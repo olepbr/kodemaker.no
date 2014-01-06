@@ -8,11 +8,6 @@
   - name: upgrade all packages
     yum: name=* state=latest
 
-  - name: Install some useful packages
-    yum: name=${item} state=present
-    with_items:
-      - vim
-
   - name: Add deployment user
     user: name=deploy state=present password=$deploy_password shell=/bin/bash
 
@@ -40,6 +35,12 @@
 
   - name: Create the repository for EPEL
     copy: src=files/epel.repo dest=/etc/yum.repos.d/epel.repo
+
+  - name: Install vim
+    yum: name=vim state=present
+
+  - name: Install yum-cron for automatic updates
+    yum: name=yum-cron state=present
 
   handlers:
   - name: Restart ssh
