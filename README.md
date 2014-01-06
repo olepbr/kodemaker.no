@@ -57,3 +57,19 @@ eller apt unna. Eller hvis du er på OSX:
 ```sh
 brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
 ```
+
+#### Neste: Sette opp kodemaker.no
+
+Når du bootstrapper, så vil root-login og passord-login bli disablet.
+Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
+annen inkantasjon:
+
+```sh
+ansible-playbook -i hosts.ini setup-kodemaker.yml --user deploy --sudo --ask-sudo-pass
+```
+
+Nå er det altså ikke SSH-passordet som brukes lenger - den bruker din
+private key - men du må oppgi sudo-passordet. Dersom du ikke har gjort
+noen endringer, så er det fortsatt `kodemaker`. Men hvis dette er en
+offentlig server, så lønner det seg nok å gjøre den endringen. Logg
+inn som `deploy` og `passwd`.
