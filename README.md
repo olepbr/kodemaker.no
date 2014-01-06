@@ -64,11 +64,3 @@ ansible-playbook -i hosts.ini bootstrap.yml --user root --ask-pass
   apt-get update
   apt-get install python-apt
   ```
-
-- Noen bokser kommer uten noe særlig byggetools i det heletatt:
-
-  ```sh
-  yum update e2fsprogs-libs e2fsprogs e2fsprogs-devel
-  yum install e2fsprogs-libs e2fsprogs e2fsprogs-devel
-  yum install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel gd zlib-devel zip unzip libcap-devel cronie bzip2 db4-devel cyrus-sasl-devel perl-ExtUtils-Embed autoconf automake libtool which
-  ```

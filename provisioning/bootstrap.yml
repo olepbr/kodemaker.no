@@ -5,6 +5,14 @@
     # crypted password, generated on a Linux box using: echo 'import crypt,getpass; print crypt.crypt(getpass.getpass(), "$6$AC77dCF7!")' | python -
 
   tasks:
+  - name: Install necessary packages
+    yum: name=${item} state=latest
+    with_items:
+     - sudo
+     - e2fsprogs-libs
+     - e2fsprogs
+     - e2fsprogs-devel
+
   - name: upgrade all packages
     yum: name=* state=latest
 
