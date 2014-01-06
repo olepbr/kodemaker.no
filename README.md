@@ -51,16 +51,9 @@ ansible-playbook -i hosts.ini bootstrap.yml --user root --ask-pass
 
 #### Øhh, det gikk ikke helt bra
 
-- Nei, du mangler kanskje `sshpass` lokalt hos deg? Det er bare en yum
-  eller apt unna. Eller hvis du er på OSX:
+Nei, du mangler kanskje `sshpass` lokalt hos deg? Det er bare en yum
+eller apt unna. Eller hvis du er på OSX:
 
-  ```sh
-  brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
-  ```
-
-- Eller kanskje det mangler `python-apt` på serveren? Da må du SSHe inn og:
-
-  ```sh
-  apt-get update
-  apt-get install python-apt
-  ```
+```sh
+brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
+```
