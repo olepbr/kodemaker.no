@@ -1,0 +1,18 @@
+---
+- hosts: new-servers
+  tasks:
+   - name: Install nginx
+     yum: name=nginx state=present
+
+   - name: Create kodemaker.no directory
+     file: state=directory path=/var/www/kodemaker.no/ owner=nginx group=nginx
+
+   - name: Write nginx.conf
+     template: src=templates/nginx.conf.j2 dest=/etc/nginx/nginx.conf
+     notify:
+      - restart nginx
+
+  handlers:
+   - name: restart nginx
+     service: name=nginx state=restarted enabled=yes
+
