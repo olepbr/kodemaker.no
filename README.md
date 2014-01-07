@@ -37,11 +37,6 @@ passord er `kodemaker`.
 Så kan du fortsette ned til
 [Sette opp kodemaker.no](#neste-sette-opp-kodemakerno).
 
-Dessverre får jeg Connection refused fra vagrant-boksen når jeg prøver
-å curl'e port 80. Skjønner ikke hvorfor. Det funker i prod. :-P Gi meg
-et hint om du har noen ideer. Eller gi et svar her på
-[Stack Overflow](http://serverfault.com/questions/565529/connection-refused-from-outside-vagrant-box-with-private-network).
-
 ### Provisjonere en server
 
 Så, du har en fersk og fresk CentOS server som vil bli kodemaker.no.
