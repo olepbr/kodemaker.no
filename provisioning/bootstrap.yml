@@ -6,7 +6,7 @@
 
   tasks:
   - name: Install necessary packages
-    yum: name=${item} state=latest
+    yum: name={{ item }} state=latest
     with_items:
      - sudo
      - e2fsprogs-libs
@@ -17,7 +17,7 @@
     yum: name=* state=latest
 
   - name: Add deployment user
-    user: name=deploy state=present password=$deploy_password shell=/bin/bash
+    user: name=deploy state=present password={{ deploy_password }} shell=/bin/bash
 
   - name: Setup authorized_keys for users who may act as deploy user
     authorized_key: user=deploy key="{{ item }}"
