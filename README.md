@@ -12,7 +12,7 @@ får du `1.4.3` eller nyere, noe du også trenger.
 
 Du kan bruke [Vagrant](http://www.vagrantup.com/) og
 [VirtualBox](https://www.virtualbox.org/) for å sette opp en virtuell
-blank Ubuntu server lokalt.
+blank CentOS server lokalt.
 
 ```sh
 cd provisioning/devbox
@@ -33,6 +33,13 @@ ansible-playbook -i hosts.ini bootstrap.yml --private-key=~/.vagrant.d/insecure_
 
 Nå kan du `ssh deploy@local.kodemaker.no` og se deg omkring. Sudo
 passord er `kodemaker`.
+
+Så kan du fortsette ned til
+[Sette opp kodemaker.no](#neste-sette-opp-kodemakerno).
+
+Dessverre får jeg Connection refused fra vagrant-boksen når jeg prøver
+å curl'e port 80. Skjønner ikke hvorfor. Det funker i prod. :-P Gi meg
+et hint om du har noen ideer.
 
 ### Provisjonere en server
 
@@ -58,7 +65,7 @@ eller apt unna. Eller hvis du er på OSX:
 brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
 ```
 
-#### Neste: Sette opp kodemaker.no
+### Neste: Sette opp kodemaker.no
 
 Når du bootstrapper, så vil root-login og passord-login bli disablet.
 Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
