@@ -1,8 +1,14 @@
 body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
-#logo {color: #fff; margin-top: 7px; margin-bottom: 7px}
 #main {max-width: 960px; margin: 0 auto;}
+
+#logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
+#logo {width: 155px; height: 23px; background: url(kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 14px 11px;}
+
+@media screen and (min-width:620px) {
+    #logo {width: 303px; height: 45px; background: url(kodemaker-large.png) no-repeat 0 0; background-size: 303px 45px; margin: 22px 17px;}
+}
 
 .header {background: #000;}
 
@@ -12,10 +18,6 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 .mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px;}
 
-@media screen and (min-width:460px) and (max-width:720px) {
-    .mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px 10px;}
-}
-
 .bd,
 .line,
 .lastUnit{overflow:hidden; *overflow:visible; *zoom:1;}
@@ -24,6 +26,8 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 .r-2of3 {width: 100%;}
 
 body {-webkit-text-size-adjust: 100%}
+
+.top-img {margin-top: 5px;}
 
 .menu {display:none;}
 
@@ -43,19 +47,23 @@ a, h1, h2 {color: #d30707;}
 h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 
-@media screen and (min-width:600px) {
+.header {position: relative;}
+.menu {position: absolute; bottom: -4px; right: 0; }
+.menu a {color: #fff; text-decoration: none; margin-left: 10px; }
+
+@media screen and (min-width:620px) {
     h1 {font-size: 60px;}
     h2 {font-size: 25px;}
+
+    .menu {bottom: 5px;}
+    .menu a {margin-left: 15px;}
 }
 
 .aside, .body {line-height: 1.7;}
 
 q {color: #666;}
+cite a {text-decoration: none;}
 strong {font-weight: bold;}
-
-.header {position: relative;}
-.menu {position: absolute; bottom: 4px; right: 0; }
-.menu a {color: #fff; text-decoration: none; margin-left: 15px; }
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px;}
 
