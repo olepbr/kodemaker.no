@@ -1,2 +1,62 @@
-.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed;}
-#logo {font-size: 200px; color: #e2e2e2;}
+body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
+
+.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
+#logo {color: #fff; margin-top: 7px; margin-bottom: 7px}
+#main {max-width: 960px; margin: 0 auto;}
+
+.header {background: #000;}
+
+@media screen and (min-width:960px) {
+    .header {border-radius: 0 0 5px 5px;}
+}
+
+.mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px;}
+
+@media screen and (min-width:460px) and (max-width:720px) {
+    .mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px 10px;}
+}
+
+.bd,
+.line,
+.lastUnit{overflow:hidden; *overflow:visible; *zoom:1;}
+
+.r-1of3,
+.r-2of3 {width: 100%;}
+
+body {-webkit-text-size-adjust: 100%}
+
+.menu {display:none;}
+
+@media screen and (min-width:460px) {
+    .menu {display:block;}
+    .unit{float:left;}
+    .unitRight{float:right;}
+    .r-1of3 {width: 33.33333%;}
+    .r-2of3 {width: 66.66666%;}
+}
+
+img {max-width: 100%; height: auto;}
+@media \0screen {img {width: auto; /* for ie 8 */}}
+
+a, h1, h2 {color: #d30707;}
+
+h1 {font-size: 30px;}
+h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
+
+@media screen and (min-width:600px) {
+    h1 {font-size: 60px;}
+    h2 {font-size: 25px;}
+}
+
+.aside, .body {line-height: 1.7;}
+
+q {color: #666;}
+strong {font-weight: bold;}
+
+.header {position: relative;}
+.menu {position: absolute; bottom: 4px; right: 0; }
+.menu a {color: #fff; text-decoration: none; margin-left: 15px; }
+
+#footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px;}
+
+.mbn {margin-bottom: 0 !important;}
