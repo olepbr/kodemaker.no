@@ -13,13 +13,12 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 #header {background: #000; position: relative;}
 
-.mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px;}
+.mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 15px;}
 
 .bd,
 .line,
 .lastUnit{overflow:hidden; *overflow:visible; *zoom:1;}
 
-.r-1of3,
 .r-2of3 {width: 100%;}
 
 body {-webkit-text-size-adjust: 100%}
@@ -47,6 +46,6 @@ q {color: #666;}
 cite a {text-decoration: none;}
 strong {font-weight: bold;}
 
-#footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px;}
+#footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px; clear: both;}
 
 .mbn {margin-bottom: 0 !important;}
