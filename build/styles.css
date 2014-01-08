@@ -10,10 +10,10 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
     #logo {width: 303px; height: 45px; background: url(kodemaker-large.png) no-repeat 0 0; background-size: 303px 45px; margin: 22px 17px;}
 }
 
-.header {background: #000;}
+#header {background: #000; position: relative;}
 
 @media screen and (min-width:960px) {
-    .header {border-radius: 0 0 5px 5px;}
+    #header {border-radius: 0 0 5px 5px;}
 }
 
 .mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px;}
@@ -29,6 +29,8 @@ body {-webkit-text-size-adjust: 100%}
 
 .top-img {margin-top: 5px;}
 
+.nowrap {white-space: nowrap;}
+
 .menu {display:none;}
 
 @media screen and (min-width:460px) {
@@ -40,14 +42,13 @@ body {-webkit-text-size-adjust: 100%}
 }
 
 img {max-width: 100%; height: auto;}
-@media \0screen {img {width: auto; /* for ie 8 */}}
+.ie8 img {width: auto;}
 
 a, h1, h2 {color: #d30707;}
 
 h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 
-.header {position: relative;}
 .menu {position: absolute; bottom: -4px; right: 0; }
 .menu a {color: #fff; text-decoration: none; margin-left: 10px; }
 
