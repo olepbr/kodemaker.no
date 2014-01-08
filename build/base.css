@@ -2,19 +2,16 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
 #main {max-width: 960px; margin: 0 auto;}
+.ie8 #main {width: 960px;}
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
 #logo {width: 155px; height: 23px; background: url(kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 14px;}
 
-@media screen and (min-width:620px) {
-    #logo {width: 303px; height: 45px; background: url(kodemaker-large.png) no-repeat 0 0; background-size: 303px 45px; margin: 22px 17px;}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #logo {background-image: url(kodemaker-small-2x.png);}
 }
 
 #header {background: #000; position: relative;}
-
-@media screen and (min-width:960px) {
-    #header {border-radius: 0 0 5px 5px;}
-}
 
 .mod, h1, h2, h3, h4, h5, p, ul, ol, .img, address {margin: 15px;}
 
@@ -33,14 +30,6 @@ body {-webkit-text-size-adjust: 100%}
 
 .menu {display:none;}
 
-@media screen and (min-width:460px) {
-    .menu {display:block;}
-    .unit{float:left;}
-    .unitRight{float:right;}
-    .r-1of3 {width: 33.33333%;}
-    .r-2of3 {width: 66.66666%;}
-}
-
 img {max-width: 100%; height: auto;}
 .ie8 img {width: auto;}
 
@@ -51,14 +40,6 @@ h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 
 .menu {position: absolute; bottom: -4px; right: 0; }
 .menu a {color: #fff; text-decoration: none; margin-left: 10px; }
-
-@media screen and (min-width:620px) {
-    h1 {font-size: 60px;}
-    h2 {font-size: 25px;}
-
-    .menu {bottom: 5px;}
-    .menu a {margin-left: 15px;}
-}
 
 .aside, .body {line-height: 1.7;}
 
