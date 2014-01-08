@@ -76,3 +76,15 @@ private key - men du må oppgi sudo-passordet. Dersom du ikke har gjort
 noen endringer, så er det fortsatt `kodemaker`. Men hvis dette er en
 offentlig server, så lønner det seg nok å gjøre den endringen. Logg
 inn som `deploy` og `passwd`.
+
+#### Deploy en versjon av siten
+
+Til slutt gjelder det å legge ut filene. Hadde det trengt å være tre
+forskjellige steg? Nei. Skal se litt på det.
+
+```sh
+ansible-playbook -i hosts.ini deploy-kodemaker.yml --user deploy --sudo --ask-sudo-pass
+```
+
+Og nå kan du besøke http://local.kodemaker.no i nettleseren din og
+meske deg i de nye sidene våre.
