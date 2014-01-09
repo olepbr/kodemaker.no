@@ -1,0 +1,11 @@
+#logo {width: 303px; height: 45px; background: url(/images/kodemaker-large.png) no-repeat 0 0; background-size: 303px 45px; margin: 22px 17px;}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #logo {background-image: url(/images/kodemaker-large-2x.png);}
+}
+
+h1 {font-size: 60px;}
+h2 {font-size: 25px;}
+
+.menu {bottom: 5px;}
+.menu a {margin-left: 15px;}

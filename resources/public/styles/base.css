@@ -2,13 +2,12 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
 #main {max-width: 960px; margin: 0 auto;}
-.ie8 #main {width: 960px;}
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
-#logo {width: 155px; height: 23px; background: url(kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 14px;}
+#logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 14px;}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    #logo {background-image: url(kodemaker-small-2x.png);}
+    #logo {background-image: url(/images/kodemaker-small-2x.png);}
 }
 
 #header {background: #000; position: relative;}
@@ -30,7 +29,6 @@ body {-webkit-text-size-adjust: 100%}
 .menu {display:none;}
 
 img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
-.ie8 img {width: auto;}
 
 a, h1, h2 {color: #d30707;}
 

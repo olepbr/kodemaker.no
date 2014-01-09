@@ -2,13 +2,24 @@
 
 Våre nye nettsider kommer til verden.
 
+## Teste lokalt
+
+Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen)
+om du ikke har den. Deretter:
+
+```shell
+lein ring server
+```
+
+Voila!
+
 ## Provisjonering
 
 Vi bruker [Ansible](www.ansibleworks.com) for å sette opp serveren.
 Hvis du sitter på OSX er det så enkelt som `brew install ansible`. Da
 får du `1.4.3` eller nyere, noe du også trenger.
 
-### Teste lokalt
+### Sette opp din egen server lokalt
 
 Du kan bruke [Vagrant](http://www.vagrantup.com/) og
 [VirtualBox](https://www.virtualbox.org/) for å sette opp en virtuell
@@ -39,7 +50,7 @@ Så kan du fortsette ned til
 
 ### Provisjonere en server
 
-Så, du har en fersk og fresk CentOS server som vil bli kodemaker.no.
+Så, du har en fresk og fersk CentOS server som vil bli kodemaker.no.
 Legg den til i `provisioning/hosts.ini` under `[new-servers]`. Du kan
 ta bort `192.168.33.44`, den brukes bare for lokal testing.
 
@@ -77,12 +88,15 @@ noen endringer, så er det fortsatt `kodemaker`. Men hvis dette er en
 offentlig server, så lønner det seg nok å gjøre den endringen. Logg
 inn som `deploy` og `passwd`.
 
-#### Deploy en versjon av siten
+#### Bygg og deploy siten
 
-Til slutt gjelder det å legge ut filene. Hadde det trengt å være tre
-forskjellige steg? Nei. Skal se litt på det.
+Du må ha en ganske ny versjon av
+[leiningen](https://github.com/technomancy/leiningen#leiningen)
+installert. Gå til rota av prosjektet, og:
 
 ```sh
+lein build-site
+cd provisioning
 ansible-playbook -i hosts.ini deploy-kodemaker.yml --user deploy --sudo --ask-sudo-pass
 ```
 
