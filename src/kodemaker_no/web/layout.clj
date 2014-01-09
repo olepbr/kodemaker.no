@@ -38,7 +38,7 @@
      content
      [:div#footer
       [:div.mod
-       [:strong (no-widows "Kodemaker Systemutvikling AS")]
+       [:strong (no-widows "Kodemaker Systemutvikling AS")] " "
        [:span.nowrap "Orgnr. 982099595 "]
        [:div
         [:span.nowrap "Dronning Eufemias gate 16,"] " "
