@@ -35,10 +35,10 @@
        [:strong "Kodemaker Systemutvikling AS "]
        [:span.nowrap "Orgnr. 982099595 "]
        [:div
-        [:span.nowrap "Dronning Eufemias gate 16, "]
-        [:span.nowrap "Visma-bygget, "]
-        [:span.nowrap "0191 Oslo "]]
+        [:span.nowrap "Dronning Eufemias gate 16,"] " "
+        [:span.nowrap "Visma-bygget,"] " "
+        [:span.nowrap "0191 Oslo"]]
        [:div
-        [:span.nowrap "Telefon: +47 22 82 20 80. "]
-        [:span.nowrap "Telefaks: +47 22 82 20 88 "]
+        [:span.nowrap "Telefon: +47 22 82 20 80."] " "
+        [:span.nowrap "Telefaks: +47 22 82 20 88"] " "
         [:span.nowrap "E-post: <a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]))
