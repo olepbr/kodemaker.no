@@ -3,7 +3,7 @@
             [kodemaker-no.web.layout :refer [with-layout]]))
 
 (defn index [request]
-  (with-layout request "Systemutvikling på høyt&nbsp;nivå"
+  (with-layout request "Systemutvikling på høyt nivå"
     (list
      [:div.body.unitRight.r-2of3
       [:div.bd

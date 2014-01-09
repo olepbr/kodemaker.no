@@ -1,12 +1,18 @@
 (ns kodemaker-no.web.layout
   (:require [optimus.link :as link]
-            [hiccup.page :refer [html5]]))
+            [hiccup.page :refer [html5]]
+            [clojure.string :as str]))
 
 (defn- serve-to-media-query-capable-browsers [tag]
   (list "<!--[if (gt IE 8) | (IEMobile)]><!-->" tag "<!--<![endif]-->"))
 
 (defn- serve-to-media-query-clueless-browsers [tag]
   (list "<!--[if (lte IE 8) & (!IEMobile)]>" tag "<![endif]-->"))
+
+(defn- no-widows [s]
+  "Avoid typographic widows by adding a non-breaking space between the
+   last two words."
+  (str/replace s #" ([^ ]+)$" "&nbsp;$1"))
 
 (defn with-layout [request title content]
   (html5
@@ -28,11 +34,11 @@
         [:a {:href "#"} "Mennesker"]
         [:a {:href "#"} "Ta kontakt"]]
        [:h1#logo.hn "Kodemaker"]]]
-     [:h1.hn.mbn title]
+     [:h1.hn.mbn (no-widows title)]
      content
      [:div#footer
       [:div.mod
-       [:strong "Kodemaker Systemutvikling AS "]
+       [:strong (no-widows "Kodemaker Systemutvikling AS")]
        [:span.nowrap "Orgnr. 982099595 "]
        [:div
         [:span.nowrap "Dronning Eufemias gate 16,"] " "
