@@ -22,6 +22,12 @@
      notify:
       - restart iptables
 
+   - name: Install rsync
+     yum: name=rsync state=present
+
+   - name: No tty required for rsync
+     lineinfile: dest=/etc/sudoers regexp="Defaults!/usr/bin/rsync" line="Defaults!/usr/bin/rsync !requiretty"
+
   handlers:
    - name: restart nginx
      service: name=nginx state=restarted enabled=yes
