@@ -12,6 +12,22 @@
      notify:
       - restart nginx
 
+   - name: Create sites-enabled/available directories
+     file: state=directory path=/etc/nginx/{{ item }} owner=nginx group=nginx
+     with_items:
+      - sites-enabled
+      - sites-available
+
+   - name: Write sites-available/kodemaker.no
+     template: src=templates/sites-available/kodemaker.no.j2 dest=/etc/nginx/sites-available/kodemaker.no
+
+   - name: Symlink kodemaker.no into sites-enabled
+     file: src=/etc/nginx/sites-available/kodemaker.no
+           dest=/etc/nginx/sites-enabled/kodemaker.no
+           owner=nginx
+           group=nginx
+           state=link
+
    - name: Check if iptables is operational (it isnt on VPSes)
      stat: path=/etc/sysconfig/iptables
      register: iptables_info
