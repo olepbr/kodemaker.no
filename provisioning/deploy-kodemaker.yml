@@ -9,3 +9,6 @@
 
    - name: Require password for sudo again
      lineinfile: dest=/etc/sudoers regexp="deploy ALL" line="deploy ALL=(ALL) ALL" state=present
+
+   - name: Purge all html files from varnish
+     command: varnishadm -S /etc/varnish/secret -T localhost:6082 "purge req.url ~ (/|[.]html)$"

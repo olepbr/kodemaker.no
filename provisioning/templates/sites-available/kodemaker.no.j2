@@ -4,17 +4,17 @@
 # the right one -- http://wiki.nginx.org/Pitfalls#Server_Name
 server {
   # don't forget to tell on which port this server listens
-  listen 80;
+  listen 8001;
 
   # listen on the non-www host
   server_name kodemaker.no;
 
   # and redirect to the non-www host (declared below)
-  return 301 $scheme://www.kodemaker.no$request_uri;
+  return 301 $scheme://{{ km_domain }}$request_uri;
 }
 
 server {
-  listen 80 default deferred; # Re: deferred: The option is beneficial on all configurations, not to the level you'd ever likely notice except under an extreme load of HTTP traffic, but it's theoretically the "right" way to do it. It's an option because not all Unix (not even all Linux) flavours have that capability, and thus for portability it can be configured not to be inclided. http://unix.stackexchange.com/questions/94104/real-world-use-of-tcp-defer-accept
+  listen 8001 default deferred; # Re: deferred: The option is beneficial on all configurations, not to the level you'd ever likely notice except under an extreme load of HTTP traffic, but it's theoretically the "right" way to do it. It's an option because not all Unix (not even all Linux) flavours have that capability, and thus for portability it can be configured not to be inclided. http://unix.stackexchange.com/questions/94104/real-world-use-of-tcp-defer-accept
 
   # The host name to respond to
   server_name {{ km_domain }};

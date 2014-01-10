@@ -7,7 +7,7 @@
    - name: Create kodemaker.no directory
      file: state=directory path=/var/www/kodemaker.no/ owner=nginx group=nginx
 
-   - name: Write nginx.conf
+   - name: Configure nginx
      template: src=templates/nginx.conf.j2 dest=/etc/nginx/nginx.conf
      notify:
       - restart nginx
@@ -20,6 +20,8 @@
 
    - name: Write sites-available/kodemaker.no
      template: src=templates/sites-available/kodemaker.no.j2 dest=/etc/nginx/sites-available/kodemaker.no
+     notify:
+      - restart nginx
 
    - name: Symlink kodemaker.no into sites-enabled
      file: src=/etc/nginx/sites-available/kodemaker.no
@@ -27,6 +29,19 @@
            owner=nginx
            group=nginx
            state=link
+
+   - name: Install varnish
+     yum: name=varnish state=present
+
+   - name: Configure varnish sysconfig
+     template: src=templates/varnish.j2 dest=/etc/sysconfig/varnish
+     notify:
+      - restart varnish
+
+   - name: Configure varnish vcl
+     template: src=templates/varnish.vcl.j2 dest=/etc/varnish/default.vcl
+     notify:
+      - restart varnish
 
    - name: Check if iptables is operational (it isnt on VPSes)
      stat: path=/etc/sysconfig/iptables
@@ -50,3 +65,6 @@
 
    - name: restart iptables
      service: name=iptables state=restarted enabled=yes
+
+   - name: restart varnish
+     service: name=varnish state=restarted enabled=yes
