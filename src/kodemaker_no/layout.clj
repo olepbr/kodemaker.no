@@ -1,18 +1,14 @@
 (ns kodemaker-no.layout
   (:require [optimus.link :as link]
             [hiccup.page :refer [html5]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [kodemaker-no.formatting :refer [no-widows]]))
 
 (defn- serve-to-media-query-capable-browsers [tag]
   (list "<!--[if (gt IE 8) | (IEMobile)]><!-->" tag "<!--<![endif]-->"))
 
 (defn- serve-to-media-query-clueless-browsers [tag]
   (list "<!--[if (lte IE 8) & (!IEMobile)]>" tag "<![endif]-->"))
-
-(defn- no-widows [s]
-  "Avoid typographic widows by adding a non-breaking space between the
-   last two words."
-  (str/replace s #" ([^ ]+)$" "&nbsp;$1"))
 
 (defn with-layout [request title content]
   (html5

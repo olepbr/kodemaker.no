@@ -7,7 +7,8 @@
                  [optimus "0.14.0"]
                  [stasis "0.2.0"]
                  [ring "1.2.1"]
-                 [hiccup "1.0.4"]]
+                 [hiccup "1.0.4"]
+                 [me.raynes/cegdown "0.1.1"]]
   :ring {:handler kodemaker-no.web/app
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
