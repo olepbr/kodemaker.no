@@ -15,4 +15,5 @@
                                   [print-foo "0.4.2"]]
                    :plugins [[lein-midje "3.1.3"]
                              [lein-ring "0.8.7"]]
+                   :resource-paths ["config"]
                    :source-paths ["dev"]}})
