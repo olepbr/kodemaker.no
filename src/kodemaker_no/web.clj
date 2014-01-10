@@ -1,6 +1,6 @@
-(ns kodemaker-no.web.core
+(ns kodemaker-no.web
   (:require [ring.middleware.content-type :refer [wrap-content-type]]
-            [kodemaker-no.web.pages :as web-pages]
+            [kodemaker-no.pages :refer [pages]]
             [stasis.core :as stasis]
             [optimus.assets :as assets]
             [optimus.prime :as optimus]
@@ -12,8 +12,6 @@
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
                                 #"/photos/.*\.jpg"]))
-
-(def pages {"/index.html" web-pages/index})
 
 (def app (-> (stasis/serve-pages pages)
              (optimus/wrap get-assets

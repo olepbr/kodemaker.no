@@ -1,4 +1,4 @@
-(ns kodemaker-no.web.layout
+(ns kodemaker-no.layout
   (:require [optimus.link :as link]
             [hiccup.page :refer [html5]]
             [clojure.string :as str]))

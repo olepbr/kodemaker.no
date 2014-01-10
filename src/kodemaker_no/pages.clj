@@ -1,6 +1,6 @@
-(ns kodemaker-no.web.pages
+(ns kodemaker-no.pages
   (:require [optimus.link :as link]
-            [kodemaker-no.web.layout :refer [with-layout]]))
+            [kodemaker-no.layout :refer [with-layout]]))
 
 (defn index [request]
   (with-layout request "Systemutvikling på høyt nivå"
@@ -22,3 +22,5 @@
         [:img.top-img {:src (link/file-path request "/photos/KolbjornJetne.jpg")}]
         "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]])))
+
+(def pages {"/index.html" index})
