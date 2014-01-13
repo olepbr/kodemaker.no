@@ -28,6 +28,8 @@ body {-webkit-text-size-adjust: 100%}
 
 .menu {display:none;}
 
+.title {display: block; color: #666;}
+
 img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
 a, h1, h2 {color: #d30707;}

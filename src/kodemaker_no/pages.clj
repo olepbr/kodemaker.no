@@ -1,7 +1,8 @@
 (ns kodemaker-no.pages
   (:require [optimus.link :as link]
             [kodemaker-no.layout :refer [with-layout]]
-            [kodemaker-no.formatting :refer [to-html]]))
+            [kodemaker-no.formatting :refer [to-html]]
+            [kodemaker-no.people :as people]))
 
 (defn index [request]
   (with-layout request "Systemutvikling på høyt nivå"
@@ -64,4 +65,15 @@ via den enkeltes CV.")]]
         "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]])))
 
-(def pages {"/index.html" index})
+(defn render-person [person]
+  [:p (peeps/full-name person)
+   [:span.title (:title person)]])
+
+(defn all-people [request]
+  (with-layout request (str (count people/consultants) " kvasse konsulenter")
+    [:div.body
+     [:div.bd
+      (map render-person people/everyone)]]))
+
+(def pages {"/index.html" index
+            "/mennesker.html" all-people})

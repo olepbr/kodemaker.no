@@ -2,4 +2,5 @@
  :first-name "Kolbjørn"
  :last-name "Jetne"
  :title "Daglig leder"
- :order 1}
+ :order 1
+ :administration? true}
