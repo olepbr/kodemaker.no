@@ -8,14 +8,13 @@
             [optimus.strategies :refer [serve-live-assets]]
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [config]))
 
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
                                 #"/photos/.*\.jpg"]))
-
-(def config (read-string (slurp (io/resource "config.edn"))))
 
 (defn optimize [assets options]
   (-> assets
@@ -31,7 +30,7 @@
 
 (defn export []
   (let [assets (optimize (get-assets) {})
-        target-dir (:export-directory config)]
+        target-dir (config/export-directory)]
     (stasis/delete-directory! target-dir)
     (optimus.export/save-assets assets target-dir)
     (stasis/export-pages pages target-dir {:optimus-assets assets})))
