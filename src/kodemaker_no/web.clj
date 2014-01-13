@@ -9,7 +9,7 @@
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
             [clojure.java.io :as io]
-            [config]))
+            [config :refer [export-directory]]))
 
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
@@ -29,8 +29,7 @@
              wrap-content-type))
 
 (defn export []
-  (let [assets (optimize (get-assets) {})
-        target-dir (config/export-directory)]
-    (stasis/delete-directory! target-dir)
-    (optimus.export/save-assets assets target-dir)
-    (stasis/export-pages pages target-dir {:optimus-assets assets})))
+  (let [assets (optimize (get-assets) {})]
+    (stasis/delete-directory! export-directory)
+    (optimus.export/save-assets assets export-directory)
+    (stasis/export-pages pages export-directory {:optimus-assets assets})))
