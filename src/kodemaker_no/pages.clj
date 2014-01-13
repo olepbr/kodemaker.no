@@ -66,7 +66,7 @@ via den enkeltes CV.")]]
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]])))
 
 (defn render-person [person]
-  [:p (peeps/full-name person)
+  [:p (people/full-name person)
    [:span.title (:title person)]])
 
 (defn all-people [request]
