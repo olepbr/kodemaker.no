@@ -5,12 +5,12 @@
             [kodemaker-no.people :as people]))
 
 (defn index [request]
-  (with-layout request "Systemutvikling på høyt nivå"
-    (list
-     [:div.body.unitRight.r-2of3
-      [:div.bd
-       [:p "Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap."]
-       (to-html :md "
+  {:body (with-layout request "Systemutvikling på høyt nivå"
+     (list
+      [:div.body.unitRight.r-2of3
+       [:div.bd
+        [:p "Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap."]
+        (to-html :md "
 ## Teknologisk i front
 
 Svært god teknologikunnskap er bare én brikke i det å drive vellykket
@@ -58,37 +58,37 @@ kunder. Disse kundene ønsker gjerne å være teknologisk i front, og vi
 forsøker å bistå i å gjøre de riktige valgene til riktig tid. Vi
 behersker mange teknologier og plattformer, og dette framkommer best
 via den enkeltes CV.")]]
-     [:div.aside.lastUnit
-      [:div.bd
-       [:p
-        [:img.top-img {:src (link/file-path request "/photos/KolbjornJetne.jpg")}]
-        "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
-          <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]])))
+      [:div.aside.lastUnit
+       [:div.bd
+        [:p
+         [:img.top-img {:src (link/file-path request "/photos/KolbjornJetne.jpg")}]
+         "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
+          <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]]))})
 
-(defn- url-to-person [person]
+(defn- url-for-person [person]
   (str "/" (-> person :id str (subs 1)) ".html"))
 
 (defn render-person [person]
   [:p
-   [:a {:href (url-to-person person)} (people/full-name person)]
+   [:a {:href (url-for-person person)} (people/full-name person)]
    [:span.title (:title person)]])
 
 (defn all-people [request]
-  (with-layout request (str (count people/consultants) " kvasse konsulenter")
-    [:div.body
-     [:div.bd
-      (map render-person people/everyone)]]))
+  {:body (with-layout request (str (count people/consultants) " kvasse konsulenter")
+           [:div.body
+            [:div.bd
+             (map render-person people/everyone)]])})
 
 (defn- person-page [person request]
-  (with-layout request (people/full-name person)
-    [:div.body]))
+  {:body (with-layout request (people/full-name person)
+           [:div.body])})
 
 (def general-pages
   {"/index.html" index
    "/mennesker.html" all-people})
 
 (def people-pages
-  (into {} (map (juxt url-to-person #(partial person-page %)) people/everyone)))
+  (into {} (map (juxt url-for-person #(partial person-page %)) people/everyone)))
 
 (def pages (merge general-pages
                   people-pages))
