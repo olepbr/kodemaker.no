@@ -27,7 +27,7 @@
       [:div.bd
        [:div.mod.menu
         [:a {:href "#"} "Referanser"]
-        [:a {:href "#"} "Mennesker"]
+        [:a {:href "/mennesker.html"} "Mennesker"]
         [:a {:href "#"} "Ta kontakt"]]
        [:h1#logo.hn "Kodemaker"]]]
      [:h1.hn.mbn (no-widows title)]
