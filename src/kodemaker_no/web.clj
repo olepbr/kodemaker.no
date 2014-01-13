@@ -6,6 +6,7 @@
             [optimus.prime :as optimus]
             [optimus.optimizations :as optimizations]
             [optimus.strategies :refer [serve-live-assets]]
+            [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
             [clojure.java.io :as io]))
 
@@ -16,14 +17,20 @@
 
 (def config (read-string (slurp (io/resource "config.edn"))))
 
+(defn optimize [assets options]
+  (-> assets
+      (transform-images {:regexp #"/photos/.*\.jpg"
+                         :quality 0.3
+                         :width (* 290 2)
+                         :progressive true})
+      (optimizations/all options)))
+
 (def app (-> (stasis/serve-pages pages)
-             (optimus/wrap get-assets
-                           optimizations/all
-                           serve-live-assets)
+             (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type))
 
 (defn export []
-  (let [assets (optimizations/all (get-assets) {})
+  (let [assets (optimize (get-assets) {})
         target-dir (:export-directory config)]
     (stasis/delete-directory! target-dir)
     (optimus.export/save-assets assets target-dir)
