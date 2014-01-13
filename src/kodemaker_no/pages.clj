@@ -65,8 +65,12 @@ via den enkeltes CV.")]]
         "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]])))
 
+(defn- url-to-person [person]
+  (str "/" (-> person :id str (subs 1)) ".html"))
+
 (defn render-person [person]
-  [:p (people/full-name person)
+  [:p
+   [:a {:href (url-to-person person)} (people/full-name person)]
    [:span.title (:title person)]])
 
 (defn all-people [request]
@@ -75,5 +79,16 @@ via den enkeltes CV.")]]
      [:div.bd
       (map render-person people/everyone)]]))
 
-(def pages {"/index.html" index
-            "/mennesker.html" all-people})
+(defn- person-page [person request]
+  (with-layout request (people/full-name person)
+    [:div.body]))
+
+(def general-pages
+  {"/index.html" index
+   "/mennesker.html" all-people})
+
+(def people-pages
+  (into {} (map (juxt url-to-person #(partial person-page %)) people/everyone)))
+
+(def pages (merge general-pages
+                  people-pages))
