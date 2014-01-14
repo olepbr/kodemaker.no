@@ -82,7 +82,8 @@ via den enkeltes CV.")]]
            [:div.body
             [:div.bd
              [:div.grid
-              (map (partial render-person request) people/everyone)]]])})
+              (map (partial render-person request) people/everyone)]
+             [:p "Det er menneskene som betyr noe. Hos oss legger vi vekt på å bygge relasjoner og sørge for at de sosiale båndene er sterke. Hvis man trives på fritiden og føler at man har havnet i riktig firma, så vil man også fungere bedre i jobben som konsulent. Dette vil også kundene merke."]]])})
 
 (defn- person-page [person request]
   {:body (with-layout request (people/full-name person)
