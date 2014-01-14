@@ -43,9 +43,10 @@ body {-webkit-text-size-adjust: 100%}
 
 img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
-a, h1, h2 {color: #d30707;}
+a, h1, h2, .linkish {color: #d30707;}
 
 .linkBlock {display: block; text-decoration: none;}
+.linkish {text-decoration: underline;}
 
 h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}

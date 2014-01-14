@@ -70,11 +70,11 @@ via den enkeltes CV.")]]
 
 (defn render-person [request person]
   [:div.gridUnit.r-4-3-2
-   [:div.photoframe.gridContent
+   [:a.photoframe.gridContent.linkBlock {:href (url-for-person person)}
     [:div.paspartur.tiny
      [:img.photo {:src (link/file-path request (str "/photos/" (people/id person) "/side-profile.jpg")
                                        :fallback "/photos/unknown/side-profile.jpg")}]
-     [:a {:href (url-for-person person)} (people/full-name person)]
+     [:span.linkish (people/full-name person)]
      [:span.title (:title person)]]]])
 
 (defn all-people [request]
