@@ -4,7 +4,7 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 #main {max-width: 960px; margin: 0 auto;}
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
-#logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 14px;}
+#logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 15px 10px;}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #logo {background-image: url(/images/kodemaker-small-2x.png);}
@@ -12,19 +12,21 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 #header {background: #000; position: relative;}
 
-.mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 15px;}
+.mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 10px;}
 
 .bd,
 .line,
 .lastUnit{overflow:hidden; *overflow:visible; *zoom:1;}
 
-.grid {margin: 15px 0 0 15px; overflow:hidden; *overflow:visible;*zoom:1;}
+.grid {margin: 10px 0 0 10px; overflow:hidden; *overflow:visible;*zoom:1;}
 .gridUnit {display: inline-block;}
-.gridContent {margin: 0 15px 15px 0;}
+.gridContent {margin: 0 10px 10px 0;}
 
 .photoframe {position: relative; z-index: 0; display: inline-block; vertical-align: bottom; text-align: left; max-width: 100%;}
 .photoframe:after {bottom: 5px; content: ""; position: absolute; width: 90%; height: 25px; z-index: -1; padding: 0; margin: 0 5%; display: block; background: transparent; border-radius: 100% / 50%; box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);}
-.photoframe .paspartur {border: 1px solid #ccc; padding: 8px; border-radius: 2px; background: #fff; max-width: 100%;}
+.photoframe .paspartur {border: 1px solid #ccc; padding: 5px; border-radius: 2px; background: #fff; max-width: 100%;}
+
+p {margin-bottom: 1.3em;}
 
 .tiny {font-size: 12px;}
 
