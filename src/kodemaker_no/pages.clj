@@ -6,11 +6,11 @@
 
 (defn index [request]
   {:body (with-layout request "Systemutvikling på høyt nivå"
-     (list
-      [:div.body.unitRight.r-2of3
-       [:div.bd
-        [:p "Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap."]
-        (to-html :md "
+           (list
+            [:div.body.unitRight.r-2of3
+             [:div.bd
+              [:p "Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap."]
+              (to-html :md "
 ## Teknologisk i front
 
 Svært god teknologikunnskap er bare én brikke i det å drive vellykket
@@ -58,11 +58,11 @@ kunder. Disse kundene ønsker gjerne å være teknologisk i front, og vi
 forsøker å bistå i å gjøre de riktige valgene til riktig tid. Vi
 behersker mange teknologier og plattformer, og dette framkommer best
 via den enkeltes CV.")]]
-      [:div.aside.lastUnit
-       [:div.bd
-        [:p
-         [:img.top-img {:src (link/file-path request "/photos/kolbjorn/side-profile-cropped.jpg")}]
-         "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
+            [:div.aside.lastUnit
+             [:div.bd
+              [:p
+               [:img.top-img {:src (link/file-path request "/photos/kolbjorn/side-profile-cropped.jpg")}]
+               "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]]))})
 
 (defn- url-for-person [person]
