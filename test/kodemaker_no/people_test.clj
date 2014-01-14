@@ -5,3 +5,6 @@
 (fact
  (full-name {:first-name "Magnar" :last-name "Sveen"}) => "Magnar Sveen"
  (full-name {:first-name "Finn" :middle-name "J" :last-name "Johnsen"}) => "Finn J Johnsen")
+
+(fact
+ (id {:id :magnars}) => "magnars")

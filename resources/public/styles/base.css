@@ -18,6 +18,17 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 .line,
 .lastUnit{overflow:hidden; *overflow:visible; *zoom:1;}
 
+.grid {margin: 15px 0 0 15px; overflow:hidden; *overflow:visible;*zoom:1;}
+.gridUnit {display: inline-block;}
+.gridContent {margin: 0 15px 15px 0;}
+
+.photoframe {position: relative; z-index: 0; display: inline-block; vertical-align: bottom; text-align: left; max-width: 100%;}
+.photoframe:after {bottom: 5px; content: ""; position: absolute; width: 90%; height: 25px; z-index: -1; padding: 0; margin: 0 5%; display: block; background: transparent; border-radius: 100% / 50%; box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);}
+.photoframe .paspartur {border: 1px solid #ccc; padding: 8px; border-radius: 2px; background: #fff; max-width: 100%;}
+
+.tiny {font-size: 12px;}
+
+.r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
 
 body {-webkit-text-size-adjust: 100%}

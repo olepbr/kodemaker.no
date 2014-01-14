@@ -61,23 +61,28 @@ via den enkeltes CV.")]]
       [:div.aside.lastUnit
        [:div.bd
         [:p
-         [:img.top-img {:src (link/file-path request "/photos/KolbjornJetne.jpg")}]
+         [:img.top-img {:src (link/file-path request "/photos/kolbjorn/side-profile-cropped.jpg")}]
          "<br><cite><a href='http://www.kodemaker.no/mennesker/kolbjorn/'>Kolbjørn Jetne</a></cite><br>
           <q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front teknologisk for å være attraktive som konsulenter. Vi setter vår ære i å holde oss oppdatert på nye teknologier og trender innen våre fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å formidle og dele vår kunnskap.</q>"]]]))})
 
 (defn- url-for-person [person]
-  (str "/" (-> person :id str (subs 1)) ".html"))
+  (str "/" (people/id person) ".html"))
 
-(defn render-person [person]
-  [:p
-   [:a {:href (url-for-person person)} (people/full-name person)]
-   [:span.title (:title person)]])
+(defn render-person [request person]
+  [:div.gridUnit.r-4-3-2
+   [:div.photoframe.gridContent
+    [:div.paspartur.tiny
+     [:img.photo {:src (link/file-path request (str "/photos/" (people/id person) "/side-profile.jpg")
+                                       :fallback "/photos/unknown/side-profile.jpg")}]
+     [:a {:href (url-for-person person)} (people/full-name person)]
+     [:span.title (:title person)]]]])
 
 (defn all-people [request]
   {:body (with-layout request (str (count people/consultants) " kvasse konsulenter")
            [:div.body
             [:div.bd
-             (map render-person people/everyone)]])})
+             [:div.grid
+              (map (partial render-person request) people/everyone)]]])})
 
 (defn- person-page [person request]
   {:body (with-layout request (people/full-name person)

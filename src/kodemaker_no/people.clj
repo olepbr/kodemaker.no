@@ -13,3 +13,7 @@
        (when-let [middle (:middle-name person)]
          (str middle " "))
        (:last-name person)))
+
+(defn id [person]
+  (-> person :id str (subs 1)))
+
