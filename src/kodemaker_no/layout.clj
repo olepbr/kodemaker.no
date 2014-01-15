@@ -29,8 +29,8 @@
         [:a {:href "#"} "Referanser"]
         [:a {:href "/mennesker.html"} "Mennesker"]
         [:a {:href "#"} "Ta kontakt"]]
-       [:a.linkBlock {:href "/"}
-        [:h1#logo.hn "Kodemaker"]]]]
+       [:h1#logo.hn
+        [:a.linkBlock {:href "/"} "Kodemaker"]]]]
      [:h1.hn.mbn (no-widows title)]
      content
      [:div#footer
