@@ -8,6 +8,7 @@
             [optimus.strategies :refer [serve-live-assets]]
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
+            [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [clojure.java.io :as io]
             [config :refer [export-directory]]))
 
@@ -26,7 +27,8 @@
 
 (def app (-> (stasis/serve-pages pages)
              (optimus/wrap get-assets optimize serve-live-assets)
-             wrap-content-type))
+             wrap-content-type
+             wrap-content-type-utf-8))
 
 (defn export []
   (let [assets (optimize (get-assets) {})]
