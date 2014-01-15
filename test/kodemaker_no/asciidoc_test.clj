@@ -2,8 +2,8 @@
   (:require [kodemaker-no.asciidoc :refer :all]
             [midje.sweet :refer :all]))
 
-(fact "We parse asciidoc pages."
-      (parse-page "
+(fact "We parse asciidoc articles."
+      (parse-article "
 = Systemutvikling på høyt nivå
 
 :url: /kompetanse.html
@@ -37,19 +37,19 @@ link:/kolbjorn.html[Kolbjørn Jetne]
           :url "/kompetanse.html"
           :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
           :lead "<p>Vi er et fokusert selskap.</p>"
-          :article "<h2>Teknologisk i front</h2><p>Svært god teknologikunnskap.</p><h2>Konsulenttjenester innen systemutvikling</h2><p>Våre konsulenter.</p><p>Med lang erfaring.</p><h2>Språk, plattformer og utviklingsmiljøer</h2><p>Vi har både små og store.</p>"
+          :body "<h2>Teknologisk i front</h2><p>Svært god teknologikunnskap.</p><h2>Konsulenttjenester innen systemutvikling</h2><p>Våre konsulenter.</p><p>Med lang erfaring.</p><h2>Språk, plattformer og utviklingsmiljøer</h2><p>Vi har både små og store.</p>"
           :aside "<p><a href=\"/kolbjorn.html\">Kolbjørn Jetne</a></p><p>&#8220;Erfaringer fra tøffere tider&#8221;</p>"})
 
-(fact "Minimal page"
-      (parse-page "
+(fact "Minimal article"
+      (parse-article "
 = Referanser
 
 :url: /referanser.html
 
 == :lead
 
-Ja, har vi noen sånne da?
+Ingressen er her.
 ")
       => {:title "Referanser"
           :url "/referanser.html"
-          :lead "<p>Ja, har vi noen sånne da?</p>"})
+          :lead "<p>Ingressen er her.</p>"})

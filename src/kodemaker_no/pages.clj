@@ -32,9 +32,9 @@
   {:body (with-layout request (people/full-name person)
            [:div.body])})
 
-(defn custom-pages []
-  (->> (slurp-files "resources/pages/" #"\.adoc$")
-       (map adoc/parse-page)
+(defn article-pages []
+  (->> (slurp-files "resources/articles/" #"\.adoc$")
+       (map adoc/parse-article)
        (map (juxt :url #(partial render-page %)))
        (into {})))
 
@@ -46,5 +46,5 @@
 
 (defn get-pages []
   (merge (people-pages)
-         (custom-pages)
+         (article-pages)
          (general-pages)))

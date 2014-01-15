@@ -17,19 +17,19 @@
 (defn- htmlize-part [part]
   (str "<h2>" (:title part) "</h2>" (content part)))
 
-(defn- patch-together-article [doc]
+(defn- patch-together-article-body [doc]
   (->> doc :parts
        (remove #(-> % :title #{":lead" ":aside" ":ignore"}))
        (map htmlize-part)
        (str/join)
        (nil-if-blank)))
 
-(defn parse-page [s]
+(defn parse-article [s]
   (-> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
         {:title (-> doc :header :document-title)
          :url (-> doc :header :attributes :url)
          :illustration (-> doc :header :attributes :illustration)
          :lead (-> doc (find-part ":lead") content)
-         :article (-> doc patch-together-article)
+         :body (-> doc patch-together-article-body)
          :aside (-> doc (find-part ":aside") content)})
       remove-nil-vals))

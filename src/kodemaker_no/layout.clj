@@ -57,14 +57,15 @@
    [:div.body.unitRight.r-2of3
     [:div.bd
      (:lead page)
-     (:article page)]]
+     (:body page)]]
    [:div.aside.lastUnit
     [:div.bd
-     [:div.illustration
-      [:img {:src (link/file-path request (:illustration page))}]]
+     (when (:illustration page)
+       [:div.illustration
+        [:img {:src (link/file-path request (:illustration page))}]])
      (:aside page)]]))
 
-(defn two-column-page? [page]
+(defn- two-column-page? [page]
   (or (:illustration page)
       (:aside page)))
 
