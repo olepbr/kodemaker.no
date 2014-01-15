@@ -2,12 +2,17 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]
             [clojure.set :as set]
-            [clojure.pprint :refer (pprint pp)]
+            [clojure.pprint :refer [pprint pp print-table]]
             [clojure.repl :refer :all]
             [print.foo :refer :all]
-            [hiccup.core :refer [html]]))
+            [hiccup.core :refer [html]]
+            [clojure.reflect]))
 
 (defmacro dump-locals []
   `(clojure.pprint/pprint
     ~(into {} (map (fn [l] [`'~l l]) (reverse (keys &env))))))
 
+(defn list-functions [o]
+  (print-table
+   (sort-by :name
+            (filter :exception-types (:members (clojure.reflect/reflect o))))))
