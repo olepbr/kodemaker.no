@@ -1,9 +1,17 @@
 (ns kodemaker-no.people
   (:require [kodemaker-no.homeless :refer [slurp-files]]))
 
+(defn id [person]
+  (-> person :id str (subs 1)))
+
+(defn- enrich-person [person]
+  (-> person
+      (assoc :url (str "/" (id person) ".html"))))
+
 (def everyone
   (->> (slurp-files "resources/people/" #"\.edn$")
-       (map read-string)))
+       (map read-string)
+       (map enrich-person)))
 
 (def consultants
   (remove :administration? everyone))
@@ -13,7 +21,3 @@
        (when-let [middle (:middle-name person)]
          (str middle " "))
        (:last-name person)))
-
-(defn id [person]
-  (-> person :id str (subs 1)))
-
