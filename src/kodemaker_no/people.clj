@@ -1,5 +1,5 @@
 (ns kodemaker-no.people
-  (:require [kodemaker-no.homeless :refer [slurp-files]]))
+  (:require [stasis.core :refer [slurp-files]]))
 
 (defn id [person]
   (-> person :id str (subs 1)))

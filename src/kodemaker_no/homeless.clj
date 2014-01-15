@@ -1,11 +1,6 @@
 (ns kodemaker-no.homeless
   (:require [clojure.java.io :as io]))
 
-(defn slurp-files [dir regexp]
-  (->> (.listFiles (io/as-file dir))
-       (filter #(re-find regexp (.getName %)))
-       (map slurp)))
-
 (defn wrap-content-type-utf-8 [handler]
   (fn [request]
     (when-let [response (handler request)]

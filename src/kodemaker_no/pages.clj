@@ -1,9 +1,9 @@
 (ns kodemaker-no.pages
   (:require [optimus.link :as link]
+            [stasis.core :refer [slurp-files]]
             [kodemaker-no.layout :refer [with-layout render-page]]
             [kodemaker-no.asciidoc :as adoc]
             [kodemaker-no.people :as people]
-            [kodemaker-no.homeless :refer [slurp-files]]
             [kodemaker-no.pages.people-page :refer [all-people]]
             [clojure.java.io :as io]))
 
