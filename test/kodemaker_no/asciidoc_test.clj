@@ -51,8 +51,5 @@ link:/kolbjorn.html[Kolbjørn Jetne]
 Ja, har vi noen sånne da?
 ")
       => {:title "Referanser"
-          :illustration nil
           :url "/referanser.html"
-          :lead "<p>Ja, har vi noen sånne da?</p>"
-          :article nil
-          :aside nil})
+          :lead "<p>Ja, har vi noen sånne da?</p>"})

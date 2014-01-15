@@ -10,3 +10,10 @@
 
   (fact (set (slurp-files (str tmp-dir "/texts") #"\.txt$"))
         => #{"Banan" "Eple" "Frukt"}))
+
+(fact (remove-nil-vals {:a 1, :b nil, :c 3}) => {:a 1, :c 3})
+
+(fact
+ (nil-if-blank "a") => "a"
+ (nil-if-blank "") => nil
+ (nil-if-blank nil) => nil)

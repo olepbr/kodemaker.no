@@ -14,3 +14,10 @@
         (if (string? (:body response))
           (update-in response [:headers "Content-Type"] #(str % "; charset=utf-8"))
           response)))))
+
+(defn remove-nil-vals [m]
+  (apply dissoc m
+         (for [[k v] m :when (nil? v)] k)))
+
+(defn nil-if-blank [s]
+  (if (empty? s) nil s))
