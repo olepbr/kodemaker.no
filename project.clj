@@ -6,10 +6,11 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [optimus "0.14.2"]
                  [optimus-img-transform "0.1.0"]
-                 [stasis "0.3.0"]
+                 [stasis "0.4.0"]
                  [ring "1.2.1"]
                  [hiccup "1.0.4"]
-                 [me.raynes/cegdown "0.1.1"]]
+                 [me.raynes/cegdown "0.1.1"]
+                 [asciidoclj "0.2.0-SNAPSHOT"]]
   :ring {:handler kodemaker-no.web/app
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}

@@ -1,6 +1,6 @@
 (ns kodemaker-no.web
   (:require [ring.middleware.content-type :refer [wrap-content-type]]
-            [kodemaker-no.pages :refer [pages]]
+            [kodemaker-no.pages :refer [get-pages]]
             [stasis.core :as stasis]
             [optimus.assets :as assets]
             [optimus.prime :as optimus]
@@ -25,7 +25,7 @@
                          :progressive true})
       (optimizations/all options)))
 
-(def app (-> (stasis/serve-pages pages)
+(def app (-> (stasis/serve-pages get-pages)
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
              wrap-content-type-utf-8))
@@ -34,4 +34,4 @@
   (let [assets (optimize (get-assets) {})]
     (stasis/delete-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
-    (stasis/export-pages pages export-directory {:optimus-assets assets})))
+    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})))

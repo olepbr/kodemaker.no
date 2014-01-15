@@ -12,7 +12,7 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 #header {background: #000; position: relative;}
 
-.mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 10px;}
+.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 10px;}
 
 .bd,
 .line,
@@ -35,8 +35,6 @@ p {margin-bottom: 1.3em;}
 
 body {-webkit-text-size-adjust: 100%}
 
-.top-img {margin-top: 5px;}
-
 .nowrap {white-space: nowrap;}
 
 .menu {display:none;}
@@ -46,6 +44,7 @@ body {-webkit-text-size-adjust: 100%}
 img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
 a, h1, h2, .linkish {color: #d30707;}
+h2 a {text-decoration: none;}
 
 .linkBlock {display: block; text-decoration: none;}
 .linkish {text-decoration: underline;}
@@ -56,7 +55,9 @@ h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 .aside, .body {line-height: 1.7;}
 
 q {color: #666;}
-cite a {text-decoration: none;}
+q:before {content: "“"}
+q:after {content: "”"}
+
 strong {font-weight: bold;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px; clear: both;}
