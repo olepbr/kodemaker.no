@@ -45,3 +45,32 @@
         [:span.nowrap "Telefon: +47 22 82 20 80."] " "
         [:span.nowrap "Telefaks: +47 22 82 20 88"] " "
         [:span.nowrap "E-post: <a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]))
+
+(defn- render-single-column [page]
+  [:div.body
+   [:div.bd
+    (:lead page)
+    (:article page)]])
+
+(defn- render-two-column [page request]
+  (list
+   [:div.body.unitRight.r-2of3
+    [:div.bd
+     (:lead page)
+     (:article page)]]
+   [:div.aside.lastUnit
+    [:div.bd
+     [:div.illustration
+      [:img {:src (link/file-path request (:illustration page))}]]
+     (:aside page)]]))
+
+(defn two-column-page? [page]
+  (or (:illustration page)
+      (:aside page)))
+
+(defn render-page [page request]
+  {:body
+   (with-layout request (:title page)
+     (if (two-column-page? page)
+       (render-two-column page request)
+       (render-single-column page)))})

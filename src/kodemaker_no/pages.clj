@@ -1,39 +1,10 @@
 (ns kodemaker-no.pages
   (:require [optimus.link :as link]
-            [kodemaker-no.layout :refer [with-layout]]
+            [kodemaker-no.layout :refer [with-layout render-page]]
             [kodemaker-no.asciidoc :as adoc]
             [kodemaker-no.people :as people]
             [kodemaker-no.homeless :refer [slurp-files]]
             [clojure.java.io :as io]))
-
-(defn- render-single-column [page]
-  [:div.body
-   [:div.bd
-    (:lead page)
-    (:article page)]])
-
-(defn- render-two-column [page request]
-  (list
-   [:div.body.unitRight.r-2of3
-    [:div.bd
-     (:lead page)
-     (:article page)]]
-   [:div.aside.lastUnit
-    [:div.bd
-     [:div.illustration
-      [:img {:src (link/file-path request (:illustration page))}]]
-     (:aside page)]]))
-
-(defn two-column-page? [page]
-  (or (:illustration page)
-      (:aside page)))
-
-(defn render-page [page request]
-  {:body
-   (with-layout request (:title page)
-     (if (two-column-page? page)
-       (render-two-column page request)
-       (render-single-column page)))})
 
 (defn- url-for-person [person]
   (str "/" (people/id person) ".html"))
