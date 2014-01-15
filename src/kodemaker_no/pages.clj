@@ -8,8 +8,11 @@
             [clojure.java.io :as io]))
 
 (defn- person-page [person request]
-  {:body (with-layout request (people/full-name person)
-           [:div.body])})
+  (render-page
+   {:title (people/full-name person)
+    :illustration (str "/photos/" (people/id person) "/half-figure.jpg")
+    :lead (str "<p>" (:description person) "</p>")}
+   request))
 
 (defn article-pages []
   (->> (slurp-files "resources/articles/" #"\.adoc$")
