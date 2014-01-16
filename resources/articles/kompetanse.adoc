@@ -1,6 +1,5 @@
 = Systemutvikling på høyt nivå
 
-:url: /kompetanse.html
 :illustration: /photos/kolbjorn/side-profile-cropped.jpg
 
 == :lead

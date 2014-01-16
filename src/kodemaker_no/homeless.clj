@@ -10,9 +10,15 @@
           (update-in response [:headers "Content-Type"] #(str % "; charset=utf-8"))
           response)))))
 
-(defn remove-vals [pred m]
+(defn remove-vals [m pred]
   (apply dissoc m
          (for [[k v] m :when (pred v)] k)))
+
+(defn update-vals [m f]
+  (into {} (for [[k v] m] [k (f v)])))
+
+(defn rename-keys [m f]
+  (into {} (map (fn [[key val]] [(f key) val]) m)))
 
 (defn nil-if-blank [s]
   (if (empty? s) nil s))

@@ -1,6 +1,5 @@
 = Velkommen til gards
 
-:url: /index.html
 :illustration: /photos/frontpage.jpg
 
 == :aside

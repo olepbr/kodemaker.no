@@ -6,7 +6,6 @@
       (parse-article "
 = Systemutvikling på høyt nivå
 
-:url: /kompetanse.html
 :illustration: /photos/kolbjorn/side-profile-cropped.jpg
 
 == :lead
@@ -34,7 +33,6 @@ link:/kolbjorn.html[Kolbjørn Jetne]
 ``Erfaringer fra tøffere tider''
 ")
       => {:title "Systemutvikling på høyt nivå"
-          :url "/kompetanse.html"
           :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
           :lead "<p>Vi er et fokusert selskap.</p>"
           :body "<h2>Teknologisk i front</h2><p>Svært god teknologikunnskap.</p><h2>Konsulenttjenester innen systemutvikling</h2><p>Våre konsulenter.</p><p>Med lang erfaring.</p><h2>Språk, plattformer og utviklingsmiljøer</h2><p>Vi har både små og store.</p>"
@@ -44,12 +42,9 @@ link:/kolbjorn.html[Kolbjørn Jetne]
       (parse-article "
 = Referanser
 
-:url: /referanser.html
-
 == :lead
 
 Ingressen er her.
 ")
       => {:title "Referanser"
-          :url "/referanser.html"
           :lead "<p>Ingressen er her.</p>"})

@@ -1,5 +1,5 @@
 (ns kodemaker-no.people
-  (:require [stasis.core :refer [slurp-files]]))
+  (:require [stasis.core :refer [slurp-directory]]))
 
 (defn id [person]
   (-> person :id str (subs 1)))
@@ -9,7 +9,8 @@
       (assoc :url (str "/" (id person) ".html"))))
 
 (def everyone
-  (->> (slurp-files "resources/people/" #"\.edn$")
+  (->> (slurp-directory "resources/people/" #"\.edn$")
+       (vals)
        (map read-string)
        (map enrich-person)))
 

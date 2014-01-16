@@ -11,8 +11,8 @@
 (defn- content [part]
   (when part
     (-> part :content
-        (str/replace #"<div class=\"[^\"]+\">\n" "")
-        (str/replace #"\n</div>\n?" ""))))
+        (str/replace #"\n?<div class=\"[^\"]+\">\n?" "")
+        (str/replace #"\n?</div>\n?" ""))))
 
 (defn- htmlize-part [part]
   (str "<h2>" (:title part) "</h2>" (content part)))
@@ -25,11 +25,10 @@
        (nil-if-blank)))
 
 (defn parse-article [s]
-  (->> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
-         {:title (-> doc :header :document-title)
-          :url (-> doc :header :attributes :url)
-          :illustration (-> doc :header :attributes :illustration)
-          :lead (-> doc (find-part ":lead") content)
-          :body (-> doc patch-together-article-body)
-          :aside (-> doc (find-part ":aside") content)})
-       (remove-vals nil?)))
+  (-> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
+        {:title (-> doc :header :document-title)
+         :illustration (-> doc :header :attributes :illustration)
+         :lead (-> doc (find-part ":lead") content)
+         :body (-> doc patch-together-article-body)
+         :aside (-> doc (find-part ":aside") content)})
+      (remove-vals nil?)))

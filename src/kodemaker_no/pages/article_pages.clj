@@ -1,16 +1,19 @@
 (ns kodemaker-no.pages.article-pages
   (:require [optimus.link :as link]
-            [stasis.core :refer [slurp-files]]
+            [stasis.core :refer [slurp-directory]]
             [kodemaker-no.layout :refer [render-page]]
-            [kodemaker-no.asciidoc :as adoc]))
+            [kodemaker-no.asciidoc :as adoc]
+            [kodemaker-no.homeless :refer [update-vals rename-keys]]
+            [clojure.string :as str]))
 
 (defn- article-page [article request]
   (render-page
-   (update-in article [:illustration] #(link/file-path request %))
+   (-> article
+       (adoc/parse-article)
+       (update-in [:illustration] #(link/file-path request %)))
    request))
 
 (defn article-pages []
-  (->> (slurp-files "resources/articles/" #"\.adoc$")
-       (map adoc/parse-article)
-       (map (juxt :url #(partial article-page %)))
-       (into {})))
+  (-> (slurp-directory "resources/articles/" #"\.adoc$")
+      (rename-keys #(str/replace % #"\.adoc$" ".html"))
+      (update-vals #(partial article-page %))))
