@@ -1,7 +1,8 @@
 (ns kodemaker-no.web
-  (:require [ring.middleware.content-type :refer [wrap-content-type]]
-            [kodemaker-no.pages :refer [get-pages]]
-            [stasis.core :as stasis]
+  (:require [kodemaker-no.pages :as pages]
+            [kodemaker-no.cultivate :refer [cultivate-content]]
+            [ring.middleware.content-type :refer [wrap-content-type]]
+            [stasis.core :as stasis :refer [slurp-directory]]
             [optimus.assets :as assets]
             [optimus.prime :as optimus]
             [optimus.optimizations :as optimizations]
@@ -9,13 +10,21 @@
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
-            [clojure.java.io :as io]
             [config :refer [export-directory]]))
 
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
                                 #"/photos/.*\.jpg"]))
+
+(defn load-content []
+  {:people (->> (slurp-directory "resources/people/" #"\.edn$")
+                (vals)
+                (map read-string))
+   :articles (slurp-directory "resources/articles/" #"\.adoc$")})
+
+(defn get-pages []
+  (pages/get-pages (cultivate-content (load-content))))
 
 (defn optimize [assets options]
   (-> assets

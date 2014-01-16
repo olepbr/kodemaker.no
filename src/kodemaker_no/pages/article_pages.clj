@@ -1,6 +1,5 @@
 (ns kodemaker-no.pages.article-pages
   (:require [optimus.link :as link]
-            [stasis.core :refer [slurp-directory]]
             [kodemaker-no.layout :refer [render-page]]
             [kodemaker-no.asciidoc :as adoc]
             [kodemaker-no.homeless :refer [update-vals rename-keys]]
@@ -13,7 +12,7 @@
        (update-in [:illustration] #(link/file-path request %)))
    request))
 
-(defn article-pages []
-  (-> (slurp-directory "resources/articles/" #"\.adoc$")
+(defn article-pages [articles]
+  (-> articles
       (rename-keys #(str/replace % #"\.adoc$" ".html"))
       (update-vals #(partial article-page %))))
