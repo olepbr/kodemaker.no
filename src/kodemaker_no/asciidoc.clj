@@ -1,7 +1,7 @@
 (ns kodemaker-no.asciidoc
   (:require [asciidoclj.core :as adoc]
             [clojure.string :as str]
-            [kodemaker-no.homeless :refer [nil-if-blank remove-nil-vals]]))
+            [kodemaker-no.homeless :refer [nil-if-blank remove-vals]]))
 
 (def adoc-parse (memoize adoc/parse))
 
@@ -25,11 +25,11 @@
        (nil-if-blank)))
 
 (defn parse-article [s]
-  (-> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
-        {:title (-> doc :header :document-title)
-         :url (-> doc :header :attributes :url)
-         :illustration (-> doc :header :attributes :illustration)
-         :lead (-> doc (find-part ":lead") content)
-         :body (-> doc patch-together-article-body)
-         :aside (-> doc (find-part ":aside") content)})
-      remove-nil-vals))
+  (->> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
+         {:title (-> doc :header :document-title)
+          :url (-> doc :header :attributes :url)
+          :illustration (-> doc :header :attributes :illustration)
+          :lead (-> doc (find-part ":lead") content)
+          :body (-> doc patch-together-article-body)
+          :aside (-> doc (find-part ":aside") content)})
+       (remove-vals nil?)))

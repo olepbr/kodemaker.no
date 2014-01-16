@@ -3,7 +3,7 @@
             [test-with-files.core :refer [with-files tmp-dir]]
             [midje.sweet :refer :all]))
 
-(fact (remove-nil-vals {:a 1, :b nil, :c 3}) => {:a 1, :c 3})
+(fact (remove-vals nil? {:a 1, :b nil, :c 3}) => {:a 1, :c 3})
 
 (fact
  (nil-if-blank "a") => "a"

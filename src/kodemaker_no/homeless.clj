@@ -10,9 +10,9 @@
           (update-in response [:headers "Content-Type"] #(str % "; charset=utf-8"))
           response)))))
 
-(defn remove-nil-vals [m]
+(defn remove-vals [pred m]
   (apply dissoc m
-         (for [[k v] m :when (nil? v)] k)))
+         (for [[k v] m :when (pred v)] k)))
 
 (defn nil-if-blank [s]
   (if (empty? s) nil s))
