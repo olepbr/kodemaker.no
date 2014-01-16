@@ -10,21 +10,29 @@
 (defn- person-page [person request]
   (render-page
    {:title (people/full-name person)
-    :illustration (str "/photos/" (people/id person) "/half-figure.jpg")
+    :illustration (link/file-path request (str "/photos/" (people/id person) "/half-figure.jpg")
+                                  :fallback "/photos/unknown/half-figure.jpg")
     :lead (str "<p>" (:description person) "</p>")}
+   request))
+
+(defn- article-page [article request]
+  (render-page
+   (update-in article [:illustration] #(link/file-path request %))
    request))
 
 (defn article-pages []
   (->> (slurp-files "resources/articles/" #"\.adoc$")
        (map adoc/parse-article)
-       (map (juxt :url #(partial render-page %)))
+       (map (juxt :url #(partial article-page %)))
+       (into {})))
+
+(defn people-pages []
+  (->> people/everyone
+       (map (juxt :url #(partial person-page %)))
        (into {})))
 
 (defn general-pages []
   {"/mennesker.html" all-people})
-
-(defn people-pages []
-  (into {} (map (juxt :url #(partial person-page %)) people/everyone)))
 
 (defn get-pages []
   (merge (people-pages)

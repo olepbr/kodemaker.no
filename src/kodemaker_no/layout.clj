@@ -52,7 +52,7 @@
     (:lead page)
     (:article page)]])
 
-(defn- render-two-column [page request]
+(defn- render-two-column [page]
   (list
    [:div.body.unitRight.r-2of3
     [:div.bd
@@ -62,7 +62,7 @@
     [:div.bd
      (when (:illustration page)
        [:div.illustration
-        [:img {:src (link/file-path request (:illustration page))}]])
+        [:img {:src (:illustration page)}]])
      (:aside page)]]))
 
 (defn- two-column-page? [page]
@@ -73,5 +73,5 @@
   {:body
    (with-layout request (:title page)
      (if (two-column-page? page)
-       (render-two-column page request)
+       (render-two-column page)
        (render-single-column page)))})
