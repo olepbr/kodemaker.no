@@ -16,7 +16,8 @@
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[midje "1.6.0"]
                                   [print-foo "0.4.2"]
-                                  [test-with-files "0.1.0"]]
+                                  [test-with-files "0.1.0"]
+                                  [enlive "1.1.5"]]
                    :plugins [[lein-midje "3.1.3"]
                              [lein-ring "0.8.7"]]
                    :resource-paths ["test/resources"]

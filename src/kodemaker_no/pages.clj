@@ -4,9 +4,6 @@
             [kodemaker-no.pages.article-pages :refer [article-pages]]
             [clojure.set :as set]))
 
-(defn general-pages [content]
-  {"/mennesker.html" (partial all-people (:people content))})
-
 (defn- guard-against-collisions [pages]
   (doseq [k1 (keys pages)
           k2 (keys pages)]
@@ -16,6 +13,9 @@
         (when-not (empty? collisions)
           (throw (Exception. (str "URL conflicts between " k1 " and " k2 ": " collisions)))))))
   pages)
+
+(defn general-pages [content]
+  {"/mennesker.html" (partial all-people (:people content))})
 
 (defn get-pages [content]
   (->> {:person-pages (person-pages (:people content))
