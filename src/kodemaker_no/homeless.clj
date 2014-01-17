@@ -1,5 +1,6 @@
 (ns kodemaker-no.homeless
   (:require [clojure.java.io :as io]
+            [clojure.set :as set]
             [net.cgrand.enlive-html :as enlive]))
 
 (defn wrap-content-type-utf-8 [handler]
@@ -27,3 +28,22 @@
 (defmacro with-html-transform [html & body]
   `(apply str ((enlive/template (java.io.StringReader. ~html) []
                                 ~@body))))
+
+;; create project hiccup-find for this?
+
+(defn hiccup-nodes [root]
+  (->> root
+       (tree-seq #(or (vector? %) (seq? %)) seq)
+       (filter vector?)))
+
+(defn split-hiccup-symbol [symbol]
+  (re-seq #"[:.#][^:.#]+" (str symbol)))
+
+(defn hiccup-symbol-matches? [q symbol]
+  (set/subset? (set (split-hiccup-symbol q))
+               (set (split-hiccup-symbol symbol))))
+
+(defn hiccup-find [q root]
+  (->> root
+       (hiccup-nodes)
+       (filter #(hiccup-symbol-matches? q (first %)))))

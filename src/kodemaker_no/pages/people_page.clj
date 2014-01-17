@@ -17,6 +17,6 @@
   {:title (str (num-consultants people) " kvasse konsulenter")
    :body (list
           [:div.grid (->> people
-                          (sort-by :order >)
+                          (sort-by #(:order % 0) >)
                           (map render-person))]
           [:p "Det er menneskene som betyr noe. Hos oss legger vi vekt på å bygge relasjoner og sørge for at de sosiale båndene er sterke. Hvis man trives på fritiden og føler at man har havnet i riktig firma, så vil man også fungere bedre i jobben som konsulent. Dette vil også kundene merke."])})
