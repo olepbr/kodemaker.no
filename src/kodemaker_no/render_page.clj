@@ -20,7 +20,9 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
-    [:title (str title " | Kodemaker")]]
+    [:title (if title
+              (str title " | Kodemaker")
+              "Kodemaker")]]
    [:body
     [:div#main
      [:div#header
@@ -31,7 +33,7 @@
         [:a {:href "#"} "Ta kontakt"]]
        [:h1#logo.hn
         [:a.linkBlock {:href "/"} "Kodemaker"]]]]
-     [:h1.hn.mbn (no-widows title)]
+     (when title [:h1.hn.mbn (no-widows title)])
      content
      [:div#footer
       [:div.mod
