@@ -1,5 +1,6 @@
 (ns kodemaker-no.homeless
-  (:require [clojure.java.io :as io]))
+  (:require [clojure.java.io :as io]
+            [net.cgrand.enlive-html :as enlive]))
 
 (defn wrap-content-type-utf-8 [handler]
   (fn [request]
@@ -22,3 +23,7 @@
 
 (defn nil-if-blank [s]
   (if (empty? s) nil s))
+
+(defmacro with-html-transform [html & body]
+  `(apply str ((enlive/template (java.io.StringReader. ~html) []
+                                ~@body))))

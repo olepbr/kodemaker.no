@@ -13,3 +13,8 @@
 (fact (rename-keys {"a" 1, "b" 2} #(.toUpperCase %)) => {"A" 1, "B" 2})
 
 (fact (update-vals {"a" 1, "b" 2} inc) => {"a" 2, "b" 3})
+
+(fact (with-html-transform "<html><body><h1></h1></body></html>"
+        [:h1] (fn [node] (assoc node :content "Hello!")))
+
+      => "<html><body><h1>Hello!</h1></body></html>")

@@ -9,6 +9,7 @@
                  [stasis "0.5.0"]
                  [ring "1.2.1"]
                  [hiccup "1.0.4"]
+                 [enlive "1.1.5"]
                  [me.raynes/cegdown "0.1.1"]
                  [asciidoclj "0.2.0-SNAPSHOT"]]
   :ring {:handler kodemaker-no.web/app
@@ -16,8 +17,7 @@
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[midje "1.6.0"]
                                   [print-foo "0.4.2"]
-                                  [test-with-files "0.1.0"]
-                                  [enlive "1.1.5"]]
+                                  [test-with-files "0.1.0"]]
                    :plugins [[lein-midje "3.1.3"]
                              [lein-ring "0.8.7"]]
                    :resource-paths ["test/resources"]
