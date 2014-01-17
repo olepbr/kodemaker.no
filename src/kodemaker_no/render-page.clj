@@ -1,4 +1,4 @@
-(ns kodemaker-no.layout
+(ns kodemaker-no.render-page
   (:require [optimus.link :as link]
             [hiccup.page :refer [html5]]
             [clojure.string :as str]
@@ -10,7 +10,7 @@
 (defn- serve-to-media-query-clueless-browsers [tag]
   (list "<!--[if (lte IE 8) & (!IEMobile)]>" tag "<![endif]-->"))
 
-(defn with-layout [request title content]
+(defn- with-layout [request title content]
   (html5
    [:head
     [:meta {:charset "utf-8"}]
@@ -50,7 +50,7 @@
   [:div.body
    [:div.bd
     (:lead page)
-    (:article page)]])
+    (:body page)]])
 
 (defn- render-two-column [page]
   (list
@@ -70,8 +70,7 @@
       (:aside page)))
 
 (defn render-page [page request]
-  {:body
-   (with-layout request (:title page)
-     (if (two-column-page? page)
-       (render-two-column page)
-       (render-single-column page)))})
+  (with-layout request (:title page)
+    (if (two-column-page? page)
+      (render-two-column page)
+      (render-single-column page))))

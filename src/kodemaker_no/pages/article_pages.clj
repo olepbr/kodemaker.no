@@ -1,16 +1,10 @@
 (ns kodemaker-no.pages.article-pages
-  (:require [optimus.link :as link]
-            [kodemaker-no.layout :refer [render-page]]
-            [kodemaker-no.asciidoc :as adoc]
+  (:require [kodemaker-no.asciidoc :as adoc]
             [kodemaker-no.homeless :refer [update-vals rename-keys]]
             [clojure.string :as str]))
 
-(defn- article-page [article request]
-  (render-page
-   (-> article
-       (adoc/parse-article)
-       (update-in [:illustration] #(link/file-path request %)))
-   request))
+(defn- article-page [article]
+  (adoc/parse-article article))
 
 (defn article-pages [articles]
   (-> articles
