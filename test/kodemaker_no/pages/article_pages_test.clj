@@ -1,9 +1,9 @@
-(ns kodemaker-no.asciidoc-test
-  (:require [kodemaker-no.asciidoc :refer :all]
+(ns kodemaker-no.pages.article-pages-test
+  (:require [kodemaker-no.pages.article-pages :refer :all]
             [midje.sweet :refer :all]))
 
-(fact "We parse asciidoc articles."
-      (parse-article "
+(fact "It generates a page from an asciidoc article."
+      (article-page "
 = Systemutvikling på høyt nivå
 
 :illustration: /photos/kolbjorn/side-profile-cropped.jpg
@@ -38,8 +38,8 @@ link:/kolbjorn.html[Kolbjørn Jetne]
           :body "<h2>Teknologisk i front</h2><p>Svært god teknologikunnskap.</p><h2>Konsulenttjenester innen systemutvikling</h2><p>Våre konsulenter.</p><p>Med lang erfaring.</p><h2>Språk, plattformer og utviklingsmiljøer</h2><p>Vi har både små og store.</p>"
           :aside "<p><a href=\"/kolbjorn.html\">Kolbjørn Jetne</a></p><p>&#8220;Erfaringer fra tøffere tider&#8221;</p>"})
 
-(fact "Minimal article"
-      (parse-article "
+(fact "It handles minimal articles."
+      (article-page "
 = Referanser
 
 == :lead
