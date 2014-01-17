@@ -3,7 +3,7 @@
 (defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
-   :lead (str "<p>" (:description person) "</p>")})
+   :lead [:p (:description person)]})
 
 (defn person-pages [people]
   (into {} (map (juxt :url #(partial person-page %)) people)))
