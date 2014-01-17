@@ -14,7 +14,7 @@
      (select [:title]) first :content) => '("Title | Kodemaker"))
 
 (fact
- "Unless it's not given."
+ "Unless it's not given, then it's just: Kodemaker"
  (-> {:title nil} (render-page request) parse
      (select [:title]) first :content) => '("Kodemaker"))
 
@@ -25,7 +25,7 @@
      (select [:h1]) second :content) => '("Title"))
 
 (fact
- "Unless it's not given - again."
+ "Again, unless it's not given: In which case there is no header."
 
  (-> {:title nil} (render-page request) parse
      (select [:h1]) second) => nil)

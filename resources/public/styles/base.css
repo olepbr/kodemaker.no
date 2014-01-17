@@ -46,6 +46,7 @@ img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 a, h1, h2, .linkish {color: #d30707;}
 h2 a {text-decoration: none;}
 
+.block {display: block;}
 .linkBlock {display: block; text-decoration: none;}
 .linkish {text-decoration: underline;}
 
