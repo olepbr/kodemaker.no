@@ -14,11 +14,6 @@
 
 (fact (update-vals {"a" 1, "b" 2} inc) => {"a" 2, "b" 3})
 
-(fact (with-html-transform "<html><body><h1></h1></body></html>"
-        [:h1] (fn [node] (assoc node :content "Hello!")))
-
-      => "<html><body><h1>Hello!</h1></body></html>")
-
 (fact (hiccup-symbol-matches? :p :p.class) => true
       (hiccup-symbol-matches? :p.class :p) => false
       (hiccup-symbol-matches? :.class :p.class.more) => true

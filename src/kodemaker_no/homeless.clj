@@ -25,10 +25,6 @@
 (defn nil-if-blank [s]
   (if (empty? s) nil s))
 
-(defmacro with-html-transform [html & body]
-  `(apply str ((enlive/template (java.io.StringReader. ~html) []
-                                ~@body))))
-
 ;; create project hiccup-find for this?
 
 (defn hiccup-nodes [root]
