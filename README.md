@@ -4,25 +4,10 @@ Våre nye nettsider kommer til verden.
 
 ## Teste lokalt
 
-#### Installere avhengigheter
-
 Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen)
 om du ikke har den.
 
-Enn så lenge må man dessverre også manuelt installere en snapshot av
-asciidoctorj, siden den releasede versjonen ikke lar oss aksessere
-metadataene - som nettopp var grunnen til å bruke asciidoc i
-utgangspunktet.
-
-```sh
-git clone https://github.com/asciidoctor/asciidoctorj.git
-cd asciidoctorj
-mvn clean install
-```
-
-#### Starte serveren
-
-Så i rota av prosjektet, og
+Gå så til rota av prosjektet, og
 
 ```shell
 lein ring server
