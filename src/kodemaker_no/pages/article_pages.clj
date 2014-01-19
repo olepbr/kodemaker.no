@@ -33,7 +33,13 @@
          :aside (-> doc (find-part ":aside") content)})
       (remove-vals nil?)))
 
+(defn- article-url [path]
+  (prn path)
+  (if (= path "/index.adoc")
+    "/index.html"
+    (str/replace path #"\.adoc$" "/")))
+
 (defn article-pages [articles]
   (-> articles
-      (rename-keys #(str/replace % #"\.adoc$" ".html"))
+      (rename-keys article-url)
       (update-vals #(partial article-page %))))

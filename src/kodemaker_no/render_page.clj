@@ -29,7 +29,7 @@
       [:div.bd
        [:div.mod.menu
         [:a {:href "#"} "Referanser"]
-        [:a {:href "/mennesker.html"} "Mennesker"]
+        [:a {:href "/mennesker/"} "Mennesker"]
         [:a {:href "#"} "Ta kontakt"]]
        [:h1#logo.hn
         [:a.linkBlock {:href "/"} "Kodemaker"]]]]

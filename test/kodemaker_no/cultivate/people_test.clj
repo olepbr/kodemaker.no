@@ -18,8 +18,8 @@
   (fact (-> magnars :str) => "magnars"
         (-> finnjoh :str) => "finnjoh")
 
-  (fact (-> magnars :url) => "/magnars.html"
-        (-> finnjoh :url) => "/finnjoh.html")
+  (fact (-> magnars :url) => "/magnars/"
+        (-> finnjoh :url) => "/finnjoh/")
 
   (fact (-> magnars :photos) => {:side-profile "/photos/magnars/side-profile.jpg"
                                  :half-figure "/photos/magnars/half-figure.jpg"}

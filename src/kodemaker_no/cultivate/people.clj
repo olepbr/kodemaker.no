@@ -4,7 +4,7 @@
   (assoc person :str (-> person :id str (subs 1))))
 
 (defn- add-url [person]
-  (assoc person :url (str "/" (:str person) ".html")))
+  (assoc person :url (str "/" (:str person) "/")))
 
 (defn- add-full-name [person]
   (assoc person :full-name (str (:first-name person) " "

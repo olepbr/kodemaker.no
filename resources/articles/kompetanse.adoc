@@ -61,7 +61,7 @@ via den enkeltes CV.
 
 == :aside
 
-link:/kolbjorn.html[Kolbjørn Jetne]
+link:/kolbjorn/[Kolbjørn Jetne]
 
 ++++
 <p><q>

@@ -5,7 +5,7 @@
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
-  {"/mennesker.html" (partial all-people (:people content))})
+  {"/mennesker/" (partial all-people (:people content))})
 
 (defn get-pages [content]
   (stasis/merge-page-sources

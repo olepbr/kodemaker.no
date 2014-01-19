@@ -10,19 +10,19 @@ Disse to kjekke karene grubler og tenker på hva forsiden skal inneholde.
 
 Når du vil ha mer enn bare kode ...
 
-== link:/kompetanse.html[Teknologisk i front]
+== link:/kompetanse/[Teknologisk i front]
 
 Våre gode kommunikasjonsevner, evne til å samarbeide samt at vi har et
 våkent øye for nye og bedre løsninger gjør at kundene opplever oss som
 viktige støttespillere.
 
-== link:/referanser.html[Stødig systemutvikling]
+== link:/referanser/[Stødig systemutvikling]
 
 Svært mange av våre konsulenter blir re-engasjert i nye oppdrag hos
 samme kunde, og vi tror det skyldes at våre kunder generelt er veldig
 fornøyd med våre leveranser.
 
-== link:/mennesker.html[Kvasse konsulenter]
+== link:/mennesker/[Kvasse konsulenter]
 
 Det er menneskene som betyr noe. Hos oss legger vi vekt på å bygge
 relasjoner og sørge for at de sosiale båndene er sterke. Dette vil
