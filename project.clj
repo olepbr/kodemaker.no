@@ -6,7 +6,7 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [optimus "0.14.2"]
                  [optimus-img-transform "0.1.0"]
-                 [stasis "0.6.0"]
+                 [stasis "0.7.0"]
                  [ring "1.2.1"]
                  [hiccup "1.0.4"]
                  [enlive "1.1.5"]
