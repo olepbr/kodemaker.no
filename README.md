@@ -34,6 +34,11 @@ vagrant up
 echo "\n192.168.33.44 local.kodemaker.no" | sudo tee -a /etc/hosts
 ```
 
+Det er mulig du får en `An error occurred during installation of
+VirtualBox Guest Additions. Some functionality may not work as
+intended.` ... det er ikke stress. Bare "Window System drivers" som
+ikke blir installert.
+
 Legg til din public key i `provisioning/keys`, og føy den til listen
 under `Setup authorized_keys for users who may act as deploy user`
 tasken i `provisioning/bootstrap.yml`.
