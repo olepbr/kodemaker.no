@@ -14,9 +14,9 @@
     [:img] #(update-in % [:attrs :src] (optimize-path-fn request))))
 
 (defn prepare-page [get-page request]
-  {:body (-> (get-page)
-             (render-page request)
-             (use-optimized-images request))})
+  (-> (get-page)
+      (render-page request)
+      (use-optimized-images request)))
 
 (defn prepare-pages [pages]
   (update-vals pages #(partial prepare-page %)))

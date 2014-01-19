@@ -42,6 +42,6 @@
 
 (defn export []
   (let [assets (optimize (get-assets) {})]
-    (stasis/delete-directory! export-directory)
+    (stasis/empty-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})))
