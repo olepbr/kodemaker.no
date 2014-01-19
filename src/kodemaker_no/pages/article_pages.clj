@@ -34,7 +34,6 @@
       (remove-vals nil?)))
 
 (defn- article-url [path]
-  (prn path)
   (if (= path "/index.adoc")
     "/index.html"
     (str/replace path #"\.adoc$" "/")))
