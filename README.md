@@ -109,3 +109,15 @@ ansible-playbook -i hosts.ini deploy-kodemaker.yml --user deploy --sudo --ask-su
 
 Og nå kan du besøke http://local.kodemaker.no i nettleseren din og
 meske deg i de nye sidene våre.
+
+#### Funka ikke!
+
+Okay,
+
+- La du merke til at det er et nytt script `deploy-kodemaker.yml`?
+  Pass på at du ikke kjører `setup-kodemaker.yml` en gang til istedet.
+
+- Får du ` ERROR: synchronize is not a legal parameter in an Ansible
+  task or handler` må du oppdatere din Ansible.
+
+Fortsatt ikke bedre? Klag til meg, så legger jeg til fikser fortløpende.
