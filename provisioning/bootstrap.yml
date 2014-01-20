@@ -28,6 +28,7 @@
       - keys/magnars.pub
       - keys/christian.pub
       - keys/stian.pub
+      - keys/trygvea.pub
 
   - name: Remove sudo group rights
     action: lineinfile dest=/etc/sudoers regexp="^%sudo" state=absent
