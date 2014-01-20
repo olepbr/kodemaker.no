@@ -2,6 +2,7 @@
   (:require [kodemaker-no.pages :as pages]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
+            [kodemaker-no.validate :refer [validate-content]]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [stasis.core :as stasis :refer [slurp-directory]]
             [optimus.assets :as assets]
@@ -25,7 +26,11 @@
    :articles (slurp-directory "resources/articles/" #"\.adoc$")})
 
 (defn get-pages []
-  (prepare-pages (pages/get-pages (cultivate-content (load-content)))))
+  (-> (load-content)
+      validate-content
+      cultivate-content
+      pages/get-pages
+      prepare-pages))
 
 (defn optimize [assets options]
   (-> assets

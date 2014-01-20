@@ -1,6 +1,6 @@
 = Systemutvikling på høyt nivå
 
-:illustration: /photos/kolbjorn/side-profile-cropped.jpg
+:illustration: /photos/people/kolbjorn/side-profile-cropped.jpg
 
 == :lead
 
