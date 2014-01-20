@@ -21,9 +21,9 @@
   (fact (-> magnars :url) => "/magnars/"
         (-> finnjoh :url) => "/finnjoh/")
 
-  (fact (-> magnars :photos) => {:side-profile "/photos/magnars/side-profile.jpg"
-                                 :half-figure "/photos/magnars/half-figure.jpg"}
-        (-> finnjoh :photos) => {:side-profile "/photos/finnjoh/side-profile.jpg"
-                                 :half-figure "/photos/finnjoh/half-figure.jpg"})
+  (fact (-> magnars :photos) => {:side-profile "/photos/people/magnars/side-profile.jpg"
+                                 :half-figure "/photos/people/magnars/half-figure.jpg"}
+        (-> finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
+                                 :half-figure "/photos/people/finnjoh/half-figure.jpg"})
 
   )

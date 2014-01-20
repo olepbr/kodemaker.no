@@ -14,8 +14,8 @@
 
 (defn- add-photos [person]
   (assoc person :photos
-         {:side-profile (str "/photos/" (:str person) "/side-profile.jpg")
-          :half-figure (str "/photos/" (:str person) "/half-figure.jpg")}))
+         {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
+          :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
 (defn- cultivate-person [person]
   (-> person

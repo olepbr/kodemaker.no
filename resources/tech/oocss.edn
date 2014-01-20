@@ -1,0 +1,13 @@
+{:id :oocss
+ :name "OOCSS"
+ :url "https://github.com/stubbornella/oocss/wiki"
+ :description
+ "Når [Nicole Sullivan](http://www.stubbornella.org/) først lanserte
+  OOCSS var ikke det til rungende applaus, akkurat. Det gikk datidens
+  grunnregler for CSS midt i mot. Men foredraget hennes [Our Best
+  Practices Are Killing Us](http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us/)
+  ga gjenklang.
+
+  Nå har idéene hennes virkelig fått vist seg, og har eksplodert i
+  popularitet via CSS-rammeverk som Bootstrap og Foundation. Det har
+  virkelig vært en omlegging i hvordan vi tenker CSS og HTML."}
