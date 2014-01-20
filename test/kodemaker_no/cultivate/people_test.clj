@@ -3,17 +3,17 @@
             [midje.sweet :refer :all]))
 
 (let [magnars {:id :magnars
-               :first-name "Magnar"
-               :last-name "Sveen"}
+               :name ["Magnar" "Sveen"]}
       finnjoh {:id :finnjoh
-               :first-name "Finn"
-               :middle-name "J"
-               :last-name "Johnsen"}
+               :name ["Finn" "J" "Johnsen"]}
       content (cultivate-people {:people [magnars finnjoh]})
       [magnars finnjoh] (:people content)]
 
   (fact (-> magnars :full-name) => "Magnar Sveen"
         (-> finnjoh :full-name) => "Finn J Johnsen")
+
+  (fact (-> magnars :first-name) => "Magnar"
+        (-> finnjoh :first-name) => "Finn")
 
   (fact (-> magnars :str) => "magnars"
         (-> finnjoh :str) => "finnjoh")

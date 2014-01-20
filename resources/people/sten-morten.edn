@@ -1,6 +1,5 @@
 {:id :sten-morten
- :first-name "Sten Morten"
- :last-name "Misund-Asphaug"
+ :name ["Sten Morten" "Misund-Asphaug"]
  :title "Løsningsdesigner"
  :start-date "2008-10-01"
  :description "Sten Morten begynte å programmere som 9-åring. Han er mer opptatt av at oppgaven løses tilfredstillende enn hvilke teknologi som blir brukt, og at kildekoden holder så god kvalitet at den er lett å gjenbruke, utvide, og vedlikeholde. Han synger også tenor i kor og er en blid og trivelig fyr."}

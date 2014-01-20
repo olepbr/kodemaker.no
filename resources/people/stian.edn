@@ -1,7 +1,5 @@
 {:id :stian
- :first-name "Stian"
- :middle-name "C."
- :last-name "Alsos"
+ :name ["Stian" "C." "Alsos"]
  :title "Kodemester"
  :start-date "2010-10-01"
  :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet mye med kunder både innen offentlig sektor og bank og finans. Stian brenner for teknologi og er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."}

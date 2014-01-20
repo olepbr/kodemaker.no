@@ -1,6 +1,5 @@
 {:id :alf-kristian
- :first-name "Alf Kristian"
- :last-name "Støyle"
+ :name ["Alf Kristian" "Støyle"]
  :title "Kodemagiker"
  :start-date "2013-10-01"
  :description "Alf Kristian jobber stadig for å forbedre seg selv, prosjektene han deltar i, og koden han skriver. Han har et glødende engasjement for sitt fag, er lærenem og samarbeidsorientert. Alf Kristian har stor arbeidskapasitet og arbeider like godt selvstendig som i team. Han er svært kunnskapsrik innen programmering og kan i tillegg til rene programmerings-oppdrag ta roller innen systemarkitektur, design og sikkerhet."}

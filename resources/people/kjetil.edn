@@ -1,6 +1,5 @@
 {:id :kjetil
- :first-name "Kjetil"
- :last-name "Jørgensen-Dahl"
+ :name ["Kjetil" "Jørgensen-Dahl"]
  :title "Kodemaker"
  :start-date "2010-02-01"
  :description "Kjetil har utviklet og forvaltet IT-systemer siden 1998 og brenner for systemutviklingsfaget! Han er en erfaren utvikler og ScrumMaster, som ofte bidrar som teknisk ansvarlig, teamleder og testleder. Lagarbeid for å skape gode og vedlikeholdbare systemer, som gir optimal verdi for kunde og bruker er Kjetils raison d’être. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker og bidragsyter i fagmiljø som javaBin, Oslo XP Meetup og IASA."}

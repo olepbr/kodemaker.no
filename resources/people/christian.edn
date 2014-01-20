@@ -1,6 +1,5 @@
 {:id :christian
- :first-name "Christian"
- :last-name "Johansen"
+ :name ["Christian" "Johansen"]
  :title "Kodemaker"
  :start-date "2013-11-01"
  :description "Christian er en engasjert og allsidig programmerer. Gjennom sine kurs og foredrag har han gjort seg kjent som en kvass frontend-programmerer som tar design, testing og kvalitet seriøst, men tar med like stor glød fatt i prosjekter på server-siden. Christian har lang erfaring med både frontend og backend såvel som drift av Linux-servere. Han fungerer godt både alene og i team, og fungerer både som humørspreder og kritisk røst i samarbeid med andre."}

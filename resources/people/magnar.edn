@@ -1,6 +1,5 @@
 {:id :magnar
- :first-name "Magnar"
- :last-name "Sveen"
+ :name ["Magnar" "Sveen"]
  :title "Framsieutvikler"
  :start-date "2007-03-01"
  :description "Magnar kaller seg framsieutvikler, men egentlig trives

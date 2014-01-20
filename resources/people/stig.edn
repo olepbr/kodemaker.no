@@ -1,6 +1,5 @@
 {:id :stig
- :first-name "Stig"
- :last-name "Melling"
+ :name ["Stig" "Melling"]
  :title "Smart løsningsbygger"
  :start-date "2010-04-01"
  :description "Stig elsker å programmere, men tenner mest der han må ta tak i forretningsmessige problemstillinger og løse disse ved hjelp av nye arbeidsprosesser understøttet av teknologi. Stig er pliktoppfyllende og gir det som er nødvendig for at prosjekter skal lykkes."}

@@ -3,9 +3,7 @@
 
 (def Person
   {:id Keyword
-   :first-name Str
-   :last-name Str
-   (optional-key :middle-name) Str
+   :name [Str]
    :title Str
    :start-date Str
    :description Str

@@ -1,4 +1,5 @@
-(ns kodemaker-no.cultivate.people)
+(ns kodemaker-no.cultivate.people
+  (:require [clojure.string :as str]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id str (subs 1))))
@@ -6,11 +7,10 @@
 (defn- add-url [person]
   (assoc person :url (str "/" (:str person) "/")))
 
-(defn- add-full-name [person]
-  (assoc person :full-name (str (:first-name person) " "
-                                (when-let [middle (:middle-name person)]
-                                  (str middle " "))
-                                (:last-name person))))
+(defn- fix-names [person]
+  (-> person
+      (assoc :full-name (str/join " " (:name person)))
+      (assoc :first-name (first (:name person)))))
 
 (defn- add-photos [person]
   (assoc person :photos
@@ -21,7 +21,7 @@
   (-> person
       add-str
       add-url
-      add-full-name
+      fix-names
       add-photos))
 
 (defn cultivate-people [content]
