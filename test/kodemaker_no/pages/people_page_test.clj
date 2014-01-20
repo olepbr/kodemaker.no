@@ -12,8 +12,8 @@
 
 (fact "Everyone is included, sorted by reverse order"
 
-      (->> (all-people [{:full-name "Magnar Sveen",   :administration? false, :order 1}
-                        {:full-name "Finn J Johnsen", :administration? false, :order 2}
-                        {:full-name "Kolbjørn Jetne", :administration? true,  :order 0}])
+      (->> (all-people [{:full-name "Magnar Sveen",   :administration? false, :start-date "2007-03-01"}
+                        {:full-name "Finn J Johnsen", :administration? false, :start-date "2008-10-01"}
+                        {:full-name "Kolbjørn Jetne", :administration? true,  :start-date "2007-01-01"}])
            :body (hiccup-find :.linkish) (map second))
       => ["Finn J Johnsen" "Magnar Sveen" "Kolbjørn Jetne"])

@@ -2,5 +2,5 @@
  :first-name "August"
  :last-name "Lilleaas"
  :title "Programmerer"
- :order 23
+ :start-date "2012-01-01"
  :description "August er opptatt av enkle løsninger og gode brukeropplevelser, og er glad i å bli utfordret. Han er like erfaren på backend som på frontend, og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner."}

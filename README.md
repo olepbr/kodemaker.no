@@ -27,7 +27,7 @@ datastrukturen blir omtrent slik, vil jeg tro:
    :last-name Str
    (optional-key :middle-name) Str
    :title Str
-   :order Num
+   :start-date Str
    :description Str
    (optional-key :administration?) Boolean
 

@@ -2,6 +2,6 @@
  :first-name "Kolbjørn"
  :last-name "Jetne"
  :title "Daglig leder"
- :order 1
+ :start-date "2007-04-01"
  :administration? true
  :description "Kolbjørn leder firmaet vårt og har lang erfaring som konsulent. Ambisjonen hans er å gjøre Kodemaker til det foretrukne valg for konsulenter som ønsker å utvikle sitt potensiale både faglig, økonomisk og sosialt."}
