@@ -25,6 +25,22 @@
  :tech {:favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
         :want-to-learn-more [:reactjs :clojurescript :haskell]}
 
+ :recommendations [{:title "An introduction to Object Oriented CSS (OOCSS)"
+                    :blurb "En blog post om de to grunnprinsippene i
+                            OOCSS: Separasjon av struktur og utseende, og
+                            separasjon av innhold og rammer."
+                    :url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
+                    :tech [:oocss :css]}]
+
+ :hobbies [{:title "Brettspill"
+            :description "Det er mer enn Monopol og Ludo i verden. Har du prøvd
+                          Settlers? Moro, ikke sant? Det er bare begynnelsen.
+                          Sjekk ut [Dominion](http://www.spillsjefen.no/product_info.php?products_id=46439),
+                          [Galaxy Trucker](http://www.spillsjefen.no/product_info.php?products_id=32175),
+                          eller hvis dere bare er to:
+                          [Lord of the Rings: The Confrontation](http://www.spillsjefen.no/product_info.php?products_id=30129)"
+            :illustration "/photos/hobbies/brettspill.jpg"}]
+
  :blogs [{:id :framsieutvikling
           :name "framsieutvikling.no"
           :url "http://framsieutvikling.no/"
@@ -42,12 +58,27 @@
                :tech [:oocss :css]
                :blog :framsieutvikling}]
 
- :recommendations [{:title "An introduction to Object Oriented CSS (OOCSS)"
-                    :blurb "En blog post om de to grunnprinsippene i
-                            OOCSS: Separasjon av struktur og utseende, og
-                            separasjon av innhold og rammer."
-                    :url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
-                    :tech [:oocss :css]}]
+ :presentations [{:title "Zombie TDD: Live parprogrammering"
+                  :blurb "Zombie TDD er en norsk screencast-serie med
+                          testdrevet JavaScript på både klient og server. I
+                          dag setter Christian og Magnar seg ned med emacsen
+                          og parprogrammerer tre nye episoder foran publikum.
+                          Det blir utvikling av en ny feature, så du kan henge
+                          med selv om du ikke har sett alle episodene. Se
+                          hvordan to typer som digger JavaScript angriper
+                          problemer og gjør koden testbar."
+                  :tech [:javascript :tdd]
+                  :urls {:video "http://vimeo.com/49485653"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}]
+
+ :open-source-projects [{:url "https://github.com/magnars/optimus"
+                         :name "Optimus"
+                         :description "Et Clojure bibliotek for frontendytelse."
+                         :tech [:clojure :web-performance]}]
+
+ :open-source-contributions [{:name "clj-v8", :url "https://github.com/circleci/clj-v8"}
+                             {:name "cegdown", :url "https://github.com/Raynes/cegdown"}
+                             {:name "collage", :url "https://github.com/karls/collage"}]
 
  :projects [{:id :finn-oppdrag
              :customer "FINN oppdrag"
