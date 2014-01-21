@@ -53,6 +53,12 @@
                                           (optional-key :source) Str}
                                    :thumb Str}]
 
+   (optional-key :upcoming) [{:title Str ;; Upcoming courses or presentations
+                              :description Str
+                              :url Str
+                              :tech [Keyword]
+                              :date Str}] ;; iso-8601
+
    (optional-key :open-source-projects) [{:url Str
                                           :name Str
                                           :description Str
