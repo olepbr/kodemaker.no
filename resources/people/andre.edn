@@ -2,4 +2,9 @@
  :name ["André" "Michael" "Bonkowski"]
  :title "Partner"
  :start-date "2007-04-01"
- :description "André er opptatt av å levere kvalitet. Han er dedikert til oppgaven og er ikke redd for å si sin mening når det trenges. Han bruker enhver anledning til å kose seg med diverse hobbyprosjekter på iPhone plattformen, og gleder seg til sitt første iPhone oppdrag. \n\n Han er i tillegg opptatt av hva som rører seg av nye produkter på OpenSource-fronten og er en svoren Mac-entusiast."}
+ :description "André er opptatt av å levere kvalitet. Han er dedikert til oppgaven og er ikke redd for å si sin mening når det trenges. Han bruker enhver anledning til å kose seg med diverse hobbyprosjekter på iPhone plattformen, og gleder seg til sitt første iPhone oppdrag. \n\n Han er i tillegg opptatt av hva som rører seg av nye produkter på OpenSource-fronten og er en svoren Mac-entusiast."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

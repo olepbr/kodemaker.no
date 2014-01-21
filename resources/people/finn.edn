@@ -2,4 +2,9 @@
  :name ["Finn" "J" "Johnsen"]
  :title "1337 h@X0r"
  :start-date "2008-10-01"
- :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."}
+ :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

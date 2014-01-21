@@ -2,4 +2,9 @@
  :name ["August" "Lilleaas"]
  :title "Programmerer"
  :start-date "2012-01-01"
- :description "August er opptatt av enkle løsninger og gode brukeropplevelser, og er glad i å bli utfordret. Han er like erfaren på backend som på frontend, og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner."}
+ :description "August er opptatt av enkle løsninger og gode brukeropplevelser, og er glad i å bli utfordret. Han er like erfaren på backend som på frontend, og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

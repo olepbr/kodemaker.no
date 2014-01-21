@@ -2,4 +2,9 @@
  :name ["Yen" "Xu"]
  :title "Partner"
  :start-date "2008-09-01"
- :description "Yen er ekspert på PL/SQL og tuning av Oracle-databaser. Hun har også lang erfaring som javautvikler. Hun har ståpå humør, og får svært gode skussmål fra sine tidligere oppdragsgivere. Dessuten har hun stadig et smil på lur."}
+ :description "Yen er ekspert på PL/SQL og tuning av Oracle-databaser. Hun har også lang erfaring som javautvikler. Hun har ståpå humør, og får svært gode skussmål fra sine tidligere oppdragsgivere. Dessuten har hun stadig et smil på lur."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

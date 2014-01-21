@@ -2,4 +2,9 @@
  :name ["Fredrik" "Aubert"]
  :title "Partner"
  :start-date "2009-01-01"
- :description "Fredrik har 10 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer genrelt for lettvektsarkitekturer og smidige utviklingsmetodikk."}
+ :description "Fredrik har 10 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer genrelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

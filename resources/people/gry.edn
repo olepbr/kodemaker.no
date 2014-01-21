@@ -3,4 +3,9 @@
  :title "Sjefssekretær"
  :start-date "2008-01-01"
  :administration? true
- :description "Gry holder orden i rekkene og sørger for at hjulene går rundt. Hun har kontroll på alle rutiner, tidsfrister og forefallende gjøremål. Gry er en racer på organisering, og møter alle med godt humør."}
+ :description "Gry holder orden i rekkene og sørger for at hjulene går rundt. Hun har kontroll på alle rutiner, tidsfrister og forefallende gjøremål. Gry er en racer på organisering, og møter alle med godt humør."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

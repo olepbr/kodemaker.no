@@ -2,4 +2,9 @@
  :name ["Odin" "Hole Standal"]
  :title "Utvikler og arkitekt"
  :start-date "2012-08-01"
- :description "Odin er en pliktoppfyllende og selvdrevet problemløser som liker å ta ansvar. Han lærer raskt og er lidenskapelig opptatt av faget sitt. I tillegg er han glad i utfordrende arbeidsoppgaver og er flink til å samarbeide."}
+ :description "Odin er en pliktoppfyllende og selvdrevet problemløser som liker å ta ansvar. Han lærer raskt og er lidenskapelig opptatt av faget sitt. I tillegg er han glad i utfordrende arbeidsoppgaver og er flink til å samarbeide."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

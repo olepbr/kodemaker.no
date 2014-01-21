@@ -2,4 +2,9 @@
  :name ["Alf" "Einar" "Solbakken"]
  :title "Partner"
  :start-date "2008-07-01"
- :description "Ressursperson med lang erfaring fra design og utvikling av løsninger innen Java, hovedsaklig J2EE/Open Source. Alf Solbakken har vært teamleder og teknisk prosjektleder i mange prosjekter hos forsvaret."}
+ :description "Ressursperson med lang erfaring fra design og utvikling av løsninger innen Java, hovedsaklig J2EE/Open Source. Alf Solbakken har vært teamleder og teknisk prosjektleder i mange prosjekter hos forsvaret."
+
+ :phone-number ""
+ :email-address ""
+
+ :presence {}}

@@ -12,17 +12,35 @@
                kurs der han har vært konsulent, blant annet om
                JavaScript og testing."
 
- :blogs [{:name "framsieutvikling.no"
+ :phone-number "918 56 425"
+ :email-address "magnar@kodemaker.no"
+
+ :presence {:cv "magnar"
+            :twitter "magnars"
+            :linkedin "/pub/magnar-sveen/2/219/33a"
+            :stackoverflow "/users/1123/magnar"
+            :github "magnars"
+            :coderwall "magnars"}
+
+ :tech {:favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
+        :want-to-learn-more [:reactjs :clojurescript :haskell]}
+
+ :blogs [{:id :framsieutvikling
+          :name "framsieutvikling.no"
           :url "http://framsieutvikling.no/"
-          :posts [{:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
-                   :title "OOCSS: Et paradigmeskifte"
-                   :blurb "Jeg satt min stolthet i å skrive slank
-                           HTML. Jeg kjente alle triksene i boka for å få
-                           nettlesere til å oppføre seg. Men selv om HTMLen
-                           var ryddig og semantisk, så hadde CSS’en
-                           eksplodert. Kunne det være noe i OOCSS? Det var
-                           jo i mot alt jeg hadde lært."
-                   :tech [:oocss :css]}]}]
+          :theme "Teknisk frontend"
+          :tech [:javascript :oocss :responsive-design :html :tdd]}]
+
+ :blog-posts [{:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
+               :title "OOCSS: Et paradigmeskifte"
+               :blurb "Jeg satt min stolthet i å skrive slank
+                       HTML. Jeg kjente alle triksene i boka for å få
+                       nettlesere til å oppføre seg. Men selv om HTMLen
+                       var ryddig og semantisk, så hadde CSS’en
+                       eksplodert. Kunne det være noe i OOCSS? Det var
+                       jo i mot alt jeg hadde lært."
+               :tech [:oocss :css]
+               :blog :framsieutvikling}]
 
  :recommendations [{:title "An introduction to Object Oriented CSS (OOCSS)"
                     :blurb "En blog post om de to grunnprinsippene i
