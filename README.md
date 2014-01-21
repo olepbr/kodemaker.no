@@ -42,6 +42,15 @@ datastrukturen blir omtrent slik, vil jeg tro:
    (optional-key :tech) {:favorites-at-the-moment [Keyword]
                          (optional-key :want-to-learn-more) [Keyword]}
 
+   (optional-key :recommendations) [{:url Str
+                                     :title Str
+                                     :blurb Str
+                                     :tech [Keyword]}]
+
+   (optional-key :hobbies) [{:title Str
+                             :description Str
+                             :illustration Str}]
+
    (optional-key :blogs) [{:id Keyword
                            :name Str
                            :url Str
@@ -56,10 +65,22 @@ datastrukturen blir omtrent slik, vil jeg tro:
                                               {:name Str
                                                :url Str})}]
 
-   (optional-key :recommendations) [{:url Str
-                                     :title Str
-                                     :blurb Str
-                                     :tech [Keyword]}]
+   (optional-key :presentations) [{:title Str
+                                   :blurb Str
+                                   :tech [Keyword]
+                                   :urls {(optional-key :video) Str
+                                          (optional-key :slides) Str
+                                          (optional-key :source) Str}
+                                   :thumb Str}]
+
+   (optional-key :open-source-projects) [{:url Str
+                                          :name Str
+                                          :description Str
+                                          :tech [Keyword]}] ;; sorted under first tech
+
+   (optional-key :open-source-contributions) [{:url Str
+                                               :name Str
+                                               :tech [Keyword]}] ;; sorted under first tech
 
    (optional-key :projects) [{:id Keyword
                               :customer Str
