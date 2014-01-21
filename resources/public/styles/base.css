@@ -28,9 +28,6 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 p {margin-bottom: 1.3em;}
 
-h5 {font-weight: bold; margin-bottom: 0;}
-h5+p {margin-top: 0;}
-
 .tiny {font-size: 12px;}
 
 .r-4-3-2 {width: 50%; }
@@ -55,6 +52,11 @@ h2 a {text-decoration: none;}
 
 h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
+h3 {font-size: 18px; font-weight: bold;}
+h4 {font-weight: bold;}
+
+h3, h4, h5 {margin-bottom: 0 !important;}
+h3+*, h4+*, h5+* {margin-top: 0 !important;}
 
 .aside, .body {line-height: 1.7;}
 .tight {line-height: 1.4;}
