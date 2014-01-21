@@ -36,6 +36,9 @@ server {
     deny all;
   }
 
+  # Don't include port when redirecting
+  port_in_redirect off;
+
   # Force the latest IE version
   # Use ChromeFrame if it's installed for a better experience for the poor IE folk
   add_header "X-UA-Compatible" "IE=Edge";
