@@ -30,7 +30,14 @@
                             OOCSS: Separasjon av struktur og utseende, og
                             separasjon av innhold og rammer."
                     :url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
-                    :tech [:oocss :css]}]
+                    :tech [:oocss :css]}
+                   {:title "Web Performance Calendar"
+                    :blurb "Min favorittjulekalender. Full av triks,
+                            tips, testing og forskning om
+                            frontendytelse. Vel verdt å lese hvis du
+                            er opptatt av å lage raske websider."
+                    :url "http://calendar.perfplanet.com"
+                    :tech [:web-performance]}]
 
  :hobbies [{:title "Brettspill"
             :description "Det er mer enn Monopol og Ludo i verden. Har du prøvd
