@@ -1,7 +1,7 @@
 {:id :torstein
  :name ["Torstein" "Meland"]
  :title "Løsningsmann"
- :start-date "2007-04-01"
+ :start-date "2007-04-01 00:06"
  :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i alle ledd fra kildekode til brukeropplevelse."
 
  :phone-number ""
