@@ -46,10 +46,10 @@ datastrukturen blir omtrent slik, vil jeg tro:
                               :description Str
                               :tech [Keyword]}]
 
-   (optional-key :references) [{:author Str
-                                :quote Str
-                                (optional-key :project) Keyword
-                                (optional-key :photo) Str}]})
+   (optional-key :endorsements) [{:author Str
+                                  :quote Str
+                                  (optional-key :project) Keyword
+                                  (optional-key :photo) Str}]})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik

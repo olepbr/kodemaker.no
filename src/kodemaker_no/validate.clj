@@ -26,10 +26,10 @@
                               :description Str
                               :tech [Keyword]}]
 
-   (optional-key :references) [{:author Str
-                                :quote Str
-                                (optional-key :project) Keyword
-                                (optional-key :photo) Str}]})
+   (optional-key :endorsements) [{:author Str
+                                  :quote Str
+                                  (optional-key :project) Keyword
+                                  (optional-key :photo) Str}]})
 
 (defn validate-content [content]
   (validate {:people [Person]
