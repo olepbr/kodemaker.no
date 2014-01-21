@@ -6,8 +6,11 @@
                :name ["Magnar" "Sveen"]}
       finnjoh {:id :finnjoh
                :name ["Finn" "J" "Johnsen"]}
+      andersf {:id :andersf
+               :name ["Anders" "Furseth"]}
       content (cultivate-people {:people {:magnars magnars
-                                          :finnjoh finnjoh}})
+                                          :finnjoh finnjoh
+                                          :andersf andersf}})
       people (:people content)]
 
   (fact (-> people :magnars :full-name) => "Magnar Sveen"
@@ -15,6 +18,9 @@
 
   (fact (-> people :magnars :first-name) => "Magnar"
         (-> people :finnjoh :first-name) => "Finn")
+
+  (fact (-> people :magnars :genitive) => "Magnars"
+        (-> people :andersf :genitive) => "Anders'")
 
   (fact (-> people :magnars :str) => "magnars"
         (-> people :finnjoh :str) => "finnjoh")

@@ -5,7 +5,7 @@
         [:p (:blurb rec)]))
 
 (defn- render-recommendations [person recs]
-  (list [:h2 (str (:first-name person) "s Anbefalinger")]
+  (list [:h2 (str (:genitive person) " Anbefalinger")]
         (map render-recommendation recs)))
 
 (defn- person-page [person]

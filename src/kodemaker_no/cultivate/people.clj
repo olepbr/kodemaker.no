@@ -13,6 +13,13 @@
       (assoc :full-name (str/join " " (:name person)))
       (assoc :first-name (first (:name person)))))
 
+(defn- add-genitive [person]
+  (assoc person :genitive
+         (str (:first-name person)
+              (if (.endsWith (:first-name person) "s")
+                "'"
+                "s"))))
+
 (defn- add-photos [person]
   (assoc person :photos
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
@@ -23,6 +30,7 @@
       add-str
       add-url
       fix-names
+      add-genitive
       add-photos))
 
 (defn cultivate-people [content]

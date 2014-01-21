@@ -8,7 +8,7 @@
   (person-pages
    [{:url "/magnar/"
      :full-name "Magnar Sveen"
-     :first-name "Magnar"
+     :genitive "Magnars"
      :title "Framsieutvikler"
      :photos {:half-figure "/photos/magnars/half-figure.jpg"}
      :description "The description"
