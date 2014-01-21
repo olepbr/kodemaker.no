@@ -1,5 +1,6 @@
 (ns kodemaker-no.cultivate.people
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.homeless :refer [update-vals]]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id str (subs 1))))
@@ -25,4 +26,4 @@
       add-photos))
 
 (defn cultivate-people [content]
-  (update-in content [:people] #(map cultivate-person %)))
+  (update-in content [:people] #(update-vals % cultivate-person)))

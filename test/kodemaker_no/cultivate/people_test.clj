@@ -6,24 +6,25 @@
                :name ["Magnar" "Sveen"]}
       finnjoh {:id :finnjoh
                :name ["Finn" "J" "Johnsen"]}
-      content (cultivate-people {:people [magnars finnjoh]})
-      [magnars finnjoh] (:people content)]
+      content (cultivate-people {:people {:magnars magnars
+                                          :finnjoh finnjoh}})
+      people (:people content)]
 
-  (fact (-> magnars :full-name) => "Magnar Sveen"
-        (-> finnjoh :full-name) => "Finn J Johnsen")
+  (fact (-> people :magnars :full-name) => "Magnar Sveen"
+        (-> people :finnjoh :full-name) => "Finn J Johnsen")
 
-  (fact (-> magnars :first-name) => "Magnar"
-        (-> finnjoh :first-name) => "Finn")
+  (fact (-> people :magnars :first-name) => "Magnar"
+        (-> people :finnjoh :first-name) => "Finn")
 
-  (fact (-> magnars :str) => "magnars"
-        (-> finnjoh :str) => "finnjoh")
+  (fact (-> people :magnars :str) => "magnars"
+        (-> people :finnjoh :str) => "finnjoh")
 
-  (fact (-> magnars :url) => "/magnars/"
-        (-> finnjoh :url) => "/finnjoh/")
+  (fact (-> people :magnars :url) => "/magnars/"
+        (-> people :finnjoh :url) => "/finnjoh/")
 
-  (fact (-> magnars :photos) => {:side-profile "/photos/people/magnars/side-profile.jpg"
-                                 :half-figure "/photos/people/magnars/half-figure.jpg"}
-        (-> finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
-                                 :half-figure "/photos/people/finnjoh/half-figure.jpg"})
+  (fact (-> people :magnars :photos) => {:side-profile "/photos/people/magnars/side-profile.jpg"
+                                         :half-figure "/photos/people/magnars/half-figure.jpg"}
+        (-> people :finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
+                                         :half-figure "/photos/people/finnjoh/half-figure.jpg"})
 
   )

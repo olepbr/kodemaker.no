@@ -3,11 +3,11 @@
             [midje.sweet :refer :all]))
 
 (fact "The pages generated are based on given contents."
-      (-> {:people [{:url "/magnars/"}
-                    {:url "/finnjoh/"}]
+      (-> {:people {:magnars {:url "/magnars/"}
+                    :finnjoh {:url "/finnjoh/"}}
            :articles {"/kompetanse.adoc" ""
                       "/systemer.adoc" ""}}
-          get-pages keys set)
+          create-pages keys set)
 
       => #{"/mennesker/"
            "/magnars/"
@@ -17,11 +17,11 @@
 
 (fact "Colliding urls are not tolerated."
 
-      (get-pages {:people [], :articles {"/mennesker/" ""}})
+      (create-pages {:people {}, :articles {"/mennesker/" ""}})
       => (throws Exception "URL conflicts between :article-pages and :general-pages: #{\"/mennesker/\"}")
 
-      (get-pages {:people [{:url "/magnars/"}
-                           {:url "/finnjoh/"}]
-                  :articles {"/magnars.adoc" ""
-                             "/finnjoh.adoc" ""}})
+      (create-pages {:people {:magnars {:url "/magnars/"}
+                              :finnjoh {:url "/finnjoh/"}}
+                     :articles {"/magnars.adoc" ""
+                                "/finnjoh.adoc" ""}})
       => (throws Exception "URL conflicts between :person-pages and :article-pages: #{\"/magnars/\" \"/finnjoh/\"}"))

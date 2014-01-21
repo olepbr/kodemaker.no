@@ -5,10 +5,10 @@
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
-  {"/mennesker/" (partial all-people (:people content))})
+  {"/mennesker/" (partial all-people (vals (:people content)))})
 
-(defn get-pages [content]
+(defn create-pages [content]
   (stasis/merge-page-sources
-   {:person-pages (person-pages (:people content))
+   {:person-pages (person-pages (vals (:people content)))
     :article-pages (article-pages (:articles content))
     :general-pages (general-pages content)}))

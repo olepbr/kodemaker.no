@@ -1,10 +1,11 @@
 (ns kodemaker-no.web
   (:require [kodemaker-no.pages :as pages]
+            [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
             [ring.middleware.content-type :refer [wrap-content-type]]
-            [stasis.core :as stasis :refer [slurp-directory]]
+            [stasis.core :as stasis]
             [optimus.assets :as assets]
             [optimus.prime :as optimus]
             [optimus.optimizations :as optimizations]
@@ -19,17 +20,11 @@
                                 "/styles/unresponsive.css"
                                 #"/photos/.*\.jpg"]))
 
-(defn load-content []
-  {:people (->> (slurp-directory "resources/people/" #"\.edn$")
-                (vals)
-                (map read-string))
-   :articles (slurp-directory "resources/articles/" #"\.adoc$")})
-
 (defn get-pages []
   (-> (load-content)
       validate-content
       cultivate-content
-      pages/get-pages
+      pages/create-pages
       prepare-pages))
 
 (defn optimize [assets options]

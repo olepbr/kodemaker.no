@@ -74,6 +74,6 @@
                                   (optional-key :photo) Str}]})
 
 (defn validate-content [content]
-  (validate {:people [Person]
+  (validate {:people {Keyword Person}
              :articles {Str Str}}
             content))
