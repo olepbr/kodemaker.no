@@ -4,36 +4,49 @@
             [hiccup.core :refer [html]]
             [kodemaker-no.homeless :refer [hiccup-find]]))
 
-(def pages
-  (person-pages
-   [{:url "/magnar/"
-     :full-name "Magnar Sveen"
-     :genitive "Magnars"
-     :title "Framsieutvikler"
-     :photos {:half-figure "/photos/magnars/half-figure.jpg"}
-     :description "The description"
-     :phone-number "+47 918 56 425"
-     :email-address "magnar@kodemaker.no"
+(def magnar
+  {:url "/magnar/"
+   :full-name "Magnar Sveen"
+   :genitive "Magnars"
+   :title "Framsieutvikler"
+   :photos {:half-figure "/photos/magnars/half-figure.jpg"}
+   :description "The description"
+   :phone-number "+47 918 56 425"
+   :email-address "magnar@kodemaker.no"})
 
-     :recommendations [{:title "Anbefaling 1"
-                        :blurb "Denne er bra."
-                        :url "http://example.com"
-                        :tech [:clojure]}]}]))
+(defn page [& {:as extras}]
+  (((person-pages [(merge magnar extras)]) "/magnar/")))
 
-(def page ((pages "/magnar/")))
+(fact (-> (page) :title) => "Magnar Sveen")
+(fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
+(fact (-> (page) :lead) => [:p "The description"])
 
-(fact (-> page :title) => "Magnar Sveen")
-(fact (-> page :illustration) => "/photos/magnars/half-figure.jpg")
-(fact (-> page :lead) => [:p "The description"])
+(fact (-> (page) :aside) => [:div.tight
+                             [:h4 "Magnar Sveen"]
+                             [:p
+                              "Framsieutvikler" "<br>"
+                              [:span.nowrap "+47 918 56 425"] "<br>"
+                              [:a {:href "mailto:magnar@kodemaker.no"}
+                               "magnar@kodemaker.no"]]])
 
-(fact (-> page :aside) => [:div.tight
-                           [:h4 "Magnar Sveen"]
-                           [:p
-                            "Framsieutvikler" "<br>"
-                            [:span.nowrap "+47 918 56 425"] "<br>"
-                            [:a {:href "mailto:magnar@kodemaker.no"}
-                             "magnar@kodemaker.no"]]])
+(fact (->> (page :recommendations [{:title "Anbefaling 1"
+                                    :blurb "Denne er bra."
+                                    :url "http://example.com"
+                                    :tech [:clojure]}])
+           :body html)
 
-(fact (->> page :body html) => (html [:h2 "Magnars Anbefalinger"]
-                                     [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
-                                     [:p "Denne er bra."]))
+      => (html [:h2 "Magnars Anbefalinger"]
+               [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
+               [:p "Denne er bra."]))
+
+(fact (->> (page :hobbies [{:title "Brettspill"
+                            :description "Det er mer enn Monopol og Ludo i verden."
+                            :illustration "/photos/hobbies/brettspill.jpg"}])
+           :body html)
+
+      => (html [:h2 "Snakker gjerne om"]
+               [:div.bd
+                [:h3.mtn "Brettspill"]
+                [:p
+                 [:img.right {:src "/photos/hobbies/brettspill.jpg"}]
+                 "Det er mer enn Monopol og Ludo i verden."]]))

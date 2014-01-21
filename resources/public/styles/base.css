@@ -58,6 +58,8 @@ h4 {font-weight: bold;}
 h3, h4, h5 {margin-bottom: 0 !important;}
 h3+*, h4+*, h5+* {margin-top: 0 !important;}
 
+img.right {float: right; max-width: 35%; margin-left: 10px;}
+
 .aside, .body {line-height: 1.7;}
 .tight {line-height: 1.4;}
 
@@ -69,6 +71,7 @@ strong {font-weight: bold;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px; clear: both;}
 
+.mtn {margin-top: 0 !important;}
 .mbn {margin-bottom: 0 !important;}
 .mbs {margin-bottom: 5px !important;}
 .mrm {margin-right: 10px !important;}
