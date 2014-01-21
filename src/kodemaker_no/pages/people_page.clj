@@ -4,7 +4,7 @@
   [:div.gridUnit.r-4-3-2
    [:a.photoframe.gridContent.linkBlock {:href (:url person)}
     [:span.mount.tiny.block
-     [:img {:src (-> person :photos :side-profile)}]
+     [:img.mbs {:src (-> person :photos :side-profile)}]
      [:span.linkish (:full-name person)]
      [:span.title (:title person)]]]])
 

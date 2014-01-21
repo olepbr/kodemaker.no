@@ -28,6 +28,9 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 
 p {margin-bottom: 1.3em;}
 
+h5 {font-weight: bold; margin-bottom: 0;}
+h5+p {margin-top: 0;}
+
 .tiny {font-size: 12px;}
 
 .r-4-3-2 {width: 50%; }
@@ -41,7 +44,7 @@ body {-webkit-text-size-adjust: 100%}
 
 .title {display: block; color: #666;}
 
-img {max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
+img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
 a, h1, h2, .linkish {color: #d30707;}
 h2 a {text-decoration: none;}
@@ -54,6 +57,7 @@ h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 
 .aside, .body {line-height: 1.7;}
+.tight {line-height: 1.4;}
 
 q {color: #666;}
 q:before {content: "“"}
@@ -64,3 +68,5 @@ strong {font-weight: bold;}
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px; clear: both;}
 
 .mbn {margin-bottom: 0 !important;}
+.mbs {margin-bottom: 5px !important;}
+.mrm {margin-right: 10px !important;}

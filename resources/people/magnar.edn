@@ -12,7 +12,7 @@
                kurs der han har vært konsulent, blant annet om
                JavaScript og testing."
 
- :phone-number "918 56 425"
+ :phone-number "+47 918 56 425"
  :email-address "magnar@kodemaker.no"
 
  :presence {:cv "magnar"
