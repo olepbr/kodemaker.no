@@ -83,9 +83,9 @@
                          :description "Et Clojure bibliotek for frontendytelse."
                          :tech [:clojure :web-performance]}]
 
- :open-source-contributions [{:name "clj-v8", :url "https://github.com/circleci/clj-v8"}
-                             {:name "cegdown", :url "https://github.com/Raynes/cegdown"}
-                             {:name "collage", :url "https://github.com/karls/collage"}]
+ :open-source-contributions [{:name "clj-v8", :url "https://github.com/circleci/clj-v8", :tech [:clojure]}
+                             {:name "cegdown", :url "https://github.com/Raynes/cegdown", :tech [:clojure]}
+                             {:name "collage", :url "https://github.com/karls/collage", :tech [:clojure]}]
 
  :projects [{:id :finn-oppdrag
              :customer "FINN oppdrag"
