@@ -18,6 +18,7 @@
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
+                                #"/illustrations/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"]))
 
@@ -33,6 +34,10 @@
       (transform-images {:regexp #"/photos/.*\.jpg"
                          :quality 0.3
                          :width (* 290 2)
+                         :progressive true})
+      (transform-images {:regexp #"/illustrations/.*\.jpg"
+                         :quality 0.3
+                         :width (* 210 2)
                          :progressive true})
       (optimizations/all options)))
 

@@ -112,9 +112,9 @@ Bildene ligger i `resources/public`.
 - `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](smushit.com).
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
 - `/thumbs/videos` Utsnitt fra video: .jpg, proporsjon 4/3, gjerne 200x150
+- `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
 - `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
-- `/photos/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 580px.
 - `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
 - `/photos/people/<person>/side-profile.jpg` Kodemaker sittende: .jpg 620x485
 
