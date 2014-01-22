@@ -1,5 +1,5 @@
 (ns kodemaker-no.cultivate.tech
-  (:require [kodemaker-no.homeless :refer [update-vals]]))
+  (:require [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]))
 
 (defn- add-url [tech]
   (assoc tech :url
@@ -19,14 +19,14 @@
   ((set (map :id (:tech recommendation))) (:id tech)))
 
 (defn- add-recommendations [content tech]
-  (assoc-in tech [:recommendations]
-            (->> (:people content)
-                 vals
-                 (mapcat get-recommendations)
-                 (group-by :url)
-                 vals
-                 (map combine-recommendations)
-                 (filter #(is-about tech %)))))
+  (assoc-in-unless tech [:recommendations] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat get-recommendations)
+                        (group-by :url)
+                        vals
+                        (map combine-recommendations)
+                        (filter #(is-about tech %)))))
 
 (defn- cultivate-tech [content tech]
   (->> tech

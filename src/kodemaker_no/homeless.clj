@@ -25,6 +25,11 @@
 (defn nil-if-blank [s]
   (if (empty? s) nil s))
 
+(defn assoc-in-unless [m path pred v]
+  (if (not (pred v))
+    (assoc-in m path v)
+    m))
+
 ;; create project hiccup-find for this?
 
 (defn hiccup-nodes [root]
