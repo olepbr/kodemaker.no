@@ -58,4 +58,9 @@
    "Tech that is present, uses the :name in the tech, and adds
     a :url based on the :id."
    (-> people :magnars :tech :want-to-learn-more)
-   => [{:id :react, :name "React", :url "/react/"}]))
+   => [{:id :react, :name "React", :url "/react/"}])
+
+  (fact
+   "It doesn't add empty maps and lists"
+
+   (-> people :finnjoh :tech) => nil))

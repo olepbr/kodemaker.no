@@ -30,11 +30,16 @@
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
        maps))
 
+(defn- update-in-existing [m path f]
+  (if-not (nil? (get-in m path))
+    (update-in m path f)
+    m))
+
 (defn- look-up-tech [content person]
   (-> person
-      (update-in [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
-      (update-in [:tech :want-to-learn-more] #(tech/look-up-tech content %))
-      (update-in [:recommendations] #(look-up-tech-in-maps content %))))
+      (update-in-existing [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
+      (update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
+      (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))))
 
 (defn- cultivate-person [content person]
   (->> person
