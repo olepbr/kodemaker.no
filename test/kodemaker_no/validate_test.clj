@@ -6,4 +6,6 @@
 (fact
  "All data is validated."
 
- (validate-content (load-content)))
+ (validate-content (load-content))
+
+ "Validation OK" => truthy)

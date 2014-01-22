@@ -1,6 +1,7 @@
 {:id :oocss
  :name "OOCSS"
- :url "https://github.com/stubbornella/oocss/wiki"
+ :illustration "/photos/tech/oocss.jpg"
+ :site "https://github.com/stubbornella/oocss/wiki"
  :description
  "Når [Nicole Sullivan](http://www.stubbornella.org/) først lanserte
   OOCSS var ikke det til rungende applaus, akkurat. Det gikk datidens

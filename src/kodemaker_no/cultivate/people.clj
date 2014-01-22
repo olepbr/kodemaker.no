@@ -25,13 +25,30 @@
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
-(defn- cultivate-person [person]
+(defn- look-up-tech-1 [content id]
+  (if-let [tech (get-in content [:tech id])]
+    {:id id
+     :name (:name tech)
+     :url (str "/" (subs (str id) 1) "/")}
+    {:id id
+     :name (subs (str id) 1)}))
+
+(defn- look-up-tech-x [content techs]
+  (map #(look-up-tech-1 content %) techs))
+
+(defn- look-up-tech [content person]
   (-> person
-      add-str
-      add-url
-      fix-names
-      add-genitive
-      add-photos))
+      (update-in [:tech :favorites-at-the-moment] #(look-up-tech-x content %))
+      (update-in [:tech :want-to-learn-more] #(look-up-tech-x content %))))
+
+(defn- cultivate-person [content person]
+  (->> person
+       add-str
+       add-url
+       fix-names
+       add-genitive
+       add-photos
+       (look-up-tech content)))
 
 (defn cultivate-people [content]
-  (update-in content [:people] #(update-vals % cultivate-person)))
+  (update-in content [:people] #(update-vals % (partial cultivate-person content))))

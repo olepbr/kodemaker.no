@@ -23,9 +23,9 @@
             :coderwall "magnars"}
 
  :tech {:favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
-        :want-to-learn-more [:reactjs :clojurescript :haskell]}
+        :want-to-learn-more [:react :clojurescript :haskell]}
 
- :recommendations [{:title "An introduction to Object Oriented CSS (OOCSS)"
+ :recommendations [{:title "An introduction to Object Oriented CSS"
                     :blurb "En blog post om de to grunnprinsippene i
                             OOCSS: Separasjon av struktur og utseende, og
                             separasjon av innhold og rammer."

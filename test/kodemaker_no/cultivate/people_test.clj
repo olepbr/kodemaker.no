@@ -2,16 +2,15 @@
   (:require [kodemaker-no.cultivate.people :refer :all]
             [midje.sweet :refer :all]))
 
-(let [magnars {:id :magnars
-               :name ["Magnar" "Sveen"]}
-      finnjoh {:id :finnjoh
-               :name ["Finn" "J" "Johnsen"]}
-      andersf {:id :andersf
-               :name ["Anders" "Furseth"]}
-      content (cultivate-people {:people {:magnars magnars
-                                          :finnjoh finnjoh
-                                          :andersf andersf}})
-      people (:people content)]
+(def content
+  {:people {:magnars {:id :magnars
+                      :name ["Magnar" "Sveen"]}
+            :finnjoh {:id :finnjoh
+                      :name ["Finn" "J" "Johnsen"]}
+            :andersf {:id :andersf
+                      :name ["Anders" "Furseth"]}}})
+
+(let [people (-> content cultivate-people :people)]
 
   (fact (-> people :magnars :full-name) => "Magnar Sveen"
         (-> people :finnjoh :full-name) => "Finn J Johnsen")
@@ -31,6 +30,30 @@
   (fact (-> people :magnars :photos) => {:side-profile "/photos/people/magnars/side-profile.jpg"
                                          :half-figure "/photos/people/magnars/half-figure.jpg"}
         (-> people :finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
-                                         :half-figure "/photos/people/finnjoh/half-figure.jpg"})
+                                         :half-figure "/photos/people/finnjoh/half-figure.jpg"}))
 
-  )
+(let [people (-> content
+                 (assoc-in [:people :magnars :tech]
+                           {:favorites-at-the-moment [:clojure]
+                            :want-to-learn-more [:react]})
+                 (assoc-in [:tech :react]
+                           {:id :react
+                            :name "React"
+                            :site "http://react.js"
+                            :description "Blah!"})
+                 cultivate-people :people)]
+
+  (fact
+   "Tech that isn't present in the content is given a name based
+    on its :id."
+   (-> people :magnars :tech :favorites-at-the-moment)
+   => [{:id :clojure
+        :name "clojure"}])
+
+  (fact
+   "Tech that is present, uses the :name in the tech, and adds
+    a :url based on the :id."
+   (-> people :magnars :tech :want-to-learn-more)
+   => [{:id :react
+        :name "React"
+        :url "/react/"}]))

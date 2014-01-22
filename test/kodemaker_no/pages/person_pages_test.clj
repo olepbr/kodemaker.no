@@ -36,8 +36,9 @@
            :body html)
 
       => (html [:h2 "Magnars Anbefalinger"]
-               [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
-               [:p "Denne er bra."]))
+               [:h3 "Anbefaling 1"]
+               [:p "Denne er bra. "
+                [:a.nowrap {:href "http://example.com"} "Les mer"]]))
 
 (fact (->> (page :hobbies [{:title "Brettspill"
                             :description "Det er mer enn Monopol og Ludo i verden."
@@ -50,3 +51,17 @@
                 [:p
                  [:img.right {:src "/photos/hobbies/brettspill.jpg"}]
                  "Det er mer enn Monopol og Ludo i verden."]]))
+
+(fact (->> (page :tech {:favorites-at-the-moment [{:name "clojure"}
+                                                  {:name "emacs"}
+                                                  {:name "ansible"}]
+                        :want-to-learn-more [{:name "React", :url "/react/"}]})
+           :body html)
+
+      => (html [:p
+                [:strong "Favoritter for tiden: "]
+                "clojure, emacs og ansible"
+                "<br>"
+                [:strong "Vil lære mer: "]
+                [:a {:href "/react/"} "React"]
+                "<br>"]))

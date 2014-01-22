@@ -1,0 +1,17 @@
+{:id :emacs
+ :name "Emacs"
+ :illustration "/photos/tech/emacs.jpg"
+ :site "http://www.gnu.org/software/emacs/"
+ :description
+ "Hvordan kan en teksteditor som har eksistert siden Vietnamkrigen
+  fortsatt være aktuell? Jo, det er fordi den er så formelig. Med
+  Emacs får du en Lisp Machine som kan utvides og tilpasses til
+  hjertens lyst. Og siden Emacs er fri og åpen kildekode, har du
+  tilgang til alt som ligger der av kode allerede. Å se hvordan Emacs
+  implementerer sin `newline` kommando er bokstavelig talt bare et
+  tastetrykk unna.
+
+  Det sies at å sette opp sin Emacs konfigurasjon er som å bygge sin
+  lyssabel. Og det er noe i det. Alle disse små tilpassningene til din
+  måte å jobbe på, gjør at Emacs over tid blir et veldig personlig
+  verktøy. Spisset nettopp mot dine vaner og preferanser."}
