@@ -12,3 +12,8 @@
 
 (defn to-html [_ s]
   (md/to-html s pegdown-options))
+
+(defn comma-separated [coll]
+  (drop 1 (interleave (into (list " og " "")
+                            (repeat (dec (count coll)) ", "))
+                      coll)))

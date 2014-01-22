@@ -1,5 +1,5 @@
 (ns kodemaker-no.pages.person-pages
-  (:require [kodemaker-no.formatting :refer [to-html]]
+  (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
             [hiccup.core :as hiccup]
             [clojure.string :as str]))
 
@@ -31,11 +31,6 @@
 (defn- render-hobbies [hobbies]
   (list [:h2 "Snakker gjerne om"]
         (map render-hobby hobbies)))
-
-(defn- comma-separated [coll]
-  (drop 1 (interleave (into (list " og " "")
-                            (repeat (dec (count coll)) ", "))
-                      coll)))
 
 (defn- inline-list [label nodes]
   (list [:strong label]

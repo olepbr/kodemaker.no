@@ -5,9 +5,33 @@
   (assoc tech :url
          (str "/" (subs (str (:id tech)) 1) "/")))
 
+(defn- combine-recommendations [recommendations]
+  (assoc (first recommendations)
+    :recommended-by (map :recommended-by recommendations)
+    :tech (distinct (mapcat :tech recommendations))))
+
+(defn- get-recommendations [person]
+  (->> (:recommendations person)
+       (map #(assoc % :recommended-by {:name (:first-name person)
+                                       :url (:url person)}))))
+
+(defn- is-about [tech recommendation]
+  ((set (map :id (:tech recommendation))) (:id tech)))
+
+(defn- add-recommendations [content tech]
+  (assoc-in tech [:recommendations]
+            (->> (:people content)
+                 vals
+                 (mapcat get-recommendations)
+                 (group-by :url)
+                 vals
+                 (map combine-recommendations)
+                 (filter #(is-about tech %)))))
+
 (defn- cultivate-tech [content tech]
   (->> tech
-       add-url))
+       add-url
+       (add-recommendations content)))
 
 (defn cultivate-techs [content]
   (update-in content [:tech] #(update-vals % (partial cultivate-tech content))))
