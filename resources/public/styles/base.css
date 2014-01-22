@@ -54,10 +54,10 @@ a, h1, h2, .linkish {color: #d30707;}
 
 h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
-h3 {font-size: 18px; font-weight: bold; margin-bottom: -4px !important;}
+h3 {font-size: 18px; font-weight: bold;}
 h4 {font-weight: bold;}
 
-.near, h4, h5 {margin-bottom: 0 !important;}
+.near, h3, h4, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h4+*, h5+* {margin-top: 0 !important;}
 
 img.right {float: right; max-width: 35%; margin-left: 10px;}
@@ -71,8 +71,9 @@ q:after {content: "”"}
 
 strong {font-weight: bold;}
 
-.techs {font-size: 12px; background: #f4f4f4; padding: 4px; border-radius: 2px;}
-.techs * {margin: 0 2px;}
+.cookie {font-size: 12px; background: #f4f4f4; padding: 4px; border-radius: 2px;}
+.cookie * {margin: 0 2px;}
+.cookie-w {margin-top: -4px !important;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 13px; clear: both;}
 

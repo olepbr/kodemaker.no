@@ -11,7 +11,7 @@
 (defn- render-recommendation [rec]
   (list [:h3 (:title rec)]
         (when-not (empty? (:tech rec))
-         [:p.near [:span.techs (interpose " " (map link-to-tech (:tech rec)))]])
+          [:p.near.cookie-w [:span.cookie (interpose " " (map link-to-tech (:tech rec)))]])
         [:p (:blurb rec) " "
          [:a.nowrap {:href (:url rec)} "Les mer"]]))
 

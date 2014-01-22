@@ -37,7 +37,7 @@
 
       => (html [:h2 "Magnars Anbefalinger"]
                [:h3 "Anbefaling 1"]
-               [:p.near [:span.techs [:a {:href "/clojure/"} "Clojure"]]]
+               [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er bra. "
                 [:a.nowrap {:href "http://example.com"} "Les mer"]]))
 
