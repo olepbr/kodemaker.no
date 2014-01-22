@@ -1,6 +1,7 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
-            [kodemaker-no.homeless :refer [update-vals]]))
+            [kodemaker-no.homeless :refer [update-vals]]
+            [kodemaker-no.cultivate.tech :as tech]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id str (subs 1))))
@@ -25,21 +26,10 @@
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
-(defn- look-up-tech-1 [content id]
-  (if-let [tech (get-in content [:tech id])]
-    {:id id
-     :name (:name tech)
-     :url (str "/" (subs (str id) 1) "/")}
-    {:id id
-     :name (subs (str id) 1)}))
-
-(defn- look-up-tech-x [content techs]
-  (map #(look-up-tech-1 content %) techs))
-
 (defn- look-up-tech [content person]
   (-> person
-      (update-in [:tech :favorites-at-the-moment] #(look-up-tech-x content %))
-      (update-in [:tech :want-to-learn-more] #(look-up-tech-x content %))))
+      (update-in [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
+      (update-in [:tech :want-to-learn-more] #(tech/look-up-tech content %))))
 
 (defn- cultivate-person [content person]
   (->> person

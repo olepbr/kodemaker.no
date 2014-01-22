@@ -1,6 +1,7 @@
 (ns kodemaker-no.pages
   (:require [kodemaker-no.pages.people-page :refer [all-people]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
+            [kodemaker-no.pages.tech-pages :refer [tech-pages]]
             [kodemaker-no.pages.article-pages :refer [article-pages]]
             [stasis.core :as stasis]))
 
@@ -10,5 +11,6 @@
 (defn create-pages [content]
   (stasis/merge-page-sources
    {:person-pages (person-pages (vals (:people content)))
+    :tech-pages (tech-pages (vals (:tech content)))
     :article-pages (article-pages (:articles content))
     :general-pages (general-pages content)}))
