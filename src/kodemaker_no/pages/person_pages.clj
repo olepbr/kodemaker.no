@@ -15,7 +15,7 @@
         [:p (:blurb rec) " "
          [:a.nowrap {:href (:url rec)} "Les mer"]]))
 
-(defn- render-recommendations [person recs]
+(defn- render-recommendations [recs person]
   (list [:h2 (str (:genitive person) " Anbefalinger")]
         (map render-recommendation recs)))
 
@@ -28,7 +28,7 @@
    (into-paragraph (to-html :md (:description hobby))
                    [:img.right {:src (:illustration hobby)}])])
 
-(defn- render-hobbies [hobbies]
+(defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]
         (map render-hobby hobbies)))
 
@@ -37,7 +37,7 @@
         (comma-separated nodes)
         "<br>"))
 
-(defn- render-tech [tech]
+(defn- render-tech [tech _]
   [:p
    (when-let [favs (:favorites-at-the-moment tech)]
      (inline-list "Favoritter for tiden: " (map link-to-tech favs)))
@@ -53,18 +53,19 @@
     [:a {:href (str "mailto:" (:email-address person))}
      (:email-address person)]]])
 
+(defn- maybe-include [person kw f]
+  (when (kw person)
+    (f (kw person) person)))
+
 (defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
    :lead [:p (:description person)]
    :aside (render-aside person)
    :body (list
-          (when-let [xs (:tech person)]
-            (render-tech xs))
-          (when-let [xs (:recommendations person)]
-            (render-recommendations person xs))
-          (when-let [xs (:hobbies person)]
-            (render-hobbies xs)))})
+          (maybe-include person :tech render-tech)
+          (maybe-include person :recommendations render-recommendations)
+          (maybe-include person :hobbies render-hobbies))})
 
 (defn person-pages [people]
   (into {} (map (juxt :url #(partial person-page %)) people)))
