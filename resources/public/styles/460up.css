@@ -1,5 +1,5 @@
 .menu {display:block; position: absolute; bottom: 2px; right: 0; }
-.menu a {color: #fff; text-decoration: none; margin-left: 10px; }
+.menu a {color: #fff; margin-left: 10px; }
 
 .unit {float:left;}
 .unitRight {float:right;}

@@ -36,6 +36,8 @@
                  (assoc-in [:people :magnars :tech]
                            {:favorites-at-the-moment [:clojure]
                             :want-to-learn-more [:react]})
+                 (assoc-in [:people :magnars :recommendations]
+                           [{:tech [:ansible]}])
                  (assoc-in [:tech :react]
                            {:id :react
                             :name "React"
@@ -47,13 +49,13 @@
    "Tech that isn't present in the content is given a name based
     on its :id."
    (-> people :magnars :tech :favorites-at-the-moment)
-   => [{:id :clojure
-        :name "clojure"}])
+   => [{:id :clojure, :name "clojure"}]
+
+   (-> people :magnars :recommendations first :tech)
+   => [{:id :ansible, :name "ansible"}])
 
   (fact
    "Tech that is present, uses the :name in the tech, and adds
     a :url based on the :id."
    (-> people :magnars :tech :want-to-learn-more)
-   => [{:id :react
-        :name "React"
-        :url "/react/"}]))
+   => [{:id :react, :name "React", :url "/react/"}]))

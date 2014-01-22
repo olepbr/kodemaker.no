@@ -32,11 +32,12 @@
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er bra."
                                     :url "http://example.com"
-                                    :tech [:clojure]}])
+                                    :tech [{:name "Clojure", :url "/clojure/"}]}])
            :body html)
 
       => (html [:h2 "Magnars Anbefalinger"]
                [:h3 "Anbefaling 1"]
+               [:p.near [:span.techs [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er bra. "
                 [:a.nowrap {:href "http://example.com"} "Les mer"]]))
 

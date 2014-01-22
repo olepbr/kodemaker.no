@@ -26,10 +26,15 @@
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
+(defn- look-up-tech-in-maps [content maps]
+  (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
+       maps))
+
 (defn- look-up-tech [content person]
   (-> person
       (update-in [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
-      (update-in [:tech :want-to-learn-more] #(tech/look-up-tech content %))))
+      (update-in [:tech :want-to-learn-more] #(tech/look-up-tech content %))
+      (update-in [:recommendations] #(look-up-tech-in-maps content %))))
 
 (defn- cultivate-person [content person]
   (->> person

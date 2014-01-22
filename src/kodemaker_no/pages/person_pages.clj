@@ -3,8 +3,15 @@
             [hiccup.core :as hiccup]
             [clojure.string :as str]))
 
+(defn- link-to-tech [tech]
+  (if (:url tech)
+    [:a {:href (:url tech)} (:name tech)]
+    (:name tech)))
+
 (defn- render-recommendation [rec]
   (list [:h3 (:title rec)]
+        (when-not (empty? (:tech rec))
+         [:p.near [:span.techs (interpose " " (map link-to-tech (:tech rec)))]])
         [:p (:blurb rec) " "
          [:a.nowrap {:href (:url rec)} "Les mer"]]))
 
@@ -24,11 +31,6 @@
 (defn- render-hobbies [hobbies]
   (list [:h2 "Snakker gjerne om"]
         (map render-hobby hobbies)))
-
-(defn- link-to-tech [tech]
-  (if (:url tech)
-    [:a {:href (:url tech)} (:name tech)]
-    (:name tech)))
 
 (defn- comma-separated [coll]
   (drop 1 (interleave (into (list " og " "")
