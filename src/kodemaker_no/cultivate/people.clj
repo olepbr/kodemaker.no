@@ -1,6 +1,7 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
             [kodemaker-no.homeless :refer [update-vals]]
+            [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.tech :as tech]))
 
 (defn- add-str [person]
@@ -51,4 +52,4 @@
        (look-up-tech content)))
 
 (defn cultivate-people [content]
-  (update-in content [:people] #(update-vals % (partial cultivate-person content))))
+  (update-vals (:people content) (partial cultivate-person content)))

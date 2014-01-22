@@ -3,13 +3,13 @@
             [midje.sweet :refer :all]))
 
 (def content
-  {:people {:magnars {:url "/magnar/"
-                      :first-name "Magnar"}
-            :finnjoh {:url "/finnjoh/"
-                      :first-name "Finn"}}
+  {:people {:magnars {:id :magnars
+                      :name ["Magnar" "Sveen"]}
+            :finnjoh {:id :finnjoh
+                      :name ["Finn" "J" "Johnsen"]}}
    :tech {:react {:id :react}}})
 
-(fact (-> content cultivate-techs :tech :react :url) => "/react/")
+(fact (-> content cultivate-techs :react :url) => "/react/")
 
 (fact
  "Anbefalinger blir overført til sine techs. Hvis flere anbefaler
@@ -20,20 +20,21 @@
                [{:title "A post on React"
                  :blurb "Den er bra."
                  :url "http://example.com"
-                 :tech [{:id :react} {:id :web-performance}]}])
+                 :tech [:react :web-performance]}])
      (assoc-in [:people :finnjoh :recommendations]
                [{:title "A post on React"
                  :blurb "Den er knall."
                  :url "http://example.com"
-                 :tech [{:id :react} {:id :javascript}]}
+                 :tech [:react :javascript]}
                 {:title "Another post"
                  :blurb "Også bra"
                  :url "http://not-react.com"
-                 :tech [{:id :javascript}]}])
-     cultivate-techs :tech :react :recommendations)
+                 :tech [:javascript]}])
+     cultivate-techs :react :recommendations)
+
  => [{:title "A post on React"
       :blurb "Den er bra."
       :url "http://example.com"
-      :tech [{:id :react} {:id :web-performance} {:id :javascript}]
-      :recommended-by [{:name "Magnar", :url "/magnar/"}
+      :tech [:react :web-performance :javascript]
+      :recommended-by [{:name "Magnar", :url "/magnars/"}
                        {:name "Finn", :url "/finnjoh/"}]}])

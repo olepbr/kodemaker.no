@@ -10,7 +10,7 @@
             :andersf {:id :andersf
                       :name ["Anders" "Furseth"]}}})
 
-(let [people (-> content cultivate-people :people)]
+(let [people (-> content cultivate-people)]
 
   (fact (-> people :magnars :full-name) => "Magnar Sveen"
         (-> people :finnjoh :full-name) => "Finn J Johnsen")
@@ -43,7 +43,7 @@
                             :name "React"
                             :site "http://react.js"
                             :description "Blah!"})
-                 cultivate-people :people)]
+                 cultivate-people)]
 
   (fact
    "Tech that isn't present in the content is given a name based

@@ -3,6 +3,6 @@
             [kodemaker-no.cultivate.tech :refer [cultivate-techs]]))
 
 (defn cultivate-content [raw-content]
-  (-> raw-content
-      cultivate-people
-      cultivate-techs))
+  (assoc raw-content
+    :people (cultivate-people raw-content)
+    :tech (cultivate-techs raw-content)))
