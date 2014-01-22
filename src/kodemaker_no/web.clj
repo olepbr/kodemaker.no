@@ -18,7 +18,8 @@
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
-                                #"/photos/.*\.jpg"]))
+                                #"/photos/.*\.jpg"
+                                #"/photos/.*\.svg"]))
 
 (defn get-pages []
   (-> (load-content)

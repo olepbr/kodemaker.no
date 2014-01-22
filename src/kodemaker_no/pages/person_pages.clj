@@ -47,17 +47,20 @@
    (when-let [more (:want-to-learn-more tech)]
      (inline-list "Vil lære mer: " (map link-to-tech more)))])
 
+(defn- render-aside [person]
+  [:div.tight
+   [:h4 (:full-name person)]
+   [:p
+    (:title person) "<br>"
+    [:span.nowrap (:phone-number person)] "<br>"
+    [:a {:href (str "mailto:" (:email-address person))}
+     (:email-address person)]]])
+
 (defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
    :lead [:p (:description person)]
-   :aside [:div.tight
-           [:h4 (:full-name person)]
-           [:p
-            (:title person) "<br>"
-            [:span.nowrap (:phone-number person)] "<br>"
-            [:a {:href (str "mailto:" (:email-address person))}
-             (:email-address person)]]]
+   :aside (render-aside person)
    :body (list
           (when-let [xs (:tech person)]
             (render-tech xs))

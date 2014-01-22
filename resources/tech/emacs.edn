@@ -1,6 +1,6 @@
 {:id :emacs
  :name "Emacs"
- :illustration "/photos/tech/emacs.jpg"
+ :illustration "/photos/tech/emacs.svg"
  :site "http://www.gnu.org/software/emacs/"
  :description
  "Hvordan kan en teksteditor som har eksistert siden Vietnamkrigen
