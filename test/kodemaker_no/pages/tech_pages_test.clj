@@ -27,8 +27,8 @@
 
       => (html [:h2 "Våre anbefalinger"]
                [:h3 "Anbefaling 1"]
+               [:p.near.cookie-w [:span.cookie "Anbefalt av "
+                                  [:a {:href "/magnar/"} "Magnar"] " og "
+                                  [:a {:href "/finnjoh/"} "Finn"]]]
                [:p "Denne er bra. "
-                [:a.nowrap {:href "http://example.com"} "Les mer"]]
-               [:p.tiny "Anbefalt av "
-                [:a {:href "/magnar/"} "Magnar"] " og "
-                [:a {:href "/finnjoh/"} "Finn"]"."]))
+                [:a.nowrap {:href "http://example.com"} "Les mer"]]))
