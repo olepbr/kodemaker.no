@@ -37,7 +37,7 @@ a:hover {text-decoration: underline;}
 
 p {margin-bottom: 1.3em;}
 
-.tiny {font-size: 12px;}
+.tiny {font-size: 12px; font-weight: normal;}
 
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
@@ -49,6 +49,8 @@ body {-webkit-text-size-adjust: 100%}
 .menu {display:none;}
 
 .title {display: block; color: #666;}
+
+.shy {color: #ccc;}
 
 img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 

@@ -13,6 +13,9 @@
 (defn look-up-tech [content techs]
   (map #(look-up-tech-1 content %) techs))
 
+(defn- is-about [tech m]
+  ((set (:tech m)) (:id tech)))
+
 (defn- combine-recommendations [recommendations]
   (-> (first recommendations)
       (select-keys #{:title :blurb :url})
@@ -25,9 +28,6 @@
        (map #(assoc % :recommended-by {:name (first (:name person))
                                        :url (util/url person)}))))
 
-(defn- is-about [tech recommendation]
-  ((set (:tech recommendation)) (:id tech)))
-
 (defn- add-recommendations [content tech]
   (assoc-in-unless tech [:recommendations] empty?
                    (->> (:people content)
@@ -38,10 +38,34 @@
                         (map combine-recommendations)
                         (filter #(is-about tech %)))))
 
+(defn- combine-presentations [presentations]
+  (-> (first presentations)
+      (select-keys #{:title :blurb :thumb})
+      (assoc
+          :by (map :by presentations)
+          :tech (distinct (mapcat :tech presentations))
+          :urls (apply merge (map :urls presentations)))))
+
+(defn- get-presentations [person]
+  (->> (:presentations person)
+       (map #(assoc % :by {:name (first (:name person))
+                           :url (util/url person)}))))
+
+(defn- add-presentations [content tech]
+  (assoc-in-unless tech [:presentations] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat get-presentations)
+                        (group-by :thumb)
+                        vals
+                        (map combine-presentations)
+                        (filter #(is-about tech %)))))
+
 (defn- cultivate-tech [content tech]
   (->> tech
        add-url
-       (add-recommendations content)))
+       (add-recommendations content)
+       (add-presentations content)))
 
 (defn cultivate-techs [content]
   (update-vals (:tech content) (partial cultivate-tech content)))
