@@ -2,9 +2,54 @@
  :name ["Odin" "Hole Standal"]
  :title "Utvikler og arkitekt"
  :start-date "2012-08-01"
- :description "Odin er en pliktoppfyllende og selvdrevet problemløser som liker å ta ansvar. Han lærer raskt og er lidenskapelig opptatt av faget sitt. I tillegg er han glad i utfordrende arbeidsoppgaver og er flink til å samarbeide."
+ :description "Odin er en pliktoppfyllende og selvdrevet
+               problemløser som liker å ta ansvar.
+               Han lærer raskt og er lidenskapelig opptatt av faget
+               sitt. I tillegg er han glad i utfordrende
+               arbeidsoppgaver og er flink til å samarbeide."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 91 63 50 08"
+ :email-address "odin@kodemaker.no"
 
- :presence {}}
+ :presence {:twitter "odinodin"
+            :stackoverflow "/users/273594/odinodin"
+            :github "odinodin"
+            :coderwall "odinodin"}
+
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :light-table]
+        :want-to-learn-more [:clojurescript :ansible :unity3d]}
+
+ :recommendations [{:title "This Developer's Life"
+                    :blurb "Dette er min favorittpodcast.
+                            Her får man servert interessante
+                            perspektiv på kjente tema innenfor programvareutvikling; krydret
+                            med intervjuer av dyktige utviklere."
+                    :url "http://thisdeveloperslife.com"
+                    :tech [:development]}
+                   {:title "Light Table"
+                    :blurb "Det er lenge siden jeg har vært så begeistret
+                            for et verktøy. En editor med et minimalistisk utseende
+                            kombinert med tilnærmet ubegrensede tilpasningsmuligheter.
+                            Light Table er definitivt et prosjekt å
+                            følge med på fremover, det kan bli den nye Emacs."
+                    :url "http://www.lighttable.com"
+                    :tech [:clojurescript :editor]}]
+
+ :presentations [{:title "Elektronisk tekstbehandling"
+                  :blurb "Moderne programmeringsspråk er kraftige
+                          saker; de kjemper om å overgå
+                          hverandre med høyere og høyere abstraksjonsnivåer.
+                          Men av og til kan den korteste veien til målet befinne
+                          seg i verktøy som ble laget før internett ble oppfunnet.
+                          Her får du en oversikt over Unix-verktøy for å
+                          strukturere og filtrere tekst."
+                  :tech [:shell :unix]
+                  :urls {:video "https://vimeo.com/74309669"}
+                  :thumb "/thumbs/videos/elektronisk_tekstbehandling.jpg"}
+                 {:title "Better and groovier tests with Spock"
+                  :blurb "Spock er et elegant testrammeverk for Java og Groovy-
+                          baserte applikasjoner. Det hjelper deg å skrive
+                          lesbare og presise tester."
+                  :tech [:spock :testing :java :groovy]
+                  :urls {:video "https://vimeo.com/49476112"}
+                  :thumb "/thumbs/videos/spock.jpg"}]}
