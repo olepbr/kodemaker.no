@@ -2,9 +2,36 @@
  :name ["August" "Lilleaas"]
  :title "Programmerer"
  :start-date "2012-01-01"
- :description "August er opptatt av enkle løsninger og gode brukeropplevelser, og er glad i å bli utfordret. Han er like erfaren på backend som på frontend, og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner."
+ :description "August er opptatt av enkle løsninger og gode brukeropplevelser, og er glad i å bli utfordret. Han er like erfaren på backend som på frontend, og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner. På fritiden driver han med alt fra testrammeverk til operativsystemer, og er sulten på å lære alt om det meste."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 915 28 701"
+ :email-address "august@kodemaker.no"
 
- :presence {}}
+ :presence {}
+
+ :tech {:favorites-at-the-moment [:datomic, :react]
+        :want-to-learn-more [:C]}
+
+ :recommendations [{:title "Simple Made Easy"
+                    :url "http://www.infoq.com/presentations/Simple-Made-Easy"
+                    :tech [:clojure :design]
+                    :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}]
+ :hobbies [{:title "Programmering"
+            :description "En klisje, men sant. Programmerer ganske mye på fritiden. I skrivende stund har jeg et stort prosjekt om å lage et operativsystem som handler om immutability. Jeg tror man kan få til mye interessant med en slik begrensning, f.eks kan man gjøre heap defragmentation uten å stoppe eksekvering av kode. Har også en del småprosjekter på Github, og mange titalls  prosjekter som ikke har nådd 1.0 og aldri kommer til å gjøre det. Avbildet er John Carmack, en av mine helter."
+            :illustration "/illustrations/hobbies/programming-carmack.jpg"}
+           {:title "Dataspilling"
+            :description "Jeg liker å spille data! Spiller mye Minecraft med venner på hjemmeserveren min. Spiller en hel del Battlefield 4, stort sett for meg selv. DayZ (avbildet) er for tiden den største favoritten. Generelt glad i FPS-spilling, men må innrømme at jeg ikke har god nok aim til å spille Counter Strike."
+            :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}
+           {:title "Musikk"
+            :description "Min eneste utdannelse er en avbrutt bachelor i klassisk piano (utøvende) på Norges Musikkhøgskole. Jeg spiller lite for tiden, men har et par band jeg somler rundt med nå og da. F.eks hver påske møtes jeg og en gjeng fra studietidene og fri-improviserer merksnodige lyder som kan høres på her: https://soundcloud.com/burgerberg/sets/alpha-bravo-yeah-yeah. Hjemme har jeg en fet Denzen-forsterker som jeg bruker til å høre på ukomprimert musikk. På bildet spiller jeg på en Rebec som farfar har laget."
+            :illustration "/illustrations/hobbies/august-musikant.jpg"}]
+ :presentations [{:title "You probably don't know how the internet actually works"
+                  :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
+                  :urls {:video "http://vimeo.com/74406482"}
+                  :thumb "/thumbs/videos/how-the-internet-actually-works.jpg"
+                  :tech [:ip :openssl :ruby]}
+                 {:title "WTF is Datomic?"
+                  :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
+                  :urls {:video "http://2013.flatmap.no/lilleaas.html"}
+                  :thumb "/thumbs/videos/wtf-is-datomic.jpg"
+                  :tech [:datomic :clojure]}]}
