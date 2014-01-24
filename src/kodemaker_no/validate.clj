@@ -22,7 +22,7 @@
    (optional-key :tech) {:favorites-at-the-moment [Keyword]
                          (optional-key :want-to-learn-more) [Keyword]}
 
-   (optional-key :recommendations) [{:url Str
+   (optional-key :recommendations) [{:link {:url Str :text Str}
                                      :title Str
                                      :blurb Str
                                      :tech [Keyword]}]

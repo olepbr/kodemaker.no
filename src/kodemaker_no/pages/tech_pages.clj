@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.tech-pages
-  (:require [kodemaker-no.formatting :refer [to-html comma-separated]]))
+  (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
+            [kodemaker-no.markup :refer [render-link]]))
 
 (defn- link-to-person [person]
   [:a {:href (:url person)} (:name person)])
@@ -8,7 +9,7 @@
   (list [:h3 (:title rec)]
         [:p.near.cookie-w [:span.cookie "Anbefalt av " (comma-separated (map link-to-person (:recommended-by rec)))]]
         [:p (:blurb rec) " "
-         [:a.nowrap {:href (:url rec)} "Les mer"]]))
+         (render-link (:link rec))]))
 
 (defn- render-recommendations [recs]
   (list [:h2 "Våre Anbefalinger"]

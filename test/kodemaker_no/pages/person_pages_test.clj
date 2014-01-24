@@ -31,7 +31,7 @@
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er bra."
-                                    :url "http://example.com"
+                                    :link {:url "http://example.com" :text "Les detta"}
                                     :tech [{:name "Clojure", :url "/clojure/"}]}])
            :body html)
 
@@ -39,7 +39,7 @@
                [:h3 "Anbefaling 1"]
                [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er bra. "
-                [:a.nowrap {:href "http://example.com"} "Les mer"]]))
+                [:a.nowrap {:href "http://example.com"} "Les detta"]]))
 
 (fact (->> (page :hobbies [{:title "Brettspill"
                             :description "Det er mer enn Monopol og Ludo i verden."

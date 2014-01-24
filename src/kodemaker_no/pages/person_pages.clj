@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.person-pages
   (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
+            [kodemaker-no.markup :refer [render-link]]
             [hiccup.core :as hiccup]
             [clojure.string :as str]))
 
@@ -13,7 +14,7 @@
         (when-not (empty? (:tech rec))
           [:p.near.cookie-w [:span.cookie (interpose " " (map link-to-tech (:tech rec)))]])
         [:p (:blurb rec) " "
-         [:a.nowrap {:href (:url rec)} "Les mer"]]))
+         (render-link (:link rec))]))
 
 (defn- render-recommendations [recs person]
   (list [:h2 (str (:genitive person) " Anbefalinger")]
