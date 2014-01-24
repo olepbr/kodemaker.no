@@ -32,7 +32,7 @@
                             enkelt). Og implikasjonene for hvordan du bør
                             tenke rundt software."
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se 'Simple Made Easy' på infoq.com"}
+                           :text "Se foredraget"}
                     :tech [:design :arkitektur :clojure]}
                    {:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
@@ -40,14 +40,14 @@
                             om frontendytelse. Vel verdt å lese hvis
                             du er opptatt av å lage raske websider."
                     :link {:url "http://calendar.perfplanet.com"
-                           :text "calendar.perfplanet.com"}
+                           :text "Besøk kalenderen"}
                     :tech [:web-performance]}
                    {:title "An introduction to Object Oriented CSS"
                     :blurb "En blog post om de to grunnprinsippene i
                             OOCSS: Separasjon av struktur og utseende, og
                             separasjon av innhold og rammer."
                     :link {:url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
-                           :text "An introduction to Object Oriented CSS"}
+                           :text "Les artikkelen"}
                     :tech [:oocss :css]}]
 
  :hobbies [{:title "Brettspill"

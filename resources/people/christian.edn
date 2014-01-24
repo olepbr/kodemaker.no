@@ -24,7 +24,7 @@
 
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
-                           :text "Se 'React: Rethinking best-practices' på youtube"}
+                           :text "Se foredraget"}
                     :tech [:javascript :arkitektur :design]
                     :blurb "Pete Hunt, en av hodene bak JavaScript
                             UI-rammeverket til Facebook og Instagram, React,
@@ -36,7 +36,7 @@
                             på 'separation of concerns'."}
                    {:title "The Future of JavaScript MVC Frameworks"
                     :link {:url "http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"
-                           :text "The Future of JavaScript MVC Frameworks"}
+                           :text "Les artikkelen"}
                     :tech [:clojurescript :arkitektur :design]
                     :blurb "David Nolen, Clojurescript-superstjerne, forteller
                             om sitt 'Om', Clojurescript-API over Facebook's
@@ -54,7 +54,7 @@
                             enkelt). Og implikasjonene for hvordan du bør
                             tenke rundt software."
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se 'Simple Made Easy' på infoq.com"}
+                           :text "Se foredraget"}
                     :tech [:design :arkitektur :clojure]}]
  :hobbies [{:title "Mat, brød og øl"
             :description "Som programmerer tar jeg stor glede i å skape. Som

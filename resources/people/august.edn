@@ -14,7 +14,7 @@
 
  :recommendations [{:title "Simple Made Easy"
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se 'Simple Made Easy' på infoq.com"}
+                           :text "Se foredraget"}
                     :tech [:clojure :design]
                     :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}]
  :hobbies [{:title "Programmering"

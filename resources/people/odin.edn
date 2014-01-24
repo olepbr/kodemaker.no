@@ -25,7 +25,7 @@
                             perspektiv på kjente tema innenfor programvareutvikling; krydret
                             med intervjuer av dyktige utviklere."
                     :link {:url "http://thisdeveloperslife.com"
-                           :text "This Developer's Life"}
+                           :text "Hør podcasten"}
                     :tech [:development]}
                    {:title "Light Table"
                     :blurb "Det er lenge siden jeg har vært så begeistret
@@ -34,7 +34,7 @@
                             Light Table er definitivt et prosjekt å
                             følge med på fremover, det kan bli den nye Emacs."
                     :link {:url "http://www.lighttable.com"
-                           :text "lighttable.com"}
+                           :text "Prøv editoren"}
                     :tech [:clojurescript :editor]}]
 
  :presentations [{:title "Elektronisk tekstbehandling"
