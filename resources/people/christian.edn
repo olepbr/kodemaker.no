@@ -53,14 +53,16 @@
                           fra bunnen som jeg gjør av en kveld med
                           surdeigsbrødbaking eller ølbrygging. Eller å pleie
                           chiliplantene jeg har rundt i huset på vinteren, og i
-                          hagen på sommeren."}
+                          hagen på sommeren."
+            :illustration "/illustrations/hobbies/salsa.jpg"}
            {:title "Musikk"
             :description "Jeg har spilt i band siden jeg gikk på ungdomsskolen,
                           og holder fortsatt gitarspillet ved like gjennom
                           bandet Execration. Jeg har alltid vært en sucker for
                           aggressiv musikk, fra mine jyplingår som fan av
                           Nirvana og skranglepunk til mine senere år som
-                          metal-connoisseur av ypperste rang."}
+                          metal-connoisseur av ypperste rang."
+            :illustration "/illustrations/hobbies/execration.jpg"}
            ]
 
  :blogs [{:id :cjohansenno
@@ -72,5 +74,7 @@
  :presentations [{:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
-                  :urls ["http://vimeo.com/43808808"]}]
+                  :urls {:video "http://vimeo.com/43808808"}
+                  :thumb "/thumbs/videos/functional-js.jpg"
+                  :tech [:javascript]}]
  }

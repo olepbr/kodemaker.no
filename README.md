@@ -103,12 +103,12 @@ datastrukturen blir omtrent slik, vil jeg tro:
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
 at du bør få grei tilbakemelding om du tråkker på utsiden.
 
-Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
-
 **NB!** Kjør opp siden og se hvordan det blir før du commiter. Da får
 du kjørte all programmatisk validering av datastrukturen, sjekket at
 alle bilde-URLer finnes, og sett med øynene dine at det ble som du
 hadde tenkt.
+
+Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 
 ## Laste opp bilder
 
@@ -116,7 +116,7 @@ Bildene ligger i `resources/public`.
 
 - `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](smushit.com).
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
-- `/thumbs/videos` Utsnitt fra video: .jpg, proporsjon 4/3, gjerne 200x150
+- `/thumbs/videos` Utsnitt fra video: .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
 - `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
