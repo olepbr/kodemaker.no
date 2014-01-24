@@ -44,6 +44,18 @@
    (when-let [more (:want-to-learn-more tech)]
      (inline-list "Vil lære mer: " (map link-to-tech more)))])
 
+(defn- render-presentation [pres]
+  [:div.media
+   [:img.img.thumb.mts {:src (:thumb pres)}]
+   [:div.bd
+    [:h4.mtn (:title pres)]
+    [:p (:blurb pres) " "
+     [:a.nowrap {:href (-> pres :urls :video)} "Se video"]]]])
+
+(defn- render-presentations [presentations person]
+  (list [:h2 (str (:genitive person) " Foredrag")]
+        (map render-presentation presentations)))
+
 (defn- render-aside [person]
   [:div.tight
    [:h4 (:full-name person)]
@@ -65,7 +77,8 @@
    :body (list
           (maybe-include person :tech render-tech)
           (maybe-include person :recommendations render-recommendations)
-          (maybe-include person :hobbies render-hobbies))})
+          (maybe-include person :hobbies render-hobbies)
+          (maybe-include person :presentations render-presentations))})
 
 (defn person-pages [people]
   (into {} (map (juxt :url #(partial person-page %)) people)))

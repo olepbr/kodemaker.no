@@ -40,7 +40,8 @@
   (-> person
       (update-in-existing [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
       (update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
-      (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))))
+      (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
+      (update-in-existing [:presentations] #(look-up-tech-in-maps content %))))
 
 (defn- cultivate-person [content person]
   (->> person

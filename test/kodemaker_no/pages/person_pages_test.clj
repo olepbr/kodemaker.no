@@ -66,3 +66,19 @@
                 [:strong "Vil lære mer: "]
                 [:a {:href "/react/"} "React"]
                 "<br>"]))
+
+(fact (->> (page :presentations [{:title "Lyntale: Wrap Ajax'en din"
+                                  :blurb "Jeg tegner og forteller."
+                                  :tech [:javascript :tdd :ajax]
+                                  :urls {:video "http://vimeo.com/28764670"
+                                         :source "https://github.com/magnars/server-facade"}
+                                  :thumb "/thumbs/videos/trivelig-testing.jpg"}])
+           :body html)
+
+      => (html [:h2 "Magnars Foredrag"]
+               [:div.media
+                [:img.img.thumb.mts {:src "/thumbs/videos/trivelig-testing.jpg"}]
+                [:div.bd
+                 [:h4.mtn "Lyntale: Wrap Ajax'en din"]
+                 [:p "Jeg tegner og forteller. "
+                  [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"]]]]))

@@ -76,17 +76,21 @@
                :blog :framsieutvikling}]
 
  :presentations [{:title "Zombie TDD: Live parprogrammering"
-                  :blurb "Zombie TDD er en norsk screencast-serie med
-                          testdrevet JavaScript på både klient og server. I
-                          dag setter Christian og Magnar seg ned med emacsen
-                          og parprogrammerer tre nye episoder foran publikum.
-                          Det blir utvikling av en ny feature, så du kan henge
-                          med selv om du ikke har sett alle episodene. Se
-                          hvordan to typer som digger JavaScript angriper
-                          problemer og gjør koden testbar."
+                  :blurb "Christian og jeg setter oss ned med emacsen
+                          og parprogrammerer foran publikum. Se
+                          hvordan to typer som digger JavaScript
+                          angriper problemer og gjør koden testbar."
                   :tech [:javascript :tdd]
                   :urls {:video "http://vimeo.com/49485653"}
-                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}]
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
+                 {:title "Lyntale: Wrap Ajax'en din"
+                  :blurb "Jeg tegner og forteller hvordan du får
+                          ryddig kode og trivelig testing ved å wrappe ajaxen
+                          din."
+                  :tech [:javascript :tdd :ajax]
+                  :urls {:video "http://vimeo.com/28764670"
+                         :source "https://github.com/magnars/server-facade"}
+                  :thumb "/thumbs/videos/trivelig-testing.jpg"}]
 
  :open-source-projects [{:url "https://github.com/magnars/optimus"
                          :name "Optimus"

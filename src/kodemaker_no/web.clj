@@ -19,6 +19,7 @@
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
                                 #"/illustrations/.*\.jpg"
+                                #"/thumbs/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"]))
 
@@ -39,6 +40,10 @@
                          :quality 0.3
                          :width (* 210 2)
                          :progressive true})
+      (transform-images {:regexp #"/thumbs/.*\.jpg"
+                         :quality 0.3
+                         :width (* 100 2)
+                         :progressive false}) ; too small, will be > kb
       (optimizations/all options)))
 
 (def app (-> (stasis/serve-pages get-pages)
