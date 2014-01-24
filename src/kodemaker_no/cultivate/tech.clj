@@ -18,7 +18,7 @@
 
 (defn- combine-recommendations [recommendations]
   (-> (first recommendations)
-      (select-keys #{:title :blurb :url})
+      (select-keys #{:title :blurb :link})
       (assoc
           :recommended-by (map :recommended-by recommendations)
           :tech (distinct (mapcat :tech recommendations)))))
@@ -33,7 +33,7 @@
                    (->> (:people content)
                         vals
                         (mapcat get-recommendations)
-                        (group-by :url)
+                        (group-by #(-> % :link :url))
                         vals
                         (map combine-recommendations)
                         (filter #(is-about tech %)))))

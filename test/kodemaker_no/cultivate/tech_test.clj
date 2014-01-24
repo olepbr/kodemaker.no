@@ -22,22 +22,22 @@
      (assoc-in [:people :magnar :recommendations]
                [{:title "A post on React"
                  :blurb "Den er bra."
-                 :url "http://example.com"
+                 :link {:url "http://example.com"}
                  :tech [:react :web-performance]}])
      (assoc-in [:people :finnjoh :recommendations]
                [{:title "A post on React"
                  :blurb "Den er knall."
-                 :url "http://example.com"
+                 :link {:url "http://example.com"}
                  :tech [:react :javascript]}
                 {:title "Another post"
                  :blurb "Også bra"
-                 :url "http://not-react.com"
+                 :link {:url "http://not-react.com"}
                  :tech [:javascript]}])
      cultivate-techs :react :recommendations)
 
  => [{:title "A post on React"
       :blurb "Den er bra."
-      :url "http://example.com"
+      :link {:url "http://example.com"}
       :tech [:react :web-performance :javascript]
       :recommended-by [{:name "Magnar", :url "/magnar/"}
                        {:name "Finn", :url "/finnjoh/"}]}])
