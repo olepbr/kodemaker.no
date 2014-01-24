@@ -46,11 +46,16 @@
 
 (defn- render-presentation [pres]
   [:div.media
-   [:img.img.thumb.mts {:src (:thumb pres)}]
+   [:a.img.thumb.mts {:href (or (-> pres :urls :video)
+                                (-> pres :urls :slides)
+                                (throw (Exception. (str "Missing url to video or slides in presentation " (:title pres)))))}
+    [:img {:src (:thumb pres)}]]
    [:div.bd
     [:h4.mtn (:title pres)]
-    [:p (:blurb pres) " "
-     [:a.nowrap {:href (-> pres :urls :video)} "Se video"]]]])
+    [:p (:blurb pres)
+     (when-let [url (-> pres :urls :video)] (list " " [:a.nowrap {:href url} "Se video"]))
+     (when-let [url (-> pres :urls :slides)] (list " " [:a.nowrap {:href url} "Se slides"]))
+     (when-let [url (-> pres :urls :source)] (list " " [:a.nowrap {:href url} "Se koden"]))]]])
 
 (defn- render-presentations [presentations person]
   (list [:h2 (str (:genitive person) " Foredrag")]

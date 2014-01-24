@@ -77,8 +77,10 @@
 
       => (html [:h2 "Magnars Foredrag"]
                [:div.media
-                [:img.img.thumb.mts {:src "/thumbs/videos/trivelig-testing.jpg"}]
+                [:a.img.thumb.mts {:href "http://vimeo.com/28764670"}
+                 [:img {:src "/thumbs/videos/trivelig-testing.jpg"}]]
                 [:div.bd
                  [:h4.mtn "Lyntale: Wrap Ajax'en din"]
                  [:p "Jeg tegner og forteller. "
-                  [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"]]]]))
+                  [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
+                  [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]]]))
