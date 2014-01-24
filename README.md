@@ -105,6 +105,11 @@ at du bør få grei tilbakemelding om du tråkker på utsiden.
 
 Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 
+**NB!** Kjør opp siden og se hvordan det blir før du commiter. Da får
+du kjørte all programmatisk validering av datastrukturen, sjekket at
+alle bilde-URLer finnes, og sett med øynene dine at det ble som du
+hadde tenkt.
+
 ## Laste opp bilder
 
 Bildene ligger i `resources/public`.
