@@ -1,0 +1,13 @@
+{:id :javascript
+ :name "JavaScript"
+ :illustration "/photos/tech/js.svg"
+ :site "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+ :description
+ "Elsket eller hatet, JavaScript er språket som dominerer nettet. I
+  årevis var det sett på som et klipp-og-lim søplespråk for å lage
+  irriterende popups. Så gjorde [Douglas
+  Crockford](http://www.crockford.com/) det han kaller \"årtusenets
+  første viktige oppdagelse\" helt i begynnelsen av år 2000 - nemlig
+  det at inni JavaScript et sted skjulte det seg et jæskla bra språk.
+  Så kom Gmail, JavaScript ble rebrandet som Ajax, og som ved et
+  trylleslag var det hett å være frontendutvikler."}
