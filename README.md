@@ -49,7 +49,8 @@ datastrukturen blir omtrent slik, vil jeg tro:
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             :illustration Str}]
+                             :illustration Str
+                             (optional-key :url) Str}]
 
    (optional-key :blogs) [{:id Keyword
                            :name Str

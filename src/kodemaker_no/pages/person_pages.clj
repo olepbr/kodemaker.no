@@ -26,7 +26,9 @@
   [:div.bd
    [:h3.mtn (:title hobby)]
    (into-paragraph (to-html :md (:description hobby))
-                   [:img.right {:src (:illustration hobby)}])])
+                   (if (:url hobby)
+                     [:a.illu {:href (:url hobby)} [:img {:src (:illustration hobby)}]]
+                     [:img.illu {:src (:illustration hobby)}]))])
 
 (defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]

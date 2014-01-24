@@ -62,7 +62,8 @@
                           aggressiv musikk, fra mine jyplingår som fan av
                           Nirvana og skranglepunk til mine senere år som
                           metal-connoisseur av ypperste rang."
-            :illustration "/illustrations/hobbies/execration.jpg"}
+            :illustration "/illustrations/hobbies/execration.jpg"
+            :url "http://execration.no/"}
            ]
 
  :blogs [{:id :cjohansenno

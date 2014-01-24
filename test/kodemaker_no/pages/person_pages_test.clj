@@ -43,15 +43,25 @@
 
 (fact (->> (page :hobbies [{:title "Brettspill"
                             :description "Det er mer enn Monopol og Ludo i verden."
-                            :illustration "/photos/hobbies/brettspill.jpg"}])
+                            :illustration "/photos/hobbies/brettspill.jpg"}
+                           {:title "Adventur"
+                            :description "Hjemmesnekra spill."
+                            :url "http://www.adventur.no"
+                            :illustration "/photos/hobbies/adventur.jpg"}])
            :body html)
 
       => (html [:h2 "Snakker gjerne om"]
                [:div.bd
                 [:h3.mtn "Brettspill"]
                 [:p
-                 [:img.right {:src "/photos/hobbies/brettspill.jpg"}]
-                 "Det er mer enn Monopol og Ludo i verden."]]))
+                 [:img.illu {:src "/photos/hobbies/brettspill.jpg"}]
+                 "Det er mer enn Monopol og Ludo i verden."]]
+               [:div.bd
+                [:h3.mtn "Adventur"]
+                [:p
+                 [:a.illu {:href "http://www.adventur.no"}
+                  [:img {:src "/photos/hobbies/adventur.jpg"}]]
+                 "Hjemmesnekra spill."]]))
 
 (fact (->> (page :tech {:favorites-at-the-moment [{:name "clojure"}
                                                   {:name "emacs"}
