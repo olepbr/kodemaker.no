@@ -23,7 +23,8 @@
         :want-to-learn-more [:clojurescript :ansible :docker]}
 
  :recommendations [{:title "React: Rethinking best-practices"
-                    :url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
+                    :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
+                           :text "Se 'React: Rethinking best-practices' på youtube"}
                     :tech [:javascript :arkitektur :design]
                     :blurb "Pete Hunt, en av hodene bak JavaScript
                             UI-rammeverket til Facebook og Instagram, React,
@@ -34,7 +35,8 @@
                             klassisk UI-programmering og som virkelig fokuserer
                             på 'separation of concerns'."}
                    {:title "The Future of JavaScript MVC Frameworks"
-                    :url "http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"
+                    :link {:url "http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"
+                           :text "The Future of JavaScript MVC Frameworks"}
                     :tech [:clojurescript :arkitektur :design]
                     :blurb "David Nolen, Clojurescript-superstjerne, forteller
                             om sitt 'Om', Clojurescript-API over Facebook's

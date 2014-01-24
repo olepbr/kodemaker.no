@@ -18,7 +18,7 @@
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er bra."
-                                    :url "http://example.com"
+                                    :link {:url "http://example.com" :text "Xzample"}
                                     :recommended-by [{:name "Magnar",
                                                       :url "/magnar/"}
                                                      {:name "Finn"
@@ -31,4 +31,4 @@
                                   [:a {:href "/magnar/"} "Magnar"] " og "
                                   [:a {:href "/finnjoh/"} "Finn"]]]
                [:p "Denne er bra. "
-                [:a.nowrap {:href "http://example.com"} "Les mer"]]))
+                [:a.nowrap {:href "http://example.com"} "Xzample"]]))
