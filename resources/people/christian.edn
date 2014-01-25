@@ -83,6 +83,15 @@
           :theme "Teknisk frontend og Ruby-utvikling"
           :tech [:javascript :css :html :tdd :ruby :rails]}]
 
+ :projects [{:id :finn-oppdrag
+             :customer "FINN oppdrag"
+             :description "Gjorde FINN Oppdrags avanserte
+             registreringsskjema klart for utrulling til flere
+             markedsplasser ved å modularisere koden til komponenter
+             som kunne settes sammen til forskjellige skjemaer."
+             :tech [:javascript :spring-mvc :js-test-driver
+                    :sinon :java :junit]}]
+
  :presentations [{:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"

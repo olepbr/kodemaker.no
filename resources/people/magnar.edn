@@ -107,7 +107,9 @@
  :projects [{:id :finn-oppdrag
              :customer "FINN oppdrag"
              :description "Ansvarlig frontendutvikler. Utviklet hele
-                           framsia fra bunnen av. Over 1000 JavaScript tester."
+                           framsia fra bunnen av. Vi var første marked
+                           i FINN til å bruke responsiv design. Skrev
+                           over 1000 JavaScript tester og likte det."
              :tech [:javascript :responsive-design :oocss
                     :html :css :spring-mvc :jquery :js-test-driver
                     :sinon :java :junit]}]
