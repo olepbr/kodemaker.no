@@ -5,7 +5,7 @@ Våre nye nettsider kommer til verden.
 ## Teste lokalt
 
 Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen)
-om du ikke har den.
+om du ikke har den. Btw. Husk å bruk JDK 1.7 !
 
 Gå så til rota av prosjektet, og
 
