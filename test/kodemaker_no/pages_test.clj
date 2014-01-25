@@ -6,6 +6,7 @@
       (-> {:people {:magnars {:url "/magnars/"}
                     :finnjoh {:url "/finnjoh/"}}
            :tech {:react {:url "/react/"}}
+           :projects {:finn-oppdrag {:url "/finn-oppdrag/"}}
            :articles {"/kompetanse.adoc" ""
                       "/systemer.adoc" ""}}
           create-pages keys set)
@@ -14,6 +15,7 @@
            "/magnars/"
            "/finnjoh/"
            "/react/"
+           "/finn-oppdrag/"
            "/kompetanse/"
            "/systemer/"})
 

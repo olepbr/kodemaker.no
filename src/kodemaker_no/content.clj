@@ -11,4 +11,5 @@
 (defn load-content []
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
+   :projects (slurp-edn-maps "resources/projects/")
    :articles (slurp-directory "resources/articles/" #"\.adoc$")})

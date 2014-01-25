@@ -7,4 +7,4 @@
                er de Norges største markedsplass for privatpersoner
                som vil finne flinke fagfolk."
  :illustration "/photos/references/finn-oppdrag.jpg"
- :selected-tech [:responsive-design :javascript :oocss]}
+ :tech [:responsive-design :javascript :oocss]}

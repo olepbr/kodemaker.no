@@ -87,8 +87,17 @@
    (optional-key :illustration) Str
    (optional-key :site) Str})
 
+(def Project
+  {:id Keyword
+   :name Str
+   :logo Str
+   :description Str
+   :illustration Str
+   :tech [Keyword]})
+
 (defn validate-content [content]
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
+             :projects {Keyword Project}
              :articles {Str Str}}
             content))
