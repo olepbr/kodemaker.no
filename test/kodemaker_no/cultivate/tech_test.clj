@@ -45,8 +45,8 @@
       :blurb "Den er bra."
       :link {:url "http://example.com", :text "!"}
       :tech [:react :web-performance :javascript]
-      :recommended-by [{:name "Magnar", :url "/magnar/"}
-                       {:name "Finn", :url "/finnjoh/"}]}])
+      :by [{:name "Magnar", :url "/magnar/"}
+           {:name "Finn", :url "/finnjoh/"}]}])
 
 (fact
  "Foredrag blir overført til sine techs. Hvis flere har holdt samme

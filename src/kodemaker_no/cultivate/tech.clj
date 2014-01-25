@@ -16,23 +16,24 @@
 (defn- is-about [tech m]
   ((set (:tech m)) (:id tech)))
 
+(defn- get-with-byline [key]
+  (fn [person]
+    (->> (key person)
+         (map #(assoc % :by {:name (first (:name person))
+                             :url (util/url person)})))))
+
 (defn- combine-recommendations [recommendations]
   (-> (first recommendations)
       (select-keys #{:title :blurb :link})
       (assoc
-          :recommended-by (map :recommended-by recommendations)
+          :by (map :by recommendations)
           :tech (distinct (mapcat :tech recommendations)))))
-
-(defn- get-recommendations [person]
-  (->> (:recommendations person)
-       (map #(assoc % :recommended-by {:name (first (:name person))
-                                       :url (util/url person)}))))
 
 (defn- add-recommendations [content tech]
   (assoc-in-unless tech [:recommendations] empty?
                    (->> (:people content)
                         vals
-                        (mapcat get-recommendations)
+                        (mapcat (get-with-byline :recommendations))
                         (group-by #(-> % :link :url))
                         vals
                         (map combine-recommendations)
@@ -46,16 +47,11 @@
           :tech (distinct (mapcat :tech presentations))
           :urls (apply merge (map :urls presentations)))))
 
-(defn- get-presentations [person]
-  (->> (:presentations person)
-       (map #(assoc % :by {:name (first (:name person))
-                           :url (util/url person)}))))
-
 (defn- add-presentations [content tech]
   (assoc-in-unless tech [:presentations] empty?
                    (->> (:people content)
                         vals
-                        (mapcat get-presentations)
+                        (mapcat (get-with-byline :presentations))
                         (group-by :thumb)
                         vals
                         (map combine-presentations)

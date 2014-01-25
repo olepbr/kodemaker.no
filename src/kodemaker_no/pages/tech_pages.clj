@@ -7,7 +7,7 @@
 
 (defn- render-recommendation [rec]
   (list [:h3 (:title rec)]
-        [:p.near.cookie-w [:span.cookie "Anbefalt av " (comma-separated (map link-to-person (:recommended-by rec)))]]
+        [:p.near.cookie-w [:span.cookie "Anbefalt av " (comma-separated (map link-to-person (:by rec)))]]
         [:p (:blurb rec) " "
          (render-link (:link rec))]))
 

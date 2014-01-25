@@ -19,10 +19,10 @@
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er bra."
                                     :link {:url "http://example.com" :text "Xzample"}
-                                    :recommended-by [{:name "Magnar",
-                                                      :url "/magnar/"}
-                                                     {:name "Finn"
-                                                      :url "/finnjoh/"}]}])
+                                    :by [{:name "Magnar",
+                                          :url "/magnar/"}
+                                         {:name "Finn"
+                                          :url "/finnjoh/"}]}])
            :body html)
 
       => (html [:h2 "Våre Anbefalinger"]
