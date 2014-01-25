@@ -1,16 +1,22 @@
 (ns kodemaker-no.cultivate.people-test
   (:require [kodemaker-no.cultivate.people :refer :all]
-            [midje.sweet :refer :all]))
+            [midje.sweet :refer :all]
+            [kodemaker-no.validate :refer [validate-content]]
+            [kodemaker-no.cultivate.content-shells :as c]))
 
 (def content
-  {:people {:magnars {:id :magnars
-                      :name ["Magnar" "Sveen"]}
-            :finnjoh {:id :finnjoh
-                      :name ["Finn" "J" "Johnsen"]}
-            :andersf {:id :andersf
-                      :name ["Anders" "Furseth"]}}})
+  (c/content
+   {:people {:magnars (c/person {:id :magnars
+                                 :name ["Magnar" "Sveen"]})
+             :finnjoh (c/person {:id :finnjoh
+                                 :name ["Finn" "J" "Johnsen"]})
+             :andersf (c/person {:id :andersf
+                                 :name ["Anders" "Furseth"]})}}))
 
-(let [people (-> content cultivate-people)]
+(defn cultivate [content]
+  (cultivate-people (validate-content content)))
+
+(let [people (cultivate content)]
 
   (fact (-> people :magnars :full-name) => "Magnar Sveen"
         (-> people :finnjoh :full-name) => "Finn J Johnsen")
@@ -37,13 +43,13 @@
                            {:favorites-at-the-moment [:clojure]
                             :want-to-learn-more [:react]})
                  (assoc-in [:people :magnars :recommendations]
-                           [{:tech [:ansible]}])
+                           [(c/recommendation {:tech [:ansible]})])
                  (assoc-in [:tech :react]
                            {:id :react
                             :name "React"
                             :site "http://react.js"
                             :description "Blah!"})
-                 cultivate-people)]
+                 cultivate)]
 
   (fact
    "Tech that isn't present in the content is given a name based
