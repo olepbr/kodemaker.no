@@ -33,6 +33,6 @@
  :presentations [{:title "Gradle - Det er faktisk ditt bygg"
                   :blurb "Mange klamrer seg fortsatt til 
                           illusjon at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen men i litt større organisasjoner finner man nesten alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som svært fleksibelt og samtidig basert på konvensjoner. Det verktøyet heter Gradle"
-                  :tech [:gradle]
+                  :tech [:gradle :groovy]
                   :urls {:video "http://vimeo.com/49375218"}
                   :thumb "/thumbs/videos/gradle-ditt-bygg.jpg"}]}

@@ -1,0 +1,14 @@
+{:id :groovy
+ :name "Groovy"
+ :illustration "/photos/tech/groovy.jpg"
+ :site "http://groovy.codehaus.org/"
+ :description "Groovy er et dynamisk språk for Jvm'en. 
+               Det har optional typing og optional statisk kompilering. 
+               Språkets har svært kraftig syntaks 
+               (closures, higher order functions, operator overloading, 
+                ast transformasjoner og metaprogramering). I tillegg er det kompakt og svært lettlest.
+               Det er antageligvis det språket på jvm'en som har lavest lærekurve 
+               for javaprogrammerere. I tillegg har man sømløs integrasjon med java !
+
+Groovy har et stort og voksende økosystem med populære biblioker/rammeverk som 
+[Grails](http://www.grails.org/), [Gradle](http://www.gradle.org) og [Spock](http://spockframework.org)"}
