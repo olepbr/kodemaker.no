@@ -1,11 +1,11 @@
 {:id :kolbjorn
  :name ["Kolbjørn" "Jetne"]
  :title "Daglig leder"
- :start-date "2007-04-01 00:01"
+ :start-date "2001-04-01 00:01"
  :administration? true
  :description "Kolbjørn leder firmaet vårt og har lang erfaring som konsulent. Ambisjonen hans er å gjøre Kodemaker til det foretrukne valg for konsulenter som ønsker å utvikle sitt potensiale både faglig, økonomisk og sosialt."
 
  :phone-number ""
- :email-address ""
+ :email-address "kolbjorn@kodemaker.no"
 
  :presence {}}
