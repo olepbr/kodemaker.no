@@ -1,10 +1,38 @@
 {:id :magnus
  :name ["Magnus" "Rundberget"]
- :title "Styreleder"
+ :title "Styreleder og kodeentusiast"
  :start-date "2007-04-01 00:07"
- :description "Magnus er en arkitekttype med lang erfaring fra en rekke teknologitunge prosjekter. Magnus har evnen til å se de store linjene og sørge for at prosjekter holder seg innenfor fornuftige teknologiske rammer."
+ :description "Magnus har lang erfaring fra store og 
+               små prosjekter. Han har jobbet med en rekke teknologier og hatt mange forskjellige roller.
+               Magnus stortrives i prosjekter der han 
+               får være med å foredle kunders ønsker og drømmer i kode. Han er dyktig i team og jobber aktivt for at teamet som helhet skal lykkes. Magnus liker både frontend og backend utvikling. I tillegg har han en forkjærlighet for automatisering og Continuous Delivery. "
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 928 83 365"
+ :email-address "magnus@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "magnus"
+            :twitter "mrundberget"
+            :github "rundis"
+            :linkedin "/in/mrundberget"}
+
+ :tech {:favorites-at-the-moment [:javascript :groovy]
+       :want-to-learn-more [:clojure :clojurescript :react :reactive-programming]}
+
+ :recommendations [{:title "Test-driven JavaScript Development"
+                    :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
+                        :text "Se foredraget"}
+                    :tech [:javascript :tdd :design]
+                    :blurb "Dette foredraget av Christian Johansen
+                            var en grunnene til at jeg i stor grad har kastet jquery-scripting av frontend på båten. En inspirerende og lærerik test-drevet sesjon hvor man lager en autocomplete controll." }]
+ :hobbies [{:title "Fluefiske"
+            :description "Du går langs en deilig elv omringet av
+             flott norsk natur. I sidesynet ser du plutselig en liten uregelmessighet i vannoverflaten. Du stopper for å kikke. Etter en liten stund ser du en ørret som forsiktig stiger til overflaten og slurper i seg en liten døgnflue. Pulsen stiger, du skifter flue og navigerer deg forsiktig i posisjon for å kaste ..."
+             :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
+            :url "http://rundis.smugmug.com/Fisketurer"}]
+
+ :presentations [{:title "Gradle - Det er faktisk ditt bygg"
+                  :blurb "Mange klamrer seg fortsatt til 
+                          illusjon at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen men i litt større organisasjoner finner man nesten alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som svært fleksibelt og samtidig basert på konvensjoner. Det verktøyet heter Gradle"
+                  :tech [:gradle]
+                  :urls {:video "http://vimeo.com/49375218"}
+                  :thumb "/thumbs/videos/gradle-ditt-bygg.jpg"}]}
