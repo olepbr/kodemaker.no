@@ -19,7 +19,7 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:favorites-at-the-moment [:clojure :react :emacs]
+ :tech {:favorites-at-the-moment [:clojure :react :emacs :git]
         :want-to-learn-more [:clojurescript :ansible :docker]}
 
  :recommendations [{:title "React: Rethinking best-practices"
@@ -83,14 +83,38 @@
           :theme "Teknisk frontend og Ruby-utvikling"
           :tech [:javascript :css :html :tdd :ruby :rails]}]
 
+ :blog-posts [{:url "http://cjohansen.no/an-introduction-to-elisp"
+               :title "An introduction to Emacs Lisp"
+               :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
+                       gjennom [The Little
+                       Schemer](http://mitpress.mit.edu/books/little-schemer)
+                       satte jeg meg for noen år siden ned for å lære meg Emacs
+                       Lisp skikkelig. Jeg benyttet anledningen til å samtidig
+                       skrive en god og grundig innføring for andre i samme
+                       situasjon. Artikkelen handler om Emacs Lisp spesielt, men
+                       fungerer også som en introduksjon til Lisp generelt. I
+                       motsetning til andre introduksjonsartikler tar den for
+                       seg et nogenlunde sammensatt eksempel slik at man ser
+                       hvordan Lisp ser ut utover 'Hello world'."
+               :tech [:lisp :elisp :emacs]
+               :blog :cjohansenno}]
+
  :projects [{:id :finn-oppdrag
-             :customer "FINN oppdrag"
-             :description "Gjorde FINN Oppdrags avanserte
-             registreringsskjema klart for utrulling til flere
-             markedsplasser ved å modularisere koden til komponenter
-             som kunne settes sammen til forskjellige skjemaer."
+             :customer "FINN Oppdrag"
+             :description "Gjorde [FINN Oppdrags](http://finn.no/oppdrag/)
+             avanserte registreringsskjema klart for utrulling til flere
+             markedsplasser ved å modularisere koden til komponenter som kunne
+             settes sammen til forskjellige skjemaer."
              :tech [:javascript :spring-mvc :js-test-driver
-                    :sinon :java :junit]}]
+                    :sinon :java :junit]}
+            {:id :finn-smajobber
+             :customer "FINN Småjobber"
+             :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet
+                           med lanseringen av løsningen rett før jul 2013. Har
+                           jobbet med hele løsningen, men med fokus på frontend.
+                           Implementert nytt ajax-søk med React.JS og hjulpet
+                           andre på teamet med å styrke sin frontend-kompetanse."
+             :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]}]
 
  :presentations [{:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
@@ -122,4 +146,74 @@
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
                   :thumb "/thumbs/videos/mythbusters.jpg"
                   :tech [:javascript]}]
+
+ :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
+                         :name "Sinon.JS"
+                         :description "Et spy-/stub- og mocke-bibliotek for
+                         JavaScript. Prosjektet ble opprinnelig utviklet mens
+                         jeg skrev boka [Test-Driven JavaScript Development](http://tddjs.com)
+                         ettersom det på den tiden ikke fantes noe
+                         tilfredsstillende mocke-bibliotek. Siden den gang har
+                         Sinon.JS blitt et svært populært open source-prosjekt
+                         med mange bidragsytere, og er i dag det mest brukte
+                         stub- og mock-biblioteket for JavaScript."
+                         :tech [:javascript :testing]}
+                        {:url "https://github.com/busterjs/buster/"
+                         :name "Buster.JS"
+                         :description "Et test-rammeverk for JavaScript. Består
+                                       av svært mange komponenter, hvor mange er
+                                       fullt mulig å bruke isolert, gjerne
+                                       sammen med andre test-rammeverk."
+                         :tech [:javascript :testing]}
+                        {:url "https://github.com/cjohansen/asciidoclj"
+                         :name "asciidoclj"
+                         :description "Et lite bibliotek som åpner for bruk av
+                                       asciidoc i Clojure. Prosjektet er en
+                                       wrapper rundt Java-biblioteket
+                                       asciidoctorj og tilbyr et funksjonelt API."
+                         :tech [:clojure]}
+                        {:url "https://github.com/cjohansen/uinit"
+                         :name "Uinit"
+                         :description "Et inisialiserings-system for
+                         UI-komponenter. Prosjektet er et lettvekts-alternativ
+                         til MVC-rammeverk og tilbyr mekanismer for å deklarere
+                         avhengigheter mellom individuelle komponenter, data og
+                         elementer på siden."
+                         :tech [:javascript :frontend]}
+                        {:url "https://gitorious.org/gitorious/dolt"
+                         :name "dolt"
+                         :description "En git repository-browser for Ruby. Denne
+                         komponenten er kjernen i [fil-browseren til Gitorious](https://gitorious.org/gitorious/libdolt/source/e71f17223b1e51d97bb716ed461f4296ce6f6c49:lib)."
+                         :tech [:ruby :git]}
+                        {:url "https://gitorious.org/gitorious/makeup"
+                         :name "Makeup"
+                         :description "Et Ruby-bibliotek som lar deg rendre
+                         markdown med kodeblokker som syntax highlightes."
+                         :tech [:ruby :markdown :pygments]}
+                        {:url "https://github.com/cjohansen/use_case"
+                         :name "UseCase"
+                         :description "Et bibliotek som tilbyr en strukturert
+                         måte å abstrahere ikke-triviell programflyt.
+                         Biblioteket ble opprinnelig skrevet for å redusere
+                         kompleksiett i Ruby on Rails-applikasjoner, men er ikke
+                         spesifikt avhengig av Rails. Biblioteket reduserer
+                         koblinger mellom modeller og kontrollere, og kan
+                         potensielt redusere kompleksiteten i begge betraktelig."
+                         :tech [:ruby :arkitektur :design :rails]}
+                        {:url "https://github.com/culljs/culljs/"
+                         :name "Cull.JS"
+                         :description "Funksjonell verktøykasse for JavaScript.
+                         API-et prioriterer 'composability' over alt annet og
+                         har følgelig et noe annet API enn mange lignende
+                         biblioteker. Skrevet sammen med Magnar Sveen, og svært
+                         inspirert av ymse Clojure-API-er."
+                         :tech [:javascript :functional-programming]}
+                        {:url "https://github.com/culljs/dome/"
+                         :name "Dome"
+                         :description "Funksjonell verktøykasse for DOM-manipulering."
+                         :tech [:javascript :functional-programming :dom]}]
+ :open-source-contributions [{:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :unix :ssh]}
+                             {:name "Optimus" :url "https://github.com/magnars/optimus" :tech [:clojure :web-performance]}
+                             {:name "karma-referee" :url "https://github.com/cjohansen/karma-referee" :tech [:javascript :testing]}
+                             {:name "carousel-js" :url "https://github.com/cjohansen/carousel-js" :tech [:javascript]}]
  }
