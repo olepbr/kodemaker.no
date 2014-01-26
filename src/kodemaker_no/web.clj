@@ -22,7 +22,8 @@
                                 #"/thumbs/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"
-                                #"/logos/.*\.png"]))
+                                #"/logos/.*\.png"
+                                #"/images/.*\.png"]))
 
 (defn get-pages []
   (-> (load-content)
