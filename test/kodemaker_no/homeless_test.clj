@@ -29,3 +29,9 @@
                       [:p.image "Yes 2"]]]])
       => (list [:p.image "Yes 1"]
                [:p.image "Yes 2"]))
+
+(fact
+ (update-in* {:a 1} [:a] inc) => {:a 2}
+ (update-in* {:a [1 2]} [:a []] inc) => {:a [2 3]}
+ (update-in* {:a [{:b 1} {:b 2}]} [:a [:b]] inc) => {:a [{:b 2} {:b 3}]}
+ (update-in* {:a [{:b [{:c 1}]}]} [:a [:b [:c]]] inc) => {:a [{:b [{:c 2}]}]})

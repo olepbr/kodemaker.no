@@ -30,6 +30,16 @@
     (assoc-in m path v)
     m))
 
+(defn update-in* [m path f]
+  "Like update-in, but can map over lists by nesting paths."
+  (if (vector? (last path))
+    (let [nested-path (last path)
+          this-path (drop-last path)]
+      (if (empty? nested-path)
+        (update-in m this-path (partial map f))
+        (update-in m this-path (partial map #(update-in* % nested-path f)))))
+    (update-in m path f)))
+
 ;; create project hiccup-find for this?
 
 (defn hiccup-nodes [root]
