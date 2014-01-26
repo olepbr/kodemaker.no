@@ -30,7 +30,7 @@
                                "magnar@kodemaker.no"]]])
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
-                                    :blurb "Denne er bra."
+                                    :blurb "Denne er **bra**."
                                     :link {:url "http://example.com" :text "Les detta"}
                                     :tech [{:name "Clojure", :url "/clojure/"}]}])
            :body html)
@@ -38,7 +38,7 @@
       => (html [:h2 "Magnars Anbefalinger"]
                [:h3 "Anbefaling 1"]
                [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
-               [:p "Denne er bra. "
+               [:p "Denne er <strong>bra</strong>. "
                 [:a.nowrap {:href "http://example.com"} "Les detta"]]))
 
 (fact (->> (page :hobbies [{:title "Brettspill"

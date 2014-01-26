@@ -9,27 +9,30 @@
     [:a {:href (:url tech)} (:name tech)]
     (:name tech)))
 
+(defn prepend-to-paragraph [html node]
+  (str/replace html #"^<p>" (str "<p>" (hiccup/html node))))
+
+(defn append-to-paragraph [html node]
+  (str/replace html #"</p>$" (str (hiccup/html node) "</p>")))
+
 (defn- render-recommendation [rec]
   (list [:h3 (:title rec)]
         (when-not (empty? (:tech rec))
           [:p.near.cookie-w [:span.cookie (interpose " " (map link-to-tech (:tech rec)))]])
-        [:p (:blurb rec) " "
-         (render-link (:link rec))]))
+        (append-to-paragraph (to-html :md (:blurb rec))
+                             (list " " (render-link (:link rec))))))
 
 (defn- render-recommendations [recs person]
   (list [:h2 (str (:genitive person) " Anbefalinger")]
         (map render-recommendation recs)))
 
-(defn into-paragraph [html node]
-  (str/replace html #"^<p>" (str "<p>" (hiccup/html node))))
-
 (defn- render-hobby [hobby]
   [:div.bd
    [:h3.mtn (:title hobby)]
-   (into-paragraph (to-html :md (:description hobby))
-                   (if (:url hobby)
-                     [:a.illu {:href (:url hobby)} [:img {:src (:illustration hobby)}]]
-                     [:img.illu {:src (:illustration hobby)}]))])
+   (prepend-to-paragraph (to-html :md (:description hobby))
+                         (if (:url hobby)
+                           [:a.illu {:href (:url hobby)} [:img {:src (:illustration hobby)}]]
+                           [:img.illu {:src (:illustration hobby)}]))])
 
 (defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]

@@ -22,7 +22,7 @@
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
                         :text "Se foredraget"}
                     :tech [:javascript :tdd :design]
-                    :blurb "Dette foredraget av Christian Johansen
+                    :blurb "Dette foredraget av [Christian Johansen](/christian/)
                             var en grunnene til at jeg i stor grad har kastet jquery-scripting av frontend på båten. En inspirerende og lærerik test-drevet sesjon hvor man lager en autocomplete controll." }]
  :hobbies [{:title "Fluefiske"
             :description "Du går langs en deilig elv omringet av
