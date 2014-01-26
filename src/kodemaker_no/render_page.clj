@@ -30,7 +30,7 @@
        [:div.mod.menu
         [:a {:href "#"} "Referanser"]
         [:a {:href "/mennesker/"} "Mennesker"]
-        [:a {:href "#"} "Ta kontakt"]]
+        [:a {:href "/kontakt/"} "Ta kontakt"]]
        [:h1#logo.hn
         [:a.linkBlock {:href "/"} "Kodemaker"]]]]
      (when title [:h1.hn.mbn (no-widows title)])
