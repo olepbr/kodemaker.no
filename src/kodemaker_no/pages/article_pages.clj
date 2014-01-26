@@ -9,10 +9,7 @@
   (first (filter #(= title (:title %)) (:parts doc))))
 
 (defn- content [part]
-  (when part
-    (-> part :content
-        (str/replace #"\n?<div class=\"[^\"]+\">\n?" "")
-        (str/replace #"\n?</div>\n?" ""))))
+  (:content part))
 
 (defn- htmlize-part [part]
   (str "<h2>" (:title part) "</h2>" (content part)))
