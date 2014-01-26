@@ -23,7 +23,7 @@
                         :text "Se foredraget"}
                     :tech [:javascript :tdd :design]
                     :blurb "Dette foredraget av [Christian Johansen](/christian/)
-                            var en grunnene til at jeg i stor grad har kastet jquery-scripting av frontend på båten. En inspirerende og lærerik test-drevet sesjon hvor man lager en autocomplete controll." }]
+                            var en grunnene til at jeg i stor grad kastet jQuery-scripting på båten. En inspirerende og lærerik testdrevet sesjon hvor man lager en autocomplete-komponent." }]
  :hobbies [{:title "Fluefiske"
             :description "Du går langs en deilig elv omringet av
              flott norsk natur. I sidesynet ser du plutselig en liten uregelmessighet i vannoverflaten. Du stopper for å kikke. Etter en liten stund ser du en ørret som forsiktig stiger til overflaten og slurper i seg en liten døgnflue. Pulsen stiger, du skifter flue og navigerer deg forsiktig i posisjon for å kaste ..."
@@ -32,7 +32,7 @@
 
  :presentations [{:title "Gradle - Det er faktisk ditt bygg"
                   :blurb "Mange klamrer seg fortsatt til 
-                          illusjon at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen men i litt større organisasjoner finner man nesten alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle"
+                          illusjonen at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen, men i litt større organisasjoner finner man alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle."
                   :tech [:gradle :groovy]
                   :urls {:video "http://vimeo.com/49375218"}
                   :thumb "/thumbs/videos/gradle-ditt-bygg.jpg"}]}
