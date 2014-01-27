@@ -48,10 +48,15 @@ server {
   add_header "X-UA-Compatible" "IE=Edge";
 
   # Old URLs
-  rewrite  ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;
-  rewrite  ^/mennesker/alfeinar/?$ /alf-einar/ permanent;
-  rewrite  ^/mennesker/christian-johansen/?$ /christian/ permanent;
-  rewrite  ^/mennesker/steintore/?$ /stein-tore/ permanent;
-  rewrite  ^/mennesker/stenmorten/?$ /sten-morten/ permanent;
-  rewrite  ^/mennesker/([^/]*)/?$ /$1/ permanent;
+  location /mennesker {
+    rewrite  ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;
+    rewrite  ^/mennesker/alfeinar/?$ /alf-einar/ permanent;
+    rewrite  ^/mennesker/christian-johansen/?$ /christian/ permanent;
+    rewrite  ^/mennesker/steintore/?$ /stein-tore/ permanent;
+    rewrite  ^/mennesker/stenmorten/?$ /sten-morten/ permanent;
+
+    if ($request_uri ~* ^/mennesker/.+) {
+      rewrite ^/mennesker/(.+)$ /$1 permanent;
+    }
+  }
 }
