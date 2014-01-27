@@ -24,6 +24,10 @@ server {
 
   charset utf-8;
 
+  location ^~ /cv/ {
+    proxy_pass       http://old.kodemaker.no/cv/;
+  }
+
   # far-future expires headers
   location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|svgz|ttf|otf|woff|eot|mp4|ogg|ogv|webm)$ {
     expires max;
