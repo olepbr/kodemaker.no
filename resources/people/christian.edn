@@ -128,7 +128,7 @@
                   autocomplete/type-ahead søk, test-first."
                   :urls {:video "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"}
                   :thumb "/thumbs/videos/js-tdd-ndc.jpg"
-                  :tech [:javascript :tdd :testing]}
+                  :tech [:javascript :design :testing]}
                  {:title "JavaScript design and architecture"
                   :blurb "En liten inspirasjonsprat om å finne gode
                   abstraksjoner for frontend-programmering"
