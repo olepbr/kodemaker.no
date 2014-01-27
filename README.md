@@ -123,6 +123,7 @@ Bildene ligger i `resources/public`.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
 - `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
 - `/photos/people/<person>/side-profile.jpg` Kodemaker sittende: .jpg 620x485
+- `/photos/people/<person>/side-profile-cropped.jpg` Kodemaker med kappa hode: .jpg 580x453
 
 Hvis du ikke har Photoshop eller lignende, så kan du skalere bilder på
 http://scaleyourimage.com/.
