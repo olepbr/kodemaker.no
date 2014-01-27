@@ -1,0 +1,6 @@
+{:id :datomic
+ :name "Datomic"
+ :illustration "/photos/tech/datomic.png"
+ :site "http://www.datomic.com/"
+ :description "Datomic er en database av fleksible, tids-baserte facts. Den
+ støtter spørringer og joins, har elastisk skalerbarhet og ACID-transaksjoner."}
