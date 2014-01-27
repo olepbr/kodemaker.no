@@ -2,13 +2,15 @@
  :name "ClojureScript"
  :illustration "/photos/tech/clojure.svg"
  :site "https://github.com/clojure/clojurescript"
- :description "ClojureScript er en kompilator for [Clojure](/clojure/) med
- JavaScript som target-plattform. Med andre ord tilbyr ClojureScript alle
- fordelene som Clojure gjør, nå også for frontend-koden din. Kompilatoren
- benytter seg av [Googles Closure compiler](http://code.google.com/closure/), og
- produserer kode som er kompatibel med dennes aggressive optimeringsmodus.
+ :description "ClojureScript er en kompilator for [Clojure](/clojure/)
+ med [JavaScript](/javascript/) som target-plattform. Med andre ord
+ tilbyr ClojureScript alle fordelene som Clojure gjør, nå også for
+ frontendkoden din. Kompilatoren benytter seg av [Googles Closure
+ compiler](http://code.google.com/closure/), og produserer kode som er
+ kompatibel med dennes aggressive optimeringsmodus.
 
-David Nolens [Om](https://github.com/swannodette/om) kombinerer ClojureScripts
-persistente datastrukturer med Facebooks [React](/react), og leverer en svært
-interessant pakke for grensesnittsutvikling som flere av oss i Kodemaker følger
-med haukeøyne."}
+David Nolens [Om](https://github.com/swannodette/om) kombinerer
+ClojureScripts persistente datastrukturer med Facebooks
+[React](/react), og leverer en svært interessant pakke for
+grensesnittsutvikling som flere av oss i Kodemaker følger med
+haukeøyne."}

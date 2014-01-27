@@ -2,21 +2,25 @@
  :illustration "/photos/tech/react.png"
  :site "http://facebook.github.io/react/"
  :name "React"
- :description "React er et JavaScript-bibliotek for utvikling av dynamiske
- brukergrensesnitt. I motsetning til alternative (og populære) MVC-rammeverk
- søker ikke React å løse 'hele stacken', men heller å tilby en solid abstraksjon
- for utvikling av V-en, altså 'viewet'. Også i motsetning til omtrent alt annet
- av lignende verktøy søker React å gi deg en mulighet til å programmere
- brukergrensesnitt _uten_ å forholde deg til DOM-en. Den gjør dette ved å
- fokusere på 'komponenter' og trær av slike komponenter. Du beskriver hvordan
- komponent-treet (ja, hele) ser ut gitt en gjeldende tilstand, React sørger for
- å finne den mest effektive måten å endre DOM-en på for å reflektere dette.
+ :description "React er et [JavaScript](/javascript/)-bibliotek for
+ utvikling av dynamiske brukergrensesnitt. I motsetning til
+ alternative (og populære) MVC-rammeverk søker ikke React å løse *hele
+ stacken*, men heller å tilby en solid abstraksjon for utvikling av
+ V-en, *viewet*.
 
-Reacts modell viser seg i praksis å være konseptuelt mye lettere å forholde seg
-til en tilstandstunge DOM-sentriske løsninger, samtidig som den legger til rette
-for svært god ytelse. Se [Finn Småjobbers
+ I motsetning til omtrent alt annet av
+ lignende verktøy søker React å gi deg en mulighet til å programmere
+ brukergrensesnitt _uten_ å forholde deg til DOM-en. Den gjør dette
+ ved å fokusere på *komponenter* og trær av slike komponenter. Du
+ beskriver hvordan komponenttreet (ja, hele) ser ut gitt en gjeldende
+ tilstand, React sørger for å finne den mest effektive måten å endre
+ DOM-en på for å reflektere dette.
+
+Reacts modell viser seg i praksis å være konseptuelt mye lettere å
+forholde seg til en tilstandstunge DOM-sentriske løsninger, samtidig
+som den legger til rette for svært god ytelse. Se [Finn Småjobbers
 søk](http://www.finn.no/smajobber/alle-smajobber/) (trykk på fylker og
-kategorier) for et eksempel på bruk av React signert Kodemaker (ved [Christian
-Johansen](/christian)).
+kategorier) for et eksempel på bruk av React signert Kodemaker (ved
+[Christian Johansen](/christian)).
 
 React utvikles og brukes av Facebook og Instagram."}

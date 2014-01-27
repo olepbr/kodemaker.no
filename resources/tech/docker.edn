@@ -3,11 +3,11 @@
  :illustration "/photos/tech/docker.png"
  :site "https://www.docker.io/"
  :description "Docker er et friprog-prosjekt som gjør det enkelt å pakke og
- publisere en hvilken som helst applikasjon som en selvstendig 'container'.
+ publisere en hvilken som helst applikasjon som en selvstendig *container*.
  Docker baserer seg blant annet på [Linux
  Containers (LXE)](http://en.wikipedia.org/wiki/Linux_Containers), en form for
  lettvektsvirtualisering der alle prosessene kjører rett i host-OS-et, men
- alikevel isolert (+chroot+ 'på steroider').
+ alikevel isolert (+chroot+ på steroider).
 
 Docker-containers kan deles via et sentralt registry, not som åpner for en
 lettvekts-variant av å pakke applikasjoner som .rpm/.dep/etc-pakker og hvor

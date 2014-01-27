@@ -4,7 +4,7 @@
  :site "http://clojure.org/"
  :description
  "Clojure er en Lisp-dialekt som kjører på JVM-en (i tillegg til CLR-en og
- JavaScript). Det er et dynamisk og kompilert programmeringsspråk som er
+ [JavaScript](/javascript/)). Det er et dynamisk og kompilert programmeringsspråk som er
  designet for å integrere tett med sin host-plattform. Til tross for dette er
  Clojure primært et funksjonellt programmeringsspråk med persistente
  datastrukturer og et standard-API som er spesielt god egnet for

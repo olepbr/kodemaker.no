@@ -78,6 +78,7 @@ q:before {content: "“"}
 q:after {content: "”"}
 
 strong {font-weight: bold;}
+em {font-style: italic;}
 
 .cookie {font-size: 12px; background: #f4f4f4; padding: 4px; border-radius: 2px;}
 .cookie * {margin: 0 2px;}

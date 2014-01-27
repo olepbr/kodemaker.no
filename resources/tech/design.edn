@@ -1,16 +1,17 @@
 {:id :design
  :name "Design"
+ :illustration "/photos/tech/design.jpg"
  :description "<blockquote>
 <p>
-to prepare the preliminary sketch or the plans for (a work to be executed),
-especially to plan the form and structure of: to design a new bridge.
+There are two ways of constructing a software design: One way is to make it so
+simple that there are obviously no deficiencies, and the other way is to make
+it so complicated that there are no obvious deficiencies. The first method is
+far more difficult.
 </p>
-<p><cite><a href=\"dictionary.com/browse/design\">dictionary.com</a></cite></p>
+<p><cite>- <a href=\"http://en.wikipedia.org/wiki/C._A._R._Hoare\">C. A. R. Hoare</a></cite></p>
 </blockquote>
 
-Som programmerere er vi også designere. Kanskje ikke med mest tyngde i _grafisk
-design_, men når vi velger hvordan vi skal sy sammen systemene vi implementerer
-er vi like fullt designere. Design i programmering handler om å ta stilling til
+Design er en pågående jobb som programmerer. Det handler om å ta stilling til
 hvilke undersystemer som kan skilles ut som selvstendige komponenter, hvordan
 disse skal kommunisere, og på et lavere nivå, hvilke datastrukturer og
 abstraksjoner vi trenger. Målet med ethvert design er å finne en robust løsning

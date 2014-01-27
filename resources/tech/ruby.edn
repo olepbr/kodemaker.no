@@ -2,15 +2,16 @@
  :name "Ruby"
  :illustration "/photos/tech/ruby.png"
  :site "https://www.ruby-lang.org/en/"
- :description "Ruby er et dynamisk, interpretert programmeringsspråk. Språket er
-kjent for sin fleksible syntaks, som ofte kan skrives på en måte som leser
-nesten som naturlig språk. Ruby fikk virkelig vind i seilene da en litt nerdete
-danske bosatt i det store USA viste oss hvordan man ved hjelp av hans
-webrammeverk [Ruby on Rails](http://rubyonrails.org/) kunne implementere en
-[blogg på 15 minutter](http://www.youtube.com/watch?v=Gzj723LkRJY) for snart 10
-år siden.
+ :description "Ruby er et dynamisk, interpretert programmeringsspråk.
+Språket er kjent for sin fleksible syntaks, som med litt bøy og tøy
+nesten kan lese som naturlig språk. Ruby fikk virkelig vind i seilene
+da en litt nerdete danske bosatt i det store USA viste oss hvordan man
+ved hjelp av hans webrammeverk [Ruby on
+Rails](http://rubyonrails.org/) kunne implementere en [blogg på 15
+minutter](http://www.youtube.com/watch?v=Gzj723LkRJY) for snart 10 år
+siden.
 
-Ruby on Rails er stadig en populær måte å uvikle webapplikasjoner på, og har med
+Ruby on Rails er stadig en populær måte å utvikle webapplikasjoner på, og har med
 tiden også fått sitt innpass i de større enterprisemiljøene. I tillegg til dette
 har Ruby slått seg frem som et populært språk for bruk i testing, også av
 applikasjoner utviklet med andre språk enn Ruby. [Cucumber](http://cukes.info/),
