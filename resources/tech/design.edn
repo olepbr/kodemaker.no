@@ -1,0 +1,29 @@
+{:id :design
+ :name "Design"
+ :description "<blockquote>
+<p>
+to prepare the preliminary sketch or the plans for (a work to be executed),
+especially to plan the form and structure of: to design a new bridge.
+</p>
+<p><cite><a href=\"dictionary.com/browse/design\">dictionary.com</a></cite></p>
+</blockquote>
+
+Som programmerere er vi også designere. Kanskje ikke med mest tyngde i _grafisk
+design_, men når vi velger hvordan vi skal sy sammen systemene vi implementerer
+er vi like fullt designere. Design i programmering handler om å ta stilling til
+hvilke undersystemer som kan skilles ut som selvstendige komponenter, hvordan
+disse skal kommunisere, og på et lavere nivå, hvilke datastrukturer og
+abstraksjoner vi trenger. Målet med ethvert design er å finne en robust løsning
+som slår en god balanse mellom fleksibilitet, og kost i form av hvor lang tid
+det tar å komme i mål.
+
+Et godt design tåler å få nye, uventede krav stilt mot seg uten å kollapse;
+altså at man må skrive om hele eller store deler av løsningen for å komme i mål.
+Et godt design tar også hensyn til at systemet skal driftes og leve videre etter
+at det første utviklingsprosjektet er over.
+
+Mange Kodemakere har hatt rollen arkitekt i prosjekter, og i denne rollen har
+man det formelle ansvaret for det overordnede designet i systemet. Også de av
+oss som ikke har hatt den formelle rollen arkitekt har mange tanker og meninger
+om programvaredesign, noe som både kommuniseres til våre omgivelser i det
+daglige såvel som gjennom foredrag på konferanser og andre fagsamlinger."}
