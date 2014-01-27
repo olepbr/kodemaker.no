@@ -1,0 +1,10 @@
+{:id :ansible
+ :name "Ansible"
+ :illustration "/photos/tech/ansible.png"
+ :site "http://www.ansibleworks.com/"
+ :description "Ansible er et provisjoneringsverktøy for hel-automatisert oppsett
+ av servere og applikasjonene som kjører på dem. Ansible følger i sporene til
+ etablerte verktøy som [Puppet](http://puppetlabs.com/) og
+ [Chef](http://www.getchef.com/chef/) med fler, men med et enda sterkere fokus
+ på lav terskel for å komme igang. Ansible er såppass lavterskel at noen vil
+ påstå at å starte med Ansible er _lettere_ enn å installere en server manuelt."}
