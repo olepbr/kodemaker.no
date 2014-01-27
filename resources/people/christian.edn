@@ -37,7 +37,7 @@
                    {:title "The Future of JavaScript MVC Frameworks"
                     :link {:url "http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"
                            :text "Les artikkelen"}
-                    :tech [:clojurescript :arkitektur :design]
+                    :tech [:clojurescript :design]
                     :blurb "David Nolen, Clojurescript-superstjerne, forteller
                             om sitt 'Om', Clojurescript-API over Facebook's
                             React. Om går enda noen skritt fra hva React tilbyr
@@ -55,7 +55,7 @@
                             tenke rundt software."
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
-                    :tech [:design :arkitektur :clojure]}]
+                    :tech [:design :clojure]}]
  :hobbies [{:title "Mat, brød og øl"
             :description "Som programmerer tar jeg stor glede i å skape. Som
                           aspirerende hobbykokk tas denne gleden ut i skaperverk
@@ -135,7 +135,7 @@
                   :urls {:video "http://vimeo.com/28760470"
                          :slides "http://cjohansen.no/talks/2011/javazone-js-design"}
                   :thumb "/thumbs/videos/jz-js-design.jpg"
-                  :tech [:javascript :design :arkitektur]}
+                  :tech [:javascript :design]}
                  {:title "Mythbusters: JavaScript Edition"
                   :blurb "Få programmeringsspråk er omgitt av så mye unøyaktig,
                           irrelevant og direkte feil informasjon og misforstått
@@ -199,7 +199,7 @@
                          spesifikt avhengig av Rails. Biblioteket reduserer
                          koblinger mellom modeller og kontrollere, og kan
                          potensielt redusere kompleksiteten i begge betraktelig."
-                         :tech [:ruby :arkitektur :design :rails]}
+                         :tech [:ruby :design :rails]}
                         {:url "https://github.com/culljs/culljs/"
                          :name "Cull.JS"
                          :description "Funksjonell verktøykasse for JavaScript.

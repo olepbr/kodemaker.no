@@ -33,7 +33,7 @@
                             tenke rundt software."
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
-                    :tech [:design :arkitektur :clojure]}
+                    :tech [:design :clojure]}
                    {:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
                             Full av triks, tips, testing og forskning
