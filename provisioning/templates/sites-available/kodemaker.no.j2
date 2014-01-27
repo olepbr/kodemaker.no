@@ -59,4 +59,7 @@ server {
       rewrite ^/mennesker/(.+)$ /$1 permanent;
     }
   }
+
+  # When all else fails
+  error_page 404 /404.html;
 }

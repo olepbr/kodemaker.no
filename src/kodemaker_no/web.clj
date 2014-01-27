@@ -18,6 +18,7 @@
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
+                                "/404.html"
                                 #"/illustrations/.*\.jpg"
                                 #"/thumbs/.*\.jpg"
                                 #"/photos/.*\.jpg"
