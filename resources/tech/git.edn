@@ -1,0 +1,19 @@
+{:id :git
+ :name "Git"
+ :illustration "/photos/tech/git.png"
+ :site "http://git-scm.com/"
+ :description "Git er et distribuert versjonskontrollsystem. Det er det klart
+foretrukne verktøyet blant fri programvareutviklere, men har også for alvor
+gjort sitt inntog i enterprise-verdenen.
+
+Git sin styrke ligger i en enkel, men utrolig effektiv datastruktur, ekstrem
+ytelse, og bortimot uendelig fleksibilitet. At den er distribuert åpner opp for
+at man kan ha samme arbeidsflyt offline på toget som online bak brannmuren på
+jobb.
+
+Git er mer enn 'bare' et versjonskontrollsystem - Git har endret hvordan
+utviklere forholder seg til historikk i prosjektene sine, og ikke minst hvordan
+vi organiserer kode: stabile release-brancher, feature-brancher og mer. [Git
+flow](http://nvie.com/posts/a-successful-git-branching-model/) er ett eksempel
+på en arbeidsflyt som har blitt populær, og som nok ville vært utenkelig for
+mange med f.eks Subversion."}
