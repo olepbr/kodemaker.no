@@ -25,7 +25,7 @@
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
                            :text "Se foredraget"}
-                    :tech [:javascript :arkitektur :design]
+                    :tech [:javascript :design :react]
                     :blurb "Pete Hunt, en av hodene bak JavaScript
                             UI-rammeverket til Facebook og Instagram, React,
                             forteller om tankene bak. Foredraget fra JSConf.eu

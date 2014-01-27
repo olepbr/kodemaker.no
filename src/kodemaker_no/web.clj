@@ -22,6 +22,7 @@
                                 #"/thumbs/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"
+                                #"/photos/.*\.png"
                                 #"/logos/.*\.png"
                                 #"/images/.*\.png"]))
 
