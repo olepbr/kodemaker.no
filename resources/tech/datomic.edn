@@ -2,5 +2,9 @@
  :name "Datomic"
  :illustration "/photos/tech/datomic.png"
  :site "http://www.datomic.com/"
- :description "Datomic er en database av fleksible, tidsbaserte facts. Den
- støtter spørringer og joins, har elastisk skalerbarhet og ACID-transaksjoner."}
+ :description
+ "Datomic er en svært annerledes database. Den er append-only, akkurat som Git og loggfiler. Databasen er representert som immutable data, slik at du kan kjøre spørringer som varer i timesvis uten å bekymre deg for locking og inkonsistens. Spørringer skjer også i klienten din, ikke på serveren, med en svært smart lazy datastruktur. Noen må jo ha arbeidssettet i minnet, hvorfor ikke klienten? Dette gjør at serveren ikke trenger å gjøre noe annet en writes, som er hyggelig mtp. skalering.
+
+Den er JVM-native, men kan brukes via et HTTP-API. Da får du ikke fordelene med at spørringer kjører i klienten din, naturligvis.
+
+Desverre er den også proprietær, men den kommer i en gratis-versjon som har alle features bortsett fra de du trenger når du må skalere opp en del."}
