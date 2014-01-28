@@ -92,7 +92,8 @@
    :name Str
    :logo Str
    :description Str
-   (optional-key :illustration) Str})
+   (optional-key :illustration) Str
+   (optional-key :site) Str})
 
 (defn validate-content [content]
   (validate {:people {Keyword Person}

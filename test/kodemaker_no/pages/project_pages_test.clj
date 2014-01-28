@@ -58,3 +58,11 @@
 
       => (html [:h3 "Teknologi"]
                [:p "Java og " [:a {:href "/clojure/"} "Clojure"] "."]))
+
+(fact (->> (page :site "http://finn.no", :illustration nil)
+           :aside html)
+      => (html [:p [:a {:href "http://finn.no"} "finn.no"]]))
+
+(fact (->> (page :site "https://finn.no", :illustration nil)
+           :aside html)
+      => (html [:p [:a {:href "https://finn.no"} "finn.no"]]))

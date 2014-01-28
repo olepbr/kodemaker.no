@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.project-pages
-  (:require [kodemaker-no.formatting :refer [comma-separated]]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.formatting :refer [comma-separated]]))
 
 (defn- link-to-tech [tech]
   (if (:url tech)
@@ -38,6 +39,15 @@
   (list [:h3 "Teknologi"]
         [:p (comma-separated (map link-to-tech tech)) "."]))
 
+(defn- render-illustration [project]
+  [:p [:a {:href (:site project)} [:img {:src (:illustration project)}]]])
+
+(defn- strip-protocol [s]
+  (str/replace s #"^[a-z]+://" ""))
+
+(defn- render-site [site]
+  [:p [:a {:href site} (strip-protocol site)]])
+
 (defn- maybe-include [project kw f]
   (when (kw project)
     (f (kw project) project)))
@@ -46,6 +56,10 @@
   {:title (:name project)
    :illustration (:logo project)
    :lead [:p (:description project)]
+   :aside (list
+           (cond
+            (:illustration project) (render-illustration project)
+            (:site project) (render-site (:site project))))
    :body (list
           (maybe-include project :tech render-tech)
           (maybe-include project :people render-people)
