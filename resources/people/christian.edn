@@ -55,7 +55,19 @@
                             tenke rundt software."
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
-                    :tech [:design :clojure]}]
+                    :tech [:design :clojure]}
+                   {:title "Dance you Imps!"
+                    :blurb "Uncle Bob Martin skriver et knallgodt innlegg om
+                    hvordan ORM-er ikke egentlig er ORM-er. Dette sitatet
+                    oppsummerer på mange måter hovedpoenget:
+
+                    \"What is a data structure? It's a bunch of public data with
+                    no methods. Compare that to an object which is a bunch of
+                    public methods with no visible data. These two things are
+                    the exact opposites of each other!\""
+                    :link {:url "http://blog.8thlight.com/uncle-bob/2013/10/01/Dance-You-Imps.html"
+                           :text "Les artikkelen"}
+                    :tech [:orm :design]}]
  :hobbies [{:title "Mat, brød og øl"
             :description "Som programmerer tar jeg stor glede i å skape. Som
                           aspirerende hobbykokk tas denne gleden ut i skaperverk
