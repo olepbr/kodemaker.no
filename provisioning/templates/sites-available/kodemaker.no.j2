@@ -49,16 +49,21 @@ server {
 
   # Old URLs
   location /mennesker {
-    rewrite  ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;
-    rewrite  ^/mennesker/alfeinar/?$ /alf-einar/ permanent;
-    rewrite  ^/mennesker/christian-johansen/?$ /christian/ permanent;
-    rewrite  ^/mennesker/steintore/?$ /stein-tore/ permanent;
-    rewrite  ^/mennesker/stenmorten/?$ /sten-morten/ permanent;
+    rewrite ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;
+    rewrite ^/mennesker/alfeinar/?$ /alf-einar/ permanent;
+    rewrite ^/mennesker/christian-johansen/?$ /christian/ permanent;
+    rewrite ^/mennesker/steintore/?$ /stein-tore/ permanent;
+    rewrite ^/mennesker/stenmorten/?$ /sten-morten/ permanent;
 
     if ($request_uri ~* ^/mennesker/.+) {
       rewrite ^/mennesker/(.+)$ /$1 permanent;
     }
   }
+
+  rewrite ^/2010/05/den-gode-venninnen-og-tur-til-maldivene /blogg/den-gode-venninnen-og-tur-til-maldivene/
+  rewrite ^/2010/05/flere-kodemakere-til-høsten /blogg/flere-kodemakere-til-høsten/
+  rewrite ^/2010/05/kodemaker-golf-turnering /blogg/kodemaker-golfturnering/
+  rewrite ^/2010/05/lansering-av-kdoemkaer-no /blogg/lansering-av-kdoemkaer-no/
 
   # When all else fails
   error_page 404 /404.html;
