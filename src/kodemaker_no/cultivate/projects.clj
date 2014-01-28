@@ -12,23 +12,32 @@
 
 (defn- get-with-person-info [key]
   (fn [person]
-    (->> (key person)
-         (map #(-> %
-                   (assoc :name (str/join " " (:name person)))
-                   (assoc :url (util/url person))
-                   (assoc :thumb (str "/photos/people/" (-> person :id str (subs 1)) "/side-profile.jpg")))))))
+    (let [info {:url (util/url person)
+                :full-name (str/join " " (:name person))
+                :first-name (first (:name person))
+                :thumb (str "/photos/people/" (-> person :id str (subs 1)) "/side-profile.jpg")}]
+      (map #(assoc % :person info) (key person)))))
 
 (defn- add-people [content project]
   (assoc-in-unless project [:people] empty?
                    (->> (:people content)
                         vals
                         (mapcat (get-with-person-info :projects))
-                        (filter #(= (:id project) (:id %))))))
+                        (filter #(= (:id project) (:id %)))
+                        (map #(assoc (:person %) :description (:description %))))))
+
+(defn- add-endorsements [content project]
+    (assoc-in-unless project [:endorsements] empty?
+                     (->> (:people content)
+                          vals
+                          (mapcat (get-with-person-info :endorsements))
+                          (filter #(= (:id project) (:project %))))))
 
 (defn- cultivate-project [content project]
   (->> project
        add-url
-       (add-people content)))
+       (add-people content)
+       (add-endorsements content)))
 
 (defn cultivate-projects [content]
   (update-vals (:projects content) (partial cultivate-project content)))

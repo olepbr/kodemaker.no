@@ -6,8 +6,8 @@
 
 (def content
   (c/content
-   {:people {:magnars (c/person {:id :magnars
-                                 :name ["Magnar" "Sveen"]})
+   {:people {:magnar (c/person {:id :magnar
+                                :name ["Magnar" "Sveen"]})
              :finnjoh (c/person {:id :finnjoh
                                  :name ["Finn" "J" "Johnsen"]})
              :andersf (c/person {:id :andersf
@@ -18,31 +18,31 @@
 
 (let [people (cultivate content)]
 
-  (fact (-> people :magnars :full-name) => "Magnar Sveen"
+  (fact (-> people :magnar :full-name) => "Magnar Sveen"
         (-> people :finnjoh :full-name) => "Finn J Johnsen")
 
-  (fact (-> people :magnars :first-name) => "Magnar"
+  (fact (-> people :magnar :first-name) => "Magnar"
         (-> people :finnjoh :first-name) => "Finn")
 
-  (fact (-> people :magnars :genitive) => "Magnars"
+  (fact (-> people :magnar :genitive) => "Magnars"
         (-> people :andersf :genitive) => "Anders'")
 
-  (fact (-> people :magnars :str) => "magnars"
+  (fact (-> people :magnar :str) => "magnar"
         (-> people :finnjoh :str) => "finnjoh")
 
-  (fact (-> people :magnars :url) => "/magnars/"
+  (fact (-> people :magnar :url) => "/magnar/"
         (-> people :finnjoh :url) => "/finnjoh/")
 
-  (fact (-> people :magnars :photos) => {:side-profile "/photos/people/magnars/side-profile.jpg"
-                                         :half-figure "/photos/people/magnars/half-figure.jpg"}
+  (fact (-> people :magnar :photos) => {:side-profile "/photos/people/magnar/side-profile.jpg"
+                                        :half-figure "/photos/people/magnar/half-figure.jpg"}
         (-> people :finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
                                          :half-figure "/photos/people/finnjoh/half-figure.jpg"}))
 
 (let [people (-> content
-                 (assoc-in [:people :magnars :tech]
+                 (assoc-in [:people :magnar :tech]
                            {:favorites-at-the-moment [:clojure]
                             :want-to-learn-more [:react]})
-                 (assoc-in [:people :magnars :recommendations]
+                 (assoc-in [:people :magnar :recommendations]
                            [(c/recommendation {:tech [:ansible]})])
                  (assoc-in [:tech :react]
                            {:id :react
@@ -54,16 +54,16 @@
   (fact
    "Tech that isn't present in the content is given a name based
     on its :id."
-   (-> people :magnars :tech :favorites-at-the-moment)
+   (-> people :magnar :tech :favorites-at-the-moment)
    => [{:id :clojure, :name "clojure"}]
 
-   (-> people :magnars :recommendations first :tech)
+   (-> people :magnar :recommendations first :tech)
    => [{:id :ansible, :name "ansible"}])
 
   (fact
    "Tech that is present, uses the :name in the tech, and adds
     a :url based on the :id."
-   (-> people :magnars :tech :want-to-learn-more)
+   (-> people :magnar :tech :want-to-learn-more)
    => [{:id :react, :name "React", :url "/react/"}])
 
   (fact
@@ -72,7 +72,7 @@
    (-> people :finnjoh :tech) => nil))
 
 (let [people (-> content
-                 (assoc-in [:people :magnars :endorsements]
+                 (assoc-in [:people :magnar :endorsements]
                            [{:project :finn-oppdrag
                              :author "Kaija Ommundsen"
                              :photo "/thumbs/faces/kaija-ommundsen.jpg"
@@ -81,7 +81,7 @@
                              :author "Bjørn Henrik Vangstein"
                              :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
                              :quote "Magnar Sveen skiller seg klart ut i mengden."}])
-                 (assoc-in [:people :magnars :projects]
+                 (assoc-in [:people :magnar :projects]
                            [{:id :finn-oppdrag
                              :customer "FINN oppdrag"
                              :description ""
@@ -94,7 +94,7 @@
   (fact "It fetches the project name from the one listed in your
          profile. Only official projects are given URLs."
 
-        (-> people :magnars :endorsements)
+        (-> people :magnar :endorsements)
 
         => [{:project {:id :finn-oppdrag, :name "FINN oppdrag"}
              :author "Kaija Ommundsen"

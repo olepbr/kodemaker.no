@@ -1,8 +1,7 @@
 (ns kodemaker-no.pages.person-pages-test
   (:require [kodemaker-no.pages.person-pages :refer :all]
             [midje.sweet :refer :all]
-            [hiccup.core :refer [html]]
-            [kodemaker-no.homeless :refer [hiccup-find]]))
+            [hiccup.core :refer [html]]))
 
 (def magnar
   {:url "/magnar/"
