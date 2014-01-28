@@ -111,11 +111,22 @@
                            i FINN til å bruke responsiv design. Skrev
                            over 1000 JavaScript tester og likte det."
              :tech [:javascript :responsive-design :oocss
-                    :html :css :spring-mvc :jquery :js-test-driver
-                    :sinon :java :junit]}]
+                    :html :css :spring-mvc :ajax :jquery :js-test-driver
+                    :jsp :sinon :java :junit :git :jira :confluence]}
+            {:id :finn-surf-sammen
+             :customer "FINN Surf Sammen"
+             :description "Var med fra starten, jobbet med skisser til
+                           løsning og databasestruktur. Gikk fort over
+                           i rolle som frontendansvarlig på
+                           scrumteamet. Står bak mesteparten av Ajax-
+                           funksjonaliteten i forbindelse med lagring
+                           og deling av annonser."
+             :tech [:javascript :css :html :ajax :jquery :jsp :java
+                    :cvs :jira :confluence]}]
 
  :endorsements [{:project :finn-surf-sammen
                  :author "Bjørn Henrik Vangstein"
+                 :title "Scrum Master"
                  :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
                  :quote "Magnar Sveen skiller seg klart ut i mengden,
                          både faglig og personlig. Han ble raskt ettertraktet på
@@ -131,6 +142,7 @@
                          ettertraktet ressurs i de fleste utviklingmiljøer."}
                 {:project :finn-oppdrag
                  :author "Kaija Ommundsen"
+                 :title "Prosjekteier"
                  :photo "/thumbs/faces/kaija-ommundsen.jpg"
                  :quote "Jeg har hatt glede av å bygge opp FINN oppdrag
                          sammen med Magnar. Jeg har sjelden møtt en utvikler som
@@ -152,6 +164,7 @@
                          underveis."}
                 {:project :finn-oppdrag
                  :author "Endre Midtgård Meckelborg"
+                 :title "Teknisk Leder"
                  :photo "/thumbs/faces/endre-midtgard-meckelborg.jpg"
                  :quote "Ved oppbyggingen av FINN oppdrag jobbet jeg
                          sammen med Magnar, og det var en lærerik og morsom

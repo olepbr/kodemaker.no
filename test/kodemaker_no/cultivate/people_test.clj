@@ -70,3 +70,37 @@
    "It doesn't add empty maps and lists"
 
    (-> people :finnjoh :tech) => nil))
+
+(let [people (-> content
+                 (assoc-in [:people :magnars :endorsements]
+                           [{:project :finn-oppdrag
+                             :author "Kaija Ommundsen"
+                             :photo "/thumbs/faces/kaija-ommundsen.jpg"
+                             :quote "Jeg har hatt glede av å jobbe med Magnar."}
+                            {:project :finn-surf-sammen
+                             :author "Bjørn Henrik Vangstein"
+                             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
+                             :quote "Magnar Sveen skiller seg klart ut i mengden."}])
+                 (assoc-in [:people :magnars :projects]
+                           [{:id :finn-oppdrag
+                             :customer "FINN oppdrag"
+                             :description ""
+                             :tech []}])
+                 (assoc-in [:projects :finn-surf-sammen]
+                           (c/project {:id :finn-surf-sammen
+                                       :name "FINN surf sammen"}))
+                 cultivate)]
+
+  (fact "It fetches the project name from the one listed in your
+         profile. Only official projects are given URLs."
+
+        (-> people :magnars :endorsements)
+
+        => [{:project {:id :finn-oppdrag, :name "FINN oppdrag"}
+             :author "Kaija Ommundsen"
+             :photo "/thumbs/faces/kaija-ommundsen.jpg"
+             :quote "Jeg har hatt glede av å jobbe med Magnar."}
+            {:project {:id :finn-surf-sammen, :name "FINN surf sammen", :url "/finn-surf-sammen/"}
+             :author "Bjørn Henrik Vangstein"
+             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
+             :quote "Magnar Sveen skiller seg klart ut i mengden."}]))

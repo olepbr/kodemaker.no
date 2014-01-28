@@ -22,6 +22,14 @@
           :presence {}}
          m))
 
+(defn project [m]
+  (merge {:name "!"
+          :logo "!"
+          :description "!"
+          :illustration "!"
+          :tech []}
+         m))
+
 (defn recommendation [m]
   (merge {:link {:url "!" :text "!"}
           :title "!"

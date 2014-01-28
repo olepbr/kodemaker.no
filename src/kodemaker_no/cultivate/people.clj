@@ -2,7 +2,8 @@
   (:require [clojure.string :as str]
             [kodemaker-no.homeless :refer [update-vals]]
             [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.cultivate.tech :as tech]))
+            [kodemaker-no.cultivate.tech :as tech]
+            [kodemaker-no.cultivate.projects :as projects]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id str (subs 1))))
@@ -43,6 +44,23 @@
       (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
       (update-in-existing [:presentations] #(look-up-tech-in-maps content %))))
 
+(defn- find-my-project [person id]
+  (or (->> person
+           :projects
+           (filter #(= id (:id %)))
+           first)
+      (throw (Exception. (str "No project " id " found!")))))
+
+(defn- update-endorsement-project [content person endorsement]
+  (let [id (:project endorsement)]
+    (assoc endorsement :project
+           (or (projects/look-up-project content id)
+               {:id id, :name (:customer (find-my-project person id))}))))
+
+(defn- look-up-projects [content person]
+  (-> person
+      (update-in-existing [:endorsements] #(map (partial update-endorsement-project content person) %))))
+
 (defn- cultivate-person [content person]
   (->> person
        add-str
@@ -50,7 +68,8 @@
        fix-names
        add-genitive
        add-photos
-       (look-up-tech content)))
+       (look-up-tech content)
+       (look-up-projects content)))
 
 (defn cultivate-people [content]
   (update-vals (:people content) (partial cultivate-person content)))

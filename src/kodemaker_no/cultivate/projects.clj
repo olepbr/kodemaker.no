@@ -6,6 +6,10 @@
 (defn- add-url [project]
   (assoc project :url (util/url project)))
 
+(defn look-up-project [content id]
+  (when-let [project (get-in content [:projects id])]
+    (-> project (select-keys #{:id, :name}) add-url)))
+
 (defn- get-with-person-info [key]
   (fn [person]
     (->> (key person)

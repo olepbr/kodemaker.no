@@ -67,6 +67,26 @@
   (list [:h2 (str (:genitive person) " Foredrag")]
         (map render-presentation presentations)))
 
+(defn- project-link [project]
+  (if-let [url (:url project)]
+    [:a {:href url} (:name project)]
+    (:name project)))
+
+(defn- render-endorsement [endo]
+  [:div.media
+   (when (:photo endo)
+     [:img.img.thumb.mts {:src (:photo endo)}])
+   [:div.bd
+    [:h4.mtn (:author endo)]
+    (if (:title endo)
+      [:p.near (:title endo) ", " (-> endo :project project-link)]
+      [:p.near (-> endo :project project-link)])
+    [:p [:q (:quote endo)]]]])
+
+(defn- render-endorsements [endorsements person]
+  (list [:h2 (str (:genitive person) " Referanser")]
+        (map render-endorsement endorsements)))
+
 (defn- render-aside [person]
   [:div.tight
    [:h4 (:full-name person)]
@@ -89,7 +109,8 @@
           (maybe-include person :tech render-tech)
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
-          (maybe-include person :presentations render-presentations))})
+          (maybe-include person :presentations render-presentations)
+          (maybe-include person :endorsements render-endorsements))})
 
 (defn person-pages [people]
   (into {} (map (juxt :url #(partial person-page %)) people)))
