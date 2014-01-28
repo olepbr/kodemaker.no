@@ -1,7 +1,8 @@
 (ns kodemaker-no.cultivate.projects
-  (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]
-            [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.cultivate.tech :as tech]
+            [kodemaker-no.cultivate.util :as util]
+            [kodemaker-no.homeless :refer [update-vals assoc-in-unless interleave-all]]))
 
 (defn- add-url [project]
   (assoc project :url (util/url project)))
@@ -33,11 +34,23 @@
                           (mapcat (get-with-person-info :endorsements))
                           (filter #(= (:id project) (:project %))))))
 
+(defn- add-tech [content project]
+  (assoc-in-unless project [:tech] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat :projects)
+                        (filter #(= (:id project) (:id %)))
+                        (map :tech)
+                        (apply interleave-all)
+                        (distinct)
+                        (map (partial tech/look-up-tech-1 content)))))
+
 (defn- cultivate-project [content project]
   (->> project
        add-url
        (add-people content)
-       (add-endorsements content)))
+       (add-endorsements content)
+       (add-tech content)))
 
 (defn cultivate-projects [content]
   (update-vals (:projects content) (partial cultivate-project content)))

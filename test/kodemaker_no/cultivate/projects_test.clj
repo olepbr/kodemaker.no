@@ -53,3 +53,26 @@
       :author "Geir Pettersen"
       :photo "/thumbs/faces/geir-pettersen.jpg"
       :quote "Jeg liker brettspill, og det gjør Magnar og."}])
+
+(fact
+ "Tech blir aggregert personlige prosjektoppføringer. Den forsøker å
+  ta hensyn til alles rekkefølge ved å flette først, og så fjerne
+  duplikater."
+
+ (-> content
+     (assoc-in [:people :magnar :projects]
+               [{:id :finn-reise
+                 :customer "FINN Reise"
+                 :description "Gjorde bra ting."
+                 :tech [:javascript :testing :design]}])
+     (assoc-in [:people :andersf :projects]
+               [{:id :finn-reise
+                 :customer "FINN Reise"
+                 :description "Gjorde også bra ting."
+                 :tech [:java :javascript :testing]}])
+     cultivate :finn-reise :tech)
+
+ => [{:id :javascript, :name "javascript"}
+     {:id :java, :name "java"}
+     {:id :testing, :name "testing"}
+     {:id :design, :name "design"}])

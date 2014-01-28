@@ -1,4 +1,10 @@
-(ns kodemaker-no.pages.project-pages)
+(ns kodemaker-no.pages.project-pages
+  (:require [kodemaker-no.formatting :refer [comma-separated]]))
+
+(defn- link-to-tech [tech]
+  (if (:url tech)
+    [:a {:href (:url tech)} (:name tech)]
+    (:name tech)))
 
 (defn- render-person [person]
   [:div.media
@@ -28,6 +34,10 @@
   (list [:h2 "Referanser"]
         (map render-endorsement endorsements)))
 
+(defn- render-tech [tech project]
+  (list [:h3 "Teknologi"]
+        [:p (comma-separated (map link-to-tech tech)) "."]))
+
 (defn- maybe-include [project kw f]
   (when (kw project)
     (f (kw project) project)))
@@ -37,6 +47,7 @@
    :illustration (:logo project)
    :lead [:p (:description project)]
    :body (list
+          (maybe-include project :tech render-tech)
           (maybe-include project :people render-people)
           (maybe-include project :endorsements render-endorsements))})
 

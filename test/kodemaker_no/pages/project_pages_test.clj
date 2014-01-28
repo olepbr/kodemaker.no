@@ -9,8 +9,7 @@
    :name "FINN oppdrag"
    :logo "/logos/finn.png"
    :description "FINN.no besluttet i 2009."
-   :illustration "/photos/references/finn-oppdrag.jpg"
-   :tech [:responsive-design :javascript :oocss]})
+   :illustration "/photos/references/finn-oppdrag.jpg"})
 
 (defn page [& {:as extras}]
   (((project-pages [(merge finn-oppdrag extras)]) "/finn-oppdrag/")))
@@ -52,3 +51,10 @@
                   [:span.tiny " om "
                    [:a {:href "/magnar/"} "Magnar"]]]
                  [:p [:q "Jeg liker brettspill, og det gjør Magnar og."]]]]))
+
+(fact (->> (page :tech [{:name "Java"}
+                        {:name "Clojure", :url "/clojure/"}])
+           :body html)
+
+      => (html [:h3 "Teknologi"]
+               [:p "Java og " [:a {:href "/clojure/"} "Clojure"] "."]))

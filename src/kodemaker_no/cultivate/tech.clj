@@ -5,7 +5,7 @@
 (defn- add-url [tech]
   (assoc tech :url (util/url tech)))
 
-(defn- look-up-tech-1 [content id]
+(defn look-up-tech-1 [content id]
   (if-let [tech (get-in content [:tech id])]
     (-> tech (select-keys #{:id, :name}) add-url)
     {:id id, :name (subs (str id) 1)}))

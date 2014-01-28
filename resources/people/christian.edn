@@ -101,12 +101,11 @@
 
  :projects [{:id :finn-oppdrag
              :customer "FINN Oppdrag"
-             :description "Gjorde [FINN Oppdrags](http://finn.no/oppdrag/)
-             avanserte registreringsskjema klart for utrulling til flere
-             markedsplasser ved å modularisere koden til komponenter som kunne
-             settes sammen til forskjellige skjemaer."
-             :tech [:javascript :spring-mvc :js-test-driver
-                    :sinon :java :junit]}
+             :description "Klargjorde et avansert registreringsskjema
+             for utrulling til flere markedsplasser ved å modularisere
+             koden til komponenter som kunne settes sammen til
+             forskjellige skjemaer."
+             :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]}
             {:id :finn-smajobber
              :customer "FINN Småjobber"
              :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet

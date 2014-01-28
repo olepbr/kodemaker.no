@@ -35,3 +35,11 @@
  (update-in* {:a [1 2]} [:a []] inc) => {:a [2 3]}
  (update-in* {:a [{:b 1} {:b 2}]} [:a [:b]] inc) => {:a [{:b 2} {:b 3}]}
  (update-in* {:a [{:b [{:c 1}]}]} [:a [:b [:c]]] inc) => {:a [{:b [{:c 2}]}]})
+
+(fact
+ (interleave-all [1 2 3] [:a :b :c]) => [1 :a 2 :b 3 :c]
+ (interleave-all [1 2 3] [:a :b]) => [1 :a 2 :b 3]
+ (interleave-all [1 2] [:a :b :c]) => [1 :a 2 :b :c]
+
+ (interleave-all [1 2] [1 2] [1 2]) => [1 1 1 2 2 2]
+ (interleave-all [1] [1 2] [1 2 3]) => [1 1 1 2 2 3])
