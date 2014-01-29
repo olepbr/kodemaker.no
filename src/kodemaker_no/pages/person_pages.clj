@@ -15,7 +15,7 @@
 
 (defn- render-recommendations [recs person]
   (list [:h2 (str (:genitive person) " Anbefalinger")]
-        (map render-recommendation recs)))
+        (map render-recommendation (take 3 recs))))
 
 (defn- render-hobby [{:keys [title description url illustration]}]
   [:div.bd
