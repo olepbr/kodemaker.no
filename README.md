@@ -5,7 +5,8 @@ Våre nye nettsider kommer til verden.
 ## Teste lokalt
 
 Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen)
-om du ikke har den. Med homebrew på OSX: `brew update && brew install leiningen`
+om du ikke har den. Sats på versjon 2.3+. Hvis du har en gammel versjon under 2.0 så funker det garantert ikke.
+På OSX kan du hente den med homebrew: `brew update && brew install leiningen`
 
 Du må også ha JDK 1.7. Sjekk med `java -version`, ellers
 [last ned her](http://docs.oracle.com/javase/7/docs/webnotes/install/index.html).
