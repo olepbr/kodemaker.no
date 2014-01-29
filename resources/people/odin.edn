@@ -16,11 +16,17 @@
             :github "odinodin"
             :coderwall "odinodin"}
 
- :tech {:favorites-at-the-moment [:clojure :clojurescript :light-table]
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :lighttable]
         :want-to-learn-more [:clojurescript :ansible :unity3d]}
 
+ :blogs [{:id :odinodin
+          :name "odinodin.io"
+          :url "http://odinodin.io/"
+          :theme "Programmering"
+          :tech [:testing :clojure :groovy]}]
+
  :recommendations [{:title "This Developer's Life"
-                    :blurb "Dette er min favorittpodcast.
+                    :blurb "Dette er min definitive favorittpodcast.
                             Her får man servert interessante
                             perspektiv på kjente tema innenfor programvareutvikling; krydret
                             med intervjuer av dyktige utviklere."
@@ -54,4 +60,9 @@
                           lesbare og presise tester."
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}
-                  :thumb "/thumbs/videos/spock.jpg"}]}
+                  :thumb "/thumbs/videos/spock.jpg"}]
+
+ :hobbies [{:title "Fotografering"
+            :description "Kameraet er stort sett med overalt. Du vet
+                          aldri når muligheten til å ta et blinkskudd viser seg. "
+            :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}]}
