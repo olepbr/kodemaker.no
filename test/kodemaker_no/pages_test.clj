@@ -7,8 +7,8 @@
                     :finnjoh {:url "/finnjoh/"}}
            :tech {:react {:url "/react/"}}
            :projects {:finn-oppdrag {:url "/finn-oppdrag/"}}
-           :articles {"/kompetanse.adoc" ""
-                      "/systemer.adoc" ""}}
+           :articles {"/kompetanse.md" ""
+                      "/systemer.md" ""}}
           create-pages keys set)
 
       => #{"/mennesker/"
@@ -27,6 +27,6 @@
       (create-pages {:people {:magnars {:url "/magnars/"}
                               :finnjoh {:url "/finnjoh/"}}
                      :tech {}
-                     :articles {"/magnars.adoc" ""
-                                "/finnjoh.adoc" ""}})
+                     :articles {"/magnars.md" ""
+                                "/finnjoh.md" ""}})
       => (throws Exception "URL conflicts between :person-pages and :article-pages: #{\"/magnars/\" \"/finnjoh/\"}"))

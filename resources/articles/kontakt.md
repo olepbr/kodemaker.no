@@ -1,8 +1,7 @@
-= Ta kontakt
+:title Ta kontakt
 
-== :lead
+:::lead
 
-++++
 <div class="mod"><div id="map" class="map"></div></div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w&sensor=false"></script>
 <script>
@@ -21,25 +20,24 @@ google.maps.event.addDomListener(window, "load", function () {
     });
 });
 </script>
-++++
 
 Vår besøksadresse er Dronning Eufemias gate 16, 9. etasje. Henvendelse i resepsjonen.
 
-link:/mennesker/[Noen andre du vil snakke med?]
+[Noen andre du vil snakke med?](/mennesker/)
 
-== :aside
+:::aside
 
-image:/photos/people/kolbjorn/side-profile-cropped.jpg["Kolbjørn Jetne",link="/kolbjorn/"]
+<a href="/kolbjorn/"><img src="/photos/people/kolbjorn/side-profile-cropped.jpg"></a>
 
-*Kolbjørn Jetne* +
-Daglig leder +
-+47 957 45 096 +
-link:mailto:kolbjorn@kodemaker.no[kolbjorn@kodemaker.no]
+*Kolbjørn Jetne* <br>
+Daglig leder <br>
++47 957 45 096 <br>
+[kolbjorn@kodemaker.no](mailto:kolbjorn@kodemaker.no)
 
-*Kodemaker Systemutvikling AS* +
-Dronning Eufemias gate 16 +
-Visma-bygget +
+*Kodemaker Systemutvikling AS* <br>
+Dronning Eufemias gate 16 <br>
+Visma-bygget <br>
 0191 Oslo
 
-+47 22 82 20 80 +
-link:mailto:kontakt@kodemaker.no[kontakt@kodemaker.no]
++47 22 82 20 80 <br>
+[kontakt@kodemaker.no](mailto:kontakt@kodemaker.no)

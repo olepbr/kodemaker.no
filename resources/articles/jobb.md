@@ -1,35 +1,35 @@
-= På tide med ny jobb?
+:title På tide med ny jobb?
 
-== :aside
+:::aside
 
-image:/photos/people/magnus/side-profile-cropped.jpg["Magnus Rundeberget",link="/magnus/"]
+<a href="/magnus/"><img src="/photos/people/magnus/side-profile-cropped.jpg"></a>
 
-*Magnus Rundberget* +
-"Vi tilbyr de rette kandidatene en jobb med større faglig, sosialt og økonomisk
-utviklingspotensiale enn man finner i de fleste andre konsulenthus."
+[Magnus Rundberget](/magnus/) <br>
+<q>Vi tilbyr de rette kandidatene en jobb med større faglig, sosialt og økonomisk
+utviklingspotensiale enn man finner i de fleste andre konsulenthus.</q>
 
-image:/photos/people/yen/side-profile-cropped.jpg["Yen Xu",link="/yen/"]
+<a href="/yen/"><img src="/photos/people/yen/side-profile-cropped.jpg"></a>
 
-*Yen Xu* +
-"Jeg skulle ønske det var flere jenter her!. Gutta er morsomme typer, og jeg er
-sikker på at de også hadde satt pris på flere jenter i miljøet vårt."
+[Yen Xu](/yen/) <br>
+<q>Jeg skulle ønske det var flere jenter her!. Gutta er morsomme typer, og jeg er
+sikker på at de også hadde satt pris på flere jenter i miljøet vårt.</q>
 
-image:/photos/people/torstein/side-profile-cropped.jpg["Torstein Meland",link="/torstein/"]
+<a href="/torstein/"><img src="/photos/people/torstein/side-profile-cropped.jpg"></a>
 
-*Torstein Meland* +
-"Jeg har fått barn hver sommer i det siste, og synes det har vært rimelig greit
-å ta 10 uker fri uten å spørre sjefen om lov…"
+[Torstein Meland](/torstein/) <br>
+<q>Jeg har fått barn hver sommer i det siste, og synes det har vært rimelig greit
+å ta 10 uker fri uten å spørre sjefen om lov...</q>
 
-image:/photos/people/finn/side-profile-cropped.jpg["Finn J. Johnsen",link="/finn/"]
+<a href="/finn/"><img src="/photos/people/finn/side-profile-cropped.jpg"></a>
 
-*Finn J. Johnsen* +
-"Fra dag 1, forsto eg at her va det litt annerledes. Her blei eg involvert i
+[Finn J. Johnsen](/finn/) <br>
+<q>Fra dag 1, forsto eg at her va det litt annerledes. Her blei eg involvert i
 alle kundeforhold, kontrakter, lønninger og timepriser. Åbenhet. Det må en
-liga!"
+liga!</q>
 
-== :lead
+:::lead
 
-=== Hvem sin feil er det at du kjeder deg på jobben?
+### Hvem sin feil er det at du kjeder deg på jobben?
 
 Vi er i utgangspunktet ikke så veldig ivrig på å bli flere, men tror at det kan
 dukke opp et menneske i ny og ne som passer inn hos oss. Isåfall appellerer
@@ -38,14 +38,14 @@ kniven der du jobber i dag og føler at tiden er moden for å ta steget over til
 noe nytt. Vi tilbyr den rette kandidaten en jobb med større faglig, sosialt og
 økonomisk utviklingspotensiale enn man finner i de fleste andre konsulenthus.
 
-=== Hvem er du?
+### Hvem er du?
 
 Du er en faglig dyktig, initiativrik og sosialt intelligent person. Du er
 selvdrevet, lærelysten og har sannsynligvis høyere utdanning. Kanskje begynner
 du å bli lei av å være en liten brikke i en større bedrift, og kunne ønske deg
 en arbeidsplass med større faglig, økonomisk og sosialt utviklingspotensiale?
 
-=== Ekstern faglig utvikling
+### Ekstern faglig utvikling
 
 Vi er et miljø som setter faglig utvikling høyt. Med massiv erfaring fra store
 konsulenthus/organisasjoner vet vi hvor vanskelig det ofte kan være å komme seg
@@ -62,7 +62,7 @@ for eksempel en gjeng på tolv glade gutter på QCon i London. Vi pleier å ha e
 stand på JavaZone, og her får vi også godt med faglig påfyll. I tillegg deltar
 mange på diverse ‘meetups’ som arrangeres rundt omkring i Oslo-området.
 
-=== Intern faglig utvikling
+### Intern faglig utvikling
 
 Vi har et svært godt internt fagmiljø, og det diskuteres heftig angående hva som
 er beste måten å løse diverse problemer på. Vi er ikke redde for å spørre
@@ -71,20 +71,20 @@ jevnlige medarbeidersamlinger kjører vi egne sesjoner med lyntaler, og iveren
 etter å holde disse lyntalene er overveldende. Som regel har vi mange flere
 forslag enn det vi har tid til å ta med.
 
-=== Økonomiske muligheter
+### Økonomiske muligheter
 
 For å være attraktive for de dyktigste har vi et belønningssystem som er blant
 markedets beste. Vi har meget små administrasjonsutgifter, og har konstruert en
 modell som gir svært god avkastning for alle involverte parter.
 
-=== Trivsel og frihet
+### Trivsel og frihet
 
 Det er viktig å trives i hverdagen. De fleste av oss trenger tid til å pleie
 familie og venner, samt dyrke sine andre interesser. Våre konsulenter har derfor
 minimum seks ukers ferie, og vi legger ikke opp til at vi skal måtte jobbe masse
 overtid i dårlig styrte prosjekter.
 
-=== Vi satser stort på sosiale treff
+### Vi satser stort på sosiale treff
 
 Hver vinter samler vi en weekend alle konsulenter med famile på et egnet sted i
 fjellet. Her slår vi oss løs med god mat og drikke, og arrangementer som både

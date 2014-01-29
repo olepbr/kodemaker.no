@@ -1,8 +1,7 @@
-= Systemutvikling på høyt nivå
+:title Systemutvikling på høyt nivå
+:illustration /photos/people/kolbjorn/side-profile-cropped.jpg
 
-:illustration: /photos/people/kolbjorn/side-profile-cropped.jpg
-
-== :lead
+:::lead
 
 Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra
 tøffere tider har lært oss at vi må være helt i front teknologisk for
@@ -11,7 +10,7 @@ oppdatert på nye teknologier og trender innen våre fagfelt. Kundene
 opplever oss som medspillere, og vi er flinke til å formidle og dele
 vår kunnskap.
 
-== Teknologisk i front
+## Teknologisk i front
 
 Svært god teknologikunnskap er bare én brikke i det å drive vellykket
 konsulentvirksomhet. Våre gode kommunikasjonsevner, evne til å
@@ -24,7 +23,7 @@ I motsetning til større aktører har vi ingen intensjon om å pådytte
 kundene våre egne metodikker, men setter oss i stedet i kundens
 posisjon og bidrar med vår kunnskap der hvor dette er ønskelig. Som
 representanter for en uavhengig aktør slipper våre konsulenter den
-``tvangstrøyen'' mange opplever ved å jobbe i et større konsulenthus
+"tvangstrøyen" mange opplever ved å jobbe i et større konsulenthus
 eller hos en leverandør. Vi tror at kundene opplever konsulenter fra
 mindre selskaper som minst like dyktige og kanskje mer opptatt av
 kundens problemstillinger enn sin egen arbeidsgivers prosjektpolitikk.
@@ -32,7 +31,7 @@ Vi har også samarbeidspartnere med lignende og utfyllende kompetanse.
 Vi er derfor istand til påta oss større prosjekter. Totalt råder vi
 over bortimot 200 konsulenter via våre allianser i inn- og utland.
 
-== Konsulenttjenester innen systemutvikling
+## Konsulenttjenester innen systemutvikling
 
 Våre konsulenter har lang og god erfaring med utvikling av komplekse
 og virksomhetskritiske systemer. Vi bruker mye ressurser på å holde
@@ -51,7 +50,7 @@ transaksjonsmengder. Vi definerer oss selv som systemutviklere, men
 har helt klart gode forutsetninger for å mene noe om og jobbe med alt
 fra forretningsutvikling til brukerinteraksjon også.
 
-== Språk, plattformer og utviklingsmiljøer
+## Språk, plattformer og utviklingsmiljøer
 
 Vi har både små og store, men heldigvis teknologisk utfordrende
 kunder. Disse kundene ønsker gjerne å være teknologisk i front, og vi
@@ -59,16 +58,12 @@ forsøker å bistå i å gjøre de riktige valgene til riktig tid. Vi
 behersker mange teknologier og plattformer, og dette framkommer best
 via den enkeltes CV.
 
-== :aside
+:::aside
 
-link:/kolbjorn/[Kolbjørn Jetne]
+[Kolbjørn Jetne](/kolbjorn/)
 
-++++
-<p><q>
-Erfaringer fra tøffere tider har lært oss at vi må være helt i front
+<q>Erfaringer fra tøffere tider har lært oss at vi må være helt i front
 teknologisk for å være attraktive som konsulenter. Vi setter vår ære i
 å holde oss oppdatert på nye teknologier og trender innen våre
 fagfelt. Kundene opplever oss som medspillere, og vi er flinke til å
-formidle og dele vår kunnskap.
-</q></p>
-++++
+formidle og dele vår kunnskap.</q>

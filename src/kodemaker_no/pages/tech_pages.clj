@@ -39,7 +39,7 @@
 (defn- tech-page [tech]
   {:title (:name tech)
    :illustration (:illustration tech)
-   :lead (to-html :md (:description tech))
+   :lead (to-html (:description tech))
    :body (list
           (maybe-include tech :recommendations render-recommendations)
           (maybe-include tech :presentations render-presentations))})

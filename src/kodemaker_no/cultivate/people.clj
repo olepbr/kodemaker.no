@@ -1,6 +1,6 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
-            [kodemaker-no.homeless :refer [update-vals]]
+            [kodemaker-no.homeless :refer [update-vals update-in-existing]]
             [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.projects :as projects]))
@@ -31,11 +31,6 @@
 (defn- look-up-tech-in-maps [content maps]
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
        maps))
-
-(defn- update-in-existing [m path f]
-  (if-not (nil? (get-in m path))
-    (update-in m path f)
-    m))
 
 (defn- look-up-tech [content person]
   (-> person

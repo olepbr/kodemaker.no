@@ -11,7 +11,6 @@
                  [hiccup "1.0.4"]
                  [enlive "1.1.5"]
                  [me.raynes/cegdown "0.1.1"]
-                 [asciidoclj "0.2.0"]
                  [prismatic/schema "0.2.0"]]
   :ring {:handler kodemaker-no.web/app
          :port 3333}

@@ -8,9 +8,9 @@
   (str/replace s #" ([^ ]{1,6})$" "&nbsp;$1"))
 
 (def pegdown-options ;; https://github.com/sirthias/pegdown
-  [:autolinks :fenced-code-blocks :strikethrough])
+  [:autolinks :fenced-code-blocks :strikethrough :quotes :smarts])
 
-(defn to-html [_ s]
+(defn to-html [s]
   (md/to-html s pegdown-options))
 
 (defn comma-separated [coll]

@@ -10,7 +10,7 @@
           [:p.near.cookie-w
            [:span.cookie (interpose " " (map markup/link-if-url tech))]])
         (markup/append-to-paragraph
-         (to-html :md blurb)
+         (to-html blurb)
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recs person]
@@ -21,7 +21,7 @@
   [:div.bd
    [:h3.mtn title]
    (markup/prepend-to-paragraph
-    (to-html :md description)
+    (to-html description)
     (if url
       [:a.illu {:href url} [:img {:src illustration}]]
       [:img.illu {:src illustration}]))])

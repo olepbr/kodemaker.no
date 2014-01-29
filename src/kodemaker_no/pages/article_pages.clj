@@ -1,39 +1,19 @@
 (ns kodemaker-no.pages.article-pages
-  (:require [asciidoclj.core :as adoc]
-            [kodemaker-no.homeless :refer [nil-if-blank remove-vals update-vals rename-keys]]
+  (:require [kodemaker-no.structured-document :refer [read-doc]]
+            [kodemaker-no.homeless :refer [nil-if-blank remove-vals update-vals rename-keys update-in-existing]]
+            [kodemaker-no.formatting :refer [to-html]]
             [clojure.string :as str]))
 
-(def adoc-parse (memoize adoc/parse))
-
-(defn- find-part [doc title]
-  (first (filter #(= title (:title %)) (:parts doc))))
-
-(defn- content [part]
-  (:content part))
-
-(defn- htmlize-part [part]
-  (str "<h2>" (:title part) "</h2>" (content part)))
-
-(defn- patch-together-article-body [doc]
-  (->> doc :parts
-       (remove #(-> % :title #{":lead" ":aside" ":ignore"}))
-       (map htmlize-part)
-       (str/join)
-       (nil-if-blank)))
-
 (defn article-page [s]
-  (-> (let [doc (adoc-parse (str s "\n\n== :ignore"))]
-        {:title (-> doc :header :document-title)
-         :illustration (-> doc :header :attributes :illustration)
-         :lead (-> doc (find-part ":lead") content)
-         :body (-> doc patch-together-article-body)
-         :aside (-> doc (find-part ":aside") content)})
-      (remove-vals nil?)))
+  (-> (read-doc s)
+      (update-in-existing [:lead] to-html)
+      (update-in-existing [:aside] to-html)
+      (update-in-existing [:body] to-html)))
 
 (defn- article-url [path]
-  (if (= path "/index.adoc")
+  (if (= path "/index.md")
     "/index.html"
-    (str/replace path #"\.adoc$" "/")))
+    (str/replace path #"\.md$" "/")))
 
 (defn article-pages [articles]
   (-> articles

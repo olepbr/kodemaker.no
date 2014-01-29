@@ -30,6 +30,11 @@
     (assoc-in m path v)
     m))
 
+(defn update-in-existing [m path f]
+  (if-not (nil? (get-in m path))
+    (update-in m path f)
+    m))
+
 (defn update-in* [m path f]
   "Like update-in, but can map over lists by nesting paths."
   (if (vector? (last path))
