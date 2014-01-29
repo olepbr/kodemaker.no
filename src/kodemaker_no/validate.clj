@@ -47,7 +47,7 @@
    (optional-key :blog-posts) [{:url Str
                                 :title Str
                                 :blurb Str
-                                :tech [Keyword]
+                                (optional-key :tech) [Keyword]
                                 :blog (either Keyword ;; :id from :blogs
                                               {:name Str
                                                :url Str})}]

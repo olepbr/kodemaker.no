@@ -4,11 +4,14 @@
             [hiccup.core :as hiccup]
             [clojure.string :as str]))
 
+(defn render-tech-bubble [tech]
+  (when-not (empty? tech)
+    [:p.near.cookie-w
+     [:span.cookie (interpose " " (map markup/link-if-url tech))]]))
+
 (defn- render-recommendation [{:keys [title tech blurb link]}]
   (list [:h3 title]
-        (when-not (empty? tech)
-          [:p.near.cookie-w
-           [:span.cookie (interpose " " (map markup/link-if-url tech))]])
+        (render-tech-bubble tech)
         (markup/append-to-paragraph
          (to-html blurb)
          (list " " (markup/render-link link)))))
@@ -49,7 +52,7 @@
                                 (throw (Exception. (str "Missing url to video or slides in presentation " title))))}
     [:img {:src thumb}]]
    [:div.bd
-    [:h4.mtn title]
+    [:h3.mtn title]
     [:p blurb
      (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
      (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
@@ -63,7 +66,7 @@
   [:div.media
    (when photo [:img.img.thumb.mts {:src photo}])
    [:div.bd
-    [:h4.mtn author]
+    [:h3.mtn author]
     (if title
       [:p.near title ", " (markup/link-if-url project)]
       [:p.near (markup/link-if-url project)])
@@ -81,6 +84,18 @@
     [:span.nowrap phone-number] "<br>"
     [:a {:href (str "mailto:" email-address)} email-address]]])
 
+(defn- render-blog-post [post]
+  (list
+   [:h3 (:title post)]
+   (render-tech-bubble (:tech post))
+   [:p (:blurb post) " "
+    [:a {:href (:url post)} "Les posten"]]))
+
+(defn- render-blog-posts [posts person]
+  (list
+   [:h2 (str (:genitive person) " Bloggposter")]
+   (map render-blog-post (take 3 posts))))
+
 (defn- maybe-include [person kw f]
   (when (kw person)
     (f (kw person) person)))
@@ -94,6 +109,7 @@
           (maybe-include person :tech render-tech)
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
+          (maybe-include person :blog-posts render-blog-posts)
           (maybe-include person :presentations render-presentations)
           (maybe-include person :endorsements render-endorsements))})
 

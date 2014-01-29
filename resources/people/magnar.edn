@@ -25,7 +25,15 @@
  :tech {:favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
         :want-to-learn-more [:react :clojurescript :haskell]}
 
- :recommendations [{:title "Simple Made Easy"
+ :recommendations [{:title "Web Performance Calendar"
+                    :blurb "Min favorittjulekalender til helårsbruk.
+                            Full av triks, tips, testing og forskning
+                            om frontendytelse. Vel verdt å lese hvis
+                            du er opptatt av å lage raske websider."
+                    :link {:url "http://calendar.perfplanet.com"
+                           :text "Besøk kalenderen"}
+                    :tech [:web-performance]}
+                   {:title "Simple Made Easy"
                     :blurb "Det er ikke lett å lage noe enkelt. Rich
                             Hickey snakker om forskjellen på nærliggende
                             (subjektivt lett) og ukomplisert (objektivt
@@ -34,21 +42,6 @@
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
                     :tech [:design :clojure]}
-                   {:title "Web Performance Calendar"
-                    :blurb "Min favorittjulekalender til helårsbruk.
-                            Full av triks, tips, testing og forskning
-                            om frontendytelse. Vel verdt å lese hvis
-                            du er opptatt av å lage raske websider."
-                    :link {:url "http://calendar.perfplanet.com"
-                           :text "Besøk kalenderen"}
-                    :tech [:web-performance]}
-                   {:title "An introduction to Object Oriented CSS"
-                    :blurb "En blog post om de to grunnprinsippene i
-                            OOCSS: Separasjon av struktur og utseende, og
-                            separasjon av innhold og rammer."
-                    :link {:url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
-                           :text "Les artikkelen"}
-                    :tech [:oocss :css]}
                    {:title "Building User Interfaces With Facebook's React"
                     :blurb "Steven Luscher har en herlig stil når han
                             i dette foredraget viser fram hvorfor React er bra
@@ -56,6 +49,13 @@
                     :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
                            :text "Se foredraget"}
                     :tech [:react :javascript]}
+                   {:title "An introduction to Object Oriented CSS"
+                    :blurb "En blog post om de to grunnprinsippene i
+                            OOCSS: Separasjon av struktur og utseende, og
+                            separasjon av innhold og rammer."
+                    :link {:url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
+                           :text "Les artikkelen"}
+                    :tech [:oocss :css]}
                    {:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
                            :text "Se foredraget"}
@@ -104,7 +104,25 @@
           :theme "teknisk frontend"
           :tech [:javascript :oocss :responsive-design :html :tdd]}]
 
- :blog-posts [{:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
+ :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
+               :title "5 JavaScript-uvaner du må legge av deg"
+               :blurb "Jeg tør påstå at JavaScript er et av språkene
+                       som er mest utsatt for cargo culting. For noen år siden
+                       var det utstrakt klipping og liming, og uvanene spredte
+                       seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
+               :tech [:javascript]
+               :blog :framsieutvikling}
+              {:url "http://framsieutvikling.no/post/37707914430/boker-for-vordende-framsiefolk"
+               :title "Bøker for vordende framsiefolk"
+               :blurb "En kamerat og kollega som stort sett har holdt
+                       seg til baksia, fortalte meg at han ville bli
+                       skikkelig god på framsia. Om jeg har noe
+                       lesestoff å anbefale? Å ja. Disse bøkene mener
+                       jeg er essensielle for vordende
+                       framsieutviklere."
+               :tech [:frontend]
+               :blog :framsieutvikling}
+              {:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
                :title "OOCSS: Et paradigmeskifte"
                :blurb "Jeg satt min stolthet i å skrive slank
                        HTML. Jeg kjente alle triksene i boka for å få
