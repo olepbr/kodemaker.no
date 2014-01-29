@@ -101,7 +101,7 @@
  :blogs [{:id :framsieutvikling
           :name "framsieutvikling.no"
           :url "http://framsieutvikling.no/"
-          :theme "Teknisk frontend"
+          :theme "teknisk frontend"
           :tech [:javascript :oocss :responsive-design :html :tdd]}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"

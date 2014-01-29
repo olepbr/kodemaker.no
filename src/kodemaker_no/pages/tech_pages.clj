@@ -1,6 +1,6 @@
 (ns kodemaker-no.pages.tech-pages
   (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
-            [kodemaker-no.markup :as markup :refer [render-link]]))
+            [kodemaker-no.markup :as markup]))
 
 (defn- link-to-person [person]
   [:a {:href (:url person)} (:name person)])
