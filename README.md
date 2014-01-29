@@ -20,8 +20,7 @@ Voila!
 
 ## Hvordan skal mine data se ut?
 
-Enn så lenge er alt dette tentativt. Jeg må prøve meg litt fram. Men
-datastrukturen blir omtrent slik, vil jeg tro:
+Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
 ```clj
 (def Person
@@ -130,6 +129,30 @@ Bildene ligger i `resources/public`.
 
 Hvis du ikke har Photoshop eller lignende, så kan du skalere bilder på
 http://scaleyourimage.com/.
+
+## Hva med fagsider og referanser?
+
+De ligger i `resources/tech` og `resources/projects`.
+
+```clj
+(def Tech
+  {:id Keyword
+   :name Str
+   :description Str
+   (optional-key :illustration) Str
+   (optional-key :site) Str})
+
+(def Project
+  {:id Keyword
+   :name Str
+   :logo Str
+   :description Str
+   (optional-key :illustration) Str
+   (optional-key :site) Str})
+```
+
+Se eksempler på [tech](resources/tech/javascript.edn) og
+[project](resources/projects/finn-oppdrag.edn).
 
 ## Provisjonering
 
