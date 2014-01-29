@@ -1,12 +1,12 @@
 (ns kodemaker-no.pages.people-page)
 
-(defn- render-person [person]
+(defn- render-person [{:keys [url photos full-name title]}]
   [:div.gridUnit.r-4-3-2
-   [:a.photoframe.gridContent.linkBlock {:href (:url person)}
+   [:a.photoframe.gridContent.linkBlock {:href url}
     [:span.mount.tiny.block
-     [:img.mbs {:src (-> person :photos :side-profile)}]
-     [:span.linkish (:full-name person)]
-     [:span.title (:title person)]]]])
+     [:img.mbs {:src (:side-profile photos)}]
+     [:span.linkish full-name]
+     [:span.title title]]]])
 
 (defn- num-consultants [people]
   (->> people

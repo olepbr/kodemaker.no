@@ -1,46 +1,40 @@
 (ns kodemaker-no.pages.project-pages
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [comma-separated]]))
+            [kodemaker-no.formatting :refer [comma-separated]]
+            [kodemaker-no.markup :refer [link-if-url]]))
 
-(defn- link-to-tech [tech]
-  (if (:url tech)
-    [:a {:href (:url tech)} (:name tech)]
-    (:name tech)))
-
-(defn- render-person [person]
+(defn- render-person [{:keys [url thumb full-name description]}]
   [:div.media
-   [:a.img.thumb.mts {:href (:url person)}
-    [:img {:src (:thumb person)}]]
+   [:a.img.thumb.mts {:href url}
+    [:img {:src thumb}]]
    [:div.bd
-    [:h4.mtn (:full-name person)]
-    [:p (:description person)]]])
+    [:h4.mtn full-name]
+    [:p description]]])
 
 (defn- render-people [people project]
   (list [:h2 "Våre folk på saken"]
         (map render-person (:people project))))
 
-(defn- render-endorsement [endo]
+(defn- render-endorsement [{:keys [photo author person title quote]}]
   [:div.media
-   (when (:photo endo)
-     [:img.img.thumb.mts {:src (:photo endo)}])
+   (when photo [:img.img.thumb.mts {:src photo}])
    [:div.bd
-    [:h4.mtn (:author endo)
+    [:h4.mtn author
      [:span.tiny " om "
-      [:a {:href (-> endo :person :url)} (-> endo :person :first-name)]]]
-    (when (:title endo)
-      [:p.near (:title endo)])
-    [:p [:q (:quote endo)]]]])
+      [:a {:href (:url person)} (:first-name person)]]]
+    (when title [:p.near title])
+    [:p [:q quote]]]])
 
-(defn- render-endorsements [endorsements project]
+(defn- render-endorsements [endorsements _]
   (list [:h2 "Referanser"]
         (map render-endorsement endorsements)))
 
-(defn- render-tech [tech project]
+(defn- render-tech [tech _]
   (list [:h3 "Teknologi"]
-        [:p (comma-separated (map link-to-tech tech)) "."]))
+        [:p (comma-separated (map link-if-url tech)) "."]))
 
-(defn- render-illustration [project]
-  [:p [:a {:href (:site project)} [:img {:src (:illustration project)}]]])
+(defn- render-illustration [{:keys [site illustration]}]
+  [:p [:a {:href site} [:img {:src illustration}]]])
 
 (defn- strip-protocol [s]
   (str/replace s #"^[a-z]+://" ""))
