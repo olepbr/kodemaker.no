@@ -48,7 +48,44 @@
                             separasjon av innhold og rammer."
                     :link {:url "http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/"
                            :text "Les artikkelen"}
-                    :tech [:oocss :css]}]
+                    :tech [:oocss :css]}
+                   {:title "Building User Interfaces With Facebook's React"
+                    :blurb "Steven Luscher har en herlig stil når han
+                            i dette foredraget viser fram hvorfor React er bra
+                            greier. Underholdende og informativt!"
+                    :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
+                           :text "Se foredraget"}
+                    :tech [:react :javascript]}
+                   {:title "React: Rethinking best-practices"
+                    :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
+                           :text "Se foredraget"}
+                    :tech [:javascript :design :react]
+                    :blurb "Pete Hunt, en av hodene bak JavaScript
+                            UI-rammeverket til Facebook og Instagram, React,
+                            forteller om tankene bak. Foredraget fra JSConf.eu
+                            2013 utfordrer en del etablerte sannheter og
+                            presenterer en måte å tenke på
+                            web-frontend-programmering på som sammenfaller med
+                            klassisk UI-programmering og som virkelig fokuserer
+                            på *separation of concerns*."}
+                   {:title "Real-World Datomic: An Experience Report"
+                    :blurb "Craig Andera snakker om erfaringer med å
+                            bruke Datomic på et større prosjekt, og
+                            kommer med flere nyttige poenger
+                            underveis. Særlig bra er hans gjennomgang
+                            av indekser."
+                    :link {:url "http://www.infoq.com/presentations/datomic-use-case/"
+                           :text "Se foredraget"}
+                    :tech [:datomic]}
+                   {:title "Keep Chocolate Love Atomic"
+                    :blurb "Stuart Halloway skriver om Datomic og
+                            hvordan vi så lett faller tilbake til
+                            destruktiv oppdatering, når vi med litt
+                            ynde kan legge til facts. Må leses av alle
+                            som skal bruke Datomic."
+                    :link {:url "http://blog.datomic.com/2012/08/atomic-chocolate.html"
+                           :text "Les artikkelen"}
+                    :tech [:datomic]}]
 
  :hobbies [{:title "Brettspill"
             :description "Det er mer enn Monopol og Ludo i verden. Har du prøvd

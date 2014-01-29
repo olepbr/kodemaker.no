@@ -33,7 +33,7 @@
                             presenterer en måte å tenke på
                             web-frontend-programmering på som sammenfaller med
                             klassisk UI-programmering og som virkelig fokuserer
-                            på 'separation of concerns'."}
+                            på *separation of concerns*."}
                    {:title "The Future of JavaScript MVC Frameworks"
                     :link {:url "http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"
                            :text "Les artikkelen"}
