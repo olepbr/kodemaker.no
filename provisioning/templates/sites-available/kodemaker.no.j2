@@ -60,10 +60,10 @@ server {
     }
   }
 
-  rewrite ^/2010/05/den-gode-venninnen-og-tur-til-maldivene /blogg/den-gode-venninnen-og-tur-til-maldivene/
-  rewrite ^/2010/05/flere-kodemakere-til-høsten /blogg/flere-kodemakere-til-høsten/
-  rewrite ^/2010/05/kodemaker-golf-turnering /blogg/kodemaker-golfturnering/
-  rewrite ^/2010/05/lansering-av-kdoemkaer-no /blogg/lansering-av-kdoemkaer-no/
+  rewrite ^/2010/05/den-gode-venninnen-og-tur-til-maldivene /blogg/den-gode-venninnen-og-tur-til-maldivene/ permanent;
+  rewrite ^/2010/05/flere-kodemakere-til-høsten /blogg/flere-kodemakere-til-høsten/ permanent;
+  rewrite ^/2010/05/kodemaker-golf-turnering /blogg/kodemaker-golfturnering/ permanent;
+  rewrite ^/2010/05/lansering-av-kdoemkaer-no /blogg/lansering-av-kdoemkaer-no/ permanent;
 
   # When all else fails
   error_page 404 /404.html;
