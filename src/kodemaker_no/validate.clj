@@ -32,10 +32,16 @@
                              :illustration Str
                              (optional-key :url) Str}]
 
-   (optional-key :blogs) [{:id Keyword
+   (optional-key :side-projects) [{:title Str
+                                   :description Str
+                                   :illustration Str
+                                   (optional-key :link) {:url Str :text Str}
+                                   (optional-key :tech) [Keyword]}]
+
+   (optional-key :blogs) [{:id Keyword ;; only used to DRY up :blog-posts
                            :name Str
                            :url Str
-                           :theme Str ;; very short
+                           :theme Str ;; very short, eg. "teknisk frontend" or "groovy"
                            :tech [Keyword]}]
 
    (optional-key :blog-posts) [{:url Str
@@ -72,6 +78,7 @@
    (optional-key :projects) [{:id Keyword
                               :customer Str
                               :description Str
+                              :years [Num]
                               :tech [Keyword]}]
 
    (optional-key :endorsements) [{:author Str

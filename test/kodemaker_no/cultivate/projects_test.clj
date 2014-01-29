@@ -25,7 +25,8 @@
                [{:id :finn-reise
                  :customer "FINN Reise"
                  :description "Gjorde bra ting."
-                 :tech [:javascript]}])
+                 :tech [:javascript]
+                 :years []}])
      cultivate :finn-reise :people)
 
  => [{:url "/magnar/"
@@ -64,12 +65,14 @@
                [{:id :finn-reise
                  :customer "FINN Reise"
                  :description "Gjorde bra ting."
-                 :tech [:javascript :testing :design]}])
+                 :tech [:javascript :testing :design]
+                 :years []}])
      (assoc-in [:people :andersf :projects]
                [{:id :finn-reise
                  :customer "FINN Reise"
                  :description "Gjorde også bra ting."
-                 :tech [:java :javascript :testing]}])
+                 :tech [:java :javascript :testing]
+                 :years []}])
      cultivate :finn-reise :tech)
 
  => [{:id :javascript, :name "javascript"}

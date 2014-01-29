@@ -85,7 +85,8 @@
                            [{:id :finn-oppdrag
                              :customer "FINN oppdrag"
                              :description ""
-                             :tech []}])
+                             :tech []
+                             :years []}])
                  (assoc-in [:projects :finn-surf-sammen]
                            (c/project {:id :finn-surf-sammen
                                        :name "FINN surf sammen"}))

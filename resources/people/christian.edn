@@ -117,7 +117,8 @@
              for utrulling til flere markedsplasser ved å modularisere
              koden til komponenter som kunne settes sammen til
              forskjellige skjemaer."
-             :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]}
+             :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]
+             :years [2011 2012]}
             {:id :finn-smajobber
              :customer "FINN Småjobber"
              :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet
@@ -125,7 +126,8 @@
                            jobbet med hele løsningen, men med fokus på frontend.
                            Implementert nytt ajax-søk med React.JS og hjulpet
                            andre på teamet med å styrke sin frontend-kompetanse."
-             :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]}]
+             :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
+             :years [2013 2014]}]
 
  :presentations [{:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
