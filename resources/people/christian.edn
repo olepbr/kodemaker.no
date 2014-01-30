@@ -93,7 +93,7 @@
           :name "cjohansen.no"
           :url "http://cjohansen.no/arkiv"
           :theme "Teknisk frontend og Ruby-utvikling"
-          :tech [:javascript :css :html :tdd :ruby :rails]}]
+          :tech [:javascript :css :html :testing :ruby :rails]}]
 
  :blog-posts [{:url "http://cjohansen.no/an-introduction-to-elisp"
                :title "An introduction to Emacs Lisp"
