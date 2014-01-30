@@ -25,9 +25,10 @@
    [:h3.mtn title]
    (markup/prepend-to-paragraph
     (to-html description)
-    (if url
-      [:a.illu {:href url} [:img {:src illustration}]]
-      [:img.illu {:src illustration}]))])
+    (when illustration
+      (if url
+        [:a.illu {:href url} [:img {:src illustration}]]
+        [:img.illu {:src illustration}])))])
 
 (defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]
