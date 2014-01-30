@@ -3,8 +3,12 @@
  :title "1337 h@X0r"
  :start-date "2008-10-01"
  :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
-
- :phone-number ""
- :email-address ""
-
- :presence {}}
+ :phone-number "+47 97 00 59 68"
+ :presence {:cv "finn"
+            :twitter "finnjohnsen"
+            :github "finnjohnsen"
+            :linkedin "/in/finnj"}
+ :tech {:favorites-at-the-moment [:javascript :groovy]
+       :want-to-learn-more [:clojure]}
+ :email-address "finn@kodemaker.no"
+ }
