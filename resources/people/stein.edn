@@ -7,4 +7,4 @@
  :phone-number "+47 90833407"
  :email-address "stein@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "stein"}}
