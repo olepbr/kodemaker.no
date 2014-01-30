@@ -2,9 +2,19 @@
  :name ["Kjetil" "Jørgensen-Dahl"]
  :title "Kodemaker"
  :start-date "2010-02-01"
- :description "Kjetil har utviklet og forvaltet IT-systemer siden 1998 og brenner for systemutviklingsfaget! Han er en erfaren utvikler og ScrumMaster, som ofte bidrar som teknisk ansvarlig, teamleder og testleder. Lagarbeid for å skape gode og vedlikeholdbare systemer, som gir optimal verdi for kunde og bruker er Kjetils raison d’être. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker og bidragsyter i fagmiljø som javaBin, Oslo XP Meetup og IASA."
+ :description "Kjetil har utviklet forretningskritiske applikasjoner for kunder siden 1998 og brenner for faget! Han er en erfaren utvikler og teamleder, og som ofte leverer langt mer enn bare kode. Fokusert arbeid for å skape gode og vedlikeholdbare systemer, er Kjetils mål. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker, og ofte bidragsyter, i fagfora."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 920 84 750"
+ :email-address "kjetiljd@kodemaker.no"
 
- :presence {}}
+  :presence {:cv "kjetil"
+             :linkedin "in/kjetiljd/"}
+
+   :tech {:favorites-at-the-moment [:ansible :tdd :java :groovy :gradle :ci :cd :refactoring :utviklingsprosess :organisering-av-team :code-smells]
+          :want-to-learn-more [:javascript :clojure :linux :devops]}
+
+   :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Refactoring (Martin Fowler)"}
+                                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler) (bok)"
+                                     :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode. Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
+                                     :tech [:refactoring :code-smells]}]}
+
