@@ -1,10 +1,72 @@
-{:id :stein-tore
- :name ["Stein Tore" "Tøsse"]
- :title "Kodemekker"
- :start-date "2010-10-01"
- :description "Stein Tore er en erfaren og engasjert java-utvikler. Han er opptatt av å levere kvalitet, gjennom blant annet en aktiv dialog med kunden.\n\n Stein Tore har jobbet med flere forskjellige oppgaver innen IT, slik som support, kundeansvar, installasjon, testing og utvikling. Han bruker denne erfaringen aktivt i alle de prosjekter han deltar i."
+{:id            :stein-tore
+ :name          ["Stein Tore" "Tøsse"]
+ :title         "Kodemekker"
+ :start-date    "2010-10-01"
+ :description   "Stein Tore er en erfaren og engasjert utvikler.
+                Han er opptatt av å levere kvalitet, gjennom blant annet en aktiv dialog med kunden.
+                Stein Tore har jobbet med flere forskjellige oppgaver innen IT, slik som support, kundeansvar, installasjon, testing og utvikling.
+                Han bruker denne erfaringen aktivt i alle de prosjekter han deltar i."
 
- :phone-number ""
- :email-address ""
+ :phone-number  "+47 971 25 770"
+ :email-address "stt@kodemaker.no"
 
- :presence {}}
+ :presence      {:cv      "steintore"
+                 :twitter "steintt"
+                 :github  "steintore"
+                 :linkedin "/in/steintore/"
+                 }
+
+ :tech          {:favorites-at-the-moment [:groovy]
+                 :want-to-learn-more      [ :clojure :functional-programming :lighttable]}
+
+ :hobbies       [{:title        "Dataspilling"
+                  :description  "En avkobling fra hverdagen innebærer ikke alltid å ligge på sofaen, det
+                                er deilig å noen ganger kunne leve seg inn i et godt spill. Skulle
+                                vel ønske jeg fikk mer tid til å spille..."
+                  :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}
+                  {:title        "Fotball"
+                  :description  "Etter å ha bodd ett år i Liverpool, så er det ingen vei tilbake. Interessen går
+                                opp og ned, akkurat som prestasjonen. Men liker å slappe av med en god kamp sammen
+                                med venner. Og noen ganger spiller jeg til og med selv!"
+                  :illustration "/illustrations/hobbies/fotball.jpg"}
+                 {:title        "Smarthuset som sparer penger og gjør kule ting!"
+                  :description  "Er for tiden veldig opptatt av å automatisere huset, uten at det koster skjorta.
+                                 Planen er automatisk oppvarming, melding dersom garasjeporten er åpen og
+                                 demping av lyset når det trengs. Det hele starter med en Raspberry PI"
+                  :illustration "/illustrations/hobbies/raspberrypi.jpg"}]
+
+ :projects      [{:id          :nsb
+                   :customer    "NSB"
+                   :description "RASK - Rapportsystem for kjøring. Nyutvikling og videreutvikling av
+                                Enka - et rapportsystem for togenergiforbruk Integrasjon mot
+                                Jernbaneverkets Erex, innhenting av data fra interne systemer for rapportering"
+                   :years       [2013 2014]
+                   :tech        [:groovy :grails :javascript :html :css :jenkins :jira :confluence]}
+                  {:id          :nrk
+                   :customer    "NRK"
+                   :description "Publisering på nrk.no.
+                                Nyutvikling og forbedring av publiseringsløsningen på nrk.no.
+                                Testutvikler for publisering på nrk.no. Skrive, forbedre
+                                og vedlikeholde automatiske tester for rammeverk som publiserer innhold på nrk.no"
+                   :years       [2010 2011 2012 2013]
+                   :tech        [:ruby :cucumber :java :javascript :jira :maven]}
+                  {:id          :vps-fond
+                   :customer    "Oslo Børs VPS"
+                   :description "Utarbeide arkitektur og utvikle nytt fondssystem for Oslo Børs VPS.
+                                Løsningen består av en realtids ordremotor for fondshandel i Norge og Norden.
+                                Den ble utviklet en webapplikasjon for bruk av fondsforvaltere,
+                                samt utstrakt brukt av eksterne grensesnitt (Webservice, meldingsystemer) for
+                                mottak av ordre, kurser og lignende."
+                   :years       [2010 2011]
+                   :tech        [:java :tapestry :css :html :jquery :javascript :jira :maven]}]
+
+ :endorsements  [{:author "Goran Solomonovic"
+                  :title  "Senior Consultant / System Developer"
+                  :quote  "Skillful Java developer with extremely good social skills.
+                          During project he communicated well with the customer, delivering
+                          functionality on time and according to specifications.
+                          I recommend Stein Tore to any company interested in hiring senior Java developer!"
+                  }]
+
+ }
+

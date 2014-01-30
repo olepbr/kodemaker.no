@@ -48,10 +48,11 @@
       (throw (Exception. (str "No project " id " found!")))))
 
 (defn- update-endorsement-project [content person endorsement]
-  (let [id (:project endorsement)]
+  (if-let [id (:project endorsement)]
     (assoc endorsement :project
            (or (projects/look-up-project content id)
-               {:id id, :name (:customer (find-my-project person id))}))))
+               {:id id, :name (:customer (find-my-project person id))}))
+    endorsement))
 
 (defn- look-up-projects [content person]
   (-> person

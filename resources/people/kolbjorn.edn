@@ -10,4 +10,19 @@ Nå har jeg kanskje som førstemann lagt inn stoff på denne strålende web’en
  :phone-number "+47 957 45 096"
  :email-address "kolbjorn@kodemaker.no"
 
- :presence {}}
+ :presence {
+            :twitter "kjetne"
+            :linkedin "/no.linkedin.com/in/kolbjorn/"
+            }
+            
+:hobbies [{:title "Golf"
+            :description "Herlig å tilbringe en dag på golfbanen i konkurranse med dårlige venner. Jeg skal vinne. Merkelig hvor ofte de forløsende tankene som løser alle verdensproblemer kommer når skuldrene senkes.  Forretningsmøter på golfbanen, enda mer genialt ;)"
+            :illustration "/illustrations/hobbies/golf-kolbjorn.jpg"}]
+            
+:endorsements [{
+                 :author "Rune Lien"
+                 :title "Uber coder at Agens as (tidl. Kodemaker)"
+                 :photo "/thumbs/faces/rune-lien.jpg"
+                 :quote "Jeg har hatt gleden av å jobbe i samme firma som Kolbjørn i 3 år. Han er en bunnsolid og veldig engasjert leder. Gjennom sitt engasjement og tiltro til sine ansatte har han vært med å bidra til å sette Kodemaker på kartet. Han er direkte og ærlig, legger sjeldent noe i mellom. Du får alltid gode og ærlige svar når du spør Kolbjørn om råd. Noe som i hvertfall hos meg skaper stor tillit."}]
+                         
+                         }
