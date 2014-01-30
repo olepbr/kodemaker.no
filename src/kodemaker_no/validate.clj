@@ -29,7 +29,7 @@
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             :illustration Str
+                             (optional-key :illustration) Str
                              (optional-key :url) Str}]
 
    (optional-key :side-projects) [{:title Str
