@@ -2,9 +2,30 @@
  :name ["Alf Kristian" "Støyle"]
  :title "Kodemagiker"
  :start-date "2013-10-01"
- :description "Alf Kristian jobber stadig for å forbedre seg selv, prosjektene han deltar i, og koden han skriver. Han har et glødende engasjement for sitt fag, er lærenem og samarbeidsorientert. Alf Kristian har stor arbeidskapasitet og arbeider like godt selvstendig som i team. Han er svært kunnskapsrik innen programmering og kan i tillegg til rene programmerings-oppdrag ta roller innen systemarkitektur, design og sikkerhet."
+ :description "Alf Kristian liker seg på dypt vann, med store utfordringer og vanskelige mål. Dette gjelder både i
+ privatliv og på jobb.
+ <br><br>
+ På jobb har fokuset ofte vært \"baksia\", da prosjektene han har vært i har de største utfordrigene der. Han ser
+ likevel på seg selv som en full-stack utvikler, og hjelper gjerne kunden med frontend, utvikling av datamodeller
+ eller API'er.
+ <br><br>
+ Dette betyr også at Alf Kristian er flink til å se forbedringer i alle ledd av systemutvikling. Han opplever stadig at
+ han hjelper kunden med å forbedre ting de ikke var klar over kunne vært bedre."
 
- :phone-number ""
- :email-address ""
+ :phone-number "997 92 226"
+ :email-address "alf.kristian@kodemaker.no"
 
- :presence {}}
+ :hobbies [{:title "Jogging og løpeteknikk"
+            :description "Helt siden Alf Kristian fikk en Garmin GPS klokke i gave, og oppdaget at man kunne
+            tracke sin foredring online, har han elsket å løpe. Det begynte forholdsvis rolig, helt til han ble utfordret til å
+            løpe maraton. Dette ble en kjempe-utfordring, som gjorde ham totalt hekta.
+            <br><br>
+            Alf Kristian skjønte fort at normal løpeteknikk ikke er bra for kroppen, så han blir stadig observert på
+            jobbeturer med sine Vibram Fivefingers."
+            ; Må få inn annet bilde :)
+            :illustration "/illustrations/hobbies/brettspill.jpg"}]
+
+ :tech {:favorites-at-the-moment [:clojure :Scala :FP]
+        :want-to-learn-more [:clojurescript :node.js]}
+ :presence {}
+ :recommendations []}
