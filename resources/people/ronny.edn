@@ -16,7 +16,7 @@
        :want-to-learn-more [:clojure :ansible]}
 
 :hobbies [{:title "Fallskjermhopping"
-            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på do, i selskap.
+            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på toalettet, i selskap.
             Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
             out-of-memory-error og lignende totalt fraværende. Jeg svever på en sky, eller rettere sagt; gjennom skyene. Med hodet opp eller ned, sammen med andre glade fallskjermhoppere."
              :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
