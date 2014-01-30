@@ -25,9 +25,10 @@
    [:h3.mtn title]
    (markup/prepend-to-paragraph
     (to-html description)
-    (if url
-      [:a.illu {:href url} [:img {:src illustration}]]
-      [:img.illu {:src illustration}]))])
+    (when illustration
+      (if url
+        [:a.illu {:href url} [:img {:src illustration}]]
+        [:img.illu {:src illustration}])))])
 
 (defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]
@@ -67,9 +68,11 @@
    (when photo [:img.img.thumb.mts {:src photo}])
    [:div.bd
     [:h3.mtn author]
-    (if title
-      [:p.near title ", " (markup/link-if-url project)]
-      [:p.near (markup/link-if-url project)])
+    (when (or title project)
+      [:p.near
+       (when title title)
+       (when (and title project) ", ")
+       (when project (markup/link-if-url project))])
     [:p [:q quote]]]])
 
 (defn- render-endorsements [endorsements person]

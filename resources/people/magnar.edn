@@ -102,7 +102,7 @@
           :name "framsieutvikling.no"
           :url "http://framsieutvikling.no/"
           :theme "teknisk frontend"
-          :tech [:javascript :oocss :responsive-design :html :tdd]}]
+          :tech [:javascript :oocss :responsive-design :html :testing]}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
@@ -138,14 +138,14 @@
                           og parprogrammerer foran publikum. Se
                           hvordan to typer som digger JavaScript
                           angriper problemer og gjør koden testbar."
-                  :tech [:javascript :tdd]
+                  :tech [:javascript :testing]
                   :urls {:video "http://vimeo.com/49485653"}
                   :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får
                           ryddig kode og trivelig testing ved å wrappe ajaxen
                           din."
-                  :tech [:javascript :tdd :ajax]
+                  :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
                          :source "https://github.com/magnars/server-facade"}
                   :thumb "/thumbs/videos/trivelig-testing.jpg"}]

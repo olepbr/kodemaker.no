@@ -2,9 +2,22 @@
  :name ["Stian" "C." "Alsos"]
  :title "Kodemester"
  :start-date "2010-10-01"
- :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet mye med kunder både innen offentlig sektor og bank og finans. Stian brenner for teknologi og er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
+ :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet mange ulike kunder innenfor forskjellige bransjer, og liker å ta tak i kunden problemstillinger for å løse kundens problemstillinger . Stian brenner for teknologi og er opptatt av å holde seg oppdatert å lære nye og bedre måter å løse utfordringene han stilles oven for. Han er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 932 24 450"
+ :email-address "stian@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "stian"
+ 			:twitter "stianalsos"
+ 			:linkedin "/in/stianalsos"
+ 			:github "stiancor"
+ 			:coderwall "stiancor"}
+
+ :tech {:favorites-at-the-moment [:groovy :rails :javascript]
+        :want-to-learn-more [:clojure :javascript]}
+
+:hobbies [{:title "Gitar"
+            :description "Det finnes mange grunner til å spille gitar. Noen har som drøm å spille i forykende tempo på store scener, andre bruker det for å imponere på et nachspiel en sen lørdagskveld. For andre handler det om å slappe av og koble ut. Sånn er det for Stian. Så skader det jo ikke at dattera på under året er helt oppslukt og er hans største fan når fingrene danser nedover gitarhalsen."
+            :illustration "/illustrations/hobbies/klassisk_gitar.jpg"}]
+
+}

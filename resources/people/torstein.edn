@@ -2,9 +2,24 @@
  :name ["Torstein" "Meland"]
  :title "Løsningsmann"
  :start-date "2007-04-01 00:06"
- :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i alle ledd fra kildekode til brukeropplevelse."
+ :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en 
+               rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i 
+               alle ledd fra kildekode til brukeropplevelse."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 481 12 911"
+ :email-address "torstein@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "torstein"
+            :twitter "tmetrue"
+            :linkedin "/in/tmeland/"
+            :github "tmetrue"}
+
+ :tech {:favorites-at-the-moment [:groovy :grails :angularjs]
+        :want-to-learn-more [:clojure :emacs]}
+
+ :recommendations [{:link {:url "www.test.com" :text "Test"}
+                     :title "Teste recommendations"
+                     :blurb "Dette er blurben"
+                     :tech [:test]}]
+
+}

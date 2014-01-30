@@ -21,7 +21,7 @@
  :recommendations [{:title "Test-driven JavaScript Development"
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
                         :text "Se foredraget"}
-                    :tech [:javascript :tdd :design]
+                    :tech [:javascript :testing :design]
                     :blurb "Dette foredraget av [Christian Johansen](/christian/)
                             var en grunnene til at jeg i stor grad kastet jQuery-scripting på båten. En inspirerende og lærerik testdrevet sesjon hvor man lager en autocomplete-komponent." }]
  :hobbies [{:title "Fluefiske"

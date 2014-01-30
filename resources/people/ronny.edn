@@ -4,7 +4,23 @@
  :start-date "2008-01-01"
  :description "Ronny er en allsidig utvikler med erfaring fra de fleste sider innen javautvikling. Ronny er en humørspreder og drivkraft i det sosiale livet. Påtar seg gjerne ansvar utover det vanlige og er en person som går godt overens med alle."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 928 21 901"
+ :email-address "ronny@kodemaker.no"
 
- :presence {}}
+  :presence {:cv "ronny"
+            :twitter "rlovtangen"
+            :github "rlovtangen"
+            :linkedin "/in/ronnylovtangen"}
+
+ :tech {:favorites-at-the-moment [:javascript :groovy :grails]
+       :want-to-learn-more [:clojure :ansible]}
+
+:hobbies [{:title "Fallskjermhopping"
+            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på do, i selskap.
+            Jeg trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
+            out-of-memory-error og lignende totalt fraværende. Jeg svever på en sky, eller rettere sagt; gjennom skyene. Med hodet opp eller ned, sammen med andre glade fallskjermhoppere."
+             :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
+            :url "http://hoppfallskjerm.no"}]
+
+
+ }
