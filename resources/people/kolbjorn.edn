@@ -3,7 +3,7 @@
  :title "Daglig leder"
  :start-date "2001-04-01 00:01"
  :administration? true
- :description "Kolbjørn leder firmaet vårt.  Lang erfaring med å utfordre etablerte sannheter.  Uredd og utforskende.  Såre fornøyd med at Kodemaker nå er den aller kuleste arbeidsplassen for dyktige teknologer.  Strålende kollegaer og godt humør er viktig.  Men vi skal alltid utvikle oss videre, og to hestehoder foran er helt OK!"
+ :description "Jeg synes det er moro å være leder i Kodemakar.  Lang erfaring med å utfordre etablerte sannheter.  Uredd og utforskende.  Såre fornøyd med at Kodemaker nå er den aller kuleste arbeidsplassen for dyktige teknologer.  Motiverer meg veldig å jobbe med motiverte kodemakere, og vi har det mye moro sammen.  Vi skal alltid utvikle oss videre, og to hestehoder foran er helt OK!"
 
  :phone-number "+47 957 45 096"
  :email-address "kolbjorn@kodemaker.no"
@@ -23,7 +23,7 @@
                     :link {:url "http://en.wikipedia.org/wiki/Good_to_Great"
                            :text "Mer om boka"}
                     :tech [:business]
-                    :blurb "En bok som fikk fart på mine tanker om at Kodemaker kunne bli verdens beste konsulentfirma.  Mange interessante observasjoner fra amerikanske bedrifters utvikling.  Hva kjennetegner de store suksessene. Spennende lesing"}]
+                    :blurb "En bok som fikk fart på mine tanker om at Kodemaker kunne bli verdens beste konsulentfirma.  Mange interessante observasjoner fra amerikanske bedrifters utvikling.  Hva kjennetegner de store suksessene? Spennende lesing"}]
                             
             
 :hobbies [{:title "Golf"
