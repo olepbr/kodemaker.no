@@ -1,0 +1,13 @@
+;; Her er listen over navn på tech som vi ikke har lagd noen egen side for
+;; enda, men som vi likevel vil stave annerledes enn kun stor forbokstav
+;; og med space istedet for dash.
+{
+ :angularjs "AngularJS"
+ :cd "CD"
+ :ci "CI"
+ :css "CSS"
+ :lighttable "Light Table"
+ :node-js "Node.js"
+ :tdd "TDD"
+ :unity3d "Unity 3D"
+ }

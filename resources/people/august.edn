@@ -10,7 +10,7 @@
  :presence {}
 
  :tech {:favorites-at-the-moment [:datomic, :react]
-        :want-to-learn-more [:C]}
+        :want-to-learn-more [:c]}
 
  :recommendations [{:title "Simple Made Easy"
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"

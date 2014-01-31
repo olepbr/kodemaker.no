@@ -106,5 +106,6 @@
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
              :projects {Keyword Project}
-             :articles {Str Str}}
+             :articles {Str Str}
+             :tech-names {Keyword Str}}
             content))

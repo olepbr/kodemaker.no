@@ -16,8 +16,12 @@
        (map (juxt :id identity))
        (into {})))
 
+(defn- slurp-edn-map [file]
+  (read-string-strictly [file (slurp file)]))
+
 (defn load-content []
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
-   :articles (slurp-directory "resources/articles/" #"\.md$")})
+   :articles (slurp-directory "resources/articles/" #"\.md$")
+   :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})

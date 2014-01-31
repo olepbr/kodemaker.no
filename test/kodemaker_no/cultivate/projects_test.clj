@@ -75,7 +75,7 @@
                  :years []}])
      cultivate :finn-reise :tech)
 
- => [{:id :javascript, :name "javascript"}
-     {:id :java, :name "java"}
-     {:id :testing, :name "testing"}
-     {:id :design, :name "design"}])
+ => [{:id :javascript, :name "Javascript"}
+     {:id :java, :name "Java"}
+     {:id :testing, :name "Testing"}
+     {:id :design, :name "Design"}])

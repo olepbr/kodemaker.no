@@ -1,14 +1,27 @@
 (ns kodemaker-no.cultivate.tech
-  (:require [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]
-            [kodemaker-no.cultivate.util :as util]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.cultivate.util :as util]
+            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]))
 
 (defn- add-url [tech]
   (assoc tech :url (util/url tech)))
 
+(defn- capitalize [s]
+  (str (.toUpperCase (subs s 0 1))
+       (subs s 1)))
+
+(defn- str-for-humans [id]
+  (-> id
+      str
+      (subs 1)
+      (str/replace "-" " ")
+      capitalize))
+
 (defn look-up-tech-1 [content id]
   (if-let [tech (get-in content [:tech id])]
     (-> tech (select-keys #{:id, :name}) add-url)
-    {:id id, :name (subs (str id) 1)}))
+    {:id id, :name (or (-> content :tech-names id)
+                       (str-for-humans id))}))
 
 (defn look-up-tech [content techs]
   (map #(look-up-tech-1 content %) techs))

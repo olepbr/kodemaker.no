@@ -4,7 +4,8 @@
   (merge {:people {}
           :tech {}
           :projects {}
-          :articles {}}
+          :articles {}
+          :tech-names {}}
          m))
 
 (defn tech [m]
