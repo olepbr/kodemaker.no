@@ -87,7 +87,7 @@
     [:span.nowrap phone-number] "<br>"
     [:a {:href (str "mailto:" email-address)} email-address]]])
 
-(defn- render-blog-post [{:keys [title tech blurb]}]
+(defn- render-blog-post [{:keys [title tech blurb url]}]
   (list
    [:h3 title]
    (render-tech-bubble tech)

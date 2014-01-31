@@ -89,12 +89,6 @@
             :url "http://execration.no/"}
            ]
 
- :blogs [{:id :cjohansenno
-          :name "cjohansen.no"
-          :url "http://cjohansen.no/arkiv"
-          :theme "Teknisk frontend og Ruby-utvikling"
-          :tech [:javascript :css :html :testing :ruby :rails]}]
-
  :blog-posts [{:url "http://cjohansen.no/an-introduction-to-elisp"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
@@ -108,8 +102,7 @@
                        motsetning til andre introduksjonsartikler tar den for
                        seg et nogenlunde sammensatt eksempel slik at man ser
                        hvordan Lisp ser ut utover 'Hello world'."
-               :tech [:lisp :elisp :emacs]
-               :blog :cjohansenno}]
+               :tech [:lisp :elisp :emacs]}]
 
  :projects [{:id :finn-oppdrag
              :customer "FINN Oppdrag"

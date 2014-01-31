@@ -98,8 +98,7 @@
                        som er mest utsatt for cargo culting. For noen år siden
                        var det utstrakt klipping og liming, og uvanene spredte
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
-                 :tech [:javascript]
-                 :blog :framsieutvikling}])
+                 :tech [:javascript]}])
 
      cultivate :javascript :blog-posts)
 
@@ -110,5 +109,4 @@
                        var det utstrakt klipping og liming, og uvanene spredte
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
       :tech [:javascript]
-      :blog :framsieutvikling
       :by {:name "Magnar", :url "/magnar/"}}])

@@ -38,19 +38,10 @@
                                    (optional-key :link) {:url Str :text Str}
                                    (optional-key :tech) [Keyword]}]
 
-   (optional-key :blogs) [{:id Keyword ;; brukes bare for å referere til i :blog-posts
-                           :name Str
-                           :url Str
-                           :theme Str ;; veldig kort, typ "teknisk frontend" eller "groovy"
-                           :tech [Keyword]}]
-
    (optional-key :blog-posts) [{:url Str
                                 :title Str
                                 :blurb Str
-                                (optional-key :tech) [Keyword]
-                                :blog (either Keyword ;; :id fra :blogs
-                                              {:name Str ;; eller rett inline
-                                               :url Str})}]
+                                (optional-key :tech) [Keyword]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
