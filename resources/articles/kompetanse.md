@@ -10,6 +10,8 @@ oppdatert på nye teknologier og trender innen våre fagfelt. Kundene
 opplever oss som medspillere, og vi er flinke til å formidle og dele
 vår kunnskap.
 
+:::body
+
 ## Teknologisk i front
 
 Svært god teknologikunnskap er bare én brikke i det å drive vellykket
