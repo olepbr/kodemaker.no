@@ -9,7 +9,7 @@
    :genitive "Magnars"
    :title "Framsieutvikler"
    :photos {:half-figure "/photos/magnars/half-figure.jpg"}
-   :description "The description"
+   :description "The *description*"
    :phone-number "+47 918 56 425"
    :email-address "magnar@kodemaker.no"})
 
@@ -18,7 +18,7 @@
 
 (fact (-> (page) :title) => "Magnar Sveen")
 (fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
-(fact (-> (page) :lead) => [:p "The description"])
+(fact (-> (page) :lead) => "<p>The <em>description</em></p>")
 
 (fact (-> (page) :aside) => [:div.tight
                              [:h4 "Magnar Sveen"]

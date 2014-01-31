@@ -23,9 +23,9 @@
                             Jeg anbefaler den om du har lyst til å prøve ut TDD i
                             praksis."
                     :tech [:tdd]} 
-                   {:link {:url "http://emacsrocks.com/" :text "Emacs rocks"}
+                   {:link {:url "http://emacsrocks.com/" :text "Emacs Rocks!"}
                     :title "Emacs"
-                    :blurb "Min kjære kollega, Magnar, har bablet om Emacs de siste
+                    :blurb "Min kjære kollega, [Magnar](/magnar/), har bablet om Emacs de siste
                             årene. Jeg har tenkt at han må være riv ruskende gal.
                             Hvorfor skulle noen ville utsette seg for en editor fra
                             juratiden? Vel, det viser seg at Emacs fakstisk rocker.
@@ -38,9 +38,6 @@
                           er hav og den trenger i prinsippet ikke annet enn passe
                           vind. Det føles ikke feil å tilbringe noen dager eller uker
                           ved noen holmer langt ute i havgapet."
-            :illustration "/illustrations/hobbies/seiling.jpg"}
-           {:title "Dykking"
-            :description "asdf asdf"
             :illustration "/illustrations/hobbies/seiling.jpg"}]
 
 }

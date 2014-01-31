@@ -106,7 +106,7 @@
 (defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
-   :lead [:p (:description person)]
+   :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
           (maybe-include person :tech render-tech)

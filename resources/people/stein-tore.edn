@@ -17,13 +17,9 @@
                  }
 
  :tech          {:favorites-at-the-moment [:groovy]
-                 :want-to-learn-more      [ :clojure :functional-programming :lighttable]}
+                 :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable]}
 
- :hobbies       [{:title        "Løping/trening/fysisk fostring"
-                  :description  "Løping, sykling, fotball, langrenn, snowboard, slalåm...
-                                Skulle bare så gjerne hatt mer tid til fysisk fostring."
-                  :illustration "/illustrations/hobbies/fotball.jpg"}
-                 {:title        "Dataspilling"
+ :hobbies       [{:title        "Dataspilling"
                   :description  "En avkobling fra hverdagen innebærer ikke alltid å ligge på sofaen, det
                                 er deilig å noen ganger kunne leve seg inn i et godt spill. Skulle
                                 vel ønske jeg fikk mer tid til å spille..."
@@ -41,7 +37,7 @@
 
  :blogs [{:id :stein-tore
           :name "steintore"
-          :url ""
+          :url "http://steintoretosse.wordpress.com"
           :theme "programmering"
          :tech [:jenkins :linux]}]
 

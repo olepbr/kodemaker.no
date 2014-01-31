@@ -16,21 +16,15 @@
             :linkedin "/in/kristfh"}
 
  :tech {:favorites-at-the-moment [:clojure :clojurescript :datomic]
-       :want-to-learn-more [:Om :Reactive-programming]}
+       :want-to-learn-more [:om :reactive-programming]}
 
  :recommendations [{:title "The Functional Database"
                     :link {:url "http://www.infoq.com/presentations/datomic-functional-database"
                         :text "Se foredraget"}
                     :tech [:datomic :functional]
-                    :blurb "Dette foredraget av Rich Hickey forklarer ideene bak en funksjonell databse"}]
+                    :blurb "Dette foredraget av Rich Hickey forklarer ideene bak en funksjonell database."}]
  :hobbies [{:title "Styrketrening"
             :description "....hverdagen er ikke den samme uten"
              :illustration "/illustrations/hobbies/muscle-anatomy.jpg"
             ;:url "http://rundis.smugmug.com/Fisketurer"
-            }]
-
- :presentations [{:title "Clojure - Your tool"
-                  :blurb "Som alle vet, for seriøs koding bruker man paranteser :)"
-                  :tech [:clojure]
-                  :urls {:video "http://www.infoq.com/presentations/Simple-Made-Easy"}
-                  :thumb "/thumbs/videos/clojure-icon.jpg"}]}
+            }]}
