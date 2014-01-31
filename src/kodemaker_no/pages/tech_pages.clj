@@ -34,6 +34,18 @@
   (list [:h2 "Våre presentasjoner"]
         (map render-presentation presentations)))
 
+(defn- render-blog-post [{:keys [title by blurb url]}]
+  (list
+   [:h3 title]
+   [:p.near.cookie-w [:span.cookie "Skrevet av " (link-to-person by)]]
+   (markup/append-to-paragraph
+    (to-html blurb)
+    (list " " [:a {:href url} "Les posten"]))))
+
+(defn- render-blog-posts [posts _]
+  (list [:h2 "Våre bloggposter"]
+        (map render-blog-post posts)))
+
 (defn- maybe-include [tech kw f]
   (when (kw tech)
     (f (kw tech) tech)))
@@ -44,6 +56,7 @@
    :lead (to-html (:description tech))
    :body (list
           (maybe-include tech :recommendations render-recommendations)
+          (maybe-include tech :blog-posts render-blog-posts)
           (maybe-include tech :presentations render-presentations))})
 
 (defn tech-pages [techs]

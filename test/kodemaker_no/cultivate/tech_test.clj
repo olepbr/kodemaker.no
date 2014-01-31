@@ -86,3 +86,29 @@
       :thumb "/thumbs/videos/functional-js.jpg"
       :tech [:javascript]
       :by [{:name "Christian", :url "/christian/"}]}])
+
+(fact
+ "Bloggposter blir overført til tech."
+
+ (-> content
+     (assoc-in [:people :magnar :blog-posts]
+               [{:url "http://framsieutvikling.no/post/753317476"
+                 :title "5 JavaScript-uvaner du må legge av deg"
+                 :blurb "Jeg tør påstå at JavaScript er et av språkene
+                       som er mest utsatt for cargo culting. For noen år siden
+                       var det utstrakt klipping og liming, og uvanene spredte
+                       seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
+                 :tech [:javascript]
+                 :blog :framsieutvikling}])
+
+     cultivate :javascript :blog-posts)
+
+ => [{:url "http://framsieutvikling.no/post/753317476"
+      :title "5 JavaScript-uvaner du må legge av deg"
+      :blurb "Jeg tør påstå at JavaScript er et av språkene
+                       som er mest utsatt for cargo culting. For noen år siden
+                       var det utstrakt klipping og liming, og uvanene spredte
+                       seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
+      :tech [:javascript]
+      :blog :framsieutvikling
+      :by {:name "Magnar", :url "/magnar/"}}])

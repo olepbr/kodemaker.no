@@ -70,11 +70,19 @@
                         (map combine-presentations)
                         (filter #(is-about tech %)))))
 
+(defn- add-blog-posts [content tech]
+  (assoc-in-unless tech [:blog-posts] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat (get-with-byline :blog-posts))
+                        (filter #(is-about tech %)))))
+
 (defn- cultivate-tech [content tech]
   (->> tech
        add-url
        (add-recommendations content)
-       (add-presentations content)))
+       (add-presentations content)
+       (add-blog-posts content)))
 
 (defn cultivate-techs [content]
   (update-vals (:tech content) (partial cultivate-tech content)))
