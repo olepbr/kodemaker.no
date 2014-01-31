@@ -4,7 +4,36 @@
  :start-date "2009-01-01"
  :description "Fredrik har 10 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer genrelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 410 21 442"
+ :email-address "fredrik@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "fredrik"
+            :twitter "fredrika"
+            :linkedin "/in/fredrikaubert"
+            :github "fredrikaubert"}
+
+
+
+:tech {:favorites-at-the-moment [:groovy :grails ]
+        :want-to-learn-more [:clojure]}
+        
+        
+        
+  :hobbies [{:title "MC"
+            :description "Nærkontakt med naturen. Lukt, på godt og vondt. Du legger deg ned
+            		      i svingen, vrir på dorullen og aksellererer ut av svingen. Absolutt
+            		      fokus - hjernerens."
+            :illustration "/illustrations/hobbies/fredrik-mc.jpg"},
+            
+            
+            {:title "Home automation"
+            :description "Som programør lærer man seg å automatisere så mye som mulig. Hvorfor reise
+            seg fra sofaen for å skru av lyset når man skal se på film?"
+            :illustration "/illustrations/hobbies/raspberrypi.jpg"}
+            
+            {:title "Foto"
+            :description "Et bilde sier mer enn tusen ord."
+            :illustration "/illustrations/hobbies/fredrik-foto.jpg"}
+            ]
+        
+ }
