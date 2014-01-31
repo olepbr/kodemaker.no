@@ -6,6 +6,10 @@ backend default {
 sub vcl_recv {
         # Remove any cookie headers to enable caching
         unset req.http.cookie;
+
+        if (req.url ~ "/site/build$") {
+                return (pass);
+        }
 }
 
 sub vcl_fetch {
