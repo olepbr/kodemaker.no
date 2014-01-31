@@ -34,7 +34,7 @@
                                     :tech [{:name "Clojure", :url "/clojure/"}]}])
            :body html)
 
-      => (html [:h2 "Magnars Anbefalinger"]
+      => (html [:h2 "Magnars anbefalinger"]
                [:h3 "Anbefaling 1"]
                [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er <strong>bra</strong>. "
@@ -89,7 +89,7 @@
                                   :thumb "/thumbs/videos/trivelig-testing.jpg"}])
            :body html)
 
-      => (html [:h2 "Magnars Foredrag"]
+      => (html [:h2 "Magnars foredrag"]
                [:div.media
                 [:a.img.thumb.mts {:href "http://vimeo.com/28764670"}
                  [:img {:src "/thumbs/videos/trivelig-testing.jpg"}]]

@@ -13,7 +13,7 @@
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recommendations _]
-  (list [:h2 "Våre Anbefalinger"]
+  (list [:h2 "Våre anbefalinger"]
         (map render-recommendation recommendations)))
 
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
@@ -31,7 +31,7 @@
      (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]]])
 
 (defn- render-presentations [presentations _]
-  (list [:h2 "Våre Presentasjoner"]
+  (list [:h2 "Våre presentasjoner"]
         (map render-presentation presentations)))
 
 (defn- maybe-include [tech kw f]

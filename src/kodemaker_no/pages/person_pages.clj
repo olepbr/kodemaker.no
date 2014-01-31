@@ -17,7 +17,7 @@
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recs person]
-  (list [:h2 (str (:genitive person) " Anbefalinger")]
+  (list [:h2 (str (:genitive person) " anbefalinger")]
         (map render-recommendation (take 3 recs))))
 
 (defn- render-hobby [{:keys [title description url illustration]}]
@@ -60,7 +60,7 @@
      (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]]])
 
 (defn- render-presentations [presentations person]
-  (list [:h2 (str (:genitive person) " Foredrag")]
+  (list [:h2 (str (:genitive person) " foredrag")]
         (map render-presentation presentations)))
 
 (defn- render-endorsement [{:keys [photo author title project quote]}]
@@ -76,7 +76,7 @@
     [:p [:q quote]]]])
 
 (defn- render-endorsements [endorsements person]
-  (list [:h2 (str (:genitive person) " Referanser")]
+  (list [:h2 (str (:genitive person) " referanser")]
         (map render-endorsement endorsements)))
 
 (defn- render-aside [{:keys [full-name title phone-number email-address]}]
@@ -96,7 +96,7 @@
 
 (defn- render-blog-posts [posts person]
   (list
-   [:h2 (str (:genitive person) " Bloggposter")]
+   [:h2 (str (:genitive person) " bloggposter")]
    (map render-blog-post (take 3 posts))))
 
 (defn- maybe-include [person kw f]
