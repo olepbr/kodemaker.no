@@ -1,10 +1,18 @@
 (ns kodemaker-no.content
   (:require [stasis.core :refer [slurp-directory]]))
 
+(defn- read-string-strictly [[file s]]
+  (let [forms (try
+                (read-string (str "[" s "]"))
+                (catch Exception e
+                  (throw (Exception. (str "Error in " file ": " (.getMessage e))))))]
+    (when (> (count forms) 1)
+      (throw (Exception. (str "File " file " should contain only a single map, but had " (count forms) " forms."))))
+    (first forms)))
+
 (defn- slurp-edn-maps [directory]
   (->> (slurp-directory directory #"\.edn$")
-       (vals)
-       (map read-string)
+       (map read-string-strictly)
        (map (juxt :id identity))
        (into {})))
 
