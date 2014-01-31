@@ -17,9 +17,30 @@
  :tech {:favorites-at-the-moment [:groovy :grails :angularjs]
         :want-to-learn-more [:clojure :emacs]}
 
- :recommendations [{:link {:url "www.test.com" :text "Test"}
-                     :title "Teste recommendations"
-                     :blurb "Dette er blurben"
-                     :tech [:test]}]
+ :recommendations [{:link {:url "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata" :text "Onkel Bobs bowling kata"}
+                    :title "Test drevet utvikling"
+                    :blurb "Bowling kataen til onkel Bob ble min introduksjon til TDD.
+                            Jeg anbefaler den om du har lyst til å prøve ut TDD i
+                            praksis."
+                    :tech [:tdd]} 
+                   {:link {:url "http://emacsrocks.com/" :text "Emacs rocks"}
+                    :title "Emacs"
+                    :blurb "Min kjære kollega, Magnar, har bablet om Emacs de siste
+                            årene. Jeg har tenkt at han må være riv ruskende gal.
+                            Hvorfor skulle noen ville utsette seg for en editor fra
+                            juratiden? Vel, det viser seg at Emacs fakstisk rocker.
+                            Sjekk ut screencastene hvis du enda ikke er overbevist."
+                    :tech [:emacs]}]
+
+ :hobbies [{:title "Seiling"
+            :description "Frihetsfølelsen er kanskje den fremste grunnen til
+                          at jeg liker seiling. Båten tar meg alle steder hvor det
+                          er hav og den trenger i prinsippet ikke annet enn passe
+                          vind. Det føles ikke feil å tilbringe noen dager eller uker
+                          ved noen holmer langt ute i havgapet."
+            :illustration "/illustrations/hobbies/seiling.jpg"}
+           {:title "Dykking"
+            :description "asdf asdf"
+            :illustration "/illustrations/hobbies/seiling.jpg"}]
 
 }
