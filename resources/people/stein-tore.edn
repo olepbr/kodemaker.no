@@ -46,14 +46,14 @@
                 :blurb "Jenkins er et veldig nyttig verktøy for bygging og automatisering, men pent er det ikke.
                         Da jeg fant [Dashing](http://shopify.github.io/dashing/) tenkte jeg at det hadde vært gøy å lage et dashboard som viser
                         statusen fra Jenkins, med muligheter for mye mer. Dette har jeg foreløpig brukt i 2 prosjekter"
-                :tech [:jenkins]
+                :tech [:jenkins :dashing]
                 :blog :stein-tore
                 }
               {:url "http://steintoretosse.wordpress.com/2013/01/22/terminator-for-linux-most-important-shortcuts/"
                 :title "Nyttige shortcuts for Terminator for Linux"
                 :blurb "Jeg har prøvd å samle de nyttigste snarveiene jeg bruker i Terminator.
                         Terminator er et veldig bra terminal-emulator for linux."
-                :tech [:linux]
+                :tech [:linux :terminator]
                 :blog :stein-tore
                 }]
 
