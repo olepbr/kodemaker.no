@@ -2,7 +2,7 @@
  :name ["Stian" "C." "Alsos"]
  :title "Kodemester"
  :start-date "2010-10-01"
- :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet mange ulike kunder innenfor forskjellige bransjer, og liker å ta tak i kunden problemstillinger for å løse kundens problemstillinger . Stian brenner for teknologi og er opptatt av å holde seg oppdatert å lære nye og bedre måter å løse utfordringene han stilles oven for. Han er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
+ :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet for mange forskjellige kunder innenfor ulike bransjer, og ser at nøkkelen til et vellykket sluttprodukt handler om å forstå kundens forretning og bruke riktig teknologi på riktig sted. Stian har meget gode referanser fra tidligere oppdrag. Han er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
 
  :phone-number "+47 932 24 450"
  :email-address "stian@kodemaker.no"
@@ -13,11 +13,45 @@
  			:github "stiancor"
  			:coderwall "stiancor"}
 
- :tech {:favorites-at-the-moment [:groovy :rails :javascript]
-        :want-to-learn-more [:clojure :javascript]}
+:tech {:favorites-at-the-moment [:groovy :rails :clojure]
+	        :want-to-learn-more [:clojure :javascript :ansible]}
 
-:hobbies [{:title "Gitar"
-            :description "Det finnes mange grunner til å spille gitar. Noen har som drøm å spille i forykende tempo på store scener, andre bruker det for å imponere på et nachspiel en sen lørdagskveld. For andre handler det om å slappe av og koble ut. Sånn er det for Stian. Så skader det jo ikke at dattera på under året er helt oppslukt og er hans største fan når fingrene danser nedover gitarhalsen."
-            :illustration "/illustrations/hobbies/klassisk_gitar.jpg"}]
+:recommendations [{:title "Coding Horror"
+                    :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
+                    		På bloggen hans finner du vittige innlegg om alt fra
+                    		optimale keyboard for å skrive kode til bokanmeldelser.
+                    		Fyren er også en av grunnleggerne av Stack Overflow."
+                    :link {:url "http://www.codinghorror.com/blog/"
+                           :text "Besøk bloggen"}
+                    :tech [:blog]}
+                   {:title "Ruby on Rails Tutorial"
+                    :blurb "Rails er et rammeverk som både er elsket og hatet.
+                    		Jeg mener at til riktig type 
+                    		problemstilling kan det være et glimrende alternativ.
+                    		I disse screencastene på rundt 16 timer gir
+                    		Michael Hartl deg en solid innføring og et grunnlag
+                    		for å lage spennende applikasjoner."
+                    :link {:url "http://ruby.railstutorial.org/"
+                           :text "Bli en rails hipster"}
+                    :tech [:rails]}
+                   {:title "Løs matematiske problemer med kode"
+                    :blurb "Project Euler er ikke akkurat en ny spenstig nettside, men 
+                    		her kan du virkelig få kvesset klørne dine. Problemene blir 
+                    		vanskeligere og vanskeligere og hvilket språk du bruker til 
+                    		å løse dem er opp til deg. Personlig leker jeg meg med Clojure 
+                    		om dagen."
+                    :link {:url "http://projecteuler.net/"
+                           :text "Lek med tall her"}
+                    :tech [:clojure]}]
 
+
+:hobbies [{:title "Reising"
+            :description "Jeg er bitt av reisebasillen og har bare funnet en kur som fungerer; mer reising! Mitt foreløpige høydepunkt hadde jeg i 2008 da jeg reiste verden rundt i syv måneder. Med tiden har jeg besøkt godt over 50 land og vært i alle verdensdeler utenom Antarktis. Jeg har imidlertid funnet ut at det er viktigere å ta seg tid til å oppleve stedet du er på enn haste videre for alltid å se noe nytt. Husk at det er menneskene du møter på veien som gjør turen, ikke at man besøkte alle severdighetene på ruten. God tur!"
+            :illustration "/illustrations/hobbies/brettspill.jpg"}
+			{:title "Løping"
+            :description "For meg handler løping om mange ting. Det åpenbare er et ønske om å holde meg i form, men viktigere enn det er å tømme hodet, løse opp kroppen og være ute i marka. I løpet av året blir det mange kilometer, og noen konkurranser for å teste formen. Hvis man da i tillegg slår venner og bekjente smaker det selvsagt ekstra godt."
+            :illustration "/illustrations/hobbies/brettspill.jpg"}
+			{:title "Gitar"
+            :description "Det finnes mange grunner til å spille gitar. Noen har som drøm å spille i forrykende tempo på store scener, andre bruker det for å imponere på et nachspiel en sen lørdagskveld. For noen handler det om noe så enkelt som å slappe av og koble ut. Sånn er det for meg. Så skader det jo ikke at datteren min på under året er helt oppslukt, og min største fan når fingrene danser nedover gitarhalsen."
+            :illustration "/illustrations/hobbies/brettspill.jpg"}]
 }
