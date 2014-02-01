@@ -15,7 +15,7 @@ a:hover {text-decoration: underline;}
 
 #header {background: #000; position: relative;}
 
-.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 10px;}
+.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
 
 .bd,
 .line,
@@ -41,6 +41,7 @@ p {margin-bottom: 1.3em;}
 
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
+.s-1of3 {width: 33.33333%;}
 
 body {-webkit-text-size-adjust: 100%}
 
@@ -86,11 +87,14 @@ em {font-style: italic;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 12px; clear: both;}
 
+hr {border-top: 1px solid #ddd;}
+
 .mtn {margin-top: 0 !important;}
 .mbn {margin-bottom: 0 !important;}
 .mts {margin-top: 5px !important;}
 .mbs {margin-bottom: 5px !important;}
 .mrm {margin-right: 10px !important;}
+.pts {padding-top: 5px;}
 
 blockquote {padding: 1em 6em 0; font-style: italic; position: relative;}
 blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: .25em;}

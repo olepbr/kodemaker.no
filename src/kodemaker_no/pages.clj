@@ -4,10 +4,12 @@
             [kodemaker-no.pages.tech-pages :refer [tech-pages]]
             [kodemaker-no.pages.article-pages :refer [article-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
+            [kodemaker-no.pages.references-page :refer [references-page]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
-  {"/mennesker/" (partial all-people (vals (:people content)))})
+  {"/mennesker/" (partial all-people (vals (:people content)))
+   "/referanser/" (partial references-page (vals (:projects content)))})
 
 (defn create-pages [content]
   (stasis/merge-page-sources

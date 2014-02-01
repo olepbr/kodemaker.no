@@ -28,7 +28,7 @@
      [:div#header
       [:div.bd
        [:div.mod.menu
-        [:a {:href "#"} "Referanser"]
+        [:a {:href "/referanser/"} "Referanser"]
         [:a {:href "/mennesker/"} "Mennesker"]
         [:a {:href "/kontakt/"} "Ta kontakt"]]
        [:h1#logo.hn
