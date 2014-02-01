@@ -32,7 +32,7 @@
                             du er opptatt av å lage raske websider."
                     :link {:url "http://calendar.perfplanet.com"
                            :text "Besøk kalenderen"}
-                    :tech [:web-performance]}
+                    :tech [:web-performance :frontend]}
                    {:title "Simple Made Easy"
                     :blurb "Det er ikke lett å lage noe enkelt. Rich
                             Hickey snakker om forskjellen på nærliggende
