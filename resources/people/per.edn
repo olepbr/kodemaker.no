@@ -21,6 +21,24 @@
 	:want-to-learn-more [:clojure :javascript :reactive-programming :akka]
 }
 
+:recommendations [
+{
+	:title "The Pragmatic Programmer: From Journeyman to Master"
+    :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
+    :text "Info om boken"}
+    :tech [:software-craftsmanship]
+    :blurb "Dette er en bok full av lærdom om hva det vil si å levere godt håndtverk (software craftsmanship) som utvikler, hvordan man kommer dit, og hvordan man kan jobbe med å holde seg selv oppdatert. I tillegg til at det er masse faglig bra stoff er den også morsomt skrevet." 
+}
+{
+	:title "Domain-Driven Design: Tackling Complexity in the Heart of Software"
+    :link {:url "http://dddcommunity.org/book/evans_2003/"
+    :text "Info om boken"}
+    :tech [:DDD]
+    :blurb "En av de beste bøkene om software design etter min mening. Selv om Eric Evans skrev denne boken i 2003 så er den fortsatt like nesten aktuell. Når jeg skriver 'nesten like aktuell' så gjør jeg det fordi man i dag har mye større fokus på funksjonell programmering enn i 2003. Allikevel er de fleste av prinsippene i DDD like aktuelle i dag, slik som Ubiquitous Language, Value Objects, Context Map, og forskjellige andre design patterns of teknikker for å håndtere kompleksitet." 
+}
+]
+
+
 }
 
 
