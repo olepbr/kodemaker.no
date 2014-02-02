@@ -2,9 +2,27 @@
  :name ["Per" "Spilling"]
  :title "Sjefskonsulent"
  :start-date "2011-08-01"
- :description "Per har arbeidet profesjonelt med systemutvikling siden 1988. Prosjektene har vært varierende i størrelse, fra en-manns prosjekter til store prosjekter/programmer med over 100 personer. Per er meget faglig interessert og deltar aktivt i Javamiljøet i Norge som medlem av programkomitéen i JavaZone siden 2005. \n\n Han er opptatt av å levere kvalitet og høy verdi til kunden. Verdier han setter høyt er åpen og ærlig kommunikasjon, i en atmosfære av respekt for andres meninger og vilje til å dele på kunnskap."
+ :description "Per har arbeidet profesjonelt med systemutvikling siden 1988. Prosjektene har vært varierende i størrelse, fra en-manns prosjekter til store prosjekter/programmer med over 100 personer. Per er meget faglig interessert og har deltatt aktivt i Javamiljøet i Norge som medlem av programkomitéen i JavaZone fra 2005 til 2013. 
+ 
+ Etter at han begynte i Kodemaker i 2011 har han hatt gleden av å kunne fokusere fullt og helt på programmering igjen, og gjennoppdaget hvilken tilfredsstillelse dette gir. Han er en 'full stack' utvikler med mest erfaring med server-side utvikling, men liker også front-end utvikling.    
+ 
+ Han er opptatt av å levere kvalitet og høy verdi til kunden. Verdier han setter høyt er åpen og ærlig kommunikasjon, i en atmosfære av respekt for andres meninger og vilje til å dele på kunnskap. Når det gjelder arbeidsoppgaver så kan Per fungere i mange forskjellige roller, som f.eks. utvikler, arkitekt, teamleder eller teknisk prosjektleder, men han foretrekker helst en rolle hvor programmering inngår som en viktig del."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 909 15 115"
+ :email-address "per@kodemaker.no"
 
- :presence {}}
+ :presence {
+	 :cv "per"
+	 :twitter "perspilling"
+}
+
+:tech {
+	:favorites-at-the-moment [:hibernate-alternativer :angularjs :ruby :rails]
+	:want-to-learn-more [:clojure :javascript :reactive-programming :akka]
+}
+
+}
+
+
+
+
