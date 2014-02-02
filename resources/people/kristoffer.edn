@@ -1,10 +1,32 @@
 {:id :kristoffer
  :name ["Kristoffer" "Moe"]
  :title "Partner"
- :start-date "2007-04-01 00:05"
- :description "Kristoffer har vært i konsulentbransjen lenge, og bidrar gjerne på alle lag i systemutvikling, fra database opp til brukergrensesnitt, selv om hovedfokus er på java. Vært innom mange miljøer, og trives i åpent landskap."
+ :start-date "2003-09-01 09:00"
+ :description "Kristoffer har vært i konsulentbransjen lenge, og bidrar gjerne på alle lag i systemutvikling, fra database opp
+ til brukergrensesnitt, selv om hovedfokus er på Java. Han har alltid kundens behov i tankene, er analytisk men også pragmatisk
+  innstilt og holder kjepphestene innelåst i stallen og verktøykassen fri for gyldne hammere."
 
- :phone-number ""
- :email-address ""
+ :phone-number "922 36 798"
+ :email-address "kristoffer@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "kristoffer"
+            :linkedin "/in/kristoffermoe"}
+
+ :projects [{:id :finn-surf-sammen
+             :customer "FINN Surf Sammen"
+             :description "Jobbet hovedsaklig med javalaget, men også i databaselaget"
+             :years [2008 2009]
+             :tech [:javascript :css :html :ajax :jquery :jsp :java
+                    :cvs :jira :confluence]}]
+
+ :endorsements [{:project :finn-surf-sammen
+                 :author "Bjørn Henrik Vangstein"
+                 :title "Scrum Master"
+                 :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
+                 :quote "(...) Kristoffer er en svært selvstendig og uredd utvikler, og setter seg meget raskt inn i nye problemstillinger og teknologier.
+                  Han er meget effektiv og disiplinert, med sans for detaljer og tar like gjerne enkle som komplekse oppgaver.
+                  Kristoffers sans for humor kommer godt med i ethvert utviklingsteam, og han glir lett inn i miljøet.
+                  Det var et tap for FINN at vi ikke lenger kunne ha Kristoffer med oss videre."
+             }]
+
+ }
