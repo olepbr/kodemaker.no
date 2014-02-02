@@ -1,0 +1,8 @@
+{:id :finn-surf-sammen
+ :name "FINN surf sammen"
+ :logo "/logos/finn.png"
+ :description "Konsulenter fra Kodemaker jobbet sammen med ansatte i FINN.no og laget funksjonalitet for å opprette personlige lister med annonser
+ av interesse, og mulighet for brukere å 'surfe sammen'. Disse listene kan deles med andre brukere, for eksempel i boligjakt eller leting etter ny bil.
+ De som deler listene kan gi karakter til annonsene der, og legge til egne kommentarer. Ut fra listene kan FINN.no gi forbausende gode anbefalinger og tips om andre
+ annonser ut fra hvilke annonser som opptrer i hvilke lister, og hvilke som er felles osv."
+ :site "http://www.finn.no/"}
