@@ -56,8 +56,9 @@
     endorsement))
 
 (defn- add-url-to-project [content project]
-  (when-let [url (->> project :id (projects/look-up-project content) :url)]
-    (assoc project :url url)))
+  (if-let [url (->> project :id (projects/look-up-project content) :url)]
+    (assoc project :url url)
+    project))
 
 (defn- look-up-projects [content person]
   (-> person
