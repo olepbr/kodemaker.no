@@ -83,7 +83,7 @@
 
 (fact (->> (page :presentations [{:title "Lyntale: Wrap Ajax'en din"
                                   :blurb "Jeg tegner og forteller."
-                                  :tech [:javascript :tdd :ajax]
+                                  :tech [{:name "JavaScript", :url "/javascript/"}]
                                   :urls {:video "http://vimeo.com/28764670"
                                          :source "https://github.com/magnars/server-facade"}
                                   :thumb "/thumbs/videos/trivelig-testing.jpg"}])
@@ -95,6 +95,7 @@
                  [:img {:src "/thumbs/videos/trivelig-testing.jpg"}]]
                 [:div.bd
                  [:h3.mtn "Lyntale: Wrap Ajax'en din"]
+                 [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]
                  [:p "Jeg tegner og forteller. "
                   [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
                   [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]]]))
