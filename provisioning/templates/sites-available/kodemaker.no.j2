@@ -64,11 +64,26 @@ server {
     }
   }
 
-  rewrite ^/2010/05/den-gode-venninnen-og-tur-til-maldivene /blogg/den-gode-venninnen-og-tur-til-maldivene/ permanent;
-  rewrite ^/2010/05/flere-kodemakere-til-høsten /blogg/flere-kodemakere-til-høsten/ permanent;
-  rewrite ^/2010/05/kodemaker-golf-turnering /blogg/kodemaker-golfturnering/ permanent;
-  rewrite ^/2010/05/lansering-av-kdoemkaer-no /blogg/lansering-av-kdoemkaer-no/ permanent;
+  # Old blog posts are gone
+  location ~ /2010 {
+    if ($request_uri ~ ^/2010/0[589].*) {
+      return 410;
+    }
+  }
+
+  location ~ /2011 {
+    if ($request_uri ~ ^/2010/0[489].*) {
+      return 410;
+    }
+  }
+
+  location ~ /2012 {
+    if ($request_uri ~ ^/2012/(09)|(11).*) {
+      return 410;
+    }
+  }
 
   # When all else fails
-  error_page 404 /404.html;
+  error_page 404 /404/;
+  error_page 410 /410/;
 }
