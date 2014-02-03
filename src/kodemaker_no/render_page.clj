@@ -11,10 +11,9 @@
   (list "<!--[if (lte IE 8) & (!IEMobile)]>" tag "<![endif]-->"))
 
 (defn- head-title [title]
-  (let [title-str (or (:head title) (:h1 title) title)]
-    (if title-str
-      (str title-str " | Kodemaker")
-      "Kodemaker")))
+  (if-let [title-str (or (:head title) (:h1 title) title)]
+    (str title-str " | Kodemaker")
+    "Kodemaker"))
 
 (defn- h1-title [title]
   (let [title-str (or (:h1 title) (and (string? title) title))]
