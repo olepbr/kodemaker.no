@@ -90,6 +90,7 @@
    :name Str
    :logo Str
    :description Str
+   :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
    (optional-key :illustration) Str
    (optional-key :site) Str})
 
