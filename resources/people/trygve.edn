@@ -1,10 +1,43 @@
 {:id :trygve
  :name ["Trygve" "Amundsen"]
  :title "Løsningsarkitekt og programmerer"
- :start-date "2007-04-01 00:04"
+ :start-date "1997-02-01 00:00"
  :description "Trygve har lang og omfattende erfaring med systemutvikling. Han har jobbet med løsningsdesign, arkitektur og integrasjon, utarbeidet forstudier og kravanalyser, tilpasset utviklingsprosesser og metoder, mm.. Han ser allikevel på seg selv som systemutvikler og har høy grad av stolthet for håndverket. Han er entusiastisk opptatt av emnet, tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger innen faget. \n\n De siste 12 årene har han hovedsakelig jobbet med store og små systemer på Java plattformen. Han har opparbeidet seg solid erfaring med systemutvikling, arkitektur, integrasjon og design i komplekse homogene og heterogene miljøer. \n\n Han evner å finne enkle løsninger på kompliserte problemstillinger. Han er resultatorientert og målrettet, og leverer høy kvalitet der det trengs. Han trives i de fleste miljøer, og kommuniserer godt med kunder og kolleger. Han er diplomatisk og lyttende av natur, men står for sine meninger når det er påkrevet."
 
- :phone-number ""
- :email-address ""
+ :phone-number "9206 1819"
+ :email-address "trygve@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "trygve"
+            :twitter "trygvea"
+            :github "trygvea"
+            :linkedin "/in/trygveamundsen"}
+            
+ :tech {:favorites-at-the-moment [:haskell :deep-learning :groovy :grails]
+        :want-to-learn-more [:haskell :sparse-coding :react :reactive-programming]}
+
+ :recommendations [{:title "Learn you a Haskell for great good"
+                    :link {:url "http://learnyouahaskell.com/"
+                    :text "Sjekk ut boka her"}
+                    :tech [:haskell :testing :design]
+                    :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer de små grå på en spennende måte. Denne boka er for de som har bakgrunn i mer imperative språk, men den gir deg en morsom og klarsynt innføring i små og store funksjonelle abstraksjoner." }]
+                    
+ :hobbies [{:title "Klatring"
+            :description "Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. Etterhvert som barna har grodd til har det blitt mindre og mindre av det, men nå øyner jeg håp for å øke aktiviteten igjen - 13-åringen har nemlig begynt å klatre jevnlig."
+                    :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
+
+           {:title "MC"
+            :description "Har vært ivrig motorsykkel-entusiast i mange år, selv om dette også er en aktivitet som ikke akkurat er enklelt å praktisere når man har barn. Men om noen år... :)"
+            :illustration "/illustrations/hobbies/trygve-mc.jpg"}]
+ 
+ :presentations [{:title "Groovy collection API"
+                         :blurb "En oversikt over groovy's collection api, som gitt på Communities in Action, feb. 2012"
+                         :tech [:groovy]
+                         :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}
+                         :thumb "/thumbs/presentations/cia-groovy-collection-api.jpg"}]
+
+ :open-source-projects [{:url "https://github.com/trygvea/grails-class-diagram"
+                         :name "Grails class diagram plugin"
+                         :description "The ClassDiagram plugin provides an UML-like diagram of your grails domain classes."
+                         :tech [:groovy :grails]}]
+                         
+ :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]}
