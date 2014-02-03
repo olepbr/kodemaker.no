@@ -27,7 +27,8 @@
   (merge {:name "!"
           :logo "!"
           :description "!"
-          :illustration "!"}
+          :illustration "!"
+          :awesomeness 0}
          m))
 
 (defn recommendation [m]
