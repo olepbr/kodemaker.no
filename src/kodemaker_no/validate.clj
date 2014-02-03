@@ -1,5 +1,5 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num]]))
+  (:require [schema.core :refer [optional-key validate either Str Keyword Num pred]]))
 
 (def Person
   {:id Keyword
@@ -99,5 +99,6 @@
              :tech {Keyword Tech}
              :projects {Keyword Project}
              :articles {Str Str}
-             :tech-names {Keyword Str}}
+             :tech-names {Keyword Str}
+             :blog-posts {Str Str}}
             content))

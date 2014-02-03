@@ -182,6 +182,35 @@ Denne siden er helt super, lover. Denne delen kan bestå av flere avsnitt om du
 så ønsker, ingen begrensning. Det er heller ingen forskjell visuelt på denne
 delen fra den etterfølgende body-delen.
 
+:::body
+
+## Dette er en markdown-heading
+
+Body er bra greier altså.
+```
+
+## Blogg
+
+Mye av innholdet i den gamle bloggen er borte, men det betyr bare bedre plass
+til nye, gode innlegg. Blogg-poster finnes i `resources/blog/`. Som "artikler" er
+dette en samling markdown-filer med litt meta-data i. Formatet på blogg-poster
+er enda enklere enn artiklene, og illustreres best gjennom et eksempel. Se
+forøvrig eksisterende innlegg i `resources/blog` for flere eksempler.
+
+```md
+:title Kommende Kodemaker – Alf Kristian Støyle
+:published 2013-06-28
+:illustration /photos/blog/alf-kristian-stoyle.jpg
+
+:::body
+
+Det er over et år siden vi ansatte noen sist, men den som venter på noe godt…
+
+Velkommen til Kodemaker!
+```
+
+For blogg-poster er kun `:illustration` valgfritt.
+
 ## Provisjonering
 
 Vi bruker [Ansible](www.ansibleworks.com) for å sette opp serveren.
