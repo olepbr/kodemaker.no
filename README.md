@@ -154,6 +154,34 @@ De ligger i `resources/tech` og `resources/projects`.
 Se eksempler på [tech](resources/tech/javascript.edn) og
 [project](resources/projects/finn-oppdrag.edn).
 
+## Frittstående sider
+
+I resources/articles ligger det noen
+[markdown](http://daringfireball.net/projects/markdown/syntax)-filer. Disse blir
+hver til sin egen side, og får URL lik filnavnet. Filen
+resources/articles/kolbjorn-er-sjef.md blir tilgjengelig som
+http://kodemaker.no/kolbjorn-er-sjef/
+
+Disse "artiklene" skal inneholde noe meta-data. Som et minimum bør du ha med
+`:title` og `:body`, men du kan også ha med `:illustration` (bilde som skal
+vises øverst i venstrekolonnen), `:::lead` (øverste del av hovedkolonnen) og
+`:::aside` (venstrekolonnen). Et minimalt eksempel følger, for ytterligere
+eksempler, se eksisterende filer i `resources/articles`.
+
+```md
+:title Min supre side
+:illustration /photos/people/kolbjorn/side-profile-cropped.jpg
+
+:::aside
+
+Viktig med litt kjøtt i venstrekolonna.
+
+:::lead
+
+Denne siden er helt super, lover. Denne delen kan bestå av flere avsnitt om du
+så ønsker, ingen begrensning. Det er heller ingen forskjell visuelt på denne
+delen fra den etterfølgende body-delen.
+
 ## Provisjonering
 
 Vi bruker [Ansible](www.ansibleworks.com) for å sette opp serveren.
