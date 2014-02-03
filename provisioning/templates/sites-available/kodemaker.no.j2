@@ -66,9 +66,22 @@ server {
 
   location ~/2013 {
     rewrite ^/2013/06/kommende-kodemaker-alf-kristian-støyle/$ /kommende-kodemaker-alf-kristian-stoyle/ permanent;
+    rewrite ^/2013/08/høstens-andre-nykommer-christian-johansen/$ /hostens-andre-nykommer-christian-johansen permanent;
+    rewrite ^/2013/09/1144/$ /skarpe-kniver-pa-javazone/ permanent;
+    rewrite ^/2013/11/nerdaid-vs-firmajulenissen/ /nerdaid-vs-firmajulenissen/ permanent;
+
+    rewrite ^/2013/0[689]/$ /blogg/ permanent;
+    rewrite ^/2013/11/$ /blogg/ permanent;
   }
 
+  rewrite ^/nyheter/?$ /blogg/ permanent;
+  rewrite ^/nyheter/page/2/$ /blogg/ permanent;
+
   # Old blog posts are gone
+  location ~ /(stikkord)|(tema) {
+    rewrite ^/(stikkord)|(tema)/.*$ /blogg/ permanent;
+  }
+
   location ~ /2010 {
     if ($request_uri ~ ^/2010/0[589].*) {
       return 410;
