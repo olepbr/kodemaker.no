@@ -64,6 +64,10 @@ server {
     }
   }
 
+  location ~/2013 {
+    rewrite ^/2013/06/kommende-kodemaker-alf-kristian-støyle/$ /kommende-kodemaker-alf-kristian-stoyle/ permanent;
+  }
+
   # Old blog posts are gone
   location ~ /2010 {
     if ($request_uri ~ ^/2010/0[589].*) {
