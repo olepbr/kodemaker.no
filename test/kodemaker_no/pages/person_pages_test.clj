@@ -86,13 +86,13 @@
                                   :tech [{:name "JavaScript", :url "/javascript/"}]
                                   :urls {:video "http://vimeo.com/28764670"
                                          :source "https://github.com/magnars/server-facade"}
-                                  :thumb "/thumbs/videos/trivelig-testing.jpg"}])
+                                  :thumb "/thumbs/presentations/trivelig-testing.jpg"}])
            :body html)
 
       => (html [:h2 "Magnars foredrag"]
                [:div.media
                 [:a.img.thumb.mts {:href "http://vimeo.com/28764670"}
-                 [:img {:src "/thumbs/videos/trivelig-testing.jpg"}]]
+                 [:img {:src "/thumbs/presentations/trivelig-testing.jpg"}]]
                 [:div.bd
                  [:h3.mtn "Lyntale: Wrap Ajax'en din"]
                  [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]

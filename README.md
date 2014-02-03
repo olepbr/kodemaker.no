@@ -118,7 +118,7 @@ Bildene ligger i `resources/public`.
 
 - `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](http://smushit.com).
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
-- `/thumbs/videos` Utsnitt fra video: .jpg, proporsjon 16/9, gjerne 208x117
+- `/thumbs/presentations` Bilde fra en presentasjon (utsnitt video, slides, kode, scenebilde): .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
 - `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.

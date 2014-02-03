@@ -137,7 +137,7 @@
                           angriper problemer og gjør koden testbar."
                   :tech [:javascript :testing]
                   :urls {:video "http://vimeo.com/49485653"}
-                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
+                  :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får
                           ryddig kode og trivelig testing ved å wrappe ajaxen
@@ -145,7 +145,7 @@
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
                          :source "https://github.com/magnars/server-facade"}
-                  :thumb "/thumbs/videos/trivelig-testing.jpg"}]
+                  :thumb "/thumbs/presentations/trivelig-testing.jpg"}]
 
  :open-source-projects [{:url "https://github.com/magnars/optimus"
                          :name "Optimus"

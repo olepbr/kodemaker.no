@@ -65,14 +65,14 @@
                           strukturere og filtrere tekst."
                   :tech [:shell :unix]
                   :urls {:video "https://vimeo.com/74309669"}
-                  :thumb "/thumbs/videos/elektronisk_tekstbehandling.jpg"}
+                  :thumb "/thumbs/presentations/elektronisk_tekstbehandling.jpg"}
                  {:title "Better and groovier tests with Spock"
                   :blurb "Spock er et elegant testrammeverk for Java og Groovy-
                           baserte applikasjoner. Det hjelper deg å skrive
                           lesbare og presise tester."
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}
-                  :thumb "/thumbs/videos/spock.jpg"}]
+                  :thumb "/thumbs/presentations/spock.jpg"}]
 
  :hobbies [{:title "Fotografering"
             :description "Kameraet mitt er stort sett med overalt. Du vet
