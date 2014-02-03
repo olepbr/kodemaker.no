@@ -79,25 +79,23 @@
   (list [:h2 (str (:genitive person) " referanser")]
         (map render-endorsement endorsements)))
 
-(defn- render-presence-item [item]
-  [:div.presence
-   [:a {:href (str (:baseUrl item) "/" (:nick item))}
-    [:img {:src (str "/logos/" (:logo item)) :title (:title item)}]]])
+(def presence-items
+  [{:id :cv            :baseUrl "http://www.kodemaker.no/cv/"  :logo "cv.png"            :title "Cv"}
+   {:id :linkedin      :baseUrl "http://www.linkedin.com"      :logo "linkedin.png"      :title "LinkedIn"}
+   {:id :twitter       :baseUrl "http://www.twitter.com/"      :logo "twitter.png"       :title "Twitter"}
+   {:id :stackoverflow :baseUrl "http://www.stackoverflow.com" :logo "stackoverflow.png" :title "StackOverflow"}
+   {:id :github        :baseUrl "http://github.com/"           :logo "github.png"        :title "GitHub"}
+   {:id :coderwall     :baseUrl "http://www.coderwall.com/"    :logo "coderwall.png"     :title "Coderwall"}])
+
+(defn- render-presence-item [item presence]
+  (when-let [nick (-> item :id presence)]
+    [:div.presence
+     [:a {:href (str (:baseUrl item) nick)}
+      [:img {:src (str "/logos/" (:logo item)) :title (:title item)}]]]))
 
 (defn- render-presence [presence]
   [:div.mod
-   (when-let [cv (-> presence :cv)]
-     (render-presence-item {:baseUrl "http://www.kodemaker.no/cv" :nick cv :logo "cv.png" :title "Cv"}))
-   (when-let [li (-> presence :linkedin)]
-     (render-presence-item {:baseUrl "http://www.linkedin.com" :nick li :logo "linkedin.png" :title "LinkedIn"}))
-   (when-let [tw (-> presence :twitter)]
-     (render-presence-item {:baseUrl "http://www.twitter.com" :nick tw :logo "twitter.png" :title "Twitter"}))
-   (when-let [so (-> presence :stackoverflow)]
-     (render-presence-item {:baseUrl "http://www.stackoverflow.com" :nick so :logo "stackoverflow.png" :title "StackOverflow"}))
-   (when-let [gh (-> presence :github)]
-     (render-presence-item {:baseUrl "http://github.com" :nick gh :logo "github.png" :title "GitHub"}))
-   (when-let [cw (-> presence :coderwall)]
-     (render-presence-item {:baseUrl "http://www.coderwall.com" :nick cw :logo "coderwall.png" :title "Coderwall"}))])
+   (keep #(render-presence-item % presence) presence-items)])
 
 (defn- render-aside [{:keys [full-name title phone-number email-address presence]}]
   [:div.tight

@@ -102,6 +102,7 @@
 (fact (->> (page :presence {:twitter "magnars"})
            :aside last html)
 
-      => (html [:div.presence
-                [:a {:href "http://www.twitter.com/magnars"}
-                 [:img {:src "/logos/twitter.png" :title "Twitter"}]]]))
+      => (html [:div.mod
+                [:div.presence
+                 [:a {:href "http://www.twitter.com/magnars"}
+                  [:img {:src "/logos/twitter.png" :title "Twitter"}]]]]))
