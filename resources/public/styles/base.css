@@ -17,6 +17,11 @@ a:hover {text-decoration: underline;}
 
 .illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
 
+ul {margin-left: 30px}
+ol {margin-left: 35px}
+ul li {list-style-type: disc;}
+ol li {list-style-type: decimal;}
+
 .bd,
 .line,
 .lastUnit {overflow:hidden; *overflow:visible; *zoom:1;}
