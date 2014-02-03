@@ -17,7 +17,13 @@
              :description "Jobbet hovedsaklig med javalaget, men også i databaselaget"
              :years [2008 2009]
              :tech [:javascript :css :html :ajax :jquery :jsp :java
-                    :cvs :jira :confluence]}]
+                    :cvs :jira :confluence]}
+             {:id :sparebank1-sso
+             :customer "Sparebank1 Gruppen"
+             :description "Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM"
+             :years [2011 2012]
+             :tech [:javascript :css :html :ajax :jquery :jsf :java
+             :git :jira :confluence :bankid]}]
 
  :endorsements [{:project :finn-surf-sammen
                  :author "Bjørn Henrik Vangstein"
@@ -27,6 +33,12 @@
                   Han er meget effektiv og disiplinert, med sans for detaljer og tar like gjerne enkle som komplekse oppgaver.
                   Kristoffers sans for humor kommer godt med i ethvert utviklingsteam, og han glir lett inn i miljøet.
                   Det var et tap for FINN at vi ikke lenger kunne ha Kristoffer med oss videre."
-             }]
+             }
+             {:project :sparebank1-sso
+              :author "Johan Gedde-Dahl"
+              :title "Virksomhetsarkitekt"
+              :quote "Kristoffer ble kastet ut på dypt vann med en minimal innføring - og leverte varene med begrenset oppfølging."
+             }
+             ]
 
  }

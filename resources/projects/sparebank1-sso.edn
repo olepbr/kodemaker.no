@@ -1,0 +1,8 @@
+{:id :sparebank1-sso
+ :name "Sparebank1 Tynt Sikkerhetslag"
+ :logo "/logos/sb1_logo.png"
+ :description "Konsulenter fra Kodemaker gjorde først en proof-of-concept for å teste ut bruk av hyllevare for håndtering av sikkerhet
+ og tilgangskontroll for bankens nettsider. Deretter utførte vi en anskaffelsesprosess. Til slutt implementerte vi en ny sikkerhetsløsning
+ basert på valgt produkt."
+ :site "https://forsikring.sparebank1.no/"
+ :awesomeness 100}
