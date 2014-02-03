@@ -1,16 +1,18 @@
 (ns kodemaker-no.pages.references-page)
 
-(defn- render-reference [project]
+(defn- render-reference [{:keys [url logo name description]}]
   [:div.line
    [:div.unit.s-1of3
     [:div.bd
-     [:a.block.mod {:href (:url project)} [:img {:src (:logo project)}]]]]
+     [:a.block.mod {:href url} [:img {:src logo}]]]]
    [:div.lastUnit
     [:div.bd
-     [:h3 [:a {:href (:url project)} (:name project)]]
-     [:p (:description project) " "
-      [:a.nowrap {:href (:url project)} "Se referansen"]]]]])
+     [:h3 [:a {:href url} name]]
+     [:p description " "
+      [:a.nowrap {:href url} "Se referansen"]]]]])
 
 (defn references-page [projects]
   {:title "Referanser"
-   :body (interpose [:hr] (map render-reference projects))})
+   :body (->> projects
+              (map render-reference)
+              (interpose [:hr]))})
