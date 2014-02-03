@@ -80,12 +80,12 @@
         (map render-endorsement endorsements)))
 
 (defn- render-presence-item [item]
-  [:li
+  [:div.presence
    [:a {:href (str (:baseUrl item) "/" (:nick item))}
     [:img {:src (str "/logos/" (:logo item)) :title (:title item)}]]])
 
 (defn- render-presence [presence]
-  [:ul.logoList
+  [:div.mod
    (when-let [cv (-> presence :cv)]
      (render-presence-item {:baseUrl "http://www.kodemaker.no/cv" :nick cv :logo "cv.png" :title "Cv"}))
    (when-let [li (-> presence :linkedin)]

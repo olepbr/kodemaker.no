@@ -87,6 +87,8 @@ em {font-style: italic;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 12px; clear: both;}
 
+.presence {background-color: #d30707; float:left; margin: 0 2px 2px 0;}
+
 hr {border-top: 1px solid #ddd; border-left: 0; border-right: 0; border-bottom: 0;}
 
 .mtn {margin-top: 0 !important;}
