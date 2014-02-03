@@ -99,5 +99,6 @@
              :tech {Keyword Tech}
              :projects {Keyword Project}
              :articles {Str Str}
-             :tech-names {Keyword Str}}
+             :tech-names {Keyword Str}
+             :blog-posts {Str Str}}
             content))

@@ -5,7 +5,8 @@
           :tech {}
           :projects {}
           :articles {}
-          :tech-names {}}
+          :tech-names {}
+          :blog-posts {}}
          m))
 
 (defn tech [m]

@@ -10,6 +10,15 @@
 (defn- serve-to-media-query-clueless-browsers [tag]
   (list "<!--[if (lte IE 8) & (!IEMobile)]>" tag "<![endif]-->"))
 
+(defn- head-title [title]
+  (if-let [title-str (or (:head title) (:h1 title) title)]
+    (str title-str " | Kodemaker")
+    "Kodemaker"))
+
+(defn- h1-title [title]
+  (when-let [title-str (or (:h1 title) (and (string? title) title))]
+    [:h1.hn.mbn (no-widows title-str)]))
+
 (defn- with-layout [request title content]
   (html5
    [:head
@@ -20,9 +29,7 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
-    [:title (if title
-              (str title " | Kodemaker")
-              "Kodemaker")]]
+    [:title (head-title title)]]
    [:body
     [:div#main
      [:div#header
@@ -33,7 +40,7 @@
         [:a {:href "/kontakt/"} "Ta kontakt"]]
        [:h1#logo.hn
         [:a.linkBlock {:href "/"} "Kodemaker"]]]]
-     (when title [:h1.hn.mbn (no-widows title)])
+     (h1-title title)
      content
      [:div#footer
       [:div.mod

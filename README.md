@@ -154,6 +154,65 @@ De ligger i `resources/tech` og `resources/projects`.
 Se eksempler på [tech](resources/tech/javascript.edn) og
 [project](resources/projects/finn-oppdrag.edn).
 
+## Frittstående sider
+
+I resources/articles ligger det noen
+[markdown](http://daringfireball.net/projects/markdown/syntax)-filer. Disse blir
+hver til sin egen side, og får URL lik filnavnet. Filen
+resources/articles/kolbjorn-er-sjef.md blir tilgjengelig som
+http://kodemaker.no/kolbjorn-er-sjef/
+
+Disse "artiklene" skal inneholde noe meta-data. Som et minimum bør du ha med
+`:title` og `:body`, men du kan også ha med `:illustration` (bilde som skal
+vises øverst i venstrekolonnen), `:::lead` (øverste del av hovedkolonnen) og
+`:::aside` (venstrekolonnen). Et minimalt eksempel følger, for ytterligere
+eksempler, se eksisterende filer i `resources/articles`.
+
+```md
+:title Min supre side
+:illustration /photos/people/kolbjorn/side-profile-cropped.jpg
+
+:::aside
+
+Viktig med litt kjøtt i venstrekolonna.
+
+:::lead
+
+Denne siden er helt super, lover. Denne delen kan bestå av flere avsnitt om du
+så ønsker, ingen begrensning. Det er heller ingen forskjell visuelt på denne
+delen fra den etterfølgende body-delen.
+
+:::body
+
+## Dette er en markdown-heading
+
+Body er bra greier altså.
+```
+
+## Blogg
+
+Mye av innholdet i den gamle bloggen er borte, men det betyr bare bedre plass
+til nye, gode innlegg. Blogg-poster finnes i `resources/blog/`. Som "artikler" er
+dette en samling markdown-filer med litt meta-data i. Formatet på blogg-poster
+er enda enklere enn artiklene, og illustreres best gjennom et eksempel. Se
+forøvrig eksisterende innlegg i `resources/blog` for flere eksempler.
+
+```md
+:title Kommende Kodemaker – Alf Kristian Støyle
+:published 2013-06-28
+:illustration /photos/blog/alf-kristian-stoyle.jpg
+
+:::body
+
+Det er over et år siden vi ansatte noen sist, men den som venter på noe godt…
+
+Velkommen til Kodemaker!
+```
+
+For blogg-poster er kun `:illustration` valgfritt. URL-en til bloggpostene
+genereres fra filnavnet, og prefikses med blogg/. Altså blir
+`resources/blog/mitt-innlegg.md` til http://kodemaker.no/blogg/mitt-innlegg/
+
 ## Provisjonering
 
 Vi bruker [Ansible](www.ansibleworks.com) for å sette opp serveren.

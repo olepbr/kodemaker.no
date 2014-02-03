@@ -5,6 +5,7 @@
             [kodemaker-no.pages.article-pages :refer [article-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.references-page :refer [references-page]]
+            [kodemaker-no.pages.blog-post-pages :refer [blog-post-pages]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
@@ -17,4 +18,5 @@
     :tech-pages (tech-pages (vals (:tech content)))
     :project-pages (project-pages (vals (:projects content)))
     :article-pages (article-pages (:articles content))
+    :blog-post-pages (blog-post-pages (:blog-posts content))
     :general-pages (general-pages content)}))

@@ -24,4 +24,5 @@
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
    :articles (slurp-directory "resources/articles/" #"\.md$")
+   :blog-posts (slurp-directory "resources/blog/" #"\.md$")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})
