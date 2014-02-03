@@ -11,14 +11,15 @@
  :phone-number "+47 91 63 50 08"
  :email-address "odin@kodemaker.no"
 
- :presence {:twitter "odinodin"
+ :presence {:cv "odin"
+            :twitter "odinodin"
             :stackoverflow "/users/273594/odinodin"
             :github "odinodin"
             :coderwall "odinodin"
-            :linkedin "in/odinholestandal"}
+            :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:clojure :gradle :lighttable]
-        :want-to-learn-more [:clojurescript :ansible :unity3d]}
+        :want-to-learn-more [:clojurescript :reactive-programming :unity3d]}
 
  :blog-posts [{:url "http://odinodin.io/blog/2014/01/04/clojure-comments/"
                :title "Kommentarer i Clojure"
@@ -74,6 +75,7 @@
                   :thumb "/thumbs/videos/spock.jpg"}]
 
  :hobbies [{:title "Fotografering"
-            :description "Kameraet er stort sett med overalt. Du vet
-                          aldri når muligheten til å ta et blinkskudd viser seg. "
+            :description "Kameraet mitt er stort sett med overalt. Du vet
+                          aldri når muligheten til å ta et blinkskudd viser seg.
+                          Dette bildet av soloppgangen tok jeg innerst i en fjord på Sunnmøre."
             :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}]}
