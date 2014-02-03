@@ -1,14 +1,14 @@
 (ns kodemaker-no.pages.project-pages
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [comma-separated]]
+            [kodemaker-no.formatting :refer [comma-separated year-range]]
             [kodemaker-no.markup :refer [link-if-url]]))
 
-(defn- render-person [{:keys [url thumb full-name description]}]
+(defn- render-person [{:keys [url thumb full-name description years]}]
   [:div.media
    [:a.img.thumb.mts {:href url}
     [:img {:src thumb}]]
    [:div.bd
-    [:h4.mtn full-name]
+    [:h4.mtn full-name " " [:span.tiny.shy (year-range years)]]
     [:p description]]])
 
 (defn- render-people [people project]

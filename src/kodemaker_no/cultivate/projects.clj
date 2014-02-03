@@ -25,14 +25,16 @@
                         vals
                         (mapcat (get-with-person-info :projects))
                         (filter #(= (:id project) (:id %)))
-                        (map #(assoc (:person %) :description (:description %))))))
+                        (map #(assoc (:person %)
+                                :description (:description %)
+                                :years (:years %))))))
 
 (defn- add-endorsements [content project]
-    (assoc-in-unless project [:endorsements] empty?
-                     (->> (:people content)
-                          vals
-                          (mapcat (get-with-person-info :endorsements))
-                          (filter #(= (:id project) (:project %))))))
+  (assoc-in-unless project [:endorsements] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat (get-with-person-info :endorsements))
+                        (filter #(= (:id project) (:project %))))))
 
 (defn- add-tech [content project]
   (assoc-in-unless project [:tech] empty?

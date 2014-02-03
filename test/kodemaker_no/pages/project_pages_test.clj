@@ -22,7 +22,8 @@
                            :first-name "Magnar"
                            :full-name "Magnar Sveen"
                            :thumb "/photos/people/magnar/side-profile.jpg"
-                           :description "Gjorde bra ting."}])
+                           :description "Gjorde bra ting."
+                           :years [2008, 2009]}])
            :body html)
 
       => (html [:h2 "Våre folk på saken"]
@@ -30,7 +31,8 @@
                 [:a.img.thumb.mts {:href "/magnar/"}
                  [:img {:src "/photos/people/magnar/side-profile.jpg"}]]
                 [:div.bd
-                 [:h4.mtn "Magnar Sveen"]
+                 [:h4.mtn "Magnar Sveen "
+                  [:span.tiny.shy "2008-2009"]]
                  [:p "Gjorde bra ting."]]]))
 
 (fact (->> (page :endorsements [{:project :finn-reise

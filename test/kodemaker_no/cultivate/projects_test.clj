@@ -26,14 +26,15 @@
                  :customer "FINN Reise"
                  :description "Gjorde bra ting."
                  :tech [:javascript]
-                 :years []}])
+                 :years [2008]}])
      cultivate :finn-reise :people)
 
  => [{:url "/magnar/"
       :first-name "Magnar"
       :full-name "Magnar Sveen"
       :thumb "/photos/people/magnar/side-profile.jpg"
-      :description "Gjorde bra ting."}])
+      :description "Gjorde bra ting."
+      :years [2008]}])
 
 (fact
  "Personlige referanser blir lagt til."
