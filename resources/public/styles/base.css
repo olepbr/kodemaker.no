@@ -82,7 +82,6 @@ strong {font-weight: bold;}
 em {font-style: italic;}
 
 .cookie {font-size: 12px; background: #f4f4f4; padding: 4px;}
-.cookie * {margin: 0 2px;}
 .cookie-w {margin-top: -4px !important;}
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 12px; clear: both;}

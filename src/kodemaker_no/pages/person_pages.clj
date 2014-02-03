@@ -1,5 +1,5 @@
 (ns kodemaker-no.pages.person-pages
-  (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
+  (:require [kodemaker-no.formatting :refer [to-html comma-separated year-range]]
             [kodemaker-no.markup :as markup]
             [hiccup.core :as hiccup]
             [clojure.string :as str]))
@@ -7,7 +7,7 @@
 (defn render-tech-bubble [tech]
   (when-not (empty? tech)
     [:p.near.cookie-w
-     [:span.cookie (interpose " " (map markup/link-if-url tech))]]))
+     [:span.cookie (comma-separated (map markup/link-if-url tech))]]))
 
 (defn- render-recommendation [{:keys [title tech blurb link]}]
   (list [:h3 title]
@@ -119,6 +119,17 @@
    [:h2 (str (:genitive person) " bloggposter")]
    (map render-blog-post (take 3 posts))))
 
+(defn- render-project [{:keys [customer years tech description]}]
+  (list
+   [:h3 customer " " [:span.tiny.shy (year-range years)]]
+   (render-tech-bubble (take 5 tech))
+   (to-html description)))
+
+(defn- render-projects [projects _]
+  (list
+   [:h2 "Prosjekter"]
+   (map render-project projects)))
+
 (defn- maybe-include [person kw f]
   (when (kw person)
     (f (kw person) person)))
@@ -134,6 +145,7 @@
           (maybe-include person :hobbies render-hobbies)
           (maybe-include person :blog-posts render-blog-posts)
           (maybe-include person :presentations render-presentations)
+          (maybe-include person :projects render-projects)
           (maybe-include person :endorsements render-endorsements))})
 
 (defn person-pages [people]

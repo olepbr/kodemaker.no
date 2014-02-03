@@ -164,7 +164,7 @@
                            over 1000 JavaScript tester og likte det."
              :years [2009 2010 2011 2012 2013]
              :tech [:javascript :responsive-design :oocss
-                    :html :css :spring-mvc :ajax :jquery :js-test-driver
+                    :ajax :spring-mvc :html :css :jquery :js-test-driver
                     :jsp :sinon :java :junit :git :jira :confluence]}
             {:id :finn-surf-sammen
              :customer "FINN Surf Sammen"
