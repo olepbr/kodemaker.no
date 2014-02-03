@@ -120,11 +120,13 @@
    [:h2 (str (:genitive person) " bloggposter")]
    (map render-blog-post (take 3 posts))))
 
-(defn- render-project [{:keys [customer years tech description]}]
+(defn- render-project [{:keys [customer years tech description url]}]
   (list
    [:h3 customer " " [:span.tiny.shy (year-range years)]]
    (render-tech-bubble (take 5 tech))
-   (to-html description)))
+   (markup/append-to-paragraph
+    (to-html description)
+    (when url (list " " [:a.nowrap {:href url} "Se referansen"])))))
 
 (defn- render-projects [projects _]
   (list
