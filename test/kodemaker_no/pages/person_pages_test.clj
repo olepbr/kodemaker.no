@@ -20,13 +20,13 @@
 (fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
 (fact (-> (page) :lead) => "<p>The <em>description</em></p>")
 
-(fact (-> (page) :aside) => [:div.tight
-                             [:h4 "Magnar Sveen"]
-                             [:p
-                              "Framsieutvikler" "<br>"
-                              [:span.nowrap "+47 918 56 425"] "<br>"
-                              [:a {:href "mailto:magnar@kodemaker.no"}
-                               "magnar@kodemaker.no"]]])
+(fact (-> (page) :aside html) => (html [:div.tight
+                                        [:h4 "Magnar Sveen"]
+                                        [:p
+                                         "Framsieutvikler" "<br>"
+                                         [:span.nowrap "+47 918 56 425"] "<br>"
+                                         [:a {:href "mailto:magnar@kodemaker.no"}
+                                          "magnar@kodemaker.no"]]]))
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er **bra**."
@@ -98,3 +98,11 @@
                  [:p "Jeg tegner og forteller. "
                   [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
                   [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]]]))
+
+(fact (->> (page :presence {:twitter "magnars"})
+           :aside last html)
+
+      => (html [:ul.logoList
+                [:li
+                 [:a {:href "http://www.twitter.com/magnars"}
+                  [:img {:src "/logos/twitter.png" :title "Twitter"}]]]]))

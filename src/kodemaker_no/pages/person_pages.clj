@@ -79,13 +79,34 @@
   (list [:h2 (str (:genitive person) " referanser")]
         (map render-endorsement endorsements)))
 
-(defn- render-aside [{:keys [full-name title phone-number email-address]}]
+(defn- render-presence-item [item]
+  [:li
+   [:a {:href (str (:baseUrl item) "/" (:nick item))}
+    [:img {:src (str "/logos/" (:logo item)) :title (:title item)}]]])
+
+(defn- render-presence [presence]
+  [:ul.logoList
+   (when-let [cv (-> presence :cv)]
+     (render-presence-item {:baseUrl "http://www.kodemaker.no/cv" :nick cv :logo "cv.png" :title "Cv"}))
+   (when-let [li (-> presence :linkedin)]
+     (render-presence-item {:baseUrl "http://www.linkedin.com" :nick li :logo "linkedin.png" :title "LinkedIn"}))
+   (when-let [tw (-> presence :twitter)]
+     (render-presence-item {:baseUrl "http://www.twitter.com" :nick tw :logo "twitter.png" :title "Twitter"}))
+   (when-let [so (-> presence :stackoverflow)]
+     (render-presence-item {:baseUrl "http://www.stackoverflow.com" :nick so :logo "stackoverflow.png" :title "StackOverflow"}))
+   (when-let [gh (-> presence :github)]
+     (render-presence-item {:baseUrl "http://github.com" :nick gh :logo "github.png" :title "GitHub"}))
+   (when-let [cw (-> presence :coderwall)]
+     (render-presence-item {:baseUrl "http://www.coderwall.com" :nick cw :logo "coderwall.png" :title "Coderwall"}))])
+
+(defn- render-aside [{:keys [full-name title phone-number email-address presence]}]
   [:div.tight
    [:h4 full-name]
    [:p
     title "<br>"
     [:span.nowrap phone-number] "<br>"
-    [:a {:href (str "mailto:" email-address)} email-address]]])
+    [:a {:href (str "mailto:" email-address)} email-address]]
+   (when (seq presence) (render-presence presence))])
 
 (defn- render-blog-post [{:keys [title tech blurb url]}]
   (list
