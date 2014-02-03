@@ -11,8 +11,8 @@
    :body "This is nice, right?"})
 
 (fact "Gets blog post pages"
-      (let [blog-posts {"nice-blog-post.md" blog-post}
-            page-content (((blog-post-pages blog-posts) "nice-blog-post/"))]
+      (let [blog-posts {"/nice-blog-post.md" blog-post}
+            page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))]
         (:title page-content) => {:head "Nice blog post"}
         (:illustration page-content) => "/photos/sexy.jpg"
         (:lead page-content) => '([:h2 "Nice blog post"]

@@ -8,7 +8,7 @@
   (.format (java.text.SimpleDateFormat. "dd.MM.yyyy") (:published blog-post)))
 
 (defn- blog-post-url [path]
-  (str/replace path #"\.md$" "/"))
+  (str "/blogg" (str/replace path #"\.md$" "/")))
 
 (defn blog-post-page [blog-post]
   {:title {:head (:title blog-post)}

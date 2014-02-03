@@ -209,7 +209,9 @@ Det er over et år siden vi ansatte noen sist, men den som venter på noe godt�
 Velkommen til Kodemaker!
 ```
 
-For blogg-poster er kun `:illustration` valgfritt.
+For blogg-poster er kun `:illustration` valgfritt. URL-en til bloggpostene
+genereres fra filnavnet, og prefikses med blogg/. Altså blir
+`resources/blog/mitt-innlegg.md` til http://kodemaker.no/blogg/mitt-innlegg/
 
 ## Provisjonering
 
