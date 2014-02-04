@@ -45,7 +45,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :tech) {:favorites-at-the-moment [Keyword]
                          (optional-key :want-to-learn-more) [Keyword]}
 
-   (optional-key :recommendations) [{:link {:url Str :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
+   (optional-key :recommendations) [{:link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
                                      :title Str ;; Samme som tittel på det du lenker til
                                      :blurb Str ;; Litt om hvorfor du anbefaler
                                      :tech [Keyword]}]
@@ -53,15 +53,15 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :hobbies) [{:title Str
                              :description Str
                              (optional-key :illustration) Path
-                             (optional-key :url) Str}]
+                             (optional-key :url) URL}]
 
    (optional-key :side-projects) [{:title Str
                                    :description Str
                                    :illustration Path
-                                   (optional-key :link) {:url Str :text Str}
+                                   (optional-key :link) {:url URL :text Str}
                                    (optional-key :tech) [Keyword]}]
 
-   (optional-key :blog-posts) [{:url Str
+   (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
                                 (optional-key :tech) [Keyword]}]
@@ -69,23 +69,23 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
                                    :tech [Keyword]
-                                   :urls {(optional-key :video) Str
-                                          (optional-key :slides) Str
-                                          (optional-key :source) Str} ;; må ha minst en av disse URLene
+                                   :urls {(optional-key :video) URL
+                                          (optional-key :slides) URL
+                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    :thumb Path}]
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
-                              :url Str
+                              :url URL
                               :tech [Keyword]
                               :date Str}] ;; iso-8601
 
-   (optional-key :open-source-projects) [{:url Str
+   (optional-key :open-source-projects) [{:url URL
                                           :name Str
                                           :description Str
                                           :tech [Keyword]}] ;; sortert under første tech
 
-   (optional-key :open-source-contributions) [{:url Str
+   (optional-key :open-source-contributions) [{:url URL
                                                :name Str
                                                :tech [Keyword]}] ;; sortert under første tech
 
@@ -115,6 +115,7 @@ Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 #### Datatyper
 
 - `Path` er en streng som starter med `/` og ikke inneholder noen sære tegn.
+- `URL` er en streng som starter med `http://` eller https og forøvrig er en URL.
 
 ## Laste opp bilder
 

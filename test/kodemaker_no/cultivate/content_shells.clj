@@ -28,12 +28,12 @@
   (merge {:name "!"
           :logo "!"
           :description "!"
-          :illustration "!"
+          :illustration "/path"
           :awesomeness 0}
          m))
 
 (defn recommendation [m]
-  (merge {:link {:url "!" :text "!"}
+  (merge {:link {:url "http://example.com" :text "!"}
           :title "!"
           :blurb "!"
           :tech []}
