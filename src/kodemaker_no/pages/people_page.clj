@@ -1,5 +1,5 @@
 (ns kodemaker-no.pages.people-page
-  (:require [kodemaker-no.homeless :as compare*]))
+  (:require [kodemaker-no.homeless :refer [compare*]]))
 
 (defn- render-person [{:keys [url photos full-name title]}]
   [:div.gridUnit.r-4-3-2
