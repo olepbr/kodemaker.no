@@ -97,7 +97,7 @@
 (def BlogPost
   {:title Str
    :published java.util.Date
-   :illustration Str
+   (optional-key :illustration) Str
    :body Str})
 
 (def Article
