@@ -1,5 +1,7 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num]]))
+  (:require [schema.core :refer [optional-key validate either Str Keyword Num pred]]))
+
+(def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'path))
 
 (def Person
   {:id Keyword
@@ -13,9 +15,9 @@
    :email-address Str
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
-              (optional-key :twitter) Str  ;; brukernavn
-              (optional-key :linkedin) Str ;; path til din offentlige side
-              (optional-key :stackoverflow) Str ;; path til din offentlige side
+              (optional-key :twitter) Str ;; brukernavn
+              (optional-key :linkedin) Path ;; path til din offentlige side
+              (optional-key :stackoverflow) Path ;; path til din offentlige side
               (optional-key :github) Str ;; brukernavn
               (optional-key :coderwall) Str} ;; brukernavn
 
@@ -29,12 +31,12 @@
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             (optional-key :illustration) Str
+                             (optional-key :illustration) Path
                              (optional-key :url) Str}]
 
    (optional-key :side-projects) [{:title Str
                                    :description Str
-                                   :illustration Str
+                                   :illustration Path
                                    (optional-key :link) {:url Str :text Str}
                                    (optional-key :tech) [Keyword]}]
 
@@ -49,7 +51,7 @@
                                    :urls {(optional-key :video) Str
                                           (optional-key :slides) Str
                                           (optional-key :source) Str} ;; må ha minst en av disse URLene
-                                   :thumb Str}]
+                                   :thumb Path}]
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
@@ -76,7 +78,7 @@
                                   :quote Str
                                   (optional-key :title) Str
                                   (optional-key :project) Keyword
-                                  (optional-key :photo) Str}]})
+                                  (optional-key :photo) Path}]})
 
 (def Tech
   {:id Keyword
@@ -111,7 +113,7 @@
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
              :projects {Keyword Project}
-             :articles {Str Article}
+             :articles {Path Article}
              :tech-names {Keyword Str}
-             :blog-posts {Str BlogPost}}
+             :blog-posts {Path BlogPost}}
             content))

@@ -36,9 +36,9 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    :email-address Str
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
-              (optional-key :twitter) Str  ;; brukernavn
-              (optional-key :linkedin) Str ;; path til din offentlige side
-              (optional-key :stackoverflow) Str ;; path til din offentlige side
+              (optional-key :twitter) Str ;; brukernavn
+              (optional-key :linkedin) Path ;; path til din offentlige side
+              (optional-key :stackoverflow) Path ;; path til din offentlige side
               (optional-key :github) Str ;; brukernavn
               (optional-key :coderwall) Str} ;; brukernavn
 
@@ -52,12 +52,12 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             (optional-key :illustration) Str
+                             (optional-key :illustration) Path
                              (optional-key :url) Str}]
 
    (optional-key :side-projects) [{:title Str
                                    :description Str
-                                   :illustration Str
+                                   :illustration Path
                                    (optional-key :link) {:url Str :text Str}
                                    (optional-key :tech) [Keyword]}]
 
@@ -72,7 +72,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    :urls {(optional-key :video) Str
                                           (optional-key :slides) Str
                                           (optional-key :source) Str} ;; må ha minst en av disse URLene
-                                   :thumb Str}]
+                                   :thumb Path}]
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
@@ -99,7 +99,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                   :quote Str
                                   (optional-key :title) Str
                                   (optional-key :project) Keyword
-                                  (optional-key :photo) Str}]})
+                                  (optional-key :photo) Path}]})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
@@ -111,6 +111,10 @@ alle bilde-URLer finnes, og sett med øynene dine at det ble som du
 hadde tenkt.
 
 Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
+
+#### Datatyper
+
+- `Path` er en streng som starter med `/` og ikke inneholder noen sære tegn.
 
 ## Laste opp bilder
 
