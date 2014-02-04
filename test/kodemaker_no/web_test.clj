@@ -18,3 +18,10 @@
    (-> result :status) => 200
    (-> result :body parse (select [:title]) first :content)
    => '("OOCSS | Kodemaker")))
+
+(fact
+ "Får vi 200 på hele siten?"
+
+ (let [urls (keys (get-pages))]
+   (doseq [url urls]
+     (-> (app {:uri url}) :status) => 200)))
