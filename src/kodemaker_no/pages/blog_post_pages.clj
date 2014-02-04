@@ -16,7 +16,7 @@
    :lead (list [:h2 (:title blog-post)]
                [:p.shy (published blog-post)])
    :body (list (to-html (:body blog-post))
-               [:div#disqus_thread]
+               [:div#disqus_thread.mod]
                [:script (str "var disqus_identifier='" path "';"
                              (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))])})
 

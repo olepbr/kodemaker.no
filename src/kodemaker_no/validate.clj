@@ -94,11 +94,17 @@
    (optional-key :illustration) Str
    (optional-key :site) Str})
 
+(def BlogPost
+  {:title Str
+   :published java.util.Date
+   :illustration Str
+   :body Str})
+
 (defn validate-content [content]
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
              :projects {Keyword Project}
              :articles {Str Str}
              :tech-names {Keyword Str}
-             :blog-posts {Str Str}}
+             :blog-posts {Str BlogPost}}
             content))

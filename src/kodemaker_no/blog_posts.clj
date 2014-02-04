@@ -1,4 +1,4 @@
-(ns kodemaker-no.cultivate.blog-posts
+(ns kodemaker-no.blog-posts
   (:require [kodemaker-no.structured-document :refer [read-doc]]
             [kodemaker-no.homeless :refer [update-vals update-in-existing]]
             [clojure.string :as str])
@@ -9,9 +9,9 @@
 (defn- to-date [date-str]
   (.parse date-format date-str))
 
-(defn- cultivate-blog-post [blog-post-str]
+(defn- load-blog-post [blog-post-str]
   (-> (read-doc blog-post-str)
       (update-in-existing [:published] to-date)))
 
-(defn cultivate-blog-posts [content]
-  (update-vals (:blog-posts content) cultivate-blog-post))
+(defn load-blog-posts [blog-posts]
+  (update-vals blog-posts load-blog-post))
