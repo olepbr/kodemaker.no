@@ -19,6 +19,9 @@
 (defn update-vals [m f]
   (into {} (for [[k v] m] [k (f v)])))
 
+(defn update-vals-with-key [m f]
+  (into {} (for [[k v] m] [k (f k v)])))
+
 (defn rename-keys [m f]
   (into {} (map (fn [[key val]] [(f key) val]) m)))
 

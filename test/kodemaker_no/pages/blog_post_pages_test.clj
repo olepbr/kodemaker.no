@@ -12,9 +12,11 @@
 
 (fact "Gets blog post pages"
       (let [blog-posts {"/nice-blog-post.md" blog-post}
-            page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))]
+            page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))
+            body (:body page-content)]
         (:title page-content) => {:head "Nice blog post"}
         (:illustration page-content) => "/photos/sexy.jpg"
         (:lead page-content) => '([:h2 "Nice blog post"]
                                   [:p.shy "01.01.2013"])
-        (html (:body page-content)) => "<p>This is nice, right?</p>"))
+        (html (first body)) => "<p>This is nice, right?</p>"
+        (html (second body)) => "<div id=\"disqus_thread\"></div>"))
