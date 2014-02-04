@@ -2,9 +2,9 @@
  :name ["Magnus" "Rundberget"]
  :title "Styreleder og kodeentusiast"
  :start-date "2007-04-01 00:07"
- :description "Magnus har lang erfaring fra store og 
+ :description "Magnus har lang erfaring fra store og
                små prosjekter. Han har jobbet med en rekke teknologier og hatt mange forskjellige roller.
-               Magnus stortrives i prosjekter der han 
+               Magnus stortrives i prosjekter der han
                får være med å foredle kunders ønsker og drømmer i kode. Han er dyktig i team og jobber aktivt for at teamet som helhet skal lykkes. Magnus liker både frontend og backend utvikling. I tillegg har han en forkjærlighet for automatisering og Continuous Delivery. "
 
  :phone-number "+47 928 83 365"
@@ -31,8 +31,22 @@
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
  :presentations [{:title "Gradle - Det er faktisk ditt bygg"
-                  :blurb "Mange klamrer seg fortsatt til 
+                  :blurb "Mange klamrer seg fortsatt til
                           illusjonen at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen, men i litt større organisasjoner finner man alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle."
                   :tech [:gradle :groovy]
                   :urls {:video "http://vimeo.com/49375218"}
-                  :thumb "/thumbs/presentations/gradle-ditt-bygg.jpg"}]}
+                  :thumb "/thumbs/presentations/gradle-ditt-bygg.jpg"}]
+
+
+ :blog-posts [{:url "http://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
+               :title "Javascript testing in your JVM projects using Gradle and BusterJS"
+               :blurb "Hadde det ikke vært kjekt om du kunne inkludert javascript testing som en del
+                       av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
+               :tech [:gradle :javascript :BusterJS]}
+
+              {:url "http://codewader.blogspot.no/2011/08/groovy-infatuation-growing.html"
+               :title "A groovy infatuation growing"
+               :blurb "Etter mange år med java begynte jeg så smått å bli litt lei. Det var jo mange
+                       andre språk på JVM plattformen der ute. Etter å ha jobbet med gradle en periode
+                       fikk jeg mer om mer sansen for Groovy."
+               :tech [:groovy]}]}
