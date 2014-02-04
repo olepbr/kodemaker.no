@@ -16,4 +16,12 @@
  :spring-mvc "Spring MVC"
  :tdd "TDD"
  :unity3d "Unity 3D"
+ :tsql "T-SQL"
+ :openam "OpenAM"
+ :fatwire "FatWire CMS"
+ :bankid "BankID"
+ :jsf "JSF"
+ :cvs "CVS"
+ :siteminder "CA SiteMinder"
+ :weblogic "WebLogic"
  }
