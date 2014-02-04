@@ -19,6 +19,6 @@
                                   [print-foo "0.4.2"]
                                   [test-with-files "0.1.0"]]
                    :plugins [[lein-midje "3.1.3"]
-                             [lein-ring "0.8.7"]]
+                             [lein-ring "0.8.10"]]
                    :resource-paths ["test/resources"]
                    :source-paths ["dev" "config"]}})
