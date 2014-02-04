@@ -23,7 +23,7 @@
                     		Fyren er også en av grunnleggerne av Stack Overflow."
                     :link {:url "http://www.codinghorror.com/blog/"
                            :text "Besøk bloggen"}
-                    :tech [:technology :development]}
+                    :tech [:teknologi :utvikling]}
                    {:title "Ruby on Rails Tutorial"
                     :blurb "Rails er et rammeverk som både er elsket og hatet.
                     		Jeg mener at det til riktig type 

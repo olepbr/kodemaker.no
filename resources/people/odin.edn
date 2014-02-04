@@ -44,7 +44,7 @@
                             med intervjuer av dyktige utviklere."
                     :link {:url "http://thisdeveloperslife.com"
                            :text "Hør podcasten"}
-                    :tech [:development]}
+                    :tech [:utvikling]}
                    {:title "Light Table"
                     :blurb "Det er lenge siden jeg har vært så begeistret
                             for et verktøy. En editor med et minimalistisk utseende
