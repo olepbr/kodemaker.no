@@ -1,7 +1,8 @@
 (ns kodemaker-no.content
   (:require [stasis.core :refer [slurp-directory]]
             [kodemaker-no.blog-posts :refer [load-blog-posts]]
-            [kodemaker-no.articles :refer [load-articles]]))
+            [kodemaker-no.homeless :refer [update-vals]]
+            [kodemaker-no.structured-document :refer [read-doc]]))
 
 (defn- read-string-strictly [[file s]]
   (let [forms (try
@@ -21,10 +22,14 @@
 (defn- slurp-edn-map [file]
   (read-string-strictly [file (slurp file)]))
 
+(defn- slurp-structured-md-maps [directory]
+  (-> (slurp-directory directory #"\.md$")
+      (update-vals read-doc)))
+
 (defn load-content []
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
-   :articles (load-articles (slurp-directory "resources/articles/" #"\.md$"))
-   :blog-posts (load-blog-posts (slurp-directory "resources/blog/" #"\.md$"))
+   :articles (slurp-structured-md-maps "resources/articles/")
+   :blog-posts (load-blog-posts (slurp-structured-md-maps "resources/blog/"))
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})

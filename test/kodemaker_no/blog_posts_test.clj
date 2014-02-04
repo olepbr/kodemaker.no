@@ -8,23 +8,16 @@
 (defn- date-str [date]
   (.format (java.text.SimpleDateFormat. "yyyy-MM-dd") date))
 
-(def blog-posts {"post.md"
-                 ":title Kommende Kodemaker
-:published 2013-06-28
-:illustration /photos/blog/alf-kristian-stoyle.jpg
-
-:::body
-
-Velkommen til Kodemaker!"})
+(def blog-posts {"post.md" {:title "Kommende Kodemaker"
+                            :published "2013-06-28"
+                            :illustration "/photos/blog/alf-kristian-stoyle.jpg"
+                            :body "Velkommen til Kodemaker!"}})
 
 (def loaded-posts (load-blog-posts blog-posts))
 
 (let [post (loaded-posts "post.md")]
-  (fact "Loads blog post strings as hashes"
-        (:title post) => "Kommende Kodemaker"
-        (date-str (:published post)) "2013-06-28"
-        (:body post) => "Velkommen til Kodemaker!"
-        (:illustration post) => "/photos/blog/alf-kristian-stoyle.jpg")
+  (fact "Parses published date"
+        (date-str (:published post)) "2013-06-28")
 
   (fact "Validates blog-post map"
         (validate-content (c/content {:blog-posts loaded-posts}))))
