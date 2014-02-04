@@ -18,5 +18,5 @@
         (:illustration page-content) => "/photos/sexy.jpg"
         (:lead page-content) => '([:h2 "Nice blog post"]
                                   [:p.shy "01.01.2013"])
-        (html (first body)) => "<p>This is nice, right?</p>"
-        (html (second body)) => "<div class=\"mod\" id=\"disqus_thread\"></div>"))
+        (html (first body)) => (html [:p "This is nice, right?"])
+        (html (second body)) => (html [:div#disqus_thread.mod])))
