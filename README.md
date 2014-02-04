@@ -93,7 +93,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                               :customer Str
                               :description Str
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
-                              :tech [Keyword]}]
+                              :tech [Keyword]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
