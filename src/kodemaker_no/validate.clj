@@ -98,7 +98,8 @@
    (optional-key :site) URL})
 
 (def BlogPost
-  {:title Str
+  {:path Str ;; Genereres fra filnavn
+   :title Str
    :published java.util.Date
    (optional-key :illustration) Path
    :body Str})

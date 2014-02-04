@@ -18,7 +18,8 @@
            "/react/"
            "/finn-oppdrag/"
            "/kompetanse/"
-           "/systemer/"})
+           "/systemer/"
+           "/blogg/"})
 
 (fact "Colliding urls are not tolerated."
 

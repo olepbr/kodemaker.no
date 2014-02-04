@@ -5,12 +5,13 @@
             [kodemaker-no.pages.article-pages :refer [article-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.references-page :refer [references-page]]
-            [kodemaker-no.pages.blog-post-pages :refer [blog-post-pages]]
+            [kodemaker-no.pages.blog-pages :refer [blog-post-pages blog-page]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
   {"/mennesker/" (partial all-people (vals (:people content)))
-   "/referanser/" (partial references-page (vals (:projects content)))})
+   "/referanser/" (partial references-page (vals (:projects content)))
+   "/blogg/" (partial blog-page (:blog-posts content))})
 
 (defn create-pages [content]
   (stasis/merge-page-sources

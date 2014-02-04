@@ -1,5 +1,5 @@
-(ns kodemaker-no.pages.blog-post-pages-test
-  (:require [kodemaker-no.pages.blog-post-pages :refer :all]
+(ns kodemaker-no.pages.blog-pages-test
+  (:require [kodemaker-no.pages.blog-pages :refer :all]
             [kodemaker-no.homeless :refer [hiccup-find]]
             [midje.sweet :refer :all]
             [hiccup.core :refer [html]]))

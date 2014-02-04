@@ -19,5 +19,8 @@
   (fact "Parses published date"
         (date-str (:published post)) => "2013-06-28")
 
+  (fact "Includes path to blog post"
+        (:path post) => "/blogg/post/")
+
   (fact "Validates blog-post map"
         (validate-content (c/content {:blog-posts loaded-posts}))))
