@@ -15,7 +15,7 @@ a:hover {text-decoration: underline;}
 
 #header {background: #000; position: relative;}
 
-.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img, #disqus_thread {margin: 10px;}
+.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
 
 ul {margin-left: 30px}
 ol {margin-left: 35px}
