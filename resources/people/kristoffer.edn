@@ -14,13 +14,13 @@
 
  :projects [{:id :finn-surf-sammen
              :customer "FINN Surf Sammen"
-             :description "Jobbet hovedsaklig med javalaget, men også i databaselaget"
+             :description "Jobbet hovedsaklig med javalaget, men også i databaselaget."
              :years [2008 2009]
              :tech [:javascript :css :html :ajax :jquery :jsp :java
                     :cvs :jira :confluence]}
              {:id :sparebank1-sso
              :customer "Sparebank1 Gruppen"
-             :description "Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM"
+             :description "Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM."
              :years [2011 2012]
              :tech [:javascript :css :html :ajax :jquery :jsf :java
              :git :jira :confluence :bankid]}]
