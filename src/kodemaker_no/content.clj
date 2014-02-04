@@ -1,12 +1,19 @@
 (ns kodemaker-no.content
-  (:require [stasis.core :refer [slurp-directory]]
+  (:require [clojure.string :as str]
             [kodemaker-no.blog-posts :refer [load-blog-posts]]
             [kodemaker-no.homeless :refer [update-vals]]
-            [kodemaker-no.structured-document :refer [read-doc]]))
+            [kodemaker-no.structured-document :refer [read-doc]]
+            [stasis.core :refer [slurp-directory]]))
+
+(defn- detonate-the-bom [^String s]
+  (if (.startsWith s "\uFEFF") (subs s 1) s))
+
+(defn- trim-properly [s]
+  (-> s str/trim detonate-the-bom))
 
 (defn- read-string-strictly [[file s]]
   (let [forms (try
-                (read-string (str "[" s "]"))
+                (read-string (str "[" (trim-properly s) "]"))
                 (catch Exception e
                   (throw (Exception. (str "Error in " file ": " (.getMessage e))))))]
     (when (> (count forms) 1)
