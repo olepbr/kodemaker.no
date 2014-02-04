@@ -38,7 +38,8 @@
       (update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
       (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
       (update-in-existing [:presentations] #(look-up-tech-in-maps content %))
-      (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))))
+      (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
+      (update-in-existing [:projects] #(look-up-tech-in-maps content %))))
 
 (defn- find-my-project [person id]
   (or (->> person
@@ -54,9 +55,15 @@
                {:id id, :name (:customer (find-my-project person id))}))
     endorsement))
 
+(defn- add-url-to-project [content project]
+  (if-let [url (->> project :id (projects/look-up-project content) :url)]
+    (assoc project :url url)
+    project))
+
 (defn- look-up-projects [content person]
   (-> person
-      (update-in-existing [:endorsements] #(map (partial update-endorsement-project content person) %))))
+      (update-in-existing [:endorsements] #(map (partial update-endorsement-project content person) %))
+      (update-in-existing [:projects] #(map (partial add-url-to-project content) %))))
 
 (defn- cultivate-person [content person]
   (->> person

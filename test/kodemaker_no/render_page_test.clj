@@ -1,7 +1,8 @@
 (ns kodemaker-no.render-page-test
   (:require [kodemaker-no.render-page :refer :all]
             [midje.sweet :refer :all]
-            [net.cgrand.enlive-html :refer [select html-resource]]))
+            [net.cgrand.enlive-html :refer [select html-resource]]
+            [hiccup.core :refer [html]]))
 
 (defn parse [s]
   (html-resource (java.io.StringReader. s)))
@@ -30,3 +31,17 @@
  (-> {:title nil} (render-page request) parse
      (select [:h1]) second) => nil)
 
+(fact
+ "Uses specific title in head"
+ (-> {:title {:head "In head" :h1 "In h1"}} (render-page request) parse
+     (select [:title]) first :content) => '("In head | Kodemaker"))
+
+(fact
+ "Defaults to h1 title in head when no head title"
+ (-> {:title {:h1 "In h1"}} (render-page request) parse
+     (select [:title]) first :content) => '("In h1 | Kodemaker"))
+
+(fact
+ "Uses h1 title in body"
+ (-> {:title {:head "In head" :h1 "h1"}} (render-page request) parse
+     (select [:h1]) second :content first) => "h1")

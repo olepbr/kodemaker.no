@@ -57,19 +57,19 @@
                [{:title "Pure JavaScript"
                  :blurb "Kast de objekt-orienterte krykkene."
                  :urls {:video "http://vimeo.com/43808808"}
-                 :thumb "/thumbs/videos/functional-js.jpg"
+                 :thumb "/thumbs/presentations/functional-js.jpg"
                  :tech [:javascript]}
                 {:title "Zombie TDD: Live parprogrammering"
                  :blurb "Vi setter oss ned med emacsen."
                  :tech [:javascript :tdd]
                  :urls {:video "http://vimeo.com/49485653"}
-                 :thumb "/thumbs/videos/zombie-tdd-live.jpg"}])
+                 :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}])
      (assoc-in [:people :magnar :presentations]
                [{:title "Zombie TDD: Live parprogrammering"
                  :blurb "Vi setter oss ned med emacsen."
                  :tech [:javascript :tdd]
                  :urls {:video "http://vimeo.com/49485653"}
-                 :thumb "/thumbs/videos/zombie-tdd-live.jpg"}])
+                 :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}])
 
      cultivate :javascript :presentations)
 
@@ -77,12 +77,36 @@
       :blurb "Vi setter oss ned med emacsen."
       :tech [:javascript :tdd]
       :urls {:video "http://vimeo.com/49485653"}
-      :thumb "/thumbs/videos/zombie-tdd-live.jpg"
+      :thumb "/thumbs/presentations/zombie-tdd-live.jpg"
       :by [{:name "Magnar", :url "/magnar/"}
            {:name "Christian", :url "/christian/"}]}
      {:title "Pure JavaScript"
       :blurb "Kast de objekt-orienterte krykkene."
       :urls {:video "http://vimeo.com/43808808"}
-      :thumb "/thumbs/videos/functional-js.jpg"
+      :thumb "/thumbs/presentations/functional-js.jpg"
       :tech [:javascript]
       :by [{:name "Christian", :url "/christian/"}]}])
+
+(fact
+ "Bloggposter blir overført til tech."
+
+ (-> content
+     (assoc-in [:people :magnar :blog-posts]
+               [{:url "http://framsieutvikling.no/post/753317476"
+                 :title "5 JavaScript-uvaner du må legge av deg"
+                 :blurb "Jeg tør påstå at JavaScript er et av språkene
+                       som er mest utsatt for cargo culting. For noen år siden
+                       var det utstrakt klipping og liming, og uvanene spredte
+                       seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
+                 :tech [:javascript]}])
+
+     cultivate :javascript :blog-posts)
+
+ => [{:url "http://framsieutvikling.no/post/753317476"
+      :title "5 JavaScript-uvaner du må legge av deg"
+      :blurb "Jeg tør påstå at JavaScript er et av språkene
+                       som er mest utsatt for cargo culting. For noen år siden
+                       var det utstrakt klipping og liming, og uvanene spredte
+                       seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
+      :tech [:javascript]
+      :by {:name "Magnar", :url "/magnar/"}}])

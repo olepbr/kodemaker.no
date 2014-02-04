@@ -17,14 +17,15 @@
  :tech {:favorites-at-the-moment [:groovy :grails :angularjs]
         :want-to-learn-more [:clojure :emacs]}
 
- :recommendations [{:link {:url "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata" :text "Onkel Bobs bowling kata"}
-                    :title "Test drevet utvikling"
-                    :blurb "Bowling kataen til onkel Bob ble min introduksjon til TDD.
-                            Jeg anbefaler den om du har lyst til å prøve ut TDD i
-                            praksis."
-                    :tech [:tdd]} 
-                   {:link {:url "http://emacsrocks.com/" :text "Emacs Rocks!"}
-                    :title "Emacs"
+ :recommendations [{:link {:url "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata" :text "Prøv kataen"}
+                    :title "Onkel Bobs Bowling Game Kata"
+                    :blurb "Bowling kataen til onkel Bob ble min
+                            introduksjon til testdrevet utvikling. Jeg
+                            anbefaler den om du har lyst til å prøve
+                            ut TDD i praksis."
+                    :tech [:testing :tdd]} 
+                   {:link {:url "http://emacsrocks.com/" :text "Se videoene"}
+                    :title "Emacs Rocks!"
                     :blurb "Min kjære kollega, [Magnar](/magnar/), har bablet om Emacs de siste
                             årene. Jeg har tenkt at han må være riv ruskende gal.
                             Hvorfor skulle noen ville utsette seg for en editor fra

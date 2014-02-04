@@ -29,25 +29,25 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    :name [Str]
    :title Str
    :start-date Str
-   :description Str
+   :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
    (optional-key :administration?) Boolean
 
    :phone-number Str
    :email-address Str
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
-              (optional-key :twitter) Str  ;; username
-              (optional-key :linkedin) Str ;; path to public profile
-              (optional-key :stackoverflow) Str ;; path to public profile
-              (optional-key :github) Str ;; username
-              (optional-key :coderwall) Str} ;; username
+              (optional-key :twitter) Str  ;; brukernavn
+              (optional-key :linkedin) Str ;; path til din offentlige side
+              (optional-key :stackoverflow) Str ;; path til din offentlige side
+              (optional-key :github) Str ;; brukernavn
+              (optional-key :coderwall) Str} ;; brukernavn
 
    (optional-key :tech) {:favorites-at-the-moment [Keyword]
                          (optional-key :want-to-learn-more) [Keyword]}
 
-   (optional-key :recommendations) [{:link {:url Str :text Str}
-                                     :title Str
-                                     :blurb Str
+   (optional-key :recommendations) [{:link {:url Str :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
+                                     :title Str ;; Samme som tittel på det du lenker til
+                                     :blurb Str ;; Litt om hvorfor du anbefaler
                                      :tech [Keyword]}]
 
    (optional-key :hobbies) [{:title Str
@@ -61,29 +61,20 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    (optional-key :link) {:url Str :text Str}
                                    (optional-key :tech) [Keyword]}]
 
-   (optional-key :blogs) [{:id Keyword ;; only used to DRY up :blog-posts
-                           :name Str
-                           :url Str
-                           :theme Str ;; very short, eg. "teknisk frontend" or "groovy"
-                           :tech [Keyword]}]
-
    (optional-key :blog-posts) [{:url Str
                                 :title Str
                                 :blurb Str
-                                :tech [Keyword]
-                                :blog (either Keyword ;; :id from :blogs
-                                              {:name Str
-                                               :url Str})}]
+                                (optional-key :tech) [Keyword]}]
 
-   (optional-key :presentations) [{:title Str
+   (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
                                    :tech [Keyword]
                                    :urls {(optional-key :video) Str
                                           (optional-key :slides) Str
-                                          (optional-key :source) Str}
+                                          (optional-key :source) Str} ;; må ha minst en av disse URLene
                                    :thumb Str}]
 
-   (optional-key :upcoming) [{:title Str ;; Upcoming courses or presentations
+   (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
                               :url Str
                               :tech [Keyword]
@@ -92,19 +83,19 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :open-source-projects) [{:url Str
                                           :name Str
                                           :description Str
-                                          :tech [Keyword]}] ;; sorted under first tech
+                                          :tech [Keyword]}] ;; sortert under første tech
 
    (optional-key :open-source-contributions) [{:url Str
                                                :name Str
-                                               :tech [Keyword]}] ;; sorted under first tech
+                                               :tech [Keyword]}] ;; sortert under første tech
 
-   (optional-key :projects) [{:id Keyword
+   (optional-key :projects) [{:id Keyword ;; prosjekter du har deltatt i med Kodemaker
                               :customer Str
                               :description Str
-                              :years [Num]
+                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [Keyword]}]
 
-   (optional-key :endorsements) [{:author Str
+   (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str
                                   (optional-key :project) Keyword
@@ -127,7 +118,7 @@ Bildene ligger i `resources/public`.
 
 - `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](http://smushit.com).
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
-- `/thumbs/videos` Utsnitt fra video: .jpg, proporsjon 16/9, gjerne 208x117
+- `/thumbs/presentations` Bilde fra en presentasjon (utsnitt video, slides, kode, scenebilde): .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
 - `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
@@ -155,12 +146,72 @@ De ligger i `resources/tech` og `resources/projects`.
    :name Str
    :logo Str
    :description Str
+   :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
    (optional-key :illustration) Str
    (optional-key :site) Str})
 ```
 
 Se eksempler på [tech](resources/tech/javascript.edn) og
 [project](resources/projects/finn-oppdrag.edn).
+
+## Frittstående sider
+
+I resources/articles ligger det noen
+[markdown](http://daringfireball.net/projects/markdown/syntax)-filer. Disse blir
+hver til sin egen side, og får URL lik filnavnet. Filen
+resources/articles/kolbjorn-er-sjef.md blir tilgjengelig som
+http://kodemaker.no/kolbjorn-er-sjef/
+
+Disse "artiklene" skal inneholde noe meta-data. Som et minimum bør du ha med
+`:title` og `:body`, men du kan også ha med `:illustration` (bilde som skal
+vises øverst i venstrekolonnen), `:::lead` (øverste del av hovedkolonnen) og
+`:::aside` (venstrekolonnen). Et minimalt eksempel følger, for ytterligere
+eksempler, se eksisterende filer i `resources/articles`.
+
+```md
+:title Min supre side
+:illustration /photos/people/kolbjorn/side-profile-cropped.jpg
+
+:::aside
+
+Viktig med litt kjøtt i venstrekolonna.
+
+:::lead
+
+Denne siden er helt super, lover. Denne delen kan bestå av flere avsnitt om du
+så ønsker, ingen begrensning. Det er heller ingen forskjell visuelt på denne
+delen fra den etterfølgende body-delen.
+
+:::body
+
+## Dette er en markdown-heading
+
+Body er bra greier altså.
+```
+
+## Blogg
+
+Mye av innholdet i den gamle bloggen er borte, men det betyr bare bedre plass
+til nye, gode innlegg. Blogg-poster finnes i `resources/blog/`. Som "artikler" er
+dette en samling markdown-filer med litt meta-data i. Formatet på blogg-poster
+er enda enklere enn artiklene, og illustreres best gjennom et eksempel. Se
+forøvrig eksisterende innlegg i `resources/blog` for flere eksempler.
+
+```md
+:title Kommende Kodemaker – Alf Kristian Støyle
+:published 2013-06-28
+:illustration /photos/blog/alf-kristian-stoyle.jpg
+
+:::body
+
+Det er over et år siden vi ansatte noen sist, men den som venter på noe godt…
+
+Velkommen til Kodemaker!
+```
+
+For blogg-poster er kun `:illustration` valgfritt. URL-en til bloggpostene
+genereres fra filnavnet, og prefikses med blogg/. Altså blir
+`resources/blog/mitt-innlegg.md` til http://kodemaker.no/blogg/mitt-innlegg/
 
 ## Provisjonering
 

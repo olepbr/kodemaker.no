@@ -11,7 +11,9 @@ h2 {font-size: 25px;}
 .menu {bottom: 5px;}
 .menu a {margin-left: 15px;}
 
-.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, .img {margin: 15px;}
+.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img {margin: 15px;}
+ul {margin-left: 30px}
+ol {margin-left: 35px}
 .grid {margin: 15px 0 0 15px;}
 .gridContent {margin: 0 15px 15px 0;}
 .mount {padding: 10px;}

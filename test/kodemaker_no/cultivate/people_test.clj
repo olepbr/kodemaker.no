@@ -40,7 +40,7 @@
 
 (let [people (-> content
                  (assoc-in [:people :magnar :tech]
-                           {:favorites-at-the-moment [:clojure]
+                           {:favorites-at-the-moment [:css]
                             :want-to-learn-more [:react]})
                  (assoc-in [:people :magnar :recommendations]
                            [(c/recommendation {:tech [:ansible]})])
@@ -49,16 +49,19 @@
                             :name "React"
                             :site "http://react.js"
                             :description "Blah!"})
+                 (assoc-in [:tech-names :css] "CSS")
                  cultivate)]
 
   (fact
    "Tech that isn't present in the content is given a name based
     on its :id."
-   (-> people :magnar :tech :favorites-at-the-moment)
-   => [{:id :clojure, :name "clojure"}]
-
    (-> people :magnar :recommendations first :tech)
-   => [{:id :ansible, :name "ansible"}])
+   => [{:id :ansible, :name "Ansible"}])
+
+  (fact
+   "Unless its in the list of weird tech names."
+   (-> people :magnar :tech :favorites-at-the-moment)
+   => [{:id :css, :name "CSS"}])
 
   (fact
    "Tech that is present, uses the :name in the tech, and adds

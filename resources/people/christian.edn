@@ -89,12 +89,6 @@
             :url "http://execration.no/"}
            ]
 
- :blogs [{:id :cjohansenno
-          :name "cjohansen.no"
-          :url "http://cjohansen.no/arkiv"
-          :theme "Teknisk frontend og Ruby-utvikling"
-          :tech [:javascript :css :html :testing :ruby :rails]}]
-
  :blog-posts [{:url "http://cjohansen.no/an-introduction-to-elisp"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
@@ -108,8 +102,7 @@
                        motsetning til andre introduksjonsartikler tar den for
                        seg et nogenlunde sammensatt eksempel slik at man ser
                        hvordan Lisp ser ut utover 'Hello world'."
-               :tech [:lisp :elisp :emacs]
-               :blog :cjohansenno}]
+               :tech [:lisp :elisp :emacs]}]
 
  :projects [{:id :finn-oppdrag
              :customer "FINN Oppdrag"
@@ -133,21 +126,21 @@
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
                   :urls {:video "http://vimeo.com/43808808"}
-                  :thumb "/thumbs/videos/functional-js.jpg"
+                 :thumb "/thumbs/presentations/functional-js.jpg"
                   :tech [:javascript]}
                  {:title "Test-driven JavaScript Development"
                   :blurb "En praktisk gjennomgang av TDD i JavaScript.
                   Foredraget er en times live-kode-sesjon der jeg lager et
                   autocomplete/type-ahead søk, test-first."
                   :urls {:video "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"}
-                  :thumb "/thumbs/videos/js-tdd-ndc.jpg"
+                  :thumb "/thumbs/presentations/js-tdd-ndc.jpg"
                   :tech [:javascript :design :testing]}
                  {:title "JavaScript design and architecture"
                   :blurb "En liten inspirasjonsprat om å finne gode
                   abstraksjoner for frontend-programmering"
                   :urls {:video "http://vimeo.com/28760470"
                          :slides "http://cjohansen.no/talks/2011/javazone-js-design"}
-                  :thumb "/thumbs/videos/jz-js-design.jpg"
+                  :thumb "/thumbs/presentations/jz-js-design.jpg"
                   :tech [:javascript :design]}
                  {:title "Mythbusters: JavaScript Edition"
                   :blurb "Få programmeringsspråk er omgitt av så mye unøyaktig,
@@ -157,7 +150,7 @@
                           gjennom eksempler å oppgradere publikums JavaScript-kunnskap."
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
-                  :thumb "/thumbs/videos/mythbusters.jpg"
+                  :thumb "/thumbs/presentations/mythbusters.jpg"
                   :tech [:javascript]}]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"

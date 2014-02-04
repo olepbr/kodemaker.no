@@ -1,19 +1,34 @@
 (ns kodemaker-no.pages.project-pages
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [comma-separated]]
+            [kodemaker-no.formatting :refer [comma-separated year-range]]
             [kodemaker-no.markup :refer [link-if-url]]))
 
-(defn- render-person [{:keys [url thumb full-name description]}]
+(defn- render-person [{:keys [url thumb full-name description years]}]
   [:div.media
    [:a.img.thumb.mts {:href url}
     [:img {:src thumb}]]
    [:div.bd
-    [:h4.mtn full-name]
+    [:h4.mtn full-name " " [:span.tiny.shy (year-range years)]]
     [:p description]]])
+
+(defn- compare* [a b]
+  (let [result (compare a b)]
+    (if (zero? result)
+      nil
+      result)))
+
+(defn- compare-by-years [a b]
+  (or (compare* (count (:years b))
+                (count (:years a)))
+      (compare* (apply min (:years a))
+                (apply min (:years b)))
+      0))
 
 (defn- render-people [people project]
   (list [:h2 "Våre folk på saken"]
-        (map render-person (:people project))))
+        (->> (:people project)
+             (sort compare-by-years)
+             (map render-person))))
 
 (defn- render-endorsement [{:keys [photo author person title quote]}]
   [:div.media

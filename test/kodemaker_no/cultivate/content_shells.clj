@@ -4,7 +4,9 @@
   (merge {:people {}
           :tech {}
           :projects {}
-          :articles {}}
+          :articles {}
+          :tech-names {}
+          :blog-posts {}}
          m))
 
 (defn tech [m]
@@ -26,7 +28,8 @@
   (merge {:name "!"
           :logo "!"
           :description "!"
-          :illustration "!"}
+          :illustration "!"
+          :awesomeness 0}
          m))
 
 (defn recommendation [m]

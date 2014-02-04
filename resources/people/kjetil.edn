@@ -13,8 +13,8 @@
    :tech {:favorites-at-the-moment [:ansible :tdd :java :groovy :gradle :ci :cd :refactoring :utviklingsprosess :organisering-av-team :code-smells]
           :want-to-learn-more [:javascript :clojure :linux :devops]}
 
-   :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Refactoring (Martin Fowler)"}
-                                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler) (bok)"
+   :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Les boken"}
+                                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
                                      :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode. Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
                                      :tech [:refactoring :code-smells]}]}
 

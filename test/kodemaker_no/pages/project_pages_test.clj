@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.project-pages-test
   (:require [kodemaker-no.pages.project-pages :refer :all]
+            [kodemaker-no.homeless :refer [hiccup-find]]
             [midje.sweet :refer :all]
             [hiccup.core :refer [html]]))
 
@@ -22,7 +23,8 @@
                            :first-name "Magnar"
                            :full-name "Magnar Sveen"
                            :thumb "/photos/people/magnar/side-profile.jpg"
-                           :description "Gjorde bra ting."}])
+                           :description "Gjorde bra ting."
+                           :years [2008 2009]}])
            :body html)
 
       => (html [:h2 "Våre folk på saken"]
@@ -30,8 +32,20 @@
                 [:a.img.thumb.mts {:href "/magnar/"}
                  [:img {:src "/photos/people/magnar/side-profile.jpg"}]]
                 [:div.bd
-                 [:h4.mtn "Magnar Sveen"]
+                 [:h4.mtn "Magnar Sveen "
+                  [:span.tiny.shy "2008-2009"]]
                  [:p "Gjorde bra ting."]]]))
+
+(fact
+ "Folk på prosjektet listes opp etter hvor mange år de har vært der,
+  og hvem som startet først."
+ (->> (page :people [{:full-name "Magnar" :years [2011]}
+                     {:full-name "Christian" :years [2008 2009]}
+                     {:full-name "Anders" :years [2007 2008]}])
+      :body (hiccup-find :h4.mtn))
+ => (list [:h4.mtn "Anders" " " [:span.tiny.shy "2007-2008"]]
+          [:h4.mtn "Christian" " " [:span.tiny.shy "2008-2009"]]
+          [:h4.mtn "Magnar" " " [:span.tiny.shy "2011"]]))
 
 (fact (->> (page :endorsements [{:project :finn-reise
                                  :person {:first-name "Magnar"

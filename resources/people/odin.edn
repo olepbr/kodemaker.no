@@ -11,39 +11,31 @@
  :phone-number "+47 91 63 50 08"
  :email-address "odin@kodemaker.no"
 
- :presence {:twitter "odinodin"
+ :presence {:cv "odin"
+            :twitter "odinodin"
             :stackoverflow "/users/273594/odinodin"
             :github "odinodin"
             :coderwall "odinodin"
-            :linkedin "in/odinholestandal"}
+            :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:clojure :gradle :lighttable]
-        :want-to-learn-more [:clojurescript :ansible :unity3d]}
-
- :blogs [{:id :odinodin
-          :name "odinodin.io"
-          :url "http://odinodin.io/"
-          :theme "Programmering"
-          :tech [:testing :clojure :groovy]}]
+        :want-to-learn-more [:clojurescript :reactive-programming :unity3d]}
 
  :blog-posts [{:url "http://odinodin.io/blog/2014/01/04/clojure-comments/"
                :title "Kommentarer i Clojure"
                :blurb "Her får du en oversikt over hvilke muligheter man har i
                        Clojure for å kommentere kode."
-               :tech [:clojure]
-               :blog :odinodin}
+               :tech [:clojure]}
               {:url "http://odinodin.io/blog/2013/06/29/get-git/"
                :title "Forstå Git"
                :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med ressurser som hjalp meg å
                        forstå hvordan git fungerer."
-               :tech [:git]
-               :blog :odinodin}
+               :tech [:git]}
               {:url "http://odinodin.io/blog/2012/11/12/spock-and-spring/"
                :title "Spock og Spring"
                :blurb "Om du har en Spring-basert applikasjon og ønsker å teste den med Spock så er det kjekt å kjenne til
                        fallgruvene og hvordan du navigerer rundt de."
-               :tech [:spock :groovy]
-               :blog :odinodin}]
+               :tech [:spock :groovy]}]
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Dette er min definitive favorittpodcast.
@@ -73,16 +65,17 @@
                           strukturere og filtrere tekst."
                   :tech [:shell :unix]
                   :urls {:video "https://vimeo.com/74309669"}
-                  :thumb "/thumbs/videos/elektronisk_tekstbehandling.jpg"}
+                  :thumb "/thumbs/presentations/elektronisk_tekstbehandling.jpg"}
                  {:title "Better and groovier tests with Spock"
                   :blurb "Spock er et elegant testrammeverk for Java og Groovy-
                           baserte applikasjoner. Det hjelper deg å skrive
                           lesbare og presise tester."
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}
-                  :thumb "/thumbs/videos/spock.jpg"}]
+                  :thumb "/thumbs/presentations/spock.jpg"}]
 
  :hobbies [{:title "Fotografering"
-            :description "Kameraet er stort sett med overalt. Du vet
-                          aldri når muligheten til å ta et blinkskudd viser seg. "
+            :description "Kameraet mitt er stort sett med overalt. Du vet
+                          aldri når muligheten til å ta et blinkskudd viser seg.
+                          Dette bildet av soloppgangen tok jeg innerst i en fjord på Sunnmøre."
             :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}]}

@@ -6,25 +6,25 @@
    :name [Str]
    :title Str
    :start-date Str
-   :description Str
+   :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
    (optional-key :administration?) Boolean
 
    :phone-number Str
    :email-address Str
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
-              (optional-key :twitter) Str  ;; username
-              (optional-key :linkedin) Str ;; path to public profile
-              (optional-key :stackoverflow) Str ;; path to public profile
-              (optional-key :github) Str ;; username
-              (optional-key :coderwall) Str} ;; username
+              (optional-key :twitter) Str  ;; brukernavn
+              (optional-key :linkedin) Str ;; path til din offentlige side
+              (optional-key :stackoverflow) Str ;; path til din offentlige side
+              (optional-key :github) Str ;; brukernavn
+              (optional-key :coderwall) Str} ;; brukernavn
 
    (optional-key :tech) {:favorites-at-the-moment [Keyword]
                          (optional-key :want-to-learn-more) [Keyword]}
 
-   (optional-key :recommendations) [{:link {:url Str :text Str}
-                                     :title Str
-                                     :blurb Str
+   (optional-key :recommendations) [{:link {:url Str :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
+                                     :title Str ;; Samme som tittel på det du lenker til
+                                     :blurb Str ;; Litt om hvorfor du anbefaler
                                      :tech [Keyword]}]
 
    (optional-key :hobbies) [{:title Str
@@ -38,29 +38,20 @@
                                    (optional-key :link) {:url Str :text Str}
                                    (optional-key :tech) [Keyword]}]
 
-   (optional-key :blogs) [{:id Keyword ;; only used to DRY up :blog-posts
-                           :name Str
-                           :url Str
-                           :theme Str ;; very short, eg. "teknisk frontend" or "groovy"
-                           :tech [Keyword]}]
-
    (optional-key :blog-posts) [{:url Str
                                 :title Str
                                 :blurb Str
-                                (optional-key :tech) [Keyword]
-                                :blog (either Keyword ;; :id from :blogs
-                                              {:name Str
-                                               :url Str})}]
+                                (optional-key :tech) [Keyword]}]
 
-   (optional-key :presentations) [{:title Str
+   (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
                                    :tech [Keyword]
                                    :urls {(optional-key :video) Str
                                           (optional-key :slides) Str
-                                          (optional-key :source) Str}
+                                          (optional-key :source) Str} ;; må ha minst en av disse URLene
                                    :thumb Str}]
 
-   (optional-key :upcoming) [{:title Str ;; Upcoming courses or presentations
+   (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
                               :url Str
                               :tech [Keyword]
@@ -69,19 +60,19 @@
    (optional-key :open-source-projects) [{:url Str
                                           :name Str
                                           :description Str
-                                          :tech [Keyword]}] ;; sorted under first tech
+                                          :tech [Keyword]}] ;; sortert under første tech
 
    (optional-key :open-source-contributions) [{:url Str
                                                :name Str
-                                               :tech [Keyword]}] ;; sorted under first tech
+                                               :tech [Keyword]}] ;; sortert under første tech
 
-   (optional-key :projects) [{:id Keyword
+   (optional-key :projects) [{:id Keyword ;; prosjekter du har deltatt i med Kodemaker
                               :customer Str
                               :description Str
-                              :years [Num]
+                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [Keyword]}]
 
-   (optional-key :endorsements) [{:author Str
+   (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str
                                   (optional-key :project) Keyword
@@ -99,12 +90,28 @@
    :name Str
    :logo Str
    :description Str
+   :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
    (optional-key :illustration) Str
    (optional-key :site) Str})
+
+(def BlogPost
+  {:title Str
+   :published java.util.Date
+   :illustration Str
+   :body Str})
+
+(def Article
+  {:title Str
+   (optional-key :illustration) Str
+   (optional-key :aside) Str
+   :lead Str
+   (optional-key :body) Str})
 
 (defn validate-content [content]
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
              :projects {Keyword Project}
-             :articles {Str Str}}
+             :articles {Str Article}
+             :tech-names {Keyword Str}
+             :blog-posts {Str BlogPost}}
             content))

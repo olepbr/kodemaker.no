@@ -21,10 +21,9 @@
  :recommendations [{:title "The Functional Database"
                     :link {:url "http://www.infoq.com/presentations/datomic-functional-database"
                         :text "Se foredraget"}
-                    :tech [:datomic :functional]
+                    :tech [:datomic :funksjonell-programmering]
                     :blurb "Dette foredraget av Rich Hickey forklarer ideene bak en funksjonell database."}]
  :hobbies [{:title "Styrketrening"
             :description "....hverdagen er ikke den samme uten"
              :illustration "/illustrations/hobbies/muscle-anatomy.jpg"
-            ;:url "http://rundis.smugmug.com/Fisketurer"
             }]}

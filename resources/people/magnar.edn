@@ -32,7 +32,7 @@
                             du er opptatt av å lage raske websider."
                     :link {:url "http://calendar.perfplanet.com"
                            :text "Besøk kalenderen"}
-                    :tech [:web-performance]}
+                    :tech [:web-performance :frontend]}
                    {:title "Simple Made Easy"
                     :blurb "Det er ikke lett å lage noe enkelt. Rich
                             Hickey snakker om forskjellen på nærliggende
@@ -88,21 +88,21 @@
                     :tech [:datomic]}]
 
  :hobbies [{:title "Brettspill"
-            :description "Det er mer enn Monopol og Ludo i verden. Har du prøvd
-                          Settlers? Moro, ikke sant? Det er bare begynnelsen. Det er en
-                          verden av interessante, artige, morsomme brettspill der ute.
-                          Noen tips fra meg: [Dominion](http://www.spillsjefen.no/product_info.php?products_id=46439),
-                          [Galaxy Trucker](http://www.spillsjefen.no/product_info.php?products_id=32175),
-                          eller hvis dere bare er to:
-                          [Lord of the Rings: The Confrontation](http://www.spillsjefen.no/product_info.php?products_id=30129).
+            :description "Det er mer enn Monopol og Ludo i verden. Har
+                          du prøvd Settlers? Moro, ikke sant? Det er
+                          bare begynnelsen. Det er en verden av
+                          interessante, artige, morsomme brettspill
+                          der ute - bare du kommer deg ut av
+                          bokhandleren og inn i en skikkelig
+                          brettspillforretning. Noen tips fra meg:
+                          [Dominion](http://www.spillsjefen.no/product_info.php?products_id=46439),
+                          [Galaxy
+                          Trucker](http://www.spillsjefen.no/product_info.php?products_id=32175),
+                          eller hvis dere bare er to: [Lord of the
+                          Rings: The
+                          Confrontation](http://www.spillsjefen.no/product_info.php?products_id=30129).
                           Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
-
- :blogs [{:id :framsieutvikling
-          :name "framsieutvikling.no"
-          :url "http://framsieutvikling.no/"
-          :theme "teknisk frontend"
-          :tech [:javascript :oocss :responsive-design :html :testing]}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
@@ -110,8 +110,7 @@
                        som er mest utsatt for cargo culting. For noen år siden
                        var det utstrakt klipping og liming, og uvanene spredte
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
-               :tech [:javascript]
-               :blog :framsieutvikling}
+               :tech [:javascript]}
               {:url "http://framsieutvikling.no/post/37707914430/boker-for-vordende-framsiefolk"
                :title "Bøker for vordende framsiefolk"
                :blurb "En kamerat og kollega som stort sett har holdt
@@ -120,8 +119,7 @@
                        lesestoff å anbefale? Å ja. Disse bøkene mener
                        jeg er essensielle for vordende
                        framsieutviklere."
-               :tech [:frontend]
-               :blog :framsieutvikling}
+               :tech [:frontend]}
               {:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
                :title "OOCSS: Et paradigmeskifte"
                :blurb "Jeg satt min stolthet i å skrive slank
@@ -130,8 +128,7 @@
                        var ryddig og semantisk, så hadde CSS’en
                        eksplodert. Kunne det være noe i OOCSS? Det var
                        jo i mot alt jeg hadde lært."
-               :tech [:oocss :css]
-               :blog :framsieutvikling}]
+               :tech [:oocss :css]}]
 
  :presentations [{:title "Zombie TDD: Live parprogrammering"
                   :blurb "Christian og jeg setter oss ned med emacsen
@@ -140,7 +137,7 @@
                           angriper problemer og gjør koden testbar."
                   :tech [:javascript :testing]
                   :urls {:video "http://vimeo.com/49485653"}
-                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
+                  :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får
                           ryddig kode og trivelig testing ved å wrappe ajaxen
@@ -148,7 +145,7 @@
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
                          :source "https://github.com/magnars/server-facade"}
-                  :thumb "/thumbs/videos/trivelig-testing.jpg"}]
+                  :thumb "/thumbs/presentations/trivelig-testing.jpg"}]
 
  :open-source-projects [{:url "https://github.com/magnars/optimus"
                          :name "Optimus"
@@ -167,7 +164,7 @@
                            over 1000 JavaScript tester og likte det."
              :years [2009 2010 2011 2012 2013]
              :tech [:javascript :responsive-design :oocss
-                    :html :css :spring-mvc :ajax :jquery :js-test-driver
+                    :ajax :spring-mvc :html :css :jquery :js-test-driver
                     :jsp :sinon :java :junit :git :jira :confluence]}
             {:id :finn-surf-sammen
              :customer "FINN Surf Sammen"
