@@ -106,4 +106,4 @@
       => (html [:div.mod
                 [:div.presence
                  [:a {:href "http://www.twitter.com/magnars"}
-                  [:img {:src "/logos/twitter.png" :title "Twitter"}]]]]))
+                  [:img {:src "/icons/twitter.png" :title "Twitter"}]]]]))

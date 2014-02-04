@@ -24,6 +24,7 @@
                                 #"/photos/.*\.svg"
                                 #"/photos/.*\.png"
                                 #"/logos/.*\.png"
+                                #"/icons/.*\.png"
                                 #"/images/.*\.png"]))
 
 (defn get-pages []

@@ -92,7 +92,7 @@
   (when-let [nick (-> item :id presence)]
     [:div.presence
      [:a {:href (str (:baseUrl item) nick)}
-      [:img {:src (str "/logos/" (:logo item)) :title (:title item)}]]]))
+      [:img {:src (str "/icons/" (:logo item)) :title (:title item)}]]]))
 
 (defn- render-presence [presence]
   [:div.mod
