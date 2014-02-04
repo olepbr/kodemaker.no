@@ -1,11 +1,10 @@
 (ns kodemaker-no.pages.article-pages
-  (:require [kodemaker-no.structured-document :refer [read-doc]]
-            [kodemaker-no.homeless :refer [nil-if-blank remove-vals update-vals rename-keys update-in-existing]]
+  (:require [kodemaker-no.homeless :refer [nil-if-blank remove-vals update-vals rename-keys update-in-existing]]
             [kodemaker-no.formatting :refer [to-html]]
             [clojure.string :as str]))
 
-(defn article-page [s]
-  (-> (read-doc s)
+(defn article-page [article]
+  (-> article
       (update-in-existing [:lead] to-html)
       (update-in-existing [:aside] to-html)
       (update-in-existing [:body] to-html)))

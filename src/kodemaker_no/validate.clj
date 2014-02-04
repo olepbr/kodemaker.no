@@ -100,11 +100,18 @@
    :illustration Str
    :body Str})
 
+(def Article
+  {:title Str
+   (optional-key :illustration) Str
+   (optional-key :aside) Str
+   :lead Str
+   (optional-key :body) Str})
+
 (defn validate-content [content]
   (validate {:people {Keyword Person}
              :tech {Keyword Tech}
              :projects {Keyword Project}
-             :articles {Str Str}
+             :articles {Str Article}
              :tech-names {Keyword Str}
              :blog-posts {Str BlogPost}}
             content))

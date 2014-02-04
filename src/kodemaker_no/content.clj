@@ -1,6 +1,7 @@
 (ns kodemaker-no.content
   (:require [stasis.core :refer [slurp-directory]]
-            [kodemaker-no.blog-posts :refer [load-blog-posts]]))
+            [kodemaker-no.blog-posts :refer [load-blog-posts]]
+            [kodemaker-no.articles :refer [load-articles]]))
 
 (defn- read-string-strictly [[file s]]
   (let [forms (try
@@ -24,6 +25,6 @@
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
-   :articles (slurp-directory "resources/articles/" #"\.md$")
+   :articles (load-articles (slurp-directory "resources/articles/" #"\.md$"))
    :blog-posts (load-blog-posts (slurp-directory "resources/blog/" #"\.md$"))
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})
