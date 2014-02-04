@@ -25,9 +25,10 @@
    [:h3.mtn title]
    (markup/prepend-to-paragraph
     (to-html description)
-    (if url
-      [:a.illu {:href url} [:img {:src illustration}]]
-      [:img.illu {:src illustration}]))])
+    (when illustration
+      (if url
+        [:a.illu {:href url} [:img {:src illustration}]]
+        [:img.illu {:src illustration}])))])
 
 (defn- render-hobbies [hobbies _]
   (list [:h2 "Snakker gjerne om"]
@@ -105,7 +106,7 @@
 (defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
-   :lead [:p (:description person)]
+   :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
           (maybe-include person :tech render-tech)

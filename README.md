@@ -186,6 +186,15 @@ VirtualBox Guest Additions. Some functionality may not work as
 intended.` ... det er ikke stress. Bare "Window System drivers" som
 ikke blir installert.
 
+Deretter må du sette passord for root. Sudo passord er `kodemaker`:
+
+```sh
+vagrant ssh
+sudo passwd root
+```
+
+Logg ut igjen.
+
 Legg til din public key i `provisioning/keys`, og føy den til listen
 under `Setup authorized_keys for users who may act as deploy user`
 tasken i `provisioning/bootstrap.yml`.
@@ -193,14 +202,15 @@ tasken i `provisioning/bootstrap.yml`.
 Gå så tilbake til `provisioning/` og:
 
 ```sh
-ansible-playbook -i hosts.ini bootstrap.yml --private-key=~/.vagrant.d/insecure_private_key -u vagrant --sudo
+ansible-playbook -i hosts.ini bootstrap.yml --user root --ask-pass
 ```
 
-Nå kan du `ssh deploy@local.kodemaker.no` og se deg omkring. Sudo
-passord er `kodemaker`.
+Svar med passordet du lagde til root.
 
-Så kan du fortsette ned til
-[Sette opp kodemaker.no](#neste-sette-opp-kodemakerno).
+Den kjører en god stund, og så kan du `ssh deploy@local.kodemaker.no`
+og se deg omkring.
+
+Fortsett så til [Sette opp kodemaker.no](#neste-sette-opp-kodemakerno).
 
 ### Provisjonere en server
 
@@ -232,6 +242,10 @@ Når du bootstrapper, så vil root-login og passord-login bli disablet.
 Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
 annen inkantasjon:
 
+**NB!** Før vi open-sourcer kodemaker.no, må du dessverre legge inn
+`id_rsa.pub` og `id_rsa` med tilgang til kontoen i
+`provisioning/files/` før dette steget.
+
 ```sh
 ansible-playbook -i hosts.ini setup-kodemaker.yml --user deploy --sudo --ask-sudo-pass
 ```
@@ -242,29 +256,25 @@ noen endringer, så er det fortsatt `kodemaker`. Men hvis dette er en
 offentlig server, så lønner det seg nok å gjøre den endringen. Logg
 inn som `deploy` og `passwd`.
 
-#### Bygg og deploy siten
+#### Bygg siten
 
-Du må ha en ganske ny versjon av
-[leiningen](https://github.com/technomancy/leiningen#leiningen)
-installert. Gå til rota av prosjektet, og:
+Første gang du bygger tar det lang tid. Det kan være hyggelig å se at
+den holder på med noe.
 
 ```sh
-lein build-site
-cd provisioning
-ansible-playbook -i hosts.ini deploy-kodemaker.yml --user deploy --sudo --ask-sudo-pass
+ssh deploy@local.kodemaker.no
+./build-site.sh
 ```
 
-Og nå kan du besøke http://local.kodemaker.no i nettleseren din og
+Og så kan du besøke http://local.kodemaker.no i nettleseren din og
 meske deg i de nye sidene våre.
 
-#### Funka ikke!
+Når du vil oppgradere, kan du be serveren om å bygge en ny versjon av
+siten:
 
-Okay,
+```sh
+curl local.kodemaker.no/site/build
+```
 
-- La du merke til at det er et nytt script `deploy-kodemaker.yml`?
-  Pass på at du ikke kjører `setup-kodemaker.yml` en gang til istedet.
-
-- Får du ` ERROR: synchronize is not a legal parameter in an Ansible
-  task or handler` må du oppdatere din Ansible.
-
-Fortsatt ikke bedre? Klag til meg, så legger jeg til fikser fortløpende.
+Den henter da altså fra github. Om du vil teste lokale endringer er
+det mye greiere å få til med `lein ring server`.

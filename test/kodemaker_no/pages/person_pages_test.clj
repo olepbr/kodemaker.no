@@ -9,7 +9,7 @@
    :genitive "Magnars"
    :title "Framsieutvikler"
    :photos {:half-figure "/photos/magnars/half-figure.jpg"}
-   :description "The description"
+   :description "The *description*"
    :phone-number "+47 918 56 425"
    :email-address "magnar@kodemaker.no"})
 
@@ -18,7 +18,7 @@
 
 (fact (-> (page) :title) => "Magnar Sveen")
 (fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
-(fact (-> (page) :lead) => [:p "The description"])
+(fact (-> (page) :lead) => "<p>The <em>description</em></p>")
 
 (fact (-> (page) :aside) => [:div.tight
                              [:h4 "Magnar Sveen"]
@@ -46,7 +46,9 @@
                            {:title "Adventur"
                             :description "Hjemmesnekra spill."
                             :url "http://www.adventur.no"
-                            :illustration "/photos/hobbies/adventur.jpg"}])
+                            :illustration "/photos/hobbies/adventur.jpg"}
+                           {:title "Mytomatoes"
+                            :description "Hjemmesnekra verktøy for Pomodoro."}])
            :body html)
 
       => (html [:h2 "Snakker gjerne om"]
@@ -60,7 +62,10 @@
                 [:p
                  [:a.illu {:href "http://www.adventur.no"}
                   [:img {:src "/photos/hobbies/adventur.jpg"}]]
-                 "Hjemmesnekra spill."]]))
+                 "Hjemmesnekra spill."]]
+               [:div.bd
+                [:h3.mtn "Mytomatoes"]
+                [:p "Hjemmesnekra verktøy for Pomodoro."]]))
 
 (fact (->> (page :tech {:favorites-at-the-moment [{:name "clojure"}
                                                   {:name "emacs"}

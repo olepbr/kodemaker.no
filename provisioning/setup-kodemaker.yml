@@ -4,9 +4,6 @@
    - name: Install nginx
      yum: name=nginx state=present
 
-   - name: Create kodemaker.no directory
-     file: state=directory path=/var/www/kodemaker.no/ owner=nginx group=nginx
-
    - name: Configure nginx
      template: src=templates/nginx.conf.j2 dest=/etc/nginx/nginx.conf
      notify:
@@ -54,11 +51,70 @@
      notify:
       - restart iptables
 
-   - name: Install rsync
-     yum: name=rsync state=present
+   - name: Install jdk7
+     yum: name=java-1.7.0-openjdk-devel state=present
 
-   - name: No tty required for rsync
-     lineinfile: dest=/etc/sudoers regexp="Defaults!/usr/bin/rsync" line="Defaults!/usr/bin/rsync !requiretty"
+   - name: Install git
+     yum: name=git state=present
+
+   - name: Install node
+     yum: name=nodejs state=present
+
+   - name: Install npm
+     yum: name=npm state=present
+
+   - name: Create bin folder
+     file: state=directory path=/home/{{ansible_ssh_user}}/bin owner={{ansible_ssh_user}} group=www
+
+   - name: Install lein
+     get_url: dest=/home/{{ansible_ssh_user}}/bin/lein url="https://raw.github.com/technomancy/leiningen/stable/bin/lein"
+
+   - name: Make lein executable
+     file: path=/home/{{ansible_ssh_user}}/bin/lein mode=755
+
+   - name: Upload build-site script
+     template: src=files/build-site.sh dest=/home/{{ansible_ssh_user}}/build-site.sh mode=755 owner={{ansible_ssh_user}} group=www
+
+   - name: Upload build-queue script
+     template: src=files/build-queue.js dest=/home/{{ansible_ssh_user}}/build-queue.js owner={{ansible_ssh_user}} group=www
+
+   - name: Create SSH directory
+     file: state=directory path=/home/{{ansible_ssh_user}}/.ssh/ owner={{ansible_ssh_user}} mode=0700
+
+   - name: Upload SSH known hosts
+     copy: src=files/known_hosts dest=/home/{{ansible_ssh_user}}/.ssh/known_hosts owner={{ansible_ssh_user}} mode=0600
+
+   - name: Upload SSH keys.
+     copy: src=files/{{item}} dest=/home/{{ansible_ssh_user}}/.ssh/{{item}} owner={{ansible_ssh_user}} mode=0600
+     with_items:
+      - id_rsa
+      - id_rsa.pub
+
+   - name: Install node-forever
+     npm: name=forever global=yes state=present
+
+   - name: Check list of Node.js apps running.
+     command: forever list
+     register: forever_list
+     changed_when: false
+     sudo: no
+
+   - name: Start build-queue
+     command: forever start /home/{{ansible_ssh_user}}/build-queue.js
+     when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/build-queue.js') == -1"
+     sudo: no
+
+   - name: Add nginx to www group
+     user: name=nginx group=www
+
+   - name: Give www access to flush varnish cache
+     file: path=/etc/varnish/secret group=www mode=660
+
+   - name: Create kodemaker.no directory
+     file: state=directory path=/var/www/kodemaker.no owner=nginx group=www mode=775
+     notify:
+      - restart nginx
+      - restart varnish
 
   handlers:
    - name: restart nginx

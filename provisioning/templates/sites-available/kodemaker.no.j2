@@ -20,12 +20,16 @@ server {
   server_name {{ km_domain }};
 
   index index.html;
-  root /var/www/kodemaker.no;
+  root /var/www/kodemaker.no/current;
 
   charset utf-8;
 
   location ^~ /cv/ {
-    proxy_pass       http://old.kodemaker.no/cv/;
+    proxy_pass http://old.kodemaker.no/cv/;
+  }
+
+  location /site/build {
+    proxy_pass http://127.0.0.1:8002;
   }
 
   # far-future expires headers

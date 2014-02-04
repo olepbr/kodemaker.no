@@ -16,8 +16,11 @@
   - name: upgrade all packages
     yum: name=* state=latest
 
+  - name: Create www group
+    group: name=www state=present
+
   - name: Add deployment user
-    user: name=deploy state=present password={{ deploy_password }} shell=/bin/bash
+    user: name=deploy state=present password={{ deploy_password }} shell=/bin/bash group=www
 
   - name: Setup authorized_keys for users who may act as deploy user
     authorized_key: user=deploy key="{{ item }}"

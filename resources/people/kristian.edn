@@ -1,10 +1,30 @@
 {:id :kristian
  :name ["Kristian" "Frøhlich Hansen"]
- :title "Kodemester"
+ :title "Partner"
  :start-date "2010-02-01"
- :description "Kristian er systemutvikler og arkitekt med bred erfaring på tvers av flere bransjer. Dette inkluderer prosjekter innen bank & finans, telekom og digital medieovervåkning. Kristian har en pragmatisk og smidig tilnærming til utfordringene han møter og trives godt i prosjekter som styres etter agile prinsipper."
+ :description "Kristian er først og fremst en systemutvikler som brenner for å lage gode løsninger til krevende kunder.
+ Drivkraften er teknologiske utfordringer, domenforståelse og samspillet med mennesker som ønsker å levere solide produkter.
+ Hvis Kristian selv får velge teknologi er uten tvil Lisp-dialekten Clojure et naturlig førstevalg. Han brenner sterkt for
+ funksjonell programmering, men har likevel en pragmatisk orientering mot utfordringene som venter og søker alltid etter det beste verktøyet for jobben."
 
- :phone-number ""
- :email-address ""
+ :phone-number "91512492"
+ :email-address "kristian@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "kristian"
+            :twitter "kristfh"
+            :github "kristfh"
+            :linkedin "/in/kristfh"}
+
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :datomic]
+       :want-to-learn-more [:om :reactive-programming]}
+
+ :recommendations [{:title "The Functional Database"
+                    :link {:url "http://www.infoq.com/presentations/datomic-functional-database"
+                        :text "Se foredraget"}
+                    :tech [:datomic :functional]
+                    :blurb "Dette foredraget av Rich Hickey forklarer ideene bak en funksjonell database."}]
+ :hobbies [{:title "Styrketrening"
+            :description "....hverdagen er ikke den samme uten"
+             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"
+            ;:url "http://rundis.smugmug.com/Fisketurer"
+            }]}
