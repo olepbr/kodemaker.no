@@ -1,6 +1,7 @@
 (ns kodemaker-no.pages.project-pages
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [comma-separated year-range]]
+            [kodemaker-no.homeless :refer [compare*]]
             [kodemaker-no.markup :refer [link-if-url]]))
 
 (defn- render-person [{:keys [url thumb full-name description years]}]
@@ -10,12 +11,6 @@
    [:div.bd
     [:h4.mtn full-name " " [:span.tiny.shy (year-range years)]]
     [:p description]]])
-
-(defn- compare* [a b]
-  (let [result (compare a b)]
-    (if (zero? result)
-      nil
-      result)))
 
 (defn- compare-by-years [a b]
   (or (compare* (count (:years b))

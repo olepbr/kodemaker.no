@@ -67,6 +67,14 @@
         (when-not (empty? ss)
           (concat (map first ss) (apply interleave-all (map rest ss))))))))
 
+(defn compare* [a b]
+  "Like compare, but returns nil if they're equal, so you can chain
+   compares with or."
+  (let [result (compare a b)]
+    (if (zero? result)
+      nil
+      result)))
+
 ;; create project hiccup-find for this?
 
 (defn hiccup-nodes [root]

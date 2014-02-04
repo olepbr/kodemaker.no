@@ -10,10 +10,10 @@
                        {:administration? false}])
           :title) => "2 kvasse konsulenter")
 
-(fact "Everyone is included, sorted by reverse order"
+(fact "Everyone is included, sorted by reverse order, administration last."
 
       (->> (all-people [{:full-name "Magnar Sveen",   :administration? false, :start-date "2007-03-01"}
                         {:full-name "Finn J Johnsen", :administration? false, :start-date "2008-10-01"}
-                        {:full-name "Kolbjørn Jetne", :administration? true,  :start-date "2007-01-01"}])
+                        {:full-name "Kolbjørn Jetne", :administration? true,  :start-date "2007-04-01"}])
            :body (hiccup-find :.linkish) (map second))
       => ["Finn J Johnsen" "Magnar Sveen" "Kolbjørn Jetne"])
