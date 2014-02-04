@@ -1,9 +1,9 @@
 ﻿{:id :stein
  :name ["Stein" "Engen"]
  :title "Partner"
- :start-date "2007-04-01 00:03"
+ :start-date "1996-04-01 08:00"
  :description "Stein er en ringrev i faget og har en bred bakgrunn og god faglig ballast. 
-               Stein står på for kundene sine og ser av og til etter fornuftige løsninger på intrikate problemstillinger. Stein har også veldig gode talegaver og går godt overens med alle."
+               Stein står på for kundene sine og ser etter fornuftige løsninger på intrikate problemstillinger. Stein har også veldig gode talegaver og går godt overens med alle."
 
  :phone-number "+47 90833407"
  :email-address "stein@kodemaker.no"
