@@ -1,0 +1,12 @@
+{:id :nodejs
+ :name "Node.JS"
+ :illustration "/photos/tech/node.jpg"
+ :site "http://nodejs.org/"
+ :description "Node.JS kombinerer den svært raske JavaScript-motoren fra Chrome,
+ [V8](https://code.google.com/p/v8/), med et fullstendig asynkront I/O API.
+ Resultatet er en server-platform som har like lav terskel for å komme i gang
+ med som PHP, har elegante og konsistente API-er, og som egner seg meget godt
+ for nettverksprogrammering ved å yte godt i typiske I/O-bundne situasjoner.
+ Node.JS er også sentrum for et [svært aktivt fri
+ kildekode-miljø](http://npmjs.org), og brukes gjerne også ivrig som
+ verktøykasse for framsieutviklere."}
