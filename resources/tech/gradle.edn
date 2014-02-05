@@ -1,0 +1,13 @@
+{:id :gradle
+ :name "Gradle"
+ :illustration "/photos/tech/gradle.jpg"
+ :site "http://www.gradle.org"
+ :description "Gradle er et glitrende verktøy for automatisering av bygg.
+               For de som enda ikke har brukt det, vil det oppleves som en solid oppgradering fra Ant og Maven.
+               Man har en nydelig Groovy DSL for å beskrive sine bygg. Det har gode konvensjoner og standardinstillinger,
+               men man står helt fritt i forhold til om man vil benytte de. Støtte for inkrementelle bygg, god ytelse
+               og full kontroll på bygget ditt er noen av de gode grunnene til å ta Gradle i bruk.
+
+ [Magnus](/magnus): _\"Da jeg begynte med Gradle var det første gangen jeg syntes det var gøy å scripte bygg\"_
+
+               "}
