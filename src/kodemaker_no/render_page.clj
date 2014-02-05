@@ -37,6 +37,7 @@
        [:div.mod.menu
         [:a {:href "/referanser/"} "Referanser"]
         [:a {:href "/mennesker/"} "Mennesker"]
+        [:a {:href "/blogg/"} "Blogg"]
         [:a {:href "/kontakt/"} "Ta kontakt"]]
        [:h1#logo.hn
         [:a.linkBlock {:href "/"} "Kodemaker"]]]]

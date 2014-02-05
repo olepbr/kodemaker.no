@@ -6,7 +6,7 @@
    [:p description " "
     [:a.nowrap {:href url} "Se referansen"]]))
 
-(defn- render-reference-group [[logo references]]
+ (defn- render-reference-group [[logo references]]
   [:div.line
    [:div.unit.s-1of3
     [:div.bd

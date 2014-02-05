@@ -11,7 +11,7 @@
 (defn general-pages [content]
   {"/mennesker/" (partial all-people (vals (:people content)))
    "/referanser/" (partial references-page (vals (:projects content)))
-   "/blogg/" (partial blog-page (:blog-posts content))})
+   "/blogg/" (partial blog-page (vals (:blog-posts content)))})
 
 (defn create-pages [content]
   (stasis/merge-page-sources

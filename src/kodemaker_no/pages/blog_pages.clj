@@ -1,5 +1,5 @@
 (ns kodemaker-no.pages.blog-pages
-  (:require [kodemaker-no.homeless :refer [update-vals-with-key rename-keys]]
+  (:require [kodemaker-no.homeless :refer [update-vals rename-keys]]
             [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
             [kodemaker-no.blog-posts :refer [blog-post-path]])
@@ -8,21 +8,61 @@
 (defn- published [blog-post]
   (.format (java.text.SimpleDateFormat. "dd.MM.yyyy") (:published blog-post)))
 
-(defn blog-post-page [path blog-post]
+(defn- by-published [blog-posts]
+  (->> blog-posts (sort-by :published) reverse))
+
+(defn- blog-post-li [blog-post]
+  (list [:li.small (list [:a {:href (str (:path blog-post) "#disqus_thread")} (:title blog-post)]
+                         [:br]
+                         [:span.shy (published blog-post)])]))
+
+(defn- blog-post-list [blog-posts]
+  [:ul (map blog-post-li blog-posts)])
+
+(defn- blog-post-lead [blog-post]
+  (list [:h2 [:a {:href (:path blog-post)} (:title blog-post)]]
+        [:p.shy (published blog-post)]))
+
+(defn- blog-post-body [blog-post]
+  (to-html (:body blog-post)))
+
+(defn- blog-post-aside [blog-post blog-posts]
+  (list [:h3 "Mer fra bloggen"]
+        (->> blog-posts
+             (remove #{blog-post})
+             by-published
+             blog-post-list)))
+
+(defn- render-blog-post [blog-post]
+  [:div.line
+   [:div.unit.s-1of3
+    [:div.bd
+     (when-let [img (:illustration blog-post)]
+       [:a.block.mod {:href (:path blog-post)} [:img {:src img}]])]]
+   [:div.lastUnit
+    [:div.bd
+     (list
+      (blog-post-lead blog-post)
+      (blog-post-body blog-post))]]])
+
+(defn- disqus-script []
+  (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))
+
+(defn blog-post-page [blog-post blog-posts]
   {:title {:head (:title blog-post)}
    :illustration (:illustration blog-post)
-   :lead (list [:h2 (:title blog-post)]
-               [:p.shy (published blog-post)])
-   :body (list (to-html (:body blog-post))
+   :aside (blog-post-aside blog-post blog-posts)
+   :lead (blog-post-lead blog-post)
+   :body (list (blog-post-body blog-post)
                [:div#disqus_thread.mod]
-               [:script (str "var disqus_identifier='" path "';"
-                             (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))])})
+               [:script (str "var disqus_identifier='" (:path blog-post) "';"
+                             (disqus-script))])})
 
 (defn blog-post-pages [blog-posts]
   (-> blog-posts
       (rename-keys blog-post-path)
-      (update-vals-with-key #(partial blog-post-page %1 %2))))
+      (update-vals #(partial blog-post-page % (vals blog-posts)))))
 
 (defn blog-page [blog-posts]
-  {:title "Blogg"
-   :body (str "Det er bloggen vår da" (keys blog-posts))})
+  {:title "Kodemakerbloggen"
+   :body (map render-blog-post (by-published blog-posts))})
