@@ -145,9 +145,6 @@
    [:h2 "Prosjekter"]
    (map render-project projects)))
 
-(defn- strip-paragraph [s]
-  (subs s 3 (- (count s) 4)))
-
 (defn- should-split-open-source-by-tech [projects contributions]
   (let [entries (concat projects contributions)]
     (and (< 6 (count entries))
@@ -163,7 +160,9 @@
 
 (defn- render-open-source-project [project]
   (when project
-    (list "Utviklet " (markup/link-if-url project) ". " (strip-paragraph (to-html (:description project))))))
+    (list "Utviklet "
+          (markup/link-if-url project) ". "
+          (markup/strip-paragraph (to-html (:description project))))))
 
 (defn- render-open-source-entries [projects contributions]
   (let [entries (->> (conj (mapv render-open-source-project (take 5 projects))
