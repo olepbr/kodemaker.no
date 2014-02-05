@@ -49,4 +49,15 @@
                :blurb "Etter mange år med java begynte jeg så smått å bli litt lei. Det var jo mange
                        andre språk på JVM plattformen der ute. Etter å ha jobbet med gradle en periode
                        fikk jeg mer om mer sansen for Groovy."
-               :tech [:groovy]}]}
+               :tech [:groovy]}]
+
+ :open-source-projects[{:url "https://github.com/rundis/gradle-buster-plugin"
+                        :name "gradle-buster-plugin"
+                        :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
+                        :tech [:groovy :gradle :buster-js :javascript]}]
+
+ :open-source-contributions [{:name "gradle-ssh-plugin"
+                              :url "https://github.com/int128/gradle-ssh-plugin"
+                              :tech [:groovy :gradle]}]
+
+ }
