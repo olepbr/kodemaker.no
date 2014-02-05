@@ -12,8 +12,9 @@
   (str "/blogg" (str/replace path #"\.md$" "/")))
 
 (defn load-blog-post [path blog-post]
-  (into (update-in-existing blog-post [:published] to-date)
-        {:path (blog-post-path path)}))
+  (-> blog-post
+      (update-in-existing [:published] to-date)
+      (assoc :path (blog-post-path path))))
 
 (defn load-blog-posts [blog-posts]
   (into {} (map (fn [[key val]] [key (load-blog-post key val)]) blog-posts)))
