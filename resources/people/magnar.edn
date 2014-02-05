@@ -176,7 +176,7 @@
                           og parprogrammerer foran publikum. Se
                           hvordan to typer som digger JavaScript
                           angriper problemer og gjør koden testbar."
-                  :tech [:javascript :testing]
+                  :tech [:javascript :tdd :testing]
                   :urls {:video "http://vimeo.com/49485653"}
                   :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}
                  {:title "Lyntale: Wrap Ajax'en din"
