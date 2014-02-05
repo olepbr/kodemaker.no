@@ -39,7 +39,9 @@
       (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
       (update-in-existing [:presentations] #(look-up-tech-in-maps content %))
       (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
-      (update-in-existing [:projects] #(look-up-tech-in-maps content %))))
+      (update-in-existing [:projects] #(look-up-tech-in-maps content %))
+      (update-in-existing [:open-source-projects] #(look-up-tech-in-maps content %))
+      (update-in-existing [:open-source-contributions] #(look-up-tech-in-maps content %))))
 
 (defn- find-my-project [person id]
   (or (->> person

@@ -145,6 +145,57 @@
    [:h2 "Prosjekter"]
    (map render-project projects)))
 
+(defn- strip-paragraph [s]
+  (subs s 3 (- (count s) 4)))
+
+(defn- should-split-open-source-by-tech [projects contributions]
+  (let [entries (concat projects contributions)]
+    (and (< 6 (count entries))
+         (< 1 (count (distinct (map #(first (:tech %)) entries)))))))
+
+(defn- render-open-source-contributions [contributions]
+  (when (seq contributions)
+    (list "Har bidratt til " (comma-separated (map markup/link-if-url contributions)) ".")))
+
+(defn- render-extra-open-source-projects [projects]
+  (when (seq projects)
+    (list "Har også utviklet " (comma-separated (map markup/link-if-url projects)) ".")))
+
+(defn- render-open-source-project [project]
+  (when project
+    (list "Utviklet " (markup/link-if-url project) ". " (strip-paragraph (to-html (:description project))))))
+
+(defn- render-open-source-entries [projects contributions]
+  (let [entries (->> (conj (mapv render-open-source-project (take 5 projects))
+                           (render-extra-open-source-projects (drop 5 projects))
+                           (render-open-source-contributions contributions))
+                     (remove nil?))]
+    (if (next entries)
+      [:ul (map (fn [node] [:li node]) entries)]
+      [:p (first entries)])))
+
+(defn- render-split-open-source [projects contributions]
+  (->> (concat projects contributions)
+       (map (comp first :tech))
+       distinct
+       (map (fn [tech]
+              (list [:h3 (:name tech)]
+                    (render-open-source-entries
+                     (filter #(= tech (first (:tech %))) projects)
+                     (filter #(= tech (first (:tech %))) contributions)))))))
+
+(defn- render-open-source [{:keys [open-source-projects open-source-contributions]}]
+  (list
+   [:h2 "Open source"]
+   (if (should-split-open-source-by-tech open-source-projects open-source-contributions)
+     (render-split-open-source open-source-projects open-source-contributions)
+     (render-open-source-entries open-source-projects open-source-contributions))))
+
+(defn- maybe-include-open-source [person]
+  (when (or (:open-source-projects person)
+            (:open-source-contributions person))
+    (render-open-source person)))
+
 (defn- maybe-include [person kw f]
   (when (kw person)
     (f (kw person) person)))
@@ -161,6 +212,7 @@
           (maybe-include person :side-projects render-side-projects)
           (maybe-include person :blog-posts render-blog-posts)
           (maybe-include person :presentations render-presentations)
+          (maybe-include-open-source person)
           (maybe-include person :projects render-projects)
           (maybe-include person :endorsements render-endorsements))})
 
