@@ -17,4 +17,5 @@
       (assoc :path (blog-post-path path))))
 
 (defn load-blog-posts [blog-posts]
-  (into {} (map (fn [[key val]] [key (load-blog-post key val)]) blog-posts)))
+  (into {} (map (fn [[path blog-post]]
+                  [path (load-blog-post path blog-post)]) blog-posts)))
