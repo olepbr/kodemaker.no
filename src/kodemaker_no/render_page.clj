@@ -63,11 +63,15 @@
 
 (defn- render-two-column [page]
   (list
-   [:div.body.unitRight.r-2of3
+   [(if (-> page :title :h1)
+      :div.body.unitRight.r-2of3
+      :div.body.unitRight.r-2of3.mtm)
     [:div.bd
      (:lead page)
      (:body page)]]
-   [:div.aside.lastUnit
+   [(if (-> page :title :h1)
+      :div.aside.lastUnit
+      :div.aside.lastUnit.mtm)
     [:div.bd
      (when (:illustration page)
        [:div.illustration

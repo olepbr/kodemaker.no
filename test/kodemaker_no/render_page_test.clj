@@ -45,3 +45,11 @@
  "Uses h1 title in body"
  (-> {:title {:head "In head" :h1 "h1"}} (render-page request) parse
      (select [:h1]) second :content first) => "h1")
+
+(fact
+ "Adds top margin to body and aside when no h1"
+ (let [markup (-> {:title {:head "In head"}
+                   :aside "Hmm"
+                   :body "Body"} (render-page request) parse)]
+   (-> markup (select [:div.aside.mtm]) first :content first :content first) => "Hmm"
+   (-> markup (select [:div.body.mtm]) first :content first :content first) => "Body"))
