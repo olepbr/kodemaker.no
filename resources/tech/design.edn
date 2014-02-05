@@ -1,15 +1,13 @@
 {:id :design
  :name "Design"
  :illustration "/photos/tech/design.jpg"
- :description "<blockquote>
-<p>
-There are two ways of constructing a software design: One way is to make it so
-simple that there are obviously no deficiencies, and the other way is to make
-it so complicated that there are no obvious deficiencies. The first method is
-far more difficult.
-</p>
-<p><cite>- <a href=\"http://en.wikipedia.org/wiki/C._A._R._Hoare\">C. A. R. Hoare</a></cite></p>
-</blockquote>
+ :description "
+> There are two ways of constructing a software design: One way is to make it so
+> simple that there are obviously no deficiencies, and the other way is to make
+> it so complicated that there are no obvious deficiencies. The first method is
+> far more difficult.
+>
+> -- <cite>[C. A. R. Hoare](http://en.wikipedia.org/wiki/C._A._R._Hoare)</cite>
 
 Design er en pågående jobb som programmerer. Det handler om å ta stilling til
 hvilke undersystemer som kan skilles ut som selvstendige komponenter, hvordan
