@@ -42,7 +42,7 @@
                :title "Javascript testing in your JVM projects using Gradle and BusterJS"
                :blurb "Hadde det ikke vært kjekt om du kunne inkludert javascript testing som en del
                        av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
-               :tech [:gradle :javascript :BusterJS]}
+               :tech [:gradle :javascript :buster-js]}
 
               {:url "http://codewader.blogspot.no/2011/08/groovy-infatuation-growing.html"
                :title "A groovy infatuation growing"

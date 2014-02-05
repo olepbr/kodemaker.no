@@ -15,6 +15,7 @@
  :innovasjonsmiljoer "Innovasjonsmiljøer"
  :lighttable "Light Table"
  :ddd "DDD"
+ :buster-js "Buster.JS"
  :node-js "Node.js"
  :spring-mvc "Spring MVC"
  :tdd "TDD"
