@@ -60,6 +60,20 @@
   (list [:h2 "Sideprosjekter"]
         (map render-side-project projects)))
 
+(defn- render-open-source-project [project]
+  (list (comma-separated (map link-to-person (:by project)))
+        " utviklet "
+        [:a {:href (:url project)} (:name project)]
+        ". "
+        (:description project)))
+
+(defn- render-open-source-projects [projects _]
+  (list [:h2 "Open source"]
+        (if (next projects)
+          [:ul
+           (map (fn [p] [:li (render-open-source-project p)]) projects)]
+          [:p (render-open-source-project (first projects))])))
+
 (defn- maybe-include [tech kw f]
   (when (kw tech)
     (f (kw tech) tech)))
@@ -72,7 +86,8 @@
           (maybe-include tech :recommendations render-recommendations)
           (maybe-include tech :blog-posts render-blog-posts)
           (maybe-include tech :presentations render-presentations)
-          (maybe-include tech :side-projects render-side-projects))})
+          (maybe-include tech :side-projects render-side-projects)
+          (maybe-include tech :open-source-projects render-open-source-projects))})
 
 (defn tech-pages [techs]
   (into {} (map (juxt :url #(partial tech-page %)) techs)))

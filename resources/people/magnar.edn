@@ -188,39 +188,43 @@
                          :source "https://github.com/magnars/server-facade"}
                   :thumb "/thumbs/presentations/trivelig-testing.jpg"}]
 
- :open-source-projects [{:url "https://github.com/culljs/culljs"                 :name "cull.js"               :description "Et verktøybelte for å skrive funksjonell JavaScript."                                     :tech [:javascript]}
-                        {:url "https://github.com/culljs/dome"                   :name "dome.js"               :description "Et lite bibliotek for å bygge, traversere og manipulere DOM."                             :tech [:javascript]}
-                        {:url "https://github.com/magnars/autolint"              :name "autolint"              :description "Overvåker filene dine for jslint-feil."                                                   :tech [:javascript]}
-                        {:url "https://github.com/magnars/creator.js"            :name "creator.js"            :description "Lager create-metoder til objektene dine."                                                 :tech [:javascript]}
-                        {:url "https://github.com/busterjs/buster-lint"          :name "buster-lint"           :description "Linting som en del av testkjøringen med Buster."                                          :tech [:javascript]}
-                        {:url "https://github.com/magnars/expand-region.el"      :name "expand-region"         :description "Marker deler av fila basert på semantikk."                                                :tech [:emacs]}
-                        {:url "https://github.com/magnars/multiple-cursors.el"   :name "multiple-cursors"      :description "Rediger flere deler av fila samtidig med mange cursors."                                  :tech [:emacs]}
-                        {:url "https://github.com/magnars/js2-refactor.el"       :name "js2-refactor"          :description "Refaktorering for JavaScript i Emacs."                                                    :tech [:emacs :javascript]}
-                        {:url "https://github.com/magnars/clj-refactor.el"       :name "clj-refactor"          :description "Refaktorerings for Clojure i Emacs."                                                      :tech [:emacs :clojure]}
-                        {:url "https://github.com/magnars/dash.el"               :name "dash.el"               :description "Et moderne listebibliotek for Emacs."                                                     :tech [:emacs]}
-                        {:url "https://github.com/magnars/s.el"                  :name "s.el"                  :description "Et string-manipulasjonsbibliotek for Emacs."                                              :tech [:emacs]}
-                        {:url "https://github.com/magnars/tagedit"               :name "tagedit"               :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/simplezen.el"          :name "simplezen"             :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/buster-mode"           :name "buster-mode"           :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/multifiles.el"         :name "multifiles"            :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/string-edit.el"        :name "string-edit"           :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/smart-forward.el"      :name "smart-forward"         :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/change-inner.el"       :name "change-inner"          :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/buster-snippets.el"    :name "buster-snippets"       :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/angular-snippets.el"   :name "angular-snippets"      :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description ""                                                                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/stasis"                :name "Stasis"                :description "Et Clojure bibliotek for å lage statiske nettsider. Som denne."                           :tech [:clojure]}
-                        {:url "https://github.com/magnars/optimus"               :name "Optimus"               :description "Et Clojure bibliotek for frontendytelse."                                                 :tech [:clojure :web-performance]}
-                        {:url "https://github.com/magnars/test-with-files"       :name "test-with-files"       :description "Enkel måte å skrive tester som bruker filer på disk."                                     :tech [:clojure]}
-                        {:url "https://github.com/magnars/optimus-less"          :name "optimus-less"          :description "[LESS](http://lesscss.org/)-støtte til Optimus."                                          :tech [:clojure :less]}
-                        {:url "https://github.com/magnars/optimus-angular"       :name "optimus-angular"       :description "Bedre ytelse for [AngularJS](http://angularjs.org/)-apps."                                :tech [:clojure :angularjs]}
-                        {:url "https://github.com/magnars/optimus-jsx"           :name "optimus-jsx"           :description "[React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)-støtte til Optimus."  :tech [:clojure :react]}
-                        {:url "https://github.com/magnars/optimus-img-transform" :name "optimus-img-transform" :description ""                                                                                         :tech [:clojure]}
-                        {:url "https://github.com/magnars/autolint-maven-plugin" :name "autolint-maven-plugin" :description "Kjører statisk analyse av JavaScript i Maven."                                            :tech [:java :maven]}]
+ :open-source-projects [{:url "https://github.com/culljs/culljs"                 :name "cull.js"               :description "Et verktøybelte for å skrive funksjonell JavaScript."                                    :tech [:javascript :nodejs]}
+                        {:url "https://github.com/culljs/dome"                   :name "dome.js"               :description "Et lite bibliotek for å bygge, traversere og manipulere DOM."                            :tech [:javascript]}
+                        {:url "https://github.com/magnars/autolint"              :name "autolint"              :description "Overvåker filene dine for jslint-feil."                                                  :tech [:javascript :nodejs]}
+                        {:url "https://github.com/magnars/creator.js"            :name "creator.js"            :description "Lager create-metoder til objektene dine."                                                :tech [:javascript :nodejs]}
+                        {:url "https://github.com/busterjs/buster-lint"          :name "buster-lint"           :description "Linting som en del av testkjøringen med Buster."                                         :tech [:javascript :nodejs]}
+                        {:url "https://github.com/magnars/stasis"                :name "Stasis"                :description "Et Clojure bibliotek for å lage statiske nettsider. Som denne."                          :tech [:clojure]}
+                        {:url "https://github.com/magnars/optimus"               :name "Optimus"               :description "Et Clojure bibliotek for frontendytelse."                                                :tech [:clojure :web-performance]}
+                        {:url "https://github.com/magnars/test-with-files"       :name "test-with-files"       :description "Enkel måte å skrive tester som bruker filer på disk."                                    :tech [:clojure]}
+                        {:url "https://github.com/magnars/optimus-less"          :name "optimus-less"          :description "[LESS](http://lesscss.org/)-støtte til Optimus."                                         :tech [:clojure :less]}
+                        {:url "https://github.com/magnars/optimus-angular"       :name "optimus-angular"       :description "Bedre ytelse for [AngularJS](http://angularjs.org/)-apps."                               :tech [:clojure :angularjs]}
+                        {:url "https://github.com/magnars/optimus-jsx"           :name "optimus-jsx"           :description "[React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)-støtte til Optimus." :tech [:clojure :react]}
+                        {:url "https://github.com/magnars/optimus-img-transform" :name "optimus-img-transform" :description "Optimalisering og transformering av bilder til Optimus."                                 :tech [:clojure]}
+                        {:url "https://github.com/magnars/expand-region.el"      :name "expand-region"         :description "Marker deler av fila basert på semantikk."                                               :tech [:emacs]}
+                        {:url "https://github.com/magnars/multiple-cursors.el"   :name "multiple-cursors"      :description "Rediger mange steder i fila samtidig."                                                   :tech [:emacs]}
+                        {:url "https://github.com/magnars/js2-refactor.el"       :name "js2-refactor"          :description "Refaktorering for JavaScript i Emacs."                                                   :tech [:emacs :javascript]}
+                        {:url "https://github.com/magnars/clj-refactor.el"       :name "clj-refactor"          :description "Refaktorerings for Clojure i Emacs."                                                     :tech [:emacs :clojure]}
+                        {:url "https://github.com/magnars/dash.el"               :name "dash.el"               :description "Et moderne listebibliotek for Emacs."                                                    :tech [:emacs]}
+                        {:url "https://github.com/magnars/s.el"                  :name "s.el"                  :description "Et string-manipulasjonsbibliotek for Emacs."                                             :tech [:emacs]}
+                        {:url "https://github.com/magnars/tagedit"               :name "tagedit"               :description "Semantisk omstrukturering av HTML for Emacs."                                            :tech [:emacs]}
+                        {:url "https://github.com/magnars/simplezen.el"          :name "simplezen"             :description "Skriv HTML i en fei i Emacs."                                                            :tech [:emacs]}
+                        {:url "https://github.com/magnars/buster-mode"           :name "buster-mode"           :description "Lite minor-mode til Emacs for å kjøre Buster-tester."                                    :tech [:emacs]}
+                        {:url "https://github.com/magnars/multifiles.el"         :name "multifiles"            :description "Rediger flere filer samtidig i Emacs."                                                   :tech [:emacs]}
+                        {:url "https://github.com/magnars/string-edit.el"        :name "string-edit"           :description "Unngå escaping-trøbbel når du redigerer en string."                                      :tech [:emacs]}
+                        {:url "https://github.com/magnars/smart-forward.el"      :name "smart-forward"         :description "Semantisk navigasjon for Emacs."                                                         :tech [:emacs]}
+                        {:url "https://github.com/magnars/change-inner.el"       :name "change-inner"          :description "Semantisk copy og kill for Emacs."                                                       :tech [:emacs]}
+                        {:url "https://github.com/magnars/buster-snippets.el"    :name "buster-snippets"       :description "Snippets for å raskt skrive Buster boilerplate."                                         :tech [:emacs]}
+                        {:url "https://github.com/magnars/angular-snippets.el"   :name "angular-snippets"      :description "Snippets for å raskt skrive Angular.JS boilerplate."                                     :tech [:emacs]}
+                        {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description "Snippets for å raskt skrive Datomic boilerplate."                                        :tech [:emacs]}
+                        {:url "https://github.com/magnars/autolint-maven-plugin" :name "autolint-maven-plugin" :description "Kjører statisk analyse av JavaScript i Maven."                                           :tech [:java :maven]}]
 
  :open-source-contributions [{:name "clj-v8"              :url "https://github.com/circleci/clj-v8"              :tech [:clojure]}
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
+                             {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
+                             {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
+                             {:name "jstdutil"            :url "https://github.com/cjohansen/jstdutil"           :tech [:javascript]}
+                             {:name "carousel-js"         :url "https://github.com/finn-no/carousel-js"          :tech [:javascript]}
                              {:name "elnode"              :url "https://github.com/nicferrier/elnode"            :tech [:emacs]}
                              {:name "ecukes"              :url "https://github.com/rejeep/ecukes"                :tech [:emacs]}
                              {:name "flycheck"            :url "https://github.com/lunaryorn/flycheck"           :tech [:emacs]}
@@ -228,10 +232,6 @@
                              {:name "litable"             :url "https://github.com/Fuco1/litable"                :tech [:emacs]}
                              {:name "god-mode"            :url "https://github.com/chrisdone/god-mode"           :tech [:emacs]}
                              {:name "restclient.el"       :url "https://github.com/pashky/restclient.el"         :tech [:emacs]}
-                             {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
-                             {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
-                             {:name "jstdutil"            :url "https://github.com/cjohansen/jstdutil"           :tech [:javascript]}
-                             {:name "carousel-js"         :url "https://github.com/finn-no/carousel-js"          :tech [:javascript]}
                              {:name "buster-maven-plugin" :url "https://github.com/peternic/buster-maven-plugin" :tech [:java :maven]}]
 
  :projects [{:id :finn-oppdrag

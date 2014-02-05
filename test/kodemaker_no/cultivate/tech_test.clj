@@ -88,6 +88,36 @@
       :by [{:name "Christian", :url "/christian/"}]}])
 
 (fact
+ "Open source prosjekter blir samlet sammen. Hvis flere har jobbet på
+  samme prosjekt, så blir de slått sammen."
+
+ (-> content
+     (assoc-in [:people :magnar :open-source-projects]
+               [{:url "https://github.com/culljs/dome"         :name "dome.js"  :description "Et lite bibliotek for å bygge, traversere og manipulere DOM." :tech [:javascript :fp]}
+                {:url "https://github.com/magnars/autolint"    :name "autolint" :description "Overvåker filene dine for jslint-feil."                       :tech [:javascript]}])
+     (assoc-in [:people :christian :open-source-projects]
+               [{:url "https://github.com/culljs/dome/"        :name "dome.js"  :description "Et lite bibliotek for å bygge, traversere og manipulere DOM." :tech [:javascript :dom]}
+                {:url "https://github.com/cjohansen/Sinon.JS/" :name "Sinon.JS" :description "Et spy-/stub- og mocke-bibliotek."                            :tech [:javascript :testing]}])
+     cultivate :javascript :open-source-projects)
+
+ => [{:url "https://github.com/culljs/dome"
+      :name "dome.js"
+      :description "Et lite bibliotek for å bygge, traversere og manipulere DOM."
+      :tech [:javascript :fp :dom]
+      :by [{:name "Magnar" :url "/magnar/"}
+           {:name "Christian" :url "/christian/"}]}
+     {:url "https://github.com/magnars/autolint"
+      :name "autolint"
+      :description "Overvåker filene dine for jslint-feil."
+      :tech [:javascript]
+      :by [{:name "Magnar" :url "/magnar/"}]}
+     {:url "https://github.com/cjohansen/Sinon.JS/"
+      :name "Sinon.JS"
+      :description "Et spy-/stub- og mocke-bibliotek."
+      :tech [:javascript :testing]
+      :by [{:name "Christian" :url "/christian/"}]}])
+
+(fact
  "Bloggposter blir overført til tech."
 
  (-> content

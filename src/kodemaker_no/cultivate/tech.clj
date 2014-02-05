@@ -52,6 +52,28 @@
                         (map combine-recommendations)
                         (filter #(is-about tech %)))))
 
+(defn- combine-open-source-projects [projects]
+  (-> (first projects)
+      (select-keys #{:url :name :description})
+      (assoc
+          :by (map :by projects)
+          :tech (distinct (mapcat :tech projects)))))
+
+(defn- normalized-url [{:keys [^String url]}]
+  (if (.endsWith url "/")
+    (subs url 0 (dec (count url)))
+    url))
+
+(defn- add-open-source-projects [content tech]
+  (assoc-in-unless tech [:open-source-projects] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat (get-with-byline :open-source-projects))
+                        (group-by normalized-url)
+                        vals
+                        (map combine-open-source-projects)
+                        (filter #(is-about tech %)))))
+
 (defn- combine-presentations [presentations]
   (-> (first presentations)
       (select-keys #{:title :blurb :thumb})
@@ -90,7 +112,8 @@
        (add-recommendations content)
        (add-presentations content)
        (add-blog-posts content)
-       (add-side-projects content)))
+       (add-side-projects content)
+       (add-open-source-projects content)))
 
 (defn cultivate-techs [content]
   (update-vals (:tech content) (partial cultivate-tech content)))

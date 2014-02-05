@@ -179,7 +179,7 @@
        (map (comp first :tech))
        distinct
        (map (fn [tech]
-              (list [:h3 (:name tech)]
+              (list [:h3 (markup/link-if-url tech)]
                     (render-open-source-entries
                      (filter #(= tech (first (:tech %))) projects)
                      (filter #(= tech (first (:tech %))) contributions)))))))
