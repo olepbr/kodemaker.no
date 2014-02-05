@@ -12,9 +12,9 @@
   (->> blog-posts (sort-by :published) reverse))
 
 (defn- blog-post-li [blog-post]
-  (list [:li.small (list [:a {:href (str (:path blog-post) "#disqus_thread")} (:title blog-post)]
-                         [:br]
-                         [:span.shy (published blog-post)])]))
+  [:li.small (list [:a {:href (str (:path blog-post) "#disqus_thread")} (:title blog-post)]
+                   [:br]
+                   [:span.shy (published blog-post)])])
 
 (defn- blog-post-list [blog-posts]
   [:ul (map blog-post-li blog-posts)])
