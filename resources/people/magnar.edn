@@ -153,7 +153,13 @@
                        var ryddig og semantisk, så hadde CSS’en
                        eksplodert. Kunne det være noe i OOCSS? Det var
                        jo i mot alt jeg hadde lært."
-               :tech [:oocss :css]}]
+               :tech [:oocss :css]}
+              {:url "http://whattheemacsd.com"
+               :title "What the .emacs.d!?"
+               :blurb "En lang samling med triks og tips for å sette
+                       opp Emacs'en din sjæl. Høyt anbefalt over å dumpe inn
+                       noen andres config og håpe det blir bra."
+               :tech [:emacs]}]
 
  :presentations [{:title "Zombie TDD: Live parprogrammering"
                   :blurb "Christian og jeg setter oss ned med emacsen
