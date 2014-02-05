@@ -25,7 +25,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
 ```clj
 (def Person
-  {:id Keyword
+  {:id ID
    :name [Str]
    :title Str
    :start-date Str
@@ -42,13 +42,13 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
               (optional-key :github) Str ;; brukernavn
               (optional-key :coderwall) Str} ;; brukernavn
 
-   (optional-key :tech) {:favorites-at-the-moment [Keyword]
-                         (optional-key :want-to-learn-more) [Keyword]}
+   (optional-key :tech) {:favorites-at-the-moment [ID]
+                         (optional-key :want-to-learn-more) [ID]}
 
    (optional-key :recommendations) [{:link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
                                      :title Str ;; Samme som tittel på det du lenker til
                                      :blurb Str ;; Litt om hvorfor du anbefaler
-                                     :tech [Keyword]}]
+                                     :tech [ID]}]
 
    (optional-key :hobbies) [{:title Str
                              :description Str
@@ -59,16 +59,16 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    :description Str
                                    :illustration Path
                                    (optional-key :link) {:url URL :text Str}
-                                   (optional-key :tech) [Keyword]}]
+                                   (optional-key :tech) [ID]}]
 
    (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
-                                (optional-key :tech) [Keyword]}]
+                                (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
-                                   :tech [Keyword]
+                                   :tech [ID]
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL} ;; må ha minst en av disse URLene
@@ -77,28 +77,28 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
                               :url URL
-                              :tech [Keyword]
+                              :tech [ID]
                               :date Str}] ;; iso-8601
 
    (optional-key :open-source-projects) [{:url URL
                                           :name Str
                                           :description Str
-                                          :tech [Keyword]}] ;; sortert under første tech
+                                          :tech [ID]}] ;; sortert under første tech
 
    (optional-key :open-source-contributions) [{:url URL
                                                :name Str
-                                               :tech [Keyword]}] ;; sortert under første tech
+                                               :tech [ID]}] ;; sortert under første tech
 
-   (optional-key :projects) [{:id Keyword ;; prosjekter du har deltatt i med Kodemaker
+   (optional-key :projects) [{:id ID ;; prosjekter du har deltatt i med Kodemaker
                               :customer Str
                               :description Str
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
-                              :tech [Keyword]}] ;; hvilke tech jobbet du med? viktigst først
+                              :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str
-                                  (optional-key :project) Keyword
+                                  (optional-key :project) ID
                                   (optional-key :photo) Path}]})
 ```
 
@@ -114,7 +114,8 @@ Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 
 #### Datatyper
 
-- `Path` er en streng som starter med `/` og ikke inneholder noen sære tegn.
+- `ID` er et :keyword som er lowercase uten sære tegn.
+- `Path` er en streng som starter med `/` uten sære tegn.
 - `URL` er en streng som starter med `http://` eller https og forøvrig er en URL.
 
 ## Laste opp bilder

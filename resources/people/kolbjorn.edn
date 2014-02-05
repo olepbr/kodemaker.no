@@ -17,7 +17,7 @@
 
             
 :tech {:favorites-at-the-moment [:teamsalg :nettverksbygging :historie]
-        :want-to-learn-more [:markedsføring :innovasjonsmiljøer]}
+        :want-to-learn-more [:markedsforing :innovasjonsmiljoer]}
         
 :recommendations [{:title "Good to Great"
                     :link {:url "http://en.wikipedia.org/wiki/Good_to_Great"
