@@ -33,6 +33,19 @@
   (list [:h2 "Snakker gjerne om"]
         (map render-hobby hobbies)))
 
+(defn- render-side-project [{:keys [title description link illustration]}]
+  [:div.bd
+   [:h3.mtn title]
+   (-> (to-html description)
+       (markup/append-to-paragraph
+        (list " " (markup/render-link link)))
+       (markup/prepend-to-paragraph
+        [:a.illu {:href (:url link)} [:img {:src illustration}]]))])
+
+(defn- render-side-projects [side-projects _]
+  (list [:h2 "Sideprosjekter"]
+        (map render-side-project side-projects)))
+
 (defn- inline-list [label nodes]
   (list [:strong label]
         (comma-separated nodes)
@@ -145,6 +158,7 @@
           (maybe-include person :tech render-tech)
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
+          (maybe-include person :side-projects render-side-projects)
           (maybe-include person :blog-posts render-blog-posts)
           (maybe-include person :presentations render-presentations)
           (maybe-include person :projects render-projects)

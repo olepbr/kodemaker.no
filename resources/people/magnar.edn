@@ -104,6 +104,16 @@
                           Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
+ :side-projects [{:title "Emacs Rocks!"
+                  :description "Jeg ble så begeistret for Emacs at jeg
+                                trengte et utløp for all min
+                                entusiasme. Resultatet ble denne serien med
+                                3-minutters videoer av kule triks som
+                                nå er sett over to hundre tusen ganger."
+                  :illustration "/illustrations/side-projects/emacs-rocks.jpg"
+                  :link {:url "http://emacsrocks.com" :text "Se videoene"}
+                  :tech [:emacs]}]
+
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
                :blurb "Jeg tør påstå at JavaScript er et av språkene

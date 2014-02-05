@@ -126,6 +126,7 @@ Bildene ligger i `resources/public`.
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
 - `/thumbs/presentations` Bilde fra en presentasjon (utsnitt video, slides, kode, scenebilde): .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
+- `/illustrations/side-projects/` Illustrasjoner til sideprosjekter: .jpg med bredde 420px.
 - `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
 - `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
