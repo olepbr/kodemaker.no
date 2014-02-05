@@ -65,7 +65,7 @@
         " utviklet "
         [:a {:href (:url project)} (:name project)]
         ". "
-        (:description project)))
+        (to-html (:description project))))
 
 (defn- render-open-source-projects [projects _]
   (list [:h2 "Open source"]
