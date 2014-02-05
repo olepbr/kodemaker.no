@@ -26,5 +26,5 @@ jobbeturer med sine Vibram Fivefingers."
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
  :tech {:favorites-at-the-moment [:clojure :scala :funksjonell-programmering]
-        :want-to-learn-more [:clojurescript :node-js]}
+        :want-to-learn-more [:clojurescript :nodejs]}
  :presence {}}

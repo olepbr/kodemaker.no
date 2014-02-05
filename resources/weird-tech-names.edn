@@ -20,7 +20,7 @@
  :junit "JUnit"
  :lighttable "Light Table"
  :markedsforing "Markedsføring"
- :node-js "Node.js"
+ :nodejs "Node.js"
  :openam "OpenAM"
  :siteminder "CA SiteMinder"
  :spring-mvc "Spring MVC"
