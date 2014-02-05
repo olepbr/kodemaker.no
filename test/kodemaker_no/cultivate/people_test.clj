@@ -2,7 +2,8 @@
   (:require [kodemaker-no.cultivate.people :refer :all]
             [midje.sweet :refer :all]
             [kodemaker-no.validate :refer [validate-content]]
-            [kodemaker-no.cultivate.content-shells :as c]))
+            [kodemaker-no.cultivate.content-shells :as c]
+            [clj-time.format :as time]))
 
 (def content
   (c/content
@@ -108,3 +109,14 @@
              :author "Bjørn Henrik Vangstein"
              :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
              :quote "Magnar Sveen skiller seg klart ut i mengden."}]))
+
+(let [people (-> content
+                 (assoc-in [:people :magnar :upcoming]
+                           [{:title "Presentasjon"
+                             :date "2013-02-01"
+                             :url "http://vg.no"
+                             :tech [:javascript]
+                             :description "Something"}])
+                 cultivate)]
+  (fact "It parses dates in upcoming events"
+        (-> people :magnar :upcoming first :date) => (time/parse (time/formatters :year-month-day) "2013-02-01")))
