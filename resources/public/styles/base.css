@@ -42,6 +42,7 @@ ol li {list-style-type: decimal;}
 
 p {margin-bottom: 1.3em;}
 
+.small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
 .r-4-3-2 {width: 50%; }
