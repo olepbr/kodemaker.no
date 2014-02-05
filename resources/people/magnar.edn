@@ -113,6 +113,16 @@
                   :illustration "/illustrations/side-projects/emacs-rocks.jpg"
                   :link {:url "http://emacsrocks.com" :text "Se videoene"}
                   :tech [:emacs]}
+                 {:title "ZombieTDD"
+                  :description "Bli med når jeg skal skrive et spill
+                                fra scratch med JavaScript og Node.JS - testdrevet
+                                etter beste evne. I løpet av serien parprogrammerer
+                                jeg med gjestestjernene Christian Johansen og
+                                Johannes Brodwall - noen av episodene er endatil
+                                tatt opp foran et live publikum."
+                  :illustration "/illustrations/side-projects/zombietdd.jpg"
+                  :link {:url "http://www.zombietdd.com" :text "Se videoene"}
+                  :tech [:javascript :tdd :testing :nodejs]}
                  {:title "Adventur Delux"
                   :description "Et tekstbasert eventyrspill jeg har
                                 skrevet på siden 1997, på størrelse
