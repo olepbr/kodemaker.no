@@ -77,12 +77,20 @@
                         (mapcat (get-with-byline :blog-posts))
                         (filter #(is-about tech %)))))
 
+(defn- add-side-projects [content tech]
+  (assoc-in-unless tech [:side-projects] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat (get-with-byline :side-projects))
+                        (filter #(is-about tech %)))))
+
 (defn- cultivate-tech [content tech]
   (->> tech
        add-url
        (add-recommendations content)
        (add-presentations content)
-       (add-blog-posts content)))
+       (add-blog-posts content)
+       (add-side-projects content)))
 
 (defn cultivate-techs [content]
   (update-vals (:tech content) (partial cultivate-tech content)))

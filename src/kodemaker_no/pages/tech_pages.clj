@@ -46,6 +46,20 @@
   (list [:h2 "Våre bloggposter"]
         (map render-blog-post posts)))
 
+(defn- render-side-project [{:keys [title description link illustration by]}]
+  [:div.bd
+   [:h3.mtn title
+    [:span.shy.tiny.nowrap " av " (link-to-person by)]]
+   (-> (to-html description)
+       (markup/append-to-paragraph
+        (list " " (markup/render-link link)))
+       (markup/prepend-to-paragraph
+        [:a.illu {:href (:url link)} [:img {:src illustration}]]))])
+
+(defn- render-side-projects [projects _]
+  (list [:h2 "Sideprosjekter"]
+        (map render-side-project projects)))
+
 (defn- maybe-include [tech kw f]
   (when (kw tech)
     (f (kw tech) tech)))
@@ -57,7 +71,8 @@
    :body (list
           (maybe-include tech :recommendations render-recommendations)
           (maybe-include tech :blog-posts render-blog-posts)
-          (maybe-include tech :presentations render-presentations))})
+          (maybe-include tech :presentations render-presentations)
+          (maybe-include tech :side-projects render-side-projects))})
 
 (defn tech-pages [techs]
   (into {} (map (juxt :url #(partial tech-page %)) techs)))
