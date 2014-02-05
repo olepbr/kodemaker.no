@@ -1,12 +1,9 @@
 (ns repl
-  (require
-     [kodemaker-no.web :refer :all]
-     ring.adapter.jetty))
+  (:require [kodemaker-no.web :refer [app]]
+            [ring.adapter.jetty]))
 
-
-
-(defonce server (ring.adapter.jetty/run-jetty #'app {:port 3000 :join? false}))
 (defn start-server []
+  (defonce server (ring.adapter.jetty/run-jetty #'app {:port 3000 :join? false}))
   (.start server))
 
 (defn stop-server []
