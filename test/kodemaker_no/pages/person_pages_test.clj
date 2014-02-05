@@ -46,9 +46,7 @@
                            {:title "Adventur"
                             :description "Hjemmesnekra spill."
                             :url "http://www.adventur.no"
-                            :illustration "/photos/hobbies/adventur.jpg"}
-                           {:title "Mytomatoes"
-                            :description "Hjemmesnekra verktøy for Pomodoro."}])
+                            :illustration "/photos/hobbies/adventur.jpg"}])
            :body html)
 
       => (html [:h2 "Snakker gjerne om"]
@@ -62,10 +60,7 @@
                 [:p
                  [:a.illu {:href "http://www.adventur.no"}
                   [:img {:src "/photos/hobbies/adventur.jpg"}]]
-                 "Hjemmesnekra spill."]]
-               [:div.bd
-                [:h3.mtn "Mytomatoes"]
-                [:p "Hjemmesnekra verktøy for Pomodoro."]]))
+                 "Hjemmesnekra spill."]]))
 
 (fact (->> (page :tech {:favorites-at-the-moment [{:name "clojure"}
                                                   {:name "emacs"}

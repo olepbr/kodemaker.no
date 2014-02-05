@@ -26,14 +26,14 @@
    (optional-key :tech) {:favorites-at-the-moment [ID]
                          (optional-key :want-to-learn-more) [ID]}
 
-   (optional-key :recommendations) [{:link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
-                                     :title Str ;; Samme som tittel på det du lenker til
+   (optional-key :recommendations) [{:title Str ;; Samme som tittel på det du lenker til
                                      :blurb Str ;; Litt om hvorfor du anbefaler
+                                     :link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
                                      :tech [ID]}]
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             (optional-key :illustration) Path
+                             :illustration Path
                              (optional-key :url) URL}]
 
    (optional-key :side-projects) [{:title Str
