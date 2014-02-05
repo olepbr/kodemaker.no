@@ -112,7 +112,22 @@
                                 nå er sett over to hundre tusen ganger."
                   :illustration "/illustrations/side-projects/emacs-rocks.jpg"
                   :link {:url "http://emacsrocks.com" :text "Se videoene"}
-                  :tech [:emacs]}]
+                  :tech [:emacs]}
+                 {:title "Adventur Delux"
+                  :description "Et tekstbasert eventyrspill jeg har
+                                skrevet på siden 1997, på størrelse
+                                med Ringenes Herre fire ganger. Som en
+                                ung lovende sverdsvinger går du rundt,
+                                sier vittige ting og kverker en haug
+                                med orker, zombier, kannibaler og
+                                andre kjipinger. Jeg har lagd fem
+                                forskjellige editorer opp gjennom
+                                årene - i AMOS, Java, Ruby on Rails,
+                                [Groovy](/groovy/), samt den siste inkarnasjonen
+                                som har en [Clojure](/clojure/) backend til en
+                                Emacs Lisp frontend."
+                  :illustration "/illustrations/side-projects/adventur.jpg"
+                  :link {:url "http://www.adventur.no" :text "Prøv spillet"}}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
