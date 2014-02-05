@@ -1,9 +1,11 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num pred both]]))
+  (:require [schema.core :refer [optional-key validate either Str Keyword Num pred both]]
+            [clj-time.format :refer [parse formatters]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
+(def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
 
 (def Person
   {:id ID
@@ -59,7 +61,7 @@
                               :description Str
                               :url URL
                               :tech [ID]
-                              :date Str}] ;; iso-8601
+                              :date Date}] ;; iso-8601 yyyy-mm-dd
 
    (optional-key :open-source-projects) [{:url URL
                                           :name Str
@@ -99,9 +101,8 @@
    (optional-key :site) URL})
 
 (def BlogPost
-  {:path Str ;; Genereres fra filnavn
-   :title Str
-   :published java.util.Date
+  {:title Str
+   :published Date
    (optional-key :illustration) Path
    :body Str})
 

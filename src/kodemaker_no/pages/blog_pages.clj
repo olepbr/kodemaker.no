@@ -2,11 +2,11 @@
   (:require [kodemaker-no.homeless :refer [update-vals rename-keys]]
             [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.blog-posts :refer [blog-post-path]])
-  (:import java.text.SimpleDateFormat))
+            [kodemaker-no.cultivate.blog-posts :refer [blog-post-path]]
+            [clj-time.format :refer [unparse formatter]]))
 
 (defn- published [blog-post]
-  (.format (java.text.SimpleDateFormat. "dd.MM.yyyy") (:published blog-post)))
+  (unparse (formatter "dd.MM.yyyy") (:published blog-post)))
 
 (defn- by-published [blog-posts]
   (->> blog-posts (sort-by :published) reverse))

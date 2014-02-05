@@ -1,6 +1,5 @@
 (ns kodemaker-no.content
   (:require [clojure.string :as str]
-            [kodemaker-no.blog-posts :refer [load-blog-posts]]
             [kodemaker-no.homeless :refer [update-vals]]
             [kodemaker-no.structured-document :refer [read-doc]]
             [stasis.core :refer [slurp-directory]]))
@@ -38,5 +37,5 @@
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
    :articles (slurp-structured-md-maps "resources/articles/")
-   :blog-posts (load-blog-posts (slurp-structured-md-maps "resources/blog/"))
+   :blog-posts (slurp-structured-md-maps "resources/blog/")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})
