@@ -9,7 +9,9 @@
 
   :presence {:cv "ronny"
             :twitter "rlovtangen"
+            :stackoverflow "/users/141688/rlovtang"
             :github "rlovtangen"
+            :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
  :tech {:favorites-at-the-moment [:javascript :groovy :grails]
