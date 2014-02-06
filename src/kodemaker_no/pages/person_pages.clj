@@ -1,8 +1,10 @@
 (ns kodemaker-no.pages.person-pages
   (:require [kodemaker-no.formatting :refer [to-html comma-separated year-range]]
             [kodemaker-no.markup :as markup]
+            [kodemaker-no.date :as d]
             [hiccup.core :as hiccup]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [clj-time.core :as time]))
 
 (defn render-tech-bubble [tech]
   (when-not (empty? tech)
@@ -199,13 +201,38 @@
   (when (kw person)
     (f (kw person) person)))
 
-(defn- person-page [person]
+(defn- within? [from until date]
+  (and (or (= from date) (time/after? date from))
+       (or (= until date) (time/before? date until))))
+
+(defn- in-weeks [date weeks]
+  (time/plus date (time/weeks 6)))
+
+(defn- render-upcoming-event [now {:keys [title tech date url call-to-action location description]}]
+  (list [:h3 title]
+        (render-tech-bubble tech)
+        [:p description]
+        [:p (list [:a {:href (:url call-to-action)} (:text call-to-action)]
+                  [:span.unitRight
+                   (d/clever-date date now)
+                   ", "
+                   [:a {:href (:url location)} (:title location)]])]))
+
+(defn- render-upcoming [date upcoming person]
+  (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
+        (->> upcoming
+             (filter #(within? date (in-weeks date 6) (:date %)))
+             (sort-by :date)
+             (map (partial render-upcoming-event date)))))
+
+(defn- person-page [person date]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
    :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
           (maybe-include person :tech render-tech)
+          (maybe-include person :upcoming (partial render-upcoming date))
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
           (maybe-include person :side-projects render-side-projects)
@@ -215,5 +242,7 @@
           (maybe-include person :projects render-projects)
           (maybe-include person :endorsements render-endorsements))})
 
-(defn person-pages [people]
-  (into {} (map (juxt :url #(partial person-page %)) people)))
+(defn person-pages
+  ([people] (person-pages people (time/today)))
+  ([people date]
+     (into {} (map (juxt :url #(partial person-page % date)) people))))

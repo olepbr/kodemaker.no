@@ -1,7 +1,8 @@
 (ns kodemaker-no.pages.person-pages-test
   (:require [kodemaker-no.pages.person-pages :refer :all]
             [midje.sweet :refer :all]
-            [hiccup.core :refer [html]]))
+            [hiccup.core :refer [html]]
+            [clj-time.core :as time]))
 
 (def magnar
   {:url "/magnar/"
@@ -15,6 +16,9 @@
 
 (defn page [& {:as extras}]
   (((person-pages [(merge magnar extras)]) "/magnar/")))
+
+(defn page-at [date & {:as extras}]
+  (((person-pages [(merge magnar extras)] date) "/magnar/")))
 
 (fact (-> (page) :title) => "Magnar Sveen")
 (fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
@@ -102,3 +106,24 @@
                 [:div.presence
                  [:a {:href "http://www.twitter.com/magnars"}
                   [:img {:src "/icons/twitter.png" :title "Twitter"}]]]]))
+
+(defn upcoming [title date]
+  {:title title
+   :date date
+   :url "http://vg.no"
+   :tech [:javascript]
+   :location {:title "I stua" :url "http://127.0.0.1"}
+   :description "Something"})
+
+(let [events [(upcoming "Februarkurs" (time/local-date 2013 2 7))
+              (upcoming "Marskurs" (time/local-date 2013 3 1))]]
+
+  (fact "Includes upcoming events six weeks from render date"
+        (let [body (->> (page-at (time/local-date 2013 1 1) :upcoming events) :body html)]
+          body => #(.contains % "Magnars kommende foredrag/kurs")
+          body => #(.contains % "Februarkurs")
+          body => #(not (.contains % "Marskurs")))
+
+        (let [body (->> (page-at (time/local-date 2013 2 1) :upcoming events) :body html)]
+          body => #(.contains % "Februarkurs")
+          body => #(.contains % "Marskurs"))))
