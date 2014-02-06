@@ -9,7 +9,7 @@
  Clojure primært et funksjonellt programmeringsspråk med persistente
  datastrukturer og et standard-API som er spesielt god egnet for
  parallelisering."
- :mailchimp {:list-id "19a3b5d268"
+ :mail-form {:list-id "19a3b5d268"
              :heading "Ønsker du rådgivning om Clojure?"
              :button-text "Kjør!"
              :blurb "Vi har mange dyktige konsulenter som brenner for Clojure.

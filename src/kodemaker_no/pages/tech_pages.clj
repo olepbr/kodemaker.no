@@ -104,7 +104,7 @@
 (defn- tech-page [tech]
   {:title (:name tech)
    :illustration (:illustration tech)
-   :aside (maybe-include tech :mailchimp (fn [mailchimp tech] (render-email-signup mailchimp)))
+   :aside (maybe-include tech :mail-form (fn [mail-form tech] (render-email-signup mail-form)))
    :lead (to-html (:description tech))
    :body (list
           (maybe-include tech :upcoming render-upcoming)

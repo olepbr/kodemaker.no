@@ -151,7 +151,7 @@ De ligger i `resources/tech` og `resources/projects`.
    :description Str
    (optional-key :illustration) Str
    (optional-key :site) URL
-   (optional-key :mailchimp) {:list-id Str :heading Str :button-text Str :blurb Str}})
+   (optional-key :mail-form) {:list-id Str :heading Str :button-text Str :blurb Str}})
 
 (def Project
   {:id Keyword
@@ -178,10 +178,10 @@ Velg "Settings" og så "List name and defaults". Her vil du se list-id-en. Den
 trenger du for å legge til et skjema. For JavaScript ser det ut som dette:
 
 ```clj
-:mailchimp {:list-id "a4e5f820ff"
-            :heading "Ønsker du rådgivning om JavaScript?"
-            :button-text "Kjør!"
-            :blurb "Vi har mange dyktige konsulenter som brenner for JavaScript. Vi kan lære opp utviklerne dine og hjelpe deg å ta de riktige valgene."
+:mail-form {:list-id "a4e5f820ff"
+           :heading "Ønsker du rådgivning om JavaScript?"
+           :button-text "Kjør!"
+           :blurb "Vi har mange dyktige konsulenter som brenner for JavaScript. Vi kan lære opp utviklerne dine og hjelpe deg å ta de riktige valgene."
 ```
 
 ## Frittstående sider

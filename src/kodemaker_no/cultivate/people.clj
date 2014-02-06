@@ -1,6 +1,6 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
-            [kodemaker-no.homeless :refer [update-vals update-in-existing]]
+            [kodemaker-no.homeless :refer [update-vals update-in-existing update-in*]]
             [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.projects :as projects]
@@ -30,8 +30,7 @@
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
 (defn- parse-dates [person]
-  (update-in-existing person [:upcoming]
-             #(map (fn [u] (update-in u [:date] parse-ymd)) %)))
+  (update-in* person [:upcoming [:date]] parse-ymd))
 
 (defn- look-up-tech-in-maps [content maps]
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
