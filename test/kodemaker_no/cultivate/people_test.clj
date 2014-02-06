@@ -123,4 +123,8 @@
         (-> people :magnar :upcoming first :date) => (local-date 2013 2 1))
 
   (fact "It cultivates tech tags"
-        (-> people :magnar :upcoming first :tech) => (list {:id :javascript :name "Javascript"})))
+        (-> people :magnar :upcoming first :tech) => (list {:id :javascript :name "Javascript"}))
+
+  (fact "It does not create upcoming when there are none"
+        (-> people :finnjoh :upcoming) => nil))
+
