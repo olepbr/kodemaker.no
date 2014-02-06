@@ -3,7 +3,7 @@
             [midje.sweet :refer :all]
             [kodemaker-no.validate :refer [validate-content]]
             [kodemaker-no.cultivate.content-shells :as c]
-            [clj-time.format :as time]))
+            [clj-time.core :refer [local-date]]))
 
 (def content
   (c/content
@@ -120,4 +120,4 @@
                              :description "Something"}])
                  cultivate)]
   (fact "It parses dates in upcoming events"
-        (-> people :magnar :upcoming first :date) => (time/parse (time/formatters :year-month-day) "2013-02-01")))
+        (-> people :magnar :upcoming first :date) => (local-date 2013 2 1)))

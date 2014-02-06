@@ -3,10 +3,10 @@
             [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
             [kodemaker-no.cultivate.blog-posts :refer [blog-post-path]]
-            [clj-time.format :refer [unparse formatter]]))
+            [kodemaker-no.date :refer [format-dmy]]))
 
 (defn- published [blog-post]
-  (unparse (formatter "dd.MM.yyyy") (:published blog-post)))
+  (format-dmy (:published blog-post)))
 
 (defn- by-published [blog-posts]
   (->> blog-posts (sort-by :published) reverse))

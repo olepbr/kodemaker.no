@@ -2,7 +2,7 @@
   (:require [kodemaker-no.cultivate.blog-posts :refer [cultivate-blog-posts]]
             [kodemaker-no.validate :refer [validate-content]]
             [kodemaker-no.cultivate.content-shells :as c]
-            [clj-time.format :as format]
+            [clj-time.core :refer [local-date]]
             [midje.sweet :refer :all]))
 
 (def blog-posts {"/post.md" {:title "Kommende Kodemaker"
@@ -14,7 +14,7 @@
 
 (let [post (cultivated-posts "/post.md")]
   (fact "Parses published date"
-        (:published post) => (format/parse (format/formatters :year-month-day) "2013-06-28"))
+        (:published post) => (local-date 2013 6 28))
 
   (fact "Includes path to blog post"
         (:path post) => "/blogg/post/"))

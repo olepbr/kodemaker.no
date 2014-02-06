@@ -4,7 +4,7 @@
             [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.projects :as projects]
-            [clj-time.format :as time]))
+            [kodemaker-no.date :refer [parse-ymd]]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id str (subs 1))))
@@ -29,12 +29,9 @@
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
-(defn- date [map]
-  (time/parse (time/formatters :year-month-day) (:date map)))
-
 (defn- parse-dates [person]
   (assoc person :upcoming (map (fn [u]
-                                 (assoc u :date (date u))) (:upcoming person))))
+                                 (assoc u :date (parse-ymd (:date u)))) (:upcoming person))))
 
 (defn- look-up-tech-in-maps [content maps]
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
