@@ -1,5 +1,5 @@
 /* Ettersom denne inlines på alle sider, har jeg gjort noen krumspring
- * for å redusere filstørrelsen. Resultatet er at den bare tar 265
+ * for å redusere filstørrelsen. Resultatet er at den bare tar 255
  * bytes etter minifisering.
  *
  * "ocm" er off-canvas-menu
@@ -11,7 +11,7 @@
  *  - dersom menyen vises, kan du trykke hvor som helst utenfor off-canvas-menu for å lukke
  *
  */
-(function (bd, showMenu, className, byId) {
+(function (bd, showMenu, className) {
 
   function clickedOn(id, target) {
     if (!target) { return false; }
@@ -30,7 +30,6 @@
       }
     } else if (clickedOn("ocb", e.target)) {
       bd[className] = showMenu;
-      return false;
     }
   }
 

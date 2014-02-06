@@ -1,4 +1,4 @@
-#ocb {display:block; position: absolute; bottom: 1px; right: 0; width: 40px;}
+#ocb {display:block; position: absolute; bottom: 1px; right: 0; width: 40px; cursor: pointer;}
 #ocb span {display: block; background: #d30707; height: 5px; margin-bottom: 4px;}
 
 #ow {
