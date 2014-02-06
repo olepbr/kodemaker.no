@@ -120,4 +120,7 @@
                              :description "Something"}])
                  cultivate)]
   (fact "It parses dates in upcoming events"
-        (-> people :magnar :upcoming first :date) => (local-date 2013 2 1)))
+        (-> people :magnar :upcoming first :date) => (local-date 2013 2 1))
+
+  (fact "It cultivates tech tags"
+        (-> people :magnar :upcoming first :tech) => (list {:id :javascript :name "Javascript"})))

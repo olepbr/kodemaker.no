@@ -43,6 +43,7 @@
       (update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
       (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
       (update-in-existing [:presentations] #(look-up-tech-in-maps content %))
+      (update-in-existing [:upcoming] #(look-up-tech-in-maps content %))
       (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
       (update-in-existing [:projects] #(look-up-tech-in-maps content %))
       (update-in-existing [:open-source-projects] #(look-up-tech-in-maps content %))
