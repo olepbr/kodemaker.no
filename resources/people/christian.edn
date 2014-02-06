@@ -22,6 +22,13 @@
  :tech {:favorites-at-the-moment [:clojure :react :emacs :git]
         :want-to-learn-more [:clojurescript :ansible :docker]}
 
+ :side-projects [{:title "Test-Driven JavaScript Development"
+                  :description "Etter noen år med fordypning i og blogging om
+                  TDD med JavaScript kom jeg litt tilfeldigvis i kontakt med
+                  Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
+                  :illustration "/illustrations/side-projects/jstdd.jpg"
+                  :tech [:javascript :nodejs :tdd :testing]}]
+
  :upcoming [{:title "JavaScript for Programmers"
              :description "Lei av å gjette deg frem og copy-paste
              JavaScript-kode? Ta kontroll! Dette tredagerskurset byr på en
@@ -203,64 +210,41 @@
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
-                         :description "Et spy-/stub- og mocke-bibliotek for
-                         JavaScript. Prosjektet ble opprinnelig utviklet mens
-                         jeg skrev boka [Test-Driven JavaScript Development](http://tddjs.com)
-                         ettersom det på den tiden ikke fantes noe
-                         tilfredsstillende mocke-bibliotek. Siden den gang har
-                         Sinon.JS blitt et svært populært open source-prosjekt
-                         med mange bidragsytere, og er i dag det mest brukte
-                         stub- og mock-biblioteket for JavaScript."
+                         :description "Et spy-/stub- og mocke-bibliotek for JavaScript."
                          :tech [:javascript :testing]}
                         {:url "https://github.com/busterjs/buster/"
                          :name "Buster.JS"
-                         :description "Et test-rammeverk for JavaScript. Består
-                                       av svært mange komponenter, hvor mange er
-                                       fullt mulig å bruke isolert, gjerne
-                                       sammen med andre test-rammeverk."
+                         :description "Ambisiøst test-toolkit for JavaScript."
                          :tech [:javascript :testing]}
                         {:url "https://github.com/cjohansen/asciidoclj"
                          :name "asciidoclj"
-                         :description "Et lite bibliotek som åpner for bruk av
-                                       asciidoc i Clojure. Prosjektet er en
-                                       wrapper rundt Java-biblioteket
-                                       asciidoctorj og tilbyr et funksjonelt API."
+                         :description "Rendre asciidoc i Clojure."
                          :tech [:clojure]}
                         {:url "https://github.com/cjohansen/uinit"
                          :name "Uinit"
-                         :description "Et inisialiserings-system for
-                         UI-komponenter. Prosjektet er et lettvekts-alternativ
-                         til MVC-rammeverk og tilbyr mekanismer for å deklarere
-                         avhengigheter mellom individuelle komponenter, data og
-                         elementer på siden."
+                         :description "Et inisialiserings-system for UI-komponenter."
                          :tech [:javascript :frontend]}
                         {:url "https://gitorious.org/gitorious/dolt"
                          :name "dolt"
-                         :description "En git repository-browser for Ruby. Denne
-                         komponenten er kjernen i [fil-browseren til Gitorious](https://gitorious.org/gitorious/libdolt/source/e71f17223b1e51d97bb716ed461f4296ce6f6c49:lib)."
+                         :description "En git repository-browser for Ruby. Kjernen i [fil-browseren til Gitorious](https://gitorious.org/gitorious/libdolt/source/e71f17223b1e51d97bb716ed461f4296ce6f6c49:lib)."
                          :tech [:ruby :git]}
                         {:url "https://gitorious.org/gitorious/makeup"
                          :name "Makeup"
-                         :description "Et Ruby-bibliotek som lar deg rendre
-                         markdown med kodeblokker som syntax highlightes."
+                         :description "Et Ruby-bibliotek for å rendre markdown med kodeblokker som syntax highlightes."
                          :tech [:ruby :markdown :pygments]}
                         {:url "https://github.com/cjohansen/use_case"
                          :name "UseCase"
-                         :description "Et bibliotek som tilbyr en strukturert
-                         måte å abstrahere ikke-triviell programflyt.
-                         Biblioteket ble opprinnelig skrevet for å redusere
-                         kompleksiett i Ruby on Rails-applikasjoner, men er ikke
-                         spesifikt avhengig av Rails. Biblioteket reduserer
-                         koblinger mellom modeller og kontrollere, og kan
-                         potensielt redusere kompleksiteten i begge betraktelig."
+                         :description "Strukturerte abstraksjoner for
+                         ikke-triviell programflyt. Biblioteket ble opprinnelig
+                         skrevet for å redusere kompleksiett i Ruby on
+                         Rails-applikasjoner, men er ikke spesifikt avhengig av
+                         Rails. Biblioteket reduserer koblinger mellom modeller
+                         og kontrollere, og kan potensielt redusere
+                         kompleksiteten i begge betraktelig."
                          :tech [:ruby :design :rails]}
                         {:url "https://github.com/culljs/culljs/"
                          :name "Cull.JS"
-                         :description "Funksjonell verktøykasse for JavaScript.
-                         API-et prioriterer 'composability' over alt annet og
-                         har følgelig et noe annet API enn mange lignende
-                         biblioteker. Skrevet sammen med Magnar Sveen, og svært
-                         inspirert av ymse Clojure-API-er."
+                         :description "Funksjonell verktøykasse for JavaScript."
                          :tech [:javascript :functional-programming]}
                         {:url "https://github.com/culljs/dome/"
                          :name "Dome"
