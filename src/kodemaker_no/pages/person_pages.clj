@@ -205,7 +205,8 @@
   (list [:h3 title]
         (render-tech-bubble tech)
         [:p description]
-        [:p (list [:a {:href (:url call-to-action)} (:text call-to-action)]
+        [:p (list (if call-to-action
+                    [:a {:href (:url call-to-action)} (:text call-to-action)])
                   [:span.unitRight
                    (d/clever-date date now)
                    ", "
