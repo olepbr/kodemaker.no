@@ -27,7 +27,8 @@
                   TDD med JavaScript kom jeg litt tilfeldigvis i kontakt med
                   Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
                   :illustration "/illustrations/side-projects/jstdd.jpg"
-                  :tech [:javascript :nodejs :tdd :testing]}]
+                  :tech [:javascript :nodejs :tdd :testing]
+                  :link {:url "http://tddjs.com/" :text "Bokas hjemmeside"}}]
 
  :upcoming [{:title "JavaScript for Programmers"
              :description "Lei av å gjette deg frem og copy-paste
