@@ -56,6 +56,11 @@
   (when (kw project)
     (f (kw project) project)))
 
+(defn- render-related-projects [projects project]
+  (list [:h4 "Relaterte prosjekter"]
+        [:ul
+         (map #(list [:li [:a {:href (:url %)} (:name %)]]) projects)]))
+
 (defn- project-page [project]
   {:title (:name project)
    :illustration (:logo project)
@@ -63,7 +68,8 @@
    :aside (list
            (cond
             (:illustration project) (render-illustration project)
-            (:site project) (render-site (:site project))))
+            (:site project) (render-site (:site project)))
+           (maybe-include project :related-projects render-related-projects))
    :body (list
           (maybe-include project :tech render-tech)
           (maybe-include project :people render-people)

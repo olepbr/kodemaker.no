@@ -47,12 +47,22 @@
                         (distinct)
                         (map (partial tech/look-up-tech-1 content)))))
 
+(defn- add-related-projects [content project]
+  (let [related (->> (vals (:projects content))
+                     (filter #(and (not= (:id project) (:id %))
+                                   (= (:logo project) (:logo %))))
+                     (map add-url))]
+    (if (seq related)
+      (assoc project :related-projects related)
+      project)))
+
 (defn- cultivate-project [content project]
   (->> project
        add-url
        (add-people content)
        (add-endorsements content)
-       (add-tech content)))
+       (add-tech content)
+       (add-related-projects content)))
 
 (defn cultivate-projects [content]
   (update-vals (:projects content) (partial cultivate-project content)))
