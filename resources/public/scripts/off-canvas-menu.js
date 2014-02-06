@@ -1,3 +1,16 @@
+/* Ettersom denne inlines på alle sider, har jeg gjort noen krumspring
+ * for å redusere filstørrelsen. Resultatet er at den bare tar 265
+ * bytes etter minifisering.
+ *
+ * "ocm" er off-canvas-menu
+ * "ocb" er off-canvas-button
+ * "ow" er outer-wrapper - som dekker hele skjermflaten
+ *
+ * Funksjonaliteten er slik at
+ *  - dersom menyen ikke vises, må du trykke på off-canvas-button for å vise den
+ *  - dersom menyen vises, kan du trykke hvor som helst utenfor off-canvas-menu for å lukke
+ *
+ */
 (function (bd, showMenu, className, byId) {
 
   function clickedOn(id, target) {
