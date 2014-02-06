@@ -23,4 +23,4 @@
        (or (= until date) (time/before? date until))))
 
 (defn in-weeks [date weeks]
-  (time/plus date (time/weeks 6)))
+  (time/plus date (time/weeks weeks)))
