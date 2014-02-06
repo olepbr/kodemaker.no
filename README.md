@@ -119,6 +119,7 @@ Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 - `ID` er et :keyword som er lowercase uten sære tegn.
 - `Path` er en streng som starter med `/` uten sære tegn.
 - `URL` er en streng som starter med `http://` eller https og forøvrig er en URL.
+- `Date` en er streng med dato på formatet `yyyy-MM-dd`
 
 ## Laste opp bilder
 
