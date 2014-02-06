@@ -30,8 +30,8 @@
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
 (defn- parse-dates [person]
-  (assoc person :upcoming (map (fn [u]
-                                 (assoc u :date (parse-ymd (:date u)))) (:upcoming person))))
+  (update-in person [:upcoming]
+             #(map (fn [u] (update-in u [:date] parse-ymd)) %)))
 
 (defn- look-up-tech-in-maps [content maps]
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
