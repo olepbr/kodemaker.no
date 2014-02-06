@@ -1,8 +1,10 @@
 (ns kodemaker-no.render-page
-  (:require [optimus.link :as link]
-            [hiccup.page :refer [html5]]
+  (:require [clojure.java.io :as io]
             [clojure.string :as str]
-            [kodemaker-no.formatting :refer [no-widows]]))
+            [hiccup.page :refer [html5]]
+            [kodemaker-no.formatting :refer [no-widows]]
+            [optimus.link :as link]
+            [optimus.optimizations.minify :refer [minify-js]]))
 
 (defn- serve-to-media-query-capable-browsers [tag]
   (list "<!--[if (gt IE 8) | (IEMobile)]><!-->" tag "<!--<![endif]-->"))
@@ -31,29 +33,40 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
     [:title (head-title title)]]
    [:body
-    [:div#main
-     [:div#header
+    [:div#ow ;; outer-wrapper for off-canvas menu
+     [:div#ocm ;; off-canvas menu
       [:div.bd
-       [:div.mod.menu
-        [:a {:href "/referanser/"} "Referanser"]
-        [:a {:href "/mennesker/"} "Mennesker"]
-        [:a {:href "/kontakt/"} "Ta kontakt"]]
-       [:h1#logo.hn
-        [:a.linkBlock {:href "/"} "Kodemaker"]]]]
-     (h1-title title)
-     content
-     [:div#footer
-      [:div.mod
-       [:strong (no-widows "Kodemaker Systemutvikling AS")] " "
-       [:span.nowrap "Orgnr. 982099595 "]
-       [:div
-        [:span.nowrap "Dronning Eufemias gate 16,"] " "
-        [:span.nowrap "Visma-bygget,"] " "
-        [:span.nowrap "0191 Oslo"]]
-       [:div
-        [:span.nowrap "Telefon: +47 22 82 20 80."] " "
-        [:span.nowrap "Telefaks: +47 22 82 20 88"] " "
-        [:span.nowrap "E-post: <a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]))
+       [:div.ocm-item [:a {:href "/referanser/"} "Referanser"]]
+       [:div.ocm-item [:a {:href "/mennesker/"} "Mennesker"]]
+       [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
+     [:div#iw ;; inner-wrapper for off-canvas menu
+      [:div#main
+       [:div#header
+        [:div.bd
+         [:div#ocb.mod [:span] [:span] [:span]]
+         [:div.mod.menu
+          [:a {:href "/referanser/"} "Referanser"]
+          [:a {:href "/mennesker/"} "Mennesker"]
+          [:a {:href "/kontakt/"} "Ta kontakt"]]
+         [:h1#logo.hn
+          [:a.linkBlock {:href "/"} "Kodemaker"]]]]
+       (h1-title title)
+       content
+       [:div#footer
+        [:div.mod
+         [:strong (no-widows "Kodemaker Systemutvikling AS")] " "
+         [:span.nowrap "Orgnr. 982099595 "]
+         [:div
+          [:span.nowrap "Dronning Eufemias gate 16,"] " "
+          [:span.nowrap "Visma-bygget,"] " "
+          [:span.nowrap "0191 Oslo"]]
+         [:div
+          [:span.nowrap "Telefon: +47 22 82 20 80."] " "
+          [:span.nowrap "Telefaks: +47 22 82 20 88"] " "
+          [:span.nowrap "E-post: <a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]
+       ]]]
+    [:script
+     (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
 
 (defn- render-single-column [page]
   [:div.body

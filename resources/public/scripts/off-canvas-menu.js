@@ -1,0 +1,29 @@
+(function () {
+  var byId = function (id) { return document.getElementById(id); }
+  var bd = document.body;
+  var showMenu = "show-menu";
+  var className = "className";
+
+  function clickedOn(id, target) {
+    if (!target) { return false; }
+    if (target.id === id) {
+      return true;
+    } else {
+      return clickedOn(id, target.parentNode);
+    }
+  }
+
+  function toggleOffCanvasMenu(e) {
+    if (bd[className] === showMenu) {
+      if (!clickedOn("ocm", e.target)) {
+        bd[className] = "";
+        return false;
+      }
+    } else if (clickedOn("ocb", e.target)) {
+      bd[className] = showMenu;
+      return false;
+    }
+  }
+
+  byId("ow").onclick = toggleOffCanvasMenu;
+}());

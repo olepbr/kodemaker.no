@@ -1,3 +1,5 @@
+#ocm {display: none;}
+
 .menu {display:block; position: absolute; bottom: 2px; right: 0; }
 .menu a {color: #fff; margin-left: 10px; }
 
