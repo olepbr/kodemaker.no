@@ -80,13 +80,14 @@
 (defn- render-upcoming-event [now {:keys [by title date url call-to-action location description]}]
   (list [:h3 title]
         [:p description]
-        [:p (list [:a {:href (:url call-to-action)} (:text call-to-action)]
-                  [:span.unitRight
-                   [:a {:href (:url by)} (:name by)]
-                   ", "
-                   (d/clever-date date now)
-                   ", "
-                   [:a {:href (:url location)} (:title location)]])]))
+        [:p (list [:a {:href (:url by)} (:name by)]
+                  ", "
+                  [:a {:href (:url location)} (:title location)]
+                  ", "
+                  (d/clever-date date now)
+                  (if call-to-action
+                    (list " - "
+                          [:a {:href (:url call-to-action)} (:text call-to-action)])))]))
 
 (defn- render-upcoming [upcoming tech]
   (let [date (t/today)]

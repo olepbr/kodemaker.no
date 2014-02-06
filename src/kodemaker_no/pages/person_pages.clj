@@ -205,12 +205,12 @@
   (list [:h3 title]
         (render-tech-bubble tech)
         [:p description]
-        [:p (list (if call-to-action
-                    [:a {:href (:url call-to-action)} (:text call-to-action)])
-                  [:span.unitRight
-                   (d/clever-date date now)
-                   ", "
-                   [:a {:href (:url location)} (:title location)]])]))
+        [:p (list [:a {:href (:url location)} (:title location)]
+                  ", "
+                  (d/clever-date date now)
+                  (if call-to-action
+                    (list " - "
+                          [:a {:href (:url call-to-action)} (:text call-to-action)])))]))
 
 (defn- render-upcoming [upcoming person]
   (let [date (time/today)]
