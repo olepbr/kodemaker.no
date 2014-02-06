@@ -119,11 +119,13 @@
               (upcoming "Marskurs" (time/local-date 2013 3 1))]]
 
   (fact "Includes upcoming events six weeks from render date"
-        (let [body (->> (page-at (time/local-date 2013 1 1) :upcoming events) :body html)]
-          body => #(.contains % "Magnars kommende foredrag/kurs")
-          body => #(.contains % "Februarkurs")
-          body => #(not (.contains % "Marskurs")))
+        (with-redefs [time/today (constantly (time/local-date 2013 1 1))]
+          (let [body (->> (page :upcoming events) :body html)]
+            body => #(.contains % "Magnars kommende foredrag/kurs")
+            body => #(.contains % "Februarkurs")
+            body => #(not (.contains % "Marskurs"))))
 
-        (let [body (->> (page-at (time/local-date 2013 2 1) :upcoming events) :body html)]
-          body => #(.contains % "Februarkurs")
-          body => #(.contains % "Marskurs"))))
+        (with-redefs [time/today (constantly (time/local-date 2013 2 1))]
+          (let [body (->> (page :upcoming events) :body html)]
+            body => #(.contains % "Februarkurs")
+            body => #(.contains % "Marskurs")))))

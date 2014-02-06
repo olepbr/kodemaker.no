@@ -88,31 +88,31 @@
                    ", "
                    [:a {:href (:url location)} (:title location)]])]))
 
-(defn- render-upcoming [date upcoming tech]
-  (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
-        (->> upcoming
-             (filter #(d/within? date (d/in-weeks date 6) (:date %)))
-             (sort-by :date)
-             (map (partial render-upcoming-event date)))))
+(defn- render-upcoming [upcoming tech]
+  (let [date (t/today)]
+    (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
+          (->> upcoming
+               (filter #(d/within? date (d/in-weeks date 6) (:date %)))
+               (sort-by :date)
+               (map (partial render-upcoming-event date))))))
 
 
 (defn- maybe-include [tech kw f]
   (when (kw tech)
     (f (kw tech) tech)))
 
-(defn- tech-page [tech now]
+(defn- tech-page [tech]
   {:title (:name tech)
    :illustration (:illustration tech)
    :aside (maybe-include tech :mailchimp (fn [mailchimp tech] (render-email-signup mailchimp)))
    :lead (to-html (:description tech))
    :body (list
-          (maybe-include tech :upcoming (partial render-upcoming now))
+          (maybe-include tech :upcoming render-upcoming)
           (maybe-include tech :recommendations render-recommendations)
           (maybe-include tech :blog-posts render-blog-posts)
           (maybe-include tech :presentations render-presentations)
           (maybe-include tech :side-projects render-side-projects)
           (maybe-include tech :open-source-projects render-open-source-projects))})
 
-(defn tech-pages
-  ([techs] (tech-pages techs (t/today)))
-  ([techs now] (into {} (map (juxt :url #(partial tech-page % now)) techs))))
+(defn tech-pages [techs]
+  (into {} (map (juxt :url #(partial tech-page %)) techs)))

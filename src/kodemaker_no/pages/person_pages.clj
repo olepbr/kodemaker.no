@@ -212,21 +212,22 @@
                    ", "
                    [:a {:href (:url location)} (:title location)]])]))
 
-(defn- render-upcoming [date upcoming person]
-  (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
-        (->> upcoming
-             (filter #(d/within? date (d/in-weeks date 6) (:date %)))
-             (sort-by :date)
-             (map (partial render-upcoming-event date)))))
+(defn- render-upcoming [upcoming person]
+  (let [date (time/today)]
+    (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
+          (->> upcoming
+               (filter #(d/within? date (d/in-weeks date 6) (:date %)))
+               (sort-by :date)
+               (map (partial render-upcoming-event date))))))
 
-(defn- person-page [person date]
+(defn- person-page [person]
   {:title (:full-name person)
    :illustration (-> person :photos :half-figure)
    :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
           (maybe-include person :tech render-tech)
-          (maybe-include person :upcoming (partial render-upcoming date))
+          (maybe-include person :upcoming render-upcoming)
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
           (maybe-include person :side-projects render-side-projects)
@@ -236,7 +237,5 @@
           (maybe-include person :projects render-projects)
           (maybe-include person :endorsements render-endorsements))})
 
-(defn person-pages
-  ([people] (person-pages people (time/today)))
-  ([people date]
-     (into {} (map (juxt :url #(partial person-page % date)) people))))
+(defn person-pages [people]
+  (into {} (map (juxt :url #(partial person-page %)) people)))
