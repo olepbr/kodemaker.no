@@ -17,10 +17,13 @@
   :ring {:handler kodemaker-no.web/app
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
-  :profiles {:dev {:dependencies [[midje "1.6.0"]
-                                  [print-foo "0.4.2"]
-                                  [test-with-files "0.1.0"]]
-                   :plugins [[lein-midje "3.1.3"]
-                             [lein-ring "0.8.10"]]
-                   :resource-paths ["test/resources"]
-                   :source-paths ["dev" "config"]}})
+  :profiles {:dev {:dependencies [[print-foo "0.4.2"]]
+                   :plugins [[lein-ring "0.8.10"]]
+                   :source-paths ["dev" "config"]
+                   :test-paths ^:replace []}
+             :test {:dependencies [[midje "1.6.0"]
+                                   [test-with-files "0.1.0"]]
+                    :plugins [[lein-midje "3.1.3"]]
+                    :source-paths ["config"]
+                    :test-paths ["test"]
+                    :resource-paths ["test/resources"]}})
