@@ -116,6 +116,7 @@
                              :date "2013-02-01"
                              :url "http://vg.no"
                              :tech [:javascript]
+                             :location {:title "I stua" :url "http://127.0.0.1"}
                              :description "Something"}])
                  cultivate)]
   (fact "It parses dates in upcoming events"

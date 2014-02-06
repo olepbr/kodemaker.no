@@ -59,8 +59,10 @@
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
-                              :url URL
+                              :url URL ;; Link til feks din abstract hos konferansen
+                              (optional-key :call-to-action) {:url URL :text Str} ;; Bruk denne til "Meld deg på kurs" o.l.
                               :tech [ID]
+                              :location {:title Str :url URL} ;; Eks {:title "JavaZone (Oslo)", :url "http://javazone.no"}
                               :date Date}] ;; iso-8601 yyyy-mm-dd
 
    (optional-key :open-source-projects) [{:url URL
@@ -102,7 +104,7 @@
 
 (def BlogPost
   {:title Str
-   :published Date
+   :published Date ;; iso-8601 yyyy-mm-dd
    (optional-key :illustration) Path
    :body Str})
 

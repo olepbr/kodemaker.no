@@ -29,8 +29,10 @@
              objektmodellen og funksjoner, og gir deg en solid forståelse
              for hvordan JavaScript egentlig fungerer."
              :url "http://www.programutvikling.no/kurs/javascript-for-programmers/1942"
+             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/javascript-for-programmers/4294"}
              :tech [:javascript]
-             :date "2013-02-26"}
+             :date "2014-02-26"
+             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}
             {:title "Node.JS and React: Party in the front, party in the back"
              :description "Nysgjerrig på hva dette Node.JS-hysteriet handler om?
              I denne 3 timersworkshoppen får du en praktisk start. Vi kommer til
@@ -41,8 +43,10 @@
              på ui-biblioteket React, og noen muligheter som åpner seg når vi
              kan bruke de samme bibliotekene på både server og klient."
              :url "http://www.programutvikling.no/kurs/test-driven-javascript/1958"
+             :call-to-action {:text "Registrer deg nå" :url "http://www.boosterconf.no/users/new"}
              :tech [:javascript :react :nodejs]
-             :date "2013-03-14"}
+             :date "2014-03-14"
+             :location {:title "Booster (Bergen)" :url "http://boosterconf.no/"}}
             {:title "Test-driven JavaScript"
              :description "Lyst til å ta JavaScript-skillsa dine til et nytt
              nivå? Dette kurset gir en grundig innføring i testing og TDD med
@@ -50,8 +54,10 @@
              optimalisere for automasjon, og ikke minst, hvordan man tenker på
              design og testbarhet for JavaScript i større applikasjoner."
              :url "http://www.programutvikling.no/kurs/test-driven-javascript/1958"
+             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/test-driven-javascript/4292"}
              :tech [:javascript :nodejs :sinon]
-             :date "2013-03-26"}
+             :date "2014-03-26"
+             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}
             {:title "JavaScript for Programmers"
              :description "Lei av å gjette deg frem og copy-paste
              JavaScript-kode? Ta kontroll! Dette tredagerskurset byr på en
@@ -59,8 +65,10 @@
              objektmodellen og funksjoner, og gir deg en solid forståelse
              for hvordan JavaScript egentlig fungerer."
              :url "http://www.programutvikling.no/kurs/javascript-for-programmers/1942"
+             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/javascript-for-programmers/4296"}
              :tech [:javascript]
-             :date "2013-04-23"}]
+             :date "2014-04-23"
+             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}]
 
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
