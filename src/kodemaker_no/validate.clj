@@ -91,7 +91,8 @@
    :name Str
    :description Str
    (optional-key :illustration) Str
-   (optional-key :site) URL})
+   (optional-key :site) URL
+   (optional-key :mailchimp) {:list-id Str :heading Str :button-text Str :blurb Str}})
 
 (def Project
   {:id ID

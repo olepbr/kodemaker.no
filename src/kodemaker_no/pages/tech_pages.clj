@@ -2,7 +2,8 @@
   (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
             [kodemaker-no.markup :as markup]
             [clj-time.core :as t]
-            [kodemaker-no.date :as d]))
+            [kodemaker-no.date :as d]
+            [kodemaker-no.email-signup :refer [render-email-signup]]))
 
 (defn- link-to-person [person]
   [:a {:href (:url person)} (:name person)])
@@ -102,6 +103,7 @@
 (defn- tech-page [tech now]
   {:title (:name tech)
    :illustration (:illustration tech)
+   :aside (maybe-include tech :mailchimp (fn [mailchimp tech] (render-email-signup mailchimp)))
    :lead (to-html (:description tech))
    :body (list
           (maybe-include tech :upcoming (partial render-upcoming now))
