@@ -339,3 +339,11 @@ curl local.kodemaker.no/site/build
 
 Den henter da altså fra github. Om du vil teste lokale endringer er
 det mye greiere å få til med `lein ring server`.
+
+## Bidra til koden
+
+Supert! Gjør gjerne det, men husk å kjøre testene:
+
+```sh
+lein with-profile test midje :autotest
+```
