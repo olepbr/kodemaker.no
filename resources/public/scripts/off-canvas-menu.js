@@ -1,8 +1,4 @@
-(function () {
-  var byId = function (id) { return document.getElementById(id); }
-  var bd = document.body;
-  var showMenu = "show-menu";
-  var className = "className";
+(function (bd, showMenu, className, byId) {
 
   function clickedOn(id, target) {
     if (!target) { return false; }
@@ -26,4 +22,4 @@
   }
 
   byId("ow").onclick = toggleOffCanvasMenu;
-}());
+}(document.body, "show-menu", "className", function (id) { return document.getElementById(id); }));
