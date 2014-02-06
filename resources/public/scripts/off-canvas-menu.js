@@ -21,5 +21,5 @@
     }
   }
 
-  byId("ow").onclick = toggleOffCanvasMenu;
-}(document.body, "show-menu", "className", function (id) { return document.getElementById(id); }));
+  document.getElementById("ow").onclick = toggleOffCanvasMenu;
+}(document.body, "show-menu", "className"));
