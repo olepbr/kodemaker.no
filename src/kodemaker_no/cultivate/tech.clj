@@ -99,6 +99,13 @@
                         (mapcat (get-with-byline :blog-posts))
                         (filter #(is-about tech %)))))
 
+(defn- add-upcoming [content tech]
+  (assoc-in-unless tech [:upcoming] empty?
+                   (->> (:people content)
+                        vals
+                        (mapcat (get-with-byline :upcoming))
+                        (filter #(is-about tech %)))))
+
 (defn- add-side-projects [content tech]
   (assoc-in-unless tech [:side-projects] empty?
                    (->> (:people content)
@@ -112,6 +119,7 @@
        (add-recommendations content)
        (add-presentations content)
        (add-blog-posts content)
+       (add-upcoming content)
        (add-side-projects content)
        (add-open-source-projects content)))
 

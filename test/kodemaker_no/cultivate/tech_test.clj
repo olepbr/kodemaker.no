@@ -140,3 +140,35 @@
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
       :tech [:javascript]
       :by {:name "Magnar", :url "/magnar/"}}])
+
+(fact
+ "Kommende presentasjoner og kurs blir overført til tech."
+
+ (-> content
+     (assoc-in [:people :magnar :upcoming]
+               [{:url "http://framsieutvikling.no/post/753317476"
+                 :title "5 JavaScript-uvaner du må legge av deg"
+                 :date "2013-06-01"
+                 :location {:url "http://vg.no" :title "VG"}
+                 :description "Jeg tør påstå at JavaScript er et av språkene som
+                               er mest utsatt for cargo culting. For noen år
+                               siden var det utstrakt klipping og liming, og
+                               uvanene spredte seg fortere enn du kunne si
+                               globalt navnerom. Her er noen saker du må slutte
+                               med."
+                 :tech [:javascript]}])
+
+     cultivate :javascript :upcoming)
+
+ => [{:by {:name "Magnar", :url "/magnar/"}
+      :url "http://framsieutvikling.no/post/753317476"
+      :title "5 JavaScript-uvaner du må legge av deg"
+      :date "2013-06-01"
+      :location {:url "http://vg.no" :title "VG"}
+      :description "Jeg tør påstå at JavaScript er et av språkene som
+                               er mest utsatt for cargo culting. For noen år
+                               siden var det utstrakt klipping og liming, og
+                               uvanene spredte seg fortere enn du kunne si
+                               globalt navnerom. Her er noen saker du må slutte
+                               med."
+      :tech [:javascript]}])
