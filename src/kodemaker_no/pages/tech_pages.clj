@@ -1,6 +1,8 @@
 (ns kodemaker-no.pages.tech-pages
   (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
-            [kodemaker-no.markup :as markup]))
+            [kodemaker-no.markup :as markup]
+            [clj-time.core :as t]
+            [kodemaker-no.date :as d]))
 
 (defn- link-to-person [person]
   [:a {:href (:url person)} (:name person)])
@@ -74,20 +76,41 @@
            (map (fn [p] [:li (render-open-source-project p)]) projects)]
           [:p (render-open-source-project (first projects))])))
 
+(defn- render-upcoming-event [now {:keys [by title date url call-to-action location description]}]
+  (list [:h3 title]
+        [:p description]
+        [:p (list [:a {:href (:url call-to-action)} (:text call-to-action)]
+                  [:span.unitRight
+                   [:a {:href (:url by)} (:name by)]
+                   ", "
+                   (d/clever-date date now)
+                   ", "
+                   [:a {:href (:url location)} (:title location)]])]))
+
+(defn- render-upcoming [date upcoming tech]
+  (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
+        (->> upcoming
+             (filter #(d/within? date (d/in-weeks date 6) (:date %)))
+             (sort-by :date)
+             (map (partial render-upcoming-event date)))))
+
+
 (defn- maybe-include [tech kw f]
   (when (kw tech)
     (f (kw tech) tech)))
 
-(defn- tech-page [tech]
+(defn- tech-page [tech now]
   {:title (:name tech)
    :illustration (:illustration tech)
    :lead (to-html (:description tech))
    :body (list
+          (maybe-include tech :upcoming (partial render-upcoming now))
           (maybe-include tech :recommendations render-recommendations)
           (maybe-include tech :blog-posts render-blog-posts)
           (maybe-include tech :presentations render-presentations)
           (maybe-include tech :side-projects render-side-projects)
           (maybe-include tech :open-source-projects render-open-source-projects))})
 
-(defn tech-pages [techs]
-  (into {} (map (juxt :url #(partial tech-page %)) techs)))
+(defn tech-pages
+  ([techs] (tech-pages techs (t/today)))
+  ([techs now] (into {} (map (juxt :url #(partial tech-page % now)) techs))))

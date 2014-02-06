@@ -1,7 +1,8 @@
 (ns kodemaker-no.cultivate.tech
   (:require [clojure.string :as str]
             [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]))
+            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]
+            [kodemaker-no.date :as d]))
 
 (defn- add-url [tech]
   (assoc tech :url (util/url tech)))
@@ -104,7 +105,8 @@
                    (->> (:people content)
                         vals
                         (mapcat (get-with-byline :upcoming))
-                        (filter #(is-about tech %)))))
+                        (filter #(is-about tech %))
+                        (map #(update-in % [:date] d/parse-ymd)))))
 
 (defn- add-side-projects [content tech]
   (assoc-in-unless tech [:side-projects] empty?

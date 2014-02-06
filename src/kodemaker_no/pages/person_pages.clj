@@ -201,13 +201,6 @@
   (when (kw person)
     (f (kw person) person)))
 
-(defn- within? [from until date]
-  (and (or (= from date) (time/after? date from))
-       (or (= until date) (time/before? date until))))
-
-(defn- in-weeks [date weeks]
-  (time/plus date (time/weeks 6)))
-
 (defn- render-upcoming-event [now {:keys [title tech date url call-to-action location description]}]
   (list [:h3 title]
         (render-tech-bubble tech)
@@ -221,7 +214,7 @@
 (defn- render-upcoming [date upcoming person]
   (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
         (->> upcoming
-             (filter #(within? date (in-weeks date 6) (:date %)))
+             (filter #(d/within? date (d/in-weeks date 6) (:date %)))
              (sort-by :date)
              (map (partial render-upcoming-event date)))))
 

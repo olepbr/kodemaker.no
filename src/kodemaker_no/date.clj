@@ -16,3 +16,10 @@
       0 "I dag"
       1 "I morgen"
       (unparse (formatter "d. MMM") (to-date-time date)))))
+
+(defn within? [from until date]
+  (and (or (= from date) (time/after? date from))
+       (or (= until date) (time/before? date until))))
+
+(defn in-weeks [date weeks]
+  (time/plus date (time/weeks 6)))

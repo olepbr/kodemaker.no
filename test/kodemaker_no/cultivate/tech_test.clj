@@ -2,7 +2,8 @@
   (:require [kodemaker-no.cultivate.tech :refer :all]
             [midje.sweet :refer :all]
             [kodemaker-no.validate :refer [validate-content]]
-            [kodemaker-no.cultivate.content-shells :as c]))
+            [kodemaker-no.cultivate.content-shells :as c]
+            [clj-time.core :refer [local-date]]))
 
 (def content
   (c/content
@@ -163,7 +164,7 @@
  => [{:by {:name "Magnar", :url "/magnar/"}
       :url "http://framsieutvikling.no/post/753317476"
       :title "5 JavaScript-uvaner du må legge av deg"
-      :date "2013-06-01"
+      :date (local-date 2013 6 1)
       :location {:url "http://vg.no" :title "VG"}
       :description "Jeg tør påstå at JavaScript er et av språkene som
                                er mest utsatt for cargo culting. For noen år
