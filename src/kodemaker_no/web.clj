@@ -1,19 +1,20 @@
 (ns kodemaker-no.web
-  (:require [kodemaker-no.pages :as pages]
+  (:require [clojure.core.memoize]
+            [config :refer [export-directory]]
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
+            [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
+            [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
-            [ring.middleware.content-type :refer [wrap-content-type]]
-            [stasis.core :as stasis]
             [optimus.assets :as assets]
-            [optimus.prime :as optimus]
-            [optimus.optimizations :as optimizations]
-            [optimus.strategies :refer [serve-live-assets]]
-            [optimus-img-transform.core :refer [transform-images]]
             [optimus.export]
-            [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
-            [config :refer [export-directory]]))
+            [optimus-img-transform.core :refer [transform-images]]
+            [optimus.optimizations :as optimizations]
+            [optimus.prime :as optimus]
+            [optimus.strategies :refer [serve-live-assets]]
+            [ring.middleware.content-type :refer [wrap-content-type]]
+            [stasis.core :as stasis]))
 
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
@@ -34,21 +35,23 @@
       pages/create-pages
       prepare-pages))
 
-(defn optimize [assets options]
-  (-> assets
-      (transform-images {:regexp #"/photos/.*\.jpg"
-                         :quality 0.3
-                         :width (* 290 2)
-                         :progressive true})
-      (transform-images {:regexp #"/illustrations/.*\.jpg"
-                         :quality 0.3
-                         :width (* 210 2)
-                         :progressive true})
-      (transform-images {:regexp #"/thumbs/.*\.jpg"
-                         :quality 0.3
-                         :width (* 100 2)
-                         :progressive false}) ; too small, will be > kb
-      (optimizations/all options)))
+(def optimize
+  (-> (fn [assets options]
+        (-> assets
+            (transform-images {:regexp #"/photos/.*\.jpg"
+                               :quality 0.3
+                               :width (* 290 2)
+                               :progressive true})
+            (transform-images {:regexp #"/illustrations/.*\.jpg"
+                               :quality 0.3
+                               :width (* 210 2)
+                               :progressive true})
+            (transform-images {:regexp #"/thumbs/.*\.jpg"
+                               :quality 0.3
+                               :width (* 100 2)
+                               :progressive false}) ; too small, will be > kb
+            (optimizations/all options)))
+      (clojure.core.memoize/lru {} :lru/threshold 3)))
 
 (def app (-> (stasis/serve-pages get-pages)
              (optimus/wrap get-assets optimize serve-live-assets)
