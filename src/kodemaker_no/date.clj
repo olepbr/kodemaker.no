@@ -2,7 +2,8 @@
   (:require
    [clj-time.core :as time]
    [clj-time.format :refer [parse formatters unparse formatter]]
-   [clj-time.coerce :refer [to-local-date to-date-time]]))
+   [clj-time.coerce :refer [to-local-date to-date-time]]
+   [clojure.string :refer [lower-case replace]]))
 
 (defn parse-ymd "Ensure consistent parsing of dates" [date-str]
   (to-local-date (parse (formatters :year-month-day) date-str)))
@@ -15,7 +16,7 @@
     (case days
       0 "I dag"
       1 "I morgen"
-      (unparse (formatter "d. MMM") (to-date-time date)))))
+      (replace (lower-case (unparse (formatter "d. MMM") (to-date-time date))) "c" "s")))) ; Should really use Locale...
 
 (defn within? [from until date]
   (and (or (= from date) (time/after? date from))
