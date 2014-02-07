@@ -28,7 +28,7 @@
                   Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
                   :illustration "/illustrations/side-projects/jstdd.jpg"
                   :tech [:javascript :nodejs :tdd :testing]
-                  :link {:url "http://tddjs.com/" :text "Bokas hjemmeside"}}]
+                  :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}]
 
  :upcoming [{:title "JavaScript for Programmers"
              :description "Lei av å gjette deg frem og copy-paste
