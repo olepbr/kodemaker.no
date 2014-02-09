@@ -10,21 +10,27 @@
  eller API'er.
 
  Dette betyr også at Alf Kristian er flink til å se forbedringer i alle ledd av systemutvikling. Han opplever stadig at
- han hjelper kunden med å forbedre ting de ikke var klar over kunne vært bedre."
+ han hjelper kunden med å forbedre ting de ikke var klar over kunne vært bedre.
+
+ Alf Kristian har stor tro på funksjonell programmering, og har jobbet lenge i communities som scalaBin og Oslo Socially Functional
+ for å fremheve bruken av disse funksjonelle språk, som Scala og Clojure."
 
  :phone-number "997 92 226"
  :email-address "alf.kristian@kodemaker.no"
+
+  :presence {:cv "alf.kristian"
+            :twitter "stoyle"
+            :stackoverflow "/users/1113229/alf"
+            :github "stoyle"
+            :linkedin "/in/stoyle"}
 
  :hobbies [{:title "Jogging og løpeteknikk"
             :description "Helt siden Alf Kristian fikk en Garmin GPS klokke i gave, og oppdaget at man kunne
             tracke sin forbedring online, har han elsket å løpe. Det begynte forholdsvis rolig, helt til han ble utfordret til å
             løpe maraton. Dette ble en kjempe-utfordring, som gjorde ham totalt hekta.
-
-Alf Kristian skjønte fort at normal løpeteknikk ikke er bra for kroppen, så han blir stadig observert på
-jobbeturer med sine Vibram Fivefingers."
-            ; Må få inn annet bilde :)
-            :illustration "/illustrations/hobbies/brettspill.jpg"}]
+            Alf Kristian skjønte fort at normal løpeteknikk ikke er bra for kroppen, så han blir stadig observert på
+            jobbeturer med sine Vibram Fivefingers."
+            :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
 
  :tech {:favorites-at-the-moment [:clojure :scala :funksjonell-programmering]
-        :want-to-learn-more [:clojurescript :nodejs]}
- :presence {}}
+        :want-to-learn-more [:clojurescript :nodejs]}}
