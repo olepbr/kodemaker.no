@@ -51,7 +51,7 @@ p {margin-bottom: 1.3em;}
 .s-1of6 {width: 16.66667%;}
 
 .form label {display: block;}
-.input {width: 100%; font-size: 16px; padding-top: 5px; padding-bottom: 5px;}
+.input {width: 100%; font-size: 16px; padding: 5px; box-sizing: border-box;}
 .btn {font-size: 16px; padding: 8px 15px;}
 
 .bbl {border-bottom: 20px solid black;}
