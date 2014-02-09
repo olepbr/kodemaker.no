@@ -49,6 +49,10 @@ p {margin-bottom: 1.3em;}
 .r-2of3 {width: 100%;}
 .s-1of3 {width: 33.33333%;}
 
+.form label {display: block;}
+.input {width: 100%; font-size: 16px; padding-top: 5px; padding-bottom: 5px;}
+.btn {font-size: 16px; padding: 8px 15px;}
+
 body {-webkit-text-size-adjust: 100%}
 
 .nowrap {white-space: nowrap;}
@@ -76,6 +80,12 @@ h4 {font-weight: bold;}
 .near+*, h3+*, h4+*, h5+* {margin-top: 0 !important;}
 
 .illu {float: right; max-width: 35%; margin-left: 10px;}
+
+.fpf {float: right; margin: 0 10px; max-width: 80%;} /* front page face */
+.fpt {position: absolute; bottom: 15px; font-size: 16px; left: 10px; padding: 0 5px;} /* front page title */
+.rel {position: relative;}
+
+.inverse {background: #000; color: #fff;}
 
 .aside, .body {line-height: 1.7;}
 .tight {line-height: 1.4;}

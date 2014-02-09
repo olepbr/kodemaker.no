@@ -21,3 +21,6 @@ ol {margin-left: 35px}
 
 blockquote {padding-left: 6em;}
 blockquote:before {left: 0.25em;}
+
+.fpf {max-width: 420px;}
+.fpt {font-size: 18px;}

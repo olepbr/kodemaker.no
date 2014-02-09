@@ -11,7 +11,8 @@
                       "/systemer.md" ""}}
           create-pages keys set)
 
-      => #{"/mennesker/"
+      => #{"/"
+           "/mennesker/"
            "/referanser/"
            "/magnars/"
            "/finnjoh/"
