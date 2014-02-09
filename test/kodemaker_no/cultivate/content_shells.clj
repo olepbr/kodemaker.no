@@ -6,7 +6,16 @@
           :projects {}
           :articles {}
           :tech-names {}
-          :blog-posts {}}
+          :blog-posts {}
+          :index {:form {:title "!"
+                         :address "!"
+                         :subject "!"
+                         :button "!"
+                         :action "http://example.com"}
+                  :faces []
+                  :intro {:title "!"
+                          :text "!"}
+                  :references []}}
          m))
 
 (defn tech [m]

@@ -38,4 +38,5 @@
    :projects (slurp-edn-maps "resources/projects/")
    :articles (slurp-structured-md-maps "resources/articles/")
    :blog-posts (slurp-structured-md-maps "resources/blog/")
-   :tech-names (slurp-edn-map "resources/weird-tech-names.edn")})
+   :tech-names (slurp-edn-map "resources/weird-tech-names.edn")
+   :index (slurp-edn-map "resources/index.edn")})

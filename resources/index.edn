@@ -1,0 +1,19 @@
+{:form {:title "Kontakt oss"
+        :address "Din e-post eller telefon:"
+        :subject "Hva gjelder det?"
+        :button "Ta kontakt!"
+        :action "http://mailchimp.com/somewhere"}
+
+ :faces [:alf-einar :alf-kristian :anders :andre
+         :august :christian :finn :fredrik :kjetil
+         :kolbjorn :kristoffer :magnus :odin :ronny
+         :stein-tore :stein :sten-morten :stian
+         :stig :torstein :trygve :yen]
+
+ :intro {:title "Når du vil ha mer enn bare kode"
+         :text "Våre gode kommunikasjonsevner, evne til å samarbeide
+                samt at vi har et våkent øye for nye og bedre
+                løsninger gjør at kundene opplever oss som viktige
+                støttespillere. "}
+
+ :references [:finn-oppdrag :sparebank1-sso]}
