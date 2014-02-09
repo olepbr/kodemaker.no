@@ -22,7 +22,7 @@
      cultivate :faces)
  => [{:name "Anders Furseth"
       :url "/anders/"
-      :photo "/photos/people/anders/side-profile-cropped.jpg"}])
+      :photo "/photos/people/anders/420w/side-profile-cropped.jpg"}])
 
 (fact
  (-> content

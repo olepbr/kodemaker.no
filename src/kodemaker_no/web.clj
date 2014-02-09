@@ -38,6 +38,11 @@
 (def optimize
   (-> (fn [assets options]
         (-> assets
+            (transform-images {:regexp #"/photos/.+/side-profile-cropped\.jpg"
+                               :quality 0.3
+                               :width (* 420 2)
+                               :progressive true
+                               :prefix "420w/"})
             (transform-images {:regexp #"/photos/.*\.jpg"
                                :quality 0.3
                                :width (* 290 2)
