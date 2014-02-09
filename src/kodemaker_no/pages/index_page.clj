@@ -35,7 +35,7 @@
 
 (defn index-page [data]
   {:body (list
-          [:div.line
+          [:div.line.bbl
            [:div.unitRight.r-2of3
             [:div.bd.rel
              (render-face (first (shuffle (:faces data))))]]
