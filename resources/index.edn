@@ -2,7 +2,8 @@
         :address "Din e-post eller telefon:"
         :subject "Hva gjelder det?"
         :button "Ta kontakt!"
-        :action "http://mailchimp.com/somewhere"}
+        :action {:url "http://mailchimp.com/somewhere"
+                 :method "POST"}}
 
  :faces [:alf-einar :alf-kristian :anders :andre
          :august :christian :finn :fredrik :kjetil

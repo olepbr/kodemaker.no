@@ -121,7 +121,8 @@
           :address Str
           :subject Str
           :button Str
-          :action URL}
+          :action {:url URL
+                   :method Str}}
    :faces [ID]
    :intro {:title Str
            :text Str}

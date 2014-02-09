@@ -1,5 +1,18 @@
 (ns kodemaker-no.cultivate.content-shells)
 
+(defn index [m]
+  (merge {:form {:title "!"
+                 :address "!"
+                 :subject "!"
+                 :button "!"
+                 :action {:url "http://example.com"
+                          :method "POST"}}
+          :faces []
+          :intro {:title "!"
+                  :text "!"}
+          :references []}
+         m))
+
 (defn content [m]
   (merge {:people {}
           :tech {}
@@ -7,15 +20,7 @@
           :articles {}
           :tech-names {}
           :blog-posts {}
-          :index {:form {:title "!"
-                         :address "!"
-                         :subject "!"
-                         :button "!"
-                         :action "http://example.com"}
-                  :faces []
-                  :intro {:title "!"
-                          :text "!"}
-                  :references []}}
+          :index (index {})}
          m))
 
 (defn tech [m]

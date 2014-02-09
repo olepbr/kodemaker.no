@@ -1,11 +1,13 @@
 (ns kodemaker-no.cultivate
-  (:require [kodemaker-no.cultivate.people :refer [cultivate-people]]
-            [kodemaker-no.cultivate.tech :refer [cultivate-techs]]
+  (:require [kodemaker-no.cultivate.blog-posts :refer [cultivate-blog-posts]]
+            [kodemaker-no.cultivate.index :refer [cultivate-index]]
+            [kodemaker-no.cultivate.people :refer [cultivate-people]]
             [kodemaker-no.cultivate.projects :refer [cultivate-projects]]
-            [kodemaker-no.cultivate.blog-posts :refer [cultivate-blog-posts]]))
+            [kodemaker-no.cultivate.tech :refer [cultivate-techs]]))
 
 (defn cultivate-content [raw-content]
   (assoc raw-content
+    :index (cultivate-index raw-content)
     :people (cultivate-people raw-content)
     :tech (cultivate-techs raw-content)
     :projects (cultivate-projects raw-content)

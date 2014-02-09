@@ -1,9 +1,9 @@
 (ns kodemaker-no.cultivate.people-test
-  (:require [kodemaker-no.cultivate.people :refer :all]
-            [midje.sweet :refer :all]
-            [kodemaker-no.validate :refer [validate-content]]
+  (:require [clj-time.core :refer [local-date]]
             [kodemaker-no.cultivate.content-shells :as c]
-            [clj-time.core :refer [local-date]]))
+            [kodemaker-no.cultivate.people :refer :all]
+            [kodemaker-no.validate :refer [validate-content]]
+            [midje.sweet :refer :all]))
 
 (def content
   (c/content

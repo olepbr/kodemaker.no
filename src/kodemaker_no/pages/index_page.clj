@@ -4,7 +4,8 @@
 (defn- render-form [{:keys [title address subject button action]}]
   (list
    [:h2 title]
-   [:form.form.mod {:action action}
+   [:form.form.mod {:action (:url action)
+                    :method (:method action)}
     [:label address]
     [:input.input {:type "text"}]
     [:label subject]
@@ -17,14 +18,17 @@
    [:h2 title]
    (to-html text)))
 
+(defn- render-face [{:keys [url name photo]}]
+  [:a.linkBlock {:href url}
+   [:span.inverse.fpt.linkish name]
+   [:img.fpf {:src photo}]])
+
 (defn index-page [data]
   {:body (list
           [:div.line
            [:div.unitRight.r-2of3
             [:div.bd.rel
-             [:a.linkBlock {:href "/andre/"}
-              [:span.inverse.fpt.linkish "André Bonkowski"]
-              [:img.fpf {:src "/photos/people/andre/side-profile-cropped.jpg"}]]]]
+             (render-face (first (shuffle (:faces data))))]]
            [:div.lastUnit
             (render-form (:form data))]]
           (render-intro (:intro data)))})
