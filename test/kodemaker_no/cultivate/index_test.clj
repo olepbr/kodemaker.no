@@ -9,7 +9,9 @@
    {:people {:magnar (c/person {:id :magnar
                                 :name ["Magnar" "Sveen"]})
              :anders (c/person {:id :anders
-                                :name ["Anders" "Furseth"]})}}))
+                                :name ["Anders" "Furseth"]})}
+    :projects {:finn-oppdrag (c/project {:id :finn-oppdrag
+                                         :name "FINN oppdrag"})}}))
 
 (defn cultivate [content]
   (cultivate-index (validate-content content)))
@@ -21,3 +23,10 @@
  => [{:name "Anders Furseth"
       :url "/anders/"
       :photo "/photos/people/anders/side-profile-cropped.jpg"}])
+
+(fact
+ (-> content
+     (assoc-in [:index :references] [:finn-oppdrag])
+     cultivate :references first (select-keys [:name :url]))
+ => {:name "FINN oppdrag"
+     :url "/finn-oppdrag/"})

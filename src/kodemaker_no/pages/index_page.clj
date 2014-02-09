@@ -23,6 +23,16 @@
    [:span.inverse.fpt.linkish name]
    [:img.fpf {:src photo}]])
 
+(defn- render-reference [{:keys [url name description logo]}]
+  [:div.media
+   [:div.img.s-1of6
+    [:a.block.mts {:href url}
+     [:img {:src logo}]]]
+   [:div.bd
+    [:h3 [:a {:href url} name]]
+    [:p description " "
+     [:a.nowrap {:href url} "Se referansen"]]]])
+
 (defn index-page [data]
   {:body (list
           [:div.line
@@ -31,4 +41,5 @@
              (render-face (first (shuffle (:faces data))))]]
            [:div.lastUnit
             (render-form (:form data))]]
-          (render-intro (:intro data)))})
+          (render-intro (:intro data))
+          (map render-reference (:references data)))})
