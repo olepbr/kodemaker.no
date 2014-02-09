@@ -24,7 +24,7 @@
             :description "Jeg liker å spille data! Spiller mye Minecraft med venner på hjemmeserveren min. Spiller en hel del Battlefield 4, stort sett for meg selv. DayZ (avbildet) er for tiden den største favoritten. Generelt glad i FPS-spilling, men må innrømme at jeg ikke har god nok aim til å spille Counter Strike."
             :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}
            {:title "Musikk"
-            :description "Min eneste utdannelse er en avbrutt bachelor i klassisk piano (utøvende) på Norges Musikkhøgskole. Jeg spiller lite for tiden, men har et par band jeg somler rundt med nå og da. F.eks hver påske møtes jeg og en gjeng fra studietidene og fri-improviserer merksnodige lyder som kan høres på her: https://soundcloud.com/burgerberg/sets/alpha-bravo-yeah-yeah. Hjemme har jeg en fet Denzen-forsterker som jeg bruker til å høre på ukomprimert musikk. På bildet spiller jeg på en Rebec som farfar har laget."
+            :description "Min eneste utdannelse er en avbrutt bachelor i klassisk piano (utøvende) på Norges Musikkhøgskole. Jeg spiller lite for tiden, men har et par band jeg somler rundt med nå og da. F.eks hver påske møtes jeg og en gjeng fra studietidene og fri-improviserer merksnodige lyder som kan høres på her: https://soundcloud.com/burgerberg/sets/alpha-bravo-yeah-yeah. Hjemme har jeg en fet Densen-forsterker som jeg bruker til å høre på ukomprimert musikk. På bildet spiller jeg på en Rebec som farfar har laget."
             :illustration "/illustrations/hobbies/august-musikant.jpg"}]
  :presentations [{:title "You probably don't know how the internet actually works"
                   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
