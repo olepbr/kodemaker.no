@@ -35,4 +35,20 @@
                   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
                   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
                   :thumb "/thumbs/presentations/wtf-is-datomic.jpg"
-                  :tech [:datomic :clojure]}]}
+                  :tech [:datomic :clojure]}]
+ :open-source-projects [{:url "https://github.com/busterjs/buster/"
+                         :name "Buster.JS"
+                         :description "Ambisiøst test-toolkit for JavaScript."
+                         :tech [:javascript :testing]}
+                        {:url "https://github.com/augustl/halt"
+                         :name "HALT"
+                         :description "Ambisiøst operativsystem-prosjekt."
+                         :tech [:javascript :testing]}
+                        {:url "https://github.com/augustl/net-http-cheat-sheet"
+                         :name "Ruby Net::HTTP Cheat Sheet"
+                         :description "Eksempler på bruk av Ruby sitt Net::HTTP"
+                         :tech [:ruby :http]}
+                        {:url "https://github.com/augustl/ruby-openssl-cheat-sheet"
+                         :name "Ruby OpenSSL Cheat Sheet"
+                         :description "Eksempler på bruk av OpenSSL, både generelt, og i Ruby."
+                         :tech [:ruby :openssl]}]}
