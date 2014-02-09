@@ -17,10 +17,7 @@
                            :text "Se foredraget"}
                     :tech [:clojure :design]
                     :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}]
- :hobbies [{:title "Programmering"
-            :description "En klisje, men sant. Programmerer ganske mye på fritiden. I skrivende stund har jeg et stort prosjekt om å lage et operativsystem som handler om immutability. Jeg tror man kan få til mye interessant med en slik begrensning, f.eks kan man gjøre heap defragmentation uten å stoppe eksekvering av kode. Har også en del småprosjekter på Github, og mange titalls  prosjekter som ikke har nådd 1.0 og aldri kommer til å gjøre det. Avbildet er John Carmack, en av mine helter."
-            :illustration "/illustrations/hobbies/programming-carmack.jpg"}
-           {:title "Dataspilling"
+ :hobbies [{:title "Dataspilling"
             :description "Jeg liker å spille data! Spiller mye Minecraft med venner på hjemmeserveren min. Spiller en hel del Battlefield 4, stort sett for meg selv. DayZ (avbildet) er for tiden den største favoritten. Generelt glad i FPS-spilling, men må innrømme at jeg ikke har god nok aim til å spille Counter Strike."
             :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}
            {:title "Musikk"
