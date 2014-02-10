@@ -154,13 +154,20 @@ De ligger i `resources/tech` og `resources/projects`.
    (optional-key :mail-form) {:list-id Str :heading Str :button-text Str :blurb Str}})
 
 (def Project
-  {:id Keyword
+  {:id ID
    :name Str
    :logo Str
    :description Str
    :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
-   (optional-key :illustration) Str
-   (optional-key :site) Str})
+   (optional-key :illustration) Path
+   (optional-key :site) URL
+   (optional-key :reference) {:project ID ;; Kodemakers prosjektreferanse
+                              :author Str
+                              :quote Str
+                              :title Str
+                              (optional-key :email) Str
+                              (optional-key :phone) Str
+                              (optional-key :photo) Path}})
 ```
 
 Se eksempler på [tech](resources/tech/javascript.edn) og

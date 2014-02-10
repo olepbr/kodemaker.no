@@ -29,6 +29,8 @@ ol li {list-style-type: decimal;}
 .grid,
 .media {overflow:hidden;*overflow:visible;zoom:1;}
 .media .img {float:left; margin-right: 0;}
+.media .imgExt {float:right; margin-left: 0;}
+.right {float:right;}
 
 .grid {margin: 10px 0 0 10px; }
 .gridUnit {display: inline-block; vertical-align: top;}
@@ -39,6 +41,7 @@ ol li {list-style-type: decimal;}
 .mount {border: 1px solid #ccc; padding: 5px; background: #fff; max-width: 100%;}
 
 .thumb {width: 100px; max-width: 20%;}
+.logo {width: 200px; max-width: 35%;}
 
 p {margin-bottom: 1.3em;}
 
@@ -110,6 +113,7 @@ em {font-style: italic;}
 hr {border-top: 1px solid #ddd; border-left: 0; border-right: 0; border-bottom: 0;}
 
 .mtn {margin-top: 0 !important;}
+.mtl {margin-top: 15px !important;}
 .mbn {margin-bottom: 0 !important;}
 .mts {margin-top: 5px !important;}
 .mbs {margin-bottom: 5px !important;}

@@ -101,7 +101,13 @@
    :description Str
    :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
    (optional-key :illustration) Path
-   (optional-key :site) URL})
+   (optional-key :site) URL
+   (optional-key :reference) {:author Str ;; Kodemakers prosjektreferanse
+                              :quote Str
+                              :title Str
+                              (optional-key :email) Str
+                              (optional-key :phone) Str
+                              (optional-key :photo) Path}})
 
 (def BlogPost
   {:title Str

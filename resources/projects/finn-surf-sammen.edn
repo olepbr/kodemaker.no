@@ -6,4 +6,15 @@
  De som deler listene kan gi karakter til annonsene der, og legge til egne kommentarer. Ut fra listene kan FINN.no gi forbausende gode anbefalinger og tips om andre
  annonser ut fra hvilke annonser som opptrer i hvilke lister, og hvilke som er felles osv."
  :site "http://www.finn.no/"
- :awesomeness 90}
+ :awesomeness 90
+ :reference {:author "Bjørn Henrik Vangstein"
+             :quote "Vi i FINN.no har en meget sterk
+                     utviklingsavdeling selv, og leier i mindre grad inn
+                     konsulenter over lenger perioder. Siden vinteren 2008 har
+                     Kodemaker vært en av få leverandører av slike tjenester
+                     hos oss, og vi er meget godt fornøyd med den innsatsen
+                     som er levert. Konsulentene har glidd godt inn i vårt
+                     miljø, og ikke vært redde for å ta på seg både enkle og
+                     komplekse oppgaver."
+             :title "Avdelingsleder IT"
+             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"}}

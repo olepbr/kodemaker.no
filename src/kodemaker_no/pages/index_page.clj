@@ -23,15 +23,29 @@
    [:span.inverse.fpt.linkish name]
    [:img.fpf {:src photo}]])
 
-(defn- render-reference [{:keys [url name description logo]}]
+(defn- render-our-reference-description [name description url logo]
+  (list
+   [:a.linkBlock.right.mod.mtl.logo {:href url}
+    [:img {:src logo}]]
+   [:h3 name]
+   [:p description " "
+    [:a.nowrap {:href url} "Se referansen"]]))
+
+(defn- render-reference-quote [{:keys [photo author title quote email phone]} url logo]
   [:div.media
-   [:div.img.s-1of6
-    [:a.block.mts {:href url}
-     [:img {:src logo}]]]
+   (when photo [:img.img.thumb.mts {:src photo}])
    [:div.bd
-    [:h3 [:a {:href url} name]]
-    [:p description " "
-     [:a.nowrap {:href url} "Se referansen"]]]])
+    [:a.linkBlock.right.mod.mts.logo {:href url}
+     [:img {:src logo}]]
+    [:h4.mtn author]
+    (when title [:p.near title])
+    [:p.near [:q quote]]
+    [:p [:a {:href url} "Se referansen"]]]])
+
+(defn- render-reference [{:keys [name url description logo reference]}]
+  (if reference
+    (render-reference-quote reference url logo)
+    (render-our-reference-description name description url logo)))
 
 (defn index-page [data]
   {:body (list
