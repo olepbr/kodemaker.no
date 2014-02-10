@@ -94,8 +94,11 @@
   (list [:h2 (str (:genitive person) " referanser")]
         (map render-endorsement endorsements)))
 
+(def cv
+  {:id :cv             :baseUrl "http://www.kodemaker.no/cv/"  :logo "cv.png"            :title "Cv"})
+
 (def presence-items
-  [{:id :cv            :baseUrl "http://www.kodemaker.no/cv/"  :logo "cv.png"            :title "Cv"}
+  [cv
    {:id :linkedin      :baseUrl "http://www.linkedin.com"      :logo "linkedin.png"      :title "LinkedIn"}
    {:id :twitter       :baseUrl "http://www.twitter.com/"      :logo "twitter.png"       :title "Twitter"}
    {:id :stackoverflow :baseUrl "http://www.stackoverflow.com" :logo "stackoverflow.png" :title "StackOverflow"}
@@ -142,10 +145,13 @@
     (to-html description)
     (when url (list " " [:a.nowrap {:href url} "Se referansen"])))))
 
-(defn- render-projects [projects _]
+(defn- render-projects [projects person]
   (list
    [:h2 "Prosjekter"]
-   (map render-project projects)))
+   (map render-project (take 3 projects))
+   (when-let [nick (-> person :presence :cv)]
+     [:p [:a {:href (str (:baseUrl cv) nick)}
+          "Se flere prosjekter i " (:genitive person) " CV"]])))
 
 (defn- should-split-open-source-by-tech [projects contributions]
   (let [entries (concat projects contributions)]
