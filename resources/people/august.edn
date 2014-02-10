@@ -42,7 +42,7 @@
                   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
                   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
                   :thumb "/thumbs/presentations/wtf-is-datomic.jpg"
-                  :tech [:datomic :clojure]}]
+                  :tech [:datomic :clojure :immutability]}]
  :open-source-projects [{:url "https://github.com/busterjs/buster/"
                          :name "Buster.JS"
                          :description "Ambisiøst test-toolkit for JavaScript."
