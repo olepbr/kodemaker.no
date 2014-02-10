@@ -27,4 +27,8 @@
  :tsql "T-SQL"
  :unity3d "Unity 3D"
  :weblogic "WebLogic"
+ :zeromq "ZeroMQ"
+ :http "HTTP"
+ :openssl "OpenSSL"
+ :ip "IP"
  }
