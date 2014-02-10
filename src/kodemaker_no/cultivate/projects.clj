@@ -2,7 +2,7 @@
   (:require [clojure.string :as str]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [update-vals assoc-in-unless interleave-all]]))
+            [kodemaker-no.homeless :refer [update-vals assoc-in-unless interleave-all update-in-existing]]))
 
 (defn- add-url [project]
   (assoc project :url (util/url project)))
@@ -56,13 +56,24 @@
       (assoc project :related-projects related)
       project)))
 
+(defn- remove-duplicate-faces-1 [faces endorsements]
+  (map #(if (faces (:photo %))
+          (dissoc % :photo :title)
+          %) endorsements))
+
+(defn- remove-duplicate-faces [project]
+  (let [face (-> project :reference :photo)]
+    (update-in-existing project [:endorsements]
+                        (partial remove-duplicate-faces-1 #{face}))))
+
 (defn- cultivate-project [content project]
   (->> project
        add-url
        (add-people content)
        (add-endorsements content)
        (add-tech content)
-       (add-related-projects content)))
+       (add-related-projects content)
+       (remove-duplicate-faces)))
 
 (defn cultivate-projects [content]
   (update-vals (:projects content) (partial cultivate-project content)))
