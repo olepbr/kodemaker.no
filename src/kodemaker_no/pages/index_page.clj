@@ -42,4 +42,5 @@
            [:div.lastUnit
             (render-form (:form data))]]
           (render-intro (:intro data))
-          (map render-reference (:references data)))})
+          (map render-reference (:references data))
+          [:p.mtn [:a {:href "/referanser/"} "Se alle våre referanser"]])})
