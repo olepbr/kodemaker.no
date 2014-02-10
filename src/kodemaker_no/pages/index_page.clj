@@ -37,7 +37,7 @@
   {:body (list
           [:div.line.bbl
            [:div.unitRight.r-2of3
-            [:div.bd.rel
+            [:div.bd.rel.fface
              (render-face (first (shuffle (:faces data))))]]
            [:div.lastUnit
             (render-form (:form data))]]

@@ -10,5 +10,8 @@
 
 .map {width: 100%; height: 200px;}
 
-.fpf {max-width: 360px;}
+.fpf {max-width: 380px;}
 .fpt {bottom: 30px;}
+
+.fface {border-bottom: none;}
+.bbl {border-bottom: 20px solid black;}
