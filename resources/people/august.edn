@@ -15,8 +15,18 @@
  :recommendations [{:title "Simple Made Easy"
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
-                    :tech [:clojure :design]
-                    :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}]
+                    :tech [:clojure :design :immutability]
+                    :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}
+                   {:title "Are we there yet?"
+                    :link {:url "http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey"
+                           :text "Se foredraget"}
+                    :tech [:clojure :design :immutability]
+                    :blurb "Rich Hickey snakker om objektorientering er det endelige svaret på programmering. Er OO det beste vi kan se for oss? Finnes det situasjoner hvor det ikke passer? Hvor ofte er OO ikke nødvendigvis beste alternativ? I denne presentasjonen kan man lære mye om designfilosifien til Clojure, og hvorfor immutability er viktig."}
+                   {:title "How to think about parallel programming: Not!"
+                    :link {:url "http://www.infoq.com/presentations/Thinking-Parallel-Programming"
+                           :text "Se foredraget"}
+                    :tech [:design]
+                    :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
  :hobbies [{:title "Dataspilling"
             :description "Jeg liker å spille data! Spiller mye Minecraft med venner på hjemmeserveren min. Spiller en hel del Battlefield 4, stort sett for meg selv. DayZ (avbildet) er for tiden den største favoritten. Generelt glad i FPS-spilling, men må innrømme at jeg ikke har god nok aim til å spille Counter Strike."
             :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}

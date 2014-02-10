@@ -122,3 +122,5 @@ hr {border-top: 1px solid #ddd; border-left: 0; border-right: 0; border-bottom: 
 
 blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
 blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: 0;}
+
+code { font-family: sans-serif; }

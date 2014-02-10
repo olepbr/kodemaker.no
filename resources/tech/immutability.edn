@@ -1,0 +1,12 @@
+{:id :immutability
+ :name "Immutability"
+ :description
+ "> Familiarity hides complexity
+>
+> -- <cite>[Rich Hickey](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey)</cite>
+
+Mange web-utviklere er i stand til å skrive CSS som fungerer helt fint i IE6. Det betyr ikke dermed at IE6 er bra greier. Det samme gjelder muterbar data og objekter. De fleste utviklere er vant til å håndtere mutering, ved å ta kopier av objekter når man er usikker på eierskap, og bruke låser for å få kontroll når man har flere tråder. Men er dette *utvilsomt* den beste måten å programmere på? Gir det egentlig mening å sette måneden på en dato, og å mutere parameterne til et HTTP-request, og å slette den gamle e-postadressen til brukeren når man trykker \"Lagre\"?
+
+Programmeringsspråket Clojure har blåst liv i immutability. I Clojure er all data immutable, slik at du må lage ny data for å \"endre\" på noe. Dette er implementert smart med *structural sharing*, slik at når du legger til en key i et map, peker det nye map-et på det gamle. Det gamle er jo immutable, så dette er helt trygt. Hvorfor ta en kopi av noe som er immutable?
+
+Når du trenger ekstrem ytelse er mutering en nødvendighet, det er jo tross alt mutering hardwaren vår gjør under panseret. Men man kan jo vurdere om mutering er en nødvendighet i tradisjonell businesslogikk. Det er for eksempel umulig å representere endringer med mutering - mutering lar deg bare representere nåtid. Du unngår også hele klasser med bugs, som at du ikke trenger å bry deg om dyp kopiering, og hvem som har eierskap - det er trygt å sende inn et immutable objekt til enhver funksjon, og hvis en funksjon returnerer et immutable objekt, kan du trygt bruke det så lenge du vil, uten å bekymre deg for om det er du eller funksjonen som \"eier\" verdien."}
