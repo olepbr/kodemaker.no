@@ -25,6 +25,16 @@
              (sort compare-by-years)
              (map render-person))))
 
+(defn- render-reference-quote [{:keys [photo author title quote email phone]} _]
+  (list
+   [:h2 "Hva sier kunden?"]
+   [:div.media
+    (when photo [:img.img.thumb.mts {:src photo}])
+    [:div.bd
+     [:h4.mtn author]
+     (when title [:p.near title])
+     [:p.near [:q quote]]]]))
+
 (defn- render-endorsement [{:keys [photo author person title quote]}]
   [:div.media
    (when photo [:img.img.thumb.mts {:src photo}])
@@ -72,6 +82,7 @@
            (maybe-include project :related-projects render-related-projects))
    :body (list
           (maybe-include project :tech render-tech)
+          (maybe-include project :reference render-reference-quote)
           (maybe-include project :people render-people)
           (maybe-include project :endorsements render-endorsements))})
 
