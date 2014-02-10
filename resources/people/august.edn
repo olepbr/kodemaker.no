@@ -7,7 +7,9 @@
  :phone-number "+47 915 28 701"
  :email-address "august@kodemaker.no"
 
- :presence {}
+ :presence {:cv "august"
+            :twitter "augustl"
+            :github "augustl"}
 
  :tech {:favorites-at-the-moment [:datomic, :react]
         :want-to-learn-more [:c]}
