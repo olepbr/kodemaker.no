@@ -15,7 +15,7 @@
 (defn page [& {:as extras}]
   (((project-pages [(merge finn-oppdrag extras)]) "/finn-oppdrag/")))
 
-(fact (-> (page) :title) => "FINN oppdrag")
+(fact (-> (page) :title) => {:head "FINN oppdrag"})
 (fact (-> (page) :illustration) => "/logos/finn.png")
 (fact (-> (page) :lead) => [:p "FINN.no besluttet i 2009."])
 
@@ -72,11 +72,3 @@
 
       => (html [:h3 "Teknologi"]
                [:p "Java og " [:a {:href "/clojure/"} "Clojure"] "."]))
-
-(fact (->> (page :site "http://finn.no", :illustration nil)
-           :aside html)
-      => (html [:p [:a {:href "http://finn.no"} "finn.no"]]))
-
-(fact (->> (page :site "https://finn.no", :illustration nil)
-           :aside html)
-      => (html [:p [:a {:href "https://finn.no"} "finn.no"]]))
