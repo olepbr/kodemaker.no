@@ -4,8 +4,8 @@
  :description "Broadnet ønsket å modernisere sin applikasjonsportefølge og tilby en bestillingsportal slik at bedriftskunder
  og interne brukere og selgere kan registrere bredbåndsprodukter, så som fiber, ethernet, ADSL/SHDSL, IPVPN osv på nett.
  Geografisk søk for å avgjøre hvilke produkter som tilbys på forskjellige adresser. Privatmarkedet håndteres
- av et eget datterselskap med en tredjsparts tilpasset hyllevareløsning, som benytter et spesialskrevet REST-api som vi
- også var emd på å utvikle."
+ av et eget datterselskap med en tredjeparts tilpasset hyllevareløsning, som benytter et spesialskrevet REST-api som vi
+ også var med på å utvikle."
  :illustration "/photos/references/broadnet.png"
  :site "http://portal.broadnet.no/"
- :awesomeness 102}
+ :awesomeness 100}

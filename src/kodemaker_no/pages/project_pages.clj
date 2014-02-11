@@ -53,14 +53,11 @@
   (list [:h3 "Teknologi"]
         [:p (comma-separated (map link-if-url tech)) "."]))
 
-(defn- render-illustration [{:keys [site illustration]}]
+(defn- render-illustration [_ {:keys [site illustration]}]
   [:p [:a {:href site} [:img {:src illustration}]]])
 
 (defn- strip-protocol [s]
   (str/replace s #"^[a-z]+://" ""))
-
-(defn- render-site [site]
-  [:p [:a {:href site} (strip-protocol site)]])
 
 (defn- maybe-include [project kw f]
   (when (kw project)
@@ -72,13 +69,11 @@
          (map #(list [:li [:a {:href (:url %)} (:name %)]]) projects)]))
 
 (defn- project-page [project]
-  {:title (:name project)
+  {:title {:head (:name project)}
    :illustration (:logo project)
    :lead [:p (:description project)]
    :aside (list
-           (cond
-            (:illustration project) (render-illustration project)
-            (:site project) (render-site (:site project)))
+           (maybe-include project :illustration render-illustration)
            (maybe-include project :related-projects render-related-projects))
    :body (list
           (maybe-include project :tech render-tech)
