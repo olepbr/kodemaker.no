@@ -1,10 +1,92 @@
 {:id :sten-morten
  :name ["Sten Morten" "Misund-Asphaug"]
- :title "Løsningsdesigner"
+ :title "Kodemaker"
  :start-date "2008-10-01"
- :description "Sten Morten begynte å programmere som 9-åring. Han er mer opptatt av at oppgaven løses tilfredstillende enn hvilke teknologi som blir brukt, og at kildekoden holder så god kvalitet at den er lett å gjenbruke, utvide, og vedlikeholde. Han synger også tenor i kor og er en blid og trivelig fyr."
+ :description "Sten Morten lager systemer som får kunder til å komme til deg, i stedet for omvendt."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 93 26 19 11"
+ :email-address "stenmorten@kodemaker.no"
 
- :presence {}}
+ :presence {:cv "stenmorten"
+            :twitter "stenmorten"
+            :linkedin "/pub/magnar-sveen/2/219/33a"
+            :stackoverflow "/users/752035/steni"
+            :github "steni"}
+
+ :tech {:favorites-at-the-moment [:dan-kennedy :frank-kern :aweber :google-adwords :facebook-ads :google-analytics :infusionsoft :clojure ]
+        :want-to-learn-more [:clojure :clojurescript]}
+
+ :recommendations [{:title "Simple Made Easy"
+                    :blurb "Det er ikke lett å lage noe enkelt. Rich
+                            Hickey snakker om forskjellen på nærliggende
+                            (subjektivt lett) og ukomplisert (objektivt
+                            enkelt). Og implikasjonene for hvordan du bør
+                            tenke rundt software."
+                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
+                           :text "Se foredraget"}
+                    :tech [:design :clojure]}
+                   ]
+
+ :hobbies [{:title "Løping"
+            :description "Ikke noe renser kroppen og hodet for spenninger som en liten mil."
+            :illustration "/illustrations/hobbies/stenmorten-running.jpg"
+}]
+
+ :blogs [{:id :programmerer
+          :name "programmerer.com"
+          :url "http://www.programmerer.com/"
+          :theme "tanker"
+          :tech [:clojure :life-design :lisp :groovy]}]
+
+ :blog-posts [{:url "http://programmerer.com/2013/05/hvis-du-ikke-har-hvis-eller-if-assembly-and-clojure/"
+               :title "Hvis du ikke har hvis"
+               :blurb "Hvordan implementerer du noe så enkelt som IF?"
+               :tech [:assembly :clojure]
+               :blog :programmerer}
+              {:url "http://programmerer.com/2012/12/personlige-leveregler-gir-dybde-og-mening/"
+               :title "Personlige leveregler gir dype og mening"
+               :blurb "For noen år siden fant jeg ut at jeg ville prøve å lage et sett \"leveregler\" for meg selv. Noe som ville inspirere og motivere meg, og som jeg kunne la guide meg når jeg var i tvil om neste trekk. Hver gang jeg tar dem frem, gir de meg noe nytt. Samtidig gir de en dybde og mening, og er en rød tråd i livet. Hvis du tar deg tid til ettertanke i dag, kanskje min lille remse kan gi deg noen innspill. Disse er selvfølgelig svært personlige. Dine vil være annerledes."
+               :tech [:hjernen]
+               :blog :programmerer}
+              {:url "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"
+               :title "En deilig implementert AND (video)"
+               :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
+               :tech [:clojure]
+               :blog :programmerer}
+              {:url "http://programmerer.com/2012/12/tanker-er-vanedyr/"
+               :title "Tanker er vanedyr"
+               :blurb "Jeg tok trappen i dag. Jeg ville ikke. Hele kroppen verket etter en dårlig natt med hostende unger. Men jeg vet en ting. Jeg vet at tanker er fysiske. Da mener jeg ikke på sånn new age mumbo jumbo måte. Men at det som skjer i hjernen når jeg tenker, er at elektriske impulser blir sendt gjennom fra et neuron til et annet, fra det ene neuronets aksoner til det andre neuronets dendritter. Og at hver gang en slik overføring skjer, så styrkes banen mellom de to nevronene."
+               :tech [:hjernen]
+               :blog :programmerer}]
+
+ :presentations [{:title "Lag ditt eget språk, i Groovy, på 37 minutter (video)"
+                  :blurb "Sten Morten viser deg alt du trenger å kunne for å lage ditt eget programmeringsspråk, på 37 minutter."
+                  :tech [:lisp :groovy]
+                  :urls {:video "http://vimeo.com/album/2525252/video/74401304"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
+                 {:title "Det eneste du MÅ (FINN.no Techdagen)"
+                  :blurb "Om du bare skulle leve ETT liv, hva ville du gjort da? Resultatet av ti år med lykkeforskning er klar: Det vi trenger, er 1) en følelse av samhold, 2) følelse av kontroll over eget liv, 3) å kunne skape noe, 4) å kunne bidra positivt i verden. Samtidig viser eksperimenter med arbeidsdagens lengde at mange får mer gjort når de jobber kortere dager enn åtte timer. Flere bedrifter opplever feitere bunnlinjer med kortere arbeidsdager. Så hva om vi jobbet mindre, tjente mer, og fikk mer fritid? Ja, hva da?"
+                  :tech [:hjernen]
+                  :urls {:video "http://4x4player.com/deteneste.php"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
+                 {:title "Kjærlighet i automatiseringens tid"
+                  :blurb "Sten Morten viser deg alt du trenger å kunne for å lage ditt eget programmeringsspråk, på 37 minutter."
+                  :tech [:lisp :groovy]
+                  :urls {:video "Kjærlighet i automatiseringens tid (video)"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}]
+
+ :open-source-projects [{:url "https://github.com/steni/ryolisp"
+                         :name "Roll Your Own List"
+                         :description "Alle programmerere må en gang i livet lage sin egen LISP. Her er en du kan leke med, i Groovy"
+                         :tech [:clojure :lisp :groovy]}]
+
+ :projects [{:id :finn-motor
+             :customer "FINN Motor"
+             :description ""
+             :years [2009 2010 2011 2012 2013]
+             :tech [:javascript :responsive-design :oocss
+                    :html :css :spring-mvc :ajax :jquery :js-test-driver
+                    :jsp :sinon :java :junit :git :jira :confluence]}
+            ]
+
+ }
