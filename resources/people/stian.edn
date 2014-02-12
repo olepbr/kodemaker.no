@@ -1,22 +1,30 @@
 {:id :stian
  :name ["Stian" "C." "Alsos"]
- :title "Kodemester"
+ :title "Kodemaker"
  :start-date "2010-10-01"
- :description "Stian er en dedikert systemutvikler som er opptatt av å forstå og løse kundens problem på en best mulig måte. Han har jobbet for mange forskjellige kunder innenfor ulike bransjer, og ser at nøkkelen til et vellykket sluttprodukt handler om å skjønne kundens forretning og bruke riktig teknologi på riktig sted. Stian har meget gode referanser fra tidligere oppdrag. Han er ofte å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
+ :description "Stian er en dedikert systemutvikler som er
+               opptatt av å forstå og løse kundens problem
+               på en best mulig måte. Han har jobbet for mange
+               forskjellige kunder innenfor ulike bransjer,
+               og ser at nøkkelen til et vellykket sluttprodukt
+               handler om å skjønne kundens forretning og bruke
+               riktig teknologi på riktig sted. Stian har meget
+               gode referanser fra tidligere oppdrag. Han er ofte
+               å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
 
  :phone-number "+47 932 24 450"
  :email-address "stian@kodemaker.no"
 
  :presence {:cv "stian"
- 			:twitter "stianalsos"
- 			:linkedin "/in/stianalsos"
- 			:github "stiancor"
- 			:coderwall "stiancor"}
+ 			      :twitter "stianalsos"
+ 			      :linkedin "/in/stianalsos"
+ 			      :github "stiancor"
+ 			      :coderwall "stiancor"}
 
-:tech {:favorites-at-the-moment [:groovy :rails :clojure]
-	        :want-to-learn-more [:clojure :javascript :ansible]}
+ :tech {:favorites-at-the-moment [:groovy :rails :clojure]
+	          :want-to-learn-more [:clojure :javascript :ansible]}
 
-:recommendations [{:title "Coding Horror"
+ :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
                     		På bloggen hans finner du vittige innlegg om alt fra
                     		optimale keyboard for å skrive kode til bokanmeldelser.
@@ -26,7 +34,7 @@
                     :tech [:teknologi :utvikling]}
                    {:title "Ruby on Rails Tutorial"
                     :blurb "Rails er et rammeverk som både er elsket og hatet.
-                    		Jeg mener at det til riktig type 
+                    		Jeg mener at det til riktig type
                     		problemstilling kan det være et glimrende alternativ.
                     		I disse screencastene på rundt 16 timer gir
                     		Michael Hartl deg en solid innføring og et grunnlag
@@ -35,30 +43,92 @@
                            :text "Bli en rails hipster"}
                     :tech [:ruby :rails]}
                    {:title "Løs matematiske problemer med kode"
-                    :blurb "Project Euler er ikke akkurat en ny spenstig nettside, men 
-                    		her kan du virkelig få kvesset klørne dine. Problemene blir 
-                    		vanskeligere og vanskeligere og hvilket språk du bruker til 
-                    		å løse dem er opp til deg. Personlig leker jeg meg med Clojure 
+                    :blurb "Project Euler er ikke akkurat en ny spenstig nettside, men
+                    		her kan du virkelig få kvesset klørne dine. Problemene blir
+                    		vanskeligere og vanskeligere og hvilket språk du bruker til
+                    		å løse dem er opp til deg. Personlig leker jeg meg med Clojure
                     		om dagen."
                     :link {:url "http://projecteuler.net/"
                            :text "Lek med tall her"}
                     :tech [:deliberate-practice :clojure]}]
 
 
-:hobbies [{:title "Reising"
-            :description "Jeg er bitt av reisebasillen og har bare funnet en kur som fungerer; mer reising! Mitt foreløpige høydepunkt hadde jeg i 2008 da jeg reiste verden rundt i syv måneder. Med tiden har jeg besøkt godt over 50 land og vært i alle verdensdeler utenom Antarktis. Jeg har imidlertid funnet ut at det er viktigere å ta seg tid til å oppleve stedet du er på enn haste videre for alltid å se noe nytt. Husk at det er menneskene du møter på veien som gjør turen, ikke at man besøkte alle severdighetene på ruten. God tur!"
+ :hobbies [{:title "Reising"
+            :description "Jeg er bitt av reisebasillen og har bare funnet
+                          en kur som fungerer; mer reising! Mitt foreløpige
+                          høydepunkt hadde jeg i 2008 da jeg reiste verden
+                          rundt i syv måneder. Med tiden har jeg besøkt godt
+                          over 50 land og vært i alle verdensdeler utenom Antarktis.
+                          Jeg har imidlertid funnet ut at det er viktigere å ta seg
+                          tid til å oppleve stedet du er på enn haste videre for
+                          alltid å se noe nytt. Husk at det er menneskene du møter
+                          på veien som gjør turen, ikke at man
+                          besøkte alle severdighetene på ruten. God tur!"
             :illustration "/illustrations/hobbies/stian_reise.jpg"}
-			{:title "Løping"
-            :description "For meg handler løping om mange ting. Det åpenbare er et ønske om å holde meg i form, men viktigere enn det er å tømme hodet, løse opp kroppen og være ute i marka. I løpet av året blir det mange kilometer, og noen konkurranser for å teste formen. Hvis man da i tillegg slår venner og bekjente smaker det selvsagt ekstra godt."
+			     {:title "Løping"
+            :description "For meg handler løping om mange ting. Det åpenbare
+                          er et ønske om å holde meg i form, men viktigere enn
+                          det er å tømme hodet, løse opp kroppen og være ute
+                          i marka. I løpet av året blir det mange kilometer,
+                          og noen konkurranser for å teste formen. Hvis man
+                          da i tillegg slår venner og bekjente smaker det
+                          selvsagt ekstra godt."
             :illustration "/illustrations/hobbies/jogging.jpg"}
-			{:title "Gitar"
-            :description "Det finnes mange grunner til å spille gitar. Noen har som drøm å spille i forrykende tempo på store scener, andre bruker det for å imponere på et nachspiel en sen lørdagskveld. For noen handler det om noe så enkelt som å slappe av og koble ut. Sånn er det for meg. Så skader det jo ikke at datteren min på under året er helt oppslukt, og min største fan når fingrene danser nedover gitarhalsen."
+			     {:title "Gitar"
+            :description "Det finnes mange grunner til å spille gitar.
+                          Noen har som drøm å spille i forrykende tempo på
+                          store scener, andre bruker det for å imponere på
+                          et nachspiel en sen lørdagskveld. For noen handler
+                          det om noe så enkelt som å slappe av og koble ut.
+                          Sånn er det for meg. Så skader det jo ikke at datteren
+                          min på under året er helt oppslukt, og min største
+                          fan når fingrene danser nedover gitarhalsen."
             :illustration "/illustrations/hobbies/stian_gitar.jpg"}]
+
+ :side-projects [{:title "Twittosocial"
+                  :description "Det startet som en enkel Twitter-clone i Rails
+                          og ballet på seg når vennegjengen tok det i bruk.
+                          Nå inneholder det alt fra fulltekstsøk til likes til
+                          notifications og events. Det fungerer også like godt på
+                          mobil som på PC. Så lenge det er liv i nettstedet
+                          fortsetter jeg videreutviklingen."
+                  :illustration "/illustrations/side-projects/twittosocial.jpg"
+                  :link {:url "http://twittosocial.herokuapp.com" :text "Se nettstedet (krever innlogging)"}
+                  :tech [:emacs]}]
 
  :blog-posts [{:url "http://worldoffoobar.blogspot.no/2013/07/setting-up-grails-guard.html"
                 :title "Setting up Grails Guard"
-                :blurb "Det er kjedelig og unødvendig at integrasjonstestene dine kjører i en liten evighet når du bruker Grails. Denne blogposten viser deg hvordan du setter opp Grails Guard og slipper dødtid."
+                :blurb "Det er kjedelig og unødvendig at integrasjonstestene
+                        dine kjører i en liten evighet når du bruker Grails.
+                        Denne blogposten viser deg hvordan du setter opp
+                        Grails Guard og slipper dødtid."
                 :tech [:grails :tdd]
                 }]
+
+ :endorsements [{:author "Bradley Johannson"
+                 :title "Business Development Manager (Leder Forretningsutvikling) at Storebrand"
+                 :quote "Stian is a highly competent developer with a strong focus on the quality
+                         and stability of the solutions that he develops. Stian was originally
+                         brought in to develop new functionality, but he quickly identified and
+                         implemented significant improvements in the core solution as well.
+                         I appreciated his approachability, speed of delivery and regular
+                         and informative status reports."},
+                {:author "Vigdis Diesen"
+                 :title "Head of Client Services at VPS"
+                 :quote "Jeg har jobbet som prosjektleder for Stian i Verdipapirsentralen.
+                         Stian er en meget dyktig ressurs som fungerer godt,
+                         både faglig og sosialt. Han evner å sette seg inn i kundens - til
+                         tider svært komplekse - problemstillinger og finner gode løsninger
+                         på disse. Han er blid og positiv og fungerer godt i samarbeid
+                         med andre. Han har min varmeste anbefaling."},
+                {:author "Lene Thrap"
+                 :title "Business Unit Manager Java at Logica"
+                 :quote "I had the pleasure of having Stian in my department at
+                         Avenir from 2007 to 2010. During this time Stian delivered
+                         excellent work which was appreciated by me, by Avenir,
+                         by his fellow collegues and by our customers. Stian is dedicated,
+                         skilled and highly professional. In addition he very likable.
+                         I give Stian my best recommodation - you can never fail having
+                         him on your project."}]
 
 }
