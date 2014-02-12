@@ -67,7 +67,7 @@
 
  :projects [{:id :finn-motor
              :customer "FINN Motor"
-             :description "Utviling av Nybil-løsning, og videreutvikling av de forskjellige markedene til Finn Motor (bil, båt, etc)"
+             :description "Utvikling av Nybil-løsning, og videreutvikling av de forskjellige markedene til Finn Motor (bil, båt, etc)"
              :years [2009 2010 2011 2012 2013]
              :tech [:javascript :spring-mvc :ajax :jquery :jsp :groovy :java :junit :jira :confluence]}
             ]
