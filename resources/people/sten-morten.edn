@@ -34,10 +34,6 @@
                :title "Personlige leveregler gir dype og mening"
                :blurb "For noen år siden fant jeg ut at jeg ville prøve å lage et sett \"leveregler\" for meg selv. Noe som ville inspirere og motivere meg, og som jeg kunne la guide meg når jeg var i tvil om neste trekk. Hver gang jeg tar dem frem, gir de meg noe nytt. Samtidig gir de en dybde og mening, og er en rød tråd i livet. Hvis du tar deg tid til ettertanke i dag, kanskje min lille remse kan gi deg noen innspill. Disse er selvfølgelig svært personlige. Dine vil være annerledes."
                :tech [:hjernen]}
-              {:url "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"
-               :title "En deilig implementert AND (video)"
-               :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
-               :tech [:clojure]}
               {:url "http://programmerer.com/2012/12/tanker-er-vanedyr/"
                :title "Tanker er vanedyr"
                :blurb "Jeg tok trappen i dag. Jeg ville ikke. Hele kroppen verket etter en dårlig natt med hostende unger. Men jeg vet en ting. Jeg vet at tanker er fysiske. Da mener jeg ikke på sånn new age mumbo jumbo måte. Men at det som skjer i hjernen når jeg tenker, er at elektriske impulser blir sendt gjennom fra et neuron til et annet, fra det ene neuronets aksoner til det andre neuronets dendritter. Og at hver gang en slik overføring skjer, så styrkes banen mellom de to nevronene."
@@ -58,7 +54,12 @@
                   :blurb "Kan det hende du får utrettet mer, om du jobber mindre? Hvorfor har vi egentlig 8-timers arbeidsdag? På 34 minutter presenterer jeg et verktøy du kan bruke for å få gjort mer, på færre timer."
                   :tech [:hjernen]
                   :urls {:video "http://4x4player.com/arbeidsdagenslengde.php"}
-                  :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}]
+                  :thumb "/thumbs/presentations/enestedumaa.jpg"}
+                 {:title "En deilig implementer AND"
+                  :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
+                  :tech [:hjernen]
+                  :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}
+                  :thumb "/thumbs/presentations/enestedumaa.jpg"}]
 
  :open-source-projects [{:url "https://github.com/steni/ryolisp"
                          :name "Roll Your Own Lisp"
