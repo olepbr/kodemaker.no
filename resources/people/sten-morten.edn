@@ -55,9 +55,9 @@
                   :tech [:hjernen]
                   :urls {:video "http://4x4player.com/arbeidsdagenslengde.php"}
                   :thumb "/thumbs/presentations/enestedumaa.jpg"}
-                 {:title "En deilig implementer AND"
+                 {:title "En deilig implementert AND"
                   :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
-                  :tech [:hjernen]
+                  :tech [:hjernen :clojure]
                   :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}
                   :thumb "/thumbs/presentations/enestedumaa.jpg"}]
 
