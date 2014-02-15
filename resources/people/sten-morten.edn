@@ -39,22 +39,22 @@
                :blurb "Jeg tok trappen i dag. Jeg ville ikke. Hele kroppen verket etter en dårlig natt med hostende unger. Men jeg vet en ting. Jeg vet at tanker er fysiske. Da mener jeg ikke på sånn new age mumbo jumbo måte. Men at det som skjer i hjernen når jeg tenker, er at elektriske impulser blir sendt gjennom fra et neuron til et annet, fra det ene neuronets aksoner til det andre neuronets dendritter. Og at hver gang en slik overføring skjer, så styrkes banen mellom de to nevronene."
                :tech [:hjernen]}]
 
- :presentations [{:title "Lag ditt eget språk, i Groovy, på 37 minutter"
-                  :blurb "Sten Morten viser deg alt du trenger å kunne for å lage ditt eget programmeringsspråk, på 37 minutter."
-                  :tech [:lisp :groovy]
-                  :urls {:video "http://vimeo.com/album/2525252/video/74401304"}
-                  :thumb "/thumbs/presentations/livet.jpg"}
-                 {:title "Det eneste du MÅ (FINN.no Techdagen)"
+ :presentations [{:title "Det eneste du MÅ (FINN.no Techdagen)"
                   :blurb "Om du bare skulle leve ETT liv, hva ville du gjort da? Resultatet av ti år med lykkeforskning er klar: Det vi trenger, er 1) en følelse av samhold, 2) følelse av kontroll over eget liv, 3) å kunne skape noe, 4) å kunne bidra positivt i verden. Samtidig viser eksperimenter med arbeidsdagens lengde at mange får mer gjort når de jobber kortere dager enn åtte timer. Flere bedrifter opplever feitere bunnlinjer med kortere arbeidsdager. Så hva om vi jobbet mindre, tjente mer, og fikk mer fritid? Ja, hva da?"
                   :tech [:hjernen]
                   :urls {:video "http://4x4player.com/deteneste.php"}
                   :thumb "/thumbs/presentations/detenestedumaa.jpg"}
-                 {:title "Kjærlighet i automatiseringens tid"
+                 {:title "Lag ditt eget språk, i Groovy, på 37 minutter (JavaZone)"
+                  :blurb "Sten Morten viser deg alt du trenger å kunne for å lage ditt eget programmeringsspråk, på 37 minutter."
+                  :tech [:lisp :groovy]
+                  :urls {:video "http://vimeo.com/album/2525252/video/74401304"}
+                  :thumb "/thumbs/presentations/livet.jpg"}
+                 {:title "Kjærlighet i automatiseringens tid (CIONET)"
                   :blurb "Kan det hende du får utrettet mer, om du jobber mindre? Hvorfor har vi egentlig 8-timers arbeidsdag? På 34 minutter presenterer jeg et verktøy du kan bruke for å få gjort mer, på færre timer."
                   :tech [:hjernen]
                   :urls {:video "http://4x4player.com/arbeidsdagenslengde.php"}
                   :thumb "/thumbs/presentations/kjrlighet_i_automatiseringens_tid.jpg"}
-                 {:title "En deilig implementert AND"
+                 {:title "En deilig implementert AND (Teknologihuset)"
                   :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
                   :tech [:hjernen :clojure]
                   :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}
@@ -65,10 +65,15 @@
                          :description "Alle programmerere må en gang i livet lage sin egen LISP. Her er en du kan leke med, i Groovy"
                          :tech [:clojure :lisp :groovy]}]
 
- :projects [{:id :finn-motor
+ :projects [{:id :adam-og-eva-skolen
+             :customer "Adam og Eva - Frisørskolen"
+             :description "Lagde listemaskin som drar inn elever til Adam og Eva Skolen."
+             :years [2013 2014]
+             :tech [:google-adwords :facebook-ads :google-analytics :aweber]}
+            {:id :finn-motor
              :customer "FINN Motor"
              :description "Utvikling av Nybil-løsning, og videreutvikling av de forskjellige markedene til Finn Motor (bil, båt, etc)"
-             :years [2009 2010 2011 2012 2013]
+             :years [2010 2011 2012]
              :tech [:javascript :spring-mvc :ajax :jquery :jsp :groovy :java :junit :jira :confluence]}
             ]
 
