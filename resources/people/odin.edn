@@ -28,8 +28,8 @@
                :tech [:clojure]}
               {:url "http://odinodin.io/blog/2013/06/29/get-git/"
                :title "Forstå Git"
-               :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med ressurser som hjalp meg å
-                       forstå hvordan git fungerer."
+               :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med bøker, videoer og andre
+                       ressurser som hjalp meg å forstå hvordan git fungerer."
                :tech [:git]}
               {:url "http://odinodin.io/blog/2012/11/12/spock-and-spring/"
                :title "Spock og Spring"
@@ -69,7 +69,8 @@
                  {:title "Better and groovier tests with Spock"
                   :blurb "Spock er et elegant testrammeverk for Java og Groovy-
                           baserte applikasjoner. Det hjelper deg å skrive
-                          lesbare og presise tester."
+                          lesbare og presise tester, samtidig som det optimaliserer
+                          for utviklerproduktivitet."
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}
                   :thumb "/thumbs/presentations/spock.jpg"}]
@@ -78,4 +79,9 @@
             :description "Kameraet mitt er stort sett med overalt. Du vet
                           aldri når muligheten til å ta et blinkskudd viser seg.
                           Dette bildet av soloppgangen tok jeg innerst i en fjord på Sunnmøre."
-            :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}]}
+            :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}
+           {:title "Snø"
+            :description "Noe av et det kjekkeste jeg vet er å sette utfor en velpreparert skibakke
+                          når sola skinner. Det eneste jeg kommer på som topper det, er å pløye
+                          pudder med snø til knærne. Da kjenner du at du lever."
+            :illustration "/illustrations/hobbies/odin-ski.jpg"}]}
