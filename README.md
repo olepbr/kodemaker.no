@@ -177,7 +177,7 @@ Se eksempler på [tech](resources/tech/javascript.edn) og
 
 Du kan legge til et skjema for å signe opp folk på e-postlister i
 venstrekolonnen på fagsidene. For å gjøre dette må du først gå til Mailchimp og
-opprette en liste. Ta kontakt med Kolbjørn, Sten-Morten eller Christian dersom
+opprette en liste. Ta kontakt med Kolbjørn, Sten Morten eller Christian dersom
 du trenger tilgang til Mailchimp. Når du har opprettet listen, gå til den i
 Mailchimp sitt UI, eksempelvis
 [JavaScript-listen](https://us3.admin.mailchimp.com/lists/members/?id=297221).
