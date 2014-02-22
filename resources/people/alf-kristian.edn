@@ -2,35 +2,89 @@
  :name ["Alf Kristian" "Støyle"]
  :title "Kodemagiker"
  :start-date "2013-10-01"
- :description "Alf Kristian liker seg på dypt vann, med store utfordringer og vanskelige mål. Dette gjelder både i
- privatliv og på jobb.
+ :description "Alf Kristian liker seg på dypt vann, med store
+ utfordringer og vanskelige mål. Dette gjelder både i privatliv
+ og på jobb.
 
- På jobb har fokuset ofte vært \"baksia\", da prosjektene han har vært i har de største utfordrigene der. Han ser
- likevel på seg selv som en full-stack utvikler, og hjelper gjerne kunden med frontend, utvikling av datamodeller
- eller API'er.
+ På jobb har fokuset ofte vært \"baksia\", da prosjektene han har
+ vært i har de største utfordrigene der. Han ser likevel på seg selv
+ som en full-stack utvikler, og hjelper gjerne kunden med frontend,
+ utvikling av datamodeller eller API'er.
 
- Dette betyr også at Alf Kristian er flink til å se forbedringer i alle ledd av systemutvikling. Han opplever stadig at
- han hjelper kunden med å forbedre ting de ikke var klar over kunne vært bedre.
+ Dette betyr også at Alf Kristian er flink til å se forbedringer i
+ alle ledd av systemutvikling. Han opplever stadig at han hjelper
+ kunden med å forbedre ting de ikke var klar over kunne vært bedre.
 
- Alf Kristian har stor tro på funksjonell programmering, og har jobbet lenge i communities som scalaBin og Oslo Socially Functional
- for å fremheve bruken av disse funksjonelle språk, som Scala og Clojure."
+ Alf Kristian har stor tro på funksjonell programmering, og har
+ jobbet lenge i communities som scalaBin og Oslo Socially Functional
+ for å fremheve bruken av disse funksjonelle språk, som Scala og
+ Clojure."
 
  :phone-number "997 92 226"
  :email-address "alf.kristian@kodemaker.no"
 
   :presence {:cv "alf.kristian"
             :twitter "stoyle"
-            :stackoverflow "/users/1113229/alf"
             :github "stoyle"
             :linkedin "/in/stoyle"}
 
- :hobbies [{:title "Jogging og løpeteknikk"
-            :description "Helt siden Alf Kristian fikk en Garmin GPS klokke i gave, og oppdaget at man kunne
-            tracke sin forbedring online, har han elsket å løpe. Det begynte forholdsvis rolig, helt til han ble utfordret til å
-            løpe maraton. Dette ble en kjempe-utfordring, som gjorde ham totalt hekta.
-            Alf Kristian skjønte fort at normal løpeteknikk ikke er bra for kroppen, så han blir stadig observert på
-            jobbeturer med sine Vibram Fivefingers."
+ :hobbies [{:title "Funksjonell programmering"
+            :description "Data-verden er i stadig forandring, kravene
+            til oppgaver som skal løses skjerpes, vi må forholde oss
+            til større datamengder, lage software som yter og
+            skalerer bedre, samtidig som kunder krever at vi leverer
+            raskere. Etter min mening (og mange andres) er
+            funksjonelle programmeringsspråk bedre verktøy for å
+            imøtekomme slike krav."
+            :illustration "/illustrations/hobbies/alf_kristian_lambda.jpg"}
+           {:title "Jogging og løpeteknikk"
+            :description "Helt siden jeg fikk en Garmin GPS klokke i
+            gave, og oppdaget at man kunne tracke sin forbedring
+            online, har jeg elsket å løpe. Det begynte forholdsvis
+            rolig, helt til jeg ble utfordret til å løpe maraton.
+            Dette ble en kjempe-utfordring, som gjorde meg totalt
+            hekta. Jeg skjønte fort at normal løpeteknikk ikke er bra
+            for kroppen, så jeg blir stadig observert på joggeturer
+            med mine Vibram Fivefingers."
             :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
 
  :tech {:favorites-at-the-moment [:clojure :scala :funksjonell-programmering]
-        :want-to-learn-more [:clojurescript :nodejs]}}
+        :want-to-learn-more [:clojurescript :nodejs]}
+
+:recommendations [{:title "The Joy of Clojure"
+                    :blurb "Dette er ingen intro bok om Clojure,
+                            dette er en bok for de som vil lære litt
+                            mer. I tillegg til et dypdykk i språket,
+                            lærer man om generell funksjonell
+                            programmering. Kan anbefales for alle som
+                            føler det er forbi begynnerstadiet i FP,
+                            enten det gjelder Clojure eller andre
+                            spåk."
+                    :link {:url "http://joyofclojure.com/"
+                           :text "Offisielle sider"}
+                    :tech [:clojure :funksjonell-programmering]}
+                  {:title "Learn You a Haskell for Great Good!"
+                    :blurb "Haskell er et programmeringsspråk som får
+                            større og større påvirkningskraft på
+                            andre språk. Denne boken gir en vennlig
+                            introduksjon til et språk som er ganske
+                            ganske annerledes. Man kan lese store
+                            deler av boken på nett."
+                    :link {:url "http://learnyouahaskell.com/"
+                           :text "Besøk websidene"}
+                    :tech [:funksjonell-programmering]}
+                  {:title "Born to Run: A Hidden Tribe,
+                           Superathletes, and the Greatest Race the
+                           World Has Never Seen"
+                    :blurb "Utrolig nok, men dette er en spennende
+                            og interessant bok om løping! Hvorfor
+                            skader vi oss så ofte når vi tar på
+                            joggesko, hvorfor kan noen mennesker
+                            løpe mer enn 200 km mens vanlige
+                            mennesker sliter med 10? Denne boken
+                            kommer med en alternativ teori på
+                            hvorfor mennesker har blitt som vi er,
+                            var vi egentlig \"født til å løpe?\""
+                    :link {:url "http://www.chrismcdougall.com/book.html"
+                           :text "Offisielle sider"}
+                    :tech [:trening]}]}
