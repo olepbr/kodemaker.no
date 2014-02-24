@@ -125,7 +125,7 @@ Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 
 Bildene ligger i `resources/public`.
 
-- `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](http://smushit.com).
+- `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](http://smushit.com). Evt [tinypng](https://tinypng.com/)
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
 - `/thumbs/presentations` Bilde fra en presentasjon (utsnitt video, slides, kode, scenebilde): .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
