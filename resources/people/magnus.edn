@@ -38,7 +38,26 @@
                   :thumb "/thumbs/presentations/gradle-ditt-bygg.jpg"}]
 
 
- :blog-posts [{:url "http://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
+ :blog-posts [{:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-2.html"
+               :title "A Groovy Light Table client - Step 2: Evaluating Code"
+               :blurb "Del 2 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
+                       en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
+                       evaluert Groovy kode og vist resultater inline i Light Table."
+               :tech [:clojurescript :groovy :lighttable]}
+              {:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-1.html"
+               :title "A Groovy Light Table client - Step 1: Connecting the client"
+               :blurb "Del 1 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
+                       en dugandes Groovy plugin for Light Table. I denne posten beskriver jeg hvordan
+                       jeg kobler opp Light Table til en Groovy klient-prosess."
+               :tech [:clojurescript :groovy :lighttable]}
+
+              {:url "http://codewader.blogspot.no/2014/02/getting-my-feet-wet-with-clojure-using.html"
+               :title "Getting my feet wet with Clojure using Light Table"
+               :blurb "En liten erfaringsrapport fra mine første steg med å skrive produksjonskode i Clojure
+                       ved bruk av Light Table IDE."
+               :tech [:clojure :lighttable]}
+
+              {:url "http://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
                :title "Javascript testing in your JVM projects using Gradle and BusterJS"
                :blurb "Hadde det ikke vært kjekt om du kunne inkludert javascript testing som en del
                        av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
@@ -51,7 +70,11 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/gradle-buster-plugin"
+ :open-source-projects[{:url "https://github.com/rundis/LightTable-Groovy"
+                        :name "LightTable-Groovy"
+                        :description "Groovy plugin for Light Table. Steg 1 er å lage et langt bedre Groovy Console. Steg 2 er helt åpent. Sky's the limit!"
+                        :tech [:lighttable :groovy :clojurescript]}
+                       {:url "https://github.com/rundis/gradle-buster-plugin"
                         :name "gradle-buster-plugin"
                         :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
                         :tech [:groovy :gradle :buster-js :javascript]}]

@@ -1,0 +1,9 @@
+{:id :lighttable
+ :name "Light Table"
+ :illustration "/photos/tech/lighttable.png"
+ :site "http://www.lighttable.com/"
+ :description "Light Table er et nytt og spennende IDE som forsøker å skille seg fra andre editorer ved
+               bl.a større grad av interaktivitet og nær umiddelbar feedback. Det er veldig fleksibelt og
+               tilpasningsmuligheten nærmest uendelige. Arkitekturen i Light Table er sentrert rundt komposisjon
+               av små tagbare oppførsler. Se bloggposten [IDE as a value](http://www.chris-granger.com/2013/01/24/the-ide-as-data/) for mer detaljer.
+               Det ble [opensourcet](https://github.com/LightTable/LightTable) i januar 2014. Etter det har antall 3.parts plugins nærmest eksplodert."}
