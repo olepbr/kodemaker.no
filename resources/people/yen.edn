@@ -10,7 +10,7 @@
   	        :linkedin "/in/yenxu"}
 
  :tech {:favorites-at-the-moment [:grails :groovy :intellij :oracle :spock :dbfit :oracle-analytical-functions]
-        :want-to-learn-more [:business-integelligence :tableau]}
+        :want-to-learn-more [:business-integelligence]}
  :hobbies [{:title "Trening og helse"
  		:description  "[Å sitte er like ille som å røyke](http://www.nrk.no/livsstil/_-a-sitte-er-like-ille-som-a-royke-1.11428352) mener forskerne .
  		 Hvem liker å føle seg dårlig og uvel og blir plaget av alle mulige sykdommer? Ingen! Den beste måten å unngå dette på som jeg har tro på, er trening.
