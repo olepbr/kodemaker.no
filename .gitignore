@@ -9,5 +9,6 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
-
+/.idea/
+*.iml
 .DS_Store
