@@ -113,4 +113,56 @@
                     for fremtiden enn andre."
                     :urls  {:video "https://vimeo.com/28765670"}
                     :thumb "/thumbs/presentations/alf-k-mc-ready.jpg"
-                    :tech  [:javascript :design]}]}
+                    :tech  [:javascript :design]}]
+
+ :endorsements    [{:author "Øyvind Møller Asbjørnsen"
+                    :title  "Head of Java Community of Practice at Capgemini"
+                    :quote  "Alf Kristian is by far one of the most talented
+                    developers I've ever worked with, and it was a true
+                    pleasure to have him on my team. We worked together for
+                    a year on a distributed custom build project consisting
+                    of 100 people with six development teams in two
+                    geographical locations. Alf Kristian soon established
+                    him self as lead developer on the team and a valued
+                    resource in the project. He's highly productive, solves
+                    the toughest and most complex tasks, and delivers highly
+                    maintainable code with few bugs. He identifies problems
+                    and weaknesses in both process, code and architecture and
+                    suggests ways of solving them, but still remains loyal to
+                    the decisions made by the team or project. He's easy going
+                    and a true team player, helping out whenever he can. It was
+                    a true pleasure to have him on my team, I learned a lot from
+                    him, and hope to be working with him again in the future.
+                    If you're looking for a trustworthy, highly skilled
+                    developer/architect for your project, small or large,
+                    then you can't go wrong with Alf Kristian. Highly
+                    recommended! "}
+                   {:author "Tobias K. Torrissen"
+                    :title  "CTO Knowit Objectnet"
+                    :quote  "Alf Kristian is a passionate and talented
+                    developer. I had the pleasure of working with Alf
+                    Kristian for six years in Knowit. In addition to being a
+                    great developer and consultant, he was involved in
+                    Knowit´s strategy for knowledge management and technology.
+                    Alf Kristian has been a strong promoter of functional
+                    programing languages and his competence and enthusiasm
+                    on the subject was partly responsible for the fact that
+                    Knowit was one of the first norwegian consultancies to put
+                    a system written in Scala in production.<br><br>
+
+                    Alf Kristian is a very conscientious person and I wish him
+                    the best of luck with his new job and give him my warmest
+                    recommendations. "}
+                   {:author "Tor Magne Hougen"
+                    :title  "Byggesjef TVINN Toll- og avgiftsdirektoratet"
+                    :quote  "Tiden hos oss i Toll og avgifts direktoratet,
+                    sammen med Alf Kristian var behagelig. Alfs bidrag med
+                    kompetanse, kunnskap, kreativitet, samt oppførselen og
+                    væremåte ga oss og teamet store felles løft. Ønsket mitt
+                    var å fortsette samarbeidet , derved ”slippe” å anbefale
+                    ham. Siden så ikke ble, umiddelbart og noe skal fremheves
+                    må det være blant hans mange gode egenskaper: Raskt å
+                    tilegne seg oversikt. Se muligheter og løsninger i alle
+                    spekter fra programmeringsteknisk detaljnivå til overordnet
+                    informasjonsflyt. Profesjonell opptreden, tørre å ta tak i
+                    utfordringer på alle nivåer. "}]}
