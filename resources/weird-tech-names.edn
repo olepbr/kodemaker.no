@@ -39,4 +39,6 @@
  :frank-kern "Frank Kern"
  :google-adwords "Google AdWords"
  :google-analytics "Google Analytics"
+ :oracle-locator "Oracle Locator"
+ :mule "Mule ESB"
  }

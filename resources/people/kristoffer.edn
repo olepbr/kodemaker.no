@@ -27,7 +27,14 @@
              :description "Jobbet med utvikling av FiberWeb-portalen, eget hypermediabasert REST-api for salg mot privatmarkedet og med
              nytt system for ordreleveranse. I perioder også som SCRUM master"
              :years [2012 2013]
-             :tech [:wicket :java :mongodb :ajax :jaxrs :jboss :collectionjson]}]
+             :tech [:wicket :java :mongodb :ajax :jaxrs :jboss :collectionjson]}
+            {:id :kartverket
+             :customer "Kartverket"
+             :description "Utviklet webservice-API for uthenting av alle endringer for synkronisering
+             av eksterne systemer. Laget også integrasjon mot eksterne registre, som Enhetsregisteret
+             , Folkeregisteret og Tinglysing, for oppdatering av Matrikkelen derfra."
+             :years [2005 2006 2007]
+             :tech[:java :oracle-locator :mule :weblogic :swing :hibernate] }]
 
  :endorsements [{:project :finn-surf-sammen
                  :author "Bjørn Henrik Vangstein"
