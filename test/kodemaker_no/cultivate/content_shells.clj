@@ -7,9 +7,6 @@
                  :button "!"
                  :action {:url "http://example.com"
                           :method "POST"}}
-          :faces []
-          :intro {:title "!"
-                  :text "!"}
           :references []}
          m))
 

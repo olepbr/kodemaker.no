@@ -129,9 +129,6 @@
           :button Str
           :action {:url URL
                    :method Str}}
-   :faces [ID]
-   :intro {:title Str
-           :text Str}
    :references [ID]})
 
 (defn validate-content [content]
