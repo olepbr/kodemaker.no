@@ -76,7 +76,7 @@ som vi kjenner hverandre, til å bry seg så mye om hverandre?
 Noe av hemmeligheten bak vår suksess er at vi er et lite firma, der vi
 bryr oss om hverandres suksess.
 
-Ingen av oss har noe økonomisk incentiv for å vokse som selskap,
+Ingen av oss har noe økonomisk insentiv for å vokse som selskap,
 heller, ettersom vi eier selskapet sammen, og ikke tjener noe mer på å
 få flere mennesker inn.
 
@@ -102,9 +102,9 @@ som gir deg transparens i forhold til fremdrift, så du ikke
 risikerer at oppgaver du trodde var ferdig for lenge siden, blir
 hengende i løse luften et sted på veien.
 
-**Du må utvikle test-drevet.** Etter hvert om kodebasen vokser, vil
+**Du må utvikle test-drevet.** Etter hvert som kodebasen vokser, vil
 endringer du gjør ett sted, kunne ødelegge funksjonalitet et annet
-sted, uten at der er umiddelbart innlysende. Hvis det ikke oppdages
+sted, uten at det er umiddelbart innlysende. Hvis det ikke oppdages
 med en gang, av automatiserte tester, kan slike bugs leve lenge og
 bli svært dyre.
 
