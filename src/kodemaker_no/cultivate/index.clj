@@ -3,7 +3,7 @@
 
 (defn- update-ref [content ref]
   (-> content :projects ref
-      (assoc :url (str "/" (subs (str ref) 1) "/"))))
+      (assoc :url (str "/" (name ref) "/"))))
 
 (defn cultivate-index [content]
   (-> (:index content)

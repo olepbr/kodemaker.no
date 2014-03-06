@@ -7,7 +7,7 @@
             [kodemaker-no.date :refer [parse-ymd]]))
 
 (defn- add-str [person]
-  (assoc person :str (-> person :id str (subs 1))))
+  (assoc person :str (-> person :id name)))
 
 (defn- add-url [person]
   (assoc person :url (str "/" (:str person) "/")))

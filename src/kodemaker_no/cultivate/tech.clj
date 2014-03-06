@@ -13,8 +13,7 @@
 
 (defn- str-for-humans [id]
   (-> id
-      str
-      (subs 1)
+      name
       (str/replace "-" " ")
       capitalize))
 

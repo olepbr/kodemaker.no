@@ -16,7 +16,7 @@
     (let [info {:url (util/url person)
                 :full-name (str/join " " (:name person))
                 :first-name (first (:name person))
-                :thumb (str "/photos/people/" (-> person :id str (subs 1)) "/side-profile.jpg")}]
+                :thumb (str "/photos/people/" (-> person :id name) "/side-profile.jpg")}]
       (map #(assoc % :person info) (key person)))))
 
 (defn- add-people [content project]
