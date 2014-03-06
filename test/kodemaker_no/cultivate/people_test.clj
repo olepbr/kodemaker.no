@@ -35,8 +35,10 @@
         (-> people :finnjoh :url) => "/finnjoh/")
 
   (fact (-> people :magnar :photos) => {:side-profile "/photos/people/magnar/side-profile.jpg"
+                                        :side-profile-tiny "/photos/people/magnar/tiny/side-profile.jpg"
                                         :half-figure "/photos/people/magnar/half-figure.jpg"}
         (-> people :finnjoh :photos) => {:side-profile "/photos/people/finnjoh/side-profile.jpg"
+                                         :side-profile-tiny "/photos/people/finnjoh/tiny/side-profile.jpg"
                                          :half-figure "/photos/people/finnjoh/half-figure.jpg"}))
 
 (let [people (-> content

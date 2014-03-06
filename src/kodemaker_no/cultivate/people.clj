@@ -27,6 +27,7 @@
 (defn- add-photos [person]
   (assoc person :photos
          {:side-profile (str "/photos/people/" (:str person) "/side-profile.jpg")
+          :side-profile-tiny (str "/photos/people/" (:str person) "/tiny/side-profile.jpg")
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
 (defn- parse-dates [person]

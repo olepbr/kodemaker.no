@@ -30,7 +30,7 @@
   [:div.gridUnit.r-8-6-4
    [:a.photoframe.gridContent.linkBlock {:href url}
     [:span.thinMount.tiny.block
-     [:img.mbs {:src (:side-profile photos)}]
+     [:img.mbs {:src (:side-profile-tiny photos)}]
      ]]])
 
 (defn- num-consultants [people]
