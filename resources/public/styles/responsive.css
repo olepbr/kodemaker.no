@@ -3,5 +3,6 @@
 @import "off-canvas-menu.css" screen and (max-width: 459px);
 @import "460up.css" screen and (min-width: 460px);
 @import "620up.css" screen and (min-width: 620px);
+@import "730up.css" screen and (min-width: 730px);
 @import "810up.css" screen and (min-width: 810px);
 @import "960up.css" screen and (min-width: 960px);
