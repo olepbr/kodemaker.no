@@ -1,7 +1,7 @@
-{:form {:title "Kontakt oss"
+{:form {:title "Hva er det du vil?"
         :address "Din e-post eller telefon:"
-        :subject "Hva gjelder det?"
-        :button "Ta kontakt!"
+        :subject "Beskriv prosjektet ditt:"
+        :button "Jeg ønsker å bli kontaktet"
         :action {:url "http://mailchimp.com/somewhere"
                  :method "POST"}}
 

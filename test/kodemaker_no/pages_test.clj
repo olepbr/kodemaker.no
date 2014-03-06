@@ -20,6 +20,7 @@
            "/finn-oppdrag/"
            "/kompetanse/"
            "/systemer/"
+           "/skjema/"
            "/blogg/"})
 
 (fact "Colliding urls are not tolerated."

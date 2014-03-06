@@ -40,18 +40,24 @@ ol li {list-style-type: decimal;}
 .photoframe:after {bottom: 5px; content: ""; position: absolute; width: 90%; height: 25px; z-index: -1; padding: 0; margin: 0 5%; display: block; background: transparent; border-radius: 100% / 50%; box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);}
 .mount {border: 1px solid #ccc; padding: 5px; background: #fff; max-width: 100%;}
 
+.thinMount {border: 1px solid #ccc; padding: 5px; background: #fff; max-width: 100%;}
+
 .thumb {width: 100px; max-width: 20%;}
 .logo {width: 200px; max-width: 35%;}
+
+.normal {font-weight: normal;}
 
 p {margin-bottom: 1.3em;}
 
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
+.r-8-6-4 {width: 25%; }
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
 .s-1of3 {width: 33.33333%;}
 .s-1of6 {width: 16.66667%;}
+
 
 .form label {display: block;}
 .input {width: 100%; font-size: 16px; padding: 5px; box-sizing: border-box;}
@@ -81,6 +87,9 @@ h1 {font-size: 30px;}
 h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
 h3 {font-size: 18px; font-weight: bold;}
 h4 {font-weight: bold;}
+
+.bigProse {font-size: 20px;}
+.bigProse h2 {font-size: 30px;}
 
 .near, h3, h4, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h4+*, h5+* {margin-top: 0 !important;}
