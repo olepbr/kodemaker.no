@@ -1,8 +1,4 @@
-La oss bare innrømme det: **det er forskjell på folk**.
-
-*I Kodemaker har vi en tøff modell. De som ikke har oppdrag, har ikke
-lønn.* På den måten sikrer vi at alle konsulentene våre er folk som
-får jobben gjort.
+*I Kodemaker har vi en tøff modell. De som ikke har oppdrag, har ikke lønn.* På den måten sikrer vi at alle konsulentene våre er folk som får jobben gjort.
 
 Alt annet er utenkelig.
 
