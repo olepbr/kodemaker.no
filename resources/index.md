@@ -30,22 +30,18 @@ med ny kunnskap.
 
 Vi **liker** å dele av vår erfaring.
 
-<a href="http://tddjs.com" target="_blank"><img class="tinyIllu" src="/illustrations/side-projects/jstdd.jpg"></a>
+<a href="http://tddjs.com" target="_blank"><img class="tinyIlluR" src="/illustrations/side-projects/jstdd.jpg"></a>
 [Christian](/christian), for eksempel, har **skrevet bok** om
 test-drevet utvikling i [JavaScript](/javascript), og holder ofte
-kurs.
-
-<a href="http://emacsrocks.com" target="_blank"><img class="tinyIlluR" src="/illustrations/side-projects/emacs-rocks.jpg"></a>
-[Magnar](/magnar/) har lagd **online video-kurs** om <a href="http://www.zombietdd.com" target="_blank">JavaScript-Zombier</a>
+kurs. [Magnar](/magnar/) har lagd **online video-kurs** om <a href="http://www.zombietdd.com" target="_blank">JavaScript-Zombier</a>
 og <a href="http://emacsrocks.com" target="_blank">Emacs</a>.
 [Alf Kristian](/alf-kristian/) skal holde workshop om
 [Clojure](/clojure/) på JavaZone i september. [Odin](/odin/) har
 forklart hvordan du skriver <a href="http://javazone.no/incogito10/events/JavaZone%202012/sessions/Better%20and%20groovier%20tests%20with%20Spock" target="_blank">elegante tester i Spock</a>.
 
-<a href="http://vimeo.com/album/2525252/video/74401304" target="_blank"><img class="tinyIllu" src="/thumbs/presentations/enestedumaa.jpg">
 [Sten Morten](/sten-morten) har stått på scenen på JavaZone og
-Communities in Action og fortalt om hvordan du lager ditt eget
-programmeringsspråk.
+Communities in Action og fortalt om <a href="http://vimeo.com/album/2525252/video/74401304" target="_blank">hvordan du lager ditt eget
+programmeringsspråk</a>.
 
 [Magnus](/magnus) ga oss <a href="http://video.javazone.no/talk/49375218" target="_blank">introduksjonen til gradle</a>.
 

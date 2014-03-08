@@ -94,7 +94,7 @@ h4 {font-weight: bold;}
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 
 .tinyIllu {width: 10%; min-width: 70px; float: left; margin-right: 15px;}
-.tinyIlluR {width: 10%; min-width: 70px; float: right; margin-right: 15px;}
+.tinyIlluR {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
 
 .fpf {float: right; margin: 0 10px; max-width: 80%;} /* front page face */
 .fpt {position: absolute; bottom: 15px; font-size: 16px; left: 10px; padding: 0 5px;} /* front page title */
