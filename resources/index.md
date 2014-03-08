@@ -8,7 +8,7 @@ Alt annet er utenkelig.
 
 &nbsp;
 
-## Når du har et lag av Kodemakere hos deg, <br> har du resten av oss i ryggen
+## Når du har et lag av Kodemakere hos deg, <span class="nowrap">har du resten av oss i ryggen</span>
 
 Ingen kan alt. I en verden som blir stadig mer spesialisert, er det
 viktig å kunne hente inn ekspertise du ikke sitter på selv.
@@ -34,7 +34,7 @@ med ny kunnskap.
 
 Vi **liker** å dele av vår erfaring.
 
-<a href="http://tddjs.com" target="_blank"><img class="tinyIlluR" src="/illustrations/side-projects/jstdd.jpg"></a>
+<a href="http://tddjs.com" target="_blank"><img class="tinyIllu" src="/illustrations/side-projects/jstdd.jpg"></a>
 [Christian](/christian), for eksempel, har **skrevet bok** om
 test-drevet utvikling i [JavaScript](/javascript), og holder ofte
 kurs. [Magnar](/magnar/) har lagd **online video-kurs** om <a href="http://www.zombietdd.com" target="_blank">JavaScript-Zombier</a>
@@ -59,7 +59,7 @@ Som du ser: *Vi liker å dele*. Og det kommer du til å nyte godt av.
 
 &nbsp;
 
-## KODEMAKER er et lite konsulentfirma med null <br> ambisjoner om å vokse
+## KODEMAKER er et lite konsulentfirma med <span class="nowrap">null ambisjoner om å vokse</span>
 
 Vi har funnet en **formel som funker**, for oss og for våre kunder.
 
