@@ -30,18 +30,7 @@
                   :tech [:javascript :nodejs :tdd :testing]
                   :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}]
 
- :upcoming [{:title "JavaScript for Programmers"
-             :description "Lei av å gjette deg frem og copy-paste
-             JavaScript-kode? Ta kontroll! Dette tredagerskurset byr på en
-             grundig gjennomgang av alt fra syntaks og innbygde typer til
-             objektmodellen og funksjoner, og gir deg en solid forståelse
-             for hvordan JavaScript egentlig fungerer."
-             :url "http://www.programutvikling.no/kurs/javascript-for-programmers/1942"
-             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/javascript-for-programmers/4294"}
-             :tech [:javascript]
-             :date "2014-02-26"
-             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}
-            {:title "Node.JS and React: Party in the front, party in the back"
+ :upcoming [{:title "Node.JS and React: Party in the front, party in the back"
              :description "Nysgjerrig på hva dette Node.JS-hysteriet handler om?
              I denne 3 timersworkshoppen får du en praktisk start. Vi kommer til
              å se på alle de essensielle aspektene ved å jobbed med Node:
