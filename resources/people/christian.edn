@@ -19,8 +19,8 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:favorites-at-the-moment [:clojure :react :emacs :git]
-        :want-to-learn-more [:clojurescript :ansible :docker]}
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :react :emacs :git]
+        :want-to-learn-more [:haskell :ansible :docker]}
 
  :side-projects [{:title "Test-Driven JavaScript Development"
                   :description "Etter noen år med fordypning i og blogging om
@@ -134,7 +134,14 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "http://cjohansen.no/an-introduction-to-elisp"
+ :blog-posts [{:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis"
+               :title "Building Static Sites in Clojure With Stasis"
+               :blurb "En lang tutorial-style bloggpost om å lage statiske
+                       websider i Clojure med blant annet biblioteket Stasis.
+                       Artikkelen gir et innblikk i bruk av mange populære
+                       web-biblioteker for Clojure."
+               :tech [:clojure :stasis :optimus]}
+              {:url "http://cjohansen.no/an-introduction-to-elisp"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little
