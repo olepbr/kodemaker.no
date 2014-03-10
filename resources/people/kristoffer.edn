@@ -1,6 +1,6 @@
 {:id :kristoffer
  :name ["Kristoffer" "Moe"]
- :title "Partner"
+ :title "Sjefskonsulent"
  :start-date "2003-09-01 09:00"
  :description "Kristoffer har vært i konsulentbransjen lenge, og bidrar gjerne på alle lag i systemutvikling, fra database opp
  til brukergrensesnitt, selv om hovedfokus er på Java. Han har alltid kundens behov i tankene, er analytisk men også pragmatisk
@@ -24,15 +24,15 @@
              :tech [:jsf :java :openam :bankid :weblogic :css :ajax :fatwire :git :jira :confluence :siteminder]}
              {:id :broadnet
              :customer "Broadnet AS"
-             :description "Jobbet med utvikling av FiberWeb-portalen, eget hypermediabasert REST-api for salg mot privatmarkedet og med
-             nytt system for ordreleveranse. I perioder også som SCRUM master"
+             :description "Jobbet med utvikling av FiberWeb-portalen for salg av bredbåndproduker i bedriftsmarkedet
+             og et eget hypermediabasert REST-API for registrering av salgsordre for ADSL i privatmarkedet gjennom ekstern CRM-applikasjon, samt et nytt system for ordreleveranse. I perioder som SCRUM master"
              :years [2012 2013]
              :tech [:wicket :java :mongodb :ajax :jaxrs :jboss :collectionjson]}
             {:id :kartverket
              :customer "Kartverket"
              :description "Utviklet webservice-API for uthenting av alle endringer for synkronisering
-             av eksterne systemer. Laget også integrasjon mot eksterne registre, som Enhetsregisteret
-             , Folkeregisteret og Tinglysing, for oppdatering av Matrikkelen derfra."
+             av andre systemer. Laget også integrasjon mot eksterne kilderegistre, som Enhetsregisteret,
+             Folkeregisteret og Tinglysing, for oppdatering av Matrikkelen derfra."
              :years [2005 2006 2007]
              :tech[:java :oracle-locator :mule :weblogic :swing :hibernate] }]
 
