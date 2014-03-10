@@ -3,6 +3,7 @@
 ;; og med space istedet for dash.
 {
  :angularjs "AngularJS"
+ :appcode "AppCode"
  :bankid "BankID"
  :buster-js "Buster.JS"
  :cd "CD"
@@ -33,8 +34,12 @@
  :jaxrs "JAX-RS"
  :zeromq "ZeroMQ"
  :http "HTTP"
+ :objc "Objective C"
+ :objcplusplus "Objective C++"
  :openssl "OpenSSL"
+ :reactive-cocoa "Reactive Cocoa"
  :ip "IP"
+ :ios "iOS"
  :dan-kennedy "Dan Kennedy"
  :frank-kern "Frank Kern"
  :google-adwords "Google AdWords"
