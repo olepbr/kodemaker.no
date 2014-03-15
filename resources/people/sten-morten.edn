@@ -2,7 +2,7 @@
  :name ["Sten Morten" "Misund-Asphaug"]
  :title "Frihetsforkjemper"
  :start-date "2008-10-01"
- :description "Sten Morten lager systemer som får kunder til å komme til deg, i stedet for omvendt, ved å bruke hundre år gamle direktemarkedsføringsteknikker, koblet sammen med moderne automatisering og annonseplattformer som Google AdWords og Facebook Ads."
+ :description "Sten Morten er frihetsforkjemper. Han mener vi skal bruke teknologi for å frigjøre oss fra unødvendig arbeid, i stedet for å bruke teknologi til å binde oss til arbeidspulten. Derfor lager han systemer som får kunder til å komme til deg, systemer som selger, og systemer som leverer produkter. Dette gjør han ved å bruke hundre år gamle direktemarkedsføringsteknikker, koblet sammen med moderne automatisering (programmering) og annonseplattformer som Google AdWords og Facebook Ads."
  :phone-number "Kontakte? Se timetools.no/kontakt.php"
  :email-address ""
 
@@ -26,7 +26,11 @@
             :illustration "/illustrations/hobbies/stenmorten-running.jpg"
 }]
 
- :blog-posts [{:url "http://programmerer.com/2013/05/hvis-du-ikke-har-hvis-eller-if-assembly-and-clojure/"
+ :blog-posts [{:url "http://www.timetools.no/ta-tiden-tilbake.php"
+               :title "Hvordan ta tiden din tilbake"
+               :blurb "De siste 3 månedene har livet mitt blitt snudd på hodet, og jeg elsker det. Jeg har tid til ungene, til kona mi, og til meg selv. Jeg er fri. Og jeg har en melding jeg gjerne vil dele med deg. Trykk play på videoen, og kos deg! (Og så tar jeg veldig gjerne i mot kommentarer under videoen, når du har sett den. Del dine tanker, hva drømmer du om, hva har DU lyst å få til?)"
+               :tech [:adwords :facebook-ads :aweber]}
+              {:url "http://programmerer.com/2013/05/hvis-du-ikke-har-hvis-eller-if-assembly-and-clojure/"
                :title "Hvis du ikke har hvis"
                :blurb "Hvordan implementerer du noe så enkelt som IF?"
                :tech [:assembly :clojure]}
