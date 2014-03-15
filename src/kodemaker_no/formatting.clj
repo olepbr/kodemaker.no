@@ -39,4 +39,3 @@
 
 (defn year-range [years]
   (str/join ", " (map year-range-str (consecutive-years years))))
-

@@ -45,8 +45,9 @@
                           (sort compare-by-start-date)
                           (reverse)
                           (map render-person))]
-          [:h1.hn (str (num-consultants people) " kvasse konsulenter")]
-          (interpose [:hr] (map render-reference (:references data)))
+          [:h1.hn "Trenger dere kunnskap?"]
           [:div.bigProse
-           (to-html (slurp (io/resource "index.md")))])})
-
+           (to-html (slurp (io/resource "index-kunnskap.md")))]
+          [:h1.hn "Trenger du mennesker?"]
+          [:div.bigProse
+           (to-html (slurp (io/resource "index-mennesker.md")))])})

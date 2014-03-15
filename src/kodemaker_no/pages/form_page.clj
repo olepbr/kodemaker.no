@@ -17,5 +17,5 @@
      [:button.btn {:type "submit"} button]]]))
 
 (defn form-page [data]
-  {:title "Hva er det du vil?"
+  {:title "Hva kan vi hjelpe deg med?"
    :body (render-form (:form data))})
