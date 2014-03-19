@@ -27,7 +27,7 @@ Nå er det sånn at **ingen kan alt**. I en verden som blir stadig mer spesialis
 ## Du har mye ansvar, og mye å tenke på
 Vi forstår at du har mye å tenke på. Vi forstår at du kan oppleve press både ovenfra og nedenfra. Vi jobber også som problemløsere, og står hver dag ovenfor utfordringer vi ikke enda vet hvordan vi skal løse. Vi kan hjelpe deg å stå trygt omringet av daglig usikkerhet.
 
-Med et team av Kodemakere har du mennesker rundt deg som er dyktige problemløsere. Som kommer til deg med erfaring, nettverk, og frisk øyne. Som vet hvor de skal starte med å ta fatt på et mangehodet troll av et problem. Som har en verktøykasse av "best practices", heuristikker og erfaringer med seg. Folk som er selvdrevne og initiavrike, som ikke setter seg ned og venter på at noen skal gi dem en løsning, men som tar tak og skaper løsningen selv.
+Med et team av Kodemakere har du mennesker rundt deg som er dyktige problemløsere. Som kommer til deg med erfaring, nettverk, og friske øyne. Som vet hvor de skal starte med å ta fatt på et mangehodet troll av et problem. Som har en verktøykasse av "best practices", heuristikker og erfaringer med seg. Folk som er selvdrevne og initiavrike, som ikke setter seg ned og venter på at noen skal gi dem en løsning, men som tar tak og skaper løsningen selv.
 
 &nbsp;
 ## Du får kun erfarne Kodemakere
