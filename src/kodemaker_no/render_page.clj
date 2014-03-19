@@ -39,7 +39,7 @@
        [:div.ocm-item [:a {:href "/mennesker/"} "Mennesker"]]
        [:div.ocm-item [:a {:href "/kurs/"} "Kurs"]]
        [:div.ocm-item [:a {:href "/referanser/"} "Referanser"]]
-       [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
+       [:div.ocm-item [:a {:href "/skjema/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
        [:div#header
@@ -49,7 +49,7 @@
           [:a {:href "/mennesker/"} "Mennesker"]
           [:a {:href "/kurs/"} "Kurs"]
           [:a {:href "/referanser/"} "Referanser"]
-          [:a {:href "/kontakt/"} "Ta kontakt"]]
+          [:a {:href "/skjema/"} "Ta kontakt"]]
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
        (h1-title title)
