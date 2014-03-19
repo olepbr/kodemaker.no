@@ -36,8 +36,9 @@
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
-       [:div.ocm-item [:a {:href "/referanser/"} "Referanser"]]
        [:div.ocm-item [:a {:href "/mennesker/"} "Mennesker"]]
+       [:div.ocm-item [:a {:href "/kurs/"} "Kurs"]]
+       [:div.ocm-item [:a {:href "/referanser/"} "Referanser"]]
        [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
@@ -45,8 +46,9 @@
         [:div.bd
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
-          [:a {:href "/referanser/"} "Referanser"]
           [:a {:href "/mennesker/"} "Mennesker"]
+          [:a {:href "/kurs/"} "Kurs"]
+          [:a {:href "/referanser/"} "Referanser"]
           [:a {:href "/kontakt/"} "Ta kontakt"]]
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
