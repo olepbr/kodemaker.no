@@ -1,8 +1,11 @@
 {:form {:title "Hva kan vi hjelpe deg med?"
-        :address "Din e-post eller telefon:"
+        :from "Mailgun Sandbox <postmaster@sandbox41046.mailgun.org>"
+        :to "Sten Morten <stenmorten@gmail.com>"
         :subject "Beskriv ditt ønske:"
         :button "Jeg ønsker å bli kontaktet"
-        :action {:url "http://mailchimp.com/somewhere"
+        :address "Din e-post eller telefon:"
+        :text "Din epost eller telefon"
+        :action {:url "secret"
                  :method "POST"}}
 
- :references [:nsb-personalbillett :finn-surf-sammen]}
+}
