@@ -1,4 +1,5 @@
-Påstand: **Et team av Kodemakere kan være den raskeste veien i mål** når du trenger å bygge noe med kode.
+<div class="media"><img src="/thumbs/faces/bengt-lyng-to-be-replaced.jpg" class="img thumb mts"><div class="bd"><a href="/nsb-personalbillett/" class="linkBlock right mod mts logo"><img src="/logos/nsb.png"></a><h4 class="mtn">Bengt Lyng <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Prosjektsjef</p><p class="near"><q>Kodemaker leverte ny teknisk løsning på kortere tid enn vi forventet, og vi fikk derfor også utviklet vesentlig mer enn vi først antok.  Kodemaker løste oppgaven med minimal administrasjon. De er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de flinke til å involvere og diskutere løsningene underveis med oss som oppdragsgiver.  Anbefales sterkt!</q></p><p><a href="/nsb-personalbillett/">Se referansen</a></p></div></div>
+## Påstand: **Et team av Kodemakere kan være den raskeste veien i mål** når du trenger å bygge noe med kode.
 
 Hvordan kan vi påstå noe sånn? Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
 
@@ -39,8 +40,6 @@ All ære til de firmaene som tar inn juniorer, som tar dem under sine vinger og 
 </ul>
 
 Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos [Forsvaret, NSB, NRK, FINN.no, Storebrand, og så videre...](/vaare-kunder)
-
-<div class="media"><img src="/thumbs/faces/bengt-lyng-to-be-replaced.jpg" class="img thumb mts"><div class="bd"><a href="/nsb-personalbillett/" class="linkBlock right mod mts logo"><img src="/logos/nsb.png"></a><h4 class="mtn">Bengt Lyng <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Prosjektsjef</p><p class="near"><q>Kodemaker leverte ny teknisk løsning på kortere tid enn vi forventet, og vi fikk derfor også utviklet vesentlig mer enn vi først antok.  Kodemaker løste oppgaven med minimal administrasjon. De er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de flinke til å involvere og diskutere løsningene underveis med oss som oppdragsgiver.  Anbefales sterkt!</q></p><p><a href="/nsb-personalbillett/">Se referansen</a></p></div></div>
 
 <div class="media"><img src="/thumbs/faces/bjorn-henrik-vangstein.jpg" class="img thumb mts"><div class="bd"><a href="/finn-surf-sammen/" class="linkBlock right mod mts logo"><img src="/logos/finn.png"></a><h4 class="mtn">Bjørn Henrik Vangstein <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Avdelingsleder IT</p><p class="near"><q>Vi i FINN.no har en meget sterk
                      utviklingsavdeling selv, og leier i mindre grad inn
