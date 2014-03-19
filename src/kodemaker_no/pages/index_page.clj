@@ -45,9 +45,6 @@
                           (sort compare-by-start-date)
                           (reverse)
                           (map render-person))]
-          [:h1.hn "Trenger dere kunnskap?"]
-          [:div.bigProse
-           (to-html (slurp (io/resource "index-kunnskap.md")))]
-          [:h1.hn "Trenger du mennesker?"]
-          [:div.bigProse
-           (to-html (slurp (io/resource "index-mennesker.md")))])})
+          [:h1.hn "Hva er raskeste veien i mål?"]
+          [:div
+           (to-html (slurp (io/resource "index.md")))])})
