@@ -36,7 +36,7 @@ All ære til de firmaene som tar inn juniorer, som tar dem under sine vinger og 
 <ul>
 <li>kun seniorer, så du ikke taper verdifull tid på feil som lett kunne vært unngått</li>
 <li>mennesker med nettverk, så du ikke risikerer å stå fast på grunn av problemer teamet ikke vet løsningen på</li>
-<li>friske øyne, så du får ristet litt løs i gamle tankemåter som kanskje ikke gavner deg lenger</li>
+<li>friske øyne, så du får ristet løs i gamle tankemåter som kanskje ikke gavner deg lenger</li>
 </ul>
 
 Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos [Forsvaret, NSB, NRK, FINN.no, Storebrand, og så videre...](/vaare-kunder)
