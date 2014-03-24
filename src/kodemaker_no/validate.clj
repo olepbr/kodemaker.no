@@ -123,15 +123,7 @@
    (optional-key :body) Str})
 
 (def Index
-  {:form {:title Str
-          :from Str
-          :to Str
-          :subject Str
-          :text Str
-          :button Str
-          :address Str
-          :action {:url URL
-                   :method Str}}})
+  {(optional-key :body) Str})
 
 (defn validate-content [content]
   (validate {:people {ID Person}
