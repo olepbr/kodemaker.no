@@ -5,7 +5,7 @@
         :button "Jeg ønsker å bli kontaktet"
         :address "Din e-post eller telefon:"
         :text "Din epost eller telefon"
-        :action {:url "secret"
+        :action {:url "http://www.somewhere.no/"
                  :method "POST"}}
 
 }
