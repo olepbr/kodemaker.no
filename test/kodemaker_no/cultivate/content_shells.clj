@@ -1,13 +1,7 @@
 (ns kodemaker-no.cultivate.content-shells)
 
 (defn index [m]
-  (merge {:form {:title "!"
-                 :address "!"
-                 :subject "!"
-                 :button "!"
-                 :action {:url "http://example.com"
-                          :method "POST"}}
-          :references []}
+  (merge {:references []}
          m))
 
 (defn content [m]
