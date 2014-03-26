@@ -39,7 +39,8 @@ All ære til de firmaene som tar inn juniorer, som tar dem under sine vinger og 
 <li>friske øyne, så du får ristet løs i gamle tankemåter som kanskje ikke gavner deg lenger</li>
 </ul>
 
-Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos [Forsvaret, NSB, NRK, FINN.no, Storebrand, og så videre...](/vaare-kunder)
+Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos blant
+andre [Forsvaret, NSB, NRK, FINN.no, og Storebrand](/vaare-kunder)
 
 <div class="media"><img src="/thumbs/faces/bjorn-henrik-vangstein.jpg" class="img thumb mts"><div class="bd"><a href="/finn-surf-sammen/" class="linkBlock right mod mts logo"><img src="/logos/finn.png"></a><h4 class="mtn">Bjørn Henrik Vangstein <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Avdelingsleder IT</p><p class="near"><q>Vi i FINN.no har en meget sterk
                      utviklingsavdeling selv, og leier i mindre grad inn
