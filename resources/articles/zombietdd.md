@@ -1,12 +1,12 @@
 :title Zombie TDD - Zombier, mafia og testdrevet utvikling
 :::lead
-
+Hei! Jeg heter [Magnar](/magnar/), og jeg lager et nettspill fra scratch med [JavaScript](/javascript/) på klient og server. Testdrevet etter beste evne. Har du lyst til å være med?
 :::body
 <iframe width="835" height="505" src="http://www.youtube.com/embed/317CL6bO6fM?hd=1" frameborder="0" allowfullscreen=""></iframe>
 
 <!-- Begin MailChimp Signup Form -->
 :::aside
-## Få ALLE episodene
+## Få ALLE episodene - én i uka
 <div id="mc_embed_signup">
 <form action="http://kodemaker.us3.list-manage.com/subscribe/post?u=4ebbe7240d7b3e43134812e43&amp;id=c9cf69fc1b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
