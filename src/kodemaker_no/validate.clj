@@ -4,6 +4,7 @@
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
+(def URL-or-Path (either URL Path))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
 
@@ -52,7 +53,7 @@
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    :blurb Str
                                    :tech [ID]
-                                   :urls {(optional-key :video) URL
+                                   :urls {(optional-key :video) URL-or-Path
                                           (optional-key :slides) URL
                                           (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    :thumb Path}]
