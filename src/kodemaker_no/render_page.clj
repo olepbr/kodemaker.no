@@ -37,7 +37,7 @@
      [:div#ocm ;; off-canvas menu
       [:div.bd
        [:div.ocm-item [:a {:href "/mennesker/"} "Mennesker"]]
-       [:div.ocm-item [:a {:href "/kurs/"} "Kurs"]]
+       [:div.ocm-item [:a {:href "/kurs/"} "Læring"]]
        [:div.ocm-item [:a {:href "/referanser/"} "Referanser"]]
        [:div.ocm-item [:a {:href "/skjema/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
@@ -47,7 +47,7 @@
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
           [:a {:href "/mennesker/"} "Mennesker"]
-          [:a {:href "/kurs/"} "Kurs"]
+          [:a {:href "/kurs/"} "Læring"]
           [:a {:href "/referanser/"} "Referanser"]
           [:a {:href "/skjema/"} "Ta kontakt"]]
          [:h1#logo.hn
