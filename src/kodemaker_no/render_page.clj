@@ -33,6 +33,7 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
     [:title (head-title title)]]
    [:body
+    [:script (slurp (io/resource "public/scripts/ga.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
