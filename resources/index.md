@@ -1,7 +1,6 @@
 <div class="media"><img src="/thumbs/faces/bengt-lyng-to-be-replaced.jpg" class="img thumb mts"><div class="bd"><a href="/nsb-personalbillett/" class="linkBlock right mod mts logo"><img src="/logos/nsb.png"></a><h4 class="mtn">Bengt Lyng <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Prosjektsjef</p><p class="near"><q>Kodemaker leverte ny teknisk løsning på kortere tid enn vi forventet, og vi fikk derfor også utviklet vesentlig mer enn vi først antok.  Kodemaker løste oppgaven med minimal administrasjon. De er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de flinke til å involvere og diskutere løsningene underveis med oss som oppdragsgiver.  Anbefales sterkt!</q></p><p><a href="/nsb-personalbillett/">Se referansen</a></p></div></div>
-## Påstand: **Et team av Kodemakere kan være den raskeste veien i mål** når du trenger å bygge noe med kode.
 
-Hvordan kan vi påstå noe sånn? Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
+Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
 
 Det er kanskje brutalt, men verden kan være tøff. Hvor mange IT-prosjekter går ikke på trynet? Hvor mange ledere har ikke ufrivillig havnet i avisen? Det verste er at det er ofte ikke deres feil. **Programmering er komplekst, og graden av kompleksitet er stort sett ukjent i dét prosjektet begynner**.
 
