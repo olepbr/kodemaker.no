@@ -259,7 +259,6 @@
  :endorsements [{:project :finn-surf-sammen
                  :author "Bjørn Henrik Vangstein"
                  :title "Avdelingsleder IT"
-                 :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
                  :quote "Magnar Sveen skiller seg klart ut i mengden,
                          både faglig og personlig. Han ble raskt ettertraktet på
                          huset, både på grunn av sine fagkunnskaper, som stikker
@@ -275,7 +274,6 @@
                 {:project :finn-oppdrag
                  :author "Kaija Ommundsen"
                  :title "Prosjekteier"
-                 :photo "/thumbs/faces/kaija-ommundsen.jpg"
                  :quote "Jeg har hatt glede av å bygge opp FINN oppdrag
                          sammen med Magnar. Jeg har sjelden møtt en utvikler som
                          han; svært opptatt av å lage gode opplevelser for
@@ -297,7 +295,6 @@
                 {:project :finn-oppdrag
                  :author "Endre Midtgård Meckelborg"
                  :title "Teknisk Leder"
-                 :photo "/thumbs/faces/endre-midtgard-meckelborg.jpg"
                  :quote "Ved oppbyggingen av FINN oppdrag jobbet jeg
                          sammen med Magnar, og det var en lærerik og morsom
                          opplevelse. Magnar er en av de beste frontend-utviklere
