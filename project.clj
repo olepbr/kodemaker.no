@@ -14,7 +14,8 @@
                  [prismatic/schema "0.2.0"]
                  [clj-time "0.6.0"]
                  [org.clojure/core.memoize "0.5.6"]]
-  :jvm-opts ["-Xmx768M"]
+  :jvm-opts ["-Xmx768M"
+             "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
