@@ -1,4 +1,16 @@
-<div class="media"><img src="/thumbs/faces/bengt-lyng-to-be-replaced.jpg" class="img thumb mts"><div class="bd"><a href="/nsb-personalbillett/" class="linkBlock right mod mts logo"><img src="/logos/nsb.png"></a><h4 class="mtn">Bengt Lyng <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Prosjektsjef</p><p class="near"><q>Kodemaker leverte ny teknisk løsning på kortere tid enn vi forventet, og vi fikk derfor også utviklet vesentlig mer enn vi først antok.  Kodemaker løste oppgaven med minimal administrasjon. De er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de flinke til å involvere og diskutere løsningene underveis med oss som oppdragsgiver.  Anbefales sterkt!</q></p><p><a href="/nsb-personalbillett/">Se referansen</a></p></div></div>
+<reference img="/thumbs/faces/bengt-lyng-to-be-replaced.jpg"
+           url="/nsb-personalbillett/"
+           logo="/logos/nsb.png"
+           name="Bengt Lyng"
+           phone="+47 999 88 777"
+           title="Prosjektsjef">
+  Kodemaker leverte ny teknisk løsning på kortere tid enn vi
+  forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
+  først antok. Kodemaker løste oppgaven med minimal administrasjon. De
+  er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de
+  flinke til å involvere og diskutere løsningene underveis med oss som
+  oppdragsgiver. Anbefales sterkt!
+</reference>
 
 Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
 har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere
@@ -105,7 +117,19 @@ Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag
 hos blant andre
 [Forsvaret, NSB, NRK, FINN.no, og Storebrand](/vaare-kunder)
 
-<div class="media"><img src="/thumbs/faces/bjorn-henrik-vangstein.jpg" class="img thumb mts"><div class="bd"><a href="/finn-surf-sammen/" class="linkBlock right mod mts logo"><img src="/logos/finn.png"></a><h4 class="mtn">Bjørn Henrik Vangstein <a href="tel:+47 999 88 777" class="nowrap">+47 999 88 777</a></h4><p class="near">Avdelingsleder IT</p><p class="near"><q>Vi i FINN.no har en meget sterk utviklingsavdeling selv, og leier i mindre grad inn konsulenter over lenger perioder. Siden vinteren 2008 har Kodemaker vært en av få leverandører av slike tjenester hos oss, og vi er meget godt fornøyd med den innsatsen som er levert. Konsulentene har glidd godt inn i vårt miljø, og ikke vært redde for å ta på seg både enkle og komplekse oppgaver.</q></p><p><a href="/finn-surf-sammen/">Se referansen</a></p></div></div>
+<reference img="/thumbs/faces/bjorn-henrik-vangstein.jpg"
+           url="/finn-surf-sammen/"
+           logo="/logos/finn.png"
+           name="Bjørn Henrik Vangstein"
+           phone="+47 999 88 777"
+           title="Avdelingsleder IT">
+  Vi i FINN.no har en meget sterk utviklingsavdeling selv, og leier i
+  mindre grad inn konsulenter over lenger perioder. Siden vinteren
+  2008 har Kodemaker vært en av få leverandører av slike tjenester hos
+  oss, og vi er meget godt fornøyd med den innsatsen som er levert.
+  Konsulentene har glidd godt inn i vårt miljø, og ikke vært redde for
+  å ta på seg både enkle og komplekse oppgaver.
+</reference>
 
 &nbsp;
 ## Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjektet
