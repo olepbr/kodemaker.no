@@ -25,7 +25,7 @@
 (defn- render-person [{:keys [url photos full-name title]}]
   [:div.gridUnit.r-4-3
    [:a.gridContent.linkBlock.tight.fpp {:href url}
-    [:img.framed.mbs {:src (:side-profile-cropped photos)}]
+    [:span.block.framed.mbs [:img {:src (:side-profile-cropped photos)}]]
     [:span.linkish full-name]
     [:span.title title]]])
 
