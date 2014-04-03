@@ -1,0 +1,7 @@
+.m-dot {display: none;}
+.m-title {float: left; width: 25%; text-align: right; margin-right: 25px; font-size: 24px; line-height: 1.2;}
+.m-item,
+.m-text {display:block; overflow:hidden; *overflow:visible; *zoom:1;}
+.m-item {margin-bottom: 1.7em;}
+.m-title {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
+.m-title br {display: inline;}

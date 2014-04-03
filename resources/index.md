@@ -40,35 +40,45 @@ det ikke er et lekeprosjekt du har, så finnes det komplekse problemer
 under overflaten, som noen må ta tak i og løse, for å få prosjektet
 ditt i mål.
 
-**Du må ha eller innføre en fungerende arbeidsprosess.** Om det er
-Scrum, Kanban, eller en annen prosess er ikke det viktige, men at du
-har en definert prosess som lar deg prioritere saker basert på
-forretningsverdi og tilgjengelige ressurser for implementering, og
-som gir deg transparens i forhold til fremdrift, så du ikke
-risikerer at oppgaver du trodde var ferdig for lenge siden, blir
-hengende i løse luften et sted på veien.
+<megalist>
+ <heading>Du må ha <br>en fungerende arbeidsprosess</heading>
+ <text>
+   Om det er Scrum, Kanban, eller en annen prosess er ikke det viktige,
+   men at du har en definert prosess som lar deg prioritere saker basert
+   på forretningsverdi og tilgjengelige ressurser for implementering, og
+   som gir deg transparens i forhold til fremdrift, så du ikke risikerer
+   at oppgaver du trodde var ferdig for lenge siden, blir hengende i løse
+   luften et sted på veien.
+ </text>
+ <heading>Du må ha <br>automatiserte tester</heading>
+ <text>
+   Etter hvert som kodebasen vokser, vil endringer du gjør ett sted,
+   kunne ødelegge funksjonalitet et annet sted, uten at det er
+   umiddelbart innlysende. Hvis det ikke oppdages med en gang, av
+   automatiserte tester, kan slike bugs leve lenge og bli svært dyre.
+ </text>
+ <heading>Du må ha <br>en automatisert bygg-prosess</heading>
+ <text>
+   Å få endringer ut på test-servere og ut i produksjon kan bli et
+   uforutsigbart mareritt, avhengig av noen få nøkkelpersoner, hvis ikke
+   også denne delen av jobben er automatisert med kode. Det tar litt tid
+   å sette opp, men timene sparer du inn utallige ganger.
+ </text>
+ <heading>Du må ha <br>en entydig "definition<br>of done"</heading>
+ <text>
+   Når er en funksjonalitet "ferdig"? Er det når en utvikler sier "det har
+   jeg laget"? Er det når en annen utvikler har sett på den koden, og
+   sagt "ok"? Er det når noen i teamet har testet funksjonaliteten på en
+   test-server? Er det når noen utenfor teamet har testet
+   funksjonaliteten, og godkjent den? Hvis du ikke vet nøyaktig hva det
+   betyr at en sak er "ferdig", risikerer du å gå på en stygg smell mot
+   slutten av prosjektet, når det viser seg at mange av sakene er
+   "ferdige ... de mangler bare tester, feilhåndtering, og css", for
+   eksempel.
+ </text>
+</megalist>
 
-**Du må ha automatiserte tester.** Etter hvert som kodebasen vokser,
-vil endringer du gjør ett sted, kunne ødelegge funksjonalitet et
-annet sted, uten at det er umiddelbart innlysende. Hvis det ikke
-oppdages med en gang, av automatiserte tester, kan slike bugs leve
-lenge og bli svært dyre.
 
-**Du må automatisere bygg-prosessen.** Å få endringer ut på
-test-servere og ut i produksjon kan bli et uforutsigbart mareritt,
-avhengig av noen få nøkkelpersoner, hvis ikke også denne delen av
-jobben er automatisert med kode. Det tar litt tid å sette opp, men
-timene sparer du inn utallige ganger.
-
-**Du må ha en entydig "definition of done".** Når er en funksjonalitet
-"ferdig"? Er det når en utvikler sier "det har jeg laget"? Er det
-når en annen utvikler har sett på den koden, og sagt "ok"? Er det
-når noen i teamet har testet funksjonaliteten på en test-server? Er
-det når noen utenfor teamet har testet funksjonaliteten, og godkjent
-den? Hvis du ikke vet nøyaktig hva det betyr at en sak er "ferdig",
-risikerer du å gå på en stygg smell mot slutten av prosjektet, når
-det viser seg at mange av sakene er "ferdige ... de mangler bare
-tester, feilhåndtering, og css", for eksempel.
 
 Nå er det sånn at **ingen kan alt**. I en verden som blir stadig mer
 spesialisert, er det uhyre viktig at menneskene du har, har **et

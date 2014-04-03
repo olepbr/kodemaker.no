@@ -22,6 +22,9 @@ ol {margin-left: 35px}
 ul li {list-style-type: disc;}
 ol li {list-style-type: decimal;}
 
+.m-item {margin-bottom: 1.3em;}
+.m-title br {display: none;}
+
 .bd,
 .line,
 .lastUnit {overflow:hidden; *overflow:visible; *zoom:1;}

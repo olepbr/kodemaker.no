@@ -42,14 +42,39 @@
                                       :attrs {:href url}
                                       :content "Se referansen"}]}]}]}))
 
+(defn- to-megalist-item [[title text]]
+  {:tag :p
+   :attrs {:class "m-item"}
+   :content [{:tag :strong
+              :attrs {:class "m-title"}
+              :content [{:tag :span
+                         :content (:content title)}
+                        {:tag :span
+                         :attrs {:class "m-dot"}
+                         :content "."}]}
+             {:tag :span
+              :attrs {:class "m-text"}
+              :content (:content text)}]})
+
+(defn- replace-megalist-tag [{:keys [content]}]
+  (prn content)
+  {:tag :div
+   :attrs {:class "megalist"}
+   :content (->> content
+                 (remove string?)
+                 (partition 2)
+                 (map to-megalist-item))})
+
 (defn- tweak-pages [html request]
   (sniptest html
-
             ;; use optimized images
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
             ;; implement <reference> tag
-            [:reference] replace-reference-tag))
+            [:reference] replace-reference-tag
+
+            ;; implement <megalist> tag
+            [:megalist] replace-megalist-tag))
 
 (defn prepare-page [get-page request]
   (-> (get-page)
