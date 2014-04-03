@@ -40,9 +40,10 @@
         (-> assets
             (transform-images {:regexp #"/photos/.+/side-profile\.jpg"
                                :quality 0.3
-                               :width (* 105 2)
+                               :crop {:offset [150 100]
+                                      :size [400 300]}
                                :progressive true
-                               :prefix "tiny/"})
+                               :prefix "cropped/"})
             (transform-images {:regexp #"/photos/.*\.jpg"
                                :quality 0.3
                                :width (* 290 2)

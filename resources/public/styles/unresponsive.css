@@ -3,8 +3,8 @@
 @import "460up.css";
 @import "620up.css";
 @import "730up.css";
-@import "810up.css";
 @import "960up.css";
+@import "space.css";
 
 #main {width: 960px;}
 img {width: auto;}

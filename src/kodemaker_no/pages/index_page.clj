@@ -23,11 +23,11 @@
     (render-our-reference-description name description url logo)))
 
 (defn- render-person [{:keys [url photos full-name title]}]
-  [:div.gridUnit.r-8-6-4
-   [:a.photoframe.gridContent.linkBlock {:href url}
-    [:span.thinMount.tiny.block
-     [:img.mbs {:src (:side-profile-tiny photos)}]
-     ]]])
+  [:div.gridUnit.r-4-3-2
+   [:a.gridContent.linkBlock.tight {:href url}
+    [:img.framed.mbs {:src (:side-profile-cropped photos)}]
+    [:span.linkish full-name]
+    [:span.title title]]])
 
 (defn- num-consultants [people]
   (->> people
@@ -39,7 +39,8 @@
            (:start-date b)))
 
 (defn index-page [people data]
-  {:body (list
+  {:title {:h1 (str (num-consultants people) " kvasse konsulenter")}
+   :body (list
           [:div.grid (->> people
                           (remove :administration?)
                           (sort compare-by-start-date)

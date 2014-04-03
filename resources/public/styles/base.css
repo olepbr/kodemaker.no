@@ -3,7 +3,7 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 a {text-decoration: none;}
 a:hover {text-decoration: underline;}
 
-.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
+.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
 #main {max-width: 960px; margin: 0 auto;}
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
@@ -40,6 +40,8 @@ ol li {list-style-type: decimal;}
 .photoframe:after {bottom: 5px; content: ""; position: absolute; width: 90%; height: 25px; z-index: -1; padding: 0; margin: 0 5%; display: block; background: transparent; border-radius: 100% / 50%; box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);}
 .mount {border: 1px solid #ccc; padding: 5px; background: #fff; max-width: 100%;}
 
+.framed {border: 3px solid #000;}
+
 .thinMount {border: 1px solid #ccc; padding: 3px 4px 0px; background: #fff; max-width: 100%;}
 
 .thumb {width: 100px; max-width: 20%;}
@@ -52,18 +54,14 @@ p {margin-bottom: 1.3em;}
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
-.r-8-6-4 {width: 25%; }
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
 .s-1of3 {width: 33.33333%;}
 .s-1of6 {width: 16.66667%;}
 
-
 .form label {display: block;}
 .input {width: 100%; font-size: 16px; padding: 5px; box-sizing: border-box;}
 .btn {font-size: 16px; padding: 8px 15px;}
-
-.fface {border-bottom: 15px solid black;}
 
 body {-webkit-text-size-adjust: 100%}
 
@@ -94,10 +92,6 @@ h4 {font-weight: bold;}
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
 
-.fpf {float: right; margin: 0 10px; max-width: 80%;} /* front page face */
-.fpt {position: absolute; bottom: 15px; font-size: 16px; left: 10px; padding: 0 5px;} /* front page title */
-.rel {position: relative;}
-
 .inverse {background: #000; color: #fff;}
 
 .aside, .body {line-height: 1.7;}
@@ -118,14 +112,6 @@ em {font-style: italic;}
 .presence {background-color: #d30707; float:left; margin: 0 2px 2px 0;}
 
 hr {border-top: 1px solid #ddd; border-left: 0; border-right: 0; border-bottom: 0;}
-
-.mtn {margin-top: 0 !important;}
-.mtl {margin-top: 15px !important;}
-.mbn {margin-bottom: 0 !important;}
-.mts {margin-top: 5px !important;}
-.mbs {margin-bottom: 5px !important;}
-.mrm {margin-right: 10px !important;}
-.mtm {margin-top: 10px !important;}
 
 blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
 blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: 0;}
