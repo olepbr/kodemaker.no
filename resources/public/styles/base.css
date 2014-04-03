@@ -54,11 +54,14 @@ ol li {list-style-type: decimal;}
 
 p {margin-bottom: 1.3em;}
 
+.fpp {font-size: 11px;} /* front page photos */
+
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
+.r-4-3,
 .s-1of3 {width: 33.33333%;}
 .s-1of6 {width: 16.66667%;}
 

@@ -23,8 +23,8 @@
     (render-our-reference-description name description url logo)))
 
 (defn- render-person [{:keys [url photos full-name title]}]
-  [:div.gridUnit.r-4-3-2
-   [:a.gridContent.linkBlock.tight {:href url}
+  [:div.gridUnit.r-4-3
+   [:a.gridContent.linkBlock.tight.fpp {:href url}
     [:img.framed.mbs {:src (:side-profile-cropped photos)}]
     [:span.linkish full-name]
     [:span.title title]]])

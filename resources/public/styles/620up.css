@@ -18,3 +18,5 @@ ol {margin-left: 40px;}
 
 blockquote {padding-left: 6em;}
 blockquote:before {left: 0.25em;}
+
+.fpp {font-size: 14px;} /* front page photos */
