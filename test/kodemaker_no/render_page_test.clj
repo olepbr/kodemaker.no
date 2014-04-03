@@ -37,9 +37,9 @@
      (select [:title]) first :content) => '("In head | Kodemaker"))
 
 (fact
- "Defaults to h1 title in head when no head title"
+ "Uses default title in head, even if there is a specific in h1"
  (-> {:title {:h1 "In h1"}} (render-page request) parse
-     (select [:title]) first :content) => '("In h1 | Kodemaker"))
+     (select [:title]) first :content) => '("Kodemaker"))
 
 (fact
  "Uses h1 title in body"
