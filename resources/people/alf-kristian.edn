@@ -113,7 +113,7 @@
                     for fremtiden enn andre."
                     :urls  {:video "https://vimeo.com/28765670"}
                     :thumb "/thumbs/presentations/alf-k-mc-ready.jpg"
-                    :tech  [:javascript :design]}]
+                    :tech  [:clojure :funksjonell-programmering]}]
 
  :endorsements    [{:author "Øyvind Møller Asbjørnsen"
                     :title  "Head of Java Community of Practice at Capgemini"
