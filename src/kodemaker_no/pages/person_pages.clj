@@ -109,14 +109,19 @@
   [:div.mod
    (keep #(render-presence-item % presence) presence-items)])
 
-(defn- render-aside [{:keys [full-name title phone-number email-address presence]}]
-  [:div.tight
-   [:h4 full-name]
-   [:p
-    title "<br>"
-    [:span.nowrap phone-number] "<br>"
-    [:a {:href (str "mailto:" email-address)} email-address]]
-   (when (seq presence) (render-presence presence))])
+(defn- render-aside [{:keys [full-name title phone-number email-address presence photos]}]
+  (list
+   [:div.illustration.mbn
+    [:img {:src (:half-figure photos)}]]
+   [:div.tight
+    [:hr.mtn]
+    [:h4 full-name]
+    [:p
+     title "<br>"
+     [:span.nowrap phone-number] "<br>"
+     [:a {:href (str "mailto:" email-address)} email-address]]
+    [:hr]
+    (when (seq presence) (render-presence presence))]))
 
 (defn- render-blog-post [{:keys [title tech blurb url]}]
   (list
@@ -216,14 +221,13 @@
   (let [date (time/today)
         upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
     (when (seq upcoming)
-     (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
-           (->> upcoming
-                (sort-by :date)
-                (map (partial render-upcoming-event date)))))))
+      (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
+            (->> upcoming
+                 (sort-by :date)
+                 (map (partial render-upcoming-event date)))))))
 
 (defn- person-page [person]
   {:title (:full-name person)
-   :illustration (-> person :photos :half-figure)
    :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
