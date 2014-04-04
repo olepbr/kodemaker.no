@@ -105,8 +105,8 @@ h4 {font-weight: bold;}
 .tight {line-height: 1.4;}
 
 q {color: #666;}
-q:before {content: "“"}
-q:after {content: "”"}
+q:before {content: "«"}
+q:after {content: "»"}
 
 strong {font-weight: bold;}
 em {font-style: italic;}

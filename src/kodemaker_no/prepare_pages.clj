@@ -1,6 +1,7 @@
 (ns kodemaker-no.prepare-pages
-  (:require [kodemaker-no.render-page :refer [render-page]]
+  (:require [clojure.string :as str]
             [kodemaker-no.homeless :refer [update-vals]]
+            [kodemaker-no.render-page :refer [render-page]]
             [net.cgrand.enlive-html :refer [sniptest]]
             [optimus.link :as link]))
 
@@ -36,7 +37,7 @@
                           {:tag :p
                            :attrs {:class "near"}
                            :content [{:tag :q
-                                      :content content}]}
+                                      :content (str/trim (first content))}]}
                           {:tag :p
                            :content [{:tag :a
                                       :attrs {:href url}
@@ -75,10 +76,16 @@
             ;; implement <megalist> tag
             [:megalist] replace-megalist-tag))
 
+(defn- use-norwegian-quotes [html]
+  (-> html
+   (str/replace "“" "«")
+   (str/replace "”" "»")))
+
 (defn prepare-page [get-page request]
   (-> (get-page)
       (render-page request)
-      (tweak-pages request)))
+      (tweak-pages request)
+      use-norwegian-quotes))
 
 (defn prepare-pages [pages]
   (update-vals pages #(partial prepare-page %)))
