@@ -1,4 +1,4 @@
-<reference img="/thumbs/faces/bengt-lyng-to-be-replaced.jpg"
+<reference img="/references/dummy-1.jpg"
            url="/nsb-personalbillett/"
            logo="/logos/nsb.png"
            name="Bengt Lyng"
@@ -127,7 +127,7 @@ Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag
 hos blant andre
 [Forsvaret, NSB, NRK, FINN.no, og Storebrand](/vaare-kunder)
 
-<reference img="/thumbs/faces/bjorn-henrik-vangstein.jpg"
+<reference img="/references/dummy-1.jpg"
            url="/finn-surf-sammen/"
            logo="/logos/finn.png"
            name="Bjørn Henrik Vangstein"

@@ -3,9 +3,4 @@
  :logo "/logos/nsb.png"
  :description "Funksjonalitet i en 10 år gammel sentral applikasjon måtte løftes til tidsriktig teknisk nivå, og samtidig utvikles med ny tiltrengt funksjonalitet."
  :site "http://www.nsb.no/"
- :awesomeness 95
- :reference {:author "Bengt Lyng"
-             :quote "Kodemaker leverte ny teknisk løsning på kortere tid enn vi forventet, og vi fikk derfor også utviklet vesentlig mer enn vi først antok.  Kodemaker løste oppgaven med minimal administrasjon. De er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de flinke til å involvere og diskutere løsningene underveis med oss som oppdragsgiver.  Anbefales sterkt!"
-             :title "Prosjektsjef"
-             :phone "+47 999 88 777"
-             :photo "/thumbs/faces/bengt-lyng-to-be-replaced.jpg"}}
+ :awesomeness 95}

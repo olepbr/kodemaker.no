@@ -1,3 +1,8 @@
 h1 {font-size: 60px;}
 h2 {font-size: 25px;}
 .r-4-3 {width: 25%;}
+
+.ref {display: table;}
+.ref-txt {display: none;}
+.ref-w {display: table-cell; width: 50%; vertical-align: top; border-right: 3px solid #000;}
+.ref-txt-2 {display: table-cell; width: 50%; vertical-align: top; font-style: italic;}

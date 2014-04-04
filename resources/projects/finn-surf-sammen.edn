@@ -4,16 +4,4 @@
  :description "Konsulenter fra Kodemaker jobbet sammen med ansatte i FINN.no og laget funksjonalitet for å opprette personlige lister med annonser
  av interesse, og mulighet for brukere å 'surfe sammen'. Disse listene kan deles med andre brukere, for eksempel i boligjakt eller leting etter ny bil."
  :site "http://www.finn.no/"
- :awesomeness 90
- :reference {:author "Bjørn Henrik Vangstein"
-             :quote "Vi i FINN.no har en meget sterk
-                     utviklingsavdeling selv, og leier i mindre grad inn
-                     konsulenter over lenger perioder. Siden vinteren 2008 har
-                     Kodemaker vært en av få leverandører av slike tjenester
-                     hos oss, og vi er meget godt fornøyd med den innsatsen
-                     som er levert. Konsulentene har glidd godt inn i vårt
-                     miljø, og ikke vært redde for å ta på seg både enkle og
-                     komplekse oppgaver."
-             :title "Avdelingsleder IT"
-             :phone "+47 999 88 777"
-             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"}}
+ :awesomeness 90}

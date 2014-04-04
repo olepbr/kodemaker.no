@@ -124,3 +124,13 @@ blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
 blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: 0;}
 
 code { font-family: sans-serif; }
+
+.ref {border: 3px solid #000;}
+.ref-img {border-bottom: 3px solid #000;}
+.ref-txt {border-bottom: 3px solid #000; font-style: italic;}
+.ref-txt-2 {display: none;}
+.ref-card {display: table; width: 100%;}
+.ref-info {display: table-cell; text-align: right; width: 70%; vertical-align: top;}
+.ref-logo {display: table-cell; vertical-align: top;}
+.ref-logo img {max-height: 4em; max-width: 150px; margin: 20px;}
+

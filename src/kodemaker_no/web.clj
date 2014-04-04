@@ -21,6 +21,7 @@
                                 "/styles/unresponsive.css"
                                 #"/illustrations/.*\.jpg"
                                 #"/thumbs/.*\.jpg"
+                                #"/references/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"
                                 #"/photos/.*\.png"
@@ -47,6 +48,10 @@
             (transform-images {:regexp #"/photos/.*\.jpg"
                                :quality 0.3
                                :width (* 290 2)
+                               :progressive true})
+            (transform-images {:regexp #"/references/.*\.jpg"
+                               :quality 0.3
+                               :width (* 680 2)
                                :progressive true})
             (transform-images {:regexp #"/illustrations/.*\.jpg"
                                :quality 0.3
