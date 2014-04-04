@@ -26,14 +26,13 @@
 (fact (-> (page) :aside html) => (html [:div.illustration.mbn
                                         [:img {:src "/photos/magnars/half-figure.jpg"}]]
                                        [:div.tight
-                                        [:hr.mtn]
+                                        [:hr.mtn.s-3of4]
                                         [:h4 "Magnar Sveen"]
                                         [:p
                                          "Framsieutvikler" "<br>"
                                          [:span.nowrap "+47 918 56 425"] "<br>"
                                          [:a {:href "mailto:magnar@kodemaker.no"}
-                                          "magnar@kodemaker.no"]]
-                                        [:hr]]))
+                                          "magnar@kodemaker.no"]]]))
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er **bra**."
