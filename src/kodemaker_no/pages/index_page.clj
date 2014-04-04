@@ -37,7 +37,7 @@
   (compare (:start-date a)
            (:start-date b)))
 
-(defn index-page [people data]
+(defn index-page [people]
   {:title {:h1 (str (num-consultants people) " kvasse konsulenter")}
    :body (list
           [:div.grid (->> people

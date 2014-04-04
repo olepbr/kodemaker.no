@@ -121,15 +121,11 @@
    :lead Str
    (optional-key :body) Str})
 
-(def Index
-  {:references [ID]})
-
 (defn validate-content [content]
   (validate {:people {ID Person}
              :tech {ID Tech}
              :projects {ID Project}
              :articles {Path Article}
              :tech-names {ID Str}
-             :blog-posts {Path BlogPost}
-             :index Index}
+             :blog-posts {Path BlogPost}}
             content))

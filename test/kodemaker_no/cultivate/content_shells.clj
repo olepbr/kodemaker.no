@@ -1,17 +1,12 @@
 (ns kodemaker-no.cultivate.content-shells)
 
-(defn index [m]
-  (merge {:references []}
-         m))
-
 (defn content [m]
   (merge {:people {}
           :tech {}
           :projects {}
           :articles {}
           :tech-names {}
-          :blog-posts {}
-          :index (index {})}
+          :blog-posts {}}
          m))
 
 (defn tech [m]

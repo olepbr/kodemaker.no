@@ -10,7 +10,7 @@
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
-  {"/" (partial index-page (vals (:people content)) (:index content))
+  {"/" (partial index-page (vals (:people content)))
    "/skjema/" (partial form-page (:index content))
    "/referanser/" (partial references-page (vals (:projects content)))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))})
