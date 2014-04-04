@@ -52,7 +52,8 @@
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
        (h1-title title)
-       content
+       [:div.bd
+        content]
        [:div#footer
         [:div.bd
          [:div.mod
