@@ -57,7 +57,6 @@
               :content (:content text)}]})
 
 (defn- replace-megalist-tag [{:keys [content]}]
-  (prn content)
   {:tag :div
    :attrs {:class "megalist"}
    :content (->> content
