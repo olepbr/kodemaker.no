@@ -45,6 +45,6 @@
                           (sort compare-by-start-date)
                           (reverse)
                           (map render-person))]
-          [:h1.hn "Hva er raskeste veien i mål?"]
+          [:h1.hn.pth "Hva er raskeste veien i mål?"]
           [:div
            (to-html (slurp (io/resource "index.md")))])})

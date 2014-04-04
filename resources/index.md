@@ -101,7 +101,7 @@ problemløsere. Som kommer til deg med erfaring, nettverk, og friske
 øyne. Som vet hvor de skal starte med å ta fatt på et mangehodet troll
 av et problem. Som har en verktøykasse av "best practices",
 heuristikker og erfaringer med seg. Folk som er selvdrevne og
-initiavrike, som ikke setter seg ned og venter på at noen skal gi dem
+initiativrike, som ikke setter seg ned og venter på at noen skal gi dem
 en løsning, men som tar tak og skaper løsningen selv.
 
 ## Du får kun erfarne Kodemakere
