@@ -78,15 +78,16 @@
    [:div.bd
     [:h3.mtn author]
     (when (or title project)
-      [:p.near
-       (when title title)
-       (when (and title project) ", ")
-       (when project (markup/link-if-url project))])
+      [:p.near.mbl
+       [:strong
+        (when title title)
+        (when (and title project) ", ")
+        (when project (markup/link-if-url project))]])
     [:p [:q quote]]]])
 
 (defn- render-endorsements [endorsements person]
   (list [:h2 (str (:genitive person) " referanser")]
-        (map render-endorsement endorsements)))
+        (interpose [:hr.mtn.mhn] (map render-endorsement endorsements))))
 
 (def cv
   {:id :cv             :baseUrl "http://www.kodemaker.no/cv/"  :logo "cv.png"            :title "Cv"})
