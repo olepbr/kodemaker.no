@@ -108,7 +108,7 @@ h4 {font-weight: bold;}
 .aside, .body {line-height: 1.7;}
 .tight {line-height: 1.4;}
 
-q {color: #666;}
+q {font-style: italic;}
 q:before {content: "«"}
 q:after {content: "»"}
 
