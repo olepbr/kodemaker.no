@@ -142,7 +142,7 @@ hos blant andre
 </reference>
 
 &nbsp;
-## Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjektet
+## Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjekt
 
 Vi er bare et visst antall mennesker, og hver av oss kan bare jobbe
 med et prosjekt av gangen. Det er i alles interesse at prosjektet ditt
