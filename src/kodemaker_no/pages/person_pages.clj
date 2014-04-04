@@ -212,13 +212,14 @@
                     (list " - "
                           [:a {:href (:url call-to-action)} (:text call-to-action)])))]))
 
-(defn- render-upcoming [upcoming person]
-  (let [date (time/today)]
-    (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
-          (->> upcoming
-               (filter #(d/within? date (d/in-weeks date 6) (:date %)))
-               (sort-by :date)
-               (map (partial render-upcoming-event date))))))
+(defn- render-upcoming [events person]
+  (let [date (time/today)
+        upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
+    (when (seq upcoming)
+     (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
+           (->> upcoming
+                (sort-by :date)
+                (map (partial render-upcoming-event date)))))))
 
 (defn- person-page [person]
   {:title (:full-name person)

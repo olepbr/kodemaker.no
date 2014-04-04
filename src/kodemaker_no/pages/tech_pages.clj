@@ -84,13 +84,14 @@
                     (list " - "
                           [:a {:href (:url call-to-action)} (:text call-to-action)])))]))
 
-(defn- render-upcoming [upcoming tech]
-  (let [date (t/today)]
-    (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
-          (->> upcoming
-               (filter #(d/within? date (d/in-weeks date 6) (:date %)))
-               (sort-by :date)
-               (map (partial render-upcoming-event date))))))
+(defn- render-upcoming [events tech]
+  (let [date (t/today)
+        upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
+    (when (seq upcoming)
+     (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
+           (->> upcoming
+                (sort-by :date)
+                (map (partial render-upcoming-event date)))))))
 
 
 (defn- maybe-include [tech kw f]
