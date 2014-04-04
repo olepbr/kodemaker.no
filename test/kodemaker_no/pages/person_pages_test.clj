@@ -21,16 +21,19 @@
   (((person-pages [(merge magnar extras)] date) "/magnar/")))
 
 (fact (-> (page) :title) => "Magnar Sveen")
-(fact (-> (page) :illustration) => "/photos/magnars/half-figure.jpg")
 (fact (-> (page) :lead) => "<p>The <em>description</em></p>")
 
-(fact (-> (page) :aside html) => (html [:div.tight
+(fact (-> (page) :aside html) => (html [:div.illustration.mbn
+                                        [:img {:src "/photos/magnars/half-figure.jpg"}]]
+                                       [:div.tight
+                                        [:hr.mtn]
                                         [:h4 "Magnar Sveen"]
                                         [:p
                                          "Framsieutvikler" "<br>"
                                          [:span.nowrap "+47 918 56 425"] "<br>"
                                          [:a {:href "mailto:magnar@kodemaker.no"}
-                                          "magnar@kodemaker.no"]]]))
+                                          "magnar@kodemaker.no"]]
+                                        [:hr]]))
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er **bra**."
@@ -95,7 +98,7 @@
                 [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]))
 
 (fact (->> (page :presence {:twitter "magnars"})
-           :aside last html)
+           :aside last last html)
 
       => (html [:div.mod
                 [:div.presence
