@@ -104,6 +104,9 @@
      when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/build-queue.js') == -1"
      sudo: no
 
+   - name: make sure node forever is started after reboot
+     cron: name="reboot-build-queue" special_time=reboot user="{{ansible_ssh_user}}" job="forever start /home/{{ansible_ssh_user}}/build-queue.js"
+
    - name: Add nginx to www group
      user: name=nginx group=www
 
