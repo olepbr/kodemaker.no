@@ -16,7 +16,8 @@ a:hover {text-decoration: underline;}
 #header {background: #000; position: relative;}
 
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
-h2 {margin: 10px 0; padding: 0 10px;}
+h2 {margin: 10px 0; padding: 5px 10px; line-height: 1.2em;}
+h1 {line-height: 1.1em;}
 
 ul {margin-left: 30px}
 ol {margin-left: 35px}
