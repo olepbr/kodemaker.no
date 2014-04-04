@@ -76,7 +76,7 @@
 
 (defn- combine-presentations [presentations]
   (-> (first presentations)
-      (select-keys #{:title :blurb :thumb})
+      (select-keys #{:title :blurb})
       (assoc
           :by (map :by presentations)
           :tech (distinct (mapcat :tech presentations))
@@ -87,7 +87,7 @@
                    (->> (:people content)
                         vals
                         (mapcat (get-with-byline :presentations))
-                        (group-by :thumb)
+                        (group-by :urls)
                         vals
                         (map combine-presentations)
                         (filter #(is-about tech %)))))

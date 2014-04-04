@@ -12,7 +12,6 @@
           create-pages keys set)
 
       => #{"/"
-           "/mennesker/"
            "/referanser/"
            "/magnars/"
            "/finnjoh/"
@@ -25,8 +24,8 @@
 
 (fact "Colliding urls are not tolerated."
 
-      (create-pages {:people {}, :articles {"/mennesker/" ""}})
-      => (throws Exception "URL conflicts between :article-pages and :general-pages: #{\"/mennesker/\"}")
+      (create-pages {:people {}, :articles {"/skjema/" ""}})
+      => (throws Exception "URL conflicts between :article-pages and :general-pages: #{\"/skjema/\"}")
 
       (create-pages {:people {:magnars {:url "/magnars/"}
                               :finnjoh {:url "/finnjoh/"}}

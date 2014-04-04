@@ -96,7 +96,6 @@
                   Denne presentasjonen fokuserer på hvor viktig det er å velge
                   riktig programmeringsspråk."
                     :urls  {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
-                    :thumb "/thumbs/presentations/alf-k-prog-youtube.jpg"
                     :tech  [:funksjonell-programmering :clojure :scala
                             :python :groovy :java]}
                    {:title "Lisp er vakkert!"
@@ -104,7 +103,6 @@
                     syntaks. Men når man forstår hvorfor syntaksen er som
                     den er, så blir språket vakkert!"
                     :urls  {:video "http://vimeo.com/49324971"}
-                    :thumb "/thumbs/presentations/alf-k-lisp.jpg"
                     :tech  [:lisp :clojure]}
                    {:title "Clojure - JVM språket som er \"multi-core ready\""
                     :blurb "En introduksjonspresentasjon om Clojure,
@@ -112,7 +110,6 @@
                     Forklarer også hvorfor Clojure er et bedre rustet språk
                     for fremtiden enn andre."
                     :urls  {:video "https://vimeo.com/28765670"}
-                    :thumb "/thumbs/presentations/alf-k-mc-ready.jpg"
                     :tech  [:clojure :funksjonell-programmering]}]
 
  :endorsements    [{:author "Øyvind Møller Asbjørnsen"

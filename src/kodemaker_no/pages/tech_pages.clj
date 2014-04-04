@@ -20,18 +20,13 @@
         (map render-recommendation recommendations)))
 
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
-  [:div.media
-   [:a.img.thumb.mts {:href (or (:video urls)
-                                (:slides urls)
-                                (throw (Exception. (str "Missing url to video or slides in presentation " title))))}
-    [:img {:src thumb}]]
-   [:div.bd
-    [:h4.mtn title
-     [:span.shy.tiny.nowrap " av " (comma-separated (map link-to-person by))]]
-    [:p blurb
-     (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
-     (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
-     (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]]])
+  (list
+   [:h4.mtn title]
+   [:p.near.cookie-w [:span.cookie "Holdt av " (comma-separated (map link-to-person by))]]
+   [:p blurb
+    (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
+    (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
+    (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]))
 
 (defn- render-presentations [presentations _]
   (list [:h2 "Våre presentasjoner"]

@@ -61,18 +61,12 @@
      (inline-list "Vil lære mer: " (map markup/link-if-url want-to-learn-more)))])
 
 (defn- render-presentation [{:keys [urls title thumb blurb tech]}]
-  [:div.media
-   [:a.img.thumb.mts {:href (or (:video urls)
-                                (:slides urls)
-                                (throw (Exception. (str "Missing url to video or slides in presentation " title))))}
-    [:img {:src thumb}]]
-   [:div.bd
-    [:h3.mtn title]
-    (render-tech-bubble tech)
-    [:p blurb
-     (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
-     (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
-     (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]]])
+  (list [:h3.mtn title]
+        (render-tech-bubble tech)
+        [:p blurb
+         (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
+         (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
+         (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]))
 
 (defn- render-presentations [presentations person]
   (list [:h2 (str (:genitive person) " foredrag")]

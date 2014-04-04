@@ -84,20 +84,15 @@
                                   :blurb "Jeg tegner og forteller."
                                   :tech [{:name "JavaScript", :url "/javascript/"}]
                                   :urls {:video "http://vimeo.com/28764670"
-                                         :source "https://github.com/magnars/server-facade"}
-                                  :thumb "/thumbs/presentations/trivelig-testing.jpg"}])
+                                         :source "https://github.com/magnars/server-facade"}}])
            :body html)
 
       => (html [:h2 "Magnars foredrag"]
-               [:div.media
-                [:a.img.thumb.mts {:href "http://vimeo.com/28764670"}
-                 [:img {:src "/thumbs/presentations/trivelig-testing.jpg"}]]
-                [:div.bd
-                 [:h3.mtn "Lyntale: Wrap Ajax'en din"]
-                 [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]
-                 [:p "Jeg tegner og forteller. "
-                  [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
-                  [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]]]))
+               [:h3.mtn "Lyntale: Wrap Ajax'en din"]
+               [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]
+               [:p "Jeg tegner og forteller. "
+                [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
+                [:a.nowrap {:href "https://github.com/magnars/server-facade"} "Se koden"]]))
 
 (fact (->> (page :presence {:twitter "magnars"})
            :aside last html)

@@ -38,13 +38,11 @@
  :presentations [{:title "You probably don't know how the internet actually works"
                   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
                   :urls {:video "http://vimeo.com/74406482"}
-                  :thumb "/thumbs/presentations/how-the-internet-actually-works.jpg"
-                  :tech [:ip :openssl :ruby]}
+                   :tech [:ip :openssl :ruby]}
                  {:title "WTF is Datomic?"
                   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
                   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
-                  :thumb "/thumbs/presentations/wtf-is-datomic.jpg"
-                  :tech [:datomic :clojure :immutability]}]
+                   :tech [:datomic :clojure :immutability]}]
  :open-source-projects [{:url "https://github.com/busterjs/buster/"
                          :name "Buster.JS"
                          :description "Ambisiøst test-toolkit for JavaScript."

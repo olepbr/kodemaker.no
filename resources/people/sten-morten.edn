@@ -46,23 +46,19 @@
  :presentations [{:title "Det eneste du MÅ (FINN.no Techdagen)"
                   :blurb "Om du bare skulle leve ETT liv, hva ville du gjort da? Resultatet av ti år med lykkeforskning er klar: Det vi trenger, er 1) en følelse av samhold, 2) følelse av kontroll over eget liv, 3) å kunne skape noe, 4) å kunne bidra positivt i verden. Samtidig viser eksperimenter med arbeidsdagens lengde at mange får mer gjort når de jobber kortere dager enn åtte timer. Flere bedrifter opplever feitere bunnlinjer med kortere arbeidsdager. Så hva om vi jobbet mindre, tjente mer, og fikk mer fritid? Ja, hva da?"
                   :tech [:hjernen]
-                  :urls {:video "http://4x4player.com/deteneste.php"}
-                  :thumb "/thumbs/presentations/detenestedumaa.jpg"}
+                  :urls {:video "http://4x4player.com/deteneste.php"}}
                  {:title "Lag ditt eget språk, i Groovy, på 37 minutter (JavaZone)"
                   :blurb "Sten Morten viser deg alt du trenger å kunne for å lage ditt eget programmeringsspråk, på 37 minutter."
                   :tech [:lisp :groovy]
-                  :urls {:video "http://vimeo.com/album/2525252/video/74401304"}
-                  :thumb "/thumbs/presentations/livet.jpg"}
+                  :urls {:video "http://vimeo.com/album/2525252/video/74401304"}}
                  {:title "Kjærlighet i automatiseringens tid (CIONET)"
                   :blurb "Kan det hende du får utrettet mer, om du jobber mindre? Hvorfor har vi egentlig 8-timers arbeidsdag? På 34 minutter presenterer jeg et verktøy du kan bruke for å få gjort mer, på færre timer."
                   :tech [:hjernen]
-                  :urls {:video "http://4x4player.com/arbeidsdagenslengde.php"}
-                  :thumb "/thumbs/presentations/kjrlighet_i_automatiseringens_tid.jpg"}
+                  :urls {:video "http://4x4player.com/arbeidsdagenslengde.php"}}
                  {:title "En deilig implementert AND (Teknologihuset)"
                   :blurb "Et dypdykk inn i clojure.core, der vi ser på hvor utrolig deilig AND er implementert"
                   :tech [:hjernen :clojure]
-                  :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}
-                  :thumb "/thumbs/presentations/enestedumaa.jpg"}]
+                  :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}}]
 
  :open-source-projects [{:url "https://github.com/steni/ryolisp"
                          :name "Roll Your Own Lisp"

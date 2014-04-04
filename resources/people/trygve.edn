@@ -32,8 +32,7 @@
  :presentations [{:title "Groovy collection API"
                          :blurb "En oversikt over groovy's collection api, som gitt på Communities in Action, feb. 2012"
                          :tech [:groovy]
-                         :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}
-                         :thumb "/thumbs/presentations/cia-groovy-collection-api.jpg"}]
+                         :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
 
  :open-source-projects [{:url "https://github.com/trygvea/grails-class-diagram"
                          :name "Grails class diagram plugin"

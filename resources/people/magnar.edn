@@ -177,16 +177,14 @@
                           hvordan to typer som digger JavaScript
                           angriper problemer og gjør koden testbar."
                   :tech [:javascript :tdd :testing]
-                  :urls {:video "http://vimeo.com/49485653"}
-                  :thumb "/thumbs/presentations/zombie-tdd-live.jpg"}
+                  :urls {:video "http://vimeo.com/49485653"}}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får
                           ryddig kode og trivelig testing ved å wrappe ajaxen
                           din."
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
-                         :source "https://github.com/magnars/server-facade"}
-                  :thumb "/thumbs/presentations/trivelig-testing.jpg"}]
+                         :source "https://github.com/magnars/server-facade"}}]
 
  :open-source-projects [{:url "https://github.com/culljs/culljs"                 :name "cull.js"               :description "Et verktøybelte for å skrive funksjonell JavaScript."                                    :tech [:javascript :nodejs]}
                         {:url "https://github.com/culljs/dome"                   :name "dome.js"               :description "Et lite bibliotek for å bygge, traversere og manipulere DOM."                            :tech [:javascript]}

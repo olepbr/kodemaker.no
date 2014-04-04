@@ -178,22 +178,19 @@
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
                   :urls {:video "http://vimeo.com/43808808"}
-                  :thumb "/thumbs/presentations/functional-js.jpg"
-                  :tech [:javascript]}
+                   :tech [:javascript]}
                  {:title "Test-driven JavaScript Development"
                   :blurb "En praktisk gjennomgang av TDD i JavaScript.
                   Foredraget er en times live-kode-sesjon der jeg lager et
                   autocomplete/type-ahead søk, test-first."
                   :urls {:video "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"}
-                  :thumb "/thumbs/presentations/js-tdd-ndc.jpg"
-                  :tech [:javascript :design :testing]}
+                   :tech [:javascript :design :testing]}
                  {:title "JavaScript design and architecture"
                   :blurb "En liten inspirasjonsprat om å finne gode
                   abstraksjoner for frontend-programmering"
                   :urls {:video "http://vimeo.com/28760470"
                          :slides "http://cjohansen.no/talks/2011/javazone-js-design"}
-                  :thumb "/thumbs/presentations/jz-js-design.jpg"
-                  :tech [:javascript :design]}
+                   :tech [:javascript :design]}
                  {:title "Mythbusters: JavaScript Edition"
                   :blurb "Få programmeringsspråk er omgitt av så mye unøyaktig,
                           irrelevant og direkte feil informasjon og misforstått
@@ -202,8 +199,7 @@
                           gjennom eksempler å oppgradere publikums JavaScript-kunnskap."
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
-                  :thumb "/thumbs/presentations/mythbusters.jpg"
-                  :tech [:javascript]}]
+                   :tech [:javascript]}]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"

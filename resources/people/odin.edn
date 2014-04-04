@@ -64,16 +64,14 @@
                           Her får du en oversikt over Unix-verktøy for å
                           strukturere og filtrere tekst."
                   :tech [:shell :unix]
-                  :urls {:video "https://vimeo.com/74309669"}
-                  :thumb "/thumbs/presentations/elektronisk_tekstbehandling.jpg"}
+                  :urls {:video "https://vimeo.com/74309669"}}
                  {:title "Better and groovier tests with Spock"
                   :blurb "Spock er et elegant testrammeverk for Java og Groovy-
                           baserte applikasjoner. Det hjelper deg å skrive
                           lesbare og presise tester, samtidig som det optimaliserer
                           for utviklerproduktivitet."
                   :tech [:spock :testing :java :groovy]
-                  :urls {:video "/groovyspock/"}
-                  :thumb "/thumbs/presentations/spock.jpg"}]
+                  :urls {:video "/groovyspock/"}}]
 
  :hobbies [{:title "Fotografering"
             :description "Kameraet mitt er stort sett med overalt. Du vet

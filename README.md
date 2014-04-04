@@ -71,8 +71,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    :tech [ID]
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
-                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
-                                   :thumb Path}]
+                                          (optional-key :source) URL}}] ;; må ha minst en av disse URLene
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
