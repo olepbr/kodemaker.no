@@ -114,13 +114,12 @@
    [:div.illustration.mbn
     [:img {:src (:half-figure photos)}]]
    [:div.tight
-    [:hr.mtn]
+    [:hr.mtn.s-3of4]
     [:h4 full-name]
     [:p
      title "<br>"
      [:span.nowrap phone-number] "<br>"
      [:a {:href (str "mailto:" email-address)} email-address]]
-    [:hr]
     (when (seq presence) (render-presence presence))]))
 
 (defn- render-blog-post [{:keys [title tech blurb url]}]

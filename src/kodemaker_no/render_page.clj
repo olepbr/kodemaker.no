@@ -54,18 +54,17 @@
        (h1-title title)
        content
        [:div#footer
-        [:div.mod
-         [:strong (no-widows "Kodemaker Systemutvikling AS")] " "
-         [:span.nowrap "Orgnr. 982099595 "]
-         [:div
-          [:span.nowrap "Dronning Eufemias gate 16,"] " "
-          [:span.nowrap "Visma-bygget,"] " "
-          [:span.nowrap "0191 Oslo"]]
-         [:div
-          [:span.nowrap "Telefon: +47 22 82 20 80."] " "
-          [:span.nowrap "Telefaks: +47 22 82 20 88"] " "
-          [:span.nowrap "E-post: <a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]
-       ]]]
+        [:div.bd
+         [:div.mod
+          [:strong.mrl (no-widows "Kodemaker Systemutvikling AS")] " "
+          [:span.nowrap "Orgnr. 982099595 "]
+          [:div
+           [:span.nowrap "Dronning Eufemias gate 16,"] " "
+           [:span.nowrap "Visma-bygget,"] " "
+           [:span.nowrap "0191 Oslo"]]
+          [:div
+           [:span.nowrap.mrl "+47 22 82 20 80"] " "
+           [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]]]
     [:script
      (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
 

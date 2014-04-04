@@ -24,7 +24,6 @@ sett ukjent i dét prosjektet begynner**.
 
 Det er klart det er store muligheter for å trå feil.
 
-&nbsp;
 ## Hva skal til for at ditt prosjekt lykkes?
 
 **Uansett om vi skal hjelpe deg eller du ordner biffen selv**, er det
@@ -40,6 +39,7 @@ det ikke er et lekeprosjekt du har, så finnes det komplekse problemer
 under overflaten, som noen må ta tak i og løse, for å få prosjektet
 ditt i mål.
 
+<hr class="mhn">
 <megalist>
  <heading>Du må ha <br>en fungerende arbeidsprosess</heading>
  <text>
@@ -77,8 +77,7 @@ ditt i mål.
    eksempel.
  </text>
 </megalist>
-
-
+<hr class="mhn">
 
 Nå er det sånn at **ingen kan alt**. I en verden som blir stadig mer
 spesialisert, er det uhyre viktig at menneskene du har, har **et
@@ -90,7 +89,6 @@ hjelper hverandre, lærer av hverandre, spør hverandre... trekker
 hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
 
-&nbsp;
 ## Du har mye ansvar, og mye å tenke på
 
 Vi forstår at du har mye å tenke på. Vi forstår at du kan oppleve
@@ -106,7 +104,6 @@ heuristikker og erfaringer med seg. Folk som er selvdrevne og
 initiavrike, som ikke setter seg ned og venter på at noen skal gi dem
 en løsning, men som tar tak og skaper løsningen selv.
 
-&nbsp;
 ## Du får kun erfarne Kodemakere
 
 All ære til de firmaene som tar inn juniorer, som tar dem under sine
@@ -141,7 +138,6 @@ hos blant andre
   å ta på seg både enkle og komplekse oppgaver.
 </reference>
 
-&nbsp;
 ## Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjekt
 
 Vi er bare et visst antall mennesker, og hver av oss kan bare jobbe
@@ -164,9 +160,8 @@ For å hjelpe oss plukke ut prosjekter vi har tro på, vil vi at du
 så leser vi over det og tar kontakt med deg så snart vi har mulighet.
 Stort sett vil du høre fra oss innen to arbeidsdager.
 
-Altså: **[Fyll inn prosjektskjema her](/skjema/)**.
+Altså: [Fyll inn prosjektskjema her](/skjema/).
 
-&nbsp;
 ## ... eller du kan forbli i uvissheten
 
 Som sagt, finnes det ingen garantier her i livet. Men med Kodemaker på
@@ -174,4 +169,6 @@ din side står du tryggere og har større sjanser for å lykkes. Du får
 kode som fungerer, raskere. Du får noen av bransjens skarpeste hoder
 til å holde full fokus på dine mål. Du får folk som spiser
 beste-praksis til frokost til å skrive din kode. Du får et nettverk av
-dyktige fagfolk på din side. [Du får rett og slett Kodemaker](/skjema/).
+dyktige fagfolk på din side.
+
+[Du får rett og slett Kodemaker](/skjema/).

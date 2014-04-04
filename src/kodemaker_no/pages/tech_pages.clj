@@ -21,7 +21,7 @@
 
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
   (list
-   [:h4.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
+   [:h3.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
    [:p.near.cookie-w [:span.cookie "Holdt av " (comma-separated (map link-to-person by))]]
    [:p blurb
     (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
