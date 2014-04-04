@@ -15,7 +15,8 @@ a:hover {text-decoration: underline;}
 
 #header {background: #000; position: relative;}
 
-.illustration, .mod, h1, h2, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
+.illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
+h2 {margin: 10px 0; padding: 0 10px;}
 
 ul {margin-left: 30px}
 ol {margin-left: 35px}
@@ -81,15 +82,15 @@ body {-webkit-text-size-adjust: 100%}
 
 img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
-a, h1, h2, .linkish {color: #d30707;}
+a, h1, h3, .linkish {color: #d30707;}
 
 .block {display: block;}
 .linkBlock {display: block; text-decoration: none !important;}
 .linkBlock:hover .linkish {text-decoration: underline;}
 
 h1 {font-size: 30px;}
-h2 {font-size: 20px; border-bottom: 1px solid #ddd; font-weight: bold;}
-h3 {font-size: 18px; font-weight: bold;}
+h2 {font-size: 20px; font-weight: bold; color: #fff; background: #000;}
+h3 {font-size: 20px; font-weight: bold;}
 h4 {font-weight: bold;}
 
 .near, h3, h4, h5 {margin-bottom: 0 !important;}
