@@ -11,3 +11,5 @@
 .map {width: 100%; height: 200px;}
 
 .fpp {font-size: 12px;} /* front page photos */
+
+.ref-logo img {max-width: 150px;}

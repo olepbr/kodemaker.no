@@ -132,5 +132,5 @@ code { font-family: sans-serif; }
 .ref-card {display: table; width: 100%;}
 .ref-info {display: table-cell; text-align: right; width: 70%; vertical-align: top;}
 .ref-logo {display: table-cell; vertical-align: top;}
-.ref-logo img {max-height: 4em; max-width: 150px; margin: 20px;}
+.ref-logo img {max-height: 4em; max-width: 100px; margin: 20px;}
 
