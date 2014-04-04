@@ -3,7 +3,6 @@
             [kodemaker-no.pages.blog-pages :refer [blog-post-pages blog-page]]
             [kodemaker-no.pages.index-page :refer [index-page]]
             [kodemaker-no.pages.form-page :refer [form-page]]
-            [kodemaker-no.pages.people-page :refer [all-people]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.references-page :refer [references-page]]
@@ -13,7 +12,6 @@
 (defn general-pages [content]
   {"/" (partial index-page (vals (:people content)) (:index content))
    "/skjema/" (partial form-page (:index content))
-   "/mennesker/" (partial all-people (vals (:people content)))
    "/referanser/" (partial references-page (vals (:projects content)))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))})
 
