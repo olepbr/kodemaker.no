@@ -12,7 +12,7 @@
      [:span.cookie (comma-separated (map markup/link-if-url tech))]]))
 
 (defn- render-recommendation [{:keys [title tech blurb link]}]
-  (list [:h3 title]
+  (list [:h3 [:a {:href (:url link)} title]]
         (render-tech-bubble tech)
         (markup/append-to-paragraph
          (to-html blurb)
@@ -37,7 +37,7 @@
 
 (defn- render-side-project [{:keys [title description link illustration]}]
   [:div.bd
-   [:h3.mtn title]
+   [:h3.mtn [:a {:href (:url link)} title]]
    (-> (to-html description)
        (markup/append-to-paragraph
         (list " " (markup/render-link link)))
@@ -61,7 +61,7 @@
      (inline-list "Vil lære mer: " (map markup/link-if-url want-to-learn-more)))])
 
 (defn- render-presentation [{:keys [urls title thumb blurb tech]}]
-  (list [:h3.mtn title]
+  (list [:h3.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
         (render-tech-bubble tech)
         [:p blurb
          (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
@@ -120,7 +120,7 @@
 
 (defn- render-blog-post [{:keys [title tech blurb url]}]
   (list
-   [:h3 title]
+   [:h3 [:a {:href url} title]]
    (render-tech-bubble tech)
    (markup/append-to-paragraph
     (to-html blurb)
@@ -202,7 +202,7 @@
     (f (kw person) person)))
 
 (defn- render-upcoming-event [now {:keys [title tech date url call-to-action location description]}]
-  (list [:h3 title]
+  (list [:h3 [:a {:href (:url call-to-action)} title]]
         (render-tech-bubble tech)
         [:p description]
         [:p (list [:a {:href (:url location)} (:title location)]

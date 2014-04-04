@@ -9,7 +9,7 @@
   [:a {:href (:url person)} (:name person)])
 
 (defn- render-recommendation [{:keys [title by blurb link]}]
-  (list [:h3 title]
+  (list [:h3 [:a {:href (:url link)} title]]
         [:p.near.cookie-w [:span.cookie "Anbefalt av " (comma-separated (map link-to-person by))]]
         (markup/append-to-paragraph
          (to-html blurb)
@@ -21,7 +21,7 @@
 
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
   (list
-   [:h4.mtn title]
+   [:h4.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
    [:p.near.cookie-w [:span.cookie "Holdt av " (comma-separated (map link-to-person by))]]
    [:p blurb
     (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
@@ -34,7 +34,7 @@
 
 (defn- render-blog-post [{:keys [title by blurb url]}]
   (list
-   [:h3 title]
+   [:h3 [:a {:href url} title]]
    [:p.near.cookie-w [:span.cookie "Skrevet av " (link-to-person by)]]
    (markup/append-to-paragraph
     (to-html blurb)

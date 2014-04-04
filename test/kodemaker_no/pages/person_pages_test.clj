@@ -39,7 +39,7 @@
            :body html)
 
       => (html [:h2 "Magnars anbefalinger"]
-               [:h3 "Anbefaling 1"]
+               [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
                [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er <strong>bra</strong>. "
                 [:a.nowrap {:href "http://example.com"} "Les detta"]]))
@@ -88,7 +88,7 @@
            :body html)
 
       => (html [:h2 "Magnars foredrag"]
-               [:h3.mtn "Lyntale: Wrap Ajax'en din"]
+               [:h3.mtn [:a {:href "http://vimeo.com/28764670"} "Lyntale: Wrap Ajax'en din"]]
                [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]
                [:p "Jeg tegner og forteller. "
                 [:a.nowrap {:href "http://vimeo.com/28764670"} "Se video"] " "
