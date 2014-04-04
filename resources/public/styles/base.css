@@ -59,7 +59,7 @@ ol li {list-style-type: decimal;}
 p {margin-bottom: 1.3em;}
 
 .fpp {font-size: 11px;} /* front page photos */
-.fpp .linkish {padding-left: 3px;}
+.fpp .linkish {display: block; padding-left: 3px;}
 
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
