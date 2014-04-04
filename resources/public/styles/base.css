@@ -18,6 +18,7 @@ a:hover {text-decoration: underline;}
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
 h2 {margin: 10px 0; padding: 5px 10px; line-height: 1.2em;}
 h1 {line-height: 1.1em;}
+h3 {line-height: 1.3em;}
 
 ul {margin-left: 30px}
 ol {margin-left: 35px}
@@ -113,7 +114,7 @@ strong {font-weight: bold;}
 em {font-style: italic;}
 
 .cookie {text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px;}
-.cookie-w {margin-top: -10px !important; }
+.cookie-w {margin-top: -5px !important; }
 
 #footer {border-top: 1px solid #ddd; color: #666; line-height: 1.7; font-size: 12px; clear: both; margin-top: 10px;}
 
