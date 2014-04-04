@@ -26,8 +26,7 @@
   [:div.gridUnit.r-4-3
    [:a.gridContent.linkBlock.tight.fpp {:href url}
     [:span.block.framed.mbs [:img {:src (:side-profile-cropped photos)}]]
-    [:span.linkish full-name]
-    [:span.title title]]])
+    [:span.linkish full-name]]])
 
 (defn- num-consultants [people]
   (->> people
