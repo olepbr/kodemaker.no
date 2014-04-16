@@ -11,7 +11,7 @@
 
 (defn general-pages [content]
   {"/" (partial index-page (vals (:people content)))
-   "/skjema/" (partial form-page (:index content))
+   "/skjema/" form-page
    "/referanser/" (partial references-page (vals (:projects content)))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))})
 

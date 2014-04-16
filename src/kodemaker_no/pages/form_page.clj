@@ -1,21 +1,18 @@
 (ns kodemaker-no.pages.form-page
   (:require [kodemaker-no.formatting :refer [to-html]]))
 
-(defn- render-form [{:keys [title address subject button action]}]
-  (list
-   [:form.form.mod {:action (:url action)
-                    :method (:method action)}
-    [:label subject]
-    [:textarea.input {:rows 4}]
-    [:label "Omtrentlig omfang:"]
-    [:input.input {:type "text"}]
-    [:label "Ønsket oppstart:"]
-    [:input.input {:type "text"}]
-    [:label address]
-    [:input.input {:type "text"}]
-    [:div
-     [:button.btn {:type "submit"} button]]]))
-
-(defn form-page [data]
+(defn form-page []
   {:title "Hva kan vi hjelpe deg med?"
-   :body (render-form (:form data))})
+   :body (list
+          [:form.form.mod {:action "/send-mail"
+                           :method "POST"}
+           [:label "Prosjektbeskrivelse:"]
+           [:textarea.input {:rows 4, :name "tekst"}]
+           [:label "Omtrentlig omfang:"]
+           [:input.input {:type "text", :name "omfang"}]
+           [:label "Ønsket oppstart:"]
+           [:input.input {:type "text", :name "oppstart"}]
+           [:label "Kontaktinformasjon:"]
+           [:input.input {:type "text", :name "kontakt"}]
+           [:div
+            [:button.btn {:type "submit"} "Send skjema"]]])})
