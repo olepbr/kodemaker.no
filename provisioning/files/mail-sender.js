@@ -33,10 +33,10 @@ http.createServer(function (req, res) {
           text: info.join("\n\n")
         });
 
-        res.writeHead(302, {'Location': '/takk'});
+        res.writeHead(302, {'Location': '/takk/'});
         res.end();
       } else {
-        res.writeHead(302, {'Location': '/skjema'});
+        res.writeHead(302, {'Location': '/skjema/'});
       }
 
     });
