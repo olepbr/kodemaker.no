@@ -1,6 +1,6 @@
 module.exports = {
-  from: "kontakt@kodemaker.no",
-  to: "magnars@gmail.com",
+  from: "web@kodemaker.no",
+  to: "kontakt@kodemaker.no",
   subject: "Forespørsel fra nye.kodemaker.no",
   apiUser: "api:key-secret"
 };

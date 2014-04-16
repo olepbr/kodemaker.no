@@ -21,7 +21,17 @@ module.exports = function (params) {
     }
   };
 
-  var req = https.request(options, function () {});
+  var req = https.request(options, function (res) {
+    var out = "";
+    res.setEncoding('utf8');
+    res.on("data", function (chunk) {
+      out = out + chunk;
+    });
+    res.on("end", function () {
+      console.log(out);
+      console.log("");
+    });
+  });
   req.write(data);
   req.end();
 };

@@ -77,6 +77,15 @@
 
    - name: Upload build-queue script
      template: src=files/build-queue.js dest=/home/{{ansible_ssh_user}}/build-queue.js owner={{ansible_ssh_user}} group=www
+     notify: restart build-queue
+
+   - name: Upload mail-sender scripts
+     template: src=files/{{item}} dest=/home/{{ansible_ssh_user}}/{{item}} owner={{ansible_ssh_user}} group=www
+     with_items:
+       - mail-config.js
+       - mail-sender.js
+       - send-mail.js
+     notify: restart mail-sender
 
    - name: Create SSH directory
      file: state=directory path=/home/{{ansible_ssh_user}}/.ssh/ owner={{ansible_ssh_user}} mode=0700
@@ -104,8 +113,16 @@
      when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/build-queue.js') == -1"
      sudo: no
 
-   - name: Make sure node forever is started after reboot
+   - name: Start mail-sender
+     command: forever start /home/{{ansible_ssh_user}}/mail-sender.js
+     when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/mail-sender.js') == -1"
+     sudo: no
+
+   - name: Make sure build-queue is started after reboot
      cron: name="reboot-build-queue" special_time=reboot user="{{ansible_ssh_user}}" job="forever start /home/{{ansible_ssh_user}}/build-queue.js"
+
+   - name: Make sure mail-sender is started after reboot
+     cron: name="reboot-mail-sender" special_time=reboot user="{{ansible_ssh_user}}" job="forever start /home/{{ansible_ssh_user}}/mail-sender.js"
 
    - name: Add nginx to www group
      user: name=nginx group=www
@@ -131,3 +148,11 @@
 
    - name: restart varnish
      service: name=varnish state=restarted enabled=yes
+
+   - name: restart build-queue
+     command: forever restart /home/{{ansible_ssh_user}}/build-queue.js
+     sudo: no
+
+   - name: restart mail-sender
+     command: forever restart /home/{{ansible_ssh_user}}/mail-sender.js
+     sudo: no

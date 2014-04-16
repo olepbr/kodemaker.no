@@ -325,6 +325,16 @@ brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/
 
 ### Neste: Sette opp kodemaker.no
 
+Først av alt må du sette opp mail-utsendingen:
+
+```sh
+cp provisioning/files/mail-config-sample.js provisioning/files/mail-config.js
+```
+
+Åpne `provisioning/files/mail-config.js` og legg til den hemmelige
+nøkkelen på `apiUser`. Hvis du ikke har noen, så er det greit på en
+lokal maskin. Da bare funker det ikke å sende mail. ;-)
+
 Når du bootstrapper, så vil root-login og passord-login bli disablet.
 Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
 annen inkantasjon:
