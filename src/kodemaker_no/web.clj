@@ -58,7 +58,16 @@
             (optimizations/all options)))
       (clojure.core.memoize/lru {} :lru/threshold 3)))
 
+(defn- dummy-mail-sender [handler]
+  (fn [req]
+    (if (= "/send-mail" (:uri req))
+      (do (prn "Sending mail!" (slurp (:body req)))
+          {:status 302
+           :headers {"Location" "/takk/"}})
+      (handler req))))
+
 (def app (-> (stasis/serve-pages get-pages)
+             dummy-mail-sender
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
              wrap-content-type-utf-8))
