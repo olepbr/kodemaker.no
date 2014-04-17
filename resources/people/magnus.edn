@@ -30,7 +30,11 @@
              :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
- :presentations [{:title "Gradle - Det er faktisk ditt bygg"
+ :presentations [{:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
+                  :blurb "Screencast med en kort introduksjon til LightTable InstaBuster"
+                  :tech [:javascript :testing :lighttable]
+                  :urls {:video "http://www.youtube.com/watch?v=WKHWazblpbc"}}
+                 {:title "Gradle - Det er faktisk ditt bygg"
                   :blurb "Mange klamrer seg fortsatt til
                           illusjonen at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen, men i litt større organisasjoner finner man alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle."
                   :tech [:gradle :groovy]
@@ -69,7 +73,16 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/LightTable-Groovy"
+ :open-source-projects[{:url "https://github.com/rundis/lt-snippets"
+                        :name "lt-snippets"
+                        :description "Snippet/templates plugin for Light Table"
+                        :tech [:lighttable :clojurescript]}
+                       {:url "https://github.com/busterjs/lt-instabuster"
+                        :name "LightTable InstaBuster"
+                        :description "Light Table plugin for BusterJS"
+                        :tech [:lighttable :javascript :clojurescript]
+                        }
+                       {:url "https://github.com/rundis/LightTable-Groovy"
                         :name "LightTable-Groovy"
                         :description "Groovy plugin for Light Table. Steg 1 er å lage et langt bedre Groovy Console. Steg 2 er helt åpent. Sky's the limit!"
                         :tech [:lighttable :groovy :clojurescript]}
