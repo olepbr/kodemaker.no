@@ -14,3 +14,6 @@
 .fpp {font-size: 12px;} /* front page photos */
 
 .ref-logo img {max-width: 150px;}
+
+.lastUnit label {white-space: nowrap;}
+.lastUnit .input {border-left: 0;}
