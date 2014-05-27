@@ -12,7 +12,7 @@
   (->> blog-posts (sort-by :published) reverse))
 
 (defn- blog-post-li [blog-post]
-  [:li.small (list [:a {:href (str (:path blog-post) "#disqus_thread")} (:title blog-post)]
+  [:li.small (list [:a {:href (:path blog-post)} (:title blog-post)]
                    [:br]
                    [:span.shy (published blog-post)])])
 
@@ -49,10 +49,11 @@
   (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))
 
 (defn blog-post-page [blog-post blog-posts]
-  {:title {:head (:title blog-post)}
+  {:title (:title blog-post)
    :illustration (:illustration blog-post)
-   :aside (blog-post-aside blog-post blog-posts)
-   :lead (blog-post-lead blog-post)
+   :aside (list
+           [:p.shy (published blog-post)]
+           (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)
                [:div#disqus_thread.mod]
                [:script (str "var disqus_identifier='" (:path blog-post) "';"

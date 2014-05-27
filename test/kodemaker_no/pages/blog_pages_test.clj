@@ -27,10 +27,8 @@
 (fact "Gets blog post pages"
       (let [page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))
             body (:body page-content)]
-        (:title page-content) => {:head "Nice blog post"}
+        (:title page-content) => "Nice blog post"
         (:illustration page-content) => "/photos/sexy.jpg"
-        (:lead page-content) => '([:h2 [:a {:href "/blogg/nice-blog-post/"} "Nice blog post"]]
-                                    [:p.shy "01.01.2013"])
         (html (first body)) => (html [:p "This is nice, right?"])
         (html (second body)) => (html [:div#disqus_thread.mod])))
 
