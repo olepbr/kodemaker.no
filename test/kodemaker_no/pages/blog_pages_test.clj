@@ -42,7 +42,7 @@
 (fact "Blog index sorts posts by published date"
       (let [page-content (blog-page (vals blog-posts))
             body (parse-html (:body page-content))]
-        (:title page-content) => "Kodemakerbloggen"
-        (-> body (select [:h2]) (nth 0) str) => #(.contains % "Nice blog post")
-        (-> body (select [:h2]) (nth 1) str) => #(.contains % "Annen artikkel")
-        (-> body (select [:h2]) (nth 2) str) => #(.contains % "Ausam artikkel")))
+        (:title page-content) => {:head "Kodemakerbloggen"}
+        (-> body (select [:h1]) (nth 0) str) => #(.contains % "Nice blog post")
+        (-> body (select [:h1]) (nth 1) str) => #(.contains % "Annen artikkel")
+        (-> body (select [:h1]) (nth 2) str) => #(.contains % "Ausam artikkel")))

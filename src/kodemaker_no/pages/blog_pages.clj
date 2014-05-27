@@ -20,8 +20,7 @@
   [:ul (map blog-post-li blog-posts)])
 
 (defn- blog-post-lead [blog-post]
-  (list [:h2 [:a {:href (:path blog-post)} (:title blog-post)]]
-        [:p.shy (published blog-post)]))
+  [:h1.hn.mbs [:a {:href (:path blog-post)} (:title blog-post)]])
 
 (defn- blog-post-body [blog-post]
   (to-html (:body blog-post)))
@@ -34,16 +33,17 @@
              blog-post-list)))
 
 (defn- render-blog-post [blog-post]
-  [:div.line
-   [:div.unit.s-1of3
-    [:div.bd
-     (when-let [img (:illustration blog-post)]
-       [:a.block.mod {:href (:path blog-post)} [:img {:src img}]])]]
-   [:div.lastUnit
-    [:div.bd
-     (list
-      (blog-post-lead blog-post)
-      (blog-post-body blog-post))]]])
+  (list
+   (blog-post-lead blog-post)
+   [:div.line
+    [:div.unit.s-1of3
+     [:div.bd
+      (when-let [img (:illustration blog-post)]
+        [:a.block.mod {:href (:path blog-post)} [:img {:src img}]])
+      [:p.shy (published blog-post)]]]
+    [:div.lastUnit
+     [:div.bd
+      (blog-post-body blog-post)]]]))
 
 (defn- disqus-script []
   (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))
@@ -65,5 +65,8 @@
       (update-vals #(partial blog-post-page % (vals blog-posts)))))
 
 (defn blog-page [blog-posts]
-  {:title "Kodemakerbloggen"
-   :body (map render-blog-post (by-published blog-posts))})
+  {:title {:head "Kodemakerbloggen"}
+   :body (->> blog-posts
+              by-published
+              (map render-blog-post)
+              (interpose [:hr.mhn]))})
