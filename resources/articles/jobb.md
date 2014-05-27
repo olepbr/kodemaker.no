@@ -1,6 +1,6 @@
 :title På tide med ny jobb?
 
-:::aside
+:aside
 
 <a href="/magnus/"><img src="/photos/people/magnus/side-profile-cropped.jpg"></a>
 
@@ -27,7 +27,7 @@ sikker på at de også hadde satt pris på flere jenter i miljøet vårt.</q>
 alle kundeforhold, kontrakter, lønninger og timepriser. Åbenhet. Det må en
 liga!</q>
 
-:::lead
+:lead
 
 ### Hvem sin feil er det at du kjeder deg på jobben?
 

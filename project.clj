@@ -10,6 +10,7 @@
                  [ring "1.2.1"]
                  [hiccup "1.0.4"]
                  [enlive "1.1.5"]
+                 [mapdown "0.1.0"]
                  [me.raynes/cegdown "0.1.1"]
                  [prismatic/schema "0.2.0"]
                  [clj-time "0.6.0"]

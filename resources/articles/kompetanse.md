@@ -1,7 +1,7 @@
 :title Systemutvikling på høyt nivå
 :illustration /photos/people/kolbjorn/side-profile-cropped.jpg
 
-:::lead
+:lead
 
 Vi er et fokusert selskap. Fokusert på kompetanse. Erfaringer fra
 tøffere tider har lært oss at vi må være helt i front teknologisk for
@@ -10,7 +10,7 @@ oppdatert på nye teknologier og trender innen våre fagfelt. Kundene
 opplever oss som medspillere, og vi er flinke til å formidle og dele
 vår kunnskap.
 
-:::body
+:body
 
 ## Teknologisk i front
 
@@ -60,7 +60,7 @@ forsøker å bistå i å gjøre de riktige valgene til riktig tid. Vi
 behersker mange teknologier og plattformer, og dette framkommer best
 via den enkeltes CV.
 
-:::aside
+:aside
 
 [Kolbjørn Jetne](/kolbjorn/)
 

@@ -1,7 +1,7 @@
 :title Skarpe kniver på JavaZone
 :published 2013-09-13
 :illustration /photos/blog/javazone2013.jpg
-:::body
+:body
 
 Vi i Kodemaker trives godt på Javazone. Hyggelig å møte gamle og ikke minst nye
 bekjente. Sushi er ikke upopulært, og jammen hadde vi mange deltakere på den

@@ -1,6 +1,6 @@
 :title Ta kontakt
 
-:::lead
+:lead
 
 <div class="mod"><div id="map" class="map"></div></div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w&sensor=false"></script>
@@ -25,7 +25,7 @@ Vår besøksadresse er Dronning Eufemias gate 16, 9. etasje. Henvendelse i resep
 
 [Noen andre du vil snakke med?](/mennesker/)
 
-:::aside
+:aside
 
 <a href="/kolbjorn/"><img src="/photos/people/kolbjorn/side-profile-cropped.jpg"></a>
 

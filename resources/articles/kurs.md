@@ -1,10 +1,10 @@
 :title Vi liker å dele
 
-:::lead
+:lead
 
 Bli med på foredrag, kurs, eller workshop, eller len deg tilbake og se en screencast!
 
-:::body
+:body
 
 ## Videoserier
 

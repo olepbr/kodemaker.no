@@ -1,7 +1,7 @@
 :title Nerdaid vs Firmajulenissen
 :published 2013-11-22
 :illustration /photos/blog/nerdaid.jpg
-:::body
+:body
 
 Kodemaker angriper julegaveproblematikk allerede i november, og setter
 firmajulenissen sjakk matt. Ingen mulighet til mottrekk, og seier til veldedige

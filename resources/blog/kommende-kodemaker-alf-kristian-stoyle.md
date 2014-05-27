@@ -2,7 +2,7 @@
 :published 2013-06-28
 :illustration /photos/blog/alf-kristian-stoyle.jpg
 
-:::body
+:body
 
 Det er over et år siden vi ansatte noen sist, men den som venter på noe godt…
 

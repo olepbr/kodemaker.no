@@ -1,7 +1,7 @@
 :title Høstens andre nykommer – Christian Johansen
 :published 2013-08-27
 :illustration /photos/blog/christian-johansen.jpg
-:::body
+:body
 
 Det var på tide at Christian begynner i Kodemaker. Han har stått på ønskelisten
 lenge. Vi synes Gitorious-folket er en bra gjeng, og ville ikke aktivt
