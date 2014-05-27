@@ -21,6 +21,7 @@
                                 "/styles/unresponsive.css"
                                 #"/illustrations/.*\.jpg"
                                 #"/thumbs/.*\.jpg"
+                                #"/forside/.*\.jpg"
                                 #"/references/.*\.jpg"
                                 #"/photos/.*\.jpg"
                                 #"/photos/.*\.svg"

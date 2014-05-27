@@ -1,6 +1,7 @@
 (ns kodemaker-no.pages.index-page
   (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :refer [to-html]]))
+            [kodemaker-no.formatting :refer [to-html]]
+            [mapdown.core :as mapdown]))
 
 (defn- render-our-reference-description [name description url logo]
   (list
@@ -37,6 +38,18 @@
   (compare (:start-date a)
            (:start-date b)))
 
+(defn- render-frontpage-section [section]
+  (if (:full-width section)
+    (to-html (:body section))
+    (list (when (:title section)
+            [:h2.offset [:span (:title section)]])
+          [:div.line
+           [:div.unit.text-adornment
+            [:p (when (:illustration section)
+                  [:img {:src (:illustration section)}])]]
+           [:div.lastUnit
+            (to-html (:body section))]])))
+
 (defn index-page [people]
   {:title {:h1 (str (num-consultants people) " kvasse konsulenter")}
    :body (list
@@ -47,4 +60,7 @@
                           (map render-person))]
           [:h1.hn.pth "Hva er raskeste veien i mål?"]
           [:div
-           (to-html (slurp (io/resource "index.md")))])})
+           (->> (io/resource "index.md")
+                slurp
+                mapdown/parse
+                (map render-frontpage-section))])})

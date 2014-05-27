@@ -1,3 +1,7 @@
+--------------------------------------------------------------------------------
+:full-width
+:body
+
 <reference img="/references/dummy-1.jpg"
            url="/nsb-personalbillett/"
            logo="/logos/nsb.png"
@@ -12,6 +16,10 @@
   oppdragsgiver. Anbefales sterkt!
 </reference>
 
+--------------------------------------------------------------------------------
+:illustration /forside/haier.jpg
+:body
+
 Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
 har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere
 er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
@@ -24,7 +32,10 @@ sett ukjent i dét prosjektet begynner**.
 
 Det er klart det er store muligheter for å trå feil.
 
-## Hva skal til for at ditt prosjekt lykkes?
+--------------------------------------------------------------------------------
+:title Hva skal til for at ditt prosjekt lykkes?
+:illustration /forside/krussedull.jpg
+:body
 
 **Uansett om vi skal hjelpe deg eller du ordner biffen selv**, er det
 noen faktorer som bidrar sterkt til **om ditt prosjekt blir ferdig,
@@ -39,6 +50,10 @@ det ikke er et lekeprosjekt du har, så finnes det komplekse problemer
 under overflaten, som noen må ta tak i og løse, for å få prosjektet
 ditt i mål.
 
+--------------------------------------------------------------------------------
+:full-width
+:body
+
 <hr class="mhn">
 <megalist>
  <heading>Du må ha <br>en fungerende arbeidsprosess</heading>
@@ -50,21 +65,21 @@ ditt i mål.
    at oppgaver du trodde var ferdig for lenge siden, blir hengende i løse
    luften et sted på veien.
  </text>
- <heading>Du må ha <br>automatiserte tester</heading>
+ <heading>Du må ha <br>automatiserte <br>tester</heading>
  <text>
    Etter hvert som kodebasen vokser, vil endringer du gjør ett sted,
    kunne ødelegge funksjonalitet et annet sted, uten at det er
    umiddelbart innlysende. Hvis det ikke oppdages med en gang, av
    automatiserte tester, kan slike bugs leve lenge og bli svært dyre.
  </text>
- <heading>Du må ha <br>en automatisert bygg-prosess</heading>
+ <heading>Du må ha <br>en automatisert <br>bygg-prosess</heading>
  <text>
    Å få endringer ut på test-servere og ut i produksjon kan bli et
    uforutsigbart mareritt, avhengig av noen få nøkkelpersoner, hvis ikke
    også denne delen av jobben er automatisert med kode. Det tar litt tid
    å sette opp, men timene sparer du inn utallige ganger.
  </text>
- <heading>Du må ha <br>en entydig "definition<br>of done"</heading>
+ <heading>Du må ha <br>en entydig <br>"definition <br>of done"</heading>
  <text>
    Når er en funksjonalitet "ferdig"? Er det når en utvikler sier "det har
    jeg laget"? Er det når en annen utvikler har sett på den koden, og
@@ -79,6 +94,10 @@ ditt i mål.
 </megalist>
 <hr class="mhn">
 
+--------------------------------------------------------------------------------
+:illustration /forside/team.jpg
+:body
+
 Nå er det sånn at **ingen kan alt**. I en verden som blir stadig mer
 spesialisert, er det uhyre viktig at menneskene du har, har **et
 nettverk å trekke på**, når de står fast. For de kommer til å stå
@@ -89,7 +108,10 @@ hjelper hverandre, lærer av hverandre, spør hverandre... trekker
 hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
 
-## Du har mye ansvar, og mye å tenke på
+--------------------------------------------------------------------------------
+:title Du har mye ansvar, og mye å tenke på
+:illustration /forside/tornado.jpg
+:body
 
 Vi forstår at du har mye å tenke på. Vi forstår at du kan oppleve
 press både ovenfra og nedenfra. Vi jobber også som problemløsere, og
@@ -104,14 +126,18 @@ heuristikker og erfaringer med seg. Folk som er selvdrevne og
 initiativrike, som ikke setter seg ned og venter på at noen skal gi dem
 en løsning, men som tar tak og skaper løsningen selv.
 
-## Du får kun erfarne Kodemakere
+--------------------------------------------------------------------------------
+:title Du får kun erfarne Kodemakere
+:illustration /forside/klosser.jpg
+:body
 
 All ære til de firmaene som tar inn juniorer, som tar dem under sine
 vinger og lar dem utvikle seg, lære, og modnes. Det er et
 langtidsprosjekt det står respekt av. I noen settinger er det riktig å
-gjøre: når du ønsker å ha folk hos deg i årevis. Andre ganger er det
-viktigste å få ting gjort så fort som mulig. Som *hired guns* er det
-naturlig at du bare får seniorer fra oss.
+gjøre: når du ønsker å ha folk hos deg i årevis.
+
+Andre ganger er det viktigste å få ting gjort så fort som mulig. Som *hired
+guns* er det naturlig at du bare får seniorer fra oss.
 
 - kun seniorer, så du ikke taper verdifull tid på feil som lett kunne
   vært unngått
@@ -120,9 +146,12 @@ naturlig at du bare får seniorer fra oss.
 - friske øyne, så du får ristet løs i gamle tankemåter som kanskje
   ikke gavner deg lenger
 
-Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag
-hos blant andre
-[Forsvaret, NSB, NRK, FINN.no, og Storebrand](/vaare-kunder)
+Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos blant
+andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
+
+--------------------------------------------------------------------------------
+:full-width
+:body
 
 <reference img="/references/dummy-1.jpg"
            url="/finn-surf-sammen/"
@@ -138,7 +167,9 @@ hos blant andre
   å ta på seg både enkle og komplekse oppgaver.
 </reference>
 
-## Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjekt
+--------------------------------------------------------------------------------
+:title Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjekt
+:body
 
 Vi er bare et visst antall mennesker, og hver av oss kan bare jobbe
 med et prosjekt av gangen. Det er i alles interesse at prosjektet ditt
@@ -155,6 +186,10 @@ meg gjenta dem fort:
 **Hvis du ikke allerede har disse tingene på plass, må du være 100%
 villig til å la oss hjelpe deg å få dem på plass.**
 
+--------------------------------------------------------------------------------
+:illustration /forside/papir.jpg
+:body
+
 For å hjelpe oss plukke ut prosjekter vi har tro på, vil vi at du
 [skal skrive litt om prosjektet ditt i skjemaet på neste side ...](/skjema/)
 så leser vi over det og tar kontakt med deg så snart vi har mulighet.
@@ -162,7 +197,10 @@ Stort sett vil du høre fra oss innen to arbeidsdager.
 
 Altså: [Fyll inn prosjektskjema her](/skjema/).
 
-## ... eller du kan forbli i uvissheten
+--------------------------------------------------------------------------------
+:title ... eller du kan forbli i uvissheten
+:illustration /forside/egg.jpg
+:body
 
 Som sagt, finnes det ingen garantier her i livet. Men med Kodemaker på
 din side står du tryggere og har større sjanser for å lykkes. Du får
@@ -172,3 +210,5 @@ beste-praksis til frokost til å skrive din kode. Du får et nettverk av
 dyktige fagfolk på din side.
 
 [Du får rett og slett Kodemaker](/skjema/).
+
+--------------------------------------------------------------------------------

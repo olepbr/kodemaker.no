@@ -1,8 +1,11 @@
 .m-dot {display: none;}
-.m-title {float: left; width: 25%; text-align: right; margin-right: 25px; font-size: 24px; line-height: 1.3;}
+.m-title {float: left; width: 33.33333%; text-align: right; font-size: 26px; line-height: 1.3;}
 .m-item,
-.m-text {display:block; overflow:hidden; *overflow:visible; *zoom:1;}
+.m-text-wrap {display:block; overflow:hidden; *overflow:visible; *zoom:1;}
 .m-title {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
 .m-title br {display: inline;}
+.m-title-text {display: block; margin: 20px;}
+.m-text {display: block; margin: 20px;}
+.m-item {margin-left: 0; margin-right: 0;}
 
 .fpp {font-size: 15px;} /* front page photos */

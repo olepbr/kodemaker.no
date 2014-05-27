@@ -50,13 +50,16 @@
    :content [{:tag :strong
               :attrs {:class "m-title"}
               :content [{:tag :span
+                         :attrs {:class "m-title-text"}
                          :content (:content title)}
                         {:tag :span
                          :attrs {:class "m-dot"}
                          :content "."}]}
              {:tag :span
-              :attrs {:class "m-text"}
-              :content (:content text)}]})
+              :attrs {:class "m-text-wrap"}
+              :content [{:tag :span
+                         :attrs {:class "m-text"}
+                         :content (:content text)}]}]})
 
 (defn- replace-megalist-tag [{:keys [content]}]
   {:tag :div

@@ -13,7 +13,12 @@ ol {margin-left: 40px;}
 .mount {padding: 10px;}
 .pth {padding-top: 40px;}
 
-.ref {display: table;}
+h2.offset {padding: 5px 0; padding-left: 33.33333%;}
+h2.offset span {display: block; margin: 0 10px 0 20px;}
+
+.text-adornment {display: block; width: 33.33333%;}
+
+.ref {display: table; margin-bottom: 50px;}
 .ref-txt {display: none;}
 .ref-w {display: table-cell; width: 50%; vertical-align: top; border-right: 3px solid #000;}
 .ref-txt-2 {display: table-cell; width: 50%; vertical-align: top; font-style: italic;}
