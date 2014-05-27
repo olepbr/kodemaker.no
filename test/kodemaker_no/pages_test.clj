@@ -12,7 +12,6 @@
           create-pages keys set)
 
       => #{"/"
-           "/referanser/"
            "/magnars/"
            "/finnjoh/"
            "/react/"

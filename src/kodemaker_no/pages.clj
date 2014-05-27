@@ -5,14 +5,12 @@
             [kodemaker-no.pages.form-page :refer [form-page]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
-            [kodemaker-no.pages.references-page :refer [references-page]]
             [kodemaker-no.pages.tech-pages :refer [tech-pages]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
   {"/" (partial index-page (vals (:people content)))
    "/skjema/" form-page
-   "/referanser/" (partial references-page (vals (:projects content)))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))})
 
 (defn create-pages [content]
