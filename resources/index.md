@@ -7,7 +7,7 @@
            logo="/logos/nsb.png"
            name="Bengt Lyng"
            phone="+47 999 88 777"
-           title="Prosjektsjef">
+           title="Prosjektsjef, NSB">
   Kodemaker leverte ny teknisk løsning på kortere tid enn vi
   forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
   først antok. Kodemaker løste oppgaven med minimal administrasjon. De
@@ -158,7 +158,7 @@ andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
            logo="/logos/finn.png"
            name="Bjørn Henrik Vangstein"
            phone="+47 999 88 777"
-           title="Avdelingsleder IT">
+           title="Avdelingsleder IT, FINN.no">
   Vi i FINN.no har en meget sterk utviklingsavdeling selv, og leier i
   mindre grad inn konsulenter over lenger perioder. Siden vinteren
   2008 har Kodemaker vært en av få leverandører av slike tjenester hos
