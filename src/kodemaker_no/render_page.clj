@@ -61,9 +61,7 @@
            [:span.nowrap "0191 Oslo"]]
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
-           [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]]]
-    [:script
-     (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
+           [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]]]]))
 
 (defn- render-single-column [page]
   [:div.body

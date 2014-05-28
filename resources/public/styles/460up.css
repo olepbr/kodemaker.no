@@ -1,8 +1,3 @@
-#ocm {display: none;}
-
-.menu {display:block; position: absolute; bottom: 2px; right: 0; }
-.menu a {color: #999; font-size: 16px; margin-left: 10px; text-transform: uppercase; }
-
 .unit {float:left;}
 .unitRight {float:right;}
 .r-2of3 {width: 66.66666%;}

@@ -146,3 +146,7 @@ code { font-family: sans-serif; }
 .ref-logo {display: table-cell; vertical-align: top;}
 .ref-logo img {max-height: 4em; max-width: 100px; margin: 20px;}
 
+#ocm {display: none;}
+
+.menu {display:block; position: absolute; bottom: 2px; right: 0; }
+.menu a {color: #999; font-size: 16px; margin-left: 10px; text-transform: uppercase; }
