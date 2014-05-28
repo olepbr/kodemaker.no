@@ -47,6 +47,7 @@
       (update-in-existing [:upcoming] #(look-up-tech-in-maps content %))
       (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
       (update-in-existing [:projects] #(look-up-tech-in-maps content %))
+      (update-in-existing [:side-projects] #(look-up-tech-in-maps content %))
       (update-in-existing [:open-source-projects] #(look-up-tech-in-maps content %))
       (update-in-existing [:open-source-contributions] #(look-up-tech-in-maps content %))))
 

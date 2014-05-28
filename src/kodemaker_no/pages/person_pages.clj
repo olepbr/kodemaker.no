@@ -35,9 +35,10 @@
   (list [:h2 "Snakker gjerne om"]
         (map render-hobby hobbies)))
 
-(defn- render-side-project [{:keys [title description link illustration]}]
+(defn- render-side-project [{:keys [title description link illustration tech]}]
   [:div.bd
    [:h3.mtn [:a {:href (:url link)} title]]
+   (render-tech-bubble tech)
    (-> (to-html description)
        (markup/append-to-paragraph
         (list " " (markup/render-link link)))
