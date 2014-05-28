@@ -17,7 +17,8 @@ h2.offset span {display: block; margin: 0 10px 0 20px;}
 
 .text-adornment {display: block; width: 33.33333%;}
 
-.ref {display: table; margin-bottom: 50px;}
+.ref {margin-bottom: 50px; overflow: hidden; background: url(/images/3px.png) repeat-y 50%;}
+.ref-img {padding-right: 1.5px;}
 .ref-txt {display: none;}
-.ref-w {display: table-cell; width: 50%; vertical-align: top; border-right: 3px solid #000;}
-.ref-txt-2 {display: table-cell; width: 50%; vertical-align: top; font-style: italic;}
+.ref-w {float: left; width: 50%; vertical-align: top;}
+.ref-txt-2 {float: left; display: block; width: 50%; vertical-align: top; font-style: italic;}
