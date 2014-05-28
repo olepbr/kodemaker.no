@@ -39,7 +39,6 @@
  :endorsements [{:project :finn-surf-sammen
                  :author "Bjørn Henrik Vangstein"
                  :title "Avdelingsleder IT"
-                 :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
                  :quote "(...) Kristoffer er en svært selvstendig og uredd utvikler, og setter seg meget raskt inn i nye problemstillinger og teknologier.
                   Han er meget effektiv og disiplinert, med sans for detaljer og tar like gjerne enkle som komplekse oppgaver.
                   Kristoffers sans for humor kommer godt med i ethvert utviklingsteam, og han glir lett inn i miljøet.
