@@ -15,6 +15,8 @@ ol {margin-left: 40px;}
 h2.offset {padding: 5px 0; padding-left: 33.33333%;}
 h2.offset span {display: block; margin: 0 10px 0 20px;}
 
+#footer {padding-left: 33.3333%;}
+
 .text-adornment {display: block; width: 33.33333%;}
 
 .ref {margin-bottom: 50px; overflow: hidden; background: url(/images/3px.png) repeat-y 50%;}
