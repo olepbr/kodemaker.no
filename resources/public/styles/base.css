@@ -150,3 +150,7 @@ code { font-family: sans-serif; }
 
 .menu {display:block; position: absolute; bottom: 2px; right: 0; }
 .menu a {color: #999; font-size: 16px; margin-left: 10px; text-transform: uppercase; }
+
+.arrow {float: right; overflow: hidden; margin-top: 5px;}
+.arrow-body {float: left; background: #d30707; width: 22px; height: 22px;}
+.arrow-head {float: left; display: block; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #d30707;}

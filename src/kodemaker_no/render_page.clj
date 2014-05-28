@@ -19,7 +19,10 @@
 
 (defn- h1-title [title]
   (when-let [title-str (or (:h1 title) (and (string? title) title))]
-    [:h1.hn.mbn (no-widows title-str)]))
+    [:h1.hn.mbn
+     (when (:arrow title)
+       [:a.arrow {:href (:arrow title)} [:span.arrow-body] [:span.arrow-head]])
+     (no-widows title-str)]))
 
 (defn- with-layout [request title content]
   (html5

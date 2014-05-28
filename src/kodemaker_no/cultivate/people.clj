@@ -75,8 +75,21 @@
       (update-in-existing [:endorsements] #(map (partial update-endorsement-project content person) %))
       (update-in-existing [:projects] #(map (partial add-url-to-project content) %))))
 
+(defn- add-link-to-next-person [content person]
+  (let [sorted-peeps (->> content :people vals
+                          (sort-by :start-date)
+                          reverse)
+        next-person (or (->> sorted-peeps
+                             (drop-while #(not= % person))
+                             (drop 1)
+                             first)
+                        (first sorted-peeps))]
+    (assoc person :next-person-url
+           (str "/" (name (:id next-person)) "/"))))
+
 (defn- cultivate-person [content person]
   (->> person
+       (add-link-to-next-person content)
        add-str
        add-url
        fix-names

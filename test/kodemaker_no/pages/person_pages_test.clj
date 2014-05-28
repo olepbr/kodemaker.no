@@ -12,7 +12,8 @@
    :photos {:half-figure "/photos/magnars/half-figure.jpg"}
    :description "The *description*"
    :phone-number "+47 918 56 425"
-   :email-address "magnar@kodemaker.no"})
+   :email-address "magnar@kodemaker.no"
+   :next-person-url "/anders/"})
 
 (defn page [& {:as extras}]
   (((person-pages [(merge magnar extras)]) "/magnar/")))
@@ -20,7 +21,10 @@
 (defn page-at [date & {:as extras}]
   (((person-pages [(merge magnar extras)] date) "/magnar/")))
 
-(fact (-> (page) :title) => "Magnar Sveen")
+(fact (-> (page) :title) => {:h1 "Magnar Sveen"
+                             :head "Magnar Sveen"
+                             :arrow "/anders/"})
+
 (fact (-> (page) :lead) => "<p>The <em>description</em></p>")
 
 (fact (-> (page) :aside html) => (html [:div.illustration.mbn

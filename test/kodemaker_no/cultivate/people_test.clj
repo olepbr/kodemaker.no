@@ -8,11 +8,14 @@
 (def content
   (c/content
    {:people {:magnar (c/person {:id :magnar
-                                :name ["Magnar" "Sveen"]})
+                                :name ["Magnar" "Sveen"]
+                                :start-date "2007-04-01 00:09"})
              :finnjoh (c/person {:id :finnjoh
-                                 :name ["Finn" "J" "Johnsen"]})
+                                 :name ["Finn" "J" "Johnsen"]
+                                 :start-date "2008-10-01"})
              :andersf (c/person {:id :andersf
-                                 :name ["Anders" "Furseth"]})}}))
+                                 :name ["Anders" "Furseth"]
+                                 :start-date "2010-03-15"})}}))
 
 (defn cultivate [content]
   (cultivate-people (validate-content content)))
@@ -33,6 +36,10 @@
 
   (fact (-> people :magnar :url) => "/magnar/"
         (-> people :finnjoh :url) => "/finnjoh/")
+
+  (fact (-> people :andersf :next-person-url) => "/finnjoh/"
+        (-> people :finnjoh :next-person-url) => "/magnar/"
+        (-> people :magnar :next-person-url) => "/andersf/")
 
   (fact (-> people :magnar :photos) => {:side-profile "/photos/people/magnar/side-profile.jpg"
                                         :side-profile-near "/photos/people/magnar/side-profile-near.jpg"

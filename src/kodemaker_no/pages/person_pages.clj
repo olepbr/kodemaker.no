@@ -228,7 +228,9 @@
                  (map (partial render-upcoming-event date)))))))
 
 (defn- person-page [person]
-  {:title (:full-name person)
+  {:title {:head (:full-name person)
+           :h1 (:full-name person)
+           :arrow (:next-person-url person)}
    :lead (to-html (:description person))
    :aside (render-aside person)
    :body (list
