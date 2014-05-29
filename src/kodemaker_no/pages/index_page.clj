@@ -51,24 +51,25 @@
             (to-html (:body section))]])))
 
 (defn index-page [people]
-  {:title {:h1 (str (num-consultants people) " kvasse konsulenter")}
-   :bricks [{:url "/clojure/", :text "Clojure"}
-            {:url "/java/", :text "Java"}
-            {:url "/groovy/", :text "Groovy"}
-            {:url "/javascript/", :text "JavaScript"}
-            {:url "/ruby/", :text "Ruby"}
-            {:url "/react/", :text "React"}
-            {:url "/git/", :text "Git"}
-            {:url "/emacs/", :text "Emacs"}]
-   :body (list
-          [:div.grid (->> people
+  (let [sorted-peeps (->> people
                           (remove :administration?)
                           (sort compare-by-start-date)
-                          (reverse)
-                          (map render-person))]
-          [:h1.hn.pth "Hva er raskeste veien i mål?"]
-          [:div
-           (->> (io/resource "index.md")
-                slurp
-                mapdown/parse
-                (map render-frontpage-section))])})
+                          (reverse))]
+    {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
+             :arrow (:url (first sorted-peeps))}
+     :bricks [{:url "/clojure/", :text "Clojure"}
+              {:url "/java/", :text "Java"}
+              {:url "/groovy/", :text "Groovy"}
+              {:url "/javascript/", :text "JavaScript"}
+              {:url "/ruby/", :text "Ruby"}
+              {:url "/react/", :text "React"}
+              {:url "/git/", :text "Git"}
+              {:url "/emacs/", :text "Emacs"}]
+     :body (list
+            [:div.grid (map render-person sorted-peeps)]
+            [:h1.hn.pth "Hva er raskeste veien i mål?"]
+            [:div
+             (->> (io/resource "index.md")
+                  slurp
+                  mapdown/parse
+                  (map render-frontpage-section))])}))
