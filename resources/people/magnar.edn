@@ -86,7 +86,14 @@
                             som skal bruke Datomic."
                     :link {:url "http://blog.datomic.com/2012/08/atomic-chocolate.html"
                            :text "Les artikkelen"}
-                    :tech [:datomic]}]
+                    :tech [:datomic]}
+                   {:title "Luke W om Responsiv design"
+                    :blurb "Luke Wroblewski er en bra mann å høre på når det
+                    gjelder design på nett. Her er en samling av hans blogposter
+                    og notater om responsiv design. Vel verdt å følge med på."
+                    :link {:url "http://www.lukew.com/ff?tag=responsive%20design"
+                           :text "Sjekk ut blogpostene"}
+                    :tech [:responsive-design]}]
 
  :hobbies [{:title "Brettspill"
             :description "Det er mer enn Monopol og Ludo i verden. Har
