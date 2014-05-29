@@ -25,7 +25,8 @@
               (optional-key :github) Str ;; brukernavn
               (optional-key :coderwall) Str} ;; brukernavn
 
-   (optional-key :tech) {:favorites-at-the-moment [ID]
+   (optional-key :tech) {(optional-key :using-at-work) [ID]
+                         (optional-key :favorites-at-the-moment) [ID]
                          (optional-key :want-to-learn-more) [ID]}
 
    (optional-key :recommendations) [{:title Str ;; Samme som tittel på det du lenker til
