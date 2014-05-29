@@ -21,6 +21,7 @@ a:hover {text-decoration: underline;}
     .presence {background-image: url(/icons/icons2x.png); background-size: 40px 240px;}
 }
 
+#instantclick {display: none;}
 #header {background: #000; position: relative;}
 
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img {margin: 10px;}
