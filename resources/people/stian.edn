@@ -94,7 +94,7 @@
                           fortsetter jeg videreutviklingen."
                   :illustration "/illustrations/side-projects/twittosocial.jpg"
                   :link {:url "http://twittosocial.herokuapp.com" :text "Se nettstedet (krever innlogging)"}
-                  :tech [:emacs]}]
+                  :tech [:ruby :rails]}]
 
  :blog-posts [{:url "http://worldoffoobar.blogspot.no/2013/07/setting-up-grails-guard.html"
                 :title "Setting up Grails Guard"
