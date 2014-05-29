@@ -7,4 +7,4 @@
  :phone-number ""
  :email-address ""
 
- :presence {}}
+ :presence {:cv "stig"}}

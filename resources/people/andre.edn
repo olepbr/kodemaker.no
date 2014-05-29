@@ -9,7 +9,8 @@
  :phone-number  "+47 911 79 089"
  :email-address "andre@kodemaker.no"
 
- :presence      {:twitter       "bonkowski"
+ :presence      {:cv "andre"
+                 :twitter       "bonkowski"
                  :linkedin      "/in/bonkowski"
                  :stackoverflow "/users/893477/andre"
                  :github        "bonkowski"
