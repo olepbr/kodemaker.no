@@ -8,7 +8,7 @@
       (-> (index-page [{:administration? true}
                        {:administration? false}
                        {:administration? false}])
-          :title) => {:h1 "2 kvasse konsulenter"})
+          :title :h1) => "2 kvasse konsulenter")
 
 (fact "Only consultants are included, sorted by reverse order."
 
