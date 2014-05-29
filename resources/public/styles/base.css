@@ -156,8 +156,12 @@ code {font-family: Consolas, "Liberation Mono", Courier, monospace; border: 1px 
 .arrow-body {float: left; background: #d30707; width: 22px; height: 22px;}
 .arrow-head {float: left; display: block; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #d30707;}
 
+.arrow:hover .arrow-body {background: #000;}
+.arrow:hover .arrow-head {border-color: transparent transparent transparent #000;}
+
 .wall {font-size: 11px;}
 .bricks {margin-bottom: 3px; background: #d30707; text-align: center; line-height: 25px;}
 .brick {width: 18%; color: #fff; display: inline-block; height: 25px; border-right: 3px solid #fff;}
 .brick:first-child {border-left: 3px solid #fff;}
 .collapsing-brick {display: none;}
+a.brick:hover {background: #000;}
