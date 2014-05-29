@@ -2,12 +2,18 @@
  :name "Responsive Design"
  :illustration "/photos/tech/responsive-design.jpg"
  :site "http://en.wikipedia.org/wiki/Responsive_web_design"
- :description "Det er mange som har lagd seg en `m.` mobiltilpasset versjon av
+ :description "Det er mange som lager seg en `m.` mobiltilpasset versjon av
  nettsidene sine, men det har vist seg å være et lite plaster på et stort sår.
- Skal du lage en `pad.` nettbrettilpasset versjon også, da?
+ Skal du lage en `pad.` nettbrettilpasset versjon også? Hva med store telefoner?
+ Små nettbrett? TV?
 
  Som illustrasjonen tydelig viser (det er Samsung sine enheter forresten), så
  kan du ikke lenger ta for gitt noe som helst om bredden på skjermen til dine
  besøkende. Responsiv design er løsningen på problemet. Det er en samling
  teknikker som gjør det mulig å få sidene dine til fungere godt på alle
- skjermstørrelser."}
+ skjermstørrelser.
+
+ Responsiv design er mye jobb, og du må tenke annerledes. Kanskje fire på noen
+ krav. Antagelig legge om hvordan designerne dine jobber. I gjengjeld slipper du
+ å fragmentere kodebasen din. Du slipper å implementere brukergrensesnittet
+ igjen og igjen. Og du får du noe som fungerer."}
