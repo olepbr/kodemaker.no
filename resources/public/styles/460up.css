@@ -15,3 +15,7 @@ body {font-size: 17px;}
 
 .lastUnit label {white-space: nowrap;}
 .lastUnit .input {border-left: 0;}
+
+.wall {font-size: 14px;}
+.bricks {line-height: 30px;}
+.brick {height: 30px;}

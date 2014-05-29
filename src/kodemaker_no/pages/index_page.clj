@@ -52,6 +52,14 @@
 
 (defn index-page [people]
   {:title {:h1 (str (num-consultants people) " kvasse konsulenter")}
+   :bricks [{:url "/clojure/", :text "Clojure"}
+            {:url "/java/", :text "Java"}
+            {:url "/groovy/", :text "Groovy"}
+            {:url "/javascript/", :text "JavaScript"}
+            {:url "/ruby/", :text "Ruby"}
+            {:url "/react/", :text "React"}
+            {:url "/ansible/", :text "Ansible"}
+            {:url "/emacs/", :text "Emacs"}]
    :body (list
           [:div.grid (->> people
                           (remove :administration?)

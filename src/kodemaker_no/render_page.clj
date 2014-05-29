@@ -24,7 +24,11 @@
        [:a.arrow {:href (:arrow title)} [:span.arrow-body] [:span.arrow-head]])
      (no-widows title-str)]))
 
-(defn- with-layout [request title content]
+(defn- brick
+  ([] [:div.brick "&nbsp;"])
+  ([{:keys [url text]}] [:a.brick {:href url} text]))
+
+(defn- with-layout [request page content]
   (html5
    [:head
     [:meta {:charset "utf-8"}]
@@ -34,7 +38,7 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
-    [:title (head-title title)]]
+    [:title (head-title (:title page))]]
    [:body
     [:script (slurp (io/resource "public/scripts/ga.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
@@ -50,9 +54,31 @@
           [:a {:href "/skjema/"} "Ta kontakt"]]
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
-       (h1-title title)
+       (h1-title (:title page))
        [:div.bd
         content]
+       [:div.footer-spacing]
+       (when-let [bricks (:bricks page)]
+         [:div.wall
+          [:div.bricks
+           (brick (nth bricks 0))
+           (brick)
+           (brick (nth bricks 1))
+           (brick (nth bricks 2))
+           (brick)]
+          [:div.bricks
+           (brick (nth bricks 3))
+           (brick)
+           (brick)
+           (brick (nth bricks 4))
+           (brick)
+           (brick (nth bricks 5))]
+          [:div.bricks
+           (brick)
+           (brick (nth bricks 6))
+           (brick (nth bricks 7))
+           (brick)
+           (brick)]])
        [:div#footer
         [:div.bd
          [:div.mod
@@ -94,7 +120,7 @@
       (:aside page)))
 
 (defn render-page [page request]
-  (with-layout request (:title page)
+  (with-layout request page
     (if (two-column-page? page)
       (render-two-column page)
       (render-single-column page))))

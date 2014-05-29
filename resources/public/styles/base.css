@@ -123,7 +123,8 @@ em {font-style: italic;}
 .cookie {text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px;}
 .cookie-w {margin-top: -5px !important; }
 
-#footer {background: #000; color: #fff; line-height: 1.7; clear: both; margin-top: 150px;}
+.footer-spacing {clear: both; margin-top: 150px;}
+#footer {background: #000; color: #fff; line-height: 1.7;}
 #footer a {color:#fff;}
 
 .presence {background-color: #d30707; float:left; margin: 0 2px 2px 0;}
@@ -154,3 +155,8 @@ code { font-family: sans-serif; }
 .arrow {float: right; overflow: hidden; margin-top: 5px;}
 .arrow-body {float: left; background: #d30707; width: 22px; height: 22px;}
 .arrow-head {float: left; display: block; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #d30707;}
+
+.wall {font-size: 10px;}
+.bricks {margin-bottom: 3px; background: #d30707; text-align: center; line-height: 25px;}
+.brick {color: #fff; display: inline-block; height: 25px; border-right: 3px solid #fff; width: 15%;}
+.brick:first-child {border-left: 3px solid #fff;}

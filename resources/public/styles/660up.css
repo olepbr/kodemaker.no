@@ -13,3 +13,7 @@ blockquote:before {left: 0.25em;}
 .fpp {font-size: 14px;} /* front page photos */
 
 .form {padding: 20px 40px;}
+
+.wall {font-size: inherit;}
+.bricks {line-height: 40px;}
+.brick {height: 40px;}
