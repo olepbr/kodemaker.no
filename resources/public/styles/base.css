@@ -9,8 +9,16 @@ a:hover {text-decoration: underline;}
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
 #logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 15px 10px;}
 
+.presence {float: left; width: 40px; height: 40px; margin: 0 6px 6px 0; background: url(/icons/icons.png);}
+.presence.twitter {background-position: 0 -40px;}
+.presence.linkedin {background-position: 0 -80px;}
+.presence.github {background-position: 0 -120px;}
+.presence.stackoverflow {background-position: 0 -160px;}
+.presence.coderwall {background-position: 0 -200px;}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #logo {background-image: url(/images/kodemaker-small-2x.png);}
+    .presence {background-image: url(/icons/icons2x.png); background-size: 40px 240px;}
 }
 
 #header {background: #000; position: relative;}
@@ -126,8 +134,6 @@ em {font-style: italic;}
 .footer-spacing {clear: both; margin-top: 150px;}
 #footer {background: #000; color: #fff; line-height: 1.7;}
 #footer a {color:#fff;}
-
-.presence {background-color: #d30707; float:left; margin: 0 2px 2px 0;}
 
 .bullet {margin: 0 0.5em;}
 

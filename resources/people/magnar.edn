@@ -19,8 +19,7 @@
             :twitter "magnars"
             :linkedin "/pub/magnar-sveen/2/219/33a"
             :stackoverflow "/users/1123/magnar"
-            :github "magnars"
-            :coderwall "magnars"}
+            :github "magnars"}
 
  :tech {:using-at-work [:clojure :javascript :responsive-design]
         :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]

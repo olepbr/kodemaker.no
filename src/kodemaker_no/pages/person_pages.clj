@@ -93,21 +93,21 @@
         (interpose [:hr.mtn.mhn] (map render-endorsement endorsements))))
 
 (def cv
-  {:id :cv             :baseUrl "http://www.kodemaker.no/cv/"  :logo "cv.png"            :title "Cv"})
+  {:id :cv             :baseUrl "http://www.kodemaker.no/cv/"  :title "Cv"})
 
 (def presence-items
   [cv
-   {:id :linkedin      :baseUrl "http://www.linkedin.com"      :logo "linkedin.png"      :title "LinkedIn"}
-   {:id :twitter       :baseUrl "http://www.twitter.com/"      :logo "twitter.png"       :title "Twitter"}
-   {:id :stackoverflow :baseUrl "http://www.stackoverflow.com" :logo "stackoverflow.png" :title "StackOverflow"}
-   {:id :github        :baseUrl "http://github.com/"           :logo "github.png"        :title "GitHub"}
-   {:id :coderwall     :baseUrl "http://www.coderwall.com/"    :logo "coderwall.png"     :title "Coderwall"}])
+   {:id :twitter       :baseUrl "http://www.twitter.com/"      :title "Twitter"}
+   {:id :linkedin      :baseUrl "http://www.linkedin.com"      :title "LinkedIn"}
+   {:id :stackoverflow :baseUrl "http://www.stackoverflow.com" :title "StackOverflow"}
+   {:id :github        :baseUrl "http://github.com/"           :title "GitHub"}
+   {:id :coderwall     :baseUrl "http://www.coderwall.com/"    :title "Coderwall"}])
 
 (defn- render-presence-item [item presence]
   (when-let [nick (-> item :id presence)]
-    [:div.presence
-     [:a {:href (str (:baseUrl item) nick)}
-      [:img {:src (str "/icons/" (:logo item)) :title (:title item)}]]]))
+    [:a {:href (str (:baseUrl item) nick)
+         :class (str "presence " (name (:id item)))
+         :title (:title item)}]))
 
 (defn- render-presence [presence]
   [:div.mod
