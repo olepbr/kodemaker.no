@@ -56,10 +56,10 @@
 
 (defn- render-tech [{:keys [using-at-work favorites-at-the-moment want-to-learn-more]} _]
   [:p
-   (when using-at-work
-     (inline-list "Bruker på jobben: " (map markup/link-if-url using-at-work)))
    (when favorites-at-the-moment
      (inline-list "Favoritter for tiden: " (map markup/link-if-url favorites-at-the-moment)))
+   (when using-at-work
+     (inline-list "Bruker på jobben: " (map markup/link-if-url using-at-work)))
    (when want-to-learn-more
      (inline-list "Vil lære mer: " (map markup/link-if-url want-to-learn-more)))])
 
