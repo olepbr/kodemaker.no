@@ -58,7 +58,7 @@
             {:url "/javascript/", :text "JavaScript"}
             {:url "/ruby/", :text "Ruby"}
             {:url "/react/", :text "React"}
-            {:url "/ansible/", :text "Ansible"}
+            {:url "/git/", :text "Git"}
             {:url "/emacs/", :text "Emacs"}]
    :body (list
           [:div.grid (->> people
