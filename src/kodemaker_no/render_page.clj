@@ -28,6 +28,9 @@
   ([] [:div.brick "&nbsp;"])
   ([{:keys [url text]}] [:a.brick {:href url} text]))
 
+(defn- brick-collapsing
+  [] [:div.brick.collapsing-brick "&nbsp;"])
+
 (defn- with-layout [request page content]
   (html5
    [:head
@@ -65,11 +68,11 @@
            (brick)
            (brick (nth bricks 1))
            (brick (nth bricks 2))
-           (brick)]
+           (brick-collapsing)]
           [:div.bricks
            (brick (nth bricks 3))
            (brick)
-           (brick)
+           (brick-collapsing)
            (brick (nth bricks 4))
            (brick)
            (brick (nth bricks 5))]
@@ -77,7 +80,7 @@
            (brick)
            (brick (nth bricks 6))
            (brick (nth bricks 7))
-           (brick)
+           (brick-collapsing)
            (brick)]])
        [:div#footer
         [:div.bd
