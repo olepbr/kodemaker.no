@@ -165,6 +165,19 @@
                        eksplodert. Kunne det være noe i OOCSS? Det var
                        jo i mot alt jeg hadde lært."
                :tech [:oocss :css]}
+              {:url "http://framsieutvikling.no/post/36337881618"
+               :title "Ingrediensene i Responsive Webdesign"
+               :blurb "Responsive Design handler om at nettsia tilpasser seg
+                       størrelsen på skjermen. Det kommer som et svar på det voksende
+                       mylderet av enheter i varierende størrelser som besøker nettsidene
+                       våre. Her ser jeg på de to hovedingrediensene."
+               :tech [:responsive-design]}
+              {:url "http://framsieutvikling.no/post/84304693872"
+               :title "Responsiv design: Hva gjør vi med IE?"
+               :blurb "Nesten alle nettlesere forstår media queries. Men det er fortsatt en hel
+                       del stakkars jævler der ute som bruker IE 8. Hvem skal tenke på dem?
+                       Joda, det er oss, det."
+               :tech [:responsive-design]}
               {:url "http://whattheemacsd.com"
                :title "What the .emacs.d!?"
                :blurb "En lang samling med triks og tips for å sette
