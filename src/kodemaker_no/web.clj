@@ -19,6 +19,7 @@
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
+                                "/scripts/instantclick.js"
                                 #"/illustrations/.*\.jpg"
                                 #"/thumbs/.*\.jpg"
                                 #"/forside/.*\.jpg"

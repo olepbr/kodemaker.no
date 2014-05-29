@@ -56,8 +56,9 @@
            (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)
                [:div#disqus_thread.mod]
-               [:script (str "var disqus_identifier='" (:path blog-post) "';"
-                             (disqus-script))])})
+               [:script {:data-no-instant ""}
+                (str "var disqus_identifier='" (:path blog-post) "';"
+                     (disqus-script))])})
 
 (defn blog-post-pages [blog-posts]
   (-> blog-posts
