@@ -71,7 +71,7 @@
                           lesbare og presise tester, samtidig som det optimaliserer
                           for utviklerproduktivitet."
                   :tech [:spock :testing :java :groovy]
-                  :urls {:video "/groovyspock/"}}]
+                  :urls {:video "https://vimeo.com/49476112"}}]
 
  :hobbies [{:title "Fotografering"
             :description "Kameraet mitt er stort sett med overalt. Du vet

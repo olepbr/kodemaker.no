@@ -39,3 +39,20 @@
 
 (defn year-range [years]
   (str/join ", " (map year-range-str (consecutive-years years))))
+
+(def norwegian-char-replacements
+  {"æ" "e"
+   "ø" "o"
+   "å" "a"
+   "Æ" "E"
+   "Ø" "O"
+   "Å" "A"})
+
+(defn to-id-str [str]
+  "Replaces all special characters with dashes, avoiding leading,
+   trailing and double dashes."
+  (-> (.toLowerCase str)
+      (str/replace #"[æøåÆØÅ]" norwegian-char-replacements)
+      (str/replace #"[^a-zA-Z0-9]+" "-")
+      (str/replace #"-$" "")
+      (str/replace #"^-" "")))

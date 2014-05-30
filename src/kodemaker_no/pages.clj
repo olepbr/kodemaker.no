@@ -6,6 +6,7 @@
             [kodemaker-no.pages.person-pages :refer [person-pages]]
             [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.tech-pages :refer [tech-pages]]
+            [kodemaker-no.pages.video-pages :refer [video-pages]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
@@ -20,4 +21,5 @@
     :project-pages (project-pages (vals (:projects content)))
     :article-pages (article-pages (:articles content))
     :blog-post-pages (blog-post-pages (:blog-posts content))
-    :general-pages (general-pages content)}))
+    :general-pages (general-pages content)
+    :video-pages (video-pages (:videos content))}))

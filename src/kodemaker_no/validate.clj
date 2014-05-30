@@ -51,9 +51,10 @@
                                 (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
+                                   (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
-                                   :urls {(optional-key :video) (either URL Path)
+                                   :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL}}] ;; må ha minst en av disse URLene
 
