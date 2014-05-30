@@ -1,5 +1,6 @@
 (ns kodemaker-no.cultivate.videos
-  (:require [kodemaker-no.cultivate.util :as util]
+  (:require [kodemaker-no.cultivate.tech :as tech]
+            [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.formatting :refer [to-id-str]]))
 
 (defn find-video [^String url]
@@ -23,10 +24,11 @@
                         :frameborder "0"
                         :allowfullscreen true}]])))
 
-(defn- cultivate-video [{:keys [blurb title urls by id]}]
+(defn- cultivate-video [raw-content {:keys [blurb title urls by id tech]}]
   {:title title
    :by by
    :blurb blurb
+   :tech (map (partial tech/look-up-tech-1 raw-content) tech)
    :url (str "/" (if id (name id) (to-id-str title)) "/")
    :embed-code (create-embed-code (:video urls))})
 
@@ -40,4 +42,4 @@
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
        (filter (comp find-video :video :urls))
-       (map cultivate-video)))
+       (map (partial cultivate-video raw-content))))

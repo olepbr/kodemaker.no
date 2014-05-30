@@ -14,7 +14,7 @@
        :presentations [{:title "Zombie TDD: Live parprogrammering"
                         :id :zombie-tdd-live-at-javazone
                         :blurb "Progger på JavaZone"
-                        :tech [:javascript :tdd :testing]
+                        :tech [:javascript]
                         :urls {:video "http://vimeo.com/49485653"}}]})
 
      :sten-morten
@@ -27,7 +27,7 @@
                         :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}}
                        {:title "Programmeringsspråket betyr alt!"
                         :blurb "Hovedverktøyet til programmerere"
-                        :tech [:funksjonell-programmering :clojure :scala :python :groovy :java]
+                        :tech [:clojure]
                         :urls {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}}]})}}))
 
 (defn cultivate [content]
@@ -49,6 +49,11 @@
    "It includes the blurb."
    (map :blurb videos) => ["Progger på JavaZone"
                            "Hovedverktøyet til programmerere"])
+
+  (fact
+   "It includes the tech."
+   (map :tech videos) => [[{:id :javascript, :name "Javascript"}]
+                          [{:id :clojure, :name "Clojure"}]])
 
   (fact
    "It uses the given :id as URL, otherwise it uses the title to generate one."
