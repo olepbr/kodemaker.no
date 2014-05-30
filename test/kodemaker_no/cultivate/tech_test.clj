@@ -74,12 +74,12 @@
  => [{:title "Zombie TDD: Live parprogrammering"
       :blurb "Vi setter oss ned med emacsen."
       :tech [:javascript :tdd]
-      :urls {:video "http://vimeo.com/49485653"}
+      :urls {:video "/zombie-tdd-live-parprogrammering/"}
       :by [{:name "Magnar", :url "/magnar/"}
            {:name "Christian", :url "/christian/"}]}
      {:title "Pure JavaScript"
       :blurb "Kast de objekt-orienterte krykkene."
-      :urls {:video "http://vimeo.com/43808808"}
+      :urls {:video "/pure-javascript/"}
       :tech [:javascript]
       :by [{:name "Christian", :url "/christian/"}]}])
 
