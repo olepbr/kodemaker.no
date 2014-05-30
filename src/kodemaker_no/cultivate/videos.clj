@@ -46,4 +46,5 @@
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
        (filter (comp find-video :video :urls))
+       (remove :direct-link?)
        (map (partial cultivate-video raw-content))))

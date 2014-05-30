@@ -46,14 +46,14 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                          (optional-key :favorites-at-the-moment) [ID]
                          (optional-key :want-to-learn-more) [ID]}
 
-   (optional-key :recommendations) [{:link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
-                                     :title Str ;; Samme som tittel på det du lenker til
+   (optional-key :recommendations) [{:title Str ;; Samme som tittel på det du lenker til
                                      :blurb Str ;; Litt om hvorfor du anbefaler
+                                     :link {:url URL :text Str} ;; lenketekst av typen "Se foredraget" og "Les artikkelen"
                                      :tech [ID]}]
 
    (optional-key :hobbies) [{:title Str
                              :description Str
-                             (optional-key :illustration) Path
+                             :illustration Path
                              (optional-key :url) URL}]
 
    (optional-key :side-projects) [{:title Str
@@ -68,11 +68,13 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                 (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
+                                   (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
-                                          (optional-key :source) URL}}] ;; må ha minst en av disse URLene
+                                          (optional-key :source) URL}  ;; må ha minst en av disse URLene
+                                   (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str

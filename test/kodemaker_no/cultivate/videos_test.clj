@@ -91,3 +91,11 @@
      cultivate
      first
      :blurb) => "Overridden")
+
+(fact
+ "It does not include videos with :direct-link? set to true."
+
+ (-> content
+     (assoc-in [:people :magnar :presentations 0 :direct-link?] true)
+     cultivate
+     count) => 1)
