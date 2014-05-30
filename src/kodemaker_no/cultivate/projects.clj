@@ -1,6 +1,5 @@
 (ns kodemaker-no.cultivate.projects
   (:require [clojure.string :as str]
-            [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.homeless :refer [update-vals assoc-in-unless interleave-all update-in-existing]]))
 
@@ -45,7 +44,7 @@
                         (map :tech)
                         (apply interleave-all)
                         (distinct)
-                        (map (partial tech/look-up-tech-1 content)))))
+                        (map (partial util/look-up-tech content)))))
 
 (defn- add-related-projects [content project]
   (let [related (->> (vals (:projects content))

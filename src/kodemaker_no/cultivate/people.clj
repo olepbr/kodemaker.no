@@ -1,10 +1,11 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
-            [kodemaker-no.homeless :refer [update-vals update-in-existing update-in*]]
-            [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.projects :as projects]
-            [kodemaker-no.date :refer [parse-ymd]]))
+            [kodemaker-no.cultivate.tech :as tech]
+            [kodemaker-no.cultivate.util :as util]
+            [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
+            [kodemaker-no.date :refer [parse-ymd]]
+            [kodemaker-no.homeless :refer [update-vals update-in-existing update-in*]]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id name)))
@@ -96,6 +97,7 @@
        fix-names
        add-genitive
        add-photos
+       replace-video-urls
        (look-up-tech content)
        (look-up-projects content)
        parse-dates))

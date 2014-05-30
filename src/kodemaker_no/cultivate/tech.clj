@@ -1,30 +1,11 @@
 (ns kodemaker-no.cultivate.tech
-  (:require [clojure.string :as str]
-            [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]
-            [kodemaker-no.date :as d]))
-
-(defn- add-url [tech]
-  (assoc tech :url (util/url tech)))
-
-(defn- capitalize [s]
-  (str (.toUpperCase (subs s 0 1))
-       (subs s 1)))
-
-(defn- str-for-humans [id]
-  (-> id
-      name
-      (str/replace "-" " ")
-      capitalize))
-
-(defn look-up-tech-1 [content id]
-  (if-let [tech (get-in content [:tech id])]
-    (-> tech (select-keys #{:id, :name}) add-url)
-    {:id id, :name (or (-> content :tech-names id)
-                       (str-for-humans id))}))
+  (:require [kodemaker-no.cultivate.util :as util]
+            [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
+            [kodemaker-no.date :as d]
+            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]))
 
 (defn look-up-tech [content techs]
-  (map #(look-up-tech-1 content %) techs))
+  (map #(util/look-up-tech content %) techs))
 
 (defn- is-about [tech m]
   ((set (:tech m)) (:id tech)))
@@ -76,7 +57,7 @@
 
 (defn- combine-presentations [presentations]
   (-> (first presentations)
-      (select-keys #{:title :blurb})
+      (select-keys #{:title :blurb :direct-link?})
       (assoc
           :by (map :by presentations)
           :tech (distinct (mapcat :tech presentations))
@@ -116,9 +97,10 @@
 
 (defn- cultivate-tech [content tech]
   (->> tech
-       add-url
+       util/add-url
        (add-recommendations content)
        (add-presentations content)
+       replace-video-urls
        (add-blog-posts content)
        (add-upcoming content)
        (add-side-projects content)

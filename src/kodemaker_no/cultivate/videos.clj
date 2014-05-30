@@ -1,7 +1,7 @@
 (ns kodemaker-no.cultivate.videos
-  (:require [kodemaker-no.cultivate.tech :as tech]
-            [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.formatting :refer [to-id-str]]))
+  (:require [kodemaker-no.cultivate.util :as util]
+            [kodemaker-no.formatting :refer [to-id-str]]
+            [kodemaker-no.homeless :refer [update-in-existing update-vals]]))
 
 (defn find-video [^String url]
   (when url
@@ -24,15 +24,21 @@
                         :frameborder "0"
                         :allowfullscreen true}]])))
 
-(defn- cultivate-video [raw-content {:keys [blurb title urls by id tech]}]
-  (let [id (or id (keyword (to-id-str title)))
-        override (-> raw-content :video-overrides (get id))]
+(defn- video-id [video]
+  (or (:id video)
+      (keyword (to-id-str (:title video)))))
+
+(defn- video-url [video]
+  (str "/" (name (video-id video)) "/"))
+
+(defn- cultivate-video [raw-content {:keys [blurb title urls by tech] :as video}]
+  (let [override (-> raw-content :video-overrides (get (video-id video)))]
     (merge
      {:title title
       :by by
       :blurb blurb
-      :tech (map (partial tech/look-up-tech-1 raw-content) tech)
-      :url (str "/" (name id) "/")
+      :tech (map (partial util/look-up-tech raw-content) tech)
+      :url (video-url video)
       :embed-code (create-embed-code (:video urls))}
      override)))
 
@@ -42,9 +48,20 @@
          (map #(assoc % :by {:name (first (:name person))
                              :url (util/url person)})))))
 
+(defn- create-video-page-for-presentation? [presentation]
+  (and (not (:direct-link? presentation))
+       (find-video (:video (:urls presentation)))))
+
+(defn replace-presentation-video-urls-1 [pres]
+  (if (create-video-page-for-presentation? pres)
+    (assoc-in pres [:urls :video] (video-url pres))
+    pres))
+
+(defn replace-video-urls [m]
+  (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
+
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
-       (filter (comp find-video :video :urls))
-       (remove :direct-link?)
+       (filter create-video-page-for-presentation?)
        (map (partial cultivate-video raw-content))))
