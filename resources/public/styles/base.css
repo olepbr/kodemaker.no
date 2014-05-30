@@ -177,3 +177,7 @@ a.brick:hover {background: #000;}
 .video-embed iframe,
 .video-embed object,
 .video-embed embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.call-to-action {background: #f4f4f4; -webkit-transition: opacity 1000ms;}
+.call-to-action.hidden {opacity: 0; height: 0; overflow: hidden;}
+.call-to-action.visible {opacity: 1; height: auto;}

@@ -6,7 +6,8 @@
           :projects {}
           :articles {}
           :tech-names {}
-          :blog-posts {}}
+          :blog-posts {}
+          :video-overrides {}}
          m))
 
 (defn tech [m]

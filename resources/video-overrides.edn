@@ -1,0 +1,7 @@
+{:instabuster-javascript-testing-with-lighttable-buster-js
+ {:blurb "Screencast med en kort introduksjon til LightTable InstaBuster."
+  :call-to-action {:seconds-to-delay 60
+                   :content ("Lyst til å prøve? "
+                             [:a {:href "https://github.com/busterjs/lt-instabuster"}
+                              "Sjekk ut lt-instabuster på github"]
+                               "!")}}}

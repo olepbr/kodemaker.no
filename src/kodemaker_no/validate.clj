@@ -1,5 +1,5 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num pred both]]
+  (:require [schema.core :refer [optional-key validate either Str Keyword Num Any pred both]]
             [clj-time.format :refer [parse formatters]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
@@ -123,11 +123,17 @@
    :lead Str
    (optional-key :body) Str})
 
+(def VideoOverride
+  {(optional-key :blurb) Str
+   (optional-key :call-to-action) {:seconds-to-delay Num
+                                   :content Any}})
+
 (defn validate-content [content]
   (validate {:people {ID Person}
              :tech {ID Tech}
              :projects {ID Project}
              :articles {Path Article}
              :tech-names {ID Str}
-             :blog-posts {Path BlogPost}}
+             :blog-posts {Path BlogPost}
+             :video-overrides {ID VideoOverride}}
             content))

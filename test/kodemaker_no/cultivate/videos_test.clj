@@ -80,3 +80,14 @@
  (find-video "http://vimeo.com/49324971") => {:type :vimeo, :id "49324971"}
  (find-video "https://vimeo.com/28765670") => {:type :vimeo, :id "28765670"}
  (find-video "http://vimeo.com/album/2525252/video/74401304") => {:type :vimeo, :id "74401304"})
+
+(fact
+ "It merges in video overrides based on id."
+
+ (-> content
+     (assoc :video-overrides
+       {:zombie-tdd-live-at-javazone
+        {:blurb "Overridden"}})
+     cultivate
+     first
+     :blurb) => "Overridden")

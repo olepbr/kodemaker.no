@@ -25,12 +25,16 @@
                         :allowfullscreen true}]])))
 
 (defn- cultivate-video [raw-content {:keys [blurb title urls by id tech]}]
-  {:title title
-   :by by
-   :blurb blurb
-   :tech (map (partial tech/look-up-tech-1 raw-content) tech)
-   :url (str "/" (if id (name id) (to-id-str title)) "/")
-   :embed-code (create-embed-code (:video urls))})
+  (let [id (or id (keyword (to-id-str title)))
+        override (-> raw-content :video-overrides (get id))]
+    (merge
+     {:title title
+      :by by
+      :blurb blurb
+      :tech (map (partial tech/look-up-tech-1 raw-content) tech)
+      :url (str "/" (name id) "/")
+      :embed-code (create-embed-code (:video urls))}
+     override)))
 
 (defn- get-with-byline [key]
   (fn [person]
