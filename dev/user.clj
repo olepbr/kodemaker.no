@@ -1,12 +1,13 @@
 (ns user
   (:require [clojure.java.io :as io]
-            [clojure.string :as str]
-            [clojure.set :as set]
             [clojure.pprint :refer [pprint pp print-table]]
+            [clojure.reflect]
             [clojure.repl :refer :all]
-            [print.foo :refer :all]
+            [clojure.set :as set]
+            [clojure.string :as str]
             [hiccup.core :refer [html]]
-            [clojure.reflect]))
+            [kodemaker-no.content :refer [load-content]]
+            [print.foo :refer :all]))
 
 (defmacro dump-locals []
   `(clojure.pprint/pprint
