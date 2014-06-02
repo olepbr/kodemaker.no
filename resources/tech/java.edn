@@ -1,0 +1,8 @@
+{:id :java
+ :name "Java"
+ :illustration "/photos/tech/java.png"
+ :site "http://docs.oracle.com/javase/7/docs/api/"
+ :description
+ "Java er raskt, typesikkert, og har en enorm masse flinke utviklere som kan hele språket inn og ut. De fleste Kodemakere foretrekker Groovy, Clojure og andre alternative språk, men vi må nok innrømme at vi er Java-eksperter også.
+
+  Det er en fantastisk mengde av supre biblioteker til Java, som er lett å bruke fra andre JVM-språk. Når man skriver biblioteker selv, kan det være smart å velge Java, med mindre man har helt spesielle behov; både Groovy og Clojure har kjempebra Java-interop."}
