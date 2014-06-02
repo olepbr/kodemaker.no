@@ -1,0 +1,9 @@
+{:id :c
+ :name "C"
+ :site "http://www.open-std.org/jtc1/sc22/wg14/"
+ :description
+ "Det er neppe noen Kodemakere som bruker C på jobb. Eller som kommer til å gjøre det. Men mange av oss har enten brukt C eller C++ i oppdrag tidligere (før Java kom?), eller lekt med C på fritiden.
+
+  C kalles av mange portabel assembly, og det er lett å forstå. Det er ofte lurt å ha i bakhodet hva slags assembly-instruksjoner som ender opp med å kjøre. Og selv om du liksom har et slags typesystem, skinner det ganske kraftig igjennom at du egentlig bare jobber med bytes og pekere til minneadresser.
+
+  C er også et godt eksempel på at et programmeringsspråk kan virke greit å skjønne på overflaten. Men når du begynner å skrive litt kode, snubler du fort borti en hel del grensetilfeller hvor ting kanskje ikke er så intuitivt som du hadde håpet på. Peker-aritmetikk på structs sier du? Nei nå får du skjerpe deg, konverter til en `void *` først."}
