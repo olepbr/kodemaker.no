@@ -62,7 +62,11 @@
                          :tech [:ruby :openssl]}]
  :open-source-contributions [{:name "Linux" :url "http://lkml.indiana.edu/hypermail/linux/kernel/1105.3/02740.html" :tech [:c :gcc :linux]}
                              {:name "Urban Airship" :url "https://github.com/groupon/urbanairship/commit/3c4967b987ac3aade37b323e1e449de3abd15479" :tech [:ruby]}]
- :blog-posts [{:url "http://augustl.com/blog/2014/an_immutable_operating_system/"
+ :blog-posts [{:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
+               :title "JDK8 + Facebook React: Rendering single page apps on the server"
+               :blurb "En proof-of-concept på å gjenbruke React-komponenter til å få single page apps til å funke både på server og klient, uten at du trenger å gjøre noe særlig for å tilpasse JS-koden din."
+               :tech [:java :react]}
+              {:url "http://augustl.com/blog/2014/an_immutable_operating_system/"
                :title "An immutable operating system"
                :blurb "Hjerne-dump av tankene mine om et operativsystem jeg lenge har hatt lyst til å lage (og nå har begynt å hacke på). Til tross for svært lite tabloid stil fikk den en del oppmerksomhet, og endte opp på forsiden til Hacker News."
                :tech [:c :immutability]}
