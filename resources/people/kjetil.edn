@@ -8,7 +8,7 @@
  :email-address "kjetiljd@kodemaker.no"
 
   :presence {:cv "kjetil"
-             :linkedin "/in/kjetiljd/"}
+             :linkedin "/in/kjetiljd"}
 
    :tech {:favorites-at-the-moment [:ansible :tdd :java :groovy :gradle :ci :cd :refactoring :utviklingsprosess :organisering-av-team :code-smells]
           :want-to-learn-more [:javascript :clojure :linux :devops]}
