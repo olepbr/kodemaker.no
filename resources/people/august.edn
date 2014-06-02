@@ -19,11 +19,11 @@
                            :text "Se foredraget"}
                     :tech [:clojure :design :immutability]
                     :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}
-                   {:title "Are we there yet?"
-                    :link {:url "http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey"
+                   {:title "Fun with Relational Interpreters in miniKanren"
+                    :link {:url "http://vimeo.com/user18356272/review/66548859/4f724d6341"
                            :text "Se foredraget"}
-                    :tech [:clojure :design :immutability]
-                    :blurb "Rich Hickey snakker om objektorientering er det endelige svaret på programmering. Er OO det beste vi kan se for oss? Finnes det situasjoner hvor det ikke passer? Hvor ofte er OO ikke nødvendigvis beste alternativ? I denne presentasjonen kan man lære mye om designfilosifien til Clojure, og hvorfor immutability er viktig."}
+                    :tech [:scheme :logic-programming]
+                    :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}
                    {:title "How to think about parallel programming: Not!"
                     :link {:url "http://www.infoq.com/presentations/Thinking-Parallel-Programming"
                            :text "Se foredraget"}
