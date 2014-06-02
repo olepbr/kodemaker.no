@@ -44,7 +44,11 @@
                   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
                   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
                    :tech [:datomic :clojure :immutability]}]
- :open-source-projects [{:url "https://github.com/busterjs/buster/"
+ :open-source-projects [{:url "https://github.com/augustl/path-travel-agent/"
+                         :name "Path Travel Agent"
+                         :description "Bibliotek til Java for path-matching (f.eks URL-er i HTTP) som er typesikkert, og har `O(log N)` ytelse"
+                         :tech [:java]}
+                        {:url "https://github.com/busterjs/buster/"
                          :name "Buster.JS"
                          :description "Ambisiøst test-toolkit for JavaScript."
                          :tech [:javascript :testing]}
