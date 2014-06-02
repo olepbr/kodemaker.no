@@ -16,5 +16,39 @@
    :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Les boken"}
                                      :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
                                      :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode. Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
-                                     :tech [:refactoring :code-smells]}]}
+                                     :tech [:refactoring :code-smells]}]
+
+ :projects      [{:id          :finn
+                   :customer    "FINN reise"
+                   :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
+                   :years       [2013 2014]
+                   :tech        [:java :groovy :cucumber :camel :gradle :solr]}
+                  {:id          :finn
+                   :customer    "FINN jobb"
+                   :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering.
+                                 Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
+                   :years       [2011 2012 2013]
+                   :tech        [:java :ruby :cucumber :solr]}
+                  {:id          :rvo-sek
+                   :customer    "Fondet for Regionale Verneombud"
+                   :description "Nytt sekretariatssystem 
+                                Saksbehandlingssystem for innkreving av avgift fra virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
+                   :years       [2010 2011]
+                   :tech        [:ruby :rails :sphinx :mysql]}
+                  {:id          :lindorff-decision
+                   :customer    "Lindorff Decision (nå Bisnode)"
+                   :description "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach.
+                                Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur. Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av utviklingsteamet."
+                   :years       [2010]
+                   :tech        [:java :spring-mvc]}]
+
+ :endorsements  [{:author "Pedro Thormodsen"
+                  :title  "Product Director, FINN jobb"
+                  :quote  "Kjetil is without doubt one of the best software developers I've had the privilege to work with. Kjetil has made invaluable contributions to product development, methodology, and technology to our team and I would not hesitate to hire him back. Top qualities: Great Results, Expert, High Integrity"
+                  }
+                  {:author "Geir Egil Hansen"
+                  :title  "Senior SW Consultant, Lindorff Decision"
+                  :quote  "Lindorff Decision hired Kjetil for a specific project in 2010. He is a fantastic guy to work with; inspiring, dedicated and was able to give us new ideas on how we should improve the way we work. He was the main reason our project went so well, in time and with good results. Kjetil is a great motivator. With his great knowledge around project management, software build systems, software development techniques and the like, there is no problem recommending him for any software project. Top qualities: Great Results, Personable, Expert"
+                  }]
+}
 
