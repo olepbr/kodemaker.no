@@ -39,6 +39,10 @@
                   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
                   :urls {:video "http://vimeo.com/74406482"}
                    :tech [:ip :openssl :ruby]}
+                 {:title "The imminent revolution of functional append-only databases"
+                  :blurb ""
+                  :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
+                  :tech [:datomic :eventstore :clojure :immutability]}
                  {:title "WTF is Datomic?"
                   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
                   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
