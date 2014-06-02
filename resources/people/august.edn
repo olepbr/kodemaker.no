@@ -30,11 +30,8 @@
                     :tech [:design]
                     :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
  :hobbies [{:title "Dataspilling"
-            :description "Jeg liker å spille data! Spiller mye Minecraft med venner på hjemmeserveren min. Spiller en hel del Battlefield 4, stort sett for meg selv. DayZ (avbildet) er for tiden den største favoritten. Generelt glad i FPS-spilling, men må innrømme at jeg ikke har god nok aim til å spille Counter Strike."
-            :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}
-           {:title "Musikk"
-            :description "Min eneste utdannelse er en avbrutt bachelor i klassisk piano (utøvende) på Norges Musikkhøgskole. Jeg spiller lite for tiden, men har et par band jeg somler rundt med nå og da. F.eks hver påske møtes jeg og en gjeng fra studietidene og fri-improviserer merksnodige lyder som kan høres på her: https://soundcloud.com/burgerberg/sets/alpha-bravo-yeah-yeah. Hjemme har jeg en fet Densen-forsterker som jeg bruker til å høre på ukomprimert musikk. På bildet spiller jeg på en Rebec som farfar har laget."
-            :illustration "/illustrations/hobbies/august-musikant.jpg"}]
+            :description "Eller &laquo;gaming&raquo; om du vil. Spiller ikke aktivti konkurranser, så det kan vel sies å være en fritidssyssel mere enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til Everquest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har desverre ikke god nok aim til å spille Counter Strike."
+            :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
  :presentations [{:title "You probably don't know how the internet actually works"
                   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
                   :urls {:video "http://vimeo.com/74406482"}
