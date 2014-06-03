@@ -9,6 +9,7 @@
 
  :presence {:cv "august"
             :twitter "augustl"
+            :stackoverflow "/users/26051/august-lilleaas"
             :github "augustl"}
 
  :tech {:favorites-at-the-moment [:datomic, :react]
