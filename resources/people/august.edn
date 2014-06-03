@@ -14,67 +14,83 @@
  :tech {:favorites-at-the-moment [:datomic, :react]
         :want-to-learn-more [:c]}
 
- :recommendations [{:title "Simple Made Easy"
-                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se foredraget"}
-                    :tech [:clojure :design :immutability]
-                    :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}
-                   {:title "Fun with Relational Interpreters in miniKanren"
-                    :link {:url "http://vimeo.com/user18356272/review/66548859/4f724d6341"
-                           :text "Se foredraget"}
-                    :tech [:scheme :logic-programming]
-                    :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}
-                   {:title "How to think about parallel programming: Not!"
-                    :link {:url "http://www.infoq.com/presentations/Thinking-Parallel-Programming"
-                           :text "Se foredraget"}
-                    :tech [:design]
-                    :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
- :hobbies [{:title "Dataspilling"
-            :description "Eller \"gaming\" om du vil. Spiller ikke aktivt i konkurranser, så det kan vel sies å være en fritidssyssel mer enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til EverQuest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har dessverre ikke god nok aim til å spille Counter Strike."
-            :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
- :presentations [{:title "You probably don't know how the internet actually works"
-                  :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
-                  :urls {:video "http://vimeo.com/74406482"}
-                   :tech [:ip :openssl]}
-                 {:title "The imminent revolution of functional append-only databases"
-                  :blurb ""
-                  :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
-                  :tech [:datomic :eventstore :clojure :immutability]}
-                 {:title "WTF is Datomic?"
-                  :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
-                  :urls {:video "http://2013.flatmap.no/lilleaas.html"}
-                   :tech [:datomic :clojure :immutability]}]
- :open-source-projects [{:url "https://github.com/augustl/path-travel-agent/"
-                         :name "Path Travel Agent"
-                         :description "Bibliotek til Java for path-matching (f.eks URL-er i HTTP) som er typesikkert, og har `O(log N)` ytelse"
-                         :tech [:java]}
-                        {:url "https://github.com/busterjs/buster/"
-                         :name "Buster.JS"
-                         :description "Ambisiøst test-toolkit for JavaScript."
-                         :tech [:javascript :testing]}
-                        {:url "https://github.com/augustl/halt"
+ :recommendations
+ [{:title "Simple Made Easy"
+   :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
+          :text "Se foredraget"}
+   :tech [:clojure :design :immutability]
+   :blurb "Rich Hickey, oppfinneren av Clojure og Datomic, snakker om forskjellene på \"Simple\" og \"Easy\". Det er stor forskjell på \"vanskelig\", som er subjektivt (Russisk er vanskelig fordi du ikke kan det), og \"simpelt\", som er objektivt (spagetti-kode er vanskelig å lese fordi det er sammenvevd). Denne presentasjonen har allerede rukket å bli rene Woodstock-legenden, og forklarer godt hovedpoengene med Clojure uten en eneste linje kode."}
+  {:title "Fun with Relational Interpreters in miniKanren"
+   :link {:url "http://vimeo.com/user18356272/review/66548859/4f724d6341"
+          :text "Se foredraget"}
+   :tech [:scheme :logic-programming]
+   :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}
+  {:title "How to think about parallel programming: Not!"
+   :link {:url "http://www.infoq.com/presentations/Thinking-Parallel-Programming"
+          :text "Se foredraget"}
+   :tech [:design]
+   :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
+
+
+ :hobbies
+ [{:title "Dataspilling"
+   :description "Eller \"gaming\" om du vil. Spiller ikke aktivt i konkurranser, så det kan vel sies å være en fritidssyssel mer enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til EverQuest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har dessverre ikke god nok aim til å spille Counter Strike."
+   :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
+
+
+ :presentations
+ [{:title "You probably don't know how the internet actually works"
+   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
+   :urls {:video "http://vimeo.com/74406482"}
+   :tech [:ip :openssl]}
+  {:title "The imminent revolution of functional append-only databases"
+   :blurb ""
+   :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
+   :tech [:datomic :eventstore :clojure :immutability]}
+  {:title "WTF is Datomic?"
+   :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
+   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
+   :tech [:datomic :clojure :immutability]}]
+
+
+ :open-source-projects
+ [{:url "https://github.com/augustl/path-travel-agent/"
+   :name "Path Travel Agent"
+   :description "Bibliotek til Java for path-matching (f.eks URL-er i HTTP) som er typesikkert, og har `O(log N)` ytelse"
+   :tech [:java]}
+  {:url "https://github.com/busterjs/buster/"
+   :name "Buster.JS"
+   :description "Ambisiøst test-toolkit for JavaScript."
+   :tech [:javascript :testing]}
+  {:url "https://github.com/augustl/halt"
                          :name "HALT"
-                         :description "Ambisiøst operativsystem-prosjekt."
-                         :tech [:javascript :testing]}
-                        {:url "https://github.com/augustl/net-http-cheat-sheet"
-                         :name "Ruby Net::HTTP Cheat Sheet"
-                         :description "Eksempler på bruk av Ruby sitt Net::HTTP"
-                         :tech [:ruby :http]}
-                        {:url "https://github.com/augustl/ruby-openssl-cheat-sheet"
-                         :name "Ruby OpenSSL Cheat Sheet"
-                         :description "Eksempler på bruk av OpenSSL, både generelt, og i Ruby."
-                         :tech [:ruby :openssl]}]
- :open-source-contributions [{:name "Linux" :url "http://lkml.indiana.edu/hypermail/linux/kernel/1105.3/02740.html" :tech [:c :gcc :linux]}
-                             {:name "Urban Airship" :url "https://github.com/groupon/urbanairship/commit/3c4967b987ac3aade37b323e1e449de3abd15479" :tech [:ruby]}]
- :blog-posts [{:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
-               :title "JDK8 + Facebook React: Rendering single page apps on the server"
-               :blurb "En proof-of-concept på å gjenbruke React-komponenter til å få single page apps til å funke både på server og klient, uten at du trenger å gjøre noe særlig for å tilpasse JS-koden din."
-               :tech [:java :react]}
-              {:url "http://augustl.com/blog/2014/an_immutable_operating_system/"
-               :title "An immutable operating system"
-               :blurb "Hjerne-dump av tankene mine om et operativsystem jeg lenge har hatt lyst til å lage (og nå har begynt å hacke på). Til tross for svært lite tabloid stil fikk den en del oppmerksomhet, og endte opp på forsiden til Hacker News."
-               :tech [:c :immutability]}
-              {:url "http://augustl.com/blog/2013/zeromq_instead_of_http/"
-               :title "ZeroMQ instead of HTTP, for internal services"
-               :blurb "Det er vanlig å bruke HTTP når man trenger RPC, altså at du har en eller annen klient som trenger å snakke med en server. I denne bloggposten forklarer jeg hvorfor og hvordan du kan og bør bruke ZeroMQ i stedet for, eller i tillegg til, HTTP. Det er svært mange fordeler med ZeroMQ som er fundamentalt umulig å løse med HTTP."
-               :tech [:clojure :zeromq :http]}]}
+   :description "Ambisiøst operativsystem-prosjekt."
+   :tech [:javascript :testing]}
+  {:url "https://github.com/augustl/net-http-cheat-sheet"
+   :name "Ruby Net::HTTP Cheat Sheet"
+   :description "Eksempler på bruk av Ruby sitt Net::HTTP"
+   :tech [:ruby :http]}
+  {:url "https://github.com/augustl/ruby-openssl-cheat-sheet"
+   :name "Ruby OpenSSL Cheat Sheet"
+   :description "Eksempler på bruk av OpenSSL, både generelt, og i Ruby."
+   :tech [:ruby :openssl]}]
+
+
+ :open-source-contributions
+ [{:name "Linux" :url "http://lkml.indiana.edu/hypermail/linux/kernel/1105.3/02740.html" :tech [:c :gcc :linux]}
+  {:name "Urban Airship" :url "https://github.com/groupon/urbanairship/commit/3c4967b987ac3aade37b323e1e449de3abd15479" :tech [:ruby]}]
+
+
+ :blog-posts
+ [{:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
+   :title "JDK8 + Facebook React: Rendering single page apps on the server"
+   :blurb "En proof-of-concept på å gjenbruke React-komponenter til å få single page apps til å funke både på server og klient, uten at du trenger å gjøre noe særlig for å tilpasse JS-koden din."
+   :tech [:java :react]}
+  {:url "http://augustl.com/blog/2014/an_immutable_operating_system/"
+   :title "An immutable operating system"
+   :blurb "Hjerne-dump av tankene mine om et operativsystem jeg lenge har hatt lyst til å lage (og nå har begynt å hacke på). Til tross for svært lite tabloid stil fikk den en del oppmerksomhet, og endte opp på forsiden til Hacker News."
+   :tech [:c :immutability]}
+  {:url "http://augustl.com/blog/2013/zeromq_instead_of_http/"
+   :title "ZeroMQ instead of HTTP, for internal services"
+   :blurb "Det er vanlig å bruke HTTP når man trenger RPC, altså at du har en eller annen klient som trenger å snakke med en server. I denne bloggposten forklarer jeg hvorfor og hvordan du kan og bør bruke ZeroMQ i stedet for, eller i tillegg til, HTTP. Det er svært mange fordeler med ZeroMQ som er fundamentalt umulig å løse med HTTP."
+   :tech [:clojure :zeromq :http]}]}
