@@ -1,12 +1,12 @@
 {:id :logic-programming
- :name "Logisk programmering"
+ :name "Logikk-programmering"
  :site "http://www.open-std.org/jtc1/sc22/wg14/"
  :description
- "Det sies at rangstigen av programmeringskonsepter er prosidyrell programmering, imperativ programmering, funksjonell programmering, og på toppen logisk programmering. De lærde strides. Men det er nokså objektivt at denne rangstigen er sortert etter hva som er minst &laquo;mekanisk&raquo;. Og logisk programmering vinner lett den kampen.
+ "Det sies at rangstigen av programmeringskonsepter er prosidyrell programmering, imperativ programmering, funksjonell programmering, og på toppen logikk-programmering. De lærde strides. Men det er nokså objektivt at denne rangstigen er sortert etter hva som er minst &laquo;mekanisk&raquo;. Og logikk-programmering vinner lett den kampen.
 
 
-  SQL er et slags eksempel på logisk programmering. Se for deg å bruke prosyderell eller imperativ programmering til å gjøre en spørring mot en databasen. Ikke gøy, og sannsynligvis ikke relevant for problemet du løser. Mye deiliere å si `select * from T1 join T2 on T1.b = T2.a`, og la databaseserveren kose seg med parallelle hash-joins og annet snacks.
+  SQL er et slags eksempel på logikk-programmering. Se for deg å bruke prosyderell eller imperativ programmering til å gjøre en spørring mot en databasen. Ikke gøy, og sannsynligvis ikke relevant for problemet du løser. Mye deiliere å si `select * from T1 join T2 on T1.b = T2.a`, og la databaseserveren kose seg med parallelle hash-joins og annet snacks.
 
   Datomic har en spørringsmotor som heter Datalog, som er et mere konkret eksempel på logikkprogrammering. All data i Datomic har formen `[entity-id attribute value]`, eks `[123 :user/email \"foo@test.com\"]`. For å gjøre spørringer, spesifiserer du en rekke innsnevringer til Datomic, og logikk-motoren gjør resten. Spørringen `[? :user/email \"foo@test.com\"]` gir deg tilbake allle entity-id-er hvis attributt og verdi er det samme som du spesifiserte. Flytt spørsmålstegnet og legg til flere regler, og du har hele spørringsmotoren i et nøtteskall.
 
-  Likevel brukes dette sjelden i praktiske applikasjoner, som nok henger mye sammen med at det skal en del trening til for å tenke &laquo;dette problemet løses best med logisk programmering&raquo; når du har en uke igjen til neste sprint og allerede ser de nesta for-loopene for deg i hodet."}
+  Likevel brukes dette sjelden i praktiske applikasjoner, som nok henger mye sammen med at det skal en del trening til for å tenke &laquo;dette problemet løses best med logikk-programmering&raquo; når du har en uke igjen til neste sprint og allerede ser de nesta for-loopene for deg i hodet."}
