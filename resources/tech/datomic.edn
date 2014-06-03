@@ -3,8 +3,21 @@
  :illustration "/photos/tech/datomic.png"
  :site "http://www.datomic.com/"
  :description
- "Datomic er en svært annerledes database. Den er append-only, akkurat som Git og loggfiler. Databasen er representert som immutable data, slik at du kan kjøre spørringer som varer i timesvis uten å bekymre deg for locking og inkonsistens. Spørringer skjer også i klienten din, ikke på serveren, med en svært smart lazy datastruktur. Noen må jo ha arbeidssettet i minnet, hvorfor ikke klienten? Dette gjør at serveren ikke trenger å gjøre noe annet en writes, som er hyggelig mtp. skalering.
+ "Datomic tar automatisk vare på gammel data for deg. Jo mere du skjønner om Datomic, jo oftere vil du oppdage at mange database-relaterte problemer ikke er så fundamentale som du kanskje trodde.
 
-Den er JVM-native, men kan brukes via et HTTP-API. Da får du ikke fordelene med at spørringer kjører i klienten din, naturligvis.
+I og med at Datomic er **veldig** annerledes andre databaser, er det litt keitete å oppsummere den med noen få setninger. Det krever mere enn to minutters skumlesing for å forstå hva slags problem Datomic egentlig løser.
 
-Desverre er den også proprietær, men den kommer i en gratis-versjon som har alle features bortsett fra de du trenger når du må skalere opp en del."}
+Men for å liste opp noen kule ting:
+
+* Lesing og skriving er skilt helt fra hverandre. CQRS, altså.
+* All lesing skjer via et immutable database-objekt, ikke en flytende connection. Når du ber en connection om en database, vil du få den nyeste, og den vil aldri endre seg, så du kan kjøre spørringer i mange timer hvis du vil, uten noen form for synkronisering.
+* Du kan også be om databasen slik den så ut ved en gitt dato. Denne er også immutable når du har hentet den ut.
+* NOSQL, relasjonell, og ACID. Det går altså an å ha konsistent data uten SQL, hvem skulle trodd det?
+* Du kan gjøre spørringer på endringer gjort til dataene dine over tid.
+* Du kan lese ut transaksjoner fra databasen. Transaksjoner er altså ikke skjulte og interne, men spørrbare entiteter.
+* Transaksjoner kan tagges med din egen metadata, f.eks \"hvem gjorde dette\".
+
+I hovedsak løser Datomic et viktig problem: for de fleste domener er gammel data verdifull, og bruker du Datomic, blir gammel data tatt vare på for deg, uten at du trenger å modellere det med sindige join-tabeller og annet snacks.
+
+Den er også proprietær, med en ganske voldsom lisens. Heldigvis har Kodemakere bare brukt gratis-versjonen enn så lenge, så vi har lov til å bruke datomic til \"nefarious purposes\". Vi kan til og med blogge kritisk om Cognitect, firmaet bak Datomic. I motsetning til stakkarene som har punga ut. Betal-utgaven trenger man først og fremst når man skal skalere, gratis-versjonen er helt fin og stabil og trygg.
+"}
