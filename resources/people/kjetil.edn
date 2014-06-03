@@ -19,7 +19,7 @@
                     :tech [:refactoring :code-smells]}
                     {:link {:url "http://www.growing-object-oriented-software.com/" :text "Boken"}
                     :title "Growing Object-Oriented Software, Guided by Tests (Freeman & Pryce)"
-                    :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre sukess i flere prosjekter."
+                    :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech [:tdd :automatisering :release-early]}]
 
  :projects      [{:id          :finn
