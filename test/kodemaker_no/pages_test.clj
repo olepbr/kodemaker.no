@@ -19,7 +19,8 @@
            "/kompetanse/"
            "/systemer/"
            "/skjema/"
-           "/blogg/"})
+           "/blogg/"
+           "/kurs/"})
 
 (fact "Colliding urls are not tolerated."
 

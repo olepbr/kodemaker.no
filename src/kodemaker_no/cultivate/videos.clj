@@ -22,14 +22,21 @@
       :vimeo [:div.video-embed
               [:iframe {:src (str "//player.vimeo.com/video/" id "?title=0&amp;byline=0&amp;portrait=0")
                         :frameborder "0"
-                        :allowfullscreen true}]])))
+                        :allowfullscreen true}]]
+      nil)))
+
+(defn- create-video-page-for-presentation? [presentation]
+  (and (not (:direct-link? presentation))
+       (find-video (:video (:urls presentation)))))
 
 (defn- video-id [video]
   (or (:id video)
       (keyword (to-id-str (:title video)))))
 
 (defn- video-url [video]
-  (str "/" (name (video-id video)) "/"))
+  (if (create-video-page-for-presentation? video)
+    (str "/" (name (video-id video)) "/")
+    (-> video :urls :video)))
 
 (defn- cultivate-video [raw-content {:keys [blurb title urls by tech] :as video}]
   (let [override (-> raw-content :video-overrides (get (video-id video)))]
@@ -39,7 +46,8 @@
       :blurb blurb
       :tech (map (partial util/look-up-tech raw-content) tech)
       :url (video-url video)
-      :embed-code (create-embed-code (:video urls))}
+      :embed-code (create-embed-code (:video urls))
+      :direct-link? (not (create-video-page-for-presentation? video))}
      override)))
 
 (defn- get-with-byline [key]
@@ -47,10 +55,6 @@
     (->> (key person)
          (map #(assoc % :by {:name (first (:name person))
                              :url (util/url person)})))))
-
-(defn- create-video-page-for-presentation? [presentation]
-  (and (not (:direct-link? presentation))
-       (find-video (:video (:urls presentation)))))
 
 (defn replace-presentation-video-urls-1 [pres]
   (if (create-video-page-for-presentation? pres)
@@ -63,5 +67,4 @@
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
-       (filter create-video-page-for-presentation?)
        (map (partial cultivate-video raw-content))))
