@@ -44,7 +44,7 @@
    :urls {:video "http://vimeo.com/74406482"}
    :tech [:ip :openssl]}
   {:title "The imminent revolution of functional append-only databases"
-   :blurb ""
+   :blurb "I de fleste domener har gammel data høy verdi. Dette bør ikke være ditt ansvar å løse dette manuelt, med tradisjonelle muterbare databaser. Få en introduksjon til ny grensesprengende database-teknologi som løser dette problemet for deg."
    :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
    :tech [:datomic :eventstore :clojure :immutability]}
   {:title "WTF is Datomic?"
