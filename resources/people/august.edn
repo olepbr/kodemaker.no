@@ -12,6 +12,7 @@
             :github "augustl"}
 
  :tech {:favorites-at-the-moment [:datomic, :react]
+        :using-at-work [:grails :oracle :angularjs :react]
         :want-to-learn-more [:c :haskell]}
 
  :recommendations
