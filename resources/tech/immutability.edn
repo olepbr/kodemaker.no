@@ -1,9 +1,9 @@
 {:id :immutability
  :name "Immutability"
  :description
- "> Familiarity hides complexity
+ "> Immutability changes everything
 >
-> -- <cite>[Rich Hickey](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey)</cite>
+> -- <cite>[Pat Helland](http://vimeo.com/52831373)</cite>
 
 Når du kan endre og slette data som du vil, er det ditt problem å ta vare på gammel data hvis du skulle ønske det. Det finnes et hva av løsninger. Copy on write. Låsing. [RCU](http://en.wikipedia.org/wiki/Read-copy-update). Message passing. Men alt dette er eksempler på at det i bunn og grunn er ditt problem. Det er også ditt problem å sørge for eierskap, og f.eks returnere kopier av objekters interne state slik at omverdenen ikke har anledning til å ødelegge staten din. Lykke til med cache-invalidering dersom du returnerer en intern datastruktur som du har cachet opp på andre vis, og noen utenifra kommer tli å endre på disse dataene.
 
