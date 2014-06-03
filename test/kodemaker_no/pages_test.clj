@@ -24,11 +24,11 @@
 (fact "Colliding urls are not tolerated."
 
       (create-pages {:people {}, :articles {"/skjema/" ""}})
-      => (throws Exception "URL conflicts between :article-pages and :general-pages: #{\"/skjema/\"}")
+      => (throws Exception "URL conflicts between :article-pages and :general-pages: #{\"/skjema/index.html\"}")
 
       (create-pages {:people {:magnars {:url "/magnars/"}
                               :finnjoh {:url "/finnjoh/"}}
                      :tech {}
                      :articles {"/magnars.md" ""
                                 "/finnjoh.md" ""}})
-      => (throws Exception "URL conflicts between :person-pages and :article-pages: #{\"/magnars/\" \"/finnjoh/\"}"))
+      => (throws Exception "URL conflicts between :person-pages and :article-pages: #{\"/finnjoh/index.html\" \"/magnars/index.html\"}"))

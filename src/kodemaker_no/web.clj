@@ -57,7 +57,9 @@
                                :quality 0.3
                                :width (* 100 2)
                                :progressive false}) ; too small, will be > kb
-            (optimizations/all options)))
+            (optimizations/all options)
+            (->> (remove :bundled)
+                 (remove :outdated))))
       (clojure.core.memoize/lru {} :lru/threshold 3)))
 
 (defn- dummy-mail-sender [handler]
@@ -74,8 +76,16 @@
              wrap-content-type
              wrap-content-type-utf-8))
 
+(defn- load-export-dir []
+  (stasis/slurp-directory export-directory #"\.[^.]+$"))
+
 (defn export []
-  (let [assets (optimize (get-assets) {})]
+  (let [assets (optimize (get-assets) {})
+        old-files (load-export-dir)]
     (stasis/empty-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
-    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})))
+    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})
+    (println)
+    (println "Export complete:")
+    (stasis/report-differences old-files (load-export-dir))
+    (println)))
