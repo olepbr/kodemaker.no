@@ -1,0 +1,8 @@
+{:id :haskell
+ :name "Haskell"
+ :illustration "/photos/tech/haskell.png"
+ :site "http://www.haskell.org/"
+ :description
+ "Hei! Øøøh. Er det noen Kodemakere som *kan* Haskell, og vil skrive noe her? Hmm.
+
+Mange Kodemakere ønsker å lære mere om Haskell. Simon Peyton Jones sammenlinker Haskell med et drivhus hvor du møysommelig klipper og vanner og steller alskens eksotiske planter, i ro og mak, uten noen mål om å bli rik og berømt. Noe ganske annet enn det vi driver med på jobb, altså."}
