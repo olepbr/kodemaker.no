@@ -8,8 +8,7 @@
     (cond
      (.startsWith url "http://www.youtube.com/watch?v=") {:type :youtube, :id (subs url 31)}
      (.startsWith url "http://vimeo.com/album/") {:type :vimeo, :id (second (re-find #"http://vimeo.com/album/\d+/video/(\d+)" url))}
-     (.startsWith url "http://vimeo.com/") {:type :vimeo, :id (subs url 17)}
-     (.startsWith url "https://vimeo.com/") {:type :vimeo, :id (subs url 18)}
+     (re-find #"https?://vimeo.com/\d+" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/(\d+)" url))}
      :else nil)))
 
 (defn- create-embed-code [url]
