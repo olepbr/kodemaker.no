@@ -7,12 +7,14 @@
             [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.tech-pages :refer [tech-pages]]
             [kodemaker-no.pages.video-pages :refer [video-pages]]
+            [kodemaker-no.pages.course-page :refer [course-page]]
             [stasis.core :as stasis]))
 
 (defn general-pages [content]
   {"/" (partial index-page (vals (:people content)))
    "/skjema/" form-page
-   "/blogg/" (partial blog-page (vals (:blog-posts content)))})
+   "/blogg/" (partial blog-page (vals (:blog-posts content)))
+   "/kurs/" (partial course-page (:videos content))})
 
 (defn create-pages [content]
   (stasis/merge-page-sources

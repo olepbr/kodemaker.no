@@ -30,12 +30,12 @@
                     :tech [:design]
                     :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
  :hobbies [{:title "Dataspilling"
-            :description "Eller &laquo;gaming&raquo; om du vil. Spiller ikke aktivti konkurranser, så det kan vel sies å være en fritidssyssel mere enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til Everquest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har desverre ikke god nok aim til å spille Counter Strike."
+            :description "Eller \"gaming\" om du vil. Spiller ikke aktivt i konkurranser, så det kan vel sies å være en fritidssyssel mer enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til EverQuest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har dessverre ikke god nok aim til å spille Counter Strike."
             :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
  :presentations [{:title "You probably don't know how the internet actually works"
                   :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
                   :urls {:video "http://vimeo.com/74406482"}
-                   :tech [:ip :openssl :ruby]}
+                   :tech [:ip :openssl]}
                  {:title "The imminent revolution of functional append-only databases"
                   :blurb ""
                   :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}

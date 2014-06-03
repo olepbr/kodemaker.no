@@ -33,4 +33,7 @@
       [:p (:blurb video)])}))
 
 (defn video-pages [videos]
-  (into {} (map (juxt :url create-video-page) videos)))
+  (->> videos
+       (remove :direct-link?)
+       (map (juxt :url create-video-page))
+       (into {})))

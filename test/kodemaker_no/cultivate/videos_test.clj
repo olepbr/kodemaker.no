@@ -23,7 +23,7 @@
        :name ["Sten Morten" "MA"]
        :presentations [{:title "En deilig implementert AND (Teknologihuset)"
                         :blurb "Et dypdykk inn i clojure.core"
-                        :tech [:hjernen :clojure]
+                        :tech [:clojure]
                         :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}}
                        {:title "Programmeringsspråket betyr alt!"
                         :blurb "Hovedverktøyet til programmerere"
@@ -35,36 +35,42 @@
 
 (let [videos (cultivate content)]
   (fact
-   "Videos with known hosts are included."
+   "It includes the title."
    (map :title videos) => ["Zombie TDD: Live parprogrammering"
+                           "En deilig implementert AND (Teknologihuset)"
                            "Programmeringsspråket betyr alt!"])
 
   (fact
    "It includes name and url to the person."
 
    (map :by videos) => [{:name "Magnar", :url "/magnar/"}
+                        {:name "Sten Morten", :url "/sten-morten/"}
                         {:name "Sten Morten", :url "/sten-morten/"}])
 
   (fact
    "It includes the blurb."
    (map :blurb videos) => ["Progger på JavaZone"
+                           "Et dypdykk inn i clojure.core"
                            "Hovedverktøyet til programmerere"])
 
   (fact
    "It includes the tech."
    (map :tech videos) => [[{:id :javascript, :name "Javascript"}]
+                          [{:id :clojure, :name "Clojure"}]
                           [{:id :clojure, :name "Clojure"}]])
 
   (fact
-   "It uses the given :id as URL, otherwise it uses the title to generate one."
+   "It uses the given :id as URL, otherwise it uses the title to generate one.
+    Then there's the videos we can't embed on our site. Those are left alone."
 
    (map :url videos) => ["/zombie-tdd-live-at-javazone/"
+                         "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"
                          "/programmeringsspraket-betyr-alt/"])
 
   (fact
    "It creates embed-code"
 
-   (map :embed-code videos) =>
+   (->> videos (remove :direct-link?) (map :embed-code)) =>
    [[:div.video-embed
      [:iframe {:src "//player.vimeo.com/video/49485653?title=0&amp;byline=0&amp;portrait=0"
                :frameborder "0"
@@ -79,7 +85,8 @@
  (find-video "http://www.youtube.com/watch?v=y5PSRn56ZWo") => {:type :youtube, :id "y5PSRn56ZWo"}
  (find-video "http://vimeo.com/49324971") => {:type :vimeo, :id "49324971"}
  (find-video "https://vimeo.com/28765670") => {:type :vimeo, :id "28765670"}
- (find-video "http://vimeo.com/album/2525252/video/74401304") => {:type :vimeo, :id "74401304"})
+ (find-video "http://vimeo.com/album/2525252/video/74401304") => {:type :vimeo, :id "74401304"}
+ (find-video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a") => nil)
 
 (fact
  "It merges in video overrides based on id."
@@ -92,10 +99,10 @@
      first
      :blurb) => "Overridden")
 
-(fact
- "It does not include videos with :direct-link? set to true."
+#_(fact
+   "It does not mess with videos with :direct-link? set to true."
 
- (-> content
-     (assoc-in [:people :magnar :presentations 0 :direct-link?] true)
-     cultivate
-     count) => 1)
+   (-> content
+       (assoc-in [:people :magnar :presentations 0 :direct-link?] true)
+       cultivate
+       count) => 1)
