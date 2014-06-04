@@ -5,7 +5,7 @@
   {:title "Hva kan vi hjelpe deg med?"
    :body (list
           [:p
-           "Vi tar utviklingsoppdrag, lager workshops for deg, og holder kurs og foredrag."]
+           "Vi tar utviklingsoppdrag, lager workshops for deg, eller holder kurs og foredrag."]
           [:p "For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
             fyller ut dette skjemaet. Vi tar kontakt med
             deg så snart vi har mulighet. Stort sett vil du høre fra oss innen to
