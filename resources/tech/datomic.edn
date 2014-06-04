@@ -3,9 +3,9 @@
  :illustration "/photos/tech/datomic.png"
  :site "http://www.datomic.com/"
  :description
- "Datomic tar automatisk vare på gammel data for deg. Jo mere du skjønner om Datomic, jo oftere vil du oppdage at mange database-relaterte problemer ikke er så fundamentale som du kanskje trodde.
+ "Datomic tar automatisk vare på gammel data for deg. Jo mer du skjønner om Datomic, jo oftere vil du oppdage at mange databaserelaterte problemer ikke er så unike som du kanskje trodde.
 
-I og med at Datomic er **veldig** annerledes andre databaser, er det litt keitete å oppsummere den med noen få setninger. Det krever mere enn to minutters skumlesing for å forstå hva slags problem Datomic egentlig løser.
+I og med at Datomic skiller seg radikalt fra andre databaser, er det keitete å oppsummere det hele med noen få setninger. Det krever mer enn to minutters skumlesing for å forstå hva slags problem Datomic løser.
 
 Men for å liste opp noen kule ting:
 
@@ -19,5 +19,5 @@ Men for å liste opp noen kule ting:
 
 I hovedsak løser Datomic et viktig problem: for de fleste domener er gammel data verdifull, og bruker du Datomic, blir gammel data tatt vare på for deg, uten at du trenger å modellere det med sindige join-tabeller og annet snacks.
 
-Den er også proprietær, med en ganske voldsom lisens. Heldigvis har Kodemakere bare brukt gratis-versjonen enn så lenge, så vi har lov til å bruke datomic til \"nefarious purposes\". Vi kan til og med blogge kritisk om Cognitect, firmaet bak Datomic. I motsetning til stakkarene som har punga ut. Betal-utgaven trenger man først og fremst når man skal skalere, gratis-versjonen er helt fin og stabil og trygg.
+Den er også proprietær, med en ganske voldsom lisens. Heldigvis har Kodemakere bare brukt gratis-versjonen enn så lenge, så vi har lov til å bruke datomic til \"nefarious purposes\". Vi kan til og med blogge kritisk om Cognitect, firmaet bak Datomic. I motsetning til stakkarene som har punga ut. Betal-utgaven trenger man først og fremst når man skal skalere, gratis-versjonen er helt fin, stabil og trygg.
 "}
