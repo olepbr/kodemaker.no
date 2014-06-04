@@ -23,7 +23,7 @@ google.maps.event.addDomListener(window, "load", function () {
 
 Vår besøksadresse er Dronning Eufemias gate 16, 9. etasje. Henvendelse i resepsjonen.
 
-[Noen andre du vil snakke med?](/mennesker/)
+[Noen andre du vil snakke med?](/)
 
 :aside
 
@@ -34,10 +34,11 @@ Daglig leder <br>
 +47 957 45 096 <br>
 [kolbjorn@kodemaker.no](mailto:kolbjorn@kodemaker.no)
 
-*Kodemaker Systemutvikling AS* <br>
-Dronning Eufemias gate 16 <br>
-Visma-bygget <br>
-0191 Oslo
+<a href="/gry/"><img src="/photos/people/gry/side-profile-cropped.jpg"></a>
 
-+47 22 82 20 80 <br>
-[kontakt@kodemaker.no](mailto:kontakt@kodemaker.no)
+*Gry Gautier Dale* <br>
+Lederassistent <br>
++47 228 22 080 <br>
+[gry@kodemaker.no](mailto:gry@kodemaker.no)
+
+
