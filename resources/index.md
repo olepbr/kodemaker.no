@@ -168,15 +168,15 @@ andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
 </reference>
 
 --------------------------------------------------------------------------------
-:title Vi ønsker selvfølgelig at alle våre prosjekter lykkes, og derfor stiller vi noen krav til ditt prosjekt
+:title Vi ønsker selvfølgelig at alle våre oppdrag lykkes, og derfor stiller vi noen krav
 :body
 
 Vi er bare et visst antall mennesker, og hver av oss kan bare jobbe
-med et prosjekt av gangen. Det er i alles interesse at prosjektet ditt
-skal lykkes. Derfor velger vi bare prosjekter vi selv har stor tro på
-at skal gå bra. Det finnes selvfølgelig ingen garantier her i livet,
+med et oppdrag av gangen. Det er i alles interesse at prosjektet ditt
+skal lykkes. Derfor velger vi bare oppdrag vi selv har stor tro på.
+Det finnes selvfølgelig ingen garantier her i livet,
 men vi mener og tror at punktene beskrevet over er uhyre viktige. La
-meg gjenta dem fort:
+oss gjenta dem fort:
 
 - du må ha en fungerende arbeidsprosess (lean, kanban, eller lignende)
 - du må ha automatiserte tester
@@ -190,12 +190,12 @@ villig til å la oss hjelpe deg å få dem på plass.**
 :illustration /forside/papir.jpg
 :body
 
-For å hjelpe oss plukke ut prosjekter vi har tro på, vil vi at du
-[skal skrive litt om prosjektet ditt i skjemaet på neste side ...](/skjema/)
-så leser vi over det og tar kontakt med deg så snart vi har mulighet.
+For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
+[skal skrive litt om planene dine i skjemaet på neste side ...](/skjema/)
+så leser vi det og tar kontakt med deg så snart vi har mulighet.
 Stort sett vil du høre fra oss innen to arbeidsdager.
 
-Altså: [Fyll inn prosjektskjema her](/skjema/).
+Altså: [Fyll inn skjema her](/skjema/).
 
 --------------------------------------------------------------------------------
 :title ... eller du kan forbli i uvissheten
