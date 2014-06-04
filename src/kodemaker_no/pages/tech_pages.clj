@@ -47,7 +47,7 @@
 (defn- render-side-project [{:keys [title description link illustration by]}]
   [:div.bd
    [:h3.mtn [:a {:href (:url link)} title]]
-   [:p.near.cookie-w [:span.cookie "Av " (link-to-person by)]]
+   [:p.near.cookie-w [:span.cookie "Av " (comma-separated (map link-to-person by))]]
    (-> (to-html description)
        (markup/append-to-paragraph
         (list " " (markup/render-link link)))

@@ -63,6 +63,13 @@
           :tech (distinct (mapcat :tech presentations))
           :urls (apply merge (map :urls presentations)))))
 
+(defn- combine-side-projects [side-projects]
+  (-> (first side-projects)
+      (select-keys #{:title :description :illustration :link})
+      (assoc
+          :by (map :by side-projects)
+          :tech (distinct (mapcat :tech side-projects)))))
+
 (defn- add-presentations [content tech]
   (assoc-in-unless tech [:presentations] empty?
                    (->> (:people content)
@@ -93,6 +100,9 @@
                    (->> (:people content)
                         vals
                         (mapcat (get-with-byline :side-projects))
+                        (group-by :link)
+                        vals
+                        (map combine-side-projects)
                         (filter #(is-about tech %)))))
 
 (defn- cultivate-tech [content tech]

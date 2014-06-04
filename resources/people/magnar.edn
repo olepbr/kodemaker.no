@@ -130,6 +130,16 @@
                   :illustration "/illustrations/side-projects/zombietdd.jpg"
                   :link {:url "http://www.zombietdd.com" :text "Se videoene"}
                   :tech [:javascript :tdd :testing :nodejs]}
+                 {:title "ZombieCLJ"
+                  :description "I denne oppfølgeren til ZombieTDD lager
+                                [Christian](/christian/) og jeg spill med
+                                Clojure og ClojureScript. Det går i
+                                parprogrammering hele veien. Og jaggu skriver vi
+                                ikke flere tester først. Skulle tro XP hadde noe
+                                for seg."
+                  :illustration "/illustrations/side-projects/zombieclj.jpg"
+                  :link {:url "http://www.zombieclj.no" :text "Se videoene"}
+                  :tech [:clojure :clojurescript :tdd :testing]}
                  {:title "Adventur Delux"
                   :description "Et tekstbasert eventyrspill jeg har
                                 skrevet på siden 1997, på størrelse
