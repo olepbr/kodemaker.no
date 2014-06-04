@@ -154,17 +154,12 @@ andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
 :body
 
 <reference img="/references/dummy-1.jpg"
-           url="/finn-surf-sammen/"
-           logo="/logos/finn.png"
-           name="Bjørn Henrik Vangstein"
-           phone="+47 999 88 777"
-           title="Avdelingsleder IT, FINN.no">
-  Vi i FINN.no har en meget sterk utviklingsavdeling selv, og leier i
-  mindre grad inn konsulenter over lenger perioder. Siden vinteren
-  2008 har Kodemaker vært en av få leverandører av slike tjenester hos
-  oss, og vi er meget godt fornøyd med den innsatsen som er levert.
-  Konsulentene har glidd godt inn i vårt miljø, og ikke vært redde for
-  å ta på seg både enkle og komplekse oppgaver.
+           url="/storfekjottkontrollen/"
+           logo="/logos/animalia.png"
+           name="Torkel Randem"
+           phone="+47 991 68 897"
+           title="Økonomi- og utviklingssjef">
+  Kodemaker har vært en bærebjelke i vår satsning på nyutvikling av fagssystemer.  De er høykompetente, byr på seg selv og fungerer strålende som mentorer for våre egne utviklere.  Våren 2013 leverte vi med hjelp av Kodemaker et nytt og moderne system for Storefekjøttkontroll.  Lanseringen var svært vellykket og systemet har blitt veldig godt mottatt av brukerene.
 </reference>
 
 --------------------------------------------------------------------------------
