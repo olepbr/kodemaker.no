@@ -7,12 +7,6 @@
    last two words."
   (str/replace s #" ([^ ]{1,6})$" "&nbsp;$1"))
 
-(def pegdown-options ;; https://github.com/sirthias/pegdown
-  [:autolinks :fenced-code-blocks :strikethrough :quotes :smarts])
-
-(defn to-html [s]
-  (md/to-html s pegdown-options))
-
 (defn comma-separated [coll]
   (drop 1 (interleave (into (list " og " "")
                             (repeat (dec (count coll)) ", "))
@@ -56,3 +50,49 @@
       (str/replace #"[^a-zA-Z0-9]+" "-")
       (str/replace #"-$" "")
       (str/replace #"^-" "")))
+
+(defn min*
+  "Like min, but takes a list - and 0 elements is okay."
+  [vals]
+  (when (seq vals) (apply min vals)))
+
+(defn subs*
+  "Like subs, but safe - ie, doesn't barf on too short."
+  [s len]
+  (if (> (count s) len)
+    (subs s len)
+    s))
+
+(defn find-common-indent-column
+  "Find the lowest number of spaces that all lines have as a common
+   prefix. Except, don't count empty lines."
+  [lines]
+  (->> lines
+       (remove empty?)
+       (map #(count (re-find #"^ +" %)))
+       (min*)))
+
+(defn unindent-all
+  "Given a block of code, if all lines are indented, this removes the
+   preceeding whitespace that is common to all lines."
+  [lines]
+  (let [superflous-spaces (find-common-indent-column lines)]
+    (map #(subs* % superflous-spaces) lines)))
+
+(defn unindent-but-first
+  "Given a block of code, if all lines are indented, this removes the
+   preceeding whitespace that is common to all lines."
+  [lines]
+  (let [superflous-spaces (find-common-indent-column (drop 1 lines))]
+    (concat (take 1 lines)
+            (map #(subs* % superflous-spaces) (drop 1 lines)))))
+
+(def pegdown-options ;; https://github.com/sirthias/pegdown
+  [:autolinks :fenced-code-blocks :strikethrough :quotes :smarts])
+
+(defn to-html [s]
+  (md/to-html (->> s
+                   str/split-lines
+                   unindent-but-first
+                   (str/join "\n"))
+              pegdown-options))
