@@ -5,13 +5,14 @@
   {:title "Hva kan vi hjelpe deg med?"
    :body (list
           [:p
-           "For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
+           "Vi tar utviklingsoppdrag, lager workshops for deg, og holder kurs og foredrag."]
+          [:p "For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
             fyller ut dette skjemaet. Vi tar kontakt med
             deg så snart vi har mulighet. Stort sett vil du høre fra oss innen to
             arbeidsdager."]
           [:form.form.mod {:action "/send-mail"
                            :method "POST"}
-           [:label "Skriv litt om prosjektet ditt"]
+           [:label "Skriv litt om planene dine"]
            [:textarea.input {:rows 8, :name "tekst"}]
            [:div.line
             [:div.unit.r-1of2
