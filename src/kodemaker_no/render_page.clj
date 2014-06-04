@@ -47,6 +47,7 @@
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
+       [:div.ocm-item [:a {:href "/kurs/"} "Lær"]]
        [:div.ocm-item [:a {:href "/skjema/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
@@ -54,6 +55,7 @@
         [:div.bd
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
+          [:a {:href "/kurs/"} "Lær"]
           [:a {:href "/skjema/"} "Ta kontakt"]]
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
