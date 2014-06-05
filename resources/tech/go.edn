@@ -1,0 +1,8 @@
+{:id :go
+ :name "Go"
+ :site "http://golang.org/"
+ :description
+ "[Go](http://golang.org/) er et språk som er utviklet av Google, med Rob Pike og Ken Thompson i spissen. Det var opprinnelig et eksperiment med det utgangspunktet at det skulle kunne erstatte C++, og man har med hensikt holdt språket enkelt, uten å legge til unødvendig kompleksitet En av Go sine styrker er støtten det gir for 'concurrent programming'. Go er ikke et objekt orientert språk, men benytter interfaces for å oppnå polymorfisme.
+ 
+ 
+ "}

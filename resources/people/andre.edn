@@ -17,8 +17,8 @@
                  :coderwall     "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:ruby :objc :clojure :cocoa]
-                 :want-to-learn-more      [:clojure :reactive-cocoa :javascript]}
+ :tech          {:favorites-at-the-moment [:swift :go :ruby :cocoa]
+                 :want-to-learn-more      [:swift :go :javascript]}
  
  :recommendations [
 {
