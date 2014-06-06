@@ -16,6 +16,12 @@
  :tech          {:favorites-at-the-moment [:groovy]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable :swift]}
                  
+:recommendations [{:title "Kom igang med Clojure"
+                    :blurb "En god begynnelse for de som ønsker å komme igang med Clojure. Passer godt til både nye programmerere og de litt mer erfarne"
+                    :link {:url "http://aphyr.com/posts/301-clojure-from-the-ground-up-welcome"
+                           :text "Les artikkelen"}
+                    :tech [:clojure]}]
+                 
 :projects      [{:id          :gbms
                    :customer    "Forsvaret"
                    :description "GBMS - Nyutvikling av et system for datafangst og analyse av belastning på våpen."
