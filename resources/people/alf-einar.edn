@@ -2,9 +2,46 @@
  :name ["Alf" "Einar" "Solbakken"]
  :title "Partner"
  :start-date "2008-07-01"
- :description "Ressursperson med lang erfaring fra design og utvikling av løsninger innen Java, hovedsaklig J2EE/Open Source. Alf Solbakken har vært teamleder og teknisk prosjektleder i mange prosjekter hos forsvaret."
+ :description "Alf liker enkle og pragmatiske løsninger som kan dekke kundens behov. Han liker godt å sette seg inn i nye domener, programmeringsspråk og teknologier, og har kapasitet til raskt å omsette teori til praksis."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 9345 6131"
+ :email-address "alf@kodemaker.no"
 
- :presence {:cv "alf"}}
+ :presence		{:cv "alf"
+ 				:twitter "aesolbakken"
+    			:github  "aesolbakken"
+    			:linkedin "/in/aesolbakken/"}
+ 	
+ :tech          {:favorites-at-the-moment [:groovy]
+                 :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable :swift]}
+                 
+:projects      [{:id          :gbms
+                   :customer    "Forsvaret"
+                   :description "GBMS - Nyutvikling av et system for datafangst og analyse av belastning på våpen."
+                   :years       [2013 2014]
+                   :tech        [:groovy :grails :javascript :html :css :oracle :jenkins]}
+                  {:id          :bkad
+                   :customer    "NETS"
+                   :description "Videreutvikling av ulike applikasjoner for å legge til rette for separation of duties. Videreutvikling av BKAD - Sentralt bankregister"
+                   :years       [2012]
+                   :tech        [:java, :hibernate, :spring, :selenium, :jetty :junit, :maven, :oracle]}
+                  {:id          :rvo-fond
+                   :customer    "Fondet for RVO"
+                   :description "Nytt saksbehandlersystem for regionale verneombud i bygg og anleggsbransjen"
+                   :years       [2011]
+                   :tech        [:ruby :rails :html :css :javascript :jquery :mysql :nginx :rspec]}]
+                 
+  :endorsements  [{:author "Ketil Lund"
+                  :title  "Principal scientist at Forsvarets Forskningsinstitutt"
+                  :quote  "Alf jobbet for oss i ca 3 mnd i forbindelse med et pilotprosjekt rundt integrasjon av ulike informasjonssystemer. Vi er svært fornøyde med jobben Alf gjorde. Han er effektiv, har stor innsatsvilje og er en trivelig person å jobbe sammen med."
+                  }
+                 {:author "Kjell Røysum"
+                  :title  "Senior Software Engineer at Steria AS"
+                  :quote  "I worked with Alf for almost half a year in a Scrum Team, and learned to know him as a real proffesional. 
+When he picked a task from our Sprintbacklog we considered it done! He worked independently, and his ability to acquire knowledge of existing functionality was impressive. He always kept focus on his tasks and his human qualities contributed to a great atmosphere and helped the collaboration in the team. 
+He primarily worked with JEE, Spring (Including Spring Batch), Hibernate and Fitnesse using Subversion, Maven 2, 
+Hudson, Nexus and he was responsible for the design and implementation of our Spring Batch reference application. 
+I addition he obtained a good knowledge of the Pension Business."
+                  }
+                 ]
+ }
