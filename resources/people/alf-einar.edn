@@ -10,7 +10,8 @@
  :presence		{:cv "alf"
  				:twitter "aesolbakken"
     			:github  "aesolbakken"
-    			:linkedin "/in/aesolbakken/"}
+    			:linkedin "/in/aesolbakken/"
+    			:coderwall "aesolbakken"}
  	
  :tech          {:favorites-at-the-moment [:groovy]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable :swift]}
