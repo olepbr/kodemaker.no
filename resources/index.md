@@ -6,8 +6,8 @@
            url="/nsb-personalbillett/"
            logo="/logos/nsb.png"
            name="Bengt Lyng"
-           phone="+47 999 88 777"
-           title="Prosjektsjef, NSB">
+           phone="+47 924 33 836"
+           title="Avdelingssjef, NSB Fellestjenester IT">
   Kodemaker leverte ny teknisk løsning på kortere tid enn vi
   forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
   først antok. Kodemaker løste oppgaven med minimal administrasjon. De
