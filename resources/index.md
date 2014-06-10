@@ -2,7 +2,7 @@
 :full-width
 :body
 
-<reference img="/references/dummy-1.jpg"
+<reference img="/references/bengt-lyng.jpg"
            url="/nsb-personalbillett/"
            logo="/logos/nsb.png"
            name="Bengt Lyng"
