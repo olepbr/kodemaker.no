@@ -3,6 +3,10 @@
  :illustration "/photos/tech/java.png"
  :site "http://docs.oracle.com/javase/7/docs/api/"
  :description
- "Java er raskt, typesikkert, og har en enorm masse flinke utviklere som kan hele språket inn og ut. De fleste Kodemakere foretrekker Groovy, Clojure og andre alternative språk, men vi må nok innrømme at vi er Java-eksperter også.
+ "Java er raskt, typesikkert, og har enormt mange flinke utviklere som kan hele språket inn og ut. Java har alltid
+ hatt et sterkt fagmiljø som over tid har utviklet en mengde gode open source biblioteker. Dette gjør Java til et
+ trygt valg, spesielt for store prosjekter.
 
-  Det er en fantastisk mengde av supre biblioteker til Java, som er lett å bruke fra andre JVM-språk. Når man skriver biblioteker selv, kan det være smart å velge Java, med mindre man har helt spesielle behov; både Groovy og Clojure har kjempebra Java-interop."}
+ Java har hatt en utfordring over de senere årene med at det har hengt etter i utviklingen i forhold til nye kuule
+ språk som Groovy, Clojure og Scala, men den siste versjonen, Java 8, har gitt Java en lenge etterlengtet
+ modernisering slik at Java nå i større grad er konkurransedyktig i forhold til alternative språk."}
