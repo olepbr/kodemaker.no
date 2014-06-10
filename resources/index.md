@@ -159,7 +159,7 @@ andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
            name="Torkel Randem"
            phone="+47 991 68 897"
            title="Økonomi- og utviklingssjef">
-  Kodemaker har vært en bærebjelke i vår satsning på nyutvikling av fagssystemer.  De er høykompetente, byr på seg selv og fungerer strålende som mentorer for våre egne utviklere.  Våren 2013 leverte vi med hjelp av Kodemaker et nytt og moderne system for Storefekjøttkontroll.  Lanseringen var svært vellykket og systemet har blitt veldig godt mottatt av brukerene.
+  Kodemaker har vært en bærebjelke i vår satsning på nyutvikling av fagssystemer.  De er høykompetente, byr på seg selv og fungerer strålende som mentorer for våre egne utviklere.  Våren 2013 leverte vi med hjelp av Kodemaker et nytt og moderne system for Storefekjøttkontrollen.  Lanseringen var svært vellykket og systemet har blitt veldig godt mottatt av brukerene.
 </reference>
 
 --------------------------------------------------------------------------------
