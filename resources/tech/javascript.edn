@@ -11,9 +11,8 @@
   det at inni JavaScript et sted skjulte det seg et jæskla bra språk.
   Så kom Gmail for fullt, JavaScript ble rebrandet som Ajax, og som
   ved et trylleslag var det hett å være frontendutvikler."
- :mail-form {:list-id "a4e5f820ff"
-             :heading "Ønsker du rådgivning om JavaScript?"
-             :button-text "Kjør!"
-             :blurb "Vi har mange dyktige konsulenter som brenner for
-             JavaScript. Vi kurser utviklerne dine og hjelper deg å ta
-             de riktige valgene."}}
+ :ad {:heading "Ønsker du rådgivning om JavaScript?"
+      :blurb "Vi har mange dyktige konsulenter som brenner for
+              JavaScript. Vi kurser utviklerne dine og hjelper deg å ta
+              de riktige valgene."
+      :link-text "Ta kontakt!"}}

@@ -1,9 +1,8 @@
 (ns kodemaker-no.pages.tech-pages
-  (:require [kodemaker-no.formatting :refer [to-html comma-separated]]
-            [kodemaker-no.markup :as markup]
-            [clj-time.core :as t]
+  (:require [clj-time.core :as t]
             [kodemaker-no.date :as d]
-            [kodemaker-no.email-signup :refer [render-email-signup]]))
+            [kodemaker-no.formatting :refer [to-html comma-separated]]
+            [kodemaker-no.markup :as markup]))
 
 (defn- link-to-person [person]
   [:a {:href (:url person)} (:name person)])
@@ -88,11 +87,15 @@
   (let [date (t/today)
         upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
     (when (seq upcoming)
-     (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
-           (->> upcoming
-                (sort-by :date)
-                (map (partial render-upcoming-event date)))))))
+      (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
+            (->> upcoming
+                 (sort-by :date)
+                 (map (partial render-upcoming-event date)))))))
 
+(defn render-ad [{:keys [heading blurb link-text]} _]
+  (list
+   [:h4 heading]
+   [:p blurb " " [:a.nowrap {:href "/skjema/"} link-text]]))
 
 (defn- maybe-include [tech kw f]
   (when (kw tech)
@@ -101,7 +104,7 @@
 (defn- tech-page [tech]
   {:title (:name tech)
    :illustration (:illustration tech)
-   :aside (maybe-include tech :mail-form (fn [mail-form tech] (render-email-signup mail-form)))
+   :aside (maybe-include tech :ad render-ad)
    :lead (to-html (:description tech))
    :body (list
           (maybe-include tech :upcoming render-upcoming)

@@ -153,7 +153,10 @@ De ligger i `resources/tech` og `resources/projects`.
    :description Str
    (optional-key :illustration) Str
    (optional-key :site) URL
-   (optional-key :mail-form) {:list-id Str :heading Str :button-text Str :blurb Str}})
+   (optional-key :ad) {:heading Str
+                       :blurb Str
+                       :link-text Str}})
+
 
 (def Project
   {:id ID
@@ -175,22 +178,17 @@ De ligger i `resources/tech` og `resources/projects`.
 Se eksempler på [tech](resources/tech/javascript.edn) og
 [project](resources/projects/finn-oppdrag.edn).
 
-### E-postskjemaer på fagsider
+### Annonser på fagsider
 
-Du kan legge til et skjema for å signe opp folk på e-postlister i
-venstrekolonnen på fagsidene. For å gjøre dette må du først gå til Mailchimp og
-opprette en liste. Ta kontakt med Kolbjørn, Sten Morten eller Christian dersom
-du trenger tilgang til Mailchimp. Når du har opprettet listen, gå til den i
-Mailchimp sitt UI, eksempelvis
-[JavaScript-listen](https://us3.admin.mailchimp.com/lists/members/?id=297221).
-Velg "Settings" og så "List name and defaults". Her vil du se list-id-en. Den
-trenger du for å legge til et skjema. For JavaScript ser det ut som dette:
+Du kan legge til en liten annonse for å ta kontakt med oss i venstrekolonnen på
+fagsidene. For JavaScript ser det ut som dette:
 
 ```clj
-:mail-form {:list-id "a4e5f820ff"
-           :heading "Ønsker du rådgivning om JavaScript?"
-           :button-text "Kjør!"
-           :blurb "Vi har mange dyktige konsulenter som brenner for JavaScript. Vi kan lære opp utviklerne dine og hjelpe deg å ta de riktige valgene."
+:ad {:heading "Ønsker du rådgivning om JavaScript?"
+     :blurb "Vi har mange dyktige konsulenter som brenner for
+             JavaScript. Vi kurser utviklerne dine og hjelper deg å ta
+             de riktige valgene."
+     :link-text "Ta kontakt"}
 ```
 
 ## Frittstående sider

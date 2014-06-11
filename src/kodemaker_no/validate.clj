@@ -94,7 +94,9 @@
    :description Str
    (optional-key :illustration) Str
    (optional-key :site) URL
-   (optional-key :mail-form) {:list-id Str :heading Str :button-text Str :blurb Str}})
+   (optional-key :ad) {:heading Str
+                       :blurb Str
+                       :link-text Str}})
 
 (def Project
   {:id ID
