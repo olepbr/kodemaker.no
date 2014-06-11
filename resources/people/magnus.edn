@@ -30,7 +30,15 @@
              :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
- :presentations [{:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
+ :presentations [{:title "The Groovy Light Table Plugin"
+                  :blurb "Screencast om bruk av Groovy og Gradle i Light Table"
+                  :tech [:clojurescript :lighttable :groovy :gradle]
+                  :urls {:video "http://www.youtube.com/watch?v=5ji8RR2A4gQ"}}
+                 {:title "Creating and Using Snippets in Light Table"
+                  :blurb "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
+                  :tech [:javascript :lighttable]
+                  :urls {:video "http://www.youtube.com/watch?v=I6iuXOw3HDQ"}}
+                 {:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
                   :blurb "Screencast med en kort introduksjon til LightTable InstaBuster"
                   :tech [:javascript :testing :lighttable]
                   :urls {:video "http://www.youtube.com/watch?v=WKHWazblpbc"}}
@@ -41,7 +49,19 @@
                   :urls {:video "http://vimeo.com/49375218"}}]
 
 
- :blog-posts [{:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-2.html"
+ :blog-posts [{:url "http://codewader.blogspot.no/2014/05/a-groovy-light-table-client-step-4.html"
+               :title "A Groovy Light Table client - Step 4: Exploring new avenues with Gradle"
+               :blurb "Del 4 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
+                       en dugandes Groovy plugin for Light Table. Del 4 handler om implementasjon av Gradle støtte
+                       for uthenting og bruk av classpath, samt opplisting og eksevkvering av tasks"
+               :tech [:clojurescript :groovy :gradle :lighttable]}
+              {:url "http://codewader.blogspot.no/2014/05/a-groovy-light-table-client-step-3.html"
+               :title "A Groovy Light Table client - Step 3: Running out of quick wins"
+               :blurb "Del 3 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
+                       en dugandes Groovy plugin for Light Table. Del 3 handler om noen små forbedringer
+                       for å gi en REPL lignende opplevelse med Groovy."
+               :tech [:clojurescript :groovy :lighttable]}
+              {:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-2.html"
                :title "A Groovy Light Table client - Step 2: Evaluating Code"
                :blurb "Del 2 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                        en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
