@@ -20,7 +20,6 @@
   (stasis/merge-page-sources
    {:person-pages (person-pages (vals (:people content)))
     :tech-pages (tech-pages (vals (:tech content)))
-    :project-pages (project-pages (vals (:projects content)))
     :article-pages (article-pages (:articles content))
     :blog-post-pages (blog-post-pages (:blog-posts content))
     :general-pages (general-pages content)

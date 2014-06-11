@@ -15,7 +15,6 @@
            "/magnars/"
            "/finnjoh/"
            "/react/"
-           "/finn-oppdrag/"
            "/kompetanse/"
            "/systemer/"
            "/skjema/"

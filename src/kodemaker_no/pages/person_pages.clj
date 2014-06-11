@@ -85,7 +85,7 @@
        [:strong
         (when title title)
         (when (and title project) ", ")
-        (when project (markup/link-if-url project))]])
+        (when project (:name project))]])
     [:p [:q quote]]]])
 
 (defn- render-endorsements [endorsements person]
@@ -139,13 +139,11 @@
    [:h2 (str (:genitive person) " bloggposter")]
    (map render-blog-post (take 3 posts))))
 
-(defn- render-project [{:keys [customer years tech description url]}]
+(defn- render-project [{:keys [customer years tech description]}]
   (list
    [:h3 customer " " [:span.tiny.shy (year-range years)]]
    (render-tech-bubble (take 5 tech))
-   (markup/append-to-paragraph
-    (to-html description)
-    (when url (list " " [:a.nowrap {:href url} "Se referansen"])))))
+   (to-html description)))
 
 (defn- render-projects [projects person]
   (list
