@@ -147,7 +147,7 @@ guns* er det naturlig at du bare får seniorer fra oss.
   ikke gavner deg lenger
 
 Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos blant
-andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
+andre FINN.no, Forsvaret, NSB, Telenor, Animalia, SPID og Conax.
 
 --------------------------------------------------------------------------------
 :full-width
