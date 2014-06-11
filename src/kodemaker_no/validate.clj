@@ -134,6 +134,7 @@
              :tech {ID Tech}
              :projects {ID Project}
              :articles {Path Article}
+             :raw-pages {Path Str}
              :tech-names {ID Str}
              :blog-posts {Path BlogPost}
              :video-overrides {ID VideoOverride}}

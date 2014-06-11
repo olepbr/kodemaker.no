@@ -5,6 +5,7 @@
           :tech {}
           :projects {}
           :articles {}
+          :raw-pages {}
           :tech-names {}
           :blog-posts {}
           :video-overrides {}}

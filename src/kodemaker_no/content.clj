@@ -33,6 +33,7 @@
    :tech (slurp-edn-maps "resources/tech/")
    :projects (slurp-edn-maps "resources/projects/")
    :articles (mapdown/slurp-directory "resources/articles/" #"\.md$")
+   :raw-pages (stasis/slurp-directory "resources/raw" #"\.html$")
    :blog-posts (mapdown/slurp-directory "resources/blog/" #"\.md$")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")
    :video-overrides (slurp-edn-map "resources/video-overrides.edn")})

@@ -32,11 +32,15 @@
                                 #"/images/.*\.png"]))
 
 (defn get-pages []
-  (-> (load-content)
-      validate-content
-      cultivate-content
-      pages/create-pages
-      prepare-pages))
+  (let [content (load-content)
+        pages (-> content
+                  validate-content
+                  cultivate-content
+                  pages/create-pages
+                  prepare-pages)]
+    (stasis/merge-page-sources
+     {:site-pages pages
+      :raw-pages (:raw-pages content)})))
 
 (def optimize
   (-> (fn [assets options]
