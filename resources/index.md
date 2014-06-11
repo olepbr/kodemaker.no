@@ -153,7 +153,7 @@ andre Forsvaret, NSB, NRK, FINN.no, og Storebrand.
 :full-width
 :body
 
-<reference img="/references/dummy-1.jpg"
+<reference img="/references/torkel-randem.jpg"
            url="/storfekjottkontrollen/"
            logo="/logos/animalia.png"
            name="Torkel Randem"
