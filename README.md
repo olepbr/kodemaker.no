@@ -129,10 +129,9 @@ Bildene ligger i `resources/public`.
 
 - `/logos` Logo til referanser: .png med bredde 290px. Husk å bruke [smushit](http://smushit.com). Evt [tinypng](https://tinypng.com/)
 - `/thumbs/faces` Ansikt til referansepersoner: .jpg, proporsjon 3/4, gjerne 210x280
-- `/thumbs/presentations` Bilde fra en presentasjon (utsnitt video, slides, kode, scenebilde): .jpg, proporsjon 16/9, gjerne 208x117
 - `/illustrations/hobbies/` Illustrasjoner til hobbyer: .jpg med bredde 420px.
 - `/illustrations/side-projects/` Illustrasjoner til sideprosjekter: .jpg med bredde 420px.
-- `/photos/references/` Illustrasjoner til referanser: .jpg med bredde 580px.
+- `/references/` Illustrasjoner til forside-referanser: .jpg med bredde 1280x488.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
 - `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
 - `/photos/people/<person>/side-profile.jpg` Kodemaker sittende: .jpg 620x485
@@ -201,25 +200,25 @@ http://kodemaker.no/kolbjorn-er-sjef/
 
 Disse "artiklene" skal inneholde noe meta-data. Som et minimum bør du ha med
 `:title` og `:body`, men du kan også ha med `:illustration` (bilde som skal
-vises øverst i venstrekolonnen), `:::lead` (øverste del av hovedkolonnen) og
-`:::aside` (venstrekolonnen). Et minimalt eksempel følger, for ytterligere
+vises øverst i venstrekolonnen), `:lead` (øverste del av hovedkolonnen) og
+`:aside` (venstrekolonnen). Et minimalt eksempel følger, for ytterligere
 eksempler, se eksisterende filer i `resources/articles`.
 
 ```md
 :title Min supre side
 :illustration /photos/people/kolbjorn/side-profile-cropped.jpg
 
-:::aside
+:aside
 
 Viktig med litt kjøtt i venstrekolonna.
 
-:::lead
+:lead
 
 Denne siden er helt super, lover. Denne delen kan bestå av flere avsnitt om du
 så ønsker, ingen begrensning. Det er heller ingen forskjell visuelt på denne
 delen fra den etterfølgende body-delen.
 
-:::body
+:body
 
 ## Dette er en markdown-heading
 
@@ -239,7 +238,7 @@ forøvrig eksisterende innlegg i `resources/blog` for flere eksempler.
 :published 2013-06-28
 :illustration /photos/blog/alf-kristian-stoyle.jpg
 
-:::body
+:body
 
 Det er over et år siden vi ansatte noen sist, men den som venter på noe godt…
 
