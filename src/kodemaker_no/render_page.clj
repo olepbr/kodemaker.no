@@ -127,8 +127,11 @@
   (or (:illustration page)
       (:aside page)))
 
+(defn render-body [page]
+  (if (two-column-page? page)
+    (render-two-column page)
+    (render-single-column page)))
+
 (defn render-page [page request]
   (with-layout request page
-    (if (two-column-page? page)
-      (render-two-column page)
-      (render-single-column page))))
+    (render-body page)))
