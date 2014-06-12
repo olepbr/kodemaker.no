@@ -185,7 +185,7 @@ villig til å la oss hjelpe deg å få dem på plass.**
 :illustration /forside/papir.jpg
 :body
 
-For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
+For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi at du
 [skal skrive litt om planene dine i skjemaet på neste side ...](/skjema/)
 så leser vi det og tar kontakt med deg så snart vi har mulighet.
 Stort sett vil du høre fra oss innen to arbeidsdager.
