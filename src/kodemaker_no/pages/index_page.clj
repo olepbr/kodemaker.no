@@ -64,7 +64,7 @@
               {:url "/ruby/", :text "Ruby"}
               {:url "/react/", :text "React"}
               {:url "/git/", :text "Git"}
-              {:url "/emacs/", :text "Emacs"}]
+              {:url "/design/", :text "Design"}]
      :body (list
             [:div.grid (map render-person sorted-peeps)]
             [:h1.hn.pth "Hva er raskeste veien i mål?"]
