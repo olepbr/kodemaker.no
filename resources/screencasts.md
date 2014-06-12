@@ -1,9 +1,9 @@
-### [Zombie TDD - Testdrevet JavaScript](/zombietdd/)
+### [Zombie TDD - Testdrevet JavaScript](http://www.zombieclj.no/)
 
 Følg med når [Magnar](/magnar/) lager et nettspill fra scratch med
 [JavaScript](/javascript/) på klient og server. Testdrevet etter beste evne. Har
 du lyst til å være med?
-[Hele greia er gratis og online - **se første episode her**](/zombietdd/).
+[Hele greia er gratis og online - **se første episode her**](http://www.zombieclj.no/).
 
 ### [Zombie CLJ - Clojure og ClojureScript](http://www.zombieclj.no/)
 
