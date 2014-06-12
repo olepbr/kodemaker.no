@@ -31,8 +31,14 @@ server {
 
   charset utf-8;
 
+  # fetch CVs from old site
   location ^~ /cv/ {
     proxy_pass http://old.kodemaker.no/cv/;
+  }
+
+  # fetch old wordpress content from old site (to go with CVs)
+  location ^~ /wp-content/ {
+    proxy_pass http://old.kodemaker.no/wp-content/;
   }
 
   location /site/build {
