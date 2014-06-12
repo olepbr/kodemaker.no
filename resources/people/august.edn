@@ -51,7 +51,7 @@
    :tech [:datomic :eventstore :clojure :immutability]}
   {:title "WTF is Datomic?"
    :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
-   :urls {:video "http://2013.flatmap.no/lilleaas.html"}
+   :urls {:video "http://vimeo.com/user18356272/review/66548971/99370e0950"}
    :tech [:datomic :clojure :immutability]}]
 
 

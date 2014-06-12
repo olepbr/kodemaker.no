@@ -153,8 +153,7 @@
                   live-koding av minesveiper med ClojureScript og Om (en
                   React-wrapper)."
                   :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
-                  :tech [:javascript :clojurescript :react :om]
-                  :direct-link? true}
+                  :tech [:javascript :clojurescript :react :om]}
                  {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
