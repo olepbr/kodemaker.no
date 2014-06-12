@@ -85,41 +85,6 @@
    (-> people :finnjoh :tech) => nil))
 
 (let [people (-> content
-                 (assoc-in [:people :magnar :endorsements]
-                           [{:project :finn-oppdrag
-                             :author "Kaija Ommundsen"
-                             :photo "/thumbs/faces/kaija-ommundsen.jpg"
-                             :quote "Jeg har hatt glede av å jobbe med Magnar."}
-                            {:project :finn-surf-sammen
-                             :author "Bjørn Henrik Vangstein"
-                             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
-                             :quote "Magnar Sveen skiller seg klart ut i mengden."}])
-                 (assoc-in [:people :magnar :projects]
-                           [{:id :finn-oppdrag
-                             :customer "FINN oppdrag"
-                             :description ""
-                             :tech []
-                             :years []}])
-                 (assoc-in [:projects :finn-surf-sammen]
-                           (c/project {:id :finn-surf-sammen
-                                       :name "FINN surf sammen"}))
-                 cultivate)]
-
-  (fact "It fetches the project name from the one listed in your
-         profile. Only official projects are given URLs."
-
-        (-> people :magnar :endorsements)
-
-        => [{:project {:id :finn-oppdrag, :name "FINN oppdrag"}
-             :author "Kaija Ommundsen"
-             :photo "/thumbs/faces/kaija-ommundsen.jpg"
-             :quote "Jeg har hatt glede av å jobbe med Magnar."}
-            {:project {:id :finn-surf-sammen, :name "FINN surf sammen", :url "/finn-surf-sammen/"}
-             :author "Bjørn Henrik Vangstein"
-             :photo "/thumbs/faces/bjorn-henrik-vangstein.jpg"
-             :quote "Magnar Sveen skiller seg klart ut i mengden."}]))
-
-(let [people (-> content
                  (assoc-in [:people :magnar :upcoming]
                            [{:title "Presentasjon"
                              :date "2013-02-01"

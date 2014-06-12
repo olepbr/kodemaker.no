@@ -22,18 +22,15 @@
                            :text "Les artikkelen"}
                     :tech [:clojure]}]
                  
-:projects      [{:id          :gbms
-                   :customer    "Forsvaret"
+:projects      [{:customer    "Forsvaret"
                    :description "GBMS - Nyutvikling av et system for datafangst og analyse av belastning på våpen."
                    :years       [2013 2014]
                    :tech        [:groovy :grails :javascript :html :css :oracle :jenkins]}
-                  {:id          :bkad
-                   :customer    "NETS"
+                  {:customer    "NETS"
                    :description "Videreutvikling av ulike applikasjoner for å legge til rette for separation of duties. Videreutvikling av BKAD - Sentralt bankregister"
                    :years       [2012]
                    :tech        [:java, :hibernate, :spring, :selenium, :jetty :junit, :maven, :oracle]}
-                  {:id          :rvo-fond
-                   :customer    "Fondet for RVO"
+                  {:customer    "Fondet for RVO"
                    :description "Nytt saksbehandlersystem for regionale verneombud i bygg og anleggsbransjen"
                    :years       [2011]
                    :tech        [:ruby :rails :html :css :javascript :jquery :mysql :nginx :rspec]}]

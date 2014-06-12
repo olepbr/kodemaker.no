@@ -49,23 +49,20 @@
                 :tech [:linux :terminator]
                 }]
 
- :projects      [{:id          :nsb
-                   :customer    "NSB"
+ :projects      [{:customer    "NSB"
                    :description "RASK - Rapportsystem for kjøring. Nyutvikling og videreutvikling av
                                 Enka - et rapportsystem for togenergiforbruk Integrasjon mot
                                 Jernbaneverkets Erex, innhenting av data fra interne systemer for rapportering"
                    :years       [2013 2014]
                    :tech        [:groovy :grails :javascript :html :css :jenkins :jira :confluence]}
-                  {:id          :nrk
-                   :customer    "NRK"
+                  {:customer    "NRK"
                    :description "Publisering på nrk.no.
                                 Nyutvikling og forbedring av publiseringsløsningen på nrk.no.
                                 Testutvikler for publisering på nrk.no. Skrive, forbedre
                                 og vedlikeholde automatiske tester for rammeverk som publiserer innhold på nrk.no"
                    :years       [2010 2011 2012 2013]
                    :tech        [:ruby :cucumber :java :javascript :jira :maven]}
-                  {:id          :vps-fond
-                   :customer    "Oslo Børs VPS"
+                  {:customer    "Oslo Børs VPS"
                    :description "Utarbeide arkitektur og utvikle nytt fondssystem for Oslo Børs VPS.
                                 Løsningen består av en realtids ordremotor for fondshandel i Norge og Norden.
                                 Den ble utviklet en webapplikasjon for bruk av fondsforvaltere,

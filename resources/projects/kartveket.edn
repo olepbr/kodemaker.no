@@ -1,9 +1,0 @@
-{:id :kartverket
- :name "Kartverket"
- :logo "/logos/kartverket.png"
- :description "Som en følge av Matrikkelloven, som trådte i kraft i 2010, utviklet Kartverket Matrikkelen med hjelp
- av utviklere fra bl.a. Kodemaker. Matrikkelen er nå Norges offisielle eiendomsregister.
- Systemet erstatter det tidligere GAB-registeret og kommunenes digitale eiendomskart."
- :illustration "/photos/references/matrikkel.png"
- :site "http://kartverket.no/Eiendom-og-areal/Matrikkelen/"
- :awesomeness 100}

@@ -4,7 +4,6 @@
             [kodemaker-no.pages.index-page :refer [index-page]]
             [kodemaker-no.pages.form-page :refer [form-page]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
-            [kodemaker-no.pages.project-pages :refer [project-pages]]
             [kodemaker-no.pages.tech-pages :refer [tech-pages]]
             [kodemaker-no.pages.video-pages :refer [video-pages]]
             [kodemaker-no.pages.course-page :refer [course-page]]

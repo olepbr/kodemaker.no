@@ -263,8 +263,7 @@
                              {:name "restclient.el"       :url "https://github.com/pashky/restclient.el"         :tech [:emacs]}
                              {:name "buster-maven-plugin" :url "https://github.com/peternic/buster-maven-plugin" :tech [:java :maven]}]
 
- :projects [{:id :finn-oppdrag
-             :customer "FINN oppdrag"
+ :projects [{:customer "FINN oppdrag"
              :description "Ansvarlig frontendutvikler. Utviklet hele
                            framsia fra bunnen av. Vi var første marked
                            i FINN til å bruke responsiv design. Skrev
@@ -273,8 +272,7 @@
              :tech [:javascript :responsive-design :oocss
                     :ajax :spring-mvc :html :css :jquery :js-test-driver
                     :jsp :sinon :java :junit :git :jira :confluence]}
-            {:id :finn-surf-sammen
-             :customer "FINN Surf Sammen"
+            {:customer "FINN Surf Sammen"
              :description "Var med fra starten, jobbet med skisser til
                            løsning og databasestruktur. Gikk fort over
                            i rolle som frontendansvarlig på
@@ -285,9 +283,8 @@
              :tech [:javascript :css :html :ajax :jquery :jsp :java
                     :cvs :jira :confluence]}]
 
- :endorsements [{:project :finn-surf-sammen
-                 :author "Bjørn Henrik Vangstein"
-                 :title "Avdelingsleder IT"
+ :endorsements [{:author "Bjørn Henrik Vangstein"
+                 :title "Avdelingsleder IT, FINN.no"
                  :quote "Magnar Sveen skiller seg klart ut i mengden,
                          både faglig og personlig. Han ble raskt ettertraktet på
                          huset, både på grunn av sine fagkunnskaper, som stikker
@@ -300,9 +297,8 @@
                          gode sosiale evner, kombinert med vilje og evne til å
                          dele sine kunnskaper med andre gjør ham til en svært
                          ettertraktet ressurs i de fleste utviklingmiljøer."}
-                {:project :finn-oppdrag
-                 :author "Kaija Ommundsen"
-                 :title "Prosjekteier"
+                {:author "Kaija Ommundsen"
+                 :title "Prosjekteier, FINN oppdrag"
                  :quote "Jeg har hatt glede av å bygge opp FINN oppdrag
                          sammen med Magnar. Jeg har sjelden møtt en utvikler som
                          han; svært opptatt av å lage gode opplevelser for
@@ -321,9 +317,8 @@
                          jobbe sammen med Magnar - det skaper gode løsninger,
                          interessante diskusjoner og garantert læring
                          underveis."}
-                {:project :finn-oppdrag
-                 :author "Endre Midtgård Meckelborg"
-                 :title "Teknisk Leder"
+                {:author "Endre Midtgård Meckelborg"
+                 :title "Teknisk Leder, FINN oppdrag"
                  :quote "Ved oppbyggingen av FINN oppdrag jobbet jeg
                          sammen med Magnar, og det var en lærerik og morsom
                          opplevelse. Magnar er en av de beste frontend-utviklere

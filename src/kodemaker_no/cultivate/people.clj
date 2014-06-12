@@ -1,6 +1,5 @@
 (ns kodemaker-no.cultivate.people
   (:require [clojure.string :as str]
-            [kodemaker-no.cultivate.projects :as projects]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
@@ -60,23 +59,6 @@
            first)
       (throw (Exception. (str "No project " id " found!")))))
 
-(defn- update-endorsement-project [content person endorsement]
-  (if-let [id (:project endorsement)]
-    (assoc endorsement :project
-           (or (projects/look-up-project content id)
-               {:id id, :name (:customer (find-my-project person id))}))
-    endorsement))
-
-(defn- add-url-to-project [content project]
-  (if-let [url (->> project :id (projects/look-up-project content) :url)]
-    (assoc project :url url)
-    project))
-
-(defn- look-up-projects [content person]
-  (-> person
-      (update-in-existing [:endorsements] #(map (partial update-endorsement-project content person) %))
-      (update-in-existing [:projects] #(map (partial add-url-to-project content) %))))
-
 (defn- add-link-to-next-person [content person]
   (let [sorted-peeps (->> content :people vals
                           (sort-by :start-date)
@@ -99,7 +81,6 @@
        add-photos
        replace-video-urls
        (look-up-tech content)
-       (look-up-projects content)
        parse-dates))
 
 (defn cultivate-people [content]

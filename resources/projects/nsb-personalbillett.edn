@@ -1,6 +1,0 @@
-{:id :nsb-personalbillett
- :name "NSB Personalbillett"
- :logo "/logos/nsb.png"
- :description "Funksjonalitet i en 10 år gammel sentral applikasjon måtte løftes til tidsriktig teknisk nivå, og samtidig utvikles med ny tiltrengt funksjonalitet."
- :site "http://www.nsb.no/"
- :awesomeness 95}

@@ -22,23 +22,19 @@
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech [:tdd :automatisering :release-early]}]
 
- :projects      [{:id          :finn
-                  :customer    "FINN reise"
+ :projects      [{:customer    "FINN reise"
                   :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
                   :years       [2013 2014]
                   :tech        [:java :groovy :cucumber :camel :gradle :solr]}
-                 {:id          :finn
-                  :customer    "FINN jobb"
+                 {:customer    "FINN jobb"
                   :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
                   :years       [2011 2012 2013]
                   :tech        [:java :ruby :cucumber :solr]}
-                 {:id          :rvo-sek
-                  :customer    "Fondet for Regionale Verneombud"
+                 {:customer    "Fondet for Regionale Verneombud"
                   :description "Nytt sekretariatssystem. Saksbehandlingssystem for innkreving av avgift fra virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
                   :years       [2010 2011]
                   :tech        [:ruby :rails :sphinx :mysql]}
-                 {:id          :lindorff-decision
-                  :customer    "Lindorff Decision (nå Bisnode)"
+                 {:customer    "Lindorff Decision (nå Bisnode)"
                   :description "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach. Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur. Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av utviklingsteamet."
                   :years       [2010]
                   :tech        [:java :spring-mvc]}]

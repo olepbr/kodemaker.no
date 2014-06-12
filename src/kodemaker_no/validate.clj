@@ -76,16 +76,14 @@
                                                :name Str
                                                :tech [ID]}] ;; sortert under første tech
 
-   (optional-key :projects) [{:id ID ;; prosjekter du har deltatt i med Kodemaker
-                              :customer Str
+   (optional-key :projects) [{:customer Str
                               :description Str
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
-                                  (optional-key :title) Str
-                                  (optional-key :project) ID
+                                  (optional-key :title) Str ;; tittel, firma
                                   (optional-key :photo) Path}]})
 
 (def Tech
@@ -97,21 +95,6 @@
    (optional-key :ad) {:heading Str
                        :blurb Str
                        :link-text Str}})
-
-(def Project
-  {:id ID
-   :name Str
-   :logo Str
-   :description Str
-   :awesomeness Num ;; brukes for sortering - kule prosjekter på toppen
-   (optional-key :illustration) Path
-   (optional-key :site) URL
-   (optional-key :reference) {:author Str ;; Kodemakers prosjektreferanse
-                              :quote Str
-                              :title Str
-                              (optional-key :email) Str
-                              (optional-key :phone) Str
-                              (optional-key :photo) Path}})
 
 (def BlogPost
   {:title Str
@@ -134,7 +117,6 @@
 (defn validate-content [content]
   (validate {:people {ID Person}
              :tech {ID Tech}
-             :projects {ID Project}
              :articles {Path Article}
              :raw-pages {Path Str}
              :tech-names {ID Str}

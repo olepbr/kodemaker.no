@@ -131,16 +131,14 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:id :finn-oppdrag
-             :customer "FINN Oppdrag"
+ :projects [{:customer "FINN Oppdrag"
              :description "Klargjorde et avansert registreringsskjema
              for utrulling til flere markedsplasser ved å modularisere
              koden til komponenter som kunne settes sammen til
              forskjellige skjemaer."
              :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]
              :years [2011 2012]}
-            {:id :finn-smajobber
-             :customer "FINN Småjobber"
+            {:customer "FINN Småjobber"
              :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet
                            med lanseringen av løsningen rett før jul 2013. Har
                            jobbet med hele løsningen, men med fokus på frontend.

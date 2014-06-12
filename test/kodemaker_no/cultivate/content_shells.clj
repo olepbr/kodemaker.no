@@ -3,7 +3,6 @@
 (defn content [m]
   (merge {:people {}
           :tech {}
-          :projects {}
           :articles {}
           :raw-pages {}
           :tech-names {}

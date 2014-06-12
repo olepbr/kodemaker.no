@@ -6,7 +6,6 @@
       (-> {:people {:magnars {:url "/magnars/"}
                     :finnjoh {:url "/finnjoh/"}}
            :tech {:react {:url "/react/"}}
-           :projects {:finn-oppdrag {:url "/finn-oppdrag/"}}
            :articles {"/kompetanse.md" ""
                       "/systemer.md" ""}}
           create-pages keys set)

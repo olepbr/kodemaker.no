@@ -65,13 +65,11 @@
                          :description "Alle programmerere må en gang i livet lage sin egen LISP. Her er en du kan leke med, i Groovy"
                          :tech [:clojure :lisp :groovy]}]
 
- :projects [{:id :adam-og-eva-skolen
-             :customer "Adam og Eva - Frisørskolen"
+ :projects [{:customer "Adam og Eva - Frisørskolen"
              :description "Lagde listemaskin som drar inn elever til Adam og Eva Skolen."
              :years [2013 2014]
              :tech [:google-adwords :facebook-ads :google-analytics :aweber]}
-            {:id :finn-motor
-             :customer "FINN Motor"
+            {:customer "FINN Motor"
              :description "Utvikling av Nybil-løsning, og videreutvikling av de forskjellige markedene til Finn Motor (bil, båt, etc)"
              :years [2010 2011 2012]
              :tech [:javascript :spring-mvc :ajax :jquery :jsp :groovy :java :junit :jira :confluence]}

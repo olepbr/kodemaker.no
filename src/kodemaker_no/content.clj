@@ -31,7 +31,6 @@
 (defn load-content []
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
-   :projects (slurp-edn-maps "resources/projects/")
    :articles (mapdown/slurp-directory "resources/articles/" #"\.md$")
    :raw-pages (stasis/slurp-directory "resources/raw" #"\.html$")
    :blog-posts (mapdown/slurp-directory "resources/blog/" #"\.md$")
