@@ -43,7 +43,7 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
     [:title (head-title (:title page))]]
    [:body
-    [:script {:data-no-instant ""} (slurp (io/resource "public/scripts/ga.js"))]
+    [:script (slurp (io/resource "public/scripts/ga.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
@@ -95,10 +95,7 @@
            [:span.nowrap "0191 Oslo"]]
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
-           [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]]]
-    [:script {:data-no-instant "",
-              :src (link/file-path request "/scripts/instantclick.js")}]
-    [:script {:data-no-instant ""} "InstantClick.init(50);"]]))
+           [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]]]]]]]))
 
 (defn- render-single-column [page]
   [:div.body
