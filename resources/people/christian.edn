@@ -40,42 +40,7 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming [{:title "Node.JS and React: Party in the front, party in the back"
-             :description "Nysgjerrig på hva dette Node.JS-hysteriet handler om?
-             I denne 3 timersworkshoppen får du en praktisk start. Vi kommer til
-             å se på alle de essensielle aspektene ved å jobbed med Node:
-             kjernekonsepter så som events, buffers og streams, API-er for å
-             jobbe med filsystemet og lage webservere, samt utviklingsstøtte som
-             pakkesystemet npm og automatiserte tester. Vi skal også kikke litt
-             på ui-biblioteket React, og noen muligheter som åpner seg når vi
-             kan bruke de samme bibliotekene på både server og klient."
-             :url "http://www.programutvikling.no/kurs/test-driven-javascript/1958"
-             :call-to-action {:text "Registrer deg nå" :url "http://www.boosterconf.no/users/new"}
-             :tech [:javascript :react :nodejs]
-             :date "2014-03-14"
-             :location {:title "Booster (Bergen)" :url "http://boosterconf.no/"}}
-            {:title "Test-driven JavaScript"
-             :description "Lyst til å ta JavaScript-skillsa dine til et nytt
-             nivå? Dette kurset gir en grundig innføring i testing og TDD med
-             JavaScript. Vi ser på tilgjengelige verktøy, hvordan man kan
-             optimalisere for automasjon, og ikke minst, hvordan man tenker på
-             design og testbarhet for JavaScript i større applikasjoner."
-             :url "http://www.programutvikling.no/kurs/test-driven-javascript/1958"
-             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/test-driven-javascript/4292"}
-             :tech [:javascript :nodejs :sinon]
-             :date "2014-03-26"
-             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}
-            {:title "JavaScript for Programmers"
-             :description "Lei av å gjette deg frem og copy-paste
-             JavaScript-kode? Ta kontroll! Dette tredagerskurset byr på en
-             grundig gjennomgang av alt fra syntaks og innbygde typer til
-             objektmodellen og funksjoner, og gir deg en solid forståelse
-             for hvordan JavaScript egentlig fungerer."
-             :url "http://www.programutvikling.no/kurs/javascript-for-programmers/1942"
-             :call-to-action {:text "Meld deg på kurset" :url "http://www.programutvikling.no/bestill/javascript-for-programmers/4296"}
-             :tech [:javascript]
-             :date "2014-04-23"
-             :location {:title "Fornebu" :url "http://www.programutvikling.no/"}}]
+ :upcoming []
 
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
@@ -184,7 +149,15 @@
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
              :years [2013 2014]}]
 
- :presentations [{:title "Pure JavaScript"
+ :presentations [{:title "Functional UI Programming"
+                  :blurb "En introduksjon til React.js, med sammenligning av
+                  populære MC*-rammeverk, samt et eksempel på bruk i form av
+                  live-koding av minesveiper med ClojureScript og Om (en
+                  React-wrapper)."
+                  :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
+                  :tech [:javascript :clojurescript :react :om]
+                  :direct-link? true}
+                 {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
                   :urls {:video "http://vimeo.com/43808808"}
@@ -223,6 +196,10 @@
                         {:url "https://github.com/cjohansen/asciidoclj"
                          :name "asciidoclj"
                          :description "Rendre asciidoc i Clojure."
+                         :tech [:clojure]}
+                        {:url "https://github.com/cjohansen/hiccup-find"
+                         :name "hiccup-find"
+                         :description "Test-helpere for hiccup."
                          :tech [:clojure]}
                         {:url "https://github.com/cjohansen/uinit"
                          :name "Uinit"
