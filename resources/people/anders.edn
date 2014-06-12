@@ -1,10 +1,53 @@
 {:id :anders
  :name ["Anders" "Furseth"]
- :title "Arkitekt og sikkerhetsspesialist"
+ :title "Utvikler"
  :start-date "2010-03-15"
- :description "Anders elsker jobben sin som kodemaker. Han har de siste 10 årene besittet roller som utvikler og løsningsarkitek i små og store prosjekter, hovedsakelig innen bank og finans, og ofte med særskilt fokus på IT-sikkerhet. \n\n Anders er pragmatisk og tar stor glede i å kunne benytte de riktige verktøyene for å skape produkter med høy kvalitet til lav kost. Gjensidig respekt, ærlighet og åpen kommunikasjon med rikelig takhøyde er verdier som Anders setter høyt."
+ :description "Anders elsker jobben sin som kodemaker. Han har de siste 10
+               årene besittet roller som utvikler og løsningsarkitek i små
+               og store prosjekter, hovedsakelig innen bank og finans, og
+               ofte med særskilt fokus på IT-sikkerhet. \n\n
+               Anders er pragmatisk og tar stor glede i å kunne benytte de
+               riktige verktøyene for å skape produkter med høy kvalitet
+               til lav kost. Gjensidig respekt, ærlighet og åpen kommunikasjon
+               med rikelig takhøyde er verdier som Anders setter høyt."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 922 02 797"
+ :email-address "anders@kodemaker.no"
 
- :presence {:cv "anders"}}
+ :presence {:cv "anders"
+            :linkedin "/in/andersfurseth"
+            :github "andersfurseth"}
+
+ :tech {:using-at-work [:groovy :javascript :java]
+        :favorites-at-the-moment [:clojure :funksjonell-programmering]
+        :want-to-learn-more      [:clojurescript :react]}
+
+ :recommendations [{:title "Out of the Tar Pit"
+                    :blurb "Ben Moseley og Peter Marks presenterer svært
+                            overbevisende argumenter for hva som er kilden
+                            til  kompleksitet i systemene vi bygger. Dersom du
+                            ikke har lest denne artikkelen de siste 3 månedene
+                            oppfordrer jeg deg på det sterkeste til å gjøre
+                            nettopp det med det samme!"
+                    :link  {:url  "http://shaffner.us/cs/papers/tarpit.pdf"
+                            :text "Out of the Tar Pit (PDF)"}
+                    :tech  [:funksjonell-programmering]}
+                   {:title "Simple Made Easy"
+                    :blurb "Foredraget som endret mitt syn på hvordan
+                            programvare bør utvikles. Rich Hickey gir
+                            oss i tillegg et begrepsaparat for å objektivt
+                            kunne diskutere graden av kompleksitet i kode vi
+                            skriver og verktøyer vi benytter. Jeg kan ikke
+                            anbefale dette foredraget varmere!"
+                    :link  {:url  "http://www.infoq.com/presentations/Simple-Made-Easy"
+                            :text "Gjør det eneste fornuftige. Se foredraget nå!"}
+                    :tech  [:funksjonell-programmering]}]
+
+ :endorsements [{:author "Steffen Fiksdal"
+                 :title "Sikkerhetsarkitekt"
+                 :quote "Of the people I know Anders is one of very few who
+                        understands and masters all layers of computer software
+                        architecture. He has a solid overview of the lowest levels
+                        of the operating system up to the higher abstract levels
+                        of application programming. This competence makes him an
+                        extremly powerful resource in a software development team."}]}
