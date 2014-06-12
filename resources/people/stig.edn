@@ -4,7 +4,31 @@
  :start-date "2010-04-01"
  :description "Stig elsker å programmere, men tenner mest der han må ta tak i forretningsmessige problemstillinger og løse disse ved hjelp av nye arbeidsprosesser understøttet av teknologi. Stig er pliktoppfyllende og gir det som er nødvendig for at prosjekter skal lykkes."
 
- :phone-number ""
- :email-address ""
+ :phone-number "+47 951 24 632"
+ :email-address "stig@kodemaker.no"
 
- :presence {:cv "stig"}}
+ :presence {:cv "stig"}
+
+ :hobbies [{:title "Orientering"
+            :description "Orientering er utrolig gøy og fasinerende. Det å jobbe
+                          med fysiske utfordringer samtidig som du må ha med deg
+                          hodet – gir et eget kick når du lykkes. Det er en
+                          fantastisk følelse å finne frem i nytt terreng med
+                          kart og kompass."
+            :illustration "/illustrations/hobbies/stig-orientering.jpg"
+            :url "http://www.ringerike-o-lag.no/"}
+           {:title "Skikkelig barneskirenn"
+            :description "...det er skikarusellen på Ringerike. 250 glade barn
+                          skal ha det gøy i skiløypene i hele distriktet. Alle
+                          skirenn må ha skikkelig tidtaking og resultatservice –
+                          så også barneskirenn – selv om vi ikke er så nøye med
+                          rekkefølgen i de yngste klassene."
+            :illustration "/illustrations/hobbies/stig-ski.jpg"
+            :url "http://langrenn.ilh.no/"}]
+
+ :side-projects [{:title "ROLtracker"
+                  :description "Live-tracking av o-løpere med Android-telefoner
+                                som fanger GPS-posisjoner som igjen overføres
+                                til sentralen og visning i web-baserte kart."
+                  :illustration "/illustrations/side-projects/roltracker.jpg"
+                  :tech [:android :java]}]}
