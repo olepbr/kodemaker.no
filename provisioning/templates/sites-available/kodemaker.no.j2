@@ -13,6 +13,13 @@ server {
   return 301 $scheme://{{ km_domain }}$request_uri;
 }
 
+# redirect from nye.kodemaker to site
+server {
+  listen 8001;
+  server_name nye.kodemaker.no;
+  return 301 $scheme://{{ km_domain }}$request_uri;
+}
+
 server {
   listen 8001 default deferred; # Re: deferred: The option is beneficial on all configurations, not to the level you'd ever likely notice except under an extreme load of HTTP traffic, but it's theoretically the "right" way to do it. It's an option because not all Unix (not even all Linux) flavours have that capability, and thus for portability it can be configured not to be inclided. http://unix.stackexchange.com/questions/94104/real-world-use-of-tcp-defer-accept
 
