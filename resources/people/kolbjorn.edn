@@ -36,7 +36,13 @@
                  :title "Chief HR Officer at Schibsted Payment AS"
                  :photo "/thumbs/faces/tonje-magnusson.jpg"
                  :quote "Jeg opplever Kolbjørn som ryddig og god på å skape relasjoner med samarbeidspartnere. Kodemaker som selskap leverer dyktige konsulenter, som passer godt inn i miljøene de jobber i. Kolbjørn er flink til å følge opp, og setter seg raskt inn i utfordringene kundene har."}
-                {
+                 {
+                 :author "Mette Rosenvinge Kolderup"
+                 :title "Daglig Leder og partner at Merge-IT AS"
+                 :photo "/thumbs/faces/mette-rosenvinge-kolderup.jpg"
+                 :quote "Kolbjørn er en av de mest profesjonelle jeg kjenner i IT bransjen i Oslo-regionen. Med sin sindige, rolige og behagelige væremåte, leder han grupper, konstellasjoner (tidligere leder, nå Styreleder, av Overhuset) og sitt selskap (Kodemaker) med stødig hånd. Han har et øye for detaljer, men er spesielt flink til å se de store linjene i det han/vi holder på med. Som samarbeidspartner er han en rettferdig, direkte og aller viktigst: en ærlig sparringspartner, noe som er gjennomgående i alt hva han gjør. 
+                 Kolbjørn anbefales. Ganske enkelt ;-)"}
+                 {
                  :author "Rune Lien"
                  :title "Uber coder at Agens as (tidl. Kodemaker)"
                  :photo "/thumbs/faces/rune-lien.jpg"
