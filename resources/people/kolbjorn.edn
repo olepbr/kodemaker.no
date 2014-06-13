@@ -32,6 +32,11 @@
             :illustration "/illustrations/hobbies/golf-kolbjorn.jpg"}]
             
 :endorsements [{
+                 :author "Tonje Magnussøn"
+                 :title "Chief HR Officer at Schibsted Payment AS"
+                 :photo "/thumbs/faces/tonje-magnusson.jpg"
+                 :quote "Jeg opplever Kolbjørn som ryddig og god på å skape relasjoner med samarbeidspartnere. Kodemaker som selskap leverer dyktige konsulenter, som passer godt inn i miljøene de jobber i. Kolbjørn er flink til å følge opp, og setter seg raskt inn i utfordringene kundene har."}
+                {
                  :author "Rune Lien"
                  :title "Uber coder at Agens as (tidl. Kodemaker)"
                  :photo "/thumbs/faces/rune-lien.jpg"
