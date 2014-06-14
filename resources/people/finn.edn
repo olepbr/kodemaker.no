@@ -11,4 +11,12 @@
  :tech {:favorites-at-the-moment [:javascript :groovy]
        :want-to-learn-more [:clojure]}
  :email-address "finn@kodemaker.no"
+ :hobbies [{:title "Foto"
+            :description "Alle liker å se på bilder. Et speilrefleks lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3 -format."
+            :illustration "/illustrations/hobbies/finn-flue.jpg"}
+	    {:title "Reise"
+	    :description "Verden er stor og har mye å vise deg - pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
+	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
+	    }
+]
  }
