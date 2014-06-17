@@ -2,44 +2,79 @@
  :name ["Per" "Spilling"]
  :title "Sjefskonsulent"
  :start-date "2011-08-01"
- :description "Per har arbeidet profesjonelt med systemutvikling siden 1988. Prosjektene har vært varierende i størrelse, fra en-manns prosjekter til store prosjekter/programmer med over 100 personer. Per er meget faglig interessert og har deltatt aktivt i Javamiljøet i Norge som medlem av programkomitéen i JavaZone fra 2005 til 2013. 
- 
- Etter at han begynte i Kodemaker i 2011 har han hatt gleden av å kunne fokusere fullt og helt på programmering igjen, og gjennoppdaget hvilken tilfredsstillelse dette gir. Han er en 'full stack' utvikler med mest erfaring med server-side utvikling, men liker også front-end utvikling.    
- 
+ :description "Per har arbeidet profesjonelt med systemutvikling siden 1988. Prosjektene har vært varierende i størrelse, fra en-manns prosjekter til store prosjekter/programmer med over 100 personer. Per er meget faglig interessert og har deltatt aktivt i Javamiljøet i Norge som medlem av programkomitéen i JavaZone fra 2005 til 2013.
+
+ Etter at han begynte i Kodemaker i 2011 har han hatt gleden av å kunne fokusere fullt og helt på programmering igjen, og gjennoppdaget hvilken tilfredsstillelse dette gir. Han er en 'full stack' utvikler med mest erfaring med server-side utvikling, men liker også front-end utvikling.
+
  Han er opptatt av å levere kvalitet og høy verdi til kunden. Verdier han setter høyt er åpen og ærlig kommunikasjon, i en atmosfære av respekt for andres meninger og vilje til å dele på kunnskap. Når det gjelder arbeidsoppgaver så kan Per fungere i mange forskjellige roller, som f.eks. utvikler, arkitekt, teamleder eller teknisk prosjektleder, men han foretrekker helst en rolle hvor programmering inngår som en viktig del."
 
  :phone-number "+47 909 15 115"
  :email-address "per@kodemaker.no"
 
  :presence {
-	 :cv "per"
-	 :twitter "perspilling"
-}
+             :cv "per"
+             :twitter "perspilling"
+             :github "perspilling"
+             :linkedin "/pub/per-spilling/1/5a/131"
+             }
 
-:tech {
-	:favorites-at-the-moment [:hibernate-alternativer :angularjs :ruby :rails]
-	:want-to-learn-more [:clojure :javascript :reactive-programming :akka]
-}
+ :tech {
+         :favorites-at-the-moment [:hibernate-alternativer :angularjs :ruby :rails]
+         :want-to-learn-more [:clojure :javascript :reactive-programming :akka]
+         }
 
-:recommendations [
-{
-	:title "The Pragmatic Programmer: From Journeyman to Master"
-    :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
-    :text "Info om boken"}
-    :tech [:software-craftsmanship]
-    :blurb "Dette er en bok full av lærdom om hva det vil si å levere godt håndtverk (software craftsmanship) som utvikler, hvordan man kommer dit, og hvordan man kan jobbe med å holde seg selv oppdatert. I tillegg til at det er masse faglig bra stoff er den også morsomt skrevet." 
-}
-{
-	:title "Domain-Driven Design: Tackling Complexity in the Heart of Software"
-    :link {:url "http://dddcommunity.org/book/evans_2003/"
-    :text "Info om boken"}
-    :tech [:ddd :design]
-    :blurb "En av de beste bøkene om software design etter min mening. Selv om Eric Evans skrev denne boken i 2003 så er den fortsatt nesten like aktuell. Når jeg skriver 'nesten like aktuell' så gjør jeg det fordi man i dag har mye større fokus på funksjonell programmering enn i 2003. Allikevel er de fleste av prinsippene i DDD like aktuelle i dag, slik som Ubiquitous Language, Value Objects, Context Map, og forskjellige andre design patterns of teknikker for å håndtere kompleksitet." 
-}
-]
+ :recommendations [
+                    {
+                      :title "The Pragmatic Programmer: From Journeyman to Master"
+                      :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
+                             :text "Info om boken"}
+                      :tech [:software-craftsmanship]
+                      :blurb "Dette er en bok full av lærdom om hva det vil si å levere godt håndtverk (software
+                      craftsmanship) som utvikler, hvordan man kommer dit, og hvordan man kan jobbe med å holde seg selv
+                      oppdatert. I tillegg til at det er masse faglig bra stoff er den også morsomt skrevet."
+                      }
+                    {
+                      :title "Domain-Driven Design: Tackling Complexity in the Heart of Software"
+                      :link {:url "http://dddcommunity.org/book/evans_2003/"
+                             :text "Info om boken"}
+                      :tech [:ddd :design]
+                      :blurb "En av de beste bøkene om software design etter min mening. Selv om Eric Evans skrev denne
+                      boken i 2003 så er den fortsatt nesten like aktuell. Når jeg skriver 'nesten like aktuell' så gjør
+                      jeg det fordi man i dag har mye større fokus på funksjonell programmering enn i 2003. Allikevel er
+                      de fleste av prinsippene i DDD like aktuelle i dag, slik som Ubiquitous Language, Value Objects,
+                      Context Map, og forskjellige andre design patterns of teknikker for å håndtere kompleksitet."
+                      }
+                    ]
 
+ :blog-posts [
+               {
+                 :url "http://perspilling.heroku.com/blog/2013/08/21/getting-started-with-angularjs-jetty-and-dropwizard/"
+                 :title "Getting Started With AngularJS, Jetty and Dropwizard"
+                 :blurb "En detaljert kom-igang artikkel som beskriver hvordan man lager en applikasjon med en front-end skrevet
+                 i AngularJS og en back-end skrevet i Java med bruk av Jetty og Dropwizard."
+                 :tech [:java :javascript]}
+               {
+                 :url "http://perspilling.heroku.com/blog/2013/02/13/agile-documentation-with-confluence-and-sparx-enterprise-architect/"
+                 :title "Agile Documentation With Confluence and Sparx Enterprise Architect"
+                 :blurb "Beskriver hvordan man kan integrere Sparx Enterprise Architect (UML verktøy) med Confluence (wiki)
+                 og på den måten få et effektivt system for \"levende systemdokumentasjon\" hvor UML-modeller er intergrert i
+                 wiki-sidene."
+                 :tech [:agile :uml :documentation]}
+               ]
 
-}
+ :presentations [
+                  {
+                    :title "How to develop an insurance webshop in 6 months"
+                    :blurb "Presentasjon som ble holdt på Lean Wisdom seminaret i Oslo i 2008. Den beskriver hvordan vi
+                    klarte å lage den nye selvbetjeningsportalen for Storebrand Skade på kun 6 måneder ved hjelp av en
+                    pragmatisk smidig prosess og et dyktig tverrfaglig team bestående av både konsulenter og ansatte i
+                    Storebrand."
+                    :tech [:agile]
+                    :urls {:slides "http://www.slideshare.net/pspilling/lean-wisdom-how-to-develop-an-insurance"}
+                    }
+                  ]
+
+ }
 
 
 
