@@ -88,6 +88,12 @@
                            :description "Et Ruby bibliotek (gem) for å parse CREMUL filer."
                            :tech [:ruby :edifact]
                            }
+                         {
+                           :url "https://github.com/perspilling/eatools"
+                           :name "eatools"
+                           :description "Et Java program for å eksportere UML diagrammer fra Sparx Enterprise Architect og gjøre dem tilgjengelige i Confluence."
+                           :tech [:agile :uml :java]
+                           }
                          ]
 
  }
