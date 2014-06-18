@@ -30,6 +30,23 @@
          :want-to-learn-more [:clojure :javascript :reactive-programming :akka]
          }
 
+ :hobbies [
+            {:title "Seiling"
+             :description "Jeg har vokst opp med båtliv og seiling, og trives fortsatt veldig godt med det. Det er
+                    noe spesielt med det å forflytte seg kun med bruk av vinden. En deilig måte å koble av på
+                    samtidig som det er nok av utfordringer å bryne seg på hvis man ønsker det."
+             :illustration "/illustrations/hobbies/per_seiling_small.jpg"
+             }
+            {:title "Å reise"
+             :description "\"Å reise er å leve\" sa H.C. Andersen, og det er jeg helt enig i. Spesielt når man reiser
+             til fjerne strøk og får helt andre opplevelser enn det man gjør hjemme så fyller man opp hjernebarken med
+             sterke minner. Er det noe jeg ikke angrer på her i livet så er det at jeg har fått reise mye rundt i verden
+             og blitt kjent med natur, mennesker og kulturer som er ganske annerledes enn hjemme i Norge. Det gir et
+             litt annet perspektiv på livet vi lever i vårt lille priviligerte land."
+             :illustration "/illustrations/hobbies/per_og_ingrid_walking_safari.jpg"
+             }
+            ]
+
  :recommendations [
                     {
                       :title "The Pragmatic Programmer: From Journeyman to Master"
