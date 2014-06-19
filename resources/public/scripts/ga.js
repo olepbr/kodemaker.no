@@ -4,4 +4,5 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-16391367-3', 'kodemaker.no');
+  ga('require', 'displayfeatures');
   ga('send', 'pageview');
