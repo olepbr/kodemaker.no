@@ -14,17 +14,17 @@
  :hobbies [{:title "Trening og helse"
  		:description  "[Å sitte er like ille som å røyke](http://www.nrk.no/livsstil/_-a-sitte-er-like-ille-som-a-royke-1.11428352) mener forskere.
  		 Hvem liker å føle seg dårlig og uvel og bli plaget av alle mulige sykdommer? Ingen! Den beste måten å unngå dette på, som jeg har tro på, er trening.
-         Jeg har stor glede av å holde på mine faste treningsrutiner som spinning, styrketrening og annen saltrening på 
+         Jeg har stor glede av å holde på mine faste treningsrutiner som spinning, styrketrening og saltrening på 
  		 mitt favorittreningsenter [Skullerudsportsenter](https://www.skullerudsportsenter.no/). "
  		 :illustration  "/illustrations/hobbies/yen-saltrening.jpg"}
  		 {:title "Aktiviter og reiser"
  		  :description "Å dykke i rødehavet blant skillepadder og haier, dirke murener under hake, 
- 		  svømme blant haiene i verdens nest største akvarium i Disney Worlds Epcot Quest og sykle med kodemakere i Italia er noen av de opplevelsene som jeg prøver å samle og lagre min livsgledesbank."
+ 		  svømme blant haiene i verdens nest største akvarium i Disney Worlds Epcot Quest og sykle med kodemakere i Italia er noen av de opplevelsene som jeg prøver å samle og lagre i min livsgledesbank."
  		  :illustration  "/illustrations/hobbies/yen-dykking.jpg"
  		 }
  		 {:title "Yin og yang og balanse"
- 		  :description "Alt handler om balanse. Så lenge man ikke overdriver, kan man gjøre alt det man har lyst til. Det er noe jeg har lært av den kinesiske filosofien.
- 		  Mat og helse går hånd i hånd. Jeg skulle gjerne ha lært mer om hvordan man kan bruke maten som medisin."
+ 		  :description "Alt handler om balanse. Så lenge man ikke overdriver, kan man gjøre alt det man har lyst til. Det er noe jeg har lært fra den kinesiske filosofien.
+ 		  Mat og helse går hånd i hånd. Jeg skulle gjerne ha lært mer om hvordan man kan bruke mat som medisin."
  		  :illustration  "/illustrations/hobbies/yinyang.jpg"
  		 }]       
 }
