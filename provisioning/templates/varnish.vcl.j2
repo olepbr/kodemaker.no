@@ -13,5 +13,9 @@ sub vcl_recv {
 }
 
 sub vcl_fetch {
-        set beresp.ttl = 1w;
+        if (req.url ~ "/cv/") {
+                set beresp.ttl = 5m;
+        } else {
+                set beresp.ttl = 1w;
+        }
 }
