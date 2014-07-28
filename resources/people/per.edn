@@ -112,7 +112,23 @@
                            :tech [:agile :uml :java]
                            }
                          ]
-
+						 
+ :endorsements [
+ 				{
+					:author "Ole Nymoen"
+					:title "IT-arkitekt i Avinor, tidligere IT-arkitekt i Bluegarden"
+					:quote "Jeg jobbet sammen med Per Spilling da han var innleid hos 
+						oss i Bluegarden som arkitekt og senere teamleder for et utviklingsteam. 
+						Per er en dyktig arkitekt, konstruktiv i sin tilnærming til problemer 
+						og behagelig å jobbe sammen med. Han var sentral i utformingen av den nye 
+						målarkitekturen til Bluegarden. Per var også svært god i rollen som 
+						teamleder/teknisk prosjektleder for et utviklingsteam i et krevende 
+						prosjekt med mange interessenter i flere land. Han er en hyggelig og 
+						omgjengelig person som kommer godt overens med alle. Jeg er sikker på 
+						at han vil løse nye utfordringer på en utmerket måte og gir ham min 
+						varmeste anbefaling."
+					}
+				]
  }
 
 
