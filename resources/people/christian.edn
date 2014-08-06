@@ -20,7 +20,7 @@
             :github "cjohansen"}
 
  :tech {:favorites-at-the-moment [:clojure :clojurescript :react :emacs :git]
-        :want-to-learn-more [:haskell :ansible :docker]}
+        :want-to-learn-more [:go :haskell :ansible :docker]}
 
  :side-projects [{:title "Test-Driven JavaScript Development"
                   :description "Etter noen år med fordypning i og blogging om
@@ -131,7 +131,21 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "FINN Oppdrag"
+ :projects [{:customer "Schibsted Payment ID (SPiD)"
+             :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
+             gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
+             Sidene blir bygget opp basert på informasjon hentet rett fra SPiD
+             sitt REST API. Eksempler i guides hentes fra fungerende eksempler,
+             for å sikre at kodeeksempler ikke er utdatert."
+             :tech [:clojure :responsive-design :stasis :optimus :midje]
+             :years [2014]}
+            {:customer "Schibsted Payment ID (SPiD)"
+             :description "Prototypet ny innlogging, registrering og kjøpsflyt
+             for SPiD, med fokus på brukervennlighet, støtte for mobil, og
+             forenkling av tekniske løsninger."
+             :tech [:html :css :responsiv-design :javascript :grunt :mocha :chai]
+             :years [2014]}
+            {:customer "FINN Oppdrag"
              :description "Klargjorde et avansert registreringsskjema
              for utrulling til flere markedsplasser ved å modularisere
              koden til komponenter som kunne settes sammen til
