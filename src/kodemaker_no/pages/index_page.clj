@@ -42,7 +42,7 @@
   (if (:full-width section)
     (to-html (:body section))
     (list (when (:title section)
-            [:h2.offset [:span (:title section)]])
+            [:h2.offset [:span.offset-content (:title section)]])
           [:div.line
            [:div.unit.text-adornment
             [:p (when (:illustration section)
