@@ -1,5 +1,6 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
+            [kodemaker-no.formatting :refer [to-id-str]]
             [kodemaker-no.homeless :refer [update-vals]]
             [kodemaker-no.render-page :refer [render-page]]
             [net.cgrand.enlive-html :refer [sniptest]]
@@ -69,6 +70,13 @@
                  (partition 2)
                  (map to-megalist-item))})
 
+(defn- get-node-text [node]
+  (let [text (-> node :content first)]
+    (if (string? text) text (get-node-text text))))
+
+(defn- idify [node]
+  (assoc-in node [:attrs :id] (to-id-str (get-node-text node))))
+
 (defn- tweak-pages [html request]
   (sniptest html
             ;; implement <reference> tag
@@ -78,7 +86,10 @@
             [:megalist] replace-megalist-tag
 
             ;; use optimized images
-            [:img] #(update-in % [:attrs :src] (optimize-path-fn request))))
+            [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
+
+            ;; give every h2 an id for linkability
+            [:h2] idify))
 
 (defn- use-norwegian-quotes [html]
   (-> html
