@@ -75,13 +75,15 @@
     (if (string? text) text (get-node-text text))))
 
 (defn- wrap-in-anchor [content target]
-  [{:tag :a
-     :attrs {:class "anchor-link"
-             :id target
-             :href (str "#" target)}
-     :content (into [{:tag :span
-                      :attrs {:class "anchor-marker"}
-                      :content "¶"}] content)}])
+  (if (string? (first content))
+    [{:tag :a
+      :attrs {:class "anchor-link"
+              :id target
+              :href (str "#" target)}
+      :content (into [{:tag :span
+                       :attrs {:class "anchor-marker"}
+                       :content "¶"}] content)}]
+    (into [(update-in (first content) [:content] #(wrap-in-anchor % target))] (rest content))))
 
 (defn- add-anchor [node]
   (update-in node [:content] #(wrap-in-anchor % (to-id-str (get-node-text node)))))

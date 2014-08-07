@@ -7,7 +7,8 @@
   {:title "Systemutvikling på høyt nivå"
    :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
    :lead [:p "Vi er et fokusert selskap."]
-   :body [:h2 "Vi er Kodemaker"]})
+   :body (list [:h2 "Vi er Kodemaker"]
+               [:h2 [:span "Vi gjør det vanskelig"]])})
 
 (def request
   {:optimus-assets [{:path "/pk-spc-1f832dasf8.jpg"
@@ -35,4 +36,16 @@
          :content ({:attrs {:class "anchor-marker"}
                     :content ("¶")
                     :tag :span}
-                   "Vi er Kodemaker")})))
+                   "Vi er Kodemaker")})
+
+   (-> page (select [:h2]) second :content)
+   => '({:tag :span
+         :attrs nil
+         :content ({:tag :a
+                    :attrs {:class "anchor-link"
+                            :href "#vi-gjor-det-vanskelig"
+                            :id "vi-gjor-det-vanskelig"}
+                    :content ({:attrs {:class "anchor-marker"}
+                               :content ("¶")
+                               :tag :span}
+                              "Vi gjør det vanskelig")})})))
