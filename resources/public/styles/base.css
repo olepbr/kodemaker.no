@@ -102,6 +102,11 @@ img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicu
 
 a, h1, .linkish {color: #d30707;}
 
+.anchor-link {color: #fff; position: relative;}
+.anchor-marker {display: none;}
+.anchor-link:hover {text-decoration: none;}
+.anchor-link:hover .anchor-marker {display: block; position: absolute; left: -16px;}
+
 .block {display: block;}
 .linkBlock {display: block; text-decoration: none !important;}
 .linkBlock:hover .linkish {text-decoration: underline;}
