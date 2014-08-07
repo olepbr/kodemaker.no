@@ -74,8 +74,17 @@
   (let [text (-> node :content first)]
     (if (string? text) text (get-node-text text))))
 
-(defn- idify [node]
-  (assoc-in node [:attrs :id] (to-id-str (get-node-text node))))
+(defn- wrap-in-anchor [content target]
+  [{:tag :a
+     :attrs {:class "anchor-link"
+             :id target
+             :href (str "#" target)}
+     :content (into [{:tag :span
+                      :attrs {:class "anchor-marker"}
+                      :content "¶"}] content)}])
+
+(defn- add-anchor [node]
+  (update-in node [:content] #(wrap-in-anchor % (to-id-str (get-node-text node)))))
 
 (defn- tweak-pages [html request]
   (sniptest html
@@ -88,8 +97,8 @@
             ;; use optimized images
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
-            ;; give every h2 an id for linkability
-            [:h2] idify))
+            ;; give every h2 an anchor link for linkability
+            [:h2] add-anchor))
 
 (defn- use-norwegian-quotes [html]
   (-> html

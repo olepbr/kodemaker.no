@@ -6,7 +6,8 @@
 (defn get-page []
   {:title "Systemutvikling på høyt nivå"
    :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
-   :lead [:p "Vi er et fokusert selskap."]})
+   :lead [:p "Vi er et fokusert selskap."]
+   :body [:h2 "Vi er Kodemaker"]})
 
 (def request
   {:optimus-assets [{:path "/pk-spc-1f832dasf8.jpg"
@@ -17,7 +18,6 @@
 
 (fact
  (let [page (parse (prepare-page get-page request))]
-
    (-> page (select [:title]) first :content)
    => '("Systemutvikling på høyt nivå | Kodemaker")
 
@@ -25,4 +25,14 @@
    => "/pk-spc-1f832dasf8.jpg"
 
    (-> page (select [:.unitRight :.bd :p]) first :content)
-   => '("Vi er et fokusert selskap.")))
+   => '("Vi er et fokusert selskap.")
+
+   (-> page (select [:h2]) first :content)
+   => '({:tag :a
+         :attrs {:class "anchor-link"
+                 :href "#vi-er-kodemaker"
+                 :id "vi-er-kodemaker"}
+         :content ({:attrs {:class "anchor-marker"}
+                    :content ("¶")
+                    :tag :span}
+                   "Vi er Kodemaker")})))
