@@ -19,7 +19,8 @@
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:clojure :gradle :unity3d :git]
-        :want-to-learn-more [:clojurescript :ansible]}
+        :using-at-work [:gradle :groovy :java :javascript]
+        :want-to-learn-more [:clojurescript :ansible :docker]}
 
  :blog-posts [{:url "http://odinodin.io/2014-07-15-podcaster/"
                :title "Podcaster for programmerere"
