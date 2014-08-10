@@ -34,7 +34,7 @@
                     :url "http://2014.javazone.no/presentation.html?id=8be8fcfe"
                     :tech [:clojure]
                     :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
-                    :date "2014-10-09"}]
+                    :date "2014-09-10"}]
 
  :hobbies         [{:title        "Funksjonell programmering"
                     :description  "Data-verden er i stadig forandring, kravene
