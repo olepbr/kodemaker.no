@@ -27,6 +27,14 @@
                    :twitter  "stoyle"
                    :github   "stoyle"
                    :linkedin "/in/stoyle"}
+ :upcoming        [{:title "Really understanding Clojure, getting into macros"
+                    :description "På JavaZone skal jeg snakke om Clojure makroer.
+                    Om du ønsker å lære mer om hvorfor språket er bygget opp slik det
+                    er, vil dette være dette presentasjonen for deg!"
+                    :url "http://2014.javazone.no/presentation.html?id=8be8fcfe"
+                    :tech [:clojure]
+                    :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
+                    :date "2014-10-09"}]
 
  :hobbies         [{:title        "Funksjonell programmering"
                     :description  "Data-verden er i stadig forandring, kravene
