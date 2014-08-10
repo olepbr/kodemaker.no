@@ -3,7 +3,7 @@
   :url "http://nye.kodemaker.no"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
+  :dependencies [[org.clojure/clojure "1.6.0"]
                  [optimus "0.14.2"]
                  [optimus-img-transform "0.2.0"]
                  [stasis "2.1.1" :exclusions [org.clojure/clojure]]
