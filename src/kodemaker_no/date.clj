@@ -10,12 +10,19 @@
 (defn format-dmy "Ensure consistent formatting of dates" [date]
   (unparse (formatter "dd.MM.yyyy") (to-date-time date)))
 
+(def months {"may" "mai"
+             "oct" "okt"
+             "dec" "des"})
+
 (defn clever-date [date relative-to]
   (let [days (time/in-days (time/interval (to-date-time relative-to) (to-date-time date)))]
     (case days
       0 "I dag"
       1 "I morgen"
-      (str/replace (str/lower-case (unparse (formatter "d. MMM") (to-date-time date))) "c" "s")))) ; Should really use Locale...
+      (let [datetime (to-date-time date)
+            day (unparse (formatter "d.") datetime)
+            month-str (str/lower-case (unparse (formatter "MMM") datetime))]
+        (str day " " (or (months month-str) month-str)))))) ; Should really use Locale...
 
 (defn within? [from until date]
   (and (or (= from date) (time/after? date from))
