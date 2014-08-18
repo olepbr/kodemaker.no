@@ -34,8 +34,8 @@
 
 
  :hobbies
- [{:title "Dataspilling"
-   :description "Eller \"gaming\" om du vil. Spiller ikke aktivt i konkurranser, så det kan vel sies å være en fritidssyssel mer enn noe annet. Har massevis av timer i World of Warcraft. Gleder meg til EverQuest Next. Prøver meg for tiden på Wildstar. DayZ (bildet) er en alle tiders favoritt. Har dessverre ikke god nok aim til å spille Counter Strike."
+ [{:title "Dataspill"
+   :description "Har aldri spilt aktivt i konkurranser og liknende, men jeg er nok over gjennomsnittlig interessert. Drømmer om å lage mitt eget dataspill en vakker dag."
    :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
 
 
