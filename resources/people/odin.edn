@@ -43,6 +43,17 @@
                        fallgruvene og hvordan du navigerer rundt de."
                 :tech [:spock :groovy]}]
 
+ :upcoming [{:title "Webutvikling med Clojure"
+             :description "Clojure representerer et radikalt alternativ til webutvikling med objektorienterte språk. Det absolutt viktigste prinsippet bak Clojure er enkelhet.
+                           Det første spørsmålet som dukker opp er hvilket webrammeverk bør man bruke? Så snart du er komfortabel med
+                           Clojure så innser du at Clojure-kode vanligvis er enklere og mer gjenbrukbar enn det du er vant til.
+                           Dermed så gir det ikke så mye mening å gå til et altomslukende rammeverk a la Rails med de begrensningene det kan medføre;
+                           men heller sette sammen det du trenger ut fra enkle komponenter til å få den oppførselen som passer i din løsning."
+             :tech [:clojure :clojurescript :web]
+             :url "http://2014.javazone.no/presentation.html?id=97d7c449"
+             :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
+             :date "2014-09-11"}]
+
  :recommendations [{:title "This Developer's Life"
                     :blurb "Dette er min definitive favorittpodcast.
                             Her får man servert interessante
