@@ -40,7 +40,19 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming []
+ :upcoming [{:title "ZombieCLJ: Live parprogrammering"
+             :description "Se Christian og Magnar parprogrammere på nettspill
+             med Clojure og ClojureScript.
+
+             Denne økten er for de som syns det er moro å se folk parprogrammere
+             mens de prater om hva de driver med. Det blir Clojure med hanskene
+             av, så man må tåle å ikke forstå alt. De som er helt nye til
+             funksjonell programmering kan muligens få eksplodert hodet.
+             Definitivt live koding."
+             :tech [:clojure :clojurescript :react]
+             :url "http://2014.javazone.no/presentation.html?id=f963bc1c"
+             :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
+             :date "2014-09-10"}]
 
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"

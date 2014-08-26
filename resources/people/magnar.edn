@@ -25,6 +25,20 @@
         :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
         :want-to-learn-more [:react :clojurescript :haskell]}
 
+ :upcoming [{:title "ZombieCLJ: Live parprogrammering"
+             :description "Se Christian og Magnar parprogrammere på nettspill
+             med Clojure og ClojureScript.
+
+             Denne økten er for de som syns det er moro å se folk parprogrammere
+             mens de prater om hva de driver med. Det blir Clojure med hanskene
+             av, så man må tåle å ikke forstå alt. De som er helt nye til
+             funksjonell programmering kan muligens få eksplodert hodet.
+             Definitivt live koding."
+             :tech [:clojure :clojurescript :react]
+             :url "http://2014.javazone.no/presentation.html?id=f963bc1c"
+             :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
+             :date "2014-09-10"}]
+
  :recommendations [{:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
                             Full av triks, tips, testing og forskning
