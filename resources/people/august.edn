@@ -15,6 +15,14 @@
  :tech {:favorites-at-the-moment [:datomic, :react]
         :want-to-learn-more [:c :haskell]}
 
+ :upcoming
+ [{:title "Hei, jeg heter August, og jeg driver med data"
+   :description "På JavaZone skal jeg gjøre et forsøk på å forklare hva funksjonell programmering <em>egentlig</em> handler om, nemlig data. Målet er at dette skal bli en introduksjon som viser fordelene \"FP\" har å by på. Kommer til å bruke Emacs, Facebook React, Datomic og Clojure til å demonstrere dette."
+   :tech []
+   :url "http://2014.javazone.no/presentation.html?id=a11572fe"
+   :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
+   :date "2014-09-10"}]
+
  :recommendations
  [{:title "Simple Made Easy"
    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
