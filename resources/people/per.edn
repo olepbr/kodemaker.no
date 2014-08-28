@@ -72,13 +72,13 @@
 
  :blog-posts [
                {
-                 :url "http://perspilling.heroku.com/blog/2013/08/21/getting-started-with-angularjs-jetty-and-dropwizard/"
+                 :url "http://perspilling.herokuapp.com/blog/2013/08/21/getting-started-with-angularjs-jetty-and-dropwizard/"
                  :title "Getting Started With AngularJS, Jetty and Dropwizard"
                  :blurb "En detaljert kom-igang artikkel som beskriver hvordan man lager en applikasjon med en front-end skrevet
                  i AngularJS og en back-end skrevet i Java med bruk av Jetty og Dropwizard."
                  :tech [:java :javascript]}
                {
-                 :url "http://perspilling.heroku.com/blog/2013/02/13/agile-documentation-with-confluence-and-sparx-enterprise-architect/"
+                 :url "http://perspilling.herokuapp.com/blog/2013/02/13/agile-documentation-with-confluence-and-sparx-enterprise-architect/"
                  :title "Agile Documentation With Confluence and Sparx Enterprise Architect"
                  :blurb "Beskriver hvordan man kan integrere Sparx Enterprise Architect (UML verktøy) med Confluence (wiki)
                  og på den måten få et effektivt system for \"levende systemdokumentasjon\" hvor UML-modeller er intergrert i
