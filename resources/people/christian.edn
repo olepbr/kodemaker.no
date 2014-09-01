@@ -216,6 +216,10 @@
                          :name "Buster.JS"
                          :description "Ambisiøst test-toolkit for JavaScript."
                          :tech [:javascript :testing]}
+                        {:url "https://github.com/magnars/prone"
+                         :name "Prone"
+                         :description "Bedre feilmeldinger og debugging for Clojure webapps."
+                         :tech [:clojure]}
                         {:url "https://github.com/cjohansen/asciidoclj"
                          :name "asciidoclj"
                          :description "Rendre asciidoc i Clojure."
