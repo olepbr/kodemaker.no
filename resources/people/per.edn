@@ -26,7 +26,7 @@
              }
 
  :tech {
-         :favorites-at-the-moment [:hibernate-alternativer :angularjs :ruby :rails]
+         :favorites-at-the-moment [:zeromq :javascript :ruby :rails]
          :want-to-learn-more [:clojure :javascript :reactive-programming :akka]
          }
 
