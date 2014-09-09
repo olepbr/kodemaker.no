@@ -1,12 +1,17 @@
-:title JavaZone eller ClojureZone?
-:published 2014-09-09
+:title JavaZone (eller ClojureZone?)
+:lead
 :illustration /photos/blog/javazone2013.jpg
 :body
 
-Vi gleder oss til JavaZone. Bacon ipsum dolor sit amet sed bacon porchetta,
-andouille tri-tip tempor reprehenderit in jowl ut brisket. Beef enim shankle
-tail. Consectetur pork leberkas cupidatat kevin occaecat. Jowl beef kielbasa
-fatback, shankle sirloin pancetta laborum.
+Vi gleder oss til JavaZone. I år stiller vi som vanlig med alle som vil på plass.  5 av oss holder foredrag, og alle handler i en eller annen grad om [Clojure](/clojure/).  Ikke bare Clojure, men vi kan vel med dette formidle at Clojure er blant de hetere faglige temaene blant våre 26 Kodemakere om dagen.
+
+Vi håper det kommer mange på foredragene våre, og kom gjerne for en prat med foredragsholderne på vår stand etter at foredragene er over.  Du kan forresten komme innom akkurat når du vil.  Kanskje du vil prøve årets konkurranse samtidig og gjøre et hederlig forsøk på å stikke av med hovedpremien?  
+
+Eventuelt bare slappe av med et av våre spillbord?  Ja, vi satser egentlig bare på kose oss på standen vår.  Null stress.
+
+Her er foredragene våre:
+
+
 
 ### [Hei, jeg heter August og driver med data](http://2014.javazone.no/presentation.html?id=a11572fe)
 
@@ -33,12 +38,4 @@ parprogrammere på nettspill med Clojure og ClojureScript.
 Klokka 10:20 på torsdag skal [Odin](/odin/) vise hvorfor du får mer kontroll,
 raskere feedback og færre bugs ved å bruke Clojure til webutvikling.
 
-Bacon ipsum dolor sit amet sed bacon porchetta, andouille tri-tip tempor
-reprehenderit in jowl ut brisket. Beef enim shankle tail. Consectetur pork
-leberkas cupidatat kevin occaecat. Jowl beef kielbasa fatback, shankle sirloin
-pancetta laborum.
 
-Bacon ipsum dolor sit amet sed bacon porchetta, andouille tri-tip tempor
-reprehenderit in jowl ut brisket. Beef enim shankle tail. Consectetur pork
-leberkas cupidatat kevin occaecat. Jowl beef kielbasa fatback, shankle sirloin
-pancetta laborum.
