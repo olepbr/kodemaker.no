@@ -208,11 +208,7 @@
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
                   :tech [:javascript]}]
 
- :open-source-projects [{:url "https://github.com/magnars/prone"
-                         :name "Prone"
-                         :description "Bedre feilmeldinger og debugging for Clojure webapps."
-                         :tech [:clojure]}
-                        {:url "https://github.com/cjohansen/Sinon.JS/"
+ :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
                          :description "Et spy-/stub- og mocke-bibliotek for JavaScript."
                          :tech [:javascript :testing]}
