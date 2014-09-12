@@ -215,7 +215,16 @@
                        noen andres config og håpe det blir bra."
                :tech [:emacs]}]
 
- :presentations [{:title "Zombie TDD: Live parprogrammering"
+ :presentations [{:title "ZombieCLJ: Live parprogrammering"
+                  :blurb "Christian og jeg parprogrammerer på et nettspill med
+                  Clojure og ClojureScript. Syns du det er moro å se folk
+                  parprogrammere mens de prater om hva de driver med? Det er
+                  Clojure med hanskene av, så du må tåle å ikke forstå alt. Er
+                  du helt ny til funksjonell programmering kan du muligens få
+                  eksplodert hodet."
+                  :tech [:clojure :clojurescript :react]
+                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
+                 {:title "Zombie TDD: Live parprogrammering"
                   :blurb "Christian og jeg setter oss ned med emacsen
                           og parprogrammerer foran publikum. Se
                           hvordan to typer som digger JavaScript

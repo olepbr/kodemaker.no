@@ -33,7 +33,7 @@ Her er foredragene vi holdt:
 <a href="/magnar/"><img src="/photos/people/magnar/side-profile-near.jpg" align="left" width=90 style="border: 3px solid black; margin: 5px 5px 5px 0px;"></a>
 <a href="/christian/"><img src="/photos/people/christian/side-profile-near.jpg" align="left" width=90 style="border: 3px solid black; margin: 5px 15px 5px 0px;"></a>
 [Magnar](/magnar/) og [Christian](/christian/) parprogrammerte på nettspill med Clojure og ClojureScript.<br>
-[Se showet](http://kodem.kr/1xSfLMU)
+[Se showet](/zombieclj-live-parprogrammering/)
 
 
 
