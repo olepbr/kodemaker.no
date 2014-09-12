@@ -40,19 +40,7 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming [{:title "ZombieCLJ: Live parprogrammering"
-             :description "Se Christian og Magnar parprogrammere på nettspill
-             med Clojure og ClojureScript.
-
-             Denne økten er for de som syns det er moro å se folk parprogrammere
-             mens de prater om hva de driver med. Det blir Clojure med hanskene
-             av, så man må tåle å ikke forstå alt. De som er helt nye til
-             funksjonell programmering kan muligens få eksplodert hodet.
-             Definitivt live koding."
-             :tech [:clojure :clojurescript :react]
-             :url "http://2014.javazone.no/presentation.html?id=f963bc1c"
-             :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
-             :date "2014-09-10"}]
+ :upcoming []
 
  :recommendations [{:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
@@ -173,7 +161,18 @@
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
              :years [2013 2014]}]
 
- :presentations [{:title "Functional UI Programming"
+ :presentations [{:title "ZombieCLJ: Live parprogrammering"
+                  :blurb "Se Christian og Magnar parprogrammere på nettspill
+                  med Clojure og ClojureScript.
+
+                  Denne økten er for de som syns det er moro å se folk parprogrammere
+                  mens de prater om hva de driver med. Det blir Clojure med hanskene
+                  av, så man må tåle å ikke forstå alt. De som er helt nye til
+                  funksjonell programmering kan muligens få eksplodert hodet.
+                  Definitivt live koding."
+                  :tech [:clojure :clojurescript :react]
+                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
+                 {:title "Functional UI Programming"
                   :blurb "En introduksjon til React.js, med sammenligning av
                   populære MC*-rammeverk, samt et eksempel på bruk i form av
                   live-koding av minesveiper med ClojureScript og Om (en
