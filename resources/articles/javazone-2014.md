@@ -18,7 +18,7 @@ Her er foredragene vi holdt:
 
 <a href="/alf-kristian/"><img src="/photos/people/alf-kristian/side-profile-near.jpg" align="left" width=90 style="border: 3px solid black; margin: 5px 15px 5px 0px;"></a>
 [Alf Kristian](/alf-kristian/) snakket om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features.<br>
-[Se foredraget](http://kodem.kr/1osAKMD)
+[Se foredraget](/really-understanding-clojure-getting-into-macros/)
 
 
 ### [Hei, jeg heter August og driver med data](http://2014.javazone.no/presentation.html?id=a11572fe)

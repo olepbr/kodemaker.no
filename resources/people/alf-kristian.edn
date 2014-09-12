@@ -97,7 +97,12 @@
                             :text "Offisielle sider"}
                     :tech  [:trening]}]
 
- :presentations   [{:title "Programmeringsspråket betyr alt!"
+ :presentations   [{:title "Really understanding Clojure, getting into macros"
+                    :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
+                    :urls  {:video "http://vimeo.com/album/3031533/video/105758305"}
+                    :tech  [:clojure :funksjonell-programmering]}
+                    
+                    {:title "Programmeringsspråket betyr alt!"
                     :blurb "Hovedverktøyet til programmerere er
                   programmeringsspråket. Likevel velge vi sjeldent det
                   beste riktige verktøyet for å løse oppgavene.
