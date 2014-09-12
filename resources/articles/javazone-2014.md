@@ -11,7 +11,7 @@ Her er foredragene vi holdt:
 
 <a href="/odin/"><img src="/photos/people/odin/side-profile-near.jpg" align="left" width=90 style="border: 3px solid black; margin: 5px 15px 5px 0px;"></a>
 [Odin](/odin/) viste hvorfor du får mer kontroll, raskere feedback og færre bugs ved å bruke Clojure til webutvikling. <br>
-[Se foredraget](http://kodem.kr/WREoba)
+[Se foredraget](/webutvikling-med-clojure/)
 
 
 ### [Really understanding Clojure, getting into macros](http://2014.javazone.no/presentation.html?id=8be8fcfe)
