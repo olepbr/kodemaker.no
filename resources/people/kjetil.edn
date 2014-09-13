@@ -44,7 +44,10 @@
                   :years       [2010]
                   :tech        [:java :spring-mvc]}]
 
- :endorsements  [{:author "Pedro Thormodsen"
+ :endorsements  [{:author "Belen Svebak"
+                  :title  "Manager Integration and Quality Team, FINN reise"
+                  :quote  "Kjetil er en god nettverksbygger! Han er også en igangsetter som ikke er redd for å eksperimentere. Opptatt av å levere høy kvalitet, men også av produkt- og prosessforbedringer. Fokuserer på å utvikle andre. Ærlig. Han er opptatt av å skape miljø hvor det kan oppstår åpenhet og ærlighet. Motiverende å jobbe med. Sterk lagånd!"}
+                 {:author "Pedro Thormodsen"
                   :title  "Product Director, FINN jobb"
                   :quote  "Kjetil is without doubt one of the best software developers I've had the privilege to work with. Kjetil has made invaluable contributions to product development, methodology, and technology to our team and I would not hesitate to hire him back. Top qualities: Great Results, Expert, High Integrity"}
                  {:author "Geir Egil Hansen"
