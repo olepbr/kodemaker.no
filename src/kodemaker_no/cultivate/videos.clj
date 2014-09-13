@@ -56,6 +56,21 @@
          (map #(assoc % :by {:name (first (:name person))
                              :url (util/url person)})))))
 
+(defn- add-occurrence [v1 v2]
+  (-> (if (map? (:by v1))
+        (assoc v1 :by [(:by v1)])
+        v1)
+      (update-in [:by] conj (:by v2))))
+
+(defn merge-duplicates [videos]
+  (->> videos
+       (reduce (fn [videos {:keys [url] :as v}]
+                 (if (and url (videos url))
+                   (update-in videos [url] add-occurrence v)
+                   (assoc videos url v)))
+               {})
+       vals))
+
 (defn replace-presentation-video-urls-1 [pres]
   (if (create-video-page-for-presentation? pres)
     (assoc-in pres [:urls :video] (video-url pres))
@@ -67,4 +82,5 @@
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
-       (map (partial cultivate-video raw-content))))
+       (map (partial cultivate-video raw-content))
+       merge-duplicates))

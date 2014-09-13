@@ -17,6 +17,16 @@
                         :tech [:javascript]
                         :urls {:video "http://vimeo.com/49485653"}}]})
 
+     :christian
+     (c/person
+      {:id :christian
+       :name ["Christian" "Johansen"]
+       :presentations [{:title "Zombie TDD: Live parprogrammering"
+                        :id :zombie-tdd-live-at-javazone
+                        :blurb "Progger på JavaZone"
+                        :tech [:javascript]
+                        :urls {:video "http://vimeo.com/49485653"}}]})
+
      :sten-morten
      (c/person
       {:id :sten-morten
@@ -36,47 +46,48 @@
 (let [videos (cultivate content)]
   (fact
    "It includes the title."
-   (map :title videos) => ["Zombie TDD: Live parprogrammering"
+   (map :title videos) => ["Programmeringsspråket betyr alt!"
                            "En deilig implementert AND (Teknologihuset)"
-                           "Programmeringsspråket betyr alt!"])
+                           "Zombie TDD: Live parprogrammering"])
 
   (fact
-   "It includes name and url to the person."
+   "It includes name and url to the people."
 
-   (map :by videos) => [{:name "Magnar", :url "/magnar/"}
+   (map :by videos) => [{:name "Sten Morten", :url "/sten-morten/"}
                         {:name "Sten Morten", :url "/sten-morten/"}
-                        {:name "Sten Morten", :url "/sten-morten/"}])
+                        [{:name "Magnar", :url "/magnar/"}
+                         {:name "Christian", :url "/christian/"}]])
 
   (fact
    "It includes the blurb."
-   (map :blurb videos) => ["Progger på JavaZone"
+   (map :blurb videos) => ["Hovedverktøyet til programmerere"
                            "Et dypdykk inn i clojure.core"
-                           "Hovedverktøyet til programmerere"])
+                           "Progger på JavaZone"])
 
   (fact
    "It includes the tech."
-   (map :tech videos) => [[{:id :javascript, :name "Javascript"}]
+   (map :tech videos) => [[{:id :clojure, :name "Clojure"}]
                           [{:id :clojure, :name "Clojure"}]
-                          [{:id :clojure, :name "Clojure"}]])
+                          [{:id :javascript, :name "Javascript"}]])
 
   (fact
    "It uses the given :id as URL, otherwise it uses the title to generate one.
     Then there's the videos we can't embed on our site. Those are left alone."
 
-   (map :url videos) => ["/zombie-tdd-live-at-javazone/"
+   (map :url videos) => ["/programmeringsspraket-betyr-alt/"
                          "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"
-                         "/programmeringsspraket-betyr-alt/"])
+                         "/zombie-tdd-live-at-javazone/"])
 
   (fact
    "It creates embed-code"
 
    (->> videos (remove :direct-link?) (map :embed-code)) =>
    [[:div.video-embed
-     [:iframe {:src "//player.vimeo.com/video/49485653?title=0&amp;byline=0&amp;portrait=0"
+     [:iframe {:src "http://www.youtube.com/embed/y5PSRn56ZWo"
                :frameborder "0"
                :allowfullscreen true}]]
     [:div.video-embed
-     [:iframe {:src "http://www.youtube.com/embed/y5PSRn56ZWo"
+     [:iframe {:src "//player.vimeo.com/video/49485653?title=0&amp;byline=0&amp;portrait=0"
                :frameborder "0"
                :allowfullscreen true}]]]))
 
@@ -96,7 +107,7 @@
        {:zombie-tdd-live-at-javazone
         {:blurb "Overridden"}})
      cultivate
-     first
+     last
      :blurb) => "Overridden")
 
 #_(fact

@@ -3,7 +3,9 @@
             [kodemaker-no.markup :as markup]))
 
 (defn- link-to-person [person]
-  [:a {:href (:url person)} (:name person)])
+  (if (map? person)
+    [:a {:href (:url person)} (:name person)]
+    (comma-separated (map link-to-person person))))
 
 (defn render-tech-bubble [tech person]
   (when-not (empty? tech)
