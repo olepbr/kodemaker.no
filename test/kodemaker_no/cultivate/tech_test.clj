@@ -138,33 +138,45 @@
       :by {:name "Magnar", :url "/magnar/"}}])
 
 (fact
- "Kommende presentasjoner og kurs blir overført til tech."
+ "Kommende presentasjoner og kurs blir overført til tech. Hvis flere skal holde
+  samme foredrag, så blir de slått sammen."
 
  (-> content
+     (assoc-in [:people :christian :upcoming]
+               [{:title "Pure JavaScript"
+                 :description "Kast de objekt-orienterte krykkene."
+                 :url "http://vg.no"
+                 :location {:url "http://vg.no", :title "VG"}
+                 :tech [:javascript]
+                 :date "2020-01-01"}
+                {:title "Zombie TDD: Live parprogrammering"
+                 :description "Vi setter oss ned med emacsen."
+                 :tech [:javascript :tdd]
+                 :url "http://db.no"
+                 :location {:url "http://db.no", :title "DB"}
+                 :date "2020-01-01"}])
      (assoc-in [:people :magnar :upcoming]
-               [{:url "http://framsieutvikling.no/post/753317476"
-                 :title "5 JavaScript-uvaner du må legge av deg"
-                 :date "2013-06-01"
-                 :location {:url "http://vg.no" :title "VG"}
-                 :description "Jeg tør påstå at JavaScript er et av språkene som
-                               er mest utsatt for cargo culting. For noen år
-                               siden var det utstrakt klipping og liming, og
-                               uvanene spredte seg fortere enn du kunne si
-                               globalt navnerom. Her er noen saker du må slutte
-                               med."
-                 :tech [:javascript]}])
+               [{:title "Zombie TDD: Live parprogrammering"
+                 :description "Vi setter oss ned med emacsen."
+                 :tech [:javascript :tdd]
+                 :url "http://db.no"
+                 :location {:url "http://db.no", :title "DB"}
+                 :date "2020-01-01"}])
 
      cultivate :javascript :upcoming)
 
- => [{:by {:name "Magnar", :url "/magnar/"}
-      :url "http://framsieutvikling.no/post/753317476"
-      :title "5 JavaScript-uvaner du må legge av deg"
-      :date (local-date 2013 6 1)
-      :location {:url "http://vg.no" :title "VG"}
-      :description "Jeg tør påstå at JavaScript er et av språkene som
-                               er mest utsatt for cargo culting. For noen år
-                               siden var det utstrakt klipping og liming, og
-                               uvanene spredte seg fortere enn du kunne si
-                               globalt navnerom. Her er noen saker du må slutte
-                               med."
-      :tech [:javascript]}])
+ => [{:title "Zombie TDD: Live parprogrammering"
+      :description "Vi setter oss ned med emacsen."
+      :tech [:javascript :tdd]
+      :date (local-date 2020 1 1)
+      :url "http://db.no"
+      :location {:url "http://db.no", :title "DB"}
+      :by [{:name "Magnar", :url "/magnar/"}
+           {:name "Christian", :url "/christian/"}]}
+     {:title "Pure JavaScript"
+      :description "Kast de objekt-orienterte krykkene."
+      :url "http://vg.no"
+      :location {:url "http://vg.no", :title "VG"}
+      :date (local-date 2020 1 1)
+      :tech [:javascript]
+      :by [{:name "Christian", :url "/christian/"}]}])

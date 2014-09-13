@@ -74,7 +74,7 @@
 (defn- render-upcoming-event [now {:keys [by title date url call-to-action location description]}]
   (list [:h3 title]
         [:p description]
-        [:p (list [:a {:href (:url by)} (:name by)]
+        [:p (list (comma-separated (map link-to-person by))
                   ", "
                   [:a {:href (:url location)} (:title location)]
                   ", "

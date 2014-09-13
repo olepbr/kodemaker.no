@@ -63,6 +63,13 @@
           :tech (distinct (mapcat :tech presentations))
           :urls (apply merge (map :urls presentations)))))
 
+(defn- combine-upcoming [presentations]
+  (-> (first presentations)
+      (select-keys #{:title :description :url :location :date})
+      (assoc
+          :by (map :by presentations)
+          :tech (distinct (mapcat :tech presentations)))))
+
 (defn- combine-side-projects [side-projects]
   (-> (first side-projects)
       (select-keys #{:title :description :illustration :link})
@@ -92,6 +99,9 @@
                    (->> (:people content)
                         vals
                         (mapcat (get-with-byline :upcoming))
+                        (group-by :url)
+                        vals
+                        (map combine-upcoming)
                         (filter #(is-about tech %))
                         (map #(update-in % [:date] d/parse-ymd)))))
 
