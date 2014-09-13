@@ -65,11 +65,9 @@
                     :tech [:clojurescript :editor]}]
 
  :presentations [{:title "Webutvikling med Clojure"
-                  :blurb "Clojure representerer et radikalt alternativ til webutvikling med objektorienterte språk. Det absolutt viktigste prinsippet bak Clojure er enkelhet.
-                           Det første spørsmålet som dukker opp er hvilket webrammeverk bør man bruke? Så snart du er komfortabel med
-                           Clojure så innser du at Clojure-kode vanligvis er enklere og mer gjenbrukbar enn det du er vant til.
-                           Dermed så gir det ikke så mye mening å gå til et altomslukende rammeverk a la Rails med de begrensningene det kan medføre;
-                           men heller sette sammen det du trenger ut fra enkle komponenter til å få den oppførselen som passer i din løsning."
+                  :blurb "Det finnes et utall plattformer for å lage webapplikasjoner; så hvorfor skal du
+                          vurdere Clojure? Fordi det gir deg enklere løsninger, raskere utvikling og færre feil.
+                          Ta sjansen til å bli kjent med et språk som vil forandre måten du tenker på."
                   :tech [:clojure :clojurescript :web]
                   :urls {:video "https://vimeo.com/105857867"}}
 
