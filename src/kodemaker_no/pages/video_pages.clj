@@ -3,15 +3,13 @@
             [kodemaker-no.markup :as markup]))
 
 (defn- link-to-person [person]
-  (if (map? person)
-    [:a {:href (:url person)} (:name person)]
-    (comma-separated (map link-to-person person))))
+  [:a {:href (:url person)} (:name person)])
 
-(defn render-tech-bubble [tech person]
+(defn render-tech-bubble [tech by]
   (when-not (empty? tech)
     [:p.near.cookie-w
      [:span.cookie
-      (link-to-person person) " om "
+      (comma-separated (map link-to-person by)) " om "
       (comma-separated (map markup/link-if-url tech))]]))
 
 (defn render-call-to-action [cta]

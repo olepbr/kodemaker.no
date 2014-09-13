@@ -62,14 +62,10 @@
         v1)
       (update-in [:by] conj (:by v2))))
 
-(defn merge-duplicates [videos]
-  (->> videos
-       (reduce (fn [videos {:keys [url] :as v}]
-                 (if (and url (videos url))
-                   (update-in videos [url] add-occurrence v)
-                   (assoc videos url v)))
-               {})
-       vals))
+(defn- combine-videos [videos]
+  (-> (first videos)
+      (assoc
+          :by (map :by videos))))
 
 (defn replace-presentation-video-urls-1 [pres]
   (if (create-video-page-for-presentation? pres)
@@ -83,4 +79,6 @@
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
        (map (partial cultivate-video raw-content))
-       merge-duplicates))
+       (group-by :url)
+       vals
+       (map combine-videos)))

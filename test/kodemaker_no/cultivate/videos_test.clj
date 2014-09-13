@@ -46,48 +46,48 @@
 (let [videos (cultivate content)]
   (fact
    "It includes the title."
-   (map :title videos) => ["Programmeringsspråket betyr alt!"
+   (map :title videos) => ["Zombie TDD: Live parprogrammering"
                            "En deilig implementert AND (Teknologihuset)"
-                           "Zombie TDD: Live parprogrammering"])
+                           "Programmeringsspråket betyr alt!"])
 
   (fact
    "It includes name and url to the people."
 
-   (map :by videos) => [{:name "Sten Morten", :url "/sten-morten/"}
-                        {:name "Sten Morten", :url "/sten-morten/"}
-                        [{:name "Magnar", :url "/magnar/"}
-                         {:name "Christian", :url "/christian/"}]])
+   (map :by videos) => [[{:name "Magnar", :url "/magnar/"}
+                         {:name "Christian", :url "/christian/"}]
+                        [{:name "Sten Morten", :url "/sten-morten/"}]
+                        [{:name "Sten Morten", :url "/sten-morten/"}]])
 
   (fact
    "It includes the blurb."
-   (map :blurb videos) => ["Hovedverktøyet til programmerere"
+   (map :blurb videos) => ["Progger på JavaZone"
                            "Et dypdykk inn i clojure.core"
-                           "Progger på JavaZone"])
+                           "Hovedverktøyet til programmerere"])
 
   (fact
    "It includes the tech."
-   (map :tech videos) => [[{:id :clojure, :name "Clojure"}]
+   (map :tech videos) => [[{:id :javascript, :name "Javascript"}]
                           [{:id :clojure, :name "Clojure"}]
-                          [{:id :javascript, :name "Javascript"}]])
+                          [{:id :clojure, :name "Clojure"}]])
 
   (fact
    "It uses the given :id as URL, otherwise it uses the title to generate one.
     Then there's the videos we can't embed on our site. Those are left alone."
 
-   (map :url videos) => ["/programmeringsspraket-betyr-alt/"
+   (map :url videos) => ["/zombie-tdd-live-at-javazone/"
                          "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"
-                         "/zombie-tdd-live-at-javazone/"])
+                         "/programmeringsspraket-betyr-alt/"])
 
   (fact
    "It creates embed-code"
 
    (->> videos (remove :direct-link?) (map :embed-code)) =>
    [[:div.video-embed
-     [:iframe {:src "http://www.youtube.com/embed/y5PSRn56ZWo"
+     [:iframe {:src "//player.vimeo.com/video/49485653?title=0&amp;byline=0&amp;portrait=0"
                :frameborder "0"
                :allowfullscreen true}]]
     [:div.video-embed
-     [:iframe {:src "//player.vimeo.com/video/49485653?title=0&amp;byline=0&amp;portrait=0"
+     [:iframe {:src "http://www.youtube.com/embed/y5PSRn56ZWo"
                :frameborder "0"
                :allowfullscreen true}]]]))
 
@@ -107,7 +107,7 @@
        {:zombie-tdd-live-at-javazone
         {:blurb "Overridden"}})
      cultivate
-     last
+     first
      :blurb) => "Overridden")
 
 #_(fact
