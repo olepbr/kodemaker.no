@@ -1,11 +1,8 @@
 (ns kodemaker-no.pages.tech-pages
   (:require [clj-time.core :as t]
             [kodemaker-no.date :as d]
-            [kodemaker-no.formatting :refer [to-html comma-separated]]
+            [kodemaker-no.formatting :refer [to-html comma-separated link-to-person]]
             [kodemaker-no.markup :as markup]))
-
-(defn- link-to-person [person]
-  [:a {:href (:url person)} (:name person)])
 
 (defn- render-recommendation [{:keys [title by blurb link]}]
   (list [:h3 [:a {:href (:url link)} title]]

@@ -1,9 +1,6 @@
 (ns kodemaker-no.pages.video-pages
-  (:require [kodemaker-no.formatting :refer [comma-separated]]
+  (:require [kodemaker-no.formatting :refer [comma-separated link-to-person]]
             [kodemaker-no.markup :as markup]))
-
-(defn- link-to-person [person]
-  [:a {:href (:url person)} (:name person)])
 
 (defn render-tech-bubble [tech by]
   (when-not (empty? tech)

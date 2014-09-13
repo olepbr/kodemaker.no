@@ -96,3 +96,6 @@
                    unindent-but-first
                    (str/join "\n"))
               pegdown-options))
+
+(defn link-to-person [person]
+  [:a {:href (:url person)} (:name person)])

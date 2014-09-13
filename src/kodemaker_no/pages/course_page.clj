@@ -1,10 +1,7 @@
 (ns kodemaker-no.pages.course-page
   (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :refer [to-html comma-separated]]
+            [kodemaker-no.formatting :refer [to-html comma-separated link-to-person]]
             [kodemaker-no.markup :as markup]))
-
-(defn- link-to-person [person]
-  [:a {:href (:url person)} (:name person)])
 
 (defn render-tech-bubble [tech by]
   (when-not (empty? tech)
