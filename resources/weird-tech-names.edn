@@ -48,4 +48,6 @@
  :google-analytics "Google Analytics"
  :oracle-locator "Oracle Locator"
  :mule "Mule ESB"
+ :webgl "WebGL"
+ :cef "Chrome Embedded Framework"
  }

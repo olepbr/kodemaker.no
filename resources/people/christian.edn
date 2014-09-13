@@ -131,7 +131,14 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Schibsted Payment ID (SPiD)"
+ :projects [{:customer "NRK - Redigeringsstøtte"
+             :description "Lager en lettvekts bilderedigeringskomponent (litt
+             effekter, crop, skalering, panorering) med web-teknologi.
+             Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
+             Premiere Pro og Quantell."
+             :tech [:javascript :webgl :cef :angularjs :jasmine :karma :nodejs]
+             :years [2014]}
+            {:customer "Schibsted Payment ID (SPiD)"
              :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
              gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
              Sidene blir bygget opp basert på informasjon hentet rett fra SPiD
