@@ -20,7 +20,7 @@
   {:title "Lærelysten? Vi deler gjerne!"
    :lead [:p "Bli med på foredrag, kurs, eller workshop, eller len deg tilbake og se en screencast."]
    :body (list
-          [:h2 "Screencasts"]
-          (to-html (slurp (io/resource "screencasts.md")))
           [:h2 "Foredrag"]
-          (map render-video videos))})
+          (map render-video videos)
+          [:h2 "Screencasts"]
+          (to-html (slurp (io/resource "screencasts.md"))))})
