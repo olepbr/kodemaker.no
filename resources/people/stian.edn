@@ -21,8 +21,8 @@
  			      :github "stiancor"
  			      :coderwall "stiancor"}
 
- :tech {:favorites-at-the-moment [:groovy :rails :clojure]
-	          :want-to-learn-more [:clojure :javascript :ansible]}
+ :tech {:favorites-at-the-moment [:groovy :clojure :rails]
+	          :want-to-learn-more [:machine-learning :clojure :javascript :docker]}
 
  :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
@@ -42,15 +42,16 @@
                     :link {:url "http://ruby.railstutorial.org/"
                            :text "Bli en rails hipster"}
                     :tech [:ruby :rails]}
-                   {:title "Løs matematiske problemer med kode"
-                    :blurb "Project Euler er ikke akkurat en ny spenstig nettside, men
-                    		her kan du virkelig få kvesset klørne dine. Problemene blir
-                    		vanskeligere og vanskeligere og hvilket språk du bruker til
-                    		å løse dem er opp til deg. Personlig leker jeg meg med Clojure
-                    		om dagen."
-                    :link {:url "http://projecteuler.net/"
-                           :text "Lek med tall her"}
-                    :tech [:deliberate-practice :clojure]}]
+                   {:title "Maskinene kommer!"
+                    :blurb "Ved bruk av datakraft og spennende algoritmer  kan man
+                            gjenkjenne håndskrift, anbefale varer basert på tidligere kjøp
+                            og kategorisere innhold i artikler automatisk. Machine learning
+                            gjør det mulig for systemer og lære basert på data uten å følge
+                            forhåndsprogrammerte instruksjoner. Dette 10-ukerskurset på Coursera
+                            er gratis og gir en solid innføring i temaet."
+                    :link {:url "https://www.coursera.org/course/ml/"
+                           :text "Ta kurset på Coursera"}
+                    :tech [:machine-learning]}]
 
 
  :hobbies [{:title "Reising"
