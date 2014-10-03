@@ -33,16 +33,16 @@
                   :illustration "/illustrations/hobbies/raspberrypi.jpg"}]
 
 :recommendations [{:title "Radiolab from WNYC - podcast"
-                    :link {:url "http://feeds.wnyc.org/radiolab"
-                        :text "Feed"}
+                    :link {:url "http://www.radiolab.org/"
+                        :text "Se hjemmesiden"}
                     :tech [:podcast]
                     :blurb "Radiolab lager podcasts om alt de og lytterne lurer på. Episodene går fra 15 til ca 60 min og
-                          veldig mange av de er både gode og veldig interessante. Anbefaler å høre på episoden om Galapagos først" }
+                          veldig mange av de er både gode og veldig interessante. Anbefaler å høre på episoden om Galapagos." }
                 {:title "Webutvikling med Clojure"
                     :link {:url "https://vimeo.com/105857867"
                         :text "Se video"}
                     :tech [:clojure]
-                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig begynne å sette meg inn i Clojure.
+                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig lære Clojure.
                             Anbefales!" }]        
 
  :blog-posts [{:url "http://steintoretosse.wordpress.com/2014/03/01/openhab-heats-my-living-room-when-i-need-it/"
