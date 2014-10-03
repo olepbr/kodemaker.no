@@ -18,7 +18,8 @@
                  }
 
  :tech          {:favorites-at-the-moment [:groovy :java]
-                 :want-to-learn-more      [:clojure :funksjonell-programmering :groovy]}
+                 :using-at-work [:grails :groovy :java :javascript]
+                 :want-to-learn-more      [:clojure :funksjonell-programmering :gradle :ansible :docker]}
 
  :hobbies       [{:title        "Fotball"
                   :description  "Etter å ha bodd ett år i Liverpool, så er det ingen vei tilbake. Interessen går
