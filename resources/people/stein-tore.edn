@@ -14,6 +14,7 @@
                  :twitter "steintt"
                  :github  "steintore"
                  :linkedin "/in/steintore/"
+                 :coderwall "steintore"
                  }
 
  :tech          {:favorites-at-the-moment [:groovy :java]
