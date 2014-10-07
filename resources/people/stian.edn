@@ -22,6 +22,7 @@
  			      :coderwall "stiancor"}
 
  :tech {:favorites-at-the-moment [:groovy :clojure :rails]
+            :using-at-work [:groovy :java :ruby :javascript]
 	          :want-to-learn-more [:machine-learning :clojure :javascript :docker]}
 
  :recommendations [{:title "Coding Horror"
