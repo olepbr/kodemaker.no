@@ -38,6 +38,9 @@
     (str "/" (name (video-id video)) "/")
     (-> video :urls :video)))
 
+(defn- slide-url [video]
+  (get-in video [:urls :slides]))
+
 (defn- cultivate-video [raw-content {:keys [blurb title urls by tech] :as video}]
   (let [override (-> raw-content :video-overrides (get (video-id video)))]
     (merge
@@ -45,7 +48,7 @@
       :by by
       :blurb blurb
       :tech (map (partial util/look-up-tech raw-content) tech)
-      :url (video-url video)
+      :url  (or (video-url video) (slide-url video))
       :embed-code (create-embed-code (:video urls))
       :direct-link? (not (create-video-page-for-presentation? video))}
      override)))
