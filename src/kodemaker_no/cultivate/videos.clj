@@ -41,12 +41,13 @@
 (defn- slide-url [video]
   (get-in video [:urls :slides]))
 
-(defn- cultivate-video [raw-content {:keys [blurb title urls by tech] :as video}]
+(defn- cultivate-video [raw-content {:keys [blurb title urls by tech date] :as video}]
   (let [override (-> raw-content :video-overrides (get (video-id video)))]
     (merge
      {:title title
       :by by
       :blurb blurb
+      :date date
       :tech (map (partial util/look-up-tech raw-content) tech)
       :url  (or (video-url video) (slide-url video))
       :embed-code (create-embed-code (:video urls))
@@ -78,10 +79,18 @@
 (defn replace-video-urls [m]
   (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
 
+(defn sort-by-date-title [videos]
+ (letfn [(zero->nil [num] (when-not (= 0 num) num))
+         (sort-comarator [[date-1 title-1] [date-2 title-2]]
+          (or (zero->nil (compare date-2 date-1))
+           (compare title-1 title-2)))]
+  (sort-by (juxt :date :title) sort-comarator videos)))
+
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
        (mapcat (get-with-byline :presentations))
        (map (partial cultivate-video raw-content))
        (group-by :url)
        vals
-       (map combine-videos)))
+       (map combine-videos)
+       sort-by-date-title))
