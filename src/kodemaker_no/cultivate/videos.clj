@@ -1,7 +1,7 @@
 (ns kodemaker-no.cultivate.videos
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.homeless :refer [update-in-existing update-vals compare*]]))
+            [kodemaker-no.homeless :refer [update-in-existing update-vals compare* remove-vals]]))
 
 (defn find-video [^String url]
   (when url
@@ -66,10 +66,13 @@
         v1)
       (update-in [:by] conj (:by v2))))
 
-(defn- combine-videos [videos]
-  (-> (first videos)
-      (assoc
-          :by (map :by videos))))
+(defn combine-videos [videos]
+ (as-> videos x
+  (map #(remove-vals % nil?) x)
+  (reverse x)
+  (apply merge x)
+  (assoc x
+   :by (map :by videos))))
 
 (defn replace-presentation-video-urls-1 [pres]
   (if (create-video-page-for-presentation? pres)
