@@ -81,10 +81,10 @@
 
 (defn sort-by-date-title [videos]
  (letfn [(zero->nil [num] (when-not (= 0 num) num))
-         (sort-comarator [[date-1 title-1] [date-2 title-2]]
+         (sort-comparator [[date-1 title-1] [date-2 title-2]]
           (or (zero->nil (compare date-2 date-1))
            (compare title-1 title-2)))]
-  (sort-by (juxt :date :title) sort-comarator videos)))
+  (sort-by (juxt :date :title) sort-comparator videos)))
 
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
