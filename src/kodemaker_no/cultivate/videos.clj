@@ -1,7 +1,7 @@
 (ns kodemaker-no.cultivate.videos
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.homeless :refer [update-in-existing update-vals]]))
+            [kodemaker-no.homeless :refer [update-in-existing update-vals compare*]]))
 
 (defn find-video [^String url]
   (when url
@@ -79,12 +79,12 @@
 (defn replace-video-urls [m]
   (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
 
-(defn sort-by-date-title [videos]
- (letfn [(zero->nil [num] (when-not (= 0 num) num))
-         (sort-comparator [[date-1 title-1] [date-2 title-2]]
-          (or (zero->nil (compare date-2 date-1))
-           (compare title-1 title-2)))]
-  (sort-by (juxt :date :title) sort-comparator videos)))
+(defn compare-by-datetime-and-title [a b]
+  (or (compare* (-> b :date)
+                (-> a :date))
+      (compare* (:title a)
+                (:title b))
+      0))
 
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
@@ -93,4 +93,4 @@
        (group-by :url)
        vals
        (map combine-videos)
-       sort-by-date-title))
+       (sort compare-by-datetime-and-title)))
