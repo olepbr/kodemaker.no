@@ -27,14 +27,7 @@
                    :twitter  "stoyle"
                    :github   "stoyle"
                    :linkedin "/in/stoyle"}
- :upcoming        [{:title "Really understanding Clojure, getting into macros"
-                    :description "På JavaZone skal jeg snakke om Clojure makroer.
-                    Om du ønsker å lære mer om hvorfor språket er bygget opp slik det
-                    er, vil dette være dette presentasjonen for deg!"
-                    :url "http://2014.javazone.no/presentation.html?id=8be8fcfe"
-                    :tech [:clojure]
-                    :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
-                    :date "2014-09-10"}]
+ :upcoming        []
 
  :hobbies         [{:title        "Funksjonell programmering"
                     :description  "IT-verden er i stadig forandring, kravene
@@ -100,6 +93,7 @@
  :presentations   [{:title "Really understanding Clojure, getting into macros"
                     :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
                     :urls  {:video "http://vimeo.com/album/3031533/video/105758305"}
+                    :date "2014-08-10"
                     :tech  [:clojure :funksjonell-programmering]}
                     
                     {:title "Programmeringsspråket betyr alt!"
@@ -108,6 +102,7 @@
                   beste riktige verktøyet for å løse oppgavene.
                   Denne presentasjonen fokuserer på hvor viktig det er å velge
                   riktig programmeringsspråk."
+                    :date "2013-02-14"
                     :urls  {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
                     :tech  [:funksjonell-programmering :clojure :scala
                             :python :groovy :java]}
@@ -115,6 +110,7 @@
                     :blurb "Mange misliker Lisp på grunn av annerledes
                     syntaks. Men når man forstår hvorfor syntaksen er som
                     den er, så blir språket vakkert!"
+                    :date "2012-09-10"
                     :urls  {:video "http://vimeo.com/49324971"}
                     :tech  [:lisp :clojure]}
                    {:title "Clojure - JVM språket som er \"multi-core ready\""
@@ -122,6 +118,7 @@
                     som går igjennom språkets oppbygning og filosofi.
                     Forklarer også hvorfor Clojure er et bedre rustet språk
                     for fremtiden enn andre."
+                    :date "2011-09-07"
                     :urls  {:video "https://vimeo.com/28765670"}
                     :tech  [:clojure :funksjonell-programmering]}]
 
