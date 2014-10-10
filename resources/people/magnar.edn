@@ -25,20 +25,6 @@
         :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
         :want-to-learn-more [:react :clojurescript :haskell]}
 
- :upcoming [{:title "ZombieCLJ: Live parprogrammering"
-             :description "Se Christian og Magnar parprogrammere på nettspill
-             med Clojure og ClojureScript.
-
-             Denne økten er for de som syns det er moro å se folk parprogrammere
-             mens de prater om hva de driver med. Det blir Clojure med hanskene
-             av, så man må tåle å ikke forstå alt. De som er helt nye til
-             funksjonell programmering kan muligens få eksplodert hodet.
-             Definitivt live koding."
-             :tech [:clojure :clojurescript :react]
-             :url "http://2014.javazone.no/presentation.html?id=f963bc1c"
-             :location {:title "JavaZone 2014" :url "http://2014.javazone.no/"}
-             :date "2014-09-10"}]
-
  :recommendations [{:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
                             Full av triks, tips, testing og forskning
@@ -222,6 +208,7 @@
                   Clojure med hanskene av, så du må tåle å ikke forstå alt. Er
                   du helt ny til funksjonell programmering kan du muligens få
                   eksplodert hodet."
+                  :date "2014-09-10"
                   :tech [:clojure :clojurescript :react]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
                  {:title "Zombie TDD: Live parprogrammering"
@@ -229,12 +216,14 @@
                           og parprogrammerer foran publikum. Se
                           hvordan to typer som digger JavaScript
                           angriper problemer og gjør koden testbar."
+                  :date "2012-09-12"
                   :tech [:javascript :tdd :testing]
                   :urls {:video "http://vimeo.com/49485653"}}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får
                           ryddig kode og trivelig testing ved å wrappe ajaxen
                           din."
+                  :date "2011-09-07"
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
                          :source "https://github.com/magnars/server-facade"}}]
