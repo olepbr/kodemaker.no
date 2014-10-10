@@ -185,12 +185,13 @@ villig til å la oss hjelpe deg å få dem på plass.**
 :illustration /forside/papir.jpg
 :body
 
-For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi at du
-[skal skrive litt om planene dine i skjemaet på neste side ...](/skjema/)
-så leser vi det og tar kontakt med deg så snart vi har mulighet.
-Stort sett vil du høre fra oss innen to arbeidsdager.
+For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi gjerne
+høre mer om deg og dine planer. La oss ta en prat!
+[Fyll inn ditt telefonnummer eller din epost-adresse på den neste siden ...](/skjema/)
+Vår daglige leder Kolbjørn Jetne tar kontakt med deg så snart han har mulighet.
+Stort sett vil du høre fra ham innen to arbeidsdager.
 
-Altså: [Fyll inn skjema her](/skjema/).
+Altså: [Skriv inn telefonnummer eller epost-adresse her](/skjema/).
 
 --------------------------------------------------------------------------------
 :title ... eller du kan forbli i uvissheten

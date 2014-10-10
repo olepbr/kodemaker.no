@@ -5,30 +5,16 @@
 
 (defn form-page [articles]
   (let [contact (articles "/kontakt.md")]
-    {:title "Hva kan vi hjelpe deg med?"
+    {:title "La oss ta en prat"
      :body (list
-            [:p
-             "Vi tar utviklingsoppdrag, lager workshops for deg, eller holder kurs og foredrag."]
-            [:p "For å hjelpe oss plukke ut oppdrag vi har tro på, vil vi at du
-            fyller ut dette skjemaet. Vi tar kontakt med
-            deg så snart vi har mulighet. Stort sett vil du høre fra oss innen to
-            arbeidsdager."]
+            [:p "Hva med å finne ut om vi er en god match for hverandre? Legg igjen
+                 telefonnummer eller epost-adresse, så tar Kolbjørn kontakt med deg."]
             [:form.form.mod {:action "/send-mail"
                              :method "POST"}
-             [:label "Skriv litt om planene dine"]
-             [:textarea.input {:rows 8, :name "tekst"}]
-             [:div.line
-              [:div.unit.r-1of2
-               [:label "Når ønsker du å starte?"]
-               [:input.input {:type "text", :name "oppstart"}]]
-              [:div.lastUnit
-               [:label "Hvilket omfang ser du for deg?"]
-               [:input.input {:type "text", :name "omfang"}]]]
-             [:label "Hvordan får vi tak i deg?"]
              [:input.input {:type "text", :name "kontakt"}]
              [:div
-              [:button.btn {:type "submit"} "Send skjema"]]]
-            [:h2 "&nbsp;"]
+              [:button.btn {:type "submit"} "Ja, la oss ta en prat, Kolbjørn"]]]
+            [:h2 "Eller, hvis du bare vil ha det gjort med én gang ..."]
             [:h1.hn (:title contact)]
             [:div.bd
              (render-body (-> contact
