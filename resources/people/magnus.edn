@@ -33,20 +33,29 @@
  :presentations [{:title "The Groovy Light Table Plugin"
                   :blurb "Screencast om bruk av Groovy og Gradle i Light Table"
                   :tech [:clojurescript :lighttable :groovy :gradle]
-                  :urls {:video "http://www.youtube.com/watch?v=5ji8RR2A4gQ"}}
+                  :urls {:video "http://www.youtube.com/watch?v=5ji8RR2A4gQ"}
+                  :date "2014-05-18"}
                  {:title "Creating and Using Snippets in Light Table"
                   :blurb "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
                   :tech [:javascript :lighttable]
-                  :urls {:video "http://www.youtube.com/watch?v=I6iuXOw3HDQ"}}
+                  :urls {:video "http://www.youtube.com/watch?v=I6iuXOw3HDQ"}
+                  :date "2014-05-06"}
+                 {:title "InstaBuster Part 2: Powerful JavaScript testing using Light Table and Buster.JS"
+                  :blurb "Screencast med demo av dashboard og autotest features for LightTable InstaBuster"
+                  :tech [:javascript :testing :lighttable]
+                  :urls {:video "https://www.youtube.com/watch?v=jYDiAVbPL8I&list=UUIpfu-L0KFtMlju3LgjPeSg"}
+                  :date "2014-04-21"}
                  {:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
                   :blurb "Screencast med en kort introduksjon til LightTable InstaBuster"
                   :tech [:javascript :testing :lighttable]
-                  :urls {:video "http://www.youtube.com/watch?v=WKHWazblpbc"}}
+                  :urls {:video "http://www.youtube.com/watch?v=WKHWazblpbc"}
+                  :date "2014-03-17"}
                  {:title "Gradle - Det er faktisk ditt bygg"
                   :blurb "Mange klamrer seg fortsatt til
                           illusjonen at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen, men i litt større organisasjoner finner man alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle."
                   :tech [:gradle :groovy]
-                  :urls {:video "http://vimeo.com/49375218"}}]
+                  :urls {:video "http://vimeo.com/49375218"}
+                  :date "2012-09-13"}]
 
 
  :blog-posts [{:url "http://codewader.blogspot.no/2014/05/a-groovy-light-table-client-step-4.html"
