@@ -118,7 +118,7 @@
   videos =not=> (contains org-blurb)))
 
 (fact "Videos should be sorted by date and then name"
- (let [f (partial sort compare-by-datetime-and-title)]
+ (let [f (partial sort compare-by-date-and-title)]
   (f []) => []
   (f [{:foo 1} {:bar 2}]) => (just {:foo 1} {:bar 2} :in-any-order)
 

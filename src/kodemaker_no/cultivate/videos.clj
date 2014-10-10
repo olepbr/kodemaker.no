@@ -79,7 +79,7 @@
 (defn replace-video-urls [m]
   (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
 
-(defn compare-by-datetime-and-title [a b]
+(defn compare-by-date-and-title [a b]
   (or (compare* (-> b :date)
                 (-> a :date))
       (compare* (:title a)
@@ -93,4 +93,4 @@
        (group-by :url)
        vals
        (map combine-videos)
-       (sort compare-by-datetime-and-title)))
+       (sort compare-by-date-and-title)))
