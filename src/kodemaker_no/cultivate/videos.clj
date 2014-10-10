@@ -80,8 +80,8 @@
   (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
 
 (defn compare-by-date-and-title [a b]
-  (or (compare* (-> b :date)
-                (-> a :date))
+  (or (compare* (:date b)
+                (:date a))
       (compare* (:title a)
                 (:title b))
       0))
