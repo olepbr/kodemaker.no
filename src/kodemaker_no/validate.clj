@@ -54,6 +54,7 @@
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
+                                   (optional-key :date) Date;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL}  ;; må ha minst en av disse URLene

@@ -24,7 +24,7 @@
                    :plugins [[lein-ring "0.8.10"]]
                    :source-paths ["dev" "config"]
                    :test-paths ^:replace []}
-             :test {:dependencies [[midje "1.6.0"]
+             :test {:dependencies [[midje "1.6.3"]
                                    [test-with-files "0.1.0"]]
                     :plugins [[lein-midje "3.1.3"]]
                     :source-paths ["config"]
