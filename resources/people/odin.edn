@@ -65,6 +65,7 @@
                     :tech [:clojurescript :editor]}]
 
  :presentations [{:title "Webutvikling med Clojure"
+                  :date "2014-09-11"
                   :blurb "Det finnes et utall plattformer for å lage webapplikasjoner; så hvorfor skal du
                           vurdere Clojure? Fordi det gir deg enklere løsninger, raskere utvikling og færre feil.
                           Ta sjansen til å bli kjent med et språk som vil forandre måten du tenker på."
@@ -72,6 +73,7 @@
                   :urls {:video "https://vimeo.com/105857867"}}
 
                   {:title "Elektronisk tekstbehandling"
+                   :date "2013-09-11"
                   :blurb "Moderne programmeringsspråk er kraftige
                           saker; de kjemper om å overgå
                           hverandre med høyere og høyere abstraksjonsnivåer.
@@ -82,6 +84,7 @@
                   :tech [:shell :unix]
                   :urls {:video "https://vimeo.com/74309669"}}
                  {:title "Better and groovier tests with Spock"
+                  :date "2012-09-13"
                   :blurb "Spock er et elegant testrammeverk for Java og Groovy-
                           baserte applikasjoner. Det hjelper deg å skrive
                           lesbare og presise tester, samtidig som det optimaliserer
