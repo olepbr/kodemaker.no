@@ -138,6 +138,14 @@
              Premiere Pro og Quantell."
              :tech [:javascript :webgl :cef :angularjs :jasmine :karma :nodejs]
              :years [2014]}
+            {:customer "NRK - Bidrag"
+             :description "Laget en app som viser en strøm av bidrag som NRKs
+             journalister og andre ansatte sender inn fra 'felten'. Brukes
+             internt i NRK til å både få oversikt over hva som kommer inn, men
+             også til å se status for viderebehandling av bilder og video i
+             andre systemer (transkoding, arkiv osv)."
+             :tech [:javascript :react :nodejs :buster-js :express-js :mysql :jade :compass]
+             :years [2014]}
             {:customer "Schibsted Payment ID (SPiD)"
              :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
              gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
