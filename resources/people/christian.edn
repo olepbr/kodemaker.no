@@ -185,6 +185,7 @@
                   av, så man må tåle å ikke forstå alt. De som er helt nye til
                   funksjonell programmering kan muligens få eksplodert hodet.
                   Definitivt live koding."
+                  :date "2014-09-10"
                   :tech [:clojure :clojurescript :react]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
                  {:title "Functional UI Programming"
@@ -192,11 +193,13 @@
                   populære MC*-rammeverk, samt et eksempel på bruk i form av
                   live-koding av minesveiper med ClojureScript og Om (en
                   React-wrapper)."
+                  :date "2014-05-13"
                   :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
                   :tech [:javascript :clojurescript :react :om]}
                  {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
+                  :date "2012-06-11"
                   :urls {:video "http://vimeo.com/43808808"}
                   :tech [:javascript]
                   :direct-link? true}
@@ -204,11 +207,13 @@
                   :blurb "En praktisk gjennomgang av TDD i JavaScript.
                   Foredraget er en times live-kode-sesjon der jeg lager et
                   autocomplete/type-ahead søk, test-first."
+                  :date "2011-06-11"
                   :urls {:video "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"}
                   :tech [:javascript :design :testing]}
                  {:title "JavaScript design and architecture"
                   :blurb "En liten inspirasjonsprat om å finne gode
                   abstraksjoner for frontend-programmering"
+                  :date "2011-09-07"
                   :urls {:video "http://vimeo.com/28760470"
                          :slides "http://cjohansen.no/talks/2011/javazone-js-design"}
                   :tech [:javascript :design]}
@@ -218,9 +223,18 @@
                           'hjelpematriell'. I dette foredraget tar jeg for meg
                           noen av de vanligste misforståelsene, og prøver
                           gjennom eksempler å oppgradere publikums JavaScript-kunnskap."
+                  :date "2011-09-07"
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
-                  :tech [:javascript]}]
+                  :tech [:javascript]}
+                 {:title "Zombie TDD: Live parprogrammering"
+                  :blurb "Magnar og jeg setter oss ned med emacsen
+                          og parprogrammerer foran publikum. Se
+                          hvordan to typer som digger JavaScript
+                          angriper problemer og gjør koden testbar."
+                  :date "2012-09-12"
+                  :tech [:javascript :tdd :testing]
+                  :urls {:video "http://vimeo.com/49485653"}}]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
