@@ -196,6 +196,14 @@
                   :date "2014-05-13"
                   :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
                   :tech [:javascript :clojurescript :react :om]}
+                 {:title "Zombie TDD: Live parprogrammering"
+                  :blurb "Magnar og jeg setter oss ned med emacsen
+                          og parprogrammerer foran publikum. Se
+                          hvordan to typer som digger JavaScript
+                          angriper problemer og gjør koden testbar."
+                  :date "2012-09-12"
+                  :tech [:javascript :tdd :testing]
+                  :urls {:video "http://vimeo.com/49485653"}}
                  {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
@@ -227,14 +235,7 @@
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
                   :tech [:javascript]}
-                 {:title "Zombie TDD: Live parprogrammering"
-                  :blurb "Magnar og jeg setter oss ned med emacsen
-                          og parprogrammerer foran publikum. Se
-                          hvordan to typer som digger JavaScript
-                          angriper problemer og gjør koden testbar."
-                  :date "2012-09-12"
-                  :tech [:javascript :tdd :testing]
-                  :urls {:video "http://vimeo.com/49485653"}}]
+                 ]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
