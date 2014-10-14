@@ -143,7 +143,13 @@
   (f [{:title "Ola"} {:date #inst"2014-01-01" :title "Per"}])
   => [{:date #inst"2014-01-01" :title "Per"} {:title "Ola"}]))
 
+(fact "Nil values from videos, should not override other non-nil values"
+ (let [f combine-videos]
+  (f [{:by "Christian" :k 2} {:by "Magnar" :k 1}])
+  => {:by ["Christian" "Magnar"] :k 2}
 
+  (f [{:by "Christian" :k nil} {:by "Magnar" :k 1}])
+  => {:by ["Christian" "Magnar"] :k 1}))
 
 #_(fact
    "It does not mess with videos with :direct-link? set to true."
