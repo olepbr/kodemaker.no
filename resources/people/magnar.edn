@@ -21,9 +21,9 @@
             :stackoverflow "/users/1123/magnar"
             :github "magnars"}
 
- :tech {:using-at-work [:clojure :javascript :responsive-design]
+ :tech {:using-at-work [:clojure :javascript :angularjs :ansible]
         :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
-        :want-to-learn-more [:react :clojurescript :haskell]}
+        :want-to-learn-more [:react :docker :haskell]}
 
  :recommendations [{:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
@@ -260,7 +260,8 @@
                         {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description "Snippets for å raskt skrive Datomic boilerplate."                                        :tech [:emacs]}
                         {:url "https://github.com/magnars/autolint-maven-plugin" :name "autolint-maven-plugin" :description "Kjører statisk analyse av JavaScript i Maven."                                           :tech [:java :maven]}]
 
- :open-source-contributions [{:name "clj-v8"              :url "https://github.com/circleci/clj-v8"              :tech [:clojure]}
+ :open-source-contributions [{:name "ring-server"         :url "https://github.com/weavejester/ring-server"      :tech [:clojure]}
+                             {:name "clj-v8"              :url "https://github.com/circleci/clj-v8"              :tech [:clojure]}
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
                              {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
@@ -276,7 +277,23 @@
                              {:name "restclient.el"       :url "https://github.com/pashky/restclient.el"         :tech [:emacs]}
                              {:name "buster-maven-plugin" :url "https://github.com/peternic/buster-maven-plugin" :tech [:java :maven]}]
 
- :projects [{:customer "FINN oppdrag"
+ :projects [{:customer "Schibsted Payment ID"
+             :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi gjør mange grep
+                           for å holde dokumentasjonen aktuell og oppdatert. Sidene blir bygget
+                           opp basert på informasjon hentet rett fra SPiD sitt REST API.
+                           Eksempler i guides hentes fra fungerende eksempler, for å sikre at
+                           kodeeksempler ikke er utdatert."
+             :years [2014]
+             :tech [:clojure :ansible :responsive-design :stasis :optimus :midje]}
+            {:customer "Oiiku"
+             :description "Jobbet i et lite team med å utvikle eventsystemet
+                           Oiiku. Vi måtte alle bidra på alle fronter: fra
+                           frontend, via backend, til database og drift.
+                           Systemet består av mange frittstående
+                           applikasjoner (pluss SSO) som kommuniserer via REST."
+             :years [2013 2014]
+             :tech [:javascript :clojure :angularjs :ansible :datomic :mongodb :elasticsearch]}
+            {:customer "FINN oppdrag"
              :description "Ansvarlig frontendutvikler. Utviklet hele
                            framsia fra bunnen av. Vi var første marked
                            i FINN til å bruke responsiv design. Skrev
