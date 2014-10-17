@@ -319,10 +319,6 @@ Når du bootstrapper, så vil root-login og passord-login bli disablet.
 Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
 annen inkantasjon:
 
-**NB!** Før vi open-sourcer kodemaker.no, må du dessverre legge inn
-`id_rsa.pub` og `id_rsa` med tilgang til kontoen i
-`provisioning/files/` før dette steget.
-
 ```sh
 ansible-playbook -i hosts.ini setup-kodemaker.yml --user deploy --sudo --ask-sudo-pass
 ```

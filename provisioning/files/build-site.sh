@@ -12,7 +12,7 @@ log () {
 }
 
 if [ ! -d "kodemaker.no" ]; then
-    git clone git@github.com:kodemaker/kodemaker.no.git
+    git clone https://github.com/kodemaker/kodemaker.no.git
     changed=1
 fi
 
