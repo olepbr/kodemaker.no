@@ -16,14 +16,33 @@
             :linkedin "/in/kristfh"}
 
  :tech {:favorites-at-the-moment [:clojure :clojurescript :datomic]
-       :want-to-learn-more [:om :reactive-programming]}
+        :want-to-learn-more [:om :reactive-programming]}
 
- :recommendations [{:title "The Functional Database"
+ :recommendations [{:title "Simple Made Easy"
+                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
+                           :text "Se foredraget"}
+                    :tech [:clojure :funksjonell-programmering]
+                    :blurb "Rich Hickey, som har skrevet språket Clojure, forklarer her forskjellen på <<Simple>> 
+                          og <<Easy>>. Hovedbudskapet er at mange velger <<Easy>>, men istedet ender opp i en jungel av kompleksitet. 
+                         Det optimale er da å kombinere <<Easy>> og <<Simple>>"}
+                   {:title "The Functional Database"
                     :link {:url "http://www.infoq.com/presentations/datomic-functional-database"
-                        :text "Se foredraget"}
+                           :text "Se foredraget"}
                     :tech [:datomic :funksjonell-programmering]
-                    :blurb "Dette foredraget av Rich Hickey forklarer ideene bak en funksjonell database."}]
- :hobbies [{:title "Styrketrening"
-            :description "....hverdagen er ikke den samme uten"
-             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"
-            }]}
+                    :blurb "Dette foredraget av Rich Hickey introduserer og forklarer ideene bak en funksjonell database.
+                           Hva om man distanserer seg fra tradisjonelle databaser og sier at data kun kan legges til?
+                           Betyr dette at man kan modellere data over tid? Og hva er egentlig fordelen med at data aldri 
+                           endrer seg? Dette er noen av spørsmålene som blir besvart gjennom en presentasjon som utfordrer
+                           etablerte <<sannheter>>."}]
+ :hobbies [{:title "Funksjonell programmering"
+            :description "Det begynnte med Scala og fortsatte med Clojure. Jeg syntes det er utrolig fasinerende å bruke
+                         språk og teknologier som er basert på helt andre prinsipper enn det man tradisjonelt kjenner fra
+                         den objektorienterte verdenen. Jeg har selv erfart at dette booster produktivitet og i tillegg er
+                         gøy når man kommer ut av startgropa." 
+            :illustration "/illustrations/hobbies/clojure-logo.jpg"}           
+           {:title "Styrketrening"
+            :description "Mye av tiden utenfor jobb brukes på et nærliggende treningsstudio. Etter intense dager på jobb er
+                         det utrolig deilig å koble helt ut og bare jobbe fysisk. Jeg har erfart at ved å være i god fysisk
+                         form orker man også mer når man er tilbake på jobb. Jeg har drevet med flere forskjellige treningsformer 
+                         opp gjennom årene, men praktiserer nå et klassisk styrketreningsprogram med fokus på de store muskelgruppene."
+             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"}]}
