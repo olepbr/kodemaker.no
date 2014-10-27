@@ -162,8 +162,8 @@ guns* er det naturlig at du bare får seniorer fra oss.
 - friske øyne, så du får ristet løs i gamle tankemåter som kanskje
   ikke gavner deg lenger
 
-Det er mange som har tillitt til oss. Vi har eller har hatt oppdrag hos blant
-andre FINN.no, Forsvaret, NSB, Telenor, Animalia, SPID og Conax.
+Det er mange som har tillit til oss. Vi har hatt oppdrag hos blant andre
+FINN.no, Forsvaret, NSB, Telenor, Hafslund, SPiD og Animalia.
 
 --------------------------------------------------------------------------------
 :full-width
