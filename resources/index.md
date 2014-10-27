@@ -3,7 +3,6 @@
 :body
 
 <reference img="/references/bengt-lyng.jpg"
-           url="/nsb-personalbillett/"
            logo="/logos/nsb.png"
            name="Bengt Lyng"
            phone="+47 924 33 836"
@@ -109,6 +108,23 @@ hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
 
 --------------------------------------------------------------------------------
+:full-width
+:body
+
+<reference img="/references/christian-printzell-halvorsen.jpg"
+           logo="/logos/finn.png"
+           name="Christian Printzell Halvorsen"
+           phone="tlf.nr. på forespørsel"
+           title="CEO, FINN.no">
+  Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
+  siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
+  sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
+  kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
+  sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
+  gjerne igjen når behovet oppstår.
+</reference>
+
+--------------------------------------------------------------------------------
 :title Du har mye ansvar, og mye å tenke på
 :illustration /forside/tornado.jpg
 :body
@@ -154,7 +170,6 @@ andre FINN.no, Forsvaret, NSB, Telenor, Animalia, SPID og Conax.
 :body
 
 <reference img="/references/torkel-randem.jpg"
-           url="/storfekjottkontrollen/"
            logo="/logos/animalia.png"
            name="Torkel Randem"
            phone="+47 991 68 897"
