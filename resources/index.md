@@ -182,16 +182,16 @@ FINN.no, Forsvaret, NSB, Telenor, Hafslund, SPiD og Animalia.
 :body
 
 Vi er bare et visst antall mennesker, og hver av oss kan bare jobbe
-med et oppdrag av gangen. Det er i alles interesse at prosjektet ditt
+med ett oppdrag av gangen. Det er i alles interesse at prosjektet ditt
 skal lykkes. Derfor velger vi bare oppdrag vi selv har stor tro på.
 Det finnes selvfølgelig ingen garantier her i livet,
 men vi mener og tror at punktene beskrevet over er uhyre viktige. La
 oss gjenta dem fort:
 
-- du må ha en fungerende arbeidsprosess (lean, kanban, eller lignende)
+- du må ha en fungerende arbeidsprosess
 - du må ha automatiserte tester
 - du må automatisere byggeprosessen
-- du må ha en entydig "defintion of done"
+- du må ha en entydig "definition of done"
 
 **Hvis du ikke allerede har disse tingene på plass, må du være 100%
 villig til å la oss hjelpe deg å få dem på plass.**
