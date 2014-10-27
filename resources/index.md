@@ -102,7 +102,7 @@ spesialisert, er det uhyre viktig at menneskene du har, har **et
 nettverk å trekke på**, når de står fast. For de kommer til å stå
 fast. I Kodemaker har vi tette bånd til hverandre. Vi reiser på turer
 sammen, kjenner hverandres familier. Vi diskuterer daglig fag i
-lukkede fora på nett. Vi har et **svært sterkt fagmiljø**, der vi
+egne fora på nett. Vi har et **svært sterkt fagmiljø**, der vi
 hjelper hverandre, lærer av hverandre, spør hverandre... trekker
 hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
