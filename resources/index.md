@@ -15,11 +15,24 @@
   oppdragsgiver. Anbefales sterkt!
 </reference>
 
+<reference img="/references/christian-printzell-halvorsen.jpg"
+           logo="/logos/finn.png"
+           name="Christian Printzell Halvorsen"
+           phone="tlf.nr. på forespørsel"
+           title="CEO, FINN.no">
+  Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
+  siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
+  sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
+  kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
+  sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
+  gjerne igjen når behovet oppstår.
+</reference>
+
 --------------------------------------------------------------------------------
 :illustration /forside/haier.jpg
 :body
 
-Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
+Nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
 har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere
 er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
 
@@ -106,23 +119,6 @@ egne fora på nett. Vi har et **svært sterkt fagmiljø**, der vi
 hjelper hverandre, lærer av hverandre, spør hverandre... trekker
 hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
-
---------------------------------------------------------------------------------
-:full-width
-:body
-
-<reference img="/references/christian-printzell-halvorsen.jpg"
-           logo="/logos/finn.png"
-           name="Christian Printzell Halvorsen"
-           phone="tlf.nr. på forespørsel"
-           title="CEO, FINN.no">
-  Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
-  siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
-  sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
-  kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
-  sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
-  gjerne igjen når behovet oppstår.
-</reference>
 
 --------------------------------------------------------------------------------
 :title Du har mye ansvar, og mye å tenke på
