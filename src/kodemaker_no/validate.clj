@@ -108,6 +108,7 @@
    (optional-key :illustration) Path
    (optional-key :aside) Str
    :lead Str
+   (optional-key :meta) Str
    (optional-key :body) Str})
 
 (def VideoOverride

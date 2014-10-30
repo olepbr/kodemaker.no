@@ -31,12 +31,17 @@
 (defn- brick-collapsing
   [] [:div.brick.collapsing-brick "&nbsp;"])
 
+(defn- meta-tag [attrs]
+  [:meta attrs])
+
 (defn- with-layout [request page content]
   (html5
    [:head
     [:meta {:charset "utf-8"}]
     [:meta {:name "viewport"
             :content "width=device-width, initial-scale=1.0"}]
+    (when (:meta page)
+      (map meta-tag (:meta page)))
     (serve-to-media-query-capable-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers

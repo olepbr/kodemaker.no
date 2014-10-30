@@ -42,3 +42,9 @@ Punkt 2"})
       => {:title "Referanser"
           :lead "<div>Hupp</div><p>Mer, mer, mer!</p>"
           :aside "<p>Punkt 1</p><h3>Heading</h3><p>Punkt 2</p>"})
+
+(fact "It allows articles to have meta."
+      (article-page {:title "Referanser"
+                     :meta "[{:name \"robots\", :content \"noindex\"}]"})
+      => {:title "Referanser"
+          :meta [{:name "robots", :content "noindex"}]})

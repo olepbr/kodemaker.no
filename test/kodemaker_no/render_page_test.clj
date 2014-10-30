@@ -53,3 +53,10 @@
                    :body "Body"} (render-page request) parse)]
    (-> markup (select [:div.aside.mtm]) first :content first :content first) => "Hmm"
    (-> markup (select [:div.body.mtm]) first :content first :content first) => "Body"))
+
+(fact
+ "Adds custom meta tags"
+ (let [markup (-> {:title {:head "In head"}
+                   :meta [{:name "robots", :content "noindex"}]
+                   :body "Body"} (render-page request) parse)]
+   (-> markup (select [:meta]) last :attrs) => {:name "robots", :content "noindex"}))

@@ -7,7 +7,8 @@
   (-> article
       (update-in-existing [:lead] to-html)
       (update-in-existing [:aside] to-html)
-      (update-in-existing [:body] to-html)))
+      (update-in-existing [:body] to-html)
+      (update-in-existing [:meta] read-string)))
 
 (defn- article-url [path]
   (if (= path "/index.md")
