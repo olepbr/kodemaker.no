@@ -9,7 +9,7 @@ Look up the documentation for the format specifier `%j`. Describe its
 functionality in one or more tests, and make them pass by implementing the
 switch. Grab the setup by cloning this repo:
 
-`git clone http://kurs.kodemaker.no/tddjs/strftime.git`
+`git clone http://git.tddjs.no/strftime.git`
 
 If you finish quickly, find another format specifier, add a test and
 implementation for it.
