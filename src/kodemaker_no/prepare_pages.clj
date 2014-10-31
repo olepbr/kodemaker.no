@@ -1,7 +1,7 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.highlight :refer [highlight-code-blocks]]
+            [kodemaker-no.highlight :refer [maybe-highlight-node maybe-add-hilite-class]]
             [kodemaker-no.homeless :refer [update-vals]]
             [kodemaker-no.render-page :refer [render-page]]
             [net.cgrand.enlive-html :refer [sniptest]]
@@ -101,30 +101,22 @@
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
             ;; give every h2 an anchor link for linkability
-            [:h2] add-anchor))
+            [:h2] add-anchor
+
+            ;; Syntax highlight fenced code blockse
+            [:pre :code] maybe-highlight-node
+            [:pre] maybe-add-hilite-class))
 
 (defn- use-norwegian-quotes [html]
   (-> html
       (str/replace "“" "«")
       (str/replace "”" "»")))
 
-(def skip-pygments?
-  (= (System/getProperty "kodemaker.skip.pygments") "true"))
-
-(defn- maybe-highlight-code-blocks [page]
-  "Parsing and highlighting with Pygments is quite resource intensive,
-   on the order of adding 20 seconds to the full test run. This way we
-   can disable the pygments by setting JVM_OPTS=\"-Dspid.skip.pygments=true\""
-  (if-not skip-pygments?
-    (highlight-code-blocks page)
-    page))
-
 (defn prepare-page [get-page request]
   (-> (get-page)
       (render-page request)
       (tweak-pages request)
-      use-norwegian-quotes
-      maybe-highlight-code-blocks))
+      use-norwegian-quotes))
 
 (defn prepare-pages [pages]
   (update-vals pages #(partial prepare-page %)))

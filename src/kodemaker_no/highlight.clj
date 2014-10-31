@@ -28,9 +28,16 @@
                     (extract-code))
                 (catch Exception e code))}))
 
-(defn highlight-code-blocks
-  "Finds all <pre> with <code> in them and highlights with Pygments."
-  [markup]
-  (sniptest markup
-            [:pre :code] highlight
-            [:pre] #(assoc-in % [:attrs :class] "codehilite")))
+(def skip-pygments?
+  (= (System/getProperty "kodemaker.skip.pygments") "true"))
+
+(defn maybe-highlight-node [node]
+  "Parsing and highlighting with Pygments is quite resource intensive,
+   on the order of adding 20 seconds to the full test run. This way we
+   can disable the pygments by setting JVM_OPTS=\"-Dspid.skip.pygments=true\""
+  (if-not skip-pygments?
+    (highlight node)
+    node))
+
+(defn maybe-add-hilite-class [node]
+  (assoc-in node [:attrs :class] "codehilite"))
