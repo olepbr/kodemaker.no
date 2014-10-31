@@ -148,7 +148,9 @@ hr {border-top: 3px solid #000; border-left: 0; border-right: 0; border-bottom: 
 blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
 blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: 0;}
 
-code {font-family: Consolas, "Liberation Mono", Courier, monospace; border: 1px solid #ddd; background-color: #f8f8f8; border-radius: 3px; max-width: 100%; display: inline-block; overflow: auto; vertical-align: middle; line-height: 1.3; font-size: 13px; padding: 0 0.5em;}
+.codehilite, code {font-family: Consolas, "Liberation Mono", Courier, monospace; border: 1px solid #ddd; background-color: #f8f8f8; border-radius: 3px; max-width: 100%; display: inline-block; overflow: auto; vertical-align: middle; line-height: 1.3; font-size: 13px; padding: 0 0.5em;}
+.codehilite {display: block; padding: 10px;}
+.codehilite code {border: none;}
 
 .ref {border: 3px solid #000;}
 .ref-img {border-bottom: 3px solid #000;}

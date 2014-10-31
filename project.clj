@@ -14,7 +14,8 @@
                  [me.raynes/cegdown "0.1.1"]
                  [prismatic/schema "0.2.0"]
                  [clj-time "0.6.0"]
-                 [org.clojure/core.memoize "0.5.6"]]
+                 [org.clojure/core.memoize "0.5.6"]
+                 [clygments "0.1.1"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app
