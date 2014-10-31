@@ -7,7 +7,7 @@ Extract the Ajax code from the live search implementation and build a proper
 abstraction, a form requester. It's job is to serialize a form and turn it into
 an HTTP request:
 
-```
+```html
 <form action="/search" method="get">
   <fieldset>
     <input type="text" name="q" id="q" value="User input">
@@ -16,7 +16,7 @@ an HTTP request:
 </form>
 ```
 
-```
+```js
 var requester = new FormRequester(form);
 requester.submit();
 //=> GET /search?q=User%20input
