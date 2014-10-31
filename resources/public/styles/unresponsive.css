@@ -6,6 +6,7 @@
 @import "810up.css";
 @import "960up.css";
 @import "space.css";
+@import "pygments.css";
 
 #main {width: 960px;}
 img {width: auto;}

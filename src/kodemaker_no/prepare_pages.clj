@@ -1,6 +1,7 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-id-str]]
+            [kodemaker-no.highlight :refer [maybe-highlight-node maybe-add-hilite-class]]
             [kodemaker-no.homeless :refer [update-vals]]
             [kodemaker-no.render-page :refer [render-page]]
             [net.cgrand.enlive-html :refer [sniptest]]
@@ -100,7 +101,11 @@
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
             ;; give every h2 an anchor link for linkability
-            [:h2] add-anchor))
+            [:h2] add-anchor
+
+            ;; Syntax highlight fenced code blockse
+            [:pre :code] maybe-highlight-node
+            [:pre] maybe-add-hilite-class))
 
 (defn- use-norwegian-quotes [html]
   (-> html
