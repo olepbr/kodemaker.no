@@ -109,7 +109,7 @@
       (str/replace "”" "»")))
 
 (def skip-pygments?
-  (= (System/getProperty "spid.skip.pygments") "true"))
+  (= (System/getProperty "kodemaker.skip.pygments") "true"))
 
 (defn- maybe-highlight-code-blocks [page]
   "Parsing and highlighting with Pygments is quite resource intensive,
