@@ -2,15 +2,16 @@
  :name ["Magnar" "Sveen"]
  :title "Framsieutvikler"
  :start-date "2007-04-01 00:09"
- :description "Magnar kaller seg framsieutvikler, men egentlig trives
-               han godt i hele stacken. Han er opptatt av og oppdatert
-               på webutvikling. Han har et entusiastisk forhold til
-               frontendutvikling - webstandarder, frontendytelse,
-               brukergrensesnitt, browserproblematikk, html, css og
-               javascript. Magnar får svært gode tilbakemeldinger fra
-               våre kunder. Etter kundenes ønske har han holdt flere
-               kurs der han har vært konsulent, blant annet om
-               JavaScript og testing."
+ :description "Magnar kaller seg framsieutvikler, men egentlig trives han godt i
+               hele stacken. Han er opptatt av og oppdatert på webutvikling. Han
+               har et entusiastisk forhold til frontendutvikling -
+               webstandarder, frontendytelse, brukergrensesnitt, responsiv
+               design, browserproblematikk, html, css og javascript.
+
+               Magnar får [svært gode tilbakemeldinger fra våre
+               kunder](#magnars-referanser). Etter kundenes ønske har han holdt
+               flere kurs der han har vært konsulent, blant annet om JavaScript
+               og testing."
 
  :phone-number "+47 918 56 425"
  :email-address "magnar@kodemaker.no"
@@ -21,9 +22,9 @@
             :stackoverflow "/users/1123/magnar"
             :github "magnars"}
 
- :tech {:using-at-work [:clojure :javascript :angularjs :ansible]
+ :tech {:using-at-work [:ansible :docker :clojure :javascript :angularjs]
         :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
-        :want-to-learn-more [:react :docker :haskell]}
+        :want-to-learn-more [:react :haskell :consul]}
 
  :recommendations [{:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
@@ -49,6 +50,12 @@
                     :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
                            :text "Se foredraget"}
                     :tech [:react :javascript]}
+                   {:title "The reuse dilemma"
+                    :blurb "Johannes Brodwall tar et oppgjør med utviklernes
+                            oppheng i gjenbruk av kode. Kan det bli *for* DRY?"
+                    :link {:url "http://johannesbrodwall.com/2014/10/10/the-reuse-dilemma/"
+                           :text "Les artikkelen"}
+                    :tech [:design]}
                    {:title "An introduction to Object Oriented CSS"
                     :blurb "En blog post om de to grunnprinsippene i
                             OOCSS: Separasjon av struktur og utseende, og
@@ -88,11 +95,20 @@
                     :tech [:datomic]}
                    {:title "Luke W om Responsiv design"
                     :blurb "Luke Wroblewski er en bra mann å høre på når det
-                    gjelder design på nett. Her er en samling av hans blogposter
-                    og notater om responsiv design. Vel verdt å følge med på."
+                            gjelder design på nett. Her er en samling av hans
+                            blogposter og notater om responsiv design. Vel verdt
+                            å følge med på."
                     :link {:url "http://www.lukew.com/ff?tag=responsive%20design"
                            :text "Sjekk ut blogpostene"}
-                    :tech [:responsive-design]}]
+                    :tech [:responsive-design]}
+                   {:title "Please don't ever say this to beginners"
+                    :blurb "Det er lett å ta ting for gitt når man har
+                            programmert i mange år. Da kan det fort gå galt i
+                            møtet med nye utviklere. Philip Guo kommer med et
+                            knakende godt råd."
+                    :link {:url "http://pgbovine.net/programmers-talking-to-beginners.htm"
+                           :text "Les bloggposten"}
+                    :tech [:hjernen]}]
 
  :hobbies [{:title "Brettspill"
             :description "Det er mer enn Monopol og Ludo i verden. Har
@@ -313,7 +329,30 @@
              :tech [:javascript :css :html :ajax :jquery :jsp :java
                     :cvs :jira :confluence]}]
 
- :endorsements [{:author "Bjørn Henrik Vangstein"
+ :endorsements [{:author "Geir Henning Pettersen"
+                 :title "Tech Lead, FINN reise"
+                 :quote "Magnar kom inn tidlig i et prosjekt der vi ønsket å øke
+                         kompetansen vår på frontendteknologi.
+
+                         Magnar hadde en vanskelig rolle, hvor vi ønsket at han
+                         skulle påvirke vår teknologi uten å løse problemene for
+                         oss. Hovedoppgaven hans var å gjøre våre faste ansatte
+                         og vår frontendteknologi bedre.
+
+                         Magnar gjorde våre folk bedre og la opp løpet rent
+                         tenkologisk slik at vi lærte å jobbe testdrevet i
+                         frontend. Læringen fra Magnar har vært veldig viktig
+                         for vårt prosjekt. Han er meget faglig dyktig i alle
+                         lag, men på frontend er han blandt de beste i Norge.
+                         Han er dessuten meget pedagogisk anlagt og enkel å
+                         jobbe med.
+
+                         Nå ca. ett år etter er jeg ikke i tvil om at grunnen
+                         til at vi har flere flinke folk på frontendteknologi er
+                         mye takket være at Magnar var hos oss i en tidlig fase.
+
+                         Jeg gir Magnar mine beste anbefalinger."}
+                {:author "Bjørn Henrik Vangstein"
                  :title "Avdelingsleder IT, FINN.no"
                  :quote "Magnar Sveen skiller seg klart ut i mengden,
                          både faglig og personlig. Han ble raskt ettertraktet på
