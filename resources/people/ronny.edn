@@ -24,5 +24,9 @@
              :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
             :url "http://hoppfallskjerm.no"}]
 
+:open-source-contributions [
+    {:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=rlovtangen", :tech [:grails]}
+    {:name "grails-doc", :url "https://github.com/grails/grails-doc/commits?author=rlovtangen", :tech [:grails]}
+]
 
  }
