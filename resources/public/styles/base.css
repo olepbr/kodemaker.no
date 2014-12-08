@@ -4,7 +4,9 @@ a {text-decoration: none;}
 a:hover {text-decoration: underline;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
-#main {max-width: 960px; margin: 0 auto;}
+body.column #main {max-width: 960px; margin: 0 auto;}
+
+body.full-width .iw {max-width: 960px; margin: 0 auto; position: relative;}
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
 #logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 15px 10px;}

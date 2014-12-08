@@ -19,10 +19,11 @@
 
 (defn- h1-title [title]
   (when-let [title-str (or (:h1 title) (and (string? title) title))]
-    [:h1.hn.mbn
-     (when (:arrow title)
-       [:a.arrow {:href (:arrow title)} [:span.arrow-body] [:span.arrow-head]])
-     (no-widows title-str)]))
+    [:div.iw
+     [:h1.hn.mbn
+      (when (:arrow title)
+        [:a.arrow {:href (:arrow title)} [:span.arrow-body] [:span.arrow-head]])
+      (no-widows title-str)]]))
 
 (defn- brick
   ([] [:div.brick "&nbsp;"])
@@ -47,7 +48,9 @@
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
     [:title (head-title (:title page))]]
-   [:body
+   [:body {:class (if (:full-width page)
+                    "full-width"
+                    "column")}
     [:script (slurp (io/resource "public/scripts/google-tag-manager.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
@@ -57,7 +60,7 @@
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
        [:div#header
-        [:div.bd
+        [:div.bd.iw
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
           [:a {:href "/kurs/"} "Lær"]
@@ -90,7 +93,7 @@
            (brick-collapsing)
            (brick)]])
        [:div#footer
-        [:div.bd
+        [:div.bd.iw
          [:div.mod
           [:strong.mrl (no-widows "Kodemaker Systemutvikling AS")] " "
           [:span.nowrap "Orgnr. 982099595 "]
