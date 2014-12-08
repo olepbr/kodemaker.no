@@ -3,26 +3,6 @@
             [kodemaker-no.formatting :refer [to-html]]
             [mapdown.core :as mapdown]))
 
-(defn- render-our-reference-description [name description url logo]
-  (list
-   [:a.linkBlock.right.mod.mtl.logo {:href url}
-    [:img {:src logo}]]
-   [:h3 name]
-   [:p description " "
-    [:a.nowrap {:href url} "Se referansen"]]))
-
-(defn- render-reference-quote [{:keys [photo author title quote email phone]} url logo name]
-  [:div.media
-   (when photo [:img.img.thumb.mts {:src photo}])
-   [:div.bd
-    [:p.mtn [:q quote]]
-    [:p "&mdash; " [:strong.nowrap author] ", " [:span.nowrap title] ", " [:a.nowrap {:href url} name]]]])
-
-(defn- render-reference [{:keys [name url description logo reference]}]
-  (if reference
-    (render-reference-quote reference url logo name)
-    (render-our-reference-description name description url logo)))
-
 (defn- render-person [{:keys [url photos full-name title]}]
   [:div.gridUnit.r-4-3
    [:a.gridContent.linkBlock.tight.fpp {:href url}
