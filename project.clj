@@ -27,7 +27,10 @@
                    :source-paths ["dev" "config"]
                    :test-paths ^:replace []}
              :test {:dependencies [[midje "1.6.3"]
-                                   [test-with-files "0.1.0"]]
+                                   [test-with-files "0.1.0"]
+                                   [flare "0.2.5"]]
+                    :injections [(require 'flare.midje)
+                                 (flare.midje/install!)]
                     :plugins [[lein-midje "3.1.3"]]
                     :source-paths ["config"]
                     :test-paths ["test"]
