@@ -13,6 +13,7 @@
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
             [optimus.strategies :refer [serve-live-assets]]
+            [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [stasis.core :as stasis]))
 
@@ -77,7 +78,8 @@
              dummy-mail-sender
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
-             wrap-content-type-utf-8))
+             wrap-content-type-utf-8
+             prone/wrap-exceptions))
 
 (defn- load-export-dir []
   (stasis/slurp-directory export-directory #"\.[^.]+$"))
