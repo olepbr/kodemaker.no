@@ -43,7 +43,7 @@
                     :link {:url "http://ruby.railstutorial.org/"
                            :text "Bli en rails hipster"}
                     :tech [:ruby :rails]}
-                   {:title "Maskinene kommer!"
+                   {:title "Machine Learning"
                     :blurb "Ved bruk av datakraft og spennende algoritmer  kan man
                             gjenkjenne håndskrift, anbefale varer basert på tidligere kjøp
                             og kategorisere innhold i artikler automatisk. Machine learning
