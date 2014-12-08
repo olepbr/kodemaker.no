@@ -18,18 +18,6 @@
   (compare (:start-date a)
            (:start-date b)))
 
-(defn- render-frontpage-section [section]
-  (if (:full-width section)
-    (to-html (:body section))
-    (list (when (:title section)
-            [:h2.offset [:span.offset-content (:title section)]])
-          [:div.line
-           [:div.unit.text-adornment
-            [:p (when (:illustration section)
-                  [:img {:src (:illustration section)}])]]
-           [:div.lastUnit
-            (to-html (:body section))]])))
-
 (defn index-page [people]
   (let [sorted-peeps (->> people
                           (remove :administration?)
@@ -45,11 +33,8 @@
               {:url "/react/", :text "React"}
               {:url "/git/", :text "Git"}
               {:url "/gradle/", :text "Gradle"}]
-     :body (list
-            [:div.grid (map render-person sorted-peeps)]
-            [:h1.hn.pth "Hva er raskeste veien i mål?"]
-            [:div
-             (->> (io/resource "index.md")
-                  slurp
-                  mapdown/parse
-                  (map render-frontpage-section))])}))
+     :sections (concat
+                [{:body [:div.grid (map render-person sorted-peeps)]}]
+                (->> (io/resource "index.md")
+                     slurp
+                     mapdown/parse))}))

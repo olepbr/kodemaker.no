@@ -34,7 +34,7 @@
 (defn- meta-tag [attrs]
   [:meta attrs])
 
-(defn- with-layout [request page content]
+(defn with-layout [request page content]
   (html5
    [:head
     [:meta {:charset "utf-8"}]

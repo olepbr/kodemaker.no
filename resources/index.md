@@ -1,34 +1,41 @@
 --------------------------------------------------------------------------------
-:full-width
-:body
-
-<reference img="/references/bengt-lyng.jpg"
-           logo="/logos/nsb.png"
-           name="Bengt Lyng"
-           phone="+47 924 33 836"
-           title="Avdelingssjef, NSB Fellestjenester IT">
-  Kodemaker leverte ny teknisk løsning på kortere tid enn vi
-  forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
-  først antok. Kodemaker løste oppgaven med minimal administrasjon. De
-  er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de
-  flinke til å involvere og diskutere løsningene underveis med oss som
-  oppdragsgiver. Anbefales sterkt!
-</reference>
-
-<reference img="/references/christian-printzell-halvorsen.jpg"
-           logo="/logos/finn.png"
-           name="Christian Printzell Halvorsen"
-           phone="tlf.nr. på forespørsel"
-           title="CEO, FINN.no">
-  Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
-  siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
-  sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
-  kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
-  sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
-  gjerne igjen når behovet oppstår.
-</reference>
+:type mega-heading
+:title Hva er raskeste veien i mål?
 
 --------------------------------------------------------------------------------
+:type reference
+:logo /logos/nsb.png
+:img /references/bengt-lyng.jpg
+:name Bengt Lyng
+:phone +47 924 33 836
+:title Avdelingssjef, NSB Fellestjenester IT
+:body
+
+Kodemaker leverte ny teknisk løsning på kortere tid enn vi
+forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
+først antok. Kodemaker løste oppgaven med minimal administrasjon. De
+er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de
+flinke til å involvere og diskutere løsningene underveis med oss som
+oppdragsgiver.
+
+Anbefales sterkt!
+--------------------------------------------------------------------------------
+:type reference
+:img /references/christian-printzell-halvorsen.jpg
+:logo /logos/finn.png
+:name Christian Printzell Halvorsen
+:phone tlf.nr. på forespørsel
+:title CEO, FINN.no
+:body
+
+Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
+siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
+sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
+kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
+sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
+gjerne igjen når behovet oppstår.
+--------------------------------------------------------------------------------
+:type illustrated-column
 :illustration /forside/haier.jpg
 :body
 
@@ -45,6 +52,7 @@ sett ukjent i dét prosjektet begynner**.
 Det er klart det er store muligheter for å trå feil.
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :title Hva skal til for at ditt prosjekt lykkes?
 :illustration /forside/krussedull.jpg
 :body
@@ -63,7 +71,6 @@ under overflaten, som noen må ta tak i og løse, for å få prosjektet
 ditt i mål.
 
 --------------------------------------------------------------------------------
-:full-width
 :body
 
 <hr class="mhn">
@@ -107,6 +114,7 @@ ditt i mål.
 <hr class="mhn">
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :illustration /forside/team.jpg
 :body
 
@@ -121,6 +129,7 @@ hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :title Du har mye ansvar, og mye å tenke på
 :illustration /forside/tornado.jpg
 :body
@@ -139,6 +148,7 @@ initiativrike, som ikke setter seg ned og venter på at noen skal gi dem
 en løsning, men som tar tak og skaper løsningen selv.
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :title Du får kun erfarne Kodemakere
 :illustration /forside/klosser.jpg
 :body
@@ -162,18 +172,22 @@ Det er mange som har tillit til oss. Vi har hatt oppdrag hos blant andre
 FINN.no, Forsvaret, NSB, Telenor, Hafslund, SPiD og Animalia.
 
 --------------------------------------------------------------------------------
-:full-width
+:type reference
+:img /references/torkel-randem.jpg
+:logo /logos/animalia.png
+:name Torkel Randem
+:phone +47 991 68 897
+:title Økonomi- og utviklingssjef
 :body
 
-<reference img="/references/torkel-randem.jpg"
-           logo="/logos/animalia.png"
-           name="Torkel Randem"
-           phone="+47 991 68 897"
-           title="Økonomi- og utviklingssjef">
-  Kodemaker har vært en bærebjelke i vår satsning på nyutvikling av fagssystemer.  De er høykompetente, byr på seg selv og fungerer strålende som mentorer for våre egne utviklere.  Våren 2013 leverte vi med hjelp av Kodemaker et nytt og moderne system for Storefekjøttkontrollen.  Lanseringen var svært vellykket og systemet har blitt veldig godt mottatt av brukerene.
-</reference>
+Kodemaker har vært en bærebjelke i vår satsning på nyutvikling av fagssystemer.
+De er høykompetente, byr på seg selv og fungerer strålende som mentorer for våre
+egne utviklere. Våren 2013 leverte vi med hjelp av Kodemaker et nytt og moderne
+system for Storefekjøttkontrollen. Lanseringen var svært vellykket og systemet
+har blitt veldig godt mottatt av brukerene.
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :title Vi ønsker selvfølgelig at alle våre oppdrag lykkes, og derfor stiller vi noen krav
 :body
 
@@ -193,6 +207,7 @@ oss gjenta dem fort:
 villig til å la oss hjelpe deg å få dem på plass.**
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :illustration /forside/papir.jpg
 :body
 
@@ -205,6 +220,7 @@ Stort sett vil du høre fra ham innen to arbeidsdager.
 Altså: [Skriv inn telefonnummer eller epost-adresse her](/skjema/).
 
 --------------------------------------------------------------------------------
+:type illustrated-column
 :title ... eller du kan forbli i uvissheten
 :illustration /forside/egg.jpg
 :body

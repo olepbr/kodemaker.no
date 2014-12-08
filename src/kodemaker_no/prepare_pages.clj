@@ -12,40 +12,6 @@
     (or (not-empty (link/file-path request src))
         (throw (Exception. (str "Asset not loaded: " src))))))
 
-(defn- replace-reference-tag [{:keys [attrs content]}]
-  (let [{:keys [img url logo name phone title]} attrs
-        quote (str "«" (str/trim (first content)) "»")]
-    {:tag :div
-     :attrs {:class "ref mod"}
-     :content [{:tag :div
-                :attrs {:class "ref-w"}
-                :content [{:tag :div
-                           :attrs {:class "ref-img"}
-                           :content [{:tag :img
-                                      :attrs {:src img}}]}
-                          {:tag :div
-                           :attrs {:class "ref-txt"}
-                           :content [{:tag :p
-                                      :content quote}]}
-                          {:tag :div
-                           :attrs {:class "ref-card"}
-                           :content [{:tag :div
-                                      :attrs {:class "ref-logo"}
-                                      :content [{:tag :img
-                                                 :attrs {:src logo}}]}
-                                     {:tag :div
-                                      :attrs {:class "ref-info tight"}
-                                      :content [{:tag :h4
-                                                 :content name}
-                                                {:tag :p
-                                                 :content [title
-                                                           {:tag :br}
-                                                           phone]}]}]}]}
-               {:tag :div
-                :attrs {:class "ref-txt-2"}
-                :content [{:tag :p
-                           :content quote}]}]}))
-
 (defn- to-megalist-item [[title text]]
   {:tag :p
    :attrs {:class "m-item"}
@@ -91,9 +57,6 @@
 
 (defn- tweak-pages [html request]
   (sniptest html
-            ;; implement <reference> tag
-            [:reference] replace-reference-tag
-
             ;; implement <megalist> tag
             [:megalist] replace-megalist-tag
 
