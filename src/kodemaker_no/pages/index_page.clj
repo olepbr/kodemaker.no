@@ -18,6 +18,25 @@
   (compare (:start-date a)
            (:start-date b)))
 
+(defn render-cloud-person [i person]
+  [:a {:href (:url person)
+       :class (str
+               "hn nowrap "
+               (when (= 1 (mod i 2)) "black"))}
+   (:full-name person)])
+
+(defn- create-people-cloud [people]
+  {:body [:div.bd.iw.mtxl.large
+          [:div.center
+           (->> people
+                (map-indexed render-cloud-person)
+                (interpose [:span " " [:span "&nbsp;"]]))]]}) ;; two spaces between names
+
+(defn- insert-person-cloud [people section]
+  (if (= "person-cloud" (:type section))
+    (create-people-cloud people)
+    section))
+
 (defn index-page [people]
   (let [sorted-peeps (->> people
                           (remove :administration?)
@@ -28,4 +47,5 @@
      :full-width true
      :sections (->> (io/resource "index.md")
                     slurp
-                    mapdown/parse)}))
+                    mapdown/parse
+                    (map #(insert-person-cloud sorted-peeps %)))}))

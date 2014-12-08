@@ -74,6 +74,7 @@ p {margin-bottom: 1.3em;}
 .fpp {font-size: 11px;} /* front page photos */
 .fpp .linkish {display: block; padding-left: 3px;}
 
+.large {font-size: 20px;}
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
@@ -103,6 +104,10 @@ body {-webkit-text-size-adjust: 100%}
 img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
 
 a, h1, .linkish {color: #d30707;}
+
+.black {color: #000;}
+
+.center {text-align: center;}
 
 .anchor-link {color: #fff; position: relative;}
 .anchor-marker {display: none;}
