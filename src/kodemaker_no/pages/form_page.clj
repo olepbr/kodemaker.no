@@ -1,6 +1,6 @@
 (ns kodemaker-no.pages.form-page
   (:require [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.render-page :refer [render-body]]
+            [kodemaker-no.render-old-page :refer [render-body]]
             [kodemaker-no.homeless :refer [update-in-existing]]))
 
 (defn form-page [articles]
