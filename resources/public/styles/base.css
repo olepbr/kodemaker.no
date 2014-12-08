@@ -86,7 +86,7 @@ p {margin-bottom: 1.3em;}
 
 .form {background: #f4f4f4; padding: 10px;}
 .form label {display: block;}
-.input {display: block; width: 100%; font-size: 16px; padding: 5px; margin-bottom: 10px; box-sizing: border-box; border: 3px solid #000;}
+.input {display: block; width: 100%; font-size: 16px; padding: 7px 5px; margin-bottom: 10px; box-sizing: border-box; border: 3px solid #000;}
 .input:focus {border-color: red;}
 .btn {font-size: 16px; padding: 10px 40px; margin-top: 20px; background: #000; color: #fff; border: none;}
 
@@ -123,6 +123,8 @@ h4 {font-weight: bold;}
 
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
+
+.inline-form {background: #f4f4f4;}
 
 .inverse {background: #000; color: #fff;}
 

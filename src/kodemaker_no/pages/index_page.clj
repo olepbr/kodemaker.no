@@ -25,16 +25,7 @@
                           (reverse))]
     {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
              :arrow (:url (first sorted-peeps))}
-     :bricks [{:url "/clojure/", :text "Clojure"}
-              {:url "/java/", :text "Java"}
-              {:url "/groovy/", :text "Groovy"}
-              {:url "/javascript/", :text "JavaScript"}
-              {:url "/ruby/", :text "Ruby"}
-              {:url "/react/", :text "React"}
-              {:url "/git/", :text "Git"}
-              {:url "/gradle/", :text "Gradle"}]
-     :sections (concat
-                [{:body [:div.grid (map render-person sorted-peeps)]}]
-                (->> (io/resource "index.md")
-                     slurp
-                     mapdown/parse))}))
+     :full-width true
+     :sections (->> (io/resource "index.md")
+                    slurp
+                    mapdown/parse)}))

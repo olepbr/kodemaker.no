@@ -1,8 +1,4 @@
 --------------------------------------------------------------------------------
-:type mega-heading
-:title Hva er raskeste veien i mål?
-
---------------------------------------------------------------------------------
 :type reference
 :logo /logos/nsb.png
 :img /references/bengt-lyng.jpg
@@ -35,8 +31,7 @@ kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
 sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
 gjerne igjen når behovet oppstår.
 --------------------------------------------------------------------------------
-:type illustrated-column
-:illustration /forside/haier.jpg
+:type centered-column
 :body
 
 Nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
@@ -52,9 +47,8 @@ sett ukjent i dét prosjektet begynner**.
 Det er klart det er store muligheter for å trå feil.
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type centered-column
 :title Hva skal til for at ditt prosjekt lykkes?
-:illustration /forside/krussedull.jpg
 :body
 
 **Uansett om vi skal hjelpe deg eller du ordner biffen selv**, er det
@@ -71,51 +65,47 @@ under overflaten, som noen må ta tak i og løse, for å få prosjektet
 ditt i mål.
 
 --------------------------------------------------------------------------------
+:type centered-column
 :body
 
-<hr class="mhn">
-<megalist>
- <heading>Du må ha <br>en fungerende arbeidsprosess</heading>
- <text>
-   Om det er Scrum, Kanban, eller en annen prosess er ikke det viktige,
-   men at du har en definert prosess som lar deg prioritere saker basert
-   på forretningsverdi og tilgjengelige ressurser for implementering, og
-   som gir deg transparens i forhold til fremdrift, så du ikke risikerer
-   at oppgaver du trodde var ferdig for lenge siden, blir hengende i løse
-   luften et sted på veien.
- </text>
- <heading>Du må ha <br>automatiserte <br>tester</heading>
- <text>
-   Etter hvert som kodebasen vokser, vil endringer du gjør ett sted,
-   kunne ødelegge funksjonalitet et annet sted, uten at det er
-   umiddelbart innlysende. Hvis det ikke oppdages med en gang, av
-   automatiserte tester, kan slike bugs leve lenge og bli svært dyre.
- </text>
- <heading>Du må ha <br>en automatisert <br>bygg-prosess</heading>
- <text>
-   Å få endringer ut på test-servere og ut i produksjon kan bli et
-   uforutsigbart mareritt, avhengig av noen få nøkkelpersoner, hvis ikke
-   også denne delen av jobben er automatisert med kode. Det tar litt tid
-   å sette opp, men timene sparer du inn utallige ganger.
- </text>
- <heading>Du må ha <br>en entydig <br>"definition <br>of done"</heading>
- <text>
-   Når er en funksjonalitet "ferdig"? Er det når en utvikler sier "det har
-   jeg laget"? Er det når en annen utvikler har sett på den koden, og
-   sagt "ok"? Er det når noen i teamet har testet funksjonaliteten på en
-   test-server? Er det når noen utenfor teamet har testet
-   funksjonaliteten, og godkjent den? Hvis du ikke vet nøyaktig hva det
-   betyr at en sak er "ferdig", risikerer du å gå på en stygg smell mot
-   slutten av prosjektet, når det viser seg at mange av sakene er
-   "ferdige ... de mangler bare tester, feilhåndtering, og css", for
-   eksempel.
- </text>
-</megalist>
-<hr class="mhn">
+<hr>
+
+**Du må ha en fungerende arbeidsprosess.** Om det er Scrum, Kanban, eller en
+annen prosess er ikke det viktige, men at du har en definert prosess som lar deg
+prioritere saker basert på forretningsverdi og tilgjengelige ressurser for
+implementering, og som gir deg transparens i forhold til fremdrift, så du ikke
+risikerer at oppgaver du trodde var ferdig for lenge siden, blir hengende i løse
+luften et sted på veien.
+
+<hr>
+
+**Du må ha automatiserte tester.** Etter hvert som kodebasen vokser, vil
+endringer du gjør ett sted, kunne ødelegge funksjonalitet et annet sted, uten at
+det er umiddelbart innlysende. Hvis det ikke oppdages med en gang, av
+automatiserte tester, kan slike bugs leve lenge og bli svært dyre.
+
+<hr>
+
+**Du må ha en automatisert bygg-prosess.** Å få endringer ut på test-servere og
+ut i produksjon kan bli et uforutsigbart mareritt, avhengig av noen få
+nøkkelpersoner, hvis ikke også denne delen av jobben er automatisert med kode.
+Det tar litt tid å sette opp, men timene sparer du inn utallige ganger.
+
+<hr>
+
+**Du må ha en entydig "definition of done".** Når er en funksjonalitet "ferdig"?
+Er det når en utvikler sier "det har jeg laget"? Er det når en annen utvikler
+har sett på den koden, og sagt "ok"? Er det når noen i teamet har testet
+funksjonaliteten på en test-server? Er det når noen utenfor teamet har testet
+funksjonaliteten, og godkjent den? Hvis du ikke vet nøyaktig hva det betyr at en
+sak er "ferdig", risikerer du å gå på en stygg smell mot slutten av prosjektet,
+når det viser seg at mange av sakene er "ferdige ... de mangler bare tester,
+feilhåndtering, og css", for eksempel.
+
+<hr>
 
 --------------------------------------------------------------------------------
-:type illustrated-column
-:illustration /forside/team.jpg
+:type centered-column
 :body
 
 Nå er det sånn at **ingen kan alt**. I en verden som blir stadig mer
@@ -129,9 +119,8 @@ hverandre oppover. **Leier du inn noen av oss, har du alle på ditt
 lag.**
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type centered-column
 :title Du har mye ansvar, og mye å tenke på
-:illustration /forside/tornado.jpg
 :body
 
 Vi forstår at du har mye å tenke på. Vi forstår at du kan oppleve
@@ -148,9 +137,8 @@ initiativrike, som ikke setter seg ned og venter på at noen skal gi dem
 en løsning, men som tar tak og skaper løsningen selv.
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type centered-column
 :title Du får kun erfarne Kodemakere
-:illustration /forside/klosser.jpg
 :body
 
 All ære til de firmaene som tar inn juniorer, som tar dem under sine
@@ -187,7 +175,7 @@ system for Storefekjøttkontrollen. Lanseringen var svært vellykket og systemet
 har blitt veldig godt mottatt av brukerene.
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type centered-column
 :title Vi ønsker selvfølgelig at alle våre oppdrag lykkes, og derfor stiller vi noen krav
 :body
 
@@ -207,8 +195,7 @@ oss gjenta dem fort:
 villig til å la oss hjelpe deg å få dem på plass.**
 
 --------------------------------------------------------------------------------
-:type illustrated-column
-:illustration /forside/papir.jpg
+:type centered-column
 :body
 
 For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi gjerne
@@ -217,12 +204,17 @@ høre mer om deg og dine planer. La oss ta en prat!
 Vår daglige leder Kolbjørn Jetne tar kontakt med deg så snart han har mulighet.
 Stort sett vil du høre fra ham innen to arbeidsdager.
 
-Altså: [Skriv inn telefonnummer eller epost-adresse her](/skjema/).
+--------------------------------------------------------------------------------
+:type contact-form
+:body
+
+Altså, skriv inn telefonnummer eller epost-adresse:
+
+:button Ja, la oss ta en prat, Kolbjørn
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type centered-column
 :title ... eller du kan forbli i uvissheten
-:illustration /forside/egg.jpg
 :body
 
 Som sagt, finnes det ingen garantier her i livet. Men med Kodemaker på

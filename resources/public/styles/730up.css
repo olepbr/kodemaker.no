@@ -2,6 +2,7 @@ h1 {font-size: 60px;}
 h2 {font-size: 25px;}
 h3 {font-size: 25px;}
 .r-4-3 {width: 25%;}
+.r-1of2 {width: 50%;}
 
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img, pre {margin: 20px;}
 h2 {margin: 60px 0 20px; padding: 5px 20px;}
@@ -16,6 +17,9 @@ h2.offset {padding: 5px 0; padding-left: 33.33333%;}
 h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 
 #footer .mod {padding-left: 33.3333%;}
+
+.centered-column {max-width: 66.6666%; margin-left: auto; margin-right: auto;}
+.inline-form form {margin-left: 16.6666%;}
 
 .text-adornment {display: block; width: 33.33333%;}
 
