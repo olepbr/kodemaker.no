@@ -19,3 +19,5 @@ blockquote:before {left: 0.25em;}
 .wall {font-size: inherit;}
 .bricks {line-height: 40px;}
 .brick {height: 40px;}
+
+.ft-dec-5 {position: absolute; right: 10px; top: 0; width: 50px; height: 50px; background: #fff;}

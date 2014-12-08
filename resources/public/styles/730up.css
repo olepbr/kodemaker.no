@@ -17,6 +17,7 @@ h2.offset {padding: 5px 0; padding-left: 33.33333%;}
 h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 
 #footer .mod {padding-left: 33.3333%;}
+.ft-dec-5 {position: absolute; right: 20px; top: 0; width: 50px; height: 50px; background: #fff;}
 
 .centered-column {max-width: 66.6666%; margin-left: auto; margin-right: auto;}
 .inline-form form {margin-left: 16.6666%;}

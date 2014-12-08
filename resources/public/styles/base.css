@@ -111,6 +111,7 @@ a, h1, .linkish {color: #d30707;}
 .black {color: #000;}
 
 .center {text-align: center;}
+.rel {position: relative;}
 
 .anchor-link {color: #fff; position: relative;}
 .anchor-marker {display: none;}
@@ -149,7 +150,7 @@ em {font-style: italic;}
 .cookie {text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px;}
 .cookie-w {margin-top: -5px !important; }
 
-.footer-spacing {clear: both; margin-top: 150px;}
+.footer-spacing {clear: both; margin-top: 100px;}
 #footer {background: #000; color: #fff; line-height: 1.7;}
 #footer a {color:#fff;}
 
