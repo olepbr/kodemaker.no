@@ -11,6 +11,9 @@ body.full-width .iw {max-width: 960px; margin: 0 auto; position: relative;}
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
 #logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 15px 10px;}
 
+.obstacle-course {margin-top: 30px; height: 150px; background: url(/forside/hinderbane.png) no-repeat 50% 50%;}
+h3.obstacle {color: #a0a0a0; font-size: 60px; line-height: 1.0; margin-bottom: 45px !important; font-family: serif; font-style: italic; }
+
 .presence {float: left; width: 40px; height: 40px; margin: 0 6px 6px 0; background: url(/icons/icons.png);}
 .presence.twitter {background-position: 0 -40px;}
 .presence.linkedin {background-position: 0 -80px;}

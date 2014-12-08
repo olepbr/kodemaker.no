@@ -37,6 +37,11 @@
     (create-people-cloud people)
     section))
 
+(defn- obstacle-course []
+  [:div.bd
+   [:div.obstacle-course]
+   [:h3.obstacle.center "Hva er raskeste" [:br] "veien i mål?"]])
+
 (defn index-page [people]
   (let [sorted-peeps (->> people
                           (remove :administration?)
@@ -45,7 +50,10 @@
     {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
              :arrow (:url (first sorted-peeps))}
      :full-width true
-     :sections (->> (io/resource "index.md")
-                    slurp
-                    mapdown/parse
-                    (map #(insert-person-cloud sorted-peeps %)))}))
+     :footer-decorations true
+     :sections (concat
+                [{:body (obstacle-course)}]
+                (->> (io/resource "index.md")
+                     slurp
+                     mapdown/parse
+                     (map #(insert-person-cloud sorted-peeps %))))}))
