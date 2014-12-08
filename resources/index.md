@@ -229,3 +229,26 @@ dyktige fagfolk på din side.
 --------------------------------------------------------------------------------
 :type person-cloud
 --------------------------------------------------------------------------------
+:type grid
+:content
+
+/christian/                        /photos/people/christian/side-profile-square.jpg
+/git/                              /photos/tech/git.jpg
+/alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
+/odin/                             /photos/people/odin/side-profile-square.jpg
+/zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
+/august/                           /photos/people/august/side-profile-square.jpg
+/per/                              /photos/people/per/side-profile-square.jpg
+/javascript/                       /photos/tech/js.svg
+/stian/                            /photos/people/stian/side-profile-square.jpg
+/stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
+/clojure/                          /photos/tech/clojure.svg
+/node/                             /photos/tech/nodejs-wide.jpg 2x
+/stig/                             /photos/people/stig/side-profile-square.jpg
+/react/                            /photos/tech/react.png
+/anders/                           /photos/people/anders/side-profile-square.jpg
+/kristian/                         /photos/people/kristian/side-profile-square.jpg
+/kjetil/                           /photos/people/kjetil/side-profile-square.jpg
+/fredrik/                          /photos/people/fredrik/side-profile-square.jpg
+
+--------------------------------------------------------------------------------

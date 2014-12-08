@@ -81,9 +81,11 @@ p {margin-bottom: 1.3em;}
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
 
+.r-3-2,
 .r-4-3-2 {width: 50%; }
 .r-2of3 {width: 100%;}
 .s-3of4 {width: 75%;}
+.r-6-4 {width: 25%;}
 .r-4-3,
 .s-1of3 {width: 33.33333%;}
 .s-1of6 {width: 16.66667%;}

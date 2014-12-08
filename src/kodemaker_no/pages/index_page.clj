@@ -26,7 +26,7 @@
    (:full-name person)])
 
 (defn- create-people-cloud [people]
-  {:body [:div.bd.iw.mtxl.large
+  {:body [:div.bd.iw.mvxl.large
           [:div.center
            (->> people
                 (map-indexed render-cloud-person)

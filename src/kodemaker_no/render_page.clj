@@ -46,6 +46,20 @@
        [:div.lastUnit
         [:input.btn.mtn.mls {:type "submit" :value button}]]]]]]])
 
+(defn- render-grid-unit [url ^String img & [size]]
+  [:div.gridUnit {:class (if (= "2x" size) "r-3-2" "r-6-4")}
+   [:a.gridContent.linkBlock.tight.fpp {:href url}
+    [:span.block.mbs
+     {:class (when (.startsWith img "/photos/people/") "framed")}
+     [:img {:src img}]]]])
+
+(defn- render-grid [{:keys [content]}]
+  [:div.bd.iw
+   [:div.grid
+    (->> content
+         (str/split-lines)
+         (map #(apply render-grid-unit (str/split % #" +"))))]])
+
 (defn render-section [section]
   [:div.body
    (case (:type section)
@@ -54,6 +68,7 @@
      "mega-heading" [:h1.hn.pth (:title section)]
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)
+     "grid" (render-grid section)
      nil (:body section)
 
      (throw (ex-info (str "Unknown section type " (:type section)) section)))])

@@ -2,6 +2,8 @@ h1 {font-size: 60px;}
 h2 {font-size: 25px;}
 h3 {font-size: 25px;}
 .r-4-3 {width: 25%;}
+.r-3-2 {width: 33.33333%;}
+.r-6-4 {width: 16.66667%;}
 .r-1of2 {width: 50%;}
 
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img, pre {margin: 20px;}
