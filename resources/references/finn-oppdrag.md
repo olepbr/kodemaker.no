@@ -49,7 +49,7 @@ crazy grid i tillegg for å få noe visuelt som bonus:
 /node/                             /photos/tech/nodejs-wide.jpg 2x
 /clojure/                          /photos/tech/clojure.svg
 /react/                            /photos/tech/react.png
-/node/                             /photos/tech/nodejs-wide.jpg 2x
+/nodejs/                           /photos/tech/nodejs-wide.jpg 2x
 /clojure/                          /photos/tech/clojure.svg
 /react/                            /photos/tech/react.png
 /javascript/                       /photos/tech/js.svg
