@@ -205,3 +205,5 @@ a.brick:hover {background: #000;}
 .call-to-action.visible {opacity: 1; height: auto;}
 
 .centered-face {max-width: 220px; margin-left: auto; margin-right: auto;}
+
+.hide-lt-460 {display: none;}

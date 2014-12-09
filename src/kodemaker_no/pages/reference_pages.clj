@@ -5,10 +5,12 @@
 (defn- render-participant [[id text] people]
   (let [person ((keyword id) people)]
     [:div.line
-     [:div.unit.text-adornment
-      [:p.centered-face.ptm [:img.framed {:src (:side-profile-near (:photos person))}]]]
+     [:div.unit.s-1of3.hide-lt-460
+      [:p.centered-face.phm [:img.framed {:src (:side-profile-near (:photos person))}]]]
      [:div.lastUnit
-      [:h1.hn.mbn (:full-name person)]
+      [:h1.hn.mbn
+       [:a {:href (:url person)}
+        (:full-name person)]]
       [:p.mts text]]]))
 
 (defn- render-participants [section people]
