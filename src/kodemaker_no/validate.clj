@@ -116,10 +116,14 @@
    (optional-key :call-to-action) {:seconds-to-delay Num
                                    :content Any}})
 
+(def Section
+  {Keyword Str})
+
 (defn validate-content [content]
   (validate {:people {ID Person}
              :tech {ID Tech}
              :articles {Path Article}
+             :references {Path [Section]}
              :raw-pages {Path Str}
              :tech-names {ID Str}
              :blog-posts {Path BlogPost}

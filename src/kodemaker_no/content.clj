@@ -32,6 +32,7 @@
   {:people (slurp-edn-maps "resources/people/")
    :tech (slurp-edn-maps "resources/tech/")
    :articles (mapdown/slurp-directory "resources/articles/" #"\.md$")
+   :references (mapdown/slurp-directory "resources/references/" #"\.md$")
    :raw-pages (stasis/slurp-directory "resources/raw" #"\.html$")
    :blog-posts (mapdown/slurp-directory "resources/blog/" #"\.md$")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")

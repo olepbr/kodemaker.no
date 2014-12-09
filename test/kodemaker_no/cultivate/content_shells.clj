@@ -4,6 +4,7 @@
   (merge {:people {}
           :tech {}
           :articles {}
+          :references {}
           :raw-pages {}
           :tech-names {}
           :blog-posts {}

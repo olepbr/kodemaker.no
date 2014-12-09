@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages
   (:require [kodemaker-no.pages.article-pages :refer [article-pages]]
+            [kodemaker-no.pages.reference-pages :refer [reference-pages]]
             [kodemaker-no.pages.blog-pages :refer [blog-post-pages blog-page]]
             [kodemaker-no.pages.index-page :refer [index-page]]
             [kodemaker-no.pages.form-page :refer [form-page]]
@@ -20,6 +21,7 @@
    {:person-pages (person-pages (vals (:people content)))
     :tech-pages (tech-pages (vals (:tech content)))
     :article-pages (article-pages (:articles content))
+    :reference-pages (reference-pages (:references content))
     :blog-post-pages (blog-post-pages (:blog-posts content))
     :general-pages (general-pages content)
     :video-pages (video-pages (:videos content))}))
