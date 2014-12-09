@@ -3,7 +3,7 @@ body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
 a {text-decoration: none;}
 a:hover {text-decoration: underline;}
 
-.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; }
+.hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; line-height: 0.9; }
 body.column #main {max-width: 960px; margin: 0 auto;}
 
 body.full-width .iw {max-width: 960px; margin: 0 auto; position: relative;}
@@ -181,7 +181,7 @@ blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolu
 .menu {display:block; position: absolute; bottom: 2px; right: 0; }
 .menu a {color: #999; font-size: 13px; margin-left: 10px; text-transform: uppercase; }
 
-.arrow {float: right; overflow: hidden; margin-top: 5px;}
+.arrow {float: right; overflow: hidden; margin-top: 2px;}
 .arrow-body {float: left; background: #d30707; width: 22px; height: 22px;}
 .arrow-head {float: left; display: block; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #d30707;}
 
