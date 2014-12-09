@@ -69,4 +69,4 @@
    :body (->> blog-posts
               by-published
               (map render-blog-post)
-              (interpose [:hr.mhn]))})
+              (interpose [:hr]))})

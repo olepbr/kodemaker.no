@@ -44,7 +44,7 @@
                                     :tech [{:name "Clojure", :url "/clojure/"}]}])
            :body html)
 
-      => (html [:h2 "Magnars anbefalinger"]
+      => (html [:h2.mhn "Magnars anbefalinger"]
                [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
                [:p.near.cookie-w [:span.cookie [:a {:href "/clojure/"} "Clojure"]]]
                [:p "Denne er <strong>bra</strong>. "
@@ -59,7 +59,7 @@
                             :illustration "/photos/hobbies/adventur.jpg"}])
            :body html)
 
-      => (html [:h2 "Snakker gjerne om"]
+      => (html [:h2.mhn "Snakker gjerne om"]
                [:div.bd
                 [:h3.mtn "Brettspill"]
                 [:p
@@ -93,7 +93,7 @@
                                          :source "https://github.com/magnars/server-facade"}}])
            :body html)
 
-      => (html [:h2 "Magnars foredrag"]
+      => (html [:h2.mhn "Magnars foredrag"]
                [:h3.mtn [:a {:href "http://vimeo.com/28764670"} "Lyntale: Wrap Ajax'en din"]]
                [:p.near.cookie-w [:span.cookie [:a {:href "/javascript/"} "JavaScript"]]]
                [:p "Jeg tegner og forteller. "

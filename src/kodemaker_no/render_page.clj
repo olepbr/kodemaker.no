@@ -62,13 +62,13 @@
 
 (defn- render-ginormous-aside [{:keys [aside body]}]
   [:div.bd.iw
-   [:hr.mhn]
+   [:hr]
    [:div.line
     [:div.unit.s-1of3.hide-lt-460
      [:p {:class (str "hn ginormous ginormous-" (count aside))} aside]]
     [:div.lastUnit
      (to-html body)]]
-   [:hr.mhn]])
+   [:hr]])
 
 (defn render-section [section]
   [:div.body

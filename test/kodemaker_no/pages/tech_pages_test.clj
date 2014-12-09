@@ -25,7 +25,7 @@
                                           :url "/finnjoh/"}]}])
            :body html)
 
-      => (html [:h2 "Våre anbefalinger"]
+      => (html [:h2.mhn "Våre anbefalinger"]
                [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
                [:p.near.cookie-w [:span.cookie "Anbefalt av "
                                   [:a {:href "/magnar/"} "Magnar"] " og "
