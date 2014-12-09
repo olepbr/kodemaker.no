@@ -1,5 +1,20 @@
 --------------------------------------------------------------------------------
 :type reference
+:img /references/christian-printzell-halvorsen.jpg
+:logo /logos/finn.png
+:name Christian Printzell Halvorsen
+:phone tlf.nr. på forespørsel
+:title CEO, FINN.no
+:body
+
+Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
+siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
+sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
+kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
+sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
+gjerne igjen når behovet oppstår.
+--------------------------------------------------------------------------------
+:type reference
 :logo /logos/nsb.png
 :img /references/bengt-lyng.jpg
 :name Bengt Lyng
@@ -16,25 +31,13 @@ oppdragsgiver.
 
 Anbefales sterkt!
 --------------------------------------------------------------------------------
-:type reference
-:img /references/christian-printzell-halvorsen.jpg
-:logo /logos/finn.png
-:name Christian Printzell Halvorsen
-:phone tlf.nr. på forespørsel
-:title CEO, FINN.no
-:body
-
-Kodemaker har vært en av våre viktigste leverandører av teknologikonsulenter
-siden 2008. Vi er meget godt fornøyd med bidraget til FINN.no
-sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
-kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
-sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
-gjerne igjen når behovet oppstår.
+:type accentuated-header
+:title Hva er raskeste<br> vei i mål?
 --------------------------------------------------------------------------------
 :type centered-column
 :body
 
-Nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
+Jo, nå skal du høre. **I Kodemaker har vi en tøff modell. De som ikke
 har oppdrag, har ikke lønn. På den måten sikrer vi at alle Kodemakere
 er folk som får jobben gjort.** Er du ikke flink nok, ramler du av.
 
@@ -70,7 +73,9 @@ ditt i mål.
 
 <hr>
 
-**Du må ha en fungerende arbeidsprosess.** Om det er Scrum, Kanban, eller en
+#### Du må ha en fungerende arbeidsprosess.
+
+Om det er Scrum, Kanban, eller en
 annen prosess er ikke det viktige, men at du har en definert prosess som lar deg
 prioritere saker basert på forretningsverdi og tilgjengelige ressurser for
 implementering, og som gir deg transparens i forhold til fremdrift, så du ikke
@@ -79,28 +84,33 @@ luften et sted på veien.
 
 <hr>
 
-**Du må ha automatiserte tester.** Etter hvert som kodebasen vokser, vil
-endringer du gjør ett sted, kunne ødelegge funksjonalitet et annet sted, uten at
-det er umiddelbart innlysende. Hvis det ikke oppdages med en gang, av
-automatiserte tester, kan slike bugs leve lenge og bli svært dyre.
+#### Du må ha automatiserte tester.
+
+Etter hvert som kodebasen vokser, vil endringer du gjør ett sted, kunne ødelegge
+funksjonalitet et annet sted, uten at det er umiddelbart innlysende. Hvis det
+ikke oppdages med en gang, av automatiserte tester, kan slike bugs leve lenge og
+bli svært dyre.
 
 <hr>
 
-**Du må ha en automatisert bygg-prosess.** Å få endringer ut på test-servere og
-ut i produksjon kan bli et uforutsigbart mareritt, avhengig av noen få
-nøkkelpersoner, hvis ikke også denne delen av jobben er automatisert med kode.
-Det tar litt tid å sette opp, men timene sparer du inn utallige ganger.
+#### Du må ha en automatisert bygg-prosess.
+
+Å få endringer ut på test-servere og ut i produksjon kan bli et uforutsigbart
+mareritt, avhengig av noen få nøkkelpersoner, hvis ikke også denne delen av
+jobben er automatisert med kode. Det tar litt tid å sette opp, men timene sparer
+du inn utallige ganger.
 
 <hr>
 
-**Du må ha en entydig "definition of done".** Når er en funksjonalitet "ferdig"?
-Er det når en utvikler sier "det har jeg laget"? Er det når en annen utvikler
-har sett på den koden, og sagt "ok"? Er det når noen i teamet har testet
-funksjonaliteten på en test-server? Er det når noen utenfor teamet har testet
-funksjonaliteten, og godkjent den? Hvis du ikke vet nøyaktig hva det betyr at en
-sak er "ferdig", risikerer du å gå på en stygg smell mot slutten av prosjektet,
-når det viser seg at mange av sakene er "ferdige ... de mangler bare tester,
-feilhåndtering, og css", for eksempel.
+#### Du må ha en entydig "definition of done".
+
+Når er en funksjonalitet "ferdig"? Er det når en utvikler sier "det har jeg
+laget"? Er det når en annen utvikler har sett på den koden, og sagt "ok"? Er det
+når noen i teamet har testet funksjonaliteten på en test-server? Er det når noen
+utenfor teamet har testet funksjonaliteten, og godkjent den? Hvis du ikke vet
+nøyaktig hva det betyr at en sak er "ferdig", risikerer du å gå på en stygg
+smell mot slutten av prosjektet, når det viser seg at mange av sakene er
+"ferdige ... de mangler bare tester, feilhåndtering, og css", for eksempel.
 
 <hr>
 
@@ -157,7 +167,7 @@ guns* er det naturlig at du bare får seniorer fra oss.
   ikke gavner deg lenger
 
 Det er mange som har tillit til oss. Vi har hatt oppdrag hos blant andre
-FINN.no, Forsvaret, NSB, Telenor, Hafslund, SPiD og Animalia.
+FINN.no, Forsvaret, NSB, Telenor, Hafslund, Schibsted og Animalia.
 
 --------------------------------------------------------------------------------
 :type reference
@@ -200,7 +210,6 @@ villig til å la oss hjelpe deg å få dem på plass.**
 
 For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi gjerne
 høre mer om deg og dine planer. La oss ta en prat!
-[Fyll inn ditt telefonnummer eller din epost-adresse på den neste siden ...](/skjema/)
 Vår daglige leder Kolbjørn Jetne tar kontakt med deg så snart han har mulighet.
 Stort sett vil du høre fra ham innen to arbeidsdager.
 
@@ -224,7 +233,7 @@ til å holde full fokus på dine mål. Du får folk som spiser
 beste-praksis til frokost til å skrive din kode. Du får et nettverk av
 dyktige fagfolk på din side.
 
-[Du får rett og slett Kodemaker](/skjema/).
+Du får rett og slett Kodemaker.
 
 --------------------------------------------------------------------------------
 :type person-cloud

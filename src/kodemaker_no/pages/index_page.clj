@@ -37,11 +37,6 @@
     (create-people-cloud people)
     section))
 
-(defn- obstacle-course []
-  [:div.bd
-   [:div.obstacle-course]
-   [:h3.obstacle.center "Hva er raskeste" [:br] "veien i mål?"]])
-
 (defn index-page [people]
   (let [sorted-peeps (->> people
                           (remove :administration?)
@@ -49,9 +44,7 @@
                           (reverse))]
     {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
              :arrow (:url (first sorted-peeps))}
-     :sections (concat
-                [{:body (obstacle-course)}]
-                (->> (io/resource "index.md")
-                     slurp
-                     mapdown/parse
-                     (map #(insert-person-cloud sorted-peeps %))))}))
+     :sections (->> (io/resource "index.md")
+                    slurp
+                    mapdown/parse
+                    (map #(insert-person-cloud sorted-peeps %)))}))

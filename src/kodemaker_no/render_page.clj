@@ -31,7 +31,7 @@
 (defn- render-centered-column [section]
   [:div.bd.iw
    [:div.centered-column
-    (when (:title section) [:h3.mbl (:title section)])
+    (when (:title section) [:h3.mbl.xlarge.hns (:title section)])
     (to-html (:body section))]])
 
 (defn- render-contact-form [{:keys [body button]}]
@@ -75,6 +75,10 @@
    (case (:type section)
      "illustrated-column" (render-illustrated-column section)
      "centered-column" (render-centered-column section)
+     "accentuated-header" [:div.inline-form
+                           [:div.bd.iw
+                            [:div.centered-column.mvxl
+                             [:h3.mbl.xxlarge.hns (:title section)]]]]
      "mega-heading" [:h1.hn.pth (:title section)]
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)

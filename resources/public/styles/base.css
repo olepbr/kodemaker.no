@@ -4,6 +4,7 @@ a {text-decoration: none;}
 a:hover {text-decoration: underline;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; line-height: 0.9; }
+.hns {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; line-height: 0.9; }
 
 .iw {max-width: 960px; margin: 0 auto; position: relative;}
 
@@ -77,6 +78,8 @@ p {margin-bottom: 1.3em;}
 .fpp {font-size: 11px;} /* front page photos */
 .fpp .linkish {display: block; padding-left: 3px;}
 
+.xxlarge {font-size: 72px;}
+.xlarge {font-size: 36px;}
 .large {font-size: 20px;}
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
@@ -129,8 +132,8 @@ h2 {font-size: 20px; font-weight: bold; color: #fff; background: #000;}
 h3 {font-size: 20px; font-weight: bold;}
 h4 {font-weight: bold;}
 
-.near, h3, h4, h5 {margin-bottom: 0 !important;}
-.near+*, h3+*, h4+*, h5+* {margin-top: 0 !important;}
+.near, h3, h5 {margin-bottom: 0 !important;}
+.near+*, h3+*, h5+* {margin-top: 0 !important;}
 
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
