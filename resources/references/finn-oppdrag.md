@@ -41,3 +41,12 @@ sammenheng, og dermed med uthevede ord / klikkbare lenker. Så har vi med en
 crazy grid i tillegg for å få noe visuelt som bonus:
 
 --------------------------------------------------------------------------------
+:type grid
+:content
+
+/javascript/                       /photos/tech/js.svg
+/git/                              /photos/tech/git.jpg
+/node/                             /photos/tech/nodejs-wide.jpg 2x
+/clojure/                          /photos/tech/clojure.svg
+/react/                            /photos/tech/react.png
+--------------------------------------------------------------------------------
