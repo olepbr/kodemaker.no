@@ -48,9 +48,7 @@
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
     [:title (head-title (:title page))]]
-   [:body {:class (if (:full-width page)
-                    "full-width"
-                    "column")}
+   [:body
     [:script (slurp (io/resource "public/scripts/google-tag-manager.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
@@ -92,14 +90,13 @@
            (brick (nth bricks 7))
            (brick-collapsing)
            (brick)]])
-       (when (:footer-decorations page)
-         [:div#footer-dec.bd.iw
-          [:div.mod.mvn.rel
-           [:div.ft-dec-0]
-           [:div.ft-dec-1]
-           [:div.ft-dec-2]
-           [:div.ft-dec-3]
-           [:div.ft-dec-4]]])
+       [:div#footer-dec.bd.iw
+        [:div.mod.mvn.rel
+         [:div.ft-dec-0]
+         [:div.ft-dec-1]
+         [:div.ft-dec-2]
+         [:div.ft-dec-3]
+         [:div.ft-dec-4]]]
        [:div#footer
         [:div.bd.iw
          [:div.mod
@@ -112,17 +109,16 @@
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
            [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]
-         (when (:footer-decorations page)
-           [:div.ft-dec-5])]]]]]]))
+         [:div.ft-dec-5]]]]]]]))
 
 (defn- render-single-column [page]
   [:div.body
-   [:div.bd
+   [:div.bd.iw
     (:lead page)
     (:body page)]])
 
 (defn- render-two-column [page]
-  (list
+  [:div.iw
    [(if (-> page :title :h1)
       :div.body.unitRight.r-2of3
       :div.body.unitRight.r-2of3.mtm)
@@ -136,7 +132,7 @@
      (when (:illustration page)
        [:div.illustration
         [:img {:src (:illustration page)}]])
-     (:aside page)]]))
+     (:aside page)]]])
 
 (defn- two-column-page? [page]
   (or (:illustration page)

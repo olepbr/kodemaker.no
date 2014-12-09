@@ -12,7 +12,7 @@
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recommendations _]
-  (list [:h2 "Våre anbefalinger"]
+  (list [:h2.mhn "Våre anbefalinger"]
         (map render-recommendation recommendations)))
 
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
@@ -25,7 +25,7 @@
     (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]))
 
 (defn- render-presentations [presentations _]
-  (list [:h2 "Våre presentasjoner"]
+  (list [:h2.mhn "Våre presentasjoner"]
         (map render-presentation presentations)))
 
 (defn- render-blog-post [{:keys [title by blurb url]}]
@@ -37,7 +37,7 @@
     (list " " [:a {:href url} "Les posten"]))))
 
 (defn- render-blog-posts [posts _]
-  (list [:h2 "Våre bloggposter"]
+  (list [:h2.mhn "Våre bloggposter"]
         (map render-blog-post posts)))
 
 (defn- render-side-project [{:keys [title description link illustration by]}]
@@ -51,7 +51,7 @@
         [:a.illu {:href (:url link)} [:img {:src illustration}]]))])
 
 (defn- render-side-projects [projects _]
-  (list [:h2 "Sideprosjekter"]
+  (list [:h2.mhn "Sideprosjekter"]
         (map render-side-project projects)))
 
 (defn- render-open-source-project [project]
@@ -62,7 +62,7 @@
         (markup/strip-paragraph (to-html (:description project)))))
 
 (defn- render-open-source-projects [projects _]
-  (list [:h2 "Open source"]
+  (list [:h2.mhn "Open source"]
         (if (next projects)
           [:ul
            (map (fn [p] [:li (render-open-source-project p)]) projects)]
@@ -84,7 +84,7 @@
   (let [date (t/today)
         upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
     (when (seq upcoming)
-      (list [:h2 (str "Våre kommende foredrag/kurs om " (:name tech))]
+      (list [:h2.mhn (str "Våre kommende foredrag/kurs om " (:name tech))]
             (->> upcoming
                  (sort-by :date)
                  (map (partial render-upcoming-event date)))))))

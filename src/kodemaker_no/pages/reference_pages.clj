@@ -24,8 +24,6 @@
 
 (defn- reference-page [sections people]
   {:title (:page-title (first sections))
-   :full-width true
-   :footer-decorations true
    :sections (->> sections
                   (map #(if (= "participants" (:type %))
                           (render-participants % people)

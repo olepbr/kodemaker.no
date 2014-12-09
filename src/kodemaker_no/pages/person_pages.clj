@@ -19,7 +19,7 @@
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recs person]
-  (list [:h2 (str (:genitive person) " anbefalinger")]
+  (list [:h2.mhn (str (:genitive person) " anbefalinger")]
         (map render-recommendation (take 3 recs))))
 
 (defn- render-hobby [{:keys [title description url illustration]}]
@@ -32,7 +32,7 @@
       [:img.illu {:src illustration}]))])
 
 (defn- render-hobbies [hobbies _]
-  (list [:h2 "Snakker gjerne om"]
+  (list [:h2.mhn "Snakker gjerne om"]
         (map render-hobby hobbies)))
 
 (defn- render-side-project [{:keys [title description link illustration tech]}]
@@ -46,7 +46,7 @@
         [:a.illu {:href (:url link)} [:img {:src illustration}]]))])
 
 (defn- render-side-projects [side-projects _]
-  (list [:h2 "Sideprosjekter"]
+  (list [:h2.mhn "Sideprosjekter"]
         (map render-side-project side-projects)))
 
 (defn- inline-list [label nodes]
@@ -72,7 +72,7 @@
          (when-let [url (:source urls)] (list " " [:a.nowrap {:href url} "Se koden"]))]))
 
 (defn- render-presentations [presentations person]
-  (list [:h2 (str (:genitive person) " foredrag")]
+  (list [:h2.mhn (str (:genitive person) " foredrag")]
         (map render-presentation presentations)))
 
 (defn- render-endorsement [{:keys [photo author title project quote]}]
@@ -89,7 +89,7 @@
     [:p [:q quote]]]])
 
 (defn- render-endorsements [endorsements person]
-  (list [:h2 (str (:genitive person) " referanser")]
+  (list [:h2.mhn (str (:genitive person) " referanser")]
         (interpose [:hr.mtn.mhn] (map render-endorsement endorsements))))
 
 (def cv
@@ -136,7 +136,7 @@
 
 (defn- render-blog-posts [posts person]
   (list
-   [:h2 (str (:genitive person) " bloggposter")]
+   [:h2.mhn (str (:genitive person) " bloggposter")]
    (map render-blog-post (take 3 posts))))
 
 (defn- render-project [{:keys [customer years tech description]}]
@@ -147,7 +147,7 @@
 
 (defn- render-projects [projects person]
   (list
-   [:h2 "Prosjekter"]
+   [:h2.mhn "Prosjekter"]
    (map render-project projects)
    (when-let [nick (-> person :presence :cv)]
      [:p [:a {:href (str (:baseUrl cv) nick)}
@@ -193,7 +193,7 @@
 
 (defn- render-open-source [{:keys [open-source-projects open-source-contributions]}]
   (list
-   [:h2 "Open source"]
+   [:h2.mhn "Open source"]
    (if (should-split-open-source-by-tech open-source-projects open-source-contributions)
      (render-split-open-source open-source-projects open-source-contributions)
      (render-open-source-entries open-source-projects open-source-contributions))))
@@ -222,7 +222,7 @@
   (let [date (time/today)
         upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
     (when (seq upcoming)
-      (list [:h2 (str (:genitive person) " kommende foredrag/kurs")]
+      (list [:h2.mhn (str (:genitive person) " kommende foredrag/kurs")]
             (->> upcoming
                  (sort-by :date)
                  (map (partial render-upcoming-event date)))))))

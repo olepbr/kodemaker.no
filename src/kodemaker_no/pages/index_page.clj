@@ -49,8 +49,6 @@
                           (reverse))]
     {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
              :arrow (:url (first sorted-peeps))}
-     :full-width true
-     :footer-decorations true
      :sections (concat
                 [{:body (obstacle-course)}]
                 (->> (io/resource "index.md")
