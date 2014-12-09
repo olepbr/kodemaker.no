@@ -18,9 +18,12 @@
 
 (defn course-page [videos]
   {:title "Lærelysten? Vi deler gjerne!"
-   :lead [:p "Bli med på foredrag, kurs, eller workshop, eller len deg tilbake og se en screencast."]
-   :body (list
-          [:h2 "Foredrag"]
-          (map render-video videos)
-          [:h2 "Screencasts"]
-          (to-html (slurp (io/resource "screencasts.md"))))})
+   :sections [{:body [:div.bd.iw [:p "Bli med på foredrag, kurs, eller workshop, eller len deg tilbake og se en screencast."]]}
+              {:type "illustrated-column"
+               :title "Foredrag"
+               :illustration "/forside/foredrag.jpg"
+               :body (map render-video videos)}
+              {:type "illustrated-column"
+               :title "Screencasts"
+               :illustration "/forside/screencast.jpg"
+               :body (slurp (io/resource "screencasts.md"))}]})
