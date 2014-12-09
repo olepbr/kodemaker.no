@@ -33,3 +33,9 @@ body {font-size: 17px;}
 .ft-dec-4 {position: absolute; right: 0; top: 40px; width: 165px; height: 10px; background: #000; -webkit-transform:rotate(-18deg);}
 
 .hide-lt-460 {display: block;}
+
+.ginormous {text-align: center; font-weight: bold; line-height: 0.8; margin-bottom: 20px;}
+.ginormous-1,
+.ginormous-2 {font-size: 130px;}
+.ginormous-3 {font-size: 90px;}
+.ginormous-4 {font-size: 60px;}

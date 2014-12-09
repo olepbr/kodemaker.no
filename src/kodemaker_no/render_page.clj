@@ -60,6 +60,16 @@
          (str/split-lines)
          (map #(apply render-grid-unit (str/split % #" +"))))]])
 
+(defn- render-ginormous-aside [{:keys [aside body]}]
+  [:div.bd.iw
+   [:hr.mhn]
+   [:div.line
+    [:div.unit.s-1of3.hide-lt-460
+     [:p {:class (str "hn ginormous ginormous-" (count aside))} aside]]
+    [:div.lastUnit
+     (to-html body)]]
+   [:hr.mhn]])
+
 (defn render-section [section]
   [:div.body
    (case (:type section)
@@ -69,6 +79,7 @@
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)
      "grid" (render-grid section)
+     "ginormous-aside" (render-ginormous-aside section)
      nil (:body section)
 
      (throw (ex-info (str "Unknown section type " (:type section)) section)))])

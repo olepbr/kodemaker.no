@@ -80,3 +80,12 @@ markedsplasser ved å modularisere koden til kompontenter som kunne settes samme
 til forskjellige skjemaer.
 
 --------------------------------------------------------------------------------
+:type ginormous-aside
+:aside 317
+:body
+
+Kodemaker har levert tilsammen 378 timer fordelt på x antall kvasse konsulenter.
+Og vi kan skrive noe mer om omfang og varighet i en sånn uthevet paragraf. Mer
+kontrast og sånn, hurra.
+
+--------------------------------------------------------------------------------

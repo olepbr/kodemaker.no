@@ -35,3 +35,8 @@ h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 .arrow {margin-top: 5px;}
 .arrow-body {width: 44px; height: 44px;}
 .arrow-head {border-width: 22px 0 22px 22px;}
+
+.ginormous-1,
+.ginormous-2 {font-size: 155px;}
+.ginormous-3 {font-size: 135px;}
+.ginormous-4 {font-size: 90px;}
