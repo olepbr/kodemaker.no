@@ -45,7 +45,7 @@ crazy grid i tillegg for å få noe visuelt som bonus:
 :content
 
 /javascript/                       /photos/tech/js.svg
-/git/                              /photos/tech/git.jpg
+/git/                              /photos/tech/git.svg
 /node/                             /photos/tech/nodejs-wide.jpg 2x
 /clojure/                          /photos/tech/clojure.svg
 /react/                            /photos/tech/react.png
@@ -53,7 +53,7 @@ crazy grid i tillegg for å få noe visuelt som bonus:
 /clojure/                          /photos/tech/clojure.svg
 /react/                            /photos/tech/react.png
 /javascript/                       /photos/tech/js.svg
-/git/                              /photos/tech/git.jpg
+/git/                              /photos/tech/git.svg
 
 --------------------------------------------------------------------------------
 :type illustrated-column

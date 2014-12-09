@@ -233,7 +233,7 @@ dyktige fagfolk på din side.
 :content
 
 /christian/                        /photos/people/christian/side-profile-square.jpg
-/git/                              /photos/tech/git.jpg
+/git/                              /photos/tech/git.svg
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
 /odin/                             /photos/people/odin/side-profile-square.jpg
 /zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
@@ -243,7 +243,7 @@ dyktige fagfolk på din side.
 /stian/                            /photos/people/stian/side-profile-square.jpg
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.svg
-/node/                             /photos/tech/nodejs-wide.jpg 2x
+/nodejs/                           /photos/tech/nodejs-wide.jpg 2x
 /stig/                             /photos/people/stig/side-profile-square.jpg
 /react/                            /photos/tech/react.png
 /anders/                           /photos/people/anders/side-profile-square.jpg
