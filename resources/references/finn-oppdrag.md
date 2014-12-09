@@ -49,4 +49,34 @@ crazy grid i tillegg for å få noe visuelt som bonus:
 /node/                             /photos/tech/nodejs-wide.jpg 2x
 /clojure/                          /photos/tech/clojure.svg
 /react/                            /photos/tech/react.png
+/node/                             /photos/tech/nodejs-wide.jpg 2x
+/clojure/                          /photos/tech/clojure.svg
+/react/                            /photos/tech/react.png
+/javascript/                       /photos/tech/js.svg
+/git/                              /photos/tech/git.jpg
+
+--------------------------------------------------------------------------------
+:type illustrated-column
+:body
+
+Det er kanskje finest om man også skriver noe under teknologi-griden, men da
+uten den svarte tittelen.
+
+--------------------------------------------------------------------------------
+:type participants
+:title Kodemakere på FINN oppdrag
+:content
+
+magnar
+
+Ansvarlig frontendutvikler. Utviklet hele framsia fra bunnen av. Vi var første
+marked i FINN til å bruke responsiv design. Skrev over 1000 JavaScript tester og
+likte det.
+
+christian
+
+Klargjorde et avansert registreringsskjema for utrulling til flere
+markedsplasser ved å modularisere koden til kompontenter som kunne settes sammen
+til forskjellige skjemaer.
+
 --------------------------------------------------------------------------------

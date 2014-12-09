@@ -203,3 +203,5 @@ a.brick:hover {background: #000;}
 .call-to-action {background: #f4f4f4; -webkit-transition: opacity 1000ms; -moz-transition: opacity 1000ms; -o-transition: opacity 1000ms; transition: opacity 1000ms;}
 .call-to-action.hidden {opacity: 0; height: 0; overflow: hidden;}
 .call-to-action.visible {opacity: 1; height: auto;}
+
+.centered-face {max-width: 220px; margin-left: auto; margin-right: auto;}

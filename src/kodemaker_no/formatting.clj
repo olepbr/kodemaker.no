@@ -74,14 +74,14 @@
 
 (defn unindent-all
   "Given a block of code, if all lines are indented, this removes the
-   preceeding whitespace that is common to all lines."
+  preceeding whitespace that is common to all lines."
   [lines]
   (let [superflous-spaces (find-common-indent-column lines)]
     (map #(subs* % superflous-spaces) lines)))
 
 (defn unindent-but-first
   "Given a block of code, if all lines are indented, this removes the
-   preceeding whitespace that is common to all lines."
+  preceeding whitespace that is common to all lines."
   [lines]
   (let [superflous-spaces (find-common-indent-column (drop 1 lines))]
     (concat (take 1 lines)
@@ -91,11 +91,13 @@
   [:autolinks :fenced-code-blocks :strikethrough :quotes :smarts])
 
 (defn to-html [s]
-  (md/to-html (->> s
-                   str/split-lines
-                   unindent-but-first
-                   (str/join "\n"))
-              pegdown-options))
+  (if (string? s)
+    (md/to-html (->> s
+                     str/split-lines
+                     unindent-but-first
+                     (str/join "\n"))
+                pegdown-options)
+    s))
 
 (defn link-to-person [person]
   [:a {:href (:url person)} (:name person)])

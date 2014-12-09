@@ -21,7 +21,7 @@
    {:person-pages (person-pages (vals (:people content)))
     :tech-pages (tech-pages (vals (:tech content)))
     :article-pages (article-pages (:articles content))
-    :reference-pages (reference-pages (:references content))
+    :reference-pages (reference-pages (:references content) (:people content))
     :blog-post-pages (blog-post-pages (:blog-posts content))
     :general-pages (general-pages content)
     :video-pages (video-pages (:videos content))}))
