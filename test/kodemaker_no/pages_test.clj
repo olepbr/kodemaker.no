@@ -14,6 +14,7 @@
            "/magnars/"
            "/finnjoh/"
            "/react/"
+           "/folk/"
            "/kompetanse/"
            "/systemer/"
            "/skjema/"
