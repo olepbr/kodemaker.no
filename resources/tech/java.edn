@@ -1,6 +1,6 @@
 {:id :java
  :name "Java"
- :illustration "/photos/tech/java.png"
+ :illustration "/photos/tech/java.svg"
  :site "http://docs.oracle.com/javase/7/docs/api/"
  :description
  "Java er raskt, typesikkert, og har enormt mange flinke utviklere som kan hele språket inn og ut. Java har alltid

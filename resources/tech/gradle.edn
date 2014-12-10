@@ -1,6 +1,6 @@
 {:id :gradle
  :name "Gradle"
- :illustration "/photos/tech/gradle.jpg"
+ :illustration "/photos/tech/gradle-sq.svg"
  :site "http://www.gradle.org"
  :description "Gradle er et glitrende verktøy for automatisering av bygg.
                For de som enda ikke har brukt det, vil det oppleves som en solid oppgradering fra Ant og Maven.

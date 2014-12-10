@@ -1,6 +1,6 @@
 {:id :groovy
  :name "Groovy"
- :illustration "/photos/tech/groovy.jpg"
+ :illustration "/photos/tech/groovy.png"
  :site "http://groovy.codehaus.org/"
  :description "Groovy er et dynamisk språk for JVM'en. 
                Det har optional typing og optional statisk kompilering. 
