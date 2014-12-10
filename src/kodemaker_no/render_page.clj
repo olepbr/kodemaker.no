@@ -75,10 +75,6 @@
    (case (:type section)
      "illustrated-column" (render-illustrated-column section)
      "centered-column" (render-centered-column section)
-     "accentuated-header" [:div.inline-form
-                           [:div.bd.iw
-                            [:div.centered-column.mvxl
-                             [:h3.mbl.xxlarge.hns (:title section)]]]]
      "mega-heading" [:h1.hn.pth (:title section)]
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)

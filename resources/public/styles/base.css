@@ -4,7 +4,7 @@ a {text-decoration: none;}
 a:hover {text-decoration: underline;}
 
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; text-transform: uppercase; line-height: 0.9; }
-.hns {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; line-height: 0.9; }
+.hns {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "Impact", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; line-height: 1.1; }
 
 .iw {max-width: 960px; margin: 0 auto; position: relative;}
 
@@ -78,8 +78,8 @@ p {margin-bottom: 1.3em;}
 .fpp {font-size: 11px;} /* front page photos */
 .fpp .linkish {display: block; padding-left: 3px;}
 
-.xxlarge {font-size: 72px;}
-.xlarge {font-size: 36px;}
+.xxlarge {font-size: 40px;}
+.xlarge {font-size: 28px;}
 .large {font-size: 20px;}
 .small {font-size: 14px; font-weight: normal;}
 .tiny {font-size: 12px; font-weight: normal;}
@@ -138,7 +138,10 @@ h4 {font-weight: bold;}
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
 
+.obstacle-header,
 .inline-form {background: #f4f4f4;}
+
+.obstacle-header {border-top: 3px solid #000; border-bottom: 3px solid #000;}
 
 .inverse {background: #000; color: #fff;}
 

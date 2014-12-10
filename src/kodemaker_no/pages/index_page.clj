@@ -32,9 +32,27 @@
                 (map-indexed render-cloud-person)
                 (interpose [:span " " [:span "&nbsp;"]]))]]}) ;; two spaces between names
 
-(defn- insert-person-cloud [people section]
-  (if (= "person-cloud" (:type section))
-    (create-people-cloud people)
+(defn- create-obstacle-header [{:keys [title-1 title-2]}]
+  {:body
+   [:div.obstacle-header.mtl.rel
+    [:div.bd.iw
+     [:div.centered-column
+      [:h3.mbl.mtm.xxlarge.hns
+       [:span.nowrap title-1] " " [:span.nowrap title-2]]]
+     [:div#obs-hd-0]
+     [:div#obs-hd-1]
+     [:div#obs-hd-2]
+     [:div#obs-hd-3]
+     [:div#obs-hd-4]
+     [:div#obs-hd-5]
+     [:div#obs-hd-6]
+     [:div#obs-hd-7]
+     [:div#obs-hd-8]]]})
+
+(defn- update-section [people section]
+  (case (:type section)
+    "person-cloud" (create-people-cloud people)
+    "obstacle-header" (create-obstacle-header section)
     section))
 
 (defn index-page [people]
@@ -47,4 +65,4 @@
      :sections (->> (io/resource "index.md")
                     slurp
                     mapdown/parse
-                    (map #(insert-person-cloud sorted-peeps %)))}))
+                    (map #(update-section sorted-peeps %)))}))
