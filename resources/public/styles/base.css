@@ -162,15 +162,6 @@ em {font-style: italic;}
 #footer {background: #000; color: #fff; line-height: 1.7;}
 #footer a {color:#fff;}
 
-#footer-dec .bd,
-#footer .bd {position: relative;}
-#footer-dec {height: 75px;}
-.ft-dec-0 {position: absolute; left: 0; top: 50px; width: 25px; height: 25px; background: #000;}
-.ft-dec-1 {position: absolute; left: 35px; top: 25px; width: 25px; height: 50px; background: #000;}
-.ft-dec-2 {position: absolute; left: 70px; top: 0; width: 25px; height: 75px; background: #000;}
-.ft-dec-3 {position: absolute; right: 70px; top: 50px; width: 25px; height: 25px; border-radius: 100%; background: #000;}
-.ft-dec-4 {position: absolute; right: 0; top: 40px; width: 165px; height: 10px; background: #000; -webkit-transform:rotate(-18deg);}
-
 .bullet {margin: 0 0.5em;}
 
 hr {border-top: 3px solid #000; border-left: 0; border-right: 0; border-bottom: 0;}
