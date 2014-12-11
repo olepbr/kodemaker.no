@@ -1,6 +1,7 @@
 (ns kodemaker-no.render-page
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
+            [kodemaker-no.layout :refer [with-layout]]
             [kodemaker-no.render-old-page :as old]))
 
 (defn- render-illustrated-column [section]
@@ -87,6 +88,6 @@
 
 (defn render-page [page request]
   (if (:sections page)
-    (old/with-layout request page
+    (with-layout request page
       (map render-section (:sections page)))
     (old/render-page page request)))
