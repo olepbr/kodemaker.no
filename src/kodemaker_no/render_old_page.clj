@@ -53,8 +53,8 @@
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
-       [:div.ocm-item [:a {:href "/kurs/"} "Lær"]]
-       [:div.ocm-item [:a {:href "/folk/"} "Folk"]]
+       [:div.ocm-item [:a {:href "/folk/"} "Folkene i Kodemaker"]]
+       [:div.ocm-item [:a {:href "/kurs/"} "Foredrag og slikt"]]
        [:div.ocm-item [:a {:href "/skjema/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
@@ -111,7 +111,9 @@
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
            [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]]]
-         [:div.ft-dec-5]]]]]]]))
+         [:div.ft-dec-5]]]]]]
+    [:script
+     (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
 
 (defn- render-single-column [page]
   [:div.body
