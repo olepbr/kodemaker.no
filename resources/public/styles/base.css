@@ -130,7 +130,7 @@ a, h1, .linkish {color: #d30707;}
 h1 {font-size: 30px;}
 h2 {font-size: 20px; font-weight: bold; color: #fff; background: #000;}
 h3 {font-size: 20px; font-weight: bold;}
-h4 {font-weight: bold;}
+h4,h5 {font-weight: bold;}
 
 .near, h3, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h5+* {margin-top: 0 !important;}
@@ -182,6 +182,9 @@ blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolu
 .ref-logo {display: table-cell; vertical-align: top;}
 .ref-logo img {max-height: 4em; max-width: 100px; margin: 20px;}
 
+.ref-meta {background: #000; color: #fff; padding: 3px;}
+.ref-meta .white {background: #fff; color: #000; overflow: hidden;}
+
 #ocm {display: none;}
 
 .menu {display:block; position: absolute; bottom: 2px; right: 0; }
@@ -212,4 +215,5 @@ a.brick:hover {background: #000;}
 
 .centered-face {max-width: 220px; margin-left: auto; margin-right: auto;}
 
+.hide-lt-660,
 .hide-lt-460 {display: none;}

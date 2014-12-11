@@ -26,6 +26,22 @@ Funksjonalitet i en 10 år gammel sentral applikasjon måtte løftes til tidsrik
 teknisk nivå, og samtidig utvikles med ny tiltrengt funksjonalitet. Kodemaker
 ble valgt til å løse oppgaven i konkurranse med andre rammeavtaleleverandører.
 
+--------------------------------------------------------------------------------
+:type reference-meta
+:title NSB Personalbillett
+:body
+
+En ny internapplikasjon for personalbilletter ble bygget opp av to Kodemakere
+i team. Personalsjef hos NSB var kundekontakt.
+
+:team-size 2
+:factoid-1 2 Kodemakere
+:factoid-2 1200 timer / 08.2013-03.2014
+
+--------------------------------------------------------------------------------
+:type illustrated-column
+:body
+
 Personalbillett er en applikasjon som brukes internt av administratorer i NSB.
 De ordner rabatterte billetter til 30 000 ansatte i NSB og assosierte selskaper
 som Nettbuss, Jernbaneverket, Flytoget, og ROM Eiendom.

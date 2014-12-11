@@ -10,6 +10,12 @@
 blockquote {padding-left: 6em;}
 blockquote:before {left: 0.25em;}
 
+.ref-meta-left .white {margin-right: 1px;}
+.ref-meta-left {float:left; width: 50%;}
+.ref-meta-right {overflow:hidden; *overflow:visible; *zoom:1;}
+.ref-meta .peeps {margin-left: 2px; text-align: right; margin-bottom: 0; padding-top: 10px; padding-right: 10px;}
+.ref-meta .peeps img {float: right;}
+
 .large {font-size: 25px; line-height: 1.5;}
 
 .fpp {font-size: 14px;} /* front page photos */
@@ -24,3 +30,5 @@ blockquote:before {left: 0.25em;}
 .ginormous-2 {font-size: 145px;}
 .ginormous-3 {font-size: 130px;}
 .ginormous-4 {font-size: 80px;}
+
+.hide-lt-660 {display: block;}
