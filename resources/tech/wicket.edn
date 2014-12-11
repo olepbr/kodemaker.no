@@ -1,0 +1,12 @@
+{:id :wicket
+ :name "Wicket"
+ :illustration "/photos/tech/wicket.svg"
+ :site "https://wicket.apache.org/"
+ :description "Wicket er et web rammeverk med fokus på komponenter og
+               objekt-orientert design. En nettside er ikke bare en streng med
+               HTML i Wicket, men et objekt. Det samme gjelder komponentene de
+               er bygget opp av. Du kan endatil velge å la Wicket håndtere Ajax
+               og URL-er for deg, og bare registrere event-handlere rett i
+               Java-koden. Noen vil kanskje si at det er å dra det for
+               langt (jajamensann, red. anm.) - men man kan også bruke Wicket
+               som et mer tradisjonelt MVC-rammeverk."}

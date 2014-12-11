@@ -1,0 +1,18 @@
+{:id :bootstrap
+ :name "Twitter Bootstrap"
+ :illustration "/photos/tech/bootstrap.svg"
+ :site "http://getbootstrap.com/"
+ :description "Twitter Bootstrap er et særdeles populært CSS-rammeverk, og det
+               bryter med nesten alt vi lærte om CSS og semantisk web i mange år.
+               Det følger tankene som Nicole Sullivan sparket igang med [OOCSS](/oocss/) og
+               [Our Best Practices Are Killing
+               Us](http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us/).
+               Grunnprinsippet er å skape modularitet og gjenbruk ved å
+               abstrahere på rett nivå. Istedet for domene-spesifikke
+               abstraksjoner (som på backend), abstraherer man rundt UI
+               komponenter.
+
+               Bootstrap har blitt så populært at mange lett vil kjenne igjen
+               når en side er bygget med den. Ikke noe stort problem for mange,
+               men selv om du ikke kan bruke Bootstrap direkte, så er det mye å
+               lære av å skrive CSSen på samme måte."}

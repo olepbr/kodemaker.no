@@ -1,0 +1,14 @@
+{:id :mssql
+ :name "Microsoft SQL Server"
+ :illustration "/photos/tech/mssql.png"
+ :site "http://www.microsoft.com/en-us/server-cloud/products/sql-server/"
+ :description "Microsoft SQL Server er en proprietær database som kommer i et
+               mylder av versjoner. Hvis du er nødt til å velge en database med
+               lukket kildekode, er MSSQL et ganske bra alternativ. Nå er det
+               vel ofte slik at databasevalget allerede er tatt når man skal
+               utvikle noe, gjerne mange år i forveien. Det er ingen
+               overdrivelse å si at du må leve med dataene dine mye lengre enn
+               du må leve med koden (og koden mye lengre enn utviklerne). Så
+               hvis du skulle få muligheten til å velge database, tenk deg om
+               da. Og skulle du være på jakt etter et open source alternativ, så
+               kan vi [gjerne anbefale noe](http://www.postgresql.org/)."}

@@ -1,0 +1,10 @@
+{:id :hibernate
+ :name "Hibernate"
+ :illustration "/photos/tech/hibernate.svg"
+ :site "http://hibernate.org/"
+ :description "Hibernate er et rammeverk med en umulig oppgave, og får mye
+               kjeft. Å forsøke å løse [the Object-relational Impedance
+               Mismatch](http://en.wikipedia.org/wiki/Object-relational_impedance_mismatch)
+               mens hele utviklersfæren ser på er en utakknemmelig oppgave. Det
+               er mye brukt, og for mange løser det flere problemer enn det
+               skaper. Ikke dårlig bare det."}

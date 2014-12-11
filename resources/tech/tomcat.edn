@@ -1,0 +1,11 @@
+{:id :tomcat
+ :name "Tomcat"
+ :illustration "/photos/tech/tomcat.svg"
+ :site "http://tomcat.apache.org/"
+ :description "Tomcat er sammen med Jetty et lettvektsalternativ for [Java](/java/)
+               applikasjonsservere. Den er i utstrakt brukt, og hadde [i
+               2012](http://zeroturnaround.com/rebellabs/developer-productivity-report-2012-java-tools-tech-devs-and-data/4/)
+               godt over halvparten av markedet for alle applikasjonsservere.
+               Dokumentasjonen og fagmiljøet rundt Tomcat er utmerket, og selv
+               om den ikke har alle featurene til JBoss eller GlassFish, så er
+               den et godt valg for de aller fleste formål."}

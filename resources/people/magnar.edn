@@ -108,7 +108,25 @@
                             knakende godt råd."
                     :link {:url "http://pgbovine.net/programmers-talking-to-beginners.htm"
                            :text "Les bloggposten"}
-                    :tech [:hjernen]}]
+                    :tech [:hjernen]}
+                   {:title "Hibernate should be to programmers what cake mixes are to bakers: beneath their dignity"
+                    :blurb "Christin sier sin mening om Hibernate og kakemiks.
+                            Et underholdende bidrag med stor sannhetsgehalt, og
+                            antagelig den beste lyntalen jeg har sett."
+                    :link {:url "http://vimeo.com/28885655"
+                           :text "Se lyntalen"}
+                    :tech [:hibernate]}
+                   {:title "The Nature of Lisp"
+                    :blurb "Eric Raymond sa \"Lisp is worth learning for the
+                            profound enlightenment experience you will have when
+                            you finally get it; that experience will make you a
+                            better programmer for the rest of your days, even if
+                            you never actually use Lisp itself a lot.\" Hva i
+                            all verden skal det bety? Denne artikkelen har en
+                            bra innfallsvinkel for å forklare nettopp det."
+                    :link {:url "http://www.defmacro.org/ramblings/lisp.html"
+                           :text "Les bloggposten"}
+                    :tech [:lisp :clojure :emacs :elisp]}]
 
  :hobbies [{:title "Brettspill"
             :description "Det er mer enn Monopol og Ludo i verden. Har
