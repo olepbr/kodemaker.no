@@ -14,9 +14,9 @@
     [:div.lastUnit
      (to-html (:body section))]]])
 
-(defn- render-reference [{:keys [img url logo name phone title body]}]
+(defn- render-reference [{:keys [img url logo name phone title body class]}]
   (let [quote (str "«" (str/trim body) "»")]
-    [:div.bd.iw
+    [:div.bd.iw {:class class}
      [:div.ref.mod
       [:div.ref-w
        [:div.ref-img [:img {:src img}]]

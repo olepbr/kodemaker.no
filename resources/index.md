@@ -5,6 +5,7 @@
 :name Bengt Lyng
 :phone +47 924 33 836
 :title Avdelingssjef, NSB Fellestjenester IT
+:class ref-top
 :body
 
 Kodemaker leverte ny teknisk løsning på kortere tid enn vi
