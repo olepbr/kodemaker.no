@@ -55,7 +55,7 @@
       [:div.bd
        [:div.ocm-item [:a {:href "/folk/"} "Folkene i Kodemaker"]]
        [:div.ocm-item [:a {:href "/kurs/"} "Foredrag og slikt"]]
-       [:div.ocm-item [:a {:href "/skjema/"} "Ta kontakt"]]]]
+       [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
        [:div#header
@@ -64,7 +64,7 @@
          [:div.mod.menu
           [:a {:href "/kurs/"} "Lær"]
           [:a {:href "/folk/"} "Folk"]
-          [:a {:href "/skjema/"} "Ta kontakt"]]
+          [:a {:href "/kontakt/"} "Ta kontakt"]]
          [:h1#logo.hn
           [:a.linkBlock {:href "/"} "Kodemaker"]]]]
        (h1-title (:title page))
