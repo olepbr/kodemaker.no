@@ -20,7 +20,7 @@
    => '("OOCSS | Kodemaker")))
 
 (fact
- "Får vi 200 på hele siten?"
+ "Får vi 200 på hele siten?" :slow
 
  (let [urls (keys (get-pages))]
    (doseq [url urls]

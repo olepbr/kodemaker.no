@@ -26,7 +26,7 @@ else
     git pull | grep -q -v 'Already up-to-date.' && changed=1
 
     if [ $changed ]; then
-        ../bin/lein with-profile test midje && passed=1
+        ../bin/lein with-profile test midje :filter -slow && ../bin/lein with-profile test midje :filter slow && passed=1
         if [ $passed ]; then
             log "Building"
             ../bin/lein build-site && built=1
