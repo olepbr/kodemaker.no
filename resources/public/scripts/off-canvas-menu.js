@@ -24,8 +24,8 @@
 
   function toggleOffCanvasMenu(e) {
     if (bd[className] === showMenu) {
+      bd[className] = "";
       if (!clickedOn("ocm", e.target)) {
-        bd[className] = "";
         return false;
       }
     } else if (clickedOn("ocb", e.target)) {
