@@ -23,7 +23,7 @@ google.maps.event.addDomListener(window, "load", function () {
 
 Vår besøksadresse er Dronning Eufemias gate 16, 9. etasje. Henvendelse i resepsjonen.
 
-[Noen andre du vil snakke med?](/)
+[Noen andre du vil snakke med?](/folk/)
 
 :aside
 
