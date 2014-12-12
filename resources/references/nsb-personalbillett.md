@@ -53,7 +53,7 @@ som Nettbuss, Jernbaneverket, Flytoget, og ROM Eiendom.
 
 Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Java kjørende på
 Jetty og [Tomcat](/tomcat/), med [Spring](/spring/), [Hibernate](/hibernate/),
-Liquibase og [MS SQL Server](/mssql/). Frontenden ble laget ved hjelpa av
+Liquibase og [MS SQL Server](/mssql/). Frontenden ble laget ved hjelp av
 [Wicket](/wicket/), [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
 
 --------------------------------------------------------------------------------

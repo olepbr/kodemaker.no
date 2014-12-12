@@ -6,6 +6,6 @@
                men er mye brukt og har utvilsomt satt sine spor for andre
                verktøy. Om du bruker [gradle](/gradle/), sbt eller leiningen, så
                ligger arven fra Maven der. Alle kan lage en `pom.xml` til deg,
-               og alle laster gjerne ned pakker fra Maven Central. Og så godt som
+               og alle laster gjerne ned pakker fra Maven Central. Så godt som
                alle [Java](/java/)-utviklere har klikket, klikket og klikket seg
                gjennom Maven sin mappeglade kodestruktur."}
