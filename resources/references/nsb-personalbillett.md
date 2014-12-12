@@ -52,8 +52,9 @@ som Nettbuss, Jernbaneverket, Flytoget, og ROM Eiendom.
 :body
 
 Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Java kjørende på
-Jetty og Tomcat, med Spring, Hibernate, Liquibase og MS SQL Server. Frontenden
-ble laget ved hjelpa av Wicket, JavaScript og Twitter Bootstrap.
+Jetty og [Tomcat](/tomcat/), med [Spring](/spring/), [Hibernate](/hibernate/),
+Liquibase og [MS SQL Server](/mssql/). Frontenden ble laget ved hjelpa av
+[Wicket](/wicket/), [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
 
 --------------------------------------------------------------------------------
 :type grid
@@ -89,16 +90,18 @@ som er NSBs sentrale billettsystem.
 
 alf-kristian
 
-Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec facilisis
-facilisis, est dui fermentum leo, quis tempor ligula erat quis odio. Nunc porta
-vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum. Aliquam posuere.
+Alf Kristian jobbet mest med hovedskjermbildene til systemet, det vil si søk og
+vedlikehold av personalbiletter. Fokuset hans var å gjøre disse skjermbildene så
+brukervennlige som mulig, og hadde derfor daglig kontakt med brukerne av
+systemet.
 
 per
 
-Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla,
-non luctus diam neque sit amet urna. Curabitur vulputate vestibulum lorem. Fusce
-sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate
-neque nulla lacinia eros.
+Per startet alene på prosjektet. I samråd med produkteier etablerte han
+skjelettet for den nye applikasjonen. Han satt opp et effektivt og
+automatiseringsvennlig utviklingsmiljø. Han implementerte en editor for
+forretningsregler, generering av billettrettigheter, og batchoverføring av
+billettrettigheter NSB’s sentrale billettsystem.
 
 --------------------------------------------------------------------------------
 :type illustrated-column
