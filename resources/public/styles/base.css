@@ -107,6 +107,7 @@ body {-webkit-text-size-adjust: 100%}
 .shy {color: #ccc; font-weight: normal;}
 
 img {display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
+img[src*=svg] { width/*\**/: 100%\9;}
 
 a, h1, .linkish {color: #d30707;}
 

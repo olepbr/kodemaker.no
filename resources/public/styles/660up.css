@@ -14,7 +14,7 @@ blockquote:before {left: 0.25em;}
 .ref-meta-left {float:left; width: 50%;}
 .ref-meta-right {overflow:hidden; *overflow:visible; *zoom:1;}
 .ref-meta .peeps {margin-left: 2px; text-align: right; margin-bottom: 0; padding-top: 10px; padding-right: 10px;}
-.ref-meta .peeps img {float: right;}
+.ref-meta .peeps img {float: right;width: 50px;}
 
 .large {font-size: 25px; line-height: 1.5;}
 
