@@ -32,7 +32,7 @@ ble valgt til å løse oppgaven i konkurranse med andre rammeavtaleleverandører
 :body
 
 En ny internapplikasjon for personalbilletter ble bygget opp av to Kodemakere
-i team. Personalsjef hos NSB var kundekontakt.
+i team. Utviklingen forgikk hos NSB over en 8 måneders periode.
 
 :team-size 2
 :factoid-1 2 Kodemakere
@@ -88,13 +88,6 @@ som er NSBs sentrale billettsystem.
 :title Kodemakere hos NSB
 :content
 
-alf-kristian
-
-Alf Kristian jobbet mest med hovedskjermbildene til systemet, det vil si søk og
-vedlikehold av personalbiletter. Fokuset hans var å gjøre disse skjermbildene så
-brukervennlige som mulig, og hadde derfor daglig kontakt med brukerne av
-systemet.
-
 per
 
 Per startet alene på prosjektet. I samråd med produkteier etablerte han
@@ -102,6 +95,13 @@ skjelettet for den nye applikasjonen. Han satt opp et effektivt og
 automatiseringsvennlig utviklingsmiljø. Han implementerte en editor for
 forretningsregler, generering av billettrettigheter, og batchoverføring av
 billettrettigheter NSB’s sentrale billettsystem.
+
+alf-kristian
+
+Alf Kristian jobbet mest med hovedskjermbildene til systemet, det vil si søk og
+vedlikehold av personalbiletter. Fokuset hans var å gjøre disse skjermbildene så
+brukervennlige som mulig, og hadde derfor daglig kontakt med brukerne av
+systemet.
 
 --------------------------------------------------------------------------------
 :type illustrated-column
