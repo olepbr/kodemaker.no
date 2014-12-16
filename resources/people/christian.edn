@@ -42,7 +42,17 @@
 
  :upcoming []
 
- :recommendations [{:title "React: Rethinking best-practices"
+ :recommendations [{:title "How to Use npm as a Build Tool"
+                    :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
+                           :text "Les artikkelen"}
+                    :tech [:javascript :node :npm :grunt :gulp]
+                    :blurb "Grunt, Gulp og andre JavaScript-baserte task runnere
+                            skaper flere problemer enn de løser. Denne artikkelen
+                            viser på forbilledlig vis hvordan npm i de aller fleste
+                            tilfeller er mer enn tilstrekkelig, og tilbyr konkrete
+                            alternativer til de mest vanlige bruksområdene for Grunt
+                            og dens like. Omfavn en smidigere frontend-stack du også!"}
+                   {:title "React: Rethinking best-practices"
                     :link {:url "http://www.youtube.com/watch?v=x7cQ3mrcKaY"
                            :text "Se foredraget"}
                     :tech [:javascript :design :react]
