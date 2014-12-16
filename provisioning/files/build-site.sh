@@ -29,7 +29,7 @@ else
         ../bin/lein with-profile test midje :filter -slow \
             && ../bin/lein with-profile test midje :filter slow-1 \
             && ../bin/lein with-profile test midje :filter slow-2 \
-            && \passed=1
+            && passed=1
         if [ $passed ]; then
             log "Building"
             ../bin/lein build-site && built=1
