@@ -45,7 +45,7 @@
  :recommendations [{:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
                            :text "Les artikkelen"}
-                    :tech [:javascript :node :npm :grunt :gulp]
+                    :tech [:javascript :nodejs :npm :grunt :gulp]
                     :blurb "Grunt, Gulp og andre JavaScript-baserte task runnere
                             skaper flere problemer enn de løser. Denne artikkelen
                             viser på forbilledlig vis hvordan npm i de aller fleste
