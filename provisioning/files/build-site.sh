@@ -26,7 +26,7 @@ else
     git pull | grep -q -v 'Already up-to-date.' && changed=1
 
     if [ $changed ]; then
-        ../bin/lein with-profile test midje :filter -slow-1 -slow-2 \
+        ../bin/lein with-profile test midje :filter -slow \
             && ../bin/lein with-profile test midje :filter slow-1 \
             && ../bin/lein with-profile test midje :filter slow-2 \
             && \passed=1
