@@ -19,9 +19,18 @@
    (-> result :body parse (select [:title]) first :content)
    => '("OOCSS | Kodemaker")))
 
-(fact
- "Får vi 200 på hele siten?" :slow
+(def split-index 75)
 
- (let [urls (keys (get-pages))]
+(fact
+ "Får vi 200 på hele siten? (del 1)" :slow-1
+
+ (let [urls (take split-index (keys (get-pages)))]
+   (doseq [url urls]
+     (-> (app {:uri url}) :status) => 200)))
+
+(fact
+ "Får vi 200 på hele siten? (del 2)" :slow-2
+
+ (let [urls (drop split-index (keys (get-pages)))]
    (doseq [url urls]
      (-> (app {:uri url}) :status) => 200)))
