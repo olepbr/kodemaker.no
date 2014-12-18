@@ -18,7 +18,7 @@
                     :tech [:coder :hardcore]
                     :blurb "Det er alltid kjekt med kolleger som både vet hva de driver
                            med og er hyggelig. Anbefales på det varmeste."
-                    :link {:url "http://www.kodemaker.no/mennesker/"
+                    :link {:url "http://www.kodemaker.no/folk/"
                            :text "Kodemakere"}}]
   :hobbies [{:title "Sykkel"
              :description "For noen år tilbake gikk jeg til anskaffelse av en terrengsykkel. Det
