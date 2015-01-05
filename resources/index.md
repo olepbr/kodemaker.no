@@ -277,13 +277,12 @@ http://zombietdd.com               /photos/tech/ztdd.png
 /magnus/                           /photos/people/magnus/side-profile-square.jpg
 /torstein/                         /photos/people/torstein/side-profile-square.jpg
 /design/                           /photos/tech/design-long.jpg 2x
-/stein/                            /photos/people/stein/side-profile-square.jpg
+/trygve/                           /photos/people/trygve/side-profile-square.jpg
 /andre/                            /photos/people/andre/side-profile-square.jpg
 /java/                             /photos/tech/java-long.svg 2x
 /kristoffer/                       /photos/people/kristoffer/side-profile-square.jpg
 /emacs/                            /photos/tech/emacs-square.png
-/oocss/                            /photos/tech/oocss.png
-/trygve/                           /photos/people/trygve/side-profile-square.jpg
+/oocss/                            /photos/tech/oocss-wide.png 2x
 /gry/                              /photos/people/gry/side-profile-square.jpg
 /docker/                           /photos/tech/docker-long.png 2x
 /kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
