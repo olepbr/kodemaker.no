@@ -28,6 +28,7 @@
                                 #"/photos/.*\.svg"
                                 #"/photos/.*\.png"
                                 #"/logos/.*\.png"
+                                #"/logos/.*\.svg"
                                 #"/icons/.*\.png"
                                 #"/icons/.*\.svg"
                                 #"/images/.*\.png"]))

@@ -1,0 +1,10 @@
+{:id :stasis
+ :name "Stasis"
+ :site "https://github.com/magnars/stasis"
+ :description "[Stasis](https://github.com/magnars/stasis) er et lite bibliotek
+               av funksjoner for å lage statisk genererte nettsteder
+               med [Clojure](/clojure/). I motsetning til mange andre verktøy i
+               denne kategorien, så er ikke Stasis noe rammeverk. Det legger
+               fint lite føringer. Du får både gleden og arbeidet med å kode
+               dine egne sider, velge ditt eget templatingspråk, sette opp din
+               egen konfigurasjon, og mer til."}

@@ -1,0 +1,14 @@
+{:id :optimus
+ :name "Optimus"
+ :illustration "/photos/tech/optimus.png"
+ :site "https://github.com/magnars/optimus"
+ :description "[Optimus](https://github.com/magnars/optimus) er en middleware
+               for frontend-optimalisering for [Clojure](/clojure/) sitt
+               webrammeverk Ring.
+
+               Den serverer dine statiske ressurser:
+
+               - i produksjon: som optimaliserte, sammenslåtte pakker.
+               - under utvikling: som uendrede, individuelle filer.
+
+               Med andre ord: Lett i utvikling. Kjapt i prod."}
