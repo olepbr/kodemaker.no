@@ -104,8 +104,9 @@ endres eller legges til, speiles det automatisk i dokumentasjonen.
 Nettstedet ble utviklet på nytt fra grunnen av. Ettersom vi skulle massere data
 hentet inn fra en rekke kilder valgte vi en tilnærming med funksjonell
 programmering med [Clojure](/clojure/). Vi skulle generere en relativt stabil
-innholdsside, så det ga mening å lage statiske sider med Stasis og Optimus -
-teknologier vi kjente godt fra å lage Kodemakers egne nettsider.
+innholdsside, så det ga mening å lage statiske sider med [Stasis](/stasis/) og
+[Optimus](/optimus/) - teknologier vi kjente godt fra å lage Kodemakers egne
+nettsider.
 
 --------------------------------------------------------------------------------
 :type grid
