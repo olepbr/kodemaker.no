@@ -8,12 +8,14 @@
 :title Tech Lead, SPiD
 :body
 
-Kodemaker overrasket oss med en langt bedre løsning på teknisk dokumentasjon enn
-vi hadde forventet. Nam euismod tellus id erat. Aenean in sem ac leo mollis
-blandit. Etiam vel tortor sodales tellus ultricies commodo.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-mus. Nunc porta vulputate tellus.
+Sammen med Kodemaker ønsket vi å øke kvaliteten på vår tekniske
+utviklerdokumentasjon. Vi ønsket et penere, mer responsivt uttrykk og hvis mulig
+å automatisere deler av prosessen. Prosjektet hadde ingen føringer på teknologi
+eller verktøy og Kodemaker var fra første dag en proaktiv partner som hjalp
+til å forme løsningen. Vi opplevde konsulentene som svært faglig dyktige og de
+ble fort en del av gjengen her. De hadde ingen problemer med å sette seg inn i
+våre problemstillinger og vi endte med en løsning som leverte mer enn vi i
+utgangpunktet hadde ambisjoner om å få til.
 
 --------------------------------------------------------------------------------
 :type illustrated-column
@@ -109,15 +111,15 @@ teknologier vi kjente godt fra å lage Kodemakers egne nettsider.
 :type grid
 :content
 
-/git/                              /photos/tech/git.svg
-/clojure/                          /photos/tech/clojure.svg
-/design/                           /photos/tech/design-long.jpg 2x
 /javascript/                       /photos/tech/js.svg
-/oocss/                            /photos/tech/oocss.png
-/nodejs/                           /photos/tech/nodejs-wide.jpg 2x
-/ansible/                          /photos/tech/ansible.png
+/clojure/                          /photos/tech/clojure.svg
+/responsive-design/                /photos/tech/rwd.jpg 2x
+/ansible/                          /photos/tech/ansible-red.svg
+/git/                              /photos/tech/git-gray.svg
+/oocss/                            /photos/tech/oocss-wide.png 2x
+/nodejs/                           /photos/tech/nodejs-simple.svg
 /optimus/                          /photos/tech/optimus.png
-/stasis/                           /photos/tech/stasis.png 2x
+/stasis/                           /photos/tech/stasis.svg 2x
 
 --------------------------------------------------------------------------------
 :type illustrated-column
