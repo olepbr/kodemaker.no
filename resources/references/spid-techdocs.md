@@ -120,7 +120,7 @@ nettsider.
 /oocss/                            /photos/tech/oocss-wide.png 2x
 /nodejs/                           /photos/tech/nodejs-simple.svg
 /optimus/                          /photos/tech/optimus.png
-/stasis/                           /photos/tech/stasis.svg 2x
+/stasis/                           /photos/tech/stasis-wide.svg 2x
 
 --------------------------------------------------------------------------------
 :type illustrated-column
