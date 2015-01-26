@@ -145,9 +145,9 @@
                           Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
- :side-projects [ {:title "MyTomatoes"
+ :side-projects [ {:title "mytomatoes"
                    :description "Et lite produktivitetsverktøy jeg smalt sammen
-                                på en uke, som nå har over 4,500 besøkende
+                                på en uke, som nå har over 4500 besøkende
                                 daglig - med 2,9 millioner 25 minutters
                                 arbeidsøkter registrert. Den første versjonen
                                 var kodet med PHP, men nylig lagde jeg en Clojure
