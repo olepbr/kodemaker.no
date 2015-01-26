@@ -91,8 +91,8 @@ endres eller legges til, speiles det automatisk i dokumentasjonen.
 - Det blir generert kode-eksempler for bruk av hvert API-endepunkt, basert på
   informasjonen som hentes ut av applikasjonen.
 
-> "Når SPiD la til et SDK for Node.JS, var det snakk om en times arbeid å legge
->  til hundrevis av eksempler på bruk av det nye SDKet."
+> "Når SPiD skulle legge til et SDK for Node.JS, var det snakk om en times
+>  arbeid å legge til hundrevis av eksempler på bruk av det nye SDKet."
 >
 > -- <cite>Magnar</cite>
 
