@@ -4,8 +4,8 @@
 :logo /logos/spid.svg
 :img /references/claes-bergsten.jpg
 :name Claes Bergsten
-:phone +47 000 00 000
-:title Tech Lead, SPiD
+:phone +47 916 68 984
+:title Tech Lead Payment, Schibsted Payment ID
 :body
 
 Sammen med Kodemaker ønsket vi å øke kvaliteten på vår tekniske
@@ -42,7 +42,7 @@ Utviklingen forgikk hos SPiD over en 6 måneders periode.
 
 :team-size 2
 :factoid-1 2 Kodemakere
-:factoid-2 000 timer / 02.2014-08.2014
+:factoid-2 950 timer / 02.2014-08.2014
 
 --------------------------------------------------------------------------------
 :type illustrated-column
