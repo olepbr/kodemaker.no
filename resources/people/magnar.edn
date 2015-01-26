@@ -145,37 +145,48 @@
                           Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
- :side-projects [{:title "Emacs Rocks!"
-                  :description "Jeg ble så begeistret for Emacs at jeg
+ :side-projects [ {:title "MyTomatoes"
+                   :description "Et lite produktivitetsverktøy jeg smalt sammen
+                                på en uke, som nå har over 4,500 besøkende
+                                daglig - med 2,9 millioner 25 minutters
+                                arbeidsøkter registrert. Den første versjonen
+                                var kodet med PHP, men nylig lagde jeg en Clojure
+                                backend som er litt morsommere å vedlikeholde."
+                   :illustration "/illustrations/side-projects/mytomatoes.jpg"
+                   :link {:url "http://mytomatoes.com" :text "Prøv app'en"}
+                   :tech [:clojure :javascript :jquery]}
+
+                  {:title "Emacs Rocks!"
+                   :description "Jeg ble så begeistret for Emacs at jeg
                                 trengte et utløp for all min
                                 entusiasme. Resultatet ble denne serien med
                                 3-minutters videoer av kule triks som
-                                nå er sett over to hundre tusen ganger."
-                  :illustration "/illustrations/side-projects/emacs-rocks.jpg"
-                  :link {:url "http://emacsrocks.com" :text "Se videoene"}
-                  :tech [:emacs]}
-                 {:title "ZombieTDD"
-                  :description "Bli med når jeg skal skrive et spill
+                                nå er sett over tre hundre tusen ganger."
+                   :illustration "/illustrations/side-projects/emacs-rocks.jpg"
+                   :link {:url "http://emacsrocks.com" :text "Se videoene"}
+                   :tech [:emacs]}
+                  {:title "ZombieTDD"
+                   :description "Bli med når jeg skal skrive et spill
                                 fra scratch med JavaScript og Node.JS - testdrevet
                                 etter beste evne. I løpet av serien parprogrammerer
                                 jeg med gjestestjernene Christian Johansen og
                                 Johannes Brodwall - noen av episodene er endatil
                                 tatt opp foran et live publikum."
-                  :illustration "/illustrations/side-projects/zombietdd.jpg"
-                  :link {:url "http://www.zombietdd.com" :text "Se videoene"}
-                  :tech [:javascript :tdd :testing :nodejs]}
-                 {:title "ZombieCLJ"
-                  :description "I denne oppfølgeren til ZombieTDD lager
+                   :illustration "/illustrations/side-projects/zombietdd.jpg"
+                   :link {:url "http://www.zombietdd.com" :text "Se videoene"}
+                   :tech [:javascript :tdd :testing :nodejs]}
+                  {:title "ZombieCLJ"
+                   :description "I denne oppfølgeren til ZombieTDD lager
                                 [Christian](/christian/) og jeg spill med
                                 Clojure og ClojureScript. Det går i
                                 parprogrammering hele veien. Og jaggu skriver vi
                                 ikke flere tester først. Skulle tro XP hadde noe
                                 for seg."
-                  :illustration "/illustrations/side-projects/zombieclj.jpg"
-                  :link {:url "http://www.zombieclj.no" :text "Se videoene"}
-                  :tech [:clojure :clojurescript :tdd :testing]}
-                 {:title "Adventur Delux"
-                  :description "Et tekstbasert eventyrspill jeg har
+                   :illustration "/illustrations/side-projects/zombieclj.jpg"
+                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
+                   :tech [:clojure :clojurescript :tdd :testing]}
+                  #_{:title "Adventur Delux"
+                     :description "Et tekstbasert eventyrspill jeg har
                                 skrevet på siden 1997, på størrelse
                                 med Ringenes Herre fire ganger. Som en
                                 ung lovende sverdsvinger går du rundt,
@@ -187,8 +198,8 @@
                                 [Groovy](/groovy/), samt den siste inkarnasjonen
                                 som har en [Clojure](/clojure/) backend til en
                                 Emacs Lisp frontend."
-                  :illustration "/illustrations/side-projects/adventur.jpg"
-                  :link {:url "http://www.adventur.no" :text "Prøv spillet"}}]
+                     :illustration "/illustrations/side-projects/adventur.jpg"
+                     :link {:url "http://www.adventur.no" :text "Prøv spillet"}}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
