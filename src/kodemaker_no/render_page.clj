@@ -11,7 +11,10 @@
    [:div.line
     [:div.unit.text-adornment
      [:p (when (:illustration section)
-           [:img {:src (:illustration section)}])]]
+           (if (:illustration-url section)
+             [:a {:href (:illustration-url section)}
+              [:img {:src (:illustration section)}]]
+             [:img {:src (:illustration section)}]))]]
     [:div.lastUnit
      (to-html (:body section))]]])
 

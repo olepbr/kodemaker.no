@@ -61,10 +61,23 @@ Techdocs-siten består av:
 --------------------------------------------------------------------------------
 :type illustrated-column
 :title Levende dokumentasjon
+:illustration /illustrations/references/spid-tech-docs.png
+:illustration-url http://techdocs.spid.no/
 :body
 
 Vi tok mange grep for å sørge for at dokumentasjonen denne gangen skulle holde
 seg komplett og oppdatert.
+
+- Kode-eksemplene i guidene hentes direkte fra de kjørende eksemplene. Dersom de
+  kjørende eksemplene oppdateres i forbindelse med en endring, så vil
+  oppdateringen automatisk også gjenspeiles i guiden.
+
+- Eksempler på respons fra serveren for hvert endepunkt hentes inn i
+  dokumentasjonen ved å utføre de faktiske kallene til en staging-server.
+  Resultatet formateres og vaskes for sensitive data.
+
+- Det blir generert kode-eksempler for bruk av hvert API-endepunkt, basert på
+  informasjonen som hentes ut av applikasjonen.
 
 --------------------------------------------------------------------------------
 :type ginormous-aside
@@ -79,17 +92,6 @@ endres eller legges til, speiles det automatisk i dokumentasjonen.
 --------------------------------------------------------------------------------
 :type illustrated-column
 :body
-
-- Kode-eksemplene i guidene hentes direkte fra de kjørende eksemplene. Dersom de
-  kjørende eksemplene oppdateres i forbindelse med en endring, så vil
-  oppdateringen automatisk også gjenspeiles i guiden.
-
-- Eksempler på respons fra serveren for hvert endepunkt hentes inn i
-  dokumentasjonen ved å utføre de faktiske kallene til en staging-server.
-  Resultatet formateres og vaskes for sensitive data.
-
-- Det blir generert kode-eksempler for bruk av hvert API-endepunkt, basert på
-  informasjonen som hentes ut av applikasjonen.
 
 > "Når SPiD skulle legge til et SDK for Node.JS, var det snakk om en times
 >  arbeid å legge til hundrevis av eksempler på bruk av det nye SDKet."

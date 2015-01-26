@@ -21,6 +21,7 @@
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
                                 #"/illustrations/.*\.jpg"
+                                #"/illustrations/.*\.png"
                                 #"/thumbs/.*\.jpg"
                                 #"/forside/.*\.jpg"
                                 #"/references/.*\.jpg"
