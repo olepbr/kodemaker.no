@@ -38,7 +38,7 @@ kontaktet.
 :body
 
 To Kodemakere i team leverte i 2014 et dedikert nettsted for teknisk dokumentasjon.
-Utviklingen forgikk hos SPiD over en 6 måneders periode.
+Utviklingen foregikk hos SPiD over en 6 måneders periode.
 
 :team-size 2
 :factoid-1 2 Kodemakere

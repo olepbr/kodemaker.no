@@ -32,7 +32,7 @@ ble valgt til å løse oppgaven i konkurranse med andre rammeavtaleleverandører
 :body
 
 En ny internapplikasjon for personalbilletter ble bygget opp av to Kodemakere
-i team. Utviklingen forgikk hos NSB over en 8 måneders periode.
+i team. Utviklingen foregikk hos NSB over en 8 måneders periode.
 
 :team-size 2
 :factoid-1 2 Kodemakere
