@@ -30,6 +30,7 @@
   {:body [:div.bd.iw.mvxl.large
           [:div.center
            (->> people
+                (remove :quit?)
                 (map-indexed render-cloud-person)
                 (interpose [:span " " [:span "&nbsp;"]]))]]}) ;; two spaces between names
 
