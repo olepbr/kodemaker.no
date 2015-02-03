@@ -252,37 +252,33 @@ Du får rett og slett Kodemaker.
 /odin/                             /photos/people/odin/side-profile-square.jpg
 /zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
 /august/                           /photos/people/august/side-profile-square.jpg
-/per/                              /photos/people/per/side-profile-square.jpg
-/javascript/                       /photos/tech/js.svg
 /stian/                            /photos/people/stian/side-profile-square.jpg
+/javascript/                       /photos/tech/js.svg
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
+/stig/                             /photos/people/stig/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.svg
 /nodejs/                           /photos/tech/nodejs-wide.jpg 2x
-/stig/                             /photos/people/stig/side-profile-square.jpg
-/react/                            /photos/tech/react.png
 /anders/                           /photos/people/anders/side-profile-square.jpg
+/react/                            /photos/tech/react.png
 /kristian/                         /photos/people/kristian/side-profile-square.jpg
 /kjetil/                           /photos/people/kjetil/side-profile-square.jpg
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
-/groovy/                           /photos/tech/groovy.png 2x
 /sten-morten/                      /photos/people/sten-morten/side-profile-square.jpg
+/groovy/                           /photos/tech/groovy.png 2x
 /finn/                             /photos/people/finn/side-profile-square.jpg
 /yen/                              /photos/people/yen/side-profile-square.jpg
-/gradle/                           /photos/tech/gradle.svg 2x
 /alf-einar/                        /photos/people/alf-einar/side-profile-square.jpg
-http://zombietdd.com               /photos/tech/ztdd.png
+/gradle/                           /photos/tech/gradle.svg 2x
 /ronny/                            /photos/people/ronny/side-profile-square.jpg
-/ruby/                             /photos/tech/ruby-square.png
+http://zombietdd.com               /photos/tech/ztdd.png
 /magnar/                           /photos/people/magnar/side-profile-square.jpg
+/ruby/                             /photos/tech/ruby-square.png
 /magnus/                           /photos/people/magnus/side-profile-square.jpg
 /torstein/                         /photos/people/torstein/side-profile-square.jpg
-/design/                           /photos/tech/design-long.jpg 2x
 /trygve/                           /photos/people/trygve/side-profile-square.jpg
+/responsive-design/                /photos/tech/rwd.jpg 2x
 /andre/                            /photos/people/andre/side-profile-square.jpg
-/java/                             /photos/tech/java-long.svg 2x
 /kristoffer/                       /photos/people/kristoffer/side-profile-square.jpg
-/emacs/                            /photos/tech/emacs-square.png
-/oocss/                            /photos/tech/oocss-wide.png 2x
 /gry/                              /photos/people/gry/side-profile-square.jpg
 /docker/                           /photos/tech/docker-long.png 2x
 /kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg

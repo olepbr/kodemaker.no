@@ -10,8 +10,7 @@
     [:span.linkish full-name]]])
 
 (defn- num-people [people]
-  (->> people
-       (count)))
+  (->> people (remove :quit?) (count)))
 
 (defn- compare-by-start-date [a b]
   (compare (:start-date a)
@@ -19,6 +18,7 @@
 
 (defn people-page [people]
   (let [sorted-peeps (->> people
+                          (remove :quit?)
                           (sort compare-by-start-date)
                           (reverse))]
     {:title {:h1 (str (num-people people) " blide mennesker")

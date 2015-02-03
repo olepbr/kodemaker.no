@@ -14,6 +14,7 @@
    :start-date Str
    :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
    (optional-key :administration?) Boolean
+   (optional-key :quit?) Boolean
 
    :phone-number Str
    :email-address Str

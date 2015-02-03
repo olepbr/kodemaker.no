@@ -64,6 +64,7 @@
                           (sort-by :start-date)
                           reverse)
         next-person (or (->> sorted-peeps
+                             (remove :quit?)
                              (drop-while #(not= % person))
                              (drop 1)
                              first)

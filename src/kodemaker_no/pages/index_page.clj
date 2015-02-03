@@ -12,6 +12,7 @@
 (defn- num-consultants [people]
   (->> people
        (remove :administration?)
+       (remove :quit?)
        (count)))
 
 (defn- compare-by-start-date [a b]
