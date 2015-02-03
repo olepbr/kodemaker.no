@@ -15,8 +15,8 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:favorites-at-the-moment [:javascript :groovy]
-       :want-to-learn-more [:clojure :clojurescript :react :reactive-programming]}
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :react]
+       :want-to-learn-more [:docker :boot :security]}
 
  :recommendations [{:title "Test-driven JavaScript Development"
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
@@ -58,25 +58,46 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://codewader.blogspot.no/2014/05/a-groovy-light-table-client-step-4.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/buddy_auth_part2.html"
+               :title "Securing Clojure Microservices using buddy - Part 2: WebApp authentication and authorization"
+               :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
+                       Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
+               :tech [:clojure :buddy :microservices]}
+              {:url "http://rundis.github.io/blog/2015/buddy_auth_part1.html"
+               :title "Securing Clojure Microservices using buddy - Part 1: Creating Auth Tokens"
+               :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
+                       Del 1 handler om å lage en service som generer signerte tokens for bruk i autentisering og autorisasjon."
+               :tech [:clojure :buddy :microservices]}
+              {:url "http://rundis.github.io/blog/2015/bootify-ring.html"
+               :title "Bootifying my ring app"
+               :blurb "[Boot.clj] (https://github.com/boot-clj/boot) er et spennende alternative til Leiningen for bygging av clojure applikasjoner.
+                       Jeg deler noen erfaringer med bruk av Boot.clj i et clojure ring prosjekt"
+               :tech [:clojure :boot]}
+              {:url "http://rundis.github.io/blog/2014/gr_lt_part5.html"
+               :title "A Groovy Light Table client - Step 5: Gradle dependencies in Light Table with dagre-D3"
+               :blurb "Del 5 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
+                       en dugandes Groovy plugin for Light Table. Del 5 kombinerer det rike api'et i Gradle
+                       og fleksibiliteten i Light Table til å vise dependency grafer vha D3. Kule greier !"
+               :tech [:clojurescript :groovy :gradle :lighttable]}
+              {:url "http://rundis.github.io/blog/2014/gr_lt_part4.html"
                :title "A Groovy Light Table client - Step 4: Exploring new avenues with Gradle"
                :blurb "Del 4 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                        en dugandes Groovy plugin for Light Table. Del 4 handler om implementasjon av Gradle støtte
                        for uthenting og bruk av classpath, samt opplisting og eksevkvering av tasks"
                :tech [:clojurescript :groovy :gradle :lighttable]}
-              {:url "http://codewader.blogspot.no/2014/05/a-groovy-light-table-client-step-3.html"
+              {:url "http://rundis.github.io/blog/2014/gr_lt_part3.html"
                :title "A Groovy Light Table client - Step 3: Running out of quick wins"
                :blurb "Del 3 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                        en dugandes Groovy plugin for Light Table. Del 3 handler om noen små forbedringer
                        for å gi en REPL lignende opplevelse med Groovy."
                :tech [:clojurescript :groovy :lighttable]}
-              {:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-2.html"
+              {:url "http://rundis.github.io/blog/2014/gr_lt_part2.html"
                :title "A Groovy Light Table client - Step 2: Evaluating Code"
                :blurb "Del 2 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                        en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
                        evaluert Groovy kode og vist resultater inline i Light Table."
                :tech [:clojurescript :groovy :lighttable]}
-              {:url "http://codewader.blogspot.no/2014/02/a-groovy-light-table-client-step-1.html"
+              {:url "http://rundis.github.io/blog/2014/gr_lt_part1.html"
                :title "A Groovy Light Table client - Step 1: Connecting the client"
                :blurb "Del 1 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                        en dugandes Groovy plugin for Light Table. I denne posten beskriver jeg hvordan
