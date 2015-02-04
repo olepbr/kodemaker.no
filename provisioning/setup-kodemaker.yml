@@ -32,7 +32,7 @@
      yum: name=varnish state=present
 
    - name: Configure varnish sysconfig
-     template: src=templates/varnish.j2 dest=/etc/sysconfig/varnish
+     template: src=templates/varnish.j2 dest=/etc/varnish/varnish.params
      notify:
       - restart varnish
 
