@@ -26,10 +26,7 @@ else
     git pull | grep -q -v 'Already up-to-date.' && changed=1
 
     if [ $changed ]; then
-        ../bin/lein with-profile test midje :filter -slow \
-            && ../bin/lein with-profile test midje :filter slow-1 \
-            && ../bin/lein with-profile test midje :filter slow-2 \
-            && passed=1
+        ../bin/lein with-profile test midje && passed=1
         if [ $passed ]; then
             log "Building"
             ../bin/lein build-site && built=1
@@ -38,7 +35,7 @@ else
                 rm -rf /var/www/kodemaker.no/current
                 mv build /var/www/kodemaker.no/current
                 log "Purging cache"
-                varnishadm -S /etc/varnish/secret -T localhost:6082 "purge req.url ~ (/|[.]html)$"
+                varnishadm -S /etc/varnish/secret -T localhost:6082 "ban req.url ~ (/|[.]html)$"
                 log "Done!"
             else
                 log "Build failed, aborting."

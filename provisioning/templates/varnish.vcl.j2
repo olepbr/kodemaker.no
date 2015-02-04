@@ -1,3 +1,5 @@
+vcl 4.0;
+
 backend default {
         .host = "127.0.0.1";
         .port = "8001";
@@ -12,8 +14,8 @@ sub vcl_recv {
         }
 }
 
-sub vcl_fetch {
-        if (req.url ~ "/cv/") {
+sub vcl_backend_response {
+        if (bereq.url ~ "/cv/") {
                 set beresp.ttl = 5m;
         } else {
                 set beresp.ttl = 1w;
