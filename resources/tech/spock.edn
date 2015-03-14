@@ -1,0 +1,10 @@
+{:id :spock
+ :name "Spock"
+ :site "https://github.com/spockframework/spock"
+ :description "Spock er et elegant og kraftig testrammeverk for Java- og Groovy-applikasjoner som er tuftet på
+ prinsippene i Behavior Driven Development. Du bruker det for å skrive lesbare og konsise tester gjennom et enkelt API.
+ Fordi det er basert på Groovy så slipper du å skrive unødvendig kode som er vanlig i Java-baserte enhetstester og gir deg en
+ strukturert spesifikasjon av hvordan du ønsker at programmet ditt skal oppføre seg.
+ Det følger også med et innebygd API for mocking og stubbing.
+
+ Spock er kompatibelt med JUnit, som betyr at tester skrevet med Spock kjører sømløst både i byggemiljøet og i utviklingsverktøyet ditt."}
