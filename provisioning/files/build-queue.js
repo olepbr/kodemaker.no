@@ -1,15 +1,15 @@
-var sys = require('sys')
+var sys = require('sys');
 var exec = require('child_process').exec;
 var http = require('http');
 
 var inProgress, anotherAfter;
 
 function runBuild() {
-  inProgress = exec("./build-site.sh", function (error, stdout, stderr) {
+  inProgress = exec("/home/deploy/build-site.sh", function (error, stdout, stderr) {
     if (error !== null) { console.log('exec error: ' + error); }
 
-    if (stdout && stdout.length) { console.log(stdout) };
-    if (stderr && stderr.length) { console.log(stderr) };
+    if (stdout && stdout.length) { console.log(stdout); }
+    if (stderr && stderr.length) { console.log(stderr); }
 
     inProgress = false;
     if (anotherAfter) {
