@@ -30,7 +30,13 @@
              :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
- :presentations [{:title "The Groovy Light Table Plugin"
+ :presentations [{:title "Clojure refactoring in Light Table"
+                  :blurb "Screencast som demonstrerer litt av min Light Table refactoring plugin"
+                  :tech [:clojurescript :lighttable :clojure]
+                  :urls {:video "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
+                         :source "https://github.com/rundis/clj-light-refactor"}
+                  :date "2015-03-07"}
+                 {:title "The Groovy Light Table Plugin"
                   :blurb "Screencast om bruk av Groovy og Gradle i Light Table"
                   :tech [:clojurescript :lighttable :groovy :gradle]
                   :urls {:video "http://www.youtube.com/watch?v=5ji8RR2A4gQ"}
@@ -58,7 +64,12 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/buddy_auth_part2.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/buddy_auth_part3.html"
+               :title "Securing Clojure Microservices using buddy - Part 3: Token revocation"
+               :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
+                       I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
+               :tech [:clojure :buddy :microservices]}
+              {:url "http://rundis.github.io/blog/2015/buddy_auth_part2.html"
                :title "Securing Clojure Microservices using buddy - Part 2: WebApp authentication and authorization"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                        Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
@@ -123,7 +134,15 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/lt-snippets"
+ :open-source-projects[{:url "https://github.com/rundis/clj-light-refactor"
+                        :name "Clj-Light-Refactor"
+                        :description "Plugin som gir Clojure refactoring support til Light Table"
+                        :tech [:lighttable :clojure :clojurescript]}
+                       {:url "https://github.com/rundis/AsciiLight"
+                        :name "AsciiLight"
+                        :description "Light Table plugin for live-edit visning av Asiidoctor dokumenter"
+                        :tech [:lighttable :clojurescript :asciidoc]}
+                       {:url "https://github.com/rundis/lt-snippets"
                         :name "lt-snippets"
                         :description "Snippet/templates plugin for Light Table"
                         :tech [:lighttable :clojurescript]}
@@ -141,7 +160,10 @@
                         :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
                         :tech [:groovy :gradle :buster-js :javascript]}]
 
- :open-source-contributions [{:name "gradle-ssh-plugin"
+ :open-source-contributions [{:name "buddy-auth"
+                              :url "https://github.com/funcool/buddy-auth"
+                              :tech [:clojure :security]}
+                             {:name "gradle-ssh-plugin"
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
