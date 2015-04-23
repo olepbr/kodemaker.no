@@ -11,7 +11,7 @@
      [:div.lastUnit
       [:h1.hn.mbn
        [:a {:href (:url person)}
-        (:full-name person)]]
+        (:first-name person)]]
       [:p.mts text]]]))
 
 (defn- render-participants [section people]
