@@ -62,7 +62,8 @@
                           (remove :administration?)
                           (sort compare-by-start-date)
                           (reverse))]
-    {:title {:h1 "Hvorfor akkurat Kodemaker?"}
+    {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
+             :arrow (:url (first sorted-peeps))}
      :sections (->> (io/resource "index.md")
                     slurp
                     mapdown/parse
