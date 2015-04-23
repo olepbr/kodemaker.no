@@ -39,7 +39,7 @@
    [:div.obstacle-header.mtl.rel
     [:div.bd.iw
      [:div.centered-column
-      [:h3.mbl.mtm.xxlarge.hns
+      [:h3.mbl.mtm.xxxlarge.hns
        [:span.nowrap title-1] " " [:span.nowrap title-2]]]
      [:div#obs-hd-0]
      [:div#obs-hd-1]
@@ -62,8 +62,7 @@
                           (remove :administration?)
                           (sort compare-by-start-date)
                           (reverse))]
-    {:title {:h1 (str (num-consultants people) " kvasse konsulenter")
-             :arrow (:url (first sorted-peeps))}
+    {:title {:h1 "Hvorfor akkurat Kodemaker?"}
      :sections (->> (io/resource "index.md")
                     slurp
                     mapdown/parse

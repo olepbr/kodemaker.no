@@ -75,12 +75,17 @@
      (to-html body)]]
    [:hr]])
 
+(defn- render-mega-quote [{:keys [title]}]
+  [:div.bd.iw
+   [:div.xxlarge.hns.mod "&mdash; " title]])
+
 (defn render-section [section]
   [:div.body
    (case (:type section)
      "illustrated-column" (render-illustrated-column section)
      "centered-column" (render-centered-column section)
      "mega-heading" [:h1.hn.pth (:title section)]
+     "mega-quote" (render-mega-quote section)
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)
      "grid" (render-grid section)

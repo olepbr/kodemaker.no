@@ -75,7 +75,8 @@ p {margin-bottom: 1.3em;}
 .fpp {font-size: 11px;} /* front page photos */
 .fpp .linkish {display: block; padding-left: 3px;}
 
-.xxlarge {font-size: 40px;}
+.xxxlarge {font-size: 40px;}
+.xxlarge {font-size: 34px;}
 .xlarge {font-size: 28px;}
 .large {font-size: 20px;}
 .small {font-size: 14px; font-weight: normal;}
@@ -132,6 +133,8 @@ h4,h5 {font-weight: bold;}
 
 .near, h3, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h5+* {margin-top: 0 !important;}
+
+.mega-quote {font-size: 30px;}
 
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
