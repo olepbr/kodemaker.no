@@ -40,6 +40,18 @@ sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
 gjerne igjen når behovet oppstår.
 
 --------------------------------------------------------------------------------
+:type contact-form
+:body
+
+### Hva kan vi hjelpe deg med?
+
+Legg igjen kontaktinformasjon, så tar vår daglig leder
+[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
+
+:button Ja, la oss ta en prat, Kolbjørn
+:placeholder Skriv inn telefonnummer eller epost-adresse
+
+--------------------------------------------------------------------------------
 :type mega-quote
 :title Kodemaker er blant Norges beste på frontend!
 
@@ -105,23 +117,16 @@ våre problemstillinger og vi endte med en løsning som leverte mer enn vi i
 utgangpunktet hadde ambisjoner om å få til.
 
 --------------------------------------------------------------------------------
-:type centered-column
-:body
-
-For å hjelpe oss å plukke ut oppdrag vi har tro på, vil vi gjerne
-høre mer om deg og dine planer. La oss ta en prat!
-Vår daglige leder Kolbjørn Jetne tar kontakt med deg så snart han har mulighet.
-Stort sett vil du høre fra ham innen to arbeidsdager.
-
---------------------------------------------------------------------------------
 :type contact-form
 :body
 
-Altså, skriv inn telefonnummer eller epost-adresse:
+### Ta gjerne kontakt!
+
+Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
+så anbefaler vi gjerne andre. Det&nbsp;er&nbsp;en&nbsp;liten&nbsp;verden!
 
 :button Ja, la oss ta en prat, Kolbjørn
-
-
+:placeholder Skriv inn telefonnummer eller epost-adresse
 
 --------------------------------------------------------------------------------
 :type person-cloud

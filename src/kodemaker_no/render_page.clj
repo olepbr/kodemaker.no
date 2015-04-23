@@ -38,16 +38,16 @@
     (when (:title section) [:h3.mbl.xlarge.hns (:title section)])
     (to-html (:body section))]])
 
-(defn- render-contact-form [{:keys [body button]}]
+(defn- render-contact-form [{:keys [body button placeholder]}]
   [:div.inline-form.mbxl
    [:div.bd.iw
     [:form {:action "/send-mail"
             :method "POST"}
+     (to-html body)
      [:div.mod
-      body
       [:div.line
        [:div.unit.r-1of2
-        [:input.input {:type "text", :name "kontakt"}]]
+        [:input.input {:type "text", :name "kontakt", :placeholder placeholder}]]
        [:div.lastUnit
         [:input.btn.mtn.mls {:type "submit" :value button}]]]]]]])
 
