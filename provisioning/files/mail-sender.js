@@ -26,6 +26,9 @@ http.createServer(function (req, res) {
         if (params.oppstart) { info.push("Oppstart: " + params.oppstart);}
         if (params.kontakt) { info.push("Kontakt: " + params.kontakt);}
 
+        console.log(info.join("\n"));
+        console.log("");
+
         sendMail({
           from: config.from,
           to: config.to,
