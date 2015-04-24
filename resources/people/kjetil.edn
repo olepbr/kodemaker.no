@@ -12,7 +12,7 @@
             :linkedin "/in/kjetiljd"}
 
  :tech {:favorites-at-the-moment [:ansible :tdd :java :groovy :gradle :ci :cd :refactoring :utviklingsprosess :organisering-av-team :code-smells]
-        :want-to-learn-more [:javascript :clojure :linux :devops]}
+        :want-to-learn-more [:javascript :clojure :go :devops]}
 
  :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
@@ -26,11 +26,11 @@
  :projects      [{:customer    "Nye Deichman - Applikasjonsprosjektet"
                   :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
                   :years       [2014 2015 2016 2017]
-                  :tech        [:saltstack :dockerio :ubuntu :vagrant :golang :ruby :cucumber :watir :elasticsearch :koha :java :tdd]}
+                  :tech        [:saltstack :docker :ubuntu :vagrant :go :ruby :nodejs :javascript :cucumber :watir :elasticsearch :koha :git :java :tdd]}
                  {:customer    "FINN reise"
                   :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
                   :years       [2013 2014]
-                  :tech        [:java :groovy :cucumber :camel :gradle :solr]}
+                  :tech        [:java :groovy :cucumber :camel :gradle :solr :git]}
                  {:customer    "FINN jobb"
                   :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
                   :years       [2011 2012 2013]
