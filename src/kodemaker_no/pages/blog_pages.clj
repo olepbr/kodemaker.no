@@ -3,7 +3,8 @@
             [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
             [kodemaker-no.cultivate.blog-posts :refer [blog-post-path]]
-            [kodemaker-no.date :refer [format-dmy]]))
+            [kodemaker-no.date :refer [format-dmy]]
+            [kodemaker-no.pages.person-pages :refer [render-presence]]))
 
 (defn- published [blog-post]
   (format-dmy (:published blog-post)))
@@ -52,6 +53,9 @@
   {:title (:title blog-post)
    :illustration (:illustration blog-post)
    :aside (list
+           (when (seq (:presence blog-post))
+             [:div.bd
+              (render-presence (:presence blog-post))])
            [:p.shy (published blog-post)]
            (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)

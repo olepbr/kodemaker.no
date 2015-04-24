@@ -109,7 +109,7 @@
          :class (str "presence " (name (:id item)))
          :title (:title item)}]))
 
-(defn- render-presence [presence]
+(defn render-presence [presence]
   [:div.mod
    (keep #(render-presence-item % presence) presence-items)])
 
