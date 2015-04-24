@@ -22,22 +22,24 @@
         :using-at-work [:gradle :groovy :java :javascript]
         :want-to-learn-more [:clojurescript :ansible :docker]}
 
- :blog-posts [{:url "http://odinodin.io/2014-07-15-podcaster/"
+ :blog-posts [{:url "http://odinodin.no/2014-07-15-podcaster/"
                :title "Podcaster for programmerere"
                :blurb "Podcaster er en fin måte å utnytte tiden til noe fornuftig når man gjør kjedelige ting som å
                        pusse opp eller å sitte på toget. Her er en oversikt over de podcastene jeg helst hører
                        på om dagen."
                :tech [:clojure]}
-               {:url "http://odinodin.io/2014-07-01-clojure-map-map/"
-               :title "Mappe maps"
-               :blurb "Hvordan transformere nøkler, verdier eller begge deler i Clojure-maps?"
-               :tech  [:clojure]}
-               {:url   "http://odinodin.io/2013-06-29-get-git/"
+               {:url "http://odinodin.no/2015-03-14-canvas-attraction/"
+               :title "Canvas og tiltrekningskraft"
+               :blurb "Jeg leste en fantastisk interessant bok som handler om hvordan man kan lage digitale
+                       verdener basert på matematiske prinsipper, Nature of code.
+                       Den inspirerte meg til å visualisere et enkelt system med ClojureScript og Canvas"
+               :tech  [:clojurescript]}
+               {:url   "http://odinodin.no/2013-06-29-get-git/"
                 :title "Forstå Git"
                 :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med bøker, videoer og andre
                         ressurser som hjalp meg å forstå hvordan git fungerer."
                 :tech [:git]}
-               {:url "http://odinodin.io/2012-11-12-spock-and-spring/"
+               {:url "http://odinodin.no/2012-11-12-spock-and-spring/"
                 :title "Spock og Spring"
                 :blurb "Om du har en Spring-basert applikasjon og ønsker å teste den med Spock så er det kjekt å kjenne til
                        fallgruvene og hvordan du navigerer rundt de."
