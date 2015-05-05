@@ -4,6 +4,7 @@
  :start-date "2008-09-01"
  :description "Yen er en svært engasjert og kunnskapsrik person med stå-på-humør. Hun har en spesiell evne til å sette seg rask inn i forretningsdomene og forstå kundens behov. Hun har jobbet med store datamengder gjennom mange prosjekter og er en kløpper når det gjelder det å designe og modellere forretningskjernevirksomhet. Hun får svært gode skussmål fra alle sine tidligere oppdragsgivere."
 
+ :phone-number ""
  :email-address "yen@kodemaker.no"
  :presence {:cv "yen"
   	        :linkedin "/in/yenxu"}
