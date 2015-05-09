@@ -1,0 +1,64 @@
+{:id :eivind
+ :name ["Eivind" "Barstad" "Waaler"]
+ :title "Kodemaker"
+ :start-date "2015-09-01 00:09"
+ :description "Eivind liker å programmere :)"
+
+ :phone-number "+47 982 19 322"
+ :email-address "eivind@kodemaker.no"
+
+ :presence {:cv "eivind"
+            :twitter "eivindw"
+            :linkedin "/pub/eivind-barstad-waaler/0/410/b5a"
+            :stackoverflow "/users/562492/eivindw"
+            :github "eivindw"}
+
+ :tech {:using-at-work [:ansible :docker :clojure :javascript :angularjs]
+        :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
+        :want-to-learn-more [:react :haskell :consul]}
+
+ :recommendations [{:title "Tittel"
+                    :blurb "Beskrivelse."
+                    :link {:url "http://url.com"
+                           :text "Tekst.."}
+                    :tech [:web-performance :frontend]}]
+
+ :hobbies [{:title "Tittel"
+            :description "Markdown beskrivelse"
+            :illustration "/illustrations/hobbies/brettspill.jpg"}]
+
+ :side-projects [ {:title "Tittel"
+                   :description "Beskrivelse"
+                   :illustration "/illustrations/side-projects/mytomatoes.jpg"
+                   :link {:url "http://url.com" :text "Tekst"}
+                   :tech [:clojure :javascript :jquery]}]
+
+ :blog-posts [{:url "http://url.com"
+               :title "Tittel"
+               :blurb "Beskrivelse..."
+               :tech [:javascript]}]
+
+ :presentations [{:title "Tittel"
+                  :blurb "Beskrivelse"
+                  :date "2014-09-10"
+                  :tech [:clojure :clojurescript :react]
+                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}]
+
+ :open-source-projects [{:url "https://github.com/url"
+                         :name "navn"
+                         :description "Beskrivelse."
+                         :tech [:javascript :nodejs]}]
+
+ :open-source-contributions [{:name "navn"
+                              :url "https://github.com/url"
+                              :tech [:clojure]}]
+
+ :projects [{:customer "Kundenavn"
+             :description "Prosjektbeskrivelse"
+             :years [2014]
+             :tech [:clojure :ansible :responsive-design :stasis :optimus :midje]}]
+
+ :endorsements [{:author "Navn på kunde"
+                 :title "Tittel, Selskap"
+                 :quote "Sitat fra kunde"}]
+}
