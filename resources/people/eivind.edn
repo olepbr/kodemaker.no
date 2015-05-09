@@ -44,14 +44,22 @@
                   :tech [:clojure :clojurescript :react]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}]
 
- :open-source-projects [{:url "https://github.com/url"
-                         :name "navn"
-                         :description "Beskrivelse."
-                         :tech [:javascript :nodejs]}]
+ :open-source-projects [{:url "https://github.com/jenkinsci/grinder-plugin"
+                         :name "Jenkins Grinder Plugin"
+                         :description "Laget en plugin for kontinuerlig ytelsestesting i Jenkins med [Grinder](http://grinder.sourceforge.net/). Tanken med dette er å ha en enkel ytelsestest som kjøres regelmessig av Jenkins. Plugin vil tegne en graf som viser hvordan ytelsen endrer seg over tid."
+                         :tech [:java :jenkins]}
+                        {:url "https://github.com/bekkopen/NoCommons"
+                         :name "NoCommons"
+                         :description "Samling av Java-klasser for å dekke særnorsk funksjonalitet som fødselsnummer/orgnummer validering, norske helligdager, postnummer og bankkontonummer."
+                         :tech [:java]}
+                        {:url "http://sourceforge.net/projects/middlegen/"
+                         :name "Middlegen"
+                         :description "Det første open source prosjektet jeg deltok på. Middlegen var et verktøy for å generere kode fra database-skjema - hovedsaklig Hibernate mapping filer. Prosjektet er ikke lengre aktivt vedlikeholdt - funksjonaliteten er dekket av Hibernate Tools."
+                         :tech [:java :hibernate :database]}]
 
- :open-source-contributions [{:name "navn"
-                              :url "https://github.com/url"
-                              :tech [:clojure]}]
+ :open-source-contributions [{:name "Hazelcast"
+                              :url "https://github.com/hazelcast/hazelcast"
+                              :tech [:grid :java]}]
 
  :projects [{:customer "Kundenavn"
              :description "Prosjektbeskrivelse"
