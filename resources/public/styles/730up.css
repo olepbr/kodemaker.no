@@ -44,7 +44,7 @@ h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 .ref-img {padding-right: 1.5px;}
 .ref-txt {display: none;}
 .ref-w {float: left; width: 50%; vertical-align: top;}
-.ref-txt-2 {float: left; display: block; width: 50%; vertical-align: top; font-style: italic;}
+.ref-txt-2 {float: left; display: block; width: 50%; vertical-align: top; font-style: italic; line-height: 1.5;}
 .ref-top {margin-top: 40px;}
 
 .arrow {margin-top: 5px;}

@@ -108,7 +108,7 @@ har blitt veldig godt mottatt av brukerene.
 :body
 
 Sammen med Kodemaker ønsket vi å øke kvaliteten på vår tekniske
-utviklerdokumentasjon. Vi ønsket et penere, mer responsivt uttrykk og hvis mulig
+utvikler&shy;dokumentasjon. Vi ønsket et penere, mer responsivt uttrykk og hvis mulig
 å automatisere deler av prosessen. Prosjektet hadde ingen føringer på teknologi
 eller verktøy og Kodemaker var fra første dag en proaktiv partner som hjalp
 til å forme løsningen. Vi opplevde konsulentene som svært faglig dyktige og de

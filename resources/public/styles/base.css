@@ -178,7 +178,7 @@ blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolu
 
 .ref {border: 3px solid #222;}
 .ref-img {border-bottom: 3px solid #222;}
-.ref-txt {border-bottom: 3px solid #222; font-style: italic;}
+.ref-txt {border-bottom: 3px solid #222; font-style: italic; padding: 10px 20px; line-height: 1.5;}
 .ref-txt-2 {display: none;}
 .ref-card {display: table; width: 100%;}
 .ref-info {display: table-cell; text-align: right; width: 70%; vertical-align: top;}

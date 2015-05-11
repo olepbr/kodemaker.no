@@ -29,9 +29,11 @@
        [:div.ref-card
         [:div.ref-logo [:img {:src logo}]]
         [:div.ref-info.tight
-         [:h4 name]
+         [:h5 name]
          [:p title [:br] phone]]]]
-      [:div.ref-txt-2 [:p (to-html quote)]]]]))
+      [:div.ref-txt-2
+       [:div.ref-txt-2-wrap
+        (to-html quote)]]]]))
 
 (defn- render-centered-column [section]
   [:div.bd.iw
