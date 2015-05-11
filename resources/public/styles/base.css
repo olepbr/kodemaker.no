@@ -142,7 +142,8 @@ h4,h5 {font-weight: bold;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
 
 .obstacle-header,
-.inline-form {background: #eaeae8;}
+.inline-form {background: #eaeae8; line-height: 1.5;}
+.inline-form h3 {line-height: 1.7;}
 
 .obstacle-header {border-top: 3px solid #222; border-bottom: 3px solid #222;}
 

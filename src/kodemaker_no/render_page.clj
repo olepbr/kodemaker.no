@@ -52,7 +52,7 @@
        [:div.unit.r-1of2
         [:input.input {:type "text", :name "kontakt", :placeholder placeholder}]]
        [:div.lastUnit
-        [:input.btn.mtn.mls {:type "submit" :value button}]]]]]]])
+        [:input.btn.mtn.mll {:type "submit" :value button}]]]]]]])
 
 (defn- render-grid-unit [url ^String img & [size]]
   [:div.gridUnit {:class (if (= "2x" size) "r-3-2" "r-6-4")}

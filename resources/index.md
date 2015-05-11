@@ -123,7 +123,7 @@ utgangpunktet hadde ambisjoner om å få til.
 ### Ta gjerne kontakt!
 
 Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
-så anbefaler vi gjerne andre. Det&nbsp;er&nbsp;en&nbsp;liten&nbsp;verden!
+<br class="hide-lt-660">så anbefaler vi gjerne andre. Det er en liten verden!
 
 :button Ja, la oss ta en prat, Kolbjørn
 :placeholder Skriv inn telefonnummer eller epost-adresse
