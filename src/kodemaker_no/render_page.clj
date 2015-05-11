@@ -41,7 +41,7 @@
     (when (:title section) [:h3.mbl.xlarge.hns (:title section)])
     (to-html (:body section))]])
 
-(defn- render-contact-form [{:keys [body button placeholder]}]
+(defn render-contact-form [{:keys [body button placeholder]}]
   [:div.inline-form.mbxl
    [:div.bd.iw
     [:form {:action "/send-mail"

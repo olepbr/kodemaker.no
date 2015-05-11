@@ -103,6 +103,8 @@
    :published Date ;; iso-8601 yyyy-mm-dd
    (optional-key :illustration) Path
    (optional-key :presence) Str
+   (optional-key :contact-form) Str
+   (optional-key :contact-form-button) Str
    :body Str})
 
 (def Article

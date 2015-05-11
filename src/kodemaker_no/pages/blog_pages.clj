@@ -4,7 +4,8 @@
             [kodemaker-no.formatting :refer [to-html]]
             [kodemaker-no.cultivate.blog-posts :refer [blog-post-path]]
             [kodemaker-no.date :refer [format-dmy]]
-            [kodemaker-no.pages.person-pages :refer [render-presence]]))
+            [kodemaker-no.pages.person-pages :refer [render-presence]]
+            [kodemaker-no.render-page :refer [render-contact-form]]))
 
 (defn- published [blog-post]
   (format-dmy (:published blog-post)))
@@ -59,6 +60,11 @@
            [:p.shy (published blog-post)]
            (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)
+               (when (:contact-form blog-post)
+                 (render-contact-form
+                  {:body (:contact-form blog-post)
+                   :button (:contact-form-button blog-post)
+                   :placeholder "E-post eller tlf"}))
                [:div#disqus_thread.mod]
                [:script (str "var disqus_identifier='" (:path blog-post) "';"
                              (disqus-script))])})
