@@ -134,7 +134,7 @@ h4,h5 {font-weight: bold;}
 .near, h3, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h5+* {margin-top: 0 !important;}
 
-.mega-quote {color: #b2b2af;}
+.mega-quote {color: #b2b2af; line-height: 1.0 !important;}
 .mega-quote strong {font-weight: normal; color: #666662;}
 
 

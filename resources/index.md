@@ -53,7 +53,7 @@ Legg igjen kontaktinformasjon, så tar vår daglig leder
 
 --------------------------------------------------------------------------------
 :type mega-quote
-:title Kodemaker er blant **Norges beste på frontend**
+:title Kodemaker er blant<br> **Norges beste på frontend**
 
 --------------------------------------------------------------------------------
 :page-title Schibsted Payment ID
