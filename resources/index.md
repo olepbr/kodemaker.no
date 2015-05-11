@@ -48,7 +48,7 @@ gjerne igjen når behovet oppstår.
 Legg igjen kontaktinformasjon, så tar vår daglig leder
 [Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
 
-:button Ja, la oss ta en prat, Kolbjørn
+:button Ta kontakt
 :placeholder Skriv inn telefonnummer eller epost-adresse
 
 --------------------------------------------------------------------------------
@@ -125,7 +125,7 @@ utgangpunktet hadde ambisjoner om å få til.
 Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
 <br class="hide-lt-660">så anbefaler vi gjerne andre. Det er en liten verden!
 
-:button Ja, la oss ta en prat, Kolbjørn
+:button Ta kontakt
 :placeholder Skriv inn telefonnummer eller epost-adresse
 
 --------------------------------------------------------------------------------
