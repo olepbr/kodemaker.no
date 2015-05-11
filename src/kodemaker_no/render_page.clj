@@ -1,6 +1,7 @@
 (ns kodemaker-no.render-page
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
+            [kodemaker-no.markup :as markup]
             [kodemaker-no.layout :refer [with-layout]]
             [kodemaker-no.render-old-page :as old]))
 
@@ -77,7 +78,8 @@
 
 (defn- render-mega-quote [{:keys [title]}]
   [:div.bd.iw
-   [:div.xxlarge.hns.mod "&mdash; " title]])
+   [:div.xxlarge.hns.mod.mega-quote "&ndash; "
+    (markup/strip-paragraph (to-html title))]])
 
 (defn render-section [section]
   [:div.body

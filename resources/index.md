@@ -21,7 +21,7 @@ Anbefales sterkt!
 
 --------------------------------------------------------------------------------
 :type mega-quote
-:title Kodemaker utmerker seg med spesielt høyt kompetansenivå!
+:title Kodemaker utmerker seg med spesielt **høyt kompetansenivå**
 
 --------------------------------------------------------------------------------
 :type reference
@@ -53,7 +53,7 @@ Legg igjen kontaktinformasjon, så tar vår daglig leder
 
 --------------------------------------------------------------------------------
 :type mega-quote
-:title Kodemaker er blant Norges beste på frontend!
+:title Kodemaker er blant **Norges beste på frontend**
 
 --------------------------------------------------------------------------------
 :page-title Schibsted Payment ID
@@ -76,7 +76,7 @@ at sluttproduktet ikke ville blitt like godt uten deres hjelp.
 
 --------------------------------------------------------------------------------
 :type mega-quote
-:title Kodemaker har vært en bærebjelke i vår satsning på nyutvikling!
+:title Kodemaker har vært **en bærebjelke i vår satsning** på nyutvikling
 
 --------------------------------------------------------------------------------
 :type reference
@@ -95,7 +95,7 @@ har blitt veldig godt mottatt av brukerene.
 
 --------------------------------------------------------------------------------
 :type mega-quote
-:title Kodemaker leverte mer enn vi hadde ambisjoner om å få til!
+:title **Kodemaker leverte mer** enn vi hadde ambisjoner om å få til
 
 --------------------------------------------------------------------------------
 :page-title Schibsted Payment ID

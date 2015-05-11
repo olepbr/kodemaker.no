@@ -134,13 +134,15 @@ h4,h5 {font-weight: bold;}
 .near, h3, h5 {margin-bottom: 0 !important;}
 .near+*, h3+*, h5+* {margin-top: 0 !important;}
 
-.mega-quote {font-size: 30px;}
+.mega-quote {color: #b2b2af;}
+.mega-quote strong {font-weight: normal; color: #666662;}
+
 
 .illu {float: right; max-width: 35%; margin-left: 10px;}
 .tinyIllu {width: 10%; min-width: 70px; float: right; margin-left: 15px;}
 
 .obstacle-header,
-.inline-form {background: #f4f4f4;}
+.inline-form {background: #eaeae8;}
 
 .obstacle-header {border-top: 3px solid #222; border-bottom: 3px solid #222;}
 
