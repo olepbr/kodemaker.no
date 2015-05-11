@@ -1,5 +1,5 @@
 :title Eivind Barstad Waaler
-:published 2015-04-25
+:published 2015-05.11
 :illustration /photos/blog/eivind-waaler.jpg
 :presence twitter eivindw, github eivindw, linkedin /pub/eivind-barstad-waaler/0/410/b5a
 :contact-form
