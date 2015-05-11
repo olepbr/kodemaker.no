@@ -19,7 +19,7 @@ Eivind er en svært motivert og positiv person som er aktiv i fagmiljøet. Han h
 
 De siste 5 årene har Eivind jobbet med modernisering av Skatteetatens datasystemer. Her er det brukt Java for å lage en distribuert mikro-tjeneste arkitektur. Eivind har vært sentral i utviklingen av flere komponenter for asynkronitet og jobb-kjøring. Han har snakket om erfaringer fra Skatteetaten knyttet til grid-teknologi og concurrency på de 3 siste JavaZone-konferansene, og nå sist på [flatMap i 2015](http://2015.flatmap.no/waaler.html#session).
 
-Eivind bor på Jar med en kone og to barn. På fritiden er han glad i å fotografere, seile, løpe og klatre. På vinterstid forsøker han å lære sønnen sin å kjøre snowboard. Mange av oss kjenner Eivind fra før, og vi vet han er en likandes kar med glimt i øyet. Vi er glade for at han valgte å begynne hos oss.
+Eivind bor på Jar med kone og to barn. På fritiden er han glad i å fotografere, seile, løpe og klatre. På vinterstid forsøker han å lære sønnen sin å kjøre snowboard. Mange av oss kjenner Eivind fra før, og vi vet han er en likandes kar med glimt i øyet. Vi er glade for at han valgte å begynne hos oss.
 
 Velkommen til Kodemaker!
 
