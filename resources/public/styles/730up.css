@@ -20,15 +20,15 @@ ol {margin-left: 40px;}
 .mount {padding: 10px;}
 .pth {padding-top: 40px;}
 
-#obs-hd-0 {position: absolute; bottom: 0px; right: 330px; width: 20px; height: 8px; background: #000;}
-#obs-hd-1 {position: absolute; bottom: 0px; right: 290px; width: 20px; height: 16px; background: #000;}
-#obs-hd-2 {position: absolute; bottom: 0px; right: 250px; width: 20px; height: 8px; background: #000;}
-#obs-hd-3 {position: absolute; bottom: 0px; right: 210px; width: 20px; height: 16px; background: #000;}
-#obs-hd-4 {position: absolute; bottom: 0px; right: 170px; width: 20px; height: 8px; background: #000;}
-#obs-hd-5 {position: absolute; bottom: 0px; right: 130px; width: 20px; height: 16px; background: #000;}
-#obs-hd-6 {position: absolute; bottom: 0px; right: 90px; width: 20px; height: 8px; background: #000;}
-#obs-hd-7 {position: absolute; top: 90px; right: 4px; width: 35px; height: 35px; background: #000; border-radius: 20px;}
-#obs-hd-8 {position: absolute; top: 0; right: 20px; height: 90px; width: 3px; background: #000;}
+#obs-hd-0 {position: absolute; bottom: 0px; right: 330px; width: 20px; height: 8px; background: #222;}
+#obs-hd-1 {position: absolute; bottom: 0px; right: 290px; width: 20px; height: 16px; background: #222;}
+#obs-hd-2 {position: absolute; bottom: 0px; right: 250px; width: 20px; height: 8px; background: #222;}
+#obs-hd-3 {position: absolute; bottom: 0px; right: 210px; width: 20px; height: 16px; background: #222;}
+#obs-hd-4 {position: absolute; bottom: 0px; right: 170px; width: 20px; height: 8px; background: #222;}
+#obs-hd-5 {position: absolute; bottom: 0px; right: 130px; width: 20px; height: 16px; background: #222;}
+#obs-hd-6 {position: absolute; bottom: 0px; right: 90px; width: 20px; height: 8px; background: #222;}
+#obs-hd-7 {position: absolute; top: 90px; right: 4px; width: 35px; height: 35px; background: #222; border-radius: 20px;}
+#obs-hd-8 {position: absolute; top: 0; right: 20px; height: 90px; width: 3px; background: #222;}
 
 h2.offset {padding: 5px 0; padding-left: 33.33333%;}
 h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
