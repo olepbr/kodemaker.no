@@ -30,7 +30,7 @@
         (:title page-content) => "Nice blog post"
         (:illustration page-content) => "/photos/sexy.jpg"
         (html (first body)) => (html [:p "This is nice, right?"])
-        (html (second body)) => (html [:div#disqus_thread.mod])))
+        (html (nth body 2)) => (html [:div#disqus_thread.mod])))
 
 (fact "Blog post page lists other posts in aside"
       (let [page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))
