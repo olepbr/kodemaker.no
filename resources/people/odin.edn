@@ -115,4 +115,20 @@
             :description "Noe av et det kjekkeste jeg vet er å sette utfor en velpreparert skibakke
                           når sola skinner. Det eneste jeg kommer på som topper det, er å pløye
                           pudder med snø til knærne. Da kjenner du at du lever."
-            :illustration "/illustrations/hobbies/odin-ski.jpg"}]}
+            :illustration "/illustrations/hobbies/odin-ski.jpg"}]
+
+ :open-source-projects [{:url "https://github.com/odinodin/canvas-fn"
+                        :name "Canvas-fn"
+                        :description "Canvas-baserte visualiseringer laget med ClojureScript"
+                        :tech [:clojurescript :canvas]}
+                        {:url "https://github.com/odinodin/cashflow"
+                         :name "Cashflow"
+                         :description "Regnskap for nettbanktransaksjoner"
+                         :tech [:clojure :react]}]
+
+ :open-source-contributions [{:name "grgit"
+                              :url "https://github.com/ajoberstar/grgit"
+                              :tech [:git :groovy]}
+                             {:name "clj-time"
+                              :url "https://github.com/clj-time/clj-time"
+                              :tech [:clojure]}]}
