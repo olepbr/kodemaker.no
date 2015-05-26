@@ -30,7 +30,13 @@
              :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
- :presentations [{:title "Clojure refactoring in Light Table"
+ :presentations [{:title "A pinch of Clojure love to Light Table"
+                  :blurb "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
+                  :tech [:clojurescript :lighttable :clojure]
+                  :urls {:video "https://youtu.be/1yk8nsjJxb0"
+                         :source "https://github.com/rundis/clj-light-refactor"}
+                  :date "2015-04-14"}
+                 {:title "Clojure refactoring in Light Table"
                   :blurb "Screencast som demonstrerer litt av min Light Table refactoring plugin"
                   :tech [:clojurescript :lighttable :clojure]
                   :urls {:video "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
@@ -64,7 +70,25 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/buddy_auth_part3.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/lt_react.html"
+               :title "Implementing a Clojure ns-browser in Light Table with React"
+               :blurb "Buzzword compliant post om hvordan man elegant kan bruke React.JS for implementering av view-logikk i Light Table.
+                       Posten går også i dybden på den grunnleggende arkiteturen i Light Table"
+               :tech [:clojure :clojurescript]}
+              {:url "http://rundis.github.io/blog/2015/clojure_dates.html"
+               :title "Taming those pesky datetimes in a clojure stack"
+               :blurb "En liten erfaringsrapport med tips og triks for hvordan håndtere datoer i Clojure/ClojureScript i en tjeneste/lagdelt arkitektur"
+               :tech [:clojure :clojurescript]}
+              {:url "http://rundis.github.io/blog/2015/buddy_auth_part4.html"
+               :title "Securing Clojure Microservices using buddy - Part 4: Secure and liberate a service app"
+               :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
+                       I del 4 ser vi på hvordan vi kan sikre en service app basert som benytter REST-biblioteket Liberator"
+               :tech [:clojure :buddy :microservices]}
+              {:url "http://rundis.github.io/blog/2015/clj_light_thread.html"
+               :title "Implementing a Clojure threading refactoring in ClojureScript using Light Table"
+               :blurb "En kort gjennomgang av hvordan man kan implementere en refaktoreringsfunksjon i Light Table vha clojure.zip"
+               :tech [:clojure :clojurescript :lighttable]}
+              {:url "http://rundis.github.io/blog/2015/buddy_auth_part3.html"
                :title "Securing Clojure Microservices using buddy - Part 3: Token revocation"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                        I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
@@ -134,7 +158,11 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/clj-light-refactor"
+ :open-source-projects[{:url "https://github.com/rundis/rewrite-cljs"
+                        :name "rewrite-cljs"
+                        :description "ClojureScript port av rewrite-clj. Bibliotek for traversering og omskriving av Clojure/ClojureScript/EDN- kode"
+                        :tech [:lighttable :clojure :clojurescript]}
+                       {:url "https://github.com/rundis/clj-light-refactor"
                         :name "Clj-Light-Refactor"
                         :description "Plugin som gir Clojure refactoring support til Light Table"
                         :tech [:lighttable :clojure :clojurescript]}
