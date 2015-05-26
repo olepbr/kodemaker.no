@@ -161,7 +161,7 @@
  :open-source-projects[{:url "https://github.com/rundis/rewrite-cljs"
                         :name "rewrite-cljs"
                         :description "ClojureScript port av rewrite-clj. Bibliotek for traversering og omskriving av Clojure/ClojureScript/EDN- kode"
-                        :tech [:lighttable :clojure :clojurescript]}
+                        :tech [:clojure :clojurescript]}
                        {:url "https://github.com/rundis/clj-light-refactor"
                         :name "Clj-Light-Refactor"
                         :description "Plugin som gir Clojure refactoring support til Light Table"
