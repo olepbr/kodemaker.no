@@ -20,7 +20,7 @@
 
  :tech {:favorites-at-the-moment [:clojure :gradle :unity3d :git]
         :using-at-work [:gradle :groovy :java :javascript]
-        :want-to-learn-more [:clojurescript :ansible :docker]}
+        :want-to-learn-more [:clojurescript :racket :docker]}
 
  :blog-posts [{:url "http://odinodin.no/2014-07-15-podcaster/"
                :title "Podcaster for programmerere"
@@ -94,7 +94,12 @@
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}}]
 
- :side-projects [{:title "Cashflow"
+ :side-projects [{:title "Much memo"
+                  :description "For å lære Swift så laget programmerte jeg et memory-spill til Apple Watch."
+                  :link {:url "http://www.hellobard.com/muchmemo/" :text "Sjekk appen"}
+                  :illustration "/illustrations/side-projects/muchmemo.jpg"
+                  :tech [:swift :ios]}
+                 {:title "Cashflow"
                   :description "Nettbanken min har ingen regnskapsfunksjon. Så det lager jeg på egen hånd, i Clojure."
                   :link {:url "https://github.com/Odinodin/cashflow" :text "Les kildekoden"}
                   :illustration "/illustrations/side-projects/cashflow.jpg"
