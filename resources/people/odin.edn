@@ -18,9 +18,9 @@
             :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:clojure :gradle :unity3d :git]
-        :using-at-work [:gradle :groovy :java :javascript]
-        :want-to-learn-more [:clojurescript :racket :docker]}
+ :tech {:favorites-at-the-moment [:react :clojurescript :gradle :git]
+        :using-at-work [:react :gradle :groovy :java :javascript]
+        :want-to-learn-more [:clojurescript :racket :docker :unity3d]}
 
  :blog-posts [{:url "http://odinodin.no/2014-07-15-podcaster/"
                :title "Podcaster for programmerere"
@@ -109,7 +109,7 @@
              :description "Bistod med å innføre Groovy og Spock som testrammeverk. Arbeid med akseptansetester,
                            byggautomatisering, frontend- og backendutvikling og testautomatisering."
              :years [2012 2013 2014]
-             :tech [:groovy, :java, :javascript, :spock, :spring, :hibernate, :spring-mvc, :hazelcast, :gradle, :maven, :git, :devops]}]
+             :tech [:groovy, :java, :javascript, :react, :spock, :spring, :hibernate, :spring-mvc, :hazelcast, :gradle, :maven, :git, :devops]}]
 
  :hobbies [{:title "Fotografering"
             :description "Kameraet mitt er stort sett med overalt. Du vet
