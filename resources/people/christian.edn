@@ -40,7 +40,12 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming []
+ :upcoming [{:title "EcmaScript 6: The close future of JavaScript"
+             :description "Et foredrag om hva som er nytt - både av funksjonalitet og artige WTFs - i den nært forestående neste versjonen av JavaScripts spec."
+             :tech []
+             :url "http://2015.javazone.no"
+             :location {:title "JavaZone 2015" :url "http://2015.javazone.no/"}
+             :date "2015-09-09"}]
 
  :recommendations [{:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
@@ -111,15 +116,32 @@
            {:title "Musikk"
             :description "Jeg har spilt i band siden jeg gikk på ungdomsskolen,
                           og holder fortsatt gitarspillet ved like gjennom
-                          bandet Execration. Jeg har alltid vært en sucker for
-                          aggressiv musikk, fra mine jyplingår som fan av
-                          Nirvana og skranglepunk til mine senere år som
-                          metal-connoisseur av ypperste rang."
+                          bandet Execration, som ble foræret en Spellemann for
+                          2014. Jeg har alltid vært en sucker for aggressiv
+                          musikk, fra mine jyplingår som fan av Nirvana og
+                          skranglepunk til mine senere år som metal-connoisseur
+                          av ypperste rang."
             :illustration "/illustrations/hobbies/execration.jpg"
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis"
+ :blog-posts [{:url "http://www.sitepoint.com/immutability-javascript/"
+               :title "Immutability in JavaScript"
+               :blurb "Introduksjon til immutability, og hvordan jobbe med immutable data i JavaScript"
+               :tech [:javascript :immutability]}
+              {:url "http://www.sitepoint.com/immutability-react/"
+               :title "Immutability in React"
+               :blurb "Artikkelen bygger videre på artikkelen om immutability i JavaScript, og viser immutable data i sving i en React-applikasjon."
+               :tech [:javascript :react :immutability]}
+              {:url "http://www.sitepoint.com/thinking-outside-dom-concepts-setup/"
+               :title "Thinking outside the DOM"
+               :blurb "Hvordan tenker man egentlig design i JavaScript? Gjelder
+              konsepter som løse koblinger og 'single responsibility' også på
+              klienten? Jeg vil så absolutt påstå at det gjør det, og denne
+              artikkelen belyser hvordan man kan angripe klient-spesifikke
+              problemer i JavaScript med gode design-prinsipper i hånda."
+               :tech [:javascript :dom]}
+              {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
                        websider i Clojure med blant annet biblioteket Stasis.
@@ -186,7 +208,15 @@
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
              :years [2013 2014]}]
 
- :presentations [{:title "ZombieCLJ: Live parprogrammering"
+ :presentations [{:title "You can't change this: Immutability in JavaScript"
+                  :blurb "Hva er immutability? Hva er hensikten? Kan man benytte
+                  seg av det i JavaScript? Hvordan? Hvilke konsekvenser har
+                  immutability for UI-programmering? Dette foredraget gir deg
+                  svar på disse spørsmålene, med mer til."
+                  :tech [:javascript :react :immutability]
+                  :date "2015-06-19"
+                  :urls {:video "http://ndcoslo.oktaset.com/t-31356"}}
+                 {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Se Christian og Magnar parprogrammere på nettspill
                   med Clojure og ClojureScript.
 
