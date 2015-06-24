@@ -215,7 +215,7 @@
                   svar på disse spørsmålene, med mer til."
                   :tech [:javascript :react :immutability]
                   :date "2015-06-19"
-                  :urls {:video "http://ndcoslo.oktaset.com/t-31356"}}
+                  :urls {:video "https://vimeo.com/131643024"}}
                  {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Se Christian og Magnar parprogrammere på nettspill
                   med Clojure og ClojureScript.
