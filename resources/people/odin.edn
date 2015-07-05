@@ -95,7 +95,7 @@
                   :urls {:video "https://vimeo.com/49476112"}}]
 
  :side-projects [{:title "Much memo"
-                  :description "For å lære Swift så laget programmerte jeg et memory-spill til Apple Watch."
+                  :description "For å lære Swift så programmerte jeg et memory-spill til Apple Watch."
                   :link {:url "http://www.hellobard.com/muchmemo/" :text "Sjekk appen"}
                   :illustration "/illustrations/side-projects/muchmemo.jpg"
                   :tech [:swift :ios]}
