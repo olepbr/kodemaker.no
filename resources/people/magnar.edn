@@ -22,8 +22,8 @@
             :stackoverflow "/users/1123/magnar"
             :github "magnars"}
 
- :tech {:using-at-work [:ansible :docker :clojure :javascript :angularjs]
-        :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
+ :tech {:using-at-work [:clojure :clojurescript :ansible :docker]
+        :favorites-at-the-moment [:clojure :ansible :responsive-design :emacs]
         :want-to-learn-more [:react :haskell :consul]}
 
  :recommendations [{:title "Web Performance Calendar"
