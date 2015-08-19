@@ -7,8 +7,7 @@
  :phone-number "+47 982 19 322"
  :email-address "eivind@kodemaker.no"
 
- :presence {:cv "eivind"
-            :twitter "eivindw"
+ :presence {:twitter "eivindw"
             :linkedin "/pub/eivind-barstad-waaler/0/410/b5a"
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
@@ -27,12 +26,6 @@
             :description "Markdown beskrivelse"
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
- :side-projects [ {:title "Tittel"
-                   :description "Beskrivelse"
-                   :illustration "/illustrations/side-projects/mytomatoes.jpg"
-                   :link {:url "http://url.com" :text "Tekst"}
-                   :tech [:clojure :javascript :jquery]}]
-
  :blog-posts [{:url "http://url.com"
                :title "Tittel"
                :blurb "Beskrivelse..."
@@ -43,30 +36,4 @@
                   :date "2014-09-10"
                   :tech [:clojure :clojurescript :react]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}]
-
- :open-source-projects [{:url "https://github.com/jenkinsci/grinder-plugin"
-                         :name "Jenkins Grinder Plugin"
-                         :description "Laget en plugin for kontinuerlig ytelsestesting i Jenkins med [Grinder](http://grinder.sourceforge.net/). Tanken med dette er å ha en enkel ytelsestest som kjøres regelmessig av Jenkins. Plugin vil tegne en graf som viser hvordan ytelsen endrer seg over tid."
-                         :tech [:java :jenkins]}
-                        {:url "https://github.com/bekkopen/NoCommons"
-                         :name "NoCommons"
-                         :description "Samling av Java-klasser for å dekke særnorsk funksjonalitet som fødselsnummer/orgnummer validering, norske helligdager, postnummer og bankkontonummer."
-                         :tech [:java]}
-                        {:url "http://sourceforge.net/projects/middlegen/"
-                         :name "Middlegen"
-                         :description "Det første open source prosjektet jeg deltok på. Middlegen var et verktøy for å generere kode fra database-skjema - hovedsaklig Hibernate mapping filer. Prosjektet er ikke lengre aktivt vedlikeholdt - funksjonaliteten er dekket av Hibernate Tools."
-                         :tech [:java :hibernate :database]}]
-
- :open-source-contributions [{:name "Hazelcast"
-                              :url "https://github.com/hazelcast/hazelcast"
-                              :tech [:grid :java]}]
-
- :projects [{:customer "Kundenavn"
-             :description "Prosjektbeskrivelse"
-             :years [2014]
-             :tech [:clojure :ansible :responsive-design :stasis :optimus :midje]}]
-
- :endorsements [{:author "Navn på kunde"
-                 :title "Tittel, Selskap"
-                 :quote "Sitat fra kunde"}]
 }
