@@ -2,7 +2,19 @@
  :name ["Eivind" "Barstad" "Waaler"]
  :title "Kodemaker"
  :start-date "2015-09-01 00:09"
- :description "Eivind liker å programmere :)"
+ :description "Eivind har mange års erfaring som utvikler og arkitekt på Java-baserte systemer.
+ 	      Han er pragmatisk og løsningsorientert, og elsker å finne gode løsninger på
+	      kompliserte utfordringer. Eivind er flink til å se saker fra flere sider og kan
+	      ofte komme opp med enklere alternativer. Han gir seg aldri før feilen er funnet!
+
+	      Eivind har erfaring med både fag- og personalledelse i tillegg til utvikling.
+	      Etter å ha jobbet i ca. 10 år tok han mastergrad ved UiO. Dette bidro til at han
+	      fikk øynene opp for alternative JVM-språk og funksjonell programmering. I tillegg
+	      skjønte han at det var programmering og systemutvikling som var viktigst, ikke
+	      ledelse.
+
+	      Eivind er aktiv i fagmiljøet og har blant annet holdt presentasjon på mer enn 10
+	      forskjellige JavaZone-konferanser."
 
  :phone-number "+47 982 19 322"
  :email-address "eivind@kodemaker.no"
