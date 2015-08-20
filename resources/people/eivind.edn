@@ -2,19 +2,29 @@
  :name ["Eivind" "Barstad" "Waaler"]
  :title "Kodemaker"
  :start-date "2015-09-01 00:09"
- :description "Eivind har mange års erfaring som utvikler og arkitekt på Java-baserte systemer.
- 	      Han er pragmatisk og løsningsorientert, og elsker å finne gode løsninger på
-	      kompliserte utfordringer. Eivind er flink til å se saker fra flere sider og kan
-	      ofte komme opp med enklere alternativer. Han gir seg aldri før feilen er funnet!
+ :description "*Eivind starter i Kodemaker 1. september.*
 
-	      Eivind har erfaring med både fag- og personalledelse i tillegg til utvikling.
-	      Etter å ha jobbet i ca. 10 år tok han mastergrad ved UiO. Dette bidro til at han
-	      fikk øynene opp for alternative JVM-språk og funksjonell programmering. I tillegg
-	      skjønte han at det var programmering og systemutvikling som var viktigst, ikke
-	      ledelse.
+               Han har mange års erfaring
+               som utvikler og arkitekt på diverse
+               Java-baserte systemer. Han er pragmatisk og
+               elsker å finne gode løsninger på kompliserte utfordringer. Eivind er
+               flink til å se saker fra flere sider og streber etter å komme opp
+               med enkle og elegante implementasjoner. Han gir seg aldri før feilen
+               er funnet!
 
-	      Eivind er aktiv i fagmiljøet og har blant annet holdt presentasjon på mer enn 10
-	      forskjellige JavaZone-konferanser."
+               Eivind har erfaring med både fag- og personalledelse i tillegg til
+               utvikling. Dette har gitt han mer forståelse for menneskene rundt
+               seg, men også gjort han enda mer sikker på at det er utvikling han
+               vil drive med.
+
+               Etter å ha jobbet i ca. 10 år tok Eivind mastergrad ved UiO.
+               Dette bidro til at han fikk øynene opp for alternative JVM-språk og
+               funksjonell programmering. De siste årene har han også jobbet en god
+               del med frontend - og mener selv å vite forskjellen på god og dårlig
+               JavaScript-kode.
+
+               Eivind er aktiv i fagmiljøet og har blant annet holdt presentasjon
+               på mer enn 10 forskjellige JavaZone-konferanser."
 
  :phone-number "+47 982 19 322"
  :email-address "eivind@kodemaker.no"
@@ -26,29 +36,32 @@
 
  :tech {:using-at-work [:java :akka :dropwizard :oracle :javascript :react]
         :favorites-at-the-moment [:scala :akka]
-        :want-to-learn-more [:clojure :haskell :reactive-streams :emacs]}
+        :want-to-learn-more [:clojure :clojurescript :haskell :reactive-streams :emacs]}
 
  :recommendations [{:title "Use the index, Luke"
                     :blurb "Veldig god innføring i database ytelse og tuning."
                     :link {:url "http://use-the-index-luke.com/"
-                           :text "A guide to database performance for developers"}
+                           :text "Til website"}
                     :tech [:database :performance]}
 		   {:title "Balancing Workload Across Nodes with Akka 2"
-		    :blurb "Artikkel som beskriver et mønster for utdeling av jobber etter
-		    	    [competing-consumers](http://www.enterpriseintegrationpatterns.com/CompetingConsumers.html)
-			    ved bruk av Akka."
+		    :blurb "Artikkel som beskriver en distribuert utdeling av jobber
+                            ved bruk av Akka, etter
+		    	    [competing-consumers](http://www.enterpriseintegrationpatterns.com/CompetingConsumers.html)-mønsteret."
 		    :link {:url "http://letitcrash.com/post/29044669086/balancing-workload-across-nodes-with-akka-2"
-		    	   :text "Balancing Workload Across Nodes with Akka 2"}
+		    	   :text "Les artikkel"}
 		    :tech [:akka]}
 		   {:title "Garbage Collection Tuning Guide"
-		    :blurb "Oracle sin dokumentasjon om tuning av Garbage Collection. Gir en svært god oversikt over
-		     	    de forskjellige alternative gc-implementasjonene og hvordan de brukes/konfigureres."
+		    :blurb "Oracle sin dokumentasjon om tuning av Garbage
+                            Collection. Gir en svært god oversikt over de
+                            forskjellige alternative gc-implementasjonene og hvordan
+                            de brukes/konfigureres."
 		    :link {:url "https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/"
-		    	   :text "Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide"}
+		    	   :text "Til website"}
 		    :tech [:java :gc :performance]}]
 
  :presentations [{:title "Calculating Taxes Using Functional Programming and Akka"
-                  :blurb "Presentasjon fra flatMap 2015 - om erfaringer med Akka og Java 8 ifm. prosjekt hos Skatteetaten."
+                  :blurb "Presentasjon fra flatMap 2015 - om erfaringer med Akka og
+                          Java 8 ifm. prosjekt hos Skatteetaten."
                   :date "2015-04-28"
                   :tech [:java :akka]
                   :urls {:video "https://vimeo.com/channels/flatmap2015/128468976"}}
@@ -56,15 +69,17 @@
 		  :blurb "Lyntale fra JavaZone 2014 rundt valg av JavaScript-rammeverk."
 		  :date "2014-09-10"
 		  :tech [:javascript]
-		  :urls {:video "http://2014.javazone.no/presentation.html?id=e00be9cf"}
+		  :urls {:video "http://2014.javazone.no/presentation.html?id=e00be9cf"}}
 		 {:title "Design for asynkronitet og høy ytelse!"
-		  :blurb "Presentasjon fra JavaZone 2014 om skalering og concurrent programmering i Java. Sammenligner
-		  	  forskjellige rammeverk og prøver å gi noen gode scenarier for bruk."
+		  :blurb "Presentasjon fra JavaZone 2014 om skalering og concurrent
+                          programmering i Java. Sammenligner forskjellige rammeverk
+                          og prøver å gi noen gode scenarier for bruk."
 		  :date "2014-09-10"
 		  :tech [:java :akka :performance :rxjava]
-		  :urls {:video "http://2014.javazone.no/presentation.html?id=7e7f10a7"}
+		  :urls {:video "http://2014.javazone.no/presentation.html?id=7e7f10a7"}}
 		 {:title "Fra Grid til Akka!"
-		  :blurb "Presentasjon fra JavaZone 2013 som sammenligner grid-produktet Hazelcast med Akka forhold til
+		  :blurb "Presentasjon fra JavaZone 2013 som sammenligner
+                          grid-produktet Hazelcast med Akka forhold til
 		    	  concurrency og ytelse."
 		  :date "2013-09-12"
 		  :tech [:java :akka :grid :hazelcast]
