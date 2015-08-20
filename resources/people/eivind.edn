@@ -24,28 +24,49 @@
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
 
- :tech {:using-at-work [:ansible :docker :clojure :javascript :angularjs]
-        :favorites-at-the-moment [:clojure :responsive-design :ansible :emacs]
-        :want-to-learn-more [:react :haskell :consul]}
+ :tech {:using-at-work [:java :akka :dropwizard :oracle :javascript :react]
+        :favorites-at-the-moment [:scala :akka]
+        :want-to-learn-more [:clojure :haskell :reactive-streams :emacs]}
 
- :recommendations [{:title "Tittel"
-                    :blurb "Beskrivelse."
-                    :link {:url "http://url.com"
-                           :text "Tekst.."}
-                    :tech [:web-performance :frontend]}]
+ :recommendations [{:title "Use the index, Luke"
+                    :blurb "Veldig god innføring i database ytelse og tuning."
+                    :link {:url "http://use-the-index-luke.com/"
+                           :text "A guide to database performance for developers"}
+                    :tech [:database :performance]}
+		   {:title "Balancing Workload Across Nodes with Akka 2"
+		    :blurb "Artikkel som beskriver et mønster for utdeling av jobber etter
+		    	    [competing-consumers](http://www.enterpriseintegrationpatterns.com/CompetingConsumers.html)
+			    ved bruk av Akka."
+		    :link {:url "http://letitcrash.com/post/29044669086/balancing-workload-across-nodes-with-akka-2"
+		    	   :text "Balancing Workload Across Nodes with Akka 2"}
+		    :tech [:akka]}
+		   {:title "Garbage Collection Tuning Guide"
+		    :blurb "Oracle sin dokumentasjon om tuning av Garbage Collection. Gir en svært god oversikt over
+		     	    de forskjellige alternative gc-implementasjonene og hvordan de brukes/konfigureres."
+		    :link {:url "https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/"
+		    	   :text "Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide"}
+		    :tech [:java :gc :performance]}]
 
- :hobbies [{:title "Tittel"
-            :description "Markdown beskrivelse"
-            :illustration "/illustrations/hobbies/brettspill.jpg"}]
-
- :blog-posts [{:url "http://url.com"
-               :title "Tittel"
-               :blurb "Beskrivelse..."
-               :tech [:javascript]}]
-
- :presentations [{:title "Tittel"
-                  :blurb "Beskrivelse"
-                  :date "2014-09-10"
-                  :tech [:clojure :clojurescript :react]
-                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}]
+ :presentations [{:title "Calculating Taxes Using Functional Programming and Akka"
+                  :blurb "Presentasjon fra flatMap 2015 - om erfaringer med Akka og Java 8 ifm. prosjekt hos Skatteetaten."
+                  :date "2015-04-28"
+                  :tech [:java :akka]
+                  :urls {:video "https://vimeo.com/channels/flatmap2015/128468976"}}
+		 {:title "Lyntale: Du MÅ ikke velge et rammeverk!"
+		  :blurb "Lyntale fra JavaZone 2014 rundt valg av JavaScript-rammeverk."
+		  :date "2014-09-10"
+		  :tech [:javascript]
+		  :urls {:video "http://2014.javazone.no/presentation.html?id=e00be9cf"}
+		 {:title "Design for asynkronitet og høy ytelse!"
+		  :blurb "Presentasjon fra JavaZone 2014 om skalering og concurrent programmering i Java. Sammenligner
+		  	  forskjellige rammeverk og prøver å gi noen gode scenarier for bruk."
+		  :date "2014-09-10"
+		  :tech [:java :akka :performance :rxjava]
+		  :urls {:video "http://2014.javazone.no/presentation.html?id=7e7f10a7"}
+		 {:title "Fra Grid til Akka!"
+		  :blurb "Presentasjon fra JavaZone 2013 som sammenligner grid-produktet Hazelcast med Akka forhold til
+		    	  concurrency og ytelse."
+		  :date "2013-09-12"
+		  :tech [:java :akka :grid :hazelcast]
+		  :urls {:video "https://vimeo.com/album/2525252/video/74553206"}}]
 }
