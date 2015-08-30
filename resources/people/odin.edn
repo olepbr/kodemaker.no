@@ -18,11 +18,16 @@
             :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:react :clojurescript :gradle :git]
+ :tech {:favorites-at-the-moment [:react :clojurescript :ansible]
         :using-at-work [:react :gradle :groovy :java :javascript]
-        :want-to-learn-more [:clojurescript :racket :docker :unity3d]}
+        :want-to-learn-more [:elm :racket :docker :unity3d]}
 
- :blog-posts [{:url "http://odinodin.no/2014-07-15-podcaster/"
+ :blog-posts [{:url "http://odinodin.no/2015-05-31-snake/"
+               :title "Interaktivt programmering"
+               :blurb "Den tradisjonelle arbeidsflyten til utviklere er for treg.
+                Interaktiv programmering er en lovende teknikk som gir deg en ekstremt kort feedback-loop."
+               :tech [:clojurescript :canvas]}
+              {:url "http://odinodin.no/2014-07-15-podcaster/"
                :title "Podcaster for programmerere"
                :blurb "Podcaster er en fin måte å utnytte tiden til noe fornuftig når man gjør kjedelige ting som å
                        pusse opp eller å sitte på toget. Her er en oversikt over de podcastene jeg helst hører
@@ -34,11 +39,6 @@
                        verdener basert på matematiske prinsipper, Nature of code.
                        Den inspirerte meg til å visualisere et enkelt system med ClojureScript og Canvas"
                :tech  [:clojurescript]}
-               {:url   "http://odinodin.no/2013-06-29-get-git/"
-                :title "Forstå Git"
-                :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med bøker, videoer og andre
-                        ressurser som hjalp meg å forstå hvordan git fungerer."
-                :tech [:git]}
                {:url "http://odinodin.no/2012-11-12-spock-and-spring/"
                 :title "Spock og Spring"
                 :blurb "Om du har en Spring-basert applikasjon og ønsker å teste den med Spock så er det kjekt å kjenne til
