@@ -208,7 +208,17 @@
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
              :years [2013 2014]}]
 
- :presentations [{:title "You can't change this: Immutability in JavaScript"
+ :presentations [{:title "EcmaScript 2015: The Close Future of JavaScript"
+                  :blurb "I juni 2015 ble siste versjon av EcmaScript - spec-en
+                  til JavaScript - ferdigstilt. EcmaScript 2015 (eller
+                  EcmaScript 6 som det en gang het) er tidenes største
+                  oppgradering av språket, og i dette foredraget gjennomgås en
+                  hel haug med eksempler på nye features og hvordan de kan
+                  brukes. Alt kodes live med hjelp av Emacs."
+                  :tech [:javascript]
+                  :date "2015-09-10"
+                  :urls {:video "https://vimeo.com/album/3556815/video/138956041"}}
+                 {:title "You can't change this: Immutability in JavaScript"
                   :blurb "Hva er immutability? Hva er hensikten? Kan man benytte
                   seg av det i JavaScript? Hvordan? Hvilke konsekvenser har
                   immutability for UI-programmering? Dette foredraget gir deg
