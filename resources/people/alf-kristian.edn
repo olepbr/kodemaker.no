@@ -90,7 +90,13 @@
                             :text "Offisielle sider"}
                     :tech  [:trening]}]
 
- :presentations   [{:title "Really understanding Clojure, getting into macros"
+ :presentations   [{:title "Erfaringer med Clojure og Scala (og Java 8)"
+                    :blurb "På Javazone 2015, snakket Alf Kristian erfaringer med de funksjonelle språkene på JVM'en. I tillegg sammenlignet han dem med \"FP\" i Java 8."
+                    :urls  {:video "https://vimeo.com/album/3556815/video/138955227"}
+                    :date "2015-08-09"
+                    :tech  [:clojure :scala :java8 :java :funksjonell-programmering]}
+
+                   {:title "Really understanding Clojure, getting into macros"
                     :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
                     :urls  {:video "http://vimeo.com/album/3031533/video/105758305"}
                     :date "2014-08-10"
