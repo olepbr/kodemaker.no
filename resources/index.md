@@ -134,24 +134,24 @@ Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
 :type grid
 :content
 
-/christian/                        /photos/people/christian/side-profile-square.jpg
+/eivind/                           /photos/people/eivind/side-profile-square.jpg
 /git/                              /photos/tech/git.svg
+/christian/                        /photos/people/christian/side-profile-square.jpg
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
-/odin/                             /photos/people/odin/side-profile-square.jpg
 /zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
+/odin/                             /photos/people/odin/side-profile-square.jpg
 /august/                           /photos/people/august/side-profile-square.jpg
-/stian/                            /photos/people/stian/side-profile-square.jpg
 /javascript/                       /photos/tech/js.svg
+/stian/                            /photos/people/stian/side-profile-square.jpg
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
-/stig/                             /photos/people/stig/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.svg
 /nodejs/                           /photos/tech/nodejs-wide.jpg 2x
-/anders/                           /photos/people/anders/side-profile-square.jpg
+/stig/                             /photos/people/stig/side-profile-square.jpg
 /react/                            /photos/tech/react.png
+/anders/                           /photos/people/anders/side-profile-square.jpg
 /kristian/                         /photos/people/kristian/side-profile-square.jpg
 /kjetil/                           /photos/people/kjetil/side-profile-square.jpg
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
-/sten-morten/                      /photos/people/sten-morten/side-profile-square.jpg
 /groovy/                           /photos/tech/groovy.png 2x
 /finn/                             /photos/people/finn/side-profile-square.jpg
 /yen/                              /photos/people/yen/side-profile-square.jpg
@@ -163,10 +163,10 @@ http://zombietdd.com               /photos/tech/ztdd.png
 /ruby/                             /photos/tech/ruby-square.png
 /magnus/                           /photos/people/magnus/side-profile-square.jpg
 /torstein/                         /photos/people/torstein/side-profile-square.jpg
-/trygve/                           /photos/people/trygve/side-profile-square.jpg
-/responsive-design/                /photos/tech/rwd.jpg 2x
 /andre/                            /photos/people/andre/side-profile-square.jpg
+/responsive-design/                /photos/tech/rwd.jpg 2x
 /kristoffer/                       /photos/people/kristoffer/side-profile-square.jpg
+/trygve/                           /photos/people/trygve/side-profile-square.jpg
 /gry/                              /photos/people/gry/side-profile-square.jpg
 /docker/                           /photos/tech/docker-long.png 2x
 /kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
