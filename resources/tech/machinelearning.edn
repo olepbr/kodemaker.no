@@ -1,0 +1,13 @@
+{:id :machinelearning
+ :name "Maskinlæring"
+ :illustration "/photos/tech/machinelearning.jpg"
+ :description "
+    Tradisjonellt løser datamaskiner problemer gjennom å bli fortalt hvordan de skal løse problemet.
+    Maskinlæring er en type algoritmer som *selv lærer* å løse problemet. Ofte skjer dette ved å finne mønstre i store datamengder. 
+
+    Maskinlæring har vært brukt med stor suksess i mange år til utfordringer som som skrift-, bilde- og tale-gjenkjenning, anbefalinger, svindel-gjenkjenning og veldig mye mer. I de senere år har man oppnådd oppsiktsvekkende resultater gjennom nye former for nevrale nettverk som går under betegnelsen [Dyp Læring](/deeplearning/). Dyp Læring er spesiellt god på å lære direkte av ubehandlede data.
+
+    Flere kodemakere har tatt kurset i [Maskinlæring på Stanford](https://www.coursera.org/learn/machine-learning) med Andrew Ng, 
+    og noen har også fulgt opp med flere kurs innenfor fagområdet.
+
+  "}

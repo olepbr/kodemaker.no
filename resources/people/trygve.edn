@@ -2,7 +2,11 @@
  :name ["Trygve" "Amundsen"]
  :title "Løsningsarkitekt og programmerer"
  :start-date "1997-02-01 00:00"
- :description "Trygve har lang og omfattende erfaring med systemutvikling. Han har jobbet med løsningsdesign, arkitektur og integrasjon, utarbeidet forstudier og kravanalyser, tilpasset utviklingsprosesser og metoder, mm.. Han ser allikevel på seg selv som systemutvikler og har høy grad av stolthet for håndverket. Han er entusiastisk opptatt av emnet, tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger innen faget. \n\n De siste 12 årene har han hovedsakelig jobbet med store og små systemer på Java plattformen. Han har opparbeidet seg solid erfaring med systemutvikling, arkitektur, integrasjon og design i komplekse homogene og heterogene miljøer. \n\n Han evner å finne enkle løsninger på kompliserte problemstillinger. Han er resultatorientert og målrettet, og leverer høy kvalitet der det trengs. Han trives i de fleste miljøer, og kommuniserer godt med kunder og kolleger. Han er diplomatisk og lyttende av natur, men står for sine meninger når det er påkrevet."
+ :description "
+    Trygve har lang og solid erfaring innen faget systemutvikling. Lang er en naturlig konsekvens av at han har jobbet med fagområdet i 30 år. Solid kommer av at han hele tiden har hatt et intenst faglig fokus som ikke har bleknet nevneverdig med tiden. 
+
+    Han tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han er resultatorientert og målrettet, og han evner å finne enkle løsninger på kompliserte problemstillinger. 
+    "
 
  :phone-number "9206 1819"
  :email-address "trygve@kodemaker.no"
@@ -12,21 +16,48 @@
             :github "trygvea"
             :linkedin "/in/trygveamundsen"}
             
- :tech {:favorites-at-the-moment [:haskell :deep-learning :groovy :grails]
-        :want-to-learn-more [:haskell :sparse-coding :react :reactive-programming]}
+ :tech {:using-at-work [:groovy]
+        :favorites-at-the-moment [:deeplearning :apache-spark :haskell :scala]
+        :want-to-learn-more [:functional-reactive-programming :massive-scalability]}
 
- :recommendations [{:title "Learn you a Haskell for great good"
-                    :link {:url "http://learnyouahaskell.com/"
-                    :text "Sjekk ut boka her"}
-                    :tech [:haskell :testing :design]
-                    :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer de små grå på en spennende måte. Denne boka er for de som har bakgrunn i mer imperative språk, men den gir deg en morsom og klarsynt innføring i små og store funksjonelle abstraksjoner." }]
+ :recommendations [{:title "Functional Programming in Scala"
+                    :blurb "Dette er boken for deg som vil lære funksjonell programmering fra bunnen av.",
+                    :link  {:url "https://www.manning.com/books/functional-programming-in-scala"
+                            :text "Sjekk ut boka her"}
+                    :tech  [:scala]}
+                   
+                   {:title "Apache spark"
+                    :blurb "Et flott verktøy for analyse av og læring gjennom store distribuerte datamengder. 
+                            Oppleves best gjennom Scala som Spark er skrevet i, men har apier til Java, Python og R. 
+
+                            Gjennom Spark REPL er det en fryd å ekseperimentere med og finne mønster i store mengder distribuerte data." 
+                    :link  {:url "https://spark.apache.org"
+                            :text "Sjekk ut siten her"}
+                    :tech  [:machinelearning :deeplearning :scala :apache-spark]}
+                   
+                   {:title "Learn you a Haskell for great good"
+                    :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer 
+                            de små grå på en spennende måte. Denne boka er for deg som har bakgrunn i mer imperative språk, men den gir deg en morsom og klarsynt innføring i små og store funksjonelle abstraksjoner."                     
+                    :link  {:url "http://learnyouahaskell.com/"
+                            :text "Sjekk ut boka her"}
+                    :tech  [:haskell]}]
                     
- :hobbies [{:title "Klatring"
-            :description "Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. Etterhvert som barna har grodd til har det blitt mindre og mindre av det, men nå øyner jeg håp for å øke aktiviteten igjen - 13-åringen har nemlig begynt å klatre jevnlig."
-                    :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
+ :hobbies [{:title "Maskinlæring"
+            :description "
+                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), og prøver så godt jeg kan å følge utviklingen på området. 
 
+                Spesiellt interessant er fagområdet ['Dyp læring'](/deeplearning/) (Deep Learning). 
+
+                Apache Spark er motoren du skal velge for stor-skala distribuert dataprosessering."
+            :illustration "/photos/tech/machinelearning.jpg"}
+           
+           {:title "Klatring"
+            :description "
+                Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. Etterhvert som barna har grodd til har det blitt mindre og mindre av det, men etterhvert som ungene blir større øyner jeg håp for å øke aktiviteten igjen."
+            :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
+           
            {:title "MC"
-            :description "Har vært ivrig motorsykkel-entusiast i mange år, selv om dette også er en aktivitet som ikke akkurat er enklelt å praktisere når man har barn. Men om noen år... :)"
+            :description "Har vært ivrig motorsykkel-entusiast i mange år, selv om dette også er en aktivitet som ikke akkurat er enkelt å praktisere når man har små barn. Men om noen år... :)"
             :illustration "/illustrations/hobbies/trygve-mc.jpg"}]
  
  :presentations [{:title "Groovy collection API"
@@ -34,9 +65,9 @@
                          :tech [:groovy]
                          :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
 
- :open-source-projects [{:url "https://github.com/trygvea/grails-class-diagram"
+ :open-source-projects [{:url "http://grails.org/plugin/class-diagram"
                          :name "Grails class diagram plugin"
-                         :description "The ClassDiagram plugin provides an UML-like diagram of your grails domain classes."
+                         :description "The ClassDiagram plugin provides an UML-like diagram of your grails domain classes. (Dette prosjektet er ikke oppdatert til nyere versjoner av grails)"
                          :tech [:groovy :grails]}]
                          
  :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]}

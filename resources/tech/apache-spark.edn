@@ -1,0 +1,7 @@
+{:id :ansible
+ :name "Apache Spark"
+ :illustration "/photos/tech/spark-logo.png"
+ :site "http://spark.apache.org/"
+ :description "
+    Apache Spark er en lynende rask motor for stor-skala dataprosessering.
+ "}

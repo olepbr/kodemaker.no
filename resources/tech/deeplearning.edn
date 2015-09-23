@@ -1,0 +1,12 @@
+{:id :deeplearning
+ :name "Dyp læring"
+ :illustration "/photos/tech/deep-learning.png"
+ :description "
+    Dyp Læring (eng. 'Deep Learning') er en fellesbetegnelse på nyere metoder innen [Maskinlæring](/machinelearning) der man tar i bruk nevrale nettverk på nye måter og i flere nivåer enn tidligere. De siste årene har Dyp Læring oppnådd oppsiktsvekkende resultater innen bl.a. bildegjenkjenning, talegjenkjenning, mm., samt mer generellt på kategorisering av umerkede (unlabelled) data. 
+
+    Dette har potensiale i seg til å endre mange fagområder i vesentlig grad. Mange ser nok for seg at veien mot dypere kunstig intelligens går gjennom Dyp Læring. Alle de store firmaene - Google, Facebook, Microsoft mmm. - støvsuger markedet for 'dyp' kunnskap om emnet.  Hva med å [google de siste nyhetene](https://www.google.no/search?q=deep+learning&tbm=nws&pws=0)? Det har sikkert skjedd mye fantastisk på området bare i dag!
+
+    Området er stort, og det finnes mange måter man kan tilegne seg mer kunnskap om emnet. Selve teoriene bak er relativt tungt tilgjengelig, men en fin ressurs for de som vil ha en praktisk tilnærming på jvm er [deeplearning4j.org](http://deeplearning4j.org). Her er det mange konkrete eksempler på bruk av Dyp Læring. 
+
+    Til tross for Dyp Læring's oppsiktsvekkende resultater - man bør ikke glemme at veldig mange problemer kan løses mye enklere med tradisjonell [maskinlæring](/machinelearning/).
+    "}
