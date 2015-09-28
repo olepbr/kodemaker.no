@@ -37,7 +37,16 @@
         :favorites-at-the-moment [:scala :akka]
         :want-to-learn-more [:clojure :clojurescript :haskell :reactive-streams :emacs]}
 
- :recommendations [{:title "Use the index, Luke"
+ :recommendations [{:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
+                    :blurb "Fantastisk bra artikkel om logg som sentralt system for integrasjon,
+                            konsistens og asynkron meldingsutveksling. Skrevet av mannen bak
+                            [Kafka](http://kafka.apache.org/). Bør leses av alle som har interesse
+                            av arkitektur hos større bedrifter med flere systemer som skal snakke
+                            sammen."
+                    :link {:url "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
+                           :text "Les artikkel"}
+                    :tech [:kafka :performance]}
+                   {:title "Use the index, Luke"
                     :blurb "Veldig god innføring i database ytelse og tuning."
                     :link {:url "http://use-the-index-luke.com/"
                            :text "Til website"}
