@@ -15,10 +15,24 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:favorites-at-the-moment [:clojure :clojurescript :react]
-       :want-to-learn-more [:docker :elm :security]}
+ :tech {:using-at-work [:groovy :grails :oracle]
+        :favorites-at-the-moment [:clojure :clojurescript :figwheel]
+        :want-to-learn-more [:docker :elm :reactive-programming]}
 
- :recommendations [{:title "Test-driven JavaScript Development"
+ :recommendations [{:title "Inventing on principle"
+                    :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
+                           :text "Se foredraget"}
+                    :tech [:tooling :design :kreativitet :observasjon]
+                    :blurb "Fantastisk foredrag av Brett Victor. Programmering er et kreativt yrke. Det er antageligvis mye lettere å være kreativ dersom man kan ta, se, observere og endre helt fritt og dynamisk på et kjørende program.
+                            Hadde det ikke vært digg å kunne spole tilbake det du nettopp gjorde i appen din, endre noen parametere og så kjøre på nytt. Kanskje tom for å sammenligne.
+                            Dette foredraget var bl.a med på å inspirere mye av tankene rundt verktøy som Light Table og programmeringspråket Elm"}
+                   {:title "Let's be Mainstream"
+                    :link {:url "https://www.youtube.com/watch?v=oYk8CKH7OhE"
+                           :text "Se foredraget"}
+                    :tech [:elm :functional-programming]
+                    :blurb "Evan Czaplicki (forfatter av Elm) forsøker å få med hardcore funksjonelle programmerere (med en hang for typer) til å begynne å kommunisere
+                            med utenforstående på mer forståelige termer. Etter å ha sett denne fikk jeg endelig lyst til å kikke på et typet funksjonelt språk."}
+                   {:title "Test-driven JavaScript Development"
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
                         :text "Se foredraget"}
                     :tech [:javascript :testing :design]
