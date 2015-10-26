@@ -16,7 +16,7 @@
             :linkedin "/in/mrundberget"}
 
  :tech {:favorites-at-the-moment [:clojure :clojurescript :react]
-       :want-to-learn-more [:docker :boot :security]}
+       :want-to-learn-more [:docker :elm :security]}
 
  :recommendations [{:title "Test-driven JavaScript Development"
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
@@ -29,6 +29,14 @@
              flott norsk natur. I sidesynet ser du plutselig en liten uregelmessighet i vannoverflaten. Du stopper for å kikke. Etter en liten stund ser du en ørret som forsiktig stiger til overflaten og slurper i seg en liten døgnflue. Pulsen stiger, du skifter flue og navigerer deg forsiktig i posisjon for å kaste ..."
              :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
+
+ :side-projects [{:title "Light Table"
+                  :description "Etter å ha vært en ivrig bruker av Light Table i 1,5 år, bestemte jeg meg sommeren 2015
+                                til å ta steget opp å joine opensource teamet til Light Table for å forsøke
+                                å gjenopplive prosjektet. Det er nok å ta tak i for å si det sånn !"
+                  :illustration "/photos/tech/lighttable.jpg"
+                  :link {:url "http://github.com/LightTable/LightTable" :text "Light Table på Github"}
+                  :tech [:clojure :clojurescript :nodejs :electron :javascript]}]
 
  :presentations [{:title "A pinch of Clojure love to Light Table"
                   :blurb "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
@@ -70,7 +78,17 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/lt_react.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
+               :title "ClojureScript - Performance tuning rewrite-cljs"
+               :blurb "Rewrite-cljs er mitt bibliotek for å traversere og omskrive clojure/clojurescript kode. I denne blogposten
+                       forteller jeg litt om hvordan jeg tunet ytelsen bl.a ved å komme nærmere jernet (JavaScript)"
+               :tech [:clojure :clojurescript :javascript]}
+              {:url "http://rundis.github.io/blog/2015/parembrace.html"
+               :title "Showcasing rewrite-cljs - Parembrace for Light Table"
+               :blurb "En liten fortelling om stegene jeg gikk igjennom for å lage en skikkelig paredit plugin for Clojure/ClojureScript i Light Table.
+                       Et nytt ClojureScript bibliotek ble unnfanget i processen."
+               :tech [:clojure :clojurescript]}
+              {:url "http://rundis.github.io/blog/2015/lt_react.html"
                :title "Implementing a Clojure ns-browser in Light Table with React"
                :blurb "Buzzword compliant post om hvordan man elegant kan bruke React.JS for implementering av view-logikk i Light Table.
                        Posten går også i dybden på den grunnleggende arkiteturen i Light Table"
