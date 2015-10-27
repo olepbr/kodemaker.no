@@ -49,7 +49,14 @@
                             greier. Underholdende og informativt!"
                     :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
                            :text "Se foredraget"}
-                    :tech [:react :javascript]}
+                    {:title "Literate interactive coding: Devcards"
+                     :blurb "Tester du UI-komponentene dine ved å klikke omkring
+                             i applikasjonen og gjenskape situasjoner manuelt?
+                             Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
+                             viser vei med Devcards."
+                     :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
+                            :text "Se foredraget"}}
+                    :tech [:clojurescript :frontend :react]}
                    {:title "The reuse dilemma"
                     :blurb "Johannes Brodwall tar et oppgjør med utviklernes
                             oppheng i gjenbruk av kode. Kan det bli *for* DRY?"
@@ -309,6 +316,7 @@
                              {:name "clj-v8"              :url "https://github.com/circleci/clj-v8"              :tech [:clojure]}
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
+                             {:name "devcards"            :url "https://github.com/bhauman/devcards"             :tech [:clojure]}
                              {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
                              {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
                              {:name "jstdutil"            :url "https://github.com/cjohansen/jstdutil"           :tech [:javascript]}
