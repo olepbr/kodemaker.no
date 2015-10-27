@@ -51,4 +51,6 @@
  :mule "Mule ESB"
  :webgl "WebGL"
  :cef "Chrome Embedded Framework"
+ :devops "DevOps"
+ :ecmascript-2015 "EcmaScript 2015"
  }

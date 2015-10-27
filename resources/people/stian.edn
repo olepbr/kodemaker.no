@@ -21,9 +21,9 @@
  			      :github "stiancor"
  			      :coderwall "stiancor"}
 
- :tech {:favorites-at-the-moment [:groovy :clojure :rails]
+ :tech {:favorites-at-the-moment [:groovy :docker :javascript]
             :using-at-work [:groovy :java :ruby :javascript]
-	          :want-to-learn-more [:machine-learning :clojure :javascript :docker]}
+	          :want-to-learn-more [:machine-learning :clojure :ecmascript-2015 :devops]}
 
  :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
@@ -33,6 +33,16 @@
                     :link {:url "http://www.codinghorror.com/blog/"
                            :text "Besøk bloggen"}
                     :tech [:teknologi :utvikling]}
+                   {:title "Machine Learning"
+                    :blurb "Ved bruk av datakraft og spennende algoritmer  kan man
+                            gjenkjenne håndskrift, anbefale varer basert på tidligere kjøp
+                            og kategorisere innhold i artikler automatisk. Machine learning
+                            gjør det mulig for systemer og lære basert på data uten å følge
+                            forhåndsprogrammerte instruksjoner. Dette 10-ukerskurset på Coursera
+                            er gratis og gir en solid innføring i temaet."
+                    :link {:url "https://www.coursera.org/course/ml/"
+                           :text "Ta kurset på Coursera"}
+                    :tech [:machine-learning]}
                    {:title "Ruby on Rails Tutorial"
                     :blurb "Rails er et rammeverk som både er elsket og hatet.
                     		Jeg mener at det til riktig type
@@ -43,16 +53,7 @@
                     :link {:url "http://ruby.railstutorial.org/"
                            :text "Bli en rails hipster"}
                     :tech [:ruby :rails]}
-                   {:title "Machine Learning"
-                    :blurb "Ved bruk av datakraft og spennende algoritmer  kan man
-                            gjenkjenne håndskrift, anbefale varer basert på tidligere kjøp
-                            og kategorisere innhold i artikler automatisk. Machine learning
-                            gjør det mulig for systemer og lære basert på data uten å følge
-                            forhåndsprogrammerte instruksjoner. Dette 10-ukerskurset på Coursera
-                            er gratis og gir en solid innføring i temaet."
-                    :link {:url "https://www.coursera.org/course/ml/"
-                           :text "Ta kurset på Coursera"}
-                    :tech [:machine-learning]}]
+                   ]
 
 
  :hobbies [{:title "Reising"
