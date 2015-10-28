@@ -18,6 +18,12 @@
         :using-at-work [:react :ecmascript-2015 :jspm :sass :groovy :grails]
         :want-to-learn-more [:clojure :ansible :docker]}
 
+ :recommendations [{:title "This Developer's Life"
+                    :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
+                    :link {:url "http://thisdeveloperslife.com"
+                           :text "Hør podcasten"}
+                    :tech [:utvikling]}]
+
 :hobbies [{:title "Fallskjermhopping"
             :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på toalettet, i selskap.
             Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
