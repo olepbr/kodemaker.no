@@ -49,13 +49,14 @@
                             greier. Underholdende og informativt!"
                     :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
                            :text "Se foredraget"}
-                    {:title "Literate interactive coding: Devcards"
-                     :blurb "Tester du UI-komponentene dine ved å klikke omkring
+                    :tech [:react :javascript]}
+                   {:title "Literate interactive coding: Devcards"
+                    :blurb "Tester du UI-komponentene dine ved å klikke omkring
                              i applikasjonen og gjenskape situasjoner manuelt?
                              Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
                              viser vei med Devcards."
-                     :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
-                            :text "Se foredraget"}}
+                    :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
+                           :text "Se foredraget"}
                     :tech [:clojurescript :frontend :react]}
                    {:title "The reuse dilemma"
                     :blurb "Johannes Brodwall tar et oppgjør med utviklernes
