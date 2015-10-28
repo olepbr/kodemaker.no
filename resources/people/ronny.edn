@@ -14,8 +14,9 @@
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:javascript :groovy :grails]
-       :want-to-learn-more [:clojure :ansible :docker]}
+ :tech {:favorites-at-the-moment [:ecmascript-2015 :groovy :grails]
+        :using-at-work [:react :ecmascript-2015 :jspm :sass :groovy :grails]
+        :want-to-learn-more [:clojure :ansible :docker]}
 
 :hobbies [{:title "Fallskjermhopping"
             :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på toalettet, i selskap.

@@ -21,6 +21,7 @@
  :js-test-driver "JsTestDriver"
  :jsf "JSF"
  :jsp "JSP"
+ :jspm "jspm"
  :junit "JUnit"
  :lighttable "Light Table"
  :markedsforing "Markedsføring"
