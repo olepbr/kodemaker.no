@@ -34,12 +34,11 @@
           :text "Se foredraget"}
    :tech [:scheme :logic-programming]
    :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}
-  {:title "How to think about parallel programming: Not!"
-   :link {:url "http://www.infoq.com/presentations/Thinking-Parallel-Programming"
-          :text "Se foredraget"}
-   :tech [:design]
-   :blurb "Guy Steele forteller oss om \"the worst program I ever wrote\". En reise igjennom programmering og abstraksjonens historie, fra selv-modifiserende kode med hardkodede fysiske minneadresser, til garbage collection i moderne språk. Han forteller at den neste tingen vi bør la maskinen gjøre for oss, er parallelisering av kode, akkurat som vi nå lar språkene gjøre linking og minnehåndtering for oss. Dette demonstreres ved språket hans, Fortress."}]
-
+  {:title "Locked doors, headaches, and intellectual need"
+   :link {:url "http://mkremins.github.io/blog/doors-headaches-intellectual-need/"
+          :text "Les bloggposten"}
+   :tech [:functional-programming :monads]
+   :blurb "Mitt anbefalte monad-tutorial. Her lærer du å fiske, i stedet for å få monad-burritoen servert, og får forklart hvorfor du og jeg ikke klarer å forstå monads."}]
 
  :hobbies
  [{:title "Dataspill"
