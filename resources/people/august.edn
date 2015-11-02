@@ -41,9 +41,9 @@
    :blurb "Mitt anbefalte monad-tutorial. Her lærer du å fiske, i stedet for å få monad-burritoen servert, og får forklart hvorfor du og jeg ikke klarer å forstå monads."}]
 
  :hobbies
- [{:title "Dataspill"
-   :description "Har aldri spilt aktivt i konkurranser og liknende, men jeg er nok over gjennomsnittlig interessert. Drømmer om å lage mitt eget dataspill en vakker dag."
-   :illustration "/illustrations/hobbies/dataspilling-dayz.jpg"}]
+ [{:title "Elite Dangerous"
+   :description "Er dypt inne i verdensrom-simulatoren Elite Dangerous for tiden. Jeg er generelt glad i simulasjoner, og Elite Dangerous simulerer like gjerne hele melkeveien. Er aktiv i Fuel Rats, en spiller-drevet gruppe som tilbyr akutthjelp for de som klarer å tømme romskipene sine for drivstoff midt ute i verdensrommet et sted."
+   :illustration "/illustrations/hobbies/elite_dangerous.png"}]
 
 
  :presentations
