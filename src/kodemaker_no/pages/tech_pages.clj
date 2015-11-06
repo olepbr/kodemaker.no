@@ -101,6 +101,7 @@
 (defn- tech-page [tech]
   {:title (:name tech)
    :illustration (:illustration tech)
+   :site (:site tech)
    :aside (maybe-include tech :ad render-ad)
    :lead (to-html (:description tech))
    :body (list

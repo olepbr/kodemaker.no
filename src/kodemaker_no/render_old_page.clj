@@ -21,7 +21,10 @@
     [:div.bd
      (when (:illustration page)
        [:div.illustration
-        [:img {:src (:illustration page)}]])
+        (if (:site page)
+          [:a {:href (:site page)}
+            [:img {:src (:illustration page)}]]
+          [:img {:src (:illustration page)}])])
      (:aside page)]]])
 
 (defn- two-column-page? [page]
