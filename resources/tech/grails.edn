@@ -5,10 +5,10 @@
  :description "Grails er et fullstack rammeverk på javaplattformen som opprinnelig var
  			   inspirert av Ruby on Rails. Grails gikk imidlertid i sin egen retning og har blitt et
  			   solid og kraftfult alternativ på javaplattformen. Man får fleksibiliteten og enkelheten 
- 			   til programmeringspråket Groovy, samtidig som hele økosystemet til JVMen er tilgjengelig.
+ 			   til programmeringspråket [Groovy](/groovy/), samtidig som hele økosystemet til JVMen er tilgjengelig.
  			   Grails bygges med [Gradle](/gradle/) og er basert på Spring Boot.
 			   
 Det finnes et vell av plugins som enkelt lar deg utvider med nye funksjonalitet. 
- 			   Kodemakere har et levende Grailsmiljø og har levert mange vellykkede prosjekter 
+ 			   Kodemaker har et levende Grailsmiljø og har levert mange vellykkede prosjekter
  			   ved bruk av denne teknologien. I tillegg finner du mange Open Source bidrag både i 
  			   selve rammeverket og i diverse plugins med Kodemakersignatur."}
