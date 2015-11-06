@@ -1,6 +1,7 @@
 :title Ta kontakt
 
 :lead
+<img src="/images/map-marker.png" id="map-marker" style="display:none">
 
 <div class="mod"><div id="map" class="map"></div></div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w&sensor=false"></script>
@@ -16,7 +17,7 @@ google.maps.event.addDomListener(window, "load", function () {
         position: kmhq,
         map: map,
         title: "<address>Dronning Eufemias gate 16, 0191 Oslo</address>",
-        icon: "/images/map-marker.png"
+        icon: document.getElementById("map-marker").src
     });
 });
 </script>
