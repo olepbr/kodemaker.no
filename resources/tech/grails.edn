@@ -4,7 +4,7 @@
  :site "https://grails.org/"
  :description "Grails er et fullstack rammeverk på javaplattformen som opprinnelig var
  			   inspirert av Ruby on Rails. Grails gikk imidlertid i sin egen retning og har blitt et
- 			   solid og kraftfullt alternativ på javaplattformen. Man får fleksibiliteten og enkelheten 
+ 			   solid og kraftfullt alternativ. Man får fleksibiliteten og enkelheten 
  			   til programmeringspråket [Groovy](/groovy/), samtidig som hele økosystemet til JVMen er tilgjengelig.
  			   Grails bygges med [Gradle](/gradle/) og er basert på Spring Boot.
 			   
