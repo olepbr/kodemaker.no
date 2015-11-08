@@ -17,18 +17,24 @@
                  :coderwall     "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:clojure :clojurescript :go :ruby :cocoa]
-                 :want-to-learn-more      [:swift :go :javascript]}
+ :tech          {:favorites-at-the-moment [:haskell :clojure :clojurescript]
+                 :want-to-learn-more      [:erlang :elixir :elm :swift :go]}
  
- :recommendations [
-{
-  :title "The Pragmatic Programmer: From Journeyman to Master"
+ :recommendations [{
+    :title "Clojure Applied"
+    :link {:url "https://pragprog.com/book/vmclojeco/clojure-applied"
+    :text "Info om boken"}
+    :tech [:clojure :software-craftsmanship]
+    :blurb "Dette er ikke en 'Lær Clojure' bok, men gir en hel tips og forslag til hvordan benytte Clojure på en bra og fornuftig måte. Jeg leste denne boken etter 
+           mitt første Clojure/ClojureScript prosjekt. Det hadde selvfølgelig vært nyttig å ha lest boken før prosjektet, men jeg er ikke sikker om alt hadde gitt så mye mening som
+           nå etter at jeg har følt noen av problemstillingene på kroppen. Uansett en bok jeg varmt vil anbefale."}
+    { 
+    :title "The Pragmatic Programmer: From Journeyman to Master"
     :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
     :text "Info om boken"}
     :tech [:software-craftsmanship]
-    :blurb "Denne boken kom ut allerede i 1999, så noen av teknologiene som er benyttet som eksempler er litt utdaterte, 
-    men budskapet i boka er fortsatt i høyeste grad aktuelle." 
-}]
+    :blurb "Denne boken kom ut allerede i 1999, så noen av teknologiene som er benyttet som eksempler er litt utdaterte, men budskapet i boka er fortsatt i høyeste grad aktuelle." 
+  }]
 
  :hobbies       [{:title        "Formel 1"
                   :description  "Jeg hadde som guttunge en plakat på veggen av Clay Regazzoni kjørende i en Ferrari F1 bil.
@@ -49,32 +55,6 @@
                 :blurb "I \"serien\" om bruk av AppCode så omhandler denne posten om navigering i IDE'en"
                 :tech [:cocoa :objc]
                 }]
-
-  :projects      [
-                  {:customer    "FINN Apps"
-                  :description "Var med på å utvikle to iOS applikasjoner for FINN. Den første appen baserte seg på eksisterende 
-                  API'er som ikke var spesielt beregnet for en slik app. Det var allikevel viktig for FINN at man fikk ut en på AppStore. 
-
-                  André hadde hovedansvaret for å integrere myVR sitt kart-API inn i applikasjonen. Dette tillot FINN.no å bruke sine
-                  egne kart, samt 3D kart av høy kvalitet. myVR sitt API er et generisk API skrevet i C++/Objective-C++ som kommuniserer 
-                  vha JSON meldinger. For å få et API som er mer likt Cocoa sine designprinsipper, så ble det utviklet et lag over myVR 
-                  som gir dette. 
-
-                  Appen som erstattet den første appen ble utviklet paralellt med utvikling av en tilsvarende app for Android.
-                  Denne gangen skulle man utvikle en app som både kjørte på iPhone og iPad. 
-                  Oppgavene bestod hovedsakling av implementering av selve iOS appen, samt utvikling av arkitekturen som tillater 
-                  at fellesfunksjonalitet trekkes ut i en 'intermediary', som ligger mellom appene og server API.
-
-                  André gikk i bresjen for at man skulle drive testdrevet utvikling i dette prosjektet, noe som så langt av en
-                  eller annen grunn ikke er så vanlig på iOS. Det har fungert veldig bra, og har gitt en betydelig forbedring 
-                  av kodekvalitet og arkitektur i applikasjonen.
-
-                  I disse prosjektene utviklet André flere gjenbrukbare komponenter som f.eks et eget GridView,
-                  \"SlideInOut skuff\" samt \"Paging\" som blir brukt flere steder i appen, og det derfor ansett
-                  som riktig og lage komponenter av disse."
-                  :years       [2011 2012 2013]
-                  :tech        [:ios :cocoa :appcode :xcode :objc :cocoapods :jenkins :ruby :objcplusplus]}
-                  ]
 
  :endorsements  [{:author "Arnstein Teigene"
                   :title  "Produkteier, FINN Apps"
