@@ -3,9 +3,9 @@
  :illustration "/photos/tech/elm.svg"
  :site "http://elm-lang.org/"
  :description
- "Elm er et funksjonelt typet språk for utvikling i nettlesere. Språket ble designet
+ "Elm er et funksjonelt, typet språk for utvikling i nettlesere. Språket ble designet
   av Evan Czaplicki i 2012. Elm er bygget rundt prinsippene for
-  [funksjonell reactive programming](https://en.wikipedia.org/wiki/Functional_reactive_programming).
-  Elm har som mål å gjøre web-programmering robust, enkelt å refaktorere og ikke minst morsomt.
+  [functional reactive programming](https://en.wikipedia.org/wiki/Functional_reactive_programming).
+  Elm har som mål å gjøre webutvikling robust, enkelt å refaktorere og ikke minst morsomt.
   Det kompilerer til [JavaScript](/javascript/) og har et voksende ekosystem. Syntaksen er inspirert av Haskell, men
-  det er forbausende enkelt å komme igang med å lage noe av faktisk nytteverdi !"}
+  det er forbausende enkelt å komme igang med å lage noe nyttig!"}
