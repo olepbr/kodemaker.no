@@ -154,7 +154,6 @@ Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
 /groovy/                           /photos/tech/groovy.png 2x
 /finn/                             /photos/people/finn/side-profile-square.jpg
-/yen/                              /photos/people/yen/side-profile-square.jpg
 /alf-einar/                        /photos/people/alf-einar/side-profile-square.jpg
 /gradle/                           /photos/tech/gradle.svg 2x
 /ronny/                            /photos/people/ronny/side-profile-square.jpg

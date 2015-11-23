@@ -8,12 +8,6 @@
 <q>Vi tilbyr de rette kandidatene en jobb med større faglig, sosialt og økonomisk
 utviklingspotensiale enn man finner i de fleste andre konsulenthus.</q>
 
-<a href="/yen/"><img src="/photos/people/yen/side-profile-cropped.jpg"></a>
-
-[Yen Xu](/yen/) <br>
-<q>Jeg skulle ønske det var flere jenter her!. Gutta er morsomme typer, og jeg er
-sikker på at de også hadde satt pris på flere jenter i miljøet vårt.</q>
-
 <a href="/torstein/"><img src="/photos/people/torstein/side-profile-cropped.jpg"></a>
 
 [Torstein Meland](/torstein/) <br>
