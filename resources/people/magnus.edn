@@ -16,8 +16,8 @@
             :linkedin "/in/mrundberget"}
 
  :tech {:using-at-work [:groovy :grails :oracle]
-        :favorites-at-the-moment [:clojure :clojurescript :figwheel]
-        :want-to-learn-more [:docker :elm :reactive-programming]}
+        :favorites-at-the-moment [:elm :clojure :clojurescript :figwheel]
+        :want-to-learn-more [:elm :reactive-programming :haskell]}
 
  :recommendations [{:title "Inventing on principle"
                     :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
@@ -52,7 +52,13 @@
                   :link {:url "http://github.com/LightTable/LightTable" :text "Light Table på Github"}
                   :tech [:clojure :clojurescript :nodejs :electron :javascript]}]
 
- :presentations [{:title "A pinch of Clojure love to Light Table"
+ :presentations [{:title "Elm plugin for Light Table"
+                  :blurb "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
+                  :tech [:elm :clojurescript :lighttable ]
+                  :urls {:video "https://youtu.be/B_eZw_GcM-4"
+                         :source "https://github.com/rundis/elm-light"}
+                  :date "2015-10-29"}
+                 {:title "A pinch of Clojure love to Light Table"
                   :blurb "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
                   :tech [:clojurescript :lighttable :clojure]
                   :urls {:video "https://youtu.be/1yk8nsjJxb0"
@@ -92,7 +98,12 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/elm_sweeper.html"
+               :title "Minesweeper - a brief journey from JavaScript/React to Elm"
+               :blurb "Jeg tar utgangspunkt i en minesveiper implementasjon fra [Christian Johansen](/christian/) i JavaScript/React og hviser hvordan man kan implementere det samme spillet i Elm.
+                       Bloggposten sammenligner flere implementasjonsdetajer og reflekterer kort om statisk vs. dynamisk typing."
+               :tech [:elm :javascript :react]}
+              {:url "http://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
                :title "ClojureScript - Performance tuning rewrite-cljs"
                :blurb "Rewrite-cljs er mitt bibliotek for å traversere og omskrive clojure/clojurescript kode. I denne blogposten
                        forteller jeg litt om hvordan jeg tunet ytelsen bl.a ved å komme nærmere jernet (JavaScript)"
@@ -190,7 +201,11 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/rewrite-cljs"
+ :open-source-projects[{:url "https://github.com/rundis/elm-light"
+                        :name "Elm Light Table Plugin"
+                        :description "Light Table plugin for Elm. Syntax-highlighting, repl/inline eval, elm reactor integrasjon mm"
+                        :tech [:elm :clojurescript]}
+                       {:url "https://github.com/rundis/rewrite-cljs"
                         :name "rewrite-cljs"
                         :description "ClojureScript port av rewrite-clj. Bibliotek for traversering og omskriving av Clojure/ClojureScript/EDN- kode"
                         :tech [:clojure :clojurescript]}
