@@ -18,6 +18,7 @@
                  }
 
  :tech          {:favorites-at-the-moment [:haskell :clojure :clojurescript]
+                 :using-at-work [:clojure :clojurescript :groovy :grails :ruby :docker :rails :javascript]
                  :want-to-learn-more      [:erlang :elixir :elm :swift :go]}
  
  :recommendations [{
