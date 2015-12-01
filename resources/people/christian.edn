@@ -19,8 +19,9 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:favorites-at-the-moment [:clojure :clojurescript :react :emacs :git]
-        :want-to-learn-more [:go :haskell :ansible :docker]}
+ :tech {:using-at-work [:javascript :es6 :docker :elasticsearch]
+        :favorites-at-the-moment [:elasticsearch :react :emacs :clojure]
+        :want-to-learn-more [:haskell :om-next]}
 
  :side-projects [{:title "Test-Driven JavaScript Development"
                   :description "Etter noen år med fordypning i og blogging om
@@ -40,12 +41,7 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming [{:title "EcmaScript 6: The close future of JavaScript"
-             :description "Et foredrag om hva som er nytt - både av funksjonalitet og artige WTFs - i den nært forestående neste versjonen av JavaScripts spec."
-             :tech []
-             :url "http://2015.javazone.no"
-             :location {:title "JavaZone 2015" :url "http://2015.javazone.no/"}
-             :date "2015-09-09"}]
+ :upcoming []
 
  :recommendations [{:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
@@ -164,7 +160,12 @@
                :tech [:lisp :elisp :emacs]}]
 
  :projects [{:customer "NRK - Redigeringsstøtte"
-             :description "Lager en lettvekts bilderedigeringskomponent (litt
+             :description "Søk i NRKs enorme mengder videoklipp - både
+            nettklipp, ting som har gått på TV og råstoff."
+             :tech [:javascript :elasticsearch :nodejs :react]}
+            {:customer "NRK -
+            Redigeringsstøtte"
+             :description "Laget en lettvekts bilderedigeringskomponent (litt
              effekter, crop, skalering, panorering) med web-teknologi.
              Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
              Premiere Pro og Quantell."
