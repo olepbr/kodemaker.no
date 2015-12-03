@@ -162,7 +162,8 @@
  :projects [{:customer "NRK - Redigeringsstøtte"
              :description "Søk i NRKs enorme mengder videoklipp - både
             nettklipp, ting som har gått på TV og råstoff."
-             :tech [:javascript :elasticsearch :nodejs :react]}
+             :tech [:javascript :elasticsearch :nodejs :react]
+             :years [2015]}
             {:customer "NRK -
             Redigeringsstøtte"
              :description "Laget en lettvekts bilderedigeringskomponent (litt
