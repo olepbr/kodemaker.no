@@ -7,7 +7,11 @@
  :phone-number "+47 951 24 632"
  :email-address "stig@kodemaker.no"
 
- :presence {:cv "stig"}
+ :presence {:cv "stig"
+            :twitter "stigmelling" 
+            :linkedin "/in/stigmelling"
+            :github "stigmelling"
+          }
 
  :hobbies [{:title "Orientering"
             :description "Orientering er utrolig gøy og fasinerende. Det å jobbe
@@ -25,6 +29,9 @@
                           rekkefølgen i de yngste klassene."
             :illustration "/illustrations/hobbies/stig-ski.jpg"
             :url "http://langrenn.ilh.no/"}]
+
+ :tech            {:favorites-at-the-moment [:grails :groovy :docker]
+                   :want-to-learn-more      [:openlayers :cesiumjs]}
 
  :side-projects [{:title "ROLtracker"
                   :description "Live-tracking av o-løpere med Android-telefoner
