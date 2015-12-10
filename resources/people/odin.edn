@@ -22,7 +22,19 @@
         :using-at-work [:react :gradle :groovy :ansible :javascript]
         :want-to-learn-more [:elm :d3js :docker :unity3d]}
 
- :blog-posts [{:url "http://odinodin.no/2015-05-31-snake/"
+ :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
+               :title "Tiltrekkende 3D på web"
+               :blurb "Hvordan kan man bruke WebGL og ClojureScript sammen"
+               :tech [:clojurescript :webgl]}
+              {:url "http://odinodin.no/2015-11-06-react-print/"
+               :title "Printe med React"
+               :blurb "Hvordan gjøre media queries fra en React-applikasjon med inline CSS."
+               :tech [:javascript :react]}
+              {:url "http://odinodin.no/2015-06-21-react-props/"
+               :title "Validering i React"
+               :blurb "Hvordan lage robuste React-komponenter"
+               :tech [:javascript :react]}
+              {:url "http://odinodin.no/2015-05-31-snake/"
                :title "Interaktiv programmering"
                :blurb "Den tradisjonelle arbeidsflyten til utviklere er for treg.
                 Interaktiv programmering er en lovende teknikk som gir deg en ekstremt kort feedback-loop."
@@ -50,14 +62,12 @@
                         ressurser som hjalp meg å forstå hvordan git fungerer."
                 :tech [:git]}]
 
- :recommendations [{:title "This Developer's Life"
-                    :blurb "Dette er min definitive favorittpodcast.
-                            Her får man servert interessante
-                            perspektiv på kjente tema innenfor programvareutvikling; krydret
-                            med intervjuer av dyktige utviklere."
-                    :link {:url "http://thisdeveloperslife.com"
-                           :text "Hør podcasten"}
-                    :tech [:utvikling]}
+ :recommendations [{:title "Bulding Microservices"
+                    :blurb "Microservices er virkelig i vinden om dagen og denne boken gir deg en bred forståelse om
+                    hva det egentlig dreier seg om."
+                    :link  {:url  "http://samnewman.io/books/building_microservices/"
+                            :text "Les boken"}
+                    :tech  [:micro-services :utvikling]}
                    {:title "Release it!"
                     :blurb "Michael Nygard deler dyrekjøpte erfaringer som kan hjelpe deg med å lage robuste
                             produksjonssystemer."
