@@ -32,6 +32,10 @@
 
  :tech            {:favorites-at-the-moment [:grails :groovy :docker]
                    :want-to-learn-more      [:openlayers :cesiumjs]}
+ :blog-posts [{:url "http://stigmelling.github.io/blog/blog/2015/nmultra.html"
+               :title "Liveresultater på NM Ultralang i orientering 2015"
+               :blurb "En introduksjon til en resultattjeneste som bare måtte virke ved første forsøk."
+               :tech [:javascript :aws]}]
 
  :side-projects [{:title "ROLtracker"
                   :description "Live-tracking av o-løpere med Android-telefoner
