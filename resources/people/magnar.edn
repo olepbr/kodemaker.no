@@ -262,7 +262,7 @@
                           i et utbrudd av entusiasme etter å ha jobbet med en
                           kodebase basert på disse prinsippene et par år."
                   :date "2015-12-16"
-                  :tech [:design :functional-programming :clojure]
+                  :tech [:design :functional-programming :immutability :clojure]
                   :urls {:video "http://www.youtube.com/watch?v=ag603CBk2TY"}}
                  {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Christian og jeg parprogrammerer på et nettspill med
