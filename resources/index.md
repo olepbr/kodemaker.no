@@ -40,18 +40,6 @@ sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
 gjerne igjen når behovet oppstår.
 
 --------------------------------------------------------------------------------
-:type contact-form
-:body
-
-### Hva kan vi hjelpe deg med?
-
-Legg igjen kontaktinformasjon, så tar vår daglig leder
-[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
-
-:button Ta kontakt
-:placeholder Skriv inn telefonnummer eller epost-adresse
-
---------------------------------------------------------------------------------
 :type mega-quote
 :title Kodemaker er blant<br> **Norges beste på frontend**
 
@@ -120,10 +108,10 @@ utgangpunktet hadde ambisjoner om å få til.
 :type contact-form
 :body
 
-### Ta gjerne kontakt!
+### Hva kan vi hjelpe deg med?
 
-Aldri feil å slå av en prat, og om vi ikke er den riktige partneren for deg,
-<br class="hide-lt-660">så anbefaler vi gjerne andre. Det er en liten verden!
+Legg igjen kontaktinformasjon, så tar vår daglig leder
+[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
 
 :button Ta kontakt
 :placeholder Skriv inn telefonnummer eller epost-adresse
