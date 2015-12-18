@@ -16,7 +16,7 @@
             :github "trygvea"
             :linkedin "/in/trygveamundsen"}
             
- :tech {:using-at-work [:groovy]
+ :tech {:using-at-work [:kafka :hadoop :hbase :apache-spark]
         :favorites-at-the-moment [:deeplearning :apache-spark :haskell :scala]
         :want-to-learn-more [:functional-reactive-programming :massive-scalability]}
 
