@@ -26,14 +26,14 @@
         :favorites-at-the-moment [:clojurescript :ansible :responsive-design :emacs]
         :want-to-learn-more [:react :elm :om-next]}
 
- :recommendations [{:title "Web Performance Calendar"
-                    :blurb "Min favorittjulekalender til helårsbruk.
-                            Full av triks, tips, testing og forskning
-                            om frontendytelse. Vel verdt å lese hvis
-                            du er opptatt av å lage raske websider."
-                    :link {:url "http://calendar.perfplanet.com"
-                           :text "Besøk kalenderen"}
-                    :tech [:web-performance :frontend]}
+ :recommendations [{:title "Literate interactive coding: Devcards"
+                    :blurb "Tester du UI-komponentene dine ved å klikke omkring
+                             i applikasjonen og gjenskape situasjoner manuelt?
+                             Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
+                             viser vei med Devcards."
+                    :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
+                           :text "Se foredraget"}
+                    :tech [:clojurescript :frontend :react]}
                    {:title "Simple Made Easy"
                     :blurb "Det er ikke lett å lage noe enkelt. Rich
                             Hickey snakker om forskjellen på nærliggende
@@ -43,6 +43,14 @@
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
                     :tech [:design :clojure]}
+                   {:title "Web Performance Calendar"
+                    :blurb "Min favorittjulekalender til helårsbruk.
+                            Full av triks, tips, testing og forskning
+                            om frontendytelse. Vel verdt å lese hvis
+                            du er opptatt av å lage raske websider."
+                    :link {:url "http://calendar.perfplanet.com"
+                           :text "Besøk kalenderen"}
+                    :tech [:web-performance :frontend]}
                    {:title "Building User Interfaces With Facebook's React"
                     :blurb "Steven Luscher har en herlig stil når han
                             i dette foredraget viser fram hvorfor React er bra
@@ -50,14 +58,6 @@
                     :link {:url "http://www.youtube.com/watch?v=1OeXsL5mr4g"
                            :text "Se foredraget"}
                     :tech [:react :javascript]}
-                   {:title "Literate interactive coding: Devcards"
-                    :blurb "Tester du UI-komponentene dine ved å klikke omkring
-                             i applikasjonen og gjenskape situasjoner manuelt?
-                             Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
-                             viser vei med Devcards."
-                    :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
-                           :text "Se foredraget"}
-                    :tech [:clojurescript :frontend :react]}
                    {:title "The reuse dilemma"
                     :blurb "Johannes Brodwall tar et oppgjør med utviklernes
                             oppheng i gjenbruk av kode. Kan det bli *for* DRY?"
@@ -123,7 +123,7 @@
                             antagelig den beste lyntalen jeg har sett."
                     :link {:url "http://vimeo.com/28885655"
                            :text "Se lyntalen"}
-                    :tech [:hibernate]}
+                    :tech [:hibernate :java]}
                    {:title "The Nature of Lisp"
                     :blurb "Eric Raymond sa \"Lisp is worth learning for the
                             profound enlightenment experience you will have when
@@ -196,6 +196,15 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}
 
+                 {:title "Parens of the Dead"
+                  :description "Mer zombier og Clojure, denne gangen på engelsk.
+                               Jeg tenkte det kunne være moro å lage noe for et
+                               større publikum. Litt mer finpussa og litt mindre
+                               jovialt enn originalen."
+                  :illustration "/illustrations/side-projects/parens-of-the-dead.jpg"
+                  :link {:url "http://www.parens-of-the-dead.com" :text "Se videoene"}
+                  :tech [:clojure :clojurescript :tdd :testing]}
+
                  #_{:title "Adventur Delux"
                     :description "Et tekstbasert eventyrspill jeg har
                                 skrevet på siden 1997, på størrelse
@@ -219,6 +228,21 @@
                        var det utstrakt klipping og liming, og uvanene spredte
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
                :tech [:javascript]}
+              {:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
+               :title "OOCSS: Et paradigmeskifte"
+               :blurb "Jeg satt min stolthet i å skrive slank HTML. Jeg kjente
+                       alle triksene i boka for å få nettlesere til å oppføre
+                       seg. Men selv om HTMLen var ryddig og semantisk, så hadde
+                       CSS’en eksplodert. Kunne det være noe i OOCSS? Det var jo
+                       i mot alt jeg hadde lært."
+               :tech [:oocss :css]}
+              {:url "http://blog.kjempekjekt.com/2012/12/16/magnar-genererer-testet-og-dokumentasjon-luke-16-2012/"
+               :title "Å generere tester og dokumentasjon"
+               :blurb "En gjestebloggpost på [Torbjørn Marø](https://twitter.com/tormaroe)
+                       sin [Programmeringsblogg](http://blog.kjempekjekt.com/)
+                       om å kombinere testing og dokumentasjon ved hjelp av makroer
+                       og Emacs Lisp sin homoikonisitet."
+               :tech [:emacs :emacs-lisp :testing :homoikonisitet]}
               {:url "http://framsieutvikling.no/post/37707914430/boker-for-vordende-framsiefolk"
                :title "Bøker for vordende framsiefolk"
                :blurb "En kamerat og kollega som stort sett har holdt
@@ -228,15 +252,6 @@
                        jeg er essensielle for vordende
                        framsieutviklere."
                :tech [:frontend]}
-              {:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
-               :title "OOCSS: Et paradigmeskifte"
-               :blurb "Jeg satt min stolthet i å skrive slank
-                       HTML. Jeg kjente alle triksene i boka for å få
-                       nettlesere til å oppføre seg. Men selv om HTMLen
-                       var ryddig og semantisk, så hadde CSS’en
-                       eksplodert. Kunne det være noe i OOCSS? Det var
-                       jo i mot alt jeg hadde lært."
-               :tech [:oocss :css]}
               {:url "http://framsieutvikling.no/post/36337881618"
                :title "Ingrediensene i Responsive Webdesign"
                :blurb "Responsive Design handler om at nettsia tilpasser seg
@@ -275,17 +290,16 @@
                   :tech [:clojure :clojurescript :react :functional-programming]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
                  {:title "Zombie TDD: Live parprogrammering"
-                  :blurb "Christian og jeg setter oss ned med emacsen
-                          og parprogrammerer foran publikum. Se
-                          hvordan to typer som digger JavaScript
-                          angriper problemer og gjør koden testbar."
+                  :blurb "Christian og jeg setter oss ned med emacsen og
+                          parprogrammerer foran publikum. Se hvordan to typer
+                          som digger JavaScript angriper problemer og gjør koden
+                          testbar."
                   :date "2012-09-12"
                   :tech [:javascript :tdd :testing]
                   :urls {:video "http://vimeo.com/49485653"}}
                  {:title "Lyntale: Wrap Ajax'en din"
-                  :blurb "Jeg tegner og forteller hvordan du får
-                          ryddig kode og trivelig testing ved å wrappe ajaxen
-                          din."
+                  :blurb "Jeg tegner og forteller hvordan du får ryddig kode og
+                          trivelig testing ved å wrappe ajaxen din."
                   :date "2011-09-07"
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
@@ -301,6 +315,7 @@
                         {:url "https://github.com/magnars/optimus"               :name "Optimus"               :description "Et bibliotek for frontendytelse."                                                        :tech [:clojure :web-performance]}
                         {:url "https://github.com/magnars/mapdown"               :name "Mapdown"               :description "Et lettvekts markup format for å lage maps av strenger."                                 :tech [:clojure]}
                         {:url "https://github.com/magnars/test-with-files"       :name "test-with-files"       :description "Enkel måte å skrive tester som bruker filer på disk."                                    :tech [:clojure]}
+                        {:url "https://github.com/magnars/helpful-loader"        :name "helpful-loader"        :description "Et lite bibliotek for å laste inn filer med gode feilmeldinger."                         :tech [:clojure]}
                         {:url "https://github.com/magnars/optimus-less"          :name "optimus-less"          :description "[LESS](http://lesscss.org/)-støtte til Optimus."                                         :tech [:clojure :less]}
                         {:url "https://github.com/magnars/optimus-angular"       :name "optimus-angular"       :description "Bedre ytelse for [AngularJS](http://angularjs.org/)-apps."                               :tech [:clojure :angularjs]}
                         {:url "https://github.com/magnars/optimus-jsx"           :name "optimus-jsx"           :description "[React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)-støtte til Optimus." :tech [:clojure :react]}
