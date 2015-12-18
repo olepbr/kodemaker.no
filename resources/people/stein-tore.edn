@@ -17,7 +17,7 @@
                  :coderwall "steintore"
                  }
 
- :tech          {:favorites-at-the-moment [:groovy :java]
+ :tech          {:favorites-at-the-moment [:grails :react :docker]
                  :using-at-work [:grails :groovy :java :javascript]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :gradle :ansible :docker]}
 
@@ -45,20 +45,20 @@
                     :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig lære Clojure.
                             Anbefales!" }]        
 
- :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it.html"
+ :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it/"
                 :title "OpenHAB heats my living room when I need it"
                 :blurb "Oppvarming av stua når jeg trenger det, dvs at det er varmt når jeg står opp og når jeg kommer
                         hjem fra jobben. Men ikke når jeg er på ferie eller jobb. Høres bra ut? Det er ikke veldig vanskelig"
                 :tech [:openhab]
               }
-              {:url "http://steintore.github.io/dashboard/2013/04/05/jenkins-build-status-widget-for-dashing.html"
+              {:url "http://steintore.github.io/dashboard/2013/04/05/jenkins-build-status-widget-for-dashing/"
                 :title "Jenkins build status widget for Dashing"
                 :blurb "Jenkins er et veldig nyttig verktøy for bygging og automatisering, men pent er det ikke.
                         Da jeg fant [Dashing](http://shopify.github.io/dashing/) tenkte jeg at det hadde vært gøy å lage et dashboard som viser
                         statusen fra Jenkins, med muligheter for mye mer. Dette har jeg foreløpig brukt i 2 prosjekter"
                 :tech [:jenkins :dashing]
                 }
-              {:url "http://steintore.github.io/tips/2013/01/22/terminator-for-linux-most-important-shortcuts.html"
+              {:url "http://steintore.github.io/tips/2013/01/22/terminator-for-linux-most-important-shortcuts/"
                 :title "Nyttige shortcuts for Terminator for Linux"
                 :blurb "Jeg har prøvd å samle de nyttigste snarveiene jeg bruker i Terminator.
                         Terminator er et veldig bra terminal-emulator for linux."
