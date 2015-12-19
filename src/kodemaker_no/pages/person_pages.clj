@@ -208,13 +208,13 @@
     (f (kw person) person)))
 
 (defn- render-upcoming-event [now {:keys [title tech date url call-to-action location description]}]
-  (list [:h3 [:a {:href (:url call-to-action)} title]]
+  (list [:h3 [:a {:href url} title]]
         (render-tech-bubble tech)
         [:p description]
         [:p (list [:a {:href (:url location)} (:title location)]
                   ", "
                   (d/clever-date date now)
-                  (if call-to-action
+                  (when call-to-action
                     (list " - "
                           [:a {:href (:url call-to-action)} (:text call-to-action)])))]))
 
