@@ -1,8 +1,8 @@
 (ns kodemaker-no.pages.person-pages-test
-  (:require [kodemaker-no.pages.person-pages :refer :all]
-            [midje.sweet :refer :all]
+  (:require [clj-time.core :as time]
             [hiccup.core :refer [html]]
-            [clj-time.core :as time]))
+            [kodemaker-no.pages.person-pages :refer :all]
+            [midje.sweet :refer :all]))
 
 (def magnar
   {:url "/magnar/"
@@ -116,16 +116,16 @@
    :description "Something"})
 
 (let [events [(upcoming "Februarkurs" (time/local-date 2013 2 7))
-              (upcoming "Marskurs" (time/local-date 2013 3 1))]]
+              (upcoming "Aprilkurs" (time/local-date 2013 4 1))]]
 
-  (fact "Includes upcoming events six weeks from render date"
+  (fact "Includes upcoming events 12 weeks from render date"
         (with-redefs [time/today (constantly (time/local-date 2013 1 1))]
           (let [body (->> (page :upcoming events) :body html)]
             body => #(.contains % "Magnars kommende foredrag/kurs")
             body => #(.contains % "Februarkurs")
-            body => #(not (.contains % "Marskurs"))))
+            body => #(not (.contains % "Aprilkurs"))))
 
         (with-redefs [time/today (constantly (time/local-date 2013 2 1))]
           (let [body (->> (page :upcoming events) :body html)]
             body => #(.contains % "Februarkurs")
-            body => #(.contains % "Marskurs")))))
+            body => #(.contains % "Aprilkurs")))))

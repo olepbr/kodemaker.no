@@ -1,10 +1,10 @@
 (ns kodemaker-no.pages.person-pages
-  (:require [kodemaker-no.formatting :refer [to-html comma-separated year-range]]
-            [kodemaker-no.markup :as markup]
-            [kodemaker-no.date :as d]
-            [hiccup.core :as hiccup]
+  (:require [clj-time.core :as time]
             [clojure.string :as str]
-            [clj-time.core :as time]))
+            [hiccup.core :as hiccup]
+            [kodemaker-no.date :as d]
+            [kodemaker-no.formatting :refer [to-html comma-separated year-range]]
+            [kodemaker-no.markup :as markup]))
 
 (defn render-tech-bubble [tech]
   (when-not (empty? tech)
@@ -220,7 +220,7 @@
 
 (defn- render-upcoming [events person]
   (let [date (time/today)
-        upcoming (filter #(d/within? date (d/in-weeks date 6) (:date %)) events)]
+        upcoming (filter #(d/within? date (d/in-weeks date 12) (:date %)) events)]
     (when (seq upcoming)
       (list [:h2.mhn (str (:genitive person) " kommende foredrag/kurs")]
             (->> upcoming
