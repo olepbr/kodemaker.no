@@ -62,7 +62,7 @@
                         ressurser som hjalp meg å forstå hvordan git fungerer."
                 :tech [:git]}]
 
- :recommendations [{:title "Bulding Microservices"
+ :recommendations [{:title "Building Microservices"
                     :blurb "Microservices er virkelig i vinden om dagen og denne boken gir deg en bred forståelse om
                     hva det egentlig dreier seg om."
                     :link  {:url  "http://samnewman.io/books/building_microservices/"
@@ -115,6 +115,16 @@
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}}]
 
+ :upcoming [{:title "Interaktiv programmering"
+             :description "Alle vet at utvikling er en treg prosess. Tiden det tar fra du gjør en kodeendring til du
+             ser effekten av endringen er alt for lang. Man soner ut, begynner å tenke på andre ting og mister fokus.
+             Men det trenger ikke være slik! Interaktiv programmering er en teknikk som åpner opp for en ekstremt kort
+             feedback-loop mens man utvikler."
+             :tech [:clojurescript :web :canvas]
+             :url "http://software2016.sched.org/event/4eoq?iframe=no"
+             :location {:title "Software 2016" :url "http://event.dnd.no/software/"}
+             :date "2016-02-10"}]
+
  :side-projects [{:title "Much memo"
                   :description "For å lære Swift så programmerte jeg et memory-spill til Apple Watch."
                   :link {:url "http://www.hellobard.com/muchmemo/" :text "Sjekk appen"}
@@ -135,7 +145,8 @@
              :description "Bistod med å innføre Groovy og Spock som testrammeverk. Arbeid med akseptansetester,
                            byggautomatisering, frontend- og backendutvikling og testautomatisering."
              :years [2012 2013 2014 2015]
-             :tech [:groovy, :java, :javascript, :react, :spock, :spring, :hibernate, :spring-mvc, :hazelcast, :gradle, :maven, :git, :devops]}]
+             :tech [:groovy, :java, :javascript, :react, :spock, :spring, :hibernate, :spring-mvc, :hazelcast,
+                    :gradle, :maven, :git, :devops, :ansible]}]
 
  :hobbies [{:title "Fotografering"
             :description "Kameraet mitt er stort sett med overalt. Du vet
