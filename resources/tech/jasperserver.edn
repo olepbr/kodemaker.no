@@ -1,0 +1,13 @@
+{:id :jasperserver
+ :name "JasperReports Server"
+ :illustration "/photos/tech/logo-jaspersoft.png"
+ :site "http://jaspersoft.com/"
+ :description "JasperReports Server er et kjøretidsmiljø for generering av rapporter i mange formater, f.eks pdf, excel, html, csv.
+ Serveren er bundlet med en [Tomcat](/tomcat/) servlet-container, og har sitt eget repository hvor rapportmaler og ferdige rapporter kan
+ lagres. Repositoriet er backet opp av en\n medfølgende PostgreSQL-database. Et REST-aktig API kan brukes til opplasting av
+ maler og kjøring av rapporter. Et eget designverktøy, iReport, brukes for å designe rapportmaler. JasperServer har støtte for
+ internasjonalisering som kan være nyttig når det er krav om at rapporter skal forefinnes på både bokmål og nynorsk.
+
+ Rapportering virker kanskje litt kjedelig, men JasperReports Server kan brukes til mange ting,
+ for eksempel utskrift av valgkort eller strekkodelapper for å merke kasser med stemmesedler som skal skannes ved
+ opptelling etter valg."}

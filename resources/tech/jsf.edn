@@ -1,0 +1,21 @@
+{:id :jsf
+ :name "JavaServer Faces"
+ :illustration "/photos/tech/jsf.png"
+ :site "https://javaserverfaces.java.net/"
+ :description
+ "JavaServer Faces er ment som standardwebrammeverket i JEE-stacken, og skal dekke alle behov.
+ <em>'It simplifies development by providing a component-centric approach to developing Java Web user interfaces'</em>,
+ står det i [introduksjonen til JSF fra 2005](http://www.oracle.com/technetwork/topics/index-090910.html). Mon det.
+  Tanken var vel at JSF skulle være et komponentbasert webrammeverk, konfigurert og beskrevet med XML. Dermed
+  kunne man tenke seg visuelle editorer hvor man kan plassere ut UI-komponenter — både egne og 3.parts — JSF tar seg av
+  resten. I manges øyne er imidlertid JSF et monster som suger kraften ut av serveren, men man skal huske på at for eksempel
+  [de seks fasene](http://docs.oracle.com/javaee/6/tutorial/doc/bnaqq.html) er der av en grunn, og at det faktisk er
+  ganske gjennomtenkt. Selv om JSF er et server-rendret webrammeverk, kom det til Ajax-støtte i JEE6 i 2009, som gjør at
+  det ikke er helt på bakfoten likevel.
+
+  Om det ikke ble så vanlig med verktøy for UI-design, brukes gjerne noen komponentbibliotek i tillegg til det som kommer
+  ut av JEE-boksen, f.eks. [PrimeFaces](http://www.primefaces.org/) eller [RichFaces](http://richfaces.jboss.org/).
+  Begge tilbyr en del praktiske widgets som gjør JSF-applikasjonene litt slickere.
+
+  Imidlertid har nok de færreste JSF-tilhengerne skjegg, tattis og fixie.
+  "}
