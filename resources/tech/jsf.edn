@@ -4,7 +4,7 @@
  :site "https://javaserverfaces.java.net/"
  :description
  "JavaServer Faces er ment som standardwebrammeverket i JEE-stacken, og skal dekke alle behov.
- <em>'It simplifies development by providing a component-centric approach to developing Java Web user interfaces'</em>,
+ _'It simplifies development by providing a component-centric approach to developing Java Web user interfaces'_,
  står det i [introduksjonen til JSF fra 2005](http://www.oracle.com/technetwork/topics/index-090910.html). Mon det.
   Tanken var vel at JSF skulle være et komponentbasert webrammeverk, konfigurert og beskrevet med XML. Dermed
   kunne man tenke seg visuelle editorer hvor man kan plassere ut UI-komponenter — både egne og 3.parts — JSF tar seg av

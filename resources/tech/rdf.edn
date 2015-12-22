@@ -1,0 +1,22 @@
+{:id :rdf
+ :name "Resource Description Framework"
+ :illustration "/photos/tech/rdf_w3c.svg"
+ :site "http://www.w3.org/RDF/"
+ :description
+ "Resource Description Framework er et sett W3C-spesifikasjoner for modellering av data og om data, altså metadata. Det mest sentrale
+ begrepet er _tripler_ på formen _Subjekt Predikat Objekt_, f.eks _William Shakespeare Skrev Othello_.
+ Videre: _William Shakespeare ble døpt 26. april 1564_ og _William Shakespeare var gift med Anne Hathaway_. Til sammen
+  danner disse triplene en graf av linkede data om William Shakespeare.
+
+  Nodene i grafen, dvs subjektene og predikatene, identifiseres med uri-er. Objektene i triplene kan være uri'er eller
+   literalverdier, f.eks. \"26. april 1564\".
+
+   Grafer kan representeres eller _serialiseres_ på flere måter, så som
+   [Turtle](https://en.wikipedia.org/wiki/Turtle_%28syntax%29), [N-triples](https://en.wikipedia.org/wiki/N-Triples)
+   og [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD). Sistnevnte skulle man tro passet bra i en javascript-setting, f.eks
+   [Node.JS](/nodejs/)
+   pga sitt JSON-fasett. Imidlertid er det dårlig støtte for RDF i javascript-økosystystemet, men desto bedre på javasiden;
+   [Apache Jena](https://jena.apache.org/) er en open source suite med bl.a. api for serialisering og håndtering av
+   RDF-modeller, et [triple-store](https://jena.apache.org/documentation/fuseki2/index.html) med REST-api og implementasjon
+   av spørrespråket [SPARQL](http://www.w3.org/TR/sparql11-query/) for søk og oppdatering av semantiske data.
+  "}
