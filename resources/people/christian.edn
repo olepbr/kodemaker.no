@@ -23,7 +23,14 @@
         :favorites-at-the-moment [:elasticsearch :react :emacs :clojure]
         :want-to-learn-more [:haskell :om-next]}
 
- :side-projects [{:title "Test-Driven JavaScript Development"
+ :side-projects [{:title "Learning Functional JavaScript"
+                  :description "Et grundig videokurs i funksjonell programmering
+                  med JavaScript. Laget for Packt forlag i 2015."
+                  :illustration "/illustrations/side-projects/functional-js.jpg"
+                  :tech [:javascript :nodejs :functional-programming]
+                  :link {:url "https://www.packtpub.com/web-development/learning-functional-javascript-video"
+                         :text "Sjekk ut kurset"}}
+                 {:title "Test-Driven JavaScript Development"
                   :description "Etter noen år med fordypning i og blogging om
                   TDD med JavaScript kom jeg litt tilfeldigvis i kontakt med
                   Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
