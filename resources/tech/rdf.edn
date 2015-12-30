@@ -17,8 +17,8 @@
    og [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD). Sistnevnte skulle man tro passet bra i en javascript-setting, f.eks
    bestående av [Node.JS](/nodejs/), Backbone.js, React, Ractive.js eller AngularJS,
    siden JSON-LD er basert på JSON. Imidlertid er det ikke veldig bra støtte for RDF i javascript-økosysystemet, men desto bedre i
-   javaverdenen. Eksempelvis er [Apache Jena](https://jena.apache.org/) en open source suite med bl.a. api for serialisering
-   og håndtering av RDF-modeller, et [triple-store](https://jena.apache.org/documentation/fuseki2/index.html) med REST-api
+   javaverdenen. Eksempelvis er [Apache Jena](https://jena.apache.org/) en open source suite med bl.a. API for serialisering
+   og håndtering av RDF-modeller, [Fuseki](https://jena.apache.org/documentation/fuseki2/index.html), et triple-store med REST-API
    og implementasjon av spørrespråket [SPARQL](http://www.w3.org/TR/sparql11-query/) for søk og oppdatering av semantiske
    data.
 
