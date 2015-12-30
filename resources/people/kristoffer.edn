@@ -15,7 +15,7 @@
 
  :tech {:using-at-work [:javascript :ractive :docker :elasticsearch :java :cucumber :vagrant :rdf]}
 
- :recommendations [{:title "Programming Antibjects"
+ :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
                            :text "Les artikkel"}
                     :tech [:design]
