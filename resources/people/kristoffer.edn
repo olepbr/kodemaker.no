@@ -13,7 +13,20 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :projects [{:customer "Nye Deichman — Applikasjonsprosjektet "
+ :tech {:using-at-work [:javascript :ractive :docker :elasticsearch :java :cucumber :vagrant :rdf]}
+
+ :recommendations [{:title "Programming Antibjects"
+                    :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
+                           :text "Les artikkel"}
+                    :tech [:design]
+                    :blurb "Et foredrag på OOPSLA-konferansen i 2006 satt tradisjonell objektorientering og simulering litt på hodet.
+                    Istedenfor å la objektene leve sitt eget liv og styre seg selv, kan man gi liv til omgivelsene rundt dem.
+                    Lukten av Pacman setter seg i spillbrettet, og det er brettet som styrer spøkelsene etter Pacman. Lukten av fotballen
+                    sprer seg i gressmatten, og spillerne blir sendt i retning av den. Oppgaven deres blir å sparke ballen vekk fra
+                     stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}]
+
+
+                   :projects [{:customer "Nye Deichman — Applikasjonsprosjektet "
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
              :tech [:java :rdf :ractive :nodejs]}
