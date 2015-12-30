@@ -9,14 +9,20 @@
   danner disse triplene en graf av linkede data om William Shakespeare.
 
   Nodene i grafen, dvs subjektene og predikatene, identifiseres med uri-er. Objektene i triplene kan være uri'er eller
-   literalverdier, f.eks. \"26. april 1564\".
+   literalverdier, f.eks. \"26. april 1564\". [Les mer om RDF med flere Shakespeare-eksempler.]
+   (http://bcc.musiclibraryassoc.org/BCC-Historical/BCC2012/BriefIntroductionToRDF.pdf)
 
    Grafer kan representeres eller _serialiseres_ på flere måter, så som
    [Turtle](https://en.wikipedia.org/wiki/Turtle_%28syntax%29), [N-triples](https://en.wikipedia.org/wiki/N-Triples)
    og [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD). Sistnevnte skulle man tro passet bra i en javascript-setting, f.eks
-   [Node.JS](/nodejs/)
-   pga sitt JSON-fasett. Imidlertid er det dårlig støtte for RDF i javascript-økosystystemet, men desto bedre på javasiden;
-   [Apache Jena](https://jena.apache.org/) er en open source suite med bl.a. api for serialisering og håndtering av
-   RDF-modeller, et [triple-store](https://jena.apache.org/documentation/fuseki2/index.html) med REST-api og implementasjon
-   av spørrespråket [SPARQL](http://www.w3.org/TR/sparql11-query/) for søk og oppdatering av semantiske data.
+   bestående av [Node.JS](/nodejs/), Backbone.js, React, Ractive.js eller AngularJS,
+   siden JSON-LD er basert på JSON. Imidlertid er det det ikke veldig bra støtte for RDF i javascript-økosysystemet, men desto bedre i
+   javaverdenen. Eksempelvis er [Apache Jena](https://jena.apache.org/) en open source suite med bl.a. api for serialisering
+   og håndtering av RDF-modeller, et [triple-store](https://jena.apache.org/documentation/fuseki2/index.html) med REST-api
+   og implementasjon av spørrespråket [SPARQL](http://www.w3.org/TR/sparql11-query/) for søk og oppdatering av semantiske
+   data.
+
+   Et mer eller mindre drop-in alternativ til Fuseki er [Virtuoso](http://virtuoso.openlinksw.com/), som blant annet også
+   støtter flere programmeringsspråk enn Fuseki, f.eks. C, C# og Ruby, og har funksjonalitet for replikering.
+   [Se sammenlikning på flere punkter.](http://db-engines.com/en/system/Jena%3BVirtuoso)
   "}
