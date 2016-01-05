@@ -16,7 +16,7 @@
             :linkedin "/in/mrundberget"}
 
  :tech {:using-at-work [:groovy :grails :oracle]
-        :favorites-at-the-moment [:elm :clojure :clojurescript :figwheel]
+        :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :reactive-programming :haskell]}
 
  :recommendations [{:title "Inventing on principle"
@@ -52,7 +52,14 @@
                   :link {:url "http://github.com/LightTable/LightTable" :text "Light Table på Github"}
                   :tech [:clojure :clojurescript :nodejs :electron :javascript]}]
 
- :presentations [{:title "Elm plugin for Light Table"
+ :presentations [{:title "Managing and diagramming elm packages with d3 in Light Table"
+                  :blurb "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
+                          Elm Light Table plugin."
+                  :tech [:elm :clojurescript :lighttable :d3]
+                  :urls {:video "https://youtu.be/Okk-YjEeUgI"
+                         :source "https://github.com/rundis/elm-light"}
+                  :date "2016-01-01"}
+                 {:title "Elm plugin for Light Table"
                   :blurb "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
                   :tech [:elm :clojurescript :lighttable ]
                   :urls {:video "https://youtu.be/B_eZw_GcM-4"
@@ -98,7 +105,13 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/elm_sweeper.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
+               :title "Typed up CRUD SPA with Haskell and Elm - Part 1: Spike time"
+               :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I serien tar
+                       jeg for meg utvikling av en CRUD applikasjon med Elm til frontend og Haskell for backend. Førte episode
+                       tar for seg en spike for å få en helt enkel basis på plass."
+               :tech [:elm :haskell]}
+              {:url "http://rundis.github.io/blog/2015/elm_sweeper.html"
                :title "Minesweeper - a brief journey from JavaScript/React to Elm"
                :blurb "Jeg tar utgangspunkt i en minesveiper implementasjon fra [Christian Johansen](/christian/) i JavaScript/React og hviser hvordan man kan implementere det samme spillet i Elm.
                        Bloggposten sammenligner flere implementasjonsdetajer og reflekterer kort om statisk vs. dynamisk typing."
