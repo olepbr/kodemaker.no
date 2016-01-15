@@ -1,0 +1,100 @@
+{:id :christin
+ :name ["Christin" "Gorman"]
+ :title "Programmerinne"
+ :start-date "2016-04-01"
+ :description "Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i alt fra sanntids kontrollsystemer, GIS verktøy, framsia og baksia på web, desktop- og mobilapper, til plugins i Excel. 
+
+ Hun er først og fremst systemutvikler, men har også hatt arbeidsoppgaver innenfor alt fra kravspesifikasjon, design, testing, kursing, workshops og prosjektkoordinering.
+
+ Christin er pragmatisk når det kommer til teknologivalg, og lærer veldig fort der det er behov for å sette seg inn i noe nytt.  Hun er over gjennomsnittet opptatt av å lage de enkleste og mest kostnadseffektive løsningene for sine kunder.  
+
+ Hun er dessuten en erfaren foredragsholder, og har en egen blogg om softwareutvikling.  
+"
+
+ :phone-number "+47 90 29 29 26"
+ :email-address "christin@kodemaker.no"
+
+ :presence {:cv "christin"
+            :twitter "christingorman"
+            :linkedin "/in/in/christin-gorman-2321aa1"
+            :github "christingorman"}
+
+ :tech {:using-at-work [:java :javascript :cpp :android :swift]
+        :want-to-learn-more [:clojure]}
+ :hobbies [{:title "Roboter"
+            :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
+            :illustration "/illustrations/hobbies/robot-prototype.png"}],
+ :blog-posts [{:url "http://kranglefant.tumblr.com/post/30266564679/programming-like-a-pirate-alt-shift-m"
+               :title "Programming like a pirate"
+               :blurb "Jeg utfordrer clean-code-prinsippet om å ekstrahere all kode ut i metoder med kun et par linjer. Det er noen fallgruver man bør passe seg for."
+               :tech [:design :arkitektur]}
+              {:url "http://kranglefant.tumblr.com/post/131808192355/future-proof"
+               :title "Future proof"
+               :blurb "Tanker og anbefalinger om hvordan gjøre en applikasjon lettere å jobbe med over tid."
+               :tech [:design :arkitektur]}
+              {:url "https://qristin.wordpress.com/2015/05/10/hvem-og-hva-er-det-vi-kjemper-imot/"
+               :title "Hvem og hva er det vi kjemper imot"
+               :blurb "Problemene vi står overfor med IT-utvikling i offentlig sektor."
+               :tech [:design :arkitektur]}
+              {:url "http://kranglefant.tumblr.com/post/32472145738/losing-loose-coupling"
+               :title "Losing loose coupling"
+               :blurb "Om verdien ved å begrense hva en applikasjon gjør, å bestemme seg for en implementasjon og funksjonalitet."
+               :tech [:design :arkitektur]}
+              {:url "http://kranglefant.tumblr.com/post/39777803002/reuse-refuse"
+               :title "Reuse? Refuse"
+               :blurb "Gjenbrukbarhet kan føre til lavere kvalitet og dårligere brukeropplevelser."
+               :tech [:design :arkitektur]}
+              ]       
+ :presentations [{:title "Hibernate should be to programmers what cake mixes are to bakers. Beneath their dignity"
+                  :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
+                  :date "2011-09-13"
+                  :tech [:orm :frameworks :hibernate]
+                  :urls {:video "https://vimeo.com/28885655"}}
+                 {:title "Readable code"
+                  :blurb "Når det gjelder kode - er lett å lese det samme som god?"
+                  :date "2012-09-13"
+                  :tech [:design]
+                  :urls {:video "https://vimeo.com/49484333"}}
+                 {:title "De første delleveransene skal være stygge"
+                  :blurb "I smidig produktutvikling er det viktig med fortløpende validering av løsningen. Man vil finne potensielle feil raskt. Man skal ikke vente med at applikasjonen er ferdig før man viser den. Det at de første leveransene er mangelfulle er en del av den nødvendige prosessen og må ikke sees som feil."
+                  :date "2012-09-13"
+                  :tech [:design :smidig]
+                  :urls {:video "https://vimeo.com/album/3114636/video/53188003"}}
+                 {:title "Smidige utviklere spør ikke om råd"
+                  :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
+                  :date "2012-09-13"
+                  :tech [:design :smidig]
+                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
+                 {:title "Sustainable code - what they don't teach you"
+                  :blurb "En applikasjon koster mer å forvalte enn å utvikle. Likevel blir de fleste kodebaser optimalisert for arbeidet gjort i prosjektfasen før prodsetting. Jeg kommer med noen tanker rundt hva vi kan gjøre annerledes for å gjøre applikasjoner lettere å forvalte."
+                  :date "2015-09-13"
+                  :tech [:design :smidig :arkitektur]
+                  :urls {:video "https://vimeo.com/138774243"}}
+                 ]
+ :projects [{:customer "Husbanken"
+             :description "eSøknad Bostøtte. Web-løsning for å søke om bostøtte. Jeg jobbet hovedsakelig i frontend-teamet, men hjalp også til med implementasjon av REST-tjenestene på serversiden. Løsningen vant Difi sin pris for Årets Digitale Tjeneste."
+             :years [2013, 2014]
+             :tech [:java :angular :mongodb :resteasy :jms :jboss :camel]}
+            {:customer "Husbanken"
+             :description "Bostøtte-tilbakekrav: Husbanken laget en applikasjon som brukes ved mistanke om svindel. Saksbehandlere kan gå over alle utbetalinger og gjøre nye beregninger basert på endret informasjon for å se om en bostøtte-mottaker har fått for mye utbetalt bostøtte. Jeg var med på både design og utvikling av hele løsningen, både frontend og backend, arkitektur og UX."
+             :years [2012, 2013]
+             :tech [:java :jboss :jsf :primefaces :springbatch :jpa]}
+            {:customer "Statnett"
+             :description "Statnett er ansvarlig for å holde strømfrekvensen i Norge så nær 50hz som mulig. På deres landssentral har de oversikt over frekvensen og hvem som produserer hva i sanntid.  Dersom frekvensen går for mye opp eller ned må de kjøpe endret produksjon av strømprodusentene. Strømprodusentene sender inn bud daglig, der de gir priser for hvor mye opp eller ned de kan gå og hvor mye disse endringene koster. Operatørene i landssentralen må raskt kunne evaluere budene og velge de som er mest hensiktsmessige.  LARM-prosjektet skulle gi dem et system som ga optimal oversikt og evne til å handle effektivt.  Jeg bidro med generell utvikling av frontend og backend, og laget mye av selve rammeverket for data-binding og event handling brukt i GUI"
+             :years [2010]
+             :tech [:java :jetty]}
+            {:customer "WesternGeco"
+             :description "Jeg var en av 3-4 utviklere som laget et java-basert GIS planleggings- og analyse-verktøy brukt av geofysikere i forbindelse med oppsamling av seismisk data på land. Millioner av punkter må ikke bare vises på skjermen, men må også kunne flyttes på og avanserte beregninger kjøres for å finne optimal plassering av sensorer og kilder.  Ytelsesmessig veldig krevende. Brukte GeoTools (java) med en del egen tilpasning for å håndtere løpende endringer av geografien. Jobbet med hele løsningen, fra GUI-kode til minneoptimalisering"
+             :years [2009]
+             :tech [:java :geotools]}
+            {:customer "WesternGeco"
+             :description "Ansvarlig for alt av design og utvikling av det sentrale kontrollsystemet brukt til de seismiske kildene i WesternGeco's land-seismikk-oppsamlings-system UniQ. Systemet i sin helhet hånterer opptil 150 000 sensorer i et IP-nettverk som kontinuerlig streamer seismiske målinger og statuser til en sentral enhet med stor lagringskapasitet. Så kjører man enorme vibrator trucks på kryss og tvers imellom sensorene. For hvert planlagte punkt, presser vibratorene en tung metallplate i bakken og vibrerer i noen sekunder. Det er enormt viktig å vite når de starter, hvilke frekvenser de bruker og hvor plata er for å kunne finne signalet igjen i dataene som kommer tilbake fra sensorene. I hver vibrator truck er det en laptop som er koblet til en UHF-radio, en GPS og til den hydrauliske kontroll-enheten til plata som vibrerer. Kontroll-systemene til kildene som ble utviklet her innebar alt fra navigasjon i truckene, til kommunikasjon over radio mellom sentral-enheten og alle vibrator-trucker, verifisering av posisjoner, start tid og vibrasjons-parameterne i bruk, samt kommunikasjon med de andre serverene i sentralsystemet. Tjenesten jeg var ansvarlig for var skrevet i java og kommuniserte med kilde-enheter opptil 15km unna med UDP over via UHF-radio. Kommunikasjon med resten av sentralsystemet forgikk hovedsakelig med egenutviklet pub/sub-rammeverk med serialiserte java-objekter over TCP"
+             :years [2006, 2007, 2008]
+             :tech [:java :cpp]}
+            {:customer "BP"
+             :description "Utvikling av et system for å registrere og søke gjennom erfaringer gjort i forbindelse med jobbing på oljerig. Web-interface samt desktop-applikasjoner med synkroniseringsmuligheter for installasjoner på platformer med dårlig internett-oppkobling. Jeg var ansvarlig for alt unntatt den egenutviklede ORMen brukt for databaseoppkobling"
+             :years [2005, 2006]
+             :tech [:csharp :aspnet :oracle :sqlserver]}
+            ]
+ 
+ }
