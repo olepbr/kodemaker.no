@@ -18,7 +18,7 @@ Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i
 
  :presence {:cv "christin"
             :twitter "christingorman"
-            :linkedin "/in/in/christin-gorman-2321aa1"
+            :linkedin "/in/christin-gorman-2321aa1"
             :github "christingorman"}
 
  :tech {:using-at-work [:java :javascript :cpp :android :swift]
