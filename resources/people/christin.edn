@@ -2,13 +2,15 @@
  :name ["Christin" "Gorman"]
  :title "Programmerinne"
  :start-date "2016-04-01"
- :description "Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i alt fra sanntids kontrollsystemer, GIS verktøy, framsia og baksia på web, desktop- og mobilapper, til plugins i Excel. 
+ :description "Christin starter i Kodemaker 1. april 2016.
+
+Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i alt fra sanntids kontrollsystemer, GIS verktøy, framsia og baksia på web, desktop- og mobilapper, til plugins i Excel. 
 
  Hun er først og fremst systemutvikler, men har også hatt arbeidsoppgaver innenfor alt fra kravspesifikasjon, design, testing, kursing, workshops og prosjektkoordinering.
 
  Christin er pragmatisk når det kommer til teknologivalg, og lærer veldig fort der det er behov for å sette seg inn i noe nytt.  Hun er over gjennomsnittet opptatt av å lage de enkleste og mest kostnadseffektive løsningene for sine kunder.  
 
- Hun er dessuten en erfaren foredragsholder, og har en egen blogg om softwareutvikling.  
+ Hun er dessuten en erfaren foredragsholder, og har en egen [blogg](http://kranglefant.tumblr.com) om softwareutvikling.
 "
 
  :phone-number "+47 90 29 29 26"
@@ -88,7 +90,7 @@
              :years [2009]
              :tech [:java :geotools]}
             {:customer "WesternGeco"
-             :description "Ansvarlig for alt av design og utvikling av det sentrale kontrollsystemet brukt til de seismiske kildene i WesternGeco's land-seismikk-oppsamlings-system UniQ. Systemet i sin helhet hånterer opptil 150 000 sensorer i et IP-nettverk som kontinuerlig streamer seismiske målinger og statuser til en sentral enhet med stor lagringskapasitet. Så kjører man enorme vibrator trucks på kryss og tvers imellom sensorene. For hvert planlagte punkt, presser vibratorene en tung metallplate i bakken og vibrerer i noen sekunder. Det er enormt viktig å vite når de starter, hvilke frekvenser de bruker og hvor plata er for å kunne finne signalet igjen i dataene som kommer tilbake fra sensorene. I hver vibrator truck er det en laptop som er koblet til en UHF-radio, en GPS og til den hydrauliske kontroll-enheten til plata som vibrerer. Kontroll-systemene til kildene som ble utviklet her innebar alt fra navigasjon i truckene, til kommunikasjon over radio mellom sentral-enheten og alle vibrator-trucker, verifisering av posisjoner, start tid og vibrasjons-parameterne i bruk, samt kommunikasjon med de andre serverene i sentralsystemet. Tjenesten jeg var ansvarlig for var skrevet i java og kommuniserte med kilde-enheter opptil 15km unna med UDP over via UHF-radio. Kommunikasjon med resten av sentralsystemet forgikk hovedsakelig med egenutviklet pub/sub-rammeverk med serialiserte java-objekter over TCP"
+             :description "Jeg var ansvarlig for design, utvikling og felttesting av det sentrale kontrollsystemet brukt til de seismiske kildene i WesternGeco's land-seismikk-oppsamlings-system UniQ"
              :years [2006, 2007, 2008]
              :tech [:java :cpp]}
             {:customer "BP"
