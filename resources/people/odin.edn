@@ -19,8 +19,8 @@
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:react :clojurescript :ansible]
-        :using-at-work [:react :gradle :groovy :ansible :javascript]
-        :want-to-learn-more [:elm :d3js :docker :unity3d]}
+        :using-at-work [:clojure :clojurescript :d3 :aws]
+        :want-to-learn-more [:elm :docker :unity3d]}
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
                :title "Tiltrekkende 3D på web"
@@ -115,16 +115,6 @@
                   :tech [:spock :testing :java :groovy]
                   :urls {:video "https://vimeo.com/49476112"}}]
 
- :upcoming [{:title "Interaktiv programmering"
-             :description "Alle vet at utvikling er en treg prosess. Tiden det tar fra du gjør en kodeendring til du
-             ser effekten av endringen er alt for lang. Man soner ut, begynner å tenke på andre ting og mister fokus.
-             Men det trenger ikke være slik! Interaktiv programmering er en teknikk som åpner opp for en ekstremt kort
-             feedback-loop mens man utvikler."
-             :tech [:clojurescript :web :canvas]
-             :url "http://software2016.sched.org/event/4eoq?iframe=no"
-             :location {:title "Software 2016" :url "http://event.dnd.no/software/"}
-             :date "2016-02-10"}]
-
  :side-projects [{:title "Much memo"
                   :description "For å lære Swift så programmerte jeg et memory-spill til Apple Watch."
                   :link {:url "http://www.hellobard.com/muchmemo/" :text "Sjekk appen"}
@@ -132,11 +122,16 @@
                   :tech [:swift :ios]}
                  {:title "Cashflow"
                   :description "Nettbanken min har ingen regnskapsfunksjon. Så det lager jeg på egen hånd, i Clojure."
-                  :link {:url "https://github.com/Odinodin/cashflow" :text "Les kildekoden"}
+                  :link {:url "https://github.com/odinodin/cashflow" :text "Les kildekoden"}
                   :illustration "/illustrations/side-projects/cashflow.jpg"
                   :tech [:clojure]}]
 
- :projects [{:customer "Sykehuspartner"
+ :projects [{:customer "Telenor Digital"
+             :description "Medlem av Data insights-teamet som driver med analysetjenester for ulike deler av Telenor.
+                           Fokus på integrasjon av datakilder og visualisering av store datamengder."
+             :years [2016]
+             :tech [:clojure :clojurescript :d3 :aws :postgresql :kafka]}
+            {:customer "Sykehuspartner"
              :description "Utviklet en prototype for Barneseksjonen ved Oslo universitetssykehus for håndtering av
                            pasienttilbakemeldinger."
              :years [2015]
