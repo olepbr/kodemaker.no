@@ -44,10 +44,16 @@
                     :tech  [:funksjonell-programmering]}]
 
  :endorsements [{:author "Steffen Fiksdal"
-                 :title "Sikkerhetsarkitekt"
+                 :title "Teknisk arkitekt, BankAxept"
                  :quote "Of the people I know Anders is one of very few who
                         understands and masters all layers of computer software
                         architecture. He has a solid overview of the lowest levels
                         of the operating system up to the higher abstract levels
                         of application programming. This competence makes him an
-                        extremly powerful resource in a software development team."}]}
+                        extremly powerful resource in a software development team."}
+                {:author "Sverre H. Huseby"
+                 :title "Konsulent, Zenior"
+                 :quote "Anders is a clever and fast programmer who easily sees
+                        solutions to complex problems. His code is tidy almost to
+                        the extreme. One of the best developers I have ever worked
+                        with."}]}
