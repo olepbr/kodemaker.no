@@ -18,9 +18,9 @@
             :linkedin "/in/andersfurseth"
             :github "andersfurseth"}
 
- :tech {:using-at-work [:groovy :javascript :java]
-        :favorites-at-the-moment [:clojure :funksjonell-programmering]
-        :want-to-learn-more      [:clojurescript :react]}
+ :tech {:using-at-work [:clojure :react :groovy :javascript :java]
+        :favorites-at-the-moment [:clojure :clojurescript :funksjonell-programmering]
+        :want-to-learn-more      [:clojurescript]}
 
  :recommendations [{:title "Out of the Tar Pit"
                     :blurb "Ben Moseley og Peter Marks presenterer svært
