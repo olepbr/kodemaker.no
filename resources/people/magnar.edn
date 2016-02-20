@@ -338,7 +338,8 @@
                         {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description "Snippets for å raskt skrive Datomic boilerplate."                                        :tech [:emacs]}
                         {:url "https://github.com/magnars/autolint-maven-plugin" :name "autolint-maven-plugin" :description "Kjører statisk analyse av JavaScript i Maven."                                           :tech [:java :maven]}]
 
- :open-source-contributions [{:name "ring-server"         :url "https://github.com/weavejester/ring-server"      :tech [:clojure]}
+ :open-source-contributions [{:name "quiescent"           :url "https://github.com/levand/quiescent"             :tech [:clojure :react]}
+                             {:name "ring-server"         :url "https://github.com/weavejester/ring-server"      :tech [:clojure]}
                              {:name "clj-v8"              :url "https://github.com/circleci/clj-v8"              :tech [:clojure]}
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
