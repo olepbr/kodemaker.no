@@ -168,4 +168,13 @@
                               :tech [:git :groovy]}
                              {:name "clj-time"
                               :url "https://github.com/clj-time/clj-time"
-                              :tech [:clojure]}]}
+                              :tech [:clojure]}]
+
+ :endorsements [{:author "Trond Hagen"
+                 :title "Director Software Development, Conax"
+                 :quote "Jeg hadde gleden av å jobbe sammen med Odin i 3 år hos Conax.
+                 Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
+                 til å sette seg inn i nye domener og problemstillinger. Han er alltid klar for å ta
+                 fatt på nye utfordringer uavhengig om de er store eller små, spennende eller ikke.
+                 I tillegg er han veldig omgjengelig og lett å samarbeide med.
+                 Jeg tror man må lete lenge etter noen som har noe negativt å si om Odin."}]}
