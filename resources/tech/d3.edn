@@ -1,0 +1,12 @@
+{:id :d3
+ :name "D3"
+ :illustration "/photos/tech/d3.svg"
+ :site "https://d3js.org/"
+ :description
+ "D3 er et JavaScript-bibliotek for å lage dynamiske og interaktive visualiseringer
+ i nettleseren. Det er basert på åpne standarder som SVG, CSS og HTML og er svært
+ fleksibelt med tanke på tilpasninger slik at du kan gi liv til dataene dine."
+ :ad {:heading "Har du store datamengder?"
+      :blurb "Vi har mange dyktige konsulenter som kan hjelpe deg forstå dataene.
+              Vi hjelper deg å ta de riktige valgene."
+      :link-text "Ta kontakt!"}}
