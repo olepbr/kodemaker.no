@@ -16,7 +16,7 @@
  :email-address "stian@kodemaker.no"
 
  :presence {:cv "stian"
- 			      :twitter "stianalsos"
+ 			      :twitter "stiancor"
  			      :linkedin "/in/stianalsos"
  			      :github "stiancor"
  			      :coderwall "stiancor"}
