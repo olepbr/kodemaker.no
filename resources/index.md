@@ -103,21 +103,6 @@ til å forme løsningen. Vi opplevde konsulentene som svært faglig dyktige og d
 ble fort en del av gjengen her. De hadde ingen problemer med å sette seg inn i
 våre problemstillinger og vi endte med en løsning som leverte mer enn vi i
 utgangpunktet hadde ambisjoner om å få til.
-
---------------------------------------------------------------------------------
-:type contact-form
-:body
-
-### Hva kan vi hjelpe deg med?
-
-Legg igjen kontaktinformasjon, så tar vår daglig leder
-[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
-
-:button Ta kontakt
-:placeholder Skriv inn telefonnummer eller epost-adresse
-
---------------------------------------------------------------------------------
-:type person-cloud
 --------------------------------------------------------------------------------
 :type grid
 :content
@@ -160,4 +145,18 @@ http://zombietdd.com               /photos/tech/ztdd.png
 /gry/                              /photos/people/gry/side-profile-square.jpg
 /kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
 
+--------------------------------------------------------------------------------
+:type person-cloud
+
+--------------------------------------------------------------------------------
+:type contact-form
+:body
+
+### Hva kan vi hjelpe deg med?
+
+Legg igjen kontaktinformasjon, så tar vår daglig leder
+[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
+
+:button Ta kontakt
+:placeholder Skriv inn telefonnummer eller epost-adresse
 --------------------------------------------------------------------------------
