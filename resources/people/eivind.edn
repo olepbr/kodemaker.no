@@ -33,9 +33,9 @@
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
 
- :tech {:using-at-work [:java :akka :dropwizard :oracle :javascript :react]
-        :favorites-at-the-moment [:scala :akka]
-        :want-to-learn-more [:clojure :clojurescript :haskell :reactive-streams :emacs]}
+ :tech {:using-at-work [:java :groovy :hystrix :rxjava :postgresql :javascript :spring :hibernate]
+        :favorites-at-the-moment [:scala :rxjava :akka]
+        :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning]}
 
  :recommendations [{:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
                     :blurb "Fantastisk bra artikkel om logg som sentralt system for integrasjon,
