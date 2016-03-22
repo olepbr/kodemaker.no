@@ -3,4 +3,7 @@
  :illustration "/photos/tech/elixirlang-logo.png"
  :site "http://elixir-lang.org"
  :description
- "Elixir er et nytt funksjonelt programmeringsspråk som kjører på Erlang VM, kjent for 'low-latency', distribuerte og feil tolerante systemer. Selv om Elixir er et nytt språk, så begynner det å få en del tilgjengelige biblioteker. Finner du ikke en Elixir variant av det du ser etter så kan du dra nytte av Erlangs store utvalg av velprøvde biblioteker"}
+ "Elixir er et nytt funksjonelt programmeringsspråk som kjører på Erlang VM, kjent for 'low-latency', distribuerte og feil tolerante systemer. Selv om Elixir er et nytt språk, så begynner det å få en del tilgjengelige biblioteker. Finner du ikke en Elixir variant av det du ser etter så kan du dra nytte av Erlangs store utvalg av velprøvde biblioteker.
+ 
+ Elixir er bl.a inspirert av Erlang, Clojure, Ruby, og tilbyr metaprogrammering med macroer og polymorfisme vha protokoller. 
+ "}
