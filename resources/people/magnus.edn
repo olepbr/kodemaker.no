@@ -52,7 +52,22 @@
                   :link {:url "http://github.com/LightTable/LightTable" :text "Light Table på Github"}
                   :tech [:clojure :clojurescript :nodejs :electron :javascript]}]
 
- :presentations [{:title "Managing and diagramming elm packages with d3 in Light Table"
+ :upcoming [{:title "Functional Reactive Programming for the Web using Elm"
+             :description "I dette foredraget vil du få en oversikt over hvordan Elm omfavner Funksjonell Reaktive Programmering
+                           vha signaler (verdier som endrer seg over tid). Du vil lære litt om Elm platformen og arkitekturen for en typisk Elm applikasjon.
+                           Live koding står også på blokka !"
+             :url "http://2016.flatmap.no/rundberget.html#session"
+             :tech [:elm :functional-programming]
+             :location {:title "flatMap(Oslo)" :url "http://2016.flatmap.no/index.html#"}
+             :date "2016-05-02"}]
+
+ :presentations [{:title "Elm package docs preview in Light Table"
+                  :blurb "Screencast som demonstrerer forhåndsvisning av pakke dokumentasjon for Elm i Light Table."
+                  :tech [:elm :clojurescript :lighttable]
+                  :urls {:video "https://youtu.be/pAwdVM888wQ"
+                         :source "https://github.com/rundis/elm-light"}
+                  :date "2016-03-27"}
+                 {:title "Managing and diagramming elm packages with d3 in Light Table"
                   :blurb "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
                           Elm Light Table plugin."
                   :tech [:elm :clojurescript :lighttable :d3]
@@ -105,7 +120,27 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2016/elm_light_modules.html"
+               :title "Elm and ClojureScript joining forces in the elm-light plugin"
+               :blurb "Jeg tenkte det måtte være kult å se om man kunne få Elm og ClojureScript til å spille sammen i Light Table.
+                       I denne blogposten forklarer jeg hvordan jeg implementerte en Modul utforsker vha både Elm og ClojureScript"
+               :tech [:elm :clojurescript :lighttable]}
+              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part4.html"
+               :title "Typed up CRUD SPA with Haskell and Elm - Part 4: Feature creep"
+               :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. Tiden har kommet for å
+                       peise på med mer funksjonalitet og en god del refaktorering. Her får jeg kjørt meg skikkelig på både Elm og Haskell"
+               :tech [:elm :haskell]}
+              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part3.html"
+               :title "Typed up CRUD SPA with Haskell and Elm - Part 3: Routing"
+               :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
+                       implementerer jeg routing i Elm frontenden"
+               :tech [:elm :haskell]}
+              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part2.html"
+               :title "Typed up CRUD SPA with Haskell and Elm - Part 2: Persistence up and running"
+               :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
+                       implementerer jeg persistens vha en god gammeldags relasjonsdatabase"
+               :tech [:elm :haskell]}
+              {:url "http://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 1: Spike time"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I serien tar
                        jeg for meg utvikling av en CRUD applikasjon med Elm til frontend og Haskell for backend. Førte episode
