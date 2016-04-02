@@ -17,8 +17,11 @@
       (str/replace "-" " ")
       capitalize))
 
+(defn tech-name [content id]
+  (or (-> content :tech-names id)
+      (str-for-humans id)))
+
 (defn look-up-tech [content id]
   (if-let [tech (get-in content [:tech id])]
     (-> tech (select-keys #{:id, :name}) add-url)
-    {:id id, :name (or (-> content :tech-names id)
-                       (str-for-humans id))}))
+    {:id id, :name (tech-name content id)}))

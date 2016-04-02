@@ -115,7 +115,7 @@ nettsider.
 :content
 
 /javascript/                       /photos/tech/js.svg
-/clojure/                          /photos/tech/clojure.svg
+/clojure/                          /photos/tech/clojure.png
 /responsive-design/                /photos/tech/rwd.jpg 2x
 /ansible/                          /photos/tech/ansible-red.svg
 /git/                              /photos/tech/git-gray.svg
