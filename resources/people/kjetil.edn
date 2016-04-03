@@ -23,9 +23,12 @@
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech [:tdd :automatisering :release-early]}]
 
- :projects      [{:customer    "Nye Deichman - Applikasjonsprosjektet"
+ :projects      [{:customer    "Politiets IKT-tjenester"
+                  :description "Koordinering og utvikling knyttet til felles tjenester."
+                  :years       [2015 2016]}
+                 {:customer    "Nye Deichman - Applikasjonsprosjektet"
                   :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
-                  :years       [2014 2015 2016 2017]
+                  :years       [2014 2015]
                   :tech        [:saltstack :docker :ubuntu :vagrant :go :ruby :nodejs :javascript :cucumber :watir :elasticsearch :koha :git :java :tdd]}
                  {:customer    "FINN reise"
                   :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
