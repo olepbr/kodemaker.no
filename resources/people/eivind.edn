@@ -75,7 +75,13 @@
                        applikasjon."
                :tech [:java :gc :performance]}]
 
- :presentations [{:title "Plugin-basert arkitektur i Java!"
+ :presentations [{:title "Sammenligning av GC alternativer"
+                  :blurb "Lyntale som viser hvordan man kan sammenligne de forskjellige
+                          GC implementasjonene i standard JVM."
+                  :date "2016-03-03"
+                  :tech [:java :performance :gc]
+                  :urls {:video "https://vimeo.com/158720082"}}
+                 {:title "Plugin-basert arkitektur i Java!"
                   :blurb "Presentasjon fra JavaZone 2015 om bruk av plugins for å
                           lage en modulær arkitektur. Spesielt relevant forhold til
                           micro-services og muligheten for å splitte en applikasjon
