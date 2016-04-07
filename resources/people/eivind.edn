@@ -76,7 +76,7 @@
                :tech [:java :gc :performance]}]
 
  :presentations [{:title "Sammenligning av GC alternativer"
-                  :blurb "Lyntale som viser hvordan man kan sammenligne de forskjellige
+                  :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
                   :tech [:java :performance :gc]
