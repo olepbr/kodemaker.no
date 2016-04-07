@@ -11,7 +11,7 @@
             :twitter "kjetiljd"
             :linkedin "/in/kjetiljd"}
 
- :tech {:favorites-at-the-moment [:ansible :tdd :java :gradle :ci :cd :refactoring :devops utviklingsprosess :organisering-av-team :code-smells]
+ :tech {:favorites-at-the-moment [:ansible :tdd :java :gradle :ci :cd :refactoring :devops :utviklingsprosess :organisering-av-team :code-smells]
         :want-to-learn-more [:javascript :clojure :kotlin :go :machine-learning]}
 
  :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
@@ -25,7 +25,8 @@
 
  :projects      [{:customer    "Politiets IKT-tjenester"
                   :description "Koordinering og utvikling knyttet til felles tjenester."
-                  :years       [2015 2016]}
+                  :years       [2015 2016]
+                  :tech        []}
                  {:customer    "Nye Deichman - Applikasjonsprosjektet"
                   :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
                   :years       [2014 2015]
