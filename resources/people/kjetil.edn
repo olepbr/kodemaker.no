@@ -12,7 +12,7 @@
             :linkedin "/in/kjetiljd"}
 
  :tech {:favorites-at-the-moment [:ansible :tdd :java :gradle :ci :cd :refactoring :devops utviklingsprosess :organisering-av-team :code-smells]
-        :want-to-learn-more [:javascript :clojure :kotlin :go :machine-learning}
+        :want-to-learn-more [:javascript :clojure :kotlin :go :machine-learning]}
 
  :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
