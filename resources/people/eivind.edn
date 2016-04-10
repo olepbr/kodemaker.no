@@ -67,6 +67,12 @@
 		    	   :text "Til website"}
 		    :tech [:java :gc :performance]}]
 
+ :hobbies [{:title "Snowboard"
+            :description "Snowboard har vært en hobby siden videregående, og det blir fortsatt
+                          noen turer hvert år. De siste årene har sønnen på 7 år også blitt med,
+                          noe som gjør det ekstra stas :)"
+            :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}]
+
  :blog-posts [{:url "http://eivindw.github.io/2016/01/08/comparing-gc-collectors.html"
                :title "Comparing GC Collectors"
                :blurb "Innlegg som viser litt av forskjellen mellom de alternative GC collectorene
