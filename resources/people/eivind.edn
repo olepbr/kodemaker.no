@@ -57,7 +57,7 @@
 		    	    [competing-consumers](http://www.enterpriseintegrationpatterns.com/CompetingConsumers.html)-mønsteret."
 		    :link {:url "http://letitcrash.com/post/29044669086/balancing-workload-across-nodes-with-akka-2"
 		    	   :text "Les artikkel"}
-		    :tech [:akka]}
+		    :tech [:akka :scala]}
 		   {:title "Garbage Collection Tuning Guide"
 		    :blurb "Oracle sin dokumentasjon om tuning av Garbage
                             Collection. Gir en svært god oversikt over de
@@ -73,7 +73,19 @@
                        som er tilgjengelige i standard Java HotSpot VM. Tanken var å vise en enkel
                        sammenligning slik at det skal være enklere å gjøre noe ligende for din egen
                        applikasjon."
-               :tech [:java :gc :performance]}]
+               :tech [:java :gc :performance]}
+              {:url "http://open.bekk.no/java-scala-null"
+               :title "null som ukjent"
+               :blurb "Post som snakker om fordelen med Scala sin Option-type kontra bruken av null
+                       for å angi en ukjent verdi. Skrevet før vi fikk Option i Java.."
+               :tech [:java :scala]}
+              {:url "http://urn.nb.no/URN:NBN:no-25670"
+               :title "Embedding Efficient DSLs on the JVM : A review of alternative languages"
+               :blurb "Masteroppgaven Eivind skrev på UiO i 2010. Viser en sammenligning av forskjellige
+                       JVM-baserte språk forhold til bruk i domene-spesifikke språk. Ser på aspekter
+                       som syntaks-muligheter og ytelse - og prøver å gi en anbefaling på hvilke språk
+                       som egner seg best til ulike scenarier."
+               :tech [:java :scala :clojure :ruby :groovy]}]
 
  :presentations [{:title "Sammenligning av GC alternativer"
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
@@ -120,5 +132,14 @@
                           erfaringer fra bruk av rammeverket i Skatteetaten."
                   :date "2012-09-13"
                   :tech [:java :grid :hazelcast]
-                  :urls {:video "https://vimeo.com/49386944"}}]
+                  :urls {:video "https://vimeo.com/49386944"}}
+                 {:title "Funksjonell Programmering på JVM"
+                  :blurb "Presentasjon fra JavaZone 2010. Hovedsaklig en presentasjon av
+                          arbeidet Eivind gjorde med master-oppgaven. Snakker om forskjellige
+                          aspekter ved funksjonell programmering og hvordan man oppnår dette
+                          med forskjellige språk på JVM."
+                  :date "2010-09-08"
+                  :tech [:java :scala :clojure :ruby :groovy]
+                  :urls {:video "https://vimeo.com/28705495"
+                         :slides "http://www.slideshare.net/EivindWaaler/funksjonell-programmering-p-jvm"}}]
 }
