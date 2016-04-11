@@ -11,6 +11,9 @@ Kodemaker PULS er en oppsummering av alt det synlige Kodemakere driver med, som 
 
 Christin [snakket på meetup](http://www.meetup.com/ProductTank-Oslo/events/228606645/)! Meetupen heter Product Tank Oslo, og bidro til at Christin ytterligere fester grepet om tittelen Kodemaker Resident Thought Leader.
 
+<iframe src="https://player.vimeo.com/video/160150795" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/160150795">What developers need from their product/project manager</a> from <a href="https://vimeo.com/user50376167">Christin Gorman</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 **Kjetil viser at iPad pro har noe for seg**
 
 På QCon London 2016 tok Kjetil med seg sin iPad pro, en Apple Pencil og Paper by fiftythree.com, og [skisset i vei](http://www.akafred.com/2016/03/notes-from-qcon-london/). Endte jammen opp med [en retweet](https://twitter.com/akafred/status/707989008400453633) fra QCon London sin offisielle twitter-konto også.
