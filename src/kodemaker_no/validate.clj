@@ -105,6 +105,7 @@
    (optional-key :presence) Str
    (optional-key :contact-form) Str
    (optional-key :contact-form-button) Str
+   (optional-key :author) Str
    :body Str})
 
 (def Article

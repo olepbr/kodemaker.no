@@ -5,8 +5,9 @@
             [kodemaker-no.cultivate.videos :refer [cultivate-videos]]))
 
 (defn cultivate-content [raw-content]
-  (assoc raw-content
-    :people (cultivate-people raw-content)
-    :tech (cultivate-techs raw-content)
-    :blog-posts (cultivate-blog-posts (:blog-posts raw-content))
-    :videos (cultivate-videos raw-content)))
+  (let [people (cultivate-people raw-content)]
+    (assoc raw-content
+      :people people
+      :tech (cultivate-techs raw-content)
+      :blog-posts (cultivate-blog-posts (:blog-posts raw-content) people)
+      :videos (cultivate-videos raw-content))))

@@ -34,6 +34,10 @@
              by-published
              blog-post-list)))
 
+(defn- blog-post-author [blog-post]
+  (when-let [author-person (:author-person blog-post)]
+    [:p "Skrevet av " [:a {:href (:url author-person)} (:first-name author-person)]]))
+
 (defn- render-blog-post [blog-post]
   (list
    (blog-post-lead blog-post)
@@ -42,7 +46,8 @@
      [:div.bd
       (when-let [img (:illustration blog-post)]
         [:a.block.mod {:href (:path blog-post)} [:img {:src img}]])
-      [:p.shy (published blog-post)]]]
+      [:p.shy (published blog-post)]
+      (blog-post-author blog-post)]]
     [:div.lastUnit
      [:div.bd
       (blog-post-body blog-post)]]]))
@@ -58,6 +63,7 @@
              [:div.bd
               (render-presence (:presence blog-post))])
            [:p.shy (published blog-post)]
+           (blog-post-author blog-post)
            (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)
                (when (:contact-form blog-post)
