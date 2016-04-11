@@ -19,7 +19,8 @@ På QCon London 2016 tok Kjetil med seg sin iPad pro, en Apple Pencil og Paper b
 
 Eivind er en skikkelig søppelmann for tiden, og graver seg dypt inn i JVM-en sin søppeltømming (eller garbage collection som fancy folk kaller det). Vi har sett ham snakke om dette internt tidligere, og denne gangen var det på [Oslo4J (også kjent som javaBin) sin lyntalekveld](http://www.meetup.com/javaBin/events/228737519/).
 
-https://vimeo.com/158720082
+<iframe src="https://player.vimeo.com/video/158720082" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/158720082">Sammenligning av GC alternativer, Eivind Waaler</a> from <a href="https://vimeo.com/javabinoslo">javaBin Oslo</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 **Christian er hot-shot i godt selskap**
 
