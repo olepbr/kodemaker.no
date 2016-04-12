@@ -24,8 +24,6 @@ Det blir spennende å følge med på hva Magnar gjør for å eventuelt ta tilbak
 
 **Open source-bidrag**
 
-Denne måneden ønsker jeg å gi en stor takk til @kjetiljd, @anders, @andre, @christin, @kristian, @alfkristian, @tmetrue og @Trygve. Disse har heldigvis ikke gjort et eneste open source-bidrag i januar, som gjør at jeg kan legge meg minst en halvtime tidligere i kveld. Fortsett gjerne slik!
-
 Alf driver med et eller annet mystisk. Han har laget et prosjekt som heter "bam" som ser ut til å ha som mål å få [`true` til å være det samme som `false`](https://github.com/aesolbakken/bam/blob/c9d6c58c19ae5c69853ef91bb82f6e30e3217a40/src/test/groovy/bam/BokSpec.groovy). Kan man sparke inn dører, klarer man sikkert  det og!
 
 Christian sin rolle i Sinon er omtrent som en romersk keiser på gladiator-arenaen. [En enkel thumbs up eller thumbs down](https://github.com/sinonjs/lolex/pull/34#issuecomment-169926357) bestemmer utfallet av andres blodslit. Noen ganger greier han også ut, og deklarerer ["there should be no singleton"](https://github.com/sinonjs/sinon/pull/936#issuecomment-172175661).
