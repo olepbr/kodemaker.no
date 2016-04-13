@@ -28,7 +28,8 @@
  :phone-number "+47 982 19 322"
  :email-address "eivind@kodemaker.no"
 
- :presence {:twitter "eivindw"
+ :presence {:cv "eivind"
+            :twitter "eivindw"
             :linkedin "/pub/eivind-barstad-waaler/0/410/b5a"
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
