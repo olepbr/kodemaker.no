@@ -1,7 +1,7 @@
 {:id :java
  :name "Java"
  :illustration "/photos/tech/java.svg"
- :site "http://docs.oracle.com/javase/7/docs/api/"
+ :site "http://docs.oracle.com/javase/8/"
  :description
  "Java er raskt, typesikkert, og har enormt mange flinke utviklere som kan hele språket inn og ut. Java har alltid
  hatt et sterkt fagmiljø som over tid har utviklet en mengde gode open source biblioteker. Dette gjør Java til et
