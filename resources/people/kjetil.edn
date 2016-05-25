@@ -1,59 +1,59 @@
-{:id :kjetil
- :name ["Kjetil" "Jørgensen-Dahl"]
- :title "Kodemaker"
- :start-date "2010-02-01"
- :description "Kjetil har utviklet forretningskritiske applikasjoner siden 1998 og brenner for faget! Han er en erfaren utvikler og teamleder, og som ofte leverer langt mer enn kode. Fokusert arbeid for å skape gode og vedlikeholdbare systemer, er Kjetils mål. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker, og ofte bidragsyter, i fagfora."
+{:id              :kjetil
+ :name            ["Kjetil" "Jørgensen-Dahl"]
+ :title           "Kodemaker"
+ :start-date      "2010-02-01"
+ :description     "Kjetil har utviklet forretningskritiske applikasjoner siden 1998 og brenner for faget! Han er en erfaren utvikler og teamleder, og som ofte leverer langt mer enn kode. Fokusert arbeid for å skape gode og vedlikeholdbare systemer, er Kjetils mål. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker, og ofte bidragsyter, i fagfora."
 
- :phone-number "+47 920 84 750"
- :email-address "kjetiljd@kodemaker.no"
+ :phone-number    "+47 920 84 750"
+ :email-address   "kjetiljd@kodemaker.no"
 
- :presence {:cv "kjetil"
-            :twitter "kjetiljd"
-            :linkedin "/in/kjetiljd"}
+ :presence        {:cv       "kjetil"
+                   :twitter  "kjetiljd"
+                   :linkedin "/in/kjetiljd"}
 
- :tech {:favorites-at-the-moment [:ansible :tdd :java :gradle :ci :cd :refactoring :devops :utviklingsprosess :organisering-av-team :code-smells]
-        :want-to-learn-more [:javascript :clojure :kotlin :go :machine-learning]}
+ :tech            {:favorites-at-the-moment [:ansible :tdd :java :gradle :ci :cd :refactoring :devops :utviklingsprosess :organisering-av-team :code-smells]
+                   :want-to-learn-more      [:javascript :clojure :kotlin :go :machine-learning]}
 
- :recommendations [{:link {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
+ :recommendations [{:link  {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
                     :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode. Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
-                    :tech [:refactoring :code-smells]}
-                    {:link {:url "http://www.growing-object-oriented-software.com/" :text "Boken"}
+                    :tech  [:refactoring :code-smells]}
+                   {:link  {:url "http://www.growing-object-oriented-software.com/" :text "Boken"}
                     :title "Growing Object-Oriented Software, Guided by Tests (Freeman & Pryce)"
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
-                    :tech [:tdd :automatisering :release-early]}]
+                    :tech  [:tdd :automatisering :release-early]}]
 
- :projects      [{:customer    "Politiets IKT-tjenester"
-                  :description "Koordinering og utvikling knyttet til felles tjenester."
-                  :years       [2015 2016]
-                  :tech        []}
-                 {:customer    "Nye Deichman - Applikasjonsprosjektet"
-                  :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
-                  :years       [2014 2015]
-                  :tech        [:saltstack :docker :ubuntu :vagrant :go :ruby :nodejs :javascript :cucumber :watir :elasticsearch :koha :git :java :tdd]}
-                 {:customer    "FINN reise"
-                  :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
-                  :years       [2013 2014]
-                  :tech        [:java :groovy :cucumber :camel :gradle :solr :git]}
-                 {:customer    "FINN jobb"
-                  :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
-                  :years       [2011 2012 2013]
-                  :tech        [:java :ruby :cucumber :solr]}
-                 {:customer    "Fondet for Regionale Verneombud"
-                  :description "Nytt sekretariatssystem. Saksbehandlingssystem for innkreving av avgift fra virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
-                  :years       [2010 2011]
-                  :tech        [:ruby :rails :sphinx :mysql]}
-                 {:customer    "Lindorff Decision (nå Bisnode)"
-                  :description "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach. Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur. Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av utviklingsteamet."
-                  :years       [2010]
-                  :tech        [:java :spring-mvc]}]
+ :projects        [{:customer    "Politiets IKT-tjenester"
+                    :description "Koordinering og utvikling knyttet til felles tjenester."
+                    :years       [2015 2016]
+                    :tech        [:javascript :react :java :maven :testing :cxf :soapui :git]}
+                   {:customer    "Nye Deichman - Applikasjonsprosjektet"
+                    :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
+                    :years       [2014 2015]
+                    :tech        [:saltstack :docker :ubuntu :vagrant :go :ruby :nodejs :javascript :cucumber :watir :elasticsearch :koha :git :java :tdd]}
+                   {:customer    "FINN reise"
+                    :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
+                    :years       [2013 2014]
+                    :tech        [:java :groovy :cucumber :camel :gradle :solr :git]}
+                   {:customer    "FINN jobb"
+                    :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
+                    :years       [2011 2012 2013]
+                    :tech        [:java :ruby :cucumber :solr]}
+                   {:customer    "Fondet for Regionale Verneombud"
+                    :description "Nytt sekretariatssystem. Saksbehandlingssystem for innkreving av avgift fra virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
+                    :years       [2010 2011]
+                    :tech        [:ruby :rails :sphinx :mysql]}
+                   {:customer    "Lindorff Decision (nå Bisnode)"
+                    :description "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach. Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur. Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av utviklingsteamet."
+                    :years       [2010]
+                    :tech        [:java :spring-mvc]}]
 
- :endorsements  [{:author "Belen Svebak"
-                  :title  "Manager Integration and Quality Team, FINN reise"
-                  :quote  "Kjetil er en god nettverksbygger! Han er også en igangsetter som ikke er redd for å eksperimentere. Opptatt av å levere høy kvalitet, men også av produkt- og prosessforbedringer. Fokuserer på å utvikle andre. Ærlig. Han er opptatt av å skape miljø hvor det kan oppstår åpenhet og ærlighet. Motiverende å jobbe med. Sterk lagånd!"}
-                 {:author "Pedro Thormodsen"
-                  :title  "Product Director, FINN jobb"
-                  :quote  "Kjetil is without doubt one of the best software developers I've had the privilege to work with. Kjetil has made invaluable contributions to product development, methodology, and technology to our team and I would not hesitate to hire him back. Top qualities: Great Results, Expert, High Integrity"}
-                 {:author "Geir Egil Hansen"
-                  :title  "Senior SW Consultant, Lindorff Decision"
-                  :quote  "Lindorff Decision hired Kjetil for a specific project in 2010. He is a fantastic guy to work with; inspiring, dedicated and was able to give us new ideas on how we should improve the way we work. He was the main reason our project went so well, in time and with good results. Kjetil is a great motivator. With his great knowledge around project management, software build systems, software development techniques and the like, there is no problem recommending him for any software project. Top qualities: Great Results, Personable, Expert" }]}
+ :endorsements    [{:author "Belen Svebak"
+                    :title  "Manager Integration and Quality Team, FINN reise"
+                    :quote  "Kjetil er en god nettverksbygger! Han er også en igangsetter som ikke er redd for å eksperimentere. Opptatt av å levere høy kvalitet, men også av produkt- og prosessforbedringer. Fokuserer på å utvikle andre. Ærlig. Han er opptatt av å skape miljø hvor det kan oppstår åpenhet og ærlighet. Motiverende å jobbe med. Sterk lagånd!"}
+                   {:author "Pedro Thormodsen"
+                    :title  "Product Director, FINN jobb"
+                    :quote  "Kjetil is without doubt one of the best software developers I've had the privilege to work with. Kjetil has made invaluable contributions to product development, methodology, and technology to our team and I would not hesitate to hire him back. Top qualities: Great Results, Expert, High Integrity"}
+                   {:author "Geir Egil Hansen"
+                    :title  "Senior SW Consultant, Lindorff Decision"
+                    :quote  "Lindorff Decision hired Kjetil for a specific project in 2010. He is a fantastic guy to work with; inspiring, dedicated and was able to give us new ideas on how we should improve the way we work. He was the main reason our project went so well, in time and with good results. Kjetil is a great motivator. With his great knowledge around project management, software build systems, software development techniques and the like, there is no problem recommending him for any software project. Top qualities: Great Results, Personable, Expert"}]}
