@@ -43,6 +43,23 @@
                     :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
                            :text "Se foredraget"}
                     :tech [:design :clojure]}
+                   {:title "On the Spectrum of Abstraction"
+                    :blurb "Rich Hickey har noen fantastiske talks. Han snakker
+                            om generelle prinsipper, og gir deg ofte noen nye
+                            konsepter og ord du kan bruke til å tenke med rundt
+                            programmering.
+
+                            Det er ikke ofte jeg ser talks av andre enn Hickey
+                            som har denne typen øye-åpnende innhold, men dette
+                            er en. Det er litt knot og kluss i starten, men det
+                            tar seg veldig opp. Han introduserer noen spissede
+                            begreper (power vs usefulness / properties) og
+                            bruker de til å snakke om abstraksjonnivåer på en
+                            veldig interessant måte. Mye godt tankemateriale
+                            her. Anbefales!"
+                    :link {:url "https://www.youtube.com/watch?v=mVVNJKv9esE"
+                           :text "Se foredraget"}
+                    :tech [:design :react]}
                    {:title "Web Performance Calendar"
                     :blurb "Min favorittjulekalender til helårsbruk.
                             Full av triks, tips, testing og forskning
