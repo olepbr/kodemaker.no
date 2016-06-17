@@ -23,7 +23,11 @@
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech  [:tdd :automatisering :release-early]}]
 
- :projects        [{:customer    "Politiets IKT-tjenester"
+ :projects        [{:customer    "Schibsted Media Group"
+                    :description "Utvikling"
+                    :years       [2016]
+                    :tech        [:java :maven :aws :git]}
+                   {:customer    "Politiets IKT-tjenester"
                     :description "Koordinering og utvikling knyttet til felles tjenester."
                     :years       [2015 2016]
                     :tech        [:javascript :react :java :maven :testing :cxf :soapui :git]}
