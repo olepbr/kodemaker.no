@@ -8,7 +8,7 @@
  :email-address "fredrik@kodemaker.no"
 
  :presence {:cv "fredrik"
-            :twitter "fredrika"
+            :twitter "faubert"
             :linkedin "/in/fredrikaubert"
             :github "fredrikaubert"}
 
