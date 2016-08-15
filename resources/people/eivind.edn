@@ -149,4 +149,19 @@
                   :tech [:java :scala :clojure :ruby :groovy]
                   :urls {:video "https://vimeo.com/28705495"
                          :slides "http://www.slideshare.net/EivindWaaler/funksjonell-programmering-p-jvm"}}]
+ :endorsements [{:author "Kjell Sverre Birkeland"
+                 :title  "Prosjektleder i Skatteetaten"
+                 :quote  "Eivind har den sjeldne egenskapen, at han forstår komplekse faglige
+                          problemstillinger og gjør det om til Java-kode. Ikke bare gjør han det om
+                          til kode, men koden er lettlest, forståelig og god å forvalte videre.
+                          Han skaper rett og slett vakker kode.
+
+                          En utvikler er ikke en utvikler. Det er stor forskjell på effektiviteten og evne
+                          til produsere kode med høy kvalitet. Eivind er i den ypperste klasse i forhold
+                          til å omgjøre krav til kode med høy teknisk og funksjonell kvalitet. Han er sterk
+                          på feilsøking, bl.a. i forbindelse med tunge prosessmotorer og håndterer både
+                          frontend og backend godt.
+
+                          Han er en team spiller og deler med stor glede av sin kompetanse, både i
+                          forbindelse med parprogrammering og gjennomganger for større eller mindre grupper."}]
 }
