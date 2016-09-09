@@ -94,7 +94,13 @@
                        som egner seg best til ulike scenarier."
                :tech [:java :scala :clojure :ruby :groovy]}]
 
- :presentations [{:title "Sammenligning av GC alternativer"
+ :presentations [{:title "5 approaches to concurrency in Java - which one is the best?"
+                  :blurb "Presentasjon fra JavaZone 2016 om forskjellige rammeverk/paradigmer for å gjøre
+                          applikasjoner concurrent. Mye live eksempel."
+                  :date "2016-09-08"
+                  :tech [:java :concurrency :akka :vertx :hystrix :rxjava :quasar]
+                  :urls {:video "https://vimeo.com/182070294"}}
+                 {:title "Sammenligning av GC alternativer"
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
