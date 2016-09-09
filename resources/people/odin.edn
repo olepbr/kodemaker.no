@@ -18,9 +18,9 @@
             :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:react :clojurescript :ansible]
-        :using-at-work [:clojure :clojurescript :d3 :aws]
-        :want-to-learn-more [:elm :docker :unity3d]}
+ :tech {:favorites-at-the-moment [:react :clojurescript :flexbox]
+        :using-at-work [:clojure :clojurescript :reagent :aws]
+        :want-to-learn-more [:elm :unity3d :spec]}
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
                :title "Tiltrekkende 3D på web"
@@ -81,7 +81,14 @@
                            :text "Det vi glemte"}
                     :tech [:clojurescript :editor]}]
 
- :presentations [{:title "Interaktiv programmering med ClojureScript"
+ :presentations [{:title "3 grunner til at ClojureScript gir deg superkrefter"
+                  :date "2016-09-8"
+                  :blurb "Trenden i webutvikling går mot mer og mer avanserte klienter skrevet i JavaScript.
+                  ClojureScript er et pragmatisk språk som hjelper deg til å lage enklere løsninger. Her belyser jeg
+                  flere grunner til at ClojureScript er verdt å vurdere til ditt neste prosjekt."
+                  :tech [:clojurescript :web :figwheel :devcards :javascript]
+                  :urls {:video "https://vimeo.com/181925282"}}
+                 {:title "Interaktiv programmering med ClojureScript"
                   :date "2015-09-9"
                   :blurb "Interaktiv programmering er en teknikk som gir deg en umiddelbar nærhet til koden din og
                   åpner opp for en ekstremt kort feedbackloop."
@@ -127,7 +134,7 @@
                   :tech [:clojure]}]
 
  :projects [{:customer "Telenor Digital"
-             :description "Medlem av Data insights-teamet som driver med analysetjenester for ulike deler av Telenor.
+             :description "Medlem av Data Insights-teamet som driver med analysetjenester for ulike deler av Telenor.
                            Fokus på integrasjon av datakilder og visualisering av store datamengder."
              :years [2016]
              :tech [:clojure :clojurescript :d3 :aws :postgresql :kafka]}
