@@ -18,9 +18,9 @@
             :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:react :clojurescript :flexbox]
-        :using-at-work [:clojure :clojurescript :reagent :aws]
-        :want-to-learn-more [:elm :unity3d :spec]}
+ :tech {:favorites-at-the-moment [:clojurescript :datascript :flexbox]
+        :using-at-work [:clojure :clojurescript :datomic :datascript :aws]
+        :want-to-learn-more [:elm :unity3d :clojure-spec]}
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
                :title "Tiltrekkende 3D på web"
@@ -45,35 +45,35 @@
                        pusse opp eller å sitte på toget. Her er en oversikt over de podcastene jeg helst hører
                        på om dagen."
                :tech [:clojure]}
-               {:url "http://odinodin.no/2015-03-14-canvas-attraction/"
+              {:url "http://odinodin.no/2015-03-14-canvas-attraction/"
                :title "Canvas og tiltrekningskraft"
                :blurb "Jeg leste en fantastisk interessant bok som handler om hvordan man kan lage digitale
                        verdener basert på matematiske prinsipper, Nature of code.
                        Den inspirerte meg til å visualisere et enkelt system med ClojureScript og Canvas"
-               :tech  [:clojurescript]}
-               {:url "http://odinodin.no/2012-11-12-spock-and-spring/"
-                :title "Spock og Spring"
-                :blurb "Om du har en Spring-basert applikasjon og ønsker å teste den med Spock så er det kjekt å kjenne til
+               :tech [:clojurescript]}
+              {:url "http://odinodin.no/2012-11-12-spock-and-spring/"
+               :title "Spock og Spring"
+               :blurb "Om du har en Spring-basert applikasjon og ønsker å teste den med Spock så er det kjekt å kjenne til
                        fallgruvene og hvordan du navigerer rundt de."
-                :tech [:spock :groovy]}
-               {:url   "http://odinodin.no/2013-06-29-get-git/"
-                :title "Forstå Git"
-                :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med bøker, videoer og andre
+               :tech [:spock :groovy]}
+              {:url "http://odinodin.no/2013-06-29-get-git/"
+               :title "Forstå Git"
+               :blurb "Git er et kraftig verktøy med spisse kanter. Her er en samling med bøker, videoer og andre
                         ressurser som hjalp meg å forstå hvordan git fungerer."
-                :tech [:git]}]
+               :tech [:git]}]
 
  :recommendations [{:title "Building Microservices"
                     :blurb "Microservices er virkelig i vinden om dagen og denne boken gir deg en bred forståelse om
                     hva det egentlig dreier seg om."
-                    :link  {:url  "http://samnewman.io/books/building_microservices/"
-                            :text "Les boken"}
-                    :tech  [:micro-services :utvikling]}
+                    :link {:url "http://samnewman.io/books/building_microservices/"
+                           :text "Les boken"}
+                    :tech [:micro-services :utvikling]}
                    {:title "Release it!"
                     :blurb "Michael Nygard deler dyrekjøpte erfaringer som kan hjelpe deg med å lage robuste
                             produksjonssystemer."
-                    :link  {:url  "http://pragprog.com/book/mnee/release-it"
-                            :text "Les boken"}
-                    :tech  [:utvikling]}
+                    :link {:url "http://pragprog.com/book/mnee/release-it"
+                           :text "Les boken"}
+                    :tech [:utvikling]}
                    {:title "The Pain we forgot"
                     :blurb "Dette er en påminner om smertene ved systemutvikling som vi har blitt så vant til at
                             vi ikke stiller spørsmål ved de lenger. Det finnes et enormt rom for forbedring!"
@@ -102,8 +102,8 @@
                   :tech [:clojure :clojurescript :web]
                   :urls {:video "https://vimeo.com/105857867"}}
 
-                  {:title "Elektronisk tekstbehandling"
-                   :date "2013-09-11"
+                 {:title "Elektronisk tekstbehandling"
+                  :date "2013-09-11"
                   :blurb "Moderne programmeringsspråk er kraftige
                           saker; de kjemper om å overgå
                           hverandre med høyere og høyere abstraksjonsnivåer.
@@ -161,10 +161,14 @@
                           pudder med snø til knærne. Da kjenner du at du lever."
             :illustration "/illustrations/hobbies/odin-ski.jpg"}]
 
- :open-source-projects [{:url "https://github.com/odinodin/canvas-fn"
-                        :name "Canvas-fn"
-                        :description "Canvas-baserte visualiseringer laget med ClojureScript"
-                        :tech [:clojurescript :canvas]}
+ :open-source-projects [{:url "https://github.com/odinodin/data-frisk-reagent"
+                         :name "data-frisk"
+                         :description "Støtteverktøy for å visualisere data i trestrukturer"
+                         :tech [:clojurescript :reagent]}
+                        {:url "https://github.com/odinodin/canvas-fn"
+                         :name "Canvas-fn"
+                         :description "Canvas-baserte visualiseringer laget med ClojureScript"
+                         :tech [:clojurescript :canvas]}
                         {:url "https://github.com/odinodin/cashflow"
                          :name "Cashflow"
                          :description "Regnskap for nettbanktransaksjoner"
