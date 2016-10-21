@@ -7,19 +7,17 @@
                 Stein Tore har jobbet med flere forskjellige oppgaver innen IT, slik som support, kundeansvar, installasjon, testing og utvikling.
                 Han bruker denne erfaringen aktivt i alle de prosjekter han deltar i."
 
- :phone-number  "+47 971 25 770"
+ :phone-number  "971 25 770"
  :email-address "stt@kodemaker.no"
 
  :presence      {:cv      "steintore"
                  :twitter "steintt"
                  :github  "steintore"
                  :linkedin "/in/steintore/"
-                 :coderwall "steintore"
                  }
 
- :tech          {:favorites-at-the-moment [:grails :react :docker]
-                 :using-at-work [:grails :groovy :java :javascript]
-                 :want-to-learn-more      [:clojure :funksjonell-programmering :gradle :ansible :docker]}
+ :tech          {:favorites-at-the-moment [:clojure]
+                 :want-to-learn-more      [:clojure :funksjonell-programmering :clojurescript]}
 
  :hobbies       [{:title        "Fotball"
                   :description  "Etter å ha bodd ett år i Liverpool, så er det ingen vei tilbake. Interessen går
@@ -27,17 +25,21 @@
                                 med venner. Og noen ganger spiller jeg til og med selv!"
                   :illustration "/illustrations/hobbies/fotball.jpg"}
                  {:title        "Smarthuset som sparer penger og gjør kule ting!"
-                  :description  "Er for tiden veldig opptatt av å automatisere huset, uten at det koster skjorta.
-                                 Planen er automatisk oppvarming, melding dersom garasjeporten er åpen og
-                                 demping av lyset når det trengs. Det hele starter med en Raspberry PI"
+                  :description  "Er for tiden veldig opptatt av å automatisere huset, uten at det koster skjorta. Jeg har nå automatisk oppvarming, melding dersom garasjeporten er åpen, melding når tørektrommelen er ferdig. Alt lyset slår seg av når jeg drar, kan jeg også erstatte mitt eksisterende alarmanlegg?
+                  Det hele starter med en, to, tre eller fire Raspberry PIs"
                   :illustration "/illustrations/hobbies/raspberrypi.jpg"}]
 
-:recommendations [{:title "Radiolab from WNYC - podcast"
-                    :link {:url "http://www.radiolab.org/"
+:recommendations [
+                {:title "TED Radio hour - podcast"
+                    :link {:url "http://www.npr.org/programs/ted-radio-hour/"
                         :text "Se hjemmesiden"}
                     :tech [:podcast]
-                    :blurb "Radiolab lager podcasts om alt de og lytterne lurer på. Episodene går fra 15 til ca 60 min og
-                          veldig mange av de er både gode og veldig interessante. Anbefaler å høre på episoden om Galapagos." }
+                    :blurb "Herlig gjennomgang av noen av de beste TED-talks, forklarer konsept og går enda litt dypere enn en vanlig talk. Anbefales!" }
+                {:title "Freakonomics Radio - podcast"
+                    :link {:url "http://freakonomics.com/"
+                        :text "Se hjemmesiden"}
+                    :tech [:podcast]
+                    :blurb "Mange gode episoder som får deg til å tenke og se ting fra en annen side." }
                 {:title "Webutvikling med Clojure"
                     :link {:url "https://vimeo.com/105857867"
                         :text "Se video"}
