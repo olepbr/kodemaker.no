@@ -42,7 +42,7 @@
                     :link {:url "https://vimeo.com/105857867"
                         :text "Se video"}
                     :tech [:clojure]
-                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig lære Clojure.
+                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig ønske å lære Clojure.
                             Anbefales!" }]        
 
  :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it/"
