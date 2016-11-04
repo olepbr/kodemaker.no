@@ -50,7 +50,7 @@
                     :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
 
  :tech            {:favorites-at-the-moment [:clojure :scala :funksjonell-programmering]
-                   :want-to-learn-more      [:clojurescript :nodejs]}
+                   :want-to-learn-more      [:elixir :lisp-flavoured-erlang]}
 
  :recommendations [{:title "The Joy of Clojure"
                     :blurb "Dette er ingen intro bok om Clojure,
@@ -128,7 +128,31 @@
                     :urls  {:video "https://vimeo.com/28765670"}
                     :tech  [:clojure :funksjonell-programmering]}]
 
- :endorsements    [{:author "Øyvind Møller Asbjørnsen"
+ :endorsements    [{:author "Owen Fraser-Green"
+                    :title "Leder MyEnergy at Hafslund"
+                    :quote "Alf Kristian is the personification of one of my
+                    favourite books - Smart and Gets Things Done. Having tried
+                    (but alas failed) to employ him a few years ago, I was lucky
+                    enough to hire him as a consultant on our Smart Home project
+                    at Hafslund. I was particularly impressed by his attention
+                    to detail, his thoroughness and his ability to just make it
+                    work. Our office hipster coffee club mourns his loss, as does
+                    the rest of our team. I would wholeheartedly recommend Alf Kristian
+                    for any project"}
+                   {:author "Rolv Seehuus"
+                    :title "Tech Lead"
+                    :quote "I learned to know Alf Kristian while he was a consultant
+                    with us in the Analytics team in Telenor Digital. He impressed me
+                    with his attitude towards commitment, and his ability to get
+                    stuff done. We learned a lot together about Clojure and AWS while
+                    he worked on parts of our ETL pipeline, and his code - concise,
+                    readable, well tested - is still running in our production systems
+                    (2014-10.)
+                    <br><br>
+                    He is a great team-mate, and I would strongly recommend
+                    his services as a software developer - or Kodemaker if you like.
+                    If I got another chance at having him on my team, I'd grab it."}
+                   {:author "Øyvind Møller Asbjørnsen"
                     :title  "Head of Java Community of Practice at Capgemini"
                     :quote  "Alf Kristian is by far one of the most talented
                     developers I've ever worked with, and it was a true

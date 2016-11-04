@@ -28,6 +28,7 @@
  :jspm "jspm"
  :junit "JUnit"
  :lighttable "Light Table"
+ :lisp-flavoured-erlang "Lisp Flavoured Erlang"
  :markedsforing "Markedsføring"
  :openam "OpenAM"
  :orm "ORM"
