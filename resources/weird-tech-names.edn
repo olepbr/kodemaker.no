@@ -9,6 +9,7 @@
  :buster-js "Buster.JS"
  :cd "Continuous Delivery"
  :ci "Continuous Integration"
+ :clojure-spec "clojure.spec"
  :css "CSS"
  :cvs "CVS"
  :csharp "C#"
