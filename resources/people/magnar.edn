@@ -411,7 +411,18 @@
              :tech [:javascript :css :html :ajax :jquery :jsp :java
                     :cvs :jira :confluence]}]
 
- :endorsements [{:author "Geir Henning Pettersen"
+ :endorsements [{:author "Owen Fraser-Green"
+                 :title "Leder MyEnergy, Hafslund"
+                 :quote "Magnar is one of the smartest full-stack developers
+                         I've ever met. I had the great pleasure of working with
+                         him on our Smart Home project at Hafslund where we
+                         tested his flexibility by asking him to take over our
+                         DevOps stack, write one of the back-end services and
+                         lead the rewrite our app. All of which he pulled off
+                         with stunning success. Besides his prowess as a
+                         developer, we also miss his sharp wit in the office.
+                         Magnar would be a fantastic asset to any team."}
+                {:author "Geir Henning Pettersen"
                  :title "Tech Lead, FINN reise"
                  :quote "Magnar kom inn tidlig i et prosjekt der vi ønsket å øke
                          kompetansen vår på frontendteknologi.
