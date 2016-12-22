@@ -181,7 +181,26 @@
                               :url "https://github.com/clj-time/clj-time"
                               :tech [:clojure]}]
 
- :endorsements [{:author "Trond Hagen"
+ :endorsements [{:author "Joel Wilsson"
+                 :title "Software Engineer, Telenor Digital"
+                 :quote "Odin was a consultant with the Data Insights team in Telenor Digital for three months,
+                 and he was productive immediately. Large companies tend to have a lot of overhead, and some
+                 consultants wait until everything is sorted out before they start working. Odin will find a way
+                 and do what it takes to cut through the nonsense and get down to programming, solving issues
+                 and getting features into production as soon as possible.
+
+                 He introduced several new libraries and technologies that we weren't aware of that are still
+                 of great value to us even today, which improved our testing and development workflow.
+
+                 Odin is able to work independently and manage customer and stakeholder requirements and
+                 expectations, and brought a lot of experience to our team and helped mentor more junior
+                 programmers in a great way.
+
+                 He really knows his stuff, is passionate about Clojure and functional programming, produces
+                 high quality code and takes pride in delivering good work, yet somehow manages to stay humble.
+                 Very easy to work with - I highly recommend you find out for yourself"}
+
+                {:author "Trond Hagen"
                  :title "Director Software Development, Conax"
                  :quote "Jeg hadde gleden av å jobbe sammen med Odin i 3 år hos Conax.
                  Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
