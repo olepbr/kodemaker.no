@@ -23,7 +23,11 @@
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech  [:tdd :automatisering :release-early]}]
 
- :projects        [{:customer    "Schibsted Products & Technology"
+ :projects        [{:customer    "NRK"
+                    :description "Utvikling av integrasjoner."
+                    :years       [2017]
+                    :tech        [:java :maven :git :spring :jenkins :rest :jira :confluence :stash]}
+                   {:customer    "Schibsted Products & Technology"
                     :description "Utvikling av integrasjon; også fasilitator for teamreorganisering og prosessforbedringer."
                     :years       [2016]
                     :tech        [:java :maven :aws :git :spring :spock :geb :mysql :jenkins :rest :docker :jira :confluence :github]}
