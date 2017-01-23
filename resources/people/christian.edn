@@ -167,7 +167,7 @@
 
  :projects [{:customer "Eventum.no"
              :description "Utvikling av backend og frontend for tjenesten eventum.no."
-             :tech [:javascript :nodejs :react :elasticsearch :clojure]
+             :tech [:javascript :nodejs :react :elasticsearch :clojure :ansible :docker :centos]
              :years [2017]}
             {:customer "NRK Origo - Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
@@ -178,7 +178,7 @@
             implementert i Elasticsearch gjennom en node.js/Express webserver,
             og med UI skrevet i React. UI-et ble skilt ut som et bibliotek for
             intern gjenbruk, og er nå i bruk i flere applikasjoner."
-             :tech [:javascript :elasticsearch :nodejs :react]
+             :tech [:javascript :elasticsearch :nodejs :react :docker :mesos]
              :years [2015 2016]}
             {:customer "NRK Radioarkiv"
              :description "Implementerte nytt design for NRKs interne
