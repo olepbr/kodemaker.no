@@ -166,7 +166,8 @@
                :tech [:lisp :elisp :emacs]}]
 
  :projects [{:customer "Eventum.no"
-             :description "Utvikling av backend og frontend for tjenesten eventum.no."
+             :description "Utvikling av backend og frontend for tjenesten
+             eventum.no. Automatisering av server-oppsett, bygg og deployment."
              :tech [:javascript :nodejs :react :elasticsearch :clojure :ansible :docker :centos]
              :years [2017]}
             {:customer "NRK Origo - Potion"
