@@ -222,8 +222,8 @@
                   :link {:url "http://www.parens-of-the-dead.com" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}
 
-                 #_{:title "Adventur Delux"
-                    :description "Et tekstbasert eventyrspill jeg har
+                 {:title "Adventur Delux"
+                  :description "Et tekstbasert eventyrspill jeg har
                                 skrevet på siden 1997, på størrelse
                                 med Ringenes Herre fire ganger. Som en
                                 ung lovende sverdsvinger går du rundt,
@@ -235,8 +235,8 @@
                                 [Groovy](/groovy/), samt den siste inkarnasjonen
                                 som har en [Clojure](/clojure/) backend til en
                                 Emacs Lisp frontend."
-                    :illustration "/illustrations/side-projects/adventur.jpg"
-                    :link {:url "http://www.adventur.no" :text "Prøv spillet"}}]
+                  :illustration "/illustrations/side-projects/adventur.jpg"
+                  :link {:url "https://www.adventur.no" :text "Prøv spillet"}}]
 
  :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
                :title "5 JavaScript-uvaner du må legge av deg"
