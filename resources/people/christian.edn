@@ -3,13 +3,12 @@
  :title "Kodemaker"
  :start-date "2013-11-01"
  :description "Christian er en engasjert og allsidig programmerer. Gjennom sine
-               kurs og foredrag har han gjort seg kjent som en kvass
-               frontend-programmerer som tar design, testing og kvalitet
-               seriøst, men tar med like stor glød fatt i prosjekter på
-               server-siden. Christian har lang erfaring med både frontend og
-               backend såvel som drift av Linux-servere. Han fungerer godt både
-               alene og i team, og fungerer både som humørspreder og kritisk
-               røst i samarbeid med andre."
+               kurs og foredrag har han gjort seg kjent som en meningssterk og
+               kvass programmerer som tar design, testing og kvalitet seriøst.
+               Christian har lang erfaring med både frontend og backend såvel
+               som "devops"-nivå oppsett og drift av applikasjonsservere. Han
+               trives godt både alene og i team, og fungerer både som
+               humørspreder og kritisk røst i samarbeid med andre."
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
@@ -19,7 +18,7 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:javascript :es6 :docker :elasticsearch]
+ :tech {:using-at-work [:javascript :es6 :docker :elasticsearch :clojure]
         :favorites-at-the-moment [:elasticsearch :react :emacs :clojure]
         :want-to-learn-more [:haskell :om-next]}
 
@@ -166,13 +165,31 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "NRK - Redigeringsstøtte"
+ :projects [{:customer "Eventum.no"
+             :description "Utvikling av backend og frontend for tjenesten eventum.no."
+             :tech [:javascript :nodejs :react :elasticsearch :clojure]
+             :years [2017]}
+            {:customer "NRK Origo - Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
-            nettklipp, ting som har gått på TV og råstoff."
+            nettklipp, ting som har gått på TV og råstoff. Utviklet en
+            søkekomponent for 'smart søk' som gjør utstrakt bruk av
+            autocomplete, forslag til forskjellige filtreringer, og gjør andre
+            grep for å styre brukeren i retning av et detaljert søk. Søket ble
+            implementert i Elasticsearch gjennom en node.js/Express webserver,
+            og med UI skrevet i React. UI-et ble skilt ut som et bibliotek for
+            intern gjenbruk, og er nå i bruk i flere applikasjoner."
              :tech [:javascript :elasticsearch :nodejs :react]
+             :years [2015 2016]}
+            {:customer "NRK Radioarkiv"
+             :description "Implementerte nytt design for NRKs interne
+             Radioarkiv, som brukes internt for research og gjenbruk av
+             arkivmatriale. Designet ble implementert i form av en styleguide
+             som senere ble den sentrale UI-komponenten i paraply-prosjektet
+             Origo, som favner alle NRKs egenproduserte systemer rettet mot
+             interne arbeidsflyter."
+             :tech [:javascript :css :rwd]
              :years [2015]}
-            {:customer "NRK -
-            Redigeringsstøtte"
+            {:customer "NRK Origo"
              :description "Laget en lettvekts bilderedigeringskomponent (litt
              effekter, crop, skalering, panorering) med web-teknologi.
              Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
