@@ -43,11 +43,11 @@
                         ]
  :presentations        [
                         {:title "Lyntale: Tracking location of your neighbours wearable"
-                         :blurb "Jeg viser frem en POC for hvor lett det er å overvåke alle bluetooth-enheter i nærheten med Android.
+                         :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
                          Det blir ekstra skummelt når jeg sender dataene til google-appengine og lar alle med appen installert abonnere
                          på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!"
                          :date  "2011-09-07"
-                         :tech  [:android :bluetooth]
+                         :tech  [:android :bluetooth :go]
                          :urls  {:video  "https://vimeo.com/181936877" }}
                         ]
 
