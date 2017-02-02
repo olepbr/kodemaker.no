@@ -107,17 +107,18 @@ utgangpunktet hadde ambisjoner om å få til.
 :type grid
 :content
 
+/nils/                             /photos/people/nils/side-profile-square.jpg
 /christin/                         /photos/people/christin/side-profile-square.jpg
 /git/                              /photos/tech/git.svg
 /eivind/                           /photos/people/eivind/side-profile-square.jpg
+/javascript/                       /photos/tech/js.svg
 /christian/                        /photos/people/christian/side-profile-square.jpg
 /zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
 /odin/                             /photos/people/odin/side-profile-square.jpg
-/javascript/                       /photos/tech/js.svg
 /august/                           /photos/people/august/side-profile-square.jpg
-/stian/                            /photos/people/stian/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.png
+/stian/                            /photos/people/stian/side-profile-square.jpg
 /nodejs/                           /photos/tech/nodejs-wide.jpg 2x
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
 /react/                            /photos/tech/react.png
@@ -127,7 +128,6 @@ utgangpunktet hadde ambisjoner om å få til.
 /kjetil/                           /photos/people/kjetil/side-profile-square.jpg
 /groovy/                           /photos/tech/groovy.png 2x
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
-/grails/                           /photos/tech/grails.png
 /finn/                             /photos/people/finn/side-profile-square.jpg
 /gradle/                           /photos/tech/gradle.svg 2x
 /alf-einar/                        /photos/people/alf-einar/side-profile-square.jpg
@@ -140,23 +140,14 @@ http://zombietdd.com               /photos/tech/ztdd.png
 /responsive-design/                /photos/tech/rwd.jpg 2x
 /andre/                            /photos/people/andre/side-profile-square.jpg
 /kristoffer/                       /photos/people/kristoffer/side-profile-square.jpg
-/trygve/                           /photos/people/trygve/side-profile-square.jpg
+/kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
 /docker/                           /photos/tech/docker.png
 /gry/                              /photos/people/gry/side-profile-square.jpg
-/kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
+/trygve/                           /photos/people/trygve/side-profile-square.jpg
 
 --------------------------------------------------------------------------------
 :type person-cloud
 
 --------------------------------------------------------------------------------
-:type contact-form
 :body
 
-### Hva kan vi hjelpe deg med?
-
-Legg igjen kontaktinformasjon, så tar vår daglig leder
-[Kolbjørn Jetne](/kolbjorn/) kontakt med deg så snart han har mulighet.
-
-:button Ta kontakt
-:placeholder Skriv inn telefonnummer eller epost-adresse
---------------------------------------------------------------------------------
