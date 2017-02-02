@@ -2,14 +2,7 @@
 :published 2016-03-08
 :illustration /photos/blog/christin.jpg
 :presence twitter ChristinGorman, github ChristinGorman, linkedin /in/christin-gorman-2321aa1
-:contact-form
 
-##### Er du interessert i ny jobb?
-
-Vi har planer om å ansette ytterligere en Kodemaker i løpet av året hvis vi
-finner den rette. Er det deg?
-
-:contact-form-button Ja, jeg er interessert!
 
 :body
 

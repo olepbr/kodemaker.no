@@ -2,14 +2,6 @@
 :published 2015-05-11
 :illustration /photos/blog/eivind-waaler.jpg
 :presence twitter eivindw, github eivindw, linkedin /pub/eivind-barstad-waaler/0/410/b5a
-:contact-form
-
-##### Er du interessert i ny jobb?
-
-Vi har planer om å ansette ytterligere en Kodemaker i løpet av året hvis vi
-finner den rette. Er det deg?
-
-:contact-form-button Ja, jeg er interessert!
 
 :body
 
