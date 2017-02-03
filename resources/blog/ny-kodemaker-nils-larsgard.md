@@ -19,4 +19,4 @@ kronglete stier i marka, bruke ro-ergometeret i kjelleren, bake sitt eget brød 
 
 Velkommen til Kodemaker!
 
-Les mer om [Nils](/nils)
+Les mer om [Nils](/nils/)
