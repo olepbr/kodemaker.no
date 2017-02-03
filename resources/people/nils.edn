@@ -9,20 +9,27 @@
  :phone-number         "+47 9053 6771"
  :email-address        "nils@kodemaker.no"
 
- :presence             {:cv            "nils"
+ :presence             {
+                        :cv            "nils"
                         :twitter       "nils_magnus"
                         :github        "nilsmagnus"
                         :stackoverflow "/users/639559/nilsmagnus"
                         :linkedin      "/in/nilsmagnus/"
                         }
 
- :tech                 {:favorites-at-the-moment [:tensorflow :deeplearning :go :webpack]
-                        :want-to-learn-more      [:clojure :redux :react]}
+ :tech                 {
+                        :favorites-at-the-moment [:kafka :apache-spark :tensorflow :go]
+                        :using-at-work           [:java :apache-spark :hbase :kafka :zookeeper]
+                        :want-to-learn-more      [:clojure :redux :react]
+                        }
 
 
- :hobbies              [{:title        "Stisykling"
+ :hobbies              [
+                        {
+                         :title        "Stisykling"
                          :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på gode norske blåstier."
-                         :illustration "/illustrations/hobbies/nils-stisykling.jpg"}],
+                         :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
+                        ],
 
 
  :recommendations      [
@@ -48,7 +55,7 @@
                          på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!"
                          :date  "2011-09-07"
                          :tech  [:android :bluetooth :go]
-                         :urls  {:video  "https://vimeo.com/181936877" }}
+                         :urls  {:video "https://vimeo.com/181936877"}}
                         ]
 
  :open-source-projects [{:url         "https://github.com/nilsmagnus/wsdl2java"
@@ -63,7 +70,7 @@
                          tillegg til at jeg ville lære litt om material-design for mobile enheter."
                          :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.timelyappsimple" :text "Prøv app'en"}
                          :illustration "/illustrations/side-projects/timelyapp.jpg"
-                         :tech         [:android :app-engine]}
+                         :tech         [:android]}
                         {:title        "DHL Tracker"
                          :description  "En enkel app for android jeg lagde etter å ha irretert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
@@ -80,7 +87,7 @@
  :projects             [{:customer    "Thomson Reuters"
                          :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
                          :years       [2016 2017]
-                         :tech        [:java8, :vertx, :kafka, :spark, :hbase]}
+                         :tech        [:java, :vertx, :kafka, :spark, :hbase]}
                         {:customer    "Norwegian Air Shuttle"
                          :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
                          :years       [2012 2016]
