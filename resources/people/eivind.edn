@@ -155,8 +155,20 @@
                   :tech [:java :scala :clojure :ruby :groovy]
                   :urls {:video "https://vimeo.com/28705495"
                          :slides "http://www.slideshare.net/EivindWaaler/funksjonell-programmering-p-jvm"}}]
- :endorsements [{:author "Kjell Sverre Birkeland"
-                 :title  "Prosjektleder i Skatteetaten"
+ :endorsements [{:author "Sissel Irene Monsø Sveum"
+                 :title  "Områdeleder, FINN.no"
+                 :quote  "Eivind er en veldig god utvikler med glimt i øyet. Han tar alle oppgaver på strak
+                          arm uansett om det er nye tjenester, vedlikehold eller en feil.
+
+                          Han har løftet vår betalingsløsning og gitt teamet økt kunnskap rundt Hibernate
+                          og Kafka. Han har hatt et stort bidrag inn i leveranser som eksempel
+                          abonnementsløsning for kredittkort og migrering av payment over på ny løsning
+                          hos Schibsted.
+
+                          Eivind jobber godt i team og har delt sin kunnskap både ved kodegjennomganger
+                          og presentasjoner på FINNs ukentlige fagdag."}
+                {:author "Kjell Sverre Birkeland"
+                 :title  "Prosjektleder, Skatteetaten"
                  :quote  "Eivind har den sjeldne egenskapen, at han forstår komplekse faglige
                           problemstillinger og gjør det om til Java-kode. Ikke bare gjør han det om
                           til kode, men koden er lettlest, forståelig og god å forvalte videre.
