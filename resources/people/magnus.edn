@@ -15,7 +15,7 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :re-agent :docker :groovy :grails :oracle]
+ :tech {:using-at-work [:clojure :reframe :docker :groovy :grails :oracle]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :elixir :rust :haskell :idris]}
 
@@ -131,7 +131,21 @@
                   :date "2012-09-13"}]
 
 
- :blog-posts [{:url "http://rundis.github.io/blog/2016/type_confused.html"
+ :blog-posts [{:url "http://rundis.github.io/blog/2017/elm_bootstrap_launch.html"
+               :title "Introducing Elm Bootstrap"
+               :blurb "Lansering av mitt nye Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap. Du får en oversikt over hva og hvorfor samt litt historie om hvordan biblioteket ble til."
+               :tech [:elm :bootstrap]}
+              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part6.html"
+               :title "Typed up CRUD SPA with Haskell and Elm - Part 6: Elm 0.18 Upgrade"
+               :blurb "I min blogserie om å lage en CRUD applikasjon i Elm og Haskell har tiden kommer for å oppgradere Elm koden til versjon 0.18.
+                       Mye av oppgraderingen denne gangen kunne automatiseres vha verktøy fra Elm Community. Resten av endringene var relativt mekaniske. Posten går relativt detaljert til verks med å sammelikne forskjellene mellom 0.17 og 0.18."
+               :tech [:elm :haskell]}
+              {:url "http://rundis.github.io/blog/2016/elm_light_ast.html"
+               :title "Elm Light 0.4.0 - AST driven Elm features in Light Table using PEG.js"
+               :blurb "For å kunne tilby enda mer avansert Elm støtte i Light Table har jeg implementert en hjemmesnekret AST vha peg.js. Dette har gitt vesentlig
+                      forbedret autocomplete og endel hendige refactor relaterte funksjoner."
+               :tech [:elm :clojurescript :pegjs :javascript]}
+              {:url "http://rundis.github.io/blog/2016/type_confused.html"
                :title "Oh no! Learning Elm has gotten me confused about static vs dynamic typing."
                :blurb "Etter lenge å ha vært overbevist om at dynamisk typing var det eneste saliggjørende reflekterer jeg over
                        min gryende tvil etter å ha brukt en solid dose tid på å sette meg inn i statisk typede funksjonelle språk."
@@ -277,7 +291,11 @@
                        fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/elm-light"
+ :open-source-projects[{:url "https://github.com/rundis/elm-bootstrap"
+                        :name "Elm Bootstrap"
+                        :description "Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap 4."
+                        :tech [:elm :bootstrap]}
+                       {:url "https://github.com/rundis/elm-light"
                         :name "Elm Light Table Plugin"
                         :description "Light Table plugin for Elm. Syntax-highlighting, repl/inline eval, elm reactor integrasjon mm"
                         :tech [:elm :clojurescript]}
@@ -300,8 +318,7 @@
                        {:url "https://github.com/busterjs/lt-instabuster"
                         :name "LightTable InstaBuster"
                         :description "Light Table plugin for BusterJS"
-                        :tech [:lighttable :javascript :clojurescript]
-                        }
+                        :tech [:lighttable :javascript :clojurescript]}
                        {:url "https://github.com/rundis/LightTable-Groovy"
                         :name "LightTable-Groovy"
                         :description "Groovy plugin for Light Table. Steg 1 er å lage et langt bedre Groovy Console. Steg 2 er helt åpent. Sky's the limit!"
@@ -311,7 +328,10 @@
                         :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
                         :tech [:groovy :gradle :buster-js :javascript]}]
 
- :open-source-contributions [{:name "buddy-auth"
+ :open-source-contributions [{:name "node-test-runner"
+                              :url "https://github.com/rtfeldman/node-test-runner"
+                              :tech [:elm]}
+                             {:name "buddy-auth"
                               :url "https://github.com/funcool/buddy-auth"
                               :tech [:clojure :security]}
                              {:name "gradle-ssh-plugin"
