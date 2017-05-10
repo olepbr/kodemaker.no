@@ -56,6 +56,12 @@
                     :years       [2010]
                     :tech        [:java :spring-mvc]}]
 
+ :presentations [{:title "How to Kill DevOps (in 5 minutes)"
+                  :blurb "En liten seanse der jeg, med dårlig skjult ironi, raljerer litt over hvordan man kan unngå å lykkes med DevOps. Fra DevOpsDays i Oslo i 2016."
+                  :date "2016-09-05"
+                  :tech [:devops]
+                  :urls {:video "http://www.youtube.com/watch?v=I7cSbKPGJzU"}}]
+
  :endorsements    [{:author "Belen Svebak"
                     :title  "Manager Integration and Quality Team, FINN reise"
                     :quote  "Kjetil er en god nettverksbygger! Han er også en igangsetter som ikke er redd for å eksperimentere. Opptatt av å levere høy kvalitet, men også av produkt- og prosessforbedringer. Fokuserer på å utvikle andre. Ærlig. Han er opptatt av å skape miljø hvor det kan oppstår åpenhet og ærlighet. Motiverende å jobbe med. Sterk lagånd!"}
