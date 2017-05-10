@@ -1,16 +1,19 @@
 {:id :spring
  :name "Spring"
  :illustration "/photos/tech/spring.png"
- :site "http://www.springworks.com/"
- :description "Når Spring 2 omsider kom etter en lang vinter, kunne Java
-               utviklerne se på framtiden med en ny optimisme. Med solens varme
+ :site "http://projects.spring.io/"
+ :description "Når [Spring Framework](http://projects.spring.io/spring-framework/) dukket
+               opp etter en lang vinter preget av EJB'er, kunne Java utviklerne se på
+               framtiden med en ny optimisme. Med solens varme
                stråler, frisk luft og grønne blader, ble utviklerne glade og
                opprømte. Nå, sa de, med dette lettvektsrammeverket skal vi lage
                Java-moduler med lav kobling og høy kohesjon. Det var en vakker
                tid.
 
-               Solen har nok gått litt ned for Spring de seneste årene. Det er
-               fortsatt særdeles mye brukt, men rammeverket har vokst i takt med
-               sin popularitet. Det er ikke lettvektsalternativet det en gang
-               var. Like fullt er det et trygt valg, og en stack nær sagt alle
-               Java-utviklere har grundig erfaring med."}
+               De ulike Spring-bibliotekene er fortsatt mye brukt i litt større
+               Java-utviklingsprosjekter, spesielt er applikasjonsrammeverket
+               [Spring Boot](http://projects.spring.io/spring-boot/) populært.
+
+               Spring er nok ikke lettvektsalternativet det en gang var, men ses
+               ofte på som et trygt valg, og er en stack veldig mange Java-utviklere
+               har erfaring med."}
