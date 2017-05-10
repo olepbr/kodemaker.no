@@ -1,0 +1,9 @@
+{:id :devops
+ :name "DevOps"
+ :site "http://en.wikipedia.org/wiki/DevOps"
+ :description "DevOps-bevegelsen jobber for å redusere den tradisjonelle motsetningen
+               mellom endringsfokuset i softwareutvikling og stabilitetsfokuset i
+               IT-drift. Om du ønsker å øke endringstakten i softwareutvikling er det
+               å satse på DevOps noe du bør sette høyt på prioriteringslisten.
+
+Blant kjerneverdiene i DevOps regnes _kultur, automatisering, måling og deling_."}
