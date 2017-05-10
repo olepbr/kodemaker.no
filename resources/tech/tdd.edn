@@ -1,0 +1,15 @@
+{:id :tdd
+ :name "Test-drevet utvikling (TDD)"
+ :site "http://www.extremeprogramming.org/rules/testfirst.html"
+ :description "Teknikken _test-drevet utvikling (TDD)_ ble beskrevet av Kent Beck på slutten
+               av 1990-tallet i forbindelse med smidig-metodikken Extreme Programming (XP).
+               TDD dreier seg om å skrive testkode før man skriver produksjonskode - som en
+               kjørbar spesifikasjon av hva koden skal utføre.
+
+Utviklere som benytter TDD opplever ofte færre feil, bedre fokus og større trygghet i forhold til å gjøre
+forbedringer i den interne strukturen i programmene - noe som ofte er nødvendig etterhvert som ny funksjonalitet
+legges til.
+
+Det finnes flere \"retninger\" innenfor TDD, for eksempel er man i _akseptansetest-drevet utvikling (ATDD)_
+opptatt av å skrive tester \"fra utsiden og inn\", mens andre foretrekker å begynne med tester på kjernen av
+systemet først."}
