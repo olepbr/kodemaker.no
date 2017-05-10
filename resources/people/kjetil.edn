@@ -21,12 +21,12 @@
                    {:link  {:url "http://www.growing-object-oriented-software.com/" :text "Boken"}
                     :title "Growing Object-Oriented Software, Guided by Tests (Freeman & Pryce)"
                     :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
-                    :tech  [:tdd :automatisering :release-early]}]
+                    :tech  [:tdd :automatisering]}]
 
  :projects        [{:customer    "NRK"
-                    :description "Utvikling av integrasjoner."
+                    :description "Utvikling av integrasjoner; utvikling av funksjonalitet, tekniske løsninger for effektiv utvikling og robust drift. Også bidragsyter på metodikk."
                     :years       [2017]
-                    :tech        [:java :maven :git :spring :jenkins :rest :jira :confluence :stash]}
+                    :tech        [:java :maven :gradle :git :spring :jenkins :rest :jira :confluence :stash]}
                    {:customer    "Schibsted Products & Technology"
                     :description "Utvikling av integrasjon; også fasilitator for teamreorganisering og prosessforbedringer."
                     :years       [2016]
