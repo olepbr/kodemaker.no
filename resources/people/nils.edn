@@ -1,10 +1,12 @@
 {:id                   :nils
  :name                 ["Nils" "Larsgård"]
- :title                "Kodemaker"
+ :title                "Programmerer"
  :start-date           "2017-01-01"
  :description          "Nils er genuint interessert i teknologi og liker alt som kan programmeres,
  automatiseres og optimaliseres. Han lærer fort og er opptatt av at programvareutvikling er et håndverk man
- skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene."
+ skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene.
+
+ Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
 
  :phone-number         "+47 9053 6771"
  :email-address        "nils@kodemaker.no"
@@ -18,9 +20,9 @@
                         }
 
  :tech                 {
-                        :favorites-at-the-moment [:kafka :apache-spark :tensorflow :go]
-                        :using-at-work           [:java :apache-spark :hbase :kafka :zookeeper]
-                        :want-to-learn-more      [:clojure :redux :react]
+                        :favorites-at-the-moment [:go :kafka :zookeeper :tensorflow :grib]
+                        :using-at-work           [:java]
+                        :want-to-learn-more      [:kotlin :redux :react]
                         }
 
 
@@ -33,11 +35,15 @@
 
 
  :recommendations      [
-                        {:title "Go concurrency patterns"
-                         :blurb "En god innføring i hvordan go håndterer concurrency med channels. Passer til både nye go-programmerere og de litt mer erfarne."
-                         :link  {:url  "https://blog.golang.org/pipelines"
-                                 :text "Les artikkelen"}
-                         :tech  [:go]},
+                        {:title "Concurrency is not parallelism"
+                         :blurb "Ofte tenker man at concurrency og parallelisme er to sider av samme sak. Rob Pike, en av skaperene av go,
+                         forklarer forskjellen og hvordan dette kan gjøres i Go. Modellen som ligger til grunn, CSP(Communicating Sequential Processes),
+                         er en modell som blir brukt av andre språk (som Occam, Erlang og Clojure) og med litt plumbing og tungen rett i munnen oversettes til java.
+                         Fine illustrasjoner som enkelt forklarer hva man prøver å oppnå med denne concurrent kode."
+                         :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
+                                 :text "Til video/slides"},
+
+                         :tech  [:go :concurrency]},
                         {:title "Tensorflow and deep learning - without a PhD "
                          :blurb "Kom i gang med maskinlæring uten å ha doktorgrad i matrisemultiplikasjon!
                          Hvis du vil komme i gang med maskinlæring er tensorflow et naturlig sted å starte,
@@ -61,17 +67,15 @@
  :open-source-projects [{:url         "https://github.com/nilsmagnus/wsdl2java"
                          :name        "wsdl2java"
                          :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
-                         :tech        [:gradle :groovy]}
+                         :tech        [:gradle :groovy]},
+                        {:url         "https://github.com/nilsmagnus/grib"
+                         :name        "grib"
+                         :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
+                         Utviklet funksjoner som gjør det mulig å streame grib-filer samtidig som man filtrerer på innholdet."
+                         :tech        [:go :grib]}
                         ]
 
- :side-projects        [{:title        "Well Timed"
-                         :description  "Laget en android-klient til Timelyapp ved bruk av REST-apiet som
-                         timely tilbyr. Appen ble utviklet fordi timely selv ikke har en Android-klent i
-                         tillegg til at jeg ville lære litt om material-design for mobile enheter."
-                         :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.timelyappsimple" :text "Prøv app'en"}
-                         :illustration "/illustrations/side-projects/timelyapp.jpg"
-                         :tech         [:android]}
-                        {:title        "DHL Tracker"
+ :side-projects        [{:title        "DHL Tracker"
                          :description  "En enkel app for android jeg lagde etter å ha irretert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
                          hver status-oppdatering for pakken din som er underveis. 150 000 nedlastninger
