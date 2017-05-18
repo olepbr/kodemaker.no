@@ -38,7 +38,7 @@
                         {:title "Concurrency is not parallelism"
                          :blurb "Ofte tenker man at concurrency og parallelisme er to sider av samme sak. Rob Pike, en av skaperene av go,
                          forklarer forskjellen og hvordan dette kan gjøres i Go. Modellen som ligger til grunn, CSP(Communicating Sequential Processes),
-                         er en modell som blir brukt av andre språk (som Occam, Erlang og Clojure) og med litt plumbing og tungen rett i munnen oversettes til java.
+                         er en modell som blir brukt av andre språk (som Occam, Kotlin og Clojure) og med litt plumbing og tungen rett i munnen oversettes til java.
                          Fine illustrasjoner som enkelt forklarer hva man prøver å oppnå med denne concurrent kode."
                          :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
                                  :text "Til video/slides"},
