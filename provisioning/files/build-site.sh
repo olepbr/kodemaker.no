@@ -23,9 +23,11 @@ if [ -f "in-progress.tmp" ]; then
 else
     touch in-progress.tmp
 
-    git pull | grep -q -v 'Already up-to-date.' && changed=1
+    current_head=$(git rev-parse HEAD)
+    git fetch
+    git reset --hard origin/master > /dev/null
 
-    if [ $changed ]; then
+    if [ "$current_head" != $(git rev-parse HEAD) ]; then
         ../bin/lein with-profile test midje && passed=1
         if [ $passed ]; then
             log "Building"
