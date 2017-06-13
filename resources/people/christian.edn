@@ -6,9 +6,10 @@
                kurs og foredrag har han gjort seg kjent som en meningssterk og
                kvass programmerer som tar design, testing og kvalitet seriøst.
                Christian har lang erfaring med både frontend og backend såvel
-               som \"devops\"-nivå oppsett og drift av applikasjonsservere. Han
-               trives godt både alene og i team, og fungerer både som
-               humørspreder og kritisk røst i samarbeid med andre."
+               som devops-nivå oppsett, provisjonering og drift av
+               applikasjonsservere. Han trives godt både alene og i team, og
+               fungerer både som humørspreder og kritisk røst i samarbeid med
+               andre."
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
@@ -18,9 +19,9 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:javascript :es6 :docker :elasticsearch :clojure]
-        :favorites-at-the-moment [:elasticsearch :react :emacs :clojure]
-        :want-to-learn-more [:haskell :om-next]}
+ :tech {:using-at-work [:clojure :datomic :docker :clojurescript]
+        :favorites-at-the-moment [:datomic :emacs :clojure]
+        :want-to-learn-more [:haskell :aws :elm]}
 
  :side-projects [{:title "Learning Functional JavaScript"
                   :description "Et grundig videokurs i funksjonell programmering
@@ -47,7 +48,17 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming []
+ :upcoming [{:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
+             :blurb "Datomic is an append-only database, designed from the
+             ground up with modern applications and hardware in mind. It never
+             loses data, it has an RDF-like approach to schemas, it's really
+             fast, and it has a powerful query language borrowed from Prolog
+             that expresses queries as data structures. In short: it's pretty
+             awesome."
+             :location {:title "NDC Oslo 2017" :url "http://ndcoslo.com/"}
+             :tech [:datomic :clojure]
+             :date "2017-06-13"
+             :url "http://ndcoslo.com/talk/i-put-7-years-of-meal-data-in-datomic-heres-what-i-learned-1/"}]
 
  :recommendations [{:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
@@ -168,7 +179,7 @@
  :projects [{:customer "Eventum.no"
              :description "Utvikling av backend og frontend for tjenesten
              eventum.no. Automatisering av server-oppsett, bygg og deployment."
-             :tech [:javascript :nodejs :react :elasticsearch :clojure :ansible :docker :centos]
+             :tech [:javascript :nodejs :react :elasticsearch :clojure :clojurescript :ansible :docker :centos]
              :years [2017]}
             {:customer "NRK Origo - Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
