@@ -49,7 +49,7 @@
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
  :upcoming [{:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
-             :blurb "Datomic is an append-only database, designed from the
+             :description "Datomic is an append-only database, designed from the
              ground up with modern applications and hardware in mind. It never
              loses data, it has an RDF-like approach to schemas, it's really
              fast, and it has a powerful query language borrowed from Prolog
