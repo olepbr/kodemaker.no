@@ -128,7 +128,15 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "http://www.sitepoint.com/immutability-javascript/"
+ :blog-posts [{:url "http://cjohansen.no/annotating-datomic-transactions/"
+               :title "Annotating Datomic transactions"
+               :blurb "En artikkel om Datomics transaksjoner, og hvordan de kan utvides med app-spesifik informasjon for bedre auditing og mer."
+               :tech [:datomic :clojure :datalog]}
+              {:url "http://cjohansen.no/querying-across-datomic-databases/"
+               :title "Querying across Datomic databases"
+               :blurb "Et konkret eksempel på hvordan du kan gjøre datalog spørringer over flere databaser samtidig med Datomic."
+               :tech [:datomic :clojure :datalog]}
+              {:url "http://www.sitepoint.com/immutability-javascript/"
                :title "Immutability in JavaScript"
                :blurb "Introduksjon til immutability, og hvordan jobbe med immutable data i JavaScript"
                :tech [:javascript :immutability]}
@@ -144,14 +152,20 @@
               artikkelen belyser hvordan man kan angripe klient-spesifikke
               problemer i JavaScript med gode design-prinsipper i hånda."
                :tech [:javascript :dom]}
-              {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis"
+              {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
                        websider i Clojure med blant annet biblioteket Stasis.
                        Artikkelen gir et innblikk i bruk av mange populære
                        web-biblioteker for Clojure."
                :tech [:clojure :stasis :optimus]}
-              {:url "http://cjohansen.no/an-introduction-to-elisp"
+              {:url "http://cjohansen.no/clojure-to-die-for/"
+               :title "Clojure to die for"
+               :blurb "En liten feiring av helt hverdagslige idiomer of småtriks
+               som gjør det å jobbe med Clojure til en fantastisk god
+               opplevelse"
+               :tech [:clojure]}
+               {:url "http://cjohansen.no/an-introduction-to-elisp/"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little
