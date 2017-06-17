@@ -48,17 +48,7 @@
                   :link {:url "http://www.zombieclj.no" :text "Se videoene"}
                   :tech [:clojure :clojurescript :tdd :testing]}]
 
- :upcoming [{:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
-             :description "Datomic is an append-only database, designed from the
-             ground up with modern applications and hardware in mind. It never
-             loses data, it has an RDF-like approach to schemas, it's really
-             fast, and it has a powerful query language borrowed from Prolog
-             that expresses queries as data structures. In short: it's pretty
-             awesome."
-             :location {:title "NDC Oslo 2017" :url "http://ndcoslo.com/"}
-             :tech [:datomic :clojure]
-             :date "2017-06-13"
-             :url "http://ndcoslo.com/talk/i-put-7-years-of-meal-data-in-datomic-heres-what-i-learned-1/"}]
+ :upcoming []
 
  :recommendations [{:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
@@ -246,7 +236,17 @@
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
              :years [2013 2014]}]
 
- :presentations [{:title "EcmaScript 2015: The Close Future of JavaScript"
+ :presentations [{:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
+                  :blurb "Datomic is an append-only database, designed from the
+                  ground up with modern applications and hardware in mind. It
+                  never loses data, it has an RDF-like approach to schemas, it's
+                  really fast, and it has a powerful query language borrowed
+                  from Prolog that expresses queries as data structures. In
+                  short: it's pretty awesome."
+                  :tech [:datomic :clojure]
+                  :date "2017-06-13"
+                  :urls {:source "http://ndcoslo.com/talk/i-put-7-years-of-meal-data-in-datomic-heres-what-i-learned-1/"}}
+                 {:title "EcmaScript 2015: The Close Future of JavaScript"
                   :blurb "I juni 2015 ble siste versjon av EcmaScript - spec-en
                   til JavaScript - ferdigstilt. EcmaScript 2015 (eller
                   EcmaScript 6 som det en gang het) er tidenes største
