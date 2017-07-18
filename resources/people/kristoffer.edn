@@ -13,7 +13,7 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :tech {:using-at-work [:javascript :ractive :docker :elasticsearch :java :cucumber :vagrant :rdf]}
+ :tech {:using-at-work [:javascript :ractive :react :docker :elasticsearch :java :cucumber :rdf]}
 
  :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
@@ -29,7 +29,7 @@
                    :projects [{:customer "Nye Deichman — Applikasjonsprosjektet "
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
-             :tech [:java :rdf :ractive :nodejs]}
+             :tech [:java :rdf :ractive :react :nodejs]}
             {:customer "Kommunal- og moderniseringsdepartementet"
              :description "Utvikling av EVA Admin – applikasjon for konfigurasjon og gjennomføring av valg i Norge"
              :years [2014 2015]
@@ -65,6 +65,16 @@
              {:author "Johan Gedde-Dahl"
               :title "Virksomhetsarkitekt, Sparebank1 Gruppen"
               :quote "Kristoffer ble kastet ut på dypt vann med en minimal innføring - og leverte varene med begrenset oppfølging."
+             }
+             {
+               :author "Arve Søreide",
+               :title "Program Manager IKT for nye Deichmanske hovedbibliotek"
+               :quote "Applikasjonsprosjektet for nye Deichmanske hovedbibliotek har som mål å levere en fremtidsrettet og robust plattform for
+                utvikling av bibliotektjenester i Oslo. Kristoffer kom inn i prosjektet i en krevende fase som satte store krav til både 
+                prosessforståelse og utviklerferdigheter. Kristoffer viste tydelig at han besitter begge egenskaper, og han satte seg raskt inn i
+                både ny teknologi og nytt domene. Kristoffer er konstruktiv og argumenterer med faglig tyngde når en skal ta viktige veivalg, og er
+                en effektiv programmerer som leverer kode av høy kvalitet. Han er en omgjengelig og vennlig kollega, som vi gjerne anbefaler varmt
+                til andre."
              }
              ]
 

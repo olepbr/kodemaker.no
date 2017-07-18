@@ -1,0 +1,19 @@
+{:id :ractive
+ :illustration "/photos/tech/ractive.png"
+ :site "http://ractive.js.org/"
+ :name "Ractive.js"
+ :description "Ractive.js er et [JavaScript](/javascript/)-bibliotek for
+ utvikling av dynamiske brukergrensesnitt. Ractive.js er template-basert, 
+ hvor html-elementer, f.eks tekstfelter, kan kobles med toveis bindinger 
+ til elementer i en datamodell, slik at dynamiske endringer overføres begge veier.
+ 
+ Ractive har ikke fått noen stor utbredelse, og er vel overskygget av [Vue.js](http://vuejs.org/), 
+ som er ganske likt. [Rich Harris](http://github.com/Rich-Harris), den mest sentrale bidragsyteren til Ractive.js, 
+ har gått videre med [svelte](http://svelte.technology/), som også deler mye av de samme 
+ ideene, men som kompileres, i likhet med [Stasis](/stasis/), slik at payload og initialisering
+ av webappen blir minimal. Ractive-brukere vil umiddelbart kjenne seg igjen i syntaksen og API'et til svelte. 
+ "
+}
+
+
+
