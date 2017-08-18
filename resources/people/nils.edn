@@ -20,16 +20,16 @@
                         }
 
  :tech                 {
-                        :favorites-at-the-moment [:go :kafka :zookeeper :tensorflow :grib]
+                        :favorites-at-the-moment [:go :kafka :zookeeper :tensorflow :influxdb]
                         :using-at-work           [:java]
-                        :want-to-learn-more      [:kotlin :redux :react]
+                        :want-to-learn-more      [:kotlin :react :lisp]
                         }
 
 
  :hobbies              [
                         {
                          :title        "Stisykling"
-                         :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på gode norske blåstier."
+                         :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere kneiker og crux."
                          :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
                         ],
 
@@ -44,27 +44,35 @@
                                  :text "Til video/slides"},
                          :tech  [:go :concurrency]},
 
-                        {:title "Tensorflow and deep learning - without a PhD "
-                         :blurb "Kom i gang med maskinlæring uten å ha doktorgrad i matrisemultiplikasjon!
-                         Hvis du vil komme i gang med maskinlæring er tensorflow et naturlig sted å starte,
-                         denne videoen går gjennom det du trenger å vite om tensorflow for å bruke tensorflow
-                         til maskinlæring."
-                         :link  {:url  "https://www.youtube.com/watch?v=qyvlt7kiQoI&feature=youtu.be"
+                        {:title "Hvorfor vi trenger tidsserie-databaser"
+                         :blurb "Paul Dix fra influxdb forklarer hva en tidsserie-database er og hvorfor man skal
+                         velge det fremfor tradisjonelle databaser. Tidsserie-databaser er optimalisert for å lagre 'events'
+                         fra f.eks logger, sensorer, iot-enheter eller strømmer av børsdata. Influxdb er en open-source database
+                         for å lagre tidsserier som lar deg komme i gang fort med å lagre tidsserier, men med avanserte
+                         funksjoner for å hente ut og aggregere data."
+                         :link  {:url  "https://www.youtube.com/watch?v=GzIYRr40QO4"
                                  :text "Se videoen"}
-                         :tech  [:deeplearning :tensorflow]}
+                         :tech  [:influxdb]}
 
                         ]
  :presentations        [
                         {:title "Lyntale: Tracking location of your neighbours wearable"
                          :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
                          Det blir ekstra skummelt når jeg sender dataene til google-appengine og lar alle med appen installert abonnere
-                         på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!"
+                         på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!
+
+                         Lyntalen har senere blitt utvidet til et foredrag som blant annet holdes på ISF sin høstkonferanse 2017.
+                         "
                          :date  "2011-09-07"
                          :tech  [:android :bluetooth :go]
                          :urls  {:video "https://vimeo.com/181936877"}}
                         ]
 
- :open-source-projects [{:url         "https://github.com/nilsmagnus/wsdl2java"
+ :open-source-projects [{:url         "https://github.com/nilsmagnus/grib"
+                         :name        "grib"
+                         :description "Et bibliotek for å parse binære filer for værdata, grib2-filer."
+                         :tech        [:go]},
+                        {:url         "https://github.com/nilsmagnus/wsdl2java"
                          :name        "wsdl2java"
                          :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
                          :tech        [:gradle :groovy]},
@@ -75,7 +83,14 @@
                          :tech        [:go :grib]}
                         ]
 
- :side-projects        [{:title        "DHL Tracker"
+ :side-projects        [{:title        "Well Timed"
+                         :description  "Laget en android-klient til Timelyapp ved bruk av REST-apiet som
+                         timely tilbyr. Appen ble utviklet fordi timely selv ikke har en Android-klent i
+                         tillegg til at jeg ville lære litt om material-design for mobile enheter."
+                         :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.timelyappsimple" :text "Prøv app'en"}
+                         :illustration "/illustrations/side-projects/timelyapp.jpg"
+                         :tech         [:android]},
+                        {:title        "DHL Tracker"
                          :description  "En enkel app for android jeg lagde etter å ha irretert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
                          hver status-oppdatering for pakken din som er underveis. 150 000 nedlastninger
@@ -88,7 +103,11 @@
                          :tech         [:android :go :app-engine]}
                         ]
 
- :projects             [{:customer    "Thomson Reuters"
+ :projects             [{:customer    "Western Geco"
+                         :description "Utvikling av nytt produkt. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
+                         :years       [2017]
+                         :tech        [:java, :bash]}
+                        {:customer    "Thomson Reuters"
                          :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
                          :years       [2016 2017]
                          :tech        [:java, :vertx, :kafka, :spark, :hbase]}
@@ -100,5 +119,12 @@
                          :description "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
                          :years       [2011 2012]
                          :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2]}]
+
+ :blog-posts
+                       [{:url "https://nilsmagnus.github.io/post/go-tensorflow/"
+                         :title "Using your tensorflow model with go"
+                         :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
+                         :tech [:go :tensorflow]}]
+
 
  }
