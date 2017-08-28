@@ -103,7 +103,7 @@
  :projects             [{:customer    "Western Geco"
                          :description "Utvikling av nytt produkt. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
                          :years       [2017]
-                         :tech        [:java, :bash]}
+                         :tech        [:java, :bash, :grpc , :protobuf, :bash]}
                         {:customer    "Thomson Reuters"
                          :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
                          :years       [2016 2017]
