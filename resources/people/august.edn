@@ -42,9 +42,9 @@
    :blurb "Mitt anbefalte monad-tutorial. Her lærer du å fiske, i stedet for å få monad-burritoen servert, og får forklart hvorfor du og jeg ikke klarer å forstå monads."}]
 
  :hobbies
- [{:title "Elite Dangerous"
-   :description "Er dypt inne i verdensrom-simulatoren Elite Dangerous for tiden. Jeg er generelt glad i simulasjoner, og Elite Dangerous simulerer like gjerne hele melkeveien. Er aktiv i Fuel Rats, en spiller-drevet gruppe som tilbyr akutthjelp for de som klarer å tømme romskipene sine for drivstoff midt ute i verdensrommet et sted."
-   :illustration "/illustrations/hobbies/elite_dangerous.png"}]
+ [{:title "Brasiliansk Jiu-Jitsu"
+   :description "Kampsportens sjakk. Vennskapelig kveling og brekking av ledd og bein. Strategi og posisjonering, fremfor eksplosiv voldsutøvelse. Og kanskje den aller beste kampsporten for selvforsvar. Bare se på UFC 1-5, helt sant :)"
+   :illustration "/illustrations/hobbies/august_bjj.jpg"}]
 
 
  :presentations
