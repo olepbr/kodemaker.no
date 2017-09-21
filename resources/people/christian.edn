@@ -19,9 +19,9 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:clojure :datomic :docker :clojurescript]
-        :favorites-at-the-moment [:datomic :emacs :clojure]
-        :want-to-learn-more [:haskell :aws :elm]}
+ :tech {:using-at-work [:clojurescript :aws :docker :concourse]
+        :favorites-at-the-moment [:datomic :emacs :clojurescript]
+        :want-to-learn-more [:haskell :aws :elm :go :oidc]}
 
  :side-projects [{:title "Learning Functional JavaScript"
                   :description "Et grundig videokurs i funksjonell programmering
@@ -182,12 +182,13 @@
 
  :projects [{:customer "Tine Husdyrfag"
              :description "Etablering av ny skyplatform og utvikling av applikasjoner på denne"
-             :tech [:aws :concourse :go :docker :nginx :clojurescript :material-ui]
+             :tech [:aws :concourse :clojurescript :go :docker :nginx :material-ui :react]
              :years [2017]}
             {:customer "Eventum.no"
              :description "Utvikling av backend og frontend for tjenesten
              eventum.no. Automatisering av server-oppsett, bygg og deployment."
-             :tech [:javascript :nodejs :react :elasticsearch :clojure :clojurescript :ansible :docker :centos :auth0 :aws-s3]
+             :tech [:datomic :clojure :clojurescript :ansible :docker :javascript :nodejs
+                    :react :elasticsearch :centos :auth0 :aws-s3]
              :years [2017]}
             {:customer "NRK Origo - Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
@@ -262,8 +263,8 @@
                   from Prolog that expresses queries as data structures. In
                   short: it's pretty awesome."
                   :tech [:datomic :clojure]
-                  :date "2017-06-13"
-                  :urls {:source "http://ndcoslo.com/talk/i-put-7-years-of-meal-data-in-datomic-heres-what-i-learned-1/"}}
+                  :date "2017-09-14"
+                  :urls {:video "https://2017.javazone.no/program/b334906441754e7b9b282dfdf533738b"}}
                  {:title "EcmaScript 2015: The Close Future of JavaScript"
                   :blurb "I juni 2015 ble siste versjon av EcmaScript - spec-en
                   til JavaScript - ferdigstilt. EcmaScript 2015 (eller
