@@ -180,10 +180,14 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Eventum.no"
+ :projects [{:customer "Tine Husdyrfag"
+             :description "Etablering av ny skyplatform og utvikling av applikasjoner på denne"
+             :tech [:aws :concourse :go :docker :nginx :clojurescript :material-ui]
+             :years [2017]}
+            {:customer "Eventum.no"
              :description "Utvikling av backend og frontend for tjenesten
              eventum.no. Automatisering av server-oppsett, bygg og deployment."
-             :tech [:javascript :nodejs :react :elasticsearch :clojure :clojurescript :ansible :docker :centos]
+             :tech [:javascript :nodejs :react :elasticsearch :clojure :clojurescript :ansible :docker :centos :auth0 :aws-s3]
              :years [2017]}
             {:customer "NRK Origo - Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
