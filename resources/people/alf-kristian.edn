@@ -128,7 +128,27 @@
                     :urls  {:video "https://vimeo.com/28765670"}
                     :tech  [:clojure :funksjonell-programmering]}]
 
- :endorsements    [{:author "Owen Fraser-Green"
+ :endorsements    [{:author "Rune Strandli"
+                    :title "Chief Digital Officer, BN Bolig"
+                    :quote "I had the pleasure to work with Alf Kristian as a client
+                    in BN Bolig.  His role in our project was as a senior full-stack
+                    developer and architect, where he was a key resource in selecting
+                    a future proof technology stack, developing a scalable and agile
+                    front/backend, implementing infrastructure and mentoring other developers.
+                    <br><br>
+                    His technology skills and deliverables are unquestionable, but what
+                    we found most valuable was his ability to identify week spots and
+                    on his own initiative fill in the blanks. Key areas where
+                    Alf Kristian has taken responsibility outside his defined role
+                    is in security issues, the interconnection between development
+                    and operations, development processes, onboarding of new employees
+                    and mapping of complex and (often) diverging user needs to
+                    delivered solution.
+                    <br><br>
+                    Alf Kristian is committed and takes ownership in his assignments.
+                    I have personally learned a lot from working with him and would not
+                    hesitate to work with him again if I get the opportunity. "}
+                   {:author "Owen Fraser-Green"
                     :title "Leder MyEnergy at Hafslund"
                     :quote "Alf Kristian is the personification of one of my
                     favourite books - Smart and Gets Things Done. Having tried
