@@ -43,7 +43,7 @@
 
  :hobbies
  [{:title "Brasiliansk Jiu-Jitsu"
-   :description "Kampsportens sjakk. Vennskapelig kveling og brekking av ledd og bein. Strategi og posisjonering, fremfor eksplosiv voldsutøvelse. Og kanskje den aller beste kampsporten for selvforsvar. Bare se på UFC 1-5, helt sant :)"
+   :description "Kampsportens sjakk, som handler mere om strategi og posisjonering enn noe annet. Og kanskje den aller beste kampsporten for selvforsvar."
    :illustration "/illustrations/hobbies/august_bjj.jpg"}]
 
 
