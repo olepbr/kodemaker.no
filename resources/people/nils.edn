@@ -1,127 +1,131 @@
-  {:id                   :nils
- :name                 ["Nils" "Larsgård"]
- :title                "Programmerer"
- :start-date           "2017-01-01"
- :description          "Nils er genuint interessert i teknologi og liker alt som kan programmeres,
+{:id            :nils
+ :name          ["Nils" "Larsgård"]
+ :title         "Programmerer"
+ :start-date    "2017-01-01"
+ :description   "Nils er genuint interessert i teknologi og liker alt som kan programmeres,
  automatiseres og optimaliseres. Han lærer fort og er opptatt av at programvareutvikling er et håndverk man
  skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene.
 
- Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
+Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
 
- :phone-number         "+47 9053 6771"
- :email-address        "nils@kodemaker.no"
+ :phone-number  "+47 9053 6771"
+ :email-address "nils@kodemaker.no"
 
- :presence             {
-                        :cv            "nils"
-                        :twitter       "nils_magnus"
-                        :github        "nilsmagnus"
-                        :stackoverflow "/users/639559/nilsmagnus"
-                        :linkedin      "/in/nilsmagnus/"
-                        }
+ :presence      {
+                 :cv            "nils"
+                 :twitter       "nils_magnus"
+                 :github        "nilsmagnus"
+                 :stackoverflow "/users/639559/nilsmagnus"
+                 :linkedin      "/in/nilsmagnus/"
+                 }
 
- :tech                 {
-                        :favorites-at-the-moment [:go :kafka :zookeeper :tensorflow :influxdb]
-                        :using-at-work           [:java]
-                        :want-to-learn-more      [:kotlin :react :lisp]
-                        }
-
-
- :hobbies              [
-                        {
-                         :title        "Stisykling"
-                         :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere kneiker og crux."
-                         :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
-                        ],
+ :tech          {
+                 :favorites-at-the-moment [:go :influxdb]
+                 :using-at-work           [:java :spring :springbatch]
+                 :want-to-learn-more      [:kotlin :clojurescript :machinelearning]
+                 }
 
 
- :recommendations      [
-                        {:title "Concurrency is not parallelism"
-                         :blurb "Concurrency og parallelisme er to begreper som blandes sammen. Rob Pike, en av skaperene av Go,
+ :hobbies       [
+                 {
+                  :title        "Stisykling"
+                  :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere kneiker og crux."
+                  :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
+                 ],
+
+
+ :recommendations
+                [
+                 {:title "Concurrency is not parallelism"
+                  :blurb "Concurrency og parallelisme er to begreper som blandes sammen. Rob Pike, en av skaperene av Go,
                          forklarer forskjellen og hvordan dette concurrency kan håndteres i Go. Det foretrukne patternet i Go er
                          'Communicating Sequential Processes' (CSP) som også blir brukt av andre språk. CSP implementasjonen i
                          Go er brukt som grunnlag for implementasjon i flere andre språk som Clojure og Kotlin."
-                         :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
-                                 :text "Til video/slides"},
-                         :tech  [:go :concurrency]},
+                  :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
+                          :text "Til video/slides"},
+                  :tech  [:go :concurrency]},
 
-                        {:title "Hvorfor vi trenger tidsserie-databaser"
-                         :blurb "Paul Dix fra influxdb forklarer hva en tidsserie-database er og hvorfor man skal
+                 {:title "Hvorfor vi trenger tidsserie-databaser"
+                  :blurb "Paul Dix fra influxdb forklarer hva en tidsserie-database er og hvorfor man skal
                          velge det fremfor tradisjonelle databaser. Tidsserie-databaser er optimalisert for å lagre 'events'
                          fra f.eks logger, sensorer, iot-enheter eller strømmer av børsdata. Influxdb er en open-source database
                          for å lagre tidsserier som lar deg komme i gang fort med å lagre tidsserier, men med avanserte
                          funksjoner for å hente ut og aggregere data."
-                         :link  {:url  "https://www.youtube.com/watch?v=GzIYRr40QO4"
-                                 :text "Se videoen"}
-                         :tech  [:influxdb]}
+                  :link  {:url  "https://www.youtube.com/watch?v=GzIYRr40QO4"
+                          :text "Se videoen"}
+                  :tech  [:influxdb]}
 
-                        ]
- :presentations        [
-                        {:title "Lyntale: Tracking location of your neighbours wearable"
-                         :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
+                 ]
+ :presentations
+                [
+                 {:title "Lyntale: Tracking location of your neighbours wearable"
+                  :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
                          Det blir ekstra skummelt når jeg sender dataene til google-appengine og lar alle med appen installert abonnere
                          på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!
 
                          Lyntalen har senere blitt utvidet til et foredrag som blant annet holdes på ISF sin høstkonferanse 2017.
                          "
-                         :date  "2011-09-07"
-                         :tech  [:android :bluetooth :go]
-                         :urls  {:video "https://vimeo.com/181936877"}}
-                        ]
+                  :date  "2011-09-07"
+                  :tech  [:android :bluetooth :go]
+                  :urls  {:video "https://vimeo.com/181936877"}}
+                 ]
 
- :open-source-projects [{:url         "https://github.com/nilsmagnus/grib"
-                         :name        "grib"
-                         :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
+ :open-source-contributions
+                [
+                 {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go] }
+                 ]
+
+
+ :open-source-projects
+                [
+                 {:url         "https://github.com/nilsmagnus/grib"
+                  :name        "grib"
+                  :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
                          Utviklet funksjoner som gjør det mulig å streame grib-filer samtidig som man filtrerer på innholdet."
-                         :tech        [:go ]}
-  ,
-                        {:url         "https://github.com/nilsmagnus/wsdl2java"
-                         :name        "wsdl2java"
-                         :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
-                         :tech        [:gradle :groovy]},
-                        ]
+                  :tech        [:go]},
+                 {:url         "https://github.com/nilsmagnus/wsdl2java"
+                  :name        "wsdl2java"
+                  :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
+                  :tech        [:gradle :groovy]},
+                 ]
 
- :side-projects        [{:title        "Well Timed"
-                         :description  "Laget en android-klient til Timelyapp ved bruk av REST-apiet som
-                         timely tilbyr. Appen ble utviklet fordi timely selv ikke har en Android-klent i
-                         tillegg til at jeg ville lære litt om material-design for mobile enheter."
-                         :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.timelyappsimple" :text "Prøv app'en"}
-                         :illustration "/illustrations/side-projects/timelyapp.jpg"
-                         :tech         [:android]},
-                        {:title        "DHL Tracker"
-                         :description  "En enkel app for android jeg lagde etter å ha irretert meg over
+ :side-projects
+                [
+                 {:title        "DHL Tracker"
+                  :description  "En enkel app for android jeg lagde etter å ha irretert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
                          hver status-oppdatering for pakken din som er underveis. 150 000 nedlastninger
                          og 1000-2000 daglige brukere. Backend ble opprinnelig skrevet i java, men har
                          blitt skrevet om til Go for å enklere kunne vedlikeholde koden og legge til nye
                          distributører. Støtter i dag pakker fra posten, postnord og flere dhl-distributører.
                          "
-                         :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.app" :text "Prøv app'en"}
-                         :illustration "/illustrations/side-projects/dhlapp.png"
-                         :tech         [:android :go :app-engine]}
-                        ]
+                  :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.app" :text "Prøv app'en"}
+                  :illustration "/illustrations/side-projects/dhlapp.png"
+                  :tech         [:android :go :app-engine]}
+                 ]
 
- :projects             [{:customer    "Western Geco"
-                         :description "Utvikling av nytt produkt. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
-                         :years       [2017]
-                         :tech        [:java, :bash, :grpc , :protobuf, :bash]}
-                        {:customer    "Thomson Reuters"
-                         :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
-                         :years       [2016 2017]
-                         :tech        [:java, :vertx, :kafka, :spark, :hbase]}
-                        {:customer    "Norwegian Air Shuttle"
-                         :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
-                         :years       [2012 2016]
-                         :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle]}
-                        {:customer    "Storebrand Aktuarsystemer"
-                         :description "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
-                         :years       [2011 2012]
-                         :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2]}]
+ :projects
+                [{:customer    "Western Geco"
+                  :description "Utvikling av nytt produkt. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
+                  :years       [2017]
+                  :tech        [:java, :bash, :grpc, :protobuf]}
+                 {:customer    "Thomson Reuters"
+                  :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
+                  :years       [2016 2017]
+                  :tech        [:java, :vertx, :kafka, :spark, :hbase]}
+                 {:customer    "Norwegian Air Shuttle"
+                  :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
+                  :years       [2012 2016]
+                  :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle]}
+                 {:customer    "Storebrand Aktuarsystemer"
+                  :description "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
+                  :years       [2011 2012]
+                  :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2]}]
 
  :blog-posts
-                       [{:url "https://nilsmagnus.github.io/post/go-tensorflow/"
-                         :title "Using your tensorflow model with go"
-                         :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
-                         :tech [:go :tensorflow]}]
-
+                [{:url   "https://nilsmagnus.github.io/post/go-tensorflow/"
+                  :title "Using your tensorflow model with go"
+                  :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
+                  :tech  [:go :tensorflow]}]
 
  }
