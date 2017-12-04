@@ -10,9 +10,11 @@
 :class ref-top
 :body
 
-Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor de utviklet integrasjonsplattform og digital kundefront til BN Bolig. Kodmaker er blant de faglig mest kompetente i bransjen, men det som kanskje var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok tak i ideer og oppgaver.
+Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor de utviklet integrasjonsplattform og digital kundefront til BN Bolig. Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok tak i ideer og oppgaver.
 
-Vi var opptatt av at å bygge et lite, agilt og selvorganisert team. Kodemaker har for oss bevist at et lite team med håndplukkede, høykompetente personer kan levere raskerere og bedre.
+Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har for oss bevist at et lite team med håndplukkede, høykompetente personer kan levere raskerere og bedre.
+
+
 
 --------------------------------------------------------------------------------
 :type mega-quote
