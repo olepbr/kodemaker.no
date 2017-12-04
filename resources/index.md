@@ -2,22 +2,17 @@
 
 --------------------------------------------------------------------------------
 :type reference
-:logo /logos/nsb.png
-:img /references/bengt-lyng.jpg
-:name Bengt Lyng
-:phone +47 924 33 836
-:title Avdelingssjef, NSB Fellestjenester IT
+:logo /logos/bnbolig.png
+:img /references/rune-strandli.jpg
+:name Rune Strandli
+:phone +47 922 97 480
+:title Chief Digital Officer, BN Bolig
 :class ref-top
 :body
 
-Kodemaker leverte ny teknisk løsning på kortere tid enn vi
-forventet, og vi fikk derfor også utviklet vesentlig mer enn vi
-først antok. Kodemaker løste oppgaven med minimal administrasjon. De
-er kunnskapsrike og løsningsorienterte fagfolk, og ikke minst var de
-flinke til å involvere og diskutere løsningene underveis med oss som
-oppdragsgiver.
+Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor de utviklet integrasjonsplattform og digital kundefront til BN Bolig. Kodmaker er blant de faglig mest kompetente i bransjen, men det som kanskje var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok tak i ideer og oppgaver.
 
-Anbefales sterkt!
+Vi var opptatt av at å bygge et lite, agilt og selvorganisert team. Kodemaker har for oss bevist at et lite team med håndplukkede, høykompetente personer kan levere raskerere og bedre.
 
 --------------------------------------------------------------------------------
 :type mega-quote
