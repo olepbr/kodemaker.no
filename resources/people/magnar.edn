@@ -24,7 +24,7 @@
 
  :tech {:using-at-work [:clojure :clojurescript :datascript :datomic]
         :favorites-at-the-moment [:clojurescript :ansible :responsive-design :emacs]
-        :want-to-learn-more [:elm :clojure-spec]}
+        :want-to-learn-more [:kubernetes :jprofiler :clojure-spec]}
 
  :recommendations [{:title "Literate interactive coding: Devcards"
                     :blurb "Tester du UI-komponentene dine ved å klikke omkring
