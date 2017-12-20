@@ -1,20 +1,47 @@
 
 
+
 --------------------------------------------------------------------------------
 :type reference
-:logo /logos/bnbolig.png
-:img /references/rune-strandli.jpg
-:name Rune Strandli
-:phone +47 922 97 480
-:title Chief Digital Officer, BN Bolig
+:img /references/sven-westgaard.jpg
+:logo /logos/nsb.png
+:name Sven Westgaard
+:phone 480 81 798
+:title Leder, system og masterdata NSB Persontog
 :class ref-top
 :body
 
-Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor de utviklet integrasjonsplattform og digital kundefront til BN Bolig. Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok tak i ideer og oppgaver.
+Kodemaker har vært sentrale i utviklingen av systemer for distribusjon av 
+trafikkinformasjon i NSB. Ved hjelp av dyktige konsulenter har vi funnet 
+effektive og brukervennlige løsninger på komplekse problemstillinger. 
+Konsulentene fra Kodemaker har bidratt med utallige råd og ideer som gjør oss 
+i stand til større grad av automatisering og presisjon i leveransen overfor 
+våre kunder.
 
-Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har for oss bevist at et lite team med håndplukkede, høykompetente personer kan levere raskerere og bedre.
+--------------------------------------------------------------------------------
 
+:type mega-quote
+:title Kodemaker er blant de faglig **mest kompetente** i bransjen
 
+--------------------------------------------------------------------------------
+:type reference
+:img /references/rune-strandli.jpg
+:logo /logos/bnbolig.png
+:name Rune Strandli
+:phone +47 922 97 480
+:title Chief Digital Officer, BN Bolig
+:body
+
+Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 
+de utviklet integrasjonsplattform og digital kundefront til BN Bolig. 
+Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje 
+var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet 
+dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok 
+tak i ideer og oppgaver.
+
+Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har 
+for oss bevist at et lite team med håndplukkede, høykompetente personer kan 
+levere raskerere og bedre.
 
 --------------------------------------------------------------------------------
 :type mega-quote
