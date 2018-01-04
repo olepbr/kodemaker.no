@@ -4,9 +4,7 @@
  :start-date    "2017-01-01"
  :description   "Nils er genuint interessert i teknologi og liker alt som kan programmeres,
  automatiseres og optimaliseres. Han lærer fort og er opptatt av at programvareutvikling er et håndverk man
- skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene.
-
-Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
+ skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene. "
 
  :phone-number  "+47 9053 6771"
  :email-address "nils@kodemaker.no"
@@ -20,9 +18,9 @@ Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
                  }
 
  :tech          {
-                 :favorites-at-the-moment [:go :influxdb]
-                 :using-at-work           [:java :spring :springbatch]
-                 :want-to-learn-more      [:kotlin :clojurescript :machinelearning]
+                 :favorites-at-the-moment [:kubernetes :go :influxdb]
+                 :using-at-work           [:java :spring :docker :docker-compose]
+                 :want-to-learn-more      [:kubernetes :clojurescript :machinelearning]
                  }
 
 
@@ -91,7 +89,12 @@ Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
 
  :side-projects
                 [
-                 {:title        "DHL Tracker"
+                 {:title        "Værdata"
+                  :description  "Et system for å samle inn og organisere data om vær og vind. Skrevet i go og deployet på google cloud platformen med kubernetes."
+                                     :illustration "/illustrations/side-projects/weathergraph.png"
+                  :tech         [ :go :kubernetes :tensorflow]},
+
+                  {:title        "DHL Tracker"
                   :description  "En enkel app for android jeg lagde etter å ha irretert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
                          hver status-oppdatering for pakken din som er underveis. 150 000 nedlastninger
@@ -105,8 +108,12 @@ Ytelse, concurrency og parallelisme er emner han gjerne jobber med. "
                  ]
 
  :projects
-                [{:customer    "Western Geco"
-                  :description "Utvikling av nytt produkt. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
+                [{:customer    "Tieto"
+                  :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
+                  :years       [2017 2018]
+                  :tech        [:java, :docker, :docker-compose :spring]},
+                  {:customer    "Western Geco"
+                  :description "Utvikling av nytt produkt for landseismikk. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
                   :years       [2017]
                   :tech        [:java, :bash, :grpc, :protobuf]}
                  {:customer    "Thomson Reuters"
