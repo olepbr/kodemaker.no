@@ -24,9 +24,9 @@
                     :tech  [:tdd :automatisering]}]
 
  :projects        [{:customer    "NRK"
-                    :description "Utvikling av integrasjoner; utvikling av funksjonalitet, tekniske løsninger for effektiv utvikling og robust drift. Også bidragsyter på metodikk."
-                    :years       [2017]
-                    :tech        [:java :maven :gradle :git :spring :jenkins :rest :jira :confluence :stash]}
+                    :description "Utvikling av integrasjoner; utvikling av funksjonalitet, tekniske løsninger for effektiv utvikling (testing, kodeforbedringer) og robust drift (automatisering, overvåkning, rutiner). Også bidragsyter på metodikk."
+                    :years       [2017 2018]
+                    :tech        [:java :maven :gradle :spring_boot :spring :groovy :jenkins :rest :soap :cucumber :mockito :ansible :jira :confluence :stash]}
                    {:customer    "Schibsted Products & Technology"
                     :description "Utvikling av integrasjon; også fasilitator for teamreorganisering og prosessforbedringer."
                     :years       [2016]
