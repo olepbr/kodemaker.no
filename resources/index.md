@@ -28,7 +28,7 @@ våre kunder.
 :img /references/rune-strandli.jpg
 :logo /logos/bnbolig.png
 :name Rune Strandli
-:phone +47 922 97 480
+:phone +47 922 97 460
 :title Chief Digital Officer, BN Bolig
 :body
 
