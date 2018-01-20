@@ -16,20 +16,19 @@
  :email-address "stian@kodemaker.no"
 
  :presence {:cv "stian"
- 			      :twitter "stiancor"
- 			      :linkedin "/in/stianalsos"
- 			      :github "stiancor"
- 			      :coderwall "stiancor"}
+            :twitter "stiancor"
+            :linkedin "/in/stianalsos"
+            :github "stiancor"}
 
- :tech {:favorites-at-the-moment [:groovy :docker :javascript]
-            :using-at-work [:groovy :java :ruby :javascript]
-	          :want-to-learn-more [:machine-learning :clojure :ecmascript-2015 :devops]}
+ :tech {:favorites-at-the-moment [:groovy :docker :clojure]
+            :using-at-work [:groovy :clojure :ruby :javascript]
+            :want-to-learn-more [:machine-learning :clojure :devops]}
 
  :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
-                    		På bloggen hans finner du vittige innlegg om alt fra
-                    		optimale keyboard for å skrive kode til bokanmeldelser.
-                    		Fyren er også en av grunnleggerne av Stack Overflow."
+                        På bloggen hans finner du vittige innlegg om alt fra
+                        optimale keyboard for å skrive kode til bokanmeldelser.
+                        Fyren er også en av grunnleggerne av Stack Overflow."
                     :link {:url "http://www.codinghorror.com/blog/"
                            :text "Besøk bloggen"}
                     :tech [:teknologi :utvikling]}
@@ -43,16 +42,6 @@
                     :link {:url "https://www.coursera.org/course/ml/"
                            :text "Ta kurset på Coursera"}
                     :tech [:machine-learning]}
-                   {:title "Ruby on Rails Tutorial"
-                    :blurb "Rails er et rammeverk som både er elsket og hatet.
-                    		Jeg mener at det til riktig type
-                    		problemstilling kan det være et glimrende alternativ.
-                    		I disse screencastene på rundt 16 timer gir
-                    		Michael Hartl deg en solid innføring og et grunnlag
-                    		for å lage spennende applikasjoner."
-                    :link {:url "http://ruby.railstutorial.org/"
-                           :text "Bli en rails hipster"}
-                    :tech [:ruby :rails]}
                    ]
 
 
@@ -68,7 +57,7 @@
                           på veien som gjør turen, ikke at man
                           besøkte alle severdighetene på ruten. God tur!"
             :illustration "/illustrations/hobbies/stian_reise.jpg"}
-			     {:title "Løping"
+           {:title "Løping"
             :description "For meg handler løping om mange ting. Det åpenbare
                           er et ønske om å holde meg i form, men viktigere enn
                           det er å tømme hodet, løse opp kroppen og være ute
@@ -77,15 +66,13 @@
                           da i tillegg slår venner og bekjente smaker det
                           selvsagt ekstra godt."
             :illustration "/illustrations/hobbies/jogging.jpg"}
-			     {:title "Gitar"
+           {:title "Gitar"
             :description "Det finnes mange grunner til å spille gitar.
                           Noen har som drøm å spille i forrykende tempo på
                           store scener, andre bruker det for å imponere på
                           et nachspiel en sen lørdagskveld. For noen handler
                           det om noe så enkelt som å slappe av og koble ut.
-                          Sånn er det for meg. Så skader det jo ikke at datteren
-                          min på under året er helt oppslukt, og min største
-                          fan når fingrene danser nedover gitarhalsen."
+                          Sånn er det for meg."
             :illustration "/illustrations/hobbies/stian_gitar.jpg"}]
 
  :side-projects [{:title "Twittosocial"
@@ -98,15 +85,6 @@
                   :illustration "/illustrations/side-projects/twittosocial.jpg"
                   :link {:url "http://twittosocial.herokuapp.com" :text "Se nettstedet (krever innlogging)"}
                   :tech [:ruby :rails]}]
-
- :blog-posts [{:url "http://worldoffoobar.blogspot.no/2013/07/setting-up-grails-guard.html"
-                :title "Setting up Grails Guard"
-                :blurb "Det er kjedelig og unødvendig at integrasjonstestene
-                        dine kjører i en liten evighet når du bruker Grails.
-                        Denne blogposten viser deg hvordan du setter opp
-                        Grails Guard og slipper dødtid."
-                :tech [:grails :tdd]
-                }]
 
  :endorsements [{:author "Bradley Johannson"
                  :title "Business Development Manager (Leder Forretningsutvikling) at Storebrand"
