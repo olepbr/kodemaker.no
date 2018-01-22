@@ -42,6 +42,17 @@
                     :link {:url "https://www.coursera.org/course/ml/"
                            :text "Ta kurset på Coursera"}
                     :tech [:machine-learning]}
+                    {:title "The morning paper"
+                    :blurb "På The morning paper legges det hver ukedag ut en 
+                            datavitenskaplig artikkel. Spennet mellom temaene er
+                            stort, men det er jo også det som er så bra! En dag kan du lese 
+                            om teknikaliteter innen et programmeringsspråk og neste 
+                            dag om en eksperimentel feature relatert til blockchains. 
+                            Så da gjelder det vel bare å finne nok tid i hverdagen til å 
+                            lese alle disse artiklene."
+                    :link {:url "https://blog.acolyer.org/"
+                           :text "Sjekk dagens artikkel"}
+                    :tech [:computer-science]}
                    ]
 
 
