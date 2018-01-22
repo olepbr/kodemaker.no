@@ -52,7 +52,7 @@
                             lese alle disse artiklene."
                     :link {:url "https://blog.acolyer.org/"
                            :text "Sjekk dagens artikkel"}
-                    :tech [:computer-science]}
+                    :tech [:teknologi :utvikling]}
                    ]
 
 
