@@ -6,10 +6,10 @@ Etter flere tiår der mange brukte det objekt-orienterte programmeringsparadigme
 for applikasjonsutvikling har _funksjonell programmering (FP)_ fått en renessanse.
 I FP foretrekker man _expressions over statements_ og _rene funksjoner_
 (uten side-effekter). Språk som støtter FP har ofte konstruksjoner
-som gjør det enklere å håndheve [immutability](immutability).
+som gjør det enklere å håndheve [immutability](/immutability/).
 
-For utviklere på JVM'et har [Scala](scala) og [Groovy](groovy) i en del år tilbudt
+For utviklere på JVM'et har [Scala](/scala/) og [Groovy](/groovy/) i en del år tilbudt
 språk-konstruksjoner som gjør det mulig å gjøre funksjonell programmering, men blant
-mange i Kodemaker er [Clojure](clojure) spesielt populært.
+mange i Kodemaker er [Clojure](/clojure/) spesielt populært.
 
-Utenfor JVM'et er [Haskell](haskell) og [Elm](elm) språk som har økende popularitet."}
+Utenfor JVM'et er [Haskell](/haskell/) og [Elm](/elm/) språk som har økende popularitet."}
