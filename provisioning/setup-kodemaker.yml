@@ -1,5 +1,7 @@
 ---
 - hosts: new-servers
+  remote_user: deploy
+  become: true
   tasks:
    - name: Install nginx
      yum: name=nginx state=present
@@ -100,17 +102,20 @@
      command: forever list
      register: forever_list
      changed_when: false
-     sudo: no
+     become: true
+     become_user: deploy
 
    - name: Start build-queue
      command: forever start /home/{{ansible_ssh_user}}/build-queue.js
      when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/build-queue.js') == -1"
-     sudo: no
+     become: true
+     become_user: deploy
 
    - name: Start mail-sender
      command: forever start /home/{{ansible_ssh_user}}/mail-sender.js
      when: "forever_list.stdout.find('/home/{{ansible_ssh_user}}/mail-sender.js') == -1"
-     sudo: no
+     become: true
+     become_user: deploy
 
    - name: Make sure build-queue is started after reboot
      cron: name="reboot-build-queue" special_time=reboot user="{{ansible_ssh_user}}" job="forever start /home/{{ansible_ssh_user}}/build-queue.js"
@@ -159,18 +164,20 @@
 
   handlers:
    - name: restart nginx
-     service: name=nginx state=restarted enabled=yes
+     service: name=nginx state=restarted
 
    - name: restart iptables
-     service: name=iptables state=restarted enabled=yes
+     service: name=iptables state=restarted
 
    - name: restart varnish
-     service: name=varnish state=restarted enabled=yes
+     service: name=varnish state=restarted
 
    - name: restart build-queue
      command: forever restart /home/{{ansible_ssh_user}}/build-queue.js
-     sudo: no
+     become: true
+     become_user: deploy
 
    - name: restart mail-sender
      command: forever restart /home/{{ansible_ssh_user}}/mail-sender.js
-     sudo: no
+     become: true
+     become_user: deploy
