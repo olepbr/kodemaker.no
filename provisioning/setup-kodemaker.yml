@@ -3,8 +3,30 @@
   remote_user: deploy
   become: true
   tasks:
+   - name: Ensure EPEL is enabled
+     yum: name=epel-release state=present
+
+   - name: Set SELinux permissive
+     selinux:
+       policy: targeted
+       state: permissive
+
    - name: Install nginx
      yum: name=nginx state=present
+
+   - name: Ensure nginx is running
+     service: name=nginx state=started enabled=true
+
+   - name: Create letsencrypt directories
+     file: path={{ item }} state=directory owner=nginx group=www mode=775
+     with_items:
+       - /var/www/letsencrypt
+       - /etc/letsencrypt
+
+   - name: Check if certificate exists
+     stat:
+       path: /etc/letsencrypt/live/www.kodemaker.no/fullchain.pem
+     register: cert_stat
 
    - name: Configure nginx
      template: src=templates/nginx.conf.j2 dest=/etc/nginx/nginx.conf
@@ -32,6 +54,9 @@
 
    - name: Install varnish
      yum: name=varnish state=present
+
+   - name: Ensure varnish is running
+     service: name=varnish state=started enabled=true
 
    - name: Configure varnish sysconfig
      template: src=templates/varnish.j2 dest=/etc/varnish/varnish.params
