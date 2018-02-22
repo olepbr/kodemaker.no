@@ -10,14 +10,16 @@ server {
   server_name kodemaker.no;
 
   # and redirect to the non-www host (declared below)
-  return 301 $scheme://{{ km_domain }}$request_uri;
+  return 301 https://{{ km_domain }}$request_uri;
 }
 
 # redirect from nye.kodemaker to site
 server {
   listen 8001;
   server_name nye.kodemaker.no;
-  return 301 $scheme://{{ km_domain }}$request_uri;
+  return 301 https://{{ km_domain }}$request_uri;
+}
+
 # SSL termination
 server {
   listen 443 ssl;
@@ -96,6 +98,9 @@ server {
   # Force the latest IE version
   # Use ChromeFrame if it's installed for a better experience for the poor IE folk
   add_header "X-UA-Compatible" "IE=Edge";
+
+  # Stay safe
+  add_header "Strict-Transport-Security" "max-age=31536000";
 
   # Old URLs
   rewrite  ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;
