@@ -133,6 +133,30 @@
    - name: Build site once every night
      cron: name="nightly-site-build" minute=0 hour=2 user="{{ansible_ssh_user}}" job="curl localhost/site/build"
 
+   - name: Install certbot
+     yum: name=certbot state=present
+
+   - name: Create letsencrypt directories
+     file: path={{ item }} state=directory owner=nginx group=www mode=775
+     with_items:
+       - /var/www/letsencrypt
+       - /etc/letsencrypt
+
+   - name: Check if certificate exists
+     stat:
+       path: /etc/letsencrypt/live/www.kodemaker.no/fullchain.pem
+     register: cert_stat
+
+   - name: Request certificate
+     shell: |
+       certbot certonly \
+           --webroot -w /var/www/letsencrypt \
+           -d www.kodemaker.no \
+           --email christian@kodemaker.no \
+           --non-interactive \
+           --agree-tos
+     when: cert_stat.stat.exists == False
+
   handlers:
    - name: restart nginx
      service: name=nginx state=restarted enabled=yes

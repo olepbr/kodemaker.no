@@ -18,6 +18,35 @@ server {
   listen 8001;
   server_name nye.kodemaker.no;
   return 301 $scheme://{{ km_domain }}$request_uri;
+# SSL termination
+server {
+  listen 443 ssl;
+  server_name {{ km_domain }};
+  ssl_certificate /etc/letsencrypt/live/{{ km_domain }}/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/{{ km_domain }}/privkey.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers HIGH:!aNULL:!MD5;
+
+  location / {
+    proxy_pass http://127.0.0.1:6081;
+  }
+}
+
+# insecure http
+server {
+  listen 80 default deferred;
+
+  # The host name to respond to
+  server_name {{ km_domain }};
+
+  location / {
+    return 301 https://{{ km_domain }}$request_uri;
+  }
+
+  # Serve ACME challenges from a separate directory
+  location /.well-known {
+    alias /var/www/letsencrypt/.well-known;
+  }
 }
 
 server {
