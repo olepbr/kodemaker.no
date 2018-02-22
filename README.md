@@ -320,7 +320,7 @@ Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
 annen inkantasjon:
 
 ```sh
-ansible-playbook -i hosts.ini setup-kodemaker.yml --user deploy --sudo --ask-sudo-pass
+ansible-playbook -i hosts.ini setup-kodemaker.yml --ask-become-pass
 ```
 
 Nå er det altså ikke SSH-passordet som brukes lenger - den bruker din
