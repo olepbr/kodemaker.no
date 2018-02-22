@@ -269,7 +269,7 @@ tasken i `provisioning/bootstrap.yml`.
 Gå så tilbake til `provisioning/` og:
 
 ```sh
-ansible-playbook -i hosts.ini bootstrap.yml --user root --ask-pass
+ansible-playbook -i hosts-local.ini bootstrap.yml --user root --ask-pass
 ```
 
 Svar med passordet du lagde til root.
@@ -282,8 +282,7 @@ Fortsett så til [Sette opp kodemaker.no](#neste-sette-opp-kodemakerno).
 ### Provisjonere en server
 
 Så, du har en fresk og fersk CentOS server som vil bli kodemaker.no.
-Legg den til i `provisioning/hosts.ini` under `[new-servers]`. Du kan
-ta bort `192.168.33.44`, den brukes bare for lokal testing.
+Legg den til i `provisioning/hosts.ini` under `[new-servers]`.
 
 Forhåpentligvis har du testet lokalt, og dermed ligger allerede din
 public key i `provisioning/keys`.
@@ -313,7 +312,9 @@ cp provisioning/files/mail-config-sample.js provisioning/files/mail-config.js
 
 Åpne `provisioning/files/mail-config.js` og legg til den hemmelige
 nøkkelen på `apiUser`. Hvis du ikke har noen, så er det greit på en
-lokal maskin. Da bare funker det ikke å sende mail. ;-)
+lokal maskin. Da bare funker det ikke å sende mail. ;-) Du kan finne
+eksisterende verdi ved å logge inn på kodemaker.no og gjøre
+`cat mail-config.js`.
 
 Når du bootstrapper, så vil root-login og passord-login bli disablet.
 Så når vi nå skal sette opp kodemaker no, så må du fleske til med en
@@ -351,6 +352,23 @@ curl local.kodemaker.no/site/build
 
 Den henter da altså fra github. Om du vil teste lokale endringer er
 det mye greiere å få til med `lein ring server`.
+
+### SSL
+
+www.kodemaker.no serveres nå med SSL og HSTS-header. Sertifikatet
+provisjoneres fra Let's Encrypt med certbot, og fornyes i en cron-jobb
+ukentlig. Ettersom Varnish ikke støtter TLS så går nå trafikken først
+til nginx på port 443, så til Varnish på port 6081, deretter varnish på
+port 8001.
+
+nginx svarer også på port 80, og dette er kun for å serve ACME challengen
+som er en del av dansen for å sikre seg sertifikater fra Let's Encrypt.
+All annen trafikk redirectes til HTTPS.
+
+Dersom du kjører lokalt bør du sette `use_ssl=False` i `hosts-local.ini`,
+ellers vil Ansible feile når det forsøkes å bestille sertifikat, ettersom
+den prosessen krever at serveren du er på er tilgjengelig over internett
+med det hostnamet du bestiller sertifikat for.
 
 ## Bidra til koden
 
