@@ -162,6 +162,14 @@
            --agree-tos
      when: cert_stat.stat.exists == False
 
+   - name: Renew certificate weekly
+     cron:
+       name: Renew letsencrypt certificate
+       minute: 30
+       hour: 2
+       weekday: 1
+       job: "certbot certonly --webroot -w /var/www/letsencrypt"
+
   handlers:
    - name: restart nginx
      service: name=nginx state=restarted
