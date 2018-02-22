@@ -27,12 +27,12 @@ else
     git fetch
     git reset --hard origin/master > /dev/null
 
-    if [ "$current_head" != $(git rev-parse HEAD) ]; then
-        ../bin/lein with-profile test midje && passed=1
-        if [ $passed ]; then
+    if [ "$current_head" != $(git rev-parse HEAD) ] || [ ! -f /var/www/kodemaker.no/current/index.html ]; then
+        ../bin/lein with-profile test midje
+        if [ $? -eq 0 ]; then
             log "Building"
-            ../bin/lein build-site && built=1
-            if [ $built ]; then
+            ../bin/lein build-site
+            if [ $? -eq 0 ]; then
                 log "Publishing"
                 rm -rf /var/www/kodemaker.no/current
                 mv build /var/www/kodemaker.no/current
