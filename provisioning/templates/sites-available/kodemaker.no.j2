@@ -10,16 +10,26 @@ server {
   server_name kodemaker.no;
 
   # and redirect to the non-www host (declared below)
+{% if cert_stat.stat.exists %}
   return 301 https://{{ km_domain }}$request_uri;
+{% else %}
+  return 301 http://{{ km_domain }}$request_uri;
+{% endif %}
 }
 
 # redirect from nye.kodemaker to site
 server {
   listen 8001;
   server_name nye.kodemaker.no;
+
+{% if cert_stat.stat.exists %}
   return 301 https://{{ km_domain }}$request_uri;
+{% else %}
+  return 301 http://{{ km_domain }}$request_uri;
+{% endif %}
 }
 
+{% if cert_stat.stat.exists %}
 # SSL termination
 server {
   listen 443 ssl;
@@ -33,7 +43,9 @@ server {
     proxy_pass http://127.0.0.1:6081;
   }
 }
+{% endif %}
 
+{% if cert_stat.stat.exists %}
 # insecure http
 server {
   listen 80 default deferred;
@@ -50,6 +62,18 @@ server {
     alias /var/www/letsencrypt/.well-known;
   }
 }
+{% else %}
+server {
+  listen 80 default deferred;
+
+  # The host name to respond to
+  server_name {{ km_domain }};
+
+  location / {
+    proxy_pass http://127.0.0.1:6081;
+  }
+}
+{% endif %}
 
 server {
   listen 8001 default deferred; # Re: deferred: The option is beneficial on all configurations, not to the level you'd ever likely notice except under an extreme load of HTTP traffic, but it's theoretically the "right" way to do it. It's an option because not all Unix (not even all Linux) flavours have that capability, and thus for portability it can be configured not to be inclided. http://unix.stackexchange.com/questions/94104/real-world-use-of-tcp-defer-accept
@@ -99,8 +123,10 @@ server {
   # Use ChromeFrame if it's installed for a better experience for the poor IE folk
   add_header "X-UA-Compatible" "IE=Edge";
 
+{% if cert_stat.stat.exists %}
   # Stay safe
   add_header "Strict-Transport-Security" "max-age=31536000";
+{% endif %}
 
   # Old URLs
   rewrite  ^/mennesker/alf-kristian-støyle/?$ /alf-kristian/ permanent;

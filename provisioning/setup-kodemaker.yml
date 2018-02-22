@@ -165,17 +165,7 @@
 
    - name: Install certbot
      yum: name=certbot state=present
-
-   - name: Create letsencrypt directories
-     file: path={{ item }} state=directory owner=nginx group=www mode=775
-     with_items:
-       - /var/www/letsencrypt
-       - /etc/letsencrypt
-
-   - name: Check if certificate exists
-     stat:
-       path: /etc/letsencrypt/live/www.kodemaker.no/fullchain.pem
-     register: cert_stat
+     when: use_ssl
 
    - name: Request certificate
      shell: |
@@ -185,7 +175,9 @@
            --email christian@kodemaker.no \
            --non-interactive \
            --agree-tos
-     when: cert_stat.stat.exists == False
+     when:
+       - cert_stat.stat.exists == False
+       - use_ssl
 
    - name: Renew certificate weekly
      cron:
@@ -194,6 +186,7 @@
        hour: 2
        weekday: 1
        job: "certbot certonly --webroot -w /var/www/letsencrypt"
+     when: use_ssl
 
   handlers:
    - name: restart nginx
