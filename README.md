@@ -379,4 +379,4 @@ lein with-profile test midje :autotest
 ```
 
 Du kan få en innføring i hvordan koden fungerer i
-[denne bloggposten](http://cjohansen.no/building-static-sites-in-clojure-with-stasis).
+[denne bloggposten](https://cjohansen.no/building-static-sites-in-clojure-with-stasis).
