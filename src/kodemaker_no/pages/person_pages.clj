@@ -150,7 +150,7 @@
    [:h2.mhn "Prosjekter"]
    (map render-project projects)
    (when-let [nick (-> person :presence :cv)]
-     [:p [:a {:href (str (:baseUrl cv) nick)}
+     [:p [:a {:href (str (:baseUrl cv) nick "/")}
           "Se flere prosjekter i " (:genitive person) " CV"]])))
 
 (defn- should-split-open-source-by-tech [projects contributions]
