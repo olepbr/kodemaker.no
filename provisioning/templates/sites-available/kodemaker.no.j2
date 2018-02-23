@@ -40,7 +40,7 @@ server {
   ssl_ciphers HIGH:!aNULL:!MD5;
 
   location / {
-    proxy_pass http://127.0.0.1:6081;
+    proxy_pass http://{{ km_domain }}:6081;
   }
 }
 {% endif %}
@@ -70,7 +70,7 @@ server {
   server_name {{ km_domain }};
 
   location / {
-    proxy_pass http://127.0.0.1:6081;
+    proxy_pass http://{{ km_domain }}:6081;
   }
 }
 {% endif %}
