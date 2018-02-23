@@ -4,7 +4,7 @@
 # the right one -- http://wiki.nginx.org/Pitfalls#Server_Name
 server {
   # don't forget to tell on which port this server listens
-  listen 8001;
+  listen 80;
 
   # listen on the non-www host
   server_name kodemaker.no;
@@ -19,7 +19,7 @@ server {
 
 # redirect from nye.kodemaker to site
 server {
-  listen 8001;
+  listen 80;
   server_name nye.kodemaker.no;
 
 {% if cert_stat.stat.exists %}
