@@ -105,7 +105,7 @@
 
 (defn- render-presence-item [item presence]
   (when-let [nick (-> item :id presence)]
-    [:a {:href (str (:baseUrl item) nick)
+    [:a {:href (str (:baseUrl item) nick "/")
          :class (str "presence " (name (:id item)))
          :title (:title item)}]))
 

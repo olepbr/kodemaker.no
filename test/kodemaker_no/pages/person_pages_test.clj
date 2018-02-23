@@ -104,8 +104,15 @@
            :aside last last html)
 
       => (html [:div.mod
-                [:a.presence.twitter {:href "https://twitter.com/magnars"
+                [:a.presence.twitter {:href "https://twitter.com/magnars/"
                                       :title "Twitter"}]]))
+
+(fact (->> (page :presence {:cv "magnar"})
+           :aside last last html)
+
+      => (html [:div.mod
+                [:a.presence.cv {:href "/cv/magnar/"
+                                 :title "Cv"}]]))
 
 (defn upcoming [title date]
   {:title title
