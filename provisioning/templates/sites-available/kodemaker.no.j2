@@ -50,6 +50,17 @@ server {
     proxy_pass http://{{ km_domain }}:6081;
   }
 }
+
+server {
+  listen 443 ssl;
+  server_name kodemaker.no;
+  ssl_certificate /etc/letsencrypt/live/kodemaker.no/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/kodemaker.no/privkey.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers HIGH:!aNULL:!MD5;
+
+  return 301 https://{{ km_domain }}$request_uri;
+}
 {% endif %}
 
 # insecure http

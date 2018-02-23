@@ -167,19 +167,22 @@
      yum: name=certbot state=present
      when: use_ssl
 
-   - name: Request certificate
+   - name: Request certificates
      shell: |
        certbot certonly \
            --webroot -w /var/www/letsencrypt \
-           -d www.kodemaker.no \
+           -d {{item}} \
            --email christian@kodemaker.no \
            --non-interactive \
            --agree-tos
      when:
        - cert_stat.stat.exists == False
        - use_ssl
+     with_items:
+       - www.kodemaker.no
+       - kodemaker.no
 
-   - name: Renew certificate weekly
+   - name: Renew certificates weekly
      cron:
        name: Renew letsencrypt certificate
        minute: 30
