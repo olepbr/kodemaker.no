@@ -104,7 +104,7 @@
            :aside last last html)
 
       => (html [:div.mod
-                [:a.presence.twitter {:href "http://www.twitter.com/magnars"
+                [:a.presence.twitter {:href "https://twitter.com/magnars"
                                       :title "Twitter"}]]))
 
 (defn upcoming [title date]
