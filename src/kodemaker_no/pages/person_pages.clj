@@ -93,7 +93,7 @@
         (interpose [:hr.mtn.mhn] (map render-endorsement endorsements))))
 
 (def cv
-  {:id :cv             :baseUrl "https://www.kodemaker.no/cv/"  :title "Cv"})
+  {:id :cv             :baseUrl "/cv/"  :title "Cv"})
 
 (def presence-items
   [cv
