@@ -9,12 +9,19 @@ server {
   # listen on the non-www host
   server_name kodemaker.no;
 
+  # Serve ACME challenges from a separate directory
+  location /.well-known {
+    alias /var/www/letsencrypt/.well-known;
+  }
+
   # and redirect to the non-www host (declared below)
+  location / {
 {% if cert_stat.stat.exists %}
   return 301 https://{{ km_domain }}$request_uri;
 {% else %}
   return 301 http://{{ km_domain }}$request_uri;
 {% endif %}
+  }
 }
 
 # redirect from nye.kodemaker to site
@@ -45,7 +52,6 @@ server {
 }
 {% endif %}
 
-{% if cert_stat.stat.exists %}
 # insecure http
 server {
   listen 80 default deferred;
@@ -54,7 +60,11 @@ server {
   server_name {{ km_domain }};
 
   location / {
+{% if cert_stat.stat.exists %}
     return 301 https://{{ km_domain }}$request_uri;
+{% else %}
+    proxy_pass http://{{ km_domain }}:6081;
+{% endif %}
   }
 
   # Serve ACME challenges from a separate directory
@@ -62,18 +72,6 @@ server {
     alias /var/www/letsencrypt/.well-known;
   }
 }
-{% else %}
-server {
-  listen 80 default deferred;
-
-  # The host name to respond to
-  server_name {{ km_domain }};
-
-  location / {
-    proxy_pass http://{{ km_domain }}:6081;
-  }
-}
-{% endif %}
 
 server {
   listen 8001 default deferred; # Re: deferred: The option is beneficial on all configurations, not to the level you'd ever likely notice except under an extreme load of HTTP traffic, but it's theoretically the "right" way to do it. It's an option because not all Unix (not even all Linux) flavours have that capability, and thus for portability it can be configured not to be inclided. http://unix.stackexchange.com/questions/94104/real-world-use-of-tcp-defer-accept
