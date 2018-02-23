@@ -93,15 +93,15 @@
         (interpose [:hr.mtn.mhn] (map render-endorsement endorsements))))
 
 (def cv
-  {:id :cv             :baseUrl "http://www.kodemaker.no/cv/"  :title "Cv"})
+  {:id :cv             :baseUrl "https://www.kodemaker.no/cv/"  :title "Cv"})
 
 (def presence-items
   [cv
-   {:id :twitter       :baseUrl "http://www.twitter.com/"      :title "Twitter"}
-   {:id :linkedin      :baseUrl "http://www.linkedin.com"      :title "LinkedIn"}
-   {:id :stackoverflow :baseUrl "http://www.stackoverflow.com" :title "StackOverflow"}
-   {:id :github        :baseUrl "http://github.com/"           :title "GitHub"}
-   {:id :coderwall     :baseUrl "http://www.coderwall.com/"    :title "Coderwall"}])
+   {:id :twitter       :baseUrl "https://twitter.com/"      :title "Twitter"}
+   {:id :linkedin      :baseUrl "https://www.linkedin.com/"      :title "LinkedIn"}
+   {:id :stackoverflow :baseUrl "https://stackoverflow.com/" :title "StackOverflow"}
+   {:id :github        :baseUrl "https://github.com/"           :title "GitHub"}
+   {:id :coderwall     :baseUrl "https://coderwall.com/"    :title "Coderwall"}])
 
 (defn- render-presence-item [item presence]
   (when-let [nick (-> item :id presence)]
