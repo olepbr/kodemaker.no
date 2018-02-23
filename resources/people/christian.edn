@@ -2,14 +2,16 @@
  :name ["Christian" "Johansen"]
  :title "Kodemaker"
  :start-date "2013-11-01"
- :description "Christian er en engasjert og allsidig programmerer. Gjennom sine
-               kurs og foredrag har han gjort seg kjent som en meningssterk og
-               kvass programmerer som tar design, testing og kvalitet seriøst.
-               Christian har lang erfaring med både frontend og backend såvel
-               som devops-nivå oppsett, provisjonering og drift av
-               applikasjonsservere. Han trives godt både alene og i team, og
-               fungerer både som humørspreder og kritisk røst i samarbeid med
-               andre."
+ :description " Christian er en allsidig, engasjert og produktiv programmerer
+    med erfaring og interesse for alt fra infrastruktur og drift, databaser og
+    backends, til frontend webutvikling. Han har lang erfaring med systemer og
+    prosesser for continuous delivery/continuous integration, samt prinsipper
+    for å kjøre applikasjoner i skyen.
+
+    Gjennom sine kurs og foredrag har han gjort seg kjent som en meningssterk og
+    kvass programmerer som tar design, testing og kvalitet seriøst. Han trives
+    godt både alene og i team, og fungerer både som humørspreder og kritisk røst
+    i samarbeid med andre."
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
@@ -19,9 +21,9 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:clojurescript :aws :docker :concourse]
+ :tech {:using-at-work [:aws :docker :concourse :bash]
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
-        :want-to-learn-more [:haskell :aws :elm :go :oidc]}
+        :want-to-learn-more [:haskell :go]}
 
  :side-projects [{:title "Learning Functional JavaScript"
                   :description "Et grundig videokurs i funksjonell programmering
