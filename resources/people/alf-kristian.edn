@@ -510,4 +510,14 @@
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}] 
+
+ :workshops [{:title "Opp og stå med Clojure"
+              :blurb "Clojure er en Lisp-dialekt som kjører på JVM-en (i tillegg
+                      til CLR-en og JavaScript). Det er et dynamisk og kompilert
+                      programmeringsspråk, og i denne workshoppen får du en
+                      innføring i basic syntaks, bruk av REPL og utvikling av
+                      web applikasjoner med Clojure."
+              :tech [:clojure]
+              :duration "3 timer"
+              :price "2500,- per deltaker (eks mva)"}]
  }

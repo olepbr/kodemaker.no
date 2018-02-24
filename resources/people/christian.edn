@@ -1082,4 +1082,59 @@
                                   :emacs :terminal
                                   :osx :centos :alpine :ubuntu :ios
                                   :docker :nginx :haproxy]}}
+
+ :workshops [{:title "Webutvikling med ClojureScript"
+              :blurb "ClojureScript er en Lisp-dialekt som kompilerer til
+                      JavaScript. Med sine immutable datastrukturer går det som
+                      hånd i hanske med React og lignende biblioteker, og sammen
+                      med toolingen som har vokst opp rundt språket har
+                      ClojureScript blitt en virkelig kraftpakke for utvikling
+                      av web-frontends. I denne workshoppen får du en
+                      gjennomgang av språkets viktigste egenskaper, bruk av
+                      REPL, live reloads med fighweel og mer."
+              :tech [:clojurescript]
+              :duration "1 dag"
+              :price "5000,- per deltaker (eks mva)"}
+             {:title "Testing og arkitektur i JavaScript-frontends"
+              :blurb "JavaScript får en større og større rolle i web-prosjekter,
+                      og en gjennomtenkt arkitektur og tilnærming til testing er
+                      essensielt for å lykkes. I denne workshoppen får
+                      deltakerne en gjennomgang av teknikker for å forme
+                      skalerbare arkitekturer som ivaretar testbarhet og sikrer
+                      deg og ditt web-prosjekt en mer feilfri hverdag."
+              :tech [:javascript]
+              :duration "1 dag"
+              :price "5000,- per deltaker (eks mva)"}]
+
+ :business-presentations [{:title "Datomic - Databasen du ikke visste at du trengte"
+                           :blurb "Datomic er en relativt ny database som byr på
+                                   et spennende featuresett: den er relasjonell,
+                                   den er en event sourcing-implementasjon, den
+                                   har en CQRS-inspirert arkitektur. Skal du
+                                   starte et nytt prosjekt hvor det skal lagres
+                                   data, eller du snuser på event sourcing bør
+                                   du invitere Christian til å fortelle om
+                                   Datomic før dere tar de store beslutningene
+                                   om hva og hvordan."
+                           :tech [:datomic]
+                           :duration "1 time"
+                           :price "5000,- (eks mva)"}
+                          {:title "ClojureScript - Mer enn bare et programmeringsspråk"
+                           :blurb "ClojureScript og verktøyene rundt har vokst
+                                   til å bli en utviklingsplatform for
+                                   web-frontender som byr på uslåelige
+                                   muligheter: live reload med full tilstand,
+                                   tilgang til kodebasen og tilstanden i
+                                   nettleseren via et REPL, clojure.spec for
+                                   validering av data og valgfri typing av
+                                   funksjoner og mye mer. I tillegg unngår
+                                   ClojureScript \"JavaScript fatigue\" ved å by
+                                   på et økosystem som er mindre motepreget og
+                                   tar bakoverkompatibilitet på alvor. I løpet
+                                   av denne timen kommer teamet ditt helt
+                                   garantert til å få lyst til å følge opp med
+                                   en workshop."
+                           :tech [:datomic]
+                           :duration "1 time"
+                           :price "5000,- (eks mva)"}]
  }

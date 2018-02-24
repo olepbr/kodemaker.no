@@ -797,4 +797,19 @@
                                   :git :svn
                                   :functional-programming :immutability
                                   :datomic :datascript]}}
+
+ :business-presentations [{:title "Emacs Rocks! kommer på besøk"
+                           :blurb "Mange har latt seg imponere av hva Magnar får
+                                   til med sin 40 år gamle teksteditor gjennom
+                                   screencasten Emacs Rocks! Nå kan du få en
+                                   live oppvisning i hva som er mulig å få til
+                                   med et fleksibelt verktøy og litt pågangsmot.
+                                   Med foredraget ønsker Magnar å inspirere
+                                   utviklere - ikke nødvendigvis til å bli
+                                   Emacs-brukere - men til å omfavne verktøyene
+                                   sine, mestre dem og lære hvordan man kan få
+                                   dem til å \"do their bidding\"."
+                           :tech [:emacs]
+                           :duration "30 minutter"
+                           :price "2500,- (eks mva)"}]
  }

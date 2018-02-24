@@ -680,4 +680,14 @@
              {:institution "Røyken videregående skole"
               :years [1989 1990 1991 1992]
               :subject "Naturfaglinje"}]
+
+ :workshops [{:title "Building Web Apps with Elm"
+              :tech [:elm]
+              :blurb "Elm er et funksjonelt, typet språk for utvikling i
+                      nettlesere. I denne praktiske hands-on workshoppen får du
+                      en gjennomgang av språket og the Elm architecture. Når du
+                      er gjennom er du klar til å bygge dine egne webapper med
+                      Elm."
+              :duration "Én dag"
+              :price "5000,- per deltaker (eks mva)"}]
  }
