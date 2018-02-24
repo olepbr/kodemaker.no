@@ -147,7 +147,19 @@
                                    :description Str}]
 
    (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
-                           (optional-key :exclude-techs) [ID]}}})
+                           (optional-key :exclude-techs) [ID]}}
+
+   (optional-key :business-presentations) [{:title Str ;; foredrag du selger til kunder
+                                            :blurb Str
+                                            :tech [ID]
+                                            :duration Str
+                                            :price Str}]
+
+   (optional-key :workshops) [{:title Str ;; workshop eller kurs til salgs
+                               :blurb Str
+                               :tech [ID]
+                               :duration Str
+                               :price Str}]})
 
 (def Tech
   {:id ID
