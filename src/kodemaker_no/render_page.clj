@@ -1,27 +1,27 @@
 (ns kodemaker-no.render-page
   (:require [clojure.string :as str]
             [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.markup :as markup]
             [kodemaker-no.layout :refer [with-layout]]
+            [kodemaker-no.markup :as markup]
             [kodemaker-no.render-old-page :as old]))
 
-(defn- render-illustrated-column [section]
-  [:div.bd.iw
-   (when (:title section)
-     [:h2.offset [:span.offset-content (:title section)]])
+(defn- render-illustrated-column [{:keys [id title illustration illustration-url body]}]
+  [:div.bd.iw {:id id}
+   (when title
+     [:h2.offset [:span.offset-content title]])
    [:div.line
     [:div.unit.text-adornment
-     [:p (when (:illustration section)
-           (if (:illustration-url section)
-             [:a {:href (:illustration-url section)}
-              [:img {:src (:illustration section)}]]
-             [:img {:src (:illustration section)}]))]]
+     [:p (when illustration
+           (if illustration-url
+             [:a {:href illustration-url}
+              [:img {:src illustration}]]
+             [:img {:src illustration}]))]]
     [:div.lastUnit
-     (to-html (:body section))]]])
+     (to-html body)]]])
 
-(defn- render-reference [{:keys [img url logo name phone title body class]}]
+(defn- render-reference [{:keys [id img url logo name phone title body class]}]
   (let [quote (str "«" (str/trim body) "»")]
-    [:div.bd.iw {:class class}
+    [:div.bd.iw {:class class :id id}
      [:div.ref.mod
       [:div.ref-w
        [:div.ref-img [:img {:src img}]]
@@ -35,14 +35,14 @@
        [:div.ref-txt-2-wrap
         (to-html quote)]]]]))
 
-(defn- render-centered-column [section]
-  [:div.bd.iw
+(defn- render-centered-column [{:keys [id title body]}]
+  [:div.bd.iw {:id id}
    [:div.centered-column
-    (when (:title section) [:h3.mbl.xlarge.hns (:title section)])
-    (to-html (:body section))]])
+    (when title [:h3.mbl.xlarge.hns title])
+    (to-html body)]])
 
-(defn render-contact-form [{:keys [body button placeholder]}]
-  [:div.inline-form.mbxl
+(defn render-contact-form [{:keys [id body button placeholder]}]
+  [:div.inline-form.mbxl {:id id}
    [:div.bd.iw
     [:form {:action "/send-mail"
             :method "POST"}
@@ -61,15 +61,15 @@
      {:class (when (.startsWith img "/photos/people/") "framed")}
      [:img {:src img}]]]])
 
-(defn- render-grid [{:keys [content]}]
-  [:div.bd.iw
+(defn- render-grid [{:keys [id content]}]
+  [:div.bd.iw {:id id}
    [:div.grid
     (->> content
          (str/split-lines)
          (map #(apply render-grid-unit (str/split % #" +"))))]])
 
-(defn- render-ginormous-aside [{:keys [aside body]}]
-  [:div.bd.iw
+(defn- render-ginormous-aside [{:keys [id aside body]}]
+  [:div.bd.iw {:id id}
    [:hr]
    [:div.line
     [:div.unit.s-1of3.hide-lt-460
@@ -78,8 +78,8 @@
      (to-html body)]]
    [:hr]])
 
-(defn- render-mega-quote [{:keys [title]}]
-  [:div.bd.iw
+(defn- render-mega-quote [{:keys [id title]}]
+  [:div.bd.iw {:id id}
    [:div.xxlarge.hns.mod.mega-quote "&ndash; "
     (markup/strip-paragraph (to-html title))]])
 
@@ -88,7 +88,7 @@
    (case (:type section)
      "illustrated-column" (render-illustrated-column section)
      "centered-column" (render-centered-column section)
-     "mega-heading" [:h1.hn.pth (:title section)]
+     "mega-heading" [:h1.hn.pth {:id (:id section)} (:title section)]
      "mega-quote" (render-mega-quote section)
      "reference" (render-reference section)
      "contact-form" (render-contact-form section)
