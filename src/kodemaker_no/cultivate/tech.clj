@@ -2,19 +2,13 @@
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
             [kodemaker-no.date :as d]
-            [kodemaker-no.homeless :refer [update-vals assoc-in-unless]]))
+            [kodemaker-no.homeless :refer [assoc-in-unless update-vals]]))
 
 (defn look-up-tech [content techs]
   (map #(util/look-up-tech content %) techs))
 
 (defn- is-about [tech m]
   ((set (:tech m)) (:id tech)))
-
-(defn- get-with-byline [key]
-  (fn [person]
-    (->> (key person)
-         (map #(assoc % :by {:name (first (:name person))
-                             :url (util/url person)})))))
 
 (defn- combine-recommendations [recommendations]
   (-> (first recommendations)
@@ -27,7 +21,7 @@
   (assoc-in-unless tech [:recommendations] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :recommendations))
+                        (mapcat (util/get-with-byline :recommendations))
                         (group-by #(-> % :link :url))
                         vals
                         (map combine-recommendations)
@@ -49,7 +43,7 @@
   (assoc-in-unless tech [:open-source-projects] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :open-source-projects))
+                        (mapcat (util/get-with-byline :open-source-projects))
                         (group-by normalized-url)
                         vals
                         (map combine-open-source-projects)
@@ -81,7 +75,7 @@
   (assoc-in-unless tech [:presentations] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :presentations))
+                        (mapcat (util/get-with-byline :presentations))
                         (group-by :urls)
                         vals
                         (map combine-presentations)
@@ -91,14 +85,14 @@
   (assoc-in-unless tech [:blog-posts] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :blog-posts))
+                        (mapcat (util/get-with-byline :blog-posts))
                         (filter #(is-about tech %)))))
 
 (defn- add-upcoming [content tech]
   (assoc-in-unless tech [:upcoming] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :upcoming))
+                        (mapcat (util/get-with-byline :upcoming))
                         (group-by :url)
                         vals
                         (map combine-upcoming)
@@ -109,7 +103,7 @@
   (assoc-in-unless tech [:side-projects] empty?
                    (->> (:people content)
                         vals
-                        (mapcat (get-with-byline :side-projects))
+                        (mapcat (util/get-with-byline :side-projects))
                         (group-by :link)
                         vals
                         (map combine-side-projects)

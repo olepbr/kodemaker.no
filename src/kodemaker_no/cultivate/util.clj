@@ -25,3 +25,9 @@
   (if-let [tech (get-in content [:tech id])]
     (-> tech (select-keys #{:id, :name}) add-url)
     {:id id, :name (tech-name content id)}))
+
+(defn get-with-byline [key]
+  (fn [person]
+    (->> (key person)
+         (map #(assoc % :by {:name (first (:name person))
+                             :url (url person)})))))

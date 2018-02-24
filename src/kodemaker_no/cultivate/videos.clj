@@ -1,7 +1,7 @@
 (ns kodemaker-no.cultivate.videos
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.homeless :refer [update-in-existing update-vals compare* remove-vals]]))
+            [kodemaker-no.homeless :refer [compare* remove-vals update-in-existing]]))
 
 (defn find-video [^String url]
   (when url
@@ -54,12 +54,6 @@
       :direct-link? (not (create-video-page-for-presentation? video))}
      override)))
 
-(defn- get-with-byline [key]
-  (fn [person]
-    (->> (key person)
-         (map #(assoc % :by {:name (first (:name person))
-                             :url (util/url person)})))))
-
 (defn- add-occurrence [v1 v2]
   (-> (if (map? (:by v1))
         (assoc v1 :by [(:by v1)])
@@ -91,7 +85,7 @@
 
 (defn cultivate-videos [raw-content]
   (->> raw-content :people vals
-       (mapcat (get-with-byline :presentations))
+       (mapcat (util/get-with-byline :presentations))
        (map (partial cultivate-video raw-content))
        (group-by :url)
        vals

@@ -1,13 +1,6 @@
 (ns kodemaker-no.cultivate.screencasts
   (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.homeless :refer [update-in-existing update-vals compare* remove-vals]]))
-
-(defn- get-with-byline [key]
-  (fn [person]
-    (->> (key person)
-         (map #(assoc % :by {:name (first (:name person))
-                             :url (util/url person)})))))
+            [kodemaker-no.homeless :refer [compare* remove-vals]]))
 
 (defn- cultivate-screencast [raw-content {:keys [title url by tech blurb link-text]}]
   {:title title
@@ -32,7 +25,7 @@
 
 (defn cultivate-screencasts [raw-content]
   (->> raw-content :people vals
-       (mapcat (get-with-byline :screencasts))
+       (mapcat (util/get-with-byline :screencasts))
        (map (partial cultivate-screencast raw-content))
        (group-by :url)
        vals
