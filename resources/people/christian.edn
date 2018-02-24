@@ -346,6 +346,13 @@
                   :tech [:javascript]}
                  ]
 
+ :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
+                :url "http://www.zombieclj.no/"
+                :blurb "I denne oppfølgeren til Zombie TDD lager Magnar og
+                        Christian nettspill fra scratch med Clojure og
+                        ClojureScript."
+                :tech [:clojure :clojurescript :frontend]}]
+
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
                          :description "Et spy-/stub- og mocke-bibliotek for JavaScript."

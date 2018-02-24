@@ -10,20 +10,20 @@
       (comma-separated (map link-to-person by)) " om "
       (comma-separated (map markup/link-if-url tech))]]))
 
-(defn- render-video [video]
+(defn- render-item [{:keys [url title tech by blurb]}]
   (list
-   [:h3 [:a {:href (:url video)} (:title video)]]
-   (render-tech-bubble (:tech video) (:by video))
-   [:p (:blurb video)]))
+   [:h3 [:a {:href url} title]]
+   (render-tech-bubble tech by)
+   [:p blurb]))
 
-(defn course-page [videos]
+(defn course-page [videos screencasts]
   {:title "Lærelysten? Vi deler gjerne!"
    :sections [{:body [:div.bd.iw [:p "Bli med på foredrag, kurs, eller workshop, eller len deg tilbake og se en screencast."]]}
               {:type "illustrated-column"
                :title "Foredrag"
                :illustration "/forside/foredrag.jpg"
-               :body (map render-video videos)}
+               :body (map render-item videos)}
               {:type "illustrated-column"
                :title "Screencasts"
                :illustration "/forside/screencast.jpg"
-               :body (slurp (io/resource "screencasts.md"))}]})
+               :body (map render-item screencasts)}]})

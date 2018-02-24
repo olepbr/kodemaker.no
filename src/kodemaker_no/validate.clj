@@ -61,6 +61,12 @@
                                           (optional-key :source) URL}  ;; må ha minst en av disse URLene
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
 
+   (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
+                                 :blurb Str
+                                 :tech [ID]
+                                 (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
+                                 :url URL}]
+
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
                               :url URL ;; Link til feks din abstract hos konferansen
