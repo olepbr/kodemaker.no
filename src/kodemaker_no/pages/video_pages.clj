@@ -1,13 +1,6 @@
 (ns kodemaker-no.pages.video-pages
-  (:require [kodemaker-no.formatting :refer [comma-separated link-to-person]]
+  (:require [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
-
-(defn render-tech-bubble [tech by]
-  (when-not (empty? tech)
-    [:p.near.cookie-w
-     [:span.cookie
-      (comma-separated (map link-to-person by)) " om "
-      (comma-separated (map markup/link-if-url tech))]]))
 
 (defn render-call-to-action [cta]
   (when cta
@@ -24,7 +17,7 @@
     {:title (:title video)
      :body
      (list
-      (render-tech-bubble (:tech video) (:by video))
+      (f/render-tech-bubble (:tech video) (:by video))
       [:div.mod (:embed-code video)]
       (render-call-to-action (:call-to-action video))
       [:p (:blurb video)])}))

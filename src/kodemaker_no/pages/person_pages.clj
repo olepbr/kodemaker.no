@@ -3,19 +3,14 @@
             [clojure.string :as str]
             [hiccup.core :as hiccup]
             [kodemaker-no.date :as d]
-            [kodemaker-no.formatting :refer [to-html comma-separated year-range]]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
-
-(defn render-tech-bubble [tech]
-  (when-not (empty? tech)
-    [:p.near.cookie-w
-     [:span.cookie (comma-separated (map markup/link-if-url tech))]]))
 
 (defn- render-recommendation [{:keys [title tech blurb link]}]
   (list [:h3 [:a {:href (:url link)} title]]
-        (render-tech-bubble tech)
+        (f/render-tech-bubble tech)
         (markup/append-to-paragraph
-         (to-html blurb)
+         (f/to-html blurb)
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recs person]
@@ -26,7 +21,7 @@
   [:div.bd
    [:h3.mtn title]
    (markup/prepend-to-paragraph
-    (to-html description)
+    (f/to-html description)
     (if url
       [:a.illu {:href url} [:img {:src illustration}]]
       [:img.illu {:src illustration}]))])
@@ -38,8 +33,8 @@
 (defn- render-side-project [{:keys [title description link illustration tech]}]
   [:div.bd
    [:h3.mtn [:a {:href (:url link)} title]]
-   (render-tech-bubble tech)
-   (-> (to-html description)
+   (f/render-tech-bubble tech)
+   (-> (f/to-html description)
        (markup/append-to-paragraph
         (list " " (markup/render-link link)))
        (markup/prepend-to-paragraph
@@ -51,7 +46,7 @@
 
 (defn- inline-list [label nodes]
   (list [:strong label]
-        (comma-separated nodes)
+        (f/comma-separated nodes)
         "<br>"))
 
 (defn- render-tech [{:keys [using-at-work favorites-at-the-moment want-to-learn-more]} _]
@@ -65,7 +60,7 @@
 
 (defn- render-presentation [{:keys [urls title thumb blurb tech]}]
   (list [:h3.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
-        (render-tech-bubble tech)
+        (f/render-tech-bubble tech)
         [:p blurb
          (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
          (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
@@ -129,9 +124,9 @@
 (defn- render-blog-post [{:keys [title tech blurb url]}]
   (list
    [:h3 [:a {:href url} title]]
-   (render-tech-bubble tech)
+   (f/render-tech-bubble tech)
    (markup/append-to-paragraph
-    (to-html blurb)
+    (f/to-html blurb)
     (list " " [:a {:href url} "Les posten"]))))
 
 (defn- render-blog-posts [posts person]
@@ -141,9 +136,9 @@
 
 (defn- render-project [{:keys [customer years tech description]}]
   (list
-   [:h3 customer " " [:span.tiny.shy (year-range years)]]
-   (render-tech-bubble (take 5 tech))
-   (to-html description)))
+   [:h3 customer " " [:span.tiny.shy (f/year-range years)]]
+   (f/render-tech-bubble (take 5 tech))
+   (f/to-html description)))
 
 (defn- render-projects [projects person]
   (list
@@ -160,17 +155,17 @@
 
 (defn- render-open-source-contributions [contributions]
   (when (seq contributions)
-    (list "Har bidratt til " (comma-separated (map markup/link-if-url contributions)) ".")))
+    (list "Har bidratt til " (f/comma-separated (map markup/link-if-url contributions)) ".")))
 
 (defn- render-extra-open-source-projects [projects]
   (when (seq projects)
-    (list "Har også utviklet " (comma-separated (map markup/link-if-url projects)) ".")))
+    (list "Har også utviklet " (f/comma-separated (map markup/link-if-url projects)) ".")))
 
 (defn- render-open-source-project [project]
   (when project
     (list "Utviklet "
           (markup/link-if-url project) ". "
-          (markup/strip-paragraph (to-html (:description project))))))
+          (markup/strip-paragraph (f/to-html (:description project))))))
 
 (defn- render-open-source-entries [projects contributions]
   (let [entries (->> (conj (mapv render-open-source-project (take 5 projects))
@@ -209,7 +204,7 @@
 
 (defn- render-upcoming-event [now {:keys [title tech date url call-to-action location description]}]
   (list [:h3 [:a {:href url} title]]
-        (render-tech-bubble tech)
+        (f/render-tech-bubble tech)
         [:p description]
         [:p (list [:a {:href (:url location)} (:title location)]
                   ", "
@@ -231,7 +226,7 @@
   {:title {:head (:full-name person)
            :h1 (:full-name person)
            :arrow (:next-person-url person)}
-   :lead (to-html (:description person))
+   :lead (f/to-html (:description person))
    :aside (render-aside person)
    :body (list
           (maybe-include person :tech render-tech)

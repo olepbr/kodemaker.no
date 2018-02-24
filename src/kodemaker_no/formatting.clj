@@ -1,5 +1,6 @@
 (ns kodemaker-no.formatting
   (:require [clojure.string :as str]
+            [kodemaker-no.markup :as markup]
             [me.raynes.cegdown :as md]))
 
 (defn no-widows [s]
@@ -101,3 +102,16 @@
 
 (defn link-to-person [person]
   [:a {:href (:url person)} (:name person)])
+
+(defn render-tech-bubble
+  ([tech by]
+   (when-not (empty? tech)
+     [:p.near.cookie-w
+      [:span.cookie
+       (comma-separated (map link-to-person by)) " om "
+       (comma-separated (map markup/link-if-url tech))]]))
+  ([tech]
+   (when-not (empty? tech)
+     [:p.near.cookie-w
+      [:span.cookie
+       (comma-separated (map markup/link-if-url tech))]])))

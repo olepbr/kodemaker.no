@@ -1,19 +1,12 @@
 (ns kodemaker-no.pages.course-page
   (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :refer [to-html comma-separated link-to-person]]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
-
-(defn render-tech-bubble [tech by]
-  (when-not (empty? tech)
-    [:p.near.cookie-w
-     [:span.cookie
-      (comma-separated (map link-to-person by)) " om "
-      (comma-separated (map markup/link-if-url tech))]]))
 
 (defn- render-item [{:keys [url title tech by blurb]}]
   (list
    [:h3 [:a {:href url} title]]
-   (render-tech-bubble tech by)
+   (f/render-tech-bubble tech by)
    [:p blurb]))
 
 (defn course-page [videos screencasts]
