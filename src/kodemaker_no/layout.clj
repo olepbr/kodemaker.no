@@ -48,6 +48,10 @@
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
+    [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
     [:title (head-title (:title page))]]
    [:body
     [:script (slurp (io/resource "public/scripts/google-tag-manager.js"))]
