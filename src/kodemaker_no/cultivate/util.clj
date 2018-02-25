@@ -18,7 +18,8 @@
       capitalize))
 
 (defn tech-name [content id]
-  (or (-> content :tech-names id)
+  (or (-> content :tech id :name)
+      (-> content :tech-names id)
       (str-for-humans id)))
 
 (defn look-up-tech [content id]
