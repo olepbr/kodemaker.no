@@ -18,9 +18,9 @@
                  }
 
  :tech          {
-                 :favorites-at-the-moment [:kubernetes :go :influxdb]
+                 :favorites-at-the-moment [:kubernetes :go :kotlin]
                  :using-at-work           [:java :spring :docker :docker-compose]
-                 :want-to-learn-more      [:kubernetes :clojurescript :machinelearning]
+                 :want-to-learn-more      [:kubernetes :kotlin :machinelearning]
                  }
 
 
@@ -108,7 +108,7 @@
                 [{:customer    "Tieto"
                   :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
                   :years       [2017 2018]
-                  :tech        [:java, :docker, :docker-compose :spring]},
+                  :tech        [:java, :docker, :docker-compose :spring :hibernate]},
                   {:customer    "Western Geco"
                   :description "Utvikling av nytt produkt for landseismikk. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
                   :years       [2017]
