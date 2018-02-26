@@ -22,10 +22,16 @@
       (-> content :tech-names id)
       (str-for-humans id)))
 
+(defn tech-type [content id]
+  (or (-> content :tech id :type)
+      (-> content :tech-types id)))
+
 (defn look-up-tech [content id]
   (if-let [tech (get-in content [:tech id])]
-    (-> tech (select-keys #{:id, :name}) add-url)
-    {:id id, :name (tech-name content id)}))
+    (-> tech (select-keys #{:id :name :type}) add-url)
+    {:id id
+     :name (tech-name content id)
+     :type (tech-type content id)}))
 
 (defn get-with-byline [key]
   (fn [person]

@@ -1,5 +1,6 @@
 {:id :jasperserver
  :name "JasperReports Server"
+ :type :server
  :illustration "/photos/tech/logo-jaspersoft.png"
  :site "http://jaspersoft.com/"
  :description "JasperReports Server er et kjøretidsmiljø for generering av rapporter i mange formater, f.eks pdf, excel, html, csv.

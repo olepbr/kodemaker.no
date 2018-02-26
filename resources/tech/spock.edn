@@ -1,5 +1,6 @@
 {:id :spock
  :name "Spock"
+ :type :library
  :site "https://github.com/spockframework/spock"
  :description "Spock er et elegant og kraftig testrammeverk for Java- og Groovy-applikasjoner som er tuftet på
  prinsippene i Behavior Driven Development. Du bruker det for å skrive lesbare og konsise tester gjennom et enkelt API.

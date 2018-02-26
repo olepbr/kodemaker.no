@@ -1,5 +1,6 @@
 {:id :scala
  :name "Scala"
+ :type :proglang
  :site "http://scala-lang.org/"
  :description
  "Scala er et funksjonelt og objekt-orientert språk som kjører på JVM'en. Det er et statisk typet

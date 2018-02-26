@@ -1,6 +1,6 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num Any pred both]]
-            [clj-time.format :refer [parse formatters]]))
+  (:require [clj-time.format :refer [parse formatters]]
+            [schema.core :refer [optional-key validate either Str Keyword Num Any pred both enum]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
@@ -98,6 +98,20 @@
   {:id ID
    :name Str
    :description Str
+   :type (enum :proglang
+               :vcs
+               :methodology
+               :devtools
+               :library
+               :framework
+               :server
+               :database
+               :technique
+               :devops
+               :os
+               :frontend
+               :specification
+               :tool)
    (optional-key :illustration) Str
    (optional-key :site) URL
    (optional-key :ad) {:heading Str
@@ -137,6 +151,7 @@
              :references {Path [Section]}
              :raw-pages {Path Str}
              :tech-names {ID Str}
+             :tech-types {ID ID}
              :blog-posts {Path BlogPost}
              :video-overrides {ID VideoOverride}}
             content))

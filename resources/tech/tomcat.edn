@@ -1,5 +1,6 @@
 {:id :tomcat
  :name "Tomcat"
+ :type :server
  :illustration "/photos/tech/tomcat.svg"
  :site "http://tomcat.apache.org/"
  :description "Tomcat er sammen med Jetty et lettvektsalternativ for [Java](/java/)

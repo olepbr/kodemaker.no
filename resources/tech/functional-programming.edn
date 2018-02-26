@@ -1,5 +1,6 @@
 {:id :functional-programming
  :name "Funksjonell programmering"
+ :type :methodology
  :site "https://no.wikipedia.org/wiki/Funksjonell_programmering"
  :description "
 Etter flere tiår der mange brukte det objekt-orienterte programmeringsparadigmet

@@ -1,5 +1,6 @@
 {:id :optimus
  :name "Optimus"
+ :type :library
  :illustration "/photos/tech/optimus.png"
  :site "https://github.com/magnars/optimus"
  :description "[Optimus](https://github.com/magnars/optimus) er en middleware

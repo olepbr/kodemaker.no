@@ -1,5 +1,6 @@
 {:id :lighttable
  :name "Light Table"
+ :type :devtools
  :illustration "/photos/tech/lighttable.jpg"
  :site "http://www.lighttable.com/"
  :description "Light Table er et nytt og spennende IDE som forsøker å skille seg fra andre editorer ved

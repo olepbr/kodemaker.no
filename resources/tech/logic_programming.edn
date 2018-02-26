@@ -1,5 +1,6 @@
 {:id :logic-programming
  :name "Logikk-programmering"
+ :type :methodology
  :site "http://www.open-std.org/jtc1/sc22/wg14/"
  :description
  "

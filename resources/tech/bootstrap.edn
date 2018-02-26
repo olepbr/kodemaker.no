@@ -1,5 +1,6 @@
 {:id :bootstrap
  :name "Twitter Bootstrap"
+ :type :framework
  :illustration "/photos/tech/bootstrap.svg"
  :site "http://getbootstrap.com/"
  :description "Twitter Bootstrap er et særdeles populært CSS-rammeverk, og det

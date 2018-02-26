@@ -1,5 +1,6 @@
 {:id :tdd
  :name "Test-drevet utvikling (TDD)"
+ :type :methodology
  :site "http://www.extremeprogramming.org/rules/testfirst.html"
  :description "Teknikken _test-drevet utvikling (TDD)_ ble beskrevet av Kent Beck på slutten
                av 1990-tallet i forbindelse med smidig-metodikken Extreme Programming (XP).

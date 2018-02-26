@@ -1,5 +1,6 @@
 {:id :swift
  :name "Swift"
+ :type :proglang
  :site "https://developer.apple.com/swift/"
  :description
  "Apple lanserte programmeringsspråket [Swift](http://developer.apple.com/swift/) under WWDC 2014 som språket som skulle ta over for Objective-C. Objective-C hadde tjent Apple vel i mange år, men man fant ut at man trengte et mer moderne og produktivt språk, som ikke dro med seg så mye bagasje fra C som det er bygget på. 

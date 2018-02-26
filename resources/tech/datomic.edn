@@ -1,5 +1,6 @@
 {:id :datomic
  :name "Datomic"
+ :type :database
  :illustration "/photos/tech/datomic.png"
  :site "http://www.datomic.com/"
  :description

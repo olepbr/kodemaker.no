@@ -1,5 +1,6 @@
 {:id :machinelearning
  :name "Maskinlæring"
+ :type :methodology
  :illustration "/photos/tech/machinelearning.jpg"
  :description "
     Tradisjonellt løser datamaskiner problemer gjennom å bli fortalt hvordan de skal løse problemet.

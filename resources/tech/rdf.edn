@@ -1,5 +1,6 @@
 {:id :rdf
  :name "Resource Description Framework"
+ :type :frontend
  :illustration "/photos/tech/rdf_w3c.svg"
  :site "http://www.w3.org/RDF/"
  :description

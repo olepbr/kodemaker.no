@@ -1,5 +1,6 @@
 {:id :responsive-design
  :name "Responsive Design"
+ :type :frontend
  :illustration "/photos/tech/rwd.jpg"
  :site "http://en.wikipedia.org/wiki/Responsive_web_design"
  :description "Det er mange som lager seg en `m.` mobiltilpasset versjon av

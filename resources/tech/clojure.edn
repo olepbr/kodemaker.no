@@ -1,5 +1,6 @@
 {:id :clojure
  :name "Clojure"
+ :type :proglang
  :illustration "/photos/tech/clojure.png"
  :site "http://clojure.org/"
  :description

@@ -1,5 +1,6 @@
 {:id :hibernate
  :name "Hibernate"
+ :type :library
  :illustration "/photos/tech/hibernate.svg"
  :site "http://hibernate.org/"
  :description "Hibernate er et rammeverk med en umulig oppgave, og får mye
