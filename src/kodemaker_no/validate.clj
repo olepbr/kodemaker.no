@@ -86,6 +86,7 @@
 
    (optional-key :projects) [{:customer Str
                               :description Str
+                              (optional-key :employer) ID
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
@@ -153,5 +154,6 @@
              :tech-names {ID Str}
              :tech-types {ID ID}
              :blog-posts {Path BlogPost}
-             :video-overrides {ID VideoOverride}}
+             :video-overrides {ID VideoOverride}
+             :employers {ID Str}}
             content))
