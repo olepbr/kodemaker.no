@@ -2,6 +2,7 @@
   (:require [kodemaker-no.pages.article-pages :refer [article-pages]]
             [kodemaker-no.pages.blog-pages :refer [blog-post-pages blog-page]]
             [kodemaker-no.pages.course-page :refer [course-page]]
+            [kodemaker-no.pages.cv-pages :refer [cv-pages]]
             [kodemaker-no.pages.form-page :refer [form-page]]
             [kodemaker-no.pages.index-page :refer [index-page]]
             [kodemaker-no.pages.people-page :refer [people-page]]
@@ -22,6 +23,7 @@
 (defn create-pages [content]
   (stasis/merge-page-sources
    {:person-pages (person-pages (vals (:people content)))
+    :cv-pages (cv-pages (vals (:cvs content)))
     :tech-pages (tech-pages (vals (:tech content)))
     :article-pages (article-pages (:articles content))
     :reference-pages (reference-pages (:references content) (:people content))
