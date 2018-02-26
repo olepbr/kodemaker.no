@@ -67,9 +67,9 @@
 
   (fact
    "It includes the tech."
-   (map :tech videos) => (just [{:id :javascript, :name "Javascript"}]
-                               [{:id :clojure, :name "Clojure"}]
-                               [{:id :clojure, :name "Clojure"}]
+   (map :tech videos) => (just [{:id :javascript, :name "Javascript", :type nil}]
+                               [{:id :clojure, :name "Clojure", :type nil}]
+                               [{:id :clojure, :name "Clojure", :type nil}]
                                :in-any-order))
 
   (fact

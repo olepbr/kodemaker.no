@@ -8,12 +8,15 @@
           :raw-pages {}
           :tech-names {}
           :blog-posts {}
-          :video-overrides {}}
+          :video-overrides {}
+          :tech-types {}
+          :employers {}}
          m))
 
 (defn tech [m]
   (merge {:name "!"
-          :description "!"}
+          :description "!"
+          :type :proglang}
          m))
 
 (defn person [m]
