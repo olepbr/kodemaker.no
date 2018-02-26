@@ -20,6 +20,8 @@
 (defn get-assets []
   (assets/load-assets "public" ["/styles/responsive.css"
                                 "/styles/unresponsive.css"
+                                "/styles/cv.css"
+                                "/styles/cv-print.css"
                                 "/favicon.ico"
                                 #"/illustrations/.*\.jpg"
                                 #"/illustrations/.*\.png"

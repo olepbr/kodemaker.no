@@ -1,0 +1,199 @@
+/*****************************************************************
+ * General
+ */
+html {
+  min-width:980px;
+}
+
+body {
+  font-size: 16px;
+  color: #666666;
+  margin: 0;
+  line-height: 120%;
+}
+
+header, footer, article, section, aside {
+  display: block;
+}
+
+ul {
+  padding-left: 13px;
+}
+
+dt {
+  width:12em;
+  float: left;
+  font-weight: bolder;
+}
+
+dd {
+  margin-left:13em;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+/*****************************************************************
+ * Header stuff
+ */
+
+#card {
+  float: left;
+  padding-left: 4em;
+  width: 22em;
+}
+
+#logo {
+  margin-top: 3em;
+}
+#logo .favicon {
+  float: left;
+  display: block;
+  margin-left: -4em;
+  margin-top: 3px;
+}
+#logo .kodemaker {
+  display: block;
+}
+#info #name {
+  font-family: "Arial Black",sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #BE2315;
+}
+#info #title {
+  margin-bottom: 8px;
+}
+#info a {
+  text-decoration: none;
+}
+#mail a {
+  color: #666;
+  text-decoration: none;
+}
+
+#picture {
+  float: left;
+}
+
+#picture img {
+  margin-left: -9em;
+  position:absolute;
+  z-index:-1;
+}
+
+#personal {
+  height: 110px;
+  margin-left: 502px;
+  padding: 30px 0 50px 4em;
+  color: white;
+  background-color: #BE2315;
+}
+
+#personal dt {
+  width: 8em;
+}
+
+#personal dd {
+  margin-left: 9em;
+}
+
+header .black_divider {
+  clear: both;
+  background: black;
+  color: black;
+}
+
+body > header:after {
+  clear: both;
+  width: 100%;
+  background: black;
+  color: black;
+  content: ".";
+  position: absolute;
+}
+
+/*****************************************************************
+ * Main sections
+ */
+
+article {
+  margin: 4em 3em 3em 3em;
+}
+
+article section  {
+  margin-left:12em;
+  padding:1em;
+}
+
+article section hr {
+  margin-top: 2em;
+}
+
+
+article section > header {
+  float: left;
+  width: 12em;
+  margin-left:-13em;
+  padding-left:1em;
+  font-family:"Arial Black",sans-serif;
+  font-size:28;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #BE2315;
+}
+
+article section > :nth-child(2) { /* Assume heading is the first-child */
+  margin-top:0;
+}
+
+/*****************************************************************
+ * Content-specific stuff
+ */
+
+th {
+  text-align: left;
+  padding: 0 2em 3px 0;
+}
+td {
+  vertical-align: top;
+  padding: 0 1em 2px 0;
+}
+
+td p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+#oppdragsgiver {
+  width : 150px;
+}
+
+#periode {
+  width : 110px;
+}
+
+/*****************************************************************
+ * Footer
+ */
+footer {
+  clear: both;
+  background: black;
+  color: white;
+  bottom: 0;
+  margin-top: 2em;
+  text-align: center;
+  font-family: Arial;
+  font-size: 13px;
+  width: 100%;
+}
+
+footer a {
+  background: black;
+  color: white;
+  text-decoration: none;
+}

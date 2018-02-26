@@ -36,6 +36,24 @@
 
 (defmulti with-layout (fn [request page content] (:layout page)))
 
+(defmethod with-layout :cv [request page content]
+  (html5
+   [:head {:profile "https://gmpg.org/xfn/11"}
+    [:meta {:charset "utf-8"}]
+    [:meta {:name "viewport"
+            :content "width=device-width, initial-scale=1.0"}]
+    (when (:meta page)
+      (map meta-tag (:meta page)))
+    [:link {:rel "stylesheet" :href (link/file-path request "/styles/cv.css")}]
+    [:link {:rel "stylesheet" :href (link/file-path request "/styles/cv-print.css") :media "print"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
+    [:title (head-title (:title page))]]
+   [:body
+    content]))
+
 (defmethod with-layout :default [request page content]
   (html5
    [:head
@@ -119,3 +137,4 @@
          [:div.ft-dec-5]]]]]]
     [:script
      (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
+
