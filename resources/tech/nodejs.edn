@@ -1,5 +1,5 @@
 {:id :nodejs
- :name "Node.JS"
+ :name "Node.js"
  :type :proglang
  :illustration "/photos/tech/node.jpg"
  :site "http://nodejs.org/"
