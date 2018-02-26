@@ -197,3 +197,8 @@ footer a {
   color: white;
   text-decoration: none;
 }
+
+li p,
+td p {
+  display: inline;
+}
