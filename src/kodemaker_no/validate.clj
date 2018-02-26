@@ -13,11 +13,21 @@
    :title Str
    :start-date Str
    :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
+   (optional-key :cv/description) Str ;; Hvis du ønsker en annen/lengre beskrivelse på CV-en
    (optional-key :administration?) Boolean
    (optional-key :quit?) Boolean
 
    :phone-number Str
    :email-address Str
+   (optional-key :use-new-cv?) Boolean
+
+   ;; For CV-er
+   (optional-key :born) Str
+   (optional-key :relationship-status) Str
+   (optional-key :education-summary) Str
+   (optional-key :experience-since) Str
+   (optional-key :innate-skills) [ID]
+   (optional-key :qualifications) [Str]
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
               (optional-key :twitter) Str ;; brukernavn
@@ -55,11 +65,17 @@
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
+                                   (optional-key :event) Str
                                    (optional-key :date) Date;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL}  ;; må ha minst en av disse URLene
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
+
+   (optional-key :appearances) [{:title Str ;; Mindre profilerte kurs/workshops/foredrag til CV-en
+                                 :event Str
+                                 :date Date ;; iso-8601 yyyy-mm-dd
+                                 :tech [ID]}]
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
                                  :blurb Str
@@ -85,15 +101,29 @@
                                                :tech [ID]}] ;; sortert under første tech
 
    (optional-key :projects) [{:customer Str
+                              (optional-key :cv/customer) Str
+                              (optional-key :summary) Str
                               (optional-key :employer) ID
                               (optional-key :description) Str
+                              (optional-key :cv/description) Str
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str ;; tittel, firma
-                                  (optional-key :photo) Path}]})
+                                  (optional-key :photo) Path}]
+
+   (optional-key :education) [{:institution Str ;; Utdanning
+                               :years [Num]
+                               :subject Str}]
+
+   (optional-key :languages) [{:language Str
+                               :orally (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")
+                               :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
+
+   (optional-key :certifications) [{:name Str
+                                    :year Num}]})
 
 (def Tech
   {:id ID
