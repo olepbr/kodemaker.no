@@ -17,7 +17,7 @@ tak i ideer og oppgaver.
 
 Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har 
 for oss bevist at et lite team med håndplukkede, høykompetente personer kan 
-levere raskerere og bedre.
+levere raskere og bedre.
 
 
 
