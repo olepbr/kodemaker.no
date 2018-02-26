@@ -85,8 +85,8 @@
                                                :tech [ID]}] ;; sortert under første tech
 
    (optional-key :projects) [{:customer Str
-                              :description Str
                               (optional-key :employer) ID
+                              (optional-key :description) Str
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 

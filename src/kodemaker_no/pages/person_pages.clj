@@ -143,7 +143,9 @@
 (defn- render-projects [projects person]
   (list
    [:h2.mhn "Prosjekter"]
-   (map render-project projects)
+   (->> projects
+        (filter :description)
+        (map render-project))
    (when-let [nick (-> person :presence :cv)]
      [:p [:a {:href (str (:baseUrl cv) nick "/")}
           "Se flere prosjekter i " (:genitive person) " CV"]])))
