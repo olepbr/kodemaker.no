@@ -159,7 +159,9 @@
                                :blurb Str
                                :tech [ID]
                                :duration Str
-                               :price Str}]})
+                               :price Str
+                               :participants {:min Num
+                                              :max Num}}]})
 
 (def Tech
   {:id ID

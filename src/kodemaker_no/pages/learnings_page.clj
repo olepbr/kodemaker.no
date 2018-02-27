@@ -3,13 +3,16 @@
             [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
 
-(defn- render-item [{:keys [url title tech by blurb duration price]}]
+(defn- render-item [{:keys [url title tech by blurb duration price participants]}]
   (list
    [:h3 (if url [:a {:href url} title] title)]
    (f/render-tech-bubble tech by)
    [:p blurb]
    (when duration [:p.mvn [:strong "Varighet: "] duration])
-   (when price [:p.mvn [:strong "Pris: "] price])))
+   (when price [:p.mvn [:strong "Pris: "] price])
+   (when participants [:p.mvn [:strong "Deltakere: "] (format "Minimum %s, maks %s"
+                                                              (:min participants)
+                                                              (:max participants))])))
 
 (defn learnings-page [{:keys [business-presentations workshops videos screencasts]}]
   {:title "Lærelysten? Vi deler gjerne!"

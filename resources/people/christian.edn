@@ -1094,6 +1094,7 @@
                       REPL, live reloads med fighweel og mer."
               :tech [:clojurescript]
               :duration "1 dag"
+              :participants {:min 3 :max 15}
               :price "5000,- per deltaker (eks mva)"}
              {:title "Testing og arkitektur i JavaScript-frontends"
               :blurb "JavaScript får en større og større rolle i web-prosjekter,
@@ -1104,6 +1105,7 @@
                       deg og ditt web-prosjekt en mer feilfri hverdag."
               :tech [:javascript]
               :duration "1 dag"
+              :participants {:min 3 :max 15}
               :price "5000,- per deltaker (eks mva)"}]
 
  :business-presentations [{:title "Datomic - Databasen du ikke visste at du trengte"

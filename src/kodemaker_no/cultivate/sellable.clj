@@ -2,13 +2,8 @@
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.homeless :refer [compare* remove-vals]]))
 
-(defn- cultivate-item [raw-content {:keys [title by tech blurb price duration]}]
-  {:title title
-   :by by
-   :blurb blurb
-   :tech (map (partial util/look-up-tech raw-content) tech)
-   :price price
-   :duration duration})
+(defn- cultivate-item [raw-content item]
+  (assoc item :tech (map (partial util/look-up-tech raw-content) (:tech item))))
 
 (defn combine-items [items]
   (as-> items x

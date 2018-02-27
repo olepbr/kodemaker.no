@@ -519,5 +519,7 @@
                       web applikasjoner med Clojure."
               :tech [:clojure]
               :duration "3 timer"
+              :participants {:min 3 :max 15}
               :price "2500,- per deltaker (eks mva)"}]
  }
+
