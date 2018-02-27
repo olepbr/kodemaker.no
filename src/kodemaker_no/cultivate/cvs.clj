@@ -71,7 +71,8 @@
         (assoc :techs (cultivate-techs data content))
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))
-        (assoc :open-source-contributions (cultivate-open-source-contributions person)))))
+        (assoc :open-source-contributions (cultivate-open-source-contributions person))
+        (assoc :url (format "/cv/%s/" (-> person :presence :cv))))))
 
 (defn cultivate-cvs [raw-content people tech]
   (->> people

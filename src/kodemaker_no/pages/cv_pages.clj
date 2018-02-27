@@ -181,10 +181,7 @@
                          [:language :orally :written])
           (endorsements person)])})
 
-(defn cv-url [{:keys [presence]}]
-  (format "/cv/%s/" (-> presence :cv)))
-
 (defn cv-pages [cvs]
   (->> cvs
-       (map (juxt cv-url #(partial cv-page %)))
+       (map (juxt :url #(partial cv-page %)))
        (into {})))

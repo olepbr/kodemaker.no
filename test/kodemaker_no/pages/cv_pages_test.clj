@@ -5,8 +5,7 @@
             [midje.sweet :refer :all]))
 
 (def christian
-  {:url "/christian/"
-   :presence {:cv "christian"}
+  {:url "/cv/christian/"
    :full-name "Christian Johansen"
    :experience-since 2002
    :use-new-cv? true
