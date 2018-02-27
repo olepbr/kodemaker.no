@@ -45,7 +45,7 @@
          (filter identity)
          (map render-tech))
     (render-tech {:label "Annet"
-                  :techs (->> (keys tech-labels)
+                  :techs (->> (set (keys tech-labels))
                               (set/difference (set (keys techs)))
                               (select-keys techs)
                               vals
@@ -89,11 +89,12 @@
                     (->> tech (map :name) (str/join ", "))]))])))
 
 (defn- projects-fullview [person]
-  (section "Prosjekter"
-           (->> (:projects person)
-                (filter :description)
-                (group-by :employer)
-                (map render-projects))))
+  (when (< 0 (count (:projects person)))
+    (section "Prosjekter"
+             (->> (:projects person)
+                  (filter :description)
+                  (group-by :employer)
+                  (map render-projects)))))
 
 (defn- render-open-source-contributions [[lang contributions]]
   (list
@@ -155,8 +156,9 @@
          [:article
           (section "Sammendrag" (f/to-html (:description person)))
           (technologies (:techs person))
-          (section "Kvalifikasjoner"
-                   [:ul (map #(vector :li %) (:qualifications person))])
+          (when (< 0 (count (:qualifications person)))
+            (section "Kvalifikasjoner"
+                     [:ul (map #(vector :li %) (:qualifications person))]))
           (table-section "Prosjekter, sammendrag"
                          (:projects person)
                          ["Oppdragsgiver" "Periode" "Oppdrag"]
