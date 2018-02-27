@@ -28,9 +28,9 @@
                            [:a {:href "#kurs"} "workshops og kurs"]
                            " og "
                            [:a {:href "#foredrag"} "foredrag"] ". Kanskje du vil
-                           prøve før du kjøper? Sjekk ut våre "
-                           [:a {:href "#konferanser"} "konferanse-foredrag"] " og "
-                           [:a {:href "#screencasts"} "screencasts"] "."]]}
+                           prøve før du kjøper? Sjekk ut "
+                           [:a {:href "#konferanser"} "video av tidligere foredrag"] " og "
+                           [:a {:href "#screencasts"} "våre screencasts"] "."]]}
               {:type "illustrated-column"
                :title "Ekspertdager"
                :illustration "/forside/team.jpg"
@@ -47,8 +47,10 @@
                            " for en flyvende start. Har dere utfordringer i
                            AWS? Be om en dag med " [:a {:href "/kristian/"} "Kristian"]
                            " eller " [:a {:href "/christian/"} "Christian"] ".
-                           Har du sett et foredrag med en Kodemaker som syntes
-                           relevant for prosjektet ditt? Spør om en ekspertdag."]
+                           Trenger teamet hjelp til å komme igang med Ansible? "
+                           [:a {:href "/kjetil/"} "Kjetil"] " ordner opp. Har du
+                           sett et foredrag med en Kodemaker som syntes relevant
+                           for prosjektet ditt? Spør om en ekspertdag."]
                       [:p "Ekspertdager brukes også aktivt av Kodemakerne selv
                            der de øyner en mulighet for aksellerert læring.
                            Dette kommer både oss og deg som kunde til gode."]]}
