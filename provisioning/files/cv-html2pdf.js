@@ -1,11 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {execSync} = require('child_process');
-
-if (!process.env.PRINCE_PATH) {
-  console.log('PRINCE_PATH=/path/to/prince-8.1 node pdf.js');
-  process.exit(1);
-}
+const prince = process.env.PRINCE_PATH ? `${process.env.PRINCE_PATH}/prince` : 'prince;'
 
 function mkdir(dir) {
   try {
@@ -38,7 +34,7 @@ function mkpdf(filepath) {
 
   const output = cvhtml.replace(outDir, rootDir).replace(/\/index\.html$/, '.pdf');
   console.log('Output PDF to', output);
-  execSync(`${process.env.PRINCE_PATH}/prince ${cvhtml} -o ${output}`);
+  execSync(`${prince} ${cvhtml} -o ${output}`);
 }
 
 function crawl(root) {
