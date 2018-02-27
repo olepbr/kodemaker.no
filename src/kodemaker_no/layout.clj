@@ -39,7 +39,8 @@
 (defmethod with-layout :cv [request page content]
   (html5
    [:head {:profile "https://gmpg.org/xfn/11"}
-    [:meta {:charset "utf-8"}]
+    ;; Prince prefers it old school
+    [:meta {:http-equiv "Content-Type" :content "text/html; charset=UTF-8"}]
     [:meta {:name "viewport"
             :content "width=device-width, initial-scale=1.0"}]
     (when (:meta page)
