@@ -95,12 +95,7 @@ server {
 
   charset utf-8;
 
-  # fetch CVs from old site
-  location ^~ /cv/ {
-    proxy_pass http://old.kodemaker.no/cv/;
-  }
-
-  # fetch old wordpress content from old site (to go with CVs)
+  # fetch old wordpress content from old site (to go with old CVs)
   location ^~ /wp-content/ {
     proxy_pass http://old.kodemaker.no/wp-content/;
   }
@@ -174,6 +169,13 @@ server {
     if ($request_uri ~ ^/2012/(09)|(11).*) {
       return 410;
     }
+  }
+
+  # fetch some CVs from old site
+  try_files /$uri /$uri/index.html @oldkodemaker;
+
+  location @oldkodemaker {
+    proxy_pass http://old.kodemaker.no;
   }
 
   # When all else fails
