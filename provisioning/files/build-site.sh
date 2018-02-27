@@ -13,7 +13,7 @@ log () {
 
 if [ ! -d "kodemaker.no" ]; then
     git clone https://github.com/kodemaker/kodemaker.no.git
-    changed=1
+    FORCE=1
 fi
 
 cd kodemaker.no
