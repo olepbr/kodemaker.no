@@ -4,9 +4,10 @@ Våre nye nettsider kommer til verden.
 
 ## Teste lokalt
 
-Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen)
-om du ikke har den. Sats på versjon 2.3+. Hvis du har en gammel versjon under 2.0 så funker det garantert ikke.
-På OSX kan du hente den med homebrew: `brew update && brew install leiningen`
+Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen) om du ikke
+har den. Sats på versjon 2.3+. Hvis du har en gammel versjon under 2.0 så funker
+det garantert ikke. På OSX kan du hente den med homebrew: `brew update && brew
+install leiningen`
 
 Du må også ha JDK 1.7. Sjekk med `java -version`, ellers
 [last ned her](http://docs.oracle.com/javase/7/docs/webnotes/install/index.html).
@@ -30,7 +31,9 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    :title Str
    :start-date Str
    :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
+   (optional-key :cv/description) Str ;; Hvis du ønsker en annen/lengre beskrivelse på CV-en
    (optional-key :administration?) Boolean
+   (optional-key :quit?) Boolean
 
    :phone-number Str
    :email-address Str
@@ -71,9 +74,11 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
+                                   (optional-key :event) Str ;; Konferansenavn etc
+                                   (optional-key :date) Date ;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
-                                          (optional-key :source) URL}  ;; må ha minst en av disse URLene
+                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
@@ -83,6 +88,17 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                               :tech [ID]
                               :location {:title Str :url URL} ;; Eks {:title "JavaZone (Oslo)", :url "http://javazone.no"}
                               :date Date}] ;; iso-8601 yyyy-mm-dd
+
+   (optional-key :appearances) [{:title Str ;; Mindre profilerte kurs/workshops/foredrag til CV-en
+                                 :event Str
+                                 :date Date ;; iso-8601 yyyy-mm-dd
+                                 :tech [ID]}]
+
+   (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
+                                 :blurb Str
+                                 :tech [ID]
+                                 (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
+                                 :url URL}]
 
    (optional-key :open-source-projects) [{:url URL
                                           :name Str
@@ -94,14 +110,38 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                                :tech [ID]}] ;; sortert under første tech
 
    (optional-key :projects) [{:customer Str
-                              :description Str
-                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
+                              (optional-key :cv/customer) Str
+                              (optional-key :summary) Str
+                              (optional-key :employer) ID
+                              (optional-key :description) Str
+                              (optional-key :cv/description) Str
+                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]. [2018 0] for å beskrive et pågående prosjekt
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str ;; tittel, firma
-                                  (optional-key :photo) Path}]})
+                                  (optional-key :photo) Path}]
+
+   ;; For CV-er
+   (optional-key :born) Str
+   (optional-key :relationship-status) Str
+   (optional-key :education-summary) Str
+   (optional-key :experience-since) Str
+   (optional-key :qualifications) [Str]
+   (optional-key :innate-skills) [ID] ;; Techs du vil ha lista på CV-en men som du ikke har tatt deg
+                                      ;; bryet å knytte til et prosjekt av noe slag
+
+   (optional-key :education) [{:institution Str ;; Utdanning
+                               :years [Num]
+                               :subject Str}]
+
+   (optional-key :languages) [{:language Str
+                               :orally (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")
+                               :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
+
+   (optional-key :certifications) [{:name Str
+                                    :year Num}]})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
@@ -112,7 +152,7 @@ du kjørte all programmatisk validering av datastrukturen, sjekket at
 alle bilde-URLer finnes, og sett med øynene dine at det ble som du
 hadde tenkt.
 
-Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
+Eksempel på utfylte data finner du i [Magnars profil](resources/people/magnar.edn).
 
 #### Datatyper
 
@@ -120,6 +160,7 @@ Eksempel på utfylte data finner du i [min profil](resources/people/magnar.edn).
 - `Path` er en streng som starter med `/` uten sære tegn.
 - `URL` er en streng som starter med `http://` eller https og forøvrig er en URL.
 - `Date` en er streng med dato på formatet `yyyy-MM-dd`
+- `Num` er et tall
 
 ## Laste opp bilder
 
@@ -148,6 +189,20 @@ De ligger i `resources/tech`.
   {:id ID
    :name Str
    :description Str
+   :type (enum :proglang
+               :vcs
+               :methodology
+               :devtools
+               :library
+               :framework
+               :server
+               :database
+               :technique
+               :devops
+               :os
+               :frontend
+               :specification
+               :tool)
    (optional-key :illustration) Str
    (optional-key :site) URL
    (optional-key :ad) {:heading Str
@@ -228,6 +283,45 @@ Velkommen til Kodemaker!
 For blogg-poster er kun `:illustration` valgfritt. URL-en til bloggpostene
 genereres fra filnavnet, og prefikses med blogg/. Altså blir
 `resources/blog/mitt-innlegg.md` til http://kodemaker.no/blogg/mitt-innlegg/
+
+## CV-er
+
+Det er nå mulig å få CV-en sin generert fra dataene i person-profilen din.
+Ettersom de nye CV-ene byr på litt mindre personlig formattering og layout, og
+nok ikke blir HELT lik som den gamle for de fleste, er den nye CV-en opt-in. Du
+opter inn i person-profilen din med:
+
+```edn
+ :use-new-cv? true
+```
+
+Se [Christians profil](resources/people/christian.edn) for referanse. For at
+CV-en skal se bra ut trenger du å fylle ut noen flere datapunkter enn det som
+tidligere var nødvendig. Det meste er valgfritt, men det er anbefalt å
+ihvertfall få på plass:
+
+- `:experience-since` - Året du startet å jobbe
+- `:education-summary` - En one-liner om utdanningen din til "visittkortet" på
+  toppen
+- `:qualifications` - En liste med kvalifikasjoner
+- `:education` - Utdanning, i mer detalj
+- `:languages` - Språk du snakker/skriver
+
+I tillegg kan du vurdere å berike CV-en din med følgende felter:
+
+- `:appearances` - Foredrag/workshops som ikke allerede er nevnt under
+  `:presentations`. Krever mindre detaljer, og vises kun på CV-en. Perfekt for
+  feks internforedrag (hos oss eller andre) osv.
+- `:innate-skills` - Techs du vil ha listet opp på CV-en, men som du ikke har
+  knyttet til noe spesifikt prosjekt.
+- `:cv/description` - En alternativ beskrivelse som brukes i stedet for
+  `:description` for CV-en.
+
+Helt til slutt er det også mulig å legge til disse to feltene, men det er
+kanskje mulig å diskutere hvor relevante de er:
+
+- `:born`
+- `:relationship-status`
 
 ## Provisjonering
 

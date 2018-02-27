@@ -21,14 +21,6 @@
    :email-address Str
    (optional-key :use-new-cv?) Boolean
 
-   ;; For CV-er
-   (optional-key :born) Str
-   (optional-key :relationship-status) Str
-   (optional-key :education-summary) Str
-   (optional-key :experience-since) Str
-   (optional-key :innate-skills) [ID]
-   (optional-key :qualifications) [Str]
-
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
               (optional-key :twitter) Str ;; brukernavn
               (optional-key :linkedin) Path ;; path til din offentlige side
@@ -65,12 +57,20 @@
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
-                                   (optional-key :event) Str
-                                   (optional-key :date) Date;; iso-8601 yyyy-mm-dd
+                                   (optional-key :event) Str ;; Konferansenavn etc
+                                   (optional-key :date) Date ;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
-                                          (optional-key :source) URL}  ;; må ha minst en av disse URLene
+                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
+
+   (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
+                              :description Str
+                              :url URL ;; Link til feks din abstract hos konferansen
+                              (optional-key :call-to-action) {:url URL :text Str} ;; Bruk denne til "Meld deg på kurs" o.l.
+                              :tech [ID]
+                              :location {:title Str :url URL} ;; Eks {:title "JavaZone (Oslo)", :url "http://javazone.no"}
+                              :date Date}] ;; iso-8601 yyyy-mm-dd
 
    (optional-key :appearances) [{:title Str ;; Mindre profilerte kurs/workshops/foredrag til CV-en
                                  :event Str
@@ -82,14 +82,6 @@
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
                                  :url URL}]
-
-   (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
-                              :description Str
-                              :url URL ;; Link til feks din abstract hos konferansen
-                              (optional-key :call-to-action) {:url URL :text Str} ;; Bruk denne til "Meld deg på kurs" o.l.
-                              :tech [ID]
-                              :location {:title Str :url URL} ;; Eks {:title "JavaZone (Oslo)", :url "http://javazone.no"}
-                              :date Date}] ;; iso-8601 yyyy-mm-dd
 
    (optional-key :open-source-projects) [{:url URL
                                           :name Str
@@ -106,13 +98,22 @@
                               (optional-key :employer) ID
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
-                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
+                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]. [2018 0] for å beskrive et pågående prosjekt
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str ;; tittel, firma
                                   (optional-key :photo) Path}]
+
+   ;; For CV-er
+   (optional-key :born) Str
+   (optional-key :relationship-status) Str
+   (optional-key :education-summary) Str
+   (optional-key :experience-since) Str
+   (optional-key :qualifications) [Str]
+   (optional-key :innate-skills) [ID] ;; Techs du vil ha lista på CV-en men som du ikke har tatt deg
+                                      ;; bryet å knytte til et prosjekt av noe slag
 
    (optional-key :education) [{:institution Str ;; Utdanning
                                :years [Num]
