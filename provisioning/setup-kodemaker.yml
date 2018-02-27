@@ -118,7 +118,8 @@
      notify: restart mail-sender
 
    - name: Install Prince
-     yum: name=libpng12 state=present
+     yum: name={{item}} state=present
+     with_items:
        - libpng12
        - http://www.princexml.com/download/prince-9.0-5.centos7.x86_64.rpm
 
