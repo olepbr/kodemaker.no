@@ -1091,7 +1091,7 @@
                       ClojureScript blitt en virkelig kraftpakke for utvikling
                       av web-frontends. I denne workshoppen får du en
                       gjennomgang av språkets viktigste egenskaper, bruk av
-                      REPL, live reloads med fighweel og mer."
+                      REPL, live reloads med figwheel og mer."
               :tech [:clojurescript]
               :duration "1 dag"
               :participants {:min 3 :max 15}
