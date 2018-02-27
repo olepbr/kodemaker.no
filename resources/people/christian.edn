@@ -2,8 +2,8 @@
  :name ["Christian" "Johansen"]
  :title "Kodemaker"
  :start-date "2013-11-01"
- :experience-since "2002"
- :born "1982"
+ :experience-since 2002
+ :born 1982
  :relationship-status "Gift, 2 barn"
  :description "Christian er en allsidig, engasjert og produktiv programmerer med
     erfaring og interesse for alt fra infrastruktur og drift, databaser og

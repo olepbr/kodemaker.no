@@ -107,10 +107,10 @@
                                   (optional-key :photo) Path}]
 
    ;; For CV-er
-   (optional-key :born) Str
+   (optional-key :born) Num
    (optional-key :relationship-status) Str
    (optional-key :education-summary) Str
-   (optional-key :experience-since) Str
+   (optional-key :experience-since) Num
    (optional-key :qualifications) [Str]
    (optional-key :innate-skills) [ID] ;; Techs du vil ha lista på CV-en men som du ikke har tatt deg
                                       ;; bryet å knytte til et prosjekt av noe slag
