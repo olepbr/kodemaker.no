@@ -326,7 +326,7 @@
             {:customer "Gitorious AS"
              :summary "Gitorious-programvaren"
              :employer :gitorious
-             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql]
+             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake]
              :years [2011 2013]}
             {:customer "Gitorious AS"
              :employer :gitorious
