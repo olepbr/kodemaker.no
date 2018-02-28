@@ -493,6 +493,7 @@
             {:customer "Oiiku AS"
              :employer :kodemaker
              :summary "Meldingsmodul for SMS og e-post"
+             :exclude-from-profile? true
              :description "Utviklet en solid meldingsmodul med støtte for
              tidsstyrt, event-styrt eller manuell utsending av SMS eller
              e-post."
@@ -532,6 +533,7 @@
 
             {:customer "Schibsted Payment ID (SPiD)"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Frontend for ny innlogging"
              :description "Prototypet ny innlogging, registrering og kjøpsflyt
              for SPiD, med fokus på brukervennlighet, støtte for mobil, og
@@ -541,6 +543,7 @@
 
             {:customer "Kodemaker"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Nye nettsider"
              :description "Utviklet nye nettsider for Kodemaker. Lagde alt fra
              deployment og bygg, til responsiv design i frontend."
@@ -582,6 +585,7 @@
 
             {:customer "FINN Motor"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Spesialist på browserproblematikk"
              :description "Reddet FINN motor sine nye annonsesider fra massive IE6-problemer."
              :years [2009]
@@ -589,6 +593,7 @@
 
             {:customer "NSB"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Integrasjon mellom ruteplanleggingsverktøy og togsett"
              :description "Integrasjon mellom ruteplanleggingsverktøy og togsett. Utviklet fra bunn av med Test Driven Development."
              :years [2009]
@@ -622,6 +627,7 @@
 
             {:customer "Nordic Lottery Systems"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Internettspill"
              :description "Utvikling av et nytt internettspill med internasjonal
              målgruppe. Hadde veldig varierte oppgaver - fra webdesign og ajax,
@@ -633,6 +639,7 @@
 
             {:customer "OwnIT"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Koster Booking"
              :description "Hadde ansvar for adminverktøy og integrasjon mot betalingsløsning for en booking-nettside."
              :years [2006 2007]
@@ -640,6 +647,7 @@
 
             {:customer "Nordic Lottery Systems"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Internettspill"
              :description "Utvikling av et nytt internettspill med internasjonal målgruppe. Jobbet med webstandards, web accessibility og usability."
              :years [2006]
@@ -647,6 +655,7 @@
 
             {:customer "DAF Norge"
              :employer :kodemaker
+             :exclude-from-profile? true
              :summary "Håndtering av ettermarkedsavtaler"
              :description "Et system som brukes av DAFs verksteder, kunder og
              DAF sentralt for oversikt over lastebilenes reparasjoner, faste
@@ -670,6 +679,7 @@
 
             {:customer "Mobildata/Kjedehuset"
              :employer :synkarion
+             :exclude-from-profile? true
              :summary "Webbasert timeregistrering"
              :description "Et timeregistrerings- og ressursstyringsverktøy på
              web og til bruk på håndholdte enheter. Programmeringen ble
@@ -680,6 +690,7 @@
 
             {:customer "ITEA NTNU"
              :employer :study-part-time
+             :exclude-from-profile? true
              :summary "Network Administration Visualized"
              :description "Network Administration Visualized: Et visuelt
              administrasjonsverktøy for nettverksdrift som brukes av alle
@@ -691,6 +702,7 @@
 
             {:customer "Bits AS"
              :employer :study-part-time
+             :exclude-from-profile? true
              :summary "Fredrikstadnett"
              :description "Fredrikstadnett: Fredrikstad Kommunes satsning på et
              samlende nettsted for Fredrikstad. Utviklet webelementer som

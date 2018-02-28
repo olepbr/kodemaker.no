@@ -98,6 +98,7 @@
                               (optional-key :employer) ID
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
+                              (optional-key :exclude-from-profile?) Boolean
                               :years [Num] ;; årstallene du jobbet der, typ [2013 2014]. [2018 0] for å beskrive et pågående prosjekt
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 

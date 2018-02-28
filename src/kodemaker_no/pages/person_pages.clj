@@ -144,6 +144,7 @@
   (list
    [:h2.mhn "Prosjekter"]
    (->> projects
+        (remove :exclude-from-profile?)
         (filter :description)
         (map render-project))
    (when-let [nick (-> person :presence :cv)]
