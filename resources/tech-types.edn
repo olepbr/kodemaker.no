@@ -48,8 +48,8 @@
  :express-js :framework
  :ezpublish :server
  :fatwire :server
- :google-adwords :technique
- :google-analytics :technique
+ :google-adwords :tool
+ :google-analytics :tool
  :grunt :library
  :haproxy :devops
  :html :frontend
@@ -59,7 +59,7 @@
  :jade :library
  :jasmine :library
  :jira :tool
- :jaxrs :technique
+ :jaxrs :tool
  :jboss :server
  :jquery :library
  :js-test-driver :library

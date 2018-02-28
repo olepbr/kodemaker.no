@@ -1,6 +1,6 @@
 {:id :deeplearning
  :name "Dyp læring"
- :type :technique
+ :type :methodology
  :illustration "/photos/tech/deep-learning.png"
  :description "
     Dyp Læring (eng. 'Deep Learning') er en fellesbetegnelse på nyere metoder innen [Maskinlæring](/machinelearning) der man tar i bruk nevrale nettverk på nye måter og i flere nivåer enn tidligere. De siste årene har Dyp Læring oppnådd oppsiktsvekkende resultater innen bl.a. bildegjenkjenning, talegjenkjenning, mm., samt mer generellt på kategorisering av umerkede (unlabelled) data. 

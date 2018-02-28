@@ -139,12 +139,12 @@
                :framework
                :server
                :database
-               :technique
                :devops
                :os
                :frontend
                :specification
-               :tool)
+               :tool
+               :other)
    (optional-key :illustration) Str
    (optional-key :site) URL
    (optional-key :ad) {:heading Str

@@ -198,7 +198,6 @@ De ligger i `resources/tech`.
                :framework
                :server
                :database
-               :technique
                :devops
                :os
                :frontend

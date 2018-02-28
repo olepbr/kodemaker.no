@@ -70,7 +70,7 @@
 
     :tech-types {:java :proglang
                  :jira :methodology
-                 :tdd :technique
+                 :tdd :methodology
                  :bash :proglang
                  :sinon :library
                  :clojure :proglang
@@ -101,7 +101,7 @@
 
   (fact
    "Groups techs by type"
-   (->> cvs :christian :techs keys set) => #{:proglang :library :methodology :technique :os})
+   (->> cvs :christian :techs keys set) => #{:proglang :library :methodology :os})
 
   (fact
    "Orders techs by most frequently referenced"

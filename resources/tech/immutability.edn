@@ -1,6 +1,6 @@
 {:id :immutability
  :name "Immutability"
- :type :technique
+ :type :methodology
  :description
  "> Immutability changes everything
 >
