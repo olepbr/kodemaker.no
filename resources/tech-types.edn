@@ -4,6 +4,7 @@
  :alpine :os
  :android :os
  :angularjs :framework
+ :ant :devtools
  :appcode :devtools
  :asana :tool
  :aspnet :framework
@@ -98,6 +99,7 @@
  :rails :framework
  :reactive-cocoa :library
  :redhat :os
+ :sbt :devtools
  :sinon :library
  :siteminder :server
  :spring-mvc :framework
@@ -106,10 +108,13 @@
  :sqlite :database
  :teamcity :devops
  :terminal :devtools
+ :textmate :devtools
  :tsql :specification
  :ubuntu :os
  :unity3d :framework
  :unix :os
+ :visual-studio :devtools
+ :visual-source-safe :vcs
  :webgl :frontend
  :weblogic :server
  :zeromq :server

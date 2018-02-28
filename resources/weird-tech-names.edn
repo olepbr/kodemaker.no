@@ -37,7 +37,7 @@
  :haproxy "HAProxy"
  :html "HTML"
  :innovasjonsmiljoer "Innovasjonsmiljøer"
- :intellij "IntelliJ"
+ :intellij "IntelliJ IDEA"
  :jira "JIRA"
  :jquery "jQuery"
  :js-test-driver "JsTestDriver"
@@ -86,4 +86,7 @@
  :om-next "Om Next"
  :svn "Subversion"
  :testing "Automatisert testing"
+ :sbt "SBT"
+ :textmate "TextMate"
+ :visual-studio "Visual Studio"
  }

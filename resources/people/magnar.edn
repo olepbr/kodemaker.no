@@ -40,6 +40,8 @@
         :favorites-at-the-moment [:clojurescript :ansible :responsive-design :emacs]
         :want-to-learn-more [:kubernetes :jprofiler :clojure-spec]}
 
+ :innate-skills [:intellij :textmate :leiningen]
+
  :qualifications ["Solid og erfaren frontendutvikler"
                   "Dreven på testdrevet utvikling"
                   "Mye praktisk erfaring med responsiv design"
