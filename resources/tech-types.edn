@@ -25,6 +25,7 @@
  :browser-devtools :devtools
  :browserify :library
  :buster-js :library
+ :capistrano :devops
  :cd :methodology
  :cef :frontend
  :centos :os
@@ -39,17 +40,22 @@
  :csharp :proglang
  :css :frontend
  :cvs :vcs
+ :cxf :server
  :datascript :database
  :dbfit :framework
  :ddd :methodology
+ :dotnet :framework
  :eclipse :devtools
  :elasticsearch :server
  :elisp :proglang
  :express-js :framework
  :ezpublish :server
  :fatwire :server
+ :fitnesse :framework
+ :flex :framework
  :google-adwords :tool
  :google-analytics :tool
+ :groovyws :library
  :grunt :library
  :haproxy :devops
  :html :frontend
@@ -58,6 +64,7 @@
  :ios :os
  :jade :library
  :jasmine :library
+ :jetty :server
  :jira :tool
  :jaxrs :tool
  :jboss :server
@@ -78,6 +85,7 @@
  :mesos :devops
  :midje :library
  :mocha :library
+ :mockito :library
  :mongodb :database
  :mule :server
  :mysql :database
@@ -91,30 +99,46 @@
  :om-next :framework
  :openam :server
  :openssl :library
+ :oracle :database
  :oracle-locator :database
+ :osx :os
+ :passenger :server
  :photoshop :tool
  :php :proglang
  :puppet :devops
  :pygments :library
  :rails :framework
+ :rake :library
  :reactive-cocoa :library
  :redhat :os
+ :rest :specification
+ :rubymine :devtools
+ :rspec :library
+ :sap :server
  :sbt :devtools
+ :selenium :library
  :sinon :library
  :siteminder :server
+ :soap :specification
+ :spring-batch :framework
  :spring-mvc :framework
+ :spring-security :framework
+ :sybase :database
  :ssh :library
  :svn :vcs
  :sqlite :database
  :teamcity :devops
  :terminal :devtools
  :textmate :devtools
+ :thinking-sphinx :library
  :tsql :specification
  :ubuntu :os
  :unity3d :framework
  :unix :os
- :visual-studio :devtools
  :visual-source-safe :vcs
+ :visual-studio :devtools
+ :windows :os
+ :wcf :framework
  :webgl :frontend
  :weblogic :server
  :zeromq :server
