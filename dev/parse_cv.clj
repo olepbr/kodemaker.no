@@ -62,12 +62,13 @@
     {:customer customer
      :years (parse-period period)
      :description (.trim description)
-     :tech (->> (str/split raw-tech #",")
-                (map #(.trim %))
-                (mapv #(or (techs %) (-> (.trim %)
-                                         .toLowerCase
-                                         (str/replace #" " "-")
-                                         keyword))))}))
+     :tech (when raw-tech
+             (->> (str/split raw-tech #",")
+                  (map #(.trim %))
+                  (mapv #(or (techs %) (-> (.trim %)
+                                           .toLowerCase
+                                           (str/replace #" " "-")
+                                           keyword)))))}))
 
 (defn parse-open-source-projects [section]
   (->> (hf/hiccup-find [:li] section)
@@ -92,6 +93,9 @@
         (map hf/hiccup-string (hf/hiccup-find [:h3] section))
         (map hf/hiccup-string (hf/hiccup-find [:blockquote] section))))
 
+(defn ensure-cols [n rows]
+  (filter #(= n (count (hf/hiccup-find [:td] %))) rows))
+
 (defn parse-cv [markup]
   (let [oss-section (find-section markup #"open source")]
     (merge
@@ -105,11 +109,12 @@
                            (mapv hf/hiccup-string))
       :projects (->> (find-section markup #"^prosjekter$")
                      (hf/hiccup-find [:.projects.details :tbody :tr])
-                     (filter #(< 0 (count (hf/hiccup-find [:td] %))))
+                     (ensure-cols 3)
                      (mapv parse-project))
       :open-source-projects (parse-open-source-projects oss-section)
       :education (->> (find-section markup #"^utdannelse$")
                       (hf/hiccup-find [:.projects.details :tbody :tr])
+                      (ensure-cols 3)
                       (mapv parse-education))
       :endorsements (parse-endorsements (find-section markup #"^anbefalinger$"))}
      (parse-personals (->> (hf/hiccup-find [:#personal :dl] markup)
