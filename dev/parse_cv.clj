@@ -44,7 +44,7 @@
        (map (fn [[dt dd]]
               (let [label (label->key (hf/hiccup-string dt))
                     value (hf/hiccup-string dd)]
-                [label (if (= label :experience-since)
+                [label (if (#{:experience-since :born} label)
                          (parse-year value)
                          value)])))
        (into {})))
@@ -53,7 +53,7 @@
   (cond
     (re-find #"\d+\s*-\s*$" period) [(parse-year period) :ongoing]
     (re-find #"\d+\s*-\s*\d+$" period) (let [numbers (map parse-year (str/split period #"-"))]
-                                         (range (first numbers) (inc (last numbers))))
+                                         (into [] (range (first numbers) (inc (last numbers)))))
     :default [(parse-year period)]))
 
 (defn parse-project [raw]
@@ -96,6 +96,10 @@
 (defn ensure-cols [n rows]
   (filter #(= n (count (hf/hiccup-find [:td] %))) rows))
 
+(defn qualifications-section [markup]
+  (or (seq (hf/hiccup-find [:#kvalifikasjoner] markup))
+      (find-section markup #"kvalifikasjoner")))
+
 (defn parse-cv [markup]
   (let [oss-section (find-section markup #"open source")]
     (merge
@@ -103,17 +107,16 @@
       :title (html-str markup [:#title])
       :phone-number (html-str markup [:#phone])
       :email-address (html-str markup [:#mail])
-      :qualifications (->> markup
-                           (hf/hiccup-find [:#kvalifikasjoner])
+      :qualifications (->> (qualifications-section markup)
                            (hf/hiccup-find [:li])
                            (mapv hf/hiccup-string))
       :projects (->> (find-section markup #"^prosjekter$")
-                     (hf/hiccup-find [:.projects.details :tbody :tr])
+                     (hf/hiccup-find [:tbody :tr])
                      (ensure-cols 3)
                      (mapv parse-project))
       :open-source-projects (parse-open-source-projects oss-section)
       :education (->> (find-section markup #"^utdannelse$")
-                      (hf/hiccup-find [:.projects.details :tbody :tr])
+                      (hf/hiccup-find [:tbody :tr])
                       (ensure-cols 3)
                       (mapv parse-education))
       :endorsements (parse-endorsements (find-section markup #"^anbefalinger$"))}
@@ -130,3 +133,13 @@
   (with-open [w (clojure.java.io/writer (format "resources/cv-dump/%s.edn" id))]
     (binding [*out* w]
       (clojure.pprint/write (fetch-and-parse id)))))
+
+(dump-cv "christin")
+(def data (tags/parse "https://www.kodemaker.no/cv/august/"))
+(qualifications-section data)
+(parse-cv data)
+
+(->> (find-section anders-data #"^prosjekter$")
+     (hf/hiccup-find [:.projects.details :tbody :tr])
+     (filter #(< 0 (count (hf/hiccup-find [:td] %))))
+     (mapv parse-project))
