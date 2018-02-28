@@ -34,7 +34,7 @@
        :appearances [{:title "Annet foredrag"
                       :date "2017-02-01"
                       :event "JavaZone"
-                      :tech [:zsh]}]
+                      :tech [:java]}]
        :open-source-projects [{:name "Sinon.JS"
                                :url "https://sinonjs.org"
                                :description "Sinon"
