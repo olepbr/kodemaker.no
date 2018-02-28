@@ -52,14 +52,8 @@
                               (apply concat)
                               (filter :type))})]))
 
-(defn- period [years]
-  (cond
-    (= 1 (count years)) (format "%s" (first years))
-    (= 0 (last years)) (format "%s- " (first years))
-    :default (format "%s-%s" (first years) (last years))))
-
-(defn- years-period [{:keys [years]}]
-  (period years))
+(defn- year-range [{:keys [years]}]
+  (f/year-range years))
 
 (defn- table [items headings columns]
   [:table
@@ -81,7 +75,7 @@
    (table projects
           ["Oppdragsgiver" "Periode" "Oppdrag"]
           [:customer
-           years-period
+           year-range
            (fn [{:keys [description tech]}]
              (list (f/to-html description)
                    [:div {:style "margin: 1em 0"}
@@ -162,7 +156,7 @@
           (table-section "Prosjekter, sammendrag"
                          (:projects person)
                          ["Oppdragsgiver" "Periode" "Oppdrag"]
-                         [:customer years-period :summary])
+                         [:customer year-range :summary])
           (projects-fullview person)
           (table-section "Foredrag/kurs"
                          (:appearances person)
@@ -172,7 +166,7 @@
           (table-section "Utdanning"
                          (:education person)
                          ["Skole" "År" "Retning"]
-                         [:institution years-period :subject])
+                         [:institution year-range :subject])
           (table-section "Sertifiseringer/ kurs"
                          (:certifications person)
                          ["Kursnavn" "År"]

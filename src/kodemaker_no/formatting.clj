@@ -14,7 +14,7 @@
                       coll)))
 
 (defn- consecutive? [[before after]]
-  (= (inc before) after))
+  (or (= :ongoing after) (= (and (number? before) (inc before)) after)))
 
 (defn- consecutive-years [years]
   (let [pairs (partition-all 2 1 years)
@@ -29,7 +29,7 @@
 
 (defn- year-range-str [[first-year & rest]]
   (if rest
-    (str first-year "-" (last rest))
+    (str first-year "-" (when-not (= :ongoing (last rest)) (last rest)))
     first-year))
 
 (defn year-range [years]

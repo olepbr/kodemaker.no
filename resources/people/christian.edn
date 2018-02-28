@@ -231,7 +231,7 @@
                     :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
                     :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
                     :alpine :ubuntu]
-             :years [2017 0]}
+             :years [2017 :ongoing]}
             {:customer "Eventum.no"
              :employer :kodemaker
              :summary "eventum.no, eventum.com"
@@ -411,7 +411,7 @@
              :employer :self-employed
              :summary "rarelink.no"
              :tech [:java :ant :maven :docker :centos :ansible :mysql]
-             :years [2005 0]}
+             :years [2005 :ongoing]}
             {:customer "IXD"
              :employer :self-employed
              :summary "flysiden.no"

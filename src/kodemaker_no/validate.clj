@@ -1,11 +1,12 @@
 (ns kodemaker-no.validate
   (:require [clj-time.format :refer [parse formatters]]
-            [schema.core :refer [optional-key validate either Str Keyword Num Any pred both enum]]))
+            [schema.core :refer [optional-key validate either Str Keyword Num Any pred both enum conditional]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
+(def YearRange [(conditional number? Num keyword? (enum :ongoing))])
 
 (def Person
   {:id ID
@@ -99,7 +100,7 @@
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
                               (optional-key :exclude-from-profile?) Boolean
-                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]. [2018 0] for å beskrive et pågående prosjekt
+                              :years YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
@@ -117,7 +118,7 @@
                                       ;; bryet å knytte til et prosjekt av noe slag
 
    (optional-key :education) [{:institution Str ;; Utdanning
-                               :years [Num]
+                               :years YearRange
                                :subject Str}]
 
    (optional-key :languages) [{:language Str

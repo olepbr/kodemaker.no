@@ -484,7 +484,7 @@
             fergebillettørene."
              :tech [:clojure :clojurescript :datomic :datascript :reagent :mount :docker :aws :cordova
                     :html :css :responsive-design :kafka :influxdb :lambdacd :travisci]
-             :years [2016 0]}
+             :years [2016 :ongoing]}
 
             {:customer "Hafslund Strøm"
              :employer :kodemaker
