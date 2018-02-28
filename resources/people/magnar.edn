@@ -405,6 +405,8 @@
                         {:url "https://github.com/magnars/prone"                 :name "Prone"                 :description "Bedre feilmeldinger og debugging for Clojure webapps."                                   :tech [:clojure]}
                         {:url "https://github.com/magnars/stasis"                :name "Stasis"                :description "Et bibliotek for å lage statiske nettsider. Som denne."                                  :tech [:clojure]}
                         {:url "https://github.com/magnars/optimus"               :name "Optimus"               :description "Et bibliotek for frontendytelse."                                                        :tech [:clojure :web-performance]}
+                        {:url "https://github.com/magnars/datoms-differ"         :name "datoms-differ"         :description "Et bibliotek for å finne diff mellom to txs a-la Datomic og DataScript"                  :tech [:clojure :datomic :datascript]}
+                        {:url "https://github.com/magnars/realize"               :name "realize"               :description "Et bibliotek for å realisere lazy seqs i Clojure med feilhåndtering"                     :tech [:clojure]}
                         {:url "https://github.com/magnars/mapdown"               :name "Mapdown"               :description "Et lettvekts markup format for å lage maps av strenger."                                 :tech [:clojure]}
                         {:url "https://github.com/magnars/stubadub"              :name "stubadub"              :description "Et lite stubbing bibliotek."                                                             :tech [:clojure]}
                         {:url "https://github.com/magnars/test-with-files"       :name "test-with-files"       :description "Enkel måte å skrive tester som bruker filer på disk."                                    :tech [:clojure]}
@@ -437,6 +439,7 @@
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
                              {:name "devcards"            :url "https://github.com/bhauman/devcards"             :tech [:clojure]}
+                             {:name "lambdacd-git"        :url "https://github.com/flosell/lambdacd-git"         :tech [:clojure :jsch :jgit]}
                              {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
                              {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
                              {:name "jstdutil"            :url "https://github.com/cjohansen/jstdutil"           :tech [:javascript]}
