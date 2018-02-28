@@ -2,6 +2,9 @@
  :name ["Magnar" "Sveen"]
  :title "Programmør"
  :start-date "2007-04-01 00:09"
+ :experience-since 1999
+ :born 1978
+ :relationship-status "Gift, 1 barn"
  :description "Magnar kaller seg framsieutvikler, men egentlig trives han godt i
                hele stacken. Han er opptatt av og oppdatert på webutvikling. Han
                har et entusiastisk forhold til frontendutvikling -
@@ -13,8 +16,19 @@
                flere kurs der han har vært konsulent, blant annet om JavaScript
                og testing."
 
+ :cv/description "Magnar er partner og seniorkonsulent i Kodemaker. Han er
+                  opptatt av og oppdatert på webutvikling. Han har et
+                  entusiastisk forhold til frontendutvikling - webstandarder,
+                  frontendytelse, brukergrensesnitt, responsiv design. Magnar
+                  skriver testene sine først, og er opptatt av å skrive modulær
+                  kode - små, gjennomtesta komponenter med klart definerte
+                  grenser. Han deler med seg det han lærer, både på
+                  arbeidsplassen og i blogposter, videoserier, foredrag og
+                  kurs."
+
  :phone-number "+47 918 56 425"
  :email-address "magnar@kodemaker.no"
+ :use-new-cv? true
 
  :presence {:cv "magnar"
             :twitter "magnars"
@@ -25,6 +39,12 @@
  :tech {:using-at-work [:clojure :clojurescript :datascript :datomic]
         :favorites-at-the-moment [:clojurescript :ansible :responsive-design :emacs]
         :want-to-learn-more [:kubernetes :jprofiler :clojure-spec]}
+
+ :qualifications ["Solid og erfaren frontendutvikler"
+                  "Dreven på testdrevet utvikling"
+                  "Mye praktisk erfaring med responsiv design"
+                  "Opptatt av hyppige leveranser og smidig utvikling"
+                  "Tar oppgaver i hele stacken, fra deployment og bygg, via databaser og backend, til frontendytelse og brukertesting."]
 
  :recommendations [{:title "Literate interactive coding: Devcards"
                     :blurb "Tester du UI-komponentene dine ved å klikke omkring
@@ -303,6 +323,7 @@
                   Clojure med hanskene av, så du må tåle å ikke forstå alt. Er
                   du helt ny til funksjonell programmering kan du muligens få
                   eksplodert hodet."
+                  :event "JavaZone"
                   :date "2014-09-10"
                   :tech [:clojure :clojurescript :react :functional-programming]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
@@ -312,15 +333,67 @@
                           som digger JavaScript angriper problemer og gjør koden
                           testbar."
                   :date "2012-09-12"
+                  :event "JavaZone"
                   :tech [:javascript :tdd :testing]
                   :urls {:video "http://vimeo.com/49485653"}}
+                 {:title "Emacs Rocks WebDev Special"
+                  :blurb "A high speed tour through some pretty darn snazzy
+                 features of Emacs when developing for the web. Even if you're
+                 not looking to change editors any time soon, this talk should
+                 have you hacking at your own editor in the following break."
+                  :date "2013-05-23"
+                  :event "WebRebels"
+                  :tech [:emacs :javascript]
+                  :urls {:video "http://www.youtube.com/watch?v=TMoPuv-xXMM"}}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får ryddig kode og
                           trivelig testing ved å wrappe ajaxen din."
                   :date "2011-09-07"
+                  :event "JavaZone"
                   :tech [:javascript :testing :ajax]
                   :urls {:video "http://vimeo.com/28764670"
                          :source "https://github.com/magnars/server-facade"}}]
+
+ :appearances [{:title "Zombie TDD: I live på CiA"
+                :event "Communities in Action"
+                :tech [:javascript :tdd]
+                :date "2012-02-08"}
+               {:title "Emacs Rocks hos Steria"
+                :event "Internforedrag hos Steria"
+                :tech [:emacs]
+                :date "2012-09-06"}
+               {:title "Emacs Rocks hos FINN.no"
+                :event "Internforedrag hos FINN.no"
+                :tech [:emacs]
+                :date "2012-10-17"}
+               {:title "Emacs Rocks hos UiO"
+                :event "Gjesteforeleser hos Universitetet i Oslo"
+                :tech [:emacs]
+                :date "2012-10-24"}
+               {:title "Må JavaScript være så forbanna vanskelig å teste?"
+                :event "Oslo XP Meetup"
+                :tech [:javascript :tdd]
+                :date "2013-02-26"}
+               {:title "HTML5 - Hva kan vi bruke NÅ?"
+                :event "Internforedrag hos FINN.no"
+                :tech [:html5]
+                :date "2010-10-27"}
+               {:title "Slik bruker vi JavaScript hos FINN"
+                :event "FINN Academy"
+                :tech [:javascript]
+                :date "2009-06-02"}
+               {:title "Extreme Startup kodekonkurranse"
+                :event "FINN Academy"
+                :tech [:ruby]
+                :date "2011-12-06"}
+               {:title "JavaScript for Javautviklere"
+                :event "Kurs for FINN.no"
+                :tech [:javascript :html :php]
+                :date "2009-10-02"}
+               {:title "Testdrevet JavaScript"
+                :event "Kurs for IWMAC"
+                :tech [:javascript :tdd]
+                :date "2014-10-29"}]
 
  :open-source-projects [{:url "https://github.com/culljs/culljs"                 :name "cull.js"               :description "Et verktøybelte for å skrive funksjonell JavaScript."                                    :tech [:javascript :nodejs]}
                         {:url "https://github.com/culljs/dome"                   :name "dome.js"               :description "Et lite bibliotek for å bygge, traversere og manipulere DOM."                            :tech [:javascript]}
@@ -338,22 +411,22 @@
                         {:url "https://github.com/magnars/optimus-angular"       :name "optimus-angular"       :description "Bedre ytelse for [AngularJS](http://angularjs.org/)-apps."                               :tech [:clojure :angularjs]}
                         {:url "https://github.com/magnars/optimus-jsx"           :name "optimus-jsx"           :description "[React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)-støtte til Optimus." :tech [:clojure :react]}
                         {:url "https://github.com/magnars/optimus-img-transform" :name "optimus-img-transform" :description "Optimalisering og transformering av bilder til Optimus."                                 :tech [:clojure]}
-                        {:url "https://github.com/magnars/expand-region.el"      :name "expand-region"         :description "Marker deler av fila basert på semantikk."                                               :tech [:emacs]}
-                        {:url "https://github.com/magnars/multiple-cursors.el"   :name "multiple-cursors"      :description "Rediger mange steder i fila samtidig."                                                   :tech [:emacs]}
-                        {:url "https://github.com/magnars/js2-refactor.el"       :name "js2-refactor"          :description "Refaktorering for JavaScript."                                                           :tech [:emacs :javascript]}
-                        {:url "https://github.com/magnars/clj-refactor.el"       :name "clj-refactor"          :description "Refaktorerings for Clojure."                                                             :tech [:emacs :clojure]}
-                        {:url "https://github.com/magnars/dash.el"               :name "dash.el"               :description "Et moderne listebibliotek for Emacs."                                                    :tech [:emacs]}
-                        {:url "https://github.com/magnars/s.el"                  :name "s.el"                  :description "Et string-manipulasjonsbibliotek for Emacs."                                             :tech [:emacs]}
-                        {:url "https://github.com/magnars/tagedit"               :name "tagedit"               :description "Semantisk omstrukturering av HTML."                                                      :tech [:emacs]}
-                        {:url "https://github.com/magnars/simplezen.el"          :name "simplezen"             :description "Skriv HTML i en fei."                                                                    :tech [:emacs]}
-                        {:url "https://github.com/magnars/buster-mode"           :name "buster-mode"           :description "Lite minor-mode for å kjøre Buster-tester."                                              :tech [:emacs]}
-                        {:url "https://github.com/magnars/multifiles.el"         :name "multifiles"            :description "Rediger flere filer samtidig."                                                           :tech [:emacs]}
-                        {:url "https://github.com/magnars/string-edit.el"        :name "string-edit"           :description "Unngå escaping-trøbbel når du redigerer en string."                                      :tech [:emacs]}
-                        {:url "https://github.com/magnars/smart-forward.el"      :name "smart-forward"         :description "Semantisk navigasjon."                                                                   :tech [:emacs]}
-                        {:url "https://github.com/magnars/change-inner.el"       :name "change-inner"          :description "Semantisk copy og kill."                                                                 :tech [:emacs]}
-                        {:url "https://github.com/magnars/buster-snippets.el"    :name "buster-snippets"       :description "Snippets for å raskt skrive Buster boilerplate."                                         :tech [:emacs]}
-                        {:url "https://github.com/magnars/angular-snippets.el"   :name "angular-snippets"      :description "Snippets for å raskt skrive Angular.JS boilerplate."                                     :tech [:emacs]}
-                        {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description "Snippets for å raskt skrive Datomic boilerplate."                                        :tech [:emacs]}
+                        {:url "https://github.com/magnars/expand-region.el"      :name "expand-region"         :description "Marker deler av fila basert på semantikk."                                               :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/multiple-cursors.el"   :name "multiple-cursors"      :description "Rediger mange steder i fila samtidig."                                                   :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/js2-refactor.el"       :name "js2-refactor"          :description "Refaktorering for JavaScript."                                                           :tech [:emacs :elisp :javascript]}
+                        {:url "https://github.com/magnars/clj-refactor.el"       :name "clj-refactor"          :description "Refaktorerings for Clojure."                                                             :tech [:emacs :elisp :clojure]}
+                        {:url "https://github.com/magnars/dash.el"               :name "dash.el"               :description "Et moderne listebibliotek for Emacs."                                                    :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/s.el"                  :name "s.el"                  :description "Et string-manipulasjonsbibliotek for Emacs."                                             :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/tagedit"               :name "tagedit"               :description "Semantisk omstrukturering av HTML."                                                      :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/simplezen.el"          :name "simplezen"             :description "Skriv HTML i en fei."                                                                    :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/buster-mode"           :name "buster-mode"           :description "Lite minor-mode for å kjøre Buster-tester."                                              :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/multifiles.el"         :name "multifiles"            :description "Rediger flere filer samtidig."                                                           :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/string-edit.el"        :name "string-edit"           :description "Unngå escaping-trøbbel når du redigerer en string."                                      :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/smart-forward.el"      :name "smart-forward"         :description "Semantisk navigasjon."                                                                   :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/change-inner.el"       :name "change-inner"          :description "Semantisk copy og kill."                                                                 :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/buster-snippets.el"    :name "buster-snippets"       :description "Snippets for å raskt skrive Buster boilerplate."                                         :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/angular-snippets.el"   :name "angular-snippets"      :description "Snippets for å raskt skrive Angular.JS boilerplate."                                     :tech [:emacs :elisp]}
+                        {:url "https://github.com/magnars/datomic-snippets.el"   :name "datomic-snippets"      :description "Snippets for å raskt skrive Datomic boilerplate."                                        :tech [:emacs :elisp]}
                         {:url "https://github.com/magnars/autolint-maven-plugin" :name "autolint-maven-plugin" :description "Kjører statisk analyse av JavaScript i Maven."                                           :tech [:java :maven]}]
 
  :open-source-contributions [{:name "quiescent"           :url "https://github.com/levand/quiescent"             :tech [:clojure :react]}
@@ -366,13 +439,13 @@
                              {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
                              {:name "jstdutil"            :url "https://github.com/cjohansen/jstdutil"           :tech [:javascript]}
                              {:name "carousel-js"         :url "https://github.com/finn-no/carousel-js"          :tech [:javascript]}
-                             {:name "elnode"              :url "https://github.com/nicferrier/elnode"            :tech [:emacs]}
-                             {:name "ecukes"              :url "https://github.com/rejeep/ecukes"                :tech [:emacs]}
-                             {:name "flycheck"            :url "https://github.com/lunaryorn/flycheck"           :tech [:emacs]}
-                             {:name "wrap-region"         :url "https://github.com/rejeep/wrap-region"           :tech [:emacs]}
-                             {:name "litable"             :url "https://github.com/Fuco1/litable"                :tech [:emacs]}
-                             {:name "god-mode"            :url "https://github.com/chrisdone/god-mode"           :tech [:emacs]}
-                             {:name "restclient.el"       :url "https://github.com/pashky/restclient.el"         :tech [:emacs]}
+                             {:name "elnode"              :url "https://github.com/nicferrier/elnode"            :tech [:emacs :elisp]}
+                             {:name "ecukes"              :url "https://github.com/rejeep/ecukes"                :tech [:emacs :elisp]}
+                             {:name "flycheck"            :url "https://github.com/lunaryorn/flycheck"           :tech [:emacs :elisp]}
+                             {:name "wrap-region"         :url "https://github.com/rejeep/wrap-region"           :tech [:emacs :elisp]}
+                             {:name "litable"             :url "https://github.com/Fuco1/litable"                :tech [:emacs :elisp]}
+                             {:name "god-mode"            :url "https://github.com/chrisdone/god-mode"           :tech [:emacs :elisp]}
+                             {:name "restclient.el"       :url "https://github.com/pashky/restclient.el"         :tech [:emacs :elisp]}
                              {:name "buster-maven-plugin" :url "https://github.com/peternic/buster-maven-plugin" :tech [:java :maven]}]
 
  :screencasts [{:title "Zombie TDD - Testdrevet JavaScript"
@@ -398,15 +471,85 @@
                         på engelsk."
                 :tech [:clojure :clojurescript]}]
 
- :projects [{:customer "Schibsted Payment ID"
-             :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi gjør mange grep
-                           for å holde dokumentasjonen aktuell og oppdatert. Sidene blir bygget
-                           opp basert på informasjon hentet rett fra SPiD sitt REST API.
-                           Eksempler i guides hentes fra fungerende eksempler, for å sikre at
-                           kodeeksempler ikke er utdatert."
+ :projects [{:customer "Norled"
+             :employer :kodemaker
+             :summary "Nytt informasjonssystem for fergedrift"
+             :description "Utvikler nye informasjonssystemer for fergedrift for
+            Norled. Jobber også med billett-app for kunder, samt app for
+            fergebillettørene."
+             :tech [:clojure :clojurescript :datomic :datascript :reagent :mount :docker :aws :cordova
+                    :html :css :responsive-design :kafka :influxdb :lambdacd :travisci]
+             :years [2016 0]}
+
+            {:customer "Hafslund Strøm"
+             :employer :kodemaker
+             :summary "Hafslund Strøm app for iOS og Android"
+             :description "Hadde ansvar for utvikling av Hafslund sin nye
+             Strøm-app og Link-app for smarthjem. Ved hjelp av responsiv design
+             kunne et lite team levere app for både web, iOS og Android."
+             :tech [:cordova :clojurescript :quiescent :core-async :optimus :javascript]
+             :years [2016]}
+
+            {:customer "Oiiku AS"
+             :employer :kodemaker
+             :summary "Meldingsmodul for SMS og e-post"
+             :description "Utviklet en solid meldingsmodul med støtte for
+             tidsstyrt, event-styrt eller manuell utsending av SMS eller
+             e-post."
+             :tech [:clojure :datomic :mount :twilio :mailgun :pswincom :angularjs]
+             :years [2016]}
+
+            {:customer "Hafslund Strøm"
+             :employer :kodemaker
+             :summary "Backend system for oppfølging av hardware"
+             :description "Utviklet verktøy for kontroll over hardware ute hos
+             kunder, med live oversikt og regelbasert utrulling av
+             oppgraderinger."
+             :tech [:clojure :clojurescript :datomic :quiescent :core-async :bootstrap :expectations :optimus :docker]
+             :years [2015]}
+
+            {:customer "Hafslund Strøm"
+             :employer :kodemaker
+             :summary "DevOps i Hafslund Link"
+             :description "Link er Hafslund sin satsning på monitorering og
+             automatisering i hjemmet. Jeg holdt i automatisering av bygg og
+             utrulling. Stikkord er one-click deploy, blue-green utrulling,
+             integrasjonstesting, og generelt hjelpe utviklerteamet på veien til
+             kontinuerlig utrulling."
+             :tech [:docker :ansible :jenkins :weave :sbt :aws :bash :ubuntu :centos :busybox]
+             :years [2014 2015]}
+
+            {:customer "Schibsted Payment ID (SPiD)"
+             :employer :kodemaker
+             :summary "Løsning for API-dokumentasjon"
+             :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
+             gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
+             Sidene blir bygget opp basert på informasjon hentet rett fra SPiD
+             sitt REST API. Eksempler i guides hentes fra fungerende eksempler,
+             for å sikre at kodeeksempler ikke er utdatert."
+             :tech [:clojure :responsive-design :stasis :optimus :midje]
+             :years [2014]}
+
+            {:customer "Schibsted Payment ID (SPiD)"
+             :employer :kodemaker
+             :summary "Frontend for ny innlogging"
+             :description "Prototypet ny innlogging, registrering og kjøpsflyt
+             for SPiD, med fokus på brukervennlighet, støtte for mobil, og
+             forenkling av tekniske løsninger."
+             :tech [:html :css :responsive-design :javascript :grunt :mocha :chai]
+             :years [2014]}
+
+            {:customer "Kodemaker"
+             :employer :kodemaker
+             :summary "Nye nettsider"
+             :description "Utviklet nye nettsider for Kodemaker. Lagde alt fra
+             deployment og bygg, til responsiv design i frontend."
              :years [2014]
-             :tech [:clojure :ansible :responsive-design :stasis :optimus :midje]}
+             :tech [:clojure :ansible :responsive-design :stasis :optimus :midje :nginx :varnish]}
+
             {:customer "Oiiku"
+             :employer :kodemaker
+             :summary "Eventsystem for bedrifter"
              :description "Jobbet i et lite team med å utvikle eventsystemet
                            Oiiku. Vi måtte alle bidra på alle fronter: fra
                            frontend, via backend, til database og drift.
@@ -414,7 +557,20 @@
                            applikasjoner (pluss SSO) som kommuniserer via REST."
              :years [2013 2014]
              :tech [:javascript :clojure :angularjs :ansible :datomic :mongodb :elasticsearch]}
-            {:customer "FINN oppdrag"
+
+            {:customer "FINN Reise"
+             :employer :kodemaker
+             :summary "Bygge frontendkompetanse i fire team"
+             :description "Leid inn for å bidra til storsatsning på ny platform
+             til FINN reise. Fokus på testdrevet utvikling, samt kontinuerlig
+             integrasjon og utrulling. Mitt ansvar var å løfte
+             frontendkompetansen på tvers av fire team."
+             :years [2013]
+             :tech [:html :css :javascript :java :spring-mvc :buster-js :sinon :junit :jawr]}
+
+            {:customer "FINN Oppdrag"
+             :employer :kodemaker
+             :summary "Ansvarlig frontendutvikler"
              :description "Ansvarlig frontendutvikler. Utviklet hele
                            framsia fra bunnen av. Vi var første marked
                            i FINN til å bruke responsiv design. Skrev
@@ -423,16 +579,124 @@
              :tech [:javascript :responsive-design :oocss
                     :ajax :spring-mvc :html :css :jquery :js-test-driver
                     :jsp :sinon :java :junit :git :jira :confluence]}
+
+            {:customer "FINN Motor"
+             :employer :kodemaker
+             :summary "Spesialist på browserproblematikk"
+             :description "Reddet FINN motor sine nye annonsesider fra massive IE6-problemer."
+             :years [2009]
+             :tech [:css :html]}
+
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "Integrasjon mellom ruteplanleggingsverktøy og togsett"
+             :description "Integrasjon mellom ruteplanleggingsverktøy og togsett. Utviklet fra bunn av med Test Driven Development."
+             :years [2009]
+             :tech [:groovy :java :hibernate :maven :junit]}
+
+            {:customer "FINN Reise"
+             :employer :kodemaker
+             :summary "Opprydding frontend"
+             :description "Stor opprydding og omlegging av JavaScript-bruken på
+             reisesidene, da særlig søkeskjemaene. Endringene gjorde det lett å
+             tilby skjemaene i iframe for VG, Aftenposten, Aftonbladet og
+             www.destination.se. Holdt JavaScript-kurs for teamet, deretter alle
+             FINNs frontend-utviklere, og til slutt et JavaScript for
+             Javautviklere-kurs for hele FINNs utviklingsavdeling. Orkestrerte
+             omlegging av FINNs CSS-organisering for å lette utviklernes jobb."
+             :years [2009]
+             :tech [:javascript :css :html :ajax :jquery :jsp :jstl :java :junit :ruby :watir :cucumber :cvs :ant :jira :confluence]}
+
             {:customer "FINN Surf Sammen"
-             :description "Var med fra starten, jobbet med skisser til
-                           løsning og databasestruktur. Gikk fort over
-                           i rolle som frontendansvarlig på
-                           scrumteamet. Står bak mesteparten av Ajax-
-                           funksjonaliteten i forbindelse med lagring
-                           og deling av annonser."
+             :employer :kodemaker
+             :summary "Utvikler på FINN.no's første sosiale medier satsning"
+             :description "Lagre annonser og del dem med venner og familie. En
+             satsning på samhandling på FINN.no, med stort fokus på
+             brukervennlighet og Ajax. Var med fra starten, jobbet med skisser
+             til løsning og databasestruktur. Gikk fort over i rolle som
+             frontendansvarlig på scrumteamet. Står bak mesteparten av Ajax-
+             funksjonaliteten i forbindelse med lagring og deling av annonser."
              :years [2008 2009]
              :tech [:javascript :css :html :ajax :jquery :jsp :java
-                    :cvs :jira :confluence]}]
+                    :cvs :jira :confluence]}
+
+            {:customer "Nordic Lottery Systems"
+             :employer :kodemaker
+             :summary "Internettspill"
+             :description "Utvikling av et nytt internettspill med internasjonal
+             målgruppe. Hadde veldig varierte oppgaver - fra webdesign og ajax,
+             via refaktorering av betalingsløsning i java, via domene-drevet
+             test-first parprogrammering, via ytelsesmåling med JMeter, og helt
+             til automatisering av deployment med ruby og capistrano."
+             :years [2007 2008]
+             :tech [:html :css :javascript :jquery :struts :java :eclipse :jmeter :ruby :capistrano :jboss :spring :hibernate :maven :oracle :jira :confluence]}
+
+            {:customer "OwnIT"
+             :employer :kodemaker
+             :summary "Koster Booking"
+             :description "Hadde ansvar for adminverktøy og integrasjon mot betalingsløsning for en booking-nettside."
+             :years [2006 2007]
+             :tech [:csharp :aspnet :java :visual-studio :mssql]}
+
+            {:customer "Nordic Lottery Systems"
+             :employer :kodemaker
+             :summary "Internettspill"
+             :description "Utvikling av et nytt internettspill med internasjonal målgruppe. Jobbet med webstandards, web accessibility og usability."
+             :years [2006]
+             :tech [:css :html :javascript :jquery :jsp :photoshop :jira :cvs :eclipse :jboss :maven :postgresql]}
+
+            {:customer "DAF Norge"
+             :employer :kodemaker
+             :summary "Håndtering av ettermarkedsavtaler"
+             :description "Et system som brukes av DAFs verksteder, kunder og
+             DAF sentralt for oversikt over lastebilenes reparasjoner, faste
+             servicer og tilhørende fakturagrunnlag. Lagde systemet fra bunnen
+             av; database, applikasjonslag, frontend, og integrasjon mot
+             delelagersystemet ABS."
+             :years [2006]
+             :tech [:csharp :aspnet :html :css :visual-studio :mssql :javascript]}
+
+            {:customer "Bravida"
+             :employer :synkarion
+             :summary "BraWeb Bestilling"
+             :description "BraWeb Bestilling: Et arbeidsverktøy for Bravidas
+             prosjektledere og montører, som lot Bravidas kunder holde seg
+             fortløpende oppdatert på status på sine bestillinger. Utviklet
+             systemet egenhendig - fra analyse og design, til implementasjon og
+             testing. Systemet hadde mange interaktive elementer a.la Ajax før
+             begrepet ble myntet."
+             :years [2005]
+             :tech [:csharp :aspnet :html :css :visual-studio :visual-source-safe :mssql :javascript]}
+
+            {:customer "Mobildata/Kjedehuset"
+             :employer :synkarion
+             :summary "Webbasert timeregistrering"
+             :description "Et timeregistrerings- og ressursstyringsverktøy på
+             web og til bruk på håndholdte enheter. Programmeringen ble
+             outsourcet til Bulgaria. Hadde sentral rolle i design av
+             databasemodell og brukergrensesnitt."
+             :years [2005]
+             :tech [:photoshop :visio]}
+
+            {:customer "ITEA NTNU"
+             :employer :study-part-time
+             :summary "Network Administration Visualized"
+             :description "Network Administration Visualized: Et visuelt
+             administrasjonsverktøy for nettverksdrift som brukes av alle
+             landets universiteter og over et dusin av landets høyskoler. Hadde
+             ansvar for utvikling av brukergrensesnitt, samt valg og bruk av
+             templating løsning."
+             :years [2003 2004]
+             :tech [:css :python :cheetah :html :photoshop :svn :postgresql]}
+
+            {:customer "Bits AS"
+             :employer :study-part-time
+             :summary "Fredrikstadnett"
+             :description "Fredrikstadnett: Fredrikstad Kommunes satsning på et
+             samlende nettsted for Fredrikstad. Utviklet webelementer som
+             debattsider, publiseringsverktøy og online chat."
+             :years [1999 2000]
+             :tech [:html :asp :sql :ms-access :javascript :visual-interdev]}]
 
  :endorsements [{:author "Owen Fraser-Green"
                  :title "Leder MyEnergy, Hafslund"
@@ -514,4 +778,17 @@
                          kunnskap rundt JavaScript/HTML/CSS. JavaScript-koden
                          til Magnar er fritatt for dårlig klipp-og-lim-kode, og
                          fungerer perfekt på alle plattformer! Sjekk ut hans
-                         omdømme på StackOverflow."}]}
+                         omdømme på StackOverflow."}]
+
+ :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
+ :education [{:institution "NTNU"
+              :years [1998 2005]
+              :subject "Sivilingeniør/Master Datateknikk"}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
+ }
