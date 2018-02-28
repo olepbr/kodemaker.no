@@ -20,6 +20,7 @@
                                          :blog-posts
                                          :screencasts
                                          :presentations
+                                         :appearances
                                          :open-source-projects
                                          :open-source-contributions
                                          :projects])
