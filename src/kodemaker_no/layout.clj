@@ -105,7 +105,6 @@
           [:span.nowrap "Orgnr. 982099595 "]
           [:div
            [:span.nowrap "Munkedamsveien 3b,"] " "
-           [:span.nowrap "Kommunenes hus,"] " "
            [:span.nowrap "0161 OSLO"]]
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
