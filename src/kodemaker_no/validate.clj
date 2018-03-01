@@ -127,6 +127,9 @@
    (optional-key :certifications) [{:name Str
                                     :year Num}]
 
+   (optional-key :domain-skills) [{:title Str
+                                   :description Str}]
+
    (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
 
 (def Tech

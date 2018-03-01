@@ -171,6 +171,10 @@
                          (:certifications person)
                          ["Kursnavn" "År"]
                          [#(f/to-html (:name %)) :year])
+          (table-section "Domenekunnskap"
+                         (:domain-skills person)
+                         ["Område" "Kjennskap"]
+                         [:title :description])
           (table-section "Språk"
                          (:languages person)
                          ["Språk" "Muntlig" "Skriftlig"]
