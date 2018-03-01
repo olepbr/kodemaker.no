@@ -56,11 +56,10 @@
                                          (into [] (range (first numbers) (inc (last numbers)))))
     :default [(parse-year period)]))
 
-(defn parse-project [raw]
-  (let [[customer period raw-desc] (map hf/hiccup-string (hf/hiccup-find [:td] raw))
-        [description raw-tech] (str/split raw-desc #"Teknologi:")]
-    {:customer customer
-     :years (parse-period period)
+(defn parse-project [[customer period raw-desc]]
+  (let [[description raw-tech] (str/split (:text raw-desc) #"Teknologi:")]
+    {:customer (:text customer)
+     :years (parse-period (:text period))
      :description (.trim description)
      :tech (when raw-tech
              (->> (str/split raw-tech #",")
@@ -68,21 +67,41 @@
                   (mapv #(or (techs %) (-> (.trim %)
                                            .toLowerCase
                                            (str/replace #" " "-")
+                                           (str/replace #"[\(\)]" "")
                                            keyword)))))}))
 
-(defn parse-open-source-projects [section]
-  (->> (hf/hiccup-find [:li] section)
-       (filter #(re-find #"^Utviklet" (hf/hiccup-string %)))
-       (mapv #(let [[_ _ _ link description] %]
-                {:url (:href (second link))
-                 :name (nth link 2)
-                 :description (str/replace description #"\s*med [^\.]+\.\s*" "")}))))
+(defn parse-col [td]
+  (if-let [link (hf/hiccup-find [:a] td)]
+    {:url (-> link first second :href)
+     :link-text (hf/hiccup-string link)
+     :text (hf/hiccup-string td)}
+    {:text (hf/hiccup-string td)}))
 
-(defn parse-education [raw]
-  (let [[institution period subject] (map hf/hiccup-string (hf/hiccup-find [:td] raw))]
-    {:institution institution
-     :years (parse-period period)
-     :subject subject}))
+(defn parse-tbody-rows [root]
+  (->> root
+       (hf/hiccup-find [:tbody :tr])
+       (filter #(= 3 (count (hf/hiccup-find [:td] %))))
+       (map #(map parse-col (hf/hiccup-find [:td] %)))))
+
+(defn parse-open-source-projects [section]
+  (if-let [lis (seq (hf/hiccup-find [:li] section))]
+    (->> (hf/hiccup-find [:li] section lis)
+         (filter #(re-find #"^Utviklet" (hf/hiccup-string %)))
+         (mapv #(let [[_ _ _ link description] %]
+                  {:url (:href (second link))
+                   :name (nth link 2)
+                   :description (str/replace description #"\s*med [^\.]+\.\s*" "")})))
+    (->> (parse-tbody-rows section)
+         (map (fn [[project year description]]
+                {:url (:url project)
+                 :name (:link-text project)
+                 :description (:text description)}))
+         (filter #(not (empty? (:name %)))))))
+
+(defn parse-education [[institution period subject]]
+  {:institution (:text institution)
+   :years (parse-period (:text period))
+   :subject (:text subject)})
 
 (defn parse-endorsements [section]
   (mapv (fn [author quote]
@@ -93,12 +112,15 @@
         (map hf/hiccup-string (hf/hiccup-find [:h3] section))
         (map hf/hiccup-string (hf/hiccup-find [:blockquote] section))))
 
-(defn ensure-cols [n rows]
-  (filter #(= n (count (hf/hiccup-find [:td] %))) rows))
-
 (defn qualifications-section [markup]
   (or (seq (hf/hiccup-find [:#kvalifikasjoner] markup))
       (find-section markup #"kvalifikasjoner")))
+
+(defn parse-presentation [[title event year]]
+  {:title (:text title)
+   :event (:text event)
+   :urls {:video (or (:url title) (:url event))}
+   :date (:text year)})
 
 (defn parse-cv [markup]
   (let [oss-section (find-section markup #"open source")]
@@ -111,14 +133,15 @@
                            (hf/hiccup-find [:li])
                            (mapv hf/hiccup-string))
       :projects (->> (find-section markup #"^prosjekter$")
-                     (hf/hiccup-find [:tbody :tr])
-                     (ensure-cols 3)
+                     parse-tbody-rows
                      (mapv parse-project))
       :open-source-projects (parse-open-source-projects oss-section)
       :education (->> (find-section markup #"^utdannelse$")
-                      (hf/hiccup-find [:tbody :tr])
-                      (ensure-cols 3)
+                      parse-tbody-rows
                       (mapv parse-education))
+      :presentations (->> (find-section markup #"foredrag")
+                          parse-tbody-rows
+                          (mapv parse-presentation))
       :endorsements (parse-endorsements (find-section markup #"^anbefalinger$"))}
      (parse-personals (->> (hf/hiccup-find [:#personal :dl] markup)
                            first
