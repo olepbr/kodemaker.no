@@ -7,7 +7,7 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w&sensor=false"></script>
 <script>
 google.maps.event.addDomListener(window, "load", function () {
-    var kmhq = new google.maps.LatLng(59.9080915, 10.7573193);
+    var kmhq = new google.maps.LatLng(59.914432, 10.731476);
     var map = new google.maps.Map(document.getElementById("map"), {
         center: kmhq,
         zoom: 15
@@ -16,13 +16,13 @@ google.maps.event.addDomListener(window, "load", function () {
     var marker = new google.maps.Marker({
         position: kmhq,
         map: map,
-        title: "<address>Dronning Eufemias gate 16, 0191 Oslo</address>",
+        title: "<address>Munkedamsveien 3, 0161 Oslo</address>",
         icon: document.getElementById("map-marker").src
     });
 });
 </script>
 
-Vår besøksadresse er Dronning Eufemias gate 16, 9. etasje. Henvendelse i resepsjonen.
+Vår besøksadresse er Munkedamsveien 3, 0161 Oslo. Henvendelse i resepsjonen.
 
 [Noen andre du vil snakke med?](/folk/)
 

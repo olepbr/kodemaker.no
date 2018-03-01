@@ -104,9 +104,9 @@
           [:strong.mrl (no-widows "Kodemaker Systemutvikling AS")] " "
           [:span.nowrap "Orgnr. 982099595 "]
           [:div
-           [:span.nowrap "Dronning Eufemias gate 16,"] " "
-           [:span.nowrap "Visma-bygget,"] " "
-           [:span.nowrap "0191 Oslo"]]
+           [:span.nowrap "Munkedamsveien 3b,"] " "
+           [:span.nowrap "Kommunenes hus,"] " "
+           [:span.nowrap "0161 OSLO"]]
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
            [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]
