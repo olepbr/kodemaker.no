@@ -1,5 +1,6 @@
 {:id :jsf
  :name "JavaServer Faces"
+ :type :framework
  :illustration "/photos/tech/jsf.png"
  :site "https://javaserverfaces.java.net/"
  :description

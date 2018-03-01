@@ -1,5 +1,6 @@
 {:id :stasis
  :name "Stasis"
+ :type :library
  :illustration "/photos/tech/stasis-square.svg"
  :site "https://github.com/magnars/stasis"
  :description "[Stasis](https://github.com/magnars/stasis) er et lite bibliotek

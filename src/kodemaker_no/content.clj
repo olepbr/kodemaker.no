@@ -36,4 +36,7 @@
    :raw-pages (stasis/slurp-directory "resources/raw" #"\.html$")
    :blog-posts (mapdown/slurp-directory "resources/blog/" #"\.md$")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")
-   :video-overrides (slurp-edn-map "resources/video-overrides.edn")})
+   :tech-types (slurp-edn-map "resources/tech-types.edn")
+   :video-overrides (slurp-edn-map "resources/video-overrides.edn")
+   :employers (slurp-edn-map "resources/employers.edn")
+   })

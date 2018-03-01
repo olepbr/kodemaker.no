@@ -1,5 +1,6 @@
 {:id :elixir
  :name "Elixir"
+ :type :proglang
  :illustration "/photos/tech/elixirlang-logo.png"
  :site "http://elixir-lang.org"
  :description

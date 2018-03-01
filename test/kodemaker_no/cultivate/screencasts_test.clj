@@ -54,9 +54,9 @@
 
   (fact
    "It includes the tech."
-   (map :tech screencasts) => (just [{:id :javascript, :name "Javascript"}]
-                                    [{:id :clojure, :name "Clojure"}
-                                     {:id :clojurescript, :name "Clojurescript"}]
+   (map :tech screencasts) => (just [{:id :javascript, :name "Javascript", :type nil}]
+                                    [{:id :clojure, :name "Clojure", :type nil}
+                                     {:id :clojurescript, :name "Clojurescript", :type nil}]
                                     :in-any-order)))
 
 (fact "Screencasts should be sorted by date and then name"

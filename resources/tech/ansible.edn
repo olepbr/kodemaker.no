@@ -1,5 +1,6 @@
 {:id :ansible
  :name "Ansible"
+ :type :devops
  :illustration "/photos/tech/ansible.png"
  :site "http://www.ansibleworks.com/"
  :description "Ansible er et provisjoneringsverktøy for helautomatisert oppsett

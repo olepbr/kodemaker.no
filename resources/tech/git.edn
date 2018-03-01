@@ -1,5 +1,6 @@
 {:id :git
  :name "Git"
+ :type :vcs
  :illustration "/photos/tech/git.svg"
  :site "http://git-scm.com/"
  :description "Git er et distribuert versjonskontrollsystem. Det er det klart

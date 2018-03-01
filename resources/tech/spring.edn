@@ -1,5 +1,6 @@
 {:id :spring
  :name "Spring"
+ :type :framework
  :illustration "/photos/tech/spring.png"
  :site "http://projects.spring.io/"
  :description "Når [Spring Framework](http://projects.spring.io/spring-framework/) dukket

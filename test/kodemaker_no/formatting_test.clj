@@ -38,6 +38,7 @@
       (comma-separated ["1" "2" "3" "4"]) => ["1" ", " "2" ", " "3" " og " "4"])
 
 (fact (year-range [2009]) => "2009")
+(fact (year-range [2009 :ongoing]) => "2009-")
 (fact (year-range [2009 2010]) => "2009-2010")
 (fact (year-range [2009 2010 2011]) => "2009-2011")
 (fact (year-range [2009 2011]) => "2009, 2011")

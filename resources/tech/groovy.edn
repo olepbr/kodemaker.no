@@ -1,5 +1,6 @@
 {:id :groovy
  :name "Groovy"
+ :type :proglang
  :illustration "/photos/tech/groovy.png"
  :site "http://www.groovy-lang.org/"
  :description "Groovy er et dynamisk språk for JVM'en. 

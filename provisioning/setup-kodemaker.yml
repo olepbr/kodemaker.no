@@ -102,6 +102,9 @@
    - name: Upload build-site script
      template: src=files/build-site.sh dest=/home/{{ansible_ssh_user}}/build-site.sh mode=755 owner={{ansible_ssh_user}} group=www
 
+   - name: Upload CV HTML -> PDF script
+     template: src=files/cv-html2pdf.js dest=/home/{{ansible_ssh_user}}/cv-html2pdf.js mode=755 owner={{ansible_ssh_user}} group=www
+
    - name: Upload build-queue script
      template: src=files/build-queue.js dest=/home/{{ansible_ssh_user}}/build-queue.js owner={{ansible_ssh_user}} group=www
      notify: restart build-queue
@@ -113,6 +116,24 @@
        - mail-sender.js
        - send-mail.js
      notify: restart mail-sender
+
+   - name: Check if Prince is installed
+     stat:
+       path: /home/deploy/prince-8.0/bin/prince
+     register: prince_stat
+
+   - name: Unpack Prince tarball
+     unarchive:
+       src: files/prince-8.0.tar.gz
+       dest: /home/deploy
+       owner: deploy
+     when: prince_stat.stat.exists == False
+
+   - name: Install Prince
+     shell: echo "/home/deploy/prince" | ./install.sh
+     args:
+       chdir: /home/deploy/prince-8.0
+     when: prince_stat.stat.exists == False
 
    - name: Create SSH directory
      file: state=directory path=/home/{{ansible_ssh_user}}/.ssh/ owner={{ansible_ssh_user}} mode=0700

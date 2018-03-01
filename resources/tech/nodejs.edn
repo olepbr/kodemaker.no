@@ -1,5 +1,6 @@
 {:id :nodejs
- :name "Node.JS"
+ :name "Node.js"
+ :type :proglang
  :illustration "/photos/tech/node.jpg"
  :site "http://nodejs.org/"
  :description "Node.JS kombinerer den svært raske JavaScript-motoren fra Chrome,

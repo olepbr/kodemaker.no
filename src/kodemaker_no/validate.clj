@@ -1,11 +1,12 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num Any pred both]]
-            [clj-time.format :refer [parse formatters]]))
+  (:require [clj-time.format :refer [parse formatters]]
+            [schema.core :refer [optional-key validate either Str Keyword Num Any pred both enum conditional]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
+(def YearRange [(conditional number? Num keyword? (enum :ongoing))])
 
 (def Person
   {:id ID
@@ -13,6 +14,7 @@
    :title Str
    :start-date Str
    :description Str ;; Skrives i tredjeperson, alt annet i førsteperson
+   (optional-key :cv/description) Str ;; Hvis du ønsker en annen/lengre beskrivelse på CV-en
    (optional-key :administration?) Boolean
    (optional-key :quit?) Boolean
 
@@ -55,17 +57,12 @@
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
                                    :blurb Str
                                    :tech [ID]
-                                   (optional-key :date) Date;; iso-8601 yyyy-mm-dd
+                                   (optional-key :event) Str ;; Konferansenavn etc
+                                   (optional-key :date) Date ;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
-                                          (optional-key :source) URL}  ;; må ha minst en av disse URLene
+                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
-
-   (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
-                                 :blurb Str
-                                 :tech [ID]
-                                 (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
-                                 :url URL}]
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner
                               :description Str
@@ -74,6 +71,17 @@
                               :tech [ID]
                               :location {:title Str :url URL} ;; Eks {:title "JavaZone (Oslo)", :url "http://javazone.no"}
                               :date Date}] ;; iso-8601 yyyy-mm-dd
+
+   (optional-key :appearances) [{:title Str ;; Mindre profilerte kurs/workshops/foredrag til CV-en
+                                 :event Str
+                                 :date Date ;; iso-8601 yyyy-mm-dd
+                                 :tech [ID]}]
+
+   (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
+                                 :blurb Str
+                                 :tech [ID]
+                                 (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
+                                 :url URL}]
 
    (optional-key :open-source-projects) [{:url URL
                                           :name Str
@@ -85,19 +93,63 @@
                                                :tech [ID]}] ;; sortert under første tech
 
    (optional-key :projects) [{:customer Str
-                              :description Str
-                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]
+                              (optional-key :cv/customer) Str
+                              (optional-key :summary) Str
+                              (optional-key :employer) ID
+                              (optional-key :description) Str
+                              (optional-key :cv/description) Str
+                              (optional-key :exclude-from-profile?) Boolean
+                              :years YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str ;; tittel, firma
-                                  (optional-key :photo) Path}]})
+                                  (optional-key :photo) Path}]
+
+   ;; For CV-er
+   (optional-key :born) Num
+   (optional-key :relationship-status) Str
+   (optional-key :education-summary) Str
+   (optional-key :experience-since) Num
+   (optional-key :qualifications) [Str]
+   (optional-key :innate-skills) [ID] ;; Techs du vil ha lista på CV-en men som du ikke har tatt deg
+                                      ;; bryet å knytte til et prosjekt av noe slag
+
+   (optional-key :education) [{:institution Str ;; Utdanning
+                               :years YearRange
+                               :subject Str}]
+
+   (optional-key :languages) [{:language Str
+                               :orally (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")
+                               :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
+
+   (optional-key :certifications) [{:name Str
+                                    :year Num}]
+
+   (optional-key :domain-skills) [{:title Str
+                                   :description Str}]
+
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
 
 (def Tech
   {:id ID
    :name Str
    :description Str
+   :type (enum :proglang
+               :vcs
+               :methodology
+               :devtools
+               :library
+               :framework
+               :server
+               :database
+               :devops
+               :os
+               :frontend
+               :specification
+               :tool
+               :other)
    (optional-key :illustration) Str
    (optional-key :site) URL
    (optional-key :ad) {:heading Str
@@ -137,6 +189,8 @@
              :references {Path [Section]}
              :raw-pages {Path Str}
              :tech-names {ID Str}
+             :tech-types {ID ID}
              :blog-posts {Path BlogPost}
-             :video-overrides {ID VideoOverride}}
+             :video-overrides {ID VideoOverride}
+             :employers {ID Str}}
             content))

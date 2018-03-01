@@ -1,5 +1,6 @@
 {:id :emacs
  :name "Emacs"
+ :type :devtools
  :illustration "/photos/tech/emacs.svg"
  :site "http://www.gnu.org/software/emacs/"
  :description

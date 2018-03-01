@@ -1,5 +1,6 @@
 {:id :gradle
  :name "Gradle"
+ :type :devtools
  :illustration "/photos/tech/gradle-sq.svg"
  :site "http://www.gradle.org"
  :description "Gradle er et glitrende verktøy for automatisering av bygg.

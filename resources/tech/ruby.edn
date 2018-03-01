@@ -1,5 +1,6 @@
 {:id :ruby
  :name "Ruby"
+ :type :proglang
  :illustration "/photos/tech/ruby.png"
  :site "https://www.ruby-lang.org/en/"
  :description "Ruby er et dynamisk, interpretert programmeringsspråk.

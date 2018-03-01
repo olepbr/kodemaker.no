@@ -1,5 +1,6 @@
 {:id :go
  :name "Go"
+ :type :proglang
  :illustration "/photos/tech/go.png"
  :site "http://golang.org/"
  :description

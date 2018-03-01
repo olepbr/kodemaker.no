@@ -1,5 +1,6 @@
 {:id :grails
  :name "Grails"
+ :type :framework
  :illustration "/photos/tech/grails.png"
  :site "https://grails.org/"
  :description "Grails er et fullstack rammeverk på javaplattformen som opprinnelig var

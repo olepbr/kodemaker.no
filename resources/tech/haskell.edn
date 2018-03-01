@@ -1,5 +1,6 @@
 {:id :haskell
  :name "Haskell"
+ :type :proglang
  :illustration "/photos/tech/haskell.png"
  :site "http://www.haskell.org/"
  :description

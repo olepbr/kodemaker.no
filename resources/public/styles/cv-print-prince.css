@@ -1,0 +1,133 @@
+/*****************************************************************
+ * Print only formatting
+ */
+
+
+a:link, a:visited {
+     color: #781351
+}
+
+.page-break {
+    clear: both;
+    background: black;
+    color: black;
+    display:block;
+    page-break-before:always;
+}
+
+h1, h2, h3, h4,
+h5, h6, thead, header {
+    page-break-after: avoid;
+}
+
+table tr, ul, ol {
+    page-break-inside: avoid;
+}
+
+blockquote {
+    page-break-inside: avoid;
+}
+
+#logo {
+    margin-top: 2em;
+}
+
+#personal {
+    height: 70px;
+    margin-left: 400px;
+}
+thead {display: table-header-group;}
+
+body {
+    font-color: black;
+    font-size: 14px;
+}
+body > header {
+    font-size: 14px;
+}
+
+p {
+    widows: 3;
+    orphans: 3;
+}
+
+footer {
+    display: block;
+    height: 2em;
+    position: fixed;
+}
+
+
+body {
+    padding-right: 10em;
+}
+
+#picture > img {
+    height: 150px;
+}
+#logo .favicon {
+    width: 27px;
+}
+#logo .kodemaker {
+    width: 153px;
+}
+#personal dt, #personal dd {
+    margin-bottom: 4px; /* WTF */
+}
+footer {
+    display: none;
+}
+
+@page {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+
+    @top-left {
+        content: "";
+    }
+    @top-right {
+        content: "";
+    }
+    @bottom-center {
+        clear: both;
+        background: black;
+        color: white;
+        bottom: 0;
+        margin-bottom: 1em;
+        font-face: Arial;
+        font-size: 11px;
+        width: 100%;
+        content: "www.kodemaker.no * +47 2282 2080 * Øvre Slottsgate 7, 0157 Oslo";
+    }
+    @bottom-left {
+        content: "";
+    }
+    @bottom-right {
+        content: "";
+    }
+}
+@page :first {
+    margin-top: 0;
+}
+
+
+/* failed attempts...
+}
+@top-left{
+font-family: Helvetica, Arial, sans-serif;
+font-size: 18pt;
+font-weight: bolder;
+content: "Test @top-left";
+}
+
+@page {
+    padding: 0;
+}
+
+html {
+    margin: -1em;
+}
+*/

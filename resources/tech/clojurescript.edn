@@ -1,5 +1,6 @@
 {:id :clojurescript
  :name "ClojureScript"
+ :type :proglang
  :illustration "/photos/tech/cljs.svg"
  :site "https://github.com/clojure/clojurescript"
  :description "ClojureScript er en kompilator for [Clojure](/clojure/)

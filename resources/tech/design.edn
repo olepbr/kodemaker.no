@@ -1,5 +1,6 @@
 {:id :design
  :name "Design"
+ :type :other
  :illustration "/photos/tech/design.jpg"
  :description "
 > There are two ways of constructing a software design: One way is to make it so

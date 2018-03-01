@@ -1,5 +1,6 @@
 {:id :wicket
  :name "Wicket"
+ :type :framework
  :illustration "/photos/tech/wicket.svg"
  :site "https://wicket.apache.org/"
  :description "Wicket er et web-rammeverk med fokus på komponenter og

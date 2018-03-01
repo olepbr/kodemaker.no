@@ -13,7 +13,7 @@ log () {
 
 if [ ! -d "kodemaker.no" ]; then
     git clone https://github.com/kodemaker/kodemaker.no.git
-    changed=1
+    FORCE=1
 fi
 
 cd kodemaker.no
@@ -34,6 +34,7 @@ else
         if [ $? -eq 0 ]; then
             log "Building"
             ../bin/lein build-site
+            PRINCE_PATH=/users/deploy/prince/bin node ../cv-html2pdf.js
             if [ $? -eq 0 ]; then
                 log "Publishing"
                 rm -rf /var/www/kodemaker.no/current

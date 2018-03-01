@@ -99,7 +99,8 @@
      (throw (ex-info (str "Unknown section type " (:type section)) section)))])
 
 (defn render-page [page request]
-  (if (:sections page)
-    (with-layout request page
-      (map render-section (:sections page)))
-    (old/render-page page request)))
+  (cond
+    (:sections page) (with-layout request page
+                       (map render-section (:sections page)))
+    (:layout page) (with-layout request page (:body page))
+    :default (old/render-page page request)))

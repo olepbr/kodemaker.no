@@ -1,5 +1,6 @@
 {:id :ractive
  :illustration "/photos/tech/ractive.png"
+ :type :library
  :site "http://ractive.js.org/"
  :name "Ractive.js"
  :description "Ractive.js er et [JavaScript](/javascript/)-bibliotek for

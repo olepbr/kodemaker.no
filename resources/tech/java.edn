@@ -1,5 +1,6 @@
 {:id :java
  :name "Java"
+ :type :proglang
  :illustration "/photos/tech/java.svg"
  :site "http://docs.oracle.com/javase/8/"
  :description

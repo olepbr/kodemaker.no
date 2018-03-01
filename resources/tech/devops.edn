@@ -1,5 +1,6 @@
 {:id :devops
  :name "DevOps"
+ :type :methodology
  :site "http://en.wikipedia.org/wiki/DevOps"
  :description "DevOps-bevegelsen jobber for å redusere den tradisjonelle motsetningen
                mellom endringsfokuset i softwareutvikling og stabilitetsfokuset i

@@ -2,8 +2,11 @@
  :name ["Christian" "Johansen"]
  :title "Kodemaker"
  :start-date "2013-11-01"
- :description " Christian er en allsidig, engasjert og produktiv programmerer
-    med erfaring og interesse for alt fra infrastruktur og drift, databaser og
+ :experience-since 2002
+ :born 1982
+ :relationship-status "Gift, 2 barn"
+ :description "Christian er en allsidig, engasjert og produktiv programmerer med
+    erfaring og interesse for alt fra infrastruktur og drift, databaser og
     backends, til frontend webutvikling. Han har lang erfaring med systemer og
     prosesser for continuous delivery/continuous integration, samt prinsipper
     for å kjøre applikasjoner i skyen.
@@ -12,6 +15,27 @@
     kvass programmerer som tar design, testing og kvalitet seriøst. Han trives
     godt både alene og i team, og fungerer både som humørspreder og kritisk røst
     i samarbeid med andre."
+
+ :cv/description "Christian er en allsidig, engasjert og produktiv programmerer
+    med erfaring og interesse for alt fra infrastruktur og drift, databaser og
+    backends, til frontend webutvikling. Han har lang erfaring med systemer og
+    prosesser for continuous delivery/continuous integration, samt prinsipper
+    for å kjøre applikasjoner i skyen.
+
+    Christian elsker å løse problemer, og brenner for å løse dem med så lite
+    programvare som mulig. Han er alltid på utkikk etter å redusere kompleksitet
+    for å sikre lang levetid og reduserte kostnader for drift av programvare.
+
+    Gjennom år med kurs og foredrag har Christian tilegnet seg gode evner til å
+    dele av sin kunnskap, noe han aktivt gjør i alle prosjekter. Han skriver
+    godt, og dokumenterer flittig løsningene han leverer fra seg.
+
+    Christian var tidlig ute som moderne frontend-utvikler. Han laget CSS for
+    Norges første offentlige nettsted med ren CSS-layout
+    (http://www.apollon.uio.no/) og har vært \"frontend-mann\" for utallige små og
+    store prosjekter, samt skrevet en bok om test-drevet utvikling med JavaScript."
+
+ :innate-skills [:terminal :browser-devtools :haproxy :svn :osx :android :ios]
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
@@ -24,6 +48,12 @@
  :tech {:using-at-work [:aws :docker :concourse :bash]
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
         :want-to-learn-more [:haskell :go]}
+
+ :qualifications ["Kreativ, smidig, entusiastisk og løsningsorientert"
+                  "Mye praktisk erfaring med automasjon av bygg og deploy (CI/CD)"
+                  "Mye praktisk erfaring med responsiv design"
+                  "Mye praktisk erfaring med mikrotjenester"
+                  "Tar oppgaver i hele stacken, fra infrastruktur, via databaser og backend, til arkitektur, implementasjon og ytelse i frontend"]
 
  :side-projects [{:title "Learning Functional JavaScript"
                   :description "Et grundig videokurs i funksjonell programmering
@@ -153,7 +183,7 @@
               klienten? Jeg vil så absolutt påstå at det gjør det, og denne
               artikkelen belyser hvordan man kan angripe klient-spesifikke
               problemer i JavaScript med gode design-prinsipper i hånda."
-               :tech [:javascript :dom]}
+               :tech [:javascript]}
               {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
@@ -167,7 +197,7 @@
                som gjør det å jobbe med Clojure til en fantastisk god
                opplevelse"
                :tech [:clojure]}
-               {:url "http://cjohansen.no/an-introduction-to-elisp/"
+              {:url "http://cjohansen.no/an-introduction-to-elisp/"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little
@@ -183,16 +213,46 @@
                :tech [:lisp :elisp :emacs]}]
 
  :projects [{:customer "Tine Husdyrfag"
-             :description "Etablering av ny skyplatform og utvikling av applikasjoner på denne"
-             :tech [:aws :concourse :clojurescript :go :docker :nginx :material-ui :react]
-             :years [2017]}
+             :employer :kodemaker
+             :summary "Utvikling av skyplatform på AWS for produsent-tjenester"
+             :description "Tine Husdyrfag utvikler tjenester for Tines
+            produsenter. Prosjektet utvikler ny skyplatform på Amazon Web
+            Services (AWS) for morgendagens tjenester.
+
+            Design og oppsett av nettverksløsning. Automatisering av oppsett og
+            utforming av applikasjonsplatform med AWS Cloudformation, bash og
+            annet. Utvikling av funksjonalitet med AWS Lambda, Api Gateway,
+            DynamoDB, Kinesis og mer. Oppsett for frontendapplikasjoner med
+            S3/Cloudfront/Route 53. Jobbet med sikkerhetsløsning basert på Oauth
+            2.0 og OpenId Connect. Utviklet løype for CI/CD basert på Concourse."
+             :tech [:aws :concourse :docker :bash :oidc :nginx :go :material-ui
+                    :dynamodb :aws-iam :aws-kinesis :aws-lambda :aws-api-gateway
+                    :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
+                    :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
+                    :alpine :ubuntu]
+             :years [2017 :ongoing]}
             {:customer "Eventum.no"
-             :description "Utvikling av backend og frontend for tjenesten
-             eventum.no. Automatisering av server-oppsett, bygg og deployment."
+             :employer :kodemaker
+             :summary "eventum.no, eventum.com"
+             :description "Eventum (eventum.no/eventum.com) er \"Airbnb for
+             event-lokaler\" - møterom, konferanselokaler,
+             restauranter/hoteller/slott til bursdag, bryllup og andre
+             sammenkomster samles på et sted og gjør det lett for arrangører å
+             finne og sammenligne tilbud på lokaler.
+
+             Jeg automatiserte oppsett og deployment av løsningen med Ansible,
+             Docker og bash. Jobbet med videreutvikling av eksisterende
+             tjeneste. Designet arkitektur for og utviklet både backend og
+             frontend for ny spesialisert kommunikasjonsløsning for arrangør og
+             utleier. Utviklet ny sikkerhetsløsning basert på OAuth 2.0 og
+             OpenId Connect."
              :tech [:datomic :clojure :clojurescript :ansible :docker :javascript :nodejs
-                    :react :elasticsearch :centos :auth0 :aws-s3]
+                    :react :elasticsearch :centos :auth0 :oidc :aws-iam :aws-s3 :leiningen :asana
+                    :maven :haproxy :nginx :datascript :oauth2 :bash]
              :years [2017]}
             {:customer "NRK Origo - Potion"
+             :employer :kodemaker
+             :summary "Origo/Potion"
              :description "Søk i NRKs enorme mengder videoklipp - både
             nettklipp, ting som har gått på TV og råstoff. Utviklet en
             søkekomponent for 'smart søk' som gjør utstrakt bruk av
@@ -201,18 +261,23 @@
             implementert i Elasticsearch gjennom en node.js/Express webserver,
             og med UI skrevet i React. UI-et ble skilt ut som et bibliotek for
             intern gjenbruk, og er nå i bruk i flere applikasjoner."
-             :tech [:javascript :elasticsearch :nodejs :react :docker :mesos]
+             :tech [:javascript :elasticsearch :nodejs :react :docker :mesos
+                    :octopus :teamcity :jira]
              :years [2015 2016]}
             {:customer "NRK Radioarkiv"
+             :employer :kodemaker
+             :summary "Radioarkiv"
              :description "Implementerte nytt design for NRKs interne
              Radioarkiv, som brukes internt for research og gjenbruk av
              arkivmatriale. Designet ble implementert i form av en styleguide
              som senere ble den sentrale UI-komponenten i paraply-prosjektet
              Origo, som favner alle NRKs egenproduserte systemer rettet mot
              interne arbeidsflyter."
-             :tech [:javascript :css :rwd]
+             :tech [:javascript :css :responsive-design :less]
              :years [2015]}
             {:customer "NRK Origo"
+             :employer :kodemaker
+             :summary "Redigeringsstøtte"
              :description "Laget en lettvekts bilderedigeringskomponent (litt
              effekter, crop, skalering, panorering) med web-teknologi.
              Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
@@ -220,6 +285,8 @@
              :tech [:javascript :webgl :cef :angularjs :jasmine :karma :nodejs]
              :years [2014]}
             {:customer "NRK - Bidrag"
+             :employer :kodemaker
+             :summary "Bidrag"
              :description "Laget en app som viser en strøm av bidrag som NRKs
              journalister og andre ansatte sender inn fra 'felten'. Brukes
              internt i NRK til å både få oversikt over hva som kommer inn, men
@@ -228,6 +295,8 @@
              :tech [:javascript :react :nodejs :buster-js :express-js :mysql :jade :compass]
              :years [2014]}
             {:customer "Schibsted Payment ID (SPiD)"
+             :employer :kodemaker
+             :summary "Løsning for API-dokumentasjon"
              :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
              gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
              Sidene blir bygget opp basert på informasjon hentet rett fra SPiD
@@ -236,34 +305,131 @@
              :tech [:clojure :responsive-design :stasis :optimus :midje]
              :years [2014]}
             {:customer "Schibsted Payment ID (SPiD)"
+             :employer :kodemaker
+             :summary "Frontend for ny innlogging"
              :description "Prototypet ny innlogging, registrering og kjøpsflyt
              for SPiD, med fokus på brukervennlighet, støtte for mobil, og
              forenkling av tekniske løsninger."
-             :tech [:html :css :responsiv-design :javascript :grunt :mocha :chai]
+             :tech [:html :css :responsive-design :javascript :grunt :mocha :chai]
              :years [2014]}
-            {:customer "FINN Oppdrag"
-             :description "Klargjorde et avansert registreringsskjema
-             for utrulling til flere markedsplasser ved å modularisere
-             koden til komponenter som kunne settes sammen til
-             forskjellige skjemaer."
-             :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]
-             :years [2011 2012]}
             {:customer "FINN Småjobber"
+             :employer :kodemaker
+             :summary "FINN Småjobber"
              :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet
                            med lanseringen av løsningen rett før jul 2013. Har
                            jobbet med hele løsningen, men med fokus på frontend.
                            Implementert nytt ajax-søk med React.JS og hjulpet
                            andre på teamet med å styrke sin frontend-kompetanse."
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
-             :years [2013 2014]}]
+             :years [2013 2014]}
+            {:customer "Gitorious AS"
+             :summary "Gitorious-programvaren"
+             :employer :gitorious
+             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake]
+             :years [2011 2013]}
+            {:customer "Gitorious AS"
+             :employer :gitorious
+             :summary "Drift gitorious.org"
+             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql]
+             :years [2011 2013]}
+            {:customer "Programutvikling"
+             :employer :gitorious
+             :summary "Månedlige kurs i JavaScript og TDD med JavaScript"
+             :tech [:javascript :tdd]
+             :years [2011 2015]}
+            {:customer "FINN Oppdrag"
+             :employer :kodemaker
+             :summary "FINN Oppdrag"
+             :description "Klargjorde et avansert registreringsskjema
+             for utrulling til flere markedsplasser ved å modularisere
+             koden til komponenter som kunne settes sammen til
+             forskjellige skjemaer."
+             :tech [:javascript :js-test-driver :sinon :spring-mvc :java :junit]
+             :years [2011 2012]}
+            {:customer "Nordea"
+             :employer :shortcut
+             :summary "Nordea Android app"
+             :tech [:android :java :eclipse]
+             :years [2010]}
+            {:customer "Adecco"
+             :employer :shortcut
+             :summary "Adecco Android app"
+             :tech [:android :java :eclipse]
+             :years [2010]}
+            {:customer "Telenor"
+             :employer :shortcut
+             :summary "Ny frontend for telenor.no"
+             :tech [:html :css :javascript :ruby]
+             :years [2010 2011]}
+            {:customer "Shortcut"
+             :employer :shortcut
+             :summary "Diverse interne apper"
+             :tech [:ruby]
+             :years [2009 2011]}
+            {:customer "Apotek 1"
+             :employer :ixd
+             :summary "konkurranse.apotek1.no"
+             :tech [:ruby :rails :html :css :javascript :capistrano :ubuntu]
+             :years [2009]}
+            {:customer "Telenor"
+             :employer :ixd
+             :summary "Ny frontend for online.no"
+             :tech [:html :css :javascript :ruby]
+             :years [2009]}
+            {:customer "IXD"
+             :employer :ixd
+             :summary "webdagene.no"
+             :tech [:php :ezpublish :mysql :html :css :javascript]
+             :years [2007 2008]}
+            {:customer "Storebrand"
+             :employer :ixd
+             :summary "Ny frontend for storebrand.no"
+             :tech [:html :css :javascript]
+             :years [2007 2008]}
+            {:customer "IXD"
+             :employer :ixd
+             :summary "reiseliv.no"
+             :tech [:html :css :javascript :ezpublish :mysql]
+             :years [2007 2009]}
+            {:customer "Storebrand"
+             :employer :ixd
+             :summary "Storebrand Skadeforsikring"
+             :tech [:html :css :javascript]
+             :years [2006 2007]}
+            {:customer "Cosmopolite"
+             :employer :self-employed
+             :summary "cosmopolite.no"
+             :tech [:html :css :javascript :ezpublish]
+             :years [2006 2013]}
+            {:customer "IXD"
+             :employer :self-employed
+             :summary "Diverse mindre websider basert på eZ Publish"
+             :tech [:html :css :javascript :ezpublish :ubuntu :windows :mysql :php]
+             :years [2005 2009]}
+            {:customer "Rarelink"
+             :employer :self-employed
+             :summary "rarelink.no"
+             :tech [:java :ant :maven :docker :centos :ansible :mysql]
+             :years [2005 :ongoing]}
+            {:customer "IXD"
+             :employer :self-employed
+             :summary "flysiden.no"
+             :tech [:php :javascript :mysql :html :css]
+             :years [2004 2005]}
+            {:customer "Universitetet i Oslo"
+             :employer :study-part-time
+             :summary "apollon.uio.no"
+             :tech [:html :css :php]
+             :years [2002 2003]}]
 
- :presentations [{:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
+ :presentations [{:title "I put 7 years of meal data in Datomic - Here's what I learned"
                   :blurb "Datomic is an append-only database, designed from the
                   ground up with modern applications and hardware in mind. It
                   never loses data, it has an RDF-like approach to schemas, it's
                   really fast, and it has a powerful query language borrowed
                   from Prolog that expresses queries as data structures. In
                   short: it's pretty awesome."
+                  :event "JavaZone"
                   :tech [:datomic :clojure]
                   :date "2017-09-14"
                   :urls {:video "https://2017.javazone.no/program/b334906441754e7b9b282dfdf533738b"}}
@@ -274,6 +440,7 @@
                   oppgradering av språket, og i dette foredraget gjennomgås en
                   hel haug med eksempler på nye features og hvordan de kan
                   brukes. Alt kodes live med hjelp av Emacs."
+                  :event "JavaZone"
                   :tech [:javascript]
                   :date "2015-09-10"
                   :urls {:video "https://vimeo.com/album/3556815/video/138956041"}}
@@ -283,8 +450,21 @@
                   immutability for UI-programmering? Dette foredraget gir deg
                   svar på disse spørsmålene, med mer til."
                   :tech [:javascript :react :immutability]
+                  :event "NDC"
                   :date "2015-06-19"
                   :urls {:video "https://vimeo.com/131643024"}}
+                 {:title "Immutable JavaScript"
+                  :blurb "When it comes to functional programming techniques
+                  seeing widespread adoption in the JavaScript community,
+                  immutability is a strong contender for \"next in line\". In
+                  this talk I'll show you what immutability is all about, why
+                  it's useful, and how to work with it. We'll even put
+                  immutability to work in a React app and observe how we can
+                  reduce complexity while increasing performance."
+                  :date "2015-05-22"
+                  :event "Web Rebels"
+                  :tech [:javascript :immutability]
+                  :urls {:video "https://vimeo.com/128790457"}}
                  {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Se Christian og Magnar parprogrammere på nettspill
                   med Clojure og ClojureScript.
@@ -295,6 +475,7 @@
                   funksjonell programmering kan muligens få eksplodert hodet.
                   Definitivt live koding."
                   :date "2014-09-10"
+                  :event "JavaZone"
                   :tech [:clojure :clojurescript :react]
                   :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
                  {:title "Functional UI Programming"
@@ -303,6 +484,7 @@
                   live-koding av minesveiper med ClojureScript og Om (en
                   React-wrapper)."
                   :date "2014-05-13"
+                  :event "flatMap(Oslo)"
                   :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
                   :tech [:javascript :clojurescript :react :om]}
                  {:title "Zombie TDD: Live parprogrammering"
@@ -311,12 +493,14 @@
                           hvordan to typer som digger JavaScript
                           angriper problemer og gjør koden testbar."
                   :date "2012-09-12"
+                  :event "JavaZone"
                   :tech [:javascript :tdd :testing]
                   :urls {:video "http://vimeo.com/49485653"}}
                  {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
                   :date "2012-06-11"
+                  :event "NDC"
                   :urls {:video "http://vimeo.com/43808808"}
                   :tech [:javascript]
                   :direct-link? true}
@@ -325,12 +509,14 @@
                   Foredraget er en times live-kode-sesjon der jeg lager et
                   autocomplete/type-ahead søk, test-first."
                   :date "2011-06-11"
+                  :event "NDC"
                   :urls {:video "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"}
                   :tech [:javascript :design :testing]}
                  {:title "JavaScript design and architecture"
                   :blurb "En liten inspirasjonsprat om å finne gode
                   abstraksjoner for frontend-programmering"
                   :date "2011-09-07"
+                  :event "JavaZone"
                   :urls {:video "http://vimeo.com/28760470"
                          :slides "http://cjohansen.no/talks/2011/javazone-js-design"}
                   :tech [:javascript :design]}
@@ -341,10 +527,356 @@
                           noen av de vanligste misforståelsene, og prøver
                           gjennom eksempler å oppgradere publikums JavaScript-kunnskap."
                   :date "2011-09-07"
+                  :event "JavaZone"
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
                   :tech [:javascript]}
                  ]
+
+ :appearances [{:title "Datomic"
+                :event "Internforedrag i Tine"
+                :tech [:datomic :clojure]
+                :date "2017-11-14"}
+               {:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
+                :event "NDC Oslo"
+                :tech [:datomic :clojure]
+                :date "2017-06-14"}
+               {:title "Datamodellering med Datomic"
+                :event "Internforedrag i Kodemaker"
+                :tech [:datomic :clojure]
+                :date "2017-01-14"}
+               {:title "Webutvikling med React"
+                :event "Intern workshop i NRK"
+                :tech [:javascript :react]
+                :date "2016-06-10"}
+               {:title "JavaScript og React, 2 dagers kurs"
+                :event "Internt i Conax"
+                :tech [:javascript :react]
+                :date "2016-04-22"}
+               {:title "The Imminent Future of JavaScript"
+                :event "JavaZone Academy"
+                :tech [:javascript]
+                :date "2016-02-16"}
+               {:title "Webutvikling med React"
+                :event "Internforedrag i Webstep"
+                :tech [:javascript :react]
+                :date "2016-02-03"}
+               {:title "The Imminent Future of JavaScript"
+                :event "Framsia"
+                :tech [:javascript]
+                :date "2015-11-25"}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :tech [:javascript]
+                :date "2015-11-24"}
+               {:title "TDD og Arkitektur med JavaScript"
+                :event "Intern workshop i NRK"
+                :tech [:javascript :tdd :react]
+                :date "2015-11-10"}
+               {:title "JavaScript for programmers, 2-dagers kurs"
+                :event "Cisco"
+                :tech [:javascript]
+                :date "2015-11-09"}
+               {:title "JavaScript Decoupled"
+                :event "Foredrag hos Capra Consulting"
+                :tech [:javascript]
+                :date "2015-10-30"}
+               {:title "Test-Driven JavaScript"
+                :event "Foredrag hos Iterate"
+                :tech [:javascript]
+                :date "2016-10-21"}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :tech [:javascript]
+                :date "2015-09-22"}
+               {:title "JavaScript for Programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :tech [:javascript]
+                :date "2015-02-25"}
+               {:title "Thinking Outside the DOM"
+                :event "NDC London"
+                :tech [:javascript]
+                :date "2014-12-04"}
+               {:title "JavaScript for Programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :tech [:javascript]
+                :date "2014-11-05"}
+               {:title "Test-Drevet JavaScript, 1-dags workshop"
+                :event "Internt i Visma"
+                :tech [:javascript :tdd]
+                :date "2014-09-01"}
+               {:title "JavaScript for Developers, 3-dagers kurs"
+                :event "Programutvikling"
+                :tech [:javascript]
+                :date "2014-08-11"}
+               {:title "Functional UI Programming"
+                :event "NDC 2014, foredrag om React.js, ClojureScript og Om"
+                :date "2014-06-20"
+                :tech [:clojurescript :om :react]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2014-04-05"
+                :tech [:javascript]}
+               {:title "Party in the front, party in the back"
+                :event "Booster conf, Bergen - node.js og React.js workshop"
+                :date "2014-04-01"
+                :tech [:nodejs :react]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2014-02-01"
+                :tech [:javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-12-01"
+                :tech [:javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-10-01"
+                :tech [:javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-09-01"
+                :tech [:javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-08-01"
+                :tech [:javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers internkurs"
+                :event "Startsiden.no"
+                :date "2013-04-10"
+                :tech [:javascript :tdd]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-04-01"
+                :tech [:javascript :tdd]}
+               {:title "JavaScript for programmers, 3-dagers internkurs"
+                :event "Startsiden.no"
+                :date "2013-03-10"
+                :tech [:javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-03-01"
+                :tech [:javascript]}
+               {:title "Unit testing with Buster.JS"
+                :event "Capra"
+                :date "2013-01-10"
+                :tech [:buster-js :javascript :tdd]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2013-01-05"
+                :tech [:javascript]}
+               {:title "Introduction to Git, 1-dags kurs"
+                :event "Nets"
+                :date "2013-01-01"
+                :tech [:git]}
+               {:title "Pure, functional JavaScript"
+                :event "Felix Aker Brygge"
+                :date "2012-12-01"
+                :tech [:javascript :functional-programming]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-11-01"
+                :tech [:javascript]}
+               {:title "Automated testing and JavaScript"
+                :event "Mesan"
+                :date "2012-11-10"
+                :tech [:tdd :javascript]}
+               {:title "Pure, functional JavaScript"
+                :event "Øredev"
+                :date "2012-11-01"
+                :tech [:functional-programming :javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-10-01"
+                :tech [:javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-09-10"
+                :tech [:javascript :tdd]}
+               {:title "Pure, functional JavaScript"
+                :event "JavaZone"
+                :date "2012-09-08"
+                :tech [:functional-programming :javascript]}
+               {:title "JavaScript Basics"
+                :event "InMeta"
+                :date "2012-09-07"
+                :tech [:javascript]}
+               {:title "Automated testing and JavaScript"
+                :event "NIFSL"
+                :date "2012-09-06"
+                :tech [:javascript :tdd]}
+               {:title "Node.JS"
+                :event "Dataforeningen"
+                :date "2012-08-10"
+                :tech [:nodejs :javascript]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-08-09"
+                :tech [:javascript]}
+               {:title "Working with Buster.JS"
+                :event ""
+                :date "2012-08-08"
+                :tech [:javascript :buster-js]}
+               {:title "Pure, functional JavaScript"
+                :event "WebRebels"
+                :date "2012-05-10"
+                :tech [:functional-programming :javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-05-09"
+                :tech [:javascript :tdd]}
+               {:title "JavaScript for programmers, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2012-04-10"
+                :tech [:javascript]}
+               {:title "Test-Driven JavaScript Development"
+                :event "SDC (Sverige)"
+                :date "2012-04-09"
+                :tech [:javascript :tdd]}
+               {:title "Pure, functional JavaScript"
+                :event "SDC (Sverige)"
+                :date "2012-04-08"
+                :tech [:functional-programming :javascript]}
+               {:title "Buster.JS"
+                :event "Bergen NNUH"
+                :date "2012-03-10"
+                :tech [:buster-js :javascript]}
+               {:title "Node.JS"
+                :event "Bergen NNUG"
+                :date "2012-03-09"
+                :tech [:nodejs :javascript]}
+               {:title "Unit testing"
+                :event "JavaScript Days, Køln"
+                :date "2012-03-08"
+                :tech [:tdd :javascript]}
+               {:title "Sinon.JS"
+                :event "JavaScript Days, Køln"
+                :date "2012-03-07"
+                :tech [:sinon :javascript]}
+               {:title "TDD with JavaScript"
+                :event "JavaScript Days, Køln"
+                :date "2012-03-06"
+                :tech [:javascript :tdd]}
+               {:title "Buster.JS/TDD workshop (med August Lilleaas)"
+                :event "BEKK"
+                :date "2012-02-10"
+                :tech [:javascript :buster-js :tdd]}
+               {:title "JavaScript: From Zero to Hero in 1.5 days"
+                :event "Konwit, Stavanger"
+                :date "2012-02-09"
+                :tech [:javascript]}
+               {:title "Step away from the for-loop!"
+                :event "Framsia"
+                :date "2012-01-10"
+                :tech [:javascript :functional-programming]}
+               {:title "Introduction to JavaScript"
+                :event "Unit4"
+                :date "2012-01-09"
+                :tech [:javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2011-11-10"
+                :tech [:javascript :tdd]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Questback"
+                :date "2011-11-09"
+                :tech [:javascript :tdd]}
+               {:title "Writing a book experience report: Test-Driven JavaScript Development"
+                :event "Øredev"
+                :date "2011-11-08"
+                :tech [:javascript]}
+               {:title "Test-Driven JavaScript Development"
+                :event "Øredev"
+                :date "2011-11-07"
+                :tech [:javascript :tdd]}
+               {:title "Divide and conquer: JavaScript design and architecture"
+                :event "BBC, London"
+                :date "2011-10-01"
+                :tech [:javascript]}
+               {:title "JavaScript design and architecture, workshop"
+                :event "Miles, Bergen"
+                :date "2011-09-10"
+                :tech [:javascript]}
+               {:title "Hands-on Buster.JS"
+                :event "Frontendconf, Zurich"
+                :date "2011-09-09"
+                :tech [:javascript :buster-js]}
+               {:title "Buster.JS Lyntale"
+                :event "Cisco"
+                :date "2011-09-06"
+                :tech [:buster-js :javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2011-06-13"
+                :tech [:javascript :tdd]}
+               {:title "TDDoing it right (TDD/BDD/Testing \"shootout\")"
+                :event "Framsia"
+                :date "2011-06-12"
+                :tech [:javascript :tdd]}
+               {:title "JavaScript design and architecture"
+                :event "NDC"
+                :date "2011-06-11"
+                :tech [:javascript]}
+               {:title "JavaScript unit testing"
+                :event "JavaBin Sørlandet"
+                :date "2011-06-06"
+                :tech [:javascript]}
+               {:title "Test-Driven JavaScript Development"
+                :event "APT"
+                :date "2011-05-02"
+                :tech [:tdd :javascript]}
+               {:title "Test-Driven JavaScript Development, workshop"
+                :event "Falsy Values, Warsawa"
+                :date "2011-05-01"
+                :tech [:tdd :javascript]}
+               {:title "Test-Driven JavaScript Development"
+                :event "Roots conf, Bergen"
+                :date "2011-04-03"
+                :tech [:javascript :tdd]}
+               {:title "Buster.JS"
+                :event "Framsia"
+                :date "2011-04-02"
+                :tech [:buster-js :javascript]}
+               {:title "Test-driven JavaScript Development, 3-dagers kurs"
+                :event "Programutvikling"
+                :date "2011-04-01"
+                :tech [:javascript :tdd]}
+               {:title "Test-driven JavaScript Development"
+                :event "Komplett.no"
+                :date "2011-02-10"
+                :tech [:javascript :tdd]}
+               {:title "JavaScript-arkitektur for liten og for stor"
+                :event "Finn.no"
+                :date "2011-02-09"
+                :tech [:javascript]}
+               {:title "JavaScript: Design og struktur"
+                :event "Finn.no"
+                :date "2011-02-08"
+                :tech [:javascript]}
+               {:title "Sinon.JS - Simplifying JavaScript testing"
+                :event "XP Meetup, Oslo"
+                :date "2011-01-10"
+                :tech [:javascript :sinon]}
+               {:title "Test-driven JavaScript Development"
+                :event "BEKK"
+                :date "2011-01-09"
+                :tech [:javascript :tdd]}
+               {:title "Unit-testing JavaScript"
+                :event "JavaZone"
+                :date "2010-09-10"
+                :tech [:javascript]}
+               {:title "Unit-testing JavaScript"
+                :event "JavaBin/Framsia"
+                :date "2010-09-09"
+                :tech [:javascript]}
+               {:title "Test-first JavaScript"
+                :event "Fronttrends, Warsawa"
+                :date "2010-09-08"
+                :tech [:javascript :tdd]}
+               {:title "JavaScript testing tools"
+                :event "irb.no, Oslo"
+                :date "2009-12-01"
+                :tech [:javascript]}]
 
  :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
                 :url "http://www.zombieclj.no/"
@@ -402,9 +934,27 @@
                         {:url "https://github.com/culljs/dome/"
                          :name "Dome"
                          :description "Funksjonell verktøykasse for DOM-manipulering."
-                         :tech [:javascript :functional-programming :dom]}]
- :open-source-contributions [{:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :unix :ssh]}
+                         :tech [:javascript :functional-programming]}]
+ :open-source-contributions [{:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :redhat :ssh]}
                              {:name "Optimus" :url "https://github.com/magnars/optimus" :tech [:clojure :web-performance]}
                              {:name "karma-referee" :url "https://github.com/cjohansen/karma-referee" :tech [:javascript :testing]}
                              {:name "carousel-js" :url "https://github.com/cjohansen/carousel-js" :tech [:javascript]}]
+
+ :education-summary "Institutt for informatikk, Universitetet i Oslo"
+ :education [{:institution "Institutt for informatikk, UiO"
+              :years [2001 2005]
+              :subject "Systemutvikling og digital signalbehandling"}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
+
+ :cv {:default {:preferred-techs [:clojure :clojurescript
+                                  :functional-programming :immutability
+                                  :emacs :terminal
+                                  :osx :centos :alpine :ubuntu :ios
+                                  :docker :nginx :haproxy]}}
  }

@@ -1,5 +1,6 @@
 {:id :oocss
  :name "OOCSS"
+ :type :frontend
  :illustration "/photos/tech/oocss.jpg"
  :site "https://github.com/stubbornella/oocss/wiki"
  :description

@@ -1,5 +1,6 @@
 {:id :elm
  :name "Elm"
+ :type :proglang
  :illustration "/photos/tech/elm.svg"
  :site "http://elm-lang.org/"
  :description

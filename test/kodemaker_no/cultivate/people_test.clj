@@ -57,6 +57,7 @@
                  (assoc-in [:tech :react]
                            {:id :react
                             :name "React"
+                            :type :library
                             :site "http://react.js"
                             :description "Blah!"})
                  (assoc-in [:tech-names :css] "CSS")
@@ -65,19 +66,19 @@
   (fact
    "Tech that isn't present in the content is given a name based
     on its :id."
-   (-> people :magnar :recommendations first :tech)
-   => [{:id :ansible, :name "Ansible"}])
+   (->> people :magnar :recommendations first :tech (map :name))
+   => ["Ansible"])
 
   (fact
    "Unless its in the list of weird tech names."
-   (-> people :magnar :tech :favorites-at-the-moment)
-   => [{:id :css, :name "CSS"}])
+   (->> people :magnar :tech :favorites-at-the-moment (map :id))
+   => [:css])
 
   (fact
    "Tech that is present, uses the :name in the tech, and adds
     a :url based on the :id."
-   (-> people :magnar :tech :want-to-learn-more)
-   => [{:id :react, :name "React", :url "/react/"}])
+   (->> people :magnar :tech :want-to-learn-more)
+   => [{:id :react, :name "React", :url "/react/" :type :library}])
 
   (fact
    "It doesn't add empty maps and lists"
@@ -97,7 +98,7 @@
         (-> people :magnar :upcoming first :date) => (local-date 2013 2 1))
 
   (fact "It cultivates tech tags"
-        (-> people :magnar :upcoming first :tech) => (list {:id :javascript :name "Javascript"}))
+        (->> people :magnar :upcoming first :tech (map :id)) => (list :javascript))
 
   (fact "It does not create upcoming when there are none"
         (-> people :finnjoh :upcoming) => nil))

@@ -1,5 +1,6 @@
 {:id :ansible
  :name "Apache Spark"
+ :type :server
  :illustration "/photos/tech/spark-logo.png"
  :site "http://spark.apache.org/"
  :description "

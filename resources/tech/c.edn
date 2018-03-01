@@ -1,5 +1,6 @@
 {:id :c
  :name "C"
+ :type :proglang
  :site "http://www.open-std.org/jtc1/sc22/wg14/"
  :description
  "Det er neppe noen Kodemakere som bruker C på jobb. Eller som kommer til å gjøre det. Men mange av oss har enten brukt C eller C++ i oppdrag tidligere (før Java kom?), eller lekt med C på fritiden.

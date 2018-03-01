@@ -1,5 +1,6 @@
 {:id :mssql
  :name "Microsoft SQL Server"
+ :type :database
  :illustration "/photos/tech/mssql.png"
  :site "http://www.microsoft.com/en-us/server-cloud/products/sql-server/"
  :description "Microsoft SQL Server er en proprietær database som kommer i et
