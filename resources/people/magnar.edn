@@ -808,5 +808,8 @@
               :orally "Meget god"
               :written "Flytende"}]
 
- :cv {}
+ :cv {:default {:preferred-techs [:clojure :clojurescript
+                                  :git :svn
+                                  :functional-programming :immutability
+                                  :datomic :datascript]}}
  }

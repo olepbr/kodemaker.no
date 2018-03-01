@@ -952,5 +952,9 @@
               :orally "Meget god"
               :written "Flytende"}]
 
- :cv {}
+ :cv {:default {:preferred-techs [:clojure :clojurescript
+                                  :functional-programming :immutability
+                                  :emacs :terminal
+                                  :osx :centos :alpine :ubuntu :ios
+                                  :docker :nginx :haproxy]}}
  }
