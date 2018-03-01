@@ -133,13 +133,3 @@
   (with-open [w (clojure.java.io/writer (format "resources/cv-dump/%s.edn" id))]
     (binding [*out* w]
       (clojure.pprint/write (fetch-and-parse id)))))
-
-(dump-cv "christin")
-(def data (tags/parse "https://www.kodemaker.no/cv/august/"))
-(qualifications-section data)
-(parse-cv data)
-
-(->> (find-section anders-data #"^prosjekter$")
-     (hf/hiccup-find [:.projects.details :tbody :tr])
-     (filter #(< 0 (count (hf/hiccup-find [:td] %))))
-     (mapv parse-project))
