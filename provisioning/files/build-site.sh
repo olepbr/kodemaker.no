@@ -34,7 +34,7 @@ else
         if [ $? -eq 0 ]; then
             log "Building"
             ../bin/lein build-site
-            node ../cv-html2pdf.js
+            PRINCE_PATH=/users/deploy/prince/bin node ../cv-html2pdf.js
             if [ $? -eq 0 ]; then
                 log "Publishing"
                 rm -rf /var/www/kodemaker.no/current

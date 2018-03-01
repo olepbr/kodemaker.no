@@ -117,11 +117,23 @@
        - send-mail.js
      notify: restart mail-sender
 
+   - name: Check if Prince is installed
+     stat:
+       path: /home/deploy/prince-8.0/bin/prince
+     register: prince_stat
+
+   - name: Unpack Prince tarball
+     unarchive:
+       src: files/prince-8.0.tar.gz
+       dest: /home/deploy
+       owner: deploy
+     when: prince_stat.stat.exists == False
+
    - name: Install Prince
-     yum: name={{item}} state=present
-     with_items:
-       - libpng12
-       - http://www.princexml.com/download/prince-9.0-5.centos7.x86_64.rpm
+     shell: echo "/home/deploy/prince" | ./install.sh
+     args:
+       chdir: /home/deploy/prince-8.0
+     when: prince_stat.stat.exists == False
 
    - name: Create SSH directory
      file: state=directory path=/home/{{ansible_ssh_user}}/.ssh/ owner={{ansible_ssh_user}} mode=0700
