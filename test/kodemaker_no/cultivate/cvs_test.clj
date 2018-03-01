@@ -13,7 +13,7 @@
      (c/person
       {:id :christian
        :name ["Christian" "Johansen"]
-       :use-new-cv? true
+       :cv {}
        :tech {:using-at-work [:clojure :java]}
        :innate-skills [:bash]
        :description "Default beskrivelse"
@@ -59,7 +59,6 @@
      (c/person
       {:id :kjetil
        :name ["Kjetil" "Jørgensen-Dahl"]
-       :use-new-cv? true
        :description "Default beskrivelse"
        :tech {:using-at-work [:kotlin :java]}
        :cv {:default {:preferred-techs [:kotlin :groovy]}}
@@ -77,8 +76,7 @@
      :magnar
      (c/person
       {:id :magnar
-       :name ["Magnar" "Sveen"]
-       :use-new-cv? false})}
+       :name ["Magnar" "Sveen"]})}
 
     :tech-types {:java :proglang
                  :jira :methodology

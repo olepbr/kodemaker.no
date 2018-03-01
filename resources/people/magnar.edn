@@ -28,7 +28,6 @@
 
  :phone-number "+47 918 56 425"
  :email-address "magnar@kodemaker.no"
- :use-new-cv? true
 
  :presence {:cv "magnar"
             :twitter "magnars"
@@ -808,4 +807,6 @@
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}]
+
+ :cv {}
  }

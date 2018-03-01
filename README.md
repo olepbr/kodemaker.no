@@ -294,7 +294,7 @@ nok ikke blir HELT lik som den gamle for de fleste, er den nye CV-en opt-in. Du
 opter inn i person-profilen din med:
 
 ```edn
- :use-new-cv? true
+ :cv {} ;; Kan inneholde enkle innstillinger, forklart lengre ned
 ```
 
 Se [Christians profil](resources/people/christian.edn) for referanse. For at

@@ -8,7 +8,7 @@
   {:url "/cv/christian/"
    :full-name "Christian Johansen"
    :experience-since 2002
-   :use-new-cv? true
+   :cv {}
    :str "christian"})
 
 (defn page [& {:as extras}]

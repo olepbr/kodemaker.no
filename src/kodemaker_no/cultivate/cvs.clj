@@ -87,6 +87,6 @@
 
 (defn cultivate-cvs [raw-content people tech]
   (->> people
-       (filter #(-> % second :use-new-cv?))
+       (filter #(-> % second :cv))
        (map (fn [[id person]] [id (cultivate-cv person tech raw-content)]))
        (into {})))

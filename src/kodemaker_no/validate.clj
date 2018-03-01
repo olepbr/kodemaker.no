@@ -20,7 +20,6 @@
 
    :phone-number Str
    :email-address Str
-   (optional-key :use-new-cv?) Boolean
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
               (optional-key :twitter) Str ;; brukernavn

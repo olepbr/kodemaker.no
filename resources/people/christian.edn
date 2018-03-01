@@ -39,7 +39,6 @@
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
- :use-new-cv? true
 
  :presence {:cv "christian"
             :twitter "cjno"
@@ -952,4 +951,6 @@
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}]
+
+ :cv {}
  }
