@@ -57,9 +57,14 @@
     :default [(parse-year period)]))
 
 (defn parse-project [[customer period raw-desc]]
-  (let [[description raw-tech] (str/split (:text raw-desc) #"Teknologi:")]
+  (let [years (if (nil? raw-desc)
+                nil
+                (when-not (empty? (:text period))
+                  (parse-period (:text period))))
+        raw-desc (if (nil? raw-desc) period raw-desc)
+        [description raw-tech] (str/split (:text raw-desc) #"Teknologi:")]
     {:customer (:text customer)
-     :years (parse-period (:text period))
+     :years years
      :description (.trim description)
      :tech (when raw-tech
              (->> (str/split raw-tech #",")
@@ -70,27 +75,29 @@
                                            (str/replace #"[\(\)]" "")
                                            keyword)))))}))
 
-(defn parse-col [td]
-  (if-let [link (hf/hiccup-find [:a] td)]
+(defn parse-el [el]
+  (if-let [link (hf/hiccup-find [:a] el)]
     {:url (-> link first second :href)
      :link-text (hf/hiccup-string link)
-     :text (hf/hiccup-string td)}
-    {:text (hf/hiccup-string td)}))
+     :text (hf/hiccup-string el)}
+    {:text (hf/hiccup-string el)}))
 
 (defn parse-tbody-rows [root]
   (->> root
        (hf/hiccup-find [:tbody :tr])
-       (filter #(= 3 (count (hf/hiccup-find [:td] %))))
-       (map #(map parse-col (hf/hiccup-find [:td] %)))))
+       (filter #(< 1 (count (hf/hiccup-find [:td] %))))
+       (map #(map parse-el (hf/hiccup-find [:td] %)))))
 
 (defn parse-open-source-projects [section]
   (if-let [lis (seq (hf/hiccup-find [:li] section))]
-    (->> (hf/hiccup-find [:li] section lis)
+    (->> lis
          (filter #(re-find #"^Utviklet" (hf/hiccup-string %)))
          (mapv #(let [[_ _ _ link description] %]
                   {:url (:href (second link))
                    :name (nth link 2)
-                   :description (str/replace description #"\s*med [^\.]+\.\s*" "")})))
+                   :description (-> description
+                                    (str/replace #"\s*med [^\.]+\.\s*" "")
+                                    (str/replace #"^[\. ]+" ""))})))
     (->> (parse-tbody-rows section)
          (map (fn [[project year description]]
                 {:url (:url project)
@@ -122,6 +129,29 @@
    :urls {:video (or (:url title) (:url event))}
    :date (:text year)})
 
+(defn parse-certification [[name year]]
+  (let [name-is-year (re-find #"^\d+$" (.trim (:text name)))]
+    {:name (if name-is-year (:text year) (:text name))
+     :year (parse-year (if name-is-year (:text name) (:text year)))}))
+
+(defn parse-presentation-li [{:keys [url link-text text]}]
+  (let [[year event description] (->> text
+                                      (re-find #"(\d+)(?:\s*-\s*)?(?:Foredrag|Lyntale) ([^:]+):(.*)")
+                                      (drop 1)
+                                      (map #(.trim %)))]
+    (if url
+      {:urls {:video url}
+       :title link-text
+       :event event
+       :date year}
+      {:title (or description text)
+       :event event
+       :date year})))
+
+(defn parse-domain-skill [[title description]]
+  {:title (:text title)
+   :description (:text description)})
+
 (defn parse-cv [markup]
   (let [oss-section (find-section markup #"open source")]
     (merge
@@ -139,10 +169,20 @@
       :education (->> (find-section markup #"^utdannelse$")
                       parse-tbody-rows
                       (mapv parse-education))
-      :presentations (->> (find-section markup #"foredrag")
+      :presentations (concat (->> (find-section markup #"foredrag")
+                                  parse-tbody-rows
+                                  (mapv parse-presentation))
+                             (->> (find-section markup #"bidrag til fagmiljøet")
+                                  (hf/hiccup-find [:li])
+                                  (map parse-el)
+                                  (map parse-presentation-li)))
+      :certifications (->> (find-section markup #"sertifiseringer")
+                           parse-tbody-rows
+                           (mapv parse-certification))
+      :endorsements (parse-endorsements (find-section markup #"^anbefalinger$"))
+      :domain-skills (->> (find-section markup #"domenekunnskap")
                           parse-tbody-rows
-                          (mapv parse-presentation))
-      :endorsements (parse-endorsements (find-section markup #"^anbefalinger$"))}
+                          (mapv parse-domain-skill))}
      (parse-personals (->> (hf/hiccup-find [:#personal :dl] markup)
                            first
                            (drop 2))))))
