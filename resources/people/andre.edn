@@ -17,9 +17,9 @@
                  :coderwall     "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:elixir :clojure :clojurescript]
-                 :using-at-work [:clojure :clojurescript :groovy :grails :ruby :docker :rails :javascript :elasticsearch]
-                 :want-to-learn-more      [:erlang :elm :go :haskell]}
+ :tech          {:favorites-at-the-moment [:kotlin, :elixir :clojure :clojurescript]
+                 :using-at-work [:kotlin, :clojure :clojurescript :groovy :grails :ruby :docker :rails :javascript :elasticsearch]
+                 :want-to-learn-more      [:haskell :purescript :scala]}
  
  :recommendations [{
     :title "Clojure Applied"
