@@ -142,7 +142,9 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
-                                    :year Num}]})
+                                    :year Num}]
+
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
@@ -316,12 +318,35 @@ I tillegg kan du vurdere å berike CV-en din med følgende felter:
   knyttet til noe spesifikt prosjekt.
 - `:cv/description` - En alternativ beskrivelse som brukes i stedet for
   `:description` for CV-en.
+- `:cv {}` - "Instillinger", se nedenfor
 
 Helt til slutt er det også mulig å legge til disse to feltene, men det er
 kanskje mulig å diskutere hvor relevante de er:
 
 - `:born`
 - `:relationship-status`
+
+### Hva er greia med den teknologi-lista a?
+
+Teknologi-seksjonen på CV-en din samles inn fra alle relevante steder du har
+nevnt "techs": prosjekter, foredrag, "using at work", open source-bidrag osv.
+Alle disse samles i en liste, som sorteres på antall forekomster. Deretter
+grupperes listen etter tech-typer. Typen på techs er angitt enten i
+`resources/tech/<navn>.edn` (som `:type`), eller i `resources/tech-types.edn`.
+Hvis du har meninger om kategorisering er det bare å slå seg løs. Dersom du
+legger til tecs vi ikke har fra før, så må du gi den en type for at den skal
+dukke opp på teknologi-sammendraget på CV-en din.
+
+Du kan påvirke teknologisammendraget på noen måter:
+
+1. Dersom du savner teknologier/metodikk i sammendraget, men ikke gidder å legge
+   disse på noen spesifikke prosjekt kan du legge dem til som "medføtte skills":
+   `:innate-skills [:shell]`
+2. Teknologier sorteres etter antall forekomster. Dette henger ikke alltid
+   sammen med hvordan man ønsker å profilere seg. Du kan påvirke sorteringen ved
+   å legge til `:cv {:default {:preferred-techs [:clojure :clojurescript]}}` i
+   profilen din. De teknologiene du her lister opp vil dukke opp i den
+   rekkefølgen på CV-en, med resterende sortert etter antall forekomster.
 
 ## Provisjonering
 

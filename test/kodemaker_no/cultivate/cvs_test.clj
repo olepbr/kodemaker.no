@@ -60,7 +60,19 @@
       {:id :kjetil
        :name ["Kjetil" "Jørgensen-Dahl"]
        :use-new-cv? true
-       :description "Default beskrivelse"})
+       :description "Default beskrivelse"
+       :tech {:using-at-work [:kotlin :java]}
+       :cv {:default {:preferred-techs [:kotlin :groovy]}}
+       :projects [{:customer "Bank"
+                   :description "Beskrivelse"
+                   :years [2020]
+                   :tech [:java :javascript :groovy]
+                   :employer :kodemaker}
+                  {:customer "Bank 2"
+                   :description "Beskrivelse 2"
+                   :years [2020]
+                   :tech [:java :javascript :groovy]
+                   :employer :kodemaker}]})
 
      :magnar
      (c/person
@@ -75,14 +87,19 @@
                  :sinon :library
                  :clojure :proglang
                  :clojurescript :proglang
+                 :javascript :proglang
+                 :groovy :proglang
                  :unix :os
-                 :haskell :proglang}
+                 :haskell :proglang
+                 :kotlin :proglang}
 
     :employers {:kodemaker "Kodemaker AS"}}))
 
 (defn cultivate [content]
   (let [raw (validate-content content)]
     (cvs/cultivate-cvs raw (p/cultivate-people raw) (t/cultivate-techs raw))))
+
+(def cvs (cultivate content))
 
 (let [cvs (cultivate content)]
   (fact
@@ -106,6 +123,10 @@
   (fact
    "Orders techs by most frequently referenced"
    (->> cvs :christian :techs :proglang (map :id)) => [:java :clojure :clojurescript :bash])
+
+  (fact
+   "Skews tech ordering by preferred techs"
+   (->> cvs :kjetil :techs :proglang (map :id)) => [:kotlin :groovy :java :javascript])
 
   (fact
    "Compiles techs from all self-effort fields"

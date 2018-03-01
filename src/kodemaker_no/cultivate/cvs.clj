@@ -13,26 +13,36 @@
 (defn apply-cv-overrides [person]
   (walk/postwalk #(if (map? %) (override % "cv") %) person))
 
+(defn compare-preferred-techs [preferred {:keys [id]}]
+  (let [idx (if (seq preferred)
+              (.indexOf preferred id)
+              -1)]
+    (if (< idx 0)
+      (count preferred)
+      idx)))
+
 (defn cultivate-techs [person content]
-  (->> (concat (->> person :tech :using-at-work)
-               (->> person :innate-skills)
-               (->> (select-keys person [:side-projects
-                                         :blog-posts
-                                         :screencasts
-                                         :presentations
-                                         :appearances
-                                         :open-source-projects
-                                         :open-source-contributions
-                                         :projects])
-                    vals
-                    (apply concat)
-                    (mapcat :tech)))
-       flatten
-       (group-by identity)
-       (map (fn [[k ks]] (merge (util/look-up-tech content k) {:count (count ks)})))
-       (sort-by :count)
-       reverse
-       (group-by :type)))
+  (let [preferred (-> person :cv :default :preferred-techs)]
+    (->> (concat (->> person :tech :using-at-work)
+                 (->> person :innate-skills)
+                 (->> (select-keys person [:side-projects
+                                           :blog-posts
+                                           :screencasts
+                                           :presentations
+                                           :appearances
+                                           :open-source-projects
+                                           :open-source-contributions
+                                           :projects])
+                      vals
+                      (apply concat)
+                      (mapcat :tech)))
+         flatten
+         (group-by identity)
+         (map (fn [[k ks]] (merge (util/look-up-tech content k) {:count (count ks)})))
+         (sort-by :count)
+         reverse
+         (sort-by #(compare-preferred-techs preferred %))
+         (group-by :type))))
 
 (defn lookup-employer [employers project]
   (assoc project :employer (employers (:employer project))))

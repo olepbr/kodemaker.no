@@ -126,7 +126,9 @@
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
-                                    :year Num}]})
+                                    :year Num}]
+
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
 
 (def Tech
   {:id ID
