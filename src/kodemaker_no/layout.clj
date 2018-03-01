@@ -54,7 +54,7 @@
     [:title (head-title (:title page))]]
    [:body
     content
-    [:footer "www.kodemaker.no * +47 2282 2080 * Dronning Eufemias gate 16, Visma-bygget, 0191 Oslo"]
+    [:footer "www.kodemaker.no * +47 22 82 20 80 * Munkedamsveien 3b, 0161 Oslo"]
     [:script {:type "text/javascript"}
      "var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-16391367-1']);
