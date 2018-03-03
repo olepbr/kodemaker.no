@@ -118,6 +118,7 @@
    (optional-key :qualifications) [Str]
    (optional-key :innate-skills) [ID] ;; Techs du vil ha lista på CV-en men som du ikke har tatt deg
                                       ;; bryet å knytte til et prosjekt av noe slag
+   (optional-key :employments) {ID {:description Str}}
 
    (optional-key :education) [{:institution Str ;; Utdanning
                                :years YearRange

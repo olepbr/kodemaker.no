@@ -45,7 +45,8 @@
          (group-by :type))))
 
 (defn lookup-employer [employers project]
-  (assoc project :employer (employers (:employer project))))
+  (assoc project :employer {:name (employers (:employer project))
+                            :id (:employer project)}))
 
 (def months ["Januar" "Februar" "Mars" "April" "Mai" "Juni" "Juli"
              "August" "September" "Oktober" "November" "Desember"])

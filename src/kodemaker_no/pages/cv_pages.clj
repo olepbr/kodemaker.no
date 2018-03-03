@@ -69,9 +69,11 @@
     (section header
              (table items headings columns))))
 
-(defn- render-projects [[employer projects]]
+(defn- render-projects [employments [employer projects]]
   (list
-   [:h3 employer]
+   [:h3 (:name employer)]
+   (when-let [employment ((:id employer) employments)]
+     [:p (:description employment)])
    (table projects
           ["Oppdragsgiver" "Periode" "Oppdrag"]
           [:customer
@@ -88,7 +90,7 @@
              (->> (:projects person)
                   (filter :description)
                   (group-by :employer)
-                  (map render-projects)))))
+                  (map #(render-projects (:employments person) %))))))
 
 (defn- render-open-source-contributions [[lang contributions]]
   (list
