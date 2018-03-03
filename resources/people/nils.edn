@@ -64,6 +64,7 @@
                          Lyntalen har senere blitt utvidet til et foredrag som blant annet holdes på ISF sin høstkonferanse 2017.
                          "
                   :date  "2011-09-07"
+                  :event "JavaZone"
                   :tech  [:android :bluetooth :go]
                   :urls  {:video "https://vimeo.com/181936877"}}
                  ]
@@ -108,23 +109,98 @@
                 [{:customer    "Tieto"
                   :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
                   :years       [2017 2018]
-                  :tech        [:java, :docker, :docker-compose :spring :hibernate]},
-                  {:customer    "Western Geco"
+                  :employer    :kodemaker
+                  :summary     "Videreutvikling av system for virtuelle bankkontoer og nyutvikling av applikasjon for automatiske betalinger."
+                  :tech        [:java, :docker, :docker-compose :spring :hibernate :db2 :maven]},
+                 {:customer   "Western Geco"
                   :description "Utvikling av nytt produkt for landseismikk. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
                   :years       [2017]
-                  :tech        [:java, :bash, :grpc, :protobuf]}
+                  :employer    :kodemaker
+                  :summary     "Utviklig av kontrollsystem for innsamling av seismisk data på land."
+                  :tech        [:java, :bash, :grpc, :google-protocol-buffers :javafx :docker]}
                  {:customer    "Thomson Reuters"
                   :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
                   :years       [2016 2017]
-                  :tech        [:java, :vertx, :kafka, :spark, :hbase]}
+                  :employer    :kodemaker
+                  :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+                  :tech        [:java, :vertx, :kafka, :spark, :hbase :zookeeper :kibana]}
+                 {:customer    "Thomson Reuters"
+                  :years       [2016]
+                  :employer    :bytecode
+                  :summary     "Utvikle ny løsning for CDB"
+                  :description "Utvikle ny løsning for CDB: distribusjon av fremskrevne tidsserier for forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop, HBase."
+                  :tech        [:hbase :spark :kafka :java :zookeeper :vertx :kibana :java]}
                  {:customer    "Norwegian Air Shuttle"
                   :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
                   :years       [2012 2016]
-                  :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle]}
+                  :employer    :webstep
+                  :summary     "Utvikling og vedlikehold av backend for booking-systemet"
+                  :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
+                                :java-ee :jboss :hibernate :bash :groovy :play :jquery :intellij
+                                :junit :testng :xml :git :hystrix]}
                  {:customer    "Storebrand Aktuarsystemer"
                   :description "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
                   :years       [2011 2012]
-                  :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2]}]
+                  :employer    :webstep
+                  :summary     "Kundeportal og integrasjon av fagsystem."
+                  :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2
+                                :java-ee :apache-cxf :html :css :intellij :gradle :maven :nexus
+                                :teamcity :seapine :bamboo :junit :itext :svn :jdbc]}
+                 {:customer "Statens Pensjonskasse, PERFORM"
+                  :years [2009]
+                  :employer    :accenture
+                  :summary     "PERFORM, Uvikling av kjernefunksjonalitet for pensjonsreformen."
+                  :description "Oppgaver: Utvikling av kjernesystemet i
+                  pensjonsbehandlings-systemet etter nye regler om
+                  pensjonsreformen."
+                  :tech [:spring-batch :spring-core :java-ee :eclipse :jsf :junit :fitnesse
+                         :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
+                         :squirrel-sql :xml :jetty :mockito :sonar :tdd :ci :web-services
+                         :apache-cxf]}
+                 {:customer "Storebrand Livsforsikring"
+                  :years [2008]
+                  :employer    :accenture
+                  :summary     "Ytelsesvurdering av kjernesystem, fondskjøp med BankID"
+                  :description "Oppgaver: Første integrasjon med BankID for
+                  Storebrand for kjøp av fond på nett. Lage sparekalkulator med
+                  anbefaling av fondsvalg. Evaluering av fagsystem for kjøp og
+                  salg av fond. Ytelsesvurdering og vurdering av
+                  integrasjonsmetoden mot fagsystemet."
+                  :tech [:bankid :java-ee :bamboo :nexus :soa :maven :ant :eclipse :jira
+                         :xml :castor-xml :prolink :css :javascript]}
+                 {:customer "Karolinska Institutet, Genbanken"
+                  :years [2008]
+                  :employer    :ibm
+                  :summary     "Portal for gen-banken."
+                  :description "Oppgaver: Lage en sikker portal for genbanken
+                  slik at store datasett av genomer skal kunne deles mellom
+                  forskere."
+                  :tech [:portlets :websphere-portal :websphere :geronimo :pki :ssl :java-ee :junit :jsr-168]}
+                 {:customer "Norsk Boligbyggerlag, NBBL"
+                  :years [2007]
+                  :employer    :ibm
+                  :summary     "Utvikling av web-portal med timeregistrering og billagsføring."
+                  :description "Oppgaver: I samarbeid med BOB (Bergen og Omegn
+                  Boligbyggerlag) lage en portal for å samle all
+                  nett-aktiviteten til NBBL. Lage web-applikasjoner for
+                  timeregistrering og bilagsregistrering."
+                  :tech [:quickr :javaee :junit :eclipse :ibm-rational-application-developer
+                         :dojo :javascript :css :html :webservices]}
+                 {:customer "Atmel Corporation"
+                  :years [2006]
+                  :employer    :ibm
+                  :summary     "Porte UI rammeverk til ny prosessortype."
+                  :description "Atmel designer og produserer micro-controllere.
+                  Porte GUI rammeverk for linux til ny 32-bits
+                  microcontroller.."
+                  :tech [:c :cpp :bash :linux-kernel]}
+                 {:customer "NTNU"
+                  :years [2002 2003 2004 2005 2006 2007]
+                  :employer :study-part-time
+                  :description "Studentassistent i IT-intro.
+                  Undervisningsassistent i Menneske-Maskin-Interaksjon(MMI) og
+                  Mikrokontrollere"
+                  :tech [:java :fortran :sql :html :css :c]}]
 
  :blog-posts
                 [{:url   "https://nilsmagnus.github.io/post/go-tensorflow/"
@@ -132,4 +208,48 @@
                   :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
                   :tech  [:go :tensorflow]}]
 
+ :cv {}
+ :cv/description "Nils er sivilingeniør i datateknikk fra NTNU med erfaring som
+ utvikler og arkitekt.
+
+ Nils er genuint interessert i teknologi og liker alt som kan programmeres,
+ automatiseres og optimaliseres. Nils lærer fort og er opptatt av at
+ programvareutvikling er et håndverk man skal være stolt av.
+
+ Når Nils ikke får nok utfordringer på jobb lærer han gjerne noe på fritiden
+ eller jobber med hobbyprosjekter. Algoritmekurs og maskinlæringskurs fra
+ Stanford er mine favoritter når han ikke utvikler egne apper og andre
+ sideprosjekter. "
+ :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
+ :experience-since 2007
+ :relationship-status "Gift, 2 barn"
+ :born 1980
+ :education [{:institution "NTNU"
+              :years [2001 2002 2003 2004 2005 2006 2007]
+              :subject "Sivilingeniør/Master Datateknikk"}
+             {:institution "NTNU/USP"
+              :years [2004 2005]
+              :subject
+              "Utvekslingsår ved Universidade de São Paulo(USP), Brasil"}]
+ :qualifications ["Senior systemutvikler"
+                  "Java Plattform"
+                  "Automatisering"
+                  "Devops"
+                  "Integrasjon"
+                  "Ytelsesvurdering og optimalisering"
+                  "Mobilutvikling, Android"
+                  "Smidig utvikling og kontinuerlig leveranse"]
+ :certifications [{:name "Certified Scrum Master", :year 2018}
+                  {:name "Machine Learning by Stanford University on Coursera"
+                   :year 2017}
+                  {:name "TOGAF 9 Part 1 and 2", :year 2014}
+                  {:name
+                   "Programming Mobile Applications for Android Handheld Systems by University of Maryland, College Park"
+                   :year 2014}
+                  {:name
+                   "Algorithms: Design and Analysis, Part 2 by Stanford University on Coursera"
+                   :year 2013}
+                  {:name "Spring Core", :year 2010}
+                  {:name "Sun Certified Java Web Component Developer", :year 2008}
+                  {:name "Sun Java Certified Programmer", :year 2007}]
  }
