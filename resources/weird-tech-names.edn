@@ -38,6 +38,7 @@
  :express-js "Express.JS"
  :ezpublish "eZ Publish"
  :es6 "ES2016/ES6"
+ :fast "Fast søkemotor"
  :fatwire "FatWire CMS"
  :h2db "H2 database"
  :haproxy "HAProxy"
@@ -89,6 +90,7 @@
  :ios "iOS"
  :dan-kennedy "Dan Kennedy"
  :frank-kern "Frank Kern"
+ :gcd "Grand Central Dispatch"
  :google-adwords "Google AdWords"
  :google-analytics "Google Analytics"
  :groovyws "GroovyWS"
@@ -108,4 +110,5 @@
  :textmate "TextMate"
  :visual-basic "Visual Basic"
  :visual-studio "Visual Studio"
+ :vmware-esxi "VMWare ESXI (nå vSphere)"
  }

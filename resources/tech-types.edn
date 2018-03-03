@@ -1,6 +1,7 @@
 ;; Kategorisering av typer tech for teknologier som ikke har sin egen side enda.
 ;; Typen brukes til å plassere teknologien i rett kategori på CV-en.
 {
+ :activemq :server
  :akka :library
  :alpine :os
  :android :os
@@ -59,12 +60,16 @@
  :event-sourcing :methodology
  :express-js :framework
  :ezpublish :server
+ :fast :server
  :fatwire :server
  :fitnesse :framework
  :flex :framework
+ :gcd :server
  :gerrit :tool
  :google-adwords :tool
  :google-analytics :tool
+ :google-closure :library
+ :google-maps :library
  :groovyws :library
  :grunt :library
  :gwt :framework
@@ -85,6 +90,7 @@
  :jaxrs :tool
  :jboss :server
  :jbuilder :library
+ :joomla :server
  :jpa :library
  :jquery :library
  :js-test-driver :library
@@ -96,6 +102,7 @@
  :leiningen :devtools
  :less :frontend
  :lighttable :devtools
+ :liquibase :library
  :lisp :proglang
  :lisp-flavoured-erlang :proglang
  :logstash :server
@@ -109,6 +116,7 @@
  :mockito :library
  :mongodb :database
  :mongo-queue :server
+ :monit :devops
  :mule :server
  :mysql :database
  :neo4j :database
@@ -166,15 +174,18 @@
  :unfiltered :library
  :unity3d :framework
  :unix :os
+ :virtualisering :devops
  :visual-basic :proglang
  :visual-source-safe :vcs
  :visual-studio :devtools
+ :vmware-esxi :devops
  :wicket :library
  :windows :os
  :wcf :framework
  :webgl :frontend
  :weblogic :server
  :webpack :tool
+ :wordpress :server
  :zeromq :server
  :zookeeper :library
  :xcode :devtools
