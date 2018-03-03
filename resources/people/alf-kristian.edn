@@ -90,25 +90,234 @@
                             :text "Offisielle sider"}
                     :tech  [:trening]}]
 
+ :projects [{:customer "Bring"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid."
+             :description "Systemet som vi utviklet, var for budleveranser, alt
+             fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
+             sanntid, og integrasjoner med mange av Bring sine systemer. Jeg har
+             mange roller i prosjektet, scrum master, programmere frontend,
+             backend, sette opp og drifte servere"
+             :tech [:javascript :es6 :react :redux :nodejs :kotlin :clojure :gradle
+                    :postgresql :event-sourcing :cqrs]}
+            {:customer "BN Bolig"
+             :years [2017]
+             :employer :kodemaker
+             :summary "Eiendomsmeglerstartup, der vi utviklet og driftet bnbolig.no og BN Bolig sin innovative KlartSalg."
+             :description "BN Bolig er en ny type megler som har etablert seg i
+             Oslo. Målet deres er å være en ny og innovativ megler, der kjøper
+             og selger får mer innsikt og kontroll i boligsalgs-prosessen. Jeg
+             har mange roller i prosjektet, programmere frontend, backend, sette
+             opp og drifte servere, og også være med på forretningsuvikling."
+             :tech [:javascript :es6 :react :redux :webpack :shipit :clojure :aleph
+                    :netty :postgresql :nginx :varnish :haproxy :ansible]}
+            {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Gjøre prototype produksjonsklar. Systemet henter inn og aggregerer informasjon fra spørreskjema, der barnet svarer på \"grad\" av smilefjes."
+             :description "Gjøre prototype produksjonsklar. Systemet henter inn
+             og aggregerer informasjon fra spørreskjema, der barnet svarer på
+             \"grad\" av smilefjes. Dette er et dynamisk smilefjes som går fra
+             sur til glad, slik at man kan måle barnets stemning bedre."
+             :tech [:clojure :clojurescript :postgresql :heroku]}
+            {:customer "Thomson Reuters"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder."
+             :description "Utvikling av løsning for intern distribusjon av
+             fremskrevne tidsserier fra forskjellige markeder."
+             :tech [:java8 :apache-spark :kafka :hbase :hadoop :zookeeper :logstash]}
+            {:customer "Hafslund Strøm"
+             :years [2014]
+             :employer :kodemaker
+             :summary "Programmerer i team i Hafslunds \"Smart hjem\" satsning, Link."
+             :description "Link er et prosjekt fra Hafslund med fokus på
+             monitorering og automatisering i hjemmet. Jeg har jobbet med mange
+             områder innen prosjektet. Blant annet salg, produkter, ordre,
+             logistikk,rapportering, generell kundeoppfølging, og tjenester som
+             varmestyring og bevegelse. Vi er et relativt lite team, der vi har
+             fullt ansvar for alt som gjøres. I tillegg til programmering, er
+             jeg med på generell planlegging, og har driftsansvar. Vi drifter
+             alt i AWS, og alle endringer som gjøres, om det så er små
+             kode-endringer eller større arkitektur-endringer, må vi selv
+             prodsette og drifte. Oppgave: Programmerer"
+             :tech [:clojurescript :scala :javascript :react :sbt :akka :play :slick
+                    :unfiltered :postgresql :kafka :micro-services :git :aws :devops]}
+            {:customer "Telenor Digital"
+             :years [2014]
+             :employer :kodemaker
+             :summary "Bistå analytics team i fornying og forbedring av eksisterende plattform. I tillegg jobbe med ETL, og analyse av data."
+             :description "Bistå analytics team i fornying av eksisterende
+             plattform. I tillegg jobbe med ETL, og analyse av data. Telenor
+             Digital har mange produkter som integrerer med deres analytics
+             plattform. Analytics teamet jobber med innhenting, tilrettelegging
+             og analyse av data fra disse produktene. I tillegg til å bistå
+             teamet med deres daglige arbeid, gikk jobben i stor grad ut på å
+             videreutvikle deres plattform. I utgangspunktet var plattformen
+             bygget på Hadoop og MongoDB, men av mange årsaker, ønsket man å
+             forenkle systemet og hovedsakelig basere plattformen på PostgreSQL.
+             Teamet ønsket å benytte Clojure, et språk som er veldig godt egnet
+             til å håndtere og manipulere data. Oppdraget gikk dermed også ut på
+             å hjelpe teamet til å innføre Clojure som hovedspråk for
+             plattformen. Oppgave: Programmerer"
+             :tech [:clojure :java :python :rest :jersey :postgresql :hadoop :hive
+                    :aws :etl :devops :maven :leiningen :git :gerrit]}
+            {:customer "NSB Fellestjenester"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Utvikling av ny applikasjon for administrasjon av personalbilletter for ansatte i NSB og assosierte selskaper."
+             :description "Utvikling av ny applikasjon for administrasjon av
+             personalbilletter for ansatte i NSB og assosierte selskaper Mål for
+             prosjektet: å erstatte en 10 år gammel applikasjon med en
+             tilsvarende ny basert på moderne Java teknologi og et mer
+             brukervennlig grensesnitt, samt noe ny funksjonalitet. Den nye
+             applikasjonen vil også bli bedre integrert med omkringliggende
+             systemer, inkludert AD, SAP-HR og LISA (NSB's sentrale
+             billettapplikasjon). Utviklingsteamet bestod av 2 personer (meg
+             selv og en kollega fra Kodemaker), og ble gjennomført på en
+             minimalistisk smidig måte. Oppgave: Programmerer"
+             :tech [:java :javascript :bootstrap :wicket :spring :hibernate :rest :jax-rs
+                    :jetty :tomcat :mssql :liquibase :maven :git]}
+            {:customer "Skatteetaten"
+             :years [2012]
+             :employer :knowit
+             :summary "Modernisering av mottaksmetoder av data fra privatpersoner og næringsliv."
+             :description "Modernisering av måten næringsliv og privatpersoner
+             innrapporterer data til Skatteetaten. Designe og programmere
+             applikasjonene som mottar, validerer, lagrer og videreformidler
+             data til skatteetatens interne systemer. Disse dataene danner blant
+             annet grunnlaget for selvangivelsen. Oppgaver: Programmerer i
+             Scrum-team"
+             :tech [:java :google-guice :hazelcast :akka :glassfish :oracle :maven]}
+            {:customer "Kommuneforlaget"
+             :years [2012]
+             :employer :knowit
+             :summary "Forvaltning og videreutvikling av store deler av applikasjonsporteføljen til Kommuneforlaget."
+             :description "Generell arkitekturgjennomgang, og utvikling av
+             diverse komponenter og applikasjoner Vi utviklet en rekke
+             applikasjoner med helt forskjellige behov. Blant annet en
+             applikasjon for å vise kalender eventer i årshjul, en portal
+             løsning for kommuner, en brukerhåndteringsløsning, og et Single
+             Sign-on system for alle disse applikasjonene (og andre), basert på
+             CAS. Oppgaver: Arkitekt og programmerer i Scrum-team"
+             :tech [:scala :javascript :jetty :derby :mysql :ldap :ad :wicket
+                    :backbone :scalatra :sso :cas :maven]}
+            {:customer "Toll og avgiftsdirektoratet"
+             :years [2010]
+             :employer :knowit
+             :summary "Modernisering av batchprosesser for fortollingsdata."
+             :description "Modernisering av batch prosessering for
+             fortollingssystemet TVINN Mye av tollvesenets systemer er laget i
+             et programmeringsspråk som heter Sysdul. Dette språket vil om få år
+             ikke være supportert. Prosjektet gikk ut å skrive om, og forbedre
+             arkitektur, til de mange batchene som knar data i tollvesenets
+             fortollingssystem. Oppgaver: Arkitekt og programmerer i Scrum-team"
+             :tech [:java :weblogic :spring :sybase :jasperreports :genova :maven]}
+            {:customer "Kommuneforlaget"
+             :years [2010]
+             :employer :knowit
+             :summary "Utvikle løsning for behandling av avvik."
+             :description "Utvikling av to applikasjoner, en for å gjøre det
+             enkelt å prosessere mye XML, en for å håndtere avvik i kommuner
+             Første oppdrag var lite prosjekt, der vi skulle lage et Java
+             Webstart/Swing GUI for å enkelt manipulere store mengder XML. Andre
+             oppdrag var å lage en web applikasjon som enkelt skulle kunne
+             deployes hos alle kommuner som kjøpte systemet av Kommuneforlaget.
+             Applikasjonen skulle motta avviks-meldinger fra kommuneforlagets
+             skjemaløsning, sende ut nødvendig mailer til involverte parter, og
+             gi enkel saksbehandlingsfuksjonalitet av dette. Oppgaver: Arkitekt
+             og programmerer i Scrum-team"
+             :tech [:scala :jetty :derby :wicket :sbt]}
+            {:customer "Direktoratet for samfunnssikkerhet og beredskap (DSB)"
+             :years [2008]
+             :employer :knowit
+             :summary "Utvikling, innføring og vedlikehold av nytt fagsystem."
+             :description "Nytt fagsystem Vi laget nytt system for
+             innrapportering av data fra privatpersoner og næringsliv, samt
+             saksbehandling av blant annet \"farlige stoffer\", \"eksplosive
+             varer\", \"el-sikkerhet\" og \"farlige produkter\". I tillegg
+             skulle systemet håndtere innrapportering fra tilsyns-instanser.
+             Systemet publiserer data tilbake til publikum blant annet for søk
+             av el-virksomheter og farlige stoffer. Oppgaver: Arkitekt og
+             programmerer i Scrum-team"
+             :tech [:java :jetty :spring :gwt :wicket :jpa :mssql :maven]}
+            {:customer "Telenor Mobil"
+             :years [2007]
+             :employer :knowit
+             :summary "Utvikling av nye portaler for privat- og bedriftskunder."
+             :description "Web i Norge, nye portaler for privat- og
+             bedriftskunder. Målet var en felles portalløsning for mobil,
+             fastnett og internett, samt redusert \"Time to market\" for nye
+             produkter. Oppgaver: programmerer i Scrum-team"
+             :tech [:java :weblogic :sybase]}
+            {:customer "Toll og avgiftsdirektoratet"
+             :years [2006]
+             :employer :mesan
+             :summary "Modernisering av online applikasjon for fortollingsdata."
+             :description "TVINN konvertering Prosjektet var første ledd i
+             konvertering av tollvesents system fastsetting og innkreving av
+             toll på alle varer. Prosjektet konverte online applikasjonen fra
+             stormaskin applikasjon, utviklet i programmeringsspråket Sysdul,
+             til Java og Swing. Oppgaver: programmerer"
+             :tech [:java :swing :ant :genova]}
+            {:customer "Nordic Lottery System"
+             :years [2006]
+             :employer :mesan
+             :summary "Utvikling av Europeisk lotterisystem."
+             :description "Utvikling av nytt internettspill med svært høye
+             oppetids- og ytelseskrav. Oppgaver: Backend programmerer i
+             Scrum-team"
+             :tech [:java :spring :jboss]}
+            {:customer "Höegh Autoliners"
+             :years [2005]
+             :employer :mesan
+             :summary "Utvikling shipping-systemer."
+             :description "Nyutvikling av to applikasjoner, CargoSurvey og
+             Invoice Prosjektet utviklet to nye appliasjoner. En for å håndtere
+             inspeksjon av biler før og etter transport på bilbåter. Det andre
+             systemet var nytt fakturasystem for alle Höeghs avdelinger.
+             Oppgaver: Lead programmer i RUP-team"
+             :tech [:java :optimalj :oc4j :oracle]}
+            {:customer "Nye Asta"
+             :years [2004]
+             :employer :mesan
+             :summary "Utvikling av arkivsystemer."
+             :description "Nytt fagsystem for stiftelsen ASTA Prosjektet skulle
+             uvikle et helt nytt arkivsystem for stiftelsen Asta. Oppgaver:
+             Programmere søkemotor og rapportgenerator for eksport av data til
+             HTML, RTF og PDF."
+             :tech [:java :oracle]}]
+
  :presentations   [{:title "Erfaringer med Clojure og Scala (og Java 8)"
                     :blurb "På Javazone 2015, snakket Alf Kristian erfaringer med de funksjonelle språkene på JVM'en. I tillegg sammenlignet han dem med \"FP\" i Java 8."
                     :urls  {:video "https://vimeo.com/album/3556815/video/138955227"}
                     :date "2015-08-09"
+                    :event "JavaZone"
                     :tech  [:clojure :scala :java8 :java :funksjonell-programmering]}
 
                    {:title "Really understanding Clojure, getting into macros"
                     :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
                     :urls  {:video "http://vimeo.com/album/3031533/video/105758305"}
                     :date "2014-08-10"
+                    :event "JavaZone"
                     :tech  [:clojure :funksjonell-programmering]}
+
+                   {:title "Intro to Clojure"
+                    :blurb "Workshop på flatMap(Oslo)"
+                    :event "flatMap(Oslo)"
+                    :urls {:video "https://gitlab.com/stoyle/clojure-workshop-flatmap/tree/master"}
+                    :date "2014-05-01"
+                    :tech [:clojure]}
                     
-                    {:title "Programmeringsspråket betyr alt!"
+                   {:title "Programmeringsspråket betyr alt!"
                     :blurb "Hovedverktøyet til programmerere er
                   programmeringsspråket. Likevel velge vi sjeldent det
                   beste riktige verktøyet for å løse oppgavene.
                   Denne presentasjonen fokuserer på hvor viktig det er å velge
                   riktig programmeringsspråk."
                     :date "2013-02-14"
+                    :event "Software 2013"
                     :urls  {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
                     :tech  [:funksjonell-programmering :clojure :scala
                             :python :groovy :java]}
@@ -117,6 +326,7 @@
                     syntaks. Men når man forstår hvorfor syntaksen er som
                     den er, så blir språket vakkert!"
                     :date "2012-09-10"
+                    :event "JavaZone"
                     :urls  {:video "http://vimeo.com/49324971"}
                     :tech  [:lisp :clojure]}
                    {:title "Clojure - JVM språket som er \"multi-core ready\""
@@ -125,8 +335,58 @@
                     Forklarer også hvorfor Clojure er et bedre rustet språk
                     for fremtiden enn andre."
                     :date "2011-09-07"
+                    :event "JavaZone"
                     :urls  {:video "https://vimeo.com/28765670"}
                     :tech  [:clojure :funksjonell-programmering]}]
+
+ :appearances [{:title "Lisp is beautiful!"
+                :event "Jfocus"
+                :date "2013-02-02"
+                :tech [:lisp]}
+               {:title "Workshop on functional programming"
+                :event "JavaZone"
+                :urls {:video "https://github.com/stoyle/functional-workshop"}
+                :date "2012-09-10"
+                :tech [:functional-programming]}
+               {:title "What is (still) painful while developing Scala"
+                :event "flatMap(Oslo)"
+                :date "2012-05-10"
+                :tech [:scala]}
+               {:title "Learning Lisp"
+                :event "Java Posse Roundup"
+                :urls {:video "http://www.slideshare.net/stoyle/learning-lisp"}
+                :date "2012-10-01"
+                :tech [:lisp]}
+               {:title "Into Clojure"
+                :event "Oslo Socially Functional"
+                :urls {:video "http://www.slideshare.net/stoyle/into-clojure-9708003"}
+                :date "2012-09-20"
+                :tech [:clojure]}
+               {:title "Dependency Injection i Scala med Cake"
+                :event "Communities in Action"
+                :urls {:video "http://www.slideshare.net/stoyle/scala-di"}
+                :date "2011-09-01"
+                :tech [:scala]}
+               {:title "Parallell Collections i Scala"
+                :event "scalaBin"
+                :urls {:video "http://www.slideshare.net/stoyle/paralell-collections-in-scala"}
+                :date "2011-08-01"
+                :tech [:scala]}
+               {:title "Kontoeksempelet i Java og Clojure"
+                :event "JavaZone"
+                :urls {:video "http://www.slideshare.net/stoyle/account-example-in-java-and-clojure"}
+                :date "2010-09-10"
+                :tech [:java :clojure]}
+               {:title "Introduksjon til Scala"
+                :event "javaBin Trondheim"
+                :urls {:video "http://www.slideshare.net/stoyle/scala-introduction"}
+                :date "2010-08-01"
+                :tech [:scala]}
+               {:title "Scala kurs"
+                :event "javaBin Oslo"
+                :urls {:video "https://github.com/javaBin/scala-training-slides"}
+                :date "2010-07-01"
+                :tech [:scala]}]
 
  :endorsements    [{:author "Rune Strandli"
                     :title "Chief Digital Officer, BN Bolig"
@@ -216,10 +476,27 @@
                     sammen med Alf Kristian var behagelig. Alfs bidrag med
                     kompetanse, kunnskap, kreativitet, samt oppførselen og
                     væremåte ga oss og teamet store felles løft. Ønsket mitt
-                    var å fortsette samarbeidet , derved ”slippe” å anbefale
+                    var å fortsette samarbeidet, derved ”slippe” å anbefale
                     ham. Siden så ikke ble, umiddelbart og noe skal fremheves
                     må det være blant hans mange gode egenskaper: Raskt å
                     tilegne seg oversikt. Se muligheter og løsninger i alle
                     spekter fra programmeringsteknisk detaljnivå til overordnet
                     informasjonsflyt. Profesjonell opptreden, tørre å ta tak i
-                    utfordringer på alle nivåer. "}]}
+                    utfordringer på alle nivåer. "}]
+
+ :cv {}
+ :born 1978
+ :relationship-status "Samboer"
+ :education-summary "Sivilingeniør Kommunikasjonsteknologi NTNU"
+ :experience-since 2004
+ :certifications [{:name "Sun Certified Enterprise Architect" :year 2006}
+                  {:name "Sun Certified Web Component Developer" :year 2006}
+                  {:name "Sun Certified Java Developer" :year 2005}
+                  {:name "Sun Certified Java Programmer" :year 2004}]
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}] 
+ }
