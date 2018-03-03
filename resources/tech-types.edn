@@ -13,6 +13,7 @@
  :aws-api-gateway :cloud
  :aws-cloudfront :cloud
  :aws-cloudwatch :cloud
+ :aws-ec2 :cloud
  :aws-ecs :cloud
  :aws-iam :cloud
  :aws-kinesis :cloud
@@ -33,6 +34,8 @@
  :chai :library
  :ci :methodology
  :clojure-spec :library
+ :cocoapods :library
+ :coffeescript :proglang
  :collectionjson :specification
  :compass :library
  :concourse :devops
@@ -46,6 +49,8 @@
  :datascript :database
  :dbfit :framework
  :ddd :methodology
+ :delphi :proglang
+ :docker-cloud :cloud
  :dotnet :framework
  :eclipse :devtools
  :elasticsearch :server
@@ -63,12 +68,15 @@
  :groovyws :library
  :grunt :library
  :gwt :framework
+ :h2db :database
  :hadoop :library
  :haproxy :devops
+ :hateoas :methodology
  :hbase :server
  :html :frontend
  :http :frontend
  :intellij :devtools
+ :interbase :database
  :ios :os
  :jade :library
  :jasmine :library
@@ -76,6 +84,7 @@
  :jira :tool
  :jaxrs :tool
  :jboss :server
+ :jbuilder :library
  :jpa :library
  :jquery :library
  :js-test-driver :library
@@ -99,8 +108,10 @@
  :mocha :library
  :mockito :library
  :mongodb :database
+ :mongo-queue :server
  :mule :server
  :mysql :database
+ :neo4j :database
  :netty :server
  :nginx :devops
  :oauth2 :security
@@ -113,6 +124,7 @@
  :openam :server
  :openssl :library
  :oracle :database
+ :oracle-appserver :server
  :oracle-locator :database
  :osx :os
  :passenger :server
@@ -149,10 +161,12 @@
  :textmate :devtools
  :thinking-sphinx :library
  :tsql :specification
+ :tutum :cloud
  :ubuntu :os
  :unfiltered :library
  :unity3d :framework
  :unix :os
+ :visual-basic :proglang
  :visual-source-safe :vcs
  :visual-studio :devtools
  :wicket :library
@@ -163,4 +177,5 @@
  :webpack :tool
  :zeromq :server
  :zookeeper :library
+ :xcode :devtools
  }
