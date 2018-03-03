@@ -119,8 +119,8 @@
 (defn- endorsements [{:keys [endorsements]}]
   (when (< 0 (count endorsements))
     (section "Anbefalinger"
-             (map (fn [{:keys [author quote]}]
-                    (list [:h3 author]
+             (map (fn [{:keys [author title quote]}]
+                    (list [:h3 author (when title (list ", " title))]
                           [:blockquote quote]))
                   endorsements))))
 
