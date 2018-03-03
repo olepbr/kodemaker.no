@@ -100,7 +100,7 @@
                   :date "2016-09-08"
                   :tech [:java :concurrency :akka :vertx :hystrix :rxjava :quasar]
                   :urls {:video "https://vimeo.com/182070294"}}
-                 {:title "Sammenligning av GC alternativer"
+                 {:title "Sammenligning av GC-alternativer"
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
@@ -155,6 +155,124 @@
                   :tech [:java :scala :clojure :ruby :groovy]
                   :urls {:video "https://vimeo.com/28705495"
                          :slides "http://www.slideshare.net/EivindWaaler/funksjonell-programmering-p-jvm"}}]
+
+ :appearances [{:title "Java 8 - hva er nytt og spennende?"
+                :event "EVRY Fagtinget"
+                :tech [:java]
+                :date "2014-10-01"}
+               {:title "Akka"
+                :event "javaBin sommermøte Oslo"
+                :tech [:akka :scala]
+                :date "2014-07-20"}
+               {:title "Fra Grid til Akka!"
+                :date "2013-05-12"
+                :event "flatMap(Oslo)"
+                :tech [:java :akka :grid :hazelcast]}
+               {:title "Nyheter i Java 8"
+                :event "javaBin julemøte Oslo"
+                :tech [:java]
+                :date "2013-12-02"}
+               {:title "Akka i praksis!"
+                :event "javaBin julemøte Trondheim"
+                :tech [:scala :akka]
+                :date "2013-12-01"}
+               {:title "Scala - Object-oriented and functional programming combined"
+                :event "Gjesteforelesning INF3110 - UiO"
+                :tech [:scala]
+                :date "2012-06-01"}
+               {:title "Scala - Object-oriented and functional programming combined"
+                :event "Gjesteforelesning INF3110 - UiO"
+                :tech [:scala]
+                :date "2011-06-01"}
+               {:title "Scala som alternativ"
+                :event "SpareBank 1"
+                :tech [:scala]
+                :date "2011-05-01"}
+               {:title "Funksjonell Programmering på JVM"
+                :event "JavaZone"
+                :date "2010-09-10"
+                :tech [:java :functional-programming]}
+               {:title "Scala - Object-oriented and functional programming combined"
+                :event "Gjesteforelesning INF3110 - UiO"
+                :tech [:scala]
+                :date "2010-06-01"}
+               {:title "Clojure"
+                :event "Communities in Action"
+                :date "2010-05-01"
+                :tech [:clojure]}
+               {:title "Continuous Performance Testing"
+                :event "CommunityOne"
+                :date "2009-10-01"
+                :tech [:ci]}
+               {:title "Continuous Performance Testing in the Cloud"
+                :event "JavaZone"
+                :tech [:ci]
+                :date "2009-09-10"}
+               {:title "Introduksjon til Scala"
+                :event "OMS - UiO"
+                :date "2009-08-01"
+                :tech [:scala]}
+               {:title "Lyntale - Image Processing in Scala"
+                :event "scalaBin"
+                :tech [:scala]
+                :date "2009-07-01"}
+               {:title "Scala - Object-oriented and functional programming combined"
+                :event "Gjesteforelesning INF3110 - UiO"
+                :tech [:scala]
+                :date "2009-06-01"}
+               {:title "Open Source i privat sektor"
+                :event "Gjesteforelesning INF5750 - UiO"
+                :tech [:open-source]
+                :date "2009-05-01"}
+               {:title "Struts2 - Et testbart alternativ!"
+                :tech [:java :struts]
+                :event "JavaZone"
+                :date "2007-09-10"}
+               {:title "EJB 3"
+                :event "javaBin"
+                :date "2006-10-01"
+                :tech [:java :ejb]}
+               {:title "Testing & TDD"
+                :event "JavaZone"
+                :tech [:tdd]
+                :date "2006-09-10"}
+               {:title "EJB 3 i praksis"
+                :event "Gjesteforelesning INF5040 - UiO"
+                :tech [:ejb :java]
+                :date "2006-06-01"}
+               {:title "Hvordan tjene penger på Open Source?"
+                :event "Gjesteforelesning INF5750 - UiO"
+                :tech [:open-source]
+                :date "2005-06-01"}
+               {:title "SiteMesh"
+                :event "javaBin"
+                :date "2005-10-01"
+                :tech [:sitemesh]}
+               {:title "What's the ideal weight of your container? (Spring vs EJB3)"
+                :event "JavaZone"
+                :tech [:java :ejb]
+                :date "2005-09-10"}
+               {:title "Hibernate & Middlegen"
+                :event "ifi-pop - UiO"
+                :tech [:middlegen :hibernate]
+                :date "2005-07-10"}
+               {:title "Oppsummering JavaONE 2004"
+                :event "javaBin"
+                :date "2004-10-01"
+                :tech [:java]}
+               {:title "Hibernate-utvikling i praksis"
+                :event "JavaZone"
+                :tech [:hibernate]
+                :date "2004-09-10"}
+               {:title "XDoclet & Middlegen"
+                :event "javaBin"
+                :tech [:xdoclet :middlegen]
+                :date "2003-06-01"}
+               {:title "Middlegen - Open Source kodegenereringsverktøy"
+                :event "JavaZone"
+                :tech [:middlegen]
+                :date "2003-05-01"}]
+
  :endorsements [{:author "Sissel Irene Monsø Sveum"
                  :title  "Områdeleder, FINN.no"
                  :quote  "Eivind er en veldig god utvikler med glimt i øyet. Han tar alle oppgaver på strak
@@ -182,4 +300,229 @@
 
                           Han er en team spiller og deler med stor glede av sin kompetanse, både i
                           forbindelse med parprogrammering og gjennomganger for større eller mindre grupper."}]
-}
+
+ :projects [{:customer "BN Bolig"
+             :years [2017]
+             :employer :kodemaker
+             :summary "Nettsider og kundeweb"
+             :description "BN Bolig er et eiendomsmegler-foretak eiet av BN Bank
+             og Eiendomsmegler1 Midt-Norge. De ønsker å ligge langt fremme når
+             det gjelder bruk av teknologi. Kodemaker har bistått i å bygge opp
+             nettsider og kundeweb med både backend og frontend. Eivind hadde
+             hovedansvar for frontend delen av prosjektet, men har også jobbet
+             som fullstack-utvikler med oppgaver som spenner over både backend
+             og frontend samt devops."
+             :tech [:javascript :clojure :react :redux :c3 :webpack :aleph :ring :core-async
+                    :ansible :nginx :postgresql :varnish :haproxy]}
+            {:customer "FINN.no"
+             :employer :kodemaker
+             :summary "Ordre, Produkt og Betaling"
+             :years [2015 2016 2017]
+             :description "Har jobbet med videreutvikling av ordre- og
+             betalingssystemer hos FINN.no. De største oppgavene for meg har
+             vært å utvikle støtte for abonnementsbetaling/månedlige avdrag på
+             kredittkort, samt ytelsesoptimalisering av Hibernate. Hadde også
+             hovedansvaret for å lage en JavaScript-basert
+             overvåkningsapplikasjon basert på node.js, Express og React, hvor
+             data kom fra ulike kilder som Prometheus, Elasticsearch og Kafka."
+             :tech [:java :groovy :scala :javascript :hibernate :spring :kafka :postgresql
+                    :sybase :jersey :nodejs :express :react :prometheus :zipkin :elasticsearch :kibana]}
+            {:customer "Skatteetaten"
+             :years [2014 2015]
+             :employer :bekk
+             :summary " Nytt system for skattekort og skatteoppgjør "
+             :description "Jobbet på prosjektet Sofus - som utvikler nytt system
+             for skattekort, skattemanntall og skatteoppgjør. Det nye systemet
+             skal erstatte en rekke gamle systemer basert på IBM stormaskin.
+             Eivind sin rolle i prosjektet var arkitekt og utvikler. Han trakk
+             opp første versjon av alle modulene, med bygg og deploy. Var også
+             med å utvikle et eget rammeverk for å definere fremtidens
+             skatteberegning som en slags DSL."
+             :tech [:java :akka :dropwizard :jetty :jersey :oracle-database :ibm-datapower
+                    :javascript]}
+            {:customer "Skatteetaten"
+             :years [2013 2014]
+             :employer :bekk
+             :summary "Edag - Utvikling av a-ordningen"
+             :description "Jobbet på prosjektet Edag - som utviklet a-ordningen
+             i et samarbeid mellom Skatteetaten, NAV og SSB. Prosjektet regnes
+             som svært vellykket og ble levert i henhold til plan og budsjett.
+             Eivind hadde rolle som erfaren utvikler hvor han tok ansvar for å
+             utvikle flere av de sentrale rammeverkene og modulene i prosjektet.
+             Eivind jobbet hovedsaklig med backend, men fikk også gjort en del
+             frontend arbeid ifm. admin- og test-grensesnitt. Hans fremste
+             bidrag i prosjektet var nok å være pragmatisk og målrettet for å få
+             jobben gjort."
+             :tech [:java :guice :jersey :xml :jaxb :abdera :jetty :akka :camel :oracle :altinn :ibm-datapower]}
+            {:customer "Statens vegvesen"
+             :years [2013]
+             :employer :bekk
+             :summary "PoC - Innsamling av veidata"
+             :description "PoC - Innsamling av veidata"
+             :tech [:java :elasticsearch :akka :dropwizard :javascript]}
+            {:customer "Skatteetaten"
+             :years [2012 2013]
+             :employer :bekk
+             :summary " Mag - Modernisering av grunnlagsdata "
+             :description "Jobbet på prosjektet Mag - som utviklet modernisert
+             mottak av grunnlagsdata. Eivind sin rolle var erfaren utvikler med
+             hovedansvar for en kjernekomponent som mottar og kontrollerer
+             filer. Utviklet både første versjon som var basert på grid og
+             Hazelcast, samt andre versjon som baserte seg på Java tråder og et
+             sentralt dokumentlager. Et spennende prosjekt hvor Eivind ble kjent
+             med mange flinke mennesker og mye spennende teknologi."
+             :tech [:java :hazelcast :guice :jersey :xml :abdera :jetty :glassfish :oracle :altinn]}
+            {:customer "Skatteetaten"
+             :years [2011 2012]
+             :employer :bekk
+             :summary "PoC - Bruk av grid for skatteberegning"
+             :description "Jobbet på en proof of concept knyttet til bruk av
+             grid-teknologi for skatteberegning. Eivind sin rolle var utvikler
+             med hovedansvar for å knytte komponentene sammen. Han tok også over
+             frontend-delen av prosjektet mot slutten - noe som var veldig
+             lærerikt for en gammel backend-utvikler. Et veldig lærerikt og
+             morsomt prosjekt!"
+             :tech [:java :gemfire :hazelcast :javascript]}
+            {:customer "SpareBank1"
+             :years [2010 2011]
+             :employer :bekk
+             :summary "Saksbehandling for livsforsikring"
+             :description "Teknisk ansvarlig, arkitekt og utvikler på
+             ASK-prosjektet hos SpareBank 1 - Livselskapet. Utvikling av en
+             prosess/saksflyt applikasjon for kundebehandlere på livsforsikring.
+             I tillegg diverse mindre oppdrag rundt strategi og rådgivning for
+             andre prosjekter/generell arkitektur i SpareBank 1."
+             :tech [:java :weblogic :spring :hibernate :jbpm :jquery :jsf]}
+            {:customer "Avinor"
+             :years [2008 2009]
+             :employer :bekk
+             :summary "Intranett/internett - Utviklet webløsninger"
+             :description "Forvaltning av selvbetjenings- og portalløsninger hos
+             Avinor. Dette inkluderer avinor.no med alle lufthavnsider. Rolle
+             som arkitekt, og utvikler. Satt opp kontinuerlig ytelsestesting
+             vha. Grinder og Jenkins."
+             :tech [:java :weblogic-portal :spring :oracle :maven :grinder]}
+            {:customer "Gjensidige"
+             :years [2005 2006 2007 2008]
+             :employer :bekk
+             :summary "Diverse prosjekter knyttet til forsikring"
+             :description "Reimplementasjon av gammelt system (KAP). Løsning for
+             å hente og behandle leads til kundebehandlere. Integrert med
+             kundebehandlingssystemet. Eivind ble også benyttet som rådgiver på
+             andre prosjekter hos Gjensidige, for valg av arkitekturer og
+             tekniske løsninger generelt."
+             :tech [:java :webwork :spring :ibm-websphere :teradata-tcrm :enonic-cms]}
+            {:customer "Unipub"
+             :years [2007 2008]
+             :employer :bekk
+             :summary "Hibernate-bistand"
+             :description "Hibernate-bistand."
+             :tech [:java :hibernate]}
+            {:customer "DnB"
+             :years [2005 2006]
+             :employer :bekk
+             :summary "Diverse prosjekt og kurs"
+             :description "Laget og holdt kurs i Spring, Maven og Subversion for
+             firmaets utviklere og teknologiske ledelse."
+             :tech [:java :spring :atg-dynamo :websphere :maven :svn]}
+            {:customer "Forsvaret"
+             :years [2004 2005]
+             :employer :bekk
+             :summary "Prosjekter basert på Open Source teknologi"
+             :description "Bygge applikasjon for å holde oversikt over lover,
+             regler og bestemmelser i organisasjonen (FOBID). Ren Open Source
+             løsning."
+             :tech [:java :spring :hibernate :jboss :webwork :sitemesh :lucene]}
+            {:customer "Selvaag"
+             :years [2002 2003 2004 2005]
+             :employer :bekk
+             :summary "Prosjekter knyttet til industrialisert boligbygging"
+             :description "Utvikling av prototyper og tekniske Proof og Consepts
+             på verktøy til bruk i byggebransjen. Har også gjennomført noe QA
+             arbeid på kundens eksisterende arkitektur samt vært ansvarlig for
+             opplæring/mentoring av ansatte."
+             :tech [:java :weblogic]}
+            {:customer "QFree"
+             :years [2003]
+             :employer :bekk
+             :summary "Bistand Hibernate"
+             :description "Bistand Hibernate."
+             :tech [:java :hibernate]}
+            {:customer "DnB"
+             :years [2001 2002 2003]
+             :employer :bekk
+             :summary "ATG Dynamo-spesialist"
+             :description "Bistått ca. 20 forskjellige prosjekter knyttet til
+             konsernets bankdivisjon med teknisk støtte og bistand på ATG Dynamo
+             relaterte problemer. Vært en teknisk ressurs som alle prosjektene
+             hadde tilgang til."
+             :tech [:java :atg-dynamo]}
+            {:customer "ABB"
+             :years [2001 2002]
+             :employer :bekk
+             :summary "Forvaltning intranett"
+             :description "Notes-basert løsning for kunden som forenkler linking
+             til eksterne data fra Lotus Notes dokumenter. Dette skjer ved at
+             den eksterne kilden (Library) eksporterer metadata i form av en XML
+             fil som så blir importert i Integration databasen. Brukeren vil
+             dermed finne igjen den samme datastrukturen her som i den eksterne
+             kilden. Når datastrukturen så er tilgjengelig i Notes, kan brukeren
+             enkelt navigere i denne strukturen og generere linker til de
+             faktiske dataene i Library."
+             :tech [:java :lotus-notes]}
+            {:customer "Formuesforvaltning"
+             :years [2000 2001]
+             :employer :bekk
+             :summary "Nytt verktøy for økonomiske porteføljer"
+             :description "Oppbygging av større system for personlig økonomisk
+             rådgivning. Salg/kjøp av produkter, samt finansiell plan og
+             porteføljeverktøy. Løsning både for kunder, rådgivere og
+             back-office personell. Integrasjon mot Oslo Børs."
+             :tech [:java :weblogic :iis :mssql]}
+            {:customer "Sportagon"
+             :years [2000]
+             :employer :bekk
+             :summary ".com-eventyr"
+             :description "Stor sportsportal for avansert analyse av
+             sportsresultater i tillegg til svært detaljrikt innhold. Første
+             versjon hovedsakelig fokusert på fotball."
+             :tech [:java]}
+            {:customer "Gotogate"
+             :years [1999 2000]
+             :employer :andersen
+             :summary "Gotogate.no - reisebyrå på internett"
+             :description "Var med på utviklingen av første utgave av
+             Gotogate.no, et internett-basert reisebyrå."
+             :tech [:java :atg-dynamo :oracle]}
+            {:customer "Andersen Consulting"
+             :years [1999]
+             :employer :andersen
+             :summary "Utviklet internt samhandlingssystem"
+             :description "Utviklet internt samhandlingssystem."
+             :tech [:vbscript :asp :iis :mssql]}]
+
+ :cv {}
+
+ :innate-skills [:python]
+ :education-summary "Høgskoleingeniør Systemutvikling, HiST / Master Informatikk, UiO"
+ :experience-since 1999
+ :qualifications ["Solid og erfaren fullstack-utvikler"
+                  "Dreven på testdrevet utvikling"
+                  "Opptatt av hyppige leveranser og smidig utvikling"
+                  "Tar oppgaver i hele stacken, fra deployment og bygg, via databaser og backend til frontend"]
+ :certifications [{:name "Sun Certified Enterprise Architect (SCEA)", :year 2004}
+                  {:name "Sun Certified Java Developer (SCJD)", :year 2004}
+                  {:name "Sun Certified Business Component Developer (SCBCD)"
+                   :year 2004}
+                  {:name "Sun Certified Web Component Developer (SCWCD)", :year 2002}
+                  {:name "Certified ATG Dynamo Developer", :year 2002}
+                  {:name "Sun Certified Java Programmer (SCJP)", :year 2001}]
+ :relationship-status "Gift, 2 barn"
+ :born 1976
+ :education [{:institution "UiO"
+              :years [2008 2009 2010]
+              :subject "Master Informatikk"}
+             {:institution "HiST"
+              :years [1995 1996 1997 1998]
+              :subject "Høgskoleingeniør Systemutvikling"}]
+ }
