@@ -56,4 +56,176 @@
                  :quote "Anders is a clever and fast programmer who easily sees
                         solutions to complex problems. His code is tidy almost to
                         the extreme. One of the best developers I have ever worked
-                        with."}]}
+                        with."}]
+
+ :projects [{:customer "Norled"
+             :employer :kodemaker
+             :summary "Nytt informasjonssystem for fergedrift"
+             :description "Utvikler nye informasjonssystemer for fergedrift for
+             Norled. Jobber også med billett-app for kunder, samt app for
+             fergebillettørene."
+             :tech [:clojure :clojurescript :datomic :datascript :reagent :mount :docker
+                    :aws :cordova :html :css :responsive-design :kafka :influxdb :lambdacd
+                    :travisci]
+             :years [2016 :ongoing]}
+            {:customer "Oiiku"
+             :employer :kodemaker
+             :years [2015 :ongoing]
+             :summary "Arrangementsystemer"
+             :description "Oiiku utvikler nettbaserte tjenester for organisering
+             og gjennomføring av arrangmenter. Oiiku blir benyttet ved flere
+             høyprofilerte konferanser i Norden (NHOs årskonferanse, EAT Forum,
+             m.fl.). Jeg jobbet i et team på to med ny- og videreutvikling av
+             Oiikus tjenester basert på Clojure. Jeg jobbet både frontend og
+             backend, samt med automatisering av drift."
+             :tech [:clojure :datomic :javascript :angularjs :ansible :elasticsearch]}
+            {:customer "NSB"
+             :years [2015]
+             :employer :kodemaker
+             :summary "Avvikssystem"
+             :description "Full-stack utvikling av system for håndtering av
+             driftsavvik i NSBs transporttjenester."
+             :tech [:groovy :javascript :react :java :spring :gradle :grails]}
+            {:customer "Eventum Norge AS"
+             :years [2014]
+             :employer :eventum
+             :summary "Markedsportal"
+             :description "Utvikling av et nettbasert markedsplass for
+             formidling av møte- og selskapslokaler. Ansvarlig for utvikling av
+             back-end av løsningen, med bidrag på utvikling av front-end.
+             Roller: Ledende utvikler."
+             :tech [:clojure :datomic :javascript :react :elasticsearch]}
+            {:customer "Oiiku"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Arrangementsystemer"
+             :description "Oiiku utvikler nettbaserte tjenester for organisering
+             og gjennomføring av arrangmenter og konferanser. Jeg jobbet i et
+             lite team med utvikling av applikasjon og API for bestilling,
+             printing og adgangskontroll for deltagerkort."
+             :tech [:clojure :datomic :elasticsearch]}
+            {:customer "FINN.no AS"
+             :years [2010]
+             :employer :kodemaker
+             :summary "FINNs tjenester for søk og bestilling av reiseprodukter"
+             :description "Utvikling av FINNs tjenester for søk og bestilling av
+             reiseprodukter Roller: Senior utvikler."
+             :tech [:groovy :java :javascript :solr :spring :maven :gradle]}
+            {:customer "Accenture / Brønnøysundsregisteret"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Sikkerhetsløsning (autentisering) for altinn.no"
+             :description "Utvikling av autentiseringsløsning for altinn.no
+             Roller: Senior utvikler, team lead, mentoring."
+             :tech [:opensso :java :maven :hibernate :jax-ws :dotnet]}
+            {:customer "Oslo Børs VPS"
+             :years [2008]
+             :employer :aktiv
+             :summary "System for forvaltning av fond"
+             :description "Utvikling av nytt system for forvaltning av fond.
+             Rolle: Teknisk ansvarlig for tjeneste- og domenelag i
+             applikasjonene."
+             :tech [:java :ejb :spring :hibernate :maven :websphere :jetty]}
+            {:customer "NETS AS"
+             :years [2008]
+             :employer :nets
+             :summary "Konsekvensanalyse / forprosjekt for utfasing av PKI plattform"
+             :description "Konsekvensanalyse / forprosjekt for utfasing av PKI
+             plattform Konsekvensanalyse for utfasing av sertifikatplattform
+             benyttet av flere virksomhetskritiske tjenester. Utarbeidelse av
+             løsningsforslag for innføring/utvikling av ny sertifikatplattform.
+             Utarbeidelse av strategi for migrering av berørte tjenester og
+             produkter til ny plattform. Rolle: Analytiker"
+             :tech [:design]}
+            {:customer "NETS AS"
+             :years [2007 2008]
+             :employer :nets
+             :summary "System for bestilling av digitale sertifikater via web"
+             :description "System for bestilling av digitale sertifikater via
+             web Design og utvikling av webbasert grensesnitt for bestilling og
+             formidling av digitale sertifikater. Rolle: Ledende utvikler"
+             :tech [:java :spring-mvc :spring :hibernate]}
+            {:customer "NETS AS"
+             :employer :nets
+             :years [2005 2006 2007]
+             :summary "Autentisering- og autorisasjonssystem for online portal"
+             :description "Autentisering- og autorisasjonssystem for online
+             portal Design og utvikling av nytt sikkerhetsrammeverk for
+             tilgangskontroll av tjenester. Støtte for et bredt utvalg av
+             autentiseringsmekanismer samt Single Sign-On mekanismer. Utvikling
+             av dynamisk regelmotor for evaluering av tilgangsforespørsler.
+             Benyttes av store deler av BBS sine webtjenester. Rolle:
+             Løsningsarkitekt og ledende utvikler"
+             :tech [:java :spring :hibernate :siteminder :rbac]}
+            {:customer "NETS AS"
+             :years [2007 2008]
+             :employer :nets
+             :summary "Utarbeidelse av metodikk for sikkerhetsanalyse av IT-systemer"
+             :description "Metodikk for sikkerhetsanalyse Initiativtaker og
+             utførende i utarbeidelse av bedriftstilpasset metodikk for
+             sikkerhetsanalyse av tjenester. Utførende analytiker og veileder
+             for sikkerhetsanalyse av tjenester. Rolle: Analytiker"
+             :tech nil}
+            {:customer "NETS AS"
+             :years [2003 2004 2005]
+             :employer :nets
+             :summary "Utvikling av system og rammeverk for kryptering og signering av finansielle transaksjoner"
+             :description "Krypteringsrammeverk Videreutvikling av tjeneste og
+             produkt for generering og verifisering av digitale signaturer i
+             ulike formater. Ansvarlig for implementering av støtte for bl.a.
+             EDIFACT AUTACK og Visa/MasterCard MPI. Benyttet av ulike tjenester
+             for å sikre integritet av utveklsing av finansielle transaksjoner
+             mellom BBS og kunder. Rolle: Utvikler"
+             :tech
+             [:c :cpp :java :jni :linux :solaris :hp-nonstop]}
+            {:customer "NETS AS"
+             :years [2002 2003]
+             :employer :nets
+             :summary "Utvikling av system for innsamling og analyse av sikkerhetshendelser"
+             :description "Innsamlings- og analyseverktøy Implementering av
+             innsamling- og analyseverktøy av sikkerhetshendelser i interne
+             infrastrukturkomponenter. Rolle: Utvikler"
+             :tech [:c :perl :mysql :apache :linux]}]
+
+ :cv {}
+ :born 1980
+ :education-summary "Institutt for Informatikk, UiO"
+ :experience-since 2001
+ :cv/description "Anders er en svært engasjert, ansvarstagende og pragmatisk
+ konsulent. I løpet av sine 14 år i bransjen har han hovedsakelig besittet
+ roller som utvikler og løsningsarkitekt i flere større prosjekter, fra
+ sikkerhetsløsninger for bank, finans og offentlige tjenester til kommersielle
+ reiselivsprodukter.
+
+ Ettersom han i perioder av denne tiden også har hatt rollen som fagsjef i en
+ infrastrukturavdeling har han vært involvert som rådgiver i en rekke mindre
+ prosjekter og forvaltningsoppdrag med bred faglig spennvidde.
+
+ Anders har også utført kodegranskning med fokus på sikkerhet av samfunnskritiske
+ systemer, samt vært foredragsholder innen sikker programvareutvikling."
+
+ :qualifications ["Funksjonell programmering"
+                  "Testdrevet utvikling"
+                  "Systemarkitektur og integrasjon"
+                  "IT-Sikkerhet"]
+
+ :certifications [{:name "Sertifisert ScrumMaster" :year 2007}
+                  {:name "Sun Certified Java Programmer" :year 2004}
+                  {:name "C development on HP NonStop" :year 2004}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
+
+ :education [{:institution "Universitet i Oslo, Institutt for Informatikk"
+              :years [2000 2001 2002 2003]
+              :subject "Systemutvikling"}
+             {:institution "Militæretjeneste, Hæren"
+              :years [1999 2000]
+              :subject "Luftværnet"}
+             {:institution "Fagerlia VGS, Ålesund"
+              :years [1996 1997 1998 1999]
+              :subject "Matte, fysikk og kjemi"}]}
