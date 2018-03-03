@@ -124,6 +124,11 @@
                           [:blockquote quote]))
                   endorsements))))
 
+(defn linked-title [{:keys [title urls]}]
+  (if-let [url (or (:video urls) (:slides urls) (:source urls))]
+    [:a {:href url} title]
+    title))
+
 (defn- cv-page [person]
   {:title (format "%s CV" (:full-name person))
    :layout :cv
@@ -161,7 +166,7 @@
           (table-section "Foredrag/kurs"
                          (:appearances person)
                          ["Navn" "Sted" "Når"]
-                         [:title :event :year-month])
+                         [linked-title :event :year-month])
           (open-source-contributions person)
           (table-section "Utdanning"
                          (:education person)
