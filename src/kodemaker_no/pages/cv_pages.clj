@@ -72,7 +72,7 @@
 (defn- render-projects [employments [employer projects]]
   (list
    [:h3 (:name employer)]
-   (when-let [employment ((:id employer) employments)]
+   (when-let [employment (and (:id employer) ((:id employer) employments))]
      [:p (:description employment)])
    (table projects
           ["Oppdragsgiver" "Periode" "Oppdrag"]
