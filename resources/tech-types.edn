@@ -1,6 +1,7 @@
 ;; Kategorisering av typer tech for teknologier som ikke har sin egen side enda.
 ;; Typen brukes til å plassere teknologien i rett kategori på CV-en.
 {
+ :akka :library
  :alpine :os
  :android :os
  :angularjs :framework
@@ -49,17 +50,22 @@
  :eclipse :devtools
  :elasticsearch :server
  :elisp :proglang
+ :es6 :proglang
  :event-sourcing :methodology
  :express-js :framework
  :ezpublish :server
  :fatwire :server
  :fitnesse :framework
  :flex :framework
+ :gerrit :tool
  :google-adwords :tool
  :google-analytics :tool
  :groovyws :library
  :grunt :library
+ :gwt :framework
+ :hadoop :library
  :haproxy :devops
+ :hbase :server
  :html :frontend
  :http :frontend
  :intellij :devtools
@@ -70,27 +76,32 @@
  :jira :tool
  :jaxrs :tool
  :jboss :server
+ :jpa :library
  :jquery :library
  :js-test-driver :library
  :jsp :library
  :jspm :devtools
  :junit :library
+ :kafka :server
  :karma :library
  :leiningen :devtools
  :less :frontend
  :lighttable :devtools
  :lisp :proglang
  :lisp-flavoured-erlang :proglang
+ :logstash :server
  :markdown :specification
  :markedsforing :methodology
  :material-ui :frontend
  :mesos :devops
+ :micro-services :methodology
  :midje :library
  :mocha :library
  :mockito :library
  :mongodb :database
  :mule :server
  :mysql :database
+ :netty :server
  :nginx :devops
  :oauth2 :security
  :objc :proglang
@@ -107,17 +118,21 @@
  :passenger :server
  :photoshop :tool
  :php :proglang
+ :play :framework
  :puppet :devops
  :pygments :library
  :rails :framework
  :rake :library
  :reactive-cocoa :library
  :redhat :os
+ :redux :library
  :rest :specification
+ :ruby :proglang
  :rubymine :devtools
  :rspec :library
  :sap :server
  :sbt :devtools
+ :scalatra :framework
  :selenium :library
  :sinon :library
  :siteminder :server
@@ -135,13 +150,17 @@
  :thinking-sphinx :library
  :tsql :specification
  :ubuntu :os
+ :unfiltered :library
  :unity3d :framework
  :unix :os
  :visual-source-safe :vcs
  :visual-studio :devtools
+ :wicket :library
  :windows :os
  :wcf :framework
  :webgl :frontend
  :weblogic :server
+ :webpack :tool
  :zeromq :server
+ :zookeeper :library
  }
