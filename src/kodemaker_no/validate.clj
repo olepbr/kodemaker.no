@@ -75,7 +75,10 @@
    (optional-key :appearances) [{:title Str ;; Mindre profilerte kurs/workshops/foredrag til CV-en
                                  :event Str
                                  :date Date ;; iso-8601 yyyy-mm-dd
-                                 :tech [ID]}]
+                                 :tech [ID]
+                                 (optional-key :urls) {(optional-key :video) URL
+                                                       (optional-key :slides) URL
+                                                       (optional-key :source) URL}}]
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
                                  :blurb Str
