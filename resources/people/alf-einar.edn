@@ -8,34 +8,203 @@
  :email-address "alf@kodemaker.no"
 
  :presence		{:cv "alf"
- 				:twitter "aesolbakken"
-    			:github  "aesolbakken"
-    			:linkedin "/in/aesolbakken/"
-    			:coderwall "aesolbakken"}
+                         :twitter "aesolbakken"
+                         :github  "aesolbakken"
+                         :linkedin "/in/aesolbakken/"
+                         :coderwall "aesolbakken"}
  	
  :tech          {:favorites-at-the-moment [:groovy]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable :swift]}
                  
-:recommendations [{:title "Clojure from the ground up"
+ :recommendations [{:title "Clojure from the ground up"
                     :blurb "En god begynnelse for de som ønsker å komme igang med Clojure. Passer godt til både nye programmerere og de litt mer erfarne"
                     :link {:url "http://aphyr.com/posts/301-clojure-from-the-ground-up-welcome"
                            :text "Les artikkelen"}
                     :tech [:clojure]}]
+
+ :projects      [{:customer "Forsvaret MDP"
+                  :years [2016 :ongoing]
+                  :summary "Forsvaret, MDP"
+                  :employer :kodemaker
+                  :description "Masterdata-synkronisering. Oppgaver: Analyse,
+                 design, test, utvikling, dokumentasjon"
+                  :tech [:groovy :grails :bootstrap :oracle :sap :soap :rest]}
+
+                 {:customer "NSB"
+                  :years [2014 2015 2016]
+                  :summary "Passasjerinformasjonssystemer, K2IS"
+                  :employer :kodemaker
+                  :description "Videreutvikling av
+                 passasjerinformasjons-anleggene ombord i togene. Oppgaver:
+                 Analyse, design, test, utvikling, dokumentasjon"
+                  :tech [:groovy :grails :bootstrap :griffon :mysql]}
+
+                 {:customer "NSB"
+                  :years [2014 2015 2016]
+                  :summary "Integrasjonstjenester mellom Svenske Trafikverket og NSB"
+                  :employer :kodemaker
+                  :description "Utvikling av integrasjonstjenester mellom Svenske
+                 Trafikverket og NSB. Oppgaver: Analyse, design, test, utvikling,
+                 dokumentasjon"
+                  :tech [:groovy :grails :bootstrap :soap :rest]}
+
+                 {:customer "NSB"
+                  :years [2014 2015 2016]
+                  :summary "Visualisering av posisjonsdata for tog i sanntid"
+                  :employer :kodemaker
+                  :description "Videreutvikling av en kartapplikasjon for
+                 visualisering av posisjonsdata for tog i sanntid. Oppgaver:
+                 Utvikling, dokumentasjon"
+                  :tech [:groovy :grails :bootstrap :react :flex]}
+
+                 {:customer "Forsvaret GBMS"
+                  :years [2013 2014 2015]
+                  :summary "GBMS"
+                  :employer :kodemaker
+                  :description "Nyutvikling av et system for datafangst og
+                analyse av skyts. Integrasjon med forsvarets SAP-løsning.
+                Oppgaver: Analyse, design, test, utvikling, dokumentasjon"
+                  :tech [:groovy :grails :bootstrap :oracle :sap :jenkins :javascript]}
+
+                 {:customer "Nets"
+                  :years [2012]
+                  :summary "Separation of duties, BKAD"
+                  :employer :kodemaker
+                  :description "Videreutvikling av diverse applikasjoner for å
+                legge til rette for separation of duties. Videreutvikling av
+                BKAD - Sentralt bankregister. Oppgaver: test, utvikling,
+                dokumentasjon"
+                  :tech [:java :hibernate :spring :selenium :jetty :junit :maven :oracle]}
+
+                 {:customer "Fondet for RVO"
+                  :years [2011]
+                  :summary "Utvikling av nytt saksbehandlersystem"
+                  :employer :kodemaker
+                  :description "Nytt saksbehandlersystem. Oppgaver: Analyse,
+                 design, test, utvikling, dokumentasjon"
+                  :tech [:ruby :rails :html :css :javascript :jquery :mysql :passenger
+                         :nginx :rspec :thinking-sphinx :rubymine :capistrano :rake]}
+
+                 {:customer "FFI"
+                  :years [2011]
+                  :summary "Systemintegrasjon"
+                  :employer :kodemaker
+                  :description "Prototyping av systemer for utveksling av
+                posisjonsdata nasjonalt og mellom våre allierte ved hjelp av
+                OASIS Web Services Notification. Oppgaver: Analyse, design,
+                test, utvikling, dokumentasjon"
+                  :tech [:cxf :groovyws :grails :wcf :csharp]}
+
+                 {:customer "Statens pensjonskasse"
+                  :years [2009 2010 2011]
+                  :summary "Utvikling av nytt pensjonssystem"
+                  :employer :kodemaker
+                  :description "Nytt pensjonssystem. prosjekt PERFORM. Oppgaver:
+                 Analyse, design, test, utvikling, dokumentasjon"
+                  :tech [:java :hibernate :spring :flex :spring-batch :mockito
+                         :sybase :jboss :maven :jetty :junit :fitnesse :c]}
+
+                 {:customer "Forsvaret"
+                  :years [2009]
+                  :summary "Amplan4"
+                  :employer :kodemaker
+                  :description "Planlegging og bestillingssystem for
+                 ammunisjon (Amplan4) - Videreutvikling. Oppgaver: Analyse,
+                 design, test, utvikling, dokumentasjon"
+                  :tech [:hibernate :spring :spring-mvc :oracle :jboss
+                         :jsp :maven :jetty :javascript :html :junit :groovy
+                         :spring-security]}
+
+                 {:customer "Statens pensjonskasse"
+                  :years [2009]
+                  :summary "Utvikling av nytt pensjonssystem"
+                  :employer :kodemaker
+                  :description "Nytt pensjonssystem. prosjekt PERFORM. Oppgaver:
+                 Analyse, design, test, utvikling, dokumentasjon"
+                  :tech [:java :hibernate :spring :flex :spring-batch :mockito
+                         :sybase :jboss :maven :jetty :junit :fitnesse :c]}
+
+                 {:customer "Forsvaret"
+                  :years [2008 2009]
+                  :summary "Amplan4"
+                  :employer :kodemaker
+                  :description "Planlegging og bestillingssystem for
+                 ammunisjon (Amplan4). Integrasjon med forsvarets SAP-løsning.
+                 Oppgaver: Analyse, design, test, utvikling, dokumentasjon"
+                  :tech [:hibernate :spring :spring-mvc :oracle :joss :jsp :maven :jetty
+                         :javacript :html :junit :groovy :spring-security :sap]}
+
+                 {:customer "Forsvaret"
+                  :years [2007]
+                  :summary "NORCCISII"
+                  :employer :forsvaret
+                  :description "Nasjonalt kommando og kontrollsystem i
+                 integrasjon med NATO (NORCCISII). Oppgaver: Implementering av
+                 et sett med webservices i forbindelse med
+                 informasjonsutveksling mellom ulike lands kommando og
+                 kontrollsystem."
+                  :tech [:dotnet :wcf :csharp :fitnesse :visual-studio]}
+                 {:customer "FOKIV"
+                  :years [2006]
+                  :summary "FOBID"
+                  :description "Informasjonssystem over alle forsvarets
+                 publikasjoner (FOBID). Oppgaver: Dynamisk transformering av
+                 dokumenter vha XSLT. Søkefunksjonalitet. Forretningslogikk."
+                  :tech [:hibernate :spring :spring-mvc :lucene :xml :xslt :jetty :tomcat :oracle
+                         :mysql :maven :junit :jmock]}
+                 {:customer "FMI"
+                  :years [2006]
+                  :summary "Medieregister"
+                  :description "Informasjonssystem over forsvarets film og
+                  bildearkiv (Medieregister). Oppgaver: Utvikling av søk, kunde-
+                  og bestillings systemet. Utvikling av søk, kunde- og
+                  bestillings systemet."
+                  :tech [:hibernate :spring :spring-mvc :lucene :jsp :jboss :tomcat :oracle
+                         :maven-junit :jmock]}
+                 {:customer "FLO"
+                  :years [2005]
+                  :summary "Beskop2"
+                  :description "Ledelses informasjonssystem over alt materiell i
+                  forsvaret (Beskop2). Oppgaver: Analyse, Design, Test,
+                  Utvikling."
+                  :tech [:hibernate :spring :webwork :jsp :velocity :jboss
+                         :oracle :maven :junit :jmock]}
+                 {:customer "FOHK"
+                  :years [2004]
+                  :summary "Ferdaball"
+                  :description "Forsvarets erfaringdatabase Lessons
+                  Learned (Ferdaball). Oppgaver: Analyse, Design, Test, Utvikling,
+                  Dokumentasjon."
+                  :tech [:hibernate :spring :webwork :jsp :velocity :xml :jboss
+                         :tomcat :oracle :mysql :maven :junit :jmock]}
+                 {:customer "FLO"
+                  :years [2003]
+                  :summary "Beskop"
+                  :description "Ledelses informasjonssystem over alt materiell i
+                  forsvaret (Beskop). Oppgaver: Analyse, Design, Utvikling."
+                  :tech [:pojo :jdbc :struts :borland :oracle :ant]}
+                 {:customer "SVI"
+                  :years [2002]
+                  :summary "SVI"
+                  :description "Kvalitetsikringssystem for forsvarets operative
+                  avdelinger. Oppgaver: Analyse, Design, Utvikling."
+                  :tech [:ejb :struts :borland :oracle :ant]}
+                 {:customer "FLO"
+                  :years [2002]
+                  :summary "FLO"
+                  :description "Sertifisert opplæring (portal).
+                  Kursadministrasjonssystem (Sopp). Oppgaver: Analyse, Design,
+                  Utvikling"
+                  :tech [:ejb :servlets :jsp :borland :apache :oracle :ant]}
+                 {:customer "FLO"
+                  :years [2001]
+                  :summary "FLO"
+                  :description "Webshop på forsvarets Intranet for Forsvarets
+                  uniformsutsalg (Funif). Oppgaver: Analyse, Design, Utvikling"
+                  :tech [:ejb :servlets :jsp :borland :oracle :ant]}
+                 ]
                  
-:projects      [{:customer    "Forsvaret"
-                   :description "GBMS - Nyutvikling av et system for datafangst og analyse av belastning på våpen."
-                   :years       [2013 2014]
-                   :tech        [:groovy :grails :javascript :html :css :oracle :jenkins]}
-                  {:customer    "NETS"
-                   :description "Videreutvikling av ulike applikasjoner for å legge til rette for separation of duties. Videreutvikling av BKAD - Sentralt bankregister"
-                   :years       [2012]
-                   :tech        [:java, :hibernate, :spring, :selenium, :jetty :junit, :maven, :oracle]}
-                  {:customer    "Fondet for RVO"
-                   :description "Nytt saksbehandlersystem for regionale verneombud i bygg og anleggsbransjen"
-                   :years       [2011]
-                   :tech        [:ruby :rails :html :css :javascript :jquery :mysql :nginx :rspec]}]
-                 
-  :endorsements  [{:author "Ketil Lund"
+ :endorsements  [{:author "Ketil Lund"
                   :title  "Principal scientist at Forsvarets Forskningsinstitutt"
                   :quote  "Alf jobbet for oss i ca 3 mnd i forbindelse med et pilotprosjekt rundt integrasjon av ulike informasjonssystemer. Vi er svært fornøyde med jobben Alf gjorde. Han er effektiv, har stor innsatsvilje og er en trivelig person å jobbe sammen med."
                   }
@@ -48,4 +217,58 @@ Hudson, Nexus and he was responsible for the design and implementation of our Sp
 I addition he obtained a good knowledge of the Pension Business."
                   }
                  ]
+
+ :cv {}
+ :born 1972
+ :relationship-status "Samboer, 3 barn"
+ :education-summary "Ingeniør HiST, KS"
+ :experience-since 2001
+ :cv/description " Alf er utdannet ingeniør fra Høgskolen i S-Trøndelag og har
+ jobbet med systemutvikling siden 2001. De fleste prosjekter han har vært
+ involvert i har han hatt en sentral rolle tilknyttet mye ansvar. Alf kan bekle
+ mange roller i et utviklingsprosjekter. I tillegg til rene utviklingsoppgaver
+ har han ved flere anledninger fungert som arkitekt og teknisk prosjektleder.
+
+ Alf liker enkle og pragmatiske løsninger som kan dekke kundens behov. Han liker
+ godt å sette seg inn i nye domener, programmeringsspråk og teknologier, og har
+ kapasitet til raskt å omsette teori til praksis.
+
+ Alf er en lagspiller og samarbeider godt med sine medarbeidere. Han er opptatt
+ av at teamet skal fungere og har egenskaper for å medvirke til dette."
+
+ :qualifications ["Senior Systemutvikler"
+                  "Løsningsarkitekt"
+                  "Java plattform"
+                  "JavaEE"
+                  "Facebook React"
+                  "Groovy og Grails"
+                  "Ruby og Rails"
+                  "Systemarkitektur og integrasjon"
+                  "XP-praksiser (TDD, CI, med mer)"
+                  "SCRUM"]
+
+ :education [{:institution "Høyskolen i S-Trøndelag"
+              :years [1998 2001]
+              :subject "Systemutvikling"}
+             {:institution "Krigsskolen Linderud"
+              :years [1994 1996]
+              :subject "Infanteriet"}
+             {:institution "Befalsskolen i Nord-Norge"
+              :years [1992 1993]
+              :subject "Infanteriet"}]
+
+ :certifications [{:name "JavaScript/JQuery" :year 2009}
+                  {:name "Enonic Kurs" :year 2008}
+                  {:name "Core Spring Kurs" :year 2006}
+                  {:name "Jboss Administrator" :year 2004}
+                  {:name "Sun Certified Java Programmer" :year 2003}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
+
+ :innate-skills [:intellij :eclipse :git :svn :cvs :ddd :tdd :unix :osx :windows]
  }
