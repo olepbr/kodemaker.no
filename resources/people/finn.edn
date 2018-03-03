@@ -17,6 +17,167 @@
 	    {:title "Reise"
 	    :description "Verden er stor og har mye å vise deg - pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
 	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
-	    }
-]
+	    }]
+
+ :projects [{:customer "Encap"
+             :years [2017]
+             :employer :kodemaker
+             :summary "Javautvikler i Encap sin autentiseringsplattform."
+             :description "Encap sin mobile autentiseringsløsning vokser og står
+             foran en stor release med mange nye krav. Encap leverer et
+             distribuerbart produkt med sikkerhet i kjernen. Utviklere har ikke
+             tilgang til produksjonssystemet, som byr på andre utfordringer enn
+             en gjerne er vant med i tradisjonell web."
+             :tech [:java :jetty :soap :hibernate :oracle :mysql :krypto]}
+            {:customer "NSB"
+             :summary "StatusPush videreutvikling"
+             :employer :kodemaker
+             :years [2016 2017]
+             :tech [:android :google-cloud-messaging :groovy :jms :activemq :tomcat]
+             :description "Ombordpersonell varsles i sitt nettbrett om
+            avvikssituasjoner fra NSBs sentrale DROPS-enhet. Serveren sentralt
+            sender push notifications (v/Google Cloud Messaging) når en
+            avvikssituasjon blir registret i NSB-Status. StatusPush backend får
+            disse avviksituasjonene fra Status via JMS. Det er vektlagt at
+            app-en skal ha enkelt brukergrensesnitt."}
+            {:customer "Schibsted"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Implementasjon av MasterCard/MasterPass i Adapter teamet i Schibsted Payment."
+             :description "MasterPass hos Schibsted Prosjekt: Integrasjon av
+             MasterPass hos Schibsted. Oppgaver: Utvikler. Schibsted trengte
+             bistand for innføring av MasterPass i sin betalingsplattform. I
+             tillegg blei det litt plukkoppgaver i diverse andre
+             integrasjonspunkter."
+             :tech [:java :soap :aws :eureka :payex]}
+            {:customer "NSB"
+             :years [2015]
+             :employer :kodemaker
+             :summary "StatusPush - Android App"
+             :description "Ombordpersonell varsles i sitt nettbrett om
+            avvikssituasjoner fra NSBs sentrale DROPS-enhet. Serveren sentralt
+            sender push notifications (v/Google Cloud Messaging) når en
+            avvikssituasjon blir registret i NSB-Status. StatusPush backend får
+            disse avviksituasjonene fra Status via JMS. Det er vektlagt at
+            app-en skal ha enkelt brukergrensesnitt.
+
+            Android App som brukes til internt personell hos NSB; fortrinnsvis
+            Konduktører og førere. Ved avvik i trafikken vil app-en få en push
+            som beskriver forholdene."
+             :tech
+             [:android :google-cloud-messaging :groovy :jms :activemq :tomcat]}
+            {:customer "NSB"
+             :years [2012]
+             :employer :kodemaker
+             :summary "Status web-applikasjon"
+             :description "Status Prosjekt: Status. Oppgaver: Utvikler.
+             Integrasjonspunkter: CIM, Hafas Information
+             Manager/Siri-standarden, ESBEN via WebServices, TrainSnapshot via
+             JMS og WebServices, Putin: SMS og e-mail via webservices.
+             Funksjonell og teknisk beskrivelse: Status distribuerer informasjon
+             internt i NSB, samt eksternt, ved oppståtte avvik. De forskjellige
+             i Status informasjonsmekanismene kalles kanaler. Applikasjonen er
+             logisk inndelt i hhv Stasjon, Tog og Infrastruktur. De forskjellige
+             kanalene bety alltid en integrasjon mot et annet system, derfor er
+             Status på mange måter et integrasjonsprosjekt. Status er basert på
+             microservices -arkitektur for implementasjon av integrasjon mot de
+             forskjellige kanalene, slik at web-frontend modulen ikke blir
+             påvirket av ny eller endret kanalhåndtering. Brukergrensesnittene
+             til Status er single page webapps laget med angular og react."
+             :tech [:groovy :javascript :grails :gorm :gradle :oracle :windows-server
+                    :centos :ansible :tomcat :angularjs :react :html5 :css :bootstrap
+                    :spock :webservices :xml :json :rest]}
+            {:customer "NSB"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Eksportmodul fra NSB til Jernbaneverket, DPS"
+             :description "Utvikler Eksportmodul fra NSB til Jernbaneverket,
+             DPS. Spesifikasjonsarbeid i forbindelse med nytt
+             kundeinformasjonssystem (Status). Grafbassert rapporteringsmodul,
+             Streken. Videreutvikling av aktiv kart, Troll. Status, StatusPush
+             Android App for personale. Oppgaver: Utvikler."
+             :tech [:android :groovy :grails :javascript :html5 :css :flex :spock :jenkins :svn
+                    :springsource-tool-suite]}
+            {:customer "Intelecom"
+             :years [2011]
+             :employer :kodemaker
+             :summary "NSB App (Android & iOS)"
+             :description "NSB app Deltok i et Scrum -team som utviklet
+             mobil-app for NSB. Android og iPhone. Oppgaver: Backendutvikler."
+             :tech [:rest :json :apple-push-notification-system :google-cloud-to-device-android-push
+                    :jboss :webservices :jetty :svn :hudson :maven]}
+            {:customer "NSB"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Rapp"
+             :description "Rapp Utvikling av en applikasjon for oppsett og
+             mottak av undersøkelser / skjema på nett. Oppgaver: Utvikler,
+             frontend og backend."
+             :tech [:groovy :grails :html5 :jquery :ajax :jquery-mobile :junit :svn :mysql :mongodb
+                    :soap :rest :html5]}
+            {:customer "NSB"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Aktivt kart, Troll"
+             :description "Aktiv Kart Utvikling av en applikasjon for
+             visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
+             Javautvikler / frontendutvikler.."
+             :tech [:tomcat :groovy :grails :java :flex :blazeds :spring :junit :svn :maven]}
+            {:customer "Statens Pensjonskasse"
+             :years [2008]
+             :employer :kodemaker
+             :summary "Java- og Flexutvikler."
+             :description "Nytt bak- og saksbehandlingssystem Statens
+             Pensjonskasse skriver om det aller meste av sin back-end og sitt
+             saksbehandlingssystem fra C++ til Java. Jobbet i 6 mnd i back-end
+             team, og 1 år i front-end Flex -team. Oppgaver: Backend
+             Javautvikler J2EE. Front-end Flex.."
+             :tech [:java :hibernate :jpa :spring :hudson :junit :hamcrest :svn :maven :flex]}
+            {:customer "Nordic Lottery Systems"
+             :years [2007 2008]
+             :employer :conduct
+             :summary "Internettspill"
+             :description "Internettspill Utvikling av et nytt internettspill
+             med svært høye oppetids- og ytelseskrav Oppgaver: Backend
+             Javautvikler J2EE. Litt frontend og JBoss Portal."
+             :tech [:java :jboss-portal :ejb :hibernate :jpa :oracle :spring :jboss-messaging
+                    :selenium :junit :testng :svn :cvs :maven]}
+            {:customer "Norwegian ASA"
+             :years [2006 2007]
+             :employer :conduct
+             :summary "Billettering back-end javautvikler. J2EE/Jboss."
+             :description "Forvaltning av baksystem for bilettering Utvilker på
+             forvaltningsteamet for baksystemetet for billettransaksjoner.
+             Oppgaver: Backend Javautvikler J2EE."
+             :tech [:java :jboss :ejb :hibernate :jpa :spring :activemq :junit :svn :cvs :maven :jira :confluence]}
+            ]
+
+ :cv {}
+ :cv/description "Finn har 17 års erfaring med programmering. Han trives best
+ med begge hendene i kildekoden. Han er engasjert i open source, og har god
+ kjennskap til trendene i bransjen."
+ :relationship-status "Samboer"
+ :born 1978
+ :experience-since 2001
+ :education-summary "Høyskolekandidat IT, DPH"
+ :qualifications ["Senior systemutvikler"
+                  "Web Front-end utvikler"
+                  "Android -utvikler"
+                  "Java back-end utvikler"
+                  "Scrum og smidig metodikk"]
+ :certifications [{:name "Retorikk", :year 2010}
+                  {:name "Certified Scrum Master", :year 2006}
+                  {:name "Sun Certified Programmer Java 1.5", :year 2006}]
+ :education [{:institution "Den Polytekniske høyskole"
+              :years [1999 2000 2001]
+              :subject "Høyskolekandidat IT"}]
+
+ 
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
+
  }
