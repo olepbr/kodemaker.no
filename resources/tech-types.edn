@@ -28,6 +28,7 @@
  :browser-devtools :devtools
  :browserify :library
  :buster-js :library
+ :camel :library
  :capistrano :devops
  :cd :methodology
  :cef :frontend
@@ -70,6 +71,7 @@
  :google-analytics :tool
  :google-closure :library
  :google-maps :library
+ :google-protocol-buffers :specification
  :groovyws :library
  :grunt :library
  :gwt :framework
@@ -80,11 +82,13 @@
  :hbase :server
  :html :frontend
  :http :frontend
+ :hazlecast :server
  :intellij :devtools
  :interbase :database
  :ios :os
  :jade :library
  :jasmine :library
+ :javafx :library
  :jetty :server
  :jira :tool
  :jaxrs :tool
@@ -118,6 +122,7 @@
  :mongo-queue :server
  :monit :devops
  :mule :server
+ :ms-access :database
  :mysql :database
  :neo4j :database
  :netty :server
@@ -157,6 +162,7 @@
  :sinon :library
  :siteminder :server
  :soap :specification
+ :splunk :server
  :spring-batch :framework
  :spring-mvc :framework
  :spring-security :framework
@@ -174,6 +180,8 @@
  :unfiltered :library
  :unity3d :framework
  :unix :os
+ :vba :proglang
+ :vertx :library
  :virtualisering :devops
  :visual-basic :proglang
  :visual-source-safe :vcs
