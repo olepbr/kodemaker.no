@@ -45,10 +45,358 @@
                          det utrolig deilig å koble helt ut og bare jobbe fysisk. Jeg har erfart at ved å være i god fysisk
                          form orker man også mer når man er tilbake på jobb. Jeg har drevet med flere forskjellige treningsformer 
                          opp gjennom årene, men praktiserer nå et klassisk styrketreningsprogram med fokus på de store muskelgruppene."
-             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"}]
- :endorsements [{:author "Rune Maurtvedt"
+            :illustration "/illustrations/hobbies/muscle-anatomy.jpg"}]
+ :endorsements [{:author "Kristin Bergsager"
+                 :title "Prosjektleder NRK"
+                 :quote "Kristian er en meget faglig sterk person og vi fikk god
+                 nytte av det inn i prosjektet. Han er kunnskapsrik og grundig
+                 og kommer med tilbakemeldinger som var med å bringe prosjektet
+                 frem på en svært god måte. I tillegg er han sosialt kompetent
+                 og bidro positivt inn i prosjektet til både utviklere og resten
+                 av prosjektgruppen. Jeg kan anbefale Kristian på det varmeste
+                 til andre tilsvarende prosjekt. Han er en verdifull medspiller
+                 i slike prosjekt."}
+                {:author "Rune Maurtvedt"
                  :title "Teknisk Leder, Finn.no"
                  :quote "Kristian er en meget solid utvikler. Han er glad i utfordringer og er flink til å beskrive tekniske løsninger.
                         I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
                         Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
-                        Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]}
+                        Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]
+
+ :projects [{:customer "Tomra"
+             :years [2016 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av ny platform på AWS-stack for å håndtere data fra pantemaskiner"
+             :description "Utvikling av ny platform på AWS stack for å håndtere
+             data fra pantemaskiner. Tomra ønsket å bygge opp en helt ny
+             platform på moderne teknologi for å håndere nye krav til skalering
+             og ytelse. I hovesak dreier det seg om å tilrettelegge for
+             horisontal skalering ved å flytte tjenester til skyen og bygge opp
+             en portefølje av micro-tjenester. Oppgaver: Backend utvikler.
+             Utvikling av REST-baserte api'er og prosessor-komponenter for å
+             håndere en stor strøm av data fra AWS Kinesis. Formålet var å parse
+             og formatere alle de forskjellige meldingstypene som flyter gjennom
+             systemet og hovedsaklig lagre unna i DynamoDb. Dataene dannet
+             grunnlaget for UI-baserte tjenester som det kan abonneres på av
+             kunder, f.eks til statistiske formål, rapportering eller ren
+             overvåking av pantemaskiner."
+             :tech [:aws :aws-kinesis :dynamodb :kubernetes :terraform :vavr
+                    :functional-programming :sparkjava :lombok]}
+            {:customer "Animalia"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Utvikling av ny dyrehelseportal"
+             :description "Utvikling av ny dyrehelseportal. Animalia faser ut
+             gammel dyrehelseportal til fordel for ny platform bygd på moderne
+             teknologier(clojure, clojurescript) og med responsivt
+             design(desktop, pad, mobil). Oppgaver: Fullstack utvikler. Det ble
+             bygd opp en microservice-arkitektur hvor relevant funksjonalitet
+             ble eksponert via REST-tjenester. I korte trekk et kjerne-api som
+             inneholdt alt av forretningslogikk, et søke-api som ble brukt til å
+             indeksere dyrehelse-data og en klient applikasjon(single page app)
+             som kommuniserte med begge api'er over REST og presenterte dataene.
+             Et vesentlig krav var å tilby et tilnærmet \"Google-søk\" med høy
+             fleksibilitet som ekspanderte ord i begge retninger samtidig søkte
+             over flere felt i parallell."
+             :tech [:tutum :clojure :clojurescript :react :re-frame :frp :websockets
+                    :sente :elasticsearch :mssql :component :liberator :honeysql :hugsql]}
+            {:customer "Thomson & Reuters"
+             :years [2015 2016]
+             :employer :kodemaker
+             :summary "Prototyping av ny arkitektur med fokus på skaleringsegenskaper"
+             :description "Prototyping av ny arkitektur med fokus på
+             skaleringsegenskaper. T&R begynner å nærme seg smertegrensen for
+             hva eksisterende arkitektur klarer å håndtere og ønsker derfor at
+             det prototypes en ny arkitektur som skalerer bedre.
+             Oppgaver(Devops): Initielt sette opp arkitekturen fra grunnen av i
+             interne datasenter. Dette innbar konfigurering av Kafka(og
+             Zookeeper) cluster samt HBase cluster backet av Hadoop / HDFS. For
+             effektivt og kunne utnytte Hadoop ble YARN(ressurs-manager)
+             konfigurert og dette ble blant annet utnyttet for å deploye ut
+             Spark-jobber. Oppgaver(Utvikler): Hekte på eksisterende datastrøm
+             via ActiveMQ & Oracle og bygge applikasjoner for transformering av
+             data, hovedsaklig tidsserier, samt publisering til Kafka og HBase.
+             Det ble også utviklet Spark-jobber hovedsaklig for å beregne
+             metadata på tidsseriene. Type dager og til hvilke klokkeslett
+             tidsseriene ble oppdatert. I tillegg ble det også utvikelt et
+             REST-api for å serve dataene ut til klienter og kunder. Det var
+             stort fokus på at API'et skulle levere data så raskt som mulig og
+             ikke blokkere med mindre det er helt nødvendig. Valgt arkitektur
+             innebar Vert.x som kjernekomponent og i tillegg Akka for å
+             underbygge en reaktiv arkitektur."
+             :tech [:bash :puppet :kafka :zookeeper :hadoop :hdfs :hbase :yarn
+                    :java :jool :vertx :akka :spring]}
+            {:customer "Oiiku / Onkel Estrup"
+             :years [2015]
+             :employer :kodemaker
+             :summary "Utforske og etablere eksternt system for logg-aggregering"
+             :description "Utforske og etablere eksternt system for
+             logg-aggregering. Pga store mengder tildels uoversiktig logg-data
+             skulle det utforskes og etableres en ekstern platform for
+             aggregering av logger. Valgt system ble Papertrail. Oppgaver:
+             Utvikler. Utforsket mulige logg-systemer og etablerte et som er
+             godt egnet til filtering og søk. Konfigurerte applikasjonene til å
+             sende logger kontinuerlig. Lite prosjekt, 1 utvikler."
+             :tech [:bash :clojure]}
+            {:customer "NRK"
+             :years [2014 2015]
+             :employer :kodemaker
+             :summary "Utvkling av integrasjonsbuss som mediator mellom Agresso og interne systemer"
+             :description "Utvikling av integrasjonsbuss som mediator mellom
+             Agresso og interne systemer NRK bytter ut gamle lønns- og
+             personalsystemer med Agresso. Agresso er det nye mastersystemet for
+             personaldata og for at data skal tilflyte øvrige NRK-systemer
+             utvikles det en egen integrasjonsbuss. Oppgaver: Utvikler.
+             Primæroppgave i prosjektet var å utvikle selve integrasjonsbussen.
+             Utviklet også en Agresso-emulator som gjorde det lett å
+             verifisere/teste. Lite prosjekt, kun 2 utviklere."
+             :tech [:springcore :jdbc :boot :xml :rest :oracle :h2 :git :maven :jenkins
+                    :jira :confluence :stash]}
+            {:customer "NSB"
+             :years [2014]
+             :employer :kodemaker
+             :summary "Utvikling av nytt rapporteringssystem"
+             :description "Utvikling av nytt rapporteringssystem Systemet
+             innhentet data fra mange ulike kilder og hadde som formål å
+             sammenstille disse til et felles datagrunnlag. Datagrunnlaget
+             brukes av frittstående applikasjoner og til rapportuthenting.
+             Oppgaver: Utvikler. Primæroppgave i prosjektet var å trekke ut og
+             sammenstille data som ble eksponert ut i diverse applikasjoner,
+             blant annet en egen lokfører-applikasjon. Medium prosjekt, 5-6
+             utviklere."
+             :tech [:groovy :grails :oracle]}
+            {:customer "Oiiku / Onkel Estrup"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Utvikling og ferdigstilling av et relativt stort og komplekst event-styringssystem"
+             :description "Utvikling og ferdigstilling av et event basert system
+             Stort og relativt komplekst system for å automatisere alt rundt
+             event-arrangementer for bedrifter. Systemet har blitt skrevet fra
+             bunn og er høyst modularisert. Oppgaver: Arkitekt / Utvikler.
+             Primæroppgave i prosjektet var å designe og utvikle applikasjoner
+             for å håndere bedrifts-eventer, som f.eks en egen
+             meldings-applikasjon. Medium prosjekt, 4-5 utviklere."
+             :tech [:clojure :datomic :mongodb :elasticsearch :compojure :rest]}
+            {:customer "Finn AS"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Bytte annonsestyringssystem(AdTech -> Emediate) med utvikling av nye moduler og API'er"
+             :description "Bytte annonsestyringssystem Bytte av
+             annonsestyringssystem fra AdTech til Emediate. I praksis ble også
+             muligheten til å rive ut gammel legacy kode til fordel for nye
+             moduler og API'er benyttet. Oppgaver: Arkitekt / Senior
+             Javautvikler. Primæroppgave var å designe og utvikle nye API'er
+             tilpasset nytt annonsestyringssystem. Medium prosjekt, 4-5
+             utviklere."
+             :tech [:java :adtechhelios :emediate :spring :spring-mvc :mockito :junit :rest]}
+            {:customer "Finn AS"
+             :years [2011 2012]
+             :employer :kodemaker
+             :summary "Utvikling av system for ip basert geolokasjon"
+             :description "Utvikling av system for ip basert geolokasjon Basert
+             på Finn sine egne data, hovedsaklig Apache-logger, ble det
+             importert og analysert massive data-mengder hvor formålet var å
+             knytte brukere(vha ip) til lokasjon, først og fremst fylke, for å
+             kunne bruke dette i en annonse-setting. Typisk målrettet reklame
+             Oppgaver: Arkitekt / Senior Javautvikler. Primæroppgave var å
+             utforske datagrunnlag og utvikle nytt system for håndtering og
+             analyse av massive datamengder. Medium prosjekt, 3-4 utviklere."
+             :tech [:java :cassandra :spring :spring-mvc :mockito :junit]}
+            {:customer "Verdipapirsentralen"
+             :years [2010 2011]
+             :employer :kodemaker
+             :summary "Løsning for obligatorisk tjenestepensjon(2)"
+             :description "Obligatorisk tjenestepesjon(2) Utarbeide arkitektur
+             og utvikle ny løsning for obligatorisk tjenestepensjon hos VPS.
+             Løsningen benyttes av mange eksisterende fondsleverandører som er
+             kunder av VPS og selges videre til deres bedriftskunder. Løsningen
+             eksisterer i dag på gammel plattform, men skrives helt om i henhold
+             til nye teknologivalg og krav. Oppgaver: Senior Javautvikler.
+             Primæroppgave var å utvikle et nytt system for obligatorisk
+             tjenestepensjon. Lite prosjekt, 2 utviklere."
+             :tech [:java :spring :hibernate :maven :spring-mvc]}
+            {:customer "Verdipapirsentralen"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Kortsiktig tiltak fond"
+             :description "Kortsiktig tiltak fond Tiltaksprosjekt for å levere
+             nødvendig funksjonalitet / utbedre mangler i dagens system
+             Oppgaver: Senior Javautvikler. Primæroppgave var å tilpasse
+             eksisterende arkitektur samt utvikle nødvendig funksjonalitet sett
+             i et kundeperspektiv. Lite prosjekt, 1-2 utviklere."
+             :tech [:java :spring :hibernate :maven :spring-mvc]}
+            {:customer "Verdipapirsentralen"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Løsning for obligatorisk tjenestepensjon(1)"
+             :description "Obligatorisk tjenestepesjon(1) Utarbeide arkitektur
+             og utvikle ny løsning for obligatorisk tjenestepensjon hos VPS.
+             Løsningen benyttes av mange eksisterende fondsleverandører som er
+             kunder av VPS og selges videre til deres bedriftskunder. Løsningen
+             eksisterer i dag på gammel plattform, men skrives helt om i henhold
+             til nye teknologivalg og krav. Oppgaver: Senior Javautvikler.
+             Primæroppgave var å utvikle en helt ny løsning for obligatorisk
+             tjenestepensjon hvor fokus var på lettvekts-tjenester og frikobling
+             av forretnings-logikk. Medium prosjekt, 4-5 utviklere."
+             :tech [:java :spring :hibernate :maven :spring-mvc]}
+            {:customer "Verdipapirsentralen"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Restrukturering / Arkitektur - prosjekt"
+             :description "Restrukturering / Arkitektur - prosjekt
+             Tilrettelegging / forbedring av eksisterende arkitektur. Prosjekt
+             som i hovedsak gir VPS merverdi på lang sikt i form av løsere
+             koblet arkitektur og bedre rutiner rundt bruk av
+             versjonskontrollsystemet Subversion Oppgaver: Senior Javautvikler
+             og arkitekt. Primæroppgave var å frigjøre forretningslogikk fra
+             interne applikasjoner og heller tilby en tjeneste-pool på tvers av
+             virksomheten. Lite prosjekt, 2-3 utviklere."
+             :tech [:java :spring :hibernate :maven :spring-mvc]}
+            {:customer "Verdipapirsentralen"
+             :years [2009 2010]
+             :employer :cicero-consulting
+             :summary "NGF - Neste Generasjon Fond"
+             :description "NGF - Neste Generasjon Fond Neste Generasjon Fond var
+             VPS sin storsatsning for å bygge et nytt og moderne fondssystem
+             tilpasset fondsforvaltere og investorerens behov. NGF-prosjektet
+             ble i hovedsak styrt av CAP Gemini som leverandør, men VPS hadde
+             også ansvaret for deler av utviklingen. Oppgavene relatert til
+             dette prosjektet var således på VPS-siden. I alle hovedsak bestod
+             arbeidet i omskrivninger / tilpasninger / nyutvikling av tjenester
+             tilpasset mot ny arkitektur Oppgaver: Senior Javautvikler /
+             Arkitekt. Primæroppgave var å utvikle ny funksjonalitet som skulle
+             inngå i nytt fondssystem. Medium prosjekt, 4-5 utviklere."
+             :tech [:java :spring :hibernate :maven :spring-mvc]}
+            {:customer "Verdipapirsentralen"
+             :years [2009]
+             :employer :cicero-consulting
+             :summary "Skatterapportering, Odin Finland"
+             :description "Skatterapportering, Odin Finland Enmanns-prosjekt som
+             hovedsaklig bestod i å utvikle et program for å beregne og
+             sammenstille alle relevante tall for buk av skattemyndighetene i
+             Finland Oppgaver: Senior Javautvikler / Arkitekt. Primæroppgave var
+             å hente ut og gjøre beregninger på skattedata samt samt tilby disse
+             på strukturert form. Lite prosjekt, 1 utvikler."
+             :tech [:java :spring :hibernate :maven]}
+            {:customer "DnB NOR"
+             :years [2009]
+             :employer :cicero-consulting
+             :summary "Restrukturering / Arkitektur - prosjekt"
+             :description "Restrukturering / Arkitektur - prosjekt
+             Restrukturerings-prosjekt. Oppgavene bestod i å flytte
+             applikasjoner fra gammel til ny arkitektur. Oppgaver: Senior
+             utvikler. Primæroppgave var å flytte applikasjonskode og noe
+             omskrivning i og med at man gikk fra et internt rammeverk til
+             Spring Web Flow for sidevisninger og flyt."
+             :tech [:java :ejb :maven :spring-web-flow]}
+            {:customer "CAP Gemini / Verdipapirsentralen"
+             :years [2008 2009]
+             :employer :cicero-consulting
+             :summary "NGF - Neste Generasjon Fond"
+             :description "NGF - Neste Generasjon Fond Neste Generasjon Fond var
+             VPS sin storsatsning for å bygge et nytt og moderne fondssystem
+             tilpasset fondsforvaltere og investorerens behov. NGF-prosjektet
+             ble i hovedsak styrt av CAP Gemini som leverandør, men VPS hadde
+             også ansvaret for deler av utviklingen. Oppgavene relatert til
+             dette prosjektet var således på CAP-siden. Oppgaver: Senior
+             Javautvikler, Team Lead, Arkitekt. Oppgavene bestod hovedsaklig i
+             utviklingen av nye tjenester i fonds-systemet og et overordnet
+             ansvar for et team på 4. Stort prosjekt, 20+ utviklere totalt"
+             :tech [:java :spring :hibernate :maven :ext-js :mockito]}
+            {:customer "Odin fondsforvaltning"
+             :years [2007]
+             :employer :cicero-consulting
+             :summary "Utvikling av nettbaserte fondskalkulatorer"
+             :description "Utvikling av nettbaserte fondskalkulatorer
+             Hovedsaklig ble det utviklet et sett kalkulatoer som blant annet
+             inkluderer avkastnings-, utaksavtale-, fonds- og
+             pensjonskalkulator. Oppgaver: Senior Utvikler, Arkitekt.
+             Primæroppgave var å utvikle applikasjoner ved bruk av Flex i
+             frontend og Spring/Hibernate på backend. Det ble også gjort noe
+             videreutvikling av en intern beregningsmotor for å tilpasse mot nye
+             tjenester."
+             :tech [:java :flex :web-services :spring :hibernate :oracle :maven]}
+            {:customer "Odin fondsforvaltning"
+             :years [2007]
+             :employer :cicero-consulting
+             :summary "Utvikling av nye portal-tjenester"
+             :description "Utvikling av nye portal-tjenester Videreutvikling av
+             Odin sin fondsportal. Oppgaver: Senior Utvikler. Primæroppgave var
+             å forbedre eksisterende tjenester og noe nyutvikling. Lite
+             prosjekt, 1-2 utviklere."
+             :tech [:java :oracle-portal :struts :web-services :css]}
+            {:customer "Odin Fondsforvaltning"
+             :years [2006 2007]
+             :employer :cicero-consulting
+             :summary "Utvikling av generisk beregningsmotor for finansielle tjenester"
+             :description "Utvikling av ny beregningsmotor / beregningsrammeverk
+             Det ble utviklet en generisk beregningsmotor / beregningrammeverk
+             for Odin slik at fremtidige web-applikasjoner skulle kunne ha en
+             gjenbrukbar platform. Det ble også tatt høyde for tilpasninger ved
+             å tillate bruk av egne moduler som lett kunne plugges inn.
+             Oppgaver: Senior Utvikler, Arkitekt. Primæroppgave var å utvikle ny
+             beregningsmotor med fokus på gjenbrukbarhet og fleksibilitet mhp
+             pluggbare moduler. Medium prosjekt, 2-3 utviklere."
+             :tech [:java :spring :jee :xsd]}
+            {:customer "Finntech AS"
+             :years [2006]
+             :employer :tieto-enator-tele
+             :summary "Utvikling av ny reiseportal, Finn Reise"
+             :description "Finn Reise Utvikling av ny reiseportal for Finn.no.
+             Finntech ønsket å bruke reiseprosjektet som en pilot for smidig
+             prosjektstyring. Oppgaver: Javautvikler. Primæroppgave var å
+             utvikle ny funksjonalitet som var en del av reiseportalen samt
+             tilpasse eksisterende tjenester. Stort prosjekt, 7-8 utviklere."
+             :tech [:java :travelfusion]}
+            {:customer "Telenor Mobil"
+             :years [2005]
+             :employer :tieto-enator-tele
+             :summary "Prosjekter basert på og rundt Telenor sin mellomvare-platform, COS"
+             :description "COS Utviklingsprosjekter i og rundt COS-platformen,
+             Telenor sin mellomvare løsning. Det var høyt trykk på å få ned
+             time-2-market effekten og samtlige prosjekter ble styrt etter
+             Scrum-modellen og XP-prinsipper. Oppgaver: Javautvikler.
+             Primæroppgave var å utvikle i og rundt COS. Stort prosjekt, 20+
+             utviklere."
+             :tech [:java :spring :easymock :junit]}
+            {:customer "Retriever AS"
+             :years [2006]
+             :employer :tieto-enator-tele
+             :summary "Implementasjon av nytt medieovervåkningssystem basert på FAST-teknologi"
+             :description "Utvikling av nytt medieovervåkningssystem Nytt system
+             basert på FAST-teknologi ble utviklet. Prosjektet ble drevet i
+             XP-ånd og det var høy fokus på testdrevet utvikling. Oppgaver:
+             Javautvikler. Primæroppgave var å integrere ny løsning mot FAST
+             sitt real time filter og utvikle nye tjenester som eksponerte data
+             ut til klienter, hovedsaklig web."
+             :tech [:java :fast :spring :hibernate :postgresql :maven :sitemesh :junit :easymock]}]
+
+ :cv {}
+ :cv/description " Kristian er først og fremst en solid utvikler og konsulent
+ som brenner for å utvikle gode løsninger for krevende kunder. Han har bred
+ erfaring på tvers av flere bransjer og domener som blant annet inkluderer
+ prosjekter innen bank & finans, telekom, digital medieovervåkning og
+ annonsering.
+
+ Kristian er tilhenger av prosjekter som styres etter smidige prinsipper og
+ trives godt i både små og store team."
+ :education-summary "Cand. Scient Informatikk, UiO"
+ :experience-since 2004
+ :qualifications ["Systemutvikler"
+                  "Løsningsarkitekt"
+                  "Clojure-entusiast"
+                  "Scrum / Smidig utvikling"]
+ :certifications [{:name "Certified ScrumMaster", :year 2007}
+                  {:name "Sun Certified Programmer for Java 2 platform", :year 2005}]
+ :relationship-status "Samboer, 1 barn"
+ :born 1977
+ :education [{:institution "Universitetet i Oslo, avdeling for Informatikk"
+              :years [2001 2002 2003 2004]
+              :subject "Cand. Scient, Informatikk"}
+             {:institution "Universitetet i Oslo, avdeling for Informatikk"
+              :years [2000 2001]
+              :subject "Cand. Mag, Informatikk"}
+             {:institution "Høgskolen i Oslo, avdeling for Telekommunikasjon"
+              :years [1997 1998 1999 2000]
+              :subject "Ingeniør, Telekommunikasjon"}]
+ }
