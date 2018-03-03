@@ -12,28 +12,255 @@
             :linkedin "/in/fredrikaubert"
             :github "fredrikaubert"}
 
-
-
-:tech {:favorites-at-the-moment [:groovy :grails ]
+ :tech {:favorites-at-the-moment [:groovy :grails ]
         :want-to-learn-more [:clojure]}
-        
-        
-        
-  :hobbies [{:title "MC"
+
+ :hobbies [{:title "MC"
             :description "Nærkontakt med naturen. Lukt, på godt og vondt. Du legger deg ned
-            		      i svingen, vrir på dorullen og aksellererer ut av svingen. Absolutt
-            		      fokus - hjernerens."
+                              i svingen, vrir på dorullen og aksellererer ut av svingen. Absolutt
+                              fokus - hjernerens."
             :illustration "/illustrations/hobbies/fredrik-mc.jpg"},
-            
-            
-            {:title "Home automation"
+
+           {:title "Home automation"
             :description "Som programør lærer man seg å automatisere så mye som mulig. Hvorfor reise
             seg fra sofaen for å skru av lyset når man skal se på film?"
             :illustration "/illustrations/hobbies/raspberrypi.jpg"}
-            
-            {:title "Foto"
+
+           {:title "Foto"
             :description "Et bilde sier mer enn tusen ord."
             :illustration "/illustrations/hobbies/fredrik-foto.jpg"}
-            ]
-        
+           ]
+
+ :projects [{:customer "NSB"
+             :employer :kodemaker
+             :summary "Passasjerinformasjonssystemer og støttesystemer"
+             :years [2015 :ongoing]
+             :description "Troll Utvikling av en kartapplikasjon for
+             visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
+             Javautvikler / frontendutvikler."
+             :tech [:grails :groovy :javascript :es6 :react :rest :css :html :bootstrap :git]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "MCC Webapplikasjon"
+             :years [2015 :ongoing]
+             :description "MCC Webapplikasjon for materiell kontroll, som
+             rapporterer nå situasjonen for tog-flåten og utnyttelsesgrad.
+             Oppgaver: Senior Javautvikler / frontendutvikler."
+             :tech [:grails :groovy :rest :soap :css :html :bootstrap :git]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "D9009 Webapplikasjon"
+             :years [2013 :ongoing]
+             :description "D9009 Webapplikasjon som viser planlagt
+             togsammensetning. Oppgaver: Senior Javautvikler /
+             frontendutvikler."
+             :tech [:grails :groovy :rest :css :html :bootstrap :svn]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "Pis Marketing System Webapplikasjon"
+             :years [2012 :ongoing]
+             :description "Pis Marketing System Webapplikasjon for å produsere
+             og distribuere markedsvideoer som vises ombord i togene. Oppgaver:
+             Senior Javautvikler / frontendutvikler."
+             :tech [:grails :groovy :css :html :bootstrap :svn]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "JODA Generering av realtime-informasjon til passasjerinformasjonssystemet på NSDs nye togsett"
+             :years [2011 :ongoing]
+             :description "JODA Generering av realtime informasjon til
+             passasjerinformasjonssystemet på NSBs nye togsett, slik som
+             nyheter, værmelding og overgangsinformasjon. Systemet henter data
+             fra innholdsleverandører og setter sammen skreddersydde pakker til
+             hvert enkelt togsett. Disse pakkene overføres ved hjelp av FILI.
+             Oppgaver: Senior Javautvikler / frontendutvikler."
+             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "FILI"
+             :years [2010 :ongoing]
+             :description "FILI Håndterer realtime datakommunikasjon med NSB nye
+             togsett, som overføring av diagnosedata, passasjertelling,
+             passasjerinformasjon osv. Oppgaver: Senior Javautvikler /
+             frontendutvikler."
+             :tech [:grails :java :spring :css :html :svn]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "GRAILS"
+             :years [2010 :ongoing]
+             :description "GRAILS Et system som beskriver geografien og
+             stasjonene i NSBs domene. Dette er masterdatabase for andre NSB
+             systemer. Oppgaver: Senior Javautvikler / frontendutvikler."
+             :tech [:grails :java :gorm :spring :testng :css :html :javascript :jquery :svn :maven]}
+            {:customer "NSB"
+             :employer :kodemaker
+             :summary "PAIN"
+             :years [2009 :ongoing]
+             :description "PAIN Utvikling av en applikasjon for automatisk
+             generere databasen som styrer passasjerinformasjons-anleggene
+             ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l.
+             Oppgaver: Senior Javautvikler / frontendutvikler"
+             :tech [:griffon :groovy :java :spring :junit :svn :maven :java-soundframework]}
+            {:customer "HRM Group"
+             :employer :kodemaker
+             :summary "Lederindeksen"
+             :years [2009]
+             :description "Utvikling av måleverktøy for Ledere.
+             www.lederindeksen.no Oppgaver: Seniorutvikler"
+             :tech [:ruby :rails :rake]}
+            {:customer "Statens Pensjonskasse"
+             :employer :kodemaker
+             :summary "Nytt saksbehandlingssystem for SPK"
+             :years [2009]
+             :description "Utvikling av saksbehandlingssystem. Oppgaver: Utvikler"
+             :tech [:java :flex :maven :hudson :hibernate :javascript]}
+            {:customer "Forsvaret"
+             :employer :kodemaker
+             :years [2009]
+             :description "Oppgaver: Utvikler"
+             :tech [:java :spring-mvc :javascript :html]}
+            {:customer "Tandberg"
+             :employer :objectware
+             :summary "Telepresence"
+             :years [2008]
+             :description "Telepresence. Utvikling av styresystem for Tandbergs
+             prestisjeprodukt T3. Oppgaver: Senior Java / frontendutvikler.
+             Utvikling av GUI i Swing."
+             :tech [:java :swing :spring :svn :junit]}
+            {:customer "Western Geco"
+             :employer :objectware
+             :summary "Støttesystemer for Seismikk"
+             :years [2008]
+             :description "Støttesystemer for Seismikk Prisberegningssystem for
+             seismikkjobber - en rik klient i Swing. Oppgaver: Senior Java /
+             frontendutvikler."
+             :tech [:java :swing :hudson]}
+            {:customer "Cicero"
+             :employer :objectware
+             :summary "Cicero Financial Portal"
+             :years [2007]
+             :description "Finansportal Utvikling av Ciceros Finansportal
+             Oppgaver: Senior Java- / frontendutvikler."
+             :tech [:java :jsp :struts2 :ajax :css :html :sql :portlets :oracle-portal
+                    :oracle-appserver :eclipse :maven :svn :spring :junit :hudson]}
+            {:customer "CSAM/Rikshospitalet"
+             :employer :objectware
+             :summary "Klinisk portal"
+             :years [2006]
+             :description "Klinisk portal Utvikling av «Klinisk Portal», en
+             portalløsning med integrasjon mot mange underliggende systemer. Var
+             bl.a. med på å muliggjøre sammenslåingen av Rikshospitalet og
+             Radiumhospitalet. Startet som et prosjekt hos Rikshospitalet men
+             vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
+             bruk på flere sykehus i Vestmanlän i Sverige. Oppgaver: Senior Java
+             / frontendutvikler. Portalutvikling av ajaxintensive portlets."
+             :tech [:java :jsp :struts :prototype :ajaxanywhere :json :javascript
+                    :css :html :portlets :oracle-portal :oracle-appserver :intellij
+                    :ant :svn :cvs :jstl :spring :junit :hudson]}
+            {:customer "Skatteetaten"
+             :employer :objectware
+             :summary "Intranett portal"
+             :years [2006]
+             :description "Intranett portal Utvikling av Intranett Oppgaver:
+             Senior Java / frontendutvikler. Portalutvikling av ajaxintensive
+             portlets."
+             :tech [:java :escenic :oracle-portal]}
+            {:customer "DnbNor"
+             :employer :accenture
+             :summary "Postbanken Nettbank"
+             :years [2005]
+             :description "Utvikling av Postbankens Nettbank Oppgaver: Ansvarlig
+             for design og utvikling av forskjellige moduler."
+             :tech [:java :html]}
+            {:customer "Norgesgruppen"
+             :employer :accenture
+             :summary "Intranett og Matsikkerhetsportal"
+             :years [2004]
+             :description "Intranett Oppgaver: Utvikler av Intranett portal for
+             Norgesgruppens forskjellige kjeder."
+             :tech [:java :escenic :oracle-portal]}
+            {:customer "DnbNor"
+             :employer :accenture
+             :summary "Postbanken Nettbank"
+             :years [2003]
+             :description "Utvikling av Postbankens Nettbank Oppgaver: Ansvarlig
+             for design og utvikling av forskjellige moduler."
+             :tech [:java :html]}
+            {:customer "Canal Digital"
+             :employer :accenture
+             :summary "Applikasjoner for Digital TV"
+             :years [2001]
+             :description "Applikasjoner for digital TV Utvikling av
+             forskjellige applikasjoner og infrastrukturmoduler som kjører på
+             Canal Digitals STB. Bl.a. Elektronisk Program Guide og
+             stemmeapplikasjon"
+             :tech [:media-highway :media-home-platform]}
+            {:customer "SuperOffice"
+             :employer :superoffice
+             :summary "Intranet portal"
+             :years [1999]
+             :description "Utvikling av Intranett produkt Oppgaver: Utvikler av
+             forskjellige moduler, som dokumentarkiv, diskusjonsforum,
+             publiseringsverktøy. Prosjektleder/Utvikler for SDK til produktet"
+             :tech [:vbscript :asp :javascript :mssql]}
+            {:customer "Trumf"
+             :employer :superoffice
+             :summary "Nettbutikk"
+             :years [2001]
+             :description "Nettbutikk Oppgaver: Utviklet Trumfs nettbutikk i et
+             team bestående av meg, en database dud og en web designer"
+             :tech [:vbscript :asp :oracle :html :javascript]}]
+
+ :cv {}
+ :cv/description "Fredrik har jobbet som utvikler siden 1999, og har har vært
+ innom en rekke forskjellige teknologer, med spesiell fokus på frontend, både
+ web og rike klienter. Han er opptatt av å velge riktig teknolog for å møte
+ kundens behov, og han tilegner seg raskt domenekunnskap i prosjektene han
+ deltar i.
+
+ Med et ønske om å levere kvalitet ligger smidige utviklingsmetodikker hans
+ hjerte nært. Scrum har vært brukt i de fleste prosjektene han har deltatt i de
+ siste årene.
+
+ Jobb skal være gøy, og Fredrik bidrar både sosialt og faglig for at teamet skal
+ yte sitt beste. "
+ :education-summary "Dataingeniør, HiG"
+ :experience-since 1999
+ :qualifications ["Senior Systemutvikler"
+                  "Løsningsarkitekt"
+                  "Java plattform"
+                  "JavaEE"
+                  "Groovy og Grails"
+                  "Systemarkitektur og integrasjon"
+                  "XP-praksiser (TDD, CI, med mer)"
+                  "SCRUM"]
+ :certifications [{:name "JavaScript/JQuery", :year 2009}
+                  {:name "Sun Certified Business Component Developer", :year 2006}
+                  {:name "Sun Certified Java Developer", :year 2005}
+                  {:name "Sun Certified Java Programmer", :year 2003}]
+ :relationship-status "Samboer"
+ :born 1976
+ :education [{:institution "Høgskolen i Gjøvik"
+              :years [1997 1998 1999]
+              :subject "Høgskoleingeniør, Data"}]
+ :domain-skills [{:title "Jernbane"
+                  :description
+                  "God kunnskap om norsk jernbane, etter over seks år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. "}
+                 {:title "Helseforetak"
+                  :description "God kunnskap etter 18 måneder på Rikshospitalet. "}
+                 {:title "Oljeleting/seismikk"
+                  :description "Noe kjennskap, etter 4 måneder i Western Geco."}
+                 {:title "Bank/Finans"
+                  :description
+                  "Noe kjennskap, etter å ha jobbet for Postbanken/DnB og Cicero finnansportal. "}
+                 {:title "Telekonferanser/Teleprecence"
+                  :description
+                  "God kjennskap til High-End/Telepresence løsningene etter 5 måneder hos Tandberg"}
+                 {:title "Dagligvarebransjen", :description "Noe kjennskap."}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
  }
