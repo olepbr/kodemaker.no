@@ -37,6 +37,7 @@
  :concourse :devops
  :confluence :tool
  :cpp :proglang
+ :cqrs :methodology
  :csharp :proglang
  :css :frontend
  :cvs :vcs
@@ -48,6 +49,7 @@
  :eclipse :devtools
  :elasticsearch :server
  :elisp :proglang
+ :event-sourcing :methodology
  :express-js :framework
  :ezpublish :server
  :fatwire :server

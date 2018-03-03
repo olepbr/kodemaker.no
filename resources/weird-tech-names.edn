@@ -28,6 +28,7 @@
  :cvs "CVS"
  :csharp "C#"
  :cpp "C++"
+ :cqrs "CQRS"
  :cxf "CXF"
  :dbfit "DbFit"
  :ddd "Domain-driven design"

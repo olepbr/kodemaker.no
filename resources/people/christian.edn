@@ -229,7 +229,7 @@
                     :dynamodb :aws-iam :aws-kinesis :aws-lambda :aws-api-gateway
                     :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
                     :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
-                    :alpine :ubuntu]
+                    :alpine :ubuntu :cqrs :event-sourcing]
              :years [2017 :ongoing]}
             {:customer "Eventum.no"
              :employer :kodemaker
