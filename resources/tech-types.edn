@@ -1,16 +1,26 @@
 ;; Kategorisering av typer tech for teknologier som ikke har sin egen side enda.
 ;; Typen brukes til å plassere teknologien i rett kategori på CV-en.
 {
+ :abdera :server
+ :actionscript :proglang
  :activemq :server
+ :activex :library
+ :adobe-reachform :tool
  :akka :library
  :alpine :os
  :android :os
  :angularjs :framework
  :ant :devtools
  :appcode :devtools
+ :architecture :methodology
  :asana :tool
+ :asciidoctor :tool
+ :asp :framework
  :aspnet :framework
+ :atg-dynamo :framework
+ :atom :specification
  :auth0 :security
+ :automated-acceptance-testing :methodology
  :aws-api-gateway :cloud
  :aws-cloudfront :cloud
  :aws-cloudwatch :cloud
@@ -23,97 +33,181 @@
  :aws-route53 :cloud
  :aws-s3 :cloud
  :aws-vpc :cloud
+ :babel :tool
+ :bankid :library
  :bamboo :tool
  :bash :proglang
  :browser-devtools :devtools
  :browserify :library
+ :burndown :methodology
  :buster-js :library
  :camel :library
  :capistrano :devops
+ :cassandra :database
  :cd :methodology
  :cef :frontend
  :centos :os
  :chai :library
+ :checkstyle :tool
  :ci :methodology
  :clojure-spec :library
+ :cobol :proglang
  :cocoapods :library
+ :codenarc :tool
+ :code-review :methodology
  :coffeescript :proglang
  :collectionjson :specification
  :compass :library
+ :complus :library
+ :component :library
+ :compojure :library
  :concourse :devops
  :confluence :tool
+ :cordova :frontend
+ :core-async :library
+ :cpd :tool
  :cpp :proglang
  :cqrs :methodology
+ :crucible :devops
+ :cruise-control :devops
  :csharp :proglang
  :css :frontend
  :cvs :vcs
+ :cygwin :devtool
  :cxf :server
+ :d3 :library
+ :dashing :tool
  :datascript :database
+ :db2 :database
+ :dbartisan :library
  :dbfit :framework
  :ddd :methodology
  :delphi :proglang
+ :dojo :library
+ :domain-modeling :methodology
  :docker-cloud :cloud
  :dotnet :framework
+ :dreamweaver-mx :tool
+ :dynamodb :database
+ :easerver :server
  :eclipse :devtools
+ :ehcache :server
  :elasticsearch :server
  :elisp :proglang
+ :epicentric-portal :server
  :es6 :proglang
+ :escenic :server
  :event-sourcing :methodology
  :express-js :framework
  :ezpublish :server
  :fast :server
  :fatwire :server
+ :figwheel :devtools
+ :findbugs :tool
  :fitnesse :framework
- :flex :framework
+ :flash :framework
+ :flex :proglang
+ :frp :methodology
+ :fusioncharts :library
  :gcd :server
  :gerrit :tool
+ :geronimo :server
+ :git-svn :vcs
+ :github :vcs
+ :gitlab :vcs
+ :glassfish :server
  :google-adwords :tool
  :google-analytics :tool
  :google-closure :library
+ :google-cloud-messaging :cloud
+ :google-earth :tool
+ :google-image-charts :library
  :google-maps :library
  :google-protocol-buffers :specification
+ :graphite :server
+ :grasshopper :tool
+ :griffon :library
  :groovyws :library
  :grunt :library
  :gwt :framework
  :h2db :database
  :hadoop :library
+ :hamcrest :library
  :haproxy :devops
  :hateoas :methodology
+ :hazlecast :server
  :hbase :server
+ :hdfs :library
+ :hibernate-search :library
+ :honeysql :library
+ :hpunix :os
  :html :frontend
  :http :frontend
- :hazlecast :server
+ :hudson :server
+ :hugsql :library
+ :hystrix :library
+ :ibm-bluemix :server
+ :iis :server
+ :immutable-js :library
  :intellij :devtools
  :interbase :database
+ :interview :methodology
  :ios :os
+ :iplanet-enterprise-directory :server
+ :j2ee :proglang
  :jade :library
  :jasmine :library
+ :jasperreport :server
+ :java-ee :proglang
  :javafx :library
+ :jdbc :library
+ :jersey :library
  :jetty :server
  :jira :tool
  :jaxrs :tool
  :jboss :server
+ :jboss-messaging :server
+ :jboss-portal :server
+ :jbossws :library
  :jbuilder :library
  :joomla :server
+ :jool :library
  :jpa :library
  :jquery :library
+ :jquery-mobile :library
+ :jrebel :library
  :js-test-driver :library
  :jsp :library
  :jspm :devtools
  :junit :library
+ :junitee :library
  :kafka :server
+ :kanban :methodology
  :karma :library
+ :kibana :server
+ :krypto :methodology
+ :kubernetes :devops
+ :koha :library
  :leiningen :devtools
  :less :frontend
+ :liberator :library
  :lighttable :devtools
+ :linux-kernel :library
  :liquibase :library
  :lisp :proglang
  :lisp-flavoured-erlang :proglang
  :logstash :server
+ :lombok :library
+ :lotus-notes :server
+ :lucene :library
+ :magnolia-cms :server
+ :manual-testing :methodology
+ :mariadb :database
  :markdown :specification
  :markedsforing :methodology
  :material-ui :frontend
  :mesos :devops
+ :metrics :methodology
  :micro-services :methodology
  :midje :library
  :mocha :library
@@ -121,12 +215,18 @@
  :mongodb :database
  :mongo-queue :server
  :monit :devops
+ :mono :framework
  :mule :server
+ :mqseries-integrator :server
  :ms-access :database
+ :ms-exchange :server
+ :mscpp :proglang
  :mysql :database
  :neo4j :database
  :netty :server
+ :nexus :server
  :nginx :devops
+ :notes :server
  :oauth2 :security
  :objc :proglang
  :objcplusplus :proglang
@@ -134,44 +234,84 @@
  :oidc :security
  :om :framework
  :om-next :framework
- :openam :server
+ :openam :security
+ :openid :security
  :openssl :library
  :oracle :database
  :oracle-appserver :server
  :oracle-locator :database
+ :oracle-portal :server
  :osx :os
+ :pair-programming :methodology
  :passenger :server
+ :peoplesoft-crm :server
+ :phantomjs :library
  :photoshop :tool
  :php :proglang
+ :pki :security
  :play :framework
+ :pmd :tool
  :puppet :devops
+ :prototype :library
  :pygments :library
+ :python :proglang
+ :quartz :library
  :rails :framework
  :rake :library
+ :rational-clearcase :vcs
+ :re-frame :library
  :reactive-cocoa :library
+ :reagent :library
  :redhat :os
  :redux :library
+ :release-management :methodology
  :rest :specification
+ :retrospectives :methodology
+ :ring :library
  :ruby :proglang
  :rubymine :devtools
+ :rust :proglang
  :rspec :library
  :sap :server
+ :saltstack :devops
+ :saml :security
  :sbt :devtools
  :scalatra :framework
+ :scrum :methodology
+ :secureway-directory-stellent-cms :server
  :selenium :library
+ :sente :library
+ :sinatra :library
  :sinon :library
  :siteminder :server
  :soap :specification
+ :solaris :os
+ :sonar :tool
  :splunk :server
  :spring-batch :framework
+ :spring-boot :framework
+ :spring-integration :framework
  :spring-mvc :framework
- :spring-security :framework
+ :spring-security :security
+ :story-points :methodology
  :sybase :database
+ :systemjs :devtools
+ :sse :frontend
  :ssh :library
+ :stash :vcs
+ :static-analysis :methodology
+ :struts :framework
+ :struts2 :framework
  :svn :vcs
  :sqlite :database
+ :squirrel-sql :library
+ :statsd :server
+ :swing :library
  :teamcity :devops
  :terminal :devtools
+ :terraform :devops
+ :testing :methodology
+ :testng :library
  :textmate :devtools
  :thinking-sphinx :library
  :tsql :specification
@@ -180,21 +320,42 @@
  :unfiltered :library
  :unity3d :framework
  :unix :os
+ :vagrant :tool
+ :varnish :devops
+ :vavr :library
  :vba :proglang
+ :vbscript :proglang
+ :vcs-analysis :methodology
+ :verity-search :server
  :vertx :library
  :virtualisering :devops
+ :visibroker :library
+ :visualage :server
  :visual-basic :proglang
  :visual-source-safe :vcs
  :visual-studio :devtools
  :vmware-esxi :devops
+ :watir :library
+ :webwork :framework
  :wicket :library
  :windows :os
  :wcf :framework
  :webgl :frontend
  :weblogic :server
  :webpack :tool
+ :websockets :frontend
+ :websphere-studio :server
+ :wiki :methodology
+ :wslite :library
  :wordpress :server
+ :yarn :tool
  :zeromq :server
  :zookeeper :library
+ :xalan :server
  :xcode :devtools
+ :xerces :tool
+ :xml :specification
+ :xmlspy :tool
+ :xslt :specification
+ :xtractor :library
  }
