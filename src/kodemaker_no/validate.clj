@@ -129,6 +129,7 @@
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
+                                    (optional-key :url) URL
                                     :year Num}]
 
    (optional-key :domain-skills) [{:title Str
