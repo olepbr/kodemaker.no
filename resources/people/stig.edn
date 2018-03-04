@@ -8,10 +8,10 @@
  :email-address "stig@kodemaker.no"
 
  :presence {:cv "stig"
-            :twitter "stigmelling" 
+            :twitter "stigmelling"
             :linkedin "/in/stigmelling"
             :github "stigmelling"
-          }
+            }
 
  :hobbies [{:title "Orientering"
             :description "Orientering er utrolig gøy og fasinerende. Det å jobbe
@@ -42,4 +42,454 @@
                                 som fanger GPS-posisjoner som igjen overføres
                                 til sentralen og visning i web-baserte kart."
                   :illustration "/illustrations/side-projects/roltracker.jpg"
-                  :tech [:android :java]}]}
+                  :tech [:android :java]}]
+
+ :projects [{:customer "NSB"
+             :years [2014 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av nytt rapporteringssystem"
+             :description "Design og utvikling av rapporeringssystem Oppgaver:
+             Prosjektdeltager, seniorutvikler, bearbeiding av energimålinger
+             slik at disse kan visualiseres for lokførere og stimulere til
+             energieffektiv kjøring. Scrum er benyttet."
+             :tech [:java :groovy :grails :javascript :tomcat :solaris :linux :camel :bootstrap :oracle]}
+            {:customer "NM Ultralang i Orientering"
+             :years [2014]
+             :employer :kodemaker
+             :summary "Utvikling og drift av system for liveresultater"
+             :description "Design og utvikling av system for liveresultater
+             Oppgaver: Integrasjonsutvikling, Design av brukergrensessnitt,
+             Design av systemarkitektur, Utvikling og test av løsning samt
+             drift. Arbeidet er organisert etter prinsipper for Kanban."
+             :tech [:java :groovy :grails :javascript :mysql :linux :aws-ec2 :bootstrap :rest]}
+            {:customer "Forsvaret"
+             :years [2013 2014]
+             :employer :kodemaker
+             :summary "Prosjekleder og utvikler av nytt kjernesystem"
+             :description "Prosjektleder og utvikler av nytt system for
+             forsvaret Prosjekt for måling og evaluering av rør/piper .
+             Prosjektet består av flere aktører og Stig og Kodemaker har en
+             svært sentral posisjon Oppgaver: Prosjektleder, seniorutvikler,
+             brukerhistorier, testplanlegging ( PDR, CDR, FAT og SAT),
+             testprosedyrer, dokumentasjon, utrulling og tilrettelegging for
+             drift. Arbeidet er organisert etter prinsipper for Scrum."
+             :tech [:java :groovy :grails :javascript :oracle :ibm-aix :redhat :jetty]}
+            {:customer "Bring Cargo"
+             :years [2011 2012 2013]
+             :employer :kodemaker
+             :summary "Teknisk rådgiver for utrullingsansvarlig i BringCargo"
+             :description "Teknisk rådgiver for utrullingsansvarlig i BringCargo
+             Han bistår også i arbeidet med å finne balanserte arbeidsprosesser
+             som muliggjør utførelse av systemgenererte planer. Stig bistår
+             Bring Cargo sin utrullingsansvarlige i arbeidet med å sikre at
+             neste generasjons planleggingsverktøy fungerer teknisk godt i Bring
+             Cargo sitt miljø."
+             :tech [:architecture]}
+            {:customer "Bring Cargo"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Design og implementering av løsning for adresse- og firmavask"
+             :description "Design og implementering av løsning for adresse- og
+             firmavask. BringCargo er avhengig av høy datakvalitet på firmanavn
+             og adresser for at automatisert planlegging skal fungere. Stig har
+             designet og implementert en løsning som vasker både firmanavn og
+             adresse opp mot sentrale registre. Løsningen genererer også grunnlag
+             for trendanalyser og fakturering av dårlig
+             firmanavn/adressekvalitet Sentral teknologi er MSSQL, Talend ETL,
+             Java, Hibernate, JaroWinkler algoritme for sammenligning av tekst
+             og Mule Enterprise Service Bus som integrasjonsmotor."
+             :tech [:mule :java :hibernate :mssql :etl]}
+            {:customer "Bring Cargo"
+             :years [2010 2011]
+             :employer :kodemaker
+             :summary "Videreutvikling og drifting av etablerte løsninger rundt planlegginssystemet Fleet"
+             :description "Videreutvikling og drifting av etablerte løsninger
+             rundt planlegginssystemet Fleet"
+             :tech [:java]}
+            {:customer "Bring Cargo"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Design og utvikling av analysegrunnlag for samspill på terminal "
+             :description "Design og utvikling av analysegrunnlag for samspill
+             på terminal Bring Cargo har behov for å analysere trender knyttet
+             til samspillet mellom sjåfører, terminalarbeidere og kjøreledere. I
+             den forbindelse har det vært nødvendig å skape ett bilde av
+             hendelsene som inntreffer i fra en tom bil ankommer terminalen -
+             til den reiser igjen ferdig lastet. Stig har laget en
+             analyseløsning som benytter GPSinformasjon i fra bilene sammen med
+             hendelser fanget i scannere på terminalen for å skape dette bildet.
+             Alle resultater er anonymisert og skal kun benyttes for å analysere
+             trender. Det er store datamengder som skal prosesseres samtidig som
+             unøyaktighet i datakvalitet på GPS possisjoner må nøytraliseres.
+             Løsningen er i hovedsak utviklet i MSSQL-server og Business
+             Intelligence and Reporting Tools (BIRT) fra eclipse."
+             :tech [:mssql :eclipse]}
+            {:customer "Bring Cargo"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Design og utvikling av løsning for utsendelse av enkeltstående SMS til sjåfør."
+             :description "Design og utvikling av løsning for utsendelse av
+             enkeltstående SMS til sjåfør. BringCargo har hatt behov for å gjøre
+             tilpassninger i SMS funksjonalitet i en av deres
+             standardapplikasjoner for utsendelse av enkelstående SMS. Det mest
+             naturlige er jo at programvarehuset gjør disse tilpassningene selv,
+             men i dette tilfellet laget Stig en alternativ løsning på samme tid
+             som programvareleverandørern benyttet på å sette i gang
+             papirarbeidet. Løsningen er utviklet i C# ved hjelp av Microsoft
+             Visual Studio og Mono."
+             :tech [:visual-studio :mono]}
+            {:customer "Bring Cargo"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Design og utvikling av løsning for trendanalyser knyttet til applikasjonsbruk."
+             :description "Design og utvikling av løsning for trendanalyser
+             knyttet til applikasjonsbruk. BringCargo har behov for å følge med
+             på trender knyttet til bruk av nye systemer som innføres. Stig har
+             designet ett sett med måltall som beskriver bruksmønster i ett
+             slikt system. Disse måltallene fanges opp og presenteres i egne
+             trendrapporter. Løsningen er utviklet i SQL og Business
+             Intelligence and Reporting Tools (BIRT) fra eclipse."
+             :tech [:mssql :eclipse]}
+            {:customer "Bring Cargo"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Design og utvikling av løsning for bulkutsendelse av SMS og email til sjåfør og transportør"
+             :description "Design og utvikling av løsning for bulkutsendelse av
+             SMS og email til sjåfør og transportør. For å forenkle
+             arbeidsprosessene til kjørelederene har det vært behov for å sende
+             mange SMS til ulike sjåfører initiert av en enkelt
+             arbeidsoperasjon. Denne funksjonaliteten mangler i standardsystemet
+             som benyttes. Stig har ved hjelp av små tilpassninger i dette
+             systemet - samt bruk av tilgjengelig infrastruktur raskt etablert
+             en slik løsning. Sentral programvare og teknoloig; java, Hibernate,
+             Mule ESB, OzekiSMS-server mot Telenor SMSC gateway og
+             standardsystemets integrasjonsapi."
+             :tech [:mule :java :hibernate]}
+            {:customer "BringCargo"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Design og utvikling av løsning for å fange opp respons i fra sjåfør via SMS"
+             :description "Design og utvikling av løsning for å fange opp
+             respons i fra sjåfør via SMS. BringCargo benytter bla. SMS for
+             kommunikasjon mot sine sjåfører for tildeling av henteoppdrag. Stig
+             har raskt etablert en løsning for å ta i mot tilbakemeldinger i fra
+             sjåførene via SMS - slik at dette kan markeres i oppdragslisten i
+             standardssystemet. Sentral programvare og teknoloig; java,
+             Hibernate, Mule ESB, OzekiSMS-server mot Telenor SMSC gateway og
+             standardsystemets integrasjonsapi."
+             :tech [:mule :hibernate :java]}
+            {:customer "Bring Cargo"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Utvikling av nye rapporter i standardsystemet for planlegging"
+             :description "Utvikling av nye rapporter i standardsystemet for
+             planlegging. BringCargo har hatt behov for å utvikle
+             spesialtilpassede rapporter til standardssystemet Fleet. Stig har
+             utviklet slike i Crystal Reports."
+             :tech [:mssql]}
+            {:customer "Bring Cargo"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Design og utvikling av løsning for visualisering av kjørte turer i GoogleEarth"
+             :description "Design og utvikling av løsning for visualisering av
+             kjørte turer i GoogleEarth. Bring Cargo har behov for å evaluere
+             dagens produksjon slik at erfaringer kan tilbakeføres til
+             planleggingssystemet og arbeidsrutiner knyttet til dette. Løsningen
+             visualiserer kjørte turer i Google Earth med mulighet for å kjøre
+             \"replay\" av disse for å analysere kjøremønster. Det hentes også
+             ut trendanalyser knyttet til avvik mellom faktiske kjørte turer vs.
+             det som var planlagt. Løsningen er utviklet i MSSQL, Mule ESB,
+             GoogleEarth, GPS eXchange Format, Talend ETL, eclipse BIRT."
+             :tech [:google-earth :etl :mule :mssql]}
+            {:customer "Posten Logistikk"
+             :years [2009]
+             :employer :posten
+             :summary "Design og utvikling av løsning for beregning av fremsendingstider i transportnettverk"
+             :description "Design og utvikling av løsning for beregning av
+             fremsendingstider i transportnettverk Planleggingssystemene for
+             distribusjon må oppdateres i forhold til hvilke oppdrag som kan
+             forventes til neste dags produksjon. Denne informasjonen er basert
+             på utførte scanninger i produksjonsapparatet kombinert med
+             fremsendingstabeller knyttet til geografi og transporttjenste som
+             benyttes. Stig har utviklet ett system for beregning av
+             fremsendingstid for planleggingssystemet Fleet. Løsningen består av
+             en rekke regler knyttet til geografi og transporttjeneste. Sentral
+             teknologi er lagrede prosedyrer i MSSQL og stor fokus på håndtering
+             av ytelse i store datamengder."
+             :tech [:mssql]}
+            {:customer "Posten Logistikk"
+             :years [2009]
+             :employer :posten
+             :summary "Design, utvikling og drifting av komplett integrasjonsløsning"
+             :description "Design, utvikling og drifting av komplett
+             integrasjonsløsning Forretningen har hatt behov for å teste ut
+             standardsystemer knyttet til planlegging av distribusjon. I den
+             forbindelse har det vært behov for raskt å etablere
+             integrasjonsløsninger og støttesystemer mellom planleggingsverktøy
+             og eksisterende systemer. Stig har designet og utviklet en komplett
+             integrasjonsløsning for samspill mellom relevante
+             systemer (Ordresystem, GPS innsamling i biler, datafangst i
+             håndterminaler og planleggingssystemet). Prosjektet har fokusert på
+             korte iterasjoner uten omfattende papirarbeid. Spesifikasjonene er
+             dokumentert som tester. Systemet er utvilet ved hjelp av Java,
+             Spring, Hibernate, Groovy/Grails, Mule ESB, ActiveMQ, IBM WebSphere
+             MQ, MSSQL Det er etablert failoverløsninger, automatisert
+             overvåkning og varsling via SMS og email dersom noe uforutsett
+             inntreffer. Løsningen håndterer ca 500.000 transaksjoner i døgnet"
+             :tech [:mule :groovy :grails :spring :hibernate :java :websphere :activemq]}
+            {:customer "Posten Logistikk"
+             :years [2009]
+             :employer :posten
+             :summary "Design og utvikling av løsning for adressevask "
+             :description "Design og utvikling av løsning for adressevask
+             Automatisk planlegging av transportruter krever at alle
+             leverings-/hentepunkter kan koordinatfestes med en lengdegrad og
+             breddegrad. Dette krever igjen at adressen er riktig skrevet. Bring
+             Cargo mottar adresseringsinformasjon i fra sine kunders
+             ERP-systemer, nettbutikker osv. Denne informasjonen må forbedres
+             før planleggingssystemene kan automatisere planlegging av
+             utkjøring/innhenting. Stig har utviklet en løsning for vasking av
+             adressedata opp mot riktige gateregister. Løsningen er benchmarket
+             mot flere andre systemer i norge, USA og Canada, og kan vise til
+             veldig gode resultater. Løsningen er utviklet i Java, Hibernate,
+             MSSQL-server, JaroWinkler algorimten for vurdering av likhet mellom
+             ulike tekster er en meget sentral komponent. Sentral teknoloig:
+             Talend ETL, Mule ESB, Apache ActiveMQ"
+             :tech [:etl :mule :activemq]}
+            {:customer "Posten Logistikk"
+             :years [2009]
+             :employer :posten
+             :summary "Konfigurasjon og enkel kundetilpassning av standardssystem for planlegging "
+             :description "Konfigurasjon og enkel kundetilpassning av
+             standardssystem for planlegging Ett standardverktøy for
+             automatisert planlegging av innhenting og distribusjon er testet og
+             rullet ut i forretningen. Stig har god teknisk forståelse av
+             standardproduktet samt inngående kjennskap til forretningen og har
+             derfor hatt en sentral possisjon i implementeringsteamet. Stig
+             bistår i daglig drift og support av produktet - samt samspill med
+             leverandør i USA."
+             :tech [:mssql]}
+            {:customer "Posten Logistikk - programkontor"
+             :years [2005 2006 2007 2008 2009 2010]
+             :employer :posten
+             :summary "Teknisk arkitekt programkontor"
+             :description "Teknisk arkitekt programkontor
+             Virksomhetsmodellering, målbilde, koordinering av sentrale
+             IKT-iniativ Teknisk arkitekt; integrasjon, datakonvertering,
+             evaluering av leverandører Integrasjonsarkitekt og
+             grensesnittutvikler i forbindelse med innføring av WMS for Bring
+             Logistics Solution Integrasjonsarkitekt og grensesnittutvikler samt
+             konfigurasjons-ansvarlig i forbindelse med innføring av TMS for
+             Bring Linehaul"
+             :tech [:architecture]}
+            {:customer "Apokjeden"
+             :years [2005]
+             :employer :ergo-group
+             :summary "Utarbeide kravspesifikasjon for produktkatalog for apokjeden "
+             :description "Utarbeide kravspesifikasjon for produktkatalog for
+             apokjeden Arbeidet bestod i å kartlegge informasjonsbehov og
+             arbeidsprosesser relatert til produktinformasjon på Apokjendes
+             produkter."
+             :tech [:architecture]}
+            {:customer "Posten Logistikk"
+             :years [2005]
+             :employer :ergo-group
+             :summary "Utvikling og utrulling av løsning for mulitmodale transportkjeder "
+             :description "Utvikling og utrulling av løsning for mulitmodale
+             transportkjeder Stig hadde rollen som teknisk prosjektleder og
+             etterhvert prosjektleder for utvikling og innføring av
+             transportstyringssystem for multimodale transportkjeder. Stig var
+             utvikler på løsningens dynamiske rapportgenerator. Denne ble
+             utviklet ved hjelp av java, eclipse Birt og Jboss
+             applikasjonsserver"
+             :tech [:java :eclipse :jboss]}
+            {:customer "Arrive/Gresvig"
+             :years [2005]
+             :employer :sap
+             :summary "Implementering av ekstern meldingsutveksling for Gresvig mot sine underleverandører ved hjelp av B2BtransIT "
+             :description "Implementering av ekstern meldingsutveksling for
+             Gresvig mot sine underleverandører ved hjelp av B2BtransIT
+             Verdikjedeintegrasjon mellom Gresvig og Gresvigs underleverandører.
+             Stig bistod i arbeidet med å analysere krav og behov - samt
+             implementering av dette i tjenesten B2BtransIT"
+             :tech [:java]}
+            {:customer "Arrive"
+             :years [2004 2005]
+             :employer :sap
+             :summary "Produktutvikling av tjeneste for verdikjedeintegrasjon - B2BtransIT "
+             :description "Produktutvikling av tjeneste for ekstern
+             meldingsutveksling - B2BTransIt Utvikling av tjeneste for
+             verdikjedeintegrasjon mellom handelspartnere. Løsningen bygger på
+             en samling standardprodukter i fra Sybase og IBM samt omfattende
+             utviklinig i Java og SQL. Meldingsbrokeren er bygget som en tjenste
+             der aktører kan forenkle og sikre sin elektroniske
+             meldingsutveksling. Løsningen håndterer en rekke formater; EDI,
+             XML, flate filer, Excel, m.fl. Løsningen eksekverer på
+             J2EE-applikasjonsserver og Sybase Adaptive Server Enterprise.
+             Sentrale teknologier: EJB, MDB, JMS, JSP, XML, XSLT, CVS, JMX,
+             HTML, CSS, JavaMail, Distribuerte transaksjoner, SQL, IBM MQ
+             Series, IBM integrasjonsadaptre."
+             :tech [:ejb :mdb :jms :jsp :xml :xslt :cvs :jmx :html :css :javamail :sql]}
+            {:customer "NSB Ekspressgods"
+             :years [2001]
+             :employer :sap
+             :summary "Utvikling av rapporter og funksjonalitet for avregning mellom internasjonale aktører"
+             :description "B2B integrasjon mellom sammarbeidsparnere Utveksling
+             av Ordre- og statusinformasjon mellom Ekspressgods og Posten Norge"
+             :tech [:architecture]}
+            {:customer "SAP Sybase Education"
+             :years [2000 2001 2002 2003 2004 2005]
+             :employer :sap
+             :summary "Kurs- og foredrags-holder "
+             :description "Produktorienterte kurs/foredrag
+
+    - Designing, Installing and Configuring e-Biz Integrator
+    - Fast Track to Sybase Enterprise Portal
+    - Fast Track to PowerBuilder
+    - Fast Track to Unwired Orchestrator
+    - New features in EAS Application Server
+    - New features in PocketBuilder
+    - New features in PowerBuilder
+    - New features in PowerDesigner
+    - New features in Enterprise Portal
+    - EAServer Administration
+    - Unwired Accelerator - combining Portal technology with Mobile Software
+    - Unwired Orchestrator - Next generation integration platform Metode/teknologiorienterte kurs/foredrag
+    - Object-Oriented Modeling with PowerDesigner
+    - Sybase Enterprise Security
+    - Building Object-Oriented Applications with PowerBuilder
+    - Building Applications with PowerBuilder and EAServer
+    - Data Modeling with PowerDesigner
+    - Accelerating Enterprise Web Application Development
+    - Integrating XML, Web Services, and .NET with PowerBuilder
+    - Working with XML in PowerBuildre
+    - Working with WebServices in PB and EAS
+    - Database modelling With PowerDesigner
+    - Object Oriented modelling using UML and PowerDesigner
+    - Java Message Service
+    - WebServices
+    - Real Time Data Services"
+             :tech [:sap]}
+            {:customer "Aftenposten, Axiti, Sør-norge aluminium, Alm.Brand, Aloc, Arrive"
+             :years [2000 2001 2002 2003 2004 2005]
+             :employer :sap
+             :summary "Proof of concept - portalprosjekter "
+             :description "Proof of concept - portalprosjekter Bistand i
+             forbindelse med implementasjon av Sybase Enterprise Portal. Bistand
+             har bestått i; kompetanseoverføring, Proof of concept,
+             løsnings-design og implementering."
+             :tech [:architecture]}
+            {:customer "SAP Sybase Salg"
+             :years [2000 2001 2002 2003 2004 2005]
+             :employer :sap
+             :summary "Teknisk salgstøtte"
+             :description "Teknisk salgstøtte Produktansvar for Sybase sine
+             modellerings og mellomvareprodukter; UML- og prosessmodellering,
+             applikasjonsserver, portalserver og Business Process Management
+             Server. Utarbeidelse av demonstrasjoner, presentasjoner og
+             produktsuport"
+             :tech [:architecture]}
+            {:customer "Telenor Mobil"
+             :years [2000]
+             :employer :avenir
+             :summary "Viderutvikling av system for administrasjon av infrastruktur for mobile tjenester "
+             :description "Viderutvikling av system for administrasjon av
+             infrastruktur for mobile tjenester Videreutvikling av system for
+             administrasjon av infrastruktur for mobile tjenester. Sentral
+             teknologi: PowerBuilder, SQL, Sybase ASE"
+             :tech [:sql :sybase]}
+            {:customer "Norges Apotekerforening"
+             :years [2000]
+             :employer :avenir
+             :summary "Design og utvikling av system for ansiennitetsberegning for apotekansatte"
+             :description "Design og utvikling av system for
+             ansiennitetsberegning for apotekansatte Løsningen ble utviklet i
+             PowerBuilder mot Sybase Adaptive Server Enterprise"
+             :tech [:sybase]}
+            {:customer "NSB Gods"
+             :years [1999]
+             :employer :avenir
+             :summary "Utvikling av rapporter og funksjonalitet for avregning mellom internasjonale aktører"
+             :description "Utvikling av rapporter og funksjonalitet for
+             avregning mellom internasjonale aktører Utvikling av rapporter for
+             avregning mellom internasjonale aktører. Løsningen ble utviklet i
+             SQL Windows."
+             :tech [:architecture]}
+            {:customer "Assuranceforeningen Skuld (Gjensidig)"
+             :years [1998]
+             :employer :avenir
+             :summary "Kompetanseoverføring, QA og datakonvertering "
+             :description "Kompetanseoverføring, QA, datakonvertering
+             Datakonvertering, kompetanseoverføring og testing av
+             assurancesystem. Platform Oracle DBMS og PowerBuilder."
+             :tech [:oracle]}
+            {:customer "Avenir og Oslo Børs"
+             :years [1998]
+             :employer :avenir
+             :summary "UML og objektorientert modellering "
+             :description "Kurs og kompetanseoverføring: UML og objektorientert
+             modellering Systemutvikling \"Best practice\" internt i Avenir og
+             eksternt mot Oslo Børs."
+             :tech [:architecture]}
+            {:customer "Statens forurensningstilsyn"
+             :years [1997]
+             :employer :avenir
+             :summary "Design og utvkikling av system for effektiv saksbehandling"
+             :description "Design og utvkikling av system for effektiv
+             saksbehandling Platform: MS SQL Server, PowerBuilder, ESRI Map"
+             :tech [:mssql]}
+            {:customer "Aftenposten"
+             :years [1995 1996]
+             :employer :avenir
+             :summary "Meglernes listeservice "
+             :description "Meglernes listeservice Forløper til Finn.no, men
+             papirbasert. Design og utvikling av system for eiendomsmeglere.
+             Løsningen ble utviklet på MS SQLserver og PowerBuilder, med
+             distribuerte databaser. Informasjonsutveksling via modem og analoge
+             telefonlinjer."
+             :tech [:mssql]}]
+
+ :cv {}
+ :cv/description " Stig elsker å programmere, men tenner mest der han kan ta tak
+ i forretningsmessige utfordringer og løse disse ved hjelp av nye
+ arbeidsprosesser understøttet av teknologi.
+
+ Stig er utdannet sivilingeniør i fra Norges Tekniske Høyskole i Trondheim og
+ har lang erfaring med systemuvikling, teknologi- og arkitektur-valg,
+ systemintegrasjon og teknisk-prosjektledelse.
+
+ Stig har god og bred teknologiforståelse som går gjennom «alle lag» i
+ teknologistakken; database, mellomvare, frontend og ulike teknikker for ekstern
+ og intern integrasjon. Han er glad i å sette seg inn i nye ting, men er
+ pragmatisk i forhold til at teknologier kommer og går. Kvalitet er ikke ett
+ produkt av verktøyet du bruker, men din evne til å arbeide strukturert innenfor
+ de mulighetene og begrensninger som verktøyet tilbyr.
+
+ Stig trives best der han kan tenke lange tanker som følges opp med praktisk og
+ strukturert «fotarbeid»."
+
+ :education-summary "Norges Tekniske Høyskole (NTH/NTNU)"
+ :experience-since 1995
+ :qualifications ["Strukturert analyse av komplekse problemstillinger"
+                  "Senior Systemutvikler"
+                  "Løsningsarkitekt/design"
+                  "Objektorientert-, prosessorientert- modellering"
+                  "Java plattform, JavaEE, Groovy og Grails"
+                  "Databasemodellering, SQL programmering og optimalisering"
+                  "Ekstern og intern applikasjonsintegrasjon"
+                  "Automatisering av prosesser mellom aktører i en verdikjede"
+                  "Agile metoder, Scrum, Kanban"
+                  "Skreddersøm som undersøtter ERP/forretningssystemer"
+                  "Varehandel, Finans, Transport, logistikk og optimalisering"]
+ :relationship-status "Gift, 2 barn"
+ :born 1970
+ :education [{:institution "Norges Tekniske Høyskole (NTH/NTNU)"
+              :years [1993 1994]
+              :subject "Informasjonsteknikk Ekstrafag innenfor systemering,
+             databasesystemer, filsystemer, algorimter og datastrukturer"}
+             {:institution "Norges Tekniske Høyskole (NTH/NTNU)"
+              :years [1990 1991 1992 1993 1994]
+              :subject "Maskin - Konstruksjon og produksjonsteknikk Fokus på
+              IT-støtte i produksjon og konstruksjonsprosessene. Diplomoppgave:
+              Vurdering av it-verktøy for støtte til SelfAudit; en teknikk for
+              kontinuerlig forbedring av forretningsprosessene."}]}
