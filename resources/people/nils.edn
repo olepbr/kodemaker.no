@@ -241,14 +241,18 @@
                   "Smidig utvikling og kontinuerlig leveranse"]
  :certifications [{:name "Certified Scrum Master", :year 2018}
                   {:name "Machine Learning by Stanford University on Coursera"
-                   :year 2017}
+                   :year 2017
+                   :certificate {:url "https://www.coursera.org/account/accomplishments/certificate/SWGVUHARZM5Y"
+                                 :text "Course certificate"}}
                   {:name "TOGAF 9 Part 1 and 2", :year 2014}
-                  {:name
-                   "Programming Mobile Applications for Android Handheld Systems by University of Maryland, College Park"
-                   :year 2014}
-                  {:name
-                   "Algorithms: Design and Analysis, Part 2 by Stanford University on Coursera"
-                   :year 2013}
+                  {:name "Programming Mobile Applications for Android Handheld Systems by University of Maryland, College Park"
+                   :year 2014
+                   :certificate {:url "https://www.coursera.org/account/accomplishments/certificate/XE7NE7U9RX"
+                                 :text "Course certificate"}}
+                  {:name "Algorithms: Design and Analysis, Part 2 by Stanford University on Coursera"
+                   :year 2013
+                   :certificate {:url "https://www.coursera.org/maestro/api/certificate/get_certificate?course_id=970655"
+                                 :text "Certificate of Accomplishment"}}
                   {:name "Spring Core", :year 2010}
                   {:name "Sun Certified Java Web Component Developer", :year 2008}
                   {:name "Sun Java Certified Programmer", :year 2007}]
