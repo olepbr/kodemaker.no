@@ -41,4 +41,138 @@
                           ved noen holmer langt ute i havgapet."
             :illustration "/illustrations/hobbies/seiling.jpg"}]
 
-}
+ :projects [{:customer "Forsvaret"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Forvaltningssystem"
+             :description "Nyutvikling av Material Data Portalen, et system for
+             anmodning om og behandling av materialdata. Integrasjon med
+             forsvarets SAP-løsning. Oppgave: Analyse, design, test, utvikling,
+             dokumentasjon"
+             :tech [:groovy :grails :oracle :sap]}
+            {:customer "Forsvaret"
+             :years [2015]
+             :employer :kodemaker
+             :summary "Videreutvikling av GBMS"
+             :description "Videreutvikling av GBMS for datafangst og analyse av
+             skyts. Integrasjon med forsvarets SAP-løsning. Oppgave: Analyse,
+             design, test, utvikling, dokumentasjon"
+             :tech [:groovy :grails :oracle :sap-integrasjon]}
+            {:customer "Forsvaret"
+             :years [2007 :ongoing]
+             :employer :kodemaker
+             :summary "EDBVT, Amplan, Ammunisjonsrestrksjoner,Datakvalitetsmonitor"
+             :description "EDBVT, Amplan, Ammunisjonsrestrksjoner,
+             Datakvalitetsmonitor Videreutvikling på flere av forsvarets
+             applikasjoner. Utvikling av grensesnitt mellom SAP og andre
+             forvaltningssystem, samt tilpasning av disse systemene slik at de
+             samspiller med SAP. Oppgaver: Senior Javautvikler."
+             :tech [:j2ee :java :struts :spring :hibernate :jboss :oracle :maven :svn]}
+            {:customer "TAD"
+             :years [2006]
+             :employer :kodemaker
+             :summary "Tolldeklarasjonssystem"
+             :description "TVINN System for behandling av tolldeklarasjoner.
+             Oppgaver: Senior Javautvikler."
+             :tech [:j2ee :j2se :spring :hibernate :genova-8 :rational-rose :sybase]}
+            {:customer "Forsvaret"
+             :years [2005]
+             :employer :kodemaker
+             :summary "Forvaltningssystem"
+             :description "Forvaltningssystemer: FELREGs webgrensesnitt, Amplan,
+             Pubreg, Datakvalitetsmonitor Videreutvikling på forsvarets
+             applikasjoner nevnt over. Arkitekt og utvikler for forsvarets
+             datakvaitetsmonitor. Oppgaver: Senior Javautvikler. Gjennomførte
+             overgang fra CVS til Subversion."
+             :tech [:j2ee :java :struts :spring :hibernate :jboss :oracle :jasper-reports :ant :svn]}
+            {:customer "Mintra"
+             :years [2005]
+             :employer :kodemaker
+             :summary "Optimalisering og videreutvikling av LMS"
+             :description "Optimalisering og videreutvikling av LMS.
+             Oppgaver: Senior Javautvikler."
+             :tech [:j2ee :java :servlets :xml :xslt :jdbc :caucho-resin :postgres]}
+            {:customer "Fagsenteret for kjøtt"
+             :years [2004]
+             :employer :kodemaker
+             :summary "Kvalitetskontroll- og produkjonsstatistikksystem"
+             :description "Kvalitetskontroll- og produkjonsstatistikksystem WEB
+             løsning for publiserings av kvalitetskontroll og
+             produksjonsstatistikk for norske kjøttprodusenter. Oppgaver: Senior
+             Javautvikler. Utvikling av ny funksjonalitet."
+             :tech [:j2ee :java :servlets :jsp :ejb :hibernate :spring :easerver :oracle]}
+            {:customer "Mintra AS"
+             :years [2003]
+             :employer :mintra
+             :summary "Produksjonsstøttesystem og LMS"
+             :description "Produksjonsstøttesystem og LMS Utvikling av
+             produksjonsstøttesystem og tilpasning av LMS. Oppgaver: Arkitekt og
+             utvikler for produksjonsstøttesystem for e-læringskurs med
+             swingklient og flashklient. Innbar også oppfølging og coaching av
+             utviklingsteamet."
+             :tech [:j2ee :java :xml :xslt :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+            {:customer "Mintra AS"
+             :years [2003]
+             :employer :norbooking
+             :summary "Produksjonsstøttesystem"
+             :description "Produksjonsstøttesystem Utvikling av
+             produksjonsstattesystem. Oppgaver: Arkitekt og utvikler for
+             produksjonsstøttesystem for e-læringskurs med swingklient og
+             flashklient. Innbar også oppfølging og coaching av
+             utviklingsteamet."
+             :tech [:j2ee :java :xml :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+            {:customer "Norbooking AS"
+             :years [2002]
+             :employer :norbooking
+             :summary "Reiselivssystem"
+             :description "Reiselivssystem Drift og videreutvikling av
+             reiselivssystemet jeg hadde vært med å utvikle i DBC-Munin
+             AS/Inspera AS. Oppgaver: Ansvarlig"
+             :tech [:j2ee :java :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}
+            {:customer "Interne prosjekter"
+             :years [1999]
+             :employer :dbc
+             :summary "Reiselivssystem og e-læringssystem"
+             :description "Reiselivssystem Utvikling av integrert system for
+             presentasjon, publisering , booking, fakturering og lagerstyring
+             for små og mellomstore reiselivsbedrifter. Utvikling av moduler til
+             bruk i e-læringssystem Oppgaver: Javautvikler."
+             :tech [:j2ee :java :servlets :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}]
+
+ :cv {}
+ :cv/description " Torstein har lang og variert erfaring med systemutvikling.
+ Han har vært innom de fleste aspekt innen faget og legger stor vekt på kvalitet
+ i alle ledd. Koding er kjernen i det han jobber med og han er flink til å komme
+ frem til løsninger på problemer.
+
+ Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
+ Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor
+ arbeidskapasitet og jobber effektivt. Han lærer raskt og tenker fremover."
+
+  :education-summary "Sivilingeniør NTNU, Realfag UiB"
+ :experience-since 1999
+ :qualifications ["Senior systemutvikler"
+                  "Løsningsmann"
+                  "Java EE"
+                  "Integrasjon"
+                  "Sterk på SQL"
+                  "Scrum / smidig utvikling"]
+ :certifications [{:name "JA310: Java Web Dynpro Basics", :year 2012}
+                  {:name "SAPEP: SAP NetWeaver Portal - Fundamentals", :year 2011}
+                  {:name "Profesjonelt styrearbeid", :year 2010}
+                  {:name "Grunnleggende regnskapsforståelse og analyse", :year 2010}
+                  {:name "Retorikk og presentasjonsteknikk", :year 2010}
+                  {:name "ITIL Foundation versjon 3", :year 2009}
+                  {:name "Sun Certified Programmer for the Java platform, SE6"
+                   :year 2009}
+                  {:name "Scrummaster", :year 2008}
+                  {:name "TDD", :year 2008}]
+ :relationship-status "Samboer, 4 barn"
+ :born 1975
+ :education [{:institution "NTNU"
+              :years [1997 1998 1999 2000 2001 2002]
+              :subject "Sivilingeniør Datateknikk - Kunnskapssystemer"}
+             {:institution "UiB"
+              :years [1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007]
+              :subject "Realfag"}]
+ }
