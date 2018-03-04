@@ -229,7 +229,7 @@
                     :dynamodb :aws-iam :aws-kinesis :aws-lambda :aws-api-gateway
                     :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
                     :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
-                    :alpine :ubuntu :cqrs :event-sourcing]
+                    :alpine :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
              :years [2017 :ongoing]}
             {:customer "Eventum.no"
              :employer :kodemaker
@@ -248,7 +248,8 @@
              OpenId Connect."
              :tech [:datomic :clojure :clojurescript :ansible :docker :javascript :nodejs
                     :react :elasticsearch :centos :auth0 :oidc :aws-iam :aws-s3 :leiningen :asana
-                    :maven :haproxy :nginx :datascript :oauth2 :bash]
+                    :maven :haproxy :nginx :datascript :oauth2 :bash :micro-services :core-async
+                    :clojure-spec :component :sse :reagent :figwheel :quartz]
              :years [2017]}
             {:customer "NRK Origo - Potion"
              :employer :kodemaker
@@ -262,7 +263,7 @@
             og med UI skrevet i React. UI-et ble skilt ut som et bibliotek for
             intern gjenbruk, og er nå i bruk i flere applikasjoner."
              :tech [:javascript :elasticsearch :nodejs :react :docker :mesos
-                    :octopus :teamcity :jira]
+                    :octopus :teamcity :jira :micro-services :babel :yarn]
              :years [2015 2016]}
             {:customer "NRK Radioarkiv"
              :employer :kodemaker
@@ -325,12 +326,12 @@
             {:customer "Gitorious AS"
              :summary "Gitorious-programvaren"
              :employer :gitorious
-             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake]
+             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake :activemq]
              :years [2011 2013]}
             {:customer "Gitorious AS"
              :employer :gitorious
              :summary "Drift gitorious.org"
-             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql]
+             :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :activemq]
              :years [2011 2013]}
             {:customer "Programutvikling"
              :employer :gitorious
