@@ -136,6 +136,10 @@
     (f/to-html [:a {:href url} name])
     (f/to-html name)))
 
+(defn certificate [{:keys [certificate]}]
+  (when certificate
+    [:a {:href (:url certificate)} (or (:text certificate) "Kurssertifikat")]))
+
 (defn- cv-page [person]
   {:title (format "%s CV" (:full-name person))
    :layout :cv
@@ -182,7 +186,7 @@
           (table-section "Sertifiseringer/ kurs"
                          (:certifications person)
                          ["Kursnavn" "År"]
-                         [certification-name :year])
+                         [certification-name :year certificate])
           (table-section "Domenekunnskap"
                          (:domain-skills person)
                          ["Område" "Kjennskap"]
