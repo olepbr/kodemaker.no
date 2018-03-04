@@ -133,7 +133,8 @@
 
   (fact
    "Resolves project employers"
-   (->> cvs :christian :projects (map :employer)) => ["Kodemaker AS" "Kodemaker AS"])
+   (->> cvs :christian :projects (map :employer)) => [{:id :kodemaker :name "Kodemaker AS"}
+                                                      {:id :kodemaker :name "Kodemaker AS"}])
 
   (fact
    "Combines appearances with presentations and sorts by date"
