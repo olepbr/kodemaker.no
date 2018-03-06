@@ -60,7 +60,7 @@
                          Det blir ekstra skummelt når jeg sender dataene til google-appengine og lar alle med appen installert abonnere
                          på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!
 
-                         Lyntalen har senere blitt utvidet til et foredrag som blant annet holdes på ISF sin høstkonferanse 2017.
+                         Lyntalen ble senere holdt som foredrag på ISF sin høstkonferanse 2017.
                          "
                   :date  "2011-09-07"
                   :event "JavaZone"
@@ -127,8 +127,8 @@
                   :years       [2016]
                   :exclude-from-profile? true
                   :employer    :bytecode
-                  :summary     "Utvikle ny løsning for CDB"
-                  :description "Utvikle ny løsning for CDB: distribusjon av fremskrevne tidsserier for forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop, HBase."
+                  :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+                  :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
                   :tech        [:hbase :spark :kafka :java :zookeeper :vertx :kibana :java]}
                  {:customer    "Norwegian Air Shuttle"
                   :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
