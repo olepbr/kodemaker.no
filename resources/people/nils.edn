@@ -27,10 +27,11 @@
  :hobbies       [
                  {
                   :title        "Stisykling"
-                  :description  "Finnes det en bedre måte å koble av på enn å sykle noen kronglete stier i marka? Neppe. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere kneiker og crux."
+                  :description  "Jeg er overbevist at det ikke finnes noen bedre måte å slappe av på enn å sykle i marka, opp og ned bratte stier. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere sleipe røtter, glatte steiner og den biten av stien du ikke klarte på forrige tur."
                   :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
                  ],
 
+ :innate-skills [ :kotlin ]
 
  :recommendations
                 [
@@ -43,15 +44,13 @@
                           :text "Til video/slides"},
                   :tech  [:go :concurrency]},
 
-                 {:title "Hvorfor vi trenger tidsserie-databaser"
-                  :blurb "Paul Dix fra influxdb forklarer hva en tidsserie-database er og hvorfor man skal
-                         velge det fremfor tradisjonelle databaser. Tidsserie-databaser er optimalisert for å lagre 'events'
-                         fra f.eks logger, sensorer, iot-enheter eller strømmer av børsdata. Influxdb er en open-source database
-                         for å lagre tidsserier som lar deg komme i gang fort med å lagre tidsserier, men med avanserte
-                         funksjoner for å hente ut og aggregere data."
-                  :link  {:url  "https://www.youtube.com/watch?v=GzIYRr40QO4"
-                          :text "Se videoen"}
-                  :tech  [:influxdb]}
+                 {:title "Teach Yourself Programming in Ten Years"
+                  :blurb "Kan man plukke opp en programmeringsbok og lære programmering på 24 timer eller 21 dager? Nei.
+                  Peter Norvig skriver litt om hva som skal til for å bli en dyktig programmerer og kommer med tips til veien
+                  man kan gå for å bli en god programmerer."
+                  :link  {:url  "http://norvig.com/21-days.html"
+                          :text "Les artikkelen"}
+                  :tech  [:programming]}
 
                  ]
  :presentations
@@ -126,6 +125,7 @@
                   :tech        [:java, :vertx, :kafka, :spark, :hbase :zookeeper :kibana]}
                  {:customer    "Thomson Reuters"
                   :years       [2016]
+                  :exclude-from-profile? true
                   :employer    :bytecode
                   :summary     "Utvikle ny løsning for CDB"
                   :description "Utvikle ny løsning for CDB: distribusjon av fremskrevne tidsserier for forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop, HBase."
@@ -136,29 +136,32 @@
                   :employer    :webstep
                   :summary     "Utvikling og vedlikehold av backend for booking-systemet"
                   :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
-                                :java-ee :jboss :hibernate :bash :groovy :play :jquery :intellij
+                                :java :jboss :hibernate :bash :groovy :play :jquery :intellij
                                 :junit :testng :xml :git :hystrix]}
                  {:customer    "Storebrand Aktuarsystemer"
                   :description "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
                   :years       [2011 2012]
+                  :exclude-from-profile? true
                   :employer    :webstep
                   :summary     "Kundeportal og integrasjon av fagsystem."
                   :tech        [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2
-                                :java-ee :apache-cxf :html :css :intellij :gradle :maven :nexus
+                                :java :apache-cxf :html :css :intellij :gradle :maven :nexus
                                 :teamcity :seapine :bamboo :junit :itext :svn :jdbc]}
                  {:customer "Statens Pensjonskasse, PERFORM"
                   :years [2009]
+                  :exclude-from-profile? true
                   :employer    :accenture
                   :summary     "PERFORM, Uvikling av kjernefunksjonalitet for pensjonsreformen."
                   :description "Oppgaver: Utvikling av kjernesystemet i
                   pensjonsbehandlings-systemet etter nye regler om
                   pensjonsreformen."
-                  :tech [:spring-batch :spring-core :java-ee :eclipse :jsf :junit :fitnesse
+                  :tech [:spring-batch :spring-core :java :eclipse :jsf :junit :fitnesse
                          :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
                          :squirrel-sql :xml :jetty :mockito :sonar :tdd :ci :web-services
                          :apache-cxf]}
                  {:customer "Storebrand Livsforsikring"
                   :years [2008]
+                  :exclude-from-profile? true
                   :employer    :accenture
                   :summary     "Ytelsesvurdering av kjernesystem, fondskjøp med BankID"
                   :description "Oppgaver: Første integrasjon med BankID for
@@ -166,36 +169,39 @@
                   anbefaling av fondsvalg. Evaluering av fagsystem for kjøp og
                   salg av fond. Ytelsesvurdering og vurdering av
                   integrasjonsmetoden mot fagsystemet."
-                  :tech [:bankid :java-ee :bamboo :nexus :soa :maven :ant :eclipse :jira
+                  :tech [:bankid :java :bamboo :nexus :soa :maven :ant :eclipse :jira
                          :xml :castor-xml :prolink :css :javascript]}
                  {:customer "Karolinska Institutet, Genbanken"
                   :years [2008]
+                  :exclude-from-profile? true
                   :employer    :ibm
                   :summary     "Portal for gen-banken."
                   :description "Oppgaver: Lage en sikker portal for genbanken
                   slik at store datasett av genomer skal kunne deles mellom
                   forskere."
-                  :tech [:portlets :websphere-portal :websphere :geronimo :pki :ssl :java-ee :junit :jsr-168]}
+                  :tech [:portlets :websphere-portal :websphere :geronimo :pki :ssl :java :junit :jsr-168]}
                  {:customer "Norsk Boligbyggerlag, NBBL"
                   :years [2007]
+                  :exclude-from-profile? true
                   :employer    :ibm
                   :summary     "Utvikling av web-portal med timeregistrering og billagsføring."
                   :description "Oppgaver: I samarbeid med BOB (Bergen og Omegn
                   Boligbyggerlag) lage en portal for å samle all
                   nett-aktiviteten til NBBL. Lage web-applikasjoner for
                   timeregistrering og bilagsregistrering."
-                  :tech [:quickr :javaee :junit :eclipse :ibm-rational-application-developer
+                  :tech [:quickr :java :junit :eclipse :ibm-rational-application-developer
                          :dojo :javascript :css :html :webservices]}
                  {:customer "Atmel Corporation"
                   :years [2006]
-                  :employer    :ibm
-                  :summary     "Porte UI rammeverk til ny prosessortype."
-                  :description "Atmel designer og produserer micro-controllere.
-                  Porte GUI rammeverk for linux til ny 32-bits
-                  microcontroller.."
-                  :tech [:c :cpp :bash :linux-kernel]}
+                  :exclude-from-profile? true
+                  :employer    :atmel
+                  :summary     "Porte UI biblioteker til ny prosessortype."
+                  :description "Atmel designer og produserer micro-controllere. Porte GUI biblioteker for linux til ny 32-bits microcontroller(AVR32). Siden AVR32 bruker big-endian var det nødvendig
+                  med en del tilpasninger i biblioteker for å kunne brukes. Det var også en del utfordringer til at ny compiler oppførte seg annerledes enn gcc på en del corner-cases som f.eks var-args ."
+                  :tech [:c :bash :linux-kernel :linux]}
                  {:customer "NTNU"
                   :years [2002 2003 2004 2005 2006 2007]
+                  :exclude-from-profile? true
                   :employer :study-part-time
                   :description "Studentassistent i IT-intro.
                   Undervisningsassistent i Menneske-Maskin-Interaksjon(MMI) og
@@ -224,6 +230,7 @@
  :experience-since 2007
  :relationship-status "Gift, 2 barn"
  :born 1980
+
  :education [{:institution "NTNU"
               :years [2001 2002 2003 2004 2005 2006 2007]
               :subject "Sivilingeniør/Master Datateknikk"}
@@ -231,6 +238,7 @@
               :years [2004 2005]
               :subject
               "Utvekslingsår ved Universidade de São Paulo(USP), Brasil"}]
+
  :qualifications ["Senior systemutvikler"
                   "Java Plattform"
                   "Automatisering"
@@ -239,6 +247,7 @@
                   "Ytelsesvurdering og optimalisering"
                   "Mobilutvikling, Android"
                   "Smidig utvikling og kontinuerlig leveranse"]
+
  :certifications [{:name "Certified Scrum Master", :year 2018}
                   {:name "Machine Learning by Stanford University on Coursera"
                    :year 2017
