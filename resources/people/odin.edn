@@ -18,8 +18,8 @@
             :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:clojurescript :datascript :flexbox]
-        :using-at-work [:clojure :clojurescript :datomic :datascript :aws]
+ :tech {:favorites-at-the-moment [:kubernetes :datascript :flexbox]
+        :using-at-work [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
         :want-to-learn-more [:kafka-streams :unity3d :blockchain]}
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
@@ -311,7 +311,7 @@
                           Dette bildet av soloppgangen tok jeg innerst i en fjord på Sunnmøre."
             :illustration "/illustrations/hobbies/odin-bubble-square.jpg"}
            {:title "Snø"
-            :description "Noe av et det kjekkeste jeg vet er å sette utfor en velpreparert skibakke
+            :description "Noe av det kjekkeste jeg vet er å sette utfor en velpreparert skibakke
                           når sola skinner. Det eneste jeg kommer på som topper det, er å pløye
                           pudder med snø til knærne. Da kjenner du at du lever."
             :illustration "/illustrations/hobbies/odin-ski.jpg"}]
