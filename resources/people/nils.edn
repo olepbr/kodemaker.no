@@ -97,7 +97,7 @@
                   {:title        "Ship(tidligere DHL Tracker)"
                   :description  "En enkel app for android jeg lagde etter å ha irritert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
-                         hver status-oppdatering for pakken din som er underveis. Backend er skrevt i go og appen i kotlin.
+                         hver status-oppdatering for pakken din som er underveis. Backend er skrevet i go og appen i kotlin.
                          Støtter i dag pakker fra posten, postnord og flere dhl-distributører. "
                   :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.ship" :text "Prøv app'en"}
                   :illustration "/illustrations/side-projects/android-ship-app.png"
