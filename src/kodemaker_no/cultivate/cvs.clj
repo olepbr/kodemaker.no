@@ -22,7 +22,8 @@
       idx)))
 
 (defn cultivate-techs [person content]
-  (let [preferred (-> person :cv :default :preferred-techs)]
+  (let [preferred (-> person :cv :default :preferred-techs)
+        exclude-techs (->> person :cv :default :exclude-techs (into #{}))]
     (->> (concat (->> person :tech :using-at-work)
                  (->> person :innate-skills)
                  (->> (select-keys person [:side-projects
@@ -35,7 +36,8 @@
                                            :projects])
                       vals
                       (apply concat)
-                      (mapcat :tech)))
+                      (mapcat :tech)
+                      (filter (comp not exclude-techs))))
          flatten
          (group-by identity)
          (map (fn [[k ks]] (merge (util/look-up-tech content k) {:count (count ks)})))

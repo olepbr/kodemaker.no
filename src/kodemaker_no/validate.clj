@@ -137,7 +137,8 @@
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
 
-   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
+                           (optional-key :exclude-techs) [ID]}}})
 
 (def Tech
   {:id ID

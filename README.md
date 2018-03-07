@@ -147,7 +147,8 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
 
-   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
+                           (optional-key :exclude-techs) [ID]}}})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
@@ -350,6 +351,8 @@ Du kan påvirke teknologisammendraget på noen måter:
    å legge til `:cv {:default {:preferred-techs [:clojure :clojurescript]}}` i
    profilen din. De teknologiene du her lister opp vil dukke opp i den
    rekkefølgen på CV-en, med resterende sortert etter antall forekomster.
+3. Dersom du ønsker å ekskludere enkelte teknologier fra sammendraget på toppen
+   kan du legge dem til i `{:cv {:default {:exclude-techs [:jira]}}}`
 
 ## Provisjonering
 
