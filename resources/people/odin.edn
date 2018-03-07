@@ -171,11 +171,12 @@
                     :reagent :mount :docker :aws :cordova]}
             {:customer "Telenor Digital"
              :description "Medlem av Data Insights-teamet som driver med analysetjenester for ulike deler av Telenor.
-                           Fokus på integrasjon av datakilder og visualisering av store datamengder."
+                           Fokus på integrasjon av datakilder, integrasjon med autentiseringstjeneste og visualisering
+                           av store datamengder."
              :years [2016]
              :employer :kodemaker
              :summary "Data Insights"
-             :tech [:clojure :clojurescript :d3 :aws :postgresql :kafka :java :d3 :aws :postgresql :ansible :vagrant]}
+             :tech [:clojure :clojurescript :d3 :aws :kafka :java :d3 :aws :postgresql :ansible :vagrant :oidc]}
             {:customer "Sykehuspartner"
              :description "Utviklet en prototype for Barneseksjonen ved Oslo universitetssykehus for håndtering av
                            pasienttilbakemeldinger."
@@ -213,7 +214,7 @@
              brukt Scrum som utviklingsmetodikk."
              :tech [:java :groovy :jsf :facelets :html :css :javascript :jquery :spring :spring-security
                     :spring-integration :maven :web-services :cxf :jms :oracle-aq :apache-mq
-                    :hudson :jenkins :sonar :jetty :oracle-appserver :oracle]}
+                    :jenkins :sonar :jetty :oracle-appserver :oracle]}
             {:customer "NAV Pensjonsprogrammet, Applikasjonsarkitektur"
              :years [2007 2010]
              :employer :accenture
@@ -273,7 +274,7 @@
              sentrale tjenester på stormaskin og Sybase databaser. Arbeidet
              inkluderte samarbeid med kundens tjenesteutviklere samt ansvar for
              oppfølging av feil fra systemtesten."
-             :tech [:java-ee :html :css :sybase :web-services]}
+             :tech [:java :html :css :sybase :web-services]}
             {:customer "Point Carbon"
              :years [2006]
              :employer :study-part-time
@@ -363,7 +364,10 @@
                  I tillegg er han veldig omgjengelig og lett å samarbeide med.
                  Jeg tror man må lete lenge etter noen som har noe negativt å si om Odin."}]
 
- :cv {}
+ :cv {:default {:preferred-techs [:clojure :clojurescript
+                                  :java :javascript
+                                  :kubernetes
+                                  :datomic :cassandra]}}
  :cv/description "Odin er sivilingeniør i datateknikk fra NTNU med allsidig
  erfaring som utvikler og arkitekt.
 

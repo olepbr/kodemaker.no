@@ -162,6 +162,7 @@
  :javafx :library
  :jdbc :library
  :jersey :library
+ :jenkins :devops
  :jetty :server
  :jira :tool
  :jaxrs :tool
@@ -251,6 +252,7 @@
  :pki :security
  :play :framework
  :pmd :tool
+ :postgresql :database
  :puppet :devops
  :prototype :library
  :pygments :library
