@@ -101,7 +101,7 @@
                          Støtter i dag pakker fra posten, postnord og flere dhl-distributører. "
                   :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.ship" :text "Prøv app'en"}
                   :illustration "/illustrations/side-projects/android-ship-app.png"
-                  :tech         [:android :go :app-engine]}
+                  :tech         [:android :kotlin :go :app-engine]}
                  ]
 
  :projects

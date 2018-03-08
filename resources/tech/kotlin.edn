@@ -1,0 +1,9 @@
+{:id :kotlin
+ :name "Kotlin"
+ :type :proglang
+ :illustration "/photos/tech/kotlin.png"
+ :site "http://kotlinlang.org/"
+ :description
+ "[Kotlin](http://kotlinlang.org/) er et statisk typet språk som kjører på JVMen, men kan også kompileres til native kode og javascript. JetBrains lagde språket i 2011 og språket fikk for alvor en oppsving da Google valgte å støtte det på Android i 2017. Kotlin er 100% interopatibelt med java, men syntaksen er forskjellig. Det tar sikte på å være et mer konsist språk enn java og støtter immutability og er null-safe.
+
+Kotlin lar deg kombinere OO og funksjonelle programmeringsstiler og har blant annet et populært bibliotek, Arrow, som gir støtte for funksjonelle datatyper og abstraksjoner. "}

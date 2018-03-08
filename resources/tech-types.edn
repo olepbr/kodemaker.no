@@ -189,6 +189,7 @@
  :krypto :methodology
  :kubernetes :devops
  :koha :library
+ :kotlin :proglang
  :leiningen :devtools
  :less :frontend
  :liberator :library
