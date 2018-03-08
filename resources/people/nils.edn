@@ -98,7 +98,7 @@
                                      :illustration "/illustrations/side-projects/weathergraph.png"
                   :tech         [ :go :kubernetes :tensorflow]},
 
-                  {:title        "Ship(tidligere DHL Tracker)"
+                  {:title       "Ship (tidligere DHL Tracker)"
                   :description  "En enkel app for android jeg lagde etter å ha irritert meg over
                          at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
                          hver status-oppdatering for pakken din som er underveis. Backend er skrevet i go og appen i kotlin.
@@ -106,7 +106,13 @@
                   :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.ship" :text "Prøv app'en"}
                   :illustration "/illustrations/side-projects/android-ship-app.png"
                   :tech         [:android :kotlin :go :app-engine]}
-                 ]
+                 {:title        "Well Timed"
+                  :description "En Android-klient til Timely for å kunne
+                 registrere timer på Android. Timely har selv en IOS klient og
+                 en web-app."
+                  :illustration "/illustrations/side-projects/well-timed.png"
+                  :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.timelyappsimple"
+                                 :text "Prøv appen"}}]
 
  :projects
                 [{:customer    "Tieto"
