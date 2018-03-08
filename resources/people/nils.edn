@@ -81,6 +81,10 @@
                   :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
                          Utviklet funksjoner som gjør det mulig å streame grib-filer samtidig som man filtrerer på innholdet."
                   :tech        [:go]},
+                 {:url         "https://github.com/nilsmagnus/silhouette"
+                  :name        "Silhouette Words"
+                  :description "En webapp laget for lærere som driver med alfabetisering."
+                  :tech        [:react]},
                  {:url         "https://github.com/nilsmagnus/wsdl2java"
                   :name        "wsdl2java"
                   :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
