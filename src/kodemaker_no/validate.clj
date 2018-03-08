@@ -51,6 +51,7 @@
    (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
+                                (optional-key :cv/blurb) Str
                                 (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
@@ -82,6 +83,7 @@
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
                                  :blurb Str
+                                 (optional-key :cv/blurb) Str
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
                                  :url URL}]

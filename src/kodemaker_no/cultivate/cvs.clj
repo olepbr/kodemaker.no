@@ -6,6 +6,7 @@
 (defn override [m ns]
   (merge m
          (->> (keys m)
+              (filter keyword?)
               (filter #(and (= (namespace %) ns) (contains? m (keyword (name %)))))
               (map (fn [k] [(-> k name keyword) (k m)]))
               (into {}))))
@@ -78,15 +79,30 @@
                (map #(assoc % :role :contributer) open-source-contributions))
        (group-by main-proglang)))
 
+(defn cultivate-side-project [side-project]
+  {:title (or (:cv/title side-project) (:title side-project))
+   :url (or (-> side-project :link :url) (:url side-project))
+   :summary (or (:cv/blurb side-project) (:cv/description side-project)
+                (:blurb side-project) (:description side-project))})
+
+(defn prefix-title [prefix item]
+  (update-in item [:title] #(str prefix %)))
+
+(defn cultivate-others [{:keys [blog-posts screencasts side-projects]}]
+  (concat (map cultivate-side-project screencasts)
+          (map cultivate-side-project side-projects)
+          (map (comp cultivate-side-project #(prefix-title "Artikkel: " %)) blog-posts)))
+
 (defn cultivate-cv [person tech content]
   (let [data ((:id person) (:people content))]
     (-> person
-        apply-cv-overrides
         (assoc :techs (cultivate-techs data content))
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))
         (assoc :open-source-contributions (cultivate-open-source-contributions person))
-        (assoc :url (format "/cv/%s/" (-> person :presence :cv))))))
+        (assoc :url (format "/cv/%s/" (-> person :presence :cv)))
+        (assoc :other (cultivate-others person))
+        apply-cv-overrides)))
 
 (defn cultivate-cvs [raw-content people tech]
   (->> people

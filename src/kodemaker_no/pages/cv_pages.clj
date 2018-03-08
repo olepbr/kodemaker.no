@@ -69,6 +69,12 @@
     (section header
              (table items headings columns))))
 
+(defn- list-section [header items render-item]
+  (when (< 0 (count items))
+    (section header
+             [:ul
+              (map (fn [item] [:li {} (render-item item)]) items)])))
+
 (defn- render-projects [employments [employer projects]]
   (list
    [:h3 (:name employer)]
@@ -179,6 +185,12 @@
                          ["Navn" "Sted" "Når"]
                          [linked-title :event :year-month])
           (open-source-contributions person)
+          (list-section "Andre faglige bidrag"
+                        (:other person)
+                        (fn [{:keys [title url summary]}]
+                          (if url
+                            (list [:a {:href url} title] " - " (f/to-html summary))
+                            (list (when title (str title " - ")) (f/to-html summary)))))
           (table-section "Utdanning"
                          (:education person)
                          ["Skole" "År" "Retning"]
