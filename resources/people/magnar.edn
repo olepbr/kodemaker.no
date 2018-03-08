@@ -454,6 +454,10 @@
 
  :screencasts [{:title "Zombie TDD - Testdrevet JavaScript"
                 :url "http://www.zombietdd.com/"
+                :cv/blurb "Ganske mange episoder med video av live testdrevet
+                programmering i JavaScript. Gjesteepisoder med Christian
+                Johansen og Johannes Brodwall. Inkluderer live programmering på
+                Communities in Action og JavaZone."
                 :blurb "Følg med når Magnar lager et nettspill fra scratch med
                         JavaScript på klient og server. Testdrevet etter beste
                         evne. Har du lyst til å være med?"
