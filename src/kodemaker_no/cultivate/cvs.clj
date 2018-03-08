@@ -37,7 +37,7 @@
                       vals
                       (apply concat)
                       (mapcat :tech)
-                      (filter (comp not exclude-techs))))
+                      (remove exclude-techs)))
          flatten
          (group-by identity)
          (map (fn [[k ks]] (merge (util/look-up-tech content k) {:count (count ks)})))
