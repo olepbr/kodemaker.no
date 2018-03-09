@@ -2,12 +2,8 @@
   (:require [kodemaker-no.cultivate.util :as util]
             [kodemaker-no.homeless :refer [compare* remove-vals]]))
 
-(defn- cultivate-screencast [raw-content {:keys [title url by tech blurb link-text]}]
-  {:title title
-   :by by
-   :blurb blurb
-   :tech (map (partial util/look-up-tech raw-content) tech)
-   :url  url})
+(defn- cultivate-screencast [raw-content screencast]
+  (assoc screencast :tech (map (partial util/look-up-tech raw-content) (:tech screencast))))
 
 (defn combine-screencasts [screencasts]
   (as-> screencasts x

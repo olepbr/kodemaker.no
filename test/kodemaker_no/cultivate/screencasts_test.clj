@@ -13,11 +13,13 @@
        :name ["Magnar" "Sveen"]
        :screencasts [{:title "Zombie TDD - Testdrevet JavaScript"
                       :url "http://www.zombietdd.com/"
-                      :blurb "JavaScript zombies"
+                      :description "JavaScript zombies"
+                      :illustration "/zombies.png"
                       :tech [:javascript]}
                      {:title "Zombie CLJ - Clojure og ClojureScript"
                       :url "http://www.zombieclj.no/"
-                      :blurb "Clojure zombies"
+                      :description "Clojure zombies"
+                      :illustration "/zombies.png"
                       :tech [:clojure :clojurescript]}]})
 
      :christian
@@ -26,7 +28,8 @@
        :name ["Christian" "Johansen"]
        :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
                       :url "http://www.zombieclj.no/"
-                      :blurb "Clojure zombies"
+                      :description "Clojure zombies"
+                      :illustration "/zombies.png"
                       :tech [:clojure :clojurescript]}]})
      }}))
 
@@ -48,9 +51,9 @@
                                   :in-any-order))
 
   (fact
-   "It includes the blurb."
-   (map :blurb screencasts) => (just #{"JavaScript zombies"
-                                       "Clojure zombies"}))
+   "It includes the description."
+   (map :description screencasts) => (just #{"JavaScript zombies"
+                                             "Clojure zombies"}))
 
   (fact
    "It includes the tech."

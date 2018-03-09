@@ -881,9 +881,16 @@
 
  :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
                 :url "http://www.zombieclj.no/"
-                :blurb "I denne oppfølgeren til Zombie TDD lager Magnar og
-                        Christian nettspill fra scratch med Clojure og
-                        ClojureScript."
+                :blurb "I denne oppfølgeren til Zombie TDD
+                lager [Magnar](/magnar/) og
+                [Christian](/christian/) nettspill fra scratch med Clojure og
+                ClojureScript."
+                :description "I denne oppfølgeren til ZombieTDD
+                lager [Magnar](/magnar/) og jeg spill med Clojure og
+                ClojureScript. Det går i parprogrammering hele veien. Og jaggu
+                skriver vi ikke flere tester først. Skulle tro XP hadde noe for
+                seg."
+                :illustration "/illustrations/side-projects/zombieclj.jpg"
                 :tech [:clojure :clojurescript :frontend]}]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
