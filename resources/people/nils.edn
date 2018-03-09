@@ -84,7 +84,7 @@
                  {:url         "https://github.com/nilsmagnus/silhouette"
                   :name        "Silhouette Words"
                   :description "En webapp laget for lærere som driver med alfabetisering."
-                  :tech        [:react]},
+                  :tech        [:react :javascript :css :npm :webpack :jsx]},
                  {:url         "https://github.com/nilsmagnus/wsdl2java"
                   :name        "wsdl2java"
                   :description "Et plugin for gradle for å generere java fra webservice-kontrakter."
