@@ -9,7 +9,7 @@
  :akka :library
  :alpine :os
  :android :os
- :angularjs :framework
+ :angularjs :frontend
  :ant :devtools
  :appcode :devtools
  :architecture :methodology
@@ -75,7 +75,6 @@
  :cvs :vcs
  :cygwin :devtool
  :cxf :server
- :d3 :library
  :dashing :tool
  :datascript :database
  :db2 :database
@@ -92,7 +91,7 @@
  :easerver :server
  :eclipse :devtools
  :ehcache :server
- :elasticsearch :server
+ :elasticsearch :database
  :elisp :proglang
  :epicentric-portal :server
  :es6 :proglang
@@ -118,7 +117,7 @@
  :glassfish :server
  :google-adwords :tool
  :google-analytics :tool
- :google-closure :library
+ :google-closure :frontend
  :google-cloud-messaging :cloud
  :google-earth :tool
  :google-image-charts :library
@@ -174,7 +173,7 @@
  :joomla :server
  :jool :library
  :jpa :library
- :jquery :library
+ :jquery :frontend
  :jquery-mobile :library
  :jrebel :library
  :js-test-driver :library
@@ -182,7 +181,7 @@
  :jspm :devtools
  :junit :library
  :junitee :library
- :kafka :server
+ :kafka :database
  :kanban :methodology
  :karma :library
  :kibana :server
@@ -264,7 +263,7 @@
  :rational-clearcase :vcs
  :re-frame :library
  :reactive-cocoa :library
- :reagent :library
+ :reagent :frontend
  :redhat :os
  :redux :library
  :release-management :methodology
