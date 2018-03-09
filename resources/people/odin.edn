@@ -366,8 +366,10 @@
 
  :cv {:default {:preferred-techs [:clojure :clojurescript
                                   :java :javascript
+                                  :react :d3
                                   :kubernetes
-                                  :datomic :cassandra]}}
+                                  :datomic :cassandra]
+                :exclude-techs [:hudson :cruise-control :jsf]}}
  :cv/description "Odin er sivilingeniør i datateknikk fra NTNU med allsidig
  erfaring som utvikler og arkitekt.
 
