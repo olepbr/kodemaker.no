@@ -235,11 +235,9 @@
 
             Jobbet med design av deler av det grunnleggende domenet (eiere) for
             nye tjenester og hvordan dette spiller sammen med autentisering og
-            autorisasjon i platformen som helhet.
-
-            Jobbet med arkitektur og design av løsninger etter CQRS-prinsippet,
-            samt en pragmatisk tilnærming til event sourcing (blant annet med
-            bruk av Datomic).
+            autorisasjon i platformen som helhet. Jobbet med arkitektur og
+            design av løsninger etter CQRS-prinsippet, samt en pragmatisk
+            tilnærming til event sourcing (blant annet med bruk av Datomic).
 
             Utviklet funksjonalitet med AWS Lambda, Api Gateway, DynamoDB,
             Kinesis og andre AWS-ressurser. Modellert deler av domenet som en
@@ -261,8 +259,8 @@
             annet. Oppsett for frontendapplikasjoner med S3/Cloudfront/Route 53.
             Jobbet med sikkerhetsløsning basert på Oauth 2.0 og OpenId Connect.
             Utviklet løype for CI/CD basert på Concourse."
-             :tech [:aws :concourse :docker :bash :oidc :nginx :go :dynamodb :aws-iam
-                    :aws-kinesis :aws-lambda :aws-api-gateway :aws-vpc :aws-ecs
+             :tech [:aws :aws-vpc :aws-ecs :concourse :aws-iam :docker :bash :oidc
+                    :nginx :go :dynamodb :aws-kinesis :aws-lambda :aws-api-gateway
                     :aws-route53 :aws-cloudwatch :aws-cloudfront :aws-rds :aws-s3
                     :auth0 :jira :confluence :cd :ci :alpine :ubuntu :micro-services]
              :years [2017 :ongoing]}
