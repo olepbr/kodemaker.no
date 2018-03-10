@@ -68,17 +68,7 @@
                   Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
                   :illustration "/illustrations/side-projects/jstdd.jpg"
                   :tech [:javascript :nodejs :tdd :testing]
-                  :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}
-                 {:title "ZombieCLJ"
-                  :description "I denne oppfølgeren til ZombieTDD lager
-                                [Magnar](/magnar/) og jeg spill med
-                                Clojure og ClojureScript. Det går i
-                                parprogrammering hele veien. Og jaggu skriver vi
-                                ikke flere tester først. Skulle tro XP hadde noe
-                                for seg."
-                  :illustration "/illustrations/side-projects/zombieclj.jpg"
-                  :link {:url "http://www.zombieclj.no" :text "Se videoene"}
-                  :tech [:clojure :clojurescript :tdd :testing]}]
+                  :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}]
 
  :upcoming []
 
