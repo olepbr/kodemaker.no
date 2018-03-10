@@ -32,6 +32,7 @@
  :cd "Continuous Delivery"
  :ci "Continuous Integration"
  :clojure-spec "clojure.spec"
+ :aws-cloudformation "AWS CloudFormation"
  :complus "COM+"
  :core-async "core.async"
  :cpd "CPD"

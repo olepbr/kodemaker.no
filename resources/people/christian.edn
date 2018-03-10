@@ -164,6 +164,14 @@
                :title "Securing HAProxy sites with Let's Encrypt SSL Certificates"
                :blurb "En gjennomgang av oppsett av SSL-sertifikater fra Let's Encrypt med HAProxy"
                :tech [:haproxy :letsencrypt :docker :centos]}
+              {:url "https://cjohansen.no/aws-apigw-proxy-cloudformation/"
+               :title "Api Gateway Proxy Resource with Cloudformation"
+               :blurb "Cloudformation-oppsett for proxy-ressurser fra AWS Api Gateway"
+               :tech [:aws-api-gateway :aws-cloudformation]}
+              {:url "https://cjohansen.no/idempotent-cloudformation-updates/"
+               :title "Idempotent Cloudformation Updates"
+               :blurb "Hvordan sørge for at Cloudformation-oppdateringer blir helt idempotente"
+               :tech [:aws-cloudformation :bash]}
               {:url "https://cjohansen.no/referentially-transparent-crud/"
                :title "Referentially Transparent CRUD"
                :blurb "Artikkel om hvordan Datomic lar deg implementere tradisjonell CRUD med referentially transparent funksjonell kode."

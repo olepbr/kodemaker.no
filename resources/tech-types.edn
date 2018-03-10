@@ -23,6 +23,7 @@
  :automated-acceptance-testing :methodology
  :aws :cloud
  :aws-api-gateway :cloud
+ :aws-cloudformation :cloud
  :aws-cloudfront :cloud
  :aws-cloudwatch :cloud
  :aws-ec2 :cloud
