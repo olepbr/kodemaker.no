@@ -21,6 +21,7 @@
  :atom :specification
  :auth0 :security
  :automated-acceptance-testing :methodology
+ :aws :cloud
  :aws-api-gateway :cloud
  :aws-cloudfront :cloud
  :aws-cloudwatch :cloud
@@ -33,6 +34,7 @@
  :aws-route53 :cloud
  :aws-s3 :cloud
  :aws-vpc :cloud
+ :azure :cloud
  :babel :tool
  :bankid :library
  :bamboo :tool
@@ -82,6 +84,7 @@
  :dbfit :framework
  :ddd :methodology
  :delphi :proglang
+ :digital-ocean :cloud
  :dojo :library
  :domain-modeling :methodology
  :docker-cloud :cloud
@@ -130,6 +133,7 @@
  :grunt :library
  :gwt :framework
  :h2db :database
+ :heroku :cloud
  :hadoop :library
  :hamcrest :library
  :haproxy :devops
