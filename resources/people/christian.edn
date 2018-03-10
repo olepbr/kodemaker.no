@@ -954,6 +954,43 @@
                              {:name "karma-referee" :url "https://github.com/cjohansen/karma-referee" :tech [:javascript :testing]}
                              {:name "carousel-js" :url "https://github.com/cjohansen/carousel-js" :tech [:javascript]}]
 
+ :endorsements [{:author "Geir Børdalen"
+                 :title "Prosjektleder, Origo-prosjektet, NRK"
+                 :quote "Christian har vært en uvurderlig ressurs i
+                 Origo-prosjektet i nesten 2 år. Han har jobbet med front-end
+                 utviklingen av produktene Potion og Radioarkivet. Dette er
+                 produkter som har endret NRK fundamentalt i forhold til tilgang
+                 og gjenbruk av arkivmateriale innenfor både radio og TV. Noen av
+                 produktene Christian har vært sentral i utviklingen av, har
+                 tilført NRK varig verdi for mange år framover. Vi har også
+                 verdsatt Christian for hans evner til teamarbeid, evne til
+                 innovasjon og alltid positive innstilling."}
+                {:author "Stefan Andreas Englien"
+                 :title "Teamleder, FINN Småjobber"
+                 :quote "Christian Johansen har vært innleid som konsulent på
+                 utviklingsteamet til FINN Småjobber i tre måneder fra og med
+                 november 2013 til februar 2014. Vi behøvde en frontend-guru, og
+                 vi valgte Christian basert på FINN Oppdrags gode erfaringer med
+                 ham. Min rolle er å lede utviklingsteamet, og jeg har dermed
+                 vært hans nærmeste leder i perioden.
+
+                 I tiden hos FINN Småjobber har Christian hjulpet oss med
+                 javascript-tester, ytelse, forenkling av rammeverket vårt, og
+                 selvfølgelig mye ny frontend-funksjonalitet. Han har også vært
+                 til stor hjelp med git-utfordringer, backend-arkitektur og
+                 produktutviklingen av FINN Småjobber.
+
+                 Christian er svært omgjengelig og hyggelig, og har vært et
+                 positivt tilskudd til teamet. Jeg er svært fornøyd med hans
+                 innsats for oss, og anbefaler ham på det sterkeste!"}
+                {:author "Karl Philip Lund"
+                 :quote "Christian is most likely the most talented web
+                 developer I've ever worked with. He is easy to communicate
+                 with, flexible to work with and has the ability to deliver
+                 success even when the requirements/instructions are unclear. He
+                 will add value to any web project. I give him my highest
+                 recommendations."}]
+
  :education-summary "Institutt for informatikk, Universitetet i Oslo"
  :education [{:institution "Institutt for informatikk, UiO"
               :years [2001 2005]
