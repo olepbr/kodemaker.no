@@ -34,6 +34,7 @@
  :clojure-spec "clojure.spec"
  :aws-cloudformation "AWS CloudFormation"
  :complus "COM+"
+ :consulting "Konsulenteri"
  :core-async "core.async"
  :cpd "CPD"
  :css "CSS"

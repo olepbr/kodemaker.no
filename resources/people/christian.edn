@@ -72,7 +72,24 @@
 
  :upcoming []
 
- :recommendations [{:title "How to Use npm as a Build Tool"
+ :recommendations [{:title "Konsulenteriet må DØ!"
+                    :link {:url "https://vimeo.com/139330934"
+                           :text "Se lyn/torden-talen"}
+                    :blurb "Erik Assum gir en tordnende god lyntale om hva man
+                   _egentlig_ burde bruke konsulenter til, og hvordan en
+                   konsulent er, eller ihvertfall burde være, noe annet enn en
+                   vikar."
+                    :tech [:consulting]}
+                   {:title "Simple Made Easy"
+                    :blurb "Det er ikke lett å lage noe enkelt. Rich
+                            Hickey snakker om forskjellen på nærliggende
+                            (subjektivt lett) og ukomplisert (objektivt
+                            enkelt). Og implikasjonene for hvordan du bør
+                            tenke rundt software."
+                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
+                           :text "Se foredraget"}
+                    :tech [:design :clojure]}
+                   {:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
                            :text "Les artikkelen"}
                     :tech [:javascript :nodejs :npm :grunt :gulp]
@@ -107,15 +124,6 @@
                             MVC-rammeverk for JavaScript er langt fra å tilby en
                             tilfredstillende løsning på problemene vi som
                             frontendutviklere møter."}
-                   {:title "Simple Made Easy"
-                    :blurb "Det er ikke lett å lage noe enkelt. Rich
-                            Hickey snakker om forskjellen på nærliggende
-                            (subjektivt lett) og ukomplisert (objektivt
-                            enkelt). Og implikasjonene for hvordan du bør
-                            tenke rundt software."
-                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se foredraget"}
-                    :tech [:design :clojure]}
                    {:title "Dance you Imps!"
                     :blurb "Uncle Bob Martin skriver et knallgodt innlegg om
                     hvordan ORM-er ikke egentlig er ORM-er. Dette sitatet
@@ -220,22 +228,43 @@
 
  :projects [{:customer "Tine Husdyrfag"
              :employer :kodemaker
-             :summary "Utvikling av skyplatform på AWS for produsent-tjenester"
+             :summary "Design av domenemodell, applikasjonsarkitektur og utvikling på AWS"
              :description "Tine Husdyrfag utvikler tjenester for Tines
-            produsenter. Prosjektet utvikler ny skyplatform på Amazon Web
+            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
+            Services (AWS) for morgendagens tjenester.
+
+            Jobbet med design av deler av det grunnleggende domenet (eiere) for
+            nye tjenester og hvordan dette spiller sammen med autentisering og
+            autorisasjon i platformen som helhet.
+
+            Jobbet med arkitektur og design av løsninger etter CQRS-prinsippet,
+            samt en pragmatisk tilnærming til event sourcing (blant annet med
+            bruk av Datomic).
+
+            Utviklet funksjonalitet med AWS Lambda, Api Gateway, DynamoDB,
+            Kinesis og andre AWS-ressurser. Modellert deler av domenet som en
+            graf, implementert dette med Datomic."
+             :tech [:datomic :aws :dynamodb :aws-iam :aws-lambda :aws-api-gateway
+                    :oidc :material-ui :ddd :aws-kinesis :aws-cloudwatch :aws-cloudfront
+                    :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd :alpine
+                    :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
+             :years [2017 :ongoing]}
+            {:customer "Tine Husdyrfag"
+             :employer :kodemaker
+             :summary "Infrastruktur og CI/CD for utvikling mot AWS"
+             :description "Tine Husdyrfag utvikler tjenester for Tines
+            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
             Services (AWS) for morgendagens tjenester.
 
             Design og oppsett av nettverksløsning. Automatisering av oppsett og
             utforming av applikasjonsplatform med AWS Cloudformation, bash og
-            annet. Utvikling av funksjonalitet med AWS Lambda, Api Gateway,
-            DynamoDB, Kinesis og mer. Oppsett for frontendapplikasjoner med
-            S3/Cloudfront/Route 53. Jobbet med sikkerhetsløsning basert på Oauth
-            2.0 og OpenId Connect. Utviklet løype for CI/CD basert på Concourse."
-             :tech [:aws :concourse :docker :bash :oidc :nginx :go :material-ui
-                    :dynamodb :aws-iam :aws-kinesis :aws-lambda :aws-api-gateway
-                    :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
-                    :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
-                    :alpine :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
+            annet. Oppsett for frontendapplikasjoner med S3/Cloudfront/Route 53.
+            Jobbet med sikkerhetsløsning basert på Oauth 2.0 og OpenId Connect.
+            Utviklet løype for CI/CD basert på Concourse."
+             :tech [:aws :concourse :docker :bash :oidc :nginx :go :dynamodb :aws-iam
+                    :aws-kinesis :aws-lambda :aws-api-gateway :aws-vpc :aws-ecs
+                    :aws-route53 :aws-cloudwatch :aws-cloudfront :aws-rds :aws-s3
+                    :auth0 :jira :confluence :cd :ci :alpine :ubuntu :micro-services]
              :years [2017 :ongoing]}
             {:customer "Eventum.no"
              :employer :kodemaker
