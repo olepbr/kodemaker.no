@@ -15,7 +15,7 @@
  :auth0 "Auth0"
  :automated-acceptance-testing "Automatisert akseptansetesting"
  :aws "AWS"
- :aws-api-gateway "ApiGateway"
+ :aws-api-gateway "AWS Api Gateway"
  :aws-cloudfront "Cloudfront"
  :aws-cloudwatch "Cloudwatch"
  :aws-ecs "AWS ECS"
