@@ -99,8 +99,8 @@
              sanntid, og integrasjoner med mange av Bring sine systemer. Jeg har
              mange roller i prosjektet, scrum master, programmere frontend,
              backend, sette opp og drifte servere"
-             :tech [:javascript :es6 :react :redux :nodejs :kotlin :clojure :gradle
-                    :postgresql :event-sourcing :cqrs]}
+             :tech [:heroku :azure :javascript :es6 :react :redux :nodejs :kotlin :clojure :gradle
+                    :postgresql :event-sourcing :cqrs :flyway]}
             {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
@@ -111,7 +111,7 @@
              har mange roller i prosjektet, programmere frontend, backend, sette
              opp og drifte servere, og også være med på forretningsuvikling."
              :tech [:javascript :es6 :react :redux :webpack :shipit :clojure :aleph
-                    :netty :postgresql :nginx :varnish :haproxy :ansible]}
+                    :netty :postgresql :nginx :varnish :haproxy :ansible :flyway :digital-ocean]}
             {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
              :years [2016]
              :employer :kodemaker
@@ -120,8 +120,9 @@
              og aggregerer informasjon fra spørreskjema, der barnet svarer på
              \"grad\" av smilefjes. Dette er et dynamisk smilefjes som går fra
              sur til glad, slik at man kan måle barnets stemning bedre."
-             :tech [:clojure :clojurescript :postgresql :heroku]}
+             :tech [:clojure :clojurescript :postgresql :heroku :flyway]}
             {:customer "Thomson Reuters"
+             :exclude-from-profile? true
              :years [2016]
              :employer :kodemaker
              :summary "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder."
@@ -181,6 +182,7 @@
                     :jetty :tomcat :mssql :liquibase :maven :git]}
             {:customer "Skatteetaten"
              :years [2012]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Modernisering av mottaksmetoder av data fra privatpersoner og næringsliv."
              :description "Modernisering av måten næringsliv og privatpersoner
@@ -192,6 +194,7 @@
              :tech [:java :google-guice :hazelcast :akka :glassfish :oracle :maven]}
             {:customer "Kommuneforlaget"
              :years [2012]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Forvaltning og videreutvikling av store deler av applikasjonsporteføljen til Kommuneforlaget."
              :description "Generell arkitekturgjennomgang, og utvikling av
@@ -205,6 +208,7 @@
                     :backbone :scalatra :sso :cas :maven]}
             {:customer "Toll og avgiftsdirektoratet"
              :years [2010]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Modernisering av batchprosesser for fortollingsdata."
              :description "Modernisering av batch prosessering for
@@ -216,6 +220,7 @@
              :tech [:java :weblogic :spring :sybase :jasperreports :genova :maven]}
             {:customer "Kommuneforlaget"
              :years [2010]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Utvikle løsning for behandling av avvik."
              :description "Utvikling av to applikasjoner, en for å gjøre det
@@ -231,6 +236,7 @@
              :tech [:scala :jetty :derby :wicket :sbt]}
             {:customer "Direktoratet for samfunnssikkerhet og beredskap (DSB)"
              :years [2008]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Utvikling, innføring og vedlikehold av nytt fagsystem."
              :description "Nytt fagsystem Vi laget nytt system for
@@ -244,6 +250,7 @@
              :tech [:java :jetty :spring :gwt :wicket :jpa :mssql :maven]}
             {:customer "Telenor Mobil"
              :years [2007]
+             :exclude-from-profile? true
              :employer :knowit
              :summary "Utvikling av nye portaler for privat- og bedriftskunder."
              :description "Web i Norge, nye portaler for privat- og
@@ -253,6 +260,7 @@
              :tech [:java :weblogic :sybase]}
             {:customer "Toll og avgiftsdirektoratet"
              :years [2006]
+             :exclude-from-profile? true
              :employer :mesan
              :summary "Modernisering av online applikasjon for fortollingsdata."
              :description "TVINN konvertering Prosjektet var første ledd i
@@ -263,6 +271,7 @@
              :tech [:java :swing :ant :genova]}
             {:customer "Nordic Lottery System"
              :years [2006]
+             :exclude-from-profile? true
              :employer :mesan
              :summary "Utvikling av Europeisk lotterisystem."
              :description "Utvikling av nytt internettspill med svært høye
@@ -271,6 +280,7 @@
              :tech [:java :spring :jboss]}
             {:customer "Höegh Autoliners"
              :years [2005]
+             :exclude-from-profile? true
              :employer :mesan
              :summary "Utvikling shipping-systemer."
              :description "Nyutvikling av to applikasjoner, CargoSurvey og
@@ -281,6 +291,7 @@
              :tech [:java :optimalj :oc4j :oracle]}
             {:customer "Nye Asta"
              :years [2004]
+             :exclude-from-profile? true
              :employer :mesan
              :summary "Utvikling av arkivsystemer."
              :description "Nytt fagsystem for stiftelsen ASTA Prosjektet skulle
@@ -418,7 +429,7 @@
                     to detail, his thoroughness and his ability to just make it
                     work. Our office hipster coffee club mourns his loss, as does
                     the rest of our team. I would wholeheartedly recommend Alf Kristian
-                    for any project"}
+                    for any project."}
                    {:author "Rolv Seehuus"
                     :title "Tech Lead"
                     :quote "I learned to know Alf Kristian while he was a consultant
