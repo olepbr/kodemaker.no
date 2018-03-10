@@ -195,6 +195,7 @@
  :kotlin :proglang
  :leiningen :devtools
  :less :frontend
+ :letsencrypt :security
  :liberator :library
  :lighttable :devtools
  :linux-kernel :library

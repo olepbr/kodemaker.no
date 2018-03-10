@@ -160,11 +160,19 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "http://cjohansen.no/annotating-datomic-transactions/"
+ :blog-posts [{:url "https://cjohansen.no/letsencrypt-haproxy-ssl/"
+               :title "Securing HAProxy sites with Let's Encrypt SSL Certificates"
+               :blurb "En gjennomgang av oppsett av SSL-sertifikater fra Let's Encrypt med HAProxy"
+               :tech [:haproxy :letsencrypt :docker :centos]}
+              {:url "https://cjohansen.no/referentially-transparent-crud/"
+               :title "Referentially Transparent CRUD"
+               :blurb "Artikkel om hvordan Datomic lar deg implementere tradisjonell CRUD med referentially transparent funksjonell kode."
+               :tech [:datomic :clojure :datalog :immutability :functional-programming]}
+              {:url "https://cjohansen.no/annotating-datomic-transactions/"
                :title "Annotating Datomic transactions"
                :blurb "En artikkel om Datomics transaksjoner, og hvordan de kan utvides med app-spesifik informasjon for bedre auditing og mer."
                :tech [:datomic :clojure :datalog]}
-              {:url "http://cjohansen.no/querying-across-datomic-databases/"
+              {:url "https://cjohansen.no/querying-across-datomic-databases/"
                :title "Querying across Datomic databases"
                :blurb "Et konkret eksempel på hvordan du kan gjøre datalog spørringer over flere databaser samtidig med Datomic."
                :tech [:datomic :clojure :datalog]}
@@ -184,20 +192,20 @@
               artikkelen belyser hvordan man kan angripe klient-spesifikke
               problemer i JavaScript med gode design-prinsipper i hånda."
                :tech [:javascript]}
-              {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
+              {:url "https://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
                        websider i Clojure med blant annet biblioteket Stasis.
                        Artikkelen gir et innblikk i bruk av mange populære
                        web-biblioteker for Clojure."
                :tech [:clojure :stasis :optimus]}
-              {:url "http://cjohansen.no/clojure-to-die-for/"
+              {:url "https://cjohansen.no/clojure-to-die-for/"
                :title "Clojure to die for"
                :blurb "En liten feiring av helt hverdagslige idiomer of småtriks
                som gjør det å jobbe med Clojure til en fantastisk god
                opplevelse"
                :tech [:clojure]}
-              {:url "http://cjohansen.no/an-introduction-to-elisp/"
+              {:url "https://cjohansen.no/an-introduction-to-elisp/"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little

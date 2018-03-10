@@ -81,6 +81,7 @@
  :jspm "jspm"
  :junit "JUnit"
  :ldap "LDAP"
+ :letsencrypt "Let's Encrypt"
  :lighttable "Light Table"
  :lisp-flavoured-erlang "Lisp Flavoured Erlang"
  :mariadb "MariaDB"
