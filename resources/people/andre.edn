@@ -14,14 +14,30 @@
                  :linkedin      "/in/bonkowski"
                  :stackoverflow "/users/893477/andre"
                  :github        "bonkowski"
-                 :coderwall     "bonkowski"
                  }
 
  :tech          {:favorites-at-the-moment [:kotlin, :elixir :clojure :clojurescript]
-                 :using-at-work [:kotlin, :clojure :clojurescript :groovy :grails :ruby :docker :rails :javascript :elasticsearch]
-                 :want-to-learn-more      [:haskell :purescript :scala]}
+                 :using-at-work [:kotlin, :clojure :clojurescript :ruby :docker :rails :javascript :elasticsearch]
+                 :want-to-learn-more      [:haskell :scala]}
  
- :recommendations [{
+ :recommendations [
+ {  :title "Learn You a Haskell for Great Good!"
+    :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
+            et sterkt typet funksjonelt språk, og da er Haskell kanskje det første språket man tenker på. Jeg har ikke vært i et projekt 
+            hvor Haskell er benyttet, men konseptene er universelle og nyttige."
+    :link  {:url  "http://learnyouahaskell.com/"
+    :text "Besøk websidene"}
+    :tech  [:funksjonell-programmering]}
+
+
+ {  :title "Learn You a Haskell for Great Good!"
+    :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
+            et sterkt typet funksjonelt språk. Haskell da kanskje det første språket man tenker på. Jeg har ikke vært i et projekt 
+            hvor Haskell er benyttet, men konseptene er universelle og nyttige, og boken er lettlest og morsom."
+    :link  {:url  "http://learnyouahaskell.com/"
+    :text "Besøk websidene"}
+    :tech  [:funksjonell-programmering]}
+ {
     :title "Clojure Applied"
     :link {:url "https://pragprog.com/book/vmclojeco/clojure-applied"
     :text "Info om boken"}
@@ -273,7 +289,7 @@
              tjenester for SMS og kreditsjekk. Oppgaver: Senior Java utvikler"
              :tech
              [:java :wicket :javascript :jee6 :jpa :hibernate :neo4j :mongodb :lucene
-              :rest :jax-rs :hateoas :jboss :postgresql :oracle :maven :jenkins :git :junit]}
+              :rest :jax-rs :jboss :postgresql :oracle :maven :jenkins :git :junit]}
             {:customer "FINN.no"
              :years [2012]
              :employer :kodemaker
@@ -551,7 +567,7 @@
                utviklingsavdeling der vi utviklet diverse systemer for
                kommunen."}}
 
- :cv {}
+ :cv {:default {:preferred-techs [:kotlin :clojure :clojurescript]}}
  :education-summary "NHI"
  :experience-since 1994
  :qualifications ["Senior Systemutvikler"
@@ -561,7 +577,6 @@
                   "iOS, Cocoa"
                   "Ruby og Rails"
                   "Java plattform"
-                  "JavaEE"
                   "Groovy/Grails"
                   "HTML, CSS"
                   "Systemarkitektur og integrasjon"
@@ -594,11 +609,13 @@
 
  André er alltid sulten etter å lære seg nye programmeringsspråk, teknologier og
  plattformer, og følger derfor godt med i hva som rører seg i bransjen. André
- har mange års erfaring innenfor Java/JEE plattformen, men har i det siste
- fokusert mer på Ruby og utvikling på Apples iOS plattform. Han har gjennom sin
- erfaring opparbeidet en sunn skepsis for nye \"silver bullets\" som jevnlig
- dukker opp i bransjen, men har samtidig et øye for hva som faktisk kan være til
- nytte i forskjellige anledninger.
+ har mange års erfaring med Objektorienterte språk, både på Java plattformen, 
+ Ruby og iOS. I de siste årene så har han fått stor sans for funksjonell 
+ programmering, og har hatt flere prosjekter hvor dette benyttes.
+
+ Han har gjennom sin erfaring opparbeidet en sunn skepsis for nye \"silver bullets\" 
+ som jevnlig dukker opp i bransjen, men har samtidig et øye for hva som faktisk kan 
+ være til nytte i forskjellige anledninger.
 
  André har sansen for enkle løsninger, og fokuserer på å ikke bringe inn ny
  teknologi og rammeverk uten av det faktisk vil gi en gevinst for prosjektet og
