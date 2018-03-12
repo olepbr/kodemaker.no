@@ -23,16 +23,7 @@
  :recommendations [
  {  :title "Learn You a Haskell for Great Good!"
     :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
-            et sterkt typet funksjonelt språk, og da er Haskell kanskje det første språket man tenker på. Jeg har ikke vært i et projekt 
-            hvor Haskell er benyttet, men konseptene er universelle og nyttige."
-    :link  {:url  "http://learnyouahaskell.com/"
-    :text "Besøk websidene"}
-    :tech  [:funksjonell-programmering]}
-
-
- {  :title "Learn You a Haskell for Great Good!"
-    :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
-            et sterkt typet funksjonelt språk. Haskell da kanskje det første språket man tenker på. Jeg har ikke vært i et projekt 
+            et sterkt typet funksjonelt språk. Haskell da kanskje det første språket man tenker på. Jeg har ikke vært i et prosjekt 
             hvor Haskell er benyttet, men konseptene er universelle og nyttige, og boken er lettlest og morsom."
     :link  {:url  "http://learnyouahaskell.com/"
     :text "Besøk websidene"}
