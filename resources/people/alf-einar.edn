@@ -13,8 +13,8 @@
                          :linkedin "/in/aesolbakken/"
                          :coderwall "aesolbakken"}
  	
- :tech          {:favorites-at-the-moment [:groovy]
-                 :want-to-learn-more      [:clojure :funksjonell-programmering :lighttable :swift]}
+ :tech          {:favorites-at-the-moment [:clojure :clojurescript]
+                 :want-to-learn-more      [:devops :docker]}
                  
  :recommendations [{:title "Clojure from the ground up"
                     :blurb "En god begynnelse for de som ønsker å komme igang med Clojure. Passer godt til både nye programmerere og de litt mer erfarne"
@@ -22,8 +22,15 @@
                            :text "Les artikkelen"}
                     :tech [:clojure]}]
 
- :projects      [{:customer "Forsvaret MDP"
-                  :years [2016 :ongoing]
+ :projects      [{:customer "Animalia"
+                  :years [2018 :ongoing]
+                  :summary "Forsvaret, MDP"
+                  :employer :kodemaker
+                  :description "Videreutvikling av helsegris og helsefjørfe"
+                  :tech [:clojure :clojurescript :groovy :grails]}
+                  
+ 				  {:customer "Forsvaret MDP"
+                  :years [2016 2017]
                   :summary "Forsvaret, MDP"
                   :employer :kodemaker
                   :description "Masterdata-synkronisering. Oppgaver: Analyse,
