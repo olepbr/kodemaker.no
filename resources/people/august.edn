@@ -139,18 +139,18 @@ presentasjonen på hele konferansen!"
 
  :projects
  [{:customer "NSB"
-   :years [2015 :ongoing]
-   :summary "Status Tiltak"
+   :years [2015 2018]
+   :summary "Status Tiltak - verktøy for planlegging og bestilling av alternativ transport"
    :employer :kodemaker
    :description "Status Tiltak - verktøyet til planlegging og bestilling av
    alternativ transport ved oppståtte avvik. Brukes av NSB sin driftsoperative
    sentral (DROPS). Rolle: Full-stack webutvikler, devops, eneste utvikler på
    prosjektet Implementerte av avansert GUI med React og websockets, for at
    flere brukere i sanntid kan jobbe med tiltaksplan for samme tog."
-   :tech [:groovy :gradle :gradle-warlike-plugin :react :oracle :active-mq :liquibase :ansible]}
+   :tech [:groovy :gradle :react :oracle :mariadb :active-mq :liquibase :ansible]}
   {:customer "NSB"
-   :years [2013 :ongoing]
-   :summary "DROPS"
+   :years [2013 2018]
+   :summary "Status - distribusjons-system for tekstlig informasjon (internt og kunder)"
    :employer :kodemaker
    :description "Status - verktøyet til trafikkinformatør-rollen i NSB sin
    driftsoperative sentral (DROPS). Rolle: Full-stack webutvikler, devops
@@ -167,12 +167,12 @@ presentasjonen på hele konferansen!"
    for automatiserte og deterministiske databasemigreringer i produksjonsmiljøet
    Innførte React og skrev om de delene av Angular.JS-appen som egnet seg dårlig
    til Angular, kodemessig og ytelsesmessig."
-   :tech [:groovy :gradle :gradle-warlike-plugin :grails :react :angular-js
+   :tech [:groovy :gradle :grails :react :angular-js
           :oracle :active-mq :liquibase :ansible]}
-  {:customer "Internt"
-   :years [2012 :ongoing]
+  {:customer "Oiiku"
+   :years [2012 2013]
    :employer :kodemaker
-   :summary "Utvikling av event-system"
+   :summary "Arkitektur og full stack utvikling for system for event-håndtering"
    :description "Oiiku, internt prosjekt i Kodemaker sammen med Onkel Estrup.
    Oiiku er et event-system for proff-brukere (eventbyråer o.l). Implementerte
    en første prototype i Ruby on Rails og CouchDB, med monolitt-arkitektur.
@@ -185,19 +185,19 @@ presentasjonen på hele konferansen!"
    Excel-aktig tabell for redigering, GUI for å definere hvilke attributter en
    deltaker kan ha, import og eksport av deltakere via excel ved bruk av Apache
    POI."
-   :tech [:clojure :datomic :angularjs :java :jetty :mongodb :google-closure :openssl :rsa
-          :lucene :elasticsearch :apache-poi]}
+   :tech [:clojure :datomic :angularjs :java :jetty :mongodb :google-closure :openssl
+          :lucene :elasticsearch]}
   {:customer "Husleieproffen"
    :years [2012 2013]
    :employer :kodemaker
-   :summary "Ruby on Rails-utvikling"
+   :summary "Full stack webutvikling, system for håndtering av husleie"
    :description "Utvikling av hele applikasjonen for Husleieproffen, både
    backend og frontend. Implementerte en prototype med Ruby on Rails som endte
    opp som produksjonssystem et par måneder. Skrev om prototypen til
    tjenestebasert arkitektur med Clojure. Tilpasset eksisterende Ruby on
    Rails-app til å bli en frittstående Ruby-app,, for å unngå å måtte skrive om
    eksisterende PDF-genereringslogikk."
-   :tech [:clojure :quartz :ruby :rails :rack :mysql :wordpress]}
+   :tech [:clojure :ruby :rails :rack :mysql]}
   {:customer "Internt"
    :years [2007 2008 2009 2010 2011]
    :employer :shortcut
@@ -285,7 +285,7 @@ presentasjonen på hele konferansen!"
   {:customer "Tandberg/Cisco"
    :years [2009 2010]
    :employer :shortcut
-   :summary "Webutvikling"
+   :summary "Front-end i portal for administering av abonnementer"
    :description "Tandberg/Cisco Callway. Abonnementsbaserte videotjenester,
    alternativ til in-house drifting av servere. Frontend-artikekt på portal for
    ordrer, fakturering, abonnementer, mm. Backend var et REST-API (ekte REST,
