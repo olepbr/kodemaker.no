@@ -13,9 +13,12 @@
  :presence      {:cv      "steintore"
                  :twitter "steintt"
                  :github  "steintore"
-                 :linkedin "/in/steintore/"
-                 }
-
+                 :linkedin "/in/steintore/"}
+    
+ 
+ :innate-skills [:terminal :browser-devtools :svn :osx :android :activemq :confluence :mysql :nexus 
+                 :pair-programming :mariadb :influxdb :db2 :github :gitlab :google-maps :h2db]
+ 
  :tech          {:favorites-at-the-moment [:clojure]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :clojurescript]}
 
@@ -34,38 +37,38 @@
                     :link {:url "http://www.npr.org/programs/ted-radio-hour/"
                            :text "Se hjemmesiden"}
                     :tech [:podcast]
-                    :blurb "Herlig gjennomgang av noen av de beste TED-talks, forklarer konsept og går enda litt dypere enn en vanlig talk. Anbefales!" }
+                    :blurb "Herlig gjennomgang av noen av de beste TED-talks, forklarer konsept og går enda litt dypere enn en vanlig talk. Anbefales!"}
                    {:title "Freakonomics Radio - podcast"
                     :link {:url "http://freakonomics.com/"
                            :text "Se hjemmesiden"}
                     :tech [:podcast]
-                    :blurb "Mange gode episoder som får deg til å tenke og se ting fra en annen side." }
+                    :blurb "Mange gode episoder som får deg til å tenke og se ting fra en annen side."}
                    {:title "Webutvikling med Clojure"
                     :link {:url "https://vimeo.com/105857867"
                            :text "Se video"}
                     :tech [:clojure]
                     :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig ønske å lære Clojure.
-                            Anbefales!" }]
+                            Anbefales!"}]
 
  :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it/"
                :title "OpenHAB heats my living room when I need it"
                :blurb "Oppvarming av stua når jeg trenger det, dvs at det er varmt når jeg står opp og når jeg kommer
                         hjem fra jobben. Men ikke når jeg er på ferie eller jobb. Høres bra ut? Det er ikke veldig vanskelig"
-               :tech [:openhab]
-               }
+               :tech [:openhab]}
+               
               {:url "http://steintore.github.io/dashboard/2013/04/05/jenkins-build-status-widget-for-dashing/"
                :title "Jenkins build status widget for Dashing"
                :blurb "Jenkins er et veldig nyttig verktøy for bygging og automatisering, men pent er det ikke.
                         Da jeg fant [Dashing](http://shopify.github.io/dashing/) tenkte jeg at det hadde vært gøy å lage et dashboard som viser
                         statusen fra Jenkins, med muligheter for mye mer. Dette har jeg foreløpig brukt i 2 prosjekter"
-               :tech [:jenkins :dashing]
-               }
+               :tech [:jenkins :dashing]}
+               
               {:url "http://steintore.github.io/tips/2013/01/22/terminator-for-linux-most-important-shortcuts/"
                :title "Nyttige shortcuts for Terminator for Linux"
                :blurb "Jeg har prøvd å samle de nyttigste snarveiene jeg bruker i Terminator.
                         Terminator er et veldig bra terminal-emulator for linux."
-               :tech [:linux :terminator]
-               }]
+               :tech [:linux :terminator]}]
+               
 
  :projects      [{:customer "NSB"
                   :years [2017 :ongoing]
@@ -242,8 +245,8 @@
                   :quote  "Skillful Java developer with extremely good social skills.
                           During project he communicated well with the customer, delivering
                           functionality on time and according to specifications.
-                          I recommend Stein Tore to any company interested in hiring senior Java developer!"
-                  }]
+                          I recommend Stein Tore to any company interested in hiring senior Java developer!"}]
+                  
 
  :cv {}
  :cv/description " Stein Tore er en erfaren programmerer som trives best med å
@@ -295,5 +298,5 @@
               :subject "Allmennfag"}
              {:institution "Stange Videregående Skole"
               :years [1995 1996 1997]
-              :subject "Idrettsfag"}]
- }
+              :subject "Idrettsfag"}]}
+ 
