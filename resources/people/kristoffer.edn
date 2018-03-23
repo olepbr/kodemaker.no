@@ -9,6 +9,7 @@
 
  :phone-number "922 36 798"
  :email-address "kristoffer@kodemaker.no"
+ :innate-skills [ :intellij :scrum]
 
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
@@ -26,14 +27,23 @@
                      stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}]
 
 
- :projects [{:customer "Nye Deichman — Applikasjonsprosjektet "
+ :projects [{:customer "Tieto Norway AS"
+             :description "Tieto leverer et avansert system for håndtering av betalinger og bankkonti. Kundene er noen av verdens
+             største internasjonale banker. For å sikre kvalitet og leveringsevne mot nye og eksisterende kunder har Tieto begynt
+              omlegging til en mer agil arbeidsform og i en tid lagt mer vekt på systematisk oppfølging av kodekvalitet i utviklingen.
+              Kristoffer bidro med kodeforbedringer og oppdatering av automatiske tester"
+             :years [2017 2018]
+             :employer :kodemaker
+             :summary "Bidrag til høyning av kodekvalitet og testdekning"
+             :tech [:java :mq :git :svn :oracle :db2]}
+            {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
              :employer :kodemaker
              :summary "Utvikling av nytt biblioteksystem for Deichmanske bibliotek"
-             :tech [:java :rdf :ractive :react :nodejs :jax-rs :apache-jena :fuseki :jetty
+             :tech [:java :rdf :ractive :react :nodejs :jaxrs :apache-jena :fuseki :jetty
                     :javascript :redux :nodejs :elasticsearch :rdf :ubuntu :go :ruby :cucumber :koha
-                    :jenkins :phantomjs :docker]}
+                    :jenkins :phantomjs :docker :sass]}
             {:customer "Kommunal- og moderniseringsdepartementet"
              :description "Utvikling av EVA Admin – applikasjon for konfigurasjon og gjennomføring av valg i Norge"
              :years [2014 2015]
@@ -231,8 +241,8 @@
 
  :cv {}
  :cv/description " Kristoffer har Cand Scient-grad fra Universitetet i Oslo og
- mer enn 17 års konsulenterfaring fra systemutvikling i større og mindre
- prosjekter hovedsaklig basert på J2EE/JEE-plattformen. Erfaring fra flere
+ mer enn 20 års konsulenterfaring fra systemutvikling i større og mindre
+ prosjekter hovedsaklig basert på JavaJEE-plattformen. Erfaring fra flere
  bransjer, bl.a bank/forsikring, forsvar, telekom, digitale medier og offentlig
  forvaltning. Han er en ressursperson som er sosial og opptatt av at teamet som
  helhet leverer god kvalitet. Lang erfaring med Java og de fleste teknologier
@@ -249,12 +259,11 @@
               :subject "Cand Scient, Informatikk, karakter 1,6"}]
  :qualifications ["Senior Systemutvikler"
                   "Frontend/backend/integrasjon"
-                  "Java/JEE"
+                  "Java/JEE/JavaScript"
                   "Sikkerhet"
                   "Selvstendig"
                   "Allsidig"]
  :certifications [{:name "Certified Scrum Master", :year 2007}
-                  {:name "JavaZone", :year 2002}
                   {:name "IBM Certfied Solution Developer", :year 2001}
                   {:name "IBM WebSphere Application Server (Standard Edition)"
                    :year 2001}
