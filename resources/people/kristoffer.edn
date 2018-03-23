@@ -56,15 +56,15 @@
              :years [2012 2013]
              :employer :kodemaker
              :summary "Utvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig til bedriftsmarkedet. REST-api for salg av ADSL til privatmarkedet"
-             :tech [:wicket :java :mongodb :ajax :jaxrs :jboss :collectionjson
-                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jax-rs
+             :tech [:wicket :java :mongodb :ajax :jboss :collectionjson
+                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jaxrs
                     :jboss :puppet :postgresql :oracle :mongodb :maven :jenkins :git]}
             {:customer "Sparebank1 Gruppen"
              :description "Proof-of-concept med CA SiteMinder som hyllevareprodukt. Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM."
              :years [2011 2012]
              :employer :kodemaker
              :summary "Implementasjon av ny sikkerhetsløsning"
-             :tech [:jsf :java :openam :bankid :weblogic :css :ajax :fatwire :git :jira
+             :tech [:jsf :java :openam :bankid :weblogic :css :fatwire :git :jira
                     :confluence :siteminder :javascript :ajax :bash :mockito :openam :apache
                     :linux :pki :saml :tomcat :jetty :maven :rpm :bankid :weblogic :fatwire]}
             {:customer "NKI Nettstudier"
