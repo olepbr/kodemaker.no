@@ -2,7 +2,7 @@
  :name ["Fredrik" "Aubert"]
  :title "Partner"
  :start-date "2009-01-01"
- :description "Fredrik har 10 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer genrelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
+ :description "Fredrik nesten 20 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer generelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
 
  :phone-number "+47 410 21 442"
  :email-address "fredrik@kodemaker.no"
@@ -12,7 +12,7 @@
             :linkedin "/in/fredrikaubert"
             :github "fredrikaubert"}
 
- :tech {:favorites-at-the-moment [:groovy :grails ]
+ :tech {:favorites-at-the-moment [:react :redux :groovy :grails ]
         :want-to-learn-more [:clojure]}
 
  :hobbies [{:title "MC"
@@ -31,14 +31,24 @@
             :illustration "/illustrations/hobbies/fredrik-foto.jpg"}
            ]
 
- :projects [{:customer "NSB"
+ :projects [
+ 	    {:customer "NSB"
+             :employer :kodemaker
+             :summary "Topas"
+             :years [2017 2018]
+             :description "Troll Utvikling av en kartapplikasjon for
+             visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
+             Javautvikler / frontendutvikler."
+             :tech [:grails :groovy :react :redux :javascript :rest :css :html :bootstrap :jms :git :gradle :mariadb]}
+ 
+ 		  {:customer "NSB"
              :employer :kodemaker
              :summary "Passasjerinformasjonssystemer og støttesystemer"
              :years [2015 :ongoing]
              :description "Troll Utvikling av en kartapplikasjon for
              visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
              Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :javascript :es6 :react :rest :css :html :bootstrap :git]}
+             :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "MCC Webapplikasjon"
@@ -210,7 +220,18 @@
              team bestående av meg, en database dud og en web designer"
              :tech [:vbscript :asp :oracle :html :javascript]}]
 
- :cv {}
+ :innate-skills [:mariadb  :jenkins]
+
+ :cv {:default {:preferred-techs [:groovy :javascript :grails
+                                 :react :redux  
+                                 :gradle :maven
+                                 :git :svn :cvs
+                                 :mariadb :oracle :mssql
+                                 :osx :ubuntu :ubuntu :ios :haproxy
+                                 :twitter-bootstrap
+                                 :jenkins :hudson
+                                 :oracle-portal :oracle-appserver :escenic]}}
+
  :cv/description "Fredrik har jobbet som utvikler siden 1999, og har har vært
  innom en rekke forskjellige teknologer, med spesiell fokus på frontend, både
  web og rike klienter. Han er opptatt av å velge riktig teknolog for å møte
