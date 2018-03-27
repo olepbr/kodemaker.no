@@ -36,54 +36,49 @@
              :employer :kodemaker
              :summary "Topas"
              :years [2017 2018]
-             :description "Troll Utvikling av en kartapplikasjon for
-             visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
-             Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :react :redux :javascript :rest :css :html :bootstrap :jms :git :gradle :mariadb]}
- 
- 		  {:customer "NSB"
+             :description "Topas er et system for å sikre at togpersonalet mottar og kvitterer for relevante dokumenter."
+             :tech [:grails :groovy :react :redux :javascript :rest :css :html :bootstrap :jms :git :gradle :mariadb :jenkins]}
+            {:customer "NSB"
              :employer :kodemaker
              :summary "Passasjerinformasjonssystemer og støttesystemer"
              :years [2015 :ongoing]
-             :description "Troll Utvikling av en kartapplikasjon for
-             visualisering av hvor togene er i øyeblikket. Oppgaver: Senior
-             Javautvikler / frontendutvikler."
+             :description "Passasjerinformasjonssystemer og støttesystemer: Et system som leverer informasjon til togsettene. Bl.a. kjøredatabase, avviksmeldinger, nyheter og værmelding."
              :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
-             :summary "MCC Webapplikasjon"
+             :summary "MCC"
              :years [2015 :ongoing]
-             :description "MCC Webapplikasjon for materiell kontroll, som
-             rapporterer nå situasjonen for tog-flåten og utnyttelsesgrad.
+             :description "MCC er en webapplikasjon for materiell kontroll, som
+             rapporterer nå-situasjonen for tog-flåten og utnyttelsesgrad.
              Oppgaver: Senior Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :rest :soap :css :html :bootstrap :git]}
+             :tech [:grails :groovy :rest :soap :css :html :bootstrap :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
-             :summary "D9009 Webapplikasjon"
+             :summary "D9009"
              :years [2013 :ongoing]
              :description "D9009 Webapplikasjon som viser planlagt
              togsammensetning. Oppgaver: Senior Javautvikler /
              frontendutvikler."
-             :tech [:grails :groovy :rest :css :html :bootstrap :svn]}
+             :tech [:grails :groovy :rest :css :javascript :html :bootstrap :git :svn :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
-             :summary "Pis Marketing System Webapplikasjon"
+             :summary "Pis Marketing System"
              :years [2012 :ongoing]
-             :description "Pis Marketing System Webapplikasjon for å produsere
+             :description "Pis Marketing System er en webapplikasjon for å produsere
              og distribuere markedsvideoer som vises ombord i togene. Oppgaver:
              Senior Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :css :html :bootstrap :svn]}
+             :tech [:grails :groovy :css :html :bootstrap :svn :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
-             :summary "JODA Generering av realtime-informasjon til passasjerinformasjonssystemet på NSDs nye togsett"
+             :summary "JODA"
              :years [2011 :ongoing]
-             :description "JODA Generering av realtime informasjon til
+             :description "JODA genererer realtime informasjon til
              passasjerinformasjonssystemet på NSBs nye togsett, slik som
              nyheter, værmelding og overgangsinformasjon. Systemet henter data
              fra innholdsleverandører og setter sammen skreddersydde pakker til
-             hvert enkelt togsett. Disse pakkene overføres ved hjelp av FILI.
+             hvert enkelt togsett. 
              Oppgaver: Senior Javautvikler / frontendutvikler."
-             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn]}
+             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :boostrap :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "FILI"
@@ -92,7 +87,7 @@
              togsett, som overføring av diagnosedata, passasjertelling,
              passasjerinformasjon osv. Oppgaver: Senior Javautvikler /
              frontendutvikler."
-             :tech [:grails :java :spring :css :html :svn]}
+             :tech [:grails :groovy :java :spring :css :html :svn :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "GRAILS"
@@ -228,9 +223,8 @@
                                  :git :svn :cvs
                                  :mariadb :oracle :mssql
                                  :osx :ubuntu :ubuntu :ios :haproxy
-                                 :twitter-bootstrap
-                                 :jenkins :hudson
-                                 :oracle-portal :oracle-appserver :escenic]}}
+                                 :jenkins
+                                 ]}}
 
  :cv/description "Fredrik har jobbet som utvikler siden 1999, og har har vært
  innom en rekke forskjellige teknologer, med spesiell fokus på frontend, både
@@ -248,11 +242,11 @@
  :experience-since 1999
  :qualifications ["Senior Systemutvikler"
                   "Løsningsarkitekt"
-                  "Java plattform"
-                  "JavaEE"
-                  "Groovy og Grails"
                   "Systemarkitektur og integrasjon"
                   "XP-praksiser (TDD, CI, med mer)"
+                  "React og Redux"
+                  "Groovy og Grails"
+                  "Java plattform"
                   "SCRUM"]
  :certifications [{:name "JavaScript/JQuery", :year 2009}
                   {:name "Sun Certified Business Component Developer", :year 2006}
@@ -265,14 +259,14 @@
               :subject "Høgskoleingeniør, Data"}]
  :domain-skills [{:title "Jernbane"
                   :description
-                  "God kunnskap om norsk jernbane, etter over seks år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. "}
+                  "God kunnskap om norsk jernbane, etter over åtte år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. "}
                  {:title "Helseforetak"
                   :description "God kunnskap etter 18 måneder på Rikshospitalet. "}
                  {:title "Oljeleting/seismikk"
                   :description "Noe kjennskap, etter 4 måneder i Western Geco."}
                  {:title "Bank/Finans"
                   :description
-                  "Noe kjennskap, etter å ha jobbet for Postbanken/DnB og Cicero finnansportal. "}
+                  "Noe kjennskap, etter å ha jobbet for Postbanken/DnB og Cicero finansportal. "}
                  {:title "Telekonferanser/Teleprecence"
                   :description
                   "God kjennskap til High-End/Telepresence løsningene etter 5 måneder hos Tandberg"}
