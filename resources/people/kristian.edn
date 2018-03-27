@@ -382,11 +382,11 @@
  :cv {:default {:preferred-techs [:clojure :clojurescript :java :groovy :javascript
                                   :git :svn :cvs
                                   :osx :ubuntu :redhat
-                                  :datomic :dynamodb :cassandra :mysql :oracle
+                                  :datomic :kafka :elasticsearch :dynamodb :cassandra :postgresql :mysql :oracle
                                   :kubernetes :terraform :puppet :teamcity
                                   :jira :confluence :bamboo
                                   :aws-kinesis :aws-s3 :aws-lambda
-                                  :scrum :funksjonell-programmering :frp :micro-services]}}
+                                  :scrum :functional-programming :frp :micro-services]}}
  :cv/description " Kristian er først og fremst en solid utvikler og konsulent
  som brenner for å utvikle gode løsninger for krevende kunder. Han har bred
  erfaring på tvers av flere bransjer og domener som blant annet inkluderer
