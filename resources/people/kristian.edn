@@ -1,11 +1,19 @@
 {:id :kristian
- :name ["Kristian" "Frøhlich Hansen"]
+ :name ["Kristian" "Frøhlich"]
  :title "Partner"
  :start-date "2010-02-01"
  :description "Kristian er først og fremst en systemutvikler som brenner for å lage gode løsninger til krevende kunder.
  Drivkraften er teknologiske utfordringer, domenforståelse og samspillet med mennesker som ønsker å levere solide produkter.
  Hvis Kristian selv får velge teknologi er uten tvil Lisp-dialekten Clojure et naturlig førstevalg. Han brenner sterkt for
  funksjonell programmering, men har likevel en pragmatisk orientering mot utfordringene som venter og søker alltid etter det beste verktøyet for jobben."
+
+ :innate-skills [:terminal 
+                 :svn :cvs 
+                 :osx :unix :ubuntu :redhat 
+                 :teamcity :hudson :jenkins :bamboo
+                 :crucible
+                 :hbase :mysql :postgresql
+                 :scrum :testing :micro-services :metrics :ci :code-review]
 
  :phone-number "91512492"
  :email-address "kristian@kodemaker.no"
@@ -80,7 +88,7 @@
              grunnlaget for UI-baserte tjenester som det kan abonneres på av
              kunder, f.eks til statistiske formål, rapportering eller ren
              overvåking av pantemaskiner."
-             :tech [:aws :aws-kinesis :dynamodb :kubernetes :terraform :vavr
+             :tech [:aws :aws-kinesis :aws-s3 :aws-lambda :dynamodb :kubernetes :terraform :vavr
                     :functional-programming :sparkjava :lombok]}
             {:customer "Animalia"
              :years [2016]
@@ -124,7 +132,7 @@
              ikke blokkere med mindre det er helt nødvendig. Valgt arkitektur
              innebar Vert.x som kjernekomponent og i tillegg Akka for å
              underbygge en reaktiv arkitektur."
-             :tech [:bash :puppet :kafka :zookeeper :hadoop :hdfs :hbase :yarn
+             :tech [:puppet :kafka :zookeeper :hadoop :hdfs :hbase :yarn
                     :java :jool :vertx :akka :spring]}
             {:customer "Oiiku / Onkel Estrup"
              :years [2015]
@@ -137,7 +145,7 @@
              Utvikler. Utforsket mulige logg-systemer og etablerte et som er
              godt egnet til filtering og søk. Konfigurerte applikasjonene til å
              sende logger kontinuerlig. Lite prosjekt, 1 utvikler."
-             :tech [:bash :clojure]}
+             :tech [:clojure]}
             {:customer "NRK"
              :years [2014 2015]
              :employer :kodemaker
@@ -324,7 +332,7 @@
              Odin sin fondsportal. Oppgaver: Senior Utvikler. Primæroppgave var
              å forbedre eksisterende tjenester og noe nyutvikling. Lite
              prosjekt, 1-2 utviklere."
-             :tech [:java :oracle-portal :struts :web-services :css]}
+             :tech [:java :javascript :oracle-portal :struts :web-services :css]}
             {:customer "Odin Fondsforvaltning"
              :years [2006 2007]
              :employer :cicero-consulting
@@ -371,7 +379,14 @@
              ut til klienter, hovedsaklig web."
              :tech [:java :fast :spring :hibernate :postgresql :maven :sitemesh :junit :easymock]}]
 
- :cv {}
+ :cv {:default {:preferred-techs [:clojure :clojurescript :java :groovy :javascript
+                                  :git :svn :cvs
+                                  :osx :ubuntu :redhat
+                                  :datomic :dynamodb :cassandra :mysql :oracle
+                                  :kubernetes :terraform :puppet :teamcity
+                                  :jira :confluence :bamboo
+                                  :aws-kinesis :aws-s3 :aws-lambda
+                                  :scrum :funksjonell-programmering :frp :micro-services]}}
  :cv/description " Kristian er først og fremst en solid utvikler og konsulent
  som brenner for å utvikle gode løsninger for krevende kunder. Han har bred
  erfaring på tvers av flere bransjer og domener som blant annet inkluderer
