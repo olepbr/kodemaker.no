@@ -647,6 +647,10 @@
                 :event "NDC 2014, foredrag om React.js, ClojureScript og Om"
                 :date "2014-06-20"
                 :tech [:clojurescript :om :react]}
+               {:title "Functional UI programming"
+                :event "Oslo Socially Functional"
+                :date "2014-04-28"
+                :tech [:javascript]}
                {:title "JavaScript for programmers, 3-dagers kurs"
                 :event "Programutvikling"
                 :date "2014-04-05"
