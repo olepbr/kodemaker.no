@@ -95,6 +95,7 @@
  :easerver :server
  :eclipse :devtools
  :ehcache :server
+ :ejb :library
  :elasticsearch :database
  :elisp :proglang
  :epicentric-portal :server
@@ -113,6 +114,7 @@
  :frp :methodology
  :fusioncharts :library
  :gcd :server
+ :geb :library
  :gerrit :tool
  :geronimo :server
  :git-svn :vcs
