@@ -54,7 +54,7 @@
  :etl "ETL"
  :express-js "Express.JS"
  :ezpublish "eZ Publish"
- :es6 "ES2016/ES6"
+ :es6 "ES2015/ES6"
  :fast "Fast søkemotor"
  :fatwire "FatWire CMS"
  :frp "FRP (Functional Reactive Programming)"
