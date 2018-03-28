@@ -7,16 +7,16 @@
  :phone-number "+47 928 21 901"
  :email-address "ronny@kodemaker.no"
 
-  :presence {:cv "ronny"
+ :presence {:cv "ronny"
             :twitter "rlovtangen"
             :stackoverflow "/users/141688/rlovtang"
             :github "rlovtangen"
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:ecmascript-2015 :groovy :grails]
-        :using-at-work [:react :ecmascript-2015 :jspm :sass :groovy :grails]
-        :want-to-learn-more [:clojure :ansible :docker]}
+ :tech {:favorites-at-the-moment [:react :es6 :groovy :grails]
+        :using-at-work [:react :es6 :sass :groovy :grails :ansible]
+        :want-to-learn-more [:kubernetes :docker]}
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
@@ -24,20 +24,355 @@
                            :text "Hør podcasten"}
                     :tech [:utvikling]}]
 
-:hobbies [{:title "Fallskjermhopping"
+ :hobbies [{:title "Fallskjermhopping"
             :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på toalettet, i selskap.
             Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
             out-of-memory-error og lignende totalt fraværende. Jeg svever på en sky, eller rettere sagt; gjennom skyene. Med hodet opp eller ned, sammen med andre glade fallskjermhoppere."
-             :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
+            :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
             :url "http://hoppfallskjerm.no"}]
 
-:open-source-contributions [
-        {:name "grails-core", :url "https://github.com/grails/grails-core", :tech [:grails]}
-        {:name "grails-doc", :url "https://github.com/grails/grails-doc", :tech [:grails]}
-        {:name "grails-profile-repository", :url "https://github.com/grails/grails-profile-repository", :tech [:grails]}
-        {:name "grails-maven-archetype", :url "https://github.com/grails/grails-maven-archetype", :tech [:grails]}
-        {:name "grails-wkhtmltopdf", :url "https://github.com/rlovtangen/grails-wkhtmltopdf", :tech [:grails]}
-        {:name "grails-build-info", :url "https://github.com/mjhugo/grails-build-info", :tech [:grails]}
-    ]
+ :open-source-contributions [
+                             {:name "grails-core", :url "https://github.com/grails/grails-core", :tech [:grails]}
+                             {:name "grails-doc", :url "https://github.com/grails/grails-doc", :tech [:grails]}
+                             {:name "grails-profile-repository", :url "https://github.com/grails/grails-profile-repository", :tech [:grails]}
+                             {:name "grails-maven-archetype", :url "https://github.com/grails/grails-maven-archetype", :tech [:grails]}
+                             {:name "grails-wkhtmltopdf", :url "https://github.com/rlovtangen/grails-wkhtmltopdf", :tech [:grails]}
+                             {:name "grails-build-info", :url "https://github.com/mjhugo/grails-build-info", :tech [:grails]}
+                             ]
+
+ :projects [{:customer "NSB"
+             :years [2014 :ongoing] ;10.2014-
+             :employer :kodemaker
+             :summary "Mozart"
+             :description "Mozart. Utvikling av en applikasjon for å fore flere
+             eksterne systemer med toginformasjon, f.eks. ruteplan,
+             materiellsammensetning, passasjerestimat osv. Oppgaver: Arkitekt /
+             senior Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :spock :html :javascript :css :bootstrap
+                    :git :svn :apache :ehcache :quartz :soap :rest :siri-service-interface-for-real-time-information
+                    :activemq :mariadb]}
+
+            {:customer "NSB"
+             :years [2014 :ongoing] ;07.2014-
+             :employer :kodemaker
+             :summary "TIM 2"
+             :description "TIM 2. Utvikling av en mobil webapplikasjon hvor
+             lokførere og konduktører kan se arbeidslister. Oppgaver: Arkitekt /
+             frontendarkitekt / senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :html :javascript :es6 :react :redux :jquery :css :bootstrap
+                    :spring :junit :git :svn :soap :apache :ehcache]}
+
+            {:customer "NSB"
+             :years [2014 :ongoing] ;01.2014-
+             :employer :kodemaker
+             :summary "Togbrettmeny"
+             :description "Togbrettmeny. Utvikling av en applikasjon med
+             snarveier til webapplikasjoner og lokale Androidapplikasjoner.
+             Oppgaver: Arkitekt / frontendarkitekt / senior Javautvikler /
+             frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :spring :spock :html :javascript :jquery :css
+                    :less :bootstrap :android-intents :git :svn :apache :ehcache]}
+
+            {:customer "NSB"
+             :years [2014 2015] ;01.2014-12.2015
+             :employer :kodemaker
+             :summary "Trafficnow"
+             :description "Trafficnow. Utvikling av et API for status på
+             trafikken i øyeblikket. Oppgaver: Arkitekt / senior Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :svn :apache :ehcache
+                    :rest :json :xml :google-image-charts]}
+
+            {:customer "NSB"
+             :years [2013 2014 2105] ;10.2013-12.2015
+             :employer :kodemaker
+             :summary "RASK"
+             :description "RASK / Min energi. Utvikling av en applikasjon for
+             lokførere som visualiserer energiforbruk. Oppgaver: Arkitekt /
+             frontendarkitekt / senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :spring :spock :highcharts :html :javascript
+                    :jquery :css :less :bootstrap :responsive-design :wkhtmltopdf :svn :oracle :mysql :apache
+                    :ehcache :quartz :vagrant :soap]}
+
+            {:customer "NSB"
+             :years [2013 :ongoing] ;04.2013
+             :employer :kodemaker
+             :summary "Usroid"
+             :description "Usroid. Utvikling av en OpenID provider for innlogging
+             med NSB-brukere i Jernbaneverkets applikasjon for togfremføring;
+             FIDO. Oppgaver: Arkitekt / senior Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :gradle :asciidoctor :openid :html
+                    :css :bootstrap :git :svn :apache :ehcache :quartz :soap :rest :ad]}
+
+            {:customer "NSB"
+             :years [2012 :ongoing] ;04.2012-
+             :employer :kodemaker
+             :summary "Apast"
+             :description "Apast. Utvikling av en applikasjon som mottar
+             telledata fra tog med automatisk passasjertelling. Tilgjengeliggjør
+             data via et REST-API. Oppgaver: Arkitekt / senior Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :junit :git :svn :rest :apache :ehcache :activemq]}
+
+            {:customer "NSB"
+             :years [2011 2012 2013 2014 2015] ;07.2011-01.2015
+             :employer :kodemaker
+             :summary "ESO, Effektive stasjonsopphold"
+             :description "ESO, Effektive stasjonsopphold. Utvikling av en
+             applikasjon som forer Jernbaneverket med data om sammensetning av
+             kommende tog for visning på anvisere på plattform. Oppgaver:
+             Arkitekt / senior Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :junit :git :svn :soap :rest :ehcache :quartz :apache-poi]}
+
+            {:customer "NSB"
+             :years [2011 2012 2013] ;05.2011-06.2013
+             :employer :kodemaker
+             :summary "GSM-R Telefonkatalog"
+             :description "GSM-R Telefonkatalog. Utvikling av en mobil
+             webapplikasjon for søk i jernbanens interne telefonsystem. Oppgaver:
+             Arkitekt / frontendarkitekt / senior Javautvikler /
+             frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :spring :junit :git :svn :soap :html :javascript
+                    :css :apache :ehcache]}
+
+            {:customer "NSB"
+             :years [2011 2012] ;02.2011-08.2012
+             :employer :kodemaker
+             :summary "Rapp"
+             :description "Rapp. Utvikling av en applikasjon for oppsett og
+             mottak av skjema på nett. Oppgaver: Arkitekt / frontendarkitekt /
+             senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :spring :html :javascript :css :jquery
+                    :jquery-mobile :junit :git :svn :mysql :mongodb :soap :rest :apache]}
+
+            {:customer "NSB"
+             :years [2011] ;02.2011-06.2011
+             :employer :kodemaker
+             :summary "UsrPwd"
+             :description "UsrPwd. Utvikling av en tjeneste for autentisering,
+             inkludert en Grailsplugin. Oppgaver: Arkitekt / senior
+             Javautvikler."
+             :tech [:tomcat :groovy :grails :java :spring :junit :svn :rest :oracle :ad :ldap :apache]}
+
+            {:customer "NSB"
+             :years [2011] ;02.2011-03.2011
+             :employer :kodemaker
+             :summary "SNMP"
+             :description "SNMP-Agent. Utvikling av en applikasjon å simulere
+             bevegelsene av et tog, for annonsering av stasjoner. Oppgaver:
+             Arkitekt / frontendarkitekt / senior Javautvikler /
+             frontendutvikler."
+             :tech [:snmp :tomcat :groovy :grails :java :spring :html :css :junit :svn :mysql :soap]}
+
+            {:customer "NSB"
+             :years [2010 :ongoing] ;06.2010-
+             :employer :kodemaker
+             :summary "Småtroll"
+             :description "Småtroll. Utvikling av en mobil webapplikasjon for
+             visning av informasjon om tog, med tilhørende ruteplan,
+             passeringshistorikk, meldinger og lignende. Oppgaver: Arkitekt /
+             frontendarkitekt / senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :html :javascript :css :jquery :rwd
+                    :spring :mysql :junit :spock :geb :git :svn :rest :bootstrap :apache :ehcache :quartz :struts2]}
+
+            {:customer "NSB"
+             :years [2010 2011 2012 2013 2014] ;01.2010-07.2014
+             :employer :kodemaker
+             :summary "TIM"
+             :description "TIM. Utvikling av en mobil webapplikasjon hvor
+             lokførere og konduktører kan se arbeidslister. Oppgaver: Arkitekt /
+             frontendarkitekt / senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :java :html :javascript :css :jquery :spring :junit
+                    :git :svn :soap :apache :struts2]}
+
+            {:customer "NSB"
+             :years [2009 :ongoing] ;04.2009-
+             :employer :kodemaker
+             :summary "Troll"
+             :description "Troll. Utvikling av en kartapplikasjon for
+             visualisering av hvor togene er i øyeblikket. Oppgaver: Arkitekt /
+             frontendarkitekt / senior Javautvikler / frontendutvikler."
+             :tech [:tomcat :groovy :grails :java :html :javascript :css :sass :react :redux :es6 :babel
+                    :jspm :systemjs :npm :flex :actionscript :blazeds :spring :jms :camel :junit :git :svn
+                    :asciidoctor :gradle :maven-2 :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
+
+            {:customer "NSB"
+             :years [2008 2009 2010] ;11.2008-12.2010
+             :employer :kodemaker
+             :summary "ENKA"
+             :description "ENKA, ENØK for lokførere. Utvikling av en
+             webapplikasjon for visualisering av strømforbruk på togstrekninger.
+             Skal trigge konkurranseinstinkt og bidra til energisparing.
+             Oppgaver: Senior Javautvikler / frontendarkitekt /
+             frontendutvikler."
+             :tech [:tomcat :struts2 :groovy :java :html :javascript :css :prototype :spring :junit
+                    :fusioncharts :svn :maven-2 :oracle :quartz :apache-poi]}
+
+            {:customer "NSB"
+             :years [2008 :ongoing] ;11.2008-
+             :employer :kodemaker
+             :summary "Diverse infrastruktur"
+             :description "Diverse. Oppsett av Git over HTTPS med
+             git-http-backend. Oppsett av GitWeb. Konvertering av repos fra
+             Subversion til Git. Administrator på JIRA og Confluence. Installasjon av
+             JIRA og Confluence. Oppsett av Munin for systemovervåkning. Diverse
+             serverdrift og oppsett CentOS. Oppsett av TLS-sertifikater.
+             Installasjon av Jenkins, Nexus m.m. Oppsett og konfigurasjon av
+             Tomcat, Apache HTTP Server, HAProxy m.m."
+             :tech [:git :tomcat :apache :haproxy :nexus :jenkins :munin :jira :confluence]}
+
+            {:customer "Nordic Lottery Systems"
+             :years [2008] ;01.2008-11.2008
+             :employer :kodemaker
+             :summary "Internettspill"
+             :description "Internettspill. Utvikling av et nytt internettspill
+             med svært høye oppetids- og ytelseskrav Oppgaver: Senior
+             Javautvikler / frontendutvikler. Ansvarlig for utvikling av en ny
+             delapplikasjon i Struts 2. Gjennomførte overgang fra CVS til
+             Subversion. Laget en proof of concept på bruk av Flex."
+             :tech [:java :jboss-portal :ejb :hibernate :jpa :spring :jboss-messaging :selenium ;EJB 2.1 og 3.0
+                    :junit :testng :css :html :javascript :ajax :jquery :struts2 :webwork
+                    :flex :actionscript :json :svn :cvs :maven-2 :apache]}
+
+            {:customer "CSAM/Rikshospitalet"
+             :years [2003 2004 2005 2006 2007 2008] ;09.2003-01.2008
+             :employer :objectware
+             :summary "Klinisk portal"
+             :description "Klinisk portal. Utvikling av «Klinisk Portal», en
+             portalløsning med integrasjon mot mange underliggende systemer. Var
+             bl.a. med på å muliggjøre sammenslåingen av Rikshospitalet og
+             Radiumhospitalet. Startet som et prosjekt hos Rikshospitalet men
+             vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
+             bruk på flere sykehus i Vestmanlän i Sverige. Oppgaver: Senior Java
+             / frontendutvikler. Portalutvikling av ajaxintensive portlets."
+             :tech [:java :jsp :struts :prototype :ajaxanywhere :json :javascript :css
+                    :html :portlets :oracle-portal :oc4j :intellij :ant :svn :cvs
+                    :jstl :spring :junit :hudson :apache-poi :watir]}
+
+            {:customer "DnB NOR"
+             :years [2004] ;07.2004-09.2004
+             :employer :objectware
+             :summary "Sparekalkulatorer"
+             :description "Sparekalkulatorer. Utvikling av diverse kalkulatorer
+             på DnB NORs hjemmesider. Konsumenter av webservicer fra Cicero
+             Financial Planner. Oppgaver: Senior Java / frontendutvikler."
+             :tech [:java :atg-dynamo :javascript :css :html :sourcesafe]}
+
+            {:customer "Schlumberger"
+             :years [2003] ;05.2003-08.2003
+             :employer :objectware
+             :summary "Kundesystem"
+             :description "Kundesystem. Utvikling av tykk klient for
+             kundehåndtering. Oppgaver: Design og GUI-utvikling."
+             :tech [:java :swing]}
+
+            {:customer "Objectware (internprosjekt)"
+             :years [2003] ;04.2003-05.2003
+             :employer :objectware
+             :summary "Novell Composer connector"
+             :description "Novell Composer connector. Utvikling av en connector for
+             Novell exteNd Composer for kobling mot Agresso."
+             :tech [:novell-extend-composer-appserver :java :jdbc :weblogic]}
+
+            {:customer "Cicero"
+             :years [2002 2003 2004] ;06.2002-04.2004
+             :employer :objectware
+             :summary "Cicero Financial Planner"
+             :description "Cicero Financial Planner. Utvikling av Cicero
+             Financial Planner, støttesystem for finansiell rådgivning.
+             Produktet bestod av en rekke webservices som ble solgt til banker
+             og finansinstitusjoner. Oppgaver: Hadde ansvaret for utvikling
+             av en administrasjonsapplikasjon. Utvikling av webtjenester."
+             :tech [:jsp :struts :servlets :webservices :jclass :orion :mysql :javascript :css
+                    :html :cvs :ant :intellij :oracle9ias :j2ee :cruise-control :dreamweaver-mx]}
+
+            {:customer "Gjensidige NOR"
+             :years [2001 2002] ;07.2001-01.2002 04.2002-05.2002
+             :employer :objectware
+             :summary "Salgsstøtteapplikasjoner"
+             :description "Salgsstøtteapplikasjoner. Utvikling av
+             salgsstøtteapplikasjoner for salg av diverse forsikringsprodukter.
+             Oppgaver: Design og utvikling av javaklient samt utvikling av
+             servertjeneste for generering av PDF og lagring til OnDemand."
+             :tech [:jfc :ibm-content-manager-ondemand :db2 :pdf :rational-rose
+                    :rational-clearcase :intellij]}
+
+            {:customer "Tybring Gjedde ASA"
+             :years [2000 2001 2002] ;06.2000-06.2001 01.2002-04.2002
+             :employer :objectware
+             :summary "Netshop"
+             :description "Netshop. Ny ehandelsløsning og administrasjonsmodul
+             med underliggende produktdatabase. Integrasjon mot SAP/R3 og
+             AMTrix. Oppgaver: Analyse, design og utvikling. Ansvar for
+             datamodellering (verktøy: PowerDesigner). Utvikling av adminmodul
+             og mellomlag i Java."
+             :tech [:java :ejb :jdbc :silverstream :oracle]}
+
+            {:customer "UiO"
+             :years [1999 2000]
+             :employer :usit
+             :summary "Brukerstøtte/operatør"
+             :description "Brukerstøtte
+             for alle mulige IT-relaterte problemer (hardware, OS,
+             applikasjoner, oppringt, nettverk, printere, etc) på forskjellige
+             plattformer (Windows, Mac, Unix/Linux). Utskriftstjenester,
+             systemovervåkning/vedlikehold."
+             :tech [:windows :mac-os :linux :unix]}]
+
+ :employments {:objectware {:description "Konsulent, Seniorkonsulent (fra 2004).
+               Java/JEE konsulent i en rekke prosjekter med varierende teknologi. Svært mye frontendutvikling på javaplattform, både tykke (Swing) og tynne klienter. Opparbeidet seg rollen som avdelingens ekspert på ajaxteknologi."}
+               :usit {:description "Brukerstøtte/operatør.
+               Deltidsstilling ved siden av studier."}}
+
+ :cv {}
+ :cv/description "Ronny har lang erfaring med systemutvikling. Han er spesielt
+fokusert på å lage webapplikasjoner med høy ytelse, god interaksjon og
+brukervennlighet, som virker på tvers av nettlesere. Har erfaring med
+frontendutvikling fra før ajax ble et begrep. Ronny har god kjennskap til
+ledende rammeverk for webutvikling på javaplattform. Er engasjert i miljøet
+rundt Groovy og Grails. Ronny er sosial og går godt overens med kunde og
+kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
+ :education-summary "Cand. Mag. Informatikk, UiO"
+ :experience-since 2000
+ :qualifications ["Senior systemutvikler"
+                  "Løsningsarkitekt"
+                  "Frontendarkitekt"
+                  "Java EE"
+                  "Groovy og Grails"
+                  "Sterk på frontendutvikling"
+                  "Scrum / smidig utvikling"]
+ :certifications [{:name "Profesjonelt styrearbeid", :year 2011}
+                  {:name "Retorikk og presentasjonsteknikk", :year 2010}
+                  {:name "Enonic Vertical Site, Utvikler 2 - Malutvikling", :year 2009}
+                  {:name "Enonic Vertical Site, Utvikler 1 - Nettstedskonfigurasjon"
+                   :year 2009}
+                  {:name "Certified ScrumMaster", :year 2006}
+                  {:name
+                   "Sun Certified Web Component Developer for Java 2 platform, Enterprise Edition"
+                   :year 2003}
+                  {:name "Sun Certified Programmer for Java 2 platform", :year 2001}]
+ :relationship-status "Gift, 3 barn"
+ :born 1975
+ :innate-skills [:postgresql :ruby :objc :xcode :textmate :sublime-text :terminal :osx :h2db :hsqldb :sqlite :google-analytics :eclipse :scrum :architecture :testing :ci :cd :micro-services :php :maven :jetty]
+ :education [{:institution "Universitet i Oslo"
+              :years [1996 1997 1998 1999 2000]
+              :subject "Cand. Mag. Informatikk"}]
+ :domain-skills [{:title "Jernbane"
+                  :description
+                  "Inngående kjennskap til hvordan norsk jernbane fungerer, etter mange år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. Stemplet som tognerd."}
+                 {:title "Helseforetak"
+                  :description
+                  "God kunnskap etter 4 år på Rikshospitalet. Var delaktig i kravinnsamlingsprosessen, som blant annet gikk ut på å ha workshops med leger og sykepleiere. Er gift med en lege, noe som gir ytterligere innblikk i helse-Norge."}
+                 {:title "Lotterivirksomhet", :description "Noe kjennskap"}
+                 {:title "Bank/Finans", :description "Noe kjennskap"}
+                 {:title "Forsikring", :description "Noe kjennskap"}]
+
+:languages [{:language "Norsk"
+               :orally "Morsmål"
+               :written "Morsmål"}
+              {:language "Engelsk"
+               :orally "Meget god"
+               :written "Flytende"}
+              {:language "Tysk"
+               :orally "Grunnleggende"
+               :written "Grunnleggende"}]
 
  }
