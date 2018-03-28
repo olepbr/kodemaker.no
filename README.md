@@ -345,7 +345,7 @@ dukke opp på teknologi-sammendraget på CV-en din.
 Du kan påvirke teknologisammendraget på noen måter:
 
 1. Dersom du savner teknologier/metodikk i sammendraget, men ikke gidder å legge
-   disse på noen spesifikke prosjekt kan du legge dem til som "medføtte skills":
+   disse på noen spesifikke prosjekt kan du legge dem til som "medfødte skills":
    `:innate-skills [:shell]`
 2. Teknologier sorteres etter antall forekomster. Dette henger ikke alltid
    sammen med hvordan man ønsker å profilere seg. Du kan påvirke sorteringen ved
