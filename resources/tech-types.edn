@@ -90,7 +90,7 @@
  :domain-modeling :methodology
  :docker-cloud :cloud
  :dotnet :framework
- :dreamweaver-mx :tool
+ :dreamweaver-mx :devtools
  :dynamodb :database
  :easerver :server
  :eclipse :devtools
@@ -145,9 +145,10 @@
  :hibernate-search :library
  :honeysql :library
  :hpunix :os
+ :hsqldb :database
  :html :frontend
  :http :frontend
- :hudson :server
+ :hudson :devops
  :hugsql :library
  :hystrix :library
  :ibm-bluemix :server
@@ -199,6 +200,7 @@
  :letsencrypt :security
  :liberator :library
  :lighttable :devtools
+ :linux :os
  :linux-kernel :library
  :liquibase :library
  :lisp :proglang
@@ -237,6 +239,7 @@
  :oauth2 :security
  :objc :proglang
  :objcplusplus :proglang
+ :oc4j :server
  :octopus :devops
  :oidc :security
  :om :framework
@@ -283,6 +286,7 @@
  :sap :server
  :saltstack :devops
  :saml :security
+ :sass :frontend
  :sbt :devtools
  :scalatra :framework
  :scrum :methodology
@@ -295,6 +299,7 @@
  :soap :specification
  :solaris :os
  :sonar :tool
+ :sourcesafe :vcs
  :splunk :server
  :spring-batch :framework
  :spring-boot :framework
@@ -314,6 +319,7 @@
  :sqlite :database
  :squirrel-sql :library
  :statsd :server
+ :sublime-text :devtools
  :swing :library
  :teamcity :devops
  :terminal :devtools
