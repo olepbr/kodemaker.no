@@ -398,6 +398,7 @@
             {:customer "SpareBank1"
              :years [2010 2011]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Saksbehandling for livsforsikring"
              :description "Teknisk ansvarlig, arkitekt og utvikler på
              ASK-prosjektet hos SpareBank 1 - Livselskapet. Utvikling av en
@@ -408,6 +409,7 @@
             {:customer "Avinor"
              :years [2008 2009]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Intranett/internett - Utviklet webløsninger"
              :description "Forvaltning av selvbetjenings- og portalløsninger hos
              Avinor. Dette inkluderer avinor.no med alle lufthavnsider. Rolle
@@ -417,6 +419,7 @@
             {:customer "Gjensidige"
              :years [2005 2006 2007 2008]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Diverse prosjekter knyttet til forsikring"
              :description "Reimplementasjon av gammelt system (KAP). Løsning for
              å hente og behandle leads til kundebehandlere. Integrert med
@@ -427,12 +430,14 @@
             {:customer "Unipub"
              :years [2007 2008]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Hibernate-bistand"
              :description "Hibernate-bistand."
              :tech [:java :hibernate]}
             {:customer "DnB"
              :years [2005 2006]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Diverse prosjekt og kurs"
              :description "Laget og holdt kurs i Spring, Maven og Subversion for
              firmaets utviklere og teknologiske ledelse."
@@ -440,6 +445,7 @@
             {:customer "Forsvaret"
              :years [2004 2005]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Prosjekter basert på Open Source teknologi"
              :description "Bygge applikasjon for å holde oversikt over lover,
              regler og bestemmelser i organisasjonen (FOBID). Ren Open Source
@@ -448,6 +454,7 @@
             {:customer "Selvaag"
              :years [2002 2003 2004 2005]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Prosjekter knyttet til industrialisert boligbygging"
              :description "Utvikling av prototyper og tekniske Proof og Consepts
              på verktøy til bruk i byggebransjen. Har også gjennomført noe QA
@@ -457,12 +464,14 @@
             {:customer "QFree"
              :years [2003]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Bistand Hibernate"
              :description "Bistand Hibernate."
              :tech [:java :hibernate]}
             {:customer "DnB"
              :years [2001 2002 2003]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "ATG Dynamo-spesialist"
              :description "Bistått ca. 20 forskjellige prosjekter knyttet til
              konsernets bankdivisjon med teknisk støtte og bistand på ATG Dynamo
@@ -472,6 +481,7 @@
             {:customer "ABB"
              :years [2001 2002]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Forvaltning intranett"
              :description "Notes-basert løsning for kunden som forenkler linking
              til eksterne data fra Lotus Notes dokumenter. Dette skjer ved at
@@ -485,6 +495,7 @@
             {:customer "Formuesforvaltning"
              :years [2000 2001]
              :employer :bekk
+             :exclude-from-profile? true
              :summary "Nytt verktøy for økonomiske porteføljer"
              :description "Oppbygging av større system for personlig økonomisk
              rådgivning. Salg/kjøp av produkter, samt finansiell plan og
@@ -494,6 +505,7 @@
             {:customer "Sportagon"
              :years [2000]
              :employer :bekk
+             :exclude-from-profile? true
              :summary ".com-eventyr"
              :description "Stor sportsportal for avansert analyse av
              sportsresultater i tillegg til svært detaljrikt innhold. Første
@@ -502,6 +514,7 @@
             {:customer "Gotogate"
              :years [1999 2000]
              :employer :andersen
+             :exclude-from-profile? true
              :summary "Gotogate.no - reisebyrå på internett"
              :description "Var med på utviklingen av første utgave av
              Gotogate.no, et internett-basert reisebyrå."
@@ -509,6 +522,7 @@
             {:customer "Andersen Consulting"
              :years [1999]
              :employer :andersen
+             :exclude-from-profile? true
              :summary "Utviklet internt samhandlingssystem"
              :description "Utviklet internt samhandlingssystem."
              :tech [:vbscript :asp :iis :mssql]}]
