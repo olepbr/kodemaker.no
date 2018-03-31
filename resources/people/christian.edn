@@ -158,7 +158,11 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "https://cjohansen.no/letsencrypt-haproxy-ssl/"
+ :blog-posts [{:url "https://cjohansen.no/optimized-optimus-asset-paths-clojurescript//"
+               :title "Optimized Optimus Asset Paths from ClojureScript"
+               :blurb "Hvordan eksponere Optimus asset-paths fra Clojure til ClojureScript via en macro"
+               :tech [:clojure :clojurescript :optimus]}
+              {:url "https://cjohansen.no/letsencrypt-haproxy-ssl/"
                :title "Securing HAProxy sites with Let's Encrypt SSL Certificates"
                :blurb "En gjennomgang av oppsett av SSL-sertifikater fra Let's Encrypt med HAProxy"
                :tech [:haproxy :letsencrypt :docker :centos]}
