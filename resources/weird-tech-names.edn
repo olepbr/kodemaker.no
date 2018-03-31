@@ -210,4 +210,5 @@
  :xmlspy "XML Spy"
  :xslt "XSLT"
  :xtractor "XTractor"
+ :opencv "OpenCV"
 }

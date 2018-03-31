@@ -34,9 +34,9 @@
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
 
- :tech {:using-at-work [:java :groovy :kafka :postgresql :javascript :spring :hibernate]
-        :favorites-at-the-moment [:scala :hystrix :rxjava :akka]
-        :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning]}
+ :tech {:using-at-work [:python :opencv :clojure :clojurescript]
+        :favorites-at-the-moment [:python :clojurescript]
+        :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning :clojurescript]}
 
  :recommendations [{:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
                     :blurb "Fantastisk bra artikkel om logg som sentralt system for integrasjon,
@@ -70,7 +70,7 @@
 
  :hobbies [{:title "Snowboard"
             :description "Snowboard har vært en hobby siden videregående, og det blir fortsatt
-                          noen turer hvert år. De siste årene har sønnen på 7 år også blitt med,
+                          noen turer hvert år. De siste årene har barna også blitt med,
                           noe som gjør det ekstra stas :)"
             :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}]
 
@@ -95,18 +95,21 @@
                :tech [:java :scala :clojure :ruby :groovy]}]
 
  :presentations [{:title "5 approaches to concurrency in Java - which one is the best?"
+                  :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2016 om forskjellige rammeverk/paradigmer for å gjøre
                           applikasjoner concurrent. Mye live eksempel."
                   :date "2016-09-08"
                   :tech [:java :concurrency :akka :vertx :hystrix :rxjava :quasar]
                   :urls {:video "https://vimeo.com/182070294"}}
                  {:title "Sammenligning av GC-alternativer"
+                  :event "javaBin"
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
                   :tech [:java :performance :gc]
                   :urls {:video "https://vimeo.com/158720082"}}
                  {:title "Plugin-basert arkitektur i Java!"
+                  :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2015 om bruk av plugins for å
                           lage en modulær arkitektur. Spesielt relevant forhold til
                           micro-services og muligheten for å splitte en applikasjon
@@ -115,17 +118,20 @@
                   :tech [:java :micro-services :plugins]
                   :urls {:video "https://vimeo.com/album/3556815/video/138954653"}}
                  {:title "Calculating Taxes Using Functional Programming and Akka"
+                  :event "flatMap"
                   :blurb "Presentasjon fra flatMap 2015 - om erfaringer med Akka og
                           Java 8 ifm. prosjekt hos Skatteetaten."
                   :date "2015-04-28"
                   :tech [:java :akka]
                   :urls {:video "https://vimeo.com/channels/flatmap2015/128468976"}}
 		 {:title "Lyntale: Du MÅ ikke velge et rammeverk!"
+                  :event "JavaZone"
 		  :blurb "Lyntale fra JavaZone 2014 rundt valg av JavaScript-rammeverk."
 		  :date "2014-09-10"
 		  :tech [:javascript]
 		  :urls {:video "http://2014.javazone.no/presentation.html?id=e00be9cf"}}
 		 {:title "Design for asynkronitet og høy ytelse!"
+                  :event "JavaZone"
 		  :blurb "Presentasjon fra JavaZone 2014 om skalering og concurrent
                           programmering i Java. Sammenligner forskjellige rammeverk
                           og prøver å gi noen gode scenarier for bruk."
@@ -133,6 +139,7 @@
 		  :tech [:java :akka :performance :rxjava]
 		  :urls {:video "http://2014.javazone.no/presentation.html?id=7e7f10a7"}}
 		 {:title "Fra Grid til Akka!"
+                  :event "JavaZone"
 		  :blurb "Presentasjon fra JavaZone 2013 som sammenligner
                           grid-produktet Hazelcast med Akka forhold til
 		    	  concurrency og ytelse."
@@ -140,6 +147,7 @@
 		  :tech [:java :akka :grid :hazelcast]
 		  :urls {:video "https://vimeo.com/album/2525252/video/74553206"}}
                  {:title "Hazelcast: Open Source In-Memory Data Grid"
+                  :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2012 som introduserer Hazelcast.
                           Gir en innføring til grid og Hazelcast med en del
                           erfaringer fra bruk av rammeverket i Skatteetaten."
@@ -147,6 +155,7 @@
                   :tech [:java :grid :hazelcast]
                   :urls {:video "https://vimeo.com/49386944"}}
                  {:title "Funksjonell Programmering på JVM"
+                  :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2010. Hovedsaklig en presentasjon av
                           arbeidet Eivind gjorde med master-oppgaven. Snakker om forskjellige
                           aspekter ved funksjonell programmering og hvordan man oppnår dette
@@ -188,10 +197,6 @@
                 :event "SpareBank 1"
                 :tech [:scala]
                 :date "2011-05-01"}
-               {:title "Funksjonell Programmering på JVM"
-                :event "JavaZone"
-                :date "2010-09-10"
-                :tech [:java :functional-programming]}
                {:title "Scala - Object-oriented and functional programming combined"
                 :event "Gjesteforelesning INF3110 - UiO"
                 :tech [:scala]
@@ -301,7 +306,14 @@
                           Han er en team spiller og deler med stor glede av sin kompetanse, både i
                           forbindelse med parprogrammering og gjennomganger for større eller mindre grupper."}]
 
- :projects [{:customer "BN Bolig"
+ :projects [{:customer "Bull's Eye"
+             :years [2017 2018]
+             :employer :kodemaker
+             :summary "Nytt spillkonsept"
+             :description "Har jobbet med utvikling av et helt nytt spillkonsept,
+             basert på bildeanalyse og fysiske spill."
+             :tech [:python :opencv :clojure :clojurescript]}
+            {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
              :summary "Nettsider og kundeweb"
