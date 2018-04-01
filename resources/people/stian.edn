@@ -139,7 +139,7 @@
              :employer :kodemaker
              :summary "Ny- og videreutvikling av fagsystemer"
              :description "Nyutvikling og videreutvikling av fagsystemer Oppgaver: Seniorutvikler"
-             :tech [:clojure :clojurescript :groovy :gradle :oracle :leiningen :react :re-frame :reagent :devops :nginx]}
+             :tech [:clojure :clojurescript :react :docker :groovy :gradle :oracle :leiningen :rest :re-frame :reagent :devops :nginx]}
             {:customer "Conax"
              :years [2016 2017]
              :employer :kodemaker
@@ -147,7 +147,7 @@
              :description "Utvikle og designe løsning
              for IP-TV og sikring av innhold. Dette er et produkt som rulles ut
              i flere land Oppgaver: Seniorutvikler"
-             :tech [:java :groovy :javascript :spring :jetty :oracle :linux :ansible]}
+             :tech [:java :groovy :ansible :javascript :docker :spring :jetty :oracle :linux]}
             {:customer "NSB"
              :years [2013 2014 2015 2016]
              :employer :kodemaker
@@ -160,7 +160,7 @@
              rushtidstrafikk og lignende. Systemet er svært forretningskritisk
              for NSB Oppgaver: Seniorutvikler, administrativ oppfølging av
              prosjekt, rapportering til ledelse"
-             :tech [:groovy :grails :javascript :oracle]}
+             :tech [:groovy :grails :gradle :javascript :oracle]}
             {:customer "Forsvaret"
              :years [2013]
              :employer :kodemaker
@@ -236,10 +236,11 @@
              for inkluderende arbeidsliv. Prosjektet besto i å kartlegge og
              utvikle nettstedet. Løsningen benytter emneord for navigasjon
              Oppgaver: Senior utvikler"
-             :tech [:enonic-cms :java :xsl :maven]}
+             :tech [:maven :java :xsl :enonic-cms]}
             {:customer "NAV"
              :years [2007]
              :employer :avenir
+             :exclude-from-profile? true
              :summary "Tilpassing av søk for nav.no"
              :description "Endret og tilpasset FAST
              søkemotor til kravene for nav.no og navet. Det inngikk skriving av
@@ -250,6 +251,7 @@
             {:customer "NAV"
              :years [2007]
              :employer :avenir
+             :exclude-from-profile? true
              :summary "Internt bestillingsystem"
              :description "Utarbeidet og
              implementerte en intern bestillingsløsning for NAV. Løsningen er
@@ -267,7 +269,7 @@
              services som kaller backend betalingsløsning. Videre implementerte
              Stian en løsning for påfylling av kontantkort via SMS for Chess.
              Oppgaver: Utvikler"
-             :tech [:java :j2ee :struts :web-services :css]}
+             :tech [:java :web-services :jee :struts :css]}
             {:customer "NAV"
              :years [2006]
              :employer :avenir
@@ -280,7 +282,7 @@
              Oppgaver: Utvikler"
              :tech [:java :jee :xsl :xml :javascript :html]}
             {:customer "Fjordland"
-             :years [2006]
+             :years [2005 2006]
              :employer :avenir
              :summary "www.fjordland.no"
              :description "Implementerte design i henhold til
@@ -293,6 +295,7 @@
             {:customer "Fjordland"
              :years [2005]
              :employer :avenir
+             :exclude-from-profile? true
              :summary "Integrasjon mellom Lotus Domino og Enonic CMS"
              :description "Konvertering av data til XML fra Lotus Domino, og innhenting av XML
              data i Enonic CMS. Dataene ble hentet inn jevnlig slik at de ansatte i
@@ -302,6 +305,7 @@
             {:customer "NAV"
              :years [2005]
              :employer :avenir
+             :exclude-from-profile? true
              :summary "nav-interim.no"
              :description "Oppsett av publiseringsløsning
              basert på Enonic CMS. Bygget webside i henhold til kundens ønskede
@@ -310,6 +314,7 @@
             {:customer "Atmel"
              :years [2004 2005]
              :employer :atmel
+        :exclude-from-profile? true
              :description "Deltidsstilling ved siden av studier. Drifting av
              serverpark benyttet til design av microcontrollere."
              :tech [:linux]}]
