@@ -5,7 +5,14 @@
  :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en 
                rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i 
                alle ledd fra kildekode til brukeropplevelse."
-
+ :cv/description "Torstein har lang og variert erfaring med systemutvikling.
+                  Han har vært innom de fleste aspekt innen faget og legger stor vekt på kvalitet
+                  i alle ledd. Koding er kjernen i det han jobber med og han er flink til å komme
+                  frem til løsninger på problemer.
+                  
+                  Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
+                  Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor
+                  arbeidskapasitet og jobber effektivt. Han lærer raskt og tenker fremover."
  :phone-number "+47 481 12 911"
  :email-address "torstein@kodemaker.no"
 
@@ -14,8 +21,18 @@
             :linkedin "/in/tmeland/"
             :github "tmetrue"}
 
- :tech {:favorites-at-the-moment [:groovy :grails :angularjs]
+ :tech {:using-at-work [:groovy :grails :java :spring]
+        :favorites-at-the-moment [:groovy :grails :angularjs]
         :want-to-learn-more [:clojure :emacs]}
+
+ :innate-skills [:intellij :eclipse :toad]
+
+ :qualifications ["Senior systemutvikler"
+                  "Løsningsmann"
+                  "Java EE"
+                  "Integrasjon"
+                  "Sterk på SQL"
+                  "Scrum / smidig utvikling"]
 
  :recommendations [{:link {:url "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata" :text "Prøv kataen"}
                     :title "Onkel Bobs Bowling Game Kata"
@@ -140,23 +157,11 @@
              :tech [:j2ee :java :servlets :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}]
 
  :cv {}
- :cv/description " Torstein har lang og variert erfaring med systemutvikling.
- Han har vært innom de fleste aspekt innen faget og legger stor vekt på kvalitet
- i alle ledd. Koding er kjernen i det han jobber med og han er flink til å komme
- frem til løsninger på problemer.
 
- Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
- Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor
- arbeidskapasitet og jobber effektivt. Han lærer raskt og tenker fremover."
 
   :education-summary "Sivilingeniør NTNU, Realfag UiB"
  :experience-since 1999
- :qualifications ["Senior systemutvikler"
-                  "Løsningsmann"
-                  "Java EE"
-                  "Integrasjon"
-                  "Sterk på SQL"
-                  "Scrum / smidig utvikling"]
+
  :certifications [{:name "JA310: Java Web Dynpro Basics", :year 2012}
                   {:name "SAPEP: SAP NetWeaver Portal - Fundamentals", :year 2011}
                   {:name "Profesjonelt styrearbeid", :year 2010}
@@ -173,6 +178,6 @@
               :years [1997 1998 1999 2000 2001 2002]
               :subject "Sivilingeniør Datateknikk - Kunnskapssystemer"}
              {:institution "UiB"
-              :years [1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007]
+              :years [1996 1997]
               :subject "Realfag"}]
  }
