@@ -164,10 +164,7 @@
              bruk i e-læringssystem Oppgaver: Javautvikler."
              :tech [:j2ee :java :servlets :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}]
 
- :cv {}
-
-
-  :education-summary "Sivilingeniør NTNU, Realfag UiB"
+ :education-summary "Sivilingeniør NTNU, Realfag UiB"
  :experience-since 1999
 
  :certifications [{:name "JA310: Java Web Dynpro Basics", :year 2012}
