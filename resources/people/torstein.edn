@@ -59,6 +59,14 @@
             :illustration "/illustrations/hobbies/seiling.jpg"}]
 
  :projects [{:customer "Forsvaret"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Amplan modernisering"
+             :description "Oppgrading av Forsvarets system for ammunisjonsplanlegging.
+             Integrasjon med en rekke andre system tilknyttet ammunisjonsforvaltningen.
+             Oppgave: Analyse, design, test, utvikling, dokumentasjon."
+             :tech [:java :spring :oracle :bootstrap :html :css :javascript]}
+            {:customer "Forsvaret"
              :years [2016]
              :employer :kodemaker
              :summary "Forvaltningssystem"
