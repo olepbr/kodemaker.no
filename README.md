@@ -95,7 +95,9 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                  :tech [ID]}]
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
-                                 :blurb Str
+                                 (optional-key :blurb) Str
+                                 :description Str
+                                 :illustration Path
                                  (optional-key :cv/blurb) Str
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
