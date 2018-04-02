@@ -6,6 +6,7 @@
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
+(def YearMonth (pred (fn [^String s] (try (parse (formatters :year-month) s) true (catch Exception e false)))))
 (def YearRange [(conditional number? Num keyword? (enum :ongoing))])
 
 (def Person
@@ -106,7 +107,9 @@
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
                               (optional-key :exclude-from-profile?) Boolean
-                              :years YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :years) YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :start) YearMonth ;; ...eller år/måned du startet
+                              (optional-key :end) YearMonth   ;; og sluttet
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin

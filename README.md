@@ -117,7 +117,9 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
                               (optional-key :exclude-from-profile?) Boolean
-                              :years [Num] ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :years) YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :start) YearMonth ;; ...eller år/måned du startet
+                              (optional-key :end) YearMonth   ;; og sluttet
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin

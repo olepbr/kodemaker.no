@@ -52,8 +52,10 @@
                               (apply concat)
                               (filter :type))})]))
 
-(defn- year-range [{:keys [years]}]
-  (f/year-range years))
+(defn- year-range [{:keys [years start end]}]
+  (if start
+    (str (f/year-month-str start) " - " (f/year-month-str end))
+    (f/year-range years)))
 
 (defn- table [items headings columns]
   [:table

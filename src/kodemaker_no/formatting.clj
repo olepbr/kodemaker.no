@@ -32,6 +32,11 @@
     (str first-year "-" (when-not (= :ongoing (last rest)) (last rest)))
     first-year))
 
+(defn year-month-str [s]
+  (when s
+    (let [[year month] (str/split s #"-")]
+      (str (format "%02d" (Integer/parseInt month)) "." year))))
+
 (defn year-range [years]
   (str/join ", " (map year-range-str (consecutive-years years))))
 
