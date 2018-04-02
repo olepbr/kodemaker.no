@@ -191,57 +191,16 @@
                           Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
- :side-projects [ {:title "mytomatoes"
-                   :description "Et lite produktivitetsverktøy jeg smalt sammen
+ :side-projects [{:title "mytomatoes"
+                  :description "Et lite produktivitetsverktøy jeg smalt sammen
                                 på en uke, som nå har flere tusen besøkende
                                 daglig - med 3,5 millioner 25 minutters
                                 arbeidsøkter registrert. Den første versjonen
                                 var kodet med PHP, men nylig lagde jeg en Clojure
                                 backend som er litt morsommere å vedlikeholde."
-                   :illustration "/illustrations/side-projects/mytomatoes.jpg"
-                   :link {:url "http://mytomatoes.com" :text "Prøv app'en"}
-                   :tech [:clojure :javascript :jquery]}
-
-                 {:title "Emacs Rocks!"
-                  :description "Jeg ble så begeistret for Emacs at jeg
-                                trengte et utløp for all min
-                                entusiasme. Resultatet ble denne serien med
-                                3-minutters videoer av kule triks som
-                                nå er sett over tre hundre tusen ganger."
-                  :illustration "/illustrations/side-projects/emacs-rocks.jpg"
-                  :link {:url "http://emacsrocks.com" :text "Se videoene"}
-                  :tech [:emacs]}
-
-                 {:title "ZombieTDD"
-                  :description "Bli med når jeg skal skrive et spill
-                                fra scratch med JavaScript og Node.JS - testdrevet
-                                etter beste evne. I løpet av serien parprogrammerer
-                                jeg med gjestestjernene Christian Johansen og
-                                Johannes Brodwall - noen av episodene er endatil
-                                tatt opp foran et live publikum."
-                  :illustration "/illustrations/side-projects/zombietdd.jpg"
-                  :link {:url "http://www.zombietdd.com" :text "Se videoene"}
-                  :tech [:javascript :tdd :testing :nodejs]}
-
-                 {:title "ZombieCLJ"
-                  :description "I denne oppfølgeren til ZombieTDD lager
-                                [Christian](/christian/) og jeg spill med
-                                Clojure og ClojureScript. Det går i
-                                parprogrammering hele veien. Og jaggu skriver vi
-                                ikke flere tester først. Skulle tro XP hadde noe
-                                for seg."
-                  :illustration "/illustrations/side-projects/zombieclj.jpg"
-                  :link {:url "http://www.zombieclj.no" :text "Se videoene"}
-                  :tech [:clojure :clojurescript :tdd :testing]}
-
-                 {:title "Parens of the Dead"
-                  :description "Mer zombier og Clojure, denne gangen på engelsk.
-                               Jeg tenkte det kunne være moro å lage noe for et
-                               større publikum. Litt mer finpussa og litt mindre
-                               jovialt enn originalen."
-                  :illustration "/illustrations/side-projects/parens-of-the-dead.jpg"
-                  :link {:url "http://www.parens-of-the-dead.com" :text "Se videoene"}
-                  :tech [:clojure :clojurescript :tdd :testing]}
+                  :illustration "/illustrations/side-projects/mytomatoes.jpg"
+                  :link {:url "http://mytomatoes.com" :text "Prøv app'en"}
+                  :tech [:clojure :javascript :jquery]}
 
                  {:title "Adventur Delux"
                   :description "Et tekstbasert eventyrspill jeg har
@@ -454,26 +413,52 @@
 
  :screencasts [{:title "Zombie TDD - Testdrevet JavaScript"
                 :url "http://www.zombietdd.com/"
-                :blurb "Følg med når Magnar lager et nettspill fra scratch med
-                        JavaScript på klient og server. Testdrevet etter beste
-                        evne. Har du lyst til å være med?"
-                :tech [:javascript :frontend]}
+                :cv/blurb "Ganske mange episoder med video av live testdrevet
+                programmering i JavaScript. Gjesteepisoder med Christian
+                Johansen og Johannes Brodwall. Inkluderer live programmering på
+                Communities in Action og JavaZone."
+                :blurb "Følg med når [Magnar](/magnar/) lager et nettspill fra
+                scratch med JavaScript på klient og server. Testdrevet etter
+                beste evne. Har du lyst til å være med?"
+                :description "Bli med når jeg skal skrive et spill fra scratch
+                med JavaScript og Node.JS - testdrevet etter beste evne. I løpet
+                av serien parprogrammerer jeg med gjestestjernene Christian
+                Johansen og Johannes Brodwall - noen av episodene er endatil
+                tatt opp foran et live publikum"
+                :illustration "/illustrations/side-projects/zombietdd.jpg"
+                :tech [:javascript :tdd :testing :nodejs]}
                {:title "Zombie CLJ - Clojure og ClojureScript"
                 :url "http://www.zombieclj.no/"
-                :blurb "I denne oppfølgeren til Zombie TDD lager Magnar og
-                        Christian nettspill fra scratch med Clojure og
-                        ClojureScript."
-                :tech [:clojure :clojurescript :frontend]}
+                :blurb "I denne oppfølgeren til Zombie TDD
+                lager [Magnar](/magnar/) og
+                [Christian](/christian/) nettspill fra scratch med Clojure og
+                ClojureScript."
+                :description "I denne oppfølgeren til ZombieTDD
+                lager [Christian](/christian/) og jeg spill med Clojure og
+                ClojureScript. Det går i parprogrammering hele veien. Og jaggu
+                skriver vi ikke flere tester først. Skulle tro XP hadde noe for
+                seg."
+                :illustration "/illustrations/side-projects/zombieclj.jpg"
+                :tech [:clojure :clojurescript :frontend :tdd :testing]}
                {:title "Emacs Rocks!"
                 :url "http://emacsrocks.com"
                 :blurb "En serie med kjappe, små videoer om hvorfor Magnar syns
-                        Emacs er en skikkelig trivelig editor."
+                Emacs er en skikkelig trivelig editor."
+                :description "Jeg ble så begeistret for Emacs at jeg trengte et
+                utløp for all min entusiasme. Resultatet ble denne serien med
+                3-minutters videoer av kule triks som nå er sett over tre hundre
+                tusen ganger."
+                :illustration "/illustrations/side-projects/emacs-rocks.jpg"
                 :tech [:emacs]}
                {:title "Parens of the dead"
                 :url "http://parens-of-the-dead.com/"
-                :blurb "En screencast i samme ånd som Zombie CLJ, denne gangen
-                        på engelsk."
-                :tech [:clojure :clojurescript]}]
+                :blurb "En screencast i samme ånd som Zombie CLJ, denne gangen på engelsk."
+                :description "Mer zombier og Clojure, denne gangen på engelsk.
+                Jeg tenkte det kunne være moro å lage noe for et større
+                publikum. Litt mer finpussa og litt mindre jovialt enn
+                originalen."
+                :illustration "/illustrations/side-projects/parens-of-the-dead.jpg"
+                :tech [:clojure :clojurescript :tdd :testing]}]
 
  :projects [{:customer "Norled"
              :employer :kodemaker

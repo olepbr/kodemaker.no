@@ -9,6 +9,7 @@
 
  :phone-number "922 36 798"
  :email-address "kristoffer@kodemaker.no"
+ :innate-skills [ :intellij :scrum]
 
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
@@ -26,34 +27,194 @@
                      stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}]
 
 
-                   :projects [{:customer "Nye Deichman — Applikasjonsprosjektet "
+ :projects [{:customer "Tieto Norway AS"
+             :description "Tieto leverer et avansert system for håndtering av betalinger og bankkonti. Kundene er noen av verdens
+             største internasjonale banker. For å sikre kvalitet og leveringsevne mot nye og eksisterende kunder har Tieto begynt
+              omlegging til en mer agil arbeidsform og i en tid lagt mer vekt på systematisk oppfølging av kodekvalitet i utviklingen.
+              Kristoffer bidro med kodeforbedringer og oppdatering av automatiske tester"
+             :years [2017 2018]
+             :employer :kodemaker
+             :summary "Bidrag til høyning av kodekvalitet og testdekning"
+             :tech [:java :mq :git :svn :oracle :db2]}
+            {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
-             :tech [:java :rdf :ractive :react :nodejs]}
+             :employer :kodemaker
+             :summary "Utvikling av nytt biblioteksystem for Deichmanske bibliotek"
+             :tech [:java :rdf :ractive :react :nodejs :jaxrs :apache-jena :fuseki :jetty
+                    :javascript :redux :nodejs :elasticsearch :rdf :ubuntu :go :ruby :cucumber :koha
+                    :jenkins :phantomjs :docker :sass]}
             {:customer "Kommunal- og moderniseringsdepartementet"
              :description "Utvikling av EVA Admin – applikasjon for konfigurasjon og gjennomføring av valg i Norge"
              :years [2014 2015]
-             :tech [:java :hibernate :jsf :jasperserver]}
+             :employer :kodemaker
+             :summary "Utvikling av EVA Admin – applikasjon for konfigurasjon og gjennomføring av valg i Norge"
+             :tech [:java :hibernate :jsf :jasperserver :primefaces :wildfly :postgresql]}
             {:customer "Broadnet AS"
              :description "Utvikling av FiberWeb-portalen for salg av bredbåndproduker i bedriftsmarkedet
              og et eget hypermediabasert REST-API for registrering av salgsordre for ADSL i privatmarkedet gjennom ekstern CRM-applikasjon, samt et nytt system for ordreleveranse. I perioder som SCRUM master"
              :years [2012 2013]
-             :tech [:wicket :java :mongodb :ajax :jaxrs :jboss :collectionjson]}
+             :employer :kodemaker
+             :summary "Utvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig til bedriftsmarkedet. REST-api for salg av ADSL til privatmarkedet"
+             :tech [:wicket :java :mongodb :ajax :jboss :collectionjson
+                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jaxrs
+                    :jboss :puppet :postgresql :oracle :mongodb :maven :jenkins :git]}
             {:customer "Sparebank1 Gruppen"
              :description "Proof-of-concept med CA SiteMinder som hyllevareprodukt. Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM."
              :years [2011 2012]
-             :tech [:jsf :java :openam :bankid :weblogic :css :ajax :fatwire :git :jira :confluence :siteminder]}
+             :employer :kodemaker
+             :summary "Implementasjon av ny sikkerhetsløsning"
+             :tech [:jsf :java :openam :bankid :weblogic :css :fatwire :git :jira
+                    :confluence :siteminder :javascript :ajax :bash :mockito :openam :apache
+                    :linux :pki :saml :tomcat :jetty :maven :rpm :bankid :weblogic :fatwire]}
+            {:customer "NKI Nettstudier"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Assistanse ifm JPA/OpenJPA"
+             :description "Assistanse ifm feilsøking og forslag til
+             arkitekturmessige endringer i JPA-basert persistenslag i
+             applikasjon for utvikling og vedlikehold av nettkurs."
+             :tech [:java :openjpa :tomcat]}
+            {:customer "A-pressen Digitale Medier"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Utvikling/portering til ny plattform"
+             :description "Videreutvikling og portering av funksjonalitet til ny
+             og mer modulær plattform for effektiv publisering av nettutgavene
+             til 50–60 lokalaviser i Norge. Sterk fokus på ytelse og korrekt
+             bruk at HTTP- og HTML-standarder."
+             :tech [:java :spring :jsp :css :javascript :jetty :linux :atom :rss :xsl :varnish
+                    :escenic :svn :jira]}
+            {:customer "SpareBank1 Gruppen"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Proof of concepts ifm sikkerhet"
+             :description "Utførte to Proof of concepts ifm sikkerhetsløsning for Finansportalen"
+             :tech [:java :wsrp :weblogic :mule :siteminder :bankid :ldap]}
+            {:customer "Telenor Mobil"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Oppgadering av COS til Weblogic 10/Java 1.6"
+             :description "Oppgradering og tilpasning av COS
+             javakode/konfigurasjon til java 1.6 og Weblogic 10.3. Innføring av
+             Gradle som nytt byggesystem"
+             :tech [:java :jms :jmx :sql :axis :xfire :maven :gradle :groovy :spring :jms :weblogic
+                    :xml :xslt :sybase :mks :wiki]}
+            {:customer "Hotell.no"
+             :years [2009]
+             :employer :kodemaker
+             :summary "Ny funksjonalitet, endringer, feilretting"
+             :description "Reiselivsside med søk etter hoteller i Norge og
+             utland. Implementere ønskede endringer, bl.a. google-kart."
+             :tech [:java :jsp :mysql]}
             {:customer "FINN Surf Sammen"
              :description "Utvikling av løsning i finn.no hvor brukere kan dele gode funn. Jobbet hovedsaklig med javalaget,
              men også i databaselaget."
              :years [2008 2009]
-             :tech [:java :ajax :jsp :tsql :cvs :jira :confluence]}
+             :employer :kodemaker
+             :summary "SurfSammen, Personalisering, Motor"
+             :tech [:java :ajax :jsp :tsql :cvs :jira :confluence :t-sql :sybase :solr :fast
+                    :spring :javascript :jquery :css :xml :html :webtrends]}
+            {:customer "Telenor Mobil AS"
+             :years [2007]
+             :employer :kodemaker
+             :summary "COS, Web i Norge"
+             :description "COS er et omfattende mellomvaresystem for håndtering
+             av kunde-, ordre og abonnementsinformasjon for mange
+             klientplattformer mot Telenor Mobil som har både kunder,
+             forhandlere og Telenors kundebehandlere som brukere. Prosjektet
+             gikk ut på å tilpasse COS til nytt web-basert selvbetjeningsløsning
+             for Telenor, Web i Norge, som skal dekke fastlinje, internett og
+             mobiltelefon for kundene. Videreutvikling av COS både i henhold til
+             artkitekturmessige ønske for COS og endringer for å tilby ønsket
+             funksjonalitet til Web i Norge."
+             :tech [:java :j2ee :weblogic :xfire-webservices :sybase]}
             {:customer "Kartverket"
              :description "Utviklet webservice-API for uthenting av alle endringer for synkronisering
              av andre systemer. Laget også integrasjon mot eksterne kilderegistre, som Enhetsregisteret,
              Folkeregisteret og Tinglysing, for oppdatering av Matrikkelen derfra."
              :years [2005 2006 2007]
-             :tech[:java :oracle-locator :mule :weblogic :swing :hibernate] }]
+             :employer :kodemaker
+             :summary "Matrikkelen"
+             :tech[:java :oracle-locator :mule :weblogic :swing :hibernate :j2ee :weblogic
+                   :hibernate :soa :xml :xslt]}
+            {:customer "Forsvaret (FLO/IKT) "
+             :years [2003]
+             :employer :kodemaker
+             :summary "FelReg, Amplan"
+             :description "Drift og vedlikehold av artikkelregister og
+             publikasjonsregister samt Amplan, et verktøy for planlegging av
+             ammunisjonsforbruk for øvelser og strid. Prosjektoppgaver:
+             Videreutvikling av web-baserte registre med søkefunksjonalitet og
+             rapporter. Integrasjon mot andre logistikksystemer.
+             Publiseringsløsning for håndbok og nyheter."
+             :tech [:java :jboss :jsp :jasperreport :spring :oracle :lucene :magnolia-cms]}
+            {:customer "ICA Norge AS"
+             :years [2003]
+             :employer :kodemaker
+             :summary "Buying Catalog"
+             :description "EMS er et av de største it-prosjekt innen
+             varehandelsbransjen (prosjekt har en størrelseorden på €200 mill.).
+             EMS inneholder 5 applikasjoner som tar seg av alt fra
+             leverandørkontrakt, innkjøp, varesortiment, butikkgruppering,
+             kampanje, vareplassering og prising. Deployment av utviklet kode og
+             installasjon/konfigurasjon av tredjeparts programvare."
+             :tech
+             [:java :j2ee :websphere :webmethods :ant :versata :ibm-mq]}
+            {:customer "Selvaag Homes AS "
+             :years [2002]
+             :employer :elan-it
+             :summary "Personalkort, Problemark"
+             :description "Casa var et langsiktig program (~10 år) med mål om å
+             automatisere produksjon av byggetegninger til boliger samt
+             støttefunksjoner rundt husproduksjon. Utviklet proof of concept for
+             XML-integrasjon med Xtractor ved å integrere informasjon fra flere
+             datakilder (Agresso, SalesMaker og Active Directory). Utvikle
+             webbasert løsning for innsamling av problemer og løsninger i
+             husbyggeprosess."
+             :tech [:java :j2ee :weblogic :mssql :xml :xslt :xtractor]}
+            {:customer "Legion AS"
+             :years [2001]
+             :employer :elan-it
+             :summary "IN Administrator"
+             :description "Legion tilbød outsourcing av callcenter-løsninger.
+             Utviklet klient/tjenerbasert administrasjonsverktøy for callcenter."
+             :tech [:java :oracle :visibroker :swing]}
+            {:customer "Storebrand Livsforsikring AS"
+             :years [2000]
+             :employer :objectware
+             :summary "Link på Nett"
+             :description "Selvbetjent nettløsning for håndtering av Unit
+             Linked-avtaler. Utviklet servlet/JSP-basert løsning for fondsbytte
+             og grafisk fremstilling av verdiutvikling på fondsportefølje."
+             :tech [:java :jsp :servlets :websphere :visualage]}
+            {:customer "Telenor Bedrift"
+             :years [1999]
+             :employer :objectware
+             :summary "Kundemaster"
+             :description "EJB-basert system for styring av distribusjon av
+             kundedata. Pilotprosjekt for innføring av EJB i Telenor Bedrift.
+             Utviklet EJB’er for styring av datadistribusjon."
+             :tech [:java :ejb :gemstone :oracle]}
+            {:customer "Gjensidige NOR"
+             :years [1999]
+             :employer :objectware
+             :summary "KLE Kunde, Logg, Engasjement"
+             :description "IBM Component Broker-basert løsning for
+             kundehåndtering. Java-overbygg over eksisterende CICS-basert
+             kundesystem. Utviklet javabaserte ytelsestester for å verifisere
+             skalerbarhet. Utviklet også server-overvåkningssystem som ble
+             integrert med eksisisterende overvåkningssystemer (CA Unicenter)
+             via SNMP"
+             :tech [:java :ibm-component-broker :cpp :cics :snmp]}
+            {:customer "Det Norske Veritas"
+             :years [1997]
+             :employer :computas-expert
+             :summary "Sesam 2000"
+             :description "Fornyelse av DNVs programpakke for strukturanalyse av
+             offshore-konstruksjoner. Utviklet scriptingmodul for journalering
+             og gjenskaping av strukturmodeller."
+             :tech [:mscpp :activex :javascript]}]
 
  :endorsements [{:author "Bjørn Henrik Vangstein"
                  :title "Avdelingsleder IT, FINN.no"
@@ -78,4 +239,35 @@
              }
              ]
 
- }
+ :cv {}
+ :cv/description " Kristoffer har Cand Scient-grad fra Universitetet i Oslo og
+ mer enn 20 års konsulenterfaring fra systemutvikling i større og mindre
+ prosjekter hovedsaklig basert på JavaJEE-plattformen. Erfaring fra flere
+ bransjer, bl.a bank/forsikring, forsvar, telekom, digitale medier og offentlig
+ forvaltning. Han er en ressursperson som er sosial og opptatt av at teamet som
+ helhet leverer god kvalitet. Lang erfaring med Java og de fleste teknologier
+ rundt gjør at han gjerne bidrar på de fleste områder — fra integrasjon,
+ sikkerhet og utvikling fra databaselag opp til brukergrensesnitt. Kristoffer er
+ analytisk, men også pragmatisk og tar gjerne tak i nye problemstillinger.
+ Certified SCRUM Master."
+ :education-summary "Cand Scient, UiO, Inst. for Informatikk"
+ :experience-since 1997
+ :relationship-status "Gift, 3 barn"
+ :born 1967
+ :education [{:institution "Universitet i Oslo"
+              :years [1997]
+              :subject "Cand Scient, Informatikk, karakter 1,6"}]
+ :qualifications ["Senior Systemutvikler"
+                  "Frontend/backend/integrasjon"
+                  "Java/JEE/JavaScript"
+                  "Sikkerhet"
+                  "Selvstendig"
+                  "Allsidig"]
+ :certifications [{:name "Certified Scrum Master", :year 2007}
+                  {:name "IBM Certfied Solution Developer", :year 2001}
+                  {:name "IBM WebSphere Application Server (Standard Edition)"
+                   :year 2001}
+                  {:name "Object-Oriented Analysis and Design Test (IBM)", :year 2001}
+                  {:name "SUN Certified Programmer for the Java 2 Platform"
+                   :year 2001}]
+}

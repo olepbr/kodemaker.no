@@ -9,7 +9,7 @@
  :akka :library
  :alpine :os
  :android :os
- :angularjs :framework
+ :angularjs :frontend
  :ant :devtools
  :appcode :devtools
  :architecture :methodology
@@ -21,7 +21,9 @@
  :atom :specification
  :auth0 :security
  :automated-acceptance-testing :methodology
+ :aws :cloud
  :aws-api-gateway :cloud
+ :aws-cloudformation :cloud
  :aws-cloudfront :cloud
  :aws-cloudwatch :cloud
  :aws-ec2 :cloud
@@ -33,6 +35,7 @@
  :aws-route53 :cloud
  :aws-s3 :cloud
  :aws-vpc :cloud
+ :azure :cloud
  :babel :tool
  :bankid :library
  :bamboo :tool
@@ -75,7 +78,6 @@
  :cvs :vcs
  :cygwin :devtool
  :cxf :server
- :d3 :library
  :dashing :tool
  :datascript :database
  :db2 :database
@@ -83,16 +85,18 @@
  :dbfit :framework
  :ddd :methodology
  :delphi :proglang
+ :digital-ocean :cloud
  :dojo :library
  :domain-modeling :methodology
  :docker-cloud :cloud
  :dotnet :framework
- :dreamweaver-mx :tool
+ :dreamweaver-mx :devtools
  :dynamodb :database
  :easerver :server
  :eclipse :devtools
  :ehcache :server
- :elasticsearch :server
+ :ejb :library
+ :elasticsearch :database
  :elisp :proglang
  :epicentric-portal :server
  :es6 :proglang
@@ -110,6 +114,7 @@
  :frp :methodology
  :fusioncharts :library
  :gcd :server
+ :geb :library
  :gerrit :tool
  :geronimo :server
  :git-svn :vcs
@@ -118,7 +123,7 @@
  :glassfish :server
  :google-adwords :tool
  :google-analytics :tool
- :google-closure :library
+ :google-closure :frontend
  :google-cloud-messaging :cloud
  :google-earth :tool
  :google-image-charts :library
@@ -131,6 +136,7 @@
  :grunt :library
  :gwt :framework
  :h2db :database
+ :heroku :cloud
  :hadoop :library
  :hamcrest :library
  :haproxy :devops
@@ -141,9 +147,10 @@
  :hibernate-search :library
  :honeysql :library
  :hpunix :os
+ :hsqldb :database
  :html :frontend
  :http :frontend
- :hudson :server
+ :hudson :devops
  :hugsql :library
  :hystrix :library
  :ibm-bluemix :server
@@ -162,6 +169,7 @@
  :javafx :library
  :jdbc :library
  :jersey :library
+ :jenkins :devops
  :jetty :server
  :jira :tool
  :jaxrs :tool
@@ -173,7 +181,7 @@
  :joomla :server
  :jool :library
  :jpa :library
- :jquery :library
+ :jquery :frontend
  :jquery-mobile :library
  :jrebel :library
  :js-test-driver :library
@@ -181,17 +189,20 @@
  :jspm :devtools
  :junit :library
  :junitee :library
- :kafka :server
+ :kafka :database
  :kanban :methodology
  :karma :library
  :kibana :server
  :krypto :methodology
  :kubernetes :devops
  :koha :library
+ :kotlin :proglang
  :leiningen :devtools
  :less :frontend
+ :letsencrypt :security
  :liberator :library
  :lighttable :devtools
+ :linux :os
  :linux-kernel :library
  :liquibase :library
  :lisp :proglang
@@ -230,6 +241,7 @@
  :oauth2 :security
  :objc :proglang
  :objcplusplus :proglang
+ :oc4j :server
  :octopus :devops
  :oidc :security
  :om :framework
@@ -251,6 +263,7 @@
  :pki :security
  :play :framework
  :pmd :tool
+ :postgresql :database
  :puppet :devops
  :prototype :library
  :pygments :library
@@ -261,7 +274,7 @@
  :rational-clearcase :vcs
  :re-frame :library
  :reactive-cocoa :library
- :reagent :library
+ :reagent :frontend
  :redhat :os
  :redux :library
  :release-management :methodology
@@ -275,6 +288,7 @@
  :sap :server
  :saltstack :devops
  :saml :security
+ :sass :frontend
  :sbt :devtools
  :scalatra :framework
  :scrum :methodology
@@ -287,6 +301,7 @@
  :soap :specification
  :solaris :os
  :sonar :tool
+ :sourcesafe :vcs
  :splunk :server
  :spring-batch :framework
  :spring-boot :framework
@@ -306,6 +321,7 @@
  :sqlite :database
  :squirrel-sql :library
  :statsd :server
+ :sublime-text :devtools
  :swing :library
  :teamcity :devops
  :terminal :devtools

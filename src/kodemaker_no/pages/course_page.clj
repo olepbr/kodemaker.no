@@ -3,11 +3,11 @@
             [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
 
-(defn- render-item [{:keys [url title tech by blurb]}]
+(defn- render-item [{:keys [url title tech by blurb description]}]
   (list
    [:h3 [:a {:href url} title]]
    (f/render-tech-bubble tech by)
-   [:p blurb]))
+   (f/to-html (or blurb description))))
 
 (defn course-page [videos screencasts]
   {:title "Lærelysten? Vi deler gjerne!"

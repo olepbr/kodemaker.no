@@ -51,6 +51,7 @@
    (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
+                                (optional-key :cv/blurb) Str
                                 (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
@@ -81,7 +82,10 @@
                                                        (optional-key :source) URL}}]
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
-                                 :blurb Str
+                                 (optional-key :blurb) Str
+                                 :description Str
+                                 :illustration Path
+                                 (optional-key :cv/blurb) Str
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
                                  :url URL}]
@@ -129,13 +133,16 @@
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
+                                    :year Num
                                     (optional-key :url) URL
-                                    :year Num}]
+                                    (optional-key :certificate) {:url URL
+                                                                 (optional-key :text) Str}}]
 
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
 
-   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
+                           (optional-key :exclude-techs) [ID]}}})
 
 (def Tech
   {:id ID

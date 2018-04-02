@@ -13,7 +13,7 @@
      (c/person
       {:id :christian
        :name ["Christian" "Johansen"]
-       :cv {}
+       :cv {:default {:exclude-techs [:jira]}}
        :tech {:using-at-work [:clojure :java]}
        :innate-skills [:bash]
        :description "Default beskrivelse"
@@ -127,13 +127,18 @@
    (->> cvs :kjetil :techs :proglang (map :id)) => [:kotlin :groovy :java :javascript])
 
   (fact
+   "Excludes some techs"
+   (->> cvs :christian :techs :methodology (map :id)) => [:tdd])
+
+  (fact
    "Compiles techs from all self-effort fields"
    (->> cvs :christian :techs vals (apply concat) (map :id) set) =>
-   #{:java :clojure :clojurescript :bash :sinon :tdd :jira :unix})
+   #{:java :clojure :clojurescript :bash :sinon :tdd :unix})
 
   (fact
    "Resolves project employers"
-   (->> cvs :christian :projects (map :employer)) => ["Kodemaker AS" "Kodemaker AS"])
+   (->> cvs :christian :projects (map :employer)) => [{:id :kodemaker :name "Kodemaker AS"}
+                                                      {:id :kodemaker :name "Kodemaker AS"}])
 
   (fact
    "Combines appearances with presentations and sorts by date"

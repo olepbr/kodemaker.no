@@ -7,10 +7,10 @@ Våre nye nettsider kommer til verden.
 Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen) om du ikke
 har den. Sats på versjon 2.3+. Hvis du har en gammel versjon under 2.0 så funker
 det garantert ikke. På OSX kan du hente den med homebrew: `brew update && brew
-install leiningen`
+install leiningen` eller med SDKMAN: `sdk install leiningen`
 
-Du må også ha JDK 1.7. Sjekk med `java -version`, ellers
-[last ned her](http://docs.oracle.com/javase/7/docs/webnotes/install/index.html).
+Du må også ha JDK 1.7 eller 1.8. Sjekk med `java -version`, ellers
+[last ned her](http://www.oracle.com/technetwork/java/javase/downloads/index.html) eller installer med SDKMAN.
 
 Gå så til rota av prosjektet, og
 
@@ -96,6 +96,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
                                  :blurb Str
+                                 (optional-key :cv/blurb) Str
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
                                  :url URL}]
@@ -147,7 +148,8 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
 
-   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
+                           (optional-key :exclude-techs) [ID]}}})
 ```
 
 Legge merke til at dette er kode som kjører når siden bygges opp, slik
@@ -343,13 +345,15 @@ dukke opp på teknologi-sammendraget på CV-en din.
 Du kan påvirke teknologisammendraget på noen måter:
 
 1. Dersom du savner teknologier/metodikk i sammendraget, men ikke gidder å legge
-   disse på noen spesifikke prosjekt kan du legge dem til som "medføtte skills":
+   disse på noen spesifikke prosjekt kan du legge dem til som "medfødte skills":
    `:innate-skills [:shell]`
 2. Teknologier sorteres etter antall forekomster. Dette henger ikke alltid
    sammen med hvordan man ønsker å profilere seg. Du kan påvirke sorteringen ved
    å legge til `:cv {:default {:preferred-techs [:clojure :clojurescript]}}` i
    profilen din. De teknologiene du her lister opp vil dukke opp i den
    rekkefølgen på CV-en, med resterende sortert etter antall forekomster.
+3. Dersom du ønsker å ekskludere enkelte teknologier fra sammendraget på toppen
+   kan du legge dem til i `{:cv {:default {:exclude-techs [:jira]}}}`
 
 ## Provisjonering
 

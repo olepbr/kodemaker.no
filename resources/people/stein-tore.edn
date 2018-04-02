@@ -13,9 +13,12 @@
  :presence      {:cv      "steintore"
                  :twitter "steintt"
                  :github  "steintore"
-                 :linkedin "/in/steintore/"
-                 }
-
+                 :linkedin "/in/steintore/"}
+    
+ 
+ :innate-skills [:terminal :browser-devtools :svn :osx :android :activemq :confluence :mysql :nexus 
+                 :pair-programming :mariadb :influxdb :db2 :github :gitlab :google-maps :h2db]
+ 
  :tech          {:favorites-at-the-moment [:clojure]
                  :want-to-learn-more      [:clojure :funksjonell-programmering :clojurescript]}
 
@@ -29,73 +32,271 @@
                   Det hele starter med en, to, tre eller fire Raspberry PIs"
                   :illustration "/illustrations/hobbies/raspberrypi.jpg"}]
 
-:recommendations [
-                {:title "TED Radio hour - podcast"
+ :recommendations [
+                   {:title "TED Radio hour - podcast"
                     :link {:url "http://www.npr.org/programs/ted-radio-hour/"
-                        :text "Se hjemmesiden"}
+                           :text "Se hjemmesiden"}
                     :tech [:podcast]
-                    :blurb "Herlig gjennomgang av noen av de beste TED-talks, forklarer konsept og går enda litt dypere enn en vanlig talk. Anbefales!" }
-                {:title "Freakonomics Radio - podcast"
+                    :blurb "Herlig gjennomgang av noen av de beste TED-talks, forklarer konsept og går enda litt dypere enn en vanlig talk. Anbefales!"}
+                   {:title "Freakonomics Radio - podcast"
                     :link {:url "http://freakonomics.com/"
-                        :text "Se hjemmesiden"}
+                           :text "Se hjemmesiden"}
                     :tech [:podcast]
-                    :blurb "Mange gode episoder som får deg til å tenke og se ting fra en annen side." }
-                {:title "Webutvikling med Clojure"
+                    :blurb "Mange gode episoder som får deg til å tenke og se ting fra en annen side."}
+                   {:title "Webutvikling med Clojure"
                     :link {:url "https://vimeo.com/105857867"
-                        :text "Se video"}
+                           :text "Se video"}
                     :tech [:clojure]
                     :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig ønske å lære Clojure.
-                            Anbefales!" }]        
+                            Anbefales!"}]
 
  :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it/"
-                :title "OpenHAB heats my living room when I need it"
-                :blurb "Oppvarming av stua når jeg trenger det, dvs at det er varmt når jeg står opp og når jeg kommer
+               :title "OpenHAB heats my living room when I need it"
+               :blurb "Oppvarming av stua når jeg trenger det, dvs at det er varmt når jeg står opp og når jeg kommer
                         hjem fra jobben. Men ikke når jeg er på ferie eller jobb. Høres bra ut? Det er ikke veldig vanskelig"
-                :tech [:openhab]
-              }
+               :tech [:openhab]}
+               
               {:url "http://steintore.github.io/dashboard/2013/04/05/jenkins-build-status-widget-for-dashing/"
-                :title "Jenkins build status widget for Dashing"
-                :blurb "Jenkins er et veldig nyttig verktøy for bygging og automatisering, men pent er det ikke.
+               :title "Jenkins build status widget for Dashing"
+               :blurb "Jenkins er et veldig nyttig verktøy for bygging og automatisering, men pent er det ikke.
                         Da jeg fant [Dashing](http://shopify.github.io/dashing/) tenkte jeg at det hadde vært gøy å lage et dashboard som viser
                         statusen fra Jenkins, med muligheter for mye mer. Dette har jeg foreløpig brukt i 2 prosjekter"
-                :tech [:jenkins :dashing]
-                }
+               :tech [:jenkins :dashing]}
+               
               {:url "http://steintore.github.io/tips/2013/01/22/terminator-for-linux-most-important-shortcuts/"
-                :title "Nyttige shortcuts for Terminator for Linux"
-                :blurb "Jeg har prøvd å samle de nyttigste snarveiene jeg bruker i Terminator.
+               :title "Nyttige shortcuts for Terminator for Linux"
+               :blurb "Jeg har prøvd å samle de nyttigste snarveiene jeg bruker i Terminator.
                         Terminator er et veldig bra terminal-emulator for linux."
-                :tech [:linux :terminator]
-                }]
+               :tech [:linux :terminator]}]
+               
 
- :projects      [{:customer    "NSB"
-                   :description "RASK - Rapportsystem for kjøring. Nyutvikling og videreutvikling av
+ :projects      [{:customer "NSB"
+                  :years [2017 :ongoing]
+                  :employer :kodemaker
+                  :summary "StatusPush - Android App. Android App som brukes til internt personell hos NSB; fortrinnsvis Konduktører og førere. Ved avvik i trafikken vil app-en få en push som beskriver forholdene."
+                  :description "Prosjekt: StatusPush Oppgaver: Utvikler
+                  Funksjonell og teknisk beskrivelse: Ombordpersonell varsles i
+                  sitt nettbrett om avvikssituasjoner fra NSBs sentrale
+                  DROPS-enhet. Serveren sentralt sender push
+                  notifications (v/Google Cloud Messaging) når en
+                  avvikssituasjon blir registret i NSB-Status. StatusPush
+                  backend får disse avviksituasjonene fra Status via JMS. Det er
+                  vektlagt at app-en skal ha enkelt brukergrensesnitt."
+                  :tech [:android :google-cloud-messaging :groovy :jms :activemq :tomcat]}
+                 {:customer "NSB"
+                  :years [2017 :ongoing]
+                  :employer :kodemaker
+                  :summary "Status. En web-applikasjon som fungerer som en paraply over diverse undersystemer, slik at trafikkinformatør kun trenger å taste inn en tekst som beskriver et avvik på ett sted - så distrubuerer Status til underliggende informasjonssystemer (f.eks reiseplanlegger www.nsb.no)."
+                  :description "Prosjekt: Status Oppgaver: Utvikler Funksjonell
+                  og teknisk beskrivelse: Status distribuerer informasjon
+                  internt i NSB, samt eksternt, ved oppståtte avvik. De
+                  forskjellige i Status informasjonsmekanismene kalles kanaler.
+                  Applikasjonen er logisk inndelt i hhv Stasjon, Tog og
+                  Infrastruktur. De forskjellige kanalene bety alltid en
+                  integrasjon mot et annet system, derfor er Status på mange
+                  måter et integrasjonsprosjekt. Status er basert på
+                  microservices -arkitektur for implementasjon av integrasjon
+                  mot de forskjellige kanalene, slik at web-frontend modulen
+                  ikke blir påvirket av ny eller endret kanalhåndtering.
+                  Brukergrensesnittene til Status er single page webapps laget
+                  med Angular og React."
+                  :tech [:groovy :javascript :grails :gorm :gradle :oracle :centos
+                         :ansible :tomcat :react :html :css :bootstrap :spock :webservices
+                         :xml :json :rest]}
+                 {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
+                  :years [2016]
+                  :employer :kodemaker
+                  :summary "Gjøre prototype produksjonsklar. Systemet henter inn
+                  og aggregerer informasjon fra spørreskjema, der barnet svarer
+                  på \"grad\" av smilefjes."
+                  :description "Gjøre prototype produksjonsklar. Systemet henter
+                  inn og aggregerer informasjon fra spørreskjema, der barnet
+                  svarer på \"grad\" av smilefjes. Dette er et dynamisk
+                  smilefjes som går fra sur til glad, slik at man kan måle
+                  barnets stemning bedre."
+                  :tech [:clojure :clojurescript :postgresql :heroku]}
+                 {:customer "Thomson Reuters"
+                  :years [2016]
+                  :employer :kodemaker
+                  :summary "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
+                  :description "Utvikling av løsning for intern distribusjon av
+                  fremskrevne tidsserier fra forskjellige markeder."
+                  :tech [:java :spark :kafka :hbase :hadoop :zookeeper :logstash]}
+                 {:customer    "NSB"
+                  :description "RASK - Rapportsystem for kjøring. Nyutvikling og videreutvikling av
                                 Enka - et rapportsystem for togenergiforbruk Integrasjon mot
                                 Jernbaneverkets Erex, innhenting av data fra interne systemer for rapportering"
-                   :years       [2013 2014]
-                   :tech        [:groovy :grails :javascript :html :css :jenkins :jira :confluence]}
-                  {:customer    "NRK"
-                   :description "Publisering på nrk.no.
+                  :years       [2013 2014]
+                  :employer    :kodemaker
+                  :summary     "Rapportsystem for kjøring (RASK)"
+                  :tech        [:groovy :grails :javascript :html :css :jenkins :jira :confluence]}
+                 {:customer    "NRK"
+                  :description "Publisering på nrk.no.
                                 Nyutvikling og forbedring av publiseringsløsningen på nrk.no.
                                 Testutvikler for publisering på nrk.no. Skrive, forbedre
                                 og vedlikeholde automatiske tester for rammeverk som publiserer innhold på nrk.no"
-                   :years       [2010 2011 2012 2013]
-                   :tech        [:ruby :cucumber :java :javascript :jira :maven]}
-                  {:customer    "Oslo Børs VPS"
-                   :description "Utarbeide arkitektur og utvikle nytt fondssystem for Oslo Børs VPS.
+                  :years       [2010 2011 2012 2013]
+                  :employer    :kodemaker
+                  :summary     "Testutvikler for publisering på nrk.no"
+                  :tech        [:ruby :cucumber :java :javascript :jira :maven]}
+                 {:customer    "Oslo Børs VPS"
+                  :description "Utarbeide arkitektur og utvikle nytt fondssystem for Oslo Børs VPS.
                                 Løsningen består av en realtids ordremotor for fondshandel i Norge og Norden.
                                 Den ble utviklet en webapplikasjon for bruk av fondsforvaltere,
                                 samt utstrakt brukt av eksterne grensesnitt (Webservice, meldingsystemer) for
                                 mottak av ordre, kurser og lignende."
-                   :years       [2010 2011]
-                   :tech        [:java :tapestry :css :html :jquery :javascript :jira :maven]}]
+                  :years       [2010 2011]
+                  :employer    :kodemaker
+                  :summary     "Utvikling av nytt fondssystem"
+                  :tech        [:java :tapestry :css :html :jquery :javascript :jira :maven]}
+                 {:customer "Verdipapirsentralen"
+                  :years [2009 2010]
+                  :employer :avenir
+                  :summary "Løsning for obligatorisk tjenestepensjon. Webutvikling og applikasjonsintegrasjoner"
+                  :description "Obligatorisk tjenestepensjon Utarbeide
+                  arkitektur og utvikle ny løsning for obligatorisk
+                  tjenestepensjon hos VPS. Løsningen benyttes av mange
+                  eksisterende fondsleverandører som er kunder av VPS og selges
+                  videre til deres bedriftskunder. Løsningen eksisterer i dag på
+                  gammel plattform, men skrives helt om i henhold til nye
+                  teknologivalg og krav. Oppgaver: Utvikler, frontendutvikler,
+                  Teamleder i perioder, webutvikling,
+                  applikasjonsintegrasjoner (SOA), analyse og design"
+                  :tech [:java :spring-mvc :hibernate :maven :spring-mvc :jquery :json :jrebel]}
+                 {:customer "Verdipapirsentralen"
+                  :years [2008]
+                  :employer :avenir
+                  :summary "Videreutvikling og feilretting av applikasjoner. Deltagelse i interne prosjekter hos VPS"
+                  :description "Videreutvikling av eksisterende applikasjoner
+                  Videreutvikling og retting av VPS sine løsninger etter
+                  kundeforespørsler. Deltagelse i interne prosjekter hos VPS.
+                  Oppgaver: Design, estimering og webutvikling"
+                  :tech [:java :spring-mvc :hibernate :maven :jquery]}
+                 {:customer "SLF - Statens Landsbruksforvaltning"
+                  :years [2007]
+                  :employer :avenir
+                  :summary "Videreutvikling og forvaltning av applikasjonene NASK og WebSkas, webutvikling"
+                  :description "Videreutvikling NASK - Naturskadesystem for
+                  saksbehandling Videreutvikling og forvaltning av applikasjonen
+                  NASK - som er en applikasjon som er utviklet i Java og Swing.
+                  Applikasjonen brukes av saksbehandlere i kommunene for
+                  registrering og oppfølging av naturskader. Oppgaver: Analyse,
+                  design, utvikling og estimering."
+                  :tech [:java :j2ee :bc4j :swing :oracle-jdeveloper :interconnect]}
+                 {:customer "SLF - Statens Landsbruksforvaltning"
+                  :years [2007]
+                  :employer :avenir
+                  :description "Videreutvikling Skogfondssytemet WebSkas
+                  Videreutvikling og forbedring av Skogfondssystemet på nett.
+                  Vedlikehold av brukerdokumentasjon. Oppgaver: Analyse, design,
+                  utvikling og estimering"
+                  :tech [:java :j2ee :bc4j :swing :oracle-jdeveloper]}
+                 {:customer "NAV"
+                  :years [2007]
+                  :employer :avenir
+                  :summary "Videreutvikling, feilretting og forvaltning av eksisterende løsninger på nav.no"
+                  :description "Døgnåpen Forvaltning Nyutvikling av
+                  foreldrepengeveilederen på nav.no. Oppgaver: Estimering og
+                  utvikling (frontend og backend)"
+                  :tech [:java :j2ee :spring-mvc :hibernate :navs-rammeverk :rad :websphere]}
+                 {:customer "NAV"
+                  :years [2007]
+                  :employer :avenir
+                  :description "Forprosjekt - rettskilder Forprosjekt for
+                  Rettskildene på nav.no Oppgaver: Utvikler (frontend)"
+                  :tech [:vertical-site :xml :xslt :css :html]}
+                 {:customer "NAV"
+                  :years [2007]
+                  :employer :avenir
+                  :description "AltUt-modul Utvikling av AltUt-modul for utlegg
+                  av rapporter til AltInn Oppgaver: Utvikler"
+                  :tech [:java :hibernate :rad :websphere]}
+                 {:customer "NAV"
+                  :years [2006]
+                  :employer :avenir
+                  :summary "Døgnåpen forvaltning - omskriving av eksisterende applikasjon"
+                  :description "Døgnåpen Forvaltning – konvertering av
+                  Aa-melding (Melding til Arbeidsgiver- og
+                  arbeidstakerregisteret) til nytt rammeverk Konvertering av
+                  eksisterende løsning Aa-melding over til nytt rammeverk,
+                  testing Oppgaver: Utvikler (frontend og backend)"
+                  :tech [:java :j2ee :spring-mvc :hibernate :rad :websphere]}
+                 {:customer "Datanova AS"
+                  :employer :datanova
+                  :years [2003 2006]
+                  :description "Jobbet som utvikler, tester, kundeansvarlig og IT-koordinator."
+                  :tech [:architecture]}
+                 {:customer "IBM"
+                  :employer :ibm
+                  :years [1999 2002]
+                  :description "Sommerjobb hos intern-IT, jobber med support på alle IBM sine produkter."
+                  :tech [:java]}]
 
- :endorsements  [{:author "Goran Solomonovic"
+ :endorsements  [{:author "Victor Dieu"
+                  :title "Prosjektleder NSB"
+                  :quote "Stein Tore er en strukturert person med variert
+                  kompetanse innenfor systemutvikling, integrasjon og
+                  brukerinteraksjon. Han setter seg fort inn nye domener /
+                  fagområder og er en person med sterk gjennomføringsevne. Han
+                  har vært en sentralt ressurs i prosjektet, i tillegg til å
+                  være en dreven utvikler."}
+                 {:author "Goran Solomonovic"
                   :title  "Senior Consultant / System Developer"
                   :quote  "Skillful Java developer with extremely good social skills.
                           During project he communicated well with the customer, delivering
                           functionality on time and according to specifications.
-                          I recommend Stein Tore to any company interested in hiring senior Java developer!"
-                  }]
+                          I recommend Stein Tore to any company interested in hiring senior Java developer!"}]
+                  
 
- }
+ :cv {}
+ :cv/description " Stein Tore er en erfaren programmerer som trives best med å
+ jobbe med brukernære utfordringer. Han kommer ofte i en veldig god dialog med
+ kunden, og blir da fort en betrodd partner i å omsette spesifikke kundebehov
+ til hensiktsmessige tekniske løsninger.
 
+ Stein Tore har tidligere jobbet med hele teknologiporteføljen for standard
+ web-applikasjoner, og har mye erfaring på både frontend og tjenestesiden. I
+ sine prosjekter har han høstet viktige erfaringer med alt fra store
+ brukermasser og krav til sikkerhet i kritiske transaksjonsprosesser. Den siste
+ tiden har han fokusert mer på frontendutvikling, og har hatt ansvar for dette i
+ sitt prosjekt med 'Obligatorisk Tjenstepensjon' på VPS.
+
+ Stein Tore er vant til å jobbe i store utviklingsmiljøer med komplekse
+ problemstillinger. Han er ofte den personen i et team som får de vanskelige
+ oppgavene, og trives godt med å finne løsninger der andre har gitt opp. Han er
+ opptatt av kvalitet, og ser på smidig utvikling og TDD (Test Driven
+ Developement) som naturlige virkemidler for å levere optimale løsninger.
+
+ Stein Tore er utdannet MSc ved John Moores University i Liverpool hvor han
+ spesialiserte seg innen programmering av interaktive multimediasystemer."
+
+ :education-summary "MSc Interactive Multimedia Systems, Liverpool John Moores University"
+ :experience-since 2003
+ :relationship-status "Gift, 3 barn"
+ :born 1979
+ :qualifications ["Senior systemutvikler"
+                  "Løsningsarkitekt"
+                  "Java"
+                  "Groovy og Grails"
+                  "Testutvikler"
+                  "Scrum / smidig utvikling"]
+ :certifications [{:name "Sun Certified Programmer for Java 5 platform", :year 2007}
+                  {:name
+                   "Sertifisering Enonic CMS - Utvikler, administrator og redaktør"
+                   :year 2006}]
+ :education [{:institution "Liverpool John Moores University"
+              :years [2002 2003]
+              :subject "Master of Science in Interactive Multimedia Systems"}
+             {:institution "Høgskolen i Gjøvik"
+              :years [1999 2000 2001 2002]
+              :subject "Dataingeniør med spesialisering innen programmering"}
+             {:institution "Førstegangstjeneste i hæren"
+              :years [1998 1999]
+              :subject " "}
+             {:institution "Hamar Katedralskole"
+              :years [1997 1998]
+              :subject "Allmennfag"}
+             {:institution "Stange Videregående Skole"
+              :years [1995 1996 1997]
+              :subject "Idrettsfag"}]}
+ 

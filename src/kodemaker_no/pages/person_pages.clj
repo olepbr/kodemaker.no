@@ -30,6 +30,20 @@
   (list [:h2.mhn "Snakker gjerne om"]
         (map render-hobby hobbies)))
 
+(defn- render-screencast [{:keys [title description url illustration tech]}]
+  [:div.bd
+   [:h3.mtn [:a {:href url} title]]
+   (f/render-tech-bubble tech)
+   (-> (f/to-html description)
+       (markup/append-to-paragraph
+        (list " " (markup/render-link {:url url :text "Se videoene"}) "."))
+       (markup/prepend-to-paragraph
+        [:a.illu {:href url} [:img {:src illustration}]]))])
+
+(defn- render-screencasts [screencasts _]
+  (list [:h2.mhn "Screencasts"]
+        (map render-screencast screencasts)))
+
 (defn- render-side-project [{:keys [title description link illustration tech]}]
   [:div.bd
    [:h3.mtn [:a {:href (:url link)} title]]
@@ -236,6 +250,7 @@
           (maybe-include person :upcoming render-upcoming)
           (maybe-include person :recommendations render-recommendations)
           (maybe-include person :hobbies render-hobbies)
+          (maybe-include person :screencasts render-screencasts)
           (maybe-include person :side-projects render-side-projects)
           (maybe-include person :blog-posts render-blog-posts)
           (maybe-include person :presentations render-presentations)
