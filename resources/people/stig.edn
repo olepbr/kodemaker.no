@@ -44,15 +44,32 @@
                   :illustration "/illustrations/side-projects/roltracker.jpg"
                   :tech [:android :java]}]
 
- :projects [{:customer "NSB"
-             :years [2014 :ongoing]
-             :employer :kodemaker
-             :summary "Utvikling av nytt rapporteringssystem"
-             :description "Design og utvikling av rapporeringssystem Oppgaver:
-             Prosjektdeltager, seniorutvikler, bearbeiding av energimålinger
-             slik at disse kan visualiseres for lokførere og stimulere til
-             energieffektiv kjøring. Scrum er benyttet."
-             :tech [:java :groovy :grails :javascript :tomcat :solaris :linux :camel :bootstrap :oracle]}
+ :projects [
+ {:customer "NSB"
+  :years [2017 :ongoing]
+  :employer :kodemaker
+  :summary "Utvikling av system for vedlikehold og publisering av servicestandarder"
+  :description "Design og utvikling av system for vedlikehold og publisering av servicestandarder. Oppgaver:
+  Utvikling og design av alt i fra brukergrensessnitt til integrasjoner.
+  Løsningen benyttes for standardisering av servicenivå innenfor informasjonsdeling og rydderenhold i tog."
+  :tech [:java :groovy :grails :javascript :tomcat :linux :activemq :bootstrap :confluence :jira]}
+              {:customer "NSB"
+               :years [2016]
+               :employer :kodemaker
+               :summary "Utvikling av støttesystem for kundeveiledere tilknyttet Buss for tog"
+               :description "Design og utvikling av system for kundeveiledere tilknyttet Buss for tog (BARI). Oppgaver:
+               Utvikling og design av alt i fra brukergrensessnitt til integrasjoner.
+               Løsningen benyttes for oppfølging av busser som kjører erstatningstrafikk for tog."
+               :tech [:java :groovy :grails :javascript :tomcat :linux :react :bootstrap :confluence :jira :hudson]}
+               {:customer "NSB"
+                           :years [2014 :ongoing]
+                           :employer :kodemaker
+                           :summary "Utvikling av nytt rapporteringssystem"
+                           :description "Design og utvikling av rapporeringssystem Oppgaver:
+                           Prosjektdeltager, seniorutvikler, bearbeiding av energimålinger
+                           slik at disse kan visualiseres for lokførere og stimulere til
+                           energieffektiv kjøring. Scrum er benyttet."
+                           :tech [:java :groovy :grails :javascript :tomcat :solaris :linux :camel :bootstrap :oracle :git :svn :intellij :jenkins]}
             {:customer "NM Ultralang i Orientering"
              :years [2014]
              :employer :kodemaker
@@ -61,7 +78,7 @@
              Oppgaver: Integrasjonsutvikling, Design av brukergrensessnitt,
              Design av systemarkitektur, Utvikling og test av løsning samt
              drift. Arbeidet er organisert etter prinsipper for Kanban."
-             :tech [:java :groovy :grails :javascript :mysql :linux :aws-ec2 :bootstrap :rest]}
+             :tech [:java :groovy :grails :javascript :mysql :ubuntu :aws-ec2 :bootstrap :rest :git :kanban]}
             {:customer "Forsvaret"
              :years [2013 2014]
              :employer :kodemaker
@@ -123,7 +140,7 @@
              unøyaktighet i datakvalitet på GPS possisjoner må nøytraliseres.
              Løsningen er i hovedsak utviklet i MSSQL-server og Business
              Intelligence and Reporting Tools (BIRT) fra eclipse."
-             :tech [:mssql :eclipse]}
+             :tech [:mssql :eclipse :windows]}
             {:customer "Bring Cargo"
              :years [2011]
              :employer :kodemaker
@@ -137,7 +154,7 @@
              som programvareleverandørern benyttet på å sette i gang
              papirarbeidet. Løsningen er utviklet i C# ved hjelp av Microsoft
              Visual Studio og Mono."
-             :tech [:visual-studio :mono]}
+             :tech [:visual-studio :mono :csharp]}
             {:customer "Bring Cargo"
              :years [2010]
              :employer :kodemaker
@@ -149,7 +166,7 @@
              slikt system. Disse måltallene fanges opp og presenteres i egne
              trendrapporter. Løsningen er utviklet i SQL og Business
              Intelligence and Reporting Tools (BIRT) fra eclipse."
-             :tech [:mssql :eclipse]}
+             :tech [:mssql :eclipse :birt]}
             {:customer "Bring Cargo"
              :years [2010]
              :employer :kodemaker
@@ -369,7 +386,7 @@
     - Java Message Service
     - WebServices
     - Real Time Data Services"
-             :tech [:sap]}
+             :tech [:sap :jms :uml :powerdesigner :powerbuilder :ee]}
             {:customer "Aftenposten, Axiti, Sør-norge aluminium, Alm.Brand, Aloc, Arrive"
              :years [2000 2001 2002 2003 2004 2005]
              :employer :sap
