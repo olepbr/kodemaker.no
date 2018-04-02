@@ -85,48 +85,57 @@
                   :date "2012-09-13"}]
 
  :screencasts [{:title "Elm package docs preview in Light Table"
-                :blurb "Screencast som demonstrerer forhåndsvisning av pakke dokumentasjon for Elm i Light Table."
+                :description "Screencast som demonstrerer forhåndsvisning av pakke dokumentasjon for Elm i Light Table."
                 :tech [:elm :clojurescript :lighttable]
                 :url "https://youtu.be/pAwdVM888wQ"
+                :illustration "/photos/tech/elm.svg"
                 :launch-date "2016-03-27"}
                {:title "Managing and diagramming elm packages with d3 in Light Table"
-                :blurb "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
+                :description "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
                 Elm Light Table plugin."
+                :illustration "/photos/tech/elm.svg"
                 :tech [:elm :clojurescript :lighttable :d3]
                 :url "https://youtu.be/Okk-YjEeUgI"
                 :launch-date "2016-01-01"}
                {:title "Elm plugin for Light Table"
-                :blurb "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
+                :description "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
+                :illustration "/photos/tech/elm.svg"
                 :tech [:elm :clojurescript :lighttable ]
                 :url "https://youtu.be/B_eZw_GcM-4"
                 :launch-date "2015-10-29"}
                {:title "A pinch of Clojure love to Light Table"
-                :blurb "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
+                :description "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
+                :illustration "/photos/tech/clojure.png"
                 :tech [:clojurescript :lighttable :clojure]
                 :url "https://youtu.be/1yk8nsjJxb0"
                 :launch-date "2015-04-14"}
                {:title "Clojure refactoring in Light Table"
-                :blurb "Screencast som demonstrerer litt av min Light Table refactoring plugin"
+                :description "Screencast som demonstrerer litt av min Light Table refactoring plugin"
+                :illustration "/photos/tech/clojure.png"
                 :tech [:clojurescript :lighttable :clojure]
                 :url "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
                 :launch-date "2015-03-07"}
                {:title "The Groovy Light Table Plugin"
-                :blurb "Screencast om bruk av Groovy og Gradle i Light Table"
+                :description "Screencast om bruk av Groovy og Gradle i Light Table"
+                :illustration "/photos/tech/groovy.png"
                 :tech [:clojurescript :lighttable :groovy :gradle]
                 :url "http://www.youtube.com/watch?v=5ji8RR2A4gQ"
                 :launch-date "2014-05-18"}
                {:title "Creating and Using Snippets in Light Table"
-                :blurb "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
+                :description "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
+                :illustration "/photos/tech/lighttable.jpg"
                 :tech [:javascript :lighttable]
                 :url "http://www.youtube.com/watch?v=I6iuXOw3HDQ"
                 :launch-date "2014-05-06"}
                {:title "InstaBuster Part 2: Powerful JavaScript testing using Light Table and Buster.JS"
-                :blurb "Screencast med demo av dashboard og autotest features for LightTable InstaBuster"
+                :description "Screencast med demo av dashboard og autotest features for LightTable InstaBuster"
+                :illustration "/photos/tech/js.svg"
                 :tech [:javascript :testing :lighttable]
                 :url "https://www.youtube.com/watch?v=jYDiAVbPL8I&list=UUIpfu-L0KFtMlju3LgjPeSg"
                 :launch-date "2014-04-21"}
                {:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
-                :blurb "Screencast med en kort introduksjon til LightTable InstaBuster"
+                :description "Screencast med en kort introduksjon til LightTable InstaBuster"
+                :illustration "/photos/tech/js.svg"
                 :tech [:javascript :testing :lighttable]
                 :url "http://www.youtube.com/watch?v=WKHWazblpbc"
                 :launch-date "2014-03-17"}]
