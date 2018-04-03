@@ -55,6 +55,7 @@
  :fast "Fast søkemotor"
  :fatwire "FatWire CMS"
  :frp "FRP (Functional Reactive Programming)"
+ :gans "Generative Adversarial Networks"
  :h2db "H2 database"
  :haproxy "HAProxy"
  :hateoas "Hypermedia (HATEOAS)"
