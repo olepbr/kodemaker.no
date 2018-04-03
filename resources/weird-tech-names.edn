@@ -67,6 +67,7 @@
  :frp "FRP (Functional Reactive Programming)"
  :fusioncharts "FusionCharts"
  :google-image-charts "Google Image Charts"
+ :gans "Generative Adversarial Networks"
  :h2db "H2 database"
  :haproxy "HAProxy"
  :hateoas "Hypermedia (HATEOAS)"
