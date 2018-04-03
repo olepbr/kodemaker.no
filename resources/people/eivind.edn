@@ -38,6 +38,8 @@
         :favorites-at-the-moment [:python :clojurescript]
         :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning :clojurescript]}
 
+ :innate-skills [:cpp :cvs :emacs :git :intellij :linux :osx :windows]
+
  :recommendations [{:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
                     :blurb "Fantastisk bra artikkel om logg som sentralt system for integrasjon,
                             konsistens og asynkron meldingsutveksling. Skrevet av mannen bak
@@ -312,7 +314,7 @@
              :summary "Nytt spillkonsept"
              :description "Har jobbet med utvikling av et helt nytt spillkonsept,
              basert på bildeanalyse og fysiske spill."
-             :tech [:python :opencv :clojure :clojurescript]}
+             :tech [:python :opencv :clojure :clojurescript :docker]}
             {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
@@ -325,7 +327,7 @@
              som fullstack-utvikler med oppgaver som spenner over både backend
              og frontend samt devops."
              :tech [:javascript :clojure :react :redux :c3 :webpack :aleph :ring :core-async
-                    :ansible :nginx :postgresql :varnish :haproxy]}
+                    :ansible :nginx :postgresql :varnish :haproxy :docker]}
             {:customer "FINN.no"
              :employer :kodemaker
              :summary "Ordre, Produkt og Betaling"
@@ -529,7 +531,6 @@
 
  :cv {}
 
- :innate-skills [:python]
  :education-summary "Høgskoleingeniør Systemutvikling, HiST / Master Informatikk, UiO"
  :experience-since 1999
  :qualifications ["Solid og erfaren fullstack-utvikler"

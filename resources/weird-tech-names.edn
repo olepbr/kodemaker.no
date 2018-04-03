@@ -119,6 +119,7 @@
  :octopus "Octopus Deploy"
  :oidc "OpenID Connect"
  :openam "OpenAM"
+ :opencv "OpenCV"
  :openid "OpenID"
  :oracle-portal "Oracle Portal"
  :oracle9ias "Oracle9iAS"
@@ -210,5 +211,4 @@
  :xmlspy "XML Spy"
  :xslt "XSLT"
  :xtractor "XTractor"
- :opencv "OpenCV"
 }
