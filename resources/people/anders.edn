@@ -228,4 +228,20 @@
               :subject "Luftværnet"}
              {:institution "Fagerlia VGS, Ålesund"
               :years [1996 1997 1998 1999]
-              :subject "Matte, fysikk og kjemi"}]}
+              :subject "Matte, fysikk og kjemi"}]
+
+ :open-source-projects [{:url "https://github.com/andersfurseth/flare"
+                         :name "flare"
+                         :description "Et verktøy som forbedrer rapportering av feilende tester for Clojure."
+                         :tech [:clojure :clojurescript]}
+                        {:url "https://github.com/andersfurseth/rubberlike"
+                         :name "rubberlike"
+                         :description "Et verktøy for å enkelt spinne opp embedded ElasticSearch servere"
+                         :tech [:clojure]}]
+
+ :open-source-contributions [{:name "midje"
+                              :url "https://github.com/marick/midje"
+                              :tech [:clojure]}
+                             {:name "stubadub"
+                              :url "https://github.com/magnars/stubadub"
+                              :tech [:clojure]}]}
