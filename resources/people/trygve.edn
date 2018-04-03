@@ -8,7 +8,7 @@
     Han tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han er resultatorientert og målrettet, og han evner å finne enkle løsninger på kompliserte problemstillinger. 
     "
 
- :phone-number "9206 1819"
+ :phone-number "+47 9206 1819"
  :email-address "trygve@kodemaker.no"
 
  :presence {:cv "trygve"
@@ -16,9 +16,9 @@
             :github "trygvea"
             :linkedin "/in/trygveamundsen"}
             
- :tech {:using-at-work [:kafka :hadoop :hbase :apache-spark]
-        :favorites-at-the-moment [:deeplearning :apache-spark :haskell :scala]
-        :want-to-learn-more [:functional-reactive-programming :massive-scalability]}
+ :tech {:using-at-work [:react :redux :es6 :typescript]
+        :favorites-at-the-moment [:deeplearning :typescript]
+        :want-to-learn-more [:pytorch :gans :idris]}
 
  :recommendations [{:title "Functional Programming in Scala"
                     :blurb "Dette er boken for deg som vil lære funksjonell programmering fra bunnen av.",
@@ -44,16 +44,13 @@
                     
  :hobbies [{:title "Maskinlæring"
             :description "
-                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), og prøver så godt jeg kan å følge utviklingen på området. 
-
-                Spesiellt interessant er fagområdet ['Dyp læring'](/deeplearning/) (Deep Learning). 
-
-                Apache Spark er motoren du skal velge for stor-skala distribuert dataprosessering."
+                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai), og jeg prøver så godt jeg kan å følge utviklingen på området. 
+                "
             :illustration "/photos/tech/machinelearning.jpg"}
            
            {:title "Klatring"
             :description "
-                Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. Etterhvert som barna har grodd til har det blitt mindre og mindre av det, men etterhvert som ungene blir større øyner jeg håp for å øke aktiviteten igjen."
+                Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. På grunn av små barn har det ikke vært så mye klatring de siste årene, men etterhvert som ungene blir større øyner jeg håp for å øke aktiviteten igjen."
             :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
            
            {:title "MC"
@@ -72,7 +69,14 @@
                          
  :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]
 
- :projects [{:customer "BN-bolig / EGGS Design"
+ :projects [{:customer "NRK Origo"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av media-arkivet til NRK"
+             :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp
+              - både nettklipp, ting som har gått på TV og råstoff"
+             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :octopus :teamcity :kubernetes]}
+            {:customer "BN-bolig / EGGS Design"
              :years [2017]
              :employer :kodemaker
              :summary "Front-end til BN-bolig - en ny eiendomsmegler startet av BN-bank og Eiendomsmegler1. Prosjektet kjører hos EGGS Design som en 'Coorporate Startup'."
@@ -81,10 +85,10 @@
              Lean prinsipper."
              :tech [:react :redux :es6 :webpack :svg :clojure]}
             {:customer "Thomson Reuters"
-             :years [2016 :ongoing]
+             :years [2016]
              :employer :kodemaker
-             :summary "Ferdigstillelse av ny løsning for CDB: distribusjon av fremskrevne tidsserier for forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop, HBase."
-             :description "Ferdigstillelse av ny løsning for CDB: distribusjon
+             :summary "Ferdigstillelse av ny løsning for distribusjon av fremskrevne tidsserier for forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop, HBase."
+             :description "Ferdigstillelse av ny løsning for distribusjon
              av fremskrevne tidsserier fra forskjellige markeder."
              :tech
              [:java :spark :kafka :hbase :hadoop :zookeeper :docker :logstash :puppet]}
@@ -92,8 +96,7 @@
              :years [2016]
              :employer :kodemaker
              :summary "Utvikling av flere trafikksystemer til bruk internt i NSB. React, redux, es6, svg, immutable.js, webpack, groovy, grails, mm."
-             :description "Utvikling div. trafikksystemer: sporbruk, buss for
-             tog."
+             :description "Utvikling flere trafikksystemer til bruk internt i NSB, eks. sporbruk, buss for tog."
              :tech [:react :redux :es6 :svg :immutable-js :webpack :groovy :grails]}
             {:customer "Thomson Reuters"
              :years [2015]
@@ -103,7 +106,7 @@
              distribusjon av fremskrevne tidsserier fra forskjellige markeder."
              :tech [:java :spark :kafka :hbase :hadoop :zookeeper :logstash :puppet]}
             {:customer "Animalia"
-             :years [2015]
+             :years [2015 2015]
              :employer :kodemaker
              :summary "Programmering, mentoring, løsningsdesign, arkitektur og integrasjon av systemer for sau-, storfe-, og fjørfe-hold. Groovy og grails."
              :description "Oppgradering av system for Sauekontrollen og
@@ -113,6 +116,7 @@
                     :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
              :years [2014]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Større oppgradering av system"
              :description "Større oppgradering av system for
@@ -121,7 +125,8 @@
              :tech [:groovy :grails :camel :bootstrap :spock :css :javascript :jquery
                     :spring-security :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
-             :years [2013]
+             :years [2013 2014]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Utvikling av sauekontrollen"
              :description "Utvikling av sauekontrollen - et system for drift av
@@ -133,7 +138,8 @@
              :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
                     :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
-             :years [2012]
+             :years [2012 2013]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Utvikling av storfekjøttkontrollen"
              :description "Utvikling av storfekjøttkontrollen - en
@@ -145,7 +151,8 @@
              :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
                     :jenkins :git :oracle]}
             {:customer "Animalia"
-             :years [2011]
+             :years [2011 2012]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Nytt system for veterinærkontroller av fjørfe"
              :description "Nytt system for veterinærkontroller av fjørfe.
@@ -154,6 +161,7 @@
                     :git :oracle]}
             {:customer "NSB"
              :years [2011]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Bistand med passasjerinformasjonssystem for Flirt-togene, samt system for presentasjon av togsammensetningsplan."
              :description "Bistand med utvikling av passasjerinformasjonssystem
@@ -161,7 +169,8 @@
              togsammensetningsplan."
              :tech [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :svn]}
             {:customer "Animalia"
-             :years [2010]
+             :years [2010 2011]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Systemer for kontroll av slakterier, innhenting av slakteopplysninger, visning av slakt-statistikk."
              :description "Bistand i forbindelse med etablering av ny arkitektur
@@ -172,6 +181,7 @@
              slakt-statistikk."
              :tech [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :git]}
             {:customer "Nordea"
+             :exclude-from-profile? true
              :years [2010]
              :employer :kodemaker
              :summary "Oppgradering av system for Flerkonto. Problemløsning og idriftssettelse."
@@ -183,6 +193,7 @@
              :tech [:weblogic :rational-clearcase :maven :spring :ldap :git :jetty]}
             {:customer "Lindorff Decision / IXD"
              :years [2010]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Oppgradering av kredittinformasjonssystem."
              :description "Bistand med prosjektoppstart av nytt
@@ -190,14 +201,16 @@
              prosess. Utvikling grensesnitt mellom back- og frontend."
              :tech [:git :svn :hudson :maven :spring :spring-mvc :appfuse :jetty :tomcat :canoo-webtest]}
             {:customer "VPS"
-             :years [2009]
+             :years [2009 2010]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Videreutvikling av VPS Investortjeneste."
              :description "Tilpasning av VPS Investortjeneste til nytt
              Fondssystem, samt videreutvikling av VPS Investortjeneste."
              :tech [:java :j2ee :db2 :maven :groovy]}
             {:customer "ICA, EMS-Programmet"
-             :years [2006]
+             :years [2006 2007 2008 2009]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Handelssystem, delsystem for prissetting."
              :description "Programmerer og systemarkitekt i EMS Price (European
@@ -208,13 +221,15 @@
                     :optimizeit-profiler :jira :confluence :websphere :oracle :plsql]}
             {:customer "ICA, EMS-Programmet"
              :years [2005]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Handelssystem, Web Service utvikling."
              :description "Utvikling av Web Services for EMS Forecasting og EMS
              Monitoring."
              :tech [:java :j2ee :webservices :jax-ws :jaxb :hibernate :websphere :oracle]}
             {:customer "ICA, EMS-Programmet"
-             :years [2002]
+             :years [2002 2003 2004 2005]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Handelssystem, delsystem for innkjøp."
              :description "Programmerer i EMS Buying (European Merchandising
@@ -223,12 +238,21 @@
              :tech [:java :j2ee :jms :swing :junit :ant :oracle :websphere :versata-workflow :webmethods-integrasjon]}
             {:customer "NetCom AS "
              :years [2002]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "NetComs forhandlersystem."
              :description "Videreutvikling av NetComs forhandlersystem."
              :tech [:j2ee :weblogic :oracle]}
+            {:customer "Familien Amundsen"
+             :years [2001]
+             :exclude-from-profile? true
+             :employer :kodemaker
+             :summary "Pappapermisjon"
+             :description "Meget lærerikt. Sovepauser og kveldstimer brukes (som før) til faglig oppdatering."
+             :tech [:bleier]}
             {:customer "Inspera AS / DBC-Munin "
              :years [2001]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "Portal for samfunnsfag i VGS."
              :description "Utvikling av samfun.net, et hjelpemiddel for
@@ -237,6 +261,7 @@
              :tech [:j2ee :tomcat :oracle :xml :xslt :jdbc]}
             {:customer "DBC-Munin AS "
              :years [2001]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "System for reiselivsbedrifter."
              :description "Utvikling av system for
@@ -246,7 +271,8 @@
              2002."
              :tech [:j2ee :weblogic :oracle :ejb :servlets :xml :xslt :jdbc :pki]}
             {:customer "SAS DATA Norge "
-             :years [1998]
+             :years [1998 1999 2000 2001]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "System for feilhåndtering på fly."
              :description "Design og utvikling av system for håndtering av feil
@@ -254,6 +280,7 @@
              :tech [:java :ejb :weblogic :oracle :swing :rational-rose :rational-clearcase]}
             {:customer "SAS DATA Norge"
              :years [1997]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "System for flyvedlikehold."
              :description "Vedlikehold og utvikling av Oracle-basert system for
@@ -261,6 +288,7 @@
              :tech [:plsql :oracle]}
             {:customer "Norsk Kjøtt/Nord Norges salgslag"
              :years [1997]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "System for markedsanalyse og salgsoppfølgning."
              :description "Utvikling av system for markedanalyse og
@@ -268,6 +296,7 @@
              :tech [:qb-vision :windows]}
             {:customer "Norsk Hestesenter"
              :years [1997]
+             :exclude-from-profile? true
              :employer :kodemaker
              :summary "System for avlsanalyse & avlsplanlegging."
              :description "Systemskisse, kravanalyse og spesifikasjon av nytt
@@ -275,27 +304,31 @@
              :tech [:architecture]}
             {:customer "Heimevernet"
              :years [1996]
-             :employer :kodemaker
+             :exclude-from-profile? true
+             :employer :mandator
              :summary "System for vedlikehold av Heimevernets krigsorganisasjon."
              :description "Design og utvikling av system for vedlikehold av
              Heimevernets krigsorganisasjon (AKOS)."
              :tech [:architecture]}
             {:customer "Mustad AS"
              :years [1995]
-             :employer :kodemaker
+             :exclude-from-profile? true
+             :employer :mandator
              :summary "Ledelsesinformasjonssystem basert på MPS- og OLFI-informasjon."
              :description "Design og utvikling av Ledelsesinformasjonssystem
              basert på MPS- og OLFI-informasjon."
              :tech [:ms-access]}
             {:customer "Gjensidige forsikring"
              :years [1995]
-             :employer :kodemaker
+             :exclude-from-profile? true
+             :employer :mandator
              :summary "Nytt sentralt kundesystem for Gjensidige."
              :description "Utvikling av nytt sentralt kundesystem for Gjensidige."
              :tech [:db2]}
             {:customer "Statoil ASA"
              :years [1994]
-             :employer :kodemaker
+             :exclude-from-profile? true
+             :employer :mandator
              :summary "Meldingsformidlingssystem"
              :description "Utvikling av TCP/IP-basert meldingssystem for Unix-,
              VAX-, og Windows-klienter koblet opp mot Statoils sentrale
@@ -303,15 +336,17 @@
              :tech [:c :tcp]}
             {:customer "SAS"
              :years [1994]
-             :employer :kodemaker
+             :exclude-from-profile? true
+             :employer :sas-data
              :summary "System for kommisjonsavregning for hotell."
              :description "Tilbudsarbeide, forstudier, kravanalyser mm. primært
              mot kunder i SAS flyvedlikehold (prosjekt HMP/PAMP) og SAS
              International Hotels (system for kommisjonsavregning)."
              :tech [:cpp :windows]}
             {:customer "SAS"
-             :years [1989 1994]
-             :employer :kodemaker
+             :years [1989 1990 1991 1992 1993 1994]
+             :exclude-from-profile? true
+             :employer :sas-data
              :summary "System for flyvedlikehold, m.fl."
              :description "Analyse og utvikling i prosjekt HMP/PAMP, et
              MPS-prosjekt for SAS flyvedlikehold. Virksomhetsanalyser,
@@ -319,8 +354,9 @@
              kunder."
              :tech [:plsql :c]}
             {:customer "SAS"
-             :years [1984 1989]
-             :employer :kodemaker
+             :years [1984 1985 1986 1987 1988 1989]
+             :exclude-from-profile? true
+             :employer :sas-data
              :summary "Database administrator, Telon (4GL) support/administrasjon, Cobol programmering."
              :description "Lokal Database Administrator og teknisk support IBM
              mainframe (IMS/MVS). Telon (IMS 4GL) support / adminstrasjon i
@@ -358,10 +394,9 @@ på området maskinlæring og såkalt dyp læring."
  :experience-since 1984
  :qualifications ["Senior Systemutvikler"
                   "Løsningsarkitekt"
+                  "Javascript, ES6, Typescript, React, Redux, CSS"
                   "Java8, Groovy og Grails"
-                  "Frontend: Javascript, ES6, React, Redux, Web"
                   "Funksjonell programmering"
-                  "Java plattform"
                   "Big Data"
                   "Maskinlæring"
                   "Systemarkitektur og integrasjon"]
