@@ -12,6 +12,10 @@
     (or (not-empty (link/file-path request src))
         (throw (Exception. (str "Asset not loaded: " src))))))
 
+(defn- try-optimize-path [request path]
+  (or (not-empty (link/file-path request path))
+      path))
+
 (defn- get-node-text [node]
   (let [text (-> node :content first)]
     (if (string? text) text (get-node-text text))))
@@ -36,7 +40,7 @@
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
             ;; use optimized links, if possible
-            [:a] #(update-in % [:attrs :href] (partial link/file-path request))
+            [:a] #(update-in % [:attrs :href] (partial try-optimize-path request))
 
             ;; give every h2 an anchor link for linkability
             [:h2] add-anchor
