@@ -431,19 +431,19 @@ på området maskinlæring og såkalt dyp læring."
                    :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
                    :year 2015
                    :certificate
-                   {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
+                   {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
                     :text "Honor Code Certificate"}}
                   {:name "CS100.1x Introduction to Big Data with Apache Spark, Berkeley University / edx.org"
                    :url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
                    :year 2015
                    :certificate
-                   {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
+                   {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
                     :text "Honor Code Certificate"}}
                   {:name "Machine Learning med Andrew Ng, Stanford University / coursera.org"
                    :url "http://www.coursera.org/learn/machine-learning"
                    :year 2012
                    :certificate
-                   {:url "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/16~388301/pdf"
+                   {:url "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"
                     :text "Statement of Accomplishment"}}
                   {:name "Profesjonellt styrearbeid", :year 2011}
                   {:name "Retorikk", :year 2010}
