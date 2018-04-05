@@ -199,7 +199,7 @@
                          [:institution year-range :subject])
           (table-section "Sertifiseringer/ kurs"
                          (:certifications person)
-                         ["Kursnavn" "År"]
+                         ["Kursnavn" "År" ""]
                          [certification-name :year certificate])
           (table-section "Domenekunnskap"
                          (:domain-skills person)

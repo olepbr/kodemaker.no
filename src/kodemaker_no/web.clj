@@ -23,6 +23,7 @@
                                 "/styles/cv.css"
                                 "/styles/cv-print.css"
                                 "/favicon.ico"
+                                #"/certificates/.*\.pdf"
                                 #"/illustrations/.*\.jpg"
                                 #"/illustrations/.*\.png"
                                 #"/thumbs/.*\.jpg"

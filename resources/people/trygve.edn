@@ -402,13 +402,16 @@ på området maskinlæring og såkalt dyp læring."
                   "Systemarkitektur og integrasjon"]
  :certifications [{:name "CS190.1x Scalable Machine Learning, Berkeley University / edx.org"
                    :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
-                   :year 2015}
+                   :year 2015
+                   :certificate {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"}}
                   {:name "CS100.1x Introduction to Big Data with Apache Spark, Berkeley University / edx.org"
                    :url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
-                   :year 2015}
+                   :year 2015
+                   :certificate {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"}}
                   {:name "Machine Learning med Andrew Ng, Stanford University / coursera.org"
                    :url "http://www.coursera.org/learn/machine-learning"
-                   :year 2012}
+                   :year 2012
+                   :certificate {:url "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"}}
                   {:name "Profesjonellt styrearbeid", :year 2011}
                   {:name "Retorikk", :year 2010}
                   {:name "JavaScript/JQuery", :year 2009}

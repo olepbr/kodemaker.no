@@ -8,6 +8,7 @@
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
 (def YearMonth (pred (fn [^String s] (try (parse (formatters :year-month) s) true (catch Exception e false)))))
 (def YearRange [(conditional number? Num keyword? (enum :ongoing))])
+(def UrlOrPath (conditional #(re-find #"^/" %) Path identity URL))
 
 (def Person
   {:id ID
@@ -138,8 +139,9 @@
    (optional-key :certifications) [{:name Str
                                     :year Num
                                     (optional-key :url) URL
-                                    (optional-key :certificate) {:url URL
-                                                                 (optional-key :text) Str}}]
+                                    (optional-key :certificate) 
+                                      {:url UrlOrPath
+                                       (optional-key :text) Str}}]
 
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
