@@ -35,6 +35,9 @@
             ;; use optimized images
             [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
+            ;; use optimized links, if possible
+            [:a] #(update-in % [:attrs :href] (partial link/file-path request))
+
             ;; give every h2 an anchor link for linkability
             [:h2] add-anchor
 
