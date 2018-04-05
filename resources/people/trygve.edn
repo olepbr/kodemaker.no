@@ -400,18 +400,51 @@ på området maskinlæring og såkalt dyp læring."
                   "Big Data"
                   "Maskinlæring"
                   "Systemarkitektur og integrasjon"]
- :certifications [{:name "CS190.1x Scalable Machine Learning, Berkeley University / edx.org"
+ :certifications [{:name "Deeplearning.ai/Coursera: Sequence Models"
+                   :url "https://www.coursera.org/learn/nlp-sequence-models"
+                   :year 2018}
+                  {:name "Deeplearning.ai/Coursera: Convolutional Neural Networks"
+                   :url "https://www.coursera.org/learn/convolutional-neural-networks"
+                   :year 2017
+                   :certificate
+                   {:url "https://www.coursera.org/account/accomplishments/records/PTT3DJSK55Q8"
+                    :text "Statement of Accomplishment"}}
+                  {:name "Deeplearning.ai/Coursera: Structuring Machine Learning Projects"
+                   :url "https://www.coursera.org/learn/machine-learning-projects"
+                   :year 2017
+                   :certificate
+                   {:url "https://www.coursera.org/account/accomplishments/records/8AGFLPT6UKQJ"
+                    :text "Statement of Accomplishment"}}
+                  {:name "Deeplearning.ai/Coursera: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"
+                   :url "https://www.coursera.org/learn/deep-neural-network"
+                   :year 2017
+                   :certificate
+                   {:url "https://www.coursera.org/account/accomplishments/records/SBVPP39R97AZ"
+                    :text "Statement of Accomplishment"}}
+                  {:name "Deeplearning.ai/Coursera: Neural Networks and Deep Learning"
+                   :url "https://www.coursera.org/learn/neural-networks-deep-learning"
+                   :year 2017
+                   :certificate
+                   {:url "https://www.coursera.org/account/accomplishments/records/JK63TDJASKVP"
+                    :text "Statement of Accomplishment"}}
+                  {:name "CS190.1x Scalable Machine Learning, Berkeley University / edx.org"
                    :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
                    :year 2015
-                   :certificate {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"}}
+                   :certificate
+                   {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
+                    :text "Honor Code Certificate"}}
                   {:name "CS100.1x Introduction to Big Data with Apache Spark, Berkeley University / edx.org"
                    :url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
                    :year 2015
-                   :certificate {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"}}
+                   :certificate
+                   {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
+                    :text "Honor Code Certificate"}}
                   {:name "Machine Learning med Andrew Ng, Stanford University / coursera.org"
                    :url "http://www.coursera.org/learn/machine-learning"
                    :year 2012
-                   :certificate {:url "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"}}
+                   :certificate
+                   {:url "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/16~388301/pdf"
+                    :text "Statement of Accomplishment"}}
                   {:name "Profesjonellt styrearbeid", :year 2011}
                   {:name "Retorikk", :year 2010}
                   {:name "JavaScript/JQuery", :year 2009}
