@@ -1035,7 +1035,7 @@
 
  :education-summary "Institutt for informatikk, Universitetet i Oslo"
  :education [{:institution "Institutt for informatikk, UiO"
-              :years [2001 2005]
+              :years [2001 2002 2003 2004 2005]
               :subject "Systemutvikling og digital signalbehandling"}]
 
  :languages [{:language "Norsk"
