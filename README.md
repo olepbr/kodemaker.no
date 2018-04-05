@@ -147,7 +147,11 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
-                                    :year Num}]
+                                    :year Num
+                                    (optional-key :url) URL
+                                    (optional-key :certificate) 
+                                      {:url UrlOrPath
+                                       (optional-key :text) Str}}]
 
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
