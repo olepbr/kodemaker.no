@@ -20,6 +20,13 @@
         :favorites-at-the-moment [:deeplearning :typescript]
         :want-to-learn-more [:pytorch :gans :idris]}
 
+ :innate-skills [
+        :haskell :scala :ruby :python :octave :pascal :prolog :fortran
+        :redux-frontend
+        :intellij :browser-devtools
+        :osx :linux
+        :ddd]
+
  :recommendations [{:title "Functional Programming in Scala"
                     :blurb "Dette er boken for deg som vil lære funksjonell programmering fra bunnen av.",
                     :link  {:url "https://www.manning.com/books/functional-programming-in-scala"
@@ -364,7 +371,13 @@
              teknisk support."
              :tech [:ims :mvs :cobol :telon :focus :turbo-pascal :dataflex :oracle]}]
  
- :cv {}
+ :cv {:default {:preferred-techs [
+                    :java :javascript :es6 :typescript :groovy :python 
+                    :react :redux :immutable-js
+                    :osx :linux
+                    :intellij :docker :ddd]
+                :exclude-techs []}}
+
  :cv/description "Trygve har lang og solid erfaring innen faget systemutvikling.
  Han er entusiastisk opptatt av fagområdet, tilegner seg raskt ny kunnskap og
  følger nøye med på nyvinninger. Han evner å finne enkle løsninger på
@@ -385,9 +398,9 @@
  arbeid.
 
  I det siste han hatt spesielt fokus på maskinlæring og 'Big Data'. I tillegg
-til å ha jobbet med Kafka, HBase og Spark, har han har tatt kurs i Maskinlæring
-og Spark på Stanford og Berkeley, og følger nøye med på den rivende utviklingen
-på området maskinlæring og såkalt dyp læring."
+til å ha jobbet med Kafka, HBase og Spark, har han har tatt [mange kurs i 
+Maskinlæring på Stanford og Berkeley](#certifications), og følger nøye med på den rivende utviklingen
+på området maskinlæring og såkalt 'dyp læring'."
  
  :education-summary "Ingeniør fra Kongsberg Ingeniørhøgskole, Bedriftsøkonomisk
  Institutt, Matematikk ved Universitetet i Oslo"

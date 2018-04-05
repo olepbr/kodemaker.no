@@ -242,6 +242,7 @@
  :objc :proglang
  :objcplusplus :proglang
  :oc4j :server
+ :octave :proglang
  :octopus :devops
  :oidc :security
  :om :framework
@@ -254,6 +255,7 @@
  :oracle-locator :database
  :oracle-portal :server
  :osx :os
+ :pascal :proglang
  :pair-programming :methodology
  :passenger :server
  :peoplesoft-crm :server
@@ -265,6 +267,7 @@
  :pmd :tool
  :postgresql :database
  :puppet :devops
+ :prolog :proglang
  :prototype :library
  :pygments :library
  :python :proglang
@@ -277,6 +280,7 @@
  :reagent :frontend
  :redhat :os
  :redux :library
+ :redux-frontent :frontend
  :release-management :methodology
  :rest :specification
  :retrospectives :methodology
@@ -332,6 +336,7 @@
  :thinking-sphinx :library
  :tsql :specification
  :tutum :cloud
+ :typescript :proglang
  :ubuntu :os
  :unfiltered :library
  :unity3d :framework

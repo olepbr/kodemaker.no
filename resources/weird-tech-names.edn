@@ -117,6 +117,7 @@
  :novell-extend-composer-appserver "Novell exteNd Composer + Appserver"
  :npm "npm"
  :oc4j "OC4J"
+ :octave "Octave/Mathlab"
  :octopus "Octopus Deploy"
  :oidc "OpenID Connect"
  :openam "OpenAM"
