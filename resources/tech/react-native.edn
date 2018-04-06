@@ -1,0 +1,14 @@
+{:id :react-native
+ :name "React Native"
+ :type :devops
+ :illustration "/photos/tech/react.png"
+ :site "https://facebook.github.io/react-native/"
+ :description
+ "[React Native](https://facebook.github.io/react-native/) er en alternativ variant av React som rendrer til iOS, Android
+ og andre native platformer, i stedet for til DOM/HTML.
+
+ Den er ganske så smart av seg. React er i prinsippet ikke hardt knyttet til HTML. Så i stedet for at du rendrer div og
+ h4 og p og annet, rendrer du Button og TabBarIos og DrawerLayoutAndroid osv. React Native gjør alt dette under panseret,
+ og gjør samme operasjon mot native GUI som den gjør mot DOM-en - du bare deklarerer hva du vil rendre, så snakker native
+ appen og web viewet sammen og oppdaterer native GUI-et basert på diffene til React. Så React Native gir deg en ekte
+ native app, ikke et web view med minste felles multiplum."}

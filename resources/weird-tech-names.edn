@@ -192,6 +192,7 @@
  :om-next "Om Next"
  :pair-programming "Parprogrammering"
  :pmd "PMD"
+ :postgresql "PostgreSQL"
  :prototype "Prototype.JS"
  :saltstack "SaltStack"
  :soap "SOAP"

@@ -26,7 +26,7 @@ presentasjonen på hele konferansen!"
             :github "augustl"}
 
  :tech {:favorites-at-the-moment [:datomic, :react]
-        :using-at-work [:react :mori]
+        :using-at-work [:react :react-native :kotlin :android :postgresql :azure]
         :want-to-learn-more [:c :haskell]}
 
  :upcoming
@@ -138,7 +138,15 @@ presentasjonen på hele konferansen!"
    :date "2011-06-01"}]
 
  :projects
- [{:customer "NSB"
+ [{:customer "Bring"
+   :years [2018]
+   :summary "Glow - hele stacken til Bring Express (trafikkstyring, levering av pakker, pakkesporing til mottagere, ...)"
+   :employer :kodemaker
+   :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
+   utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
+   mottagerene av pakkene (pakkesporing, osv)."
+   :tech [:react :react-native :kotlin :android :postgresql :azure]}
+  {:customer "NSB"
    :years [2015 2018]
    :summary "Status Tiltak - verktøy for planlegging og bestilling av alternativ transport"
    :employer :kodemaker
