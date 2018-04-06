@@ -585,7 +585,11 @@
                   :tech [:javascript]}
                  ]
 
- :appearances [{:title "Datomic"
+ :appearances [{:title "Å Bygge sin egen Infrastruktur på AWS"
+                :event "Kodemaker fagdag"
+                :tech [:aws :aws-cloudformation :concourse]
+                :date "2018-04-05"}
+               {:title "Datomic"
                 :event "Internforedrag i Tine"
                 :tech [:datomic :clojure]
                 :date "2017-11-14"}
