@@ -131,7 +131,6 @@
  :pdf "PDF"
  :plsql "PL/SQL"
  :php "PHP"
- :postgresql "PostgreSQL"
  :rational-clearcase "Rational ClearCase"
  :rational-rose "Rational Rose"
  :siri-service-interface-for-real-time-information "SIRI (Service Interface for Real Time Information)"
