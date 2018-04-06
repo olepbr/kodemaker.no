@@ -139,7 +139,7 @@ presentasjonen på hele konferansen!"
 
  :projects
  [{:customer "Bring"
-   :years [2018]
+   :start "2018-04"
    :summary "Glow - hele stacken til Bring Express (trafikkstyring, levering av pakker, pakkesporing til mottagere, ...)"
    :employer :kodemaker
    :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
@@ -147,7 +147,8 @@ presentasjonen på hele konferansen!"
    mottagerene av pakkene (pakkesporing, osv)."
    :tech [:react :react-native :kotlin :android :postgresql :azure]}
   {:customer "NSB"
-   :years [2015 2018]
+   :start "2015-01"
+   :end "2018-03"
    :summary "Status Tiltak - verktøy for planlegging og bestilling av alternativ transport"
    :employer :kodemaker
    :description "Status Tiltak - verktøyet til planlegging og bestilling av
@@ -157,7 +158,8 @@ presentasjonen på hele konferansen!"
    flere brukere i sanntid kan jobbe med tiltaksplan for samme tog."
    :tech [:groovy :gradle :react :oracle :mariadb :active-mq :liquibase :ansible]}
   {:customer "NSB"
-   :years [2013 2018]
+   :start "2013-04"
+   :end "2018-03"
    :summary "Status - distribusjons-system for tekstlig informasjon (internt og kunder)"
    :employer :kodemaker
    :description "Status - verktøyet til trafikkinformatør-rollen i NSB sin
