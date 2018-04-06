@@ -89,6 +89,7 @@
  :dojo :library
  :domain-modeling :methodology
  :docker-cloud :cloud
+ :docker-swarm :cloud
  :dotnet :framework
  :dreamweaver-mx :devtools
  :dynamodb :database

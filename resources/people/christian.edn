@@ -45,7 +45,7 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:aws :docker :concourse :bash]
+ :tech {:using-at-work [:clojurescript :cordova :aws]
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
@@ -230,7 +230,14 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Tine Husdyrfag"
+ :projects [{:customer "Hafslund Strøm"
+             :employer :kodemaker
+             :summary "Videreutvikling av Hafslund Strøms app for iOS og Android"
+             :description "Videreutvikling av Hafslund Strøms app for iOS og
+            Android, samt tilstøttende backend-systemer og infrastruktur."
+             :tech [:clojurescript :cordova :aws :docker-swarm]
+             :start "2018-04"}
+            {:customer "Tine Husdyrfag"
              :employer :kodemaker
              :summary "Design av domenemodell, applikasjonsarkitektur og utvikling på AWS"
              :description "Tine Husdyrfag utvikler tjenester for Tines
