@@ -411,7 +411,11 @@ presentasjonen på hele konferansen!"
 
 
  :blog-posts
- [{:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
+ [{:url "http://augustl.com/blog/2016/datomic_the_most_innovative_db_youve_never_heard_of/"
+   :title "Datomic: The most innovative DB you've never heard of"
+   :blurb "Alt for få utviklere kjenner til Datomic, som på en måte er bedre enn man har kapasitet til å forestille seg før man har prøvd den litt selv."
+   :tech [:datomic]}
+  {:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
    :title "JDK8 + Facebook React: Rendering single page apps on the server"
    :blurb "En proof-of-concept på å gjenbruke React-komponenter til å få single page apps til å funke både på server og klient, uten at du trenger å gjøre noe særlig for å tilpasse JS-koden din."
    :tech [:java :react]}
