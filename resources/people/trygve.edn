@@ -17,7 +17,7 @@
             :linkedin "/in/trygveamundsen"}
             
  :tech {:using-at-work [:react :redux :es6 :typescript]
-        :favorites-at-the-moment [:deeplearning :typescript]
+        :favorites-at-the-moment [:deeplearning :face-recognition :typescript]
         :want-to-learn-more [:pytorch :gans :idris]}
 
  :innate-skills [
@@ -25,7 +25,8 @@
         :redux-frontend
         :intellij :browser-devtools
         :osx :linux
-        :ddd]
+        :ddd
+        :deeplearning]
 
  :recommendations [{:title "Functional Programming in Scala"
                     :blurb "Dette er boken for deg som vil lære funksjonell programmering fra bunnen av.",
@@ -65,9 +66,34 @@
             :illustration "/illustrations/hobbies/trygve-mc.jpg"}]
  
  :presentations [{:title "Groovy collection API"
-                         :blurb "En oversikt over groovy's collection api, som gitt på Communities in Action, feb. 2012"
+                         :blurb "En oversikt over groovy's collection api"
                          :tech [:groovy]
+                         :event "Communities in Action"
+                         :date "2012-02-01"
                          :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
+
+ :appearances [{:title "Fjesgjenkjenning med dlib"
+                :event "Kodemaker fagdag"
+                :tech [:face-recognition :machinelearning]
+                :date "2017-10-11"
+                :urls {:source "https://github.com/trygvea/face-recognition-dlib"}}
+               {:title "Pure stateful computations i javascript"
+                :event "Kodemaker fagdag"
+                :tech [:es6]
+                :date "2016-10-09"
+                :urls {:source "https://github.com/trygvea/funkjs"}}
+               {:title "Deep Learning / dyp læring"
+                :event "Kodemaker fagdag"
+                :tech [:deeplearning :machinelearning]
+                :date "2015-05-21"}
+               {:title "Groovy (vs. clojure og scala)"
+                :event "Javazones julemøte 20"
+                :tech [:es6]
+                :date "2011-12-08"}
+               {:title "GPARS - concurrency patterns in Groovy"
+                :event "Kodemaker fagdag"
+                :tech [:groovy]
+                :date "2010-01-22"}]
 
  :open-source-projects [{:url "http://grails.org/plugin/class-diagram"
                          :name "Grails class diagram plugin"
