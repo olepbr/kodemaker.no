@@ -162,7 +162,7 @@
              :tech [:java :jboss :ejb :hibernate :jpa :spring :activemq :junit :svn :cvs :maven :jira :confluence]}
             ]
 
- :cv {:default {:preferred-techs [:java :javascript :git :kotlin :git :ubuntu]}}
+ :cv {:default {:preferred-techs [:java :javascript :git :kotlin :ubuntu]}}
 
 :cv/description "Finn har 17 års erfaring med programmering. Han trives best
  med begge hendene i kildekoden. Han er engasjert i open source, og har god
