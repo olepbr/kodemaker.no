@@ -215,8 +215,6 @@
  :magnolia-cms :server
  :manual-testing :methodology
  :mariadb :database
- :lotus-notes :server
- :lucene :library
  :markdown :specification
  :markedsforing :methodology
  :material-ui :frontend
