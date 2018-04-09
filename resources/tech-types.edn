@@ -194,9 +194,9 @@
  :kanban :methodology
  :karma :library
  :kibana :server
- :krypto :methodology
- :kubernetes :devops
  :koha :library
+ :kubernetes :devops
+ :krypto :methodology
  :kotlin :proglang
  :leiningen :devtools
  :less :frontend
@@ -215,6 +215,8 @@
  :magnolia-cms :server
  :manual-testing :methodology
  :mariadb :database
+ :lotus-notes :server
+ :lucene :library
  :markdown :specification
  :markedsforing :methodology
  :material-ui :frontend
