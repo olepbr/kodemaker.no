@@ -1,0 +1,16 @@
+{:id :rust
+ :name "Rust"
+ :type :proglang
+ :illustration "/photos/tech/rust.png"
+ :site "https://www.rust-lang.org/"
+ :description
+ "[Rust](https://www.rust-lang.org/) er et programmeringsspråk laget av Mozilla, men i kjent Mozilla-ånd er
+ posjektet utviklet i åpenhet og har etter hvert fått en ivrig base med bidragsytere utenfor Mozilla og.
+
+ Rust er nok et forsøk på lage et systemspråk uten runtime-kostnader som ikke er C eller C++. Det kan se ut til at
+ de er på veg til å lykkes med det, da store deler av Firefox (Servo) nå er skrevet i Rust, og bruksområdene til
+ språket som systemspråk som kompilerer til native kode øker og øker.
+
+ En av måtene Rust skiller seg fra andre systemspråk, er det kraftige typesystemet. Ting er som standard ikke
+ muterbare. Når du skal mutere ting, må dette eksplisitt annoteres, og typesystemet har en eierskap-policy som
+ hjelper deg med å holde styr på minne-allokering og alt som hører med."}

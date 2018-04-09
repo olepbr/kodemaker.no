@@ -1,0 +1,17 @@
+{:id :datascript
+ :name "DataScript"
+ :type :database
+ :site "https://github.com/tonsky/datascript"
+ :description
+ "[DataScript](https://github.com/tonsky/datascript) er en implementasjon av Datomic, bare uten persistering, og for
+ JavaScript/nettleseren, ikke backends.
+
+
+ I alle år har det egentlig vært vanlig å putte tilstand i en database i GUI-programmering. iOS/macOS har Core Data,
+ ADO.NET for Windows, SQLite for Android, osv. DataScript er en database som er optimalisert for GUI-programmering
+ i nettleseren, og lar deg putte rådataene dine fint og ryddig i en database, og gjøre spørringer på dataene som er
+ indeksert etter alle kunstens regler, fremfor at du selv lager masse userByUsername, userByEmail, og ditten og datten
+ for å få fart på GUI-et ditt.
+
+ Dessuten er jo Datomic sitt API ganske fint å jobbe med, og det er ikke _mindre_ fint å jobbe med i GUI-programmering
+ i form av DataScript."}

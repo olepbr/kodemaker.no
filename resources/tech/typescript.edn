@@ -1,0 +1,17 @@
+{:id :typescript
+ :name "TypeScript"
+ :type :proglang
+ :illustration "/photos/tech/typescript.png"
+ :site "https://www.typescriptlang.org/"
+ :description
+ "[TypeScript](https://www.typescriptlang.org/) er et pragmatisk forsøk på å introdusere statisk typing til JavaScript,
+ fra Microsoft. I praksis er det supersett av JavaScript - all JavaScript er gyldig TypeScript. Så man kan ta sitt
+ eksisterende JavaScript-prosjekt og legge på typer gradvis, for eksempel.
+
+ TypeScript er også et litt annerledes typesystem, da målet er å skulle kunne representere alt som i praksis gjøres i
+ JavaScript-kode in the wild. Du kan f.eks lage typer som denne:
+
+ ```interface Eventor { on('foo', FooHandler); on('bar', BarHandler); }```
+
+ Ikke veldig likt ting du finner i tradisjonelle typesystemer. Men siden mye JavaScript-kode i praksis fungerer på
+ denne måten, er det noe TypeScript har valgt å lage støtte for."}

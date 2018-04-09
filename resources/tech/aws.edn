@@ -1,0 +1,14 @@
+{:id :aws
+ :name "Amazon Web Services (AWS)"
+ :type :devops
+ :illustration "/photos/tech/aws.png"
+ :site "https://aws.amazon.com/"
+ :description
+ "[Amazon Web Services (AWS)](https://aws.amazon.com/) er Amazon sin cloud-platform. En eller annen gang på 2000-tallet
+ fant Jeff Bezos ut at fra nå av skal alt Amazon lager, selv om det kun er for internt bruk, være generiske tjenester
+ som alle kan bruke. Ut av dette manifesterte AWS seg, som var den første store og populere cloud-platformen hvor det
+ var trivielt å bestille store og små servere, få den satt opp på kun få minutter, og betale per time, ikke per måned
+ eller per år.
+
+ AWS har vært de-facto cloud-plattform lenge, og brukes av omtrent det som er av giganter i tech-verden. Noen bruker
+ Google Cloud og Azure og, naturligvis, men AWS er fortsatt enerådende på toppen."}
