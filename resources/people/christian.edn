@@ -45,7 +45,7 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:aws :docker :concourse :bash]
+ :tech {:using-at-work [:clojurescript :cordova :aws]
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
@@ -68,21 +68,28 @@
                   Addison-Wesley. Resultatet ble en bok som kom ut i 2010."
                   :illustration "/illustrations/side-projects/jstdd.jpg"
                   :tech [:javascript :nodejs :tdd :testing]
-                  :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}
-                 {:title "ZombieCLJ"
-                  :description "I denne oppfølgeren til ZombieTDD lager
-                                [Magnar](/magnar/) og jeg spill med
-                                Clojure og ClojureScript. Det går i
-                                parprogrammering hele veien. Og jaggu skriver vi
-                                ikke flere tester først. Skulle tro XP hadde noe
-                                for seg."
-                  :illustration "/illustrations/side-projects/zombieclj.jpg"
-                  :link {:url "http://www.zombieclj.no" :text "Se videoene"}
-                  :tech [:clojure :clojurescript :tdd :testing]}]
+                  :link {:url "http://tddjs.com/" :text "Sjekk ut boka"}}]
 
  :upcoming []
 
- :recommendations [{:title "How to Use npm as a Build Tool"
+ :recommendations [{:title "Konsulenteriet må DØ!"
+                    :link {:url "https://vimeo.com/139330934"
+                           :text "Se lyn/torden-talen"}
+                    :blurb "Erik Assum gir en tordnende god lyntale om hva man
+                   _egentlig_ burde bruke konsulenter til, og hvordan en
+                   konsulent er, eller ihvertfall burde være, noe annet enn en
+                   vikar."
+                    :tech [:consulting]}
+                   {:title "Simple Made Easy"
+                    :blurb "Det er ikke lett å lage noe enkelt. Rich
+                            Hickey snakker om forskjellen på nærliggende
+                            (subjektivt lett) og ukomplisert (objektivt
+                            enkelt). Og implikasjonene for hvordan du bør
+                            tenke rundt software."
+                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
+                           :text "Se foredraget"}
+                    :tech [:design :clojure]}
+                   {:title "How to Use npm as a Build Tool"
                     :link {:url "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
                            :text "Les artikkelen"}
                     :tech [:javascript :nodejs :npm :grunt :gulp]
@@ -117,15 +124,6 @@
                             MVC-rammeverk for JavaScript er langt fra å tilby en
                             tilfredstillende løsning på problemene vi som
                             frontendutviklere møter."}
-                   {:title "Simple Made Easy"
-                    :blurb "Det er ikke lett å lage noe enkelt. Rich
-                            Hickey snakker om forskjellen på nærliggende
-                            (subjektivt lett) og ukomplisert (objektivt
-                            enkelt). Og implikasjonene for hvordan du bør
-                            tenke rundt software."
-                    :link {:url "http://www.infoq.com/presentations/Simple-Made-Easy"
-                           :text "Se foredraget"}
-                    :tech [:design :clojure]}
                    {:title "Dance you Imps!"
                     :blurb "Uncle Bob Martin skriver et knallgodt innlegg om
                     hvordan ORM-er ikke egentlig er ORM-er. Dette sitatet
@@ -160,11 +158,31 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "http://cjohansen.no/annotating-datomic-transactions/"
+ :blog-posts [{:url "https://cjohansen.no/optimized-optimus-asset-paths-clojurescript//"
+               :title "Optimized Optimus Asset Paths from ClojureScript"
+               :blurb "Hvordan eksponere Optimus asset-paths fra Clojure til ClojureScript via en macro"
+               :tech [:clojure :clojurescript :optimus]}
+              {:url "https://cjohansen.no/letsencrypt-haproxy-ssl/"
+               :title "Securing HAProxy sites with Let's Encrypt SSL Certificates"
+               :blurb "En gjennomgang av oppsett av SSL-sertifikater fra Let's Encrypt med HAProxy"
+               :tech [:haproxy :letsencrypt :docker :centos]}
+              {:url "https://cjohansen.no/aws-apigw-proxy-cloudformation/"
+               :title "Api Gateway Proxy Resource with Cloudformation"
+               :blurb "Cloudformation-oppsett for proxy-ressurser fra AWS Api Gateway"
+               :tech [:aws-api-gateway :aws-cloudformation]}
+              {:url "https://cjohansen.no/idempotent-cloudformation-updates/"
+               :title "Idempotent Cloudformation Updates"
+               :blurb "Hvordan sørge for at Cloudformation-oppdateringer blir helt idempotente"
+               :tech [:aws-cloudformation :bash]}
+              {:url "https://cjohansen.no/referentially-transparent-crud/"
+               :title "Referentially Transparent CRUD"
+               :blurb "Artikkel om hvordan Datomic lar deg implementere tradisjonell CRUD med referentially transparent funksjonell kode."
+               :tech [:datomic :clojure :datalog :immutability :functional-programming]}
+              {:url "https://cjohansen.no/annotating-datomic-transactions/"
                :title "Annotating Datomic transactions"
                :blurb "En artikkel om Datomics transaksjoner, og hvordan de kan utvides med app-spesifik informasjon for bedre auditing og mer."
                :tech [:datomic :clojure :datalog]}
-              {:url "http://cjohansen.no/querying-across-datomic-databases/"
+              {:url "https://cjohansen.no/querying-across-datomic-databases/"
                :title "Querying across Datomic databases"
                :blurb "Et konkret eksempel på hvordan du kan gjøre datalog spørringer over flere databaser samtidig med Datomic."
                :tech [:datomic :clojure :datalog]}
@@ -184,20 +202,20 @@
               artikkelen belyser hvordan man kan angripe klient-spesifikke
               problemer i JavaScript med gode design-prinsipper i hånda."
                :tech [:javascript]}
-              {:url "http://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
+              {:url "https://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
                        websider i Clojure med blant annet biblioteket Stasis.
                        Artikkelen gir et innblikk i bruk av mange populære
                        web-biblioteker for Clojure."
                :tech [:clojure :stasis :optimus]}
-              {:url "http://cjohansen.no/clojure-to-die-for/"
+              {:url "https://cjohansen.no/clojure-to-die-for/"
                :title "Clojure to die for"
                :blurb "En liten feiring av helt hverdagslige idiomer of småtriks
                som gjør det å jobbe med Clojure til en fantastisk god
                opplevelse"
                :tech [:clojure]}
-              {:url "http://cjohansen.no/an-introduction-to-elisp/"
+              {:url "https://cjohansen.no/an-introduction-to-elisp/"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little
@@ -212,25 +230,53 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Tine Husdyrfag"
+ :projects [{:customer "Hafslund Strøm"
              :employer :kodemaker
-             :summary "Utvikling av skyplatform på AWS for produsent-tjenester"
+             :summary "Videreutvikling av Hafslund Strøms app for iOS og Android"
+             :description "Videreutvikling av Hafslund Strøms app for iOS og
+            Android, samt tilstøttende backend-systemer og infrastruktur."
+             :tech [:clojurescript :cordova :aws :docker-swarm]
+             :start "2018-04"}
+            {:customer "Tine Husdyrfag"
+             :employer :kodemaker
+             :summary "Design av domenemodell, applikasjonsarkitektur og utvikling på AWS"
              :description "Tine Husdyrfag utvikler tjenester for Tines
-            produsenter. Prosjektet utvikler ny skyplatform på Amazon Web
+            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
+            Services (AWS) for morgendagens tjenester.
+
+            Jobbet med design av deler av det grunnleggende domenet (eiere) for
+            nye tjenester og hvordan dette spiller sammen med autentisering og
+            autorisasjon i platformen som helhet. Jobbet med arkitektur og
+            design av løsninger etter CQRS-prinsippet, samt en pragmatisk
+            tilnærming til event sourcing (blant annet med bruk av Datomic).
+
+            Utviklet funksjonalitet med AWS Lambda, Api Gateway, DynamoDB,
+            Kinesis og andre AWS-ressurser. Modellert deler av domenet som en
+            graf, implementert dette med Datomic."
+             :tech [:datomic :aws :dynamodb :aws-iam :aws-lambda :aws-api-gateway
+                    :oidc :material-ui :ddd :aws-kinesis :aws-cloudwatch :aws-cloudfront
+                    :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd :alpine
+                    :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
+             :start "2017-09"
+             :end "2018-03"}
+            {:customer "Tine Husdyrfag"
+             :employer :kodemaker
+             :summary "Infrastruktur og CI/CD for utvikling mot AWS"
+             :description "Tine Husdyrfag utvikler tjenester for Tines
+            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
             Services (AWS) for morgendagens tjenester.
 
             Design og oppsett av nettverksløsning. Automatisering av oppsett og
             utforming av applikasjonsplatform med AWS Cloudformation, bash og
-            annet. Utvikling av funksjonalitet med AWS Lambda, Api Gateway,
-            DynamoDB, Kinesis og mer. Oppsett for frontendapplikasjoner med
-            S3/Cloudfront/Route 53. Jobbet med sikkerhetsløsning basert på Oauth
-            2.0 og OpenId Connect. Utviklet løype for CI/CD basert på Concourse."
-             :tech [:aws :concourse :docker :bash :oidc :nginx :go :material-ui
-                    :dynamodb :aws-iam :aws-kinesis :aws-lambda :aws-api-gateway
-                    :aws-vpc :aws-ecs :aws-route53 :aws-cloudwatch :aws-cloudfront
-                    :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd
-                    :alpine :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
-             :years [2017 :ongoing]}
+            annet. Oppsett for frontendapplikasjoner med S3/Cloudfront/Route 53.
+            Jobbet med sikkerhetsløsning basert på Oauth 2.0 og OpenId Connect.
+            Utviklet løype for CI/CD basert på Concourse."
+             :tech [:aws :aws-vpc :aws-ecs :concourse :aws-iam :docker :bash :oidc
+                    :nginx :go :dynamodb :aws-kinesis :aws-lambda :aws-api-gateway
+                    :aws-route53 :aws-cloudwatch :aws-cloudfront :aws-rds :aws-s3
+                    :auth0 :jira :confluence :cd :ci :alpine :ubuntu :micro-services]
+             :start "2017-09"
+             :end "2018-03"}
             {:customer "Eventum.no"
              :employer :kodemaker
              :summary "eventum.no, eventum.com"
@@ -250,7 +296,8 @@
                     :react :elasticsearch :centos :auth0 :oidc :aws-iam :aws-s3 :leiningen :asana
                     :maven :haproxy :nginx :datascript :oauth2 :bash :micro-services :core-async
                     :clojure-spec :component :sse :reagent :figwheel :quartz]
-             :years [2017]}
+             :start "2017-01"
+             :end "2017-09"}
             {:customer "NRK Origo - Potion"
              :employer :kodemaker
              :summary "Origo/Potion"
@@ -284,7 +331,8 @@
              Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
              Premiere Pro og Quantell."
              :tech [:javascript :webgl :cef :angularjs :jasmine :karma :nodejs]
-             :years [2014]}
+             :start "2014-09"
+             :end "2014-12"}
             {:customer "NRK - Bidrag"
              :employer :kodemaker
              :summary "Bidrag"
@@ -304,7 +352,8 @@
              sitt REST API. Eksempler i guides hentes fra fungerende eksempler,
              for å sikre at kodeeksempler ikke er utdatert."
              :tech [:clojure :responsive-design :stasis :optimus :midje]
-             :years [2014]}
+             :start "2014-03"
+             :end "2014-09"}
             {:customer "Schibsted Payment ID (SPiD)"
              :employer :kodemaker
              :summary "Frontend for ny innlogging"
@@ -312,7 +361,8 @@
              for SPiD, med fokus på brukervennlighet, støtte for mobil, og
              forenkling av tekniske løsninger."
              :tech [:html :css :responsive-design :javascript :grunt :mocha :chai]
-             :years [2014]}
+             :start "2014-03"
+             :end "2014-09"}
             {:customer "FINN Småjobber"
              :employer :kodemaker
              :summary "FINN Småjobber"
@@ -322,22 +372,23 @@
                            Implementert nytt ajax-søk med React.JS og hjulpet
                            andre på teamet med å styrke sin frontend-kompetanse."
              :tech [:javascript :spring-mvc :karma :jasmine :browserify :sinon :java :junit]
-             :years [2013 2014]}
+             :start "2012-09"
+             :end "2014-03"}
             {:customer "Gitorious AS"
              :summary "Gitorious-programvaren"
              :employer :gitorious
              :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake :activemq]
-             :years [2011 2013]}
+             :years [2011 2012 2013]}
             {:customer "Gitorious AS"
              :employer :gitorious
              :summary "Drift gitorious.org"
              :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :activemq]
-             :years [2011 2013]}
+             :years [2011 2012 2013]}
             {:customer "Programutvikling"
              :employer :gitorious
              :summary "Månedlige kurs i JavaScript og TDD med JavaScript"
              :tech [:javascript :tdd]
-             :years [2011 2015]}
+             :years [2011 2012 2013 2014 2015]}
             {:customer "FINN Oppdrag"
              :employer :kodemaker
              :summary "FINN Oppdrag"
@@ -366,7 +417,7 @@
              :employer :shortcut
              :summary "Diverse interne apper"
              :tech [:ruby]
-             :years [2009 2011]}
+             :years [2009 2010 2011]}
             {:customer "Apotek 1"
              :employer :ixd
              :summary "konkurranse.apotek1.no"
@@ -391,7 +442,7 @@
              :employer :ixd
              :summary "reiseliv.no"
              :tech [:html :css :javascript :ezpublish :mysql]
-             :years [2007 2009]}
+             :years [2007 2008 2009]}
             {:customer "Storebrand"
              :employer :ixd
              :summary "Storebrand Skadeforsikring"
@@ -401,12 +452,12 @@
              :employer :self-employed
              :summary "cosmopolite.no"
              :tech [:html :css :javascript :ezpublish]
-             :years [2006 2013]}
+             :years [2006 2007 2008 2009 2010 2011 2012 2013]}
             {:customer "IXD"
              :employer :self-employed
              :summary "Diverse mindre websider basert på eZ Publish"
              :tech [:html :css :javascript :ezpublish :ubuntu :windows :mysql :php]
-             :years [2005 2009]}
+             :years [2005 2006 2007 2008 2009]}
             {:customer "Rarelink"
              :employer :self-employed
              :summary "rarelink.no"
@@ -534,7 +585,11 @@
                   :tech [:javascript]}
                  ]
 
- :appearances [{:title "Datomic"
+ :appearances [{:title "Å Bygge sin egen Infrastruktur på AWS"
+                :event "Kodemaker fagdag"
+                :tech [:aws :aws-cloudformation :concourse]
+                :date "2018-04-05"}
+               {:title "Datomic"
                 :event "Internforedrag i Tine"
                 :tech [:datomic :clojure]
                 :date "2017-11-14"}
@@ -614,6 +669,10 @@
                 :event "NDC 2014, foredrag om React.js, ClojureScript og Om"
                 :date "2014-06-20"
                 :tech [:clojurescript :om :react]}
+               {:title "Functional UI programming"
+                :event "Oslo Socially Functional"
+                :date "2014-04-28"
+                :tech [:javascript]}
                {:title "JavaScript for programmers, 3-dagers kurs"
                 :event "Programutvikling"
                 :date "2014-04-05"
@@ -881,9 +940,16 @@
 
  :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
                 :url "http://www.zombieclj.no/"
-                :blurb "I denne oppfølgeren til Zombie TDD lager Magnar og
-                        Christian nettspill fra scratch med Clojure og
-                        ClojureScript."
+                :blurb "I denne oppfølgeren til Zombie TDD
+                lager [Magnar](/magnar/) og
+                [Christian](/christian/) nettspill fra scratch med Clojure og
+                ClojureScript."
+                :description "I denne oppfølgeren til ZombieTDD
+                lager [Magnar](/magnar/) og jeg spill med Clojure og
+                ClojureScript. Det går i parprogrammering hele veien. Og jaggu
+                skriver vi ikke flere tester først. Skulle tro XP hadde noe for
+                seg."
+                :illustration "/illustrations/side-projects/zombieclj.jpg"
                 :tech [:clojure :clojurescript :frontend]}]
 
  :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
@@ -941,9 +1007,46 @@
                              {:name "karma-referee" :url "https://github.com/cjohansen/karma-referee" :tech [:javascript :testing]}
                              {:name "carousel-js" :url "https://github.com/cjohansen/carousel-js" :tech [:javascript]}]
 
+ :endorsements [{:author "Geir Børdalen"
+                 :title "Prosjektleder, Origo-prosjektet, NRK"
+                 :quote "Christian har vært en uvurderlig ressurs i
+                 Origo-prosjektet i nesten 2 år. Han har jobbet med front-end
+                 utviklingen av produktene Potion og Radioarkivet. Dette er
+                 produkter som har endret NRK fundamentalt i forhold til tilgang
+                 og gjenbruk av arkivmateriale innenfor både radio og TV. Noen av
+                 produktene Christian har vært sentral i utviklingen av, har
+                 tilført NRK varig verdi for mange år framover. Vi har også
+                 verdsatt Christian for hans evner til teamarbeid, evne til
+                 innovasjon og alltid positive innstilling."}
+                {:author "Stefan Andreas Englien"
+                 :title "Teamleder, FINN Småjobber"
+                 :quote "Christian Johansen har vært innleid som konsulent på
+                 utviklingsteamet til FINN Småjobber i tre måneder fra og med
+                 november 2013 til februar 2014. Vi behøvde en frontend-guru, og
+                 vi valgte Christian basert på FINN Oppdrags gode erfaringer med
+                 ham. Min rolle er å lede utviklingsteamet, og jeg har dermed
+                 vært hans nærmeste leder i perioden.
+
+                 I tiden hos FINN Småjobber har Christian hjulpet oss med
+                 javascript-tester, ytelse, forenkling av rammeverket vårt, og
+                 selvfølgelig mye ny frontend-funksjonalitet. Han har også vært
+                 til stor hjelp med git-utfordringer, backend-arkitektur og
+                 produktutviklingen av FINN Småjobber.
+
+                 Christian er svært omgjengelig og hyggelig, og har vært et
+                 positivt tilskudd til teamet. Jeg er svært fornøyd med hans
+                 innsats for oss, og anbefaler ham på det sterkeste!"}
+                {:author "Karl Philip Lund"
+                 :quote "Christian is most likely the most talented web
+                 developer I've ever worked with. He is easy to communicate
+                 with, flexible to work with and has the ability to deliver
+                 success even when the requirements/instructions are unclear. He
+                 will add value to any web project. I give him my highest
+                 recommendations."}]
+
  :education-summary "Institutt for informatikk, Universitetet i Oslo"
  :education [{:institution "Institutt for informatikk, UiO"
-              :years [2001 2005]
+              :years [2001 2002 2003 2004 2005]
               :subject "Systemutvikling og digital signalbehandling"}]
 
  :languages [{:language "Norsk"

@@ -1,6 +1,6 @@
 {:id :d3
  :name "D3"
- :type :library
+ :type :frontend
  :illustration "/photos/tech/d3.svg"
  :site "https://d3js.org/"
  :description

@@ -2,7 +2,11 @@
  :name            ["Kjetil" "Jørgensen-Dahl"]
  :title           "Kodemaker"
  :start-date      "2010-02-01"
- :description     "Kjetil har utviklet forretningskritiske applikasjoner siden 1998 og brenner for faget! Han er en erfaren utvikler og teamleder, og som ofte leverer langt mer enn kode. Fokusert arbeid for å skape gode og vedlikeholdbare systemer, er Kjetils mål. Han er flink til å organisere, koordinere, fremme kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker, og ofte bidragsyter, i fagfora."
+ :description     "Kjetil har utviklet forretningskritiske applikasjoner siden 1998 og brenner for faget!
+ Han er en erfaren utvikler og teamleder, og som ofte leverer langt mer enn kode. Fokusert arbeid for å
+ skape gode og vedlikeholdbare systemer, er Kjetils mål. Han er flink til å organisere, koordinere, fremme
+ kommunikasjon, og er utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er deltaker,
+ og ofte bidragsyter, i fagfora."
 
  :phone-number    "+47 920 84 750"
  :email-address   "kjetiljd@kodemaker.no"
@@ -11,50 +15,312 @@
                    :twitter  "kjetiljd"
                    :linkedin "/in/kjetiljd"}
 
- :tech            {:favorites-at-the-moment [:java :ansible :devops :docker :tdd :gradle :ci :cd :refactoring]
-                   :want-to-learn-more      [:functional-programming]}
+ :tech            {:favorites-at-the-moment [:kotlin :monitoring :agile]
+                   :want-to-learn-more      [:functional-programming :frontend]}
 
  :recommendations [{:link  {:url "http://martinfowler.com/books/refactoring.html" :text "Boken"}
                     :title "Refactoring - Improving the Design of Existing Code (Martin Fowler)"
-                    :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode. Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
+                    :blurb "Denne boken er trolig en av de viktigste bøkene som er skrevet om kvalitet i kode.
+                    Spesielt var, og er, kapittelet om Code Smells (med Kent Beck som hovedforfatter) noe av den beste
+                    introduksjonen man kan få til hvordan man skal identifisere kode med kvalitetsproblemer."
                     :tech  [:refactoring :code-smells]}
                    {:link  {:url "http://www.growing-object-oriented-software.com/" :text "Boken"}
                     :title "Growing Object-Oriented Software, Guided by Tests (Freeman & Pryce)"
-                    :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer. Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
+                    :blurb "De første kapitlene i denne boken beskriver en praktisk måte å bygge software som fungerer.
+                    Ideene fra denne boken har hjulpet meg å sikre suksess i flere prosjekter."
                     :tech  [:tdd :automatisering]}]
 
- :projects        [{:customer    "NRK"
-                    :description "Utvikling av integrasjoner; utvikling av funksjonalitet, tekniske løsninger for effektiv utvikling (testing, kodeforbedringer) og robust drift (automatisering, overvåkning, rutiner). Også bidragsyter på metodikk."
-                    :years       [2017 2018]
-                    :tech        [:java :maven :gradle :spring-boot :spring :groovy :jenkins :rest :soap :cucumber :mockito :ansible :jira :confluence :stash]}
+ :projects        [{:customer    "Posten/Bring"
+                    :description "**Utvikler**, Private Market Web Solutions<br/>
+                    Ny- og videreutvikling av Postens webtjenester for personmarkedet."
+                    :start       "2018-03"
+                    :employer    :kodemaker
+                    :summary     "Private Market Web Solutions, Utvikler"
+                    :tech        [:kotlin :cucumber :reactjs :ratpack]}
+                   {:customer    "NRK"
+                    :description "**Utvikler**, Integrasjonsplattform for administrativ portefølje<br/>
+                    Utvikling av integrasjoner; utvikling av funksjonalitet, tekniske løsninger for
+                    effektiv utvikling (testing, kodeforbedringer) og robust drift (automatisering, overvåkning,
+                    rutiner). Også bidragsyter på metodikk."
+                    :start       "2017-01"
+                    :end         "2018-02"
+                    :employer    :kodemaker
+                    :summary     "Integrasjonsplattform for administrativ portefølje, Utvikler"
+                    :tech        [:java :spring-boot :camel :groovy :cucumber :jenkins :rest :soap :mockito :ansible :jira :confluence :bitbucket]}
                    {:customer    "Schibsted Products & Technology"
-                    :description "Utvikling av integrasjon; også fasilitator for teamreorganisering og prosessforbedringer."
-                    :years       [2016]
-                    :tech        [:java :maven :aws :git :spring :spock :geb :mysql :jenkins :rest :docker :jira :confluence :github]}
+                    :description "**Utvikler/fasilitator**, SPT Payment<br/>
+                    Utvikling av integrasjon; også fasilitator for teamreorganisering og prosessforbedringer."
+                    :start       "2016-06"
+                    :end         "2016-12"
+                    :employer    :kodemaker
+                    :summary     "SPT Payment, Utvikler/fasilitator"
+                    :tech        [:java :aws :git :spring-boot :spock :geb :mysql :jenkins :rest :docker :jira :confluence :github]}
                    {:customer    "Politiets IKT-tjenester"
-                    :description "Koordinering og utvikling knyttet til felles tjenester."
-                    :years       [2015 2016]
+                    :description "**Utvikler/koordinator**<br/>
+                    Koordinering og utvikling knyttet til felles tjenester."
+                    :start       "2015-10"
+                    :end         "2016-06"
+                    :employer    :kodemaker
+                    :summary     "Prosjekt Nye Politidistrikt, Utvikler/koordinator"
                     :tech        [:javascript :react :java :maven :testing :cxf :soapui :git]}
-                   {:customer    "Nye Deichman - Applikasjonsprosjektet"
-                    :description "Norges nye bibliotek i Bjørvika. Utvikling av biblioteks- og formidlingssystemer. Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø, produksjonsmiljø, deployment, monitorering og driftsprosesser."
-                    :years       [2014 2015]
+                   {:customer    "Oslo Kommune, Kulturetaten/Deichmanske"
+                    :description "**Teknisk leder**, Nye Deichman - Applikasjonsprosjektet<br/>
+                    Utviklings- og produksjonsplattformNorges nye bibliotek i Bjørvika.
+                    Utvikling av biblioteks- og formidlingssystemer.
+                    Nytt bibliotekssystem basert på kombinasjon av open source og skreddersøm, videreutvikling av
+                    digitalt formidlingssystem, diverse andre støttesystemer for biblioteksddrift. Teknisk leder for
+                    utviklings- og driftsplattform. Ansvarlig for utviklingsprosess, -verktøy og -miljø,
+                    produksjonsmiljø, deployment, monitorering og driftsprosesser."
+                    :start       "2015-10"
+                    :end         "2016-06"
+                    :employer    :kodemaker
+                    :summary     "Nye Deichman - Applikasjonsprosjektet,
+                    Teknisk leder Utviklings- og produksjonsplattform"
                     :tech        [:saltstack :docker :ubuntu :vagrant :go :ruby :nodejs :javascript :cucumber :watir :elasticsearch :koha :git :java :tdd]}
-                   {:customer    "FINN reise"
-                    :description "Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner i forhold til kode, prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
-                    :years       [2013 2014]
-                    :tech        [:java :groovy :cucumber :camel :gradle :solr :git]}
-                   {:customer    "FINN jobb"
-                    :description "Norges største jobbportal. Forvaltning og videreutvikling av system for rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk, produkt og teknologi."
-                    :years       [2011 2012 2013]
-                    :tech        [:java :ruby :cucumber :solr]}
+                   {:customer "Syncrotec as"
+                    :start    "2014-04"
+                    :end      "2014-05"
+                    :employer :kodemaker
+                    :exclude-from-profile? true
+                    :description "**Teknisk ekspert**, Vurdering av arbeid og kvalitet - applikasjonsutviklingsleveranse,
+                    <br/>
+                    Kodemaker ble engasjert av Syncrotec i april 2014 for å gjøre en
+                    tidsavgrenset vurdering av koden levert i et applikasjonsutviklingsprosjekt.
+                    Kjetils oppgaver besto i å:
+
+                    - Få løsningen opp på en demoserver
+                    - Gi en generell vurdering av kvaliteten på prosjektet basert på koden
+                    - Gi en spesifikk vurdering av status på enkeltfunksjoner basert på koden
+                    - Gjøre en vurdering av arbeidsomfang basert på endringshistorikk
+
+                    Det ble utarbeidet og presentert en sluttrapport som ble
+                    viktig for oppdragsgivers videre håndtering av leveransen."
+                    :tech [:git :intellij :pmd :cpd :findbugs :checkstyle :java
+                           :static-analysis :vcs-analysis
+                           :code-review :manual-testing :interview]
+                    :summary "Vurdering av arbeid og kvalitet - applikasjonsutviklingsleveranse, Teknisk ekspert"}
+                   {:customer    "FINN.no"
+                    :description "**Assisterende teknisk leder**, FINN reise<br/>
+                    Norges største reiseportal. Utvikling av FINN reise 2.0. Assisterende teknisk leder for FINN
+                    reise med organisering av utviklingsteam og bygging av nye FINN reise. Sparringpartner på kode,
+                     prosess og teknologi. Daglig oppfølging av fire utviklingsteam med til sammen 16 utviklere."
+                    :cv/description "Norges største reiseportal. Utvikling av FINN reise 2.0.<br/>
+
+                    **Assisterende teknisk leder** for FINN reise med
+                    organisering av utviklingsteam og bygging av nye FINN
+                    reise. Sparringpartner i forhold til kode, prosess og
+                    teknologi. Daglig oppfølging av fire utviklingsteam med
+                    til sammen 16 utviklere.
+
+                    Total fornying av FINN reises meta-søk applikasjoner for
+                    fly- og pakkereiser. Flysøket er en av FINNs seks Core
+                    Business Functions med spesielle krav til robusthet og
+                    oppetid.
+
+                    - Oppbygning og organisering av nytt utviklingsteam med 16 utviklere (derav en stor andel
+                     nyansatte), etablering av effektive, smidige, arbeidsprosesser med fokus på kvalitet i
+                     leveransen, kontinuerlig prosessforbedring og læringsprosesser.
+                    - Etablering og oppfølging av utviklingen av ny skalérbar applikasjonsarkitektur, med bruk av
+                     flere programmeringsspråk, og med måling og transparens for å sikre god forståelse av
+                     systemets oppførsel i produksjon, under last.
+                    - Etablering av automatiske byggeskript basert på moderne open source verktøy, med innebygde
+                    krav til, og sjekk av, kodestandard, duplisering, og med automatisert testing på enhets-, modul-
+                     og ende-til-ende-nivå. Muligheten til å gjøre samme omfattende automatiserte testing (også
+                      browsertesting) hos hver enkelt utvikler og i felles byggemiljø.
+                    - Løpende prioritering av utvikling basert på brukertesting og tidlig release av alfa- og
+                     beta-versjoner til sluttbrukere og basert på måling av brukskvalitet (responstid mv) og
+                      forretningsparametere, som konvertering.
+                    - Etablering av rutiner for drift med varsling- og informasjonsrutiner, avvikshåndtering og
+                     forbedringsprosesser for kontinuerlig forbedring av tjenesteleveransen til FINNs millioner av
+                      brukere. "
+                    :start       "2013-02"
+                    :end         "2014-04"
+                    :employer    :kodemaker
+                    :summary     "FINN reise 2.0, Assisterende teknisk leder"
+                    :tech        [:java :groovy :spring-mvc :camel :solr :wslite :jersey :dashing
+                                  :metrics :statsd :apache :kibana :graphite :gradle :phantomjs
+                                  :spock :geb :clientdriver :bamboo :codenarc :pmd :cpd :findbugs
+                                  :checkstyle :selenium :junit :shell :tdd :kanban :burndown
+                                  :retrospectives]}
+                   {:customer    "FINN.no"
+                    :description "**Seniorutvikler**, FINN jobb<br/>
+                    Norges største jobbportal. Forvaltning og videreutvikling av system for
+                     rubrikkannonsering. Seniorutvikler, samt viktig bidragsyter i forhold til metodikk,
+                     produkt og teknologi."
+                    :start       "2011-02"
+                    :end         "2013-02"
+                    :employer    :kodemaker
+                    :summary     "FINN jobb, Seniorutvikler"
+                    :tech        [:java :ruby :cucumber :solr :javascript :html :jsp :spring-mvc]}
                    {:customer    "Fondet for Regionale Verneombud"
-                    :description "Nytt sekretariatssystem. Saksbehandlingssystem for innkreving av avgift fra virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
-                    :years       [2010 2011]
-                    :tech        [:ruby :rails :sphinx :mysql]}
+                    :description "**Seniorutvikler**,Nytt Sekretariatssystem<br/>
+                    Nytt sekretariatssystem. Saksbehandlingssystem for innkreving av avgift fra
+                     virksomheter i bygg- og anleggsbransjen. Utvikling av webløsning med integrasjon mot
+                      Brønnøysundregistrene, Posten, SSB, m fl. Smidig prosjekt med to Kodemakere som jobber
+                      direkte med brukere og oppdragsgiver. Også etablering av ny driftsløsning."
+                    :start       "2010-09"
+                    :end         "2011-01"
+                    :employer    :kodemaker
+                    :summary     "Nytt Sekretariatssystem, Seniorutvikler"
+                    :tech        [:ruby :rails :sphinx :mysql :rake :git]}
                    {:customer    "Lindorff Decision (nå Bisnode)"
-                    :description "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach. Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur. Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av utviklingsteamet."
-                    :years       [2010]
-                    :tech        [:java :spring-mvc]}]
+                    :description "**Arkitekt, utvikler og prosesscoach**, Ny web-løsning mot kunder<br/>
+                    Ny webapplikasjon for kredittopplysningsselskapet Lindorff Decision. Kodemaker deltok som
+                     underleverandør til IXD, med Kjetil som ansvarlig for applikasjons- og utviklingsarkitektur.
+                      Kjetil bidro også med støtte til utviklingsprosessen og i den daglige oppfølgingen av
+                       utviklingsteamet."
+                    :start       "2010-03"
+                    :end         "2010-09"
+                    :employer    :kodemaker
+                    :summary     "Ny web-løsning mot kunder, Arkitekt, utvikler og prosesscoach"
+                    :tech        [:java :spring-mvc :maven :hudson :git-svn :scrum :tomcat :webtest :story-points]}
+                   {:customer    "NOS Clearing ASA"
+                    :start       "2006-06"
+                    :end         "2010-01"
+                    :exclude-from-profile? true
+                    :employer    :nos-clearing
+                    :summary     "QEPTA (kjernesystem for clearing) - Forvaltning og videreutvikling, Seniorutvikler"
+                    :description " **Senior systemutvikler, teamleder og prosesscoach**,
+                    QEPTA (kjernesystem for clearing)<br/>
+                     Utvikler, metodeansvarlig, teamleder og ScrumMaster i IT-avdeling som forvalter, utvikler og
+                     drifter selskapets Java-baserte kjernesystem for clearing av derivathandler. Seniorutvikler
+                     på systemet, parallellt med ansvar for innføring av Scrum i 2007, fagansvar for
+                     systemutviklingsteamet og ScrumMaster 2007-2008. Koordinering av utviklingsarbeid og
+                     migrering til ny driftsleverandør og -plattform 2008-2009. Interne og eksterne
+                     fagpresentasjoner."
+                    :tech [:java :tomcat :fuse :activemq :spring :wicket :oracle :hibernate :junit :xml :maven :hudson :intellij :scrum :tdd :ci]}
+                   {:customer    "Telenor"
+                    :years       [2005]
+                    :employer    :objectnet
+                    :exclude-from-profile? true
+                    :summary     "COS (tjenester for kunde og ordre), Forvaltningsteamet, ScrumMaster, releaseansvarlig"
+                    :description "COS-seksjonen ScrumMaster (Teamleder) for COS’ forvaltningsteam (5-12 personer). Ansvarlig for prosess, planlegging, oppfølging og evaluering av teamets arbeid. Ansvarlig for alle supportsaker for COS. Ansvarlig for koordinering av releaser. Stedfortreder for seksjonsledelsen i møter med kanaler og prosjekter."
+                    :tech [:java :weblogic :mks :intellij :scrum :release-management]}
+                   {:customer    "Telenor"
+                    :years       [2004]
+                    :employer    :objectnet
+                    :exclude-from-profile? true
+                    :summary     "EDC-COS, Ladekodedistribusjon, Seniorutvikler/Systemtestleder"
+                    :description "EDC-COS Seniorutvikler, systemtestansvarlig i prosjekt for utvikling av ny funksjonalitet (knyttet til elektronisk distribusjon av ladekoder) i forretningslogikk- og integrasjonslag (COS). Kjetil utviklet forretningsfunksjoner og etablerte byggemiljø, samt hadde ansvar for konfigurasjonsstyring. Har også bistått prosjektleder i etablering av smidig prosjektmetode basert på Scrum, samt ansvarlig for systemtest-prosessen. Teknisk ressurs i verdikjedetest av løsningen (på tvers av de involverte systemene)."
+                    :tech [:java :spring :intellij :aspectj :jms :ejb :mock :scrum]}
+                   {:customer    "Telenor"
+                    :years       [2004]
+                    :employer    :objectnet
+                    :exclude-from-profile? true
+                    :summary     "COS (tjenester for kunde og ordre), Utviklings- og forvaltningsteamet, Seniorutvikler"
+                    :description "COS-seksjonen Seniorutvikler i COS, som er forretningslogikk og -integrasjonslaget i mobildelen av Telenor. Prosjektet innførte parprogrammering - tok initiativ til evaluering av arbeidet noe som utviklet seg til et forskningsprosjekt for student ved UiO/Simula."
+                    :tech [:j2ee :ejb :testing :automated-acceptance-testing :pair-programming]}
+                   {:customer    "Telenor"
+                    :years       [2004]
+                    :employer    :objectnet
+                    :exclude-from-profile? true
+                    :summary     "Fakturakontroll-COS, Nytt bedriftskundeprodukt, Seniorutvikler"
+                    :description "Fakturakontroll COS Seniorutvikler; utvikling av ny funksjonalitet (knyttet til nytt bedriftskundeprodukt) i forretningslogikk- og integrasjonslag (COS). Utviklet forretningsfunksjoner og var med i utforming av ny applikasjonsarkitektur (overgang fra transaksjonsskript til rik domenemodell), samt at prosjektet innførte automatisert akseptansetesting."
+                    :tech [:j2ee :sping :sybase :aspectj :intellij :automated-acceptance-testing :domain-modeling :scrum]}
+                   {:customer    "Statens Vegvesen"
+                    :years       [2004]
+                    :employer    :objectnet
+                    :exclude-from-profile? true
+                    :summary     "EUCARIS, Webapplikasjon for kjøretøyoppslag, Løsningsansvarlig og utvikler"
+                    :description "EUCARIS Løsningsansvarlig og utvikler; Ny webapplikasjon for oppslag mot europeiske kjøretøy-registre. Ansvarlig for analyse, design og implementasjon av web-klienten. (Arbeidet ble lagt på is på grunn av prosjekt-eksterne forhold knyttet til internasjonale avtaler og integrasjons-plattform.)"
+                    :tech [:java :struts :xml :ldap :jms :ant]}
+                   {:customer    "Bladcentralen"
+                    :years       [2003]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Web for kommisjonærer, Oracle Portal-basert Java-prosjekt, Seniorutvikler/arkitekt"
+                    :description "Web for kommisjonærer, Oracle Portal-basert Java-prosjekt, Seniorutvikler/arkitekt"
+                    :tech        [:java]}
+                   {:customer    "Skattedirektoratet"
+                    :years       [2003]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Altinn, Innrapporteringsløsning (.NET, Adobe), Ytelsestestansvarlig"
+                    :description "Altinn, Innrapporteringsløsning (.NET, Adobe), Ytelsestestansvarlig"
+                    :tech        [:dotnet]}
+                   {:customer    "SND Invest"
+                    :years       [2002]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Ny IT-infrastruktur, Prosess for valg og bytte, Teknisk ansvarlig"
+                    :description "Ny IT-infrastruktur, Prosess for valg og bytte, Teknisk ansvarlig"
+                    :tech        [:infrastructure]}
+                   {:customer    "Finansbanken"
+                    :years       [2002]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Kundeportal, Applikasjonsforvaltning, Seniorutvikler"
+                    :description "Kundeportal, Applikasjonsforvaltning, Seniorutvikler"
+                    :tech        [:java]}
+                   {:customer    "Dansk forsikringsselskap"
+                    :years       [2001]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Tilbud, Deltagelse i arkitekturarbeid (København), Arkitekt"
+                    :description "Tilbud, Deltagelse i arkitekturarbeid (København), Arkitekt"
+                    :tech        [:architecture]}
+                   {:customer    "Norske Liv (Nordea)"
+                    :years       [2001]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Kundestøtte-system, Utviklingsprosjekt, Arkitekt, Teamleder utvikling"
+                    :description "Kundestøtte-system, Utviklingsprosjekt, Arkitekt, Teamleder utvikling"
+                    :tech        [:java]}
+                   {:customer    "Norske Liv (Nordea)"
+                    :years       [2001]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Forprosjekt, Arkitekturprosjekt, Arkitekt (jr)"
+                    :description "Forprosjekt, Arkitekturprosjekt, Arkitekt (jr)"
+                    :tech        [:architecture]}
+                   {:customer    "K-Bank (Nordea)"
+                    :years       [2000]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Min side, Kundens portefølje på web, Funksjonelt ansvarlig, veileder for utviklere"
+                    :description "Min side, Kundens portefølje på web, Funksjonelt ansvarlig, veileder for utviklere"
+                    :tech        [:architecture]}
+                   {:customer    "K-Bank (Nordea)"
+                    :years       [1999]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Min side (analysefase), Kundens portefølje på web, Analytiker"
+                    :description "Min side (analysefase), Kundens portefølje på web, Analytiker"
+                    :tech        [:architecture]}
+                   {:customer    "Andersen Consulting (Accenture)"
+                    :years       [1999]
+                    :employer    :accenture
+                    :exclude-from-profile? true
+                    :summary     "Prototype håndholdt applikasjon (innsalg), Salgsstøtte på håndholdt device, Utvikler"
+                    :description "Prototype håndholdt applikasjon (innsalg), Salgsstøtte på håndholdt device, Utvikler"
+                    :tech        [:java]}
+                   {:customer    "Storebrand (If)"
+                    :years       [1999]
+                    :exclude-from-profile? true
+                    :employer    :accenture
+                    :summary     "Aktivitetsoppfølgingssystem, Fase 2 – utvikling, Teamleder utvikling"
+                    :description "Aktivitetsoppfølgingssystem, Fase 2 – utvikling, Teamleder utvikling"
+                    :tech        [:architecture]}
+                   {:customer    "Storeband (If)"
+                    :years       [1999]
+                    :exclude-from-profile? true
+                    :employer    :accenture
+                    :summary     "Aktivitetsoppfølgingssystem, Batch-arkitektur/rammeverk, Utvikler og arkitekt"
+                    :description "Aktivitetsoppfølgingssystem, Batch-arkitektur/rammeverk, Utvikler og arkitekt"
+                    :tech        [:architecture]}
+                   {:customer    "Storebrand (If)"
+                    :years       [1999]
+                    :exclude-from-profile? true
+                    :employer    :accenture
+                    :summary     "Sarepta, Datavarehusprosjekt, Utvikler (ETL)"
+                    :description "Sarepta, Datavarehusprosjekt, Utvikler (ETL)"
+                    :tech        [:etl]}
+                   {:customer    "-"
+                    :years       [1998]
+                    :exclude-from-profile? true
+                    :employer    :accenture
+                    :description "Teknologikonsulent knyttet til Financial Services (frem til 09.2002), deretter Sr Systems Analyst i utviklerorganisasjonen Accenture Technology Solutions med ansvar for faglig oppfølging av kompetanseaktiviteter i kompetanse-gruppen ”JavaCrew” (J2EE, Java Client, Java Development og J2ME – til sammen 40-50 personer) (For prosjekter i Accenture se prosjektoversikten ovenfor)."
+                    :tech [:java]}]
 
  :presentations [{:title "How to Kill DevOps (in 5 minutes)"
                   :blurb "En liten seanse der jeg, med dårlig skjult ironi, raljerer litt over hvordan man kan unngå å lykkes med DevOps. Fra DevOpsDays i Oslo i 2016."
@@ -70,4 +336,82 @@
                     :quote  "Kjetil is without doubt one of the best software developers I've had the privilege to work with. Kjetil has made invaluable contributions to product development, methodology, and technology to our team and I would not hesitate to hire him back. Top qualities: Great Results, Expert, High Integrity"}
                    {:author "Geir Egil Hansen"
                     :title  "Senior SW Consultant, Lindorff Decision"
-                    :quote  "Lindorff Decision hired Kjetil for a specific project in 2010. He is a fantastic guy to work with; inspiring, dedicated and was able to give us new ideas on how we should improve the way we work. He was the main reason our project went so well, in time and with good results. Kjetil is a great motivator. With his great knowledge around project management, software build systems, software development techniques and the like, there is no problem recommending him for any software project. Top qualities: Great Results, Personable, Expert"}]}
+                    :quote  "Lindorff Decision hired Kjetil for a specific project in 2010. He is a fantastic guy to work with; inspiring, dedicated and was able to give us new ideas on how we should improve the way we work. He was the main reason our project went so well, in time and with good results. Kjetil is a great motivator. With his great knowledge around project management, software build systems, software development techniques and the like, there is no problem recommending him for any software project. Top qualities: Great Results, Personable, Expert"}
+                   {:author "Jenny Sjögren"
+                    :title "Developer, IXD"
+                    :quote "I got the opportunity to work with Kjetil on a
+                   project for Lindorff Decision. Kjetil played a significant
+                   role in helping the team to deliver high quality software and
+                   he is a highly skilled developer and scrum master. He is
+                   passionate about his work and makes it easy for everyone in
+                   the team to contribute and perform at their best."}
+                   {:author "Cato Wæhle"
+                    :title "Vice President Business Development, NOS Clearing ASA"
+                    :quote "Kjetil and I worked very closely when he was Scrum
+                    master and I the product owner for the NOS’ in-house
+                    developed clearing system. He was instrumental in
+                    establishing Scrum in the organisation and gave me
+                    invaluable help and support in defining my own role. Kjetil
+                    is very enthusiastic and has a lot of energy, and he always
+                    seemed to be updated on trends and development in the
+                    software (and business) methodology arena. He is focused on
+                    his tasks and has a good track record on delivery on time.
+                    Any problems was always lifted and sorted out swiftly. I
+                    would recommend Kjetil if you need help to implement agile
+                    development processes."}
+                   {:author "Aage Kramarics"
+                    :title "System Developer, NOS Clearing ASA"
+                    :quote "Kjetil is a professional and efficient-working guy.
+                    He is an experienced and productive developer, while his
+                    particular strength is in working with the development
+                    process, e.g. as a process coach. As a bonus, he also
+                    contributes significantly socially."}
+                   {:author "Johannes Brodwall"
+                    :title "Organizer, XP Meetup"
+                    :quote "Kjetil was one of the first to join the Oslo XP
+                    meetup user group when we started up the agile user
+                    community in Oslo. His contributions were essential to the
+                    eventual success of XP meetup: Not only did give
+                    presentations and participate in the events, he's energy and
+                    network was what gave us the opportunity and initiative to
+                    bring in international speakers and create one of the most
+                    vibrant agile user communities in the world."}
+                   {:author "Espen Wahlstrøm",
+                    :quote "I had the pleasure of working with Kjetil at Telenor
+                    in the EDC project. His enthusiasm and skills spread to the
+                    other resources. His contribution and focus on building high
+                    quality software made the project a big success. Delivery on
+                    time with high quality. As a testing professional I highly
+                    recommend Kjetil and look forward to be working with him
+                    again. Top qualities: Great Results, Personable, High
+                    Integrity"}]
+
+ :cv {}
+ :cv/description "Kjetil har utviklet forretningskritiske applikasjoner for
+ kunder siden 1998 og brenner for faget! Han er en erfaren utvikler og
+ teamleder, som ofte leverer langt mer enn kode. Fokusert arbeid for å skape
+ gode og vedlikeholdbare systemer, er Kjetils mål.
+
+ Han er flink til å organisere, koordinere, fremme kommunikasjon, og er
+ utadvendt og engasjert. Han er opptatt av faglig utvikling og formidling, og er
+ deltaker, og ofte bidragsyter, i fagfora."
+
+ :education-summary "NTNU, Siviling. Industriell økonomi m/datateknikk"
+ :education [{:institution "NTNU"
+              :years [1992 1993 1994 1995 1996]
+              :subject "Industriell økonomi, Siviling./M.Sc. m/datateknikk"}]
+ :qualifications ["Erfaren utvikler og utviklingsleder"
+                  "Java, Groovy og andre JVM-språk, Ruby, JavaScript"
+                  "Tjenester, Integrasjon, Web"
+                  "Smidige prosesser, Scrum, Kanban, XP"
+                  "Automatisert testing, Kontinuerlige leveranser, DevOps"]
+ :certifications [{:name
+                   " Machine Learning (with Andrew Ng, Stanford) / Coursera.orgCourse Certificate (PDF)"
+                   :year 2016}
+                  {:name
+                   " Functional Programming Principles in Scala (with Martin Odersky, École Polytechnique Fédérale de Lausanne) / Coursera.orgStatement of Accomplishment (PDF)"
+                   :year 2012}
+                  {:name "Retorikk", :year 2010}
+                  {:name "Certified ScrumMaster", :year 2006}
+                  {:name "Sun Certified Programmer for Java 2 platform", :year 200}]
+ }

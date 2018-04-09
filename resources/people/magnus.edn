@@ -15,9 +15,9 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :reframe :docker :groovy :grails :oracle]
+ :tech {:using-at-work [:clojure :reframe :docker :python :clojurescript]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
-        :want-to-learn-more [:elm :elixir :rust :haskell :idris]}
+        :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
 
  :recommendations [{:title "Inventing on principle"
                     :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
@@ -34,14 +34,14 @@
                             med utenforstående på mer forståelige termer. Etter å ha sett denne fikk jeg endelig lyst til å kikke på et typet funksjonelt språk."}
                    {:title "Test-driven JavaScript Development"
                     :link {:url "http://ndc2011.macsimum.no/mp4/Day1%20Wednesday/Track5%201620-1720.mp4"
-                        :text "Se foredraget"}
+                           :text "Se foredraget"}
                     :tech [:javascript :testing :design]
                     :blurb "Dette foredraget av [Christian Johansen](/christian/)
                             var en grunnene til at jeg i stor grad kastet jQuery-scripting på båten. En inspirerende og lærerik testdrevet sesjon hvor man lager en autocomplete-komponent." }]
  :hobbies [{:title "Fluefiske"
             :description "Du går langs en deilig elv omringet av
              flott norsk natur. I sidesynet ser du plutselig en liten uregelmessighet i vannoverflaten. Du stopper for å kikke. Etter en liten stund ser du en ørret som forsiktig stiger til overflaten og slurper i seg en liten døgnflue. Pulsen stiger, du skifter flue og navigerer deg forsiktig i posisjon for å kaste ..."
-             :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
+            :illustration "/illustrations/hobbies/fluefiske-magnus.jpg"
             :url "http://rundis.smugmug.com/Fisketurer"}]
 
  :side-projects [{:title "Light Table"
@@ -58,10 +58,12 @@
                           I dette fordraget får du en liten smakebit av fordelene med funksjonell programmering (med typer) i Elm. Du får også en innføring
                           i hvordan Elm er mere enn bare et språk. Språket, plattformen og arkitekturen promoterer en ny måte å tenke på som virkelig fanger ens oppmerksomhet.
                           Foredraget består av noen få slides og en solid dose med live-coding !"
+                  :event "JavaZone"
                   :tech [:elm]
                   :urls {:video "https://vimeo.com/181814362"}}
                  {:title "Functional Frontends with Elm"
-                  :blurb "Lyntale på Oslo Socially Functional hvor jeg lager en enkel Chat klient med Elm"
+                  :blurb "Lyntale hvor jeg lager en enkel Chat klient med Elm"
+                  :event "Oslo Socially Functional Meetup"
                   :date "2016-06-07"
                   :tech [:elm]
                   :urls {}}
@@ -69,67 +71,74 @@
                   :blurb "I dette foredraget får du en oversikt over hvordan Elm omfavner Funksjonell Reaktive Programmering
                            vha signaler (verdier som endrer seg over tid). Du vil lære litt om Elm platformen og arkitekturen for en typisk Elm applikasjon.
                            Live koding står også på blokka !"
+                  :event "Flatmap Oslo"
                   :urls {:video "https://vimeo.com/165928866"}
                   :tech [:elm]
                   :date "2016-05-02"}
-                 {:title "Elm package docs preview in Light Table"
-                  :blurb "Screencast som demonstrerer forhåndsvisning av pakke dokumentasjon for Elm i Light Table."
-                  :tech [:elm :clojurescript :lighttable]
-                  :urls {:video "https://youtu.be/pAwdVM888wQ"
-                         :source "https://github.com/rundis/elm-light"}
-                  :date "2016-03-27"}
-                 {:title "Managing and diagramming elm packages with d3 in Light Table"
-                  :blurb "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
-                          Elm Light Table plugin."
-                  :tech [:elm :clojurescript :lighttable :d3]
-                  :urls {:video "https://youtu.be/Okk-YjEeUgI"
-                         :source "https://github.com/rundis/elm-light"}
-                  :date "2016-01-01"}
-                 {:title "Elm plugin for Light Table"
-                  :blurb "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
-                  :tech [:elm :clojurescript :lighttable ]
-                  :urls {:video "https://youtu.be/B_eZw_GcM-4"
-                         :source "https://github.com/rundis/elm-light"}
-                  :date "2015-10-29"}
-                 {:title "A pinch of Clojure love to Light Table"
-                  :blurb "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
-                  :tech [:clojurescript :lighttable :clojure]
-                  :urls {:video "https://youtu.be/1yk8nsjJxb0"
-                         :source "https://github.com/rundis/clj-light-refactor"}
-                  :date "2015-04-14"}
-                 {:title "Clojure refactoring in Light Table"
-                  :blurb "Screencast som demonstrerer litt av min Light Table refactoring plugin"
-                  :tech [:clojurescript :lighttable :clojure]
-                  :urls {:video "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
-                         :source "https://github.com/rundis/clj-light-refactor"}
-                  :date "2015-03-07"}
-                 {:title "The Groovy Light Table Plugin"
-                  :blurb "Screencast om bruk av Groovy og Gradle i Light Table"
-                  :tech [:clojurescript :lighttable :groovy :gradle]
-                  :urls {:video "http://www.youtube.com/watch?v=5ji8RR2A4gQ"}
-                  :date "2014-05-18"}
-                 {:title "Creating and Using Snippets in Light Table"
-                  :blurb "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
-                  :tech [:javascript :lighttable]
-                  :urls {:video "http://www.youtube.com/watch?v=I6iuXOw3HDQ"}
-                  :date "2014-05-06"}
-                 {:title "InstaBuster Part 2: Powerful JavaScript testing using Light Table and Buster.JS"
-                  :blurb "Screencast med demo av dashboard og autotest features for LightTable InstaBuster"
-                  :tech [:javascript :testing :lighttable]
-                  :urls {:video "https://www.youtube.com/watch?v=jYDiAVbPL8I&list=UUIpfu-L0KFtMlju3LgjPeSg"}
-                  :date "2014-04-21"}
-                 {:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
-                  :blurb "Screencast med en kort introduksjon til LightTable InstaBuster"
-                  :tech [:javascript :testing :lighttable]
-                  :urls {:video "http://www.youtube.com/watch?v=WKHWazblpbc"}
-                  :date "2014-03-17"}
+
                  {:title "Gradle - Det er faktisk ditt bygg"
                   :blurb "Mange klamrer seg fortsatt til
                           illusjonen at alle bygg er (nesten) helt like. Det stemmer kanskje i knøtteligaen, men i litt større organisasjoner finner man alltid spesielle krav til bygge/leveranseprosessene. Det virker logisk å velge et byggeverktøy som er svært fleksibelt og samtidig er basert på konvensjoner. Det verktøyet heter Gradle."
+                  :event "JavaZone"
                   :tech [:gradle :groovy]
                   :urls {:video "http://vimeo.com/49375218"}
                   :date "2012-09-13"}]
 
+ :screencasts [{:title "Elm package docs preview in Light Table"
+                :description "Screencast som demonstrerer forhåndsvisning av pakke dokumentasjon for Elm i Light Table."
+                :tech [:elm :clojurescript :lighttable]
+                :url "https://youtu.be/pAwdVM888wQ"
+                :illustration "/photos/tech/elm.svg"
+                :launch-date "2016-03-27"}
+               {:title "Managing and diagramming elm packages with d3 in Light Table"
+                :description "Screencast hvor jeg demonstrerer avhengighetshåndtering og viser avhengighetsgraf (laget med d3) for min
+                Elm Light Table plugin."
+                :illustration "/photos/tech/elm.svg"
+                :tech [:elm :clojurescript :lighttable :d3]
+                :url "https://youtu.be/Okk-YjEeUgI"
+                :launch-date "2016-01-01"}
+               {:title "Elm plugin for Light Table"
+                :description "Screencast som demonstrerer første versjon av min elm plugin for Light Table"
+                :illustration "/photos/tech/elm.svg"
+                :tech [:elm :clojurescript :lighttable ]
+                :url "https://youtu.be/B_eZw_GcM-4"
+                :launch-date "2015-10-29"}
+               {:title "A pinch of Clojure love to Light Table"
+                :description "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
+                :illustration "/photos/tech/clojure.png"
+                :tech [:clojurescript :lighttable :clojure]
+                :url "https://youtu.be/1yk8nsjJxb0"
+                :launch-date "2015-04-14"}
+               {:title "Clojure refactoring in Light Table"
+                :description "Screencast som demonstrerer litt av min Light Table refactoring plugin"
+                :illustration "/photos/tech/clojure.png"
+                :tech [:clojurescript :lighttable :clojure]
+                :url "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
+                :launch-date "2015-03-07"}
+               {:title "The Groovy Light Table Plugin"
+                :description "Screencast om bruk av Groovy og Gradle i Light Table"
+                :illustration "/photos/tech/groovy.png"
+                :tech [:clojurescript :lighttable :groovy :gradle]
+                :url "http://www.youtube.com/watch?v=5ji8RR2A4gQ"
+                :launch-date "2014-05-18"}
+               {:title "Creating and Using Snippets in Light Table"
+                :description "Screencast som viser hvordan lage og bruke snippets i LightTable med lt-snippets"
+                :illustration "/photos/tech/lighttable.jpg"
+                :tech [:javascript :lighttable]
+                :url "http://www.youtube.com/watch?v=I6iuXOw3HDQ"
+                :launch-date "2014-05-06"}
+               {:title "InstaBuster Part 2: Powerful JavaScript testing using Light Table and Buster.JS"
+                :description "Screencast med demo av dashboard og autotest features for LightTable InstaBuster"
+                :illustration "/photos/tech/js.svg"
+                :tech [:javascript :testing :lighttable]
+                :url "https://www.youtube.com/watch?v=jYDiAVbPL8I&list=UUIpfu-L0KFtMlju3LgjPeSg"
+                :launch-date "2014-04-21"}
+               {:title "InstaBuster: JavaScript testing with LightTable & Buster.JS"
+                :description "Screencast med en kort introduksjon til LightTable InstaBuster"
+                :illustration "/photos/tech/js.svg"
+                :tech [:javascript :testing :lighttable]
+                :url "http://www.youtube.com/watch?v=WKHWazblpbc"
+                :launch-date "2014-03-17"}]
 
  :blog-posts [{:url "http://rundis.github.io/blog/2017/elm_bootstrap_launch.html"
                :title "Introducing Elm Bootstrap"
@@ -138,75 +147,75 @@
               {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part6.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 6: Elm 0.18 Upgrade"
                :blurb "I min blogserie om å lage en CRUD applikasjon i Elm og Haskell har tiden kommer for å oppgradere Elm koden til versjon 0.18.
-                       Mye av oppgraderingen denne gangen kunne automatiseres vha verktøy fra Elm Community. Resten av endringene var relativt mekaniske. Posten går relativt detaljert til verks med å sammelikne forskjellene mellom 0.17 og 0.18."
+               Mye av oppgraderingen denne gangen kunne automatiseres vha verktøy fra Elm Community. Resten av endringene var relativt mekaniske. Posten går relativt detaljert til verks med å sammelikne forskjellene mellom 0.17 og 0.18."
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2016/elm_light_ast.html"
                :title "Elm Light 0.4.0 - AST driven Elm features in Light Table using PEG.js"
                :blurb "For å kunne tilby enda mer avansert Elm støtte i Light Table har jeg implementert en hjemmesnekret AST vha peg.js. Dette har gitt vesentlig
-                      forbedret autocomplete og endel hendige refactor relaterte funksjoner."
+               forbedret autocomplete og endel hendige refactor relaterte funksjoner."
                :tech [:elm :clojurescript :pegjs :javascript]}
               {:url "http://rundis.github.io/blog/2016/type_confused.html"
                :title "Oh no! Learning Elm has gotten me confused about static vs dynamic typing."
                :blurb "Etter lenge å ha vært overbevist om at dynamisk typing var det eneste saliggjørende reflekterer jeg over
-                       min gryende tvil etter å ha brukt en solid dose tid på å sette meg inn i statisk typede funksjonelle språk."
+               min gryende tvil etter å ha brukt en solid dose tid på å sette meg inn i statisk typede funksjonelle språk."
                :tech [:elm :haskell :clojure :groovy]}
               {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part5.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 5: Elm 0.17 Upgrade"
                :blurb "I min blogserie om å lage en CRUD applikasjon i Elm og Haskell har tiden kommer for å oppgradere Elm koden til versjon 0.17.
-                       Ting har på overflaten endret seg dramatisk siden 0.16, men en strukutert gjennomgang av prosessen viser at de fleste endringene er trivielle og sluttresultat
-                       er unektelig bedre enn forrige versjon."
+               Ting har på overflaten endret seg dramatisk siden 0.16, men en strukutert gjennomgang av prosessen viser at de fleste endringene er trivielle og sluttresultat
+               er unektelig bedre enn forrige versjon."
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2016/elm_maybe.html"
                :title "Elm Maybe - Dealing with null/Nothing"
                :blurb "Tony Hoare ansees som mannen som fant opp null reference. Han kaller det sitt billion dollar mistake. I Elm har man ikke null og de problemene
-                       det medfører. I stedet bruker man en eksplisitt type man kaller Maybe (noen språk kaller det Option). I denne blogposten tar jeg for meg hvordan det er å jobbe med Maybe verdier og sammenligner
-                       litt med JavaScript. Det er ikke mange gode unnskyldninger for å ta med null i ett nytt språk, men enda så skjer det med nye språk som blir laget den dag i dag. Forstå det den som kan."
+               det medfører. I stedet bruker man en eksplisitt type man kaller Maybe (noen språk kaller det Option). I denne blogposten tar jeg for meg hvordan det er å jobbe med Maybe verdier og sammenligner
+               litt med JavaScript. Det er ikke mange gode unnskyldninger for å ta med null i ett nytt språk, men enda så skjer det med nye språk som blir laget den dag i dag. Forstå det den som kan."
                :tech [:elm :javascript]}
               {:url "http://rundis.github.io/blog/2016/elm_light_modules.html"
                :title "Elm and ClojureScript joining forces in the elm-light plugin"
                :blurb "Jeg tenkte det måtte være kult å se om man kunne få Elm og ClojureScript til å spille sammen i Light Table.
-                       I denne blogposten forklarer jeg hvordan jeg implementerte en Modul utforsker vha både Elm og ClojureScript"
+               I denne blogposten forklarer jeg hvordan jeg implementerte en Modul utforsker vha både Elm og ClojureScript"
                :tech [:elm :clojurescript :lighttable]}
               {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part4.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 4: Feature creep"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. Tiden har kommet for å
-                       peise på med mer funksjonalitet og en god del refaktorering. Her får jeg kjørt meg skikkelig på både Elm og Haskell"
+               peise på med mer funksjonalitet og en god del refaktorering. Her får jeg kjørt meg skikkelig på både Elm og Haskell"
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part3.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 3: Routing"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
-                       implementerer jeg routing i Elm frontenden"
+               implementerer jeg routing i Elm frontenden"
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part2.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 2: Persistence up and running"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
-                       implementerer jeg persistens vha en god gammeldags relasjonsdatabase"
+               implementerer jeg persistens vha en god gammeldags relasjonsdatabase"
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 1: Spike time"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I serien tar
-                       jeg for meg utvikling av en CRUD applikasjon med Elm til frontend og Haskell for backend. Førte episode
-                       tar for seg en spike for å få en helt enkel basis på plass."
+               jeg for meg utvikling av en CRUD applikasjon med Elm til frontend og Haskell for backend. Førte episode
+               tar for seg en spike for å få en helt enkel basis på plass."
                :tech [:elm :haskell]}
               {:url "http://rundis.github.io/blog/2015/elm_sweeper.html"
                :title "Minesweeper - a brief journey from JavaScript/React to Elm"
                :blurb "Jeg tar utgangspunkt i en minesveiper implementasjon fra [Christian Johansen](/christian/) i JavaScript/React og hviser hvordan man kan implementere det samme spillet i Elm.
-                       Bloggposten sammenligner flere implementasjonsdetajer og reflekterer kort om statisk vs. dynamisk typing."
+               Bloggposten sammenligner flere implementasjonsdetajer og reflekterer kort om statisk vs. dynamisk typing."
                :tech [:elm :javascript :react]}
               {:url "http://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
                :title "ClojureScript - Performance tuning rewrite-cljs"
                :blurb "Rewrite-cljs er mitt bibliotek for å traversere og omskrive clojure/clojurescript kode. I denne blogposten
-                       forteller jeg litt om hvordan jeg tunet ytelsen bl.a ved å komme nærmere jernet (JavaScript)"
+               forteller jeg litt om hvordan jeg tunet ytelsen bl.a ved å komme nærmere jernet (JavaScript)"
                :tech [:clojure :clojurescript :javascript]}
               {:url "http://rundis.github.io/blog/2015/parembrace.html"
                :title "Showcasing rewrite-cljs - Parembrace for Light Table"
                :blurb "En liten fortelling om stegene jeg gikk igjennom for å lage en skikkelig paredit plugin for Clojure/ClojureScript i Light Table.
-                       Et nytt ClojureScript bibliotek ble unnfanget i processen."
+               Et nytt ClojureScript bibliotek ble unnfanget i processen."
                :tech [:clojure :clojurescript]}
               {:url "http://rundis.github.io/blog/2015/lt_react.html"
                :title "Implementing a Clojure ns-browser in Light Table with React"
                :blurb "Buzzword compliant post om hvordan man elegant kan bruke React.JS for implementering av view-logikk i Light Table.
-                       Posten går også i dybden på den grunnleggende arkiteturen i Light Table"
+               Posten går også i dybden på den grunnleggende arkiteturen i Light Table"
                :tech [:clojure :clojurescript]}
               {:url "http://rundis.github.io/blog/2015/clojure_dates.html"
                :title "Taming those pesky datetimes in a clojure stack"
@@ -215,7 +224,7 @@
               {:url "http://rundis.github.io/blog/2015/buddy_auth_part4.html"
                :title "Securing Clojure Microservices using buddy - Part 4: Secure and liberate a service app"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
-                       I del 4 ser vi på hvordan vi kan sikre en service app basert som benytter REST-biblioteket Liberator"
+               I del 4 ser vi på hvordan vi kan sikre en service app basert som benytter REST-biblioteket Liberator"
                :tech [:clojure :buddy :microservices]}
               {:url "http://rundis.github.io/blog/2015/clj_light_thread.html"
                :title "Implementing a Clojure threading refactoring in ClojureScript using Light Table"
@@ -224,109 +233,109 @@
               {:url "http://rundis.github.io/blog/2015/buddy_auth_part3.html"
                :title "Securing Clojure Microservices using buddy - Part 3: Token revocation"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
-                       I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
+               I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
                :tech [:clojure :buddy :microservices]}
               {:url "http://rundis.github.io/blog/2015/buddy_auth_part2.html"
                :title "Securing Clojure Microservices using buddy - Part 2: WebApp authentication and authorization"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
-                       Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
+               Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
                :tech [:clojure :buddy :microservices]}
               {:url "http://rundis.github.io/blog/2015/buddy_auth_part1.html"
                :title "Securing Clojure Microservices using buddy - Part 1: Creating Auth Tokens"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
-                       Del 1 handler om å lage en service som generer signerte tokens for bruk i autentisering og autorisasjon."
+               Del 1 handler om å lage en service som generer signerte tokens for bruk i autentisering og autorisasjon."
                :tech [:clojure :buddy :microservices]}
               {:url "http://rundis.github.io/blog/2015/bootify-ring.html"
                :title "Bootifying my ring app"
                :blurb "[Boot.clj] (https://github.com/boot-clj/boot) er et spennende alternative til Leiningen for bygging av clojure applikasjoner.
-                       Jeg deler noen erfaringer med bruk av Boot.clj i et clojure ring prosjekt"
+               Jeg deler noen erfaringer med bruk av Boot.clj i et clojure ring prosjekt"
                :tech [:clojure :boot]}
               {:url "http://rundis.github.io/blog/2014/gr_lt_part5.html"
                :title "A Groovy Light Table client - Step 5: Gradle dependencies in Light Table with dagre-D3"
                :blurb "Del 5 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
-                       en dugandes Groovy plugin for Light Table. Del 5 kombinerer det rike api'et i Gradle
-                       og fleksibiliteten i Light Table til å vise dependency grafer vha D3. Kule greier !"
+               en dugandes Groovy plugin for Light Table. Del 5 kombinerer det rike api'et i Gradle
+               og fleksibiliteten i Light Table til å vise dependency grafer vha D3. Kule greier !"
                :tech [:clojurescript :groovy :gradle :lighttable]}
               {:url "http://rundis.github.io/blog/2014/gr_lt_part4.html"
                :title "A Groovy Light Table client - Step 4: Exploring new avenues with Gradle"
                :blurb "Del 4 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
-                       en dugandes Groovy plugin for Light Table. Del 4 handler om implementasjon av Gradle støtte
-                       for uthenting og bruk av classpath, samt opplisting og eksevkvering av tasks"
+               en dugandes Groovy plugin for Light Table. Del 4 handler om implementasjon av Gradle støtte
+               for uthenting og bruk av classpath, samt opplisting og eksevkvering av tasks"
                :tech [:clojurescript :groovy :gradle :lighttable]}
               {:url "http://rundis.github.io/blog/2014/gr_lt_part3.html"
                :title "A Groovy Light Table client - Step 3: Running out of quick wins"
                :blurb "Del 3 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
-                       en dugandes Groovy plugin for Light Table. Del 3 handler om noen små forbedringer
-                       for å gi en REPL lignende opplevelse med Groovy."
+               en dugandes Groovy plugin for Light Table. Del 3 handler om noen små forbedringer
+               for å gi en REPL lignende opplevelse med Groovy."
                :tech [:clojurescript :groovy :lighttable]}
               {:url "http://rundis.github.io/blog/2014/gr_lt_part2.html"
                :title "A Groovy Light Table client - Step 2: Evaluating Code"
                :blurb "Del 2 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
-                       en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
-                       evaluert Groovy kode og vist resultater inline i Light Table."
+               en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
+               evaluert Groovy kode og vist resultater inline i Light Table."
                :tech [:clojurescript :groovy :lighttable]}
               {:url "http://rundis.github.io/blog/2014/gr_lt_part1.html"
                :title "A Groovy Light Table client - Step 1: Connecting the client"
                :blurb "Del 1 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
-                       en dugandes Groovy plugin for Light Table. I denne posten beskriver jeg hvordan
-                       jeg kobler opp Light Table til en Groovy klient-prosess."
+               en dugandes Groovy plugin for Light Table. I denne posten beskriver jeg hvordan
+               jeg kobler opp Light Table til en Groovy klient-prosess."
                :tech [:clojurescript :groovy :lighttable]}
 
               {:url "http://codewader.blogspot.no/2014/02/getting-my-feet-wet-with-clojure-using.html"
                :title "Getting my feet wet with Clojure using Light Table"
                :blurb "En liten erfaringsrapport fra mine første steg med å skrive produksjonskode i Clojure
-                       ved bruk av Light Table IDE."
+               ved bruk av Light Table IDE."
                :tech [:clojure :lighttable]}
 
               {:url "http://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
                :title "Javascript testing in your JVM projects using Gradle and BusterJS"
                :blurb "Hadde det ikke vært kjekt om du kunne inkludert javascript testing som en del
-                       av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
+               av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
                :tech [:gradle :javascript :buster-js]}
 
               {:url "http://codewader.blogspot.no/2011/08/groovy-infatuation-growing.html"
                :title "A groovy infatuation growing"
                :blurb "Etter mange år med java begynte jeg så smått å bli litt lei. Det var jo mange
-                       andre språk på JVM plattformen der ute. Etter å ha jobbet med gradle en periode
-                       fikk jeg mer om mer sansen for Groovy."
+               andre språk på JVM plattformen der ute. Etter å ha jobbet med gradle en periode
+               fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects[{:url "https://github.com/rundis/elm-bootstrap"
-                        :name "Elm Bootstrap"
-                        :description "Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap 4."
-                        :tech [:elm :bootstrap]}
-                       {:url "https://github.com/rundis/elm-light"
-                        :name "Elm Light Table Plugin"
-                        :description "Light Table plugin for Elm. Syntax-highlighting, repl/inline eval, elm reactor integrasjon mm"
-                        :tech [:elm :clojurescript]}
-                       {:url "https://github.com/rundis/rewrite-cljs"
-                        :name "rewrite-cljs"
-                        :description "ClojureScript port av rewrite-clj. Bibliotek for traversering og omskriving av Clojure/ClojureScript/EDN- kode"
-                        :tech [:clojure :clojurescript]}
-                       {:url "https://github.com/rundis/clj-light-refactor"
-                        :name "Clj-Light-Refactor"
-                        :description "Plugin som gir Clojure refactoring support til Light Table"
-                        :tech [:lighttable :clojure :clojurescript]}
-                       {:url "https://github.com/rundis/AsciiLight"
-                        :name "AsciiLight"
-                        :description "Light Table plugin for live-edit visning av Asiidoctor dokumenter"
-                        :tech [:lighttable :clojurescript :asciidoc]}
-                       {:url "https://github.com/rundis/lt-snippets"
-                        :name "lt-snippets"
-                        :description "Snippet/templates plugin for Light Table"
-                        :tech [:lighttable :clojurescript]}
-                       {:url "https://github.com/busterjs/lt-instabuster"
-                        :name "LightTable InstaBuster"
-                        :description "Light Table plugin for BusterJS"
-                        :tech [:lighttable :javascript :clojurescript]}
-                       {:url "https://github.com/rundis/LightTable-Groovy"
-                        :name "LightTable-Groovy"
-                        :description "Groovy plugin for Light Table. Steg 1 er å lage et langt bedre Groovy Console. Steg 2 er helt åpent. Sky's the limit!"
-                        :tech [:lighttable :groovy :clojurescript]}
-                       {:url "https://github.com/rundis/gradle-buster-plugin"
-                        :name "gradle-buster-plugin"
-                        :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
-                        :tech [:groovy :gradle :buster-js :javascript]}]
+ :open-source-projects [{:url "https://github.com/rundis/elm-bootstrap"
+                         :name "Elm Bootstrap"
+                         :description "Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap 4."
+                         :tech [:elm :bootstrap]}
+                        {:url "https://github.com/rundis/elm-light"
+                         :name "Elm Light Table Plugin"
+                         :description "Light Table plugin for Elm. Syntax-highlighting, repl/inline eval, elm reactor integrasjon mm"
+                         :tech [:elm :clojurescript]}
+                        {:url "https://github.com/rundis/rewrite-cljs"
+                         :name "rewrite-cljs"
+                         :description "ClojureScript port av rewrite-clj. Bibliotek for traversering og omskriving av Clojure/ClojureScript/EDN- kode"
+                         :tech [:clojure :clojurescript]}
+                        {:url "https://github.com/rundis/clj-light-refactor"
+                         :name "Clj-Light-Refactor"
+                         :description "Plugin som gir Clojure refactoring support til Light Table"
+                         :tech [:lighttable :clojure :clojurescript]}
+                        {:url "https://github.com/rundis/AsciiLight"
+                         :name "AsciiLight"
+                         :description "Light Table plugin for live-edit visning av Asiidoctor dokumenter"
+                         :tech [:lighttable :clojurescript :asciidoc]}
+                        {:url "https://github.com/rundis/lt-snippets"
+                         :name "lt-snippets"
+                         :description "Snippet/templates plugin for Light Table"
+                         :tech [:lighttable :clojurescript]}
+                        {:url "https://github.com/busterjs/lt-instabuster"
+                         :name "LightTable InstaBuster"
+                         :description "Light Table plugin for BusterJS"
+                         :tech [:lighttable :javascript :clojurescript]}
+                        {:url "https://github.com/rundis/LightTable-Groovy"
+                         :name "LightTable-Groovy"
+                         :description "Groovy plugin for Light Table. Steg 1 er å lage et langt bedre Groovy Console. Steg 2 er helt åpent. Sky's the limit!"
+                         :tech [:lighttable :groovy :clojurescript]}
+                        {:url "https://github.com/rundis/gradle-buster-plugin"
+                         :name "gradle-buster-plugin"
+                         :description "Gradle plugin for å kjøre JavaScript tester via BusterJS i jvm prosjekter"
+                         :tech [:groovy :gradle :buster-js :javascript]}]
 
  :open-source-contributions [{:name "node-test-runner"
                               :url "https://github.com/rtfeldman/node-test-runner"
@@ -338,4 +347,337 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
+ :projects [{:customer "(Konfidensielt)"
+             :years [2018 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av nytt spillkonsept knyttet til Dart."
+             :description "Utvikling av nytt spillkonsept knyttet til Dart."
+             :tech [:clojure :clojurescript :python]}
+            {:customer "Oiiku"
+             :years [2017]
+             :employer :kodemaker
+             :summary "Utvikling av bordplasseringmodul for \"smart\" automatisk plassering av tusenvis av deltagere."
+             :description "Utvikling av bordplasseringsmodul til Event
+             håndteringssystem. Bordplasseringen skulle kunne effektiv plassere
+             1000vis av deltakere effektivt samt balansere diverse
+             konfigurerbare kriterier. Oppgaver: Utvikling av backend tjenester
+             og integrasjon mot kjernemoduler i eventsystemet. Finne best mulig
+             løsning for å løse det NP komplette problemet å automatisk best
+             mulig plassere 1000vis av deltakere på tvers av 100vis av bord."
+             :tech [:clojure :kotlin :angularjs :ansible :datomic :mongodb :gradle :teamcity]}
+            {:customer "Aprila Bank"
+             :years [2017]
+             :employer :kodemaker
+             :summary "Etablering og utvikling av tjenster for en ny bank for B2B markedet."
+             :description "Utvikling av tjenster/produkter for ny B2B bank.
+             Startup som har som mål å tilby banktjenester til små og
+             mellomstore bedrifter på en helt ny og spennend måte. Oppgaver:
+             Integrasjon mot diverse 3.parts løsninger, etablering av
+             mikrotjenster, teknologievalueringer, frontend utvikling,
+             automatisert testing mm."
+             :tech [:kotlin :elm :postgresql :google-cloud :gitlab :kubernetes :rust :aws]}
+            {:customer "Animalia - Dyrehelseportalen"
+             :years [2016]
+             :employer :kodemaker
+             :summary "Utvikling av applikasjon til veterinærer og produsenter for registrering av medisinering og helserelatert informasjon"
+             :description "Utvikling av applikasjon til veterinærer og
+             produsenter for registrering av medisinering og helserelatert
+             informasjon. Prosjektet er en omskrivning/nyutvikling av en
+             eksisterende applikasjon til en moderne responsiv webapplikasjon.
+             Første versjon av ny applikasjon gikk i produksjon i Januar 2017 og
+             er nå under kontinuerlig videreutvikling. Oppgaver: Analyse, design
+             og full-stack utvikling av en mikrotjeneste-basert arkitektur med
+             flere sluttbruker-applikasjoner."
+             :tech [:clojure :clojurescript :re-frame :docker :oracle :sql-server :elastic-search
+                    :docker :docker-cloud :bootstrap :jenkins]}
+            {:customer "Animalia - Vedlikehold og videreutvikling"
+             :years [2015]
+             :employer :kodemaker
+             :summary "Vedlikehold og videreutvikling av flere av de eksisterende Grails applikasjonene i Animalia"
+             :description "Vedlikehold og videreutvikling av flere av de
+             eksisterende Grails applikasjonene i Animalia. Oppgaver: Utvikling,
+             bugfixing, refaktorering og arkitetekturarbeide med tanke på
+             applikasjonenes levetid."
+             :tech [:grails :groovy :oracle :docker :javascript]}
+            {:customer "Animalia - Helsegris"
+             :years [2014]
+             :employer :kodemaker
+             :summary "Utvikling av ny applikasjon for oppfølging av dyrehelse for griser"
+             :description "Utvikling av ny applikasjon for oppfølging av
+             dyrehelse for griser. Det er også et mål for prosjektet å lage
+             endel gjenbrukbare tjenester. Oppgaver: Utvikling, mentoring og
+             veiledning på utvikling av tjenestearkitekturer."
+             :tech [:clojure :clojurescript :docker :ansible :bootstrap :reactjs :busterjs
+                    :jenkins :oracle]}
+            {:customer "Animalia - Sauekontrollen"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Full-stack utvikling i Grails"
+             :description "Full-stack utvikling i Grails. Prosjektekspert på
+             JavaScript/TDD og provisjonering (Ansible)."
+             :tech [:grails :groovy :jquery :bootstrap :ansible :busterjs :oracle :tomcat :jenkins :git :spock]}
+            {:customer "Animalia - Storfekjøttkontrollen"
+             :years [2012]
+             :employer :kodemaker
+             :summary "Hjelpe til med transformasjon og utvidelsen av eksisterende systemer til moderne web-teknologi basert på Java-platformen"
+             :description "Animalia er et fagmiljø for kjøtt og eggbransen.
+             Animalia tilbyr verdikjedesystemer til bønder og deres rådgivere.
+             Man har en klar strategi om å tilby gode og moderne
+             selvbetjeningsløsninger på web. Magnus er leid inn for å hjelpe til
+             med transformasjon og utvidelsen av eksisterende systemer til
+             moderne web-teknologi basert på Java-platformen. Oppgaver: Utvikling
+             av frontend og backend for nytt system. Mentoring i smidig
+             utvikling. Mentoring av fastansatte/nyansatte i moderne
+             systemutvikling."
+             :tech [:grails :groovy :jquery :bootstrap :oracle :tomcat :jenkins :git :spock]}
+            {:customer "Storebrand Aktuarsystemer"
+             :years [2011]
+             :employer :kodemaker
+             :summary "Utvikling av ny funksjonalitet og arkitekturforbedringer i pensjonskassesystem for store offentlige og private kunder"
+             :description "Storebrand Aktuarsystemer er et datterselskap i
+             Storebrand konsernet. De har utviklet et pensjonskassesystem som
+             håndterer pensjonskasser for store norske kunder. Man har et stadig
+             økende behov for å utvikle ny funksjonalitet i et raskere tempo.
+             Samtidig har man også opparbeidet endel teknisk gjeld. Magnus er
+             leid inn i første rekke som seniorutvikler på java delen av
+             løsningen. Oppgaver: Utvikling av ny funksjonalitet i Java, Pl/SQL
+             og noe .Net. SCRUM mentoring og mentoring på best practices innen
+             systemutvikling generelt. Forbedring av eksisterende
+             utviklingsprosess, bistand med innføring av nye produktive verktøy
+             og disipliner."
+             :tech [:java :plsql :gradle :teamcity :svn :dotnet :junit :apache-camel :spring :oracle]}
+            {:customer "Forsvaret FLO/IKT"
+             :years [2010]
+             :employer :kodemaker
+             :summary "Utvikling av proxyløsning for WebService kall over ustabile nettverk"
+             :description "FLO/IKT holder for tiden på med en svært omfattende
+             SOA implementering. En av utfordringene i forsvaret er at man har
+             mange nettverk med lav båndbredde og/eller ustabile forbindelser.
+             Man er derfor i gang med å utvikle en proxy basert løsning for å
+             håndtere webservice kall også i denne type nettverk. Denne
+             løsningen ser man for seg vi bli en viktig komponent i SOA
+             arkitekturen. Oppgaver: Basert på en spesifikasjon og
+             referansemplementasjon fra Forsvaret forskningsinstitutt var Magnus
+             sin oppgave å lage en produkuksjonsklar første versjon som skal
+             integreres i SOA arkitekturen."
+             :tech [:soap :webservices :netty :udp :tcp :java :jmx :jaxb :saaj :swing-admin-console
+                    :gradle :svn :hudson :confluence :jira :grasshopper]}
+            {:customer "Telenor Mobil"
+             :years [2009]
+             :employer :kodemaker
+             :summary "Oppgradering av mellomvareplatform (COS)"
+             :description "Oppgradering av mellomvareplattform (COS).
+             Oppgradering av Java4-Java6, weblogic8-weblogic10 og maven1-gradle.
+             Oppgaver: Scrum assistanse, Utvikling av webservices, porting av
+             biblioteker, weblogic konfigurasjon, ytelsestesting, byggesystem
+             analyse og migrering."
+             :tech [:weblogic :java :maven :gradle :mks :junit :easymock :xfire :axis
+                    :bamboo :cygwin :grinder :j2ee :spring]}
+            {:customer "Forsvaret FLO/IKT"
+             :years [2008 2009]
+             :employer :kodemaker
+             :summary "Modernisering og videreutvikling av fagapplikasjoner for dokumenthåndtering"
+             :description "Modernisering av fagapplikasjoner for
+             dokumenthåndtering/rapporthåndtering til Web 2.0. Oppgaver:
+             Kravstyring, Arkitekturevaluering, Utvikling på alle
+             applikasjonslag, ytelsestesting, mentoring."
+             :tech [:java :tapestry :spring :hibernate :lucene :hibernate-search :tomcat :apache
+                    :maven :hudson :easymock :svn :jira :confluence]}
+            {:customer "Nordic Lottery Systems"
+             :years [2006 2007 2008]
+             :exclude-from-profile? true
+             :employer :kodemaker
+             :summary "Internettspill"
+             :description "Utvikling av nytt internettspill med svært høye
+             oppetids og ytelseskrav. Oppgaver: Requirements Managament (user
+             stories og use cases), DDD, Design og utvikling av JEE komponenter,
+             Team admin, Ytelsesoptimlisering."
+             :tech [:java :spring :jboss :jboss-portal :jboss-messaging :jbossws :hibernate
+                    :apache :postgresql :oracle :flash :quartz :maven :ant :junit :junitee :easymock
+                    :contestj :aop :cruise-control :eclipse :intellij :cvs :jira :confluence]}
+            {:customer "EDB ASA"
+             :years [2005]
+             :exclude-from-profile? true
+             :employer :kodemaker
+             :summary "Migrering av driftsmiljø for Storebrand"
+             :description "Migrering av driftsmiljø for Storebrand. Oppgaver:
+             Ekspertråd, assistanse, \"troubleshooting\", konfigurasjon,
+             performance tuning, mentoring, dokumentasjon."
+             :tech [:websphere :mq-series :domino :db2 :mssql :oracle]}
+            {:customer "Trygge barnehager"
+             :years [2004 2005]
+             :exclude-from-profile? true
+             :employer :kodemaker
+             :summary "Utvikling av ASP-tjenester"
+             :description "Utvikling av ASP tjenester for barnehagesektoren.
+             Omfattet tjenester innen; opptak, økonomi, hjemmeside og kvalitet i
+             barnehager. Oppgaver: Etablering av IT arkitektur mål og plan,
+             Teknisk ansvarling mot outsourcings leverandør,
+             teknologievalueringer, rådgivning på prosess og metode."
+             :tech [:dotnet :visual-studio :csharp :sql-server-2000 :sql-reporting-services
+                    :ms-exchange :dashboard-portal]}
+            {:customer "IBM Danmark"
+             :years [2003]
+             :exclude-from-profile? true
+             :employer :kodemaker
+             :summary "Virk.DK, felles G2B portal for danske myndigheter"
+             :description "Virk.DK prosjektet er resultatet av en stor satsning
+             fra den danske stat for å realisere en G2B portal, hvor
+             virksomheter etterhvert skal kunne foreta all kommunikasjon med
+             myndighetene elektronisk. Oppgaver: Design/utvikling av
+             arbeidsflyter, utvikling av portlets, digitale signaturer."
+             :tech [:j2ee :ejb :websphere-portal :tivoli :db2 :secureway-directory-stellent-cms
+                    :adobe-reachform :webservices :pki :ant :log4j :junit :cvs :xerces
+                    :xalan :websphere-studio]}
+            {:customer "Pwc internt"
+             :years [2002 2003]
+             :exclude-from-profile? true
+             :employer :pwc-england
+             :summary "CRM Implementasjon"
+             :description "CRM Implementasjon. Virksomhetskritisk prosjekt med
+             målsetning å konsolidere all kunde-og kontaktinformasjon for PWC UK
+             til en sentralisert kilde. Prosjektet var en PeopleSoft 8.8
+             implementasjon og hadde en mengde grensesnitt til firmaets
+             kjernesystemer. Oppgaver: Arkitektur governance, Design/utvikling av
+             portlets, integrasjon mot SSO, design og utvikling av
+             integrasjonsgrensesnitt Rolle: Teknisk arkitekt."
+             :tech [:peoplesoft-crm :websphere :mqseries-integrator :siteminder
+                    :epicentric-portal :java :j2ee :xml :xslt :soap :jbuilder]}
+            {:customer "Pwc internt"
+             :years [2002 2003]
+             :exclude-from-profile? true
+             :employer :pwc-england
+             :summary "Risk Managment Reporting"
+             :description "Risk Managment Reporting, System for distribuert
+             analyse og rapportering av risiko vurdering internt i firmaet.
+             Systemet hadde hovedsaklig partnere som brukergruppe, og blir
+             benyttet globalt. Oppgaver: Analyse/design, koordinering mot indisk
+             outsourcet team, arkitekturprototype, databasedesign."
+             :tech [:iis :complus :mssql :rational-suite :asp :visual-basic :xml :xslt
+                    :siteminder :epicentric-portal]}
+            {:customer "Pwc internt"
+             :years [2002]
+             :exclude-from-profile? true
+             :employer :pwc-england
+             :summary "Virksomhetsportal"
+             :description "Virksomhetsportal, Portalløsning for alle firmaets
+             ansatte i Storbrittania. Portalen tilbyr en samlet personlisert
+             brukerflate og aksess til de fleste av firmaets kritiske systemer.
+             En viktig suksessfaktor for systemet var innføring av en
+             SSO (Single Sign-On) infrastruktur. Oppgaver: Rådgivning integrasjon
+             mot portal, rådgivning integrasjon mot SSO, design og utvikling av
+             portlets."
+             :tech [:epicentric-portal :websphere :siteminder :iplanet-enterprise-directory
+                    :verity-search :oracle :db2 :mssql :notes :iis :mqseries :java :j2ee
+                    :asp :xml :xslt :xmlspy :eclipse :rational-suite]}
+            {:customer "HM C&E - Engelske tolldirektoratet"
+             :years [2001 2002]
+             :exclude-from-profile? true
+             :employer :net-professionals-uk
+             :summary "G2B Portal for engelske tollvesenet"
+             :description "G2B Portal. eEnabling av tjenester fra
+             tolldirektoratet mot publikum og bedrifter. Oppgaver: Governance,
+             Analyse/Design, Team ledelse og utvikling."
+             :tech [:architecture]}
+            {:customer "Storebrand"
+             :years [2000 2001]
+             :exclude-from-profile? true
+             :employer :objectware
+             :summary "Råd på nett, Unit Linked"
+             :description "Utvikling av tjenester for Storebrands nettbank.
+             Oppgaver: Team ledelse, OOAD, utvikling og mentoring."
+             :tech [:java :j2ee :websphere :visual-age :notes :togetherj :junit :xalan :xerces :xml :xslt :db2]}
+            {:customer "Aftenposten"
+             :years [1999 2000]
+             :exclude-from-profile? true
+             :employer :objectware
+             :summary "Elektronisk innkjøpssystem"
+             :description "Elektronisk innkjøpssystem. Oppgaver: Team ledelse,
+             OOAD og utvikling."
+             :tech [:visual-basic :ms-dna :mssql :iis :asp :mts :complus :ms-market
+                    :site-server-commerce :rational-rose :rup]}
+            {:customer "Domino DA"
+             :years [1999]
+             :exclude-from-profile? true
+             :employer :objectware
+             :summary "Bonuspoengsystem"
+             :description "Bonuspoengsystem. Oppgaver: Rådgivning, Team ledelse,
+             OOAD og utvikling."
+             :tech [:ms-dna :mts :mq-series :oracle :agresso :plsql :complus :visual-basic
+                    :rational-rose :erwin]}
+            {:customer "Telnor bedrift"
+             :years [1997 1998 1999]
+             :exclude-from-profile? true
+             :employer :objectware
+             :summary "Fakturagrunnlagssystem"
+             :description "Fakturagrunnlagssystem. System for prising av telenor
+             bedrifts datatjenester. Oppgaver: Design, utvikling, kravanalyse og
+             testing."
+             :tech [:windows :hpunix :visual-basic :complus :sybase :rational-rose :erwin :dbartisan]}]
+
+ :endorsements [{:author "Simon Herberg"
+                 :title "Architect, Telenor"
+                 :quote "Karl Magnus was part of a team that upgraded our JAVA
+                and Weblogic software. In addition he was the driving force
+                behind the replacement of Maven 1.x with Gradle for our build
+                system. He worked well both within the team and on individual
+                tasks."}
+                {:author "Mitul Thobhani"
+                 :title "Owner and Co-Founder, Portfolio Software Limited"
+                 :quote "Magnus is one of those rare individuals who has the
+                ability to understand a concept at the high level as well as the
+                implementation minutia at the same time. His skills and deep
+                experience in software architecture along with his professional,
+                patient and calm nature allowed me to gain not only the
+                information needed about the project on which we worked, but
+                insights and inspiration in the more general field of software
+                development."}
+                {:author "Norman Katz"
+                 :title "Development Director, Nordic Lottery Systems"
+                 :quote "When I joined NLS Magnus was the person to go to to get
+                 answers to any and all questions relating to the complex rules
+                 of our online lottery. In time, I came to rely on him to make
+                 initial scoping estimates of potential coding projects. For
+                 those projects we chose to pursue, his estimates and their
+                 related task lists formed the basis for further detailed
+                 planning. Furthermore, Magnus's estimates could always be
+                 relied on to be very close to the eventual reality. Magnus was
+                 always looking for ways to improve our product. For example, on
+                 a project that sought through simulation techniques to validate
+                 the correctness of the product's internal calculations, Magnus
+                 recognized that this would provide the ideal test bed for
+                 profiling the product's performance. Through his efforts we
+                 were able to greatly speed up the application, in addition to
+                 fullfilling the primary purose, validation of its calculations.
+                 I recommend Magnus without reservation"}
+                {:author "Bill Lewis"
+                 :title "Head Of Application Development, PricewaterhouseCoopers"
+                 :quote "Magnus joined us towards the start of our exposure to Web
+                 Technology and greatly helped us make the right decisions. I
+                 would have no hesitation recommending Karl for his technical
+                 capability and clarity of thought"}]
+
+ :cv {}
+ :education-summary "Datateknikk HIBU, BI"
+ :experience-since 1996
+ :relationship-status "Gift, 2 barn"
+ :born 1973
+ :qualifications ["Funksjonell programmering (frontend og backend)"
+                  "Testdrevet utvikling"
+                  "Teknologievalueringer"
+                  "Teamledelse"
+                  "Prosess og kravanalyse"
+                  "Integrasjon"
+                  "Solid databaseerfaring"]
+ :certifications [{:name "Sertifisert ScrumMaster", :year 2008}
+                  {:name "Microsoft Certified Professional", :year 1999}]
+ :education [{:institution "BI"
+              :years [2004]
+              :subject "Master of Management (1 av 4 moduler), eInnovasjon (A score)"}
+             {:institution "Høgskolen i Buskerud"
+              :years [1993 1994 1995 1996]
+              :subject "Ingeniør, Linje for datateknikk"}
+             {:institution "Røyken videregående skole"
+              :years [1989 1990 1991 1992]
+              :subject "Naturfaglinje"}]
  }

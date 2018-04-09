@@ -5,7 +5,7 @@
  :description "Stian er en dedikert systemutvikler som er
                opptatt av å forstå og løse kundens problem
                på en best mulig måte. Han har jobbet for mange
-               forskjellige kunder innenfor ulike bransjer,
+               ulike kunder innenfor flere bransjer,
                og ser at nøkkelen til et vellykket sluttprodukt
                handler om å skjønne kundens forretning og bruke
                riktig teknologi på riktig sted. Stian har meget
@@ -20,8 +20,8 @@
             :linkedin "/in/stianalsos"
             :github "stiancor"}
 
- :tech {:favorites-at-the-moment [:groovy :docker :clojure]
-            :using-at-work [:groovy :clojure :ruby :javascript]
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :blockchains :groovy]
+            :using-at-work [:groovy :clojurescript :clojure :ruby :javascript]
             :want-to-learn-more [:machine-learning :clojure :devops]}
 
  :recommendations [{:title "Coding Horror"
@@ -54,7 +54,6 @@
                            :text "Sjekk dagens artikkel"}
                     :tech [:teknologi :utvikling]}
                    ]
-
 
  :hobbies [{:title "Reising"
             :description "Jeg er bitt av reisebasillen og har bare funnet
@@ -113,6 +112,18 @@
                          tider svært komplekse - problemstillinger og finner gode løsninger
                          på disse. Han er blid og positiv og fungerer godt i samarbeid
                          med andre. Han har min varmeste anbefaling."},
+                {:author "Knut Erik Sandahl"
+                 :title "Avdelingsleder Java EDB Consulting Group"
+                 :quote "Stian Cornelis Alsos har vært ansatt som
+                 seniorkonsulent hos oss fra 15.08.2005 til og med 30.09.2010. I
+                 tiden hos oss har Stian C. Alsos jobbet ut mot våre kunder som
+                 konsulent. Dette har vært sentrert rundt
+                 systemutviklingsoppdrag. EDB Consulting Group legger stor vekt
+                 på faglig utvikling. Stian har deltatt svært aktivt i dette
+                 arbeidet både som deltaker og leder av fagnettverket. Jeg har
+                 lært Stian å kjenne gjennom flere år som en dyktig konsulent,
+                 faglig pådriver og med en positiv og konstruktiv innstilling.
+                 Jeg gir han min klare anbefaling."}
                 {:author "Lene Thrap"
                  :title "Business Unit Manager Java at Logica"
                  :quote "I had the pleasure of having Stian in my department at
@@ -123,4 +134,221 @@
                          I give Stian my best recommodation - you can never fail having
                          him on your project."}]
 
+ :projects [{:customer "Animalia"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Ny- og videreutvikling av fagsystemer"
+             :description "Nyutvikling og videreutvikling av fagsystemer Oppgaver: Seniorutvikler"
+             :tech [:clojure :clojurescript :react :docker :groovy :gradle :oracle :leiningen :rest :re-frame :reagent :devops :nginx]}
+            {:customer "Conax"
+             :years [2016 2017]
+             :employer :kodemaker
+             :summary "Utvikle løsning for IP-TV"
+             :description "Utvikle og designe løsning
+             for IP-TV og sikring av innhold. Dette er et produkt som rulles ut
+             i flere land Oppgaver: Seniorutvikler"
+             :tech [:java :groovy :ansible :javascript :docker :spring :jetty :oracle :linux]}
+            {:customer "NSB"
+             :years [2013 2014 2015 2016]
+             :employer :kodemaker
+             :summary "Utvikling av nytt rapporteringssystem"
+             :description "Prosjektet gikk
+             ut på å lage et nytt rapporteringssystem for NSB. Dette ble gjort
+             ved å samle data fra en rekke ulike kilder og sammenstille disse
+             til et felles datagrunnlag. Dette datagrunnlaget brukes idag av
+             frittstående applikasjoner, samt rapportuthenting for å se på
+             rushtidstrafikk og lignende. Systemet er svært forretningskritisk
+             for NSB Oppgaver: Seniorutvikler, administrativ oppfølging av
+             prosjekt, rapportering til ledelse"
+             :tech [:groovy :grails :gradle :javascript :oracle]}
+            {:customer "Forsvaret"
+             :years [2013]
+             :employer :kodemaker
+             :summary "Utvikling av nytt kjernesystem"
+             :description "Utvikling av nytt system for forsvaret Prosjekt for
+             måling og evaluering av utstyr. Prosjektet besto av flere aktører
+             og Stian og Kodemaker hadde en svært sentral rolle Oppgaver:
+             Seniorutvikler, brukerhistorier, GUI"
+             :tech [:groovy :grails :javascript :oracle]}
+            {:customer "Regionale verneombud"
+             :years [2012 :ongoing]
+             :employer :kodemaker
+             :summary "Prosjektledelse og videreutvikling av fagsystem"
+             :description "Videreutvikle fagsystem, samt prosjektledelse
+             Oppgaven består i å videreutvikle fagsystemene som benyttes av
+             Regionale verneombud. Systemene er i sin helhet utviklet av
+             Kodemaker. Stian fungerer som utvikler samt prosjektleder for
+             teamet på fire mann. Oppgaver: Seniorutvikler/Prosjektleder"
+             :tech [:ruby :rails :thinking-sphinx :jquery :mysql :nginx]}
+            {:customer "Storebrand"
+             :years [2012]
+             :employer :kodemaker
+             :summary "System for innhenting av tilbakemeldinger fra kunder"
+             :description "Videreutvikle en eksisterende
+             løsning for innhenting av tilbakemelding fra kundene til
+             Storebrand. Målet var å automatisere den initielle prosessen med
+             innhenting av informasjon fra kunder via SMS og epost, for på den
+             måten kunne kontakte kundene å forstå deres behov. Løsningen
+             integrerte mot Microsoft CRM via meldingskø. Oppgaver: Senior
+             Javautvikler / frontendutvikler"
+             :tech [:java :struts2 :spring :spring-jdbc :jquery :mssql]}
+            {:customer "Verdipapirsentralen"
+             :years [2011 2012]
+             :employer :kodemaker
+             :summary "Nytt fondssystem for Oslo Børs VPS"
+             :description "Utarbeide arkitektur og utvikle nytt
+             fondssystem for Oslo Børs VPS. Løsningen består av en realtids
+             ordremotor for fondshandel i Norge og Norden. Det ble utviklet en
+             webapplikasjon for bruk av fondsforvaltere, samt utstrakt brukt av
+             eksterne grensesnitt (Webservice, meldingsystemer) for mottak av
+             ordre, kurser og lignende. Oppgaver: Senior Javautvikler /
+             frontendutvikler."
+             :tech [:java :tapestry :spring :hibernate :elasticsearch :groovy :jquery :db2]}
+            {:customer "Verdipapirsentralen"
+             :years [2009 2010]
+             :employer :avenir
+             :summary "Løsning for obligatorisk tjenestepensjon"
+             :description "Utarbeide arkitektur og
+             utvikle ny løsning for obligatorisk tjenestepensjon hos VPS.
+             Løsningen benyttes av mange eksisterende fondsleverandører som er
+             kunder av VPS og selges videre til deres bedriftskunder. Løsningen
+             er en total reimplementasjon av en gammel løsning i henhold til nye
+             teknologivalg og krav. Det er benyttet svært mye
+             applikasjonsintegrasjon og SOA i løsningen for å gjenbruke og
+             benytte eksisterende tjenester hos leverandører Oppgaver: Senior
+             Javautvikler / frontendutvikler."
+             :tech [:java :spring :hibernate :maven :spring-mvc :jquery :db2]}
+            {:customer "Verdipapirsentralen"
+             :years [2008 2009]
+             :employer :avenir
+             :summary "Videreutvikling av eksisterende applikasjoner"
+             :description "Arbeidet gikk i å videreutvikle eksisterende løsninger samt skrive
+             om større batchjobber til ny javaplatform. Arbeidet innebar mye
+             koordinering med produkteiere og andre utviklingsressurser for å
+             avdekke krav og gode løsninger. Benyttet i stor grad SOA for å få
+             synergier ved gjenbruk av tjenester Oppgaver: Senior Javautvikler"
+             :tech [:java :spring :hibernate :maven :jquery]}
+            {:customer "NAV"
+             :years [2007]
+             :employer :avenir
+             :summary "Utvikling av idebanken.org for NAV"
+             :description "Offentlig nettsted
+             for inkluderende arbeidsliv. Prosjektet besto i å kartlegge og
+             utvikle nettstedet. Løsningen benytter emneord for navigasjon
+             Oppgaver: Senior utvikler"
+             :tech [:maven :java :xsl :enonic-cms]}
+            {:customer "NAV"
+             :years [2007]
+             :employer :avenir
+             :exclude-from-profile? true
+             :summary "Tilpassing av søk for nav.no"
+             :description "Endret og tilpasset FAST
+             søkemotor til kravene for nav.no og navet. Det inngikk skriving av
+             Python-kode for å tilpasse dokumentprosesseringen, samt å tilpasse
+             søkeresultatet for å oppnå ønsket resultat Oppgaver: Senior
+             utvikler"
+             :tech [:java :python :xsl :maven]}
+            {:customer "NAV"
+             :years [2007]
+             :employer :avenir
+             :exclude-from-profile? true
+             :summary "Internt bestillingsystem"
+             :description "Utarbeidet og
+             implementerte en intern bestillingsløsning for NAV. Løsningen er
+             bygd på Java/JEE og kommuniserer med backend-system via web
+             services. Oppgaver: Utvikler"
+             :tech [:java :web-services :jee]}
+            {:customer "Carrot Communications"
+             :years [2007]
+             :employer :avenir
+             :summary "Nettløsning for kontantkort hos Chess"
+             :description "Utviklet webløsning for påfylling av kontantkort. Brukeren skulle selv kunne
+             velge hvilke telefonnummer som ville lades, hvilket kredittkort som
+             skulle brukes og interval for når påfyllingene skulle skje.
+             Løsningen bygger på J2EE, med Struts som webrammeverk og web
+             services som kaller backend betalingsløsning. Videre implementerte
+             Stian en løsning for påfylling av kontantkort via SMS for Chess.
+             Oppgaver: Utvikler"
+             :tech [:java :web-services :jee :struts :css]}
+            {:customer "NAV"
+             :years [2006]
+             :employer :avenir
+             :summary "nav.no og navet (intranett)"
+             :description "Stian var en del av
+             utviklingsteamet som fra mars 06 til januar 08 implementert nav.no
+             og NAVET (intranett for nav) ved bruk av Enonic CMS, samt at han
+             var med å integrere Enonic CMS med FAST søkemotor. Løsninger er
+             basert Java. Nettstedet har vunnet flere priser i ettertid.
+             Oppgaver: Utvikler"
+             :tech [:java :jee :xsl :xml :javascript :html]}
+            {:customer "Fjordland"
+             :years [2005 2006]
+             :employer :avenir
+             :summary "www.fjordland.no"
+             :description "Implementerte design i henhold til
+             grafisk profil levert av Klapp media. Løsningen benyttet XML for å
+             representere data, og XSLT i de dynamiske visningsmalene. Det ble 
+             videre benyttet en del JavaScript på sidene, samt
+             søkefunksjonalitet. Applikasjonen kjørte på Websphere Application
+             Server 6.0. Oppgaver: Utvikler"
+             :tech [:java :xsl :xml :javascript :html :css]}
+            {:customer "Fjordland"
+             :years [2005]
+             :employer :avenir
+             :exclude-from-profile? true
+             :summary "Integrasjon mellom Lotus Domino og Enonic CMS"
+             :description "Konvertering av data til XML fra Lotus Domino, og innhenting av XML
+             data i Enonic CMS. Dataene ble hentet inn jevnlig slik at de ansatte i
+             Fjordland skulle slippe å synkronisere dataene manuelt. Oppgaver:
+             Utvikler"
+             :tech [:java :xsl :xml]}
+            {:customer "NAV"
+             :years [2005]
+             :employer :avenir
+             :exclude-from-profile? true
+             :summary "nav-interim.no"
+             :description "Oppsett av publiseringsløsning
+             basert på Enonic CMS. Bygget webside i henhold til kundens ønskede
+             design. Oppgaver: Utvikler"
+             :tech [:java :xsl :xml :html :css]}
+            {:customer "Atmel"
+             :years [2004 2005]
+             :employer :atmel
+        :exclude-from-profile? true
+             :description "Deltidsstilling ved siden av studier. Drifting av
+             serverpark benyttet til design av microcontrollere."
+             :tech [:linux]}]
+
+ :cv {:default {:preferred-techs [:clojure :clojurescript :groovy :react :devops :nginx :gradle :linux]}}   
+ :cv/description " Stian er utdannet sivilingeniør innen kommunikasjonsteknologi
+ ved NTNU i Trondheim, hvor han spesialiserte seg innen systemutvikling. Han har
+ høy kompetanse på javaplatformen, og har jobbet med systemutvikling
+ siden han gikk ut av universitetet i 2005.
+
+ Stian har vært med på å utvikle en rekke systemer. Mange av disse er
+ webbaserte løsninger hvor fellesnevneren er høye krav til driftssikkerhet, ytelse og skalerbarhet.
+ Eksempler på slike systemer er en global løsning for å sikre digitalt innhold for IP-TV,
+ en fondshandelsplatform for deler av Norden, rapporteringssystemer og
+ tjenesteintegrasjon mellom ulike leverandører. De seneste årene
+ har han jobbet med mange ulike teknologier og programmeringsspråk som
+ java, clojure, groovy, javascript og ruby.
+
+ Stian brenner for å ha en smidig arbeidsmetodikk og har holdt både interne kurs
+og foredrag eksternt om tema. Han er sertifisert Scrum master og har jobbet med
+smidig utvikling siden 2005."
+
+ :education-summary "Sivilingeniør kommunikasjonsteknologi, NTNU"
+ :experience-since 2005
+ :qualifications ["Systemutvikler"
+                  "Løsningsarkitekt"
+                  "Frontendutvikling"
+                  "Scrum / smidig utvikling"]
+ :certifications [{:name "Sun Certified Web Component Developer", :year 2009}
+                  {:name "Certified ScrumMaster", :year 2008}
+                  {:name "Sun Certified Programmer for Java 5 platform", :year 2007}]
+ :relationship-status "Samboer"
+ :born 1980
+ :education [{:institution "NTNU"
+              :years [2000 2001 2002 2003 2004 2005]
+              :subject "Sivilingeniør i kommunikasjonsteknologi"}]
 }

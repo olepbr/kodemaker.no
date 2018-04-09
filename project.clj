@@ -23,7 +23,7 @@
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[print-foo "1.0.2"]
-                                  [clj-tagsoup/clj-tagsoup "0.3.0"]
+                                  [clj-tagsoup/clj-tagsoup "0.3.0" :exclusions [org.clojure/clojure]]
                                   [hiccup-find  "1.0.0"]]
                    :plugins [[lein-ring "0.9.7"]]
                    :source-paths ["dev" "config"]

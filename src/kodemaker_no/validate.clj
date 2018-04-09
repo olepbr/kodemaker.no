@@ -6,7 +6,9 @@
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
 (def ID (both Keyword (pred (fn [kw] (re-find #"^:[a-z0-9-]+$" (str kw))) 'simple-lowercase-keyword)))
 (def Date (pred (fn [^String s] (try (parse (formatters :year-month-day) s) true (catch Exception e false)))))
+(def YearMonth (pred (fn [^String s] (try (parse (formatters :year-month) s) true (catch Exception e false)))))
 (def YearRange [(conditional number? Num keyword? (enum :ongoing))])
+(def UrlOrPath (conditional #(re-find #"^/" %) Path identity URL))
 
 (def Person
   {:id ID
@@ -51,6 +53,7 @@
    (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
+                                (optional-key :cv/blurb) Str
                                 (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
@@ -81,7 +84,10 @@
                                                        (optional-key :source) URL}}]
 
    (optional-key :screencasts) [{:title Str ;; screencasts du selv har laget
-                                 :blurb Str
+                                 (optional-key :blurb) Str
+                                 :description Str
+                                 :illustration Path
+                                 (optional-key :cv/blurb) Str
                                  :tech [ID]
                                  (optional-key :launch-date) Date;; iso-8601 yyyy-mm-dd
                                  :url URL}]
@@ -102,7 +108,9 @@
                               (optional-key :description) Str
                               (optional-key :cv/description) Str
                               (optional-key :exclude-from-profile?) Boolean
-                              :years YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :years) YearRange ;; årstallene du jobbet der, typ [2013 2014]. [2018 :ongoing] for å beskrive et pågående prosjekt
+                              (optional-key :start) YearMonth ;; ...eller år/måned du startet
+                              (optional-key :end) YearMonth   ;; og sluttet
                               :tech [ID]}] ;; hvilke tech jobbet du med? viktigst først
 
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
@@ -129,13 +137,17 @@
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :certifications) [{:name Str
+                                    :year Num
                                     (optional-key :url) URL
-                                    :year Num}]
+                                    (optional-key :certificate) 
+                                      {:url UrlOrPath
+                                       (optional-key :text) Str}}]
 
    (optional-key :domain-skills) [{:title Str
                                    :description Str}]
 
-   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]}}})
+   (optional-key :cv) {ID {(optional-key :preferred-techs) [ID]
+                           (optional-key :exclude-techs) [ID]}}})
 
 (def Tech
   {:id ID

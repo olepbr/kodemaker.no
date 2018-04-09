@@ -11,6 +11,13 @@
        policy: targeted
        state: permissive
 
+   - name: Setup authorized_keys for users who may act as deploy user
+     authorized_key:
+       user: deploy
+       key: "{{ lookup('file', item) }}"
+     with_fileglob:
+       - keys/*.pub
+
    - name: Install nginx
      yum: name=nginx state=present
 
@@ -116,6 +123,12 @@
        - mail-sender.js
        - send-mail.js
      notify: restart mail-sender
+
+   - name: Prince prerequisites
+     yum: name={{ item }} state=present
+     with_items:
+       - https://rpmfind.net/linux/sourceforge/u/un/unitedrpms/27/x86_64/msttcorefonts-2.5-4.fc27.noarch.rpm
+       - libtiff
 
    - name: Check if Prince is installed
      stat:

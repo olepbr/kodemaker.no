@@ -1,0 +1,9 @@
+{:id :azure
+ :name "Microsoft Azure"
+ :type :devops
+ :illustration "/photos/tech/azure.png"
+ :site "https://azure.microsoft.com/"
+ :description
+ "[Microsoft Azure Cloud](https://azure.microsoft.com/) er Microsoft sin cloud-stack, på lik linje med AWS og Google
+ Cloud. De var først ute med støtte for Kubernetes, etter Google Cloud, og fikk mye popularitet utenfor Microsoft-miljøet
+ av den grunn."}

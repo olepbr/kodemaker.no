@@ -1,6 +1,6 @@
 {:id :react
  :illustration "/photos/tech/react.png"
- :type :framework
+ :type :frontend
  :site "http://facebook.github.io/react/"
  :name "React"
  :description "React er et [JavaScript](/javascript/)-bibliotek for

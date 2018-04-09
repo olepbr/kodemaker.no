@@ -8,8 +8,7 @@
 
  Christin er pragmatisk når det kommer til teknologivalg, og lærer veldig fort der det er behov for å sette seg inn i noe nytt.  Hun er over gjennomsnittet opptatt av å lage de enkleste og mest kostnadseffektive løsningene for sine kunder.  
 
- Hun er dessuten en erfaren foredragsholder, og har en egen [blogg](http://kranglefant.tumblr.com) om softwareutvikling.
-"
+ Hun er dessuten en erfaren foredragsholder, og har en egen [blogg](http://kranglefant.tumblr.com) om softwareutvikling."
 
  :phone-number "+47 90 29 29 26"
  :email-address "christin@kodemaker.no"
@@ -19,7 +18,7 @@
             :linkedin "/in/christin-gorman-2321aa1"
             :github "christingorman"}
 
- :tech {:using-at-work [:java :javascript :cpp :android :swift]
+ :tech {:using-at-work [:java :postgres :javascript :kubernetes :aws :cpp :android :swift]
         :want-to-learn-more [:clojure]}
  :hobbies [{:title "Roboter"
             :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
@@ -44,57 +43,273 @@
                :title "Reuse? Refuse"
                :blurb "Gjenbrukbarhet kan føre til lavere kvalitet og dårligere brukeropplevelser."
                :tech [:design :arkitektur]}
-              ]       
- :presentations [{:title "Hibernate should be to programmers what cake mixes are to bakers. Beneath their dignity"
-                  :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
-                  :date "2011-09-13"
-                  :tech [:orm :frameworks :hibernate]
-                  :urls {:video "https://vimeo.com/28885655"}}
-                 {:title "Readable code"
-                  :blurb "Når det gjelder kode - er lett å lese det samme som god?"
-                  :date "2012-09-13"
+              ]
+ :presentations [{:title "Reuse? Refuse"
+                  :event "JavaZone 2017"
+                  :blurb "Fallgruver innen gjenbruk og felleskomponenter."
+                  :urls {:video "https://vimeo.com/233817459"}
                   :tech [:design]
-                  :urls {:video "https://vimeo.com/49484333"}}
-                 {:title "De første delleveransene skal være stygge"
-                  :blurb "I smidig produktutvikling er det viktig med fortløpende validering av løsningen. Man vil finne potensielle feil raskt. Man skal ikke vente med at applikasjonen er ferdig før man viser den. Det at de første leveransene er mangelfulle er en del av den nødvendige prosessen og må ikke sees som feil."
-                  :date "2012-09-13"
-                  :tech [:design :smidig]
-                  :urls {:video "https://vimeo.com/album/3114636/video/53188003"}}
-                 {:title "Smidige utviklere spør ikke om råd"
-                  :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
-                  :date "2012-09-13"
-                  :tech [:design :smidig]
-                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
+                  :date "2017-09-14"}
+                 {:title "Bruk og kast utvikling"
+                  :event "Smidigkonferansen"
+                  :blurb ""
+                  :urls {:video "https://vimeo.com/144824087"}
+                  :tech [:design]
+                  :date "2015-11-02"}
                  {:title "Sustainable code - what they don't teach you"
                   :blurb "En applikasjon koster mer å forvalte enn å utvikle. Likevel blir de fleste kodebaser optimalisert for arbeidet gjort i prosjektfasen før prodsetting. Jeg kommer med noen tanker rundt hva vi kan gjøre annerledes for å gjøre applikasjoner lettere å forvalte."
                   :date "2015-09-13"
+                  :event "JavaZone"
                   :tech [:design :smidig :arkitektur]
                   :urls {:video "https://vimeo.com/138774243"}}
+                 {:title "Erfaringsrapport fra eSøknad Bostøtte"
+                  :blurb ""
+                  :tech [:design]
+                  :event "Smidigkonferansen"
+                  :urls {:video "https://vimeo.com/110736913"}
+                  :date "2014-11-01"}
+                 {:title "Fix that!"
+                  :blurb ""
+                  :tech [:design]
+                  :event "JavaZone"
+                  :urls {:video "https://vimeo.com/105869247"}
+                  :date "2014-09-10"}
+                 {:title "Anbud eller ta ansvaret selv?"
+                  :event "Smidig Digitalisering av offentlig sektor"
+                  :blurb ""
+                  :tech [:design]
+                  :urls {:video "https://vimeo.com/97470673"}
+                  :date "2014-08-01"}
+                 {:title "Smidige utviklere spør ikke om råd"
+                  :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
+                  :date "2012-09-13"
+                  :event "Smidigkonferansen"
+                  :tech [:design :smidig]
+                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
+                 {:title "So SQL"
+                  :event "JavaZone"
+                  :blurb ""
+                  :tech [:sql]
+                  :urls {:video "https://vimeo.com/74354408"}
+                  :date "2013-09-10"}
+                 {:title "De første delleveransene skal være stygge"
+                  :blurb "I smidig produktutvikling er det viktig med fortløpende validering av løsningen. Man vil finne potensielle feil raskt. Man skal ikke vente med at applikasjonen er ferdig før man viser den. Det at de første leveransene er mangelfulle er en del av den nødvendige prosessen og må ikke sees som feil."
+                  :date "2012-09-13"
+                  :event "Smidigkonferansen"
+                  :tech [:design :smidig]
+                  :urls {:video "https://vimeo.com/album/3114636/video/53188003"}}
+                 {:title "Readable code"
+                  :blurb "Når det gjelder kode - er lett å lese det samme som god?"
+                  :date "2012-09-13"
+                  :event "JavaZone"
+                  :tech [:design]
+                  :urls {:video "https://vimeo.com/49484333"}}
+                 {:title "Architects in Scrum is like mayonnaise in cake"
+                  :event "Booster"
+                  :blurb ""
+                  :tech [:design]
+                  :urls {:video "https://vimeo.com/52325469"}
+                  :date "2012-08-01"}
+                 {:title "Det er de smarteste folkene som innfører byråkrati"
+                  :tech [:design]
+                  :blurb ""
+                  :event "Smidigkonferansen"
+                  :urls {:video "https://vimeo.com/30577204"}
+                  :date "2011-11-02"}
+                 {:title "Hibernate should be to programmers what cake mixes are to bakers. Beneath their dignity"
+                  :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
+                  :date "2011-09-13"
+                  :event "JavaZone"
+                  :tech [:orm :frameworks :hibernate]
+                  :urls {:video "https://vimeo.com/28885655"}}
                  ]
- :projects [{:customer "Husbanken"
-             :description "eSøknad Bostøtte. Web-løsning for å søke om bostøtte. Jeg jobbet hovedsakelig i frontend-teamet, men hjalp også til med implementasjon av REST-tjenestene på serversiden. Løsningen vant Difi sin pris for Årets Digitale Tjeneste."
+
+ :appearances [{:title "How to make your code last forever"
+                :event "SCNA (Los Angeles)"
+                :tech [:design]
+                :date "2015-12-01"}]
+
+ :projects [{:customer "Tomra"
+             :start "2017-09"
+             :summary "Videreutvikling og nyutvikling av IT-systemene som samler inn data fra pantemaskiner;
+             system-overvåkning, håndtering av kvitterings-innløsning i butikk og utbetalinger via PayPal."
+             :employer :kodemaker
+             :description "Tomra er i en ekspensjonsfase, med mange nye land som innfører panteløsninger, alle med hver sine behov og spesialtilpasninger.
+             For å håndtere en hverdag med flere og flere panteoperatører i flere og flere regioner, jobber Tomra med å fornye sin digitale plattform.
+             Eldre løsninger må forbedres og konverteres til å kjøre på ny og moderne infrastruktur med tilstrekkelige skaleringsmuligheter og kontinuerlige utrullinger uten nedetid."
+             :tech [:java :kubernetes :aws :postgres :sql-server :javascript]}
+            {:customer "WesternGeco"
+             :start "2017-04"
+             :end "2017-10"
+             :employer :kodemaker
+             :summary "Kontrollsystem for innsamling av seismiske data på land"
+             :description "Kontrollsystem for innsamling av seismiske data på
+             land. WesternGeco jobber sammen med sine kunder for å utvikle nye
+             og bedre måter å innhente seismiske data på land. Jeg har jobbet
+             med utvikling av et helt nytt sentralsystem, som automatisk styrer
+             data-innhentingsprosessen og presenterer sanntidsdata på
+             hensiktsmessig måte til brukerne. Oppgaver: Programmerer"
+             :tech [:java :javafx :google-protocol-buffers :jenkins :maven :git]}
+            {:customer "Conax"
+             :start "2016-05"
+             :end "2017-04"
+             :employer :kodemaker
+             :summary "Videreutvikling av Conax Contego - en platform for kryptering av TV/video-signaler."
+             :description "Conax Contego IPTV. Conax utvikler løsninger for
+             kryptering, tilgangskontroll og innholdssikring for digital-TV.
+             Jobbet med å innføre ny funksjonalitet for IPTV i deres platform
+             Contego. Arbeid med ytelsesforberinger i test- og byggekjeden.
+             Oppgaver: Programmerer"
+             :tech [:java :jetty :hazlecast :oracle :spring :hibernate :bamboo :maven :git]}
+            {:customer "Not a Number"
+             :employer :not-a-number
+             :summary "Utvikling av en spillplatform basert på roboter."
+             :description "Inspirert av populariteten til bayblades, pokemon og tradisjonelle arkade-spill,
+             har jeg jobbet med et leke/spill-konsept med håp om å gjenskape spillgleden fra typiske arkadespill i den virkelige verden med små roboter."
+             :tech [:arduino :cpp]
+             :years [2015 2016]}
+            {:customer "Thomson Reuters"
+             :start "2015-10"
+             :end "2015-12"
+             :employer :not-a-number
+             :summary "Javascript log tracker"
+             :description "Javascript log tracker. For å få en bedre oversikt
+             over feil i javascript-kode, laget jeg et lite bibliotek som fanger
+             opp log statements og feil og sender dem til en server slik at
+             forvaltningsteamet skal kunne fikse eventuelle problemer. Koblet
+             dataene opp til både Splunk og Kibana (via Logstash), men laget
+             også en egen webapplikasjon som henter ut dataene samlet inn og
+             viser dem grafisk i et Dashboard, med mulighet til å gå inn i alle
+             feil, og se på stacktracen sammen med selve koden som forårsaket
+             feilen. Jeg jobbet stort sett alene, men med god veiledning og
+             feedback fra forvaltningsteamet rundt meg. Klientbiblioteket var
+             skrevet i vanilla javascript. Backend i Vertx med MongoDb til
+             lagring. Webapplikasjonen brukte AngularJS og Highcharts for
+             visning av data.
+             Oppgaver: Programmerer og arkitekt"
+             :tech [:java :vertx :angularjs :mongodb :elasticsearch :logstash :kibana :splunk]}
+            {:customer "Rollersafe"
+             :summary "IOS og Android applikasjoner som konfigurerer rulleski via Bluetooth Low Energy."
+             :employer :not-a-number
+             :years [2015]
+             :description "Utvikling av app for å oppgradere firmware og for å konfiguere bremsekraft på RollerSafe sine rulleski med trådløs brems."
+             :tech [:java :objc :ios :android]}
+            {:customer "Sommerskolen i Drammen"
+             :summary "Laget web-applikasjon for påmelding til sommerskolen."
+             :description "Drammen kommune trengte en enkel webapplikasjon der man kunne melde barna sine på sommerskolen.
+             Hele løsningen ble laget på under to uker."
+             :employer :not-a-number
+             :start "2015-03"
+             :end "2015-04"
+             :tech [:html :java :css :javascript]}
+            {:customer "Husbanken"
+             :employer :husbanken
+             :summary "Front- og backend-utvikler i prosjekt eSøknad Bostøtte."
+             :description "eSøknad Bostøtte. Web-løsning for å søke om bostøtte.
+             Jeg jobbet hovedsakelig i frontend-teamet, men hjalp også til med implementasjon av REST-tjenestene på serversiden.
+             Løsningen vant Difi sin pris for Årets Digitale Tjeneste."
              :years [2013, 2014]
              :tech [:java :angular :mongodb :resteasy :jms :jboss :camel]}
             {:customer "Husbanken"
-             :description "Bostøtte-tilbakekrav: Husbanken laget en applikasjon som brukes ved mistanke om svindel. Saksbehandlere kan gå over alle utbetalinger og gjøre nye beregninger basert på endret informasjon for å se om en bostøtte-mottaker har fått for mye utbetalt bostøtte. Jeg var med på både design og utvikling av hele løsningen, både frontend og backend, arkitektur og UX."
+             :employer :husbanken
+             :summary "Front- og backend-utvikler i prosjekt Bostøtte-tilbakekrav. Funksjonalitet for å kreve tilbake feilutbetalt bostøtte."
+             :description "Bostøtte-tilbakekrav: Husbanken laget en applikasjon som brukes ved mistanke om svindel.
+             Saksbehandlere kan gå over alle utbetalinger og gjøre nye beregninger basert på endret informasjon for å se om en bostøtte-mottaker har fått for mye utbetalt bostøtte. Jeg var med på både design og utvikling av hele løsningen, både frontend og backend, arkitektur og UX."
              :years [2012, 2013]
-             :tech [:java :jboss :jsf :primefaces :springbatch :jpa]}
+             :tech [:java :jboss :jsf :primefaces :springbatch :jpa :sql-server]}
             {:customer "Statnett"
-             :description "Statnett er ansvarlig for å holde strømfrekvensen i Norge så nær 50hz som mulig. På deres landssentral har de oversikt over frekvensen og hvem som produserer hva i sanntid.  Dersom frekvensen går for mye opp eller ned må de kjøpe endret produksjon av strømprodusentene. Strømprodusentene sender inn bud daglig, der de gir priser for hvor mye opp eller ned de kan gå og hvor mye disse endringene koster. Operatørene i landssentralen må raskt kunne evaluere budene og velge de som er mest hensiktsmessige.  LARM-prosjektet skulle gi dem et system som ga optimal oversikt og evne til å handle effektivt.  Jeg bidro med generell utvikling av frontend og backend, og laget mye av selve rammeverket for data-binding og event handling brukt i GUI"
-             :years [2010]
+             :summary "Front- og backendutvikler i prosjekt LARM, et markedsstyringssystem for kjøp av reservekraft fra strømprodusenter for å holde den nasjonale strømfrekvensen stabil."
+             :employer :steria
+             :description "Statnett er ansvarlig for å holde strømfrekvensen i Norge så nær 50hz som mulig. På deres landssentral har de oversikt over frekvensen og hvem som produserer hva i sanntid.  Dersom frekvensen går for mye opp eller ned må de kjøpe endret produksjon av strømprodusentene. Strømprodusentene sender inn bud daglig, der de gir priser for hvor mye opp eller ned de kan gå og hvor mye disse endringene koster. Operatørene i landssentralen må raskt kunne evaluere budene og velge de som er mest hensiktsmessige.  LARM-prosjektet skulle gi dem et system som ga optimal oversikt og evne til å handle effektivt.  Jeg bidro med generell utvikling av frontend og backend, og laget mye av selve rammeverket for data-binding og event handling brukt i GUI."
+             :start "2010-09"
+             :end "2012-08"
              :tech [:java :jetty]}
             {:customer "WesternGeco"
-             :description "Jeg var en av 3-4 utviklere som laget et java-basert GIS planleggings- og analyse-verktøy brukt av geofysikere i forbindelse med oppsamling av seismisk data på land. Millioner av punkter må ikke bare vises på skjermen, men må også kunne flyttes på og avanserte beregninger kjøres for å finne optimal plassering av sensorer og kilder.  Ytelsesmessig veldig krevende. Brukte GeoTools (java) med en del egen tilpasning for å håndtere løpende endringer av geografien. Jobbet med hele løsningen, fra GUI-kode til minneoptimalisering"
+             :description "Jeg var en av 3-4 utviklere som laget et java-basert GIS planleggings- og analyse-verktøy brukt av geofysikere i forbindelse med oppsamling av seismisk data på land. Millioner av punkter må ikke bare vises på skjermen, men må også kunne flyttes på og avanserte beregninger kjøres for å finne optimal plassering av sensorer og kilder.  Ytelsesmessig veldig krevende. Brukte GeoTools (java) med en del egen tilpasning for å håndtere løpende endringer av geografien. Jobbet med hele løsningen, fra GUI-kode til minneoptimalisering."
              :years [2009]
+             :employer :western-geco
+             :summary "Utvikling av GIS-verktøy brukt av geofysikere for å planlegge seismisk data-oppsamling på land."
              :tech [:java :geotools]}
             {:customer "WesternGeco"
-             :description "Jeg var ansvarlig for design, utvikling og felttesting av det sentrale kontrollsystemet brukt til de seismiske kildene i WesternGeco's land-seismikk-oppsamlings-system UniQ"
+             :employer :western-geco
+             :summary "Design, utvikling og testing av realtime-kontrollsystem for de seismiske kildene brukt på land."
+             :description "Jeg var ansvarlig for design, utvikling og felttesting av det sentrale kontrollsystemet brukt til de seismiske kildene i WesternGeco's land-seismikk-oppsamlings-system UniQ."
              :years [2006, 2007, 2008]
              :tech [:java :cpp]}
             {:customer "BP"
-             :description "Utvikling av et system for å registrere og søke gjennom erfaringer gjort i forbindelse med jobbing på oljerig. Web-interface samt desktop-applikasjoner med synkroniseringsmuligheter for installasjoner på platformer med dårlig internett-oppkobling. Jeg var ansvarlig for alt unntatt den egenutviklede ORMen brukt for databaseoppkobling"
+             :employer :well-data
+             :summary "Lessons Learned, design og utvikling av et system for kunnskapsdeling innen farlige situasjoner på oljerigger."
+             :description "Utvikling av et system for å registrere og søke gjennom erfaringer gjort i forbindelse med jobbing på oljerig. Web-interface samt desktop-applikasjoner med synkroniseringsmuligheter for installasjoner på platformer med dårlig internett-oppkobling.
+             Jeg var ansvarlig for alt unntatt den egenutviklede ORMen brukt for databaseoppkobling."
              :years [2005, 2006]
              :tech [:csharp :aspnet :oracle :sqlserver]}
+            {:customer "KCA Deutag"
+             :years [2003]
+             :employer :well-data
+             :description "Utvikling av et web-basert rapporteringssystem for å
+             holde styr på mannskap og utstyr på en oljerig.
+             Oppgaver: Programmerer"
+             :summary "Utvikling av web-basert system for å holde styr på mannskap og utstyr på oljeplatformer."
+             :tech [:visual-basic :aspnet :sql-server :javascript]}
+            {:customer "Well Data Technologies"
+             :years [2005]
+             :employer :well-data
+             :summary "RMX - design og utvikling av en konfigurerbar kvantitativ og kvalitativ risikoanalyse-applikasjon. Beregning av tid og kost på oljebrønnoperasjoner."
+             :description "RMX - Laget et kvantitativt risikoanalyseverktøy for å
+             estimere kostnader ved oljebrønnoperasjoner. Løsningen ble utviklet
+             fra bunnen av slik at faktorer som læring over tid, og korrelasjon
+             mellom hendelser kunne bli tatt med i beregningene, noe som ikke
+             fantes i hyllevareløsningene.
+             Oppgaver: Arkitekt og programmerer"
+             :tech [:dotnet :csharp]}
+            {:customer "BP"
+             :years [2004]
+             :employer :well-data
+             :description "FEA tool - Kunden hadde laget et MS Excel-verktøy som
+             gjorde FEA analyser av oljerør. Min oppgave var å optimalisere
+             beregningskoden, noe jeg gjorde ved å skrive en dll i C som ble
+             kalt fra excel-arket. Beregningstiden gikk fra 4 minutter til 7
+             sekunder.
+             Oppgaver: programmerer"
+             :tech [:vba :excel :c]}
+            {:customer "Det Norske Veritas"
+             :years [2003]
+             :summary "Utvikling av et enkelt kvalitativt risikoanalyse-verktøy for bruk i oleindustrien."
+             :employer :semikolon
+             :description "Risk Management - Utvikling av et enkelt kvalitativt risikoanalyse-verktøy til bruk i oljesektoren.
+             Oppgaver: Arkitekt, programmerer, kursholder"
+             :tech [:vba :ms-access]}
+            {:customer "Altinex UK Ltd"
+             :years [2002]
+             :employer :semikolon
+             :summary "Utvikling av en webapplikasjon for å holde styr på kvalitetsstyring av utstyr på oljerigger."
+             :description "Alt utstyr på en oljerig må kvalitetssikres, vi lagde en web-basert verktøy der en kvalitetssikrer kunne holde styr på hvilket utstyr som hadde blitt kontrollert, merknader og tidspunkter for kontroll og den slags."
+             :tech [:php :javascript :mysql]}
+            {:customer "Altinex UK Ltd"
+             :years [2000]
+             :employer :altinex
+             :summary "WellCost QRA - Videreutvikling av et kvantitavt risikoanalyse brukt av bl.a Shell."
+             :description "WellCost QRA inneholdt en database over typiske tider og kostnader involvert i oljeplattform-aktiviteter og
+             @Risk ble brukt til å kjøre MonteCarlo simulering med disse kostnadene og tidene for å gi estimater på tid og kost for nye planlagte oljeplattform-arbeider."
+             :tech [:vba :ms-access]}
             ]
  
+ :cv {}
+ :education-summary "MA(Hons) Computing Science, University of Aberdeen, Scotland"
+ :experience-since 2000
+ :qualifications ["Erfaren programmerer og arkitekt"
+                  "Systemarkitektur"
+                  "Testdrevet utvikling"
+                  "XP-praksiser (TDD, CI, med mer)"]
+ :certifications [{:name "Certified Scrum Master", :year 2007}
+                  {:name "TDD", :year 2008}
+                  {:name "Java Specialist Master Class", :year 2009}]
+ :relationship-status "Gift med 2 barn"
+ :born 1978
+ :education [{:institution "University of Aberdeen"
+              :years [2000 2001 2002 2003]
+              :subject "MA (Hons) Computing Science"}
+             {:institution "NTNU"
+              :years [1998 1999]
+              :subject "1. året Siv.Ing Datateknikk"}]
  }
