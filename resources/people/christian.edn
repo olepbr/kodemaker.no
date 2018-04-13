@@ -585,12 +585,16 @@
                   :tech [:javascript]}
                  ]
 
- :appearances [{:title "Å Bygge sin egen Infrastruktur på AWS"
+ :appearances [{:title "Datomic"
+                :event "Foredrag for Bring"
+                :tech [:datomic :clojure]
+                :date "2018-04-10"}
+               {:title "Å Bygge sin egen Infrastruktur på AWS"
                 :event "Kodemaker fagdag"
                 :tech [:aws :aws-cloudformation :concourse]
                 :date "2018-04-05"}
                {:title "Datomic"
-                :event "Internforedrag i Tine"
+                :event "Foredrag for Tine Husdyrfag"
                 :tech [:datomic :clojure]
                 :date "2017-11-14"}
                {:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
