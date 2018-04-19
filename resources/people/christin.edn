@@ -2,7 +2,7 @@
  :name ["Christin" "Gorman"]
  :title "Programmerinne"
  :start-date "2016-04-01"
- :description "Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i alt fra sanntids kontrollsystemer, GIS verktøy, framsia og baksia på web, desktop- og mobilapper, til plugins i Excel. 
+ :description "Christin er en arbeidssom, engasjert og engasjerende programmerer med erfaring i alt fra sanntids kontrollsystemer, GIS verktøy, framsia og baksia på web, desktop- og mobilapper, til plugins i Excel.
 
  Hun er først og fremst systemutvikler, men har også hatt arbeidsoppgaver innenfor alt fra kravspesifikasjon, design, testing, kursing, workshops og prosjektkoordinering.
 
@@ -44,60 +44,78 @@
                :blurb "Gjenbrukbarhet kan føre til lavere kvalitet og dårligere brukeropplevelser."
                :tech [:design :arkitektur]}
               ]
- :presentations [{:title "Reuse? Refuse"
+ :presentations [{:title "Hibernate should be to programmers what cake mixes are to bakers. Beneath their dignity"
+                  :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
+                  :date "2011-09-13"
+                  :event "JavaZone"
+                  :tech [:orm :frameworks :hibernate]
+                  :urls {:video "https://vimeo.com/28885655"}}
+                 {:title "Reuse? Refuse"
                   :event "JavaZone 2017"
                   :blurb "Fallgruver innen gjenbruk og felleskomponenter."
                   :urls {:video "https://vimeo.com/233817459"}
                   :tech [:design]
                   :date "2017-09-14"}
-                 {:title "Bruk og kast utvikling"
-                  :event "Smidigkonferansen"
-                  :blurb ""
-                  :urls {:video "https://vimeo.com/144824087"}
-                  :tech [:design]
-                  :date "2015-11-02"}
                  {:title "Sustainable code - what they don't teach you"
                   :blurb "En applikasjon koster mer å forvalte enn å utvikle. Likevel blir de fleste kodebaser optimalisert for arbeidet gjort i prosjektfasen før prodsetting. Jeg kommer med noen tanker rundt hva vi kan gjøre annerledes for å gjøre applikasjoner lettere å forvalte."
                   :date "2015-09-13"
                   :event "JavaZone"
                   :tech [:design :smidig :arkitektur]
                   :urls {:video "https://vimeo.com/138774243"}}
-                 {:title "Erfaringsrapport fra eSøknad Bostøtte"
-                  :blurb ""
-                  :tech [:design]
-                  :event "Smidigkonferansen"
-                  :urls {:video "https://vimeo.com/110736913"}
-                  :date "2014-11-01"}
-                 {:title "Fix that!"
-                  :blurb ""
-                  :tech [:design]
-                  :event "JavaZone"
-                  :urls {:video "https://vimeo.com/105869247"}
-                  :date "2014-09-10"}
+                 {:title "Offentlig IT v2.0"
+                  :blurb "Tanker om hva vi må få til og hva som så ofte går galt med IT i offentlig sektor"
+                  :date "2016-10-30"
+                  :event "TDC"
+                  :tech [:design :smidig :arkitektur]
+                  :urls {:video "https://vimeo.com/189664989"}}
                  {:title "Anbud eller ta ansvaret selv?"
                   :event "Smidig Digitalisering av offentlig sektor"
-                  :blurb ""
+                  :blurb "Bør staten drive med softwareutvikling? Hva skjer når man setter utvikling ut på anbud?"
                   :tech [:design]
                   :urls {:video "https://vimeo.com/97470673"}
                   :date "2014-08-01"}
-                 {:title "Smidige utviklere spør ikke om råd"
-                  :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
-                  :date "2012-09-13"
-                  :event "Smidigkonferansen"
-                  :tech [:design :smidig]
-                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
-                 {:title "So SQL"
-                  :event "JavaZone"
-                  :blurb ""
-                  :tech [:sql]
-                  :urls {:video "https://vimeo.com/74354408"}
-                  :date "2013-09-10"}
+                 {:title "What developers need from their product/project manager"
+                  :event "Product Tank - Oslo"
+                  :blurb "Hva er det utviklere trenger og forventer av sine prosjektledere/produkteiere?"
+                  :tech [:smidig]
+                  :urls {:video "https://vimeo.com/160150795"}
+                  :date "2016-04-03"}
                  {:title "De første delleveransene skal være stygge"
                   :blurb "I smidig produktutvikling er det viktig med fortløpende validering av løsningen. Man vil finne potensielle feil raskt. Man skal ikke vente med at applikasjonen er ferdig før man viser den. Det at de første leveransene er mangelfulle er en del av den nødvendige prosessen og må ikke sees som feil."
                   :date "2012-09-13"
                   :event "Smidigkonferansen"
                   :tech [:design :smidig]
                   :urls {:video "https://vimeo.com/album/3114636/video/53188003"}}
+                 {:title "How to make your code last forever"
+                  :event "SCNA (Los Angeles)"
+                  :tech [:design]
+                  :blurb "Hvordan skrive kode som kan vedlikeholdes over tid."
+                  :date "2015-12-01"
+                  :urls {:video "https://vimeo.com/146928263"}}
+                 {:title "Fix that!"
+                  :blurb "Når alle skriver rundt problemet istedenfor å løse det..."
+                  :tech [:design]
+                  :event "JavaZone"
+                  :urls {:video "https://vimeo.com/105869247"}
+                  :date "2014-09-10"}
+                 {:title "Smidige utviklere spør ikke om råd"
+                  :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
+                  :date "2012-09-13"
+                  :event "Smidigkonferansen"
+                  :tech [:design :smidig]
+                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
+                 {:title "Erfaringsrapport fra eSøknad Bostøtte"
+                  :blurb "Kjapp gjennom gang av sukksesser og utfordringer med å innføre elektronisk søknad for Bostøtte"
+                  :tech [:design]
+                  :event "Smidigkonferansen"
+                  :urls {:video "https://vimeo.com/110736913"}
+                  :date "2014-11-01"}
+                 {:title "So SQL"
+                  :event "JavaZone"
+                  :blurb "Et konkret eksempel på hvordan man kan skrive egen kode fra bunnen av, uten generiske rammeverk."
+                  :tech [:sql]
+                  :urls {:video "https://vimeo.com/74354408"}
+                  :date "2013-09-10"}
                  {:title "Readable code"
                   :blurb "Når det gjelder kode - er lett å lese det samme som god?"
                   :date "2012-09-13"
@@ -106,28 +124,22 @@
                   :urls {:video "https://vimeo.com/49484333"}}
                  {:title "Architects in Scrum is like mayonnaise in cake"
                   :event "Booster"
-                  :blurb ""
+                  :blurb "Hvorfor hierarkisk rollefordeling med ledere og arkitekter ikke fungerer så bra med smidige prinsipper."
                   :tech [:design]
                   :urls {:video "https://vimeo.com/52325469"}
                   :date "2012-08-01"}
                  {:title "Det er de smarteste folkene som innfører byråkrati"
                   :tech [:design]
-                  :blurb ""
+                  :blurb "Alle klager over byråkrati, så hvordan har det seg at vi til stadighet innfører mer av det?"
                   :event "Smidigkonferansen"
                   :urls {:video "https://vimeo.com/30577204"}
                   :date "2011-11-02"}
-                 {:title "Hibernate should be to programmers what cake mixes are to bakers. Beneath their dignity"
-                  :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
-                  :date "2011-09-13"
-                  :event "JavaZone"
-                  :tech [:orm :frameworks :hibernate]
-                  :urls {:video "https://vimeo.com/28885655"}}
-                 ]
-
- :appearances [{:title "How to make your code last forever"
-                :event "SCNA (Los Angeles)"
-                :tech [:design]
-                :date "2015-12-01"}]
+                 {:title "Bruk og kast utvikling"
+                  :event "Smidigkonferansen"
+                  :blurb "Innen IT er bruk og kast en god ting."
+                  :urls {:video "https://vimeo.com/144824087"}
+                  :tech [:design]
+                  :date "2015-11-02"}]
 
  :projects [{:customer "Tomra"
              :start "2017-09"
@@ -293,7 +305,7 @@
              @Risk ble brukt til å kjøre MonteCarlo simulering med disse kostnadene og tidene for å gi estimater på tid og kost for nye planlagte oljeplattform-arbeider."
              :tech [:vba :ms-access]}
             ]
- 
+
  :cv {}
  :education-summary "MA(Hons) Computing Science, University of Aberdeen, Scotland"
  :experience-since 2000
