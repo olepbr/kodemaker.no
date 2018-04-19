@@ -14,7 +14,7 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :tech {:using-at-work [:javascript :ractive :react :docker :elasticsearch :java :cucumber :rdf]}
+ :tech {:using-at-work [:java :spring :gradle :javascript :nodejs :git :intellij :jira :osx :mongodb :docker]}
 
  :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
