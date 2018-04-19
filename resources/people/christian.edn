@@ -45,7 +45,7 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:clojurescript :cordova :aws]
+ :tech {:using-at-work [:clojurescript :cordova :svg :d3 :aws]
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
@@ -235,7 +235,7 @@
              :summary "Videreutvikling av Hafslund Strøms app for iOS og Android"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøttende backend-systemer og infrastruktur."
-             :tech [:clojurescript :cordova :aws :docker-swarm]
+             :tech [:clojurescript :cordova :svg :d3 :aws :docker-swarm]
              :start "2018-04"}
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
