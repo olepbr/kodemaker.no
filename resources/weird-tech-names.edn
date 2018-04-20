@@ -201,6 +201,7 @@
  :svn "Subversion"
  :testing "Automatisert testing"
  :sbt "SBT"
+ :spotify-api "Spotify API"
  :textmate "TextMate"
  :vba "Visual Basic for Applications"
  :vbscript "VBScript"

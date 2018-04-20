@@ -55,7 +55,16 @@
                   "Mye praktisk erfaring med mikrotjenester"
                   "Tar oppgaver i hele stacken, fra infrastruktur, via databaser og backend, til arkitektur, implementasjon og ytelse i frontend"]
 
- :side-projects [{:title "Learning Functional JavaScript"
+ :side-projects [{:title "Shufflify"
+                  :description "Til bilturene med familien er det behov for en
+                 shuffle-funksjon som tar hensyn til at \"alle skal få sitt\".
+                 Jeg lager en tjeneste i Go som løser dette svært essensielle
+                 problemet."
+                  :tech [:go :aws-lambda :serverless :aws-api-gateway :spotify-api]
+                  :illustration "/illustrations/side-projects/shufflify.png"
+                  :link {:url "https://shufflify.io/"
+                         :text "Tjenesten er ikke lansert enda"}}
+                 {:title "Learning Functional JavaScript"
                   :description "Et grundig videokurs i funksjonell programmering
                   med JavaScript. Laget for Packt forlag i 2015."
                   :illustration "/illustrations/side-projects/functional-js.jpg"
@@ -158,7 +167,15 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "https://cjohansen.no/optimized-optimus-asset-paths-clojurescript//"
+ :blog-posts [{:url "https://cjohansen.no/processing-data-with-clojure-and-golang/"
+               :title "Processing Data with Clojure and Go"
+               :blurb "En sammenligning av samme algoritme implementert i Clojure og Go sammen med med litt synsing om ytelse, type-systemer, og uttrykkskraft."
+               :tech [:go :clojure :clojure-spec]}
+              {:url "https://cjohansen.no/a-better-playlist-shuffle-with-golang/"
+               :title "A Better Playlist Shuffle with Go"
+               :blurb "\"Shuffle\" i eksempelvis Spotify burde være smartere enn ren tilfeldighet. I dette innlegget presenterer jeg en alternativ algoritme med implementasjon i Go."
+               :tech [:go]}
+              {:url "https://cjohansen.no/optimized-optimus-asset-paths-clojurescript/"
                :title "Optimized Optimus Asset Paths from ClojureScript"
                :blurb "Hvordan eksponere Optimus asset-paths fra Clojure til ClojureScript via en macro"
                :tech [:clojure :clojurescript :optimus]}
