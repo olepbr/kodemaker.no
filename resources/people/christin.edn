@@ -141,6 +141,11 @@
                   :tech [:design]
                   :date "2015-11-02"}]
 
+ :business-presentations [{:title "Offentlig IT v2.0"
+                           :blurb "Tanker om hva vi må få til og hva som så ofte går galt med IT i offentlig sektor"
+                           :tech [:design :smidig :arkitektur]
+                           :duration "1 time"}]
+
  :projects [{:customer "Tomra"
              :start "2017-09"
              :summary "Videreutvikling og nyutvikling av IT-systemene som samler inn data fra pantemaskiner;
