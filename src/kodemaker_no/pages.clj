@@ -18,7 +18,8 @@
    "/folk/" (partial people-page (vals (:people content)))
    "/skjema/" (partial form-page (:articles content))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))
-   "/kurs/" (partial learnings-page content)})
+   "/betalte-kurs/" (partial learnings-page content)
+   "/kurs/" (partial course-page (:videos content) (:screencasts content))})
 
 (defn create-pages [content]
   (stasis/merge-page-sources
