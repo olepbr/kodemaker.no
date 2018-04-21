@@ -1105,8 +1105,7 @@
                       deg og ditt web-prosjekt en mer feilfri hverdag."
               :tech [:javascript]
               :duration "1 dag"
-              :participants {:min 3 :max 15}
-              :price "5000,- per deltaker (eks mva)"}]
+              :participants {:min 3 :max 15}}]
 
  :business-presentations [{:title "Datomic - Databasen du ikke visste at du trengte"
                            :blurb "Datomic er en relativt ny database som byr på
@@ -1119,8 +1118,7 @@
                                    Datomic før dere tar de store beslutningene
                                    om hva og hvordan."
                            :tech [:datomic]
-                           :duration "1 time"
-                           :price "5000,- (eks mva)"}
+                           :duration "1 time"}
                           {:title "ClojureScript - Mer enn bare et programmeringsspråk"
                            :blurb "ClojureScript og verktøyene rundt har vokst
                                    til å bli en utviklingsplatform for
@@ -1136,7 +1134,6 @@
                                    av denne timen kommer teamet ditt helt
                                    garantert til å få lyst til å følge opp med
                                    en workshop."
-                           :tech [:datomic]
-                           :duration "1 time"
-                           :price "5000,- (eks mva)"}]
+                           :tech [:clojurescript :frontend]
+                           :duration "1 time"}]
  }

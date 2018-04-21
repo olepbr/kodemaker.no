@@ -689,7 +689,5 @@
                       er gjennom er du klar til å bygge dine egne webapper med
                       Elm."
               :duration "Én dag"
-              :participants {:min 3 :max 15}
-              :price "5000,- per deltaker (eks mva)"}]
+              :participants {:min 3 :max 15}}]
  }
-

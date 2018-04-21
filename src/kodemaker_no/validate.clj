@@ -153,13 +153,13 @@
                                             :blurb Str
                                             :tech [ID]
                                             :duration Str
-                                            :price Str}]
+                                            (optional-key :price) Str}]
 
    (optional-key :workshops) [{:title Str ;; workshop eller kurs til salgs
                                :blurb Str
                                :tech [ID]
                                :duration Str
-                               :price Str
+                               (optional-key :price) Str
                                :participants {:min Num
                                               :max Num}}]})
 

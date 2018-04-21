@@ -17,5 +17,5 @@
       :blog-posts (cultivate-blog-posts (:blog-posts raw-content) people)
       :videos (cultivate-videos raw-content)
       :screencasts (cultivate-screencasts raw-content)
-      :business-presentations (cultivate-sellable :business-presentations raw-content)
-      :workshops (cultivate-sellable :workshops raw-content))))
+      :business-presentations (cultivate-sellable :business-presentations raw-content "20.000,- (eks mva)")
+      :workshops (cultivate-sellable :workshops raw-content "9000,- per deltaker (eks mva)"))))
