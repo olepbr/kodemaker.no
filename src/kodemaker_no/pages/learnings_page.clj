@@ -46,6 +46,7 @@
                            Book en ekspertdag med " [:a {:href "/magnus/"} "Magnus"]
                            " for en flyvende start. Har dere utfordringer i
                            AWS? Be om en dag med " [:a {:href "/kristian/"} "Kristian"]
+                           ", " [:a {:href "/anders/"} "Anders"]
                            " eller " [:a {:href "/christian/"} "Christian"] ".
                            Trenger teamet hjelp til å komme igang med Ansible? "
                            [:a {:href "/kjetil/"} "Kjetil"] " ordner opp. Har du
