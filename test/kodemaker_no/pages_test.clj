@@ -19,7 +19,8 @@
            "/systemer/"
            "/skjema/"
            "/blogg/"
-           "/kurs/"})
+           "/kurs/"
+           "/betalte-kurs/"})
 
 (fact "Colliding urls are not tolerated."
 
