@@ -328,6 +328,10 @@
                   :tech [:devops]
                   :urls {:video "http://www.youtube.com/watch?v=I7cSbKPGJzU"}}]
 
+ :blog-posts [{:url "https://medium.com/@kjetiljd/using-two-or-more-git-github-identities-78f869adb069"
+              :title "Using Two git/GitHub Identities"
+              :blurb "Av og til er det nødvendig å sjonglere to git/GitHub-identiteter - her kan du lese om en praktisk fremgangsmåte jeg fant frem til."
+              :tech [:git :ssh]}]
  :endorsements    [{:author "Belen Svebak"
                     :title  "Manager Integration and Quality Team, FINN reise"
                     :quote  "Kjetil er en god nettverksbygger! Han er også en igangsetter som ikke er redd for å eksperimentere. Opptatt av å levere høy kvalitet, men også av produkt- og prosessforbedringer. Fokuserer på å utvikle andre. Ærlig. Han er opptatt av å skape miljø hvor det kan oppstår åpenhet og ærlighet. Motiverende å jobbe med. Sterk lagånd!"}
