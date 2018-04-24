@@ -34,15 +34,6 @@
                             :text "Sjekk ut boka her"}
                     :tech  [:scala]}
                    
-                   {:title "Apache spark"
-                    :blurb "Et flott verktøy for analyse av og læring gjennom store distribuerte datamengder. 
-                            Oppleves best gjennom Scala som Spark er skrevet i, men har apier til Java, Python og R. 
-
-                            Gjennom Spark REPL er det en fryd å ekseperimentere med og finne mønster i store mengder distribuerte data." 
-                    :link  {:url "https://spark.apache.org"
-                            :text "Sjekk ut siten her"}
-                    :tech  [:machinelearning :deeplearning :scala :apache-spark]}
-                   
                    {:title "Learn you a Haskell for great good"
                     :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer 
                             de små grå på en spennende måte. Denne boka er for deg som har bakgrunn i mer imperative språk, men den gir deg en morsom og klarsynt innføring i små og store funksjonelle abstraksjoner."                     
