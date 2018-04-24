@@ -50,6 +50,15 @@
                             :text "Sjekk ut boka her"}
                     :tech  [:haskell]}]
                     
+ :side-projects
+                [{:title        "Fjesgjenkjenning"
+                  :description  "Bruke bilbioteket [dlib](http://blog.dlib.net) til å kjenne igjen alle kodemakere basert på kun étt bilde per person."
+                  :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
+                  :illustration "/illustrations/side-projects/trygve-og-einar.png"
+                  :tech         [ :python :dlib :machinelearning :deeplearning]
+                  }]
+
+
  :hobbies [{:title "Maskinlæring"
             :description "
                 De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai), og jeg prøver så godt jeg kan å følge utviklingen på området. 
