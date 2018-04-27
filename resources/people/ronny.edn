@@ -40,7 +40,37 @@
                              {:name "grails-build-info", :url "https://github.com/mjhugo/grails-build-info", :tech [:grails]}
                              ]
 
- :projects [{:customer "NSB"
+ :projects [
+
+            {:customer "NSB"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Topas"
+             :description "Topas. Utvikling av backend til en Android-applikasjon for lokførere og konduktører."
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :activemq :mariadb]}
+
+            {:customer "NSB"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "Usrapi"
+             :description "Usrapi. Utvikling av tjenester for tilgjengeliggjøring av data fra Active Directory / LDAP."
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :ldap :mariadb]}
+
+            {:customer "NSB"
+             :years [2017 :ongoing]
+             :employer :kodemaker
+             :summary "PersonnelInfoSubscriber"
+             :description "PaOListener. Utvikling av applikasjon for mottak av endringer i tjeneste for lokfører/konduktør og distribusjon av endring til andre applikasjoner"
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :activemq :mariadb]}
+
+            {:customer "NSB"
+             :years [2015 :ongoing]
+             :employer :kodemaker
+             :summary "PaOListener"
+             :description "PaOListener. Utvikling av applikasjon for å oppdage endringer i et api og sende melding til andre applikasjoner."
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :soap :activemq :mariadb]}
+
+            {:customer "NSB"
              :years [2014 :ongoing] ;10.2014-
              :employer :kodemaker
              :summary "Mozart"
