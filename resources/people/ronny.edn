@@ -47,7 +47,7 @@
              :employer :kodemaker
              :summary "Topas"
              :description "Topas. Utvikling av backend til en Android-applikasjon for lokførere og konduktører."
-             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :activemq :mariadb]}
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ansible :ehcache :quartz :rest :activemq :mariadb]}
 
             {:customer "NSB"
              :years [2017 :ongoing]
