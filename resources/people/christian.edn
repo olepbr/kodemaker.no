@@ -603,6 +603,10 @@
                  ]
 
  :appearances [{:title "Datomic"
+                :event "Foredrag for Hafslund/Fortum"
+                :tech [:datomic :clojure]
+                :date "2018-05-02"}
+               {:title "Datomic"
                 :event "Foredrag for Bring"
                 :tech [:datomic :clojure]
                 :date "2018-04-10"}
