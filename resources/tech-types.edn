@@ -335,6 +335,7 @@
  :testng :library
  :textmate :devtools
  :thinking-sphinx :library
+ :traefik :devops
  :tsql :specification
  :tutum :cloud
  :typescript :proglang
