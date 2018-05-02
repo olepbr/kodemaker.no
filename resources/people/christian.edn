@@ -251,8 +251,8 @@
              :employer :kodemaker
              :summary "Videreutvikling av Hafslund Strøms app for iOS og Android"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
-            Android, samt tilstøttende backend-systemer og infrastruktur."
-             :tech [:clojurescript :cordova :svg :d3 :terraform :aws :docker-swarm]
+            Android, samt tilstøtende backend-systemer og infrastruktur."
+             :tech [:clojurescript :cordova :svg :d3 :terraform :aws :docker-swarm :traefik]
              :start "2018-04"}
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
