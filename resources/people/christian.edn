@@ -167,7 +167,11 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "https://cjohansen.no/processing-data-with-clojure-and-golang/"
+ :blog-posts [{:url "https://cjohansen.no/git-subtree-multiple-dirs/"
+               :title "Git Subtree for Multiple Directories"
+               :blurb "En liten howto for hvordan man kan skille ut én eller flere mapper fra et git repo som et nytt repo, med historikken intakt."
+               :tech [:git :bash]}
+              {:url "https://cjohansen.no/processing-data-with-clojure-and-golang/"
                :title "Processing Data with Clojure and Go"
                :blurb "En sammenligning av samme algoritme implementert i Clojure og Go sammen med med litt synsing om ytelse, type-systemer, og uttrykkskraft."
                :tech [:go :clojure :clojure-spec]}
