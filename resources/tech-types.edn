@@ -79,6 +79,7 @@
  :cygwin :devtool
  :cxf :server
  :dashing :tool
+ :datadog :devops
  :datascript :database
  :db2 :database
  :dbartisan :library
@@ -112,6 +113,7 @@
  :fitnesse :framework
  :flash :framework
  :flex :proglang
+ :fluentd :devops
  :frp :methodology
  :fusioncharts :library
  :gcd :server
@@ -256,6 +258,7 @@
  :oracle-locator :database
  :oracle-portal :server
  :osx :os
+ :packer :devops
  :pascal :proglang
  :pair-programming :methodology
  :passenger :server
