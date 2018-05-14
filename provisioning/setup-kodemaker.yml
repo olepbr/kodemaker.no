@@ -222,7 +222,7 @@
        minute: 30
        hour: 2
        weekday: 1
-       job: "certbot certonly --webroot -w /var/www/letsencrypt"
+       job: "certbot renew --webroot -w /var/www/letsencrypt"
      when: use_ssl
 
   handlers:
