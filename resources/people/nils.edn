@@ -71,6 +71,7 @@
  :open-source-contributions
                 [
                  {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go] }
+                 {:name "Unleash-go-client" :url "https://github.com/Unleash/unleash-client-go" :tech [:go, :unleash] }
                  ]
 
 
@@ -116,11 +117,11 @@
 
  :projects
                 [{:customer    "finn.no"
-                  :description "Videreutvikle og fornye system for annonse-klikk."
+                  :description "Videreutvikle og fornye system for annonse-anbefalinger."
                   :years       [2018]
                   :employer    :kodemaker
-                  :summary     "Annonse-klikk"
-                  :tech        [:java, :kubernetes, :docker, :kafka, :postgresql, :spring-boot ]},
+                  :summary     "Annonse-anbefalinger"
+                  :tech        [:java, :kubernetes, :docker, :kafka, :postgresql, :spring-boot, :nodejs, :openlayers ]},
                  {:customer    "Tieto"
                   :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
                   :years       [2017 2018]
