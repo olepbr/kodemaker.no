@@ -172,20 +172,6 @@ server {
     }
   }
 
-  location /cv {
-    # fetch some CVs from old site
-    try_files /$uri /$uri/index.html @oldkodemaker;
-  }
-
-  location ~ /cv/(.+)/(.+)\.pdf {
-    # Do not route CV PDFs to old sites when the person has a new CV
-    try_files /cv/$1.pdf @oldkodemaker;
-  }
-
-  location @oldkodemaker {
-    proxy_pass http://old.kodemaker.no;
-  }
-
   # When all else fails
   error_page 404 /404/;
   error_page 410 /410/;
