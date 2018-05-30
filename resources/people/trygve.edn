@@ -3,10 +3,7 @@
  :title "Løsningsarkitekt og programmerer"
  :start-date "1997-02-01 00:00"
  :description "
-    Trygve har lang og solid erfaring innen faget systemutvikling. Lang er en naturlig konsekvens av at han har jobbet med fagområdet i 30 år. Solid kommer av at han hele tiden har hatt et intenst faglig fokus som ikke har bleknet nevneverdig med tiden. 
-
-    Han tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han er resultatorientert og målrettet, og han evner å finne enkle løsninger på kompliserte problemstillinger. 
-    "
+    Trygve har lang og solid erfaring innen faget systemutvikling. Han er entusiastisk opptatt av fagområdet, tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han evner å finne enkle løsninger på kompliserte problemstillinger. Han er resultatorientert og målrettet og leverer høy kvalitet. Han trives utmerket i det kunnskapsrike fagmiljøet i Kodemaker, og kommuniserer godt med kunder og kolleger.    "
 
  :phone-number "+47 9206 1819"
  :email-address "trygve@kodemaker.no"
@@ -17,7 +14,7 @@
             :linkedin "/in/trygveamundsen"}
             
  :tech {:using-at-work [:react :redux :es6 :typescript]
-        :favorites-at-the-moment [:deeplearning :face-recognition :typescript]
+        :favorites-at-the-moment [:machinelearning :face-recognition :typescript]
         :want-to-learn-more [:pytorch :gans :idris]}
 
  :innate-skills [
@@ -87,7 +84,7 @@
                 :tech [:deeplearning :machinelearning]
                 :date "2015-05-21"}
                {:title "Groovy (vs. clojure og scala)"
-                :event "Javazones julemøte 20"
+                :event "Javazones julemøte 2011"
                 :tech [:es6]
                 :date "2011-12-08"}
                {:title "GPARS - concurrency patterns in Groovy"
