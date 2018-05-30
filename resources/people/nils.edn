@@ -72,6 +72,7 @@
                 [
                  {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go] }
                  {:name "Unleash-go-client" :url "https://github.com/Unleash/unleash-client-go" :tech [:go, :unleash] }
+                 {:name "Influx/Telegraf" :url "https://github.com/influxdata/telegraf/pull/3309" :tech [:go, :telegraf] }
                  ]
 
 
