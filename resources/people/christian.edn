@@ -610,6 +610,10 @@
                  ]
 
  :appearances [{:title "Datomic"
+                :event "Foredrag for Fürst Medisinsk Laboratorium IT"
+                :tech [:datomic :clojure]
+                :date "2018-05-31"}
+               {:title "Datomic"
                 :event "Foredrag for Hafslund/Fortum"
                 :tech [:datomic :clojure]
                 :date "2018-05-02"}
@@ -984,7 +988,13 @@
                 :illustration "/illustrations/side-projects/zombieclj.jpg"
                 :tech [:clojure :clojurescript :frontend]}]
 
- :open-source-projects [{:url "https://github.com/cjohansen/Sinon.JS/"
+ :open-source-projects [{:url "https://github.com/cjohansen/dumdom/"
+                         :name "dumdom"
+                         :description "Et lettvektsalternativ til React for
+                         ClojureScript: Komponenter for snabbdom som er
+                         API-kompatible med Quiescent."
+                         :tech [:clojurescript]}
+                        {:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
                          :description "Et spy-/stub- og mocke-bibliotek for JavaScript."
                          :tech [:javascript :testing]}
@@ -1147,4 +1157,11 @@
                                    en workshop."
                            :tech [:clojurescript :frontend]
                            :duration "1 time"}]
+
+ :certifications [{:name "Styrekurs for daglig leder og styremedlemmer"
+                   :url "https://www.virke.no/kurs-konferanser/kurs/kurs-i-styrearbeid/styrekurs-for-daglig-leder-og-styremedlemmer/"
+                   :year 2018
+                   :certificate
+                   {:url "/certificates/christian/styrekurs.pdf"
+                    :text "Kursbevis"}}]
  }
