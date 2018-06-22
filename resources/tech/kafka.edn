@@ -1,0 +1,19 @@
+{:id :kafka
+ :name "Kafka"
+ :type :database
+ :illustration "/photos/tech/apache-kafka.png"
+ :site "https://kafka.apache.org/"
+ :description
+ "Kafka er en open-source 'distribuert streaming plattform', ofte brukt som en meldingsbuss med stor trafikk og lav forsinkelse. 
+ Kafka kan bli brukt som en erstatter for vanlige meldings-busser, men har funksjonalitet som gjør at det kan 
+ brukes som en database eller en datastrøm.
+
+Brukt som en vanlig meldingsbuss så er kafka en svært robust og effektiv måte å håndtere meldinger. Man kan sikre exactly-once-delivery
+og man kan re-prosessere meldinger ved behov.
+
+ Kafka-Streams lar deg se på 'vinduer' av data i datastrømmen og gjøre avanserte aggregeringer basert på data i et løpende tidsvindu i sanntid. 
+ Denne funksjonaliteten blir gjerne dratt frem som en av de kule tingene i kafka, men det har vist seg svært vanskelig å bruke
+ på en robust måte. 
+
+Systemer med behov for å prosessere store mengder av sanntids-informasjon fra flere data-kilder er typiske systemer som vil bruke kafka. 
+ "}

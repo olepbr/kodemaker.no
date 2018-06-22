@@ -118,11 +118,11 @@
 
  :projects
                 [{:customer    "finn.no"
-                  :description "Videreutvikle og fornye system for annonse-anbefalinger."
+                  :description "Videreutvikle og fornye system for anbefalte annonser(Blink)."
                   :years       [2018]
                   :employer    :kodemaker
-                  :summary     "Annonse-anbefalinger"
-                  :tech        [:java, :kubernetes, :docker, :kafka, :postgresql, :spring-boot, :nodejs, :openlayers ]},
+                  :summary     "System for å håndtere livssyklusen til anbefalte annonser(Blink). Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
+                  :tech        [:java, :kubernetes, :docker, :kafka, :postgresql, :spring-boot, :nodejs, :openlayers, :prebidjs ]},
                  {:customer    "Tieto"
                   :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
                   :years       [2017 2018]
