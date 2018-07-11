@@ -16,7 +16,7 @@
   (let [{:keys [type id]} (find-video url)]
     (case type
       :youtube [:div.video-embed
-                [:iframe {:src (str "http://www.youtube.com/embed/" id)
+                [:iframe {:src (str "//www.youtube.com/embed/" id)
                           :frameborder "0"
                           :allowfullscreen true}]]
       :vimeo [:div.video-embed

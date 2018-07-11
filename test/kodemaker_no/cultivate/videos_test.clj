@@ -89,7 +89,7 @@
                        :frameborder     "0"
                        :allowfullscreen true}]]
             [:div.video-embed
-             [:iframe {:src             "http://www.youtube.com/embed/y5PSRn56ZWo"
+             [:iframe {:src             "//www.youtube.com/embed/y5PSRn56ZWo"
                        :frameborder     "0"
                        :allowfullscreen true}]]})))
 
