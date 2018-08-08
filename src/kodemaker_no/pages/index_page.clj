@@ -27,7 +27,7 @@
    (:full-name person)])
 
 (defn- create-people-cloud [people]
-  {:body [:div.bd.iw.mvxl.large
+  {:body [:div.bd.iw.mvxxxl.large
           [:div.center
            (->> people
                 (remove :quit?)

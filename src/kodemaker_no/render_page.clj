@@ -42,7 +42,7 @@
     (to-html body)]])
 
 (defn render-contact-form [{:keys [id body button placeholder]}]
-  [:div.inline-form.mbxl {:id id}
+  [:div.inline-form.mbxxxl {:id id}
    [:div.bd.iw
     [:form {:action "/send-mail"
             :method "POST"}
