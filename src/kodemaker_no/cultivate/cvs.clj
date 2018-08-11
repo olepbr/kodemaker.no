@@ -98,7 +98,8 @@
 (defn cultivate-cv [person tech content]
   (let [data ((:id person) (:people content))]
     (-> person
-        (assoc :years-experience (- (+ 1900 (.getYear (java.util.Date.))) (:experience-since person)))
+        (assoc :years-experience (when-let [xp (:experience-since person)]
+                                   (- (+ 1900 (.getYear (java.util.Date.))) xp)))
         (assoc :techs (cultivate-techs data content))
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))
