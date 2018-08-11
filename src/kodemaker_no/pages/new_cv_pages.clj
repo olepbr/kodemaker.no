@@ -254,10 +254,10 @@
              [:blockquote
               [:div.mbm (:quote endorsement)]
               [:div.smaller [:strong (endorser endorsement)]]]]
-            [:div.f1o3
+            [:div.f1o3.noprint
              [:p
               (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
-           [:p.spread (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
+           [:p.spread.noprint (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
 
          [:div#about
           [:h2.mhn "Om " (:first-name person)]
