@@ -136,10 +136,10 @@
     (section (education-label person)
              "education"
              [:div.mod
-              [:table.table
+              [:table.table.padded
                [:tbody
-                (table-rows certifications [:year :institution certification-detail])
-                (table-rows education [year-range :institution :subject])]]])))
+                (table-rows certifications [:year :institution certification-detail] ["nw"])
+                (table-rows education [year-range :institution :subject] ["nw"])]]])))
 
 (defn- languages [{:keys [languages]}]
   (when (< 0 (count languages))
