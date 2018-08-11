@@ -249,3 +249,5 @@ td h3, td h4 {color: #d30707;}
 li p {margin: 0 0 0.5em;}
 
 .flex {display: flex; justify-content: center;}
+
+.spread {display: flex; justify-content: space-between;}

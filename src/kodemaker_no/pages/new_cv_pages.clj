@@ -121,8 +121,13 @@
            (list " / " [:a {:href (:url certificate)}
                        (or (:text certificate) "Kursbevis")]))))
 
-(defn- education [{:keys [education certifications]}]
-  (section "Utdanning, sertifiseringer og kurs"
+(defn- education-label [{:keys [education certifications]}]
+  (if (< 0 (count certifications))
+    "Utdanning, sertifiseringer og kurs"
+    "Utdanning"))
+
+(defn- education [{:keys [education certifications] :as person}]
+  (section (education-label person)
            "education"
            [:div.mod
             [:table.table
@@ -192,6 +197,17 @@
                             title)]
                      (f/to-html summary)]) other))))
 
+(defn- anchors [person]
+  (concat
+   [["#projects" "Prosjekter"]
+    ["#endorsements" "Anbefalinger"]
+    ["#technology" "Teknologi"]
+    ["#education" (education-label person)]]
+   (when (< 0 (count (:appearances person)))
+     [["#appearances" "Foredrag/kurs"]])
+   (when (< 0 (count (:open-source-contributions person)))
+     [["#open-source-contributions" "Bidrag til open source"]])))
+
 (defn- cv-page [person]
   {:title (format "%s CV" (:full-name person))
    :layout :new-cv
@@ -213,22 +229,20 @@
          [:ul.spacey
           (map #(vector :li %) (:qualifications person))]
 
-         [:div.flex.tc.mtl.mod
-          (map project-highlight (:project-highlights person))]
+         (when (< 0 (count (:project-highlights person)))
+           [:div.flex.tc.mtl.mod
+            (map project-highlight (:project-highlights person))])
 
-         [:div.bc.flex.mod
-          [:div.f2o3
-           (let [{:keys [author quote title]} (:endorsement-highlight person)]
+         (if-let [{:keys [author quote title]} (:endorsement-highlight person)]
+           [:div.bc.flex.mod
+            [:div.f2o3
              [:blockquote
               [:div.mbm quote]
-              [:div.smaller [:strong (format "%s, %s" author title)]]])]
-          [:div.f1o3
-           [:p
-            [:div.tr [:a {:href "#projects"} "Prosjekter"]]
-            [:div.tr [:a {:href "#endorsements"} "Anbefalinger"]]
-            [:div.tr [:a {:href "#technology"} "Teknologi"]]
-            [:div.tr [:a {:href "#education"} "Utdanning, sertifiseringer, språk"]]
-            [:div.tr [:a {:href "#appearances"} "Foredrag, kurs, open source"]]]]]
+              [:div.smaller [:strong (format "%s, %s" author title)]]]]
+            [:div.f1o3
+             [:p
+              (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
+           [:p.spread (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
 
          [:div#about
           [:h2.mhn "Om " (:first-name person)]
