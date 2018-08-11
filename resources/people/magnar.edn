@@ -798,6 +798,15 @@
                                   :functional-programming :immutability
                                   :datomic :datascript]}}
 
+ :endorsement-highlight {:author "Owen Fraser-Green"
+                         :title "Leder MyEnergy, Hafslund"
+                         :quote "Magnar is one of the smartest full-stack
+                         developers I've ever met. We tested his flexibility by
+                         asking him to take over our DevOps stack, write one of
+                         the back-end services and lead the rewrite of our app.
+                         All of which he pulled off with stunning success.
+                         Magnar would be a fantastic asset to any team."}
+
  :business-presentations [{:title "Emacs Rocks! kommer på besøk"
                            :blurb "Mange har latt seg imponere av hva Magnar får
                                    til med sin 40 år gamle teksteditor gjennom
