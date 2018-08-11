@@ -1,4 +1,4 @@
-body {font: 16px Helvetica, arial, freesans, clean, sans-serif;}
+body {font: 16px Helvetica, arial, freesans, clean, sans-serif; scroll-behavior: smooth;}
 
 a {text-decoration: none;}
 a:hover {text-decoration: underline;}
@@ -6,7 +6,9 @@ a:hover {text-decoration: underline;}
 .hn {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", "Impact", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:900; font-stretch:condensed; text-transform: uppercase; line-height: 0.9; }
 .hns {font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", "Impact", 'TeXGyreHerosCnBlack', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:900; font-stretch:condensed; line-height: 1.1; }
 
-.iw {max-width: 960px; margin: 0 auto; position: relative;}
+.iw, .mw {max-width: 960px; margin: 0 auto; position: relative;}
+.mw {max-width: 1200px;}
+
 
 #logo {text-indent: 100%; white-space: nowrap; overflow: hidden;}
 #logo {width: 155px; height: 23px; background: url(/images/kodemaker-small.png) no-repeat 0 0; background-size: 155px 23px; margin: 15px 10px;}
@@ -171,7 +173,7 @@ em {font-style: italic;}
 hr {border-top: 3px solid #222; border-left: 0; border-right: 0; border-bottom: 0;}
 
 blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
-blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.3em; left: 0;}
+blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.1em; left: 0;}
 
 .codehilite, code {font-family: Consolas, "Liberation Mono", Courier, monospace; border: 1px solid #ddd; background-color: #f8f8f8; border-radius: 3px; max-width: 100%; display: inline-block; overflow: auto; vertical-align: middle; line-height: 1.3; font-size: 13px; padding: 0 0.5em;}
 .codehilite {display: block; padding: 10px;}
@@ -216,3 +218,34 @@ a.brick:hover {background: #222;}
 
 .hide-lt-660,
 .hide-lt-460 {display: none;}
+
+.image {display: block;}
+.smaller {font-size: 0.9rem;}
+.bigger {font-size: 35px; margin-bottom: 10px !important;}
+.spacey li {margin-bottom: 0.3rem;}
+
+.grey-box {flex: 1 1 33%; padding: 1rem; margin-right: 0.5rem; background-color: #eee;}
+
+.f1o3 {flex: 0 0 33%;}
+.f2o3 {flex: 0 0 66%;}
+
+.tr { text-align: right; }
+
+.dtable dt {font-weight: bolder;}
+.dtable dd {margin-bottom: 1em;}
+
+.listing tbody th {width: 16em; text-align: right;}
+
+th {text-align: left;}
+th p, th h3, th h4, td p, td h2, td h3, td h4 {margin: 10px 0;}
+td h3, td h4 {color: #d30707;}
+.table {width: 100%;}
+.padded th, .padded td {padding-right: 1em;}
+.padded th {font-weight: bold;}
+.padded .nw {white-space: nowrap;}
+
+.lh-cv { line-height: 1.5; }
+
+li p {margin: 0 0 0.5em;}
+
+.flex {display: flex; justify-content: center;}

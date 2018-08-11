@@ -10,7 +10,7 @@ h3 {font-size: 25px;}
 .xxlarge {font-size: 58px; line-height: 0.9;}
 .xlarge {font-size: 36px; line-height: 1.0;}
 
-.illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, .img, pre {margin: 20px;}
+.illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, dl, .img, pre {margin: 20px;}
 h2 {margin: 60px 0 20px; padding: 5px 20px;}
 hr {margin-left: 0; margin-right: 0;}
 ul {margin-left: 45px;}
@@ -55,3 +55,7 @@ h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 .ginormous-2 {font-size: 155px;}
 .ginormous-3 {font-size: 135px;}
 .ginormous-4 {font-size: 90px;}
+
+.dtable {display: flex; flex-wrap: wrap;}
+.dtable dt {flex: 0 0 12em;}
+.dtable dd {flex: 0 0 calc(100% - 12em);}
