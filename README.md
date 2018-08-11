@@ -339,6 +339,58 @@ kanskje mulig å diskutere hvor relevante de er:
 - `:born`
 - `:relationship-status`
 
+### Nytt CV-design
+
+Nytt design på CV-en er underveis. For å få mest mulig ut av dette designet er
+det anbefalt å ta et par små grep med innholdet på CV-en din.
+
+Det viktigste er å se på hva du har i `:qualifications`, og vurdere å bytte dem
+ut med noe som passer malen under. Denne lista er nå løftet helt på CV-en, og
+tanken er at den skal gi mottakeren et raskt inntrykk av hvem du er, og ca hva
+slags profil du har. Følgende er en mal som du kan fylle ut for å kjapt fortelle
+en del om deg selv:
+
+* Er du "fullstack", eller primært backend eller frontend?
+* En setning om særlig interessant erfaring du har
+* En setning om metodikk/domene/ansvarsområde/teknologi du er spesielt
+  interessert i
+* Hvorfor akkurat deg? Hjelper kunder med å / Får ofte skryt for å / Hentes inn
+  i prosjekter for å. En setning som selger noe unikt med deg.
+
+Denne lista er ment å være kort, konkret og personlig. Unngå fyllord og
+generelle beskrivelser som kan sies om alle. Generelle beskrivelser som
+"entusiastisk", "engasjert", "ansvarsfull", "smidig", "løsningsorientert" osv
+dukker gjerne opp på alle CV-er, og du må gjerne ha dem i beskrivelsen din, men
+prøv å legg litt mer egenart i `:qualifications`-punktene.
+
+Som eksempel, her er Christians fire punkter:
+>* Fullstack, jobber like gjerne med backend som frontend
+>* Erfaring med oppsett og drift av infrastruktur og CI/CD
+>* Liker funksjonell programmering, enkle løsninger og små team
+>* Skriver godt, liker å dokumentere, holder gjerne workshops, og bidrar til å løfte fagmiljøene han jobber i
+
+Videre kan du nå legge til `:project-highlights` - tre prosjekter som er særlig
+interessant å belyse. Velg gjerne tre prosjekter som viser litt bredde i
+profilen og/eller interessante kunder. Fremhev det mest interessante du gjorde i
+teksten. Hele beskrivelsen kommer lengre ned, så denne kan helt fint utelate
+noen punkter. Til disse prosjektene bør du ha logo - finn en på nett og legg den
+i `resources/public/logos`. Aller helst SVG, men om du ikke finner det, så bruk
+PNG.
+
+Til slutt kan du legge til `:endorsement-highlight`, et utsnitt av den fineste
+anbefalingen du har. Klipp og lim litt, og få til et par setninger som sier noe
+veldig fint om din innsats i et prosjekt. Igjen, hele omtalen kommer lengre ned,
+så det er OK å utelate deler av den.
+
+## CV-er
+
+### Sammendrag
+
+Unngå fyllord
+Kan du si dette om alle? For generelt - vær konkret
+Eksempler på for generelle beskrivelser: Entusiastisk, engasjert, ansvarsfull, smidig, løsningsorientert
+
+
 ### Hva er greia med den teknologi-lista a?
 
 Teknologi-seksjonen på CV-en din samles inn fra alle relevante steder du har
