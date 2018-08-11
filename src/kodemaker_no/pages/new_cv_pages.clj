@@ -94,11 +94,14 @@
                   (group-by :employer)
                   (map #(render-projects employments %))))))
 
-(defn- render-endorsement [{:keys [author title quote]}]
+(defn- endorser [{:keys [author title]}]
+  (str/join ", " (concat [author] (when title [title]))))
+
+(defn- render-endorsement [endorsement]
   [:div
-   [:h3 (format "%s, %s" author title)]
+   [:h3 (endorser endorsement)]
    [:div.mod
-    [:blockquote quote]]])
+    [:blockquote (:quote endorsement)]]])
 
 (defn- endorsements [{:keys [endorsements] :as person}]
   (when (< 0 (count endorsements))
@@ -236,12 +239,12 @@
            [:div.flex.tc.mtl.mod
             (map project-highlight (:project-highlights person))])
 
-         (if-let [{:keys [author quote title]} (:endorsement-highlight person)]
+         (if-let [endorsement (:endorsement-highlight person)]
            [:div.bc.flex.mod
             [:div.f2o3
              [:blockquote
-              [:div.mbm quote]
-              [:div.smaller [:strong (format "%s, %s" author title)]]]]
+              [:div.mbm (:quote endorsement)]
+              [:div.smaller [:strong (endorser endorsement)]]]]
             [:div.f1o3
              [:p
               (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
