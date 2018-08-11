@@ -138,7 +138,9 @@
 
    (optional-key :project-highlights) [{:customer Str
                                         :logo Path
-                                        :blurb Str}]
+                                        :blurb Str
+                                        (optional-key :logo-width) Num
+                                        (optional-key :logo-height) Num}]
 
    (optional-key :endorsement-highlight) {:author Str ;; Kort utsnitt fra den fineste anbefalingen din
                                           :quote Str  ;; Brukes øverst på CV-en

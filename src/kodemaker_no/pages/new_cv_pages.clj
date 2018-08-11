@@ -3,9 +3,16 @@
             [clojure.string :as str]
             [kodemaker-no.formatting :as f]))
 
-(defn- project-highlight [{:keys [blurb logo customer]}]
+(defn- project-highlight [{:keys [blurb logo logo-width logo-height customer]}]
   [:div.grey-box
-   [:img.image.mbl {:style "height: 40px" :src logo :alt (format "%s logo" customer)}]
+   [:div.mbl.bd {:style "height: 40px"}
+    [:img.image {:style (str "height: " (or logo-height 40) "px;"
+                             (when logo-height
+                               (str " padding-top: " (/ (- 40 logo-height) 2) "px;"))
+                             (when logo-width
+                               (str " width: " logo-width "px;")))
+                 :src logo
+                 :alt (format "%s logo" customer)}]]
    blurb])
 
 (def tech-labels
