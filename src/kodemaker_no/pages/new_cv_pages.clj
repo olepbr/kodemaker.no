@@ -127,26 +127,28 @@
     "Utdanning"))
 
 (defn- education [{:keys [education certifications] :as person}]
-  (section (education-label person)
-           "education"
-           [:div.mod
-            [:table.table
-             [:tbody
-              (table-rows certifications [:year :institution certification-detail])
-              (table-rows education [year-range :institution :subject])]]]))
+  (when (< 0 (+ (count education) (count certifications)))
+    (section (education-label person)
+             "education"
+             [:div.mod
+              [:table.table
+               [:tbody
+                (table-rows certifications [:year :institution certification-detail])
+                (table-rows education [year-range :institution :subject])]]])))
 
 (defn- languages [{:keys [languages]}]
-  (section "Språk"
-           "languages"
-           [:div.mod
-            [:table.padded
-             [:thead
-              [:tr
-               [:th "Språk"]
-               [:th "Muntlig"]
-               [:th "Skriftlig"]]]
-             [:tbody
-              (table-rows languages [:language :orally :written])]]]))
+  (when (< 0 (count languages))
+    (section "Språk"
+             "languages"
+             [:div.mod
+              [:table.padded
+               [:thead
+                [:tr
+                 [:th "Språk"]
+                 [:th "Muntlig"]
+                 [:th "Skriftlig"]]]
+               [:tbody
+                (table-rows languages [:language :orally :written])]]])))
 
 (defn- linked-title [{:keys [title urls]}]
   (if-let [url (or (:video urls) (:slides urls) (:source urls))]
