@@ -70,7 +70,8 @@
       [:th [:h3 (:name employer)]]]
      (when-let [employment (and (:id employer) ((:id employer) employments))]
        [:tr
-        [:td {:colspan 2} [:p (:description employment)]]])]
+        [:td]
+        [:td [:p.smaller (:description employment)]]])]
     [:tbody
      (map (fn [project]
             [:tr
