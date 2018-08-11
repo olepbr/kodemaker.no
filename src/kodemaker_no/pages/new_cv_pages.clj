@@ -167,7 +167,7 @@
      (->> contributions
           (filter #(= :developer (:role %)))
           (map (fn [{:keys [url name description]}]
-                 [:li "Utviklet " [:a {:href url} name] ". " (f/to-html description)])))
+                 [:li (f/to-html (format "Utviklet [%s](%s). %s" name url description))])))
      (let [contribs (filter #(= :contributer (:role %)) contributions)]
        (when (< 0 (count contribs))
          [:li "Har bidratt til "
