@@ -1,6 +1,6 @@
 {:id :christian
  :name ["Christian" "Johansen"]
- :title "Kodemaker"
+ :title "Systemutvikler"
  :start-date "2013-11-01"
  :experience-since 2002
  :born 1982
@@ -49,11 +49,10 @@
         :favorites-at-the-moment [:datomic :emacs :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
- :qualifications ["Kreativ, smidig, entusiastisk og løsningsorientert"
-                  "Mye praktisk erfaring med automasjon av bygg og deploy (CI/CD)"
-                  "Mye praktisk erfaring med responsiv design"
-                  "Mye praktisk erfaring med mikrotjenester"
-                  "Tar oppgaver i hele stacken, fra infrastruktur, via databaser og backend, til arkitektur, implementasjon og ytelse i frontend"]
+ :qualifications ["Fullstack, jobber like gjerne med backend som frontend"
+                  "Erfaring med oppsett og drift av infrastruktur og CI/CD"
+                  "Liker funksjonell programmering, enkle løsninger og små team"
+                  "Skriver godt, liker å dokumentere, holder gjerne workshops, og bidrar til å løfte fagmiljøene han jobber i"]
 
  :side-projects [{:title "Shufflify"
                   :description "Til bilturene med familien er det behov for en
@@ -253,7 +252,7 @@
 
  :projects [{:customer "Hafslund Strøm"
              :employer :kodemaker
-             :summary "Videreutvikling av Hafslund Strøms app for iOS og Android"
+             :summary "App for iOS og Android: Cordova og ClojureScript"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøtende backend-systemer og infrastruktur."
              :tech [:clojurescript :cordova :svg :d3 :terraform :packer :aws :aws-ec2
@@ -262,20 +261,16 @@
              :start "2018-04"}
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
-             :summary "Design av domenemodell, applikasjonsarkitektur og utvikling på AWS"
-             :description "Tine Husdyrfag utvikler tjenester for Tines
-            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
-            Services (AWS) for morgendagens tjenester.
+             :summary "Domenemodellering og applikasjonsarkitektur"
+             :description "Jobbet med design av deler av det grunnleggende
+            domenet (eiere) for nye tjenester og hvordan dette spiller sammen
+            med autentisering og autorisasjon i platformen som helhet. Jobbet
+            med arkitektur og design av løsninger etter CQRS-prinsippet, samt en
+            pragmatisk tilnærming til event sourcing (blant annet med bruk av
+            Datomic).
 
-            Jobbet med design av deler av det grunnleggende domenet (eiere) for
-            nye tjenester og hvordan dette spiller sammen med autentisering og
-            autorisasjon i platformen som helhet. Jobbet med arkitektur og
-            design av løsninger etter CQRS-prinsippet, samt en pragmatisk
-            tilnærming til event sourcing (blant annet med bruk av Datomic).
-
-            Utviklet funksjonalitet med AWS Lambda, Api Gateway, DynamoDB,
-            Kinesis og andre AWS-ressurser. Modellert deler av domenet som en
-            graf, implementert dette med Datomic."
+            Utviklet funksjonalitet i AWS. Modellert deler av domenet som en
+            graf i Datomic."
              :tech [:datomic :aws :dynamodb :aws-iam :aws-lambda :aws-api-gateway
                     :oidc :material-ui :ddd :aws-kinesis :aws-cloudwatch :aws-cloudfront
                     :aws-rds :aws-s3 :auth0 :jira :confluence :cd :ci :ddd :alpine
@@ -284,16 +279,13 @@
              :end "2018-03"}
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
-             :summary "Infrastruktur og CI/CD for utvikling mot AWS"
-             :description "Tine Husdyrfag utvikler tjenester for Tines
-            produsenter. Prosjektet utvikler ny platform basert på Amazon Web
-            Services (AWS) for morgendagens tjenester.
-
-            Design og oppsett av nettverksløsning. Automatisering av oppsett og
-            utforming av applikasjonsplatform med AWS Cloudformation, bash og
-            annet. Oppsett for frontendapplikasjoner med S3/Cloudfront/Route 53.
-            Jobbet med sikkerhetsløsning basert på Oauth 2.0 og OpenId Connect.
-            Utviklet løype for CI/CD basert på Concourse."
+             :summary "Utvikling av infrastruktur på AWS"
+             :description "Design og oppsett av nettverksløsning. Automatisering
+            av oppsett og utforming av applikasjonsplatform med AWS
+            Cloudformation, bash og annet. Oppsett for frontendapplikasjoner med
+            S3/Cloudfront/Route 53. Jobbet med sikkerhetsløsning basert på Oauth
+            2.0 og OpenId Connect. Utviklet løype for CI/CD basert på
+            Concourse."
              :tech [:aws :aws-vpc :aws-ecs :concourse :aws-iam :docker :bash :oidc
                     :nginx :go :dynamodb :aws-kinesis :aws-lambda :aws-api-gateway
                     :aws-route53 :aws-cloudwatch :aws-cloudfront :aws-rds :aws-s3
@@ -303,28 +295,27 @@
              :end "2018-03"}
             {:customer "Eventum.no"
              :employer :kodemaker
-             :summary "eventum.no, eventum.com"
-             :description "Eventum (eventum.no/eventum.com) er \"Airbnb for
-             event-lokaler\" - møterom, konferanselokaler,
-             restauranter/hoteller/slott til bursdag, bryllup og andre
-             sammenkomster samles på et sted og gjør det lett for arrangører å
-             finne og sammenligne tilbud på lokaler.
+             :summary "Automatisert bygg og deploy, ny funksjonalitet"
+             :description "Jeg automatiserte oppsett og deployment av løsningen
+             med Ansible, Docker og bash. Jobbet med videreutvikling av
+             eksisterende tjeneste. Designet arkitektur for og utviklet både
+             backend og frontend for ny spesialisert kommunikasjonsløsning for
+             arrangør og utleier. Utviklet ny sikkerhetsløsning basert på OAuth
+             2.0 og OpenId Connect.
 
-             Jeg automatiserte oppsett og deployment av løsningen med Ansible,
-             Docker og bash. Jobbet med videreutvikling av eksisterende
-             tjeneste. Designet arkitektur for og utviklet både backend og
-             frontend for ny spesialisert kommunikasjonsløsning for arrangør og
-             utleier. Utviklet ny sikkerhetsløsning basert på OAuth 2.0 og
-             OpenId Connect."
+             Eventum (eventum.no/eventum.com) er \"Airbnb for event-lokaler\" -
+             møterom, konferanselokaler, restauranter/hoteller/slott til
+             bursdag, bryllup og andre sammenkomster samles på et sted og gjør
+             det lett for arrangører å finne og sammenligne tilbud på lokaler."
              :tech [:datomic :clojure :clojurescript :ansible :docker :javascript :nodejs
                     :react :elasticsearch :centos :auth0 :oidc :aws-iam :aws-s3 :leiningen :asana
                     :maven :haproxy :nginx :datascript :oauth2 :bash :micro-services :core-async
                     :clojure-spec :component :sse :reagent :figwheel :quartz :datadog]
              :start "2017-01"
              :end "2017-09"}
-            {:customer "NRK Origo - Potion"
+            {:customer "NRK"
              :employer :kodemaker
-             :summary "Origo/Potion"
+             :summary "Utviklet interaktiv søkemotor for NRKs enorme videoarkiv"
              :description "Søk i NRKs enorme mengder videoklipp - både
             nettklipp, ting som har gått på TV og råstoff. Utviklet en
             søkekomponent for 'smart søk' som gjør utstrakt bruk av
@@ -336,9 +327,9 @@
              :tech [:javascript :elasticsearch :nodejs :react :docker :mesos
                     :octopus :teamcity :jira :micro-services :babel :yarn]
              :years [2015 2016]}
-            {:customer "NRK Radioarkiv"
+            {:customer "NRK "
              :employer :kodemaker
-             :summary "Radioarkiv"
+             :summary "Ny frontend for NRKs interne Radioarkiv"
              :description "Implementerte nytt design for NRKs interne
              Radioarkiv, som brukes internt for research og gjenbruk av
              arkivmatriale. Designet ble implementert i form av en styleguide
@@ -347,9 +338,9 @@
              interne arbeidsflyter."
              :tech [:javascript :css :responsive-design :less]
              :years [2015]}
-            {:customer "NRK Origo"
+            {:customer "NRK"
              :employer :kodemaker
-             :summary "Redigeringsstøtte"
+             :summary "Laget bilderedigeringsverktøy med HTML Canvas og JavaScript"
              :description "Laget en lettvekts bilderedigeringskomponent (litt
              effekter, crop, skalering, panorering) med web-teknologi.
              Komponenten benyttes som plugin i video-redigeringsverktøyene Adobe
@@ -357,9 +348,9 @@
              :tech [:javascript :webgl :cef :angularjs :jasmine :karma :nodejs]
              :start "2014-09"
              :end "2014-12"}
-            {:customer "NRK - Bidrag"
+            {:customer "NRK"
              :employer :kodemaker
-             :summary "Bidrag"
+             :summary "Bidrag: Webapp for mottak og rask publisering av saker for journalister i felten"
              :description "Laget en app som viser en strøm av bidrag som NRKs
              journalister og andre ansatte sender inn fra 'felten'. Brukes
              internt i NRK til å både få oversikt over hva som kommer inn, men
@@ -367,9 +358,9 @@
              andre systemer (transkoding, arkiv osv)."
              :tech [:javascript :react :nodejs :buster-js :express-js :mysql :jade :compass]
              :years [2014]}
-            {:customer "Schibsted Payment ID (SPiD)"
+            {:customer "SPiD"
              :employer :kodemaker
-             :summary "Løsning for API-dokumentasjon"
+             :summary "Nytt nettsted for API-dokumentasjon med Clojure"
              :description "Utviklet nytt nettsted for teknisk dokumentasjon. Vi
              gjør mange grep for å holde dokumentasjonen aktuell og oppdatert.
              Sidene blir bygget opp basert på informasjon hentet rett fra SPiD
@@ -378,18 +369,18 @@
              :tech [:clojure :responsive-design :stasis :optimus :midje]
              :start "2014-03"
              :end "2014-09"}
-            {:customer "Schibsted Payment ID (SPiD)"
+            {:customer "SPiD"
              :employer :kodemaker
-             :summary "Frontend for ny innlogging"
+             :summary "Frontend for ny innlogging, registrering og kjøpsflyt for Schibsted Payment ID"
              :description "Prototypet ny innlogging, registrering og kjøpsflyt
              for SPiD, med fokus på brukervennlighet, støtte for mobil, og
              forenkling av tekniske løsninger."
              :tech [:html :css :responsive-design :javascript :grunt :mocha :chai]
              :start "2014-03"
              :end "2014-09"}
-            {:customer "FINN Småjobber"
+            {:customer "FINN"
              :employer :kodemaker
-             :summary "FINN Småjobber"
+             :summary "FINN Småjobber i produksjon"
              :description "Hjalp [FINN Småjobber](http://finn.no/smajobber/)-teamet
                            med lanseringen av løsningen rett før jul 2013. Har
                            jobbet med hele løsningen, men med fokus på frontend.
@@ -399,13 +390,15 @@
              :start "2012-09"
              :end "2014-03"}
             {:customer "Gitorious AS"
-             :summary "Gitorious-programvaren"
+             :summary "Utviklet tjeneste for hosting og samarbeid på git-repoer (ala Github)"
              :employer :gitorious
              :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :rake :activemq]
              :years [2011 2012 2013]}
             {:customer "Gitorious AS"
              :employer :gitorious
              :summary "Drift gitorious.org"
+             :description "Oppsett, drift og vedlikehold av gitorious.org på
+             CentOS, samt CI/CD for dette."
              :tech [:ruby :rails :git :capistrano :redhat :puppet :mysql :activemq]
              :years [2011 2012 2013]}
             {:customer "Programutvikling"
@@ -413,9 +406,9 @@
              :summary "Månedlige kurs i JavaScript og TDD med JavaScript"
              :tech [:javascript :tdd]
              :years [2011 2012 2013 2014 2015]}
-            {:customer "FINN Oppdrag"
+            {:customer "FINN"
              :employer :kodemaker
-             :summary "FINN Oppdrag"
+             :summary "Frontendutvikling for FINN Oppdrag"
              :description "Klargjorde et avansert registreringsskjema
              for utrulling til flere markedsplasser ved å modularisere
              koden til komponenter som kunne settes sammen til
@@ -444,7 +437,10 @@
              :years [2009 2010 2011]}
             {:customer "Apotek 1"
              :employer :ixd
-             :summary "konkurranse.apotek1.no"
+             :summary "Konkurranse-applikasjon i Ruby on Rails"
+             :description "Utviklet konkurranse.apotek1.no, en
+             quiz/konkurranse-tjeneste i Ruby on Rails, som ble hyppig brukt i
+             månedlig e-postmarkedsføring."
              :tech [:ruby :rails :html :css :javascript :capistrano :ubuntu]
              :years [2009]}
             {:customer "Telenor"
@@ -452,9 +448,12 @@
              :summary "Ny frontend for online.no"
              :tech [:html :css :javascript :ruby]
              :years [2009]}
-            {:customer "IXD"
+            {:customer "Webdagene"
              :employer :ixd
-             :summary "webdagene.no"
+             :summary "Frontend og CMS for webdagene.no"
+             :description "Utviklet frontend of backend for nettsidene til
+             fagkonferansen Webdagene. HTML, CSS, JavaScript i front,eZ Publish
+             og PHP på baksiden."
              :tech [:php :ezpublish :mysql :html :css :javascript]
              :years [2007 2008]}
             {:customer "Storebrand"
@@ -462,19 +461,24 @@
              :summary "Ny frontend for storebrand.no"
              :tech [:html :css :javascript]
              :years [2007 2008]}
-            {:customer "IXD"
+            {:customer "Reiseliv.no"
              :employer :ixd
-             :summary "reiseliv.no"
+             :summary "Frontend og CMS for reiseliv.no"
              :tech [:html :css :javascript :ezpublish :mysql]
              :years [2007 2008 2009]}
             {:customer "Storebrand"
              :employer :ixd
-             :summary "Storebrand Skadeforsikring"
+             :summary "Frontend for kjøpsløsningen til Storebrand Skadeforsikring"
+             :description "I 2006 bygget Storebrand opp ny Skadeforsikring fra
+             bunnen. Jeg var med prosjektet nesten fra starten og hadde
+             eneansvar for implementering av en dynamisk frontend for beregning
+             av pris og kjøp av forsikringer. Løsningen var den første av sitt
+             slag i Norge og ble i etterkant hyppig kopiert av andre selskaper."
              :tech [:html :css :javascript]
              :years [2006 2007]}
             {:customer "Cosmopolite"
              :employer :self-employed
-             :summary "cosmopolite.no"
+             :summary "Utviklet nettsidene cosmopolite.no i eZ Publish"
              :tech [:html :css :javascript :ezpublish]
              :years [2006 2007 2008 2009 2010 2011 2012 2013]}
             {:customer "IXD"
@@ -484,17 +488,22 @@
              :years [2005 2006 2007 2008 2009]}
             {:customer "Rarelink"
              :employer :self-employed
-             :summary "rarelink.no"
+             :summary "Videreutviklet og driftet tjenesten rarelink.no"
              :tech [:java :ant :maven :docker :centos :ansible :mysql]
              :years [2005 :ongoing]}
             {:customer "IXD"
              :employer :self-employed
-             :summary "flysiden.no"
+             :summary "Utivklet tjenesten flysiden.no"
              :tech [:php :javascript :mysql :html :css]
              :years [2004 2005]}
             {:customer "Universitetet i Oslo"
              :employer :study-part-time
-             :summary "apollon.uio.no"
+             :summary "Frontend og emnekart for apollon.uio.no"
+             :description "Som første offentlige nettsted i Norge lanserte UiO's
+             populærvitenskapelige magasin Apollon i 2002 et nettsted som
+             utelukkende brukte CSS, ingen tabeller. Jeg sto for
+             frontend-implementasjonen, og bidro også med konvertering av
+             gammelt innhold over til ny emnekartløsning."
              :tech [:html :css :php]
              :years [2002 2003]}]
 
@@ -610,15 +619,15 @@
                  ]
 
  :appearances [{:title "Datomic"
-                :event "Foredrag for Fürst Medisinsk Laboratorium IT"
+                :event "Fürst Medisinsk Laboratorium IT"
                 :tech [:datomic :clojure]
                 :date "2018-05-31"}
                {:title "Datomic"
-                :event "Foredrag for Hafslund/Fortum"
+                :event "Hafslund/Fortum"
                 :tech [:datomic :clojure]
                 :date "2018-05-02"}
                {:title "Datomic"
-                :event "Foredrag for Bring"
+                :event "Bring"
                 :tech [:datomic :clojure]
                 :date "2018-04-10"}
                {:title "Å Bygge sin egen Infrastruktur på AWS"
@@ -626,7 +635,7 @@
                 :tech [:aws :aws-cloudformation :concourse]
                 :date "2018-04-05"}
                {:title "Datomic"
-                :event "Foredrag for Tine Husdyrfag"
+                :event "Tine Husdyrfag"
                 :tech [:datomic :clojure]
                 :date "2017-11-14"}
                {:title "I put 7 years of meal data in Datomic - Here's what I learned"
@@ -634,15 +643,15 @@
                 :tech [:datomic :clojure]
                 :date "2017-06-14"}
                {:title "Datamodellering med Datomic"
-                :event "Internforedrag i Kodemaker"
+                :event "Kodemaker fagdag"
                 :tech [:datomic :clojure]
                 :date "2017-01-14"}
-               {:title "Webutvikling med React"
-                :event "Intern workshop i NRK"
+               {:title "Webutvikling med React - intern workshop"
+                :event "NRK"
                 :tech [:javascript :react]
                 :date "2016-06-10"}
                {:title "JavaScript og React, 2 dagers kurs"
-                :event "Internt i Conax"
+                :event "Conax"
                 :tech [:javascript :react]
                 :date "2016-04-22"}
                {:title "The Imminent Future of JavaScript"
@@ -650,7 +659,7 @@
                 :tech [:javascript]
                 :date "2016-02-16"}
                {:title "Webutvikling med React"
-                :event "Internforedrag i Webstep"
+                :event "Webstep"
                 :tech [:javascript :react]
                 :date "2016-02-03"}
                {:title "The Imminent Future of JavaScript"
@@ -661,8 +670,8 @@
                 :event "Programutvikling"
                 :tech [:javascript]
                 :date "2015-11-24"}
-               {:title "TDD og Arkitektur med JavaScript"
-                :event "Intern workshop i NRK"
+               {:title "TDD og Arkitektur med JavaScript - intern workshop"
+                :event "NRK"
                 :tech [:javascript :tdd :react]
                 :date "2015-11-10"}
                {:title "JavaScript for programmers, 2-dagers kurs"
@@ -670,11 +679,11 @@
                 :tech [:javascript]
                 :date "2015-11-09"}
                {:title "JavaScript Decoupled"
-                :event "Foredrag hos Capra Consulting"
+                :event "Capra Consulting"
                 :tech [:javascript]
                 :date "2015-10-30"}
                {:title "Test-Driven JavaScript"
-                :event "Foredrag hos Iterate"
+                :event "Iterate"
                 :tech [:javascript]
                 :date "2016-10-21"}
                {:title "Test-driven JavaScript Development, 3-dagers kurs"
@@ -694,15 +703,15 @@
                 :tech [:javascript]
                 :date "2014-11-05"}
                {:title "Test-Drevet JavaScript, 1-dags workshop"
-                :event "Internt i Visma"
+                :event "Visma"
                 :tech [:javascript :tdd]
                 :date "2014-09-01"}
                {:title "JavaScript for Developers, 3-dagers kurs"
                 :event "Programutvikling"
                 :tech [:javascript]
                 :date "2014-08-11"}
-               {:title "Functional UI Programming"
-                :event "NDC 2014, foredrag om React.js, ClojureScript og Om"
+               {:title "Functional UI Programming - React.js, ClojureScript og Om"
+                :event "NDC 2014"
                 :date "2014-06-20"
                 :tech [:clojurescript :om :react]}
                {:title "Functional UI programming"
@@ -713,8 +722,8 @@
                 :event "Programutvikling"
                 :date "2014-04-05"
                 :tech [:javascript]}
-               {:title "Party in the front, party in the back"
-                :event "Booster conf, Bergen - node.js og React.js workshop"
+               {:title "Party in the front, party in the back - workshop om node.js og React.js"
+                :event "Booster conf"
                 :date "2014-04-01"
                 :tech [:nodejs :react]}
                {:title "JavaScript for programmers, 3-dagers kurs"
@@ -1098,6 +1107,22 @@
               :orally "Meget god"
               :written "Flytende"}]
 
+ :project-highlights [{:blurb "App for iOS og Android utviklet med ClojureScript og Cordova, og tilstøtende backendsystemer."
+                       :customer "Hafslund Strøm"
+                       :logo "/logos/hafslund-strom.png"}
+                      {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
+                       :customer "Tine"
+                       :logo "/logos/tine.svg"}
+                      {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"
+                       :customer "NRK"
+                       :logo "/logos/nrk.svg"}]
+
+ :endorsement-highlight {:author "Geir Børdalen"
+                         :title "Prosjektleder, Origo-prosjektet, NRK"
+                         :quote "Christian har vært en uvurderlig ressurs i
+                         prosjektet. Vi har verdsatt hans evner til teamarbeid,
+                         innovasjon – og alltid positive innstilling."}
+
  :cv {:default {:preferred-techs [:clojure :clojurescript
                                   :functional-programming :immutability
                                   :emacs :terminal
@@ -1159,6 +1184,7 @@
                            :duration "1 time"}]
 
  :certifications [{:name "Styrekurs for daglig leder og styremedlemmer"
+                   :institution "Virke"
                    :url "https://www.virke.no/kurs-konferanser/kurs/kurs-i-styrearbeid/styrekurs-for-daglig-leder-og-styremedlemmer/"
                    :year 2018
                    :certificate
