@@ -219,12 +219,13 @@
   {:title (format "%s CV" (:full-name person))
    :layout :new-cv
    :body
-   (list [:div.bd
-          [:p.mvn.right
-           [:img.image {:style "max-width: 225px"
+   (list [:div.bd {:style "position: relative;"}
+          [:p.mvn {:style "position: absolute; top: 0; right: 0; bottom: 0;"}
+           [:img.image {:style "max-height: 100%; z-index: 0;"
                         :src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
-          [:h1.hn [:span.black "CV / "] (f/no-widows (:full-name person))]
-          [:p.mbn
+          [:div {:style "margin-right: 200px"}
+           [:h1.hn {:style "position: relative; z-index: 1;"} [:span.black "CV / "] (f/no-widows (:full-name person))]]
+          [:p
            (:phone-number person)
            [:br]
            [:a {:href (format "mailto:%s" (:email-address person))} (:email-address person)]
