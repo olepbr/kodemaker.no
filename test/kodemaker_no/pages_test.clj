@@ -32,4 +32,4 @@
                      :tech {}
                      :articles {"/magnars.md" ""
                                 "/finnjoh.md" ""}})
-      => (throws Exception "URL conflicts between :person-pages and :article-pages: #{\"/magnars/index.html\" \"/finnjoh/index.html\"}"))
+      => (throws Exception "URL conflicts between :article-pages and :person-pages: #{\"/magnars/index.html\" \"/finnjoh/index.html\"}"))
