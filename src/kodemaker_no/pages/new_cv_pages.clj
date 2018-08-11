@@ -111,10 +111,11 @@
 
 (defn- table-rows [items columns & [classes]]
   (let [classes (or classes [])]
-    (map-indexed (fn [idx item]
-                   [:tr
-                    (map (fn [col] [:td {:class (first (drop idx classes))} (col item)]) columns)])
-                 items)))
+    (map (fn [item]
+           [:tr
+            (map-indexed (fn [idx col]
+                           [:td {:class (first (drop idx classes))} (col item)]) columns)])
+         items)))
 
 (defn- certification-detail [{:keys [name url certificate]}]
   (apply vector :div
