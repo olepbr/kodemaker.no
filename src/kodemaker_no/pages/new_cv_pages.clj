@@ -200,7 +200,7 @@
           [:p.mvn.right
            [:img.image {:style "max-width: 225px"
                         :src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
-          [:h1.hn [:span.black "CV /"] (f/no-widows (:full-name person))]
+          [:h1.hn [:span.black "CV / "] (f/no-widows (:full-name person))]
           [:p.mbn
            (:phone-number person)
            [:br]
