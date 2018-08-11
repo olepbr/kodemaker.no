@@ -136,8 +136,17 @@
                                :orally (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
+   (optional-key :project-highlights) [{:customer Str
+                                        :logo Path
+                                        :blurb Str}]
+
+   (optional-key :endorsement-highlight) {:author Str ;; Kort utsnitt fra den fineste anbefalingen din
+                                          :quote Str  ;; Brukes øverst på CV-en
+                                          :title Str}
+
    (optional-key :certifications) [{:name Str
                                     :year Num
+                                    (optional-key :institution) Str
                                     (optional-key :url) URL
                                     (optional-key :certificate) 
                                       {:url UrlOrPath

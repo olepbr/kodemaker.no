@@ -150,3 +150,33 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     [:script
      (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
 
+(defmethod with-layout :new-cv [request page content]
+  (html5
+   [:head
+    [:meta {:charset "utf-8"}]
+    [:meta {:name "viewport"
+            :content "width=device-width, initial-scale=1.0"}]
+    (when (:meta page)
+      (map meta-tag (:meta page)))
+    (serve-to-media-query-capable-browsers
+     [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
+    (serve-to-media-query-clueless-browsers
+     [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
+    [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
+    [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
+    [:title (head-title (:title page))]]
+   [:body
+    [:div#header
+     [:div.mll
+      [:div.bd.iw
+       [:h1#logo.hn.mll
+        [:a.linkBlock {:href "/"} "Kodemaker"]]]]]
+    [:div.iw content]
+    [:div.footer.iw.mbl
+     [:div.flex
+      [:p [:a {:href "https://www.kodemaker.no/"} "www.kodemaker.no"]]
+      [:p "+47 22 82 20 80"]
+      [:p "Munkedamsveien 3b, 0161 Oslo"]]]]))
+

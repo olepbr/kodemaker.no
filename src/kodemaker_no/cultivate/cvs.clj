@@ -1,7 +1,8 @@
 (ns kodemaker-no.cultivate.cvs
   (:require [clojure.string :as str]
             [clojure.walk :as walk]
-            [kodemaker-no.cultivate.util :as util]))
+            [kodemaker-no.cultivate.util :as util])
+  (:import [java.util.Date]))
 
 (defn override [m ns]
   (merge m
@@ -57,8 +58,9 @@
 (defn- date->ym [appearance]
   (if (string? (:date appearance))
     (let [[y m] (str/split (:date appearance) #"-")]
-      (->> (format "%s %s" (months (dec (Integer/parseInt m))) y)
-           (assoc appearance :year-month)))
+      (-> appearance
+          (assoc :year-month (format "%s %s" (months (dec (Integer/parseInt m))) y))
+          (assoc :year-month-numeric (format "%02d.%s" (Integer/parseInt m) y))))
     appearance))
 
 (defn- cultivate-appearances [{:keys [presentations appearances]}]
@@ -96,6 +98,7 @@
 (defn cultivate-cv [person tech content]
   (let [data ((:id person) (:people content))]
     (-> person
+        (assoc :years-experience (- (+ 1900 (.getYear (java.util.Date.))) (:experience-since person)))
         (assoc :techs (cultivate-techs data content))
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))

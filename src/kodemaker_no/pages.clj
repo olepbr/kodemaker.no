@@ -6,6 +6,7 @@
             [kodemaker-no.pages.form-page :refer [form-page]]
             [kodemaker-no.pages.index-page :refer [index-page]]
             [kodemaker-no.pages.learnings-page :refer [learnings-page]]
+            [kodemaker-no.pages.new-cv-pages :refer [new-cv-pages]]
             [kodemaker-no.pages.people-page :refer [people-page]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
             [kodemaker-no.pages.reference-pages :refer [reference-pages]]
@@ -25,6 +26,7 @@
   (stasis/merge-page-sources
    {:person-pages (person-pages (vals (:people content)))
     :cv-pages (cv-pages (vals (:cvs content)))
+    :new-cv-pages (new-cv-pages (vals (:cvs content)))
     :tech-pages (tech-pages (vals (:tech content)))
     :article-pages (article-pages (:articles content))
     :reference-pages (reference-pages (:references content) (:people content))
