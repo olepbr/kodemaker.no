@@ -629,7 +629,7 @@
                 :event "Foredrag for Tine Husdyrfag"
                 :tech [:datomic :clojure]
                 :date "2017-11-14"}
-               {:title "Talk: I put 7 years of meal data in Datomic - Here's what I learned"
+               {:title "I put 7 years of meal data in Datomic - Here's what I learned"
                 :event "NDC Oslo"
                 :tech [:datomic :clojure]
                 :date "2017-06-14"}
