@@ -162,7 +162,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/responsive.css")}])
     (serve-to-media-query-clueless-browsers
      [:link {:rel "stylesheet" :href (link/file-path request "/styles/unresponsive.css")}])
-    [:link {:rel "stylesheet" :href (link/file-path request "/styles/cv-print.css") :media "print"}]
+    [:link {:rel "stylesheet" :href (link/file-path request "/styles/new-cv.css") :media "print"}]
     [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
@@ -170,10 +170,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     [:title (head-title (:title page))]]
    [:body
     [:div#header
-     [:div.mll
-      [:div.bd.iw
-       [:h1#logo.hn.mll
-        [:a.linkBlock {:href "/"} "Kodemaker"]]]]]
+     [:div.bd.iw
+      [:h1.hn
+       [:a.linkBlock.white {:href "/"} "Kodemaker"]]]]
     [:div.iw content]
     [:div.footer.iw.mbl
      [:div.flex

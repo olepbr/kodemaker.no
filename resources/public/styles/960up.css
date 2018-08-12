@@ -13,3 +13,7 @@ h2,
 hr {margin-left: 20px; margin-right: 20px;}
 
 h2.offset span.offset-content {display: block; margin: 0;}
+
+.flex-l {display: flex; justify-content: center;}
+.grey-box {flex: 1 1 33%; padding: 1rem; margin-right: 0.5rem; background-color: #eee;}
+#cv-header .picture {margin-right: 20px;}

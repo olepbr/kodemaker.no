@@ -18,10 +18,7 @@
             [stasis.core :as stasis]))
 
 (defn get-assets []
-  (assets/load-assets "public" ["/styles/responsive.css"
-                                "/styles/unresponsive.css"
-                                "/styles/cv.css"
-                                "/styles/cv-print.css"
+  (assets/load-assets "public" [#"/styles/.*\.css"
                                 "/favicon.ico"
                                 #"/certificates/.*\.pdf"
                                 #"/illustrations/.*\.jpg"

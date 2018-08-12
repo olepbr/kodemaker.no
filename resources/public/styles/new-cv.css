@@ -1,0 +1,73 @@
+@page {
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  margin-left: 0;
+  margin-right: 0;
+
+  @top-left {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @bottom-center {
+    clear: both;
+    bottom: 0;
+    margin-bottom: 1em;
+    font: 12px Helvetica, arial, freesans, clean, sans-serif;
+    width: 100%;
+    content: "www.kodemaker.no \00a0\00a0\00a0\00a0 +47 22 82 20 80 \00a0\00a0\00a0\00a0 Munkedamsveien 3b, 0161 Oslo";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
+}
+
+.noprint {
+  display: none;
+}
+
+hr {
+  margin: 10px;
+}
+
+.iw {
+  margin: 0 3em;
+}
+
+#cv-header .picture {float: right; margin-left: 0; margin-right: 10px;}
+#cv-header .picture .image {max-height: 130px;}
+
+.footer {
+  display: none;
+}
+
+@page :first {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4,
+h5, h6, thead, header {
+  page-break-after: avoid;
+}
+
+table tr, ul, ol {
+  page-break-inside: avoid;
+}
+
+blockquote {
+  page-break-inside: avoid;
+}
+
+p {
+  widows: 3;
+  orphans: 3;
+}

@@ -5,7 +5,7 @@
 
 (defn- project-highlight [{:keys [blurb logo logo-width logo-height customer]}]
   [:div.grey-box
-   [:div.mbl.bd {:style "height: 40px"}
+   [:div.mbl.bd.logo {:style "height: 40px"}
     [:img.image {:style (str "height: " (or logo-height 40) "px;"
                              (when logo-height
                                (str " padding-top: " (/ (- 40 logo-height) 2) "px;"))
@@ -13,7 +13,7 @@
                                (str " width: " logo-width "px;")))
                  :src logo
                  :alt (format "%s logo" customer)}]]
-   blurb])
+   [:div.content blurb]])
 
 (def tech-labels
   {:proglang "Programmeringsspråk"
@@ -82,14 +82,14 @@
     [:tbody
      (map (fn [project]
             [:tr
-             [:th
+             [:th.nw
               [:h4 (:customer project)]
               [:p (year-range project)]]
-             [:td
+             [:td.fw
               [:h4 (:summary project)]
               (f/to-html (:description project))
               [:div.smaller.mbxl
-               [:span "◼ "]
+               [:span "■ "]
                (->> project :tech (map :name) (str/join ", "))]]])
           projects)]]])
 
@@ -226,12 +226,11 @@
   {:title (format "%s CV" (:full-name person))
    :layout :new-cv
    :body
-   (list [:div.bd {:style "position: relative;"}
-          [:p.mvn {:style "position: absolute; top: 0; right: 0; bottom: 0;"}
-           [:img.image {:style "max-height: 100%; z-index: 0;"
-                        :src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
-          [:div {:style "margin-right: 200px"}
-           [:h1.hn {:style "position: relative; z-index: 1;"} [:span.black "CV / "] (f/no-widows (:full-name person))]]
+   (list [:div#cv-header.bd.rel
+          [:p.mvn.picture
+           [:img.image {:src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
+          [:div.heading
+           [:h1.hn [:span.black "CV / "] (f/no-widows (:full-name person))]]
           [:p
            (:phone-number person)
            [:br]
@@ -245,7 +244,7 @@
           (map #(vector :li %) (:qualifications person))]
 
          (when (< 0 (count (:project-highlights person)))
-           [:div.flex.tc.mtl.mod
+           [:div.flex-l.tc.mtl.mod
             (map project-highlight (:project-highlights person))])
 
          (if-let [endorsement (:endorsement-highlight person)]
