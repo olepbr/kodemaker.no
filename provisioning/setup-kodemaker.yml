@@ -222,7 +222,7 @@
        minute: 30
        hour: 2
        weekday: 1
-       job: "certbot renew --webroot -w /var/www/letsencrypt"
+       job: "certbot renew --webroot -w /var/www/letsencrypt && /sbin/nginx -s reload"
      when: use_ssl
 
   handlers:
