@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {execSync} = require('child_process');
-const prince = process.env.PRINCE_PATH ? `${process.env.PRINCE_PATH}/prince` : 'prince;'
+const prince = process.env.PRINCE_PATH ? `${process.env.PRINCE_PATH}/prince` : 'prince';
 
 function mkdir(dir) {
   try {
