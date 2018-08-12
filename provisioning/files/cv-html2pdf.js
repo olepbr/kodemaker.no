@@ -9,13 +9,12 @@ function mkdir(dir) {
   } catch (e) {}
 }
 
-const rootDir = 'build/cv';
 const outDir = 'cv-pdf';
 const public = 'resources/public';
 mkdir(outDir);
 
-function mkpdf(filepath) {
-  const [file, ...dirs] = filepath.replace(`${rootDir}/`, '').split('/').reverse();
+function mkpdf(root, filepath) {
+  const [file, ...dirs] = filepath.split('/').reverse();
   let p = outDir;
 
   dirs.reverse().forEach(d => {
@@ -27,12 +26,12 @@ function mkpdf(filepath) {
   console.log('Write', cvhtml);
 
   fs.writeFileSync(cvhtml,
-                   fs.readFileSync(filepath, 'utf-8')
+                   fs.readFileSync(path.join(root, filepath), 'utf-8')
                    .replace(/="\//g, `="${path.relative(p, 'build')}/`)
                    .replace(/"[^"]+cv-print.css"/, `"${path.relative(p, public)}/styles/cv-print-prince.css"`),
                    'utf-8');
 
-  const output = cvhtml.replace(outDir, rootDir).replace(/\/index\.html$/, '.pdf');
+  const output = cvhtml.replace(outDir, root).replace(/\/index\.html$/, '.pdf');
   console.log('Output PDF to', output);
   execSync(`${prince} ${cvhtml} -o ${output}`);
 }
@@ -40,11 +39,12 @@ function mkpdf(filepath) {
 function crawl(root) {
   fs.readdirSync(root).forEach(f => {
     if (/\.html$/.test(f)) {
-      mkpdf(path.join(root, f));
+      mkpdf(root, f);
     } else if (fs.statSync(path.join(root, f)).isDirectory()) {
       crawl(path.join(root, f));
     }
   });
 }
 
-crawl(rootDir);
+crawl('build/cv');
+crawl('build/ny/cv');
