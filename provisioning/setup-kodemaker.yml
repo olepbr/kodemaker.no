@@ -127,7 +127,7 @@
    - name: Prince prerequisites
      yum: name={{ item }} state=present
      with_items:
-       - https://rpmfind.net/linux/sourceforge/u/un/unitedrpms/27/x86_64/msttcorefonts-2.5-4.fc27.noarch.rpm
+       - https://www.rpmfind.net/linux/sourceforge/u/un/unitedrpms/28/x86_64/msttcorefonts-2.5-5.fc28.noarch.rpm
        - libtiff
 
    - name: Check if Prince is installed
