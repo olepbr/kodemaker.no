@@ -1112,10 +1112,12 @@
                        :logo "/logos/hafslund-strom.png"}
                       {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
                        :customer "Tine"
-                       :logo "/logos/tine.svg"}
+                       :logo "/logos/tine.svg"
+                       :logo-width 65}
                       {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"
                        :customer "NRK"
-                       :logo "/logos/nrk.svg"}]
+                       :logo "/logos/nrk.svg"
+                       :logo-width 83}]
 
  :endorsement-highlight {:author "Geir Børdalen"
                          :title "Prosjektleder, Origo-prosjektet, NRK"
