@@ -38,9 +38,14 @@ body {font-size: 17px;}
 .ft-dec-5 {position: absolute; right: 10px; top: 0; width: 50px; height: 50px; background: #fff;}
 
 .hide-lt-460 {display: block;}
+.hide-lt-460-il {display: inline;}
 
 .ginormous {text-align: center; font-weight: bold; line-height: 0.8; margin-bottom: 20px;}
 .ginormous-1,
 .ginormous-2 {font-size: 130px;}
 .ginormous-3 {font-size: 90px;}
 .ginormous-4 {font-size: 60px;}
+
+.f1o3 {flex: 0 0 33%;}
+.f2o3 {flex: 0 0 66%;}
+.nw {white-space: nowrap;}

@@ -230,8 +230,8 @@
           [:p.mvn.picture
            [:img.image {:src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
           [:div.heading
-           [:h1.hn [:span.black "CV / "] (f/no-widows (:full-name person))]]
-          [:p
+           [:h1.hn [:span.black.hide-lt-460-il "CV / "] (f/no-widows (:full-name person))]]
+          [:p.summary
            (:phone-number person)
            [:br]
            [:a {:href (format "mailto:%s" (:email-address person))} (:email-address person)]
@@ -253,10 +253,10 @@
              [:blockquote
               [:div.mbm (:quote endorsement)]
               [:div.smaller [:strong (endorser endorsement)]]]]
-            [:div.f1o3.noprint
+            [:div.f1o3.noprint.hide-lt-460
              [:p
               (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
-           [:p.spread.noprint (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
+           [:p.spread.noprint.hide-lt-460 (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
 
          [:div#about
           [:h2.mhn "Om " (:first-name person)]
