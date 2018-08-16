@@ -168,14 +168,14 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
     [:title (head-title (:title page))]]
-   [:body
+   [:body.lh-cv
     [:div#header
      [:div.bd.iw
       [:h1.hn
        [:a.linkBlock.white {:href "/"} "Kodemaker"]]]]
     [:div.iw content]
     [:div.footer.iw.mbl
-     [:div.flex
+     [:div.flex-l
       [:p [:a {:href "https://www.kodemaker.no/"} "www.kodemaker.no"]]
       [:p "+47 22 82 20 80"]
       [:p "Munkedamsveien 3b, 0161 Oslo"]]]]))

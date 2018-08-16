@@ -5,15 +5,16 @@
 
 (defn- project-highlight [{:keys [blurb logo logo-width logo-height customer]}]
   [:div.grey-box
-   [:div.mbl.bd.logo {:style "height: 40px"}
-    [:img.image {:style (str "height: " (or logo-height 40) "px;"
-                             (when logo-height
-                               (str " padding-top: " (/ (- 40 logo-height) 2) "px;"))
-                             (when logo-width
-                               (str " width: " logo-width "px;")))
-                 :src logo
-                 :alt (format "%s logo" customer)}]]
-   [:div.content blurb]])
+   [:div.bd
+    [:div.bd.logo {:style "height: 40px"}
+     [:img.image {:style (str "height: " (or logo-height 40) "px;"
+                              (when logo-height
+                                (str " padding-top: " (/ (- 40 logo-height) 2) "px;"))
+                              (when logo-width
+                                (str " width: " logo-width "px;")))
+                  :src logo
+                  :alt (format "%s logo" customer)}]]
+    [:div.content blurb]]])
 
 (def tech-labels
   {:proglang "Programmeringsspråk"

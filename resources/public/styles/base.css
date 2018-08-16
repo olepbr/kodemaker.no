@@ -177,8 +177,7 @@ em {font-style: italic;}
 
 hr {border-top: 3px solid #222; border-left: 0; border-right: 0; border-bottom: 0;}
 
-blockquote {padding: 1em 0 0 4em; font-style: italic; position: relative;}
-blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.1em; left: 0;}
+blockquote {font-style: italic;}
 
 .codehilite, code {font-family: Consolas, "Liberation Mono", Courier, monospace; border: 1px solid #ddd; background-color: #f8f8f8; border-radius: 3px; max-width: 100%; display: inline-block; overflow: auto; vertical-align: middle; line-height: 1.3; font-size: 13px; padding: 0 0.5em;}
 .codehilite {display: block; padding: 10px;}
@@ -222,7 +221,7 @@ a.brick:hover {background: #222;}
 .centered-face {max-width: 220px; margin-left: auto; margin-right: auto;}
 
 .hide-lt-660,
-.hide-lt-460 {display: none;}
+.hide-lt-460, .hide-lt-460-il {display: none;}
 
 .image {display: block;}
 .smaller {font-size: 0.9rem;}
@@ -254,7 +253,7 @@ li p {margin: 0 0 0.5em;}
 .spread {display: flex; justify-content: space-between;}
 
 #cv-header .picture {position: absolute; top: 0; right: 0; bottom: 0; margin-left: 0; margin-right: 0;}
-#cv-header .picture .image {max-height: 100%; z-index: 0;}
+#cv-header .picture .image {max-height: 100%; z-index: 0; float: right;}
 #cv-header .heading {margin-right: 200px;}
 #cv-header .summary,
 #cv-header .heading h1 {position: relative; z-index: 1;}

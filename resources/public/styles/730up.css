@@ -59,3 +59,6 @@ h2.offset span.offset-content {display: block; margin: 0 10px 0 20px;}
 .dtable {display: flex; flex-wrap: wrap;}
 .dtable dt {flex: 0 0 12em;}
 .dtable dd {flex: 0 0 calc(100% - 12em);}
+
+blockquote {padding: 1em 0 0 4em; position: relative;}
+blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.1em; left: 0;}

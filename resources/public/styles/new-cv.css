@@ -44,7 +44,7 @@ hr {
 }
 
 #cv-header .picture {float: right; margin-left: 0; margin-right: 10px;}
-#cv-header .picture .image {max-height: 130px;}
+#cv-header .picture .image {max-height: 130px; float: right;}
 
 .footer {
   display: none;
@@ -71,3 +71,38 @@ p {
   widows: 3;
   orphans: 3;
 }
+
+.flex-l {
+  overflow: hidden;
+}
+
+.grey-box {
+  float: left;
+  width: 33%;
+  overflow: hidden;
+}
+
+.grey-box .logo {
+  padding: 1em 1em 0;
+}
+
+.grey-box > .bd {
+  background-color: #eee;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.grey-box:first-child .bd {
+  margin-left: 0;
+}
+
+.grey-box:last-child .bd {
+  margin-right: 0;
+}
+
+.grey-box .content {
+  margin: 0.5em 1em 1em;
+}
+
+blockquote {padding: 1em 0 0 4em; position: relative;}
+blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.1em; left: 0;}
