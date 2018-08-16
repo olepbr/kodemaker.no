@@ -1,0 +1,180 @@
+{:id :frode
+ :profile-active? false
+ :name ["Frode" "Nerbråten"]
+ :title "Systemutvikler"
+ :start-date "2018-10-01 00:09"
+ :description "Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
+
+Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift og har de siste årene jobbet mye med api-design, mikrotjenester og devops.
+
+Frode liker å lære nye ting og er god til å sette seg inn i komplekse domener. Han er interessert i funksjonell programmering og distribuerte systemer og er opptatt av å lage enkle, robuste og feiltollerante systemer.
+
+Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette med roller som fagleder og teamleder."
+
+ :phone-number "+47 982 19 314"
+ :email-address "frode@kodemaker.no"
+
+ :presence {:cv "frode"
+            :twitter "froden"
+            :linkedin "/in/nerbraten"
+            :github "froden"}
+
+ :tech {:using-at-work [:java :postgresql :javascript :docker :terraform]
+        :favorites-at-the-moment [:elm :kotlin :haskell]
+        :want-to-learn-more [:elm :kotlin :clojure]}
+
+ :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban]
+
+ :recommendations [{:title "Distributed systems for fun and profit"
+                    :blurb "En veldig bra innføring i grunnleggende teori og prinsipper bak distribuerte systemer. Den tar for seg på en lettlest måte hvordan fysisk avstand og samtidighet påvirker alle distribuerte systemer (i praksis alle kommersielle it-systemer), hvorfor det er viktig å ta hensyn til dette når vi utvikler systemer og hvordan dette påvirker designet av kjente systemer som Amazon Dynamo, Google BigTable og Hadoop."
+                    :link {:url "http://book.mixu.net/distsys/single-page.html"
+                           :text "Til boken"}
+                    :tech [:distributed-systems]}
+                   {:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
+                    :blurb "Meget inspirerende bloggpost av Jay Kreps, mannen bak Kafka hos LinkedIn, om hvordan en replikert, append-only log kan brukes til integrasjon og asynkron meldingsutveksling med høy throughput og lav latency."
+                    :link {:url "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
+                           :text "Les artikkel"}
+                    :tech [:kafka :performance]}
+		   {:title "The Phoenix Project"
+		    :blurb "En fornøyelig bok om en mellomleder i IT-avdelingen i en stor bedrift som får i oppgave å redde selskapets massive forsinkede IT-prosjekt som truer hele selskapets fremtid. Han får hjelp av et mystisk styremedlem med en teori om at IT har mer til felles med produksjon av biler enn man skulle tro. Meget underholdene bok om prinsippene fra lean manufacturing og starten på devopsbevegelsen."
+		    :link {:url "https://itrevolution.com/book/the-phoenix-project/"
+		    	   :text "Til boken"}
+		    :tech [:lean :devops]}
+		   {:title "Learn you a Haskell for great good"
+		    :blurb "En lettbeint og underholdene introduksjon til Haskell. Anbefales til alle som vil lære Haskell. Les gjerne denne før du går over til mer omfattende bøker."
+		    :link {:url "http://learnyouahaskell.com/"
+		    	   :text "Til boken"}
+		    :tech [:haskell :functional-programming]}]
+
+;; :hobbies [{:title "Foto"
+;;            :description "TLDR"
+;;            :illustration "/illustrations/hobbies/frode_foto.jpg"}]
+
+ :presentations [{:title "Hypermediadrevet API i praksis"
+                  :event "JavaZone"
+                  :blurb "Presentasjon fra JavaZone 2012 om praktisk bruk av hypermedia og lenker i REST-apier"
+                  :date "2012-09-12"
+                  :tech [:rest :hypermedia :api]
+                  :urls {:video "https://vimeo.com/49392437"}}
+                 ]
+
+ :appearances [
+               {:title "3-dagers Scala-kurs på NTNU"
+                :date "2013-11-20"
+                :event "NTNU"
+                :tech [:scala :scalatra :mongodb :angularjs]}
+               {:title "Monader du allerede kjenner"
+                :event "Fagdag"
+                :tech [:scala :functional-programming]
+                :date "2013-11-01"}
+               {:title "Intro til Scala"
+                :event "Chalmers i Gøteborg"
+                :tech [:scala]
+                :date "2013-09-01"}
+               {:title "Ruby on Rails kurs på NTNU"
+                :event "NTNU"
+                :tech [:ruby :rails]
+                :date "2008-11-01"}
+               {:title "Ruby on Rails kurs på UiO"
+                :event "UiO"
+                :tech [:ruby :rails]
+                :date "2008-09-01"}
+               {:title "Intro til Ruby on Rails"
+                :event "NTNU"
+                :tech [:ruby :rails]
+                :date "2007-05-01"}
+                ]
+
+;; :endorsements [{:author "Tor Kleiberg"
+;;                 :title  "Teknisk ansvarlig på Digipost"
+;;                 :quote  ""}
+;;                ]
+
+ :projects [{:customer "Posten Norge AS - Digipost"
+             :years [2010 2011 2012 2013 2014 2015 2016 2017 2018]
+             :employer :bekk
+             :summary "Digipost - Sikker digital post for Norges innbyggere"
+             :description "Frode har vært med å utvikle Digipost helt fra starten via pilot til første release
+                          og til Digipost ble den foretrukne leverandøren for sikker digital post i Norge med 1.8 millioner brukere.
+                          Han har jobbet med alle de sentrale komponentene i Digipost inkludert rest-api-er, batch-api,
+                          integrasjon med andre systemer, databaser, infrastruktur, overvåkning, skytjenester, frontend og ytelsestesting.
+                          Frode har opparbeidet seg stor tillitt hos kunden og blitt en av de mest sentrale utviklerne på Digipost.
+                          Hans roller på prosjekt inkludere utvikler, arkitekt og teamleder."
+             :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
+                    :cloudstack :prometheus :kibana :elasticsearch :scala :javascript :react :docker
+                    :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
+                    :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
+            {:customer "Posten Norge AS - Digipost"
+             :employer :bekk
+             :summary "Digipost Labs"
+             :years [2014]
+             :description "System for brukerdialog, blogg og idébank for Digipost. https://labs.digipost.no.
+                          Frode hadde hovedansvar for backendutvikling provisjonering av infrastruktur og drift.
+                          Han bidro også med frontendutvikling senere i prosjektet."
+             :tech [:scala :scalatra :mongodb :javascript :jquery]}
+            {:customer "Statens Vegvesen"
+             :years [2013]
+             :employer :bekk
+             :summary "POC Datainnsamling til Nasjonal Veidatabank"
+             :description "System for innsending, validering og lagring av veidata til Nasjonal Veidatabank.
+                          POC med fokus på ytelse, skalerbarhet og modularisering.
+                          Frode jobbet med AKKA-basert backend og ytelsestesting."
+             :tech [:java :akka :jetty :elasticsearch :gatling :javascript]}
+            {:customer "Norwegian Air Shuttle"
+             :years [2005 2006 2007 2008 2009 2010]
+             :employer :bekk
+             :summary "Integrasjonsplatform/mellomvare for billettbestilling"
+             :description "Frode jobbet som systemutvikler og forvalter på foretningskritisk integrasjonsbuss som håndterer mer enn 90% av Norwegians billettbestillinger.
+                          Integrasjonsbussen er utviklet fra grunnen inhouse hos Norwegian og integrerer en stor del av de eksterne og interne systemene med høye sikkerhetskrav.
+                          Disse integrasjonspunktene inkluderer bl.a. databaser, Amadeus GDS, SAP, kredittkortvalidering, BizTalk, økonomisystemer, diverse flyplassystemer,
+                          norwegian.no, BankNorwegian og CallNorwegian. Frode var en del av et lite team som jobbet tett med flere avdelinger hos kunden og
+                          samarbeidet med team fra andre konsulentselskaper. Teamet hadde ansvar for utvikling, testing, deployment og overvåkning i produksjon."
+             :tech [:java :jboss :apache-axis :xml :jaxb :jbossws :cxf :aop :linux :junit :testng :maven :hudson :git :svn :cvs :ant :cruisecontrol :eclipse]}
+             ]
+
+ :cv {}
+
+ :education-summary "Sivilingeniør/Master i Kommunikasjonsteknologi fra NTNU"
+ :experience-since 2005
+ :qualifications ["Erfaren, engasjert og dyktig systemutvikler"
+                  "Liker å jobbe med alle deler av en applikasjon fra backend og apier til databaser, infrastruktur, devops og også frontend"
+                  "Opptatt av kontinuerlige leveranser og mener at en feature ikke er ferdig før den kjører i prod og gir verdi til brukerne"
+                  "Interessert i funksjonell programmering, åpen kildekode og distribuerte systemer"
+                  ]
+ :certifications [{:name "Elastic Leadership. 2-dagers kurs med Roy Osherove", :year 2018}
+                  {:name "Distributed Systems. 2-dagers kurs med Kyle Kingsbury", :year 2016}
+                  {:name "Design and Implementation of Microservices: kurs med Sam Newman", :year 2015}
+                  {:name "Bekk Managerprogram", :year 2013}
+                  {:name "Sertifisering: Functional Programming Principles in Scala", :year 2012}
+                  {:name "Certified Scrum Master", :year 2008}
+                  {:name "Sun Certified Enterprise Architect, del 1", :year 2007}
+                  {:name "JBoss Advanced J2EE kurs", :year 2006}
+                  {:name "RHD261 - JBoss for Advanced J2EE Developers / Certified JBoss Developer", :year 2006}
+                  {:name "Sun Certified Java Programmer for Java 1.5", :year 2005}
+                  {:name "Notes Domino 6/6.5 Application Developer Foundation Skills", :year 2005}
+                  ]
+ :relationship-status "Gift, 3 barn"
+ :born 1980
+ :education [{:institution "NTNU"
+              :years [2000 2001 2002 2003 2004 2005]
+              :subject "Sivilingeniør/Master i Kommunikasjonsteknologi"}
+              ]
+ :open-source-contributions [
+                 {:name "Dropwizard" :url "https://github.com/dropwizard/dropwizard/pull/948" :tech [:java :dropwizard] }
+                 {:name "Gatling" :url "https://github.com/gatling/gatling/pull/1564" :tech [:scala :gatling] }
+                 {:name "Jetty" :url "https://bugs.eclipse.org/bugs/show_bug.cgi?id=450467" :tech [:java :jetty] }
+                 {:name "Jetty" :url "https://bugs.eclipse.org/bugs/show_bug.cgi?id=384896" :tech [:java :jetty] }
+                 {:name "HOauth" :url "https://github.com/freizl/hoauth2/pull/24" :tech [:haskell :hoauth] }
+                 ]
+
+:side-projects
+                [
+                 {:title        "Digipostarkiv"
+                  :description  "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
+                                Består av en backend skrevet i Haskell og et native OSX-gui skrevet i Swift som linkes sammen til én binary."
+                  :illustration "/illustrations/side-projects/weathergraph.png"
+                  :link         {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
+                  :tech         [ :haskell :swift :objective-c :oauth]
+                  }
+                 ]
+ }
