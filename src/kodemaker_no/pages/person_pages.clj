@@ -259,4 +259,7 @@
           (maybe-include person :endorsements render-endorsements))})
 
 (defn person-pages [people]
-  (into {} (map (juxt :url #(partial person-page %)) people)))
+  (->> people
+       (remove #(not (get % :profile-active? true)))
+       (map (juxt :url #(partial person-page %)))
+       (into {})))

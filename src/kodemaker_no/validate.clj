@@ -19,6 +19,7 @@
    (optional-key :cv/description) Str ;; Hvis du ønsker en annen/lengre beskrivelse på CV-en
    (optional-key :administration?) Boolean
    (optional-key :quit?) Boolean
+   (optional-key :profile-active?) Boolean
 
    :phone-number Str
    :email-address Str

@@ -19,6 +19,7 @@
 (defn people-page [people]
   (let [sorted-peeps (->> people
                           (remove :quit?)
+                          (remove #(not (get % :profile-active? true)))
                           (sort compare-by-start-date)
                           (reverse))]
     {:title {:h1 (str (num-people people) " blide mennesker")

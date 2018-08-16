@@ -9,11 +9,10 @@
     [:span.block.framed.mbs [:img {:src (:side-profile-near photos)}]]
     [:span.linkish full-name]]])
 
-(defn- num-consultants [people]
+(defn- employees [people]
   (->> people
-       (remove :administration?)
        (remove :quit?)
-       (count)))
+       (remove #(not (get % :profile-active? true)))))
 
 (defn- compare-by-start-date [a b]
   (compare (:start-date a)
@@ -30,7 +29,7 @@
   {:body [:div.bd.iw.mvxxxl.large
           [:div.center
            (->> people
-                (remove :quit?)
+                employees
                 (map-indexed render-cloud-person)
                 (interpose [:span " " [:span "&nbsp;"]]))]]}) ;; two spaces between names
 
@@ -59,6 +58,7 @@
 
 (defn index-page [people]
   (let [sorted-peeps (->> people
+                          employees
                           (remove :administration?)
                           (sort compare-by-start-date)
                           (reverse))]
