@@ -260,3 +260,7 @@ li p {margin: 0 0 0.5em;}
 
 .grey-box {margin-bottom: 20px;}
 .grey-box .logo {margin-right: 20px;}
+
+.grey-box .content {
+  margin-top: 1em;
+}
