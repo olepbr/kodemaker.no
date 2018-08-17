@@ -3,11 +3,13 @@
  :name ["Frode" "Nerbråten"]
  :title "Systemutvikler"
  :start-date "2018-10-01 00:09"
- :description "Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
+ :description "<strong>Starter 1. oktober</strong>
 
-Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift og har de siste årene jobbet mye med api-design, mikrotjenester og devops.
+Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
 
-Frode liker å lære nye ting og er god til å sette seg inn i komplekse domener. Han er interessert i funksjonell programmering og distribuerte systemer og er opptatt av å lage enkle, robuste og feiltollerante systemer.
+Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift. De siste årene har han jobbet mye med api-design, mikrotjenester og devops.
+
+Frode liker å lære nye ting og er god til å sette seg inn i komplekse domener. Han er interessert i funksjonell programmering og distribuerte systemer og er opptatt av å lage enkle, robuste og feiltolerante systemer.
 
 Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette med roller som fagleder og teamleder."
 
@@ -23,7 +25,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
         :favorites-at-the-moment [:elm :kotlin :haskell]
         :want-to-learn-more [:elm :kotlin :clojure]}
 
- :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban]
+ :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban :tdd]
 
  :recommendations [{:title "Distributed systems for fun and profit"
                     :blurb "En veldig bra innføring i grunnleggende teori og prinsipper bak distribuerte systemer. Den tar for seg på en lettlest måte hvordan fysisk avstand og samtidighet påvirker alle distribuerte systemer (i praksis alle kommersielle it-systemer), hvorfor det er viktig å ta hensyn til dette når vi utvikler systemer og hvordan dette påvirker designet av kjente systemer som Amazon Dynamo, Google BigTable og Hadoop."
@@ -99,7 +101,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                           Han har jobbet med alle de sentrale komponentene i Digipost inkludert rest-api-er, batch-api,
                           integrasjon med andre systemer, databaser, infrastruktur, overvåkning, skytjenester, frontend og ytelsestesting.
                           Frode har opparbeidet seg stor tillitt hos kunden og blitt en av de mest sentrale utviklerne på Digipost.
-                          Hans roller på prosjekt inkludere utvikler, arkitekt og teamleder."
+                          Hans roller på prosjektet inkludere utvikler, arkitekt og teamleder."
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
                     :cloudstack :prometheus :kibana :elasticsearch :scala :javascript :react :docker
                     :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
@@ -136,10 +138,11 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
 
  :education-summary "Sivilingeniør/Master i Kommunikasjonsteknologi fra NTNU"
  :experience-since 2005
- :qualifications ["Erfaren, engasjert og dyktig systemutvikler"
+ :qualifications ["Erfaren, engasjert og allsidig systemutvikler"
                   "Liker å jobbe med alle deler av en applikasjon fra backend og apier til databaser, infrastruktur, devops og også frontend"
                   "Opptatt av kontinuerlige leveranser og mener at en feature ikke er ferdig før den kjører i prod og gir verdi til brukerne"
                   "Interessert i funksjonell programmering, åpen kildekode og distribuerte systemer"
+                  "Lang erfaring med testdrevet utvikling"
                   ]
  :certifications [{:name "Elastic Leadership. 2-dagers kurs med Roy Osherove", :year 2018}
                   {:name "Distributed Systems. 2-dagers kurs med Kyle Kingsbury", :year 2016}
