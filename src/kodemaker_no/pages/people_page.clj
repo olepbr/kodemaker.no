@@ -10,7 +10,10 @@
     [:span.linkish full-name]]])
 
 (defn- num-people [people]
-  (->> people (remove :quit?) (count)))
+  (->> people 
+       (remove :quit?) 
+       (remove #(not (get % :profile-active? true))) 
+       (count)))
 
 (defn- compare-by-start-date [a b]
   (compare (:start-date a)
