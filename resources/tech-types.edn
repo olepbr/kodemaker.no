@@ -275,6 +275,7 @@
  :prototype :library
  :pygments :library
  :python :proglang
+ :pwa :frontend
  :quartz :library
  :rails :framework
  :rake :library

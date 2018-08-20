@@ -54,7 +54,17 @@
                   "Liker funksjonell programmering, enkle løsninger og små team"
                   "Skriver godt, liker å dokumentere, holder gjerne workshops, og bidrar til å løfte fagmiljøene han jobber i"]
 
- :side-projects [{:title "Shufflify"
+ :side-projects [{:title "TempCalc"
+                  :description "Temperatur er viktig i gjærbakst. Ideellt sett
+                  angir en oppskrift hvilken temperatur deigen skal ha etter
+                  endt elting. Denne kalkulatoren hjelper deg med å finne riktig
+                  temperatur på vannet for å nå en gitt deigtemperatur. Og andre
+                  temperatur-kombinasjonsproblemer."
+                  :tech [:clojurescript :pwa :aws :aws-s3 :aws-cloudfront :aws-route53]
+                  :illustration "/illustrations/side-projects/tempcalc.png"
+                  :link {:url "https://tempcalc.com/"
+                         :text "tempcalc.com"}}
+                 {:title "Shufflify"
                   :description "Til bilturene med familien er det behov for en
                  shuffle-funksjon som tar hensyn til at \"alle skal få sitt\".
                  Jeg lager en tjeneste i Go som løser dette svært essensielle
