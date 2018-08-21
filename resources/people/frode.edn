@@ -87,28 +87,35 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                 :date "2007-05-01"}
                 ]
 
-;; :endorsements [{:author "Tor Kleiberg"
-;;                 :title  "Teknisk ansvarlig på Digipost"
-;;                 :quote  ""}
-;;                ]
+ :endorsements [{:author "Tor Kleiberg"
+                 :title  "Teknologidirektør Digipost, Posten Norge"
+                 :quote  "Frode jobbet for og med meg i teknologiavdelingen i Digipost i flere år. Jeg vil alltid huske ham som en bunnsolid og kunnskapsrik teknolog og utvikler med løsningsteft og evne til å finne og realisere gode løsninger på alle mulige utfordringer. Frode er en kjernekar og bidro med sine verdier og smittende entusiasme i stor grad til å skape en sterk, samarbeidsorientert og kvalitetsbevist arbeidskultur på prosjektet. Jeg kan uten tvil anbefale Frode på det varmeste."}
+                ]
 
  :projects [{:customer "Posten Norge AS - Digipost"
-             :years [2010 2011 2012 2013 2014 2015 2016 2017 2018]
+             :years [2017 2018]
              :employer :bekk
-             :summary "Digipost - Sikker digital post for Norges innbyggere"
-             :description "Frode har vært med å utvikle Digipost helt fra starten via pilot til første release
-                          og til Digipost ble den foretrukne leverandøren for sikker digital post i Norge med 1.8 millioner brukere.
-                          Han har jobbet med alle de sentrale komponentene i Digipost inkludert rest-api-er, batch-api,
-                          integrasjon med andre systemer, databaser, infrastruktur, overvåkning, skytjenester, frontend og ytelsestesting.
-                          Frode har opparbeidet seg stor tillitt hos kunden og blitt en av de mest sentrale utviklerne på Digipost.
-                          Hans roller på prosjektet inkludere utvikler, arkitekt og teamleder."
-             :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
-                    :cloudstack :prometheus :kibana :elasticsearch :scala :javascript :react :docker
-                    :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
-                    :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
+             :summary "Videreutvikling, farvaltning og teamledelse på Digipost"
+             :description "Videreutvikling og forvaltning av systemer på Digipost. Frode har i perioden vært teamleder for det største utviklingsteamet på Digipost."
+             :tech [:java :jetty :jersey :spring :hibernate :dropwizard :postgresql :ansible :terraform
+                    :cloudstack :prometheus :kibana :elasticsearch :javascript :react :docker
+                    :haproxy :linux :centos :coreos :hazelcast :git
+                    :drone :bash :npm :nexus :github :trello :slack]}
             {:customer "Posten Norge AS - Digipost"
              :employer :bekk
-             :summary "Digipost Labs"
+             :summary "Digipost Faktura"
+             :years [2015 2016]
+             :description "Utvikling av løsning for fakturabetaling i Digipost. Løsningen gjør det mulig å betale fakturaer mottatt i Digipost direkte i nettbanken. Frode hadde en sentral rolle i prosjektet fra planlegging til implementasjon. Prosjektet bestod i to hoveddeler: Del 1 involverte integrasjon med bank-APIer for å kunne betale fra Digipost. Del 2 bestod i å utvikle API-er som bankene kan bruke til å hente fakturainformasjon fra Digipost for betaling i nettbanken."
+             :tech [:java :jetty :jersey :spring :hibernate :postgresql :springws]}
+            {:customer "Posten Norge AS - Digipost"
+             :employer :bekk
+             :summary "Volum og ytelsestestrigg"
+             :years [2015]
+             :description "Utvikling av system for kontinuerlige volum og lasttester for både batch-api og rest-apier på Digipost."
+             :tech [:java :dropwizard-metrics :scala :gatling]}
+            {:customer "Posten Norge AS - Digipost"
+             :employer :bekk
+             :summary "Digipost Labs - system for brukerdialog, blogg og idébank"
              :years [2014]
              :description "System for brukerdialog, blogg og idébank for Digipost. https://labs.digipost.no.
                           Frode hadde hovedansvar for backendutvikling provisjonering av infrastruktur og drift.
@@ -122,6 +129,20 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                           POC med fokus på ytelse, skalerbarhet og modularisering.
                           Frode jobbet med AKKA-basert backend og ytelsestesting."
              :tech [:java :akka :jetty :elasticsearch :gatling :javascript]}
+            {:customer "Posten Norge AS - Digipost"
+             :years [2010 2011 2012 2013]
+             :employer :bekk
+             :summary "Digipost - Sikker digital post for Norges innbyggere"
+             :description "Frode har vært med å utvikle Digipost helt fra starten via pilot til første release
+                          og til Digipost ble den foretrukne leverandøren for sikker digital post i Norge med 1.8 millioner brukere.
+                          Han har jobbet med alle de sentrale komponentene i Digipost inkludert rest-api-er, batch-api,
+                          integrasjon med andre systemer, databaser, infrastruktur, overvåkning, skytjenester, frontend og ytelsestesting.
+                          Frode har opparbeidet seg stor tillitt hos kunden og blitt en av de mest sentrale utviklerne på Digipost.
+                          Hans roller på prosjektet inkludere utvikler, arkitekt og teamleder."
+             :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
+                    :cloudstack :kibana :elasticsearch :scala :javascript 
+                    :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
+                    :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
             {:customer "Norwegian Air Shuttle"
              :years [2005 2006 2007 2008 2009 2010]
              :employer :bekk
