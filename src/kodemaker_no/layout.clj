@@ -55,16 +55,7 @@
    [:body
     content
     [:footer "www.kodemaker.no * +47 22 82 20 80 * Munkedamsveien 3b, 0161 Oslo"]
-    [:script {:type "text/javascript"}
-     "var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-16391367-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();"]]))
+    [:script (slurp (io/resource "public/scripts/analytics.js"))]]))
 
 (defmethod with-layout :default [request page content]
   (html5
@@ -84,7 +75,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
     [:title (head-title (:title page))]]
    [:body
-    [:script (slurp (io/resource "public/scripts/google-tag-manager.js"))]
+    [:script (slurp (io/resource "public/scripts/analytics.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
