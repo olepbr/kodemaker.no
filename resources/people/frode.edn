@@ -92,6 +92,18 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                  :quote  "Frode jobbet for og med meg i teknologiavdelingen i Digipost i flere år. Jeg vil alltid huske ham som en bunnsolid og kunnskapsrik teknolog og utvikler med løsningsteft og evne til å finne og realisere gode løsninger på alle mulige utfordringer. Frode er en kjernekar og bidro med sine verdier og smittende entusiasme i stor grad til å skape en sterk, samarbeidsorientert og kvalitetsbevist arbeidskultur på prosjektet. Jeg kan uten tvil anbefale Frode på det varmeste."}
                 ]
 
+ :endorsement-highlight {:author "Tor Kleiberg"
+                         :title "Teknologidirektør Digipost, Posten Norge"
+                         :quote "Frode er en bunnsolid og kunnskapsrik teknolog og utvikler med løsningsteft og evne til å finne og realisere gode løsninger på alle mulige utfordringer. Han er en kjernekar og bidro med sine verdier og smittende entusiasme i stor grad til å skape en sterk, samarbeidsorientert og kvalitetsbevist arbeidskultur på prosjektet."}
+
+ :project-highlights [{:blurb "Utvikling av system for sikker digital post. Domenemodellering, applikasjonsarkitektur, api-design og infrastruktur"
+                       :customer "Posten Norge AS - Digipost"
+                       :logo "/logos/digipost.svg"
+                       :logo-width 110}
+                      {:blurb "Utvikling, forvaltning og drift av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk"
+                       :customer "Norwegian"
+                       :logo "/logos/norwegian.png"}]
+
  :projects [{:customer "Posten Norge AS - Digipost"
              :years [2017 2018]
              :employer :bekk
