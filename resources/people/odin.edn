@@ -1,8 +1,17 @@
 {:id :odin
  :name ["Odin" "Hole Standal"]
- :title "Utvikler og arkitekt"
+ :title "Utvikler"
  :start-date "2012-08-01"
+ :experience-since 2005
+ :born 1981
+ :relationship-status "Gift, 3 barn"
  :description "Odin er en pliktoppfyllende og selvdrevet
+               problemløser som liker å ta ansvar.
+               Han lærer raskt og er lidenskapelig opptatt av faget
+               sitt. I tillegg er han glad i utfordrende
+               arbeidsoppgaver og er flink til å samarbeide."
+
+ :cv/description "Odin er en pliktoppfyllende og selvdrevet
                problemløser som liker å ta ansvar.
                Han lærer raskt og er lidenskapelig opptatt av faget
                sitt. I tillegg er han glad i utfordrende
@@ -15,12 +24,16 @@
             :twitter "odinodin"
             :stackoverflow "/users/273594/odinodin"
             :github "odinodin"
-            :coderwall "odinodin"
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:kubernetes :datascript :flexbox]
         :using-at-work [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
         :want-to-learn-more [:kafka-streams :unity3d :blockchain]}
+
+ :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
+                  "Bred erfaring med bygg og kontinuerlige leveranser"
+                  "Hjelper kunder med testautomatisering"
+                  "Selvdrevet, samarbeidsvillig og ansvarsfull"]
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
                :title "Tiltrekkende 3D på web"
@@ -168,7 +181,7 @@
              Norled. Jobber også med billett-app for kunder, samt app for
              fergebillettørene."
              :tech [:clojure :clojurescript :datomic :kubernetes :kafka :cassandra :datascript
-                    :reagent :mount :docker :aws :cordova]}
+                    :d3 :mapbox :reagent :mount :docker :aws :cordova]}
             {:customer "Telenor Digital"
              :description "Medlem av Data Insights-teamet som driver med analysetjenester for ulike deler av Telenor.
                            Fokus på integrasjon av datakilder, integrasjon med autentiseringstjeneste og visualisering
@@ -364,35 +377,37 @@
                  I tillegg er han veldig omgjengelig og lett å samarbeide med.
                  Jeg tror man må lete lenge etter noen som har noe negativt å si om Odin."}]
 
+ :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av nytt informasjonssystem for fergedrift basert på Clojure, Kafka og Datomic."
+                       :customer "Norled"
+                       :logo "/logos/norled.svg"}
+                      {:blurb "Integrasjon av datakilder, sikkerhet og visualisering av store datamengder."
+                       :customer "Telenor Digital"
+                       :logo "/logos/telenordigital.png"
+                       :logo-width 139}
+                      {:blurb "Workshops om testautomatisering, byggautomatisering, frontend- og backendutvikling og testautomatisering."
+                       :customer "Conax"
+                       :logo "/logos/conax.png"}]
+
+ :endorsement-highlight {:author "Trond Hagen"
+                        :title "Director Software Development, Conax"
+                        :quote "Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
+                                til å sette seg inn i nye domener og problemstillinger. Han er alltid klar for å ta
+                                fatt på nye utfordringer uavhengig om de er store eller små, spennende eller ikke."}
+
  :cv {:default {:preferred-techs [:clojure :clojurescript
                                   :java :javascript
                                   :react :d3
                                   :kubernetes
-                                  :datomic :cassandra]
+                                  :datomic :kafka]
                 :exclude-techs [:hudson :cruise-control :jsf]}}
- :cv/description "Odin er sivilingeniør i datateknikk fra NTNU med allsidig
- erfaring som utvikler og arkitekt.
-
- Som konsulent er Odin pliktoppfyllende, selvdrevet og liker å ta ansvar. Han
- lærer raskt og søker enkle løsninger der det er mulig. I tillegg er han en
- dyktig problemløser, glad i utfordrende arbeidsoppgaver og lidenskapelig
- opptatt av faget sitt. "
 
  :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
- :experience-since 2005
- :qualifications ["Erfaren frontendutvikler"
-                  "Erfaren backendutvikler"
-                  "Byggautomatisering"
-                  "Kontinuerlige leveranser"
-                  "Språkentusiast"]
  :certifications [{:name "Architecting for continuous delivery and zero downtime" :year 2015}
                   {:name "Java 8 med Venkat Subramaniam", :year 2014}
                   {:name "Rubykurs", :year 2012}
                   {:name "SpringSource, Spring and Hibernate", :year 2009}
                   {:name "Sun Java Certified Programmer, Java 5", :year 2008}
                   {:name "RFID-kurs i Hong Kong i regi av Accenture", :year 2005}]
- :relationship-status "Gift, 3 barn"
- :born 1981
  :education [{:institution "NTNU"
               :years [2001 2002 2003 2004 2005 2006]
               :subject "Sivilingeniør/Master Datateknikk"}]}
