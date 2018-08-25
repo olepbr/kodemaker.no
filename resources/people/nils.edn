@@ -6,8 +6,30 @@
  automatiseres og optimaliseres. Han lærer fort og er opptatt av at programvareutvikling er et håndverk man
  skal være stolt av. Han er glad i utfordringer og liker å samarbeide for å finne de beste løsningene. "
 
+ :cv/description "Nils er sivilingeniør i datateknikk fra NTNU med erfaring som
+ utvikler og arkitekt.
+
+ Nils er genuint interessert i teknologi og liker alt som kan programmeres,
+ automatiseres og optimaliseres. Nils lærer fort og er opptatt av at
+ programvareutvikling er et håndverk man skal være stolt av.
+
+ Når Nils ikke får nok utfordringer på jobb lærer han gjerne noe på fritiden
+ eller jobber med hobbyprosjekter. "
+
  :phone-number  "+47 9053 6771"
  :email-address "nils@kodemaker.no"
+
+ :project-highlights [{:blurb "Utvikling av system for anbefaling av rubrikk-annonser. Java, Kotlin, Kafka og Postgresql."
+                       :customer "Finn"
+                       :logo "/logos/finn.svg"},
+                      {:blurb "Ansvar for utvikling og drifting av android app. Videreutvikle kjernekomponeter for bookingsystemet."
+                       :customer "Norwegian Air Shuttle"
+                       :logo "/logos/norwegian.png"},
+                      {:blurb "Utvikling av løsning for distribusjon av tidsseriedata fra ulike markeder ved hjelp av Spark, Kafka, Hadoop og HBase."
+                       :customer "Thomson Reuters"
+                       :logo "/logos/thomson-reuters.png"
+                       }]
+
 
  :presence      {
                  :cv            "nils"
@@ -22,7 +44,6 @@
                  :using-at-work           [:java :spring :docker :docker-compose]
                  :want-to-learn-more      [:kubernetes :kotlin :machinelearning]
                  }
-
 
  :hobbies       [
                  {
@@ -95,6 +116,12 @@
 
  :side-projects
                 [
+                 {:title        "pushify.xys"
+                  :link         {:url "https://pushify.xyz" :text "Pushify"}
+                  :description  "Pushify lar deg sende og motta push-meldinger uten å måtte installere en app, en såkalt progressive web app(pwa). Det eneste man trenger er å gå til nettsiden og begynne å bruke appen. Service workers sørger for at du får push-meldinger selv om nettleseren er lukket. Jeg lagde appen for å kunne motta push-meldinger fra hjemme-automasjonssystemet mitt og for å lære om Elm og pwa. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
+                  :illustration "/illustrations/side-projects/pushify.png"
+                  :tech         [ :go :googlecloud :elm :pwa]
+                  },
                  {:title        "Analyse av værdata"
                   :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
                   :illustration "/illustrations/side-projects/weathergraph.png"
@@ -233,17 +260,6 @@
                   :tech  [:go :tensorflow :machinelearning ]}]
 
  :cv {}
- :cv/description "Nils er sivilingeniør i datateknikk fra NTNU med erfaring som
- utvikler og arkitekt.
-
- Nils er genuint interessert i teknologi og liker alt som kan programmeres,
- automatiseres og optimaliseres. Nils lærer fort og er opptatt av at
- programvareutvikling er et håndverk man skal være stolt av.
-
- Når Nils ikke får nok utfordringer på jobb lærer han gjerne noe på fritiden
- eller jobber med hobbyprosjekter. Algoritmekurs og maskinlæringskurs fra
- Stanford er mine favoritter når han ikke utvikler egne apper og andre
- sideprosjekter. "
  :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
  :experience-since 2007
  :relationship-status "Gift, 2 barn"
@@ -257,14 +273,11 @@
               :subject
               "Utvekslingsår ved Universidade de São Paulo(USP), Brasil"}]
 
- :qualifications ["Senior systemutvikler"
-                  "Java Plattform"
-                  "Automatisering"
-                  "Devops"
-                  "Integrasjon"
-                  "Ytelsesvurdering og optimalisering"
-                  "Mobilutvikling, Android"
-                  "Smidig utvikling og kontinuerlig leveranse"]
+ :qualifications ["Fullstackutvikler med fokus på backend og integrasjon"
+                  "Selvstendig, effektiv og løsningsorientert"
+                  "Hjelper kunder med å finne enkle løsninger på vanskelige problemer"
+                  "Variert erfaring fra mobil, backend og frontend"
+ ]
 
  :certifications [{:name "Certified Scrum Master", :year 2018}
                   {:name "Machine Learning by Stanford University on Coursera"
