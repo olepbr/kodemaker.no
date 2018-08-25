@@ -116,7 +116,7 @@
 
  :side-projects
                 [
-                 {:title        "pushify.xys"
+                 {:title        "pushify.xyz"
                   :link         {:url "https://pushify.xyz" :text "Pushify"}
                   :description  "Pushify lar deg sende og motta push-meldinger uten å måtte installere en app, en såkalt progressive web app(pwa). Det eneste man trenger er å gå til nettsiden og begynne å bruke appen. Service workers sørger for at du får push-meldinger selv om nettleseren er lukket. Jeg lagde appen for å kunne motta push-meldinger fra hjemme-automasjonssystemet mitt og for å lære om Elm og pwa. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
                   :illustration "/illustrations/side-projects/pushify.png"
