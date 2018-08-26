@@ -1,15 +1,37 @@
 {:id :magnus
  :name ["Magnus" "Rundberget"]
- :title "Kodeentusiast"
+ :title "Systemutvikler"
  :start-date "2007-04-01 00:07"
- :description "Magnus har lang erfaring fra store og
-               små prosjekter. Han har jobbet med en rekke teknologier og hatt mange forskjellige roller.
-               Magnus stortrives i prosjekter der han
-               får være med å foredle kunders ønsker og drømmer i kode. Han er dyktig i team og jobber aktivt for at teamet som helhet skal lykkes. Magnus liker både frontend og backend utvikling. I tillegg har han en forkjærlighet for automatisering og Continuous Delivery. "
+ :description "Magnus er en ringrev som er like engasjert (om ikke mer) i faget sitt nå, enn da han skrev sine første Commodore 64 program på 80 tallet.
+               Han er analytisk av natur og går ofte de ekstra milen for å sørge for at rikig ting blir levert så fort som mulig med så høy kvalitet som mulig.
+
+               Med sin bredde og erfaring kan Magnus ta mange forskjellige roller i et prosjekt.
+               Han passer nok aller best i team med fokus på hyppige leveranser og kontinuerlig forbedring.
+               Læring er noe som er veldig viktig for Magnus og han er like opptatt av å dele kunnskap som han er av egen utvikling.
+
+               Drømmeprosjektene til Magnus er der han får være med å på hele reisen med å løse problemer og realisere ideer i fungerende kode.
+               Når Magnus jobber med videreutvikling av eksisterende løsninger, er han alltid opptatt av hvordan man kan gjøre ting bedre.
+               Magnus bidrar ofte med å sette opp eller forbedre CI/CD prosesser, komme opp med tiltak for redusering av teknisk gjeld eller med å ta grep for bedre brukeropplevelser og smartere prosessautomatisering.
+
+               Magnus har i de siste årene blitt svært opptatt av funksjonell programmering både med og uten sterk statisk typing.
+               Programmeringsspråk som ClojureScript og Elm og deres underliggende ideer, har gjort at han har kastet seg over frontendutvikling med stor entusiasme.
+
+               I perioder er Magnus svært aktiv med å bidra til OpenSource. Motivasjonen for å gjøre det er drevet av ønsket om å lære, følelsen av å gi noe tilbake samt å dele kunnskap.
+               "
+
+
+
 
  :phone-number "+47 928 83 365"
  :email-address "magnus@kodemaker.no"
 
+ :experience-since 1996
+ :relationship-status "Gift, 2 barn"
+ :born 1973
+ :qualifications ["Opprinnelig backendutvikler som har virkelig har fått sansen for frontendutvikling de siste årene"
+                  "Funksjonell programmerer med OO bakgrunn"
+                  "Solid erfaring på arkitektur, analyse og design, men liker best å kode"
+                  "Yter mest optimalt i små smidige team med fokus på hyppige leveranser, læring og trivsel."]
  :presence {:cv "magnus"
             :twitter "mrundberget"
             :github "rundis"
@@ -18,6 +40,29 @@
  :tech {:using-at-work [:clojure :reframe :docker :python :clojurescript]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
+
+ :endorsement-highlight {:author "Mitul Thobhani"
+                         :title "Owner and Co-Founder, Portfolio Software Limited"
+                         :quote "Magnus is one of those rare individuals who has the
+                                ability to understand a concept at the high level as well as the
+                                implementation minutia at the same time. His skills and deep
+                                experience in software architecture along with his professional,
+                                patient and calm nature allowed me to gain not only the
+                                information needed about the project on which we worked, but
+                                insights and inspiration in the more general field of software
+                                development."}
+
+ :project-highlights [{:blurb "Smart bordplasseringsmodul for automatisk plassering av mange event-deltakere basert på potensielt motstridende ønsker. Clojure, Kotlin og OptaPlanner."
+                       :customer "Oiiku"
+                       :logo "/logos/oiiku.svg"}
+                      {:blurb "Etablering og utvikling av tjenster for en ny bank for B2B markedet. Basert på bla. Kotlin, Rust, Elm og Google Cloud."
+                       :customer "Aprila Bank"
+                       :logo "/logos/aprilabank.svg"}
+                      {:blurb "Applikasjon for veterinærer og produsenter for registrering av medisinering og helserelatert informasjon. Tjenestebasert arkiktur laget med Clojure, ClojureScript, Oracle og Docker Cloud."
+                       :customer "Animalia"
+                       :logo "/logos/animalia.png"}
+                      ]
+
 
  :recommendations [{:title "Inventing on principle"
                     :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
@@ -347,8 +392,16 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
- :projects [{:customer "(Konfidensielt)"
+ :projects [{:customer "Protector Forsikring"
              :years [2018 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av B2B og B2C forsikringsportal"
+             :description "Videreutvikling og forbedring av portalløsning for self-service på forsikringsprodukter fra Protector.
+                          Portalen er implementer som en SPA med REST integrasjoner mot kjernesystemene. Oppgaver:
+                          Utvikling av ny funksjonalitet, teknologievaluering, mentoring på moderne funksjonell utvikling og rådgiving ifm. innføring av SCRUM/smidig prinsipper."
+             :tech [:javascript :typescript :node :webpack :docker :teamcity]}
+            {:customer "(Konfidensielt)"
+             :years [2018]
              :employer :kodemaker
              :summary "Utvikling av nytt spillkonsept knyttet til Dart."
              :description "Utvikling av nytt spillkonsept knyttet til Dart."
@@ -363,7 +416,7 @@
              konfigurerbare kriterier. Oppgaver: Utvikling av backend tjenester
              og integrasjon mot kjernemoduler i eventsystemet. Finne best mulig
              løsning for å løse det NP komplette problemet å automatisk best
-             mulig plassere 1000vis av deltakere på tvers av 100vis av bord."
+             mulig plassere tusenvis av deltakere på tvers av hundrevis av bord."
              :tech [:clojure :kotlin :angularjs :ansible :datomic :mongodb :gradle :teamcity]}
             {:customer "Aprila Bank"
              :years [2017]
@@ -657,18 +710,9 @@
                  would have no hesitation recommending Karl for his technical
                  capability and clarity of thought"}]
 
- :cv {}
+ :cv {:default {:preferred-techs [:elm :clojure :clojurescript :kotlin :functional-programming :immutability]}}
  :education-summary "Datateknikk HIBU, BI"
- :experience-since 1996
- :relationship-status "Gift, 2 barn"
- :born 1973
- :qualifications ["Funksjonell programmering (frontend og backend)"
-                  "Testdrevet utvikling"
-                  "Teknologievalueringer"
-                  "Teamledelse"
-                  "Prosess og kravanalyse"
-                  "Integrasjon"
-                  "Solid databaseerfaring"]
+
  :certifications [{:name "Sertifisert ScrumMaster", :year 2008}
                   {:name "Microsoft Certified Professional", :year 1999}]
  :education [{:institution "BI"
