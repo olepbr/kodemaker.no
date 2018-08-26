@@ -123,6 +123,7 @@
  :git-svn :vcs
  :github :vcs
  :gitlab :vcs
+ :mks :vcs
  :glassfish :server
  :google-adwords :tool
  :google-analytics :tool
@@ -284,6 +285,7 @@
  :reactive-cocoa :library
  :reagent :frontend
  :redhat :os
+ :redis :database
  :redux :library
  :redux-frontent :frontend
  :release-management :methodology
@@ -357,7 +359,7 @@
  :vertx :library
  :virtualisering :devops
  :visibroker :library
- :visualage :server
+ :visualage :devtools
  :visual-basic :proglang
  :visual-source-safe :vcs
  :visual-studio :devtools
