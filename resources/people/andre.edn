@@ -1,8 +1,11 @@
 {:id            :andre
  :name          ["André" "Bonkowski"]
- :title         "Kodemaker"
+ :title         "Utvikler"
  :start-date    "2005-09-01"
- :description   "André har sansen for enkle løsninger, og fokuserer på å ikke bringe inn ny teknologi og rammeverk uten av det 
+ :experience-since 1994
+ :born          1967
+ :relationship-status "Samboer, 2 barn"
+ :description   "André har sansen for enkle løsninger, og fokuserer på å ikke bringe inn ny teknologi og rammeverk uten at det 
                  faktisk vil gi en gevinst for prosjektet og kunden. Han er preget av yrkesstolthet, er nøyaktig, og setter 
                  sin ære i å levere riktig kvalitet."
 
@@ -17,9 +20,35 @@
                  }
 
  :tech          {:favorites-at-the-moment [:kotlin, :elixir :clojure :clojurescript]
-                 :using-at-work [:kotlin, :clojure :clojurescript :ruby :docker :rails :javascript :elasticsearch]
+                 :using-at-work [:kotlin, :javascript :react]
                  :want-to-learn-more      [:haskell :scala]}
+
+ :cv {:default {:preferred-techs [:elixir :kotlin :clojure :clojurescript]}}                 
  
+ :project-highlights [{:blurb "Design og utvikling av et nytt system for budleveranser"
+                        :customer "Bring"
+                        :logo "/logos/bring.svg"}
+                       {:blurb "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
+                        :customer "Animalia"
+                        :logo "/logos/animalia.svg"
+                        :logo-width 139}
+                       {:blurb "Arkitektur og implementering av FINN.no iOS applikasjoner"
+                        :customer "FINN.no"
+                        :logo "/logos/finn.svg"}
+                       ]
+
+ :endorsement-highlight {:author "Torkel Randem"
+                         :title "Økonomi- og utviklingssjef, Animalia.no"
+                         :quote "André er en meget dyktig utvikler og en jovial person
+                                 som jeg hadde gleden av å samarbeide med i Animalia. Han bidro
+                                 sterkt i arbeidet med å søke etter og implementere ny teknologi
+                                 i videre-/nyutviklingen av Animalia sine husdyrkontroller og fagsystemer."}
+ :qualifications ["Fullstackutvikler, med erfaring fra mobilutvikling på iOS, React Native, Android",
+                  "Foretrekker funksjonell programmering"
+                  "Testdrevet utvikling"
+                  "Ansvarsfull, samabeidsvillig og har en stor dose yrkesstolthet"]
+
+
  :recommendations [
  {  :title "Learn You a Haskell for Great Good!"
     :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
@@ -51,7 +80,7 @@
                   :illustration "/illustrations/hobbies/kimi-f1.jpg"}
                   ]
 
- :blog-posts [{:url "http://blog.bonkowski.net/blog/2013/02/10/refactoring-in-appcode//"
+ :blog-posts [{:url "http://blog.bonkowski.net/blog/2013/02/10/refactoring-in-appcode/"
                 :title "Refactoring in AppCode"
                 :blurb "De fleste Java utviklere kjenner til IntelliJ IDEA, som etter min og mange andres mening er den beste IDE'en 
                 for Java. Etter å ha utviklet for iOS en god stund så finner man fort ut at Apples Xcode ikke er på høyde. Gleden var stor da 
@@ -60,7 +89,7 @@
                 }
               {:url "http://blog.bonkowski.net/blog/2013/01/21/navigation-in-appcode/"
                 :title "Navigation in AppCode"
-                :blurb "I \"serien\" om bruk av AppCode så omhandler denne posten om navigering i IDE'en"
+                :blurb "I \"serien\" om bruk av AppCode så omhandler denne artikkelen om navigering i IDE'en"
                 :tech [:cocoa :objc]
                 }]
 
@@ -133,7 +162,7 @@
              Utviker"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
-             :tech [:kotlin :functional-programming :gradle :postgresql]}
+             :tech [:kotlin :javascript :react :react-native :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture]}
             {:customer "Animalia"
              :years [2017]
              :employer :kodemaker
@@ -145,14 +174,14 @@
              for migrering av de andre Grailsbaserte løsningen som Animalia har.
              Oppgaver: Utvikler, arkitekt"
              :tech
-             [:grails :javascript :docker :clojure :docker-cloud :oracle :git]}
+             [:grails :javascript :docker :clojure :docker-cloud :oracle :git :architecture]}
             {:customer "Animalia"
              :years [2017]
              :employer :kodemaker
              :summary "Videreutvikling av Helseservice"
              :description "Videreutvikling av Helseservice. Implementasjon av
              nye krav og ønsker. Oppgaver: Utvikler, arkitekt"
-             :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git]}
+             :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
             {:customer "Fondet for Regionale Verneombud"
              :years [2017]
              :summary "Integrasjoner med ITX samt uttrekk av informasjon fra Sekretariatsystemet som skulle inn i Visma"
@@ -163,7 +192,7 @@
              hovedsaklig gikk ut på å utvikle integrasjoner med ITX samt uttrekk
              av informasjon fra Sekretariatsystemet som skulle inn i Visma.
              Oppgaver: Utvikler, arkitekt"
-             :tech [:ruby :rails :mysql :javascript]}
+             :tech [:ruby :rails :javascript :mariadb]}
             {:customer "Animalia"
              :years [2016]
              :employer :kodemaker
@@ -184,7 +213,7 @@
              både på serversiden samt i klienten. Det ble også utført enn del
              refaktoreringer i forbindelse med dette arbeidet for å forenkle
              datamodellen systemet bygger på. Oppgaver: Utvikler, arkitekt"
-             :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git]}
+             :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2016]
              :employer :kodemaker
@@ -204,8 +233,7 @@
              som man integrerte inn i Kontrollene, som kommuniserer med det nye
              Helse APIet. På denne måten så vil man kunne gjenbruke dette i
              andre systemer som f.eks Helsegris. Oppgaver: Utvikler, arkitekt"
-             :tech
-             [:clojure :clojurescript :docker :docker-cloud :groovy :grails :oracle :gradle :git]}
+             :tech [:clojure :clojurescript :docker :docker-cloud :groovy :grails :oracle :gradle :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2016]
              :employer :kodemaker
@@ -216,8 +244,7 @@
              produktportefølje. I denne perioden var det diverse utvidelse av
              Sauekontrollen, samt utvidelser av Produsentregisteret Oppgaver:
              Utvikler"
-             :tech
-             [:clojure :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
+             :tech [:clojure :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
             {:customer "Animalia"
              :years [2015]
              :summary "Videreutvikling av Helsefjørfe"
@@ -227,9 +254,7 @@
              Docker og Tutum, samt innføring av en ny tjenester for håndtering
              av produsenter. Denne tjenesten vil bli benyttet av de flere andre
              delsystemene i Animalia. Oppgaver: Utvikler"
-             :tech
-             [:clojure :javascript :docker :tutum :elasticsearch :groovy :grails
-              :oracle :gradle :git]}
+             :tech [:clojure :javascript :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
             {:customer "Animalia"
              :years [2014]
              :summary "Utvikling av et nytt system innen kjøttproduksjonsbransjen"
@@ -249,8 +274,7 @@
              se på Docker,noe som har vist seg til å passe oss bra. Jeg har
              jobbet med å finne ut av hvordan sette opp dette og automatisere
              tjenestene rundt dette. Oppgaver: Utvikler"
-             :tech
-             [:clojure :clojurescript :docker :tutum :leiningen :oracle :jenkins :git]}
+             :tech [:clojure :clojurescript :docker :tutum :leiningen :oracle :jenkins :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2014]
              :employer :kodemaker
@@ -295,7 +319,7 @@
              en eller annen grunn ikke er så vanlig på iOS. Det har fungert
              veldig bra, og har gitt en betydelig forbedring av kodekvalitet og
              arkitektur i applikasjonen. Oppgaver: Utvikler og mentor."
-             :tech [:ios :cocoa :appcode :xcode :objc :cocoapods :jenkins :ruby]}
+             :tech [:ios :cocoa :appcode :xcode :objc :cocoapods :jenkins :ruby :bamboo :architecture]}
             {:customer "FINN.no"
              :years [2011]
              :employer :kodemaker
@@ -322,7 +346,7 @@
              biblioteker. Jobber nå med å forbedre og utvide den eksisterende
              applikasjonen, samt klargjøre og planlegge for de neste iOS
              applikasjonene som skal utvikles. Oppgaver: Utvikler og mentor."
-             :tech [:ios :cocoa :appcode :xcode :objc :objcplusplus]}
+             :tech [:ios :cocoa :appcode :xcode :objc :objcplusplus :architecture]}
             {:customer "Fondet for Regionale Verneombud"
              :years [2011]
              :employer :kodemaker
@@ -349,18 +373,7 @@
              både JMS og WebServices. Brukergrensesnitt implementert med JSF.
              Oppgaver: Utvikler"
              :tech [:java :groovy :oracle :oracle-appserver :h2db :webservices
-                    :jms :maven :intellij :jsf :jira :jenkins]}
-            {:customer "Tripletex"
-             :years [2010]
-             :employer :kodemaker
-             :summary "Utvikling av en iPhone app mot timeregistreringsdelen av Tripletex"
-             :description "Utvikling av en iPhone app mot timeregistreringsdelen
-             av Tripletex Oppgaven går ut på å lage en iPhone applikasjon som
-             kommuniserer med tjenester på Tripletex serveren, slik at brukere
-             av timeregistreringsmodulen i systemet skal kunne føre timer uten å
-             ha en PC medlemmer seg. Kommunikasjon med server foregår vha et
-             REST-basert API som snakker JSON. Oppgaver: Utvikler og arkitekt."
-             :tech [:objective-c :xcode :json]}
+                    :jms :maven :intellij :jsf :jira :jenkins :cqrs]}
             {:customer "Fondet for regionale verneombud."
              :years [2010]
              :employer :kodemaker
@@ -394,7 +407,7 @@
              moduler. Det ble også innført et nytt og forbedret system og
              regressjonstestrammeverk, samt Bamboo CI byggesystem."
              :tech [:java :weblogic :drools :mks :maven :bamboo :sybase :easymock
-                    :junit :intellij :dbunit :aspectj]}
+                    :junit :intellij :dbunit :aspectj :architecture]}
             {:customer "Nordic Lottery Systems"
              :years [2007]
              :employer :kodemaker
@@ -410,7 +423,7 @@
              serverinstanser som hver av disse kjørte opptil 1000 samtidige
              klienter."
              :tech [:java :jboss :spring :oracle :aws-ec2 :jmeter :jdbc :junit :dbunit
-                    :cruisecontrol :easymock :webservices :xml :uml :intellij]}
+                    :cruisecontrol :easymock :webservices :xml :uml :intellij :architecture]}
             {:customer "Telenor Mobil"
              :years [2007]
              :employer :kodemaker
@@ -422,7 +435,7 @@
              foreta kall til Mobils mellomvare plattform Cos, og fast nett via
              en Service bus fra BEA."
              :tech [:java :j2ee :weblogic :spring :sybase :jdbc :junit :dbunit :cruise-control
-                    :easymock :aspectj :webservices :xml :uml :intellij]}
+                    :easymock :aspectj :webservices :xml :uml :intellij :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [2005]
              :employer :kodemaker
@@ -434,7 +447,7 @@
              slik at en del av oppgaven gikk ut på å utvikle disse. Utførte også
              en mindre integrasjonsjobb mellom Telenor/Netcom Elektroniske
              Ladekoder og BAXBIS (BankAxept)."
-             :tech [:java :j2se :j2me :apache-axis :sybase :ruby]}
+             :tech [:java :j2se :j2me :apache-axis :sybase :ruby :git :architecture]}
             {:customer "Telenor Mobil"
              :years [2002]
              :summary "Forvaltning og nyutvikling av Cos"
@@ -444,7 +457,7 @@
              arkitektur. Teamleder, funksjonell arkitekt for «nettnære systemer»
              etc. Deltok i flere intern prosjekter som arkitekt og utvikler."
              :tech [:java :j2ee :weblogic :spring :corba :sybase :jdbc :oracle :junit :dbunit
-                    :cruisecontrol :mockobjects :aspectj :servlet :webservices :xml :uml :intellij]}
+                    :cruisecontrol :mockobjects :aspectj :servlet :webservices :xml :uml :intellij :architecture]}
             {:customer "Arrive, Nordea, Europay Norway"
              :years [2002]
              :employer :objectware
@@ -454,7 +467,7 @@
              concept for bruk av webservices i Objectware og Nordeas
              egenutviklede J2EE baserte rammeverk JEFF/Coffee. Design og
              utvikling av en online saldooversikt for EuroCard-kunder"
-             :tech [:java :j2ee :websphere :visual-age-for-java :sybase]}
+             :tech [:java :j2ee :websphere :visual-age-for-java :sybase :architecture]}
             {:customer "Gjensidige NOR"
              :years [2002]
              :employer :objectware
@@ -468,7 +481,7 @@
              :summary "eFaktura"
              :description "eFaktura – Integrasjon av eFakturafunksjonalitet til
              iBank (K-Nettbank)."
-             :tech [:java :jbuilder :webmacro :tandem]}
+             :tech [:java :jbuilder :webmacro :tandem :svn :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [2000]
              :employer :objectware
@@ -478,7 +491,7 @@
              Utviklet bl.a et MVC rammeverk på toppen av Servlet API'et, samt en
              screenscraping løsning pga at tilsvarende løsningen ikke eksisterte
              eller ikke var modne til bruk i produksjon."
-             :tech [:java :jbuilder :webmacro :tandem :mvs :awt :swing :cobol]}
+             :tech [:java :jbuilder :webmacro :tandem :mvs :awt :swing :cobol :cvs :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [1999]
              :employer :objectware
@@ -488,21 +501,21 @@
              på toppen av Servlet API'et, samt en screenscraping løsning pga at
              tilsvarende løsningen ikke eksisterte eller ikke var modne til bruk
              i produksjon."
-             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet]}
+             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet :cvs :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [1998]
              :summary "Kompetansebase"
              :employer :objectware
              :description "Kompetansebase – Design og utvikling av en
              kompetansebase for internt bruk i BBS."
-             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet]}
+             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet :cvs :architecture]}
             {:customer "Norges Bank"
              :years [1998]
              :summary "Utvikling av et system for håndtering av Nattsafer"
              :employer :quick
              :description "Videreutvikling av et administrasjonssystem for
              opptelling og kontroll av nattsafer."
-             :tech [:delphi :sybase]}
+             :tech [:delphi :sybase :cvs]}
             {:customer "VingCard"
              :years [1997]
              :employer :quick
@@ -510,14 +523,14 @@
              :description "Design og utvikling av «Persona», et
              administrasjonssystem for utstedelse og vedlikehold av magnetkort
              for kortbaserte låssystemer"
-             :tech [:delphi :interbase :ole]}
+             :tech [:delphi :interbase :ole :architecture]}
             {:customer "IT-Medicine"
              :years [1996]
              :summary "An Encyclopedia of Oral Mucosal Lesions"
              :employer :quick
              :description "Utvikling av «An Encyclopedia of Oral Mucosal
              Lesions», Et CD-ROM basert leksikon for tannleger."
-             :tech [:delphi :paradox]}
+             :tech [:delphi :paradox :architecture]}
             {:customer "Kommuneforlaget"
              :years [1996]
              :summary "Internettbokhandel"
@@ -531,13 +544,13 @@
              :description "Publikumsstøttesystem for helse og sosialavdelingen.
              Proof-of-concept for en Delphibasert løsning. Fikk innført Delphi
              som det prefererte utviklingsverktøy i kommunen."
-             :tech [:delphi :sybase :erwin :windows]}
+             :tech [:delphi :sybase :erwin :windows :sourcesafe]}
             {:customer "Bærum Kommune"
              :years [1995]
              :employer :systemservice
              :description "Design og utvikling og design av kommunens økonomi,
              lønn og personalsystem."
-             :tech [:cpp :visual-basic :sybase :erwin :windows-nt]}
+             :tech [:cpp :visual-basic :sybase :erwin :windows-nt :sourcesafe]}
             {:customer "Bærum Kommune"
              :years [1994]
              :employer :systemservice
@@ -558,27 +571,13 @@
                utviklingsavdeling der vi utviklet diverse systemer for
                kommunen."}}
 
- :cv {:default {:preferred-techs [:kotlin :clojure :clojurescript]}}
  :education-summary "NHI"
- :experience-since 1994
- :qualifications ["Senior Systemutvikler"
-                  "Clojure, Clojurescript"
-                  "Kotlin"
-                  "Docker, DockerCloud, Elasticsearch"
-                  "iOS, Cocoa"
-                  "Ruby og Rails"
-                  "Java plattform"
-                  "Groovy/Grails"
-                  "HTML, CSS"
-                  "Systemarkitektur og integrasjon"
-                  "Agile metoder, Scrum"]
+ 
  :certifications [{:name "Profesjonelt styrearbeid", :year 2011}
                   {:name "Retorikk", :year 2010}
                   {:name "Certified ScrumMaster, London/QCon", :year 2005}
                   {:name "Sun Certified Programmer for Java 2 platform", :year 2000}
                   {:name "Certified Delphi Programmer", :year 1995}]
- :relationship-status "Samboer, 2 barn"
- :born 1967
  :education [{:institution "NHI Datahøyskolen"
               :years [1992 1993 1994]
               :subject "NHI DH-Kandidat"}
@@ -592,24 +591,4 @@
               :years [1983 1984]
               :subject "Grunnkurs Maskin og Mekaniker"}]
 
- :cv/description "André har jobbet med systemutvikling siden 1994, og har
- gjennom denne perioden opparbeidet seg en bred og solid erfaring innenfor en
- rekke teknologier og bransjer. Han kler mange roller, og har i tillegg til rene
- utviklingsoppgaver ved flere anledninger fungert som teamleder, arkitekt og
- teknisk prosjektleder.
-
- André er alltid sulten etter å lære seg nye programmeringsspråk, teknologier og
- plattformer, og følger derfor godt med i hva som rører seg i bransjen. André
- har mange års erfaring med Objektorienterte språk, både på Java plattformen, 
- Ruby og iOS. I de siste årene så har han fått stor sans for funksjonell 
- programmering, og har hatt flere prosjekter hvor dette benyttes.
-
- Han har gjennom sin erfaring opparbeidet en sunn skepsis for nye \"silver bullets\" 
- som jevnlig dukker opp i bransjen, men har samtidig et øye for hva som faktisk kan 
- være til nytte i forskjellige anledninger.
-
- André har sansen for enkle løsninger, og fokuserer på å ikke bringe inn ny
- teknologi og rammeverk uten av det faktisk vil gi en gevinst for prosjektet og
- kunden. Han er preget av yrkesstolthet, er nøyaktig, og setter sin ære i å
- levere riktig kvalitet."
 }
