@@ -2,8 +2,8 @@
  :name ["Magnus" "Rundberget"]
  :title "Systemutvikler"
  :start-date "2007-04-01 00:07"
- :description "Magnus er en ringrev som er like engasjert (om ikke mer) i faget sitt nå, enn da han skrev sine første Commodore 64 program på 80 tallet.
-               Han er analytisk av natur og går ofte de ekstra milen for å sørge for at rikig ting blir levert så fort som mulig med så høy kvalitet som mulig.
+ :description "Magnus er en ringrev som er like engasjert (om ikke mer) i faget sitt nå, enn da han skrev sine første Commodore 64-program på 80 tallet.
+               Han er analytisk av natur og nøler ikke med å brette opp ermene for å sørge for at rikig ting blir levert så fort som mulig med så høy kvalitet som mulig.
 
                Med sin bredde og erfaring kan Magnus ta mange forskjellige roller i et prosjekt.
                Han passer nok aller best i team med fokus på hyppige leveranser og kontinuerlig forbedring.
@@ -29,7 +29,7 @@
  :relationship-status "Gift, 2 barn"
  :born 1973
  :qualifications ["Opprinnelig backendutvikler som har virkelig har fått sansen for frontendutvikling de siste årene"
-                  "Funksjonell programmerer med OO bakgrunn"
+                  "Funksjonell programmerer med OO-bakgrunn"
                   "Solid erfaring på arkitektur, analyse og design, men liker best å kode"
                   "Yter mest optimalt i små smidige team med fokus på hyppige leveranser, læring og trivsel."]
  :presence {:cv "magnus"
@@ -421,7 +421,7 @@
             {:customer "Aprila Bank"
              :years [2017]
              :employer :kodemaker
-             :summary "Etablering og utvikling av tjenster for en ny bank for B2B markedet."
+             :summary "Etablering og utvikling av tjenster for en ny bank for B2B-markedet."
              :description "Utvikling av tjenster/produkter for ny B2B bank.
              Startup som har som mål å tilby banktjenester til små og
              mellomstore bedrifter på en helt ny og spennend måte. Oppgaver:
