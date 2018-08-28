@@ -45,8 +45,8 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:clojurescript :cordova :svg :d3 :aws]
-        :favorites-at-the-moment [:datomic :emacs :clojurescript]
+ :tech {:using-at-work [:kubernetes :clojurescript :cordova :svg :d3 :aws]
+        :favorites-at-the-moment [:datomic :kubernetes :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
  :qualifications ["Fullstack, jobber like gjerne med backend som frontend"
@@ -265,7 +265,7 @@
              :summary "App for iOS og Android: Cordova og ClojureScript"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøtende backend-systemer og infrastruktur."
-             :tech [:clojurescript :cordova :svg :d3 :terraform :packer :aws :aws-ec2
+             :tech [:clojurescript :cordova :svg :kubernetes :terraform :d3 :packer :aws :aws-ec2
                     :aws-iam :aws-rds :aws-route53 :aws-vpc :docker-swarm :traefik :fluentd
                     :datadog :git]
              :start "2018-04"}
