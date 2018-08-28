@@ -100,18 +100,18 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                        :customer "Posten Norge AS - Digipost"
                        :logo "/logos/digipost.svg"
                        :logo-width 110}
-                      {:blurb "Utvikling, forvaltning og drift av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk"
+                      {:blurb "Utvikling og drift av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk"
                        :customer "Norwegian"
                        :logo "/logos/norwegian.png"}]
 
  :projects [{:customer "Posten Norge AS - Digipost"
              :years [2017 2018]
              :employer :bekk
-             :summary "Videreutvikling, farvaltning og teamledelse på Digipost"
-             :description "Videreutvikling og forvaltning av systemer på Digipost. Frode har i perioden vært teamleder for det største utviklingsteamet på Digipost."
+             :summary "Videreutvikling og teamledelse på Digipost"
+             :description "Videreutvikling av systemer på Digipost. Frode har i perioden vært teamleder for det største utviklingsteamet på Digipost."
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :postgresql :ansible :terraform
-                    :cloudstack :prometheus :kibana :elasticsearch :javascript :react :docker
-                    :haproxy :linux :centos :coreos :hazelcast :git
+                    :cloudstack :prometheus :kibana :elasticsearch :javascript :react :nodejs :docker
+                    :haproxy :linux :centos :coreos :hazelcast :git :go
                     :drone :bash :npm :nexus :github :trello :slack]}
             {:customer "Posten Norge AS - Digipost"
              :employer :bekk
@@ -152,14 +152,14 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                           Frode har opparbeidet seg stor tillitt hos kunden og blitt en av de mest sentrale utviklerne på Digipost.
                           Hans roller på prosjektet inkludere utvikler, arkitekt og teamleder."
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
-                    :cloudstack :kibana :elasticsearch :scala :javascript 
+                    :cloudstack :kibana :elasticsearch :scala :javascript :python
                     :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
                     :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
             {:customer "Norwegian Air Shuttle"
              :years [2005 2006 2007 2008 2009 2010]
              :employer :bekk
              :summary "Integrasjonsplatform/mellomvare for billettbestilling"
-             :description "Frode jobbet som systemutvikler og forvalter på foretningskritisk integrasjonsbuss som håndterer mer enn 90% av Norwegians billettbestillinger.
+             :description "Frode jobbet som systemutvikler på foretningskritisk integrasjonsbuss som håndterer mer enn 90% av Norwegians billettbestillinger.
                           Integrasjonsbussen er utviklet fra grunnen inhouse hos Norwegian og integrerer en stor del av de eksterne og interne systemene med høye sikkerhetskrav.
                           Disse integrasjonspunktene inkluderer bl.a. databaser, Amadeus GDS, SAP, kredittkortvalidering, BizTalk, økonomisystemer, diverse flyplassystemer,
                           norwegian.no, BankNorwegian og CallNorwegian. Frode var en del av et lite team som jobbet tett med flere avdelinger hos kunden og
