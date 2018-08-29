@@ -1,6 +1,6 @@
 {:id :ronny
  :name ["Ronny" "Løvtangen"]
- :title "Partner"
+ :title "Utvikler"
  :start-date "2008-01-01"
  :description "Ronny er en allsidig utvikler med erfaring fra de fleste sider innen javautvikling. Ronny er en humørspreder og drivkraft i det sosiale livet. Påtar seg gjerne ansvar utover det vanlige og er en person som går godt overens med alle."
 
@@ -14,9 +14,9 @@
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:react :es6 :groovy :grails]
-        :using-at-work [:react :es6 :sass :groovy :grails :ansible]
-        :want-to-learn-more [:kubernetes :docker]}
+ :tech {:favorites-at-the-moment [:react :es6 :groovy]
+        :using-at-work [:react :es6 :redux :groovy :grails :ansible]
+        :want-to-learn-more [:clojure :clojurescript :kubernetes :docker]}
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
@@ -43,35 +43,56 @@
  :projects [
 
             {:customer "NSB"
-             :years [2017 :ongoing]
+             :start "2018-05"
+             :end "2018-08"
+             :employer :kodemaker
+             :summary "Tjenestevarsling"
+             :description "Utvikling av en applikasjon for oppfølging av endringer i tjeneste for lokførere og konduktører"
+             :tech [:tomcat :groovy :grails :create-react-app :yarn :node :react :redux :jest :sse :gradle :java :spring :spock :git :haproxy :activemq :mariadb]}
+
+            {:customer "NSB"
+             :start "2018-01"
+             :end "2018-03"
+             :employer :kodemaker
+             :summary "UsrPwd 2"
+             :description "UsrPwd. Videreutvikling av en tjeneste for autentisering"
+             :tech [:tomcat :groovy :grails :java :spring :spock :git :rest :ad :ldap :haproxy]}
+
+            {:customer "NSB"
+             :start "2016-10"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Topas"
              :description "Topas. Utvikling av backend til en Android-applikasjon for lokførere og konduktører."
              :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ansible :ehcache :quartz :rest :activemq :mariadb]}
 
             {:customer "NSB"
-             :years [2017 :ongoing]
+             :start "2017-08"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Usrapi"
              :description "Usrapi. Utvikling av tjenester for tilgjengeliggjøring av data fra Active Directory / LDAP."
              :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :ldap :mariadb]}
 
             {:customer "NSB"
-             :years [2017 :ongoing]
+             :start "2017-01"
+             :end "2018-08"
              :employer :kodemaker
              :summary "PersonnelInfoSubscriber"
              :description "PaOListener. Utvikling av applikasjon for mottak av endringer i tjeneste for lokfører/konduktør og distribusjon av endring til andre applikasjoner"
              :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :activemq :mariadb]}
 
             {:customer "NSB"
-             :years [2015 :ongoing]
+             :start "2015-01"
+             :end "2018-08"
              :employer :kodemaker
              :summary "PaOListener"
              :description "PaOListener. Utvikling av applikasjon for å oppdage endringer i et api og sende melding til andre applikasjoner."
-             :tech [:tomcat :groovy :grails :java :spring :spock :git :haproxy :ehcache :quartz :rest :soap :activemq :mariadb]}
+             :tech [:tomcat :groovy :grails :kafka :java :spring :spock :git :haproxy :ehcache :quartz :rest :soap :activemq :mariadb]}
 
             {:customer "NSB"
-             :years [2014 :ongoing] ;10.2014-
+             :start "2014-10"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Mozart"
              :description "Mozart. Utvikling av en applikasjon for å fore flere
@@ -83,7 +104,8 @@
                     :activemq :mariadb]}
 
             {:customer "NSB"
-             :years [2014 :ongoing] ;07.2014-
+             :start "2014-07"
+             :end "2018-08"
              :employer :kodemaker
              :summary "TIM 2"
              :description "TIM 2. Utvikling av en mobil webapplikasjon hvor
@@ -93,7 +115,8 @@
                     :spring :junit :git :svn :soap :apache :ehcache]}
 
             {:customer "NSB"
-             :years [2014 :ongoing] ;01.2014-
+             :start "2014-01"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Togbrettmeny"
              :description "Togbrettmeny. Utvikling av en applikasjon med
@@ -104,7 +127,8 @@
                     :less :bootstrap :android-intents :git :svn :apache :ehcache]}
 
             {:customer "NSB"
-             :years [2014 2015] ;01.2014-12.2015
+             :start "2014-01"
+             :end "2015-12"
              :employer :kodemaker
              :summary "Trafficnow"
              :description "Trafficnow. Utvikling av et API for status på
@@ -113,7 +137,8 @@
                     :rest :json :xml :google-image-charts]}
 
             {:customer "NSB"
-             :years [2013 2014 2105] ;10.2013-12.2015
+             :start "2013-10"
+             :end "2015-12"
              :employer :kodemaker
              :summary "RASK"
              :description "RASK / Min energi. Utvikling av en applikasjon for
@@ -124,7 +149,8 @@
                     :ehcache :quartz :vagrant :soap]}
 
             {:customer "NSB"
-             :years [2013 :ongoing] ;04.2013
+             :start "2013-04"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Usroid"
              :description "Usroid. Utvikling av en OpenID provider for innlogging
@@ -134,7 +160,8 @@
                     :css :bootstrap :git :svn :apache :ehcache :quartz :soap :rest :ad]}
 
             {:customer "NSB"
-             :years [2012 :ongoing] ;04.2012-
+             :start "2012-04"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Apast"
              :description "Apast. Utvikling av en applikasjon som mottar
@@ -143,7 +170,8 @@
              :tech [:tomcat :groovy :grails :java :spring :junit :git :svn :rest :apache :ehcache :activemq]}
 
             {:customer "NSB"
-             :years [2011 2012 2013 2014 2015] ;07.2011-01.2015
+             :start "2011-07"
+             :end "2015-01"
              :employer :kodemaker
              :summary "ESO, Effektive stasjonsopphold"
              :description "ESO, Effektive stasjonsopphold. Utvikling av en
@@ -153,7 +181,8 @@
              :tech [:tomcat :groovy :grails :java :spring :junit :git :svn :soap :rest :ehcache :quartz :apache-poi]}
 
             {:customer "NSB"
-             :years [2011 2012 2013] ;05.2011-06.2013
+             :start "2011-05"
+             :end "2013-06"
              :employer :kodemaker
              :summary "GSM-R Telefonkatalog"
              :description "GSM-R Telefonkatalog. Utvikling av en mobil
@@ -164,7 +193,8 @@
                     :css :apache :ehcache]}
 
             {:customer "NSB"
-             :years [2011 2012] ;02.2011-08.2012
+             :start "2011-02"
+             :end "2012-08"
              :employer :kodemaker
              :summary "Rapp"
              :description "Rapp. Utvikling av en applikasjon for oppsett og
@@ -174,7 +204,8 @@
                     :jquery-mobile :junit :git :svn :mysql :mongodb :soap :rest :apache]}
 
             {:customer "NSB"
-             :years [2011] ;02.2011-06.2011
+             :start "2011-02"
+             :end "2011-06"
              :employer :kodemaker
              :summary "UsrPwd"
              :description "UsrPwd. Utvikling av en tjeneste for autentisering,
@@ -183,7 +214,8 @@
              :tech [:tomcat :groovy :grails :java :spring :junit :svn :rest :oracle :ad :ldap :apache]}
 
             {:customer "NSB"
-             :years [2011] ;02.2011-03.2011
+             :start "2011-02"
+             :end "2011-03"
              :employer :kodemaker
              :summary "SNMP"
              :description "SNMP-Agent. Utvikling av en applikasjon å simulere
@@ -193,7 +225,8 @@
              :tech [:snmp :tomcat :groovy :grails :java :spring :html :css :junit :svn :mysql :soap]}
 
             {:customer "NSB"
-             :years [2010 :ongoing] ;06.2010-
+             :start "2010-06"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Småtroll"
              :description "Småtroll. Utvikling av en mobil webapplikasjon for
@@ -204,7 +237,8 @@
                     :spring :mysql :junit :spock :geb :git :svn :rest :bootstrap :apache :ehcache :quartz :struts2]}
 
             {:customer "NSB"
-             :years [2010 2011 2012 2013 2014] ;01.2010-07.2014
+             :start "2010-01"
+             :end "2014-07"
              :employer :kodemaker
              :summary "TIM"
              :description "TIM. Utvikling av en mobil webapplikasjon hvor
@@ -214,7 +248,8 @@
                     :git :svn :soap :apache :struts2]}
 
             {:customer "NSB"
-             :years [2009 :ongoing] ;04.2009-
+             :start "2009-04"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Troll"
              :description "Troll. Utvikling av en kartapplikasjon for
@@ -225,7 +260,8 @@
                     :asciidoctor :gradle :maven-2 :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
 
             {:customer "NSB"
-             :years [2008 2009 2010] ;11.2008-12.2010
+             :start "2008-11"
+             :end "2010-12"
              :employer :kodemaker
              :summary "ENKA"
              :description "ENKA, ENØK for lokførere. Utvikling av en
@@ -237,7 +273,8 @@
                     :fusioncharts :svn :maven-2 :oracle :quartz :apache-poi]}
 
             {:customer "NSB"
-             :years [2008 :ongoing] ;11.2008-
+             :start "2008-11"
+             :end "2018-08"
              :employer :kodemaker
              :summary "Diverse infrastruktur"
              :description "Diverse. Oppsett av Git over HTTPS med
@@ -247,10 +284,11 @@
              serverdrift og oppsett CentOS. Oppsett av TLS-sertifikater.
              Installasjon av Jenkins, Nexus m.m. Oppsett og konfigurasjon av
              Tomcat, Apache HTTP Server, HAProxy m.m."
-             :tech [:git :tomcat :apache :haproxy :nexus :jenkins :munin :jira :confluence]}
+             :tech [:git :ansible :tomcat :apache :haproxy :nexus :jenkins :munin :jira :confluence :centos]}
 
             {:customer "Nordic Lottery Systems"
-             :years [2008] ;01.2008-11.2008
+             :start "2008-01"
+             :end "2008-11"
              :employer :kodemaker
              :summary "Internettspill"
              :description "Internettspill. Utvikling av et nytt internettspill
@@ -263,7 +301,8 @@
                     :flex :actionscript :json :svn :cvs :maven-2 :apache]}
 
             {:customer "CSAM/Rikshospitalet"
-             :years [2003 2004 2005 2006 2007 2008] ;09.2003-01.2008
+             :start "2003-09"
+             :end "2008-01"
              :employer :objectware
              :summary "Klinisk portal"
              :description "Klinisk portal. Utvikling av «Klinisk Portal», en
@@ -278,7 +317,8 @@
                     :jstl :spring :junit :hudson :apache-poi :watir]}
 
             {:customer "DnB NOR"
-             :years [2004] ;07.2004-09.2004
+             :start "2004-07"
+             :end "2004-09"
              :employer :objectware
              :summary "Sparekalkulatorer"
              :description "Sparekalkulatorer. Utvikling av diverse kalkulatorer
@@ -287,7 +327,8 @@
              :tech [:java :atg-dynamo :javascript :css :html :sourcesafe]}
 
             {:customer "Schlumberger"
-             :years [2003] ;05.2003-08.2003
+             :start "2003-05"
+             :end "2003-08"
              :employer :objectware
              :summary "Kundesystem"
              :description "Kundesystem. Utvikling av tykk klient for
@@ -295,7 +336,8 @@
              :tech [:java :swing]}
 
             {:customer "Objectware (internprosjekt)"
-             :years [2003] ;04.2003-05.2003
+             :start "2003-04"
+             :end "2003-05"
              :employer :objectware
              :summary "Novell Composer connector"
              :description "Novell Composer connector. Utvikling av en connector for
@@ -303,7 +345,8 @@
              :tech [:novell-extend-composer-appserver :java :jdbc :weblogic]}
 
             {:customer "Cicero"
-             :years [2002 2003 2004] ;06.2002-04.2004
+             :start "2002-06"
+             :end "2002-04"
              :employer :objectware
              :summary "Cicero Financial Planner"
              :description "Cicero Financial Planner. Utvikling av Cicero
@@ -315,7 +358,8 @@
                     :html :cvs :ant :intellij :oracle9ias :j2ee :cruise-control :dreamweaver-mx]}
 
             {:customer "Gjensidige NOR"
-             :years [2001 2002] ;07.2001-01.2002 04.2002-05.2002
+             :start "2002-04"
+             :end "2002-05"
              :employer :objectware
              :summary "Salgsstøtteapplikasjoner"
              :description "Salgsstøtteapplikasjoner. Utvikling av
@@ -326,7 +370,32 @@
                     :rational-clearcase :intellij]}
 
             {:customer "Tybring Gjedde ASA"
-             :years [2000 2001 2002] ;06.2000-06.2001 01.2002-04.2002
+             :start "2002-01"
+             :end "2001-04"
+             :employer :objectware
+             :summary "Netshop"
+             :description "Netshop. Ny ehandelsløsning og administrasjonsmodul
+             med underliggende produktdatabase. Integrasjon mot SAP/R3 og
+             AMTrix. Oppgaver: Analyse, design og utvikling. Ansvar for
+             datamodellering (verktøy: PowerDesigner). Utvikling av adminmodul
+             og mellomlag i Java."
+             :tech [:java :ejb :jdbc :silverstream :oracle]}
+
+            {:customer "Gjensidige NOR"
+             :start "2001-07"
+             :end "2002-01"
+             :employer :objectware
+             :summary "Salgsstøtteapplikasjoner"
+             :description "Salgsstøtteapplikasjoner. Utvikling av
+             salgsstøtteapplikasjoner for salg av diverse forsikringsprodukter.
+             Oppgaver: Design og utvikling av javaklient samt utvikling av
+             servertjeneste for generering av PDF og lagring til OnDemand."
+             :tech [:jfc :ibm-content-manager-ondemand :db2 :pdf :rational-rose
+                    :rational-clearcase :intellij]}
+
+            {:customer "Tybring Gjedde ASA"
+             :start "2000-06"
+             :end "2001-06"
              :employer :objectware
              :summary "Netshop"
              :description "Netshop. Ny ehandelsløsning og administrasjonsmodul
@@ -352,7 +421,19 @@
                :usit {:description "Brukerstøtte/operatør.
                Deltidsstilling ved siden av studier."}}
 
- :cv {}
+ :project-highlights [{:blurb "Rikt, interaktivt kart over togtrafikken. Viktig applikasjon for driftoperativt senter."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}
+                      {:blurb "Visualisering av strømforbruk for lokførere. For å trigge konkurranseinnstinkt og spare energi."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}
+                      {:blurb "Virksomhetskritisk motor for sending av toginformasjon til flere mottakere. Integrasjon med en rekke kilder."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}
+                      ]
+
+ :cv {:default {:exclude-techs [:dreamweaver-mx :struts :atg-dynamo :webwork :fusioncharts :google-image-charts :weblogic :jboss-messaging :jboss-portal]}}
+
  :cv/description "Ronny har lang erfaring med systemutvikling. Han er spesielt
 fokusert på å lage webapplikasjoner med høy ytelse, god interaksjon og
 brukervennlighet, som virker på tvers av nettlesere. Har erfaring med
@@ -362,13 +443,12 @@ rundt Groovy og Grails. Ronny er sosial og går godt overens med kunde og
 kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
  :education-summary "Cand. Mag. Informatikk, UiO"
  :experience-since 2000
- :qualifications ["Senior systemutvikler"
-                  "Løsningsarkitekt"
-                  "Frontendarkitekt"
-                  "Java EE"
-                  "Groovy og Grails"
+ :qualifications ["Fullstackutvikler som liker best å jobbe med ting som synes"
+                  "Opptatt av å avdekke kundens behov og møte disse"
+                  "Engasjert i miljøet rundt Groovy og Grails"
+                  "Tar ansvar for helheten og blir gjerne en person folk går til"
                   "Sterk på frontendutvikling"
-                  "Scrum / smidig utvikling"]
+                  ]
  :certifications [{:name "Profesjonelt styrearbeid", :year 2011}
                   {:name "Retorikk og presentasjonsteknikk", :year 2010}
                   {:name "Enonic Vertical Site, Utvikler 2 - Malutvikling", :year 2009}
@@ -387,7 +467,7 @@ kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
               :subject "Cand. Mag. Informatikk"}]
  :domain-skills [{:title "Jernbane"
                   :description
-                  "Inngående kjennskap til hvordan norsk jernbane fungerer, etter mange år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. Stemplet som tognerd."}
+                  "Inngående kjennskap til hvordan norsk jernbane fungerer, etter mange år hos NSB. Også kjennskap til svensk jernbane etter flere prosjekter for Tågkompaniet. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. Stemplet som tognerd."}
                  {:title "Helseforetak"
                   :description
                   "God kunnskap etter 4 år på Rikshospitalet. Var delaktig i kravinnsamlingsprosessen, som blant annet gikk ut på å ha workshops med leger og sykepleiere. Er gift med en lege, noe som gir ytterligere innblikk i helse-Norge."}
