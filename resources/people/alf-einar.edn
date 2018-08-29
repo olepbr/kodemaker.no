@@ -1,6 +1,6 @@
 {:id :alf-einar
  :name ["Alf" "Einar" "Solbakken"]
- :title "Partner"
+ :title "Utvikler"
  :start-date "2008-07-01"
  :description "Alf liker enkle og pragmatiske løsninger som kan dekke kundens behov. Han liker godt å sette seg inn i nye domener, programmeringsspråk og teknologier, og har kapasitet til raskt å omsette teori til praksis."
 
@@ -14,8 +14,26 @@
                          :coderwall "aesolbakken"}
  	
  :tech          {:favorites-at-the-moment [:clojure :clojurescript]
-                 :want-to-learn-more      [:devops :docker]}
-                 
+                 :want-to-learn-more      [:devops :kubernetes]
+                 :using-at-work [:clojure :clojurescript :react]}
+
+ :cv {:default {:preferred-techs [:clojure :clojurescript]}}
+
+ :project-highlights [{:blurb "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
+                       :customer "Animalia"
+                       :logo "/logos/animalia.svg"
+                       :logo-width 139}
+                      {:blurb "Arkitektur og implementering av forsvarets løsning for synkronisering av masterdata"
+                       :customer "Forsvaret"
+                       :logo "/logos/forsvaret.svg"}
+                      {:blurb "Videreutvikling av NSB sin løsning for visualisering av posisjonsdata for tog i sanntid"
+                       :customer "NSB"
+                       :logo "/logos/nsb.svg"}
+                      ]
+ :endorsement-highlight {:author "Ketil Lund"
+                         :title "Principal scientist at Forsvarets Forskningsinstitutt"
+                         :quote "Alf jobbet for oss i ca 3 mnd i forbindelse med et pilotprosjekt rundt integrasjon av ulike informasjonssystemer. Vi er svært fornøyde med jobben Alf gjorde. Han er effektiv, har stor innsatsvilje og er en trivelig person å jobbe sammen med."}
+
  :recommendations [{:title "Clojure from the ground up"
                     :blurb "En god begynnelse for de som ønsker å komme igang med Clojure. Passer godt til både nye programmerere og de litt mer erfarne"
                     :link {:url "http://aphyr.com/posts/301-clojure-from-the-ground-up-welcome"
@@ -225,7 +243,6 @@ I addition he obtained a good knowledge of the Pension Business."
                   }
                  ]
 
- :cv {}
  :born 1972
  :relationship-status "Samboer, 3 barn"
  :education-summary "Ingeniør HiST, KS"
@@ -243,16 +260,9 @@ I addition he obtained a good knowledge of the Pension Business."
  Alf er en lagspiller og samarbeider godt med sine medarbeidere. Han er opptatt
  av at teamet skal fungere og har egenskaper for å medvirke til dette."
 
- :qualifications ["Senior Systemutvikler"
-                  "Løsningsarkitekt"
-                  "Java plattform"
-                  "JavaEE"
-                  "Facebook React"
-                  "Groovy og Grails"
-                  "Ruby og Rails"
-                  "Systemarkitektur og integrasjon"
-                  "XP-praksiser (TDD, CI, med mer)"
-                  "SCRUM"]
+ :qualifications ["Fullstackutvikler"
+                  "Foretrekker funksjonell programmering"
+                  "Ansvarsfull og samarbeidsvillig"]
 
  :education [{:institution "Høyskolen i S-Trøndelag"
               :years [1998 2001]
