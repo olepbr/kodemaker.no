@@ -48,9 +48,7 @@
                            AWS? Be om en dag med " [:a {:href "/kristian/"} "Kristian"]
                            ", " [:a {:href "/anders/"} "Anders"]
                            " eller " [:a {:href "/christian/"} "Christian"] ".
-                           Trenger teamet hjelp til å komme igang med Ansible? "
-                           [:a {:href "/kjetil/"} "Kjetil"] " ordner opp. Har du
-                           sett et foredrag med en Kodemaker som syntes relevant
+                           Har du sett et foredrag med en Kodemaker som syntes relevant
                            for prosjektet ditt? Spør om en ekspertdag."]
                       [:p "Ekspertdager brukes også aktivt av Kodemakerne selv
                            der de øyner en mulighet for aksellerert læring.
