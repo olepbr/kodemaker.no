@@ -1,11 +1,11 @@
 {:id :kristoffer
  :name ["Kristoffer" "Moe"]
- :title "Sjefskonsulent"
+ :title "Seniorkonsulent"
  :start-date "2003-09-01 09:00"
  :description "Kristoffer har vært i konsulentbransjen lenge, og bidrar gjerne på alle lag i systemutvikling, fra database opp
- til brukergrensesnitt, selv om hovedfokus er på Java. Han har alltid kundens behov i tankene, er analytisk men også pragmatisk
-  innstilt og holder kjepphestene innelåst i stallen og verktøykassen fri for gyldne hammere. Kristoffer gir seg ikke før
-  oppgaven er løst."
+ til brukergrensesnitt, selv om hovedfokus er på Java. Han liker å skrive kode så deklarativt som mulig, med navn som er
+ selvforklarende. Han har alltid kundens behov i tankene, er analytisk men også pragmatisk innstilt og holder kjepphestene
+ innelåst i stallen og verktøykassen fri for gyldne hammere. Kristoffer gir seg ikke før oppgaven er løst."
 
  :phone-number "922 36 798"
  :email-address "kristoffer@kodemaker.no"
@@ -24,24 +24,28 @@
                     Istedenfor å la objektene leve sitt eget liv og styre seg selv, kan man gi liv til omgivelsene rundt dem.
                     Lukten av Pacman setter seg i spillbrettet, og det er brettet som styrer spøkelsene etter Pacman. Lukten av fotballen
                     sprer seg i gressmatten, og spillerne blir sendt i retning av den. Oppgaven deres blir å sparke ballen vekk fra
-                     stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}]
+                     stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}
+                     {:title "Functors, Applicatives, And Monads In Pictures"
+                    :link {:url "http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html"
+                           :text "Les artikkel"}
+                    :tech [:functional-programming]
+                    :blurb "Hvis du også føler at bruk av begreper som \"skolemisering\" og \"monader\" ikke er annet enn hersketeknikk,
+                    gjør deg mindre sårbar for hersing ved å lese denne artikkelen med tegninger for dummies. Les den gjerne en gang til."}]
 
 
- :projects [{:customer "Tieto Norway AS"
-             :description "Tieto leverer et avansert system for håndtering av betalinger og bankkonti. Kundene er noen av verdens
-             største internasjonale banker. For å sikre kvalitet og leveringsevne mot nye og eksisterende kunder har Tieto begynt
-              omlegging til en mer agil arbeidsform og i en tid lagt mer vekt på systematisk oppfølging av kodekvalitet i utviklingen.
-              Kristoffer bidro med kodeforbedringer og oppdatering av automatiske tester"
-             :years [2017 2018]
+ :projects [{:customer "Protector Forsikring ASA"
+             :description "Videreutvikling og vedlikehold av Protectors applikasjoner for administrasjon av forsikringspoliser
+             i Protectors skadeforsikringsvirksomhet i bedriftsmarkeder i Norge, Sverige, Finnland, Danmark og Storbritannia."
+             :years [2018]
              :employer :kodemaker
-             :summary "Bidrag til høyning av kodekvalitet og testdekning"
-             :tech [:java :mq :git :svn :oracle :db2]}
+             :summary "Front- og backendutvikling"
+             :tech [:java :javascript :git :aurelia :tomcat :saml :docker :nodejs :ms-sql]}
             {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
              :employer :kodemaker
              :summary "Utvikling av nytt biblioteksystem for Deichmanske bibliotek"
-             :tech [:java :rdf :ractive :react :nodejs :jaxrs :apache-jena :fuseki :jetty
+             :tech [:java :rdf :ractive :react :nodejs :jax-rs :apache-jena :fuseki :jetty
                     :javascript :redux :nodejs :elasticsearch :rdf :ubuntu :go :ruby :cucumber :koha
                     :jenkins :phantomjs :docker :sass]}
             {:customer "Kommunal- og moderniseringsdepartementet"
@@ -240,12 +244,12 @@
              ]
 
  :cv {}
- :cv/description " Kristoffer har Cand Scient-grad fra Universitetet i Oslo og
+ :cv/description "Kristoffer har Cand Scient-grad fra Universitetet i Oslo og
  mer enn 20 års konsulenterfaring fra systemutvikling i større og mindre
- prosjekter hovedsaklig basert på JavaJEE-plattformen. Erfaring fra flere
+ prosjekter hovedsaklig basert på Java/JEE-plattformen. Han har erfaring fra flere
  bransjer, bl.a bank/forsikring, forsvar, telekom, digitale medier og offentlig
  forvaltning. Han er en ressursperson som er sosial og opptatt av at teamet som
- helhet leverer god kvalitet. Lang erfaring med Java og de fleste teknologier
+ helhet leverer god kvalitet. Lang erfaring med Java, JavaScript og de fleste teknologier
  rundt gjør at han gjerne bidrar på de fleste områder — fra integrasjon,
  sikkerhet og utvikling fra databaselag opp til brukergrensesnitt. Kristoffer er
  analytisk, men også pragmatisk og tar gjerne tak i nye problemstillinger.
@@ -257,17 +261,38 @@
  :education [{:institution "Universitet i Oslo"
               :years [1997]
               :subject "Cand Scient, Informatikk, karakter 1,6"}]
- :qualifications ["Senior Systemutvikler"
-                  "Frontend/backend/integrasjon"
+ :qualifications ["Frontend/backend/integrasjon"
                   "Java/JEE/JavaScript"
-                  "Sikkerhet"
                   "Selvstendig"
                   "Allsidig"]
- :certifications [{:name "Certified Scrum Master", :year 2007}
+ :certifications [{:name "Certified Scrum Master", :year 2017}
+                  {:name "Certified Scrum Master", :year 2007}
                   {:name "IBM Certfied Solution Developer", :year 2001}
                   {:name "IBM WebSphere Application Server (Standard Edition)"
                    :year 2001}
                   {:name "Object-Oriented Analysis and Design Test (IBM)", :year 2001}
                   {:name "SUN Certified Programmer for the Java 2 Platform"
                    :year 2001}]
+ :project-highlights [{:blurb "Ny tjenesteplattform for Deichmanske bibliotek basert på open source.
+                               Verktøy for katalogisering av bibliografiske data med RDF.
+                               Kraftig og brukervennlig søk med Elasticsearch."
+                      :customer "Deichmanske bibliotek"
+                      :logo "/logos/deichman.svg"
+                      :logo-height 30}
+                     {:blurb "Elektronisk valgadministrasjonssystem for konfigurasjon og gjennomføring av valg i Norge som bare MÅ virke
+                              på valgdagen, i tillegg til før og etter."
+                      :customer "Kommunal- og moderniseringsdepartementet"
+                      :logo "/logos/valgdir.png"}
+                      {:blurb "REST-API for salg av bredbånd til privatmarkedet med ordentlige HATEOAS-egenskaper som styrer
+                               salgsklienten gjennom bestillingsprosessen med hyperlinking."
+                      :customer "Broadnet"
+                      :logo "/logos/broadnet_transbg.png"}]
+
+ :endorsement-highlight {:author "Arve Søreide"
+                         :title "Program Manager IKT for nye Deichmanske hovedbibliotek"
+                         :quote "Kristoffer er konstruktiv og argumenterer med faglig tyngde når en skal ta viktige veivalg, og er
+                                 en effektiv programmerer som leverer kode av høy kvalitet. Han er en omgjengelig og vennlig kollega,
+                                 som vi gjerne anbefaler varmt til andre."}
+
+
 }
