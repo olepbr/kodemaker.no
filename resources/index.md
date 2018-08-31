@@ -147,9 +147,9 @@ utgangpunktet hadde ambisjoner om å få til.
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
 /react/                            /photos/tech/react.png
 /stig/                             /photos/people/stig/side-profile-square.jpg
+/elm/                              /photos/tech/elm.svg
 /anders/                           /photos/people/anders/side-profile-square.jpg
 /kristian/                         /photos/people/kristian/side-profile-square.jpg
-/kjetil/                           /photos/people/kjetil/side-profile-square.jpg
 /groovy/                           /photos/tech/groovy.png 2x
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
 /finn/                             /photos/people/finn/side-profile-square.jpg
