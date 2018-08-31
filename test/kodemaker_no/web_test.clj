@@ -26,11 +26,13 @@
 
  (let [urls (take split-index (keys (get-pages)))]
    (doseq [url urls]
-     (-> (app {:uri url}) :status) => 200)))
+     {:status (-> (app {:uri url}) :status)
+      :uri url} => {:status 200 :uri url})))
 
 (fact
  "Får vi 200 på hele siten? (del 2)" :slow :slow-2
 
  (let [urls (drop split-index (keys (get-pages)))]
    (doseq [url urls]
-     (-> (app {:uri url}) :status) => 200)))
+     {:status (-> (app {:uri url}) :status)
+      :uri url} => {:status 200 :uri url})))
