@@ -25,7 +25,7 @@
                        :logo-width 139}
                       {:blurb "Arkitektur og implementering av forsvarets løsning for synkronisering av masterdata"
                        :customer "Forsvaret"
-                       :logo "/logos/forsvaret.svg"}
+                       :logo "/logos/forsvaret.png"}
                       {:blurb "Videreutvikling av NSB sin løsning for visualisering av posisjonsdata for tog i sanntid"
                        :customer "NSB"
                        :logo "/logos/nsb.svg"}
