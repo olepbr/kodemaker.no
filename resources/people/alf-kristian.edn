@@ -25,7 +25,7 @@
  :phone-number    "997 92 226"
  :email-address   "alf.kristian@kodemaker.no"
 
- :presence        {:cv       "alfkristian"
+ :presence        {:cv       "alf-kristian"
                    :twitter  "stoyle"
                    :github   "stoyle"
                    :linkedin "/in/stoyle"}
