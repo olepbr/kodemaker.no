@@ -1,6 +1,6 @@
 {:id :august
  :name ["August" "Lilleaas"]
- :title "Programmerer"
+ :title "Systemutvikler"
  :start-date "2012-01-01"
  :description "August er opptatt av enkle løsninger og gode brukeropplevelser,
  og er glad i å bli utfordret. Han er like erfaren på backend som på frontend,
@@ -10,7 +10,7 @@
  :cv/description "August er full-stack webutvikler, og har tidligere jobbet som iOS-apputvikler.
 
 Han startet med Ruby on Rails, og beveget seg over på JVM-plattformen i 2012 og
-har erfaring med Clojure, Grails/Groovy og Spring/Java.
+har erfaring med Clojure, Kotlin, Grails/Groovy og Spring
 
 August liker å snakke, og du kan få et godt inntrykk av hvordan han oppleves ved
 å se presentasjonen [You Probably Don't Know How The Internet Actually Works](https://vimeo.com/74406482) fra
@@ -435,14 +435,17 @@ presentasjonen på hele konferansen!"
  :education [{:institution "Norges Musikkhøgskole"
               :years [2005 2006 2007]
               :subject "Bachelor, Klassisk piano utøvende (ikke fullført)"}]
- :qualifications ["Frontendutvikling"
-                  "Serversideutvikling"
-                  "Full-stack webutvikler"
-                  "Clojure, Java, Groovy, Kotlin"
-                  "Lucene, elasticsearch, fulltekstsøk"
-                  "HTML, HTML5, CSS, JavaScript"
-                  "iOS, Android, React Native"
-                  "Ruby, Ruby on Rails, Rack"
-                  "Node.js"
-                  "ActiveMQ"]
+ :qualifications ["Ekspert på GUI-programmering for web og mobilapper (både iOS og Android)"
+                  "Full-stack, jobber oftest med hele stacken, ikke bare front-end og GUI"
+                  "God på arkitektur og skalerbarhet, med tilhørende devops"]
+
+ :project-highlights [{:blurb "Full-stack + native app for nytt nordisk system for ekspressleveranser"
+                       :customer "Bring"
+                       :logo "/logos/bring.svg"}
+                      {:blurb "Full-stack utvikling av system for distribusjon av trafikkinformasjon"
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}
+                      {:blurb "Full-stack utvikling av system for hurtig planlegging av alternativ transport ved oppståtte avvik"
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}]
  }
