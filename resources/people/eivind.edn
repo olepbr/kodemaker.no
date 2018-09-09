@@ -1,6 +1,6 @@
 {:id :eivind
- :name ["Eivind" "Barstad" "Waaler"]
- :title "Kodemaker"
+ :name ["Eivind" "B" "Waaler"]
+ :title "Systemutvikler"
  :start-date "2015-09-01 00:09"
  :description "Eivind har mange års erfaring
                som utvikler og arkitekt på diverse
@@ -300,7 +300,7 @@
                           Han skaper rett og slett vakker kode.
 
                           En utvikler er ikke en utvikler. Det er stor forskjell på effektiviteten og evne
-                          til produsere kode med høy kvalitet. Eivind er i den ypperste klasse i forhold
+                          til å produsere kode med høy kvalitet. Eivind er i den ypperste klasse i forhold
                           til å omgjøre krav til kode med høy teknisk og funksjonell kvalitet. Han er sterk
                           på feilsøking, bl.a. i forbindelse med tunge prosessmotorer og håndterer både
                           frontend og backend godt.
@@ -529,14 +529,33 @@
              :description "Utviklet internt samhandlingssystem."
              :tech [:vbscript :asp :iis :mssql]}]
 
+ :project-highlights [{:blurb "Utvikling av nye og eksisterende løsninger for betaling, ordre og produkt."
+											 :customer "FINN.no"
+											 :logo "/logos/finn.png"
+											 :logo-width 100}
+											{:blurb "Websider og selvbetjening for boligselgere. Grensesnitt og integrasjoner."
+											 :customer "BN Bolig"
+											 :logo "/logos/bnbolig.png"
+											 :logo-width 55}
+											{:blurb "Utvikling av nytt spillkonsept. Bildeanalyse, spillutvikling, grensesnitt og drift/monitorering."
+											 :customer "Oche"
+											 :logo "/logos/oche.svg"
+											 :logo-width 100}]
+
+ :endorsement-highlight {:author "Kjell Sverre Birkeland"
+												 :title "Prosjektleder, Skatteetaten"
+												 :quote "En utvikler er ikke en utvikler. Det er stor forskjell på effektiviteten og evne
+													       til å produsere kode med høy kvalitet. Eivind er i den ypperste klasse i forhold
+													       til å omgjøre krav til kode med høy teknisk og funksjonell kvalitet."}
+
  :cv {}
 
  :education-summary "Høgskoleingeniør Systemutvikling, HiST / Master Informatikk, UiO"
  :experience-since 1999
- :qualifications ["Solid og erfaren fullstack-utvikler"
-                  "Dreven på testdrevet utvikling"
-                  "Opptatt av hyppige leveranser og smidig utvikling"
-                  "Tar oppgaver i hele stacken, fra deployment og bygg, via databaser og backend til frontend"]
+ :qualifications ["Solid og erfaren fullstack-utvikler. Trives både i avanserte server-algoritmer og i moderne grensesnitt."
+                  "Erfaren problemløser - senest innen bildeanalyse og spill!"
+                  "Benytter funksjonell programmering og liker små autonome team."
+                  "Leter etter enkle løsninger på kompliserte problemer. Gir aldri opp før problemet er løst eller feilen funnet!"]
  :certifications [{:name "Sun Certified Enterprise Architect (SCEA)", :year 2004}
                   {:name "Sun Certified Java Developer (SCJD)", :year 2004}
                   {:name "Sun Certified Business Component Developer (SCBCD)"
