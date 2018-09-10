@@ -1,6 +1,6 @@
 {:id :fredrik
  :name ["Fredrik" "Aubert"]
- :title "Partner"
+ :title "Utvikler"
  :start-date "2009-01-01"
  :description "Fredrik nesten 20 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer generelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
 
@@ -13,12 +13,11 @@
             :github "fredrikaubert"}
 
  :tech {:favorites-at-the-moment [:react :redux :groovy :grails ]
-        :want-to-learn-more [:clojure]}
+        :want-to-learn-more [:clojure :kubernetes]
+        :using-at-work [:react :redux :groovy :grails]}
 
  :hobbies [{:title "MC"
-            :description "Nærkontakt med naturen. Lukt, på godt og vondt. Du legger deg ned
-                              i svingen, vrir på dorullen og aksellererer ut av svingen. Absolutt
-                              fokus - hjernerens."
+            :description "Aktiv i firmaets MC-klubb; Codebreakers, som årlig drar på flere turer rundt om i Norge. Liker å utvikle mc-ferdighetene på bane."
             :illustration "/illustrations/hobbies/fredrik-mc.jpg"},
 
            {:title "Home automation"
@@ -240,14 +239,10 @@
  yte sitt beste. "
  :education-summary "Dataingeniør, HiG"
  :experience-since 1999
- :qualifications ["Senior Systemutvikler"
-                  "Løsningsarkitekt"
-                  "Systemarkitektur og integrasjon"
-                  "XP-praksiser (TDD, CI, med mer)"
-                  "React og Redux"
-                  "Groovy og Grails"
-                  "Java plattform"
-                  "SCRUM"]
+ :qualifications ["Fullstack utvikler"
+                  "Lang erfaring med Groovy og Grails"
+                  "God domeneforståelse og gode samarbeidsevner"
+                  ]
  :certifications [{:name "JavaScript/JQuery", :year 2009}
                   {:name "Sun Certified Business Component Developer", :year 2006}
                   {:name "Sun Certified Java Developer", :year 2005}
@@ -278,4 +273,20 @@
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}]
+
+ :project-highlights [{:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"
+                       :logo-width 63}
+                      {:blurb "Planlegging og bestillingssystem for ammunisjon"
+                       :customer "Forsvaret"
+                       :logo "/logos/forsvaret.png"}
+                      {:blurb "System for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy"
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"
+                       :logo-width 63}]
+
  }
+
+
+ 
