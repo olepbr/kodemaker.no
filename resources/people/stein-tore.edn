@@ -2,10 +2,34 @@
  :name          ["Stein Tore" "Tøsse"]
  :title         "Kodemekker"
  :start-date    "2010-10-01"
+ :experience-since 2003
+ :relationship-status "Gift, 3 barn"
+ :born 1979
  :description   "Stein Tore er en erfaren og engasjert utvikler.
                 Han er opptatt av å levere kvalitet, gjennom blant annet en aktiv dialog med kunden.
                 Stein Tore har jobbet med flere forskjellige oppgaver innen IT, slik som support, kundeansvar, installasjon, testing og utvikling.
                 Han bruker denne erfaringen aktivt i alle de prosjekter han deltar i."
+
+ :cv/description " Stein Tore er en erfaren programmerer som trives best med å
+    jobbe med brukernære utfordringer. Han kommer ofte i en veldig god dialog med
+    kunden, og blir da fort en betrodd partner i å omsette spesifikke kundebehov
+    til hensiktsmessige tekniske løsninger.
+
+    Stein Tore har tidligere jobbet med hele teknologiporteføljen for standard
+    web-applikasjoner, og har mye erfaring på både frontend og tjenestesiden. I
+    sine prosjekter har han høstet viktige erfaringer med alt fra store
+    brukermasser og krav til sikkerhet i kritiske transaksjonsprosesser. Den siste
+    tiden har han fokusert mer på frontendutvikling, og har hatt ansvar for dette i
+    sitt prosjekt med 'Obligatorisk Tjenstepensjon' på VPS.
+
+    Stein Tore er vant til å jobbe i store utviklingsmiljøer med komplekse
+    problemstillinger. Han er ofte den personen i et team som får de vanskelige
+    oppgavene, og trives godt med å finne løsninger der andre har gitt opp. Han er
+    opptatt av kvalitet, og ser på smidig utvikling og TDD (Test Driven
+    Developement) som naturlige virkemidler for å levere optimale løsninger.
+
+    Stein Tore er utdannet MSc ved John Moores University i Liverpool hvor han
+    spesialiserte seg innen programmering av interaktive multimediasystemer."
 
  :phone-number  "971 25 770"
  :email-address "stt@kodemaker.no"
@@ -70,8 +94,19 @@
                :tech [:linux :terminator]}]
                
 
- :projects      [{:customer "NSB"
-                  :years [2017 :ongoing]
+ :projects      [{:customer "Bring"
+                  :employer :kodemaker
+                  :start "2018-05"
+                  :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid."
+                  :description "Systemet som vi utviklet, var for budleveranser, alt
+                fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
+                sanntid, og integrasjoner med mange av Bring sine systemer. Jeg har jobbet med det meste i prosjektet, 
+                frontend, backend, drifting og vært scrum master"
+                :tech [:azure :javascript :es6 :react :redux :nodejs :kotlin :clojure :gradle
+                    :postgresql :event-sourcing :cqrs :flyway]
+                 }
+                 {:customer "NSB"
+                  :years [2017 2018]
                   :employer :kodemaker
                   :summary "StatusPush - Android App. Android App som brukes til internt personell hos NSB; fortrinnsvis Konduktører og førere. Ved avvik i trafikken vil app-en få en push som beskriver forholdene."
                   :description "Prosjekt: StatusPush Oppgaver: Utvikler
@@ -84,7 +119,7 @@
                   vektlagt at app-en skal ha enkelt brukergrensesnitt."
                   :tech [:android :google-cloud-messaging :groovy :jms :activemq :tomcat]}
                  {:customer "NSB"
-                  :years [2017 :ongoing]
+                  :years [2017 2018]
                   :employer :kodemaker
                   :summary "Status. En web-applikasjon som fungerer som en paraply over diverse undersystemer, slik at trafikkinformatør kun trenger å taste inn en tekst som beskriver et avvik på ett sted - så distrubuerer Status til underliggende informasjonssystemer (f.eks reiseplanlegger www.nsb.no)."
                   :description "Prosjekt: Status Oppgaver: Utvikler Funksjonell
@@ -245,41 +280,34 @@
                   :quote  "Skillful Java developer with extremely good social skills.
                           During project he communicated well with the customer, delivering
                           functionality on time and according to specifications.
-                          I recommend Stein Tore to any company interested in hiring senior Java developer!"}]
-                  
+                          I recommend Stein Tore to any company interested in hiring senior a Java developer!"}]
+ :endorsement-highlight {:author "Victor Dieu"
+   :title "Prosjektleder RASK-prosjektet NSB"
+   :quote "Stein Tore er en strukturert person med variert kompetanse innenfor systemutvikling, integrasjon og
+           brukerinteraksjon. Han har vært en sentralt ressurs i prosjektet, i tillegg til å være en dreven utvikler."}              
 
  :cv {}
- :cv/description " Stein Tore er en erfaren programmerer som trives best med å
- jobbe med brukernære utfordringer. Han kommer ofte i en veldig god dialog med
- kunden, og blir da fort en betrodd partner i å omsette spesifikke kundebehov
- til hensiktsmessige tekniske løsninger.
-
- Stein Tore har tidligere jobbet med hele teknologiporteføljen for standard
- web-applikasjoner, og har mye erfaring på både frontend og tjenestesiden. I
- sine prosjekter har han høstet viktige erfaringer med alt fra store
- brukermasser og krav til sikkerhet i kritiske transaksjonsprosesser. Den siste
- tiden har han fokusert mer på frontendutvikling, og har hatt ansvar for dette i
- sitt prosjekt med 'Obligatorisk Tjenstepensjon' på VPS.
-
- Stein Tore er vant til å jobbe i store utviklingsmiljøer med komplekse
- problemstillinger. Han er ofte den personen i et team som får de vanskelige
- oppgavene, og trives godt med å finne løsninger der andre har gitt opp. Han er
- opptatt av kvalitet, og ser på smidig utvikling og TDD (Test Driven
- Developement) som naturlige virkemidler for å levere optimale løsninger.
-
- Stein Tore er utdannet MSc ved John Moores University i Liverpool hvor han
- spesialiserte seg innen programmering av interaktive multimediasystemer."
+ :project-highlights [{:blurb "Scrum master og full-stack utvikler for nytt nordisk system for budleveranser."
+                       :customer "Bring"
+                       :logo "/logos/bring.svg"}
+                      {:blurb "Full-stack utvikling av system for distribusjon av trafikkinformasjon."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}
+                      {:blurb "Scrum master of full-stack utvikler for rapportsystem for togfremføring."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"}]
+:languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]
 
  :education-summary "MSc Interactive Multimedia Systems, Liverpool John Moores University"
- :experience-since 2003
- :relationship-status "Gift, 3 barn"
- :born 1979
- :qualifications ["Senior systemutvikler"
-                  "Løsningsarkitekt"
-                  "Java"
-                  "Groovy og Grails"
+ :qualifications ["Full-stack, jobber like gjerne med backend som frontend"
+                  "Opptatt av kompetansedeling og kompetanseheving"
                   "Testutvikler"
-                  "Scrum / smidig utvikling"]
+                  "Glad i små smidige team og devops"]
  :certifications [{:name "Sun Certified Programmer for Java 5 platform", :year 2007}
                   {:name
                    "Sertifisering Enonic CMS - Utvikler, administrator og redaktør"
