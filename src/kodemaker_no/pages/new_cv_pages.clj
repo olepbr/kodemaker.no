@@ -240,7 +240,10 @@
            (when-let [username (-> person :presence :github)]
              [:a {:href (format "https://github.com/%s" username)} "github.com/" username])]]
          [:hr.mtn]
-         [:h3.bigger (format "%s med %s års erfaring" (:title person) (:years-experience person))]
+         [:h3.bigger
+          (format "%s med %s års erfaring" (:title person)
+            (let [years (:years-experience person)]
+              (if (<= years 30) years "mange")))]
          [:ul.spacey
           (map #(vector :li %) (:qualifications person))]
 
