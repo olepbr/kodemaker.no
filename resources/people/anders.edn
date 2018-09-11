@@ -2,6 +2,8 @@
  :name ["Anders" "Furseth"]
  :title "Utvikler"
  :start-date "2010-03-15"
+ :experience-since 2001
+ :born 1980
  :description "Anders elsker jobben sin som kodemaker. Han har de siste 10
                årene besittet roller som utvikler og løsningsarkitek i små
                og store prosjekter, hovedsakelig innen bank og finans, og
@@ -18,14 +20,18 @@
             :linkedin "/in/andersfurseth"
             :github "andersfurseth"}
 
- :tech {:using-at-work [:clojure :react :groovy :javascript :java]
+ :tech {:using-at-work [:clojure :clojurescript :kubernetes :datomic :kafka]
         :favorites-at-the-moment [:clojure :clojurescript :funksjonell-programmering]
-        :want-to-learn-more      [:clojurescript]}
+        :want-to-learn-more      [:kubernetes]}
+
+ :qualifications ["Nysgjerrig, erfaren og ansvarstagende full-stack utvikler"
+                  "Lang erfaring med IT-sikkerhet"
+                  "Trives i mindre, autonome team"]
 
  :recommendations [{:title "Out of the Tar Pit"
                     :blurb "Ben Moseley og Peter Marks presenterer svært
                             overbevisende argumenter for hva som er kilden
-                            til  kompleksitet i systemene vi bygger. Dersom du
+                            til kompleksitet i systemene vi bygger. Dersom du
                             ikke har lest denne artikkelen de siste 3 månedene
                             oppfordrer jeg deg på det sterkeste til å gjøre
                             nettopp det med det samme!"
@@ -64,7 +70,7 @@
              :description "Utvikler nye informasjonssystemer for fergedrift for
              Norled. Jobber også med billett-app for kunder, samt app for
              fergebillettørene."
-             :tech [:clojure :clojurescript :datomic :datascript :reagent :mount :docker
+             :tech [:clojure :clojurescript :kubernetes :datomic :datascript :reagent :mount :docker
                     :aws :cordova :html :css :responsive-design :kafka :influxdb :lambdacd
                     :travisci]
              :years [2016 :ongoing]}
@@ -188,9 +194,31 @@
              :tech [:c :perl :mysql :apache :linux]}]
 
  :cv {}
- :born 1980
+
+ :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
+                               nytt informasjonssystem for fergedrift basert på
+                               Clojure, Clojurescript og Datomic."
+                       :customer "Norled"
+                       :logo "/logos/norled.svg"
+                       :logo-height 30}
+                      {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
+                               eller manuell utsending av SMS eller e-post.
+                               Clojure og Datomic."
+                       :customer "Oiiku"
+                       :logo "/logos/oiiku.svg"}
+                      {:blurb "Utvikling av FINNs tjenester for søk og bestilling
+                               av reiseprodukter."
+                       :customer "FINN.no AS"
+                       :logo "/logos/finn.svg"}]
+
+ :endorsement-highlight {:author "Steffen Fiksdal"
+                         :title "Teknisk arkitekt, BankAxept"
+                         :quote "Anders has a solid overview of the lowest levels
+                                 of the operating system up to the higher abstract levels
+                                 of application programming. This competence makes him an
+                                 extremly powerful resource in a software development team."}
+
  :education-summary "Institutt for Informatikk, UiO"
- :experience-since 2001
  :cv/description "Anders er en svært engasjert, ansvarstagende og pragmatisk
  konsulent. I løpet av sine 14 år i bransjen har han hovedsakelig besittet
  roller som utvikler og løsningsarkitekt i flere større prosjekter, fra
@@ -203,15 +231,6 @@
 
  Anders har også utført kodegranskning med fokus på sikkerhet av samfunnskritiske
  systemer, samt vært foredragsholder innen sikker programvareutvikling."
-
- :qualifications ["Funksjonell programmering"
-                  "Testdrevet utvikling"
-                  "Systemarkitektur og integrasjon"
-                  "IT-Sikkerhet"]
-
- :certifications [{:name "Sertifisert ScrumMaster" :year 2007}
-                  {:name "Sun Certified Java Programmer" :year 2004}
-                  {:name "C development on HP NonStop" :year 2004}]
 
  :languages [{:language "Norsk"
               :orally "Morsmål"
