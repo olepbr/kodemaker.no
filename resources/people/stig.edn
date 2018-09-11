@@ -119,7 +119,7 @@ Det gikk bra - veldig bra."
              :employer :kodemaker
              :summary "Prosjekleder og utvikler av nytt kjernesystem"
              :description "Prosjektleder og utvikler av nytt system for
-             forsvaret Prosjekt for måling og evaluering av rør/piper .
+             måling og evaluering av rør/piper hos Forsvaret.
              Prosjektet består av flere aktører og Stig og Kodemaker har en
              svært sentral posisjon Oppgaver: Prosjektleder, seniorutvikler,
              brukerhistorier, testplanlegging ( PDR, CDR, FAT og SAT),
@@ -511,17 +511,17 @@ Det gikk bra - veldig bra."
                   :quote "Stig er veldig dyktig når det gjelder å levere i fra seg produkt med god kvalitet."}
                  ]
 
-:project-highlights [{:blurb "App for iOS og Android utviklet med ClojureScript og Cordova, og tilstøtende backendsystemer."
-                     :customer "Hafslund Strøm"
-                     :logo "/logos/hafslund-strom.png"}
-                    {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
-                     :customer "Tine"
-                     :logo "/logos/tine.svg"
-                     :logo-width 65}
-                    {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"
-                     :customer "NRK"
-                     :logo "/logos/nrk.svg"
-                     :logo-width 83}]
+:project-highlights [{:blurb "Teknisk arkitekt programkontor. Virksomhetsmodellering, målbilde, koordinering av sentrale IKT-iniativ"
+                     :customer "Bring"
+                     :logo "/logos/bring.svg"}
+                    {:blurb "Utvikling og DevOps på virksomhetskritiske applikasjoner."
+                     :customer "NSB"
+                     :logo "/logos/nsb.png"
+                     }
+                    {:blurb "Prosjektleder og utvikler av nytt system for måling og evaluering av rør/piper hos Forsvaret"
+                     :customer "Forsvaret"
+                     :logo "/logos/forsvaret.png"
+                     }]
 
 :endorsement-highlight {:author "Cato Berg"
                        :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
