@@ -2,6 +2,9 @@
  :name ["Stian" "C." "Alsos"]
  :title "Kodemaker"
  :start-date "2010-10-01"
+ :experience-since 2004
+ :relationship-status "Gift, 2 barn"
+ :born 1980
  :description "Stian er en dedikert systemutvikler som er
                opptatt av å forstå og løse kundens problem
                på en best mulig måte. Han har jobbet for mange
@@ -96,6 +99,15 @@
                   :link {:url "http://twittosocial.herokuapp.com" :text "Se nettstedet (krever innlogging)"}
                   :tech [:ruby :rails]}]
 
+ :endorsement-highlight {:author "Vigdis Diesen"
+                 :title "Head of Client Services at VPS"
+                 :quote "Jeg har jobbet som prosjektleder for Stian i Verdipapirsentralen.
+                         Stian er en meget dyktig ressurs som fungerer godt,
+                         både faglig og sosialt. Han evner å sette seg inn i kundens - til
+                         tider svært komplekse - problemstillinger og finner gode løsninger
+                         på disse. Han er blid og positiv og fungerer godt i samarbeid
+                         med andre. Han har min varmeste anbefaling."}
+
  :endorsements [{:author "Bradley Johannson"
                  :title "Business Development Manager (Leder Forretningsutvikling) at Storebrand"
                  :quote "Stian is a highly competent developer with a strong focus on the quality
@@ -133,6 +145,17 @@
                          skilled and highly professional. In addition he very likable.
                          I give Stian my best recommodation - you can never fail having
                          him on your project."}]
+
+ :project-highlights [{:blurb "Mikrotjenester, devops, clojure, groovy. "
+                       :customer "Animalia"
+                       :logo "/logos/animalia.svg"}
+                      {:blurb "Ny løsning for IP-basert TV og sikring av digitalt innhold"
+                       :customer "Conax"
+                       :logo "/logos/conax.png"}
+                      ;{:blurb "Utvikling av nytt fondsystem for Norge og Norden"
+                       ;:customer "VPS"
+                       ;:logo "/logos/vps.jpg"}
+                       ]                         
 
  :projects [{:customer "Animalia"
              :years [2017 :ongoing]
@@ -323,7 +346,7 @@
  :cv/description " Stian er utdannet sivilingeniør innen kommunikasjonsteknologi
  ved NTNU i Trondheim, hvor han spesialiserte seg innen systemutvikling. Han har
  høy kompetanse på javaplatformen, og har jobbet med systemutvikling
- siden han gikk ut av universitetet i 2005.
+ siden før han gikk ut av universitetet i 2005.
 
  Stian har vært med på å utvikle en rekke systemer. Mange av disse er
  webbaserte løsninger hvor fellesnevneren er høye krav til driftssikkerhet, ytelse og skalerbarhet.
@@ -338,17 +361,21 @@ og foredrag eksternt om tema. Han er sertifisert Scrum master og har jobbet med
 smidig utvikling siden 2005."
 
  :education-summary "Sivilingeniør kommunikasjonsteknologi, NTNU"
- :experience-since 2005
  :qualifications ["Systemutvikler"
                   "Løsningsarkitekt"
                   "Frontendutvikling"
-                  "Scrum / smidig utvikling"]
+                  "Devops"]
  :certifications [{:name "Sun Certified Web Component Developer", :year 2009}
                   {:name "Certified ScrumMaster", :year 2008}
                   {:name "Sun Certified Programmer for Java 5 platform", :year 2007}]
- :relationship-status "Samboer"
- :born 1980
  :education [{:institution "NTNU"
               :years [2000 2001 2002 2003 2004 2005]
               :subject "Sivilingeniør i kommunikasjonsteknologi"}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}]              
 }
