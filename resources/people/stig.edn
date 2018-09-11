@@ -3,6 +3,25 @@
  :title "Smart løsningsbygger"
  :start-date "2010-04-01"
  :description "Stig elsker å programmere, men tenner mest der han må ta tak i forretningsmessige problemstillinger og løse disse ved hjelp av nye arbeidsprosesser understøttet av teknologi. Stig er pliktoppfyllende og gir det som er nødvendig for at prosjekter skal lykkes."
+ :cv/description " Stig elsker å programmere, men tenner mest der han kan ta tak
+ i forretningsmessige utfordringer og løse disse ved hjelp av nye
+ arbeidsprosesser understøttet av teknologi.
+
+ Stig er utdannet sivilingeniør i fra Norges Tekniske Høyskole i Trondheim og
+ har lang erfaring med systemuvikling, teknologi- og arkitektur-valg,
+ systemintegrasjon og teknisk-prosjektledelse.
+
+ Stig har god og bred teknologiforståelse som går gjennom «alle lag» i
+ teknologistakken; database, mellomvare, frontend og ulike teknikker for ekstern
+ og intern integrasjon. Han er glad i å sette seg inn i nye ting, men er
+ pragmatisk i forhold til at teknologier kommer og går. Kvalitet er ikke ett
+ produkt av verktøyet du bruker, men din evne til å arbeide strukturert innenfor
+ de mulighetene og begrensninger som verktøyet tilbyr.
+
+ Stig trives best der han kan tenke lange tanker som følges opp med praktisk og
+ strukturert «fotarbeid»."
+
+ :innate-skills [:terminal :browser-devtools :haproxy :svn :git ]
 
  :phone-number "+47 951 24 632"
  :email-address "stig@kodemaker.no"
@@ -12,6 +31,31 @@
             :linkedin "/in/stigmelling"
             :github "stigmelling"
             }
+:tech {:using-at-work [:grails :javascript :docker :git :ansible :svg ]
+           :favorites-at-the-moment [:grails :groovy :react]
+           :want-to-learn-more [:kotlin :openlayers :cesiumjs]}
+
+:qualifications ["God og bred teknologiforståelse som går gjennom «alle lag» i teknologistakken"
+                 "Erfaring med oppsett, drift og kontinuerlig forbedring av løsninger"
+                 "Flink til å forstå hva kunden lever av og bidra til at dette kan gjøres enklere"
+                "Automatisering av prosesser mellom aktører i en verdikjede"
+                "Har klokketro på å lage løsninger som undersøtter ERP/forretningssystemer"
+                "Varehandel, Finans, Transport, logistikk og optimalisering"]
+
+:side-projects [{:title "Resultatservice på nett"
+                :description "Ringerike o-lag med sine sammarbeidsparter arrangerete NM Ultralang i august 2015. Det var viktig for oss å bruke denne anledningen til å bygge egen arrangør-kompetanse ved å gjennomføre ett så viktig løp. Vi ønsket derfor selv å ta ansvar for tidtakertjenesten med tilhørende resultatservice. Det var OK for Norges orienteringsforbund - så lenge vi klarer å stable på beina en resultattjenste som er på høyde med det publikum forventer i denne type arrangement.
+Da blir det fort mer interessant. Utvikling av ny programvare som bare må virke ved første storskala forsøk kan jo ikke kategoriseres som noe annet enn spennende.
+I de fleste systemutviklingsprosjekt, er det mulig med en myk 'igangkjøring' der eventuelle problemstillinger kan håndteres og rettes 'i fart'.
+En resultattjeneste for ett løp som bare gjennomføres den 22/8-2015 - har ikke rom til å feile. Enten så fungerer det som det skal - eller så blir det fiasko.
+Det gikk bra - veldig bra."
+                :illustration "/illustrations/side-projects/nmultra.png"
+                :tech [:grails :react :aws]}
+               {:title "ROLtracker"
+                                 :description "Live-tracking av o-løpere med Android-telefoner
+                                               som fanger GPS-posisjoner som igjen overføres
+                                               til sentralen og visning i web-baserte kart."
+                                 :illustration "/illustrations/side-projects/roltracker.jpg"
+                                 :tech [:android :java]}]
 
  :hobbies [{:title "Orientering"
             :description "Orientering er utrolig gøy og fasinerende. Det å jobbe
@@ -30,19 +74,10 @@
             :illustration "/illustrations/hobbies/stig-ski.jpg"
             :url "http://langrenn.ilh.no/"}]
 
- :tech            {:favorites-at-the-moment [:grails :groovy :docker]
-                   :want-to-learn-more      [:openlayers :cesiumjs]}
  :blog-posts [{:url "http://stigmelling.github.io/blog/blog/2015/nmultra.html"
                :title "Liveresultater på NM Ultralang i orientering 2015"
                :blurb "En introduksjon til en resultattjeneste som bare måtte virke ved første forsøk."
                :tech [:javascript :aws]}]
-
- :side-projects [{:title "ROLtracker"
-                  :description "Live-tracking av o-løpere med Android-telefoner
-                                som fanger GPS-posisjoner som igjen overføres
-                                til sentralen og visning i web-baserte kart."
-                  :illustration "/illustrations/side-projects/roltracker.jpg"
-                  :tech [:android :java]}]
 
  :projects [
  {:customer "NSB"
@@ -466,38 +501,34 @@
              telefonlinjer."
              :tech [:mssql]}]
 
- :cv {}
- :cv/description " Stig elsker å programmere, men tenner mest der han kan ta tak
- i forretningsmessige utfordringer og løse disse ved hjelp av nye
- arbeidsprosesser understøttet av teknologi.
+:cv {}
 
- Stig er utdannet sivilingeniør i fra Norges Tekniske Høyskole i Trondheim og
- har lang erfaring med systemuvikling, teknologi- og arkitektur-valg,
- systemintegrasjon og teknisk-prosjektledelse.
+:endorsements [{:author "Cato Berg"
+                  :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
+                  :quote "Stig har på en imponerende måte satt seg inn i utfordringer og kompleksitet i prosjektet slik at Kodemaker har kunnet levert det produktet vi som kunde har kravstilt."}
+              {:author "Victor Dieu"
+                  :title "Prosjektleder, NSB"
+                  :quote "Stig er veldig dyktig når det gjelder å levere i fra seg produkt med god kvalitet."}
+                 ]
 
- Stig har god og bred teknologiforståelse som går gjennom «alle lag» i
- teknologistakken; database, mellomvare, frontend og ulike teknikker for ekstern
- og intern integrasjon. Han er glad i å sette seg inn i nye ting, men er
- pragmatisk i forhold til at teknologier kommer og går. Kvalitet er ikke ett
- produkt av verktøyet du bruker, men din evne til å arbeide strukturert innenfor
- de mulighetene og begrensninger som verktøyet tilbyr.
+:project-highlights [{:blurb "App for iOS og Android utviklet med ClojureScript og Cordova, og tilstøtende backendsystemer."
+                     :customer "Hafslund Strøm"
+                     :logo "/logos/hafslund-strom.png"}
+                    {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
+                     :customer "Tine"
+                     :logo "/logos/tine.svg"
+                     :logo-width 65}
+                    {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"
+                     :customer "NRK"
+                     :logo "/logos/nrk.svg"
+                     :logo-width 83}]
 
- Stig trives best der han kan tenke lange tanker som følges opp med praktisk og
- strukturert «fotarbeid»."
+:endorsement-highlight {:author "Cato Berg"
+                       :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
+                       :quote "Stig har på en imponerende måte satt seg inn i utfordringer og kompleksitet i prosjektet slik at Kodemaker har kunnet levert det produktet vi som kunde har kravstilt."}
 
  :education-summary "Norges Tekniske Høyskole (NTH/NTNU)"
  :experience-since 1995
- :qualifications ["Strukturert analyse av komplekse problemstillinger"
-                  "Senior Systemutvikler"
-                  "Løsningsarkitekt/design"
-                  "Objektorientert-, prosessorientert- modellering"
-                  "Java plattform, JavaEE, Groovy og Grails"
-                  "Databasemodellering, SQL programmering og optimalisering"
-                  "Ekstern og intern applikasjonsintegrasjon"
-                  "Automatisering av prosesser mellom aktører i en verdikjede"
-                  "Agile metoder, Scrum, Kanban"
-                  "Skreddersøm som undersøtter ERP/forretningssystemer"
-                  "Varehandel, Finans, Transport, logistikk og optimalisering"]
  :relationship-status "Gift, 2 barn"
  :born 1970
  :education [{:institution "Norges Tekniske Høyskole (NTH/NTNU)"
