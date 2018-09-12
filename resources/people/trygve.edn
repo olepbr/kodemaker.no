@@ -431,8 +431,7 @@
  :education-summary "Ingeniør fra Kongsberg Ingeniørhøgskole, Bedriftsøkonomisk
  Institutt, Matematikk ved Universitetet i Oslo"
  :experience-since 1984
- :qualifications ["Senior Systemutvikler"
-                  "Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
+ :qualifications ["Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
                   "Erfaring med forskjellige former for funksjonell programmering"
                   "Erfaring fra Big Data med Apache Spark, Kafka, Hadoop, HBase"
                   "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
