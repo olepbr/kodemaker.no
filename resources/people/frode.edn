@@ -96,11 +96,11 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                          :title "Teknologidirektør Digipost, Posten Norge"
                          :quote "Frode er en bunnsolid og kunnskapsrik teknolog og utvikler med løsningsteft og evne til å finne og realisere gode løsninger på alle mulige utfordringer. Han er en kjernekar og bidro med sine verdier og smittende entusiasme i stor grad til å skape en sterk, samarbeidsorientert og kvalitetsbevist arbeidskultur på prosjektet."}
 
- :project-highlights [{:blurb "Utvikling av system for sikker digital post. Domenemodellering, applikasjonsarkitektur, api-design og infrastruktur"
+ :project-highlights [{:blurb "Utvikling av system for sikker digital post. Domenemodellering, applikasjonsarkitektur, api-design, frontend og infrastruktur"
                        :customer "Posten Norge AS - Digipost"
                        :logo "/logos/digipost.svg"
                        :logo-width 110}
-                      {:blurb "Utvikling og drift av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk"
+                      {:blurb "Utvikling av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk."
                        :customer "Norwegian"
                        :logo "/logos/norwegian.png"}]
 
@@ -171,15 +171,17 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
 
  :education-summary "Sivilingeniør/Master i Kommunikasjonsteknologi fra NTNU"
  :experience-since 2005
- :qualifications ["Erfaren, engasjert og allsidig systemutvikler"
-                  "Liker å jobbe med alle deler av en applikasjon fra backend og apier til databaser, infrastruktur, devops og også frontend"
-                  "Opptatt av kontinuerlige leveranser og mener at en feature ikke er ferdig før den kjører i prod og gir verdi til brukerne"
-                  "Interessert i funksjonell programmering, åpen kildekode og distribuerte systemer"
-                  "Lang erfaring med testdrevet utvikling"
+ :qualifications ["Erfaren, engasjert og allsidig systemutvikler og arkitekt"
+                  "Full-stack, med mest erfaring fra backend"
+                  "Erfaring med devops, overvåkning og oppsett av infrastruktur"
+                  "Interessert i funksjonell programmering, distribuerte systemer og åpen kildekode"
+                  "Erfaring med kontinuerlige leveranser og autonome team"
                   ]
  :certifications [{:name "Elastic Leadership. 2-dagers kurs med Roy Osherove", :year 2018}
                   {:name "Distributed Systems. 2-dagers kurs med Kyle Kingsbury", :year 2016}
+                  {:name "Fagleder distribuerte systemer", :year 2016}
                   {:name "Design and Implementation of Microservices: kurs med Sam Newman", :year 2015}
+                  {:name "Fagleder Scala og JVM", :year 2013}
                   {:name "Bekk Managerprogram", :year 2013}
                   {:name "Sertifisering: Functional Programming Principles in Scala", :year 2012}
                   {:name "Certified Scrum Master", :year 2008}
