@@ -436,56 +436,65 @@
                   "Erfaring fra Big Data med Apache Spark, Kafka, Hadoop, HBase"
                   "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
                   "Lang erfaring med Java, Groovy og Grails"]
- :certifications [{:name "Deeplearning.ai/Coursera: Deep learning specialization"
-                   ;:url "https://www.coursera.org/learn/nlp-sequence-models"
+ :certifications [{:institution "Deeplearning.ai / Coursera"
+                   :name "Deep learning specialization"
+                   :url "https://www.coursera.org/specializations/deep-learning"
                    :year 2018
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/specialization/certificate/XUNMU5JLM672"
                     :text "Statement of Accomplishment"}}
-                  {:name "Deeplearning.ai/Coursera: Sequence Models"
-                   ;:url "https://www.coursera.org/learn/nlp-sequence-models"
+                  {:institution "Deeplearning.ai / Coursera"
+                   :name "Sequence Models"
+                   :url "https://www.coursera.org/learn/nlp-sequence-models"
                    :year 2018
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/verify/AXU6TN2MTU5S"
                     :text "Statement of Accomplishment"}}
-                  {:name "Deeplearning.ai/Coursera: Convolutional Neural Networks"
-                   ;:url "https://www.coursera.org/learn/convolutional-neural-networks"
+                  {:institution "Deeplearning.ai / Coursera"
+                   :name "Convolutional Neural Networks"
+                   :url "https://www.coursera.org/learn/convolutional-neural-networks"
                    :year 2017
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/records/PTT3DJSK55Q8"
                     :text "Statement of Accomplishment"}}
-                  {:name "Deeplearning.ai/Coursera: Structuring Machine Learning Projects"
-                   ;:url "https://www.coursera.org/learn/machine-learning-projects"
+                  {:institution "Deeplearning.ai / Coursera"
+                   :name "Structuring Machine Learning Projects"
+                   :url "https://www.coursera.org/learn/machine-learning-projects"
                    :year 2017
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/records/8AGFLPT6UKQJ"
                     :text "Statement of Accomplishment"}}
-                  {:name "Deeplearning.ai/Coursera: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"
-                   ;:url "https://www.coursera.org/learn/deep-neural-network"
+                  {:institution "Deeplearning.ai / Coursera"
+                   :name "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"
+                   :url "https://www.coursera.org/learn/deep-neural-network"
                    :year 2017
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/records/SBVPP39R97AZ"
                     :text "Statement of Accomplishment"}}
-                  {:name "Deeplearning.ai/Coursera: Neural Networks and Deep Learning"
-                   ;:url "https://www.coursera.org/learn/neural-networks-deep-learning"
+                  {:institution "Deeplearning.ai / Coursera"
+                   :name "Neural Networks and Deep Learning"
+                   :url "https://www.coursera.org/learn/neural-networks-deep-learning"
                    :year 2017
                    :certificate
                    {:url "https://www.coursera.org/account/accomplishments/records/JK63TDJASKVP"
                     :text "Statement of Accomplishment"}}
-                  {:name "CS190.1x Scalable Machine Learning, Berkeley University / edx.org"
-                   ;:url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
+                  {:institution "Berkeley University / edx.org"
+                   :name "CS190.1x Scalable Machine Learning"
+                   :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
                    :year 2015
                    :certificate
                    {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
                     :text "Honor Code Certificate"}}
-                  {:name "CS100.1x Introduction to Big Data with Apache Spark, Berkeley University / edx.org"
-                   ;:url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
+                  {:institution "Berkeley University / edx.org"
+                   :name "CS100.1x Introduction to Big Data with Apache Spark"
+                   :url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
                    :year 2015
                    :certificate
                    {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
                     :text "Honor Code Certificate"}}
-                  {:name "Machine Learning med Andrew Ng, Stanford University / coursera.org"
-                   ;:url "http://www.coursera.org/learn/machine-learning"
+                  {:institution " Stanford University / coursera.org"
+                   :name "Machine Learning med Andrew Ng"
+                   :url "http://www.coursera.org/learn/machine-learning"
                    :year 2012
                    :certificate
                    {:url "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"
@@ -509,7 +518,8 @@
              {:institution "Kongsberg Ingeniørhøyskole"
               :years [1980 1981 1982]
               :subject "Datateknikk"}]
-:endorsement-highlight {:author ""
-                         :title ""
-                         :quote ""}
+:endorsement-highlight {:author "Ståle Bie"
+                         :title "Avdelingsleder, SAS Data"
+                         :quote "Han storkoser seg når det umulige blir mulig og skyr ingen anstrengelser. 
+                                Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}
 }
