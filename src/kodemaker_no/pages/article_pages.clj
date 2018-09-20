@@ -1,14 +1,14 @@
 (ns kodemaker-no.pages.article-pages
-  (:require [kodemaker-no.homeless :refer [nil-if-blank remove-vals update-vals rename-keys update-in-existing]]
-            [kodemaker-no.formatting :refer [to-html]]
-            [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]))
 
 (defn article-page [article]
   (-> article
-      (update-in-existing [:lead] to-html)
-      (update-in-existing [:aside] to-html)
-      (update-in-existing [:body] to-html)
-      (update-in-existing [:meta] read-string)))
+      (h/update-in-existing [:lead] f/to-html)
+      (h/update-in-existing [:aside] f/to-html)
+      (h/update-in-existing [:body] f/to-html)
+      (h/update-in-existing [:meta] read-string)))
 
 (defn- article-url [path]
   (if (= path "/index.md")
@@ -17,5 +17,5 @@
 
 (defn article-pages [articles]
   (-> articles
-      (rename-keys article-url)
-      (update-vals #(partial article-page %))))
+      (h/rename-keys article-url)
+      (h/update-vals #(partial article-page %))))

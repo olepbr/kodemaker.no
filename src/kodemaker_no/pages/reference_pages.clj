@@ -1,7 +1,7 @@
 (ns kodemaker-no.pages.reference-pages
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.homeless :refer [update-vals rename-keys]]))
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]))
 
 (defn- render-participant [[id text] people]
   (let [person ((keyword id) people)]
@@ -32,7 +32,7 @@
     [:div.ref-meta.mod.line
      [:div.ref-meta-left [:div.white
                           [:h5 title]
-                          (to-html body)]]
+                          (f/to-html body)]]
      [:div.ref-meta-right
       [:div.peeps.white.hide-lt-660
        (repeat (Integer/parseInt team-size) [:img {:src "/icons/team-member.svg"}])]
@@ -54,5 +54,5 @@
 
 (defn reference-pages [references people]
   (-> references
-      (rename-keys reference-url)
-      (update-vals #(partial reference-page % people))))
+      (h/rename-keys reference-url)
+      (h/update-vals #(partial reference-page % people))))

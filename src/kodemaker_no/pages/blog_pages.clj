@@ -1,14 +1,14 @@
 (ns kodemaker-no.pages.blog-pages
-  (:require [kodemaker-no.homeless :refer [update-vals rename-keys]]
-            [clojure.string :as str]
-            [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.cultivate.blog-posts :refer [blog-post-path]]
-            [kodemaker-no.date :refer [format-dmy]]
-            [kodemaker-no.pages.person-pages :refer [render-presence]]
-            [kodemaker-no.render-page :refer [render-contact-form]]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.cultivate.blog-posts :as blog]
+            [kodemaker-no.date :as d]
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]
+            [kodemaker-no.pages.person-pages :as pp]
+            [kodemaker-no.render-page :as r]))
 
 (defn- published [blog-post]
-  (format-dmy (:published blog-post)))
+  (d/format-dmy (:published blog-post)))
 
 (defn- by-published [blog-posts]
   (->> blog-posts (sort-by :published) reverse))
@@ -25,7 +25,7 @@
   [:h1.hn.mbs [:a {:href (:path blog-post)} (:title blog-post)]])
 
 (defn- blog-post-body [blog-post]
-  (to-html (:body blog-post)))
+  (f/to-html (:body blog-post)))
 
 (defn- blog-post-aside [blog-post blog-posts]
   (list [:h3 "Mer fra bloggen"]
@@ -61,13 +61,13 @@
    :aside (list
            (when (seq (:presence blog-post))
              [:div.bd
-              (render-presence (:presence blog-post))])
+              (pp/render-presence (:presence blog-post))])
            [:p.shy (published blog-post)]
            (blog-post-author blog-post)
            (blog-post-aside blog-post blog-posts))
    :body (list (blog-post-body blog-post)
                (when (:contact-form blog-post)
-                 (render-contact-form
+                 (r/render-contact-form
                   {:body (:contact-form blog-post)
                    :button (:contact-form-button blog-post)
                    :placeholder "E-post eller tlf"}))
@@ -77,8 +77,8 @@
 
 (defn blog-post-pages [blog-posts]
   (-> blog-posts
-      (rename-keys blog-post-path)
-      (update-vals #(partial blog-post-page % (vals blog-posts)))))
+      (h/rename-keys blog/blog-post-path)
+      (h/update-vals #(partial blog-post-page % (vals blog-posts)))))
 
 (defn blog-page [blog-posts]
   {:title {:head "Kodemakerbloggen"}

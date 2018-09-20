@@ -1,6 +1,5 @@
 (ns kodemaker-no.pages.index-page
   (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :refer [to-html]]
             [mapdown.core :as mapdown]))
 
 (defn- render-person [{:keys [url photos full-name title]}]

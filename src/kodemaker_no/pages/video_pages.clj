@@ -1,6 +1,5 @@
 (ns kodemaker-no.pages.video-pages
-  (:require [kodemaker-no.formatting :as f]
-            [kodemaker-no.markup :as markup]))
+  (:require [kodemaker-no.formatting :as f]))
 
 (defn render-call-to-action [cta]
   (when cta

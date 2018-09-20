@@ -1,5 +1,5 @@
 (ns kodemaker-no.render-old-page
-  (:require [kodemaker-no.layout :refer [with-layout]]))
+  (:require [kodemaker-no.layout :as layout]))
 
 (defn- render-single-column [page]
   [:div.body
@@ -37,5 +37,5 @@
     (render-single-column page)))
 
 (defn render-page [page request]
-  (with-layout request page
+  (layout/with-layout request page
     (render-body page)))

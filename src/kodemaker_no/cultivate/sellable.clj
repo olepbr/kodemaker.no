@@ -1,20 +1,20 @@
 (ns kodemaker-no.cultivate.sellable
   (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [compare* remove-vals]]))
+            [kodemaker-no.homeless :as h]))
 
 (defn- cultivate-item [raw-content item]
   (assoc item :tech (map (partial util/look-up-tech raw-content) (:tech item))))
 
 (defn combine-items [items]
   (as-> items x
-    (map #(remove-vals % nil?) x)
+    (map #(h/remove-vals % nil?) x)
     (reverse x)
     (apply merge x)
     (assoc x :by (map :by items))))
 
 (defn compare-by-title [a b]
-  (or (compare* (:title a)
-                (:title b))
+  (or (h/compare* (:title a)
+                  (:title b))
       0))
 
 (defn ensure-price [default-price sellable]

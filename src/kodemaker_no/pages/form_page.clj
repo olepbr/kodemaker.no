@@ -1,7 +1,4 @@
-(ns kodemaker-no.pages.form-page
-  (:require [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.render-old-page :refer [render-body]]
-            [kodemaker-no.homeless :refer [update-in-existing]]))
+(ns kodemaker-no.pages.form-page)
 
 (defn form-page [articles]
   {:title "La oss ta en prat"

@@ -1,7 +1,7 @@
 (ns kodemaker-no.cultivate.videos
   (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.homeless :refer [compare* remove-vals update-in-existing]]))
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]))
 
 (defn find-video [^String url]
   (when url
@@ -31,7 +31,7 @@
 
 (defn- video-id [video]
   (or (:id video)
-      (keyword (to-id-str (:title video)))))
+      (keyword (f/to-id-str (:title video)))))
 
 (defn- video-url [video]
   (if (create-video-page-for-presentation? video)
@@ -62,7 +62,7 @@
 
 (defn combine-videos [videos]
  (as-> videos x
-  (map #(remove-vals % nil?) x)
+  (map #(h/remove-vals % nil?) x)
   (reverse x)
   (apply merge x)
   (assoc x
@@ -74,13 +74,13 @@
     pres))
 
 (defn replace-video-urls [m]
-  (update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
+  (h/update-in-existing m [:presentations] #(map replace-presentation-video-urls-1 %)))
 
 (defn compare-by-date-and-title [a b]
-  (or (compare* (:date b)
-                (:date a))
-      (compare* (:title a)
-                (:title b))
+  (or (h/compare* (:date b)
+                  (:date a))
+      (h/compare* (:title a)
+                  (:title b))
       0))
 
 (defn cultivate-videos [raw-content]

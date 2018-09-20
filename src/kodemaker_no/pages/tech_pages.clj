@@ -1,14 +1,14 @@
 (ns kodemaker-no.pages.tech-pages
   (:require [clj-time.core :as t]
             [kodemaker-no.date :as d]
-            [kodemaker-no.formatting :refer [to-html comma-separated link-to-person]]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))
 
 (defn- render-recommendation [{:keys [title by blurb link]}]
   (list [:h3 [:a {:href (:url link)} title]]
-        [:p.near.cookie-w [:span.cookie "Anbefalt av " (comma-separated (map link-to-person by))]]
+        [:p.near.cookie-w [:span.cookie "Anbefalt av " (f/comma-separated (map f/link-to-person by))]]
         (markup/append-to-paragraph
-         (to-html blurb)
+         (f/to-html blurb)
          (list " " (markup/render-link link)))))
 
 (defn- render-recommendations [recommendations _]
@@ -18,7 +18,7 @@
 (defn- render-presentation [{:keys [urls title thumb by blurb]}]
   (list
    [:h3.mtn [:a {:href (or (:video urls) (:slides urls) (:source urls))} title]]
-   [:p.near.cookie-w [:span.cookie "Holdt av " (comma-separated (map link-to-person by))]]
+   [:p.near.cookie-w [:span.cookie "Holdt av " (f/comma-separated (map f/link-to-person by))]]
    [:p blurb
     (when-let [url (:video urls)] (list " " [:a.nowrap {:href url} "Se video"]))
     (when-let [url (:slides urls)] (list " " [:a.nowrap {:href url} "Se slides"]))
@@ -31,9 +31,9 @@
 (defn- render-blog-post [{:keys [title by blurb url]}]
   (list
    [:h3 [:a {:href url} title]]
-   [:p.near.cookie-w [:span.cookie "Skrevet av " (link-to-person by)]]
+   [:p.near.cookie-w [:span.cookie "Skrevet av " (f/link-to-person by)]]
    (markup/append-to-paragraph
-    (to-html blurb)
+    (f/to-html blurb)
     (list " " [:a {:href url} "Les posten"]))))
 
 (defn- render-blog-posts [posts _]
@@ -43,8 +43,8 @@
 (defn- render-side-project [{:keys [title description link illustration by]}]
   [:div.bd
    [:h3.mtn [:a {:href (:url link)} title]]
-   [:p.near.cookie-w [:span.cookie "Av " (comma-separated (map link-to-person by))]]
-   (-> (to-html description)
+   [:p.near.cookie-w [:span.cookie "Av " (f/comma-separated (map f/link-to-person by))]]
+   (-> (f/to-html description)
        (markup/append-to-paragraph
         (list " " (markup/render-link link)))
        (markup/prepend-to-paragraph
@@ -55,11 +55,11 @@
         (map render-side-project projects)))
 
 (defn- render-open-source-project [project]
-  (list (comma-separated (map link-to-person (:by project)))
+  (list (f/comma-separated (map f/link-to-person (:by project)))
         " utviklet "
         [:a {:href (:url project)} (:name project)]
         ". "
-        (markup/strip-paragraph (to-html (:description project)))))
+        (markup/strip-paragraph (f/to-html (:description project)))))
 
 (defn- render-open-source-projects [projects _]
   (list [:h2.mhn "Open source"]
@@ -71,7 +71,7 @@
 (defn- render-upcoming-event [now {:keys [by title date url call-to-action location description]}]
   (list [:h3 title]
         [:p description]
-        [:p (list (comma-separated (map link-to-person by))
+        [:p (list (f/comma-separated (map f/link-to-person by))
                   ", "
                   [:a {:href (:url location)} (:title location)]
                   ", "
@@ -103,7 +103,7 @@
    :illustration (:illustration tech)
    :site (:site tech)
    :aside (maybe-include tech :ad render-ad)
-   :lead (to-html (:description tech))
+   :lead (f/to-html (:description tech))
    :body (list
           (maybe-include tech :upcoming render-upcoming)
           (maybe-include tech :recommendations render-recommendations)

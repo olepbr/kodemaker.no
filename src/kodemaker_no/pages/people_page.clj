@@ -1,7 +1,4 @@
-(ns kodemaker-no.pages.people-page
-  (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :refer [to-html]]
-            [mapdown.core :as mapdown]))
+(ns kodemaker-no.pages.people-page)
 
 (defn- render-person [{:keys [url photos full-name title]}]
   [:div.gridUnit.r-4-3

@@ -1,7 +1,7 @@
 (ns kodemaker-no.render-page
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [to-html]]
-            [kodemaker-no.layout :refer [with-layout]]
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.layout :as layout]
             [kodemaker-no.markup :as markup]
             [kodemaker-no.render-old-page :as old]))
 
@@ -17,7 +17,7 @@
               [:img {:src illustration}]]
              [:img {:src illustration}]))]]
     [:div.lastUnit
-     (to-html body)]]])
+     (f/to-html body)]]])
 
 (defn- render-reference [{:keys [id img url logo name phone title body class]}]
   (let [quote (str "«" (str/trim body) "»")]
@@ -25,7 +25,7 @@
      [:div.ref.mod
       [:div.ref-w
        [:div.ref-img [:img {:src img}]]
-       [:div.ref-txt [:p (to-html quote)]]
+       [:div.ref-txt [:p (f/to-html quote)]]
        [:div.ref-card
         [:div.ref-logo [:img {:src logo}]]
         [:div.ref-info.tight
@@ -33,20 +33,20 @@
          [:p title [:br] phone]]]]
       [:div.ref-txt-2
        [:div.ref-txt-2-wrap
-        (to-html quote)]]]]))
+        (f/to-html quote)]]]]))
 
 (defn- render-centered-column [{:keys [id title body]}]
   [:div.bd.iw {:id id}
    [:div.centered-column
     (when title [:h3.mbl.xlarge.hns title])
-    (to-html body)]])
+    (f/to-html body)]])
 
 (defn render-contact-form [{:keys [id body button placeholder]}]
   [:div.inline-form.mbxxxl {:id id}
    [:div.bd.iw
     [:form {:action "/send-mail"
             :method "POST"}
-     (to-html body)
+     (f/to-html body)
      [:div.mod
       [:div.line
        [:div.unit.r-1of2
@@ -75,13 +75,13 @@
     [:div.unit.s-1of3.hide-lt-460
      [:p {:class (str "hn ginormous ginormous-" (count aside))} aside]]
     [:div.lastUnit
-     (to-html body)]]
+     (f/to-html body)]]
    [:hr]])
 
 (defn- render-mega-quote [{:keys [id title]}]
   [:div.bd.iw {:id id}
    [:div.xxlarge.hns.mod.mega-quote "&ndash; "
-    (markup/strip-paragraph (to-html title))]])
+    (markup/strip-paragraph (f/to-html title))]])
 
 (defn render-section [section]
   [:div.body
@@ -100,7 +100,7 @@
 
 (defn render-page [page request]
   (cond
-    (:sections page) (with-layout request page
+    (:sections page) (layout/with-layout request page
                        (map render-section (:sections page)))
-    (:layout page) (with-layout request page (:body page))
+    (:layout page) (layout/with-layout request page (:body page))
     :default (old/render-page page request)))

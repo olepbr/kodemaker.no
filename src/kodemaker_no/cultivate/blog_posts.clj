@@ -1,8 +1,8 @@
 (ns kodemaker-no.cultivate.blog-posts
-  (:require [kodemaker-no.date :refer [parse-ymd]]
-            [clojure.string :as str]
-            [clojure.walk :refer [keywordize-keys]]
-            [kodemaker-no.homeless :refer [update-in-existing]]))
+  (:require [clojure.string :as str]
+            [clojure.walk :as w]
+            [kodemaker-no.date :as d]
+            [kodemaker-no.homeless :as h]))
 
 (defn blog-post-path [path]
   (str "/blogg" (str/replace path #"\.md$" "/")))
@@ -13,12 +13,12 @@
 (defn- parse-presence [s]
   (->> (str/split s #"[\s,]+")
        (apply hash-map)
-       (keywordize-keys)))
+       (w/keywordize-keys)))
 
 (defn load-blog-post [path blog-post people]
   (-> blog-post
-      (update-in-existing [:published] parse-ymd)
-      (update-in-existing [:presence] parse-presence)
+      (h/update-in-existing [:published] d/parse-ymd)
+      (h/update-in-existing [:presence] parse-presence)
       (assoc :path (blog-post-path path))
       (assoc :author-person (blog-post-person blog-post people))))
 

@@ -1,7 +1,5 @@
 (ns kodemaker-no.pages.person-pages
   (:require [clj-time.core :as time]
-            [clojure.string :as str]
-            [hiccup.core :as hiccup]
             [kodemaker-no.date :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.markup :as markup]))

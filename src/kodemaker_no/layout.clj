@@ -1,9 +1,9 @@
 (ns kodemaker-no.layout
   (:require [clojure.java.io :as io]
             [hiccup.page :refer [html5]]
-            [kodemaker-no.formatting :refer [no-widows]]
+            [kodemaker-no.formatting :as f]
             [optimus.link :as link]
-            [optimus.optimizations.minify :refer [minify-js]]))
+            [optimus.optimizations.minify :as minify]))
 
 (defn- serve-to-media-query-capable-browsers [tag]
   (list "<!--[if (gt IE 8) | (IEMobile)]><!-->" tag "<!--<![endif]-->"))
@@ -22,7 +22,7 @@
      [:h1.hn.mbn
       (when (:arrow title)
         [:a.arrow {:href (:arrow title)} [:span.arrow-body] [:span.arrow-head]])
-      (no-widows title-str)]]))
+      (f/no-widows title-str)]]))
 
 (defn- brick
   ([] [:div.brick "&nbsp;"])
@@ -128,7 +128,7 @@
        [:div#footer
         [:div.bd.iw
          [:div.mod
-          [:strong.mrl (no-widows "Kodemaker Systemutvikling AS")] " "
+          [:strong.mrl (f/no-widows "Kodemaker Systemutvikling AS")] " "
           [:span.nowrap "Orgnr. 982099595 "]
           [:div
            [:span.nowrap "Munkedamsveien 3b,"] " "
@@ -139,7 +139,7 @@
            [:div [:span.nowrap "<a href='/personvern/'>Personvern</a>"]]]]
          [:div.ft-dec-5]]]]]]
     [:script
-     (minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
+     (minify/minify-js (slurp (io/resource "public/scripts/off-canvas-menu.js")))]]))
 
 (defmethod with-layout :new-cv [request page content]
   (html5

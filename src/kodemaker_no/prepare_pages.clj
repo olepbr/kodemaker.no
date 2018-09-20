@@ -1,10 +1,10 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
-            [kodemaker-no.formatting :refer [to-id-str]]
-            [kodemaker-no.highlight :refer [maybe-highlight-node maybe-add-hilite-class]]
-            [kodemaker-no.homeless :refer [update-vals]]
-            [kodemaker-no.render-page :refer [render-page]]
-            [net.cgrand.enlive-html :refer [sniptest]]
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.highlight :as hl]
+            [kodemaker-no.homeless :as h]
+            [kodemaker-no.render-page :as render]
+            [net.cgrand.enlive-html :as enlive]
             [optimus.link :as link]))
 
 (defn- optimize-path-fn [request]
@@ -32,22 +32,23 @@
     (into [(update-in (first content) [:content] #(wrap-in-anchor % target))] (rest content))))
 
 (defn- add-anchor [node]
-  (update-in node [:content] #(wrap-in-anchor % (to-id-str (get-node-text node)))))
+  (update-in node [:content] #(wrap-in-anchor % (f/to-id-str (get-node-text node)))))
 
 (defn- tweak-pages [html request]
-  (sniptest html
-            ;; use optimized images
-            [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
+  (enlive/sniptest
+   html
+   ;; use optimized images
+   [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
-            ;; use optimized links, if possible
-            [:a] #(update-in % [:attrs :href] (partial try-optimize-path request))
+   ;; use optimized links, if possible
+   [:a] #(update-in % [:attrs :href] (partial try-optimize-path request))
 
-            ;; give every h2 an anchor link for linkability
-            [:h2] add-anchor
+   ;; give every h2 an anchor link for linkability
+   [:h2] add-anchor
 
-            ;; Syntax highlight fenced code blockse
-            [:pre :code] maybe-highlight-node
-            [:pre] maybe-add-hilite-class))
+   ;; Syntax highlight fenced code blockse
+   [:pre :code] hl/maybe-highlight-node
+   [:pre] hl/maybe-add-hilite-class))
 
 (defn- use-norwegian-quotes [html]
   (-> html
@@ -56,9 +57,9 @@
 
 (defn prepare-page [get-page request]
   (-> (get-page)
-      (render-page request)
+      (render/render-page request)
       (tweak-pages request)
       use-norwegian-quotes))
 
 (defn prepare-pages [pages]
-  (update-vals pages #(partial prepare-page %)))
+  (h/update-vals pages #(partial prepare-page %)))

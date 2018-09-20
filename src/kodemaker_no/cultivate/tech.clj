@@ -1,6 +1,6 @@
 (ns kodemaker-no.cultivate.tech
   (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
+            [kodemaker-no.cultivate.videos :as v]
             [kodemaker-no.date :as d]
             [kodemaker-no.homeless :refer [assoc-in-unless update-vals]]))
 
@@ -114,7 +114,7 @@
        util/add-url
        (add-recommendations content)
        (add-presentations content)
-       replace-video-urls
+       v/replace-video-urls
        (add-blog-posts content)
        (add-upcoming content)
        (add-side-projects content)

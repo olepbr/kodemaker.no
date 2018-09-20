@@ -1,22 +1,22 @@
 (ns kodemaker-no.cultivate.screencasts
   (:require [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.homeless :refer [compare* remove-vals]]))
+            [kodemaker-no.homeless :as h]))
 
 (defn- cultivate-screencast [raw-content screencast]
   (assoc screencast :tech (map (partial util/look-up-tech raw-content) (:tech screencast))))
 
 (defn combine-screencasts [screencasts]
   (as-> screencasts x
-    (map #(remove-vals % nil?) x)
+    (map #(h/remove-vals % nil?) x)
     (reverse x)
     (apply merge x)
     (assoc x :by (map :by screencasts))))
 
 (defn compare-by-date-and-title [a b]
-  (or (compare* (:launch-date b)
-                (:launch-date a))
-      (compare* (:title a)
-                (:title b))
+  (or (h/compare* (:launch-date b)
+                  (:launch-date a))
+      (h/compare* (:title a)
+                  (:title b))
       0))
 
 (defn cultivate-screencasts [raw-content]

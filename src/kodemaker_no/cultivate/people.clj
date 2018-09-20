@@ -2,9 +2,9 @@
   (:require [clojure.string :as str]
             [kodemaker-no.cultivate.tech :as tech]
             [kodemaker-no.cultivate.util :as util]
-            [kodemaker-no.cultivate.videos :refer [replace-video-urls]]
-            [kodemaker-no.date :refer [parse-ymd]]
-            [kodemaker-no.homeless :refer [update-vals update-in-existing update-in*]]))
+            [kodemaker-no.cultivate.videos :as v]
+            [kodemaker-no.date :as d]
+            [kodemaker-no.homeless :as h]))
 
 (defn- add-str [person]
   (assoc person :str (-> person :id name)))
@@ -31,8 +31,8 @@
           :half-figure (str "/photos/people/" (:str person) "/half-figure.jpg")}))
 
 (defn- parse-dates [person]
-  (update-in-existing person [:upcoming]
-                      #(map (fn [u] (update-in u [:date] parse-ymd)) %)))
+  (h/update-in-existing person [:upcoming]
+                      #(map (fn [u] (update-in u [:date] d/parse-ymd)) %)))
 
 (defn- look-up-tech-in-maps [content maps]
   (map (fn [m] (update-in m [:tech] #(tech/look-up-tech content %)))
@@ -40,19 +40,19 @@
 
 (defn- look-up-tech [content person]
   (-> person
-      (update-in-existing [:tech :using-at-work] #(tech/look-up-tech content %))
-      (update-in-existing [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
-      (update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
-      (update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
-      (update-in-existing [:presentations] #(look-up-tech-in-maps content %))
-      (update-in-existing [:appearances] #(look-up-tech-in-maps content %))
-      (update-in-existing [:upcoming] #(look-up-tech-in-maps content %))
-      (update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
-      (update-in-existing [:projects] #(look-up-tech-in-maps content %))
-      (update-in-existing [:side-projects] #(look-up-tech-in-maps content %))
-      (update-in-existing [:open-source-projects] #(look-up-tech-in-maps content %))
-      (update-in-existing [:open-source-contributions] #(look-up-tech-in-maps content %))
-      (update-in-existing [:screencasts] #(look-up-tech-in-maps content %))))
+      (h/update-in-existing [:tech :using-at-work] #(tech/look-up-tech content %))
+      (h/update-in-existing [:tech :favorites-at-the-moment] #(tech/look-up-tech content %))
+      (h/update-in-existing [:tech :want-to-learn-more] #(tech/look-up-tech content %))
+      (h/update-in-existing [:recommendations] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:presentations] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:appearances] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:upcoming] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:blog-posts] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:projects] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:side-projects] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:open-source-projects] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:open-source-contributions] #(look-up-tech-in-maps content %))
+      (h/update-in-existing [:screencasts] #(look-up-tech-in-maps content %))))
 
 (defn- find-my-project [person id]
   (or (->> person
@@ -82,9 +82,9 @@
        fix-names
        add-genitive
        add-photos
-       replace-video-urls
+       v/replace-video-urls
        (look-up-tech content)
        parse-dates))
 
 (defn cultivate-people [content]
-  (update-vals (:people content) (partial cultivate-person content)))
+  (h/update-vals (:people content) (partial cultivate-person content)))

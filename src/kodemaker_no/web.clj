@@ -18,22 +18,24 @@
             [stasis.core :as stasis]))
 
 (defn get-assets []
-  (assets/load-assets "public" [#"/styles/.*\.css"
-                                "/favicon.ico"
-                                #"/certificates/.*\.pdf"
-                                #"/illustrations/.*\.jpg"
-                                #"/illustrations/.*\.png"
-                                #"/thumbs/.*\.jpg"
-                                #"/forside/.*\.jpg"
-                                #"/references/.*\.jpg"
-                                #"/photos/.*\.jpg"
-                                #"/photos/.*\.svg"
-                                #"/photos/.*\.png"
-                                #"/logos/.*\.png"
-                                #"/logos/.*\.svg"
-                                #"/icons/.*\.png"
-                                #"/icons/.*\.svg"
-                                #"/images/.*\.png"]))
+  (assets/load-assets
+   "public"
+   [#"/styles/.*\.css"
+    "/favicon.ico"
+    #"/certificates/.*\.pdf"
+    #"/illustrations/.*\.jpg"
+    #"/illustrations/.*\.png"
+    #"/thumbs/.*\.jpg"
+    #"/forside/.*\.jpg"
+    #"/references/.*\.jpg"
+    #"/photos/.*\.jpg"
+    #"/photos/.*\.svg"
+    #"/photos/.*\.png"
+    #"/logos/.*\.png"
+    #"/logos/.*\.svg"
+    #"/icons/.*\.png"
+    #"/icons/.*\.svg"
+    #"/images/.*\.png"]))
 
 (defn get-pages []
   (let [content (load-content)

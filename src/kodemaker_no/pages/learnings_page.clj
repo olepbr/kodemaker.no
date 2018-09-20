@@ -1,7 +1,5 @@
 (ns kodemaker-no.pages.learnings-page
-  (:require [clojure.java.io :as io]
-            [kodemaker-no.formatting :as f]
-            [kodemaker-no.markup :as markup]))
+  (:require [kodemaker-no.formatting :as f]))
 
 (defn- render-item [{:keys [url title tech by blurb duration price participants]}]
   (list

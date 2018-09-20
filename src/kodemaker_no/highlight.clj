@@ -1,6 +1,6 @@
 (ns kodemaker-no.highlight
   (:require [clygments.core :as pygments]
-            [net.cgrand.enlive-html :refer [sniptest html-resource select]]))
+            [net.cgrand.enlive-html :as enlive]))
 
 (defn- extract-code
   "Pulls out just the highlighted code, removing needless fluff and
@@ -8,8 +8,8 @@
   [highlighted]
   (-> highlighted
       java.io.StringReader.
-      html-resource
-      (select [:pre])
+      enlive/html-resource
+      (enlive/select [:pre])
       first
       :content))
 
