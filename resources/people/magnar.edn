@@ -279,7 +279,7 @@
                           hvilke tilfeller den ikke funker så bra."
                   :date "2018-09-13"
                   :tech [:design :functional-programming :frontend]
-                  :url {:video "https://vimeo.com/289851906"}}
+                  :urls {:video "https://vimeo.com/289851906"}}
                  {:title "16 minutter om Pure Functions"
                   :blurb "Jeg snakker hva, hvorfor og hvordan om Pure Functions,
                           i et utbrudd av entusiasme etter å ha jobbet med en
