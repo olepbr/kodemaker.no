@@ -277,6 +277,7 @@
                           kjøpet. I dette foredraget prater jeg om den snedige
                           løsningen vår -- hvordan og når den funker bra, og i
                           hvilke tilfeller den ikke funker så bra."
+                  :event "JavaZone"
                   :date "2018-09-13"
                   :tech [:design :functional-programming :frontend]
                   :urls {:video "https://vimeo.com/289851906"}}
