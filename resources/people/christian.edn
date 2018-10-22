@@ -262,6 +262,17 @@
 
  :projects [{:customer "Hafslund Strøm"
              :employer :kodemaker
+             :summary "Utvikling av infrastruktur på AWS med Kubernetes"
+             :description "Provisjonert ny infrastruktur for å kjøre
+             Docker-containere på AWS. Kubernetes med diverse tillegg som
+             automatiserer hele livssyklusen til en app, inkludert
+             provisjonering av DNS records i Route53. Hel-automatisert med kops
+             og Terraform."
+             :tech [:aws :kubernetes :aws-cloudfront :aws-s3 :aws-iam :aws-route53 :terraform]
+             :start "2018-04"}
+
+            {:customer "Hafslund Strøm"
+             :employer :kodemaker
              :summary "App for iOS og Android: Cordova og ClojureScript"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøtende backend-systemer og infrastruktur."
