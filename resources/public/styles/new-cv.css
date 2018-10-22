@@ -59,7 +59,7 @@ h5, h6, thead, header {
   page-break-after: avoid;
 }
 
-table tr, ul, ol {
+table tr, ul, ol, .print-block {
   page-break-inside: avoid;
 }
 

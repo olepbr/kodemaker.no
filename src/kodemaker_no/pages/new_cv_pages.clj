@@ -38,7 +38,7 @@
 
 (defn- section [title id & content]
   (apply vector
-         :div {:id id}
+         :div {:id id :class "print-block"}
          [:h2.mhn title]
          content))
 
@@ -257,7 +257,7 @@
               (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
            [:p.spread.noprint.hide-lt-460 (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
 
-         [:div#about
+         [:div#about.print-block
           [:h2.mhn "Om " (:first-name person)]
           (f/to-html (:description person))]
 
