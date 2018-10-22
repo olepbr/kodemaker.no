@@ -517,7 +517,17 @@
              :tech [:html :css :php]
              :years [2002 2003]}]
 
- :presentations [{:title "I put 7 years of meal data in Datomic - Here's what I learned"
+ :presentations [{:title "To the Cloud"
+                  :blurb "AWS lover uendelig skalering og fleksibilitet ved
+                  klikk på en knapp. Men er det egentlig så enkelt? Jeg går
+                  gjennom en del problemstillinger du møter når du går til
+                  skyen, og viser til erfaringer fra flere AWS-prosjekter."
+                  :event "JavaZone"
+                  :tech [:aws :terraform :kubernetes]
+                  :date "2018-09-13"
+                  :urls {:video "https://vimeo.com/289627521"
+                         :slides "https://2018.javazone.no/program/1f3d689b-9f01-4856-ada5-b200f6076936"}}
+                 {:title "I put 7 years of meal data in Datomic - Here's what I learned"
                   :blurb "Datomic is an append-only database, designed from the
                   ground up with modern applications and hardware in mind. It
                   never loses data, it has an RDF-like approach to schemas, it's
