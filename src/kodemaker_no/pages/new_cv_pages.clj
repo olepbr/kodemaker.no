@@ -244,6 +244,8 @@
            [:div.flex-l.tc.mtl.mod
             (map project-highlight (:project-highlights person))])
 
+         [:div.mod.mbl.show-lt-810 [:hr]]
+
          (if-let [endorsement (:endorsement-highlight person)]
            [:div.bc.flex.mod
             [:div.f2o3
