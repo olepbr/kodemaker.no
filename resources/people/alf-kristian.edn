@@ -142,10 +142,10 @@
              opp og drifte servere, og også være med på forretningsuvikling."
              :tech [:javascript :es6 :react :redux :webpack :shipit :clojure :aleph
                     :netty :postgresql :nginx :varnish :haproxy :ansible :flyway :digital-ocean]}
-            {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
+            {:customer "BUP"
              :years [2016]
              :employer :kodemaker
-             :summary "Gjøre prototype produksjonsklar. Systemet henter inn og aggregerer informasjon fra spørreskjema, der barnet svarer på \"grad\" av smilefjes."
+             :summary "Gjøre prototype produksjonsklar for Barne- og ungdomspsykiatrisk poliklinikk."
              :description "Gjøre prototype produksjonsklar. Systemet henter inn
              og aggregerer informasjon fra spørreskjema, der barnet svarer på
              \"grad\" av smilefjes. Dette er et dynamisk smilefjes som går fra
@@ -236,17 +236,18 @@
              CAS. Oppgaver: Arkitekt og programmerer i Scrum-team"
              :tech [:scala :javascript :jetty :derby :mysql :ldap :ad :wicket
                     :backbone :scalatra :sso :cas :maven]}
-            {:customer "Toll og avgiftsdirektoratet"
+            {:customer "Tolletaten"
              :years [2010]
              :exclude-from-profile? true
              :employer :knowit
              :summary "Modernisering av batchprosesser for fortollingsdata."
              :description "Modernisering av batch prosessering for
-             fortollingssystemet TVINN Mye av tollvesenets systemer er laget i
-             et programmeringsspråk som heter Sysdul. Dette språket vil om få år
-             ikke være supportert. Prosjektet gikk ut å skrive om, og forbedre
-             arkitektur, til de mange batchene som knar data i tollvesenets
-             fortollingssystem. Oppgaver: Arkitekt og programmerer i Scrum-team"
+             fortollingssystemet TVINN. Mye av toll og avgiftsdirektoratets
+             systemer er laget i et programmeringsspråk som heter Sysdul. Dette
+             språket vil om få år ikke være supportert. Prosjektet gikk ut å
+             skrive om, og forbedre arkitektur, til de mange batchene som knar
+             data i tollvesenets fortollingssystem. Oppgaver: Arkitekt og
+             programmerer i Scrum-team"
              :tech [:java :weblogic :spring :sybase :jasperreports :genova :maven]}
             {:customer "Kommuneforlaget"
              :years [2010]
@@ -264,19 +265,19 @@
              gi enkel saksbehandlingsfuksjonalitet av dette. Oppgaver: Arkitekt
              og programmerer i Scrum-team"
              :tech [:scala :jetty :derby :wicket :sbt]}
-            {:customer "Direktoratet for samfunnssikkerhet og beredskap (DSB)"
+            {:customer "DSB"
              :years [2008]
              :exclude-from-profile? true
              :employer :knowit
              :summary "Utvikling, innføring og vedlikehold av nytt fagsystem."
-             :description "Nytt fagsystem Vi laget nytt system for
-             innrapportering av data fra privatpersoner og næringsliv, samt
-             saksbehandling av blant annet \"farlige stoffer\", \"eksplosive
-             varer\", \"el-sikkerhet\" og \"farlige produkter\". I tillegg
-             skulle systemet håndtere innrapportering fra tilsyns-instanser.
-             Systemet publiserer data tilbake til publikum blant annet for søk
-             av el-virksomheter og farlige stoffer. Oppgaver: Arkitekt og
-             programmerer i Scrum-team"
+             :description "Vi laget et nytt system for Direktoratet for
+             samfunnssikkerhet og beredskap (DSB), for innrapportering av data
+             fra privatpersoner og næringsliv, samt saksbehandling av blant
+             annet \"farlige stoffer\", \"eksplosive varer\", \"el-sikkerhet\"
+             og \"farlige produkter\". I tillegg skulle systemet håndtere
+             innrapportering fra tilsyns-instanser. Systemet publiserer data
+             tilbake til publikum blant annet for søk av el-virksomheter og
+             farlige stoffer. Oppgaver: Arkitekt og programmerer i Scrum-team"
              :tech [:java :jetty :spring :gwt :wicket :jpa :mssql :maven]}
             {:customer "Telenor Mobil"
              :years [2007]
@@ -288,16 +289,17 @@
              fastnett og internett, samt redusert \"Time to market\" for nye
              produkter. Oppgaver: programmerer i Scrum-team"
              :tech [:java :weblogic :sybase]}
-            {:customer "Toll og avgiftsdirektoratet"
+            {:customer "Tolletaten"
              :years [2006]
              :exclude-from-profile? true
              :employer :mesan
              :summary "Modernisering av online applikasjon for fortollingsdata."
-             :description "TVINN konvertering Prosjektet var første ledd i
-             konvertering av tollvesents system fastsetting og innkreving av
-             toll på alle varer. Prosjektet konverte online applikasjonen fra
-             stormaskin applikasjon, utviklet i programmeringsspråket Sysdul,
-             til Java og Swing. Oppgaver: programmerer"
+             :description "TVINN konvertering. Prosjektet var første ledd i
+             konvertering av toll og avgiftsdirektoratets system for fastsetting
+             og innkreving av toll på alle varer. Prosjektet konverte online
+             applikasjonen fra stormaskin applikasjon, utviklet i
+             programmeringsspråket Sysdul, til Java og Swing. Oppgaver:
+             programmerer"
              :tech [:java :swing :ant :genova]}
             {:customer "Nordic Lottery System"
              :years [2006]
