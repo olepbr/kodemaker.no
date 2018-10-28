@@ -82,13 +82,10 @@ p {
   overflow: hidden;
 }
 
-.grey-box .logo {
-  padding: 1em 1em 0;
-}
-
-.grey-box > .bd {
+.grey-box .bd {
   background-color: #eee;
   margin: 0 10px;
+  padding: 10px;
   font-size: 12px;
 }
 
@@ -101,8 +98,23 @@ p {
 }
 
 .grey-box .content {
-  margin: 0.5em 1em 1em;
+  margin: 0.5em 0 0;
 }
 
-blockquote {padding: 1em 0 0 4em; position: relative;}
-blockquote:before {color: #ccc; content: "“"; font-size: 8em; position: absolute; top: -0.1em; left: 0;}
+blockquote {
+  padding: 1em 0 0 6em;
+  position: relative;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: "“";
+  font-size: 8em;
+  position: absolute;
+  top: -0.1em;
+  left: 0;
+}
+
+#cv-header .heading {
+  margin-top: 20px;
+}
