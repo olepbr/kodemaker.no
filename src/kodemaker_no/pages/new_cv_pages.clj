@@ -228,10 +228,7 @@
           [:p.summary
            (:phone-number person)
            [:br]
-           [:a {:href (format "mailto:%s" (:email-address person))} (:email-address person)]
-           [:br]
-           (when-let [username (-> person :presence :github)]
-             [:a {:href (format "https://github.com/%s" username)} "github.com/" username])]]
+           [:a {:href (format "mailto:%s" (:email-address person))} (:email-address person)]]]
          [:hr.mtn]
          [:h3.bigger
           (format "%s med %s års erfaring" (:title person)
