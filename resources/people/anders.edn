@@ -117,12 +117,13 @@
              :description "Utvikling av FINNs tjenester for søk og bestilling av
              reiseprodukter Roller: Senior utvikler."
              :tech [:groovy :java :javascript :solr :spring :maven :gradle]}
-            {:customer "Accenture / Brønnøysundsregisteret"
+            {:customer "Brønnøysundsreg."
              :years [2010]
              :employer :kodemaker
              :summary "Sikkerhetsløsning (autentisering) for altinn.no"
-             :description "Utvikling av autentiseringsløsning for altinn.no
-             Roller: Senior utvikler, team lead, mentoring."
+             :description "Utvikling av autentiseringsløsning for altinn.no via
+             Accenture / Brønnøysundsregisteret. Roller: Senior utvikler, team
+             lead, mentoring."
              :tech [:opensso :java :maven :hibernate :jax-ws :dotnet]}
             {:customer "Oslo Børs VPS"
              :years [2008]

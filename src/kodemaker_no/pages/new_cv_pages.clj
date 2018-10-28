@@ -76,7 +76,7 @@
     [:tbody
      (map (fn [project]
             [:tr
-             [:th.nw
+             [:th {:style "max-width: 200px;"}
               [:h4 (:customer project)]
               [:p (year-range project)]]
              [:td.fw
