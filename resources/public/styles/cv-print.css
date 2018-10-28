@@ -1,9 +1,0 @@
-.noprint,
-footer {
-  display: none;
-}
-
-li p,
-td p {
-  display: inline;
-}

@@ -1,204 +1,120 @@
-/*****************************************************************
- * General
- */
-html {
-  min-width:980px;
+@page {
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  margin-left: 0;
+  margin-right: 0;
+
+  @top-left {
+    content: "";
+  }
+
+  @top-right {
+    content: "";
+  }
+
+  @bottom-center {
+    clear: both;
+    bottom: 0;
+    margin-bottom: 1em;
+    font: 12px Helvetica, arial, freesans, clean, sans-serif;
+    width: 100%;
+    content: "www.kodemaker.no \00a0\00a0\00a0\00a0 +47 22 82 20 80 \00a0\00a0\00a0\00a0 Munkedamsveien 3b, 0161 Oslo";
+  }
+
+  @bottom-left {
+    content: "";
+  }
+
+  @bottom-right {
+    content: "";
+  }
 }
 
-body {
-  font-size: 16px;
-  color: #666666;
-  margin: 0;
-  line-height: 120%;
+.noprint {
+  display: none;
 }
 
-header, footer, article, section, aside {
-  display: block;
+hr {
+  margin: 10px;
 }
 
-ul {
-  padding-left: 13px;
+.iw {
+  margin: 0 3em;
 }
 
-dt {
-  width:12em;
-  float: left;
-  font-weight: bolder;
+#cv-header .picture {float: right; margin-left: 0; margin-right: 10px;}
+#cv-header .picture .image {max-height: 130px; float: right;}
+
+.footer {
+  display: none;
 }
 
-dd {
-  margin-left:13em;
+@page :first {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4,
+h5, h6, thead, header {
+  page-break-after: avoid;
+}
+
+table tr, ul, ol, .print-block {
+  page-break-inside: avoid;
 }
 
 blockquote {
-  font-style: italic;
+  page-break-inside: avoid;
 }
 
-/*****************************************************************
- * Header stuff
- */
+p {
+  widows: 3;
+  orphans: 3;
+}
 
-#card {
+.flex-l {
+  overflow: hidden;
+}
+
+.grey-box {
   float: left;
-  padding-left: 4em;
-  width: 22em;
+  width: 33%;
+  overflow: hidden;
 }
 
-#logo {
-  margin-top: 3em;
-}
-#logo .favicon {
-  float: left;
-  display: block;
-  margin-left: -4em;
-  margin-top: 3px;
-}
-#logo .kodemaker {
-  display: block;
-}
-#info #name {
-  font-family: "Arial Black",sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  color: #BE2315;
-}
-#info #title {
-  margin-bottom: 8px;
-}
-#info a {
-  text-decoration: none;
-}
-#mail a {
-  color: #666;
-  text-decoration: none;
+.grey-box .bd {
+  background-color: #eee;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 12px;
 }
 
-#picture {
-  float: left;
+.grey-box:first-child .bd {
+  margin-left: 0;
 }
 
-#picture img {
-  margin-left: -9em;
-  position:absolute;
-  z-index:-1;
+.grey-box:last-child .bd {
+  margin-right: 0;
 }
 
-#personal {
-  height: 110px;
-  margin-left: 502px;
-  padding: 30px 0 50px 4em;
-  color: white;
-  background-color: #BE2315;
+.grey-box .content {
+  margin: 0.5em 0 0;
 }
 
-#personal dt {
-  width: 8em;
+blockquote {
+  padding: 1em 0 0 6em;
+  position: relative;
 }
 
-#personal dd {
-  margin-left: 9em;
-}
-
-header .black_divider {
-  clear: both;
-  background: black;
-  color: black;
-}
-
-body > header:after {
-  clear: both;
-  width: 100%;
-  background: black;
-  color: black;
-  content: ".";
+blockquote:before {
+  color: #ccc;
+  content: "“";
+  font-size: 8em;
   position: absolute;
+  top: -0.1em;
+  left: 0;
 }
 
-/*****************************************************************
- * Main sections
- */
-
-article {
-  margin: 4em 3em 3em 3em;
-}
-
-article section  {
-  margin-left:12em;
-  padding:1em;
-}
-
-article section hr {
-  margin-top: 2em;
-}
-
-
-article section > header {
-  float: left;
-  width: 12em;
-  margin-left:-13em;
-  padding-left:1em;
-  font-family:"Arial Black",sans-serif;
-  font-size:28;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #BE2315;
-}
-
-article section > :nth-child(2) { /* Assume heading is the first-child */
-  margin-top:0;
-}
-
-/*****************************************************************
- * Content-specific stuff
- */
-
-th {
-  text-align: left;
-  padding: 0 2em 3px 0;
-}
-td {
-  vertical-align: top;
-  padding: 0 1em 2px 0;
-}
-
-td p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 1em;
-}
-
-#oppdragsgiver {
-  width : 150px;
-}
-
-#periode {
-  width : 110px;
-}
-
-/*****************************************************************
- * Footer
- */
-footer {
-  clear: both;
-  background: black;
-  color: white;
-  bottom: 0;
-  margin-top: 2em;
-  text-align: center;
-  font-family: Arial;
-  font-size: 13px;
-  width: 100%;
-}
-
-footer a {
-  background: black;
-  color: white;
-  text-decoration: none;
-}
-
-li p,
-td p {
-  display: inline;
+#cv-header .heading {
+  margin-top: 20px;
 }

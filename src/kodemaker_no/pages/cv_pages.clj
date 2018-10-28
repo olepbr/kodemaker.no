@@ -3,11 +3,11 @@
             [clojure.string :as str]
             [kodemaker-no.formatting :as f]))
 
-(defn- section [header id content]
-  [:section {:id id}
-   [:header header]
-   content
-   [:hr]])
+(defn- project-highlight [{:keys [blurb logo logo-width logo-height customer]}]
+  [:div.grey-box
+   [:div.bd
+    [:div [:strong customer]]
+    [:div.content blurb]]])
 
 (def tech-labels
   {:proglang "Programmeringsspråk"
@@ -25,84 +25,152 @@
 (def tech-order
   [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend])
 
+(defn- prep-tech [all-techs tech-type]
+  (when-let [techs (tech-type all-techs)]
+    {:label (tech-labels tech-type)
+     :techs techs}))
+
 (defn- render-tech [{:keys [label techs]}]
   (list [:dt label]
         [:dd (->> techs
                   (map :name)
                   (str/join ", "))]))
 
-(defn- prep-tech [all-techs tech-type]
-  (when-let [techs (tech-type all-techs)]
-    {:label (tech-labels tech-type)
-     :techs techs}))
+(defn- section [title id & content]
+  (apply vector
+         :div {:id id :class "print-block"}
+         [:h2.mhn title]
+         content))
 
-(defn- technologies [techs]
-  (section
-   "Teknologi"
-   "technology"
-   [:dl
-    (->> tech-order
-         (map #(prep-tech techs %))
-         (filter identity)
-         (map render-tech))
-    (render-tech {:label "Annet"
-                  :techs (->> (set (keys tech-labels))
-                              (set/difference (set (keys techs)))
-                              (select-keys techs)
-                              vals
-                              (apply concat)
-                              (filter :type))})]))
+(defn- technologies [{:keys [techs]}]
+  (section "Teknologi" "technology"
+           [:dl.dtable
+            (->> tech-order
+                 (map #(prep-tech techs %))
+                 (filter identity)
+                 (map render-tech))
+            (render-tech {:label "Annet"
+                          :techs (->> (set (keys tech-labels))
+                                      (set/difference (set (keys techs)))
+                                      (select-keys techs)
+                                      vals
+                                      (apply concat)
+                                      (filter :type))})]))
 
 (defn- year-range [{:keys [years start end]}]
   (if start
     (str (f/year-month-str start) " - " (f/year-month-str end))
     (f/year-range years)))
 
-(defn- table [items headings columns]
-  [:table
-   [:thead [:tr (map (fn [h] [:th h]) headings)]]
-   [:tbody
+(defn- render-projects [employments [employer projects]]
+  [:div.mod
+   [:table.listing.padded
+    [:thead
+     [:tr
+      [:th.tr [:h3 "Arbeidsgiver:"]]
+      [:th [:h3 (:name employer)]]]
+     (when-let [employment (and (:id employer) ((:id employer) employments))]
+       [:tr
+        [:td]
+        [:td [:p.smaller (:description employment)]]])]
+    [:tbody
+     (map (fn [project]
+            [:tr
+             [:th {:style "max-width: 200px;"}
+              [:h4 (:customer project)]
+              [:p (year-range project)]]
+             [:td.fw
+              [:h4 (:summary project)]
+              (f/to-html (:description project))
+              [:div.smaller.mbxl
+               [:span "■ "]
+               (->> project :tech (map :name) (str/join ", "))]]])
+          projects)]]])
+
+(defn- projects [{:keys [projects employments]}]
+  (when (< 0 (count projects))
+    (section "Prosjekter"
+             "projects"
+             (->> projects
+                  (group-by :employer)
+                  (map #(render-projects employments %))))))
+
+(defn- endorser [{:keys [author title]}]
+  (str/join ", " (concat [author] (when title [title]))))
+
+(defn- render-endorsement [endorsement]
+  [:div
+   [:h3 (endorser endorsement)]
+   [:div.mod
+    [:blockquote (:quote endorsement)]]])
+
+(defn- endorsements [{:keys [endorsements] :as person}]
+  (when (< 0 (count endorsements))
+    (section "Anbefalinger"
+             "endorsements"
+             (map render-endorsement endorsements))))
+
+(defn- table-rows [items columns & [classes]]
+  (let [classes (or classes [])]
     (map (fn [item]
            [:tr
-            (map (fn [col] [:td (col item)]) columns)])
-         items)]])
+            (map-indexed (fn [idx col]
+                           [:td {:class (first (drop idx classes))} (col item)]) columns)])
+         items)))
 
-(defn- table-section [header id items headings columns]
-  (when (< 0 (count items))
-    (section header
-             id
-             (table items headings columns))))
+(defn- certification-detail [{:keys [name url certificate]}]
+  (apply vector :div
+         (if url
+           [:a {:href url} name]
+           name)
+         (when certificate
+           (list " / " [:a {:href (:url certificate)}
+                       (or (:text certificate) "Kursbevis")]))))
 
-(defn- list-section [header id items render-item]
-  (when (< 0 (count items))
-    (section header
-             id
-             [:ul
-              (map (fn [item] [:li {} (render-item item)]) items)])))
+(defn- education-label [{:keys [education certifications]}]
+  (if (< 0 (count certifications))
+    "Utdanning, sertifiseringer og kurs"
+    "Utdanning"))
 
-(defn- render-projects [employments [employer projects]]
-  (list
-   [:h3 (:name employer)]
-   (when-let [employment (and (:id employer) ((:id employer) employments))]
-     [:p (:description employment)])
-   (table projects
-          ["Oppdragsgiver" "Periode" "Oppdrag"]
-          [:customer
-           year-range
-           (fn [{:keys [description tech]}]
-             (list (f/to-html description)
-                   [:div {:style "margin: 1em 0"}
-                    [:strong "Teknologi: "]
-                    (->> tech (map :name) (str/join ", "))]))])))
+(defn- education [{:keys [education certifications] :as person}]
+  (when (< 0 (+ (count education) (count certifications)))
+    (section (education-label person)
+             "education"
+             [:div.mod
+              [:table.table.padded
+               [:tbody
+                (table-rows certifications [:year :institution certification-detail] ["nw"])
+                (table-rows education [year-range :institution :subject] ["nw"])]]])))
 
-(defn- projects-fullview [person]
-  (when (< 0 (count (:projects person)))
-    (section "Prosjekter"
-             (name :projects)
-             (->> (:projects person)
-                  (filter :description)
-                  (group-by :employer)
-                  (map #(render-projects (:employments person) %))))))
+(defn- languages [{:keys [languages]}]
+  (when (< 0 (count languages))
+    (section "Språk"
+             "languages"
+             [:div.mod
+              [:table.padded
+               [:thead
+                [:tr
+                 [:th "Språk"]
+                 [:th "Muntlig"]
+                 [:th "Skriftlig"]]]
+               [:tbody
+                (table-rows languages [:language :orally :written])]]])))
+
+(defn- linked-title [{:keys [title urls]}]
+  (if-let [url (or (:video urls) (:slides urls) (:source urls))]
+    [:a {:href url} title]
+    title))
+
+(defn- appearances [{:keys [appearances]}]
+  (when (< 0 (count appearances))
+    (section "Foredrag/kurs"
+             "appearances"
+             [:div.mod
+              [:table.padded
+               [:tbody
+                (table-rows appearances
+                            [:year-month-numeric linked-title :event]
+                            [nil "nw"])]]])))
 
 (defn- render-open-source-contributions [[lang contributions]]
   (list
@@ -112,7 +180,7 @@
      (->> contributions
           (filter #(= :developer (:role %)))
           (map (fn [{:keys [url name description]}]
-                 [:li "Utviklet " [:a {:href url} name] ". " (f/to-html description)])))
+                 [:li (f/to-html (format "Utviklet [%s](%s). %s" name url description))])))
      (let [contribs (filter #(= :contributer (:role %)) contributions)]
        (when (< 0 (count contribs))
          [:li "Har bidratt til "
@@ -126,104 +194,78 @@
              "open-source-contributions"
              (map render-open-source-contributions open-source-contributions))))
 
-(defn- short-fact [person attr label]
-  (when-let [val (attr person)]
-    (list [:dt label]
-          [:dd val])))
+(defn- other-contributions [{:keys [other]}]
+  (when (< 0 (count other))
+    (section "Andre faglige bidrag"
+             "other"
+             (map (fn [{:keys [title url summary]}]
+                    [:div
+                     [:h5 (if url
+                            [:a {:href url} title]
+                            title)]
+                     (f/to-html summary)]) other))))
 
-(defn- endorsements [{:keys [endorsements]}]
-  (when (< 0 (count endorsements))
-    (section "Anbefalinger"
-             "endorsments"
-             (map (fn [{:keys [author title quote]}]
-                    (list [:h3 author (when title (list ", " title))]
-                          [:blockquote quote]))
-                  endorsements))))
-
-(defn linked-title [{:keys [title urls]}]
-  (if-let [url (or (:video urls) (:slides urls) (:source urls))]
-    [:a {:href url} title]
-    title))
-
-(defn certification-name [{:keys [name url]}]
-  (if url
-    (f/to-html [:a {:href url} name])
-    (f/to-html name)))
-
-(defn certificate [{:keys [certificate]}]
-  (when certificate
-    [:a {:href (:url certificate)} (or (:text certificate) "Kurssertifikat")]))
+(defn- anchors [person]
+  (concat
+   [["#projects" "Prosjekter"]
+    ["#endorsements" "Anbefalinger"]
+    ["#technology" "Teknologi"]
+    ["#education" (education-label person)]]
+   (when (< 0 (count (:appearances person)))
+     [["#appearances" "Foredrag/kurs"]])
+   (when (< 0 (count (:open-source-contributions person)))
+     [["#open-source-contributions" "Bidrag til open source"]])))
 
 (defn- cv-page [person]
   {:title (format "%s CV" (:full-name person))
    :layout :cv
    :body
-   (list [:header
-          [:section#card
-           [:section#logo
-            [:img.favicon {:src "/images/cv/favicon-pointed-right.png"}]
-            [:img.kodemaker {:src "/images/cv/kodemaker.png"}]]
-           [:section#info
-            [:div#name (:full-name person)]
-            [:div#title (:title person)]
-            [:div#phone (:phone-number person)]
-            [:div#mail (:email-address person)]]]
-          [:section#picture
-           [:img {:height "190"
-                  :src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
-          [:section#personal
-           [:dl
-            (short-fact person :born "Født")
-            (short-fact person :relationship-status "Sivilstatus")
-            (short-fact person :education-summary "Utdanning")
-            (short-fact person :experience-since "Erfaring")]]]
-         [:article
-          (section "Sammendrag" "abstract" (f/to-html (:description person)))
-          (technologies (:techs person))
-          (when (< 0 (count (:qualifications person)))
-            (section "Kvalifikasjoner"
-                     (name :qualifications)
-                     [:ul (map #(vector :li %) (:qualifications person))]))
-          (table-section "Prosjekter, sammendrag"
-                         (name :projects)
-                         (:projects person)
-                         ["Oppdragsgiver" "Periode" "Oppdrag"]
-                         [:customer year-range :summary])
-          (projects-fullview person)
-          (table-section "Foredrag/kurs"
-                         (name :appearances)
-                         (:appearances person)
-                         ["Navn" "Sted" "Når"]
-                         [linked-title :event :year-month])
-          (open-source-contributions person)
-          (list-section "Andre faglige bidrag"
-                        (name :other)
-                        (:other person)
-                        (fn [{:keys [title url summary]}]
-                          (if url
-                            (list [:a {:href url} title] " - " (f/to-html summary))
-                            (list (when title (str title " - ")) (f/to-html summary)))))
-          (table-section "Utdanning"
-                         (name :education)
-                         (:education person)
-                         ["Skole" "År" "Retning"]
-                         [:institution year-range :subject])
-          (table-section "Sertifiseringer/ kurs"
-                         (name :certifications)
-                         (:certifications person)
-                         ["Kursnavn" "År" ""]
-                         [certification-name :year certificate])
-          (table-section "Domenekunnskap"
-                         (name :domain-skills)
-                         (:domain-skills person)
-                         ["Område" "Kjennskap"]
-                         [:title :description])
-          (table-section "Språk"
-                         (name :languages)
-                         (:languages person)
-                         ["Språk" "Muntlig" "Skriftlig"]
-                         [:language :orally :written])
-          (endorsements person)])})
+   (list [:div#cv-header.bd.rel
+          [:p.mvn.picture
+           [:img.image {:src (format "/photos/people/%s/side-profile-cropped.jpg" (:str person))}]]
+          [:div.heading
+           [:h1.hn [:span.black.hide-lt-460-il "CV / "] (f/no-widows (:full-name person))]]
+          [:p.summary
+           (:phone-number person)
+           [:br]
+           [:a {:href (format "mailto:%s" (:email-address person))} (:email-address person)]]]
+         [:hr.mtn]
+         [:h3.bigger
+          (format "%s med %s års erfaring" (:title person)
+                  (let [years (get person :years-experience 0)]
+              (if (<= years 30) years "mange")))]
+         [:ul.spacey
+          (map #(vector :li %) (:qualifications person))]
+
+         (when (< 0 (count (:project-highlights person)))
+           [:div.flex-l.tc.mtl.mod
+            (map project-highlight (:project-highlights person))])
+
+         [:div.mod.mbl.show-lt-810 [:hr]]
+
+         (if-let [endorsement (:endorsement-highlight person)]
+           [:div.bc.flex.mod
+            [:div.f2o3
+             [:blockquote
+              [:div.mbm (:quote endorsement)]
+              [:div.smaller [:strong (endorser endorsement)]]]]
+            [:div.f1o3.noprint.hide-lt-460
+             [:p
+              (map #(vector :div.tr [:a {:href (first %)} (second %)]) (anchors person))]]]
+           [:p.spread.noprint.hide-lt-460 (interpose " " (map #(vector :a {:href (first %)} (second %)) (anchors person)))])
+
+         [:div#about.print-block
+          [:h2.mhn "Om " (:first-name person)]
+          (f/to-html (:description person))]
+
+         (technologies person)
+         (projects person)
+         (endorsements person)
+         (education person)
+         (languages person)
+         (appearances person)
+         (open-source-contributions person)
+         (other-contributions person))})
 
 (defn cv-pages [cvs]
   (->> cvs

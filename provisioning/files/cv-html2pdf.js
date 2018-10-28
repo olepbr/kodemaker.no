@@ -27,8 +27,7 @@ function mkpdf(root, filepath) {
 
   fs.writeFileSync(cvhtml,
                    fs.readFileSync(path.join(root, filepath), 'utf-8')
-                   .replace(/="\//g, `="${path.relative(p, 'build')}/`)
-                   .replace(/"[^"]+cv-print.css"/, `"${path.relative(p, public)}/styles/cv-print-prince.css"`),
+                   .replace(/="\//g, `="${path.relative(p, 'build')}/`),
                    'utf-8');
 
   const output = cvhtml.replace(outDir, root).replace(/\/index\.html$/, '.pdf');

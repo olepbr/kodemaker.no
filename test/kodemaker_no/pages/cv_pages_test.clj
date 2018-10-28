@@ -22,4 +22,4 @@
  "Rendering the page does not cause trouble"
  (let [html (-> (page) :body html)]
    html => #"/photos/people/christian/side-profile-cropped.jpg"
-   html => #"Erfaring"))
+   html => #"erfaring"))
