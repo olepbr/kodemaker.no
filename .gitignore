@@ -16,3 +16,4 @@ pom.xml.asc
 /provisioning/*.retry
 cv-pdf
 .terraform
+ci/.zip

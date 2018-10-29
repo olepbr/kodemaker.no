@@ -15,3 +15,13 @@ provider "aws" {
     role_arn = "arn:aws:iam::195221715009:role/Deployer"
   }
 }
+
+provider "aws" {
+  version = "~> 1.0"
+  region = "us-east-1"
+  alias = "us-east-1"
+
+  assume_role {
+    role_arn = "arn:aws:iam::195221715009:role/Deployer"
+  }
+}

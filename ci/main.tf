@@ -44,6 +44,53 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
   policy = "${data.aws_iam_policy_document.s3_policy.json}"
 }
 
+data "aws_iam_policy_document" "lambda" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type = "Service"
+      identifiers = [
+        "lambda.amazonaws.com",
+        "edgelambda.amazonaws.com"
+      ]
+    }
+  }
+}
+
+resource "aws_iam_role" "lambda_role" {
+  name_prefix = "${local.domain_name}"
+  assume_role_policy = "${data.aws_iam_policy_document.lambda.json}"
+}
+
+resource "aws_iam_role_policy_attachment" "basic" {
+  role = "${aws_iam_role.lambda_role.name}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+data "archive_file" "rewrite" {
+  type = "zip"
+  output_path = "${path.module}/.zip/rewrite.zip"
+
+  source {
+    filename = "lambda.js"
+    content = "${file("${path.module}/lambda.js")}"
+  }
+}
+
+resource "aws_lambda_function" "basic_auth" {
+  provider = "aws.us-east-1"
+  function_name = "kodemaker-www-url-rewrite"
+  filename = "${data.archive_file.rewrite.output_path}"
+  source_code_hash = "${data.archive_file.rewrite.output_base64sha256}"
+  role = "${aws_iam_role.lambda_role.arn}"
+  runtime = "nodejs8.10"
+  handler = "lambda.handler"
+  memory_size = 128
+  timeout = 3
+  publish = true
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name = "${aws_s3_bucket.bucket.bucket_regional_domain_name}"
@@ -79,6 +126,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     max_ttl = 86400
     compress = true
     viewer_protocol_policy = "allow-all"
+
+    lambda_function_association {
+      event_type = "viewer-request"
+      lambda_arn = "${aws_lambda_function.basic_auth.qualified_arn}"
+      include_body = false
+    }
   }
 
   # Cache immutable paths for a long time
