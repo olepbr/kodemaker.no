@@ -1,5 +1,6 @@
 (ns kodemaker-no.web
   (:require [clojure.core.memoize]
+            [clojure.data.json :as json]
             [config :refer [export-directory]]
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
@@ -91,13 +92,17 @@
 (defn- load-export-dir []
   (stasis/slurp-directory export-directory #"\.[^.]+$"))
 
-(defn export []
-  (let [assets (optimize (get-assets) {})
+(defn export [& args]
+  (let [[format] (map read-string args)
+        assets (optimize (get-assets) {})
         old-files (load-export-dir)]
     (stasis/empty-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})
-    (println)
-    (println "Export complete:")
-    (stasis/report-differences old-files (load-export-dir))
-    (println)))
+    (if (= format :json)
+      (println (json/write-str (dissoc (stasis/diff-maps old-files (load-export-dir)) :unchanged)))
+      (do
+        (println)
+        (println "Export complete:")
+        (stasis/report-differences old-files (load-export-dir))
+        (println)))))
