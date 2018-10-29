@@ -51,7 +51,7 @@
 
 (def optimize
   (-> (fn [assets options]
-        (-> assets
+        (-> (map #(assoc % :context-path "/assets") assets)
             (transform-images {:regexp #"/photos/.*\.jpg"
                                :quality 0.3
                                :width (* 290 2)
