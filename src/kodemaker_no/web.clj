@@ -46,7 +46,8 @@
                   prepare-pages)]
     (stasis/merge-page-sources
      {:site-pages pages
-      :raw-pages (:raw-pages content)})))
+      :raw-pages (:raw-pages content)
+      :raw-css (:raw-css content)})))
 
 (def optimize
   (-> (fn [assets options]

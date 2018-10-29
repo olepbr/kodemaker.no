@@ -231,6 +231,7 @@
              :articles {Path Article}
              :references {Path [Section]}
              :raw-pages {Path Str}
+             :raw-css {Path Str}
              :tech-names {ID Str}
              :tech-types {ID ID}
              :blog-posts {Path BlogPost}
