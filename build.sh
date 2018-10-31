@@ -16,13 +16,21 @@ role_creds=$(aws sts assume-role \
                  --role-arn "arn:aws:iam::195221715009:role/Deployer" \
                  --role-session-name DeployKodemakerWeb)
 
+prod-aws() {
+  env \
+      AWS_ACCESS_KEY_ID=$(echo "$role_creds" | jq -cr .Credentials.AccessKeyId) \
+      AWS_SECRET_ACCESS_KEY=$(echo "$role_creds" | jq -cr .Credentials.SecretAccessKey) \
+      AWS_SESSION_TOKEN=$(echo "$role_creds" | jq -cr .Credentials.SessionToken) \
+      aws $@
+}
+
 bucket="s3://kodemaker-www/"
 target="build"
 
 echo "Syncing down production site for accurate build diffs"
 mkdir -p "$target"
 pushd "$target" > /dev/null
-aws s3 sync $bucket .
+prod-aws s3 sync $bucket .
 popd > /dev/null
 
 echo "Building site"
@@ -42,13 +50,13 @@ if [ $? -ne 0 ]; then
 fi
 
 expires="$(format-date $ts "%a, %d %b %Y %H:%M:%S GMT")"
-aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*"
+prod-aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*"
 
 echo "Syncing remaining files and deleting removed files"
-aws s3 sync . $bucket --delete --exclude "assets/*"
+prod-aws s3 sync . $bucket --delete --exclude "assets/*"
 
 echo "Purging old assets"
-aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --delete
+prod-aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --delete
 
 changed=$(for file in $(echo "${diffs}" | jq -cr '.changed[]'); do
             echo ${file/"index.html"/""}
@@ -61,5 +69,5 @@ removed=$(for file in $(echo "${diffs}" | jq -cr '.removed[]'); do
 if [ "$changed$removed" != "" ]; then
   paths=$(echo "$changed $removed")
   echo "Purging Cloudfront caches for $paths"
-  aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths $paths
+  prod-aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths $paths
 fi
