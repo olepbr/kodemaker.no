@@ -10,4 +10,6 @@ cache:
   - $HOME/.m2
 
 after_success:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
   - aws sts get-caller-identity
