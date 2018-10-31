@@ -15,9 +15,9 @@ env:
 cache:
   directories:
   - $HOME/.m2
+  - /home/travis/build/kodemaker/kodemaker.no/build
 
 after_success:
-  - pwd # Debugging
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
   - ./build.sh
