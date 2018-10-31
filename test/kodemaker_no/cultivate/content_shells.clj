@@ -6,6 +6,7 @@
           :articles {}
           :references {}
           :raw-pages {}
+          :raw-css {}
           :tech-names {}
           :blog-posts {}
           :video-overrides {}
