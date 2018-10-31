@@ -1,16 +1,20 @@
 #!/bin/bash
 
 function format-date() {
-    timestamp=$1
-    format="$2"
-    res=$(date -d @$timestamp +"$format" 2> /dev/null)
+  timestamp=$1
+  format="$2"
+  res=$(date -d @$timestamp +"$format" 2> /dev/null)
 
-    if [ $? -eq 0 ]; then
-        echo $res
-    else
-        date -r $timestamp -u +"$format"
-    fi
+  if [ $? -eq 0 ]; then
+    echo $res
+  else
+    date -r $timestamp -u +"$format"
+  fi
 }
+
+role_creds=$(aws sts assume-role \
+                 --role-arn "arn:aws:iam::195221715009:role/Deployer" \
+                 --role-session-name DeployKodemakerWeb)
 
 bucket="s3://kodemaker-www/"
 target="build"
@@ -23,6 +27,10 @@ popd > /dev/null
 
 echo "Building site"
 diffs=$(lein build-site :json)
+
+echo "Generating PDFs"
+$(aws ecr get-login --no-include-email)
+docker run --rm -v $(cd $(dirname $0)/build && pwd):/site 575778107697.dkr.ecr.eu-west-1.amazonaws.com/html2pdf:130bd62355 /site/cv /site
 
 echo "Syncing assets, cacheable for a year"
 pushd "$target" > /dev/null

@@ -1,4 +1,10 @@
+sudo: true
+
 language: clojure
+
+services:
+  - docker
+
 script: lein with-profile test midje
 
 env:
@@ -13,4 +19,4 @@ cache:
 after_success:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
-  - aws sts get-caller-identity
+  - ./build.sh
