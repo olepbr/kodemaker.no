@@ -17,6 +17,7 @@ cache:
   - $HOME/.m2
 
 after_success:
+  - pwd # Debugging
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
   - ./build.sh
