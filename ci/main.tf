@@ -101,6 +101,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
+  custom_error_response {
+    error_code = 404
+    response_page_path = "/404/index.html"
+    response_code = 404
+  }
+
   enabled = true
   is_ipv6_enabled = true
   comment = "Distribution for ${local.domain_name}"
