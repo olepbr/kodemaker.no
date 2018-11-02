@@ -1,11 +1,15 @@
 {:id :frode
- :profile-active? false
+ :profile-active? true
  :name ["Frode" "Nerbråten"]
  :title "Systemutvikler"
- :start-date "2018-10-01 00:09"
- :description "<strong>Starter 1. oktober</strong>
+ :start-date "2018-10-01 00:00"
+ :description "Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
 
-Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
+Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift.
+
+Han er interessert i funksjonell programmering og distribuerte systemer og er opptatt av å lage enkle, robuste og feiltolerante systemer."
+
+ :cv/description "Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
 
 Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift. De siste årene har han jobbet mye med api-design, mikrotjenester og devops.
 
@@ -37,16 +41,16 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                     :link {:url "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
                            :text "Les artikkel"}
                     :tech [:kafka :performance]}
-		   {:title "The Phoenix Project"
-		    :blurb "En fornøyelig bok om en mellomleder i IT-avdelingen i en stor bedrift som får i oppgave å redde selskapets massive forsinkede IT-prosjekt som truer hele selskapets fremtid. Han får hjelp av et mystisk styremedlem med en teori om at IT har mer til felles med produksjon av biler enn man skulle tro. Meget underholdene bok om prinsippene fra lean manufacturing og starten på devopsbevegelsen."
-		    :link {:url "https://itrevolution.com/book/the-phoenix-project/"
-		    	   :text "Til boken"}
-		    :tech [:lean :devops]}
-		   {:title "Learn you a Haskell for great good"
-		    :blurb "En lettbeint og underholdene introduksjon til Haskell. Anbefales til alle som vil lære Haskell. Les gjerne denne før du går over til mer omfattende bøker."
-		    :link {:url "http://learnyouahaskell.com/"
-		    	   :text "Til boken"}
-		    :tech [:haskell :functional-programming]}]
+       {:title "The Phoenix Project"
+        :blurb "En fornøyelig bok om en mellomleder i IT-avdelingen i en stor bedrift som får i oppgave å redde selskapets massive forsinkede IT-prosjekt som truer hele selskapets fremtid. Han får hjelp av et mystisk styremedlem med en teori om at IT har mer til felles med produksjon av biler enn man skulle tro. Meget underholdene bok om prinsippene fra lean manufacturing og starten på devopsbevegelsen."
+        :link {:url "https://itrevolution.com/book/the-phoenix-project/"
+             :text "Til boken"}
+        :tech [:lean :devops]}
+       {:title "Learn you a Haskell for great good"
+        :blurb "En lettbeint og underholdene introduksjon til Haskell. Anbefales til alle som vil lære Haskell. Les gjerne denne før du går over til mer omfattende bøker."
+        :link {:url "http://learnyouahaskell.com/"
+             :text "Til boken"}
+        :tech [:haskell :functional-programming]}]
 
 ;; :hobbies [{:title "Foto"
 ;;            :description "TLDR"
@@ -202,19 +206,17 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
  :open-source-contributions [
                  {:name "Dropwizard" :url "https://github.com/dropwizard/dropwizard/pull/948" :tech [:java :dropwizard] }
                  {:name "Gatling" :url "https://github.com/gatling/gatling/pull/1564" :tech [:scala :gatling] }
-                 {:name "Jetty" :url "https://bugs.eclipse.org/bugs/show_bug.cgi?id=450467" :tech [:java :jetty] }
-                 {:name "Jetty" :url "https://bugs.eclipse.org/bugs/show_bug.cgi?id=384896" :tech [:java :jetty] }
-                 {:name "HOauth" :url "https://github.com/freizl/hoauth2/pull/24" :tech [:haskell :hoauth] }
+                 {:name "Jetty" :url "https://org.eclipse.jetty" :tech [:java :jetty] }
                  ]
 
-:side-projects
-                [
-                 {:title        "Digipostarkiv"
-                  :description  "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
-                                Består av en backend skrevet i Haskell og et native OSX-gui skrevet i Swift som linkes sammen til én binary."
-                  :illustration "/illustrations/side-projects/weathergraph.png"
-                  :link         {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
-                  :tech         [ :haskell :swift :objective-c :oauth]
-                  }
-                 ]
+;:side-projects
+;                [
+;                 {:title        "Digipostarkiv"
+;                  :description  "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
+;                                Består av en backend skrevet i Haskell og et native OSX-gui skrevet i Swift som linkes sammen til én binary."
+;                  :illustration "/illustrations/side-projects/weathergraph.png"
+;                  :link         {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
+;                  :tech         [ :haskell :swift :objective-c :oauth]
+;                  }
+;                 ]
  }
