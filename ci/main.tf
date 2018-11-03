@@ -1,6 +1,11 @@
 locals {
   domain_name = "www.kodemaker.no"
+  secondary_domain_name = "kodemaker.no"
   s3_origin_id = "StaticFilesS3BucketOrigin"
+}
+
+data "aws_route53_zone" "zone" {
+  name = "kodemaker.no."
 }
 
 resource "aws_s3_bucket" "bucket" {
@@ -91,7 +96,33 @@ resource "aws_lambda_function" "basic_auth" {
   publish = true
 }
 
+resource "aws_acm_certificate" "cert" {
+  provider = "aws.us-east-1"
+  domain_name = "*.kodemaker.no"
+  validation_method = "DNS"
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_route53_record" "cert_validation" {
+  name = "${aws_acm_certificate.cert.domain_validation_options.0.resource_record_name}"
+  type = "${aws_acm_certificate.cert.domain_validation_options.0.resource_record_type}"
+  zone_id = "${data.aws_route53_zone.zone.id}"
+  records = ["${aws_acm_certificate.cert.domain_validation_options.0.resource_record_value}"]
+  ttl = 60
+}
+
+resource "aws_acm_certificate_validation" "cert" {
+  provider = "aws.us-east-1"
+  certificate_arn = "${aws_acm_certificate.cert.arn}"
+  validation_record_fqdns = ["${aws_route53_record.cert_validation.fqdn}"]
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
+  depends_on = ["aws_acm_certificate_validation.cert"]
+
   origin {
     domain_name = "${aws_s3_bucket.bucket.bucket_regional_domain_name}"
     origin_id = "${local.s3_origin_id}"
@@ -111,7 +142,10 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled = true
   comment = "Distribution for ${local.domain_name}"
   default_root_object = "index.html"
-  aliases = ["${local.domain_name}"]
+  aliases = [
+    "${local.domain_name}",
+    "${local.secondary_domain_name}"
+  ]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
@@ -170,6 +204,32 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = "true"
+    acm_certificate_arn = "${aws_acm_certificate.cert.arn}"
+    minimum_protocol_version = "TLSv1"
+    ssl_support_method = "sni-only"
+  }
+}
+
+resource "aws_route53_record" "www_record" {
+  name = "${local.domain_name}"
+  zone_id = "${data.aws_route53_zone.zone.zone_id}"
+  type = "A"
+
+  alias {
+    name = "${aws_cloudfront_distribution.s3_distribution.domain_name}"
+    zone_id = "${aws_cloudfront_distribution.s3_distribution.hosted_zone_id}"
+    evaluate_target_health = true
+  }
+}
+
+resource "aws_route53_record" "root_record" {
+  name = "${local.secondary_domain_name}"
+  zone_id = "${data.aws_route53_zone.zone.zone_id}"
+  type = "A"
+
+  alias {
+    name = "${aws_cloudfront_distribution.s3_distribution.domain_name}"
+    zone_id = "${aws_cloudfront_distribution.s3_distribution.hosted_zone_id}"
+    evaluate_target_health = true
   }
 }
