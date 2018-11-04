@@ -309,6 +309,7 @@
  :sinatra :library
  :sinon :library
  :siteminder :server
+ :slack :tool
  :soap :specification
  :solaris :os
  :sonar :tool
@@ -342,6 +343,7 @@
  :textmate :devtools
  :thinking-sphinx :library
  :traefik :devops
+ :trello :tool
  :tsql :specification
  :tutum :cloud
  :typescript :proglang

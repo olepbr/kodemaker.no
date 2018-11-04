@@ -1,6 +1,6 @@
 {:id :react-native
  :name "React Native"
- :type :devops
+ :type :frontend
  :illustration "/photos/tech/react.png"
  :site "https://facebook.github.io/react-native/"
  :description
