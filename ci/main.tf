@@ -98,7 +98,7 @@ resource "aws_lambda_function" "basic_auth" {
 
 resource "aws_acm_certificate" "cert" {
   provider = "aws.us-east-1"
-  domain_name = "*.kodemaker.no"
+  domain_name = "www.kodemaker.no"
   validation_method = "DNS"
 
   lifecycle {
@@ -142,10 +142,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled = true
   comment = "Distribution for ${local.domain_name}"
   default_root_object = "index.html"
-  aliases = [
-    "${local.domain_name}",
-    "${local.secondary_domain_name}"
-  ]
+  aliases = ["${local.domain_name}"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
@@ -222,14 +219,23 @@ resource "aws_route53_record" "www_record" {
   }
 }
 
+resource "aws_s3_bucket" "redirect" {
+  bucket = "${local.secondary_domain_name}"
+  acl = "public-read"
+
+  website {
+    redirect_all_requests_to = "https://${local.domain_name}"
+  }
+}
+
 resource "aws_route53_record" "root_record" {
   name = "${local.secondary_domain_name}"
   zone_id = "${data.aws_route53_zone.zone.zone_id}"
   type = "A"
 
   alias {
-    name = "${aws_cloudfront_distribution.s3_distribution.domain_name}"
-    zone_id = "${aws_cloudfront_distribution.s3_distribution.hosted_zone_id}"
+    name = "${aws_s3_bucket.redirect.website_domain}"
+    zone_id = "${aws_s3_bucket.redirect.hosted_zone_id}"
     evaluate_target_health = true
   }
 }
