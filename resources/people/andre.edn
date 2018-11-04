@@ -23,7 +23,8 @@
                  :using-at-work [:kotlin, :javascript :react]
                  :want-to-learn-more      [:haskell :scala]}
 
- :cv {:default {:preferred-techs [:elixir :kotlin :clojure :clojurescript]}}                 
+ :cv {:default {:preferred-techs [:elixir :kotlin :clojure :clojurescript]
+                :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase]}}                 
  
  :project-highlights [{:blurb "Design og utvikling av et nytt system for budleveranser"
                         :customer "Bring"
@@ -158,11 +159,12 @@
              :years [2018 :ongoing]
              :description "Utvikling av et system for budleveranser, alt fra
              mottak av ordre, ruteoptimalisering for sjåfører, sporing i
-             sanntid, og integrasjoner med mange av Bring sine systemer.
+             sanntid, og integrasjoner med mange av Bring sine systemer. Utvikling av app for sjåfører for å støtte de 
+             i sin jobb med å plukke opp og leverer pakkene til mottaker.
              Utviker"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
-             :tech [:kotlin :javascript :react :react-native :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture]}
+             :tech [:kotlin :javascript :es6 :react :react-native :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
             {:customer "Animalia"
              :years [2017]
              :employer :kodemaker
