@@ -249,6 +249,7 @@
  :octave :proglang
  :octopus :devops
  :oidc :security
+ :okd :devops
  :om :framework
  :om-next :framework
  :openam :security
@@ -331,6 +332,7 @@
  :struts2 :framework
  :svn :vcs
  :sqlite :database
+ :sqlserver :database
  :squirrel-sql :library
  :statsd :server
  :sublime-text :devtools

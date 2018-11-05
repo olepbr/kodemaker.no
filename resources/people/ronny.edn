@@ -14,9 +14,9 @@
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:react :es6 :groovy]
-        :using-at-work [:react :es6 :redux :groovy :grails :ansible]
-        :want-to-learn-more [:clojure :clojurescript :kubernetes :docker]}
+ :tech {:favorites-at-the-moment [:react :es6]
+        :using-at-work [:clojure :clojurescript :re-frame :reagent :docker]
+        :want-to-learn-more [:kubernetes :docker]}
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
@@ -41,6 +41,13 @@
                              ]
 
  :projects [
+
+            {:customer "Animalia"
+             :start "2018-09"
+             :employer :kodemaker
+             :summary "Dyrehelseportalen"
+             :description "Utvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
+             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :compojure :swagger :spec :reagent :re-frame :react :websocket :bootstrap :sqlserver :oracle]}
 
             {:customer "NSB"
              :start "2018-05"
@@ -432,7 +439,7 @@
                        :logo "/logos/nsb.png"}
                       ]
 
- :cv {:default {:exclude-techs [:dreamweaver-mx :struts :atg-dynamo :webwork :fusioncharts :google-image-charts :weblogic :jboss-messaging :jboss-portal]}}
+ :cv {:default {:exclude-techs [:dreamweaver-mx :struts :atg-dynamo :webwork :fusioncharts :google-image-charts :weblogic :jboss-messaging :jboss-portal :hudson]}}
 
  :cv/description "Ronny har lang erfaring med systemutvikling. Han er spesielt
 fokusert på å lage webapplikasjoner med høy ytelse, god interaksjon og
