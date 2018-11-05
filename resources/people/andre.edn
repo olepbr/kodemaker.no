@@ -81,14 +81,14 @@
                   :illustration "/illustrations/hobbies/kimi-f1.jpg"}
                   ]
 
- :blog-posts [{:url "http://blog.bonkowski.net/blog/2013/02/10/refactoring-in-appcode/"
+ :blog-posts [{:url "http://bonkowski.net/posts/refactoring-in-appcode"
                 :title "Refactoring in AppCode"
                 :blurb "De fleste Java utviklere kjenner til IntelliJ IDEA, som etter min og mange andres mening er den beste IDE'en 
                 for Java. Etter å ha utviklet for iOS en god stund så finner man fort ut at Apples Xcode ikke er på høyde. Gleden var stor da 
                 JetBrains laserte AppCode. Her en artikkel som beskriver litt hvordan rafactoring støtten er i AppCode"
                 :tech [:cocoa :objc]
                 }
-              {:url "http://blog.bonkowski.net/blog/2013/01/21/navigation-in-appcode/"
+              {:url "http://bonkowski.net/posts/navigation-in-appcode/"
                 :title "Navigation in AppCode"
                 :blurb "I \"serien\" om bruk av AppCode så omhandler denne artikkelen om navigering i IDE'en"
                 :tech [:cocoa :objc]
