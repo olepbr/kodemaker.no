@@ -78,8 +78,9 @@
                              (drop 1)
                              first)
                         (first sorted-peeps))]
-    (assoc person :next-person-url
-           (str "/" (name (:id next-person)) "/"))))
+    (assoc person
+           :next-person-url (str "/" (name (:id next-person)) "/")
+           :next-person-cv-url (str "/cv/" (name (:id next-person)) "/"))))
 
 (defn- cultivate-person [content person]
   (->> person

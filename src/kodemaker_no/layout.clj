@@ -143,6 +143,8 @@
     [:div#header.inverse
      [:div.bd.iw
       [:h1.hn
+       (when-let [url (:arrow page)]
+         [:a.arrow.noprint {:href url :title "Neste CV"} [:span.arrow-body] [:span.arrow-head]])
        [:a.linkBlock.white {:href "/"} "Kodemaker"]]]]
     [:div.iw content]
     [:div.footer.iw.mbl

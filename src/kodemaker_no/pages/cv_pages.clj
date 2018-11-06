@@ -219,6 +219,7 @@
 (defn- cv-page [person]
   {:title (format "%s CV" (:full-name person))
    :layout :cv
+   :arrow (:next-person-cv-url person)
    :body
    (list [:div#cv-header.bd.rel
           [:p.mvn.picture

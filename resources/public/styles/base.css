@@ -200,6 +200,8 @@ blockquote {font-style: italic;}
 
 .arrow:hover .arrow-body {background: #222;}
 .arrow:hover .arrow-head {border-color: transparent transparent transparent #222;}
+.inverse .arrow:hover .arrow-body {background: #fff;}
+.inverse .arrow:hover .arrow-head {border-color: transparent transparent transparent #fff;}
 
 .wall {font-size: 11px;}
 .bricks {margin-bottom: 3px; background: #d30707; text-align: center; line-height: 25px;}
