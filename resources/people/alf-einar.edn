@@ -42,9 +42,9 @@
 
  :projects      [{:customer "Animalia"
                   :years [2018 :ongoing]
-                  :summary "Forsvaret, MDP"
+                  :summary "Uvikler"
                   :employer :kodemaker
-                  :description "Videreutvikling av helsegris og helsefjørfe"
+                  :description "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
                   :tech [:clojure :clojurescript :groovy :grails]}
                   
  				  {:customer "Forsvaret MDP"
