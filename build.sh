@@ -58,10 +58,12 @@ env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --inclu
 
 changed=$(for file in $(echo "${diffs}" | jq -cr '.changed[]'); do
             echo ${file/"index.html"/""}
+            echo $file
           done)
 
 removed=$(for file in $(echo "${diffs}" | jq -cr '.removed[]'); do
             echo ${file/"index.html"/""}
+            echo $file
           done)
 
 if [ "$changed$removed" != "" ]; then
