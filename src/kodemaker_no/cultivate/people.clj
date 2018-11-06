@@ -6,6 +6,16 @@
             [kodemaker-no.date :as d]
             [kodemaker-no.homeless :as h]))
 
+(defn profile-active? [person]
+  (and (not (:quit? person))
+       (get person :profile-active? true)))
+
+(defn sorted-profiles [people]
+  (->> people
+       (filter profile-active?)
+       (sort-by :start-date)
+       reverse))
+
 (defn- add-str [person]
   (assoc person :str (-> person :id name)))
 
@@ -62,11 +72,8 @@
       (throw (Exception. (str "No project " id " found!")))))
 
 (defn- add-link-to-next-person [content person]
-  (let [sorted-peeps (->> content :people vals
-                          (sort-by :start-date)
-                          reverse)
+  (let [sorted-peeps (sorted-profiles (-> content :people vals))
         next-person (or (->> sorted-peeps
-                             (remove :quit?)
                              (drop-while #(not= % person))
                              (drop 1)
                              first)

@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.index-page
   (:require [clojure.java.io :as io]
+            [kodemaker-no.cultivate.people :as people]
             [mapdown.core :as mapdown]))
 
 (defn- render-person [{:keys [url photos full-name title]}]
@@ -9,9 +10,7 @@
     [:span.linkish full-name]]])
 
 (defn- employees [people]
-  (->> people
-       (remove :quit?)
-       (remove #(not (get % :profile-active? true)))))
+  (filter people/profile-active? people))
 
 (defn- compare-by-start-date [a b]
   (compare (:start-date a)
