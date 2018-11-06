@@ -159,6 +159,7 @@
  :systemjs "SystemJS"
  :tdd "TDD"
  :testng "TestNG"
+ :tools-deps "tools.deps"
  :tsql "T-SQL"
  :unity3d "Unity 3D"
  :weblogic "WebLogic"
