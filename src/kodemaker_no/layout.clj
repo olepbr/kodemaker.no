@@ -63,7 +63,7 @@
        [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
       [:div#main
-       [:div#header
+       [:div#header.inverse
         [:div.bd.iw
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
@@ -140,7 +140,7 @@
     [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
     [:title (head-title (:title page))]]
    [:body.lh-cv
-    [:div#header
+    [:div#header.inverse
      [:div.bd.iw
       [:h1.hn
        [:a.linkBlock.white {:href "/"} "Kodemaker"]]]]
