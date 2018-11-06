@@ -16,6 +16,9 @@
        (sort-by :start-date)
        reverse))
 
+(defn cv-url [person]
+  (format "/cv/%s/" (-> person :presence :cv)))
+
 (defn- add-str [person]
   (assoc person :str (-> person :id name)))
 
@@ -80,7 +83,7 @@
                         (first sorted-peeps))]
     (assoc person
            :next-person-url (str "/" (name (:id next-person)) "/")
-           :next-person-cv-url (str "/cv/" (name (:id next-person)) "/"))))
+           :next-person-cv-url (cv-url next-person))))
 
 (defn- cultivate-person [content person]
   (->> person

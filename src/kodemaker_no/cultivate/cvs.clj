@@ -1,6 +1,7 @@
 (ns kodemaker-no.cultivate.cvs
   (:require [clojure.string :as str]
             [clojure.walk :as walk]
+            [kodemaker-no.cultivate.people :as people]
             [kodemaker-no.cultivate.util :as util])
   (:import [java.util.Date]))
 
@@ -104,7 +105,7 @@
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))
         (assoc :open-source-contributions (cultivate-open-source-contributions person))
-        (assoc :url (format "/cv/%s/" (-> person :presence :cv)))
+        (assoc :url (people/cv-url person))
         (assoc :other (cultivate-others person))
         apply-cv-overrides)))
 
