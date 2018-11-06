@@ -106,11 +106,22 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                        :customer "Posten Norge AS - Digipost"
                        :logo "/logos/digipost.svg"
                        :logo-width 110}
-                      {:blurb "Utvikling av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk."
+                      {:blurb "Utvikling av sentral integrasjonsplattform og mellomvare for billettbestillinger og søk"
                        :customer "Norwegian"
-                       :logo "/logos/norwegian.png"}]
+                       :logo "/logos/norwegian.png"}
+                      {:blurb "Utvikling av appen Nimble. Et mobilt samhandlingsverktøy for helsepersonell på sykehus"
+                       :customer "Diffia"
+                       :logo "/logos/diffia.png"}]
 
- :projects [{:customer "Posten Norge AS - Digipost"
+ :projects [{:customer "Diffia"
+             :years [2018]
+             :employer :kodemaker
+             :summary "Nimble - samhandlingsverktøy for helsepersonell på sykehus"
+             :description "Utvikling av appen Nimble som brukes av helsepersonell på sykehus.
+                Med den kan leger og sykepleiere registrere pasientinformasjon, legge inn prøveresultater og kommunisere seg i mellom direkte fra sengeposten.
+                Appen integrerer med andre sentrale sykehussystemer som elektronisk pasientjournal. Frode har jobbet med frontend, backend og infrastruktur."
+             :tech [:java :netty :jdbi :postgresql :javascript :react :redux :material-ui]}
+            {:customer "Posten Norge AS - Digipost"
              :years [2017 2018]
              :employer :bekk
              :summary "Videreutvikling og teamledelse på Digipost"
