@@ -154,7 +154,7 @@
              :description "Tomra er i en ekspensjonsfase, med mange nye land som innfører panteløsninger, alle med hver sine behov og spesialtilpasninger.
              For å håndtere en hverdag med flere og flere panteoperatører i flere og flere regioner, jobber Tomra med å fornye sin digitale plattform.
              Eldre løsninger må forbedres og konverteres til å kjøre på ny og moderne infrastruktur med tilstrekkelige skaleringsmuligheter og kontinuerlige utrullinger uten nedetid."
-             :tech [:java :kubernetes :aws :postgres :sql-server :javascript]}
+             :tech [:java :kubernetes :aws :postgresql :sql-server :javascript :gitlab]}
             {:customer "WesternGeco"
              :start "2017-04"
              :end "2017-10"
@@ -177,7 +177,7 @@
              Jobbet med å innføre ny funksjonalitet for IPTV i deres platform
              Contego. Arbeid med ytelsesforberinger i test- og byggekjeden.
              Oppgaver: Programmerer"
-             :tech [:java :jetty :hazlecast :oracle :spring :hibernate :bamboo :maven :git]}
+             :tech [:java :jetty :hazelcast :oracle :spring :hibernate :bamboo :maven :git :react]}
             {:customer "Not a Number"
              :employer :not-a-number
              :summary "Utvikling av en spillplatform basert på roboter."
@@ -311,6 +311,15 @@
              :tech [:vba :ms-access]}
             ]
 
+ :project-highlights [{:blurb "Design og utvikling av Tomra sine server-løsninger. Java, AWS"
+                       :customer "Tomra"
+                       :logo "/logos/tomra.png"}
+                      {:blurb "Design og utvikling av kontrollsystem for seismisk data-innsamling. Java, JavaFX, Google Protocol Buffers"
+                       :customer "WesternGeco"
+                       :logo "/logos/westrngeco.png"}
+                      {:blurb "Design og utvikling av Conax platform for streaming av kryptert videoinnhold. Java, Hazelcast"
+                       :customer "Conax"
+                       :logo "/logos/conax.png"}]
  :cv {}
  :education-summary "MA(Hons) Computing Science, University of Aberdeen, Scotland"
  :experience-since 2000
