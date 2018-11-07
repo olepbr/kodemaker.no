@@ -20,6 +20,18 @@
 	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
 	    }]
 
+ :project-highlights [{:blurb "Intern webløsning for formidling av avviksinformasjon hos NSB; til de reisende og internt."
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"
+                       :logo-width 63}
+                      {:blurb "App Gateway hos FINN.NO"
+                       :customer "FINN"
+                       :logo "/logos/finn.png"
+                       :logo-width 100}
+                      {:blurb "Android App for ombordpersonell hos NSB"
+                       :customer "NSB"
+                       :logo "/logos/nsb.png"
+                       :logo-width 63}]
  :projects [
            {:customer "Encap"
             :start "2018-10"
