@@ -1,9 +1,9 @@
 {:id :finn
  :name ["Finn" "J" "Johnsen"]
- :title "Partner"
+ :title "Utvikler"
  :start-date "2008-10-01"
  :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
- :innate-skills [:gradle :java :kotlin :git :scrum :testing]
+ :innate-kills [:java :kotlin :git :unittesting]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
             :twitter "finnjohnsen"
@@ -182,17 +182,16 @@
 
  :cv {:default {:preferred-techs [:java :javascript :git :kotlin :ubuntu]}}
 
-:cv/description "Finn har 17 års erfaring med programmering. Han trives best
+:cv/description "Finn har lang erfaring innen programmering. Han trives best
  med begge hendene i kildekoden. Han er engasjert i open source, og har god
  kjennskap til trendene i bransjen."
  :born 1978
  :experience-since 2001
  :education-summary "Høyskolekandidat IT, DPH"
- :qualifications ["Senior systemutvikler"
-                  "Web Front-end utvikler"
+ :qualifications ["Fullstack -utvikler"
+                  "Web -utvikler"
                   "Android -utvikler"
-                  "Java back-end utvikler"
-                  "Scrum og smidig metodikk"]
+                  "Java back-end utvikler"]
  :certifications [{:name "Retorikk", :year 2010}
                   {:name "Certified Scrum Master", :year 2006}
                   {:name "Sun Certified Programmer Java 1.5", :year 2006}]
