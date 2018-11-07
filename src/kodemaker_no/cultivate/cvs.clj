@@ -5,6 +5,10 @@
             [kodemaker-no.cultivate.util :as util])
   (:import [java.util.Date]))
 
+(defn cv-url [person]
+  (when-let [cv-id (-> person :presence :cv)]
+    (format "/cv/%s/" cv-id)))
+
 (defn override [m ns]
   (merge m
          (->> (keys m)
@@ -96,6 +100,9 @@
           (map cultivate-side-project side-projects)
           (map (comp cultivate-side-project #(prefix-title "Artikkel: " %)) blog-posts)))
 
+(defn- add-link-to-next-cv [person content]
+  (assoc person :next-person-cv-url (people/next-person-link content person cv-url)))
+
 (defn cultivate-cv [person tech content]
   (let [data ((:id person) (:people content))]
     (-> person
@@ -105,9 +112,10 @@
         (update-in [:projects] #(map (partial lookup-employer (:employers content)) %))
         (assoc :appearances (cultivate-appearances person))
         (assoc :open-source-contributions (cultivate-open-source-contributions person))
-        (assoc :url (people/cv-url person))
+        (assoc :url (cv-url person))
         (assoc :other (cultivate-others person))
-        apply-cv-overrides)))
+        apply-cv-overrides
+        (add-link-to-next-cv content))))
 
 (defn cultivate-cvs [raw-content people tech]
   (->> people

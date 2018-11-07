@@ -16,14 +16,29 @@
        (sort-by :start-date)
        reverse))
 
-(defn cv-url [person]
-  (format "/cv/%s/" (-> person :presence :cv)))
+(defn next-person-link [content person f]
+  (let [self (f person)
+        sorted-links (->> (-> content :people vals)
+                          sorted-profiles
+                          (filter f)
+                          (map f))]
+    (or (->> sorted-links
+             (drop-while #(not= % self))
+             (drop 1)
+             first)
+        (first sorted-links))))
+
+(defn person-str [person]
+  (-> person :id name))
+
+(defn person-url [person]
+  (str "/" (person-str person) "/"))
 
 (defn- add-str [person]
-  (assoc person :str (-> person :id name)))
+  (assoc person :str (person-str person)))
 
 (defn- add-url [person]
-  (assoc person :url (str "/" (:str person) "/")))
+  (assoc person :url (person-url person)))
 
 (defn- fix-names [person]
   (-> person
@@ -75,15 +90,7 @@
       (throw (Exception. (str "No project " id " found!")))))
 
 (defn- add-link-to-next-person [content person]
-  (let [sorted-peeps (sorted-profiles (-> content :people vals))
-        next-person (or (->> sorted-peeps
-                             (drop-while #(not= % person))
-                             (drop 1)
-                             first)
-                        (first sorted-peeps))]
-    (assoc person
-           :next-person-url (str "/" (name (:id next-person)) "/")
-           :next-person-cv-url (cv-url next-person))))
+  (assoc person :next-person-url (next-person-link content person person-url)))
 
 (defn- cultivate-person [content person]
   (->> person
