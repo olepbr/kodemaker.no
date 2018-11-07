@@ -10,7 +10,7 @@
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
  :tech {:favorites-at-the-moment [:javascript :kotlin :java]
-       :want-to-learn-more [:clojure]}
+       :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
  :hobbies [{:title "Foto"
             :description "Alle liker å se på bilder. Et speilrefleks lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3 -format."
@@ -21,7 +21,13 @@
 	    }]
 
  :projects [
-            {:customer "FINN"
+           {:customer "Encap"
+            :start "2018-10"
+            :employer :kodemaker
+            :summary "Javautvikler i Encap sitt autentiseringsplattform"
+            :description "Videreutvikling av Encap sitt kjerneprodukt."
+            :tech [:java :rest :mysql :krypto]}
+           {:customer "FINN"
              :years [2017]
              :employer :kodemaker
              :summary "Javautvikler i FINN sitt Apps Core team."
@@ -32,7 +38,7 @@
             {:customer "Encap"
              :years [2017]
              :employer :kodemaker
-             :summary "Javautvikler i Encap sin autentiseringsplattform."
+             :summary "Javautvikler i Encap sitt autentiseringsplattform."
              :description "Encap sin mobile autentiseringsløsning vokser og står
              foran en stor release med mange nye krav. Encap leverer et
              distribuerbart produkt med sikkerhet i kjernen. Utviklere har ikke
