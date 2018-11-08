@@ -5,7 +5,6 @@
             [kodemaker-no.pages.cv-pages :refer [cv-pages]]
             [kodemaker-no.pages.form-page :refer [form-page]]
             [kodemaker-no.pages.index-page :refer [index-page]]
-            [kodemaker-no.pages.learnings-page :refer [learnings-page]]
             [kodemaker-no.pages.people-page :refer [people-page]]
             [kodemaker-no.pages.person-pages :refer [person-pages]]
             [kodemaker-no.pages.reference-pages :refer [reference-pages]]
@@ -18,8 +17,7 @@
    "/folk/" (partial people-page (vals (:people content)))
    "/skjema/" (partial form-page (:articles content))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))
-   "/betalte-kurs/" (partial learnings-page content)
-   "/kurs/" (partial course-page (:videos content) (:screencasts content))})
+   "/kurs/" (partial course-page content)})
 
 (defn create-pages [content]
   (stasis/merge-page-sources
