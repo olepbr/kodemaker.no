@@ -36,13 +36,13 @@
            {:customer "Encap"
             :start "2018-10"
             :employer :kodemaker
-            :summary "Javautvikler i Encap sitt autentiseringsplattform"
+            :summary "Javautvikler i Encap sin autentiseringsplattform"
             :description "Videreutvikling av Encap sitt kjerneprodukt."
             :tech [:java :rest :mysql :krypto]}
            {:customer "FINN"
              :years [2017]
              :employer :kodemaker
-             :summary "Javautvikler i FINN sitt Apps Core team."
+             :summary "Javautvikler i FINN sitt Apps Core -team."
              :description "FINN sin Apps gateway er en modul ansvarlig for distribusjon av App (iOS og Android) sin datatrafikk
              til FINN sine underliggende interne tjenester. FINN sin App er helt sentralt i FINN sin satsning for å nå sine kunder,
              derfor er ytelse, overvåkning og driftsstabilitet helt avgjørende for å lykkes med denne nye modulen."
@@ -50,7 +50,7 @@
             {:customer "Encap"
              :years [2017]
              :employer :kodemaker
-             :summary "Javautvikler i Encap sitt autentiseringsplattform."
+             :summary "Javautvikler i Encap sin autentiseringsplattform."
              :description "Encap sin mobile autentiseringsløsning vokser og står
              foran en stor release med mange nye krav. Encap leverer et
              distribuerbart produkt med sikkerhet i kjernen. Utviklere har ikke
