@@ -54,25 +54,48 @@
                          form orker man også mer når man er tilbake på jobb. Jeg har drevet med flere forskjellige treningsformer 
                          opp gjennom årene, men praktiserer nå et klassisk styrketreningsprogram med fokus på de store muskelgruppene."
             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"}]
- :endorsements [{:author "Kristin Bergsager"
+ :endorsements [{:author "Stine Marconini Bjerke"
+                 :title "Technical Domain Architet, Tomra"
+                 :quote "From June 2016 through March 2018, Kristian Frøhlich was 
+                         part of our core development team, as a Backend/SysOps developer. 
+                         He had a key role in establishing the next generation of 
+                         TOMRA Digitals IoT platform, built on Amazon Web Services. 
+			 Main deliveries included design and implementation of platform services, 
+			 processors and api's for operational tools to remotely monitor machines, 
+                         processing and report generation for clearing and financial data, 
+                         setup and automation of infrastructure components."}
+                {:author "Kristin Bergsager"
                  :title "Prosjektleder NRK"
                  :quote "Kristian er en meget faglig sterk person og vi fikk god
-                 nytte av det inn i prosjektet. Han er kunnskapsrik og grundig
-                 og kommer med tilbakemeldinger som var med å bringe prosjektet
-                 frem på en svært god måte. I tillegg er han sosialt kompetent
-                 og bidro positivt inn i prosjektet til både utviklere og resten
-                 av prosjektgruppen. Jeg kan anbefale Kristian på det varmeste
-                 til andre tilsvarende prosjekt. Han er en verdifull medspiller
-                 i slike prosjekt."}
+                         nytte av det inn i prosjektet. Han er kunnskapsrik og grundig
+                 	og kommer med tilbakemeldinger som var med å bringe prosjektet
+                 	frem på en svært god måte. I tillegg er han sosialt kompetent
+                 	og bidro positivt inn i prosjektet til både utviklere og resten
+                 	av prosjektgruppen. Jeg kan anbefale Kristian på det varmeste
+                 	til andre tilsvarende prosjekt. Han er en verdifull medspiller
+                 	i slike prosjekt."}
                 {:author "Rune Maurtvedt"
                  :title "Teknisk Leder, Finn.no"
                  :quote "Kristian er en meget solid utvikler. Han er glad i utfordringer og er flink til å beskrive tekniske løsninger.
                         I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
                         Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
                         Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]
-
- :projects [{:customer "Tomra"
-             :years [2016 :ongoing]
+ :projects [{:customer "Finn AS"
+             :years [2018 :ongoing]
+             :employer :kodemaker
+             :summary "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
+             :description "Migrering av applikasjoner fra gammel api-rigg til Kubernetes,
+             mer spesifikt Finn sin tilnærming til Kubernetes, FIAAS(Finn Infrastructure As A Service). 
+	     Finn er i ferd med å flytte hele teknologi stacken sin over på en fremtidsrettet arkitektur
+             fordi de ønsker automatisk horisontal skalering og i tillegg sanere spesialtilpassede konfigurasjoner
+             som krever dyp forståelse av arkitekturen. I hovesak handler det om å senke terskelen for utviklere
+             slik at teamene opererer som autonome enheter som selv har ansvar fra koding til deployment. Oppgaver: Devops
+             og backend utvikler. Pakketere applikasjoner i docker image, legge på fiaas konfigurasjoner, legge til deploy konfigurasjoner, 
+	     legge på rest-ruter for helsesjekker, flytte database migrasjoner inn i applikasjonene og avslutningsvis sanere gamle Puppet 
+             konfigurasjoner samt ta ned applikasjoner fra gammel api-rigg." 
+             :tech [:docker :kubernetes :fiaas :haproxy :rest :thrift :java :puppet]}
+	    {:customer "Tomra"
+             :years [2016 2017 2018]
              :employer :kodemaker
              :summary "Utvikling av ny platform på AWS-stack for å håndtere data fra pantemaskiner"
              :description "Utvikling av ny platform på AWS stack for å håndtere
@@ -414,4 +437,21 @@
              {:institution "Høgskolen i Oslo, avdeling for Telekommunikasjon"
               :years [1997 1998 1999 2000]
               :subject "Ingeniør, Telekommunikasjon"}]
- }
+
+:project-highlights [{:blurb "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
+                      :customer "Finn AS"
+                      :logo "/logos/finn.svg"
+                      :logo-width 65}
+		     {:blurb "Utvikling av ny platform på AWS-stack for å håndtere data fra pantemaskiner."
+                      :customer "Tomra"
+                      :logo "/logos/tomra.png"}
+                     {:blurb "Prototyping av ny arkitektur med fokus på skaleringsegenskaper"
+                      :customer "Thomson & Reuters"
+                      :logo "/logos/thomson-reuters.svg"
+                      :logo-width 83}]
+
+:endorsement-highlight {:author "Rune Maurtvedt"
+                         :title "Teknisk Leder, Finn AS."
+                         :quote "Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."
+                       }
+}
