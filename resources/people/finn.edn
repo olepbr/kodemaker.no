@@ -3,7 +3,7 @@
  :title "Utvikler"
  :start-date "2008-10-01"
  :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
- :innate-kills [:java :kotlin :git :unittesting]
+ :innate-skills [:java :kotlin :git :unittesting]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
             :twitter "finnjohnsen"
@@ -44,7 +44,7 @@
              :employer :kodemaker
              :summary "Javautvikler i FINN sitt Apps Core team."
              :description "FINN sin Apps gateway er en modul ansvarlig for distribusjon av App (iOS og Android) sin datatrafikk
-             til FINN sine underliggende interne tjenester. FINN sin App er helt sentralt i FINN sin satsning for å nå sine kunder, 
+             til FINN sine underliggende interne tjenester. FINN sin App er helt sentralt i FINN sin satsning for å nå sine kunder,
              derfor er ytelse, overvåkning og driftsstabilitet helt avgjørende for å lykkes med denne nye modulen."
              :tech [:java :rest :spring-boot]}
             {:customer "Encap"
@@ -199,7 +199,7 @@
               :years [1999 2000 2001]
               :subject "Høyskolekandidat IT"}]
 
- 
+
  :languages [{:language "Norsk"
               :orally "Morsmål"
               :written "Morsmål"}
