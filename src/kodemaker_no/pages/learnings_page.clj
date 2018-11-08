@@ -1,16 +1,16 @@
 (ns kodemaker-no.pages.learnings-page
   (:require [kodemaker-no.formatting :as f]))
 
-(defn- render-item [{:keys [url title tech by blurb duration price participants]}]
+(defn- render-item [{:keys [url title tech by blurb duration participants]}]
   (list
    [:h3 (if url [:a {:href url} title] title)]
    (f/render-tech-bubble tech by)
    [:p blurb]
    (when duration [:p.mvn [:strong "Varighet: "] duration])
-   (when price [:p.mvn [:strong "Pris: "] price])
    (when participants [:p.mvn [:strong "Deltakere: "] (format "Minimum %s, maks %s"
                                                               (:min participants)
-                                                              (:max participants))])))
+                                                              (:max participants))])
+   [:p.mvn [:strong [:a {:href "/kontakt/"} "Ta kontakt for pris og bestilling"]]]))
 
 (defn learnings-page [{:keys [business-presentations workshops videos screencasts]}]
   {:title "Lærelysten? Vi deler gjerne!"

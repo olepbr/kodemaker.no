@@ -164,14 +164,12 @@
    (optional-key :business-presentations) [{:title Str ;; foredrag du selger til kunder
                                             :blurb Str
                                             :tech [ID]
-                                            :duration Str
-                                            (optional-key :price) Str}]
+                                            :duration Str}]
 
    (optional-key :workshops) [{:title Str ;; workshop eller kurs til salgs
                                :blurb Str
                                :tech [ID]
                                :duration Str
-                               (optional-key :price) Str
                                :participants {:min Num
                                               :max Num}}]})
 

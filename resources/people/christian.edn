@@ -1173,8 +1173,7 @@
                       REPL, live reloads med figwheel og mer."
               :tech [:clojurescript]
               :duration "1 dag"
-              :participants {:min 3 :max 15}
-              :price "5000,- per deltaker (eks mva)"}
+              :participants {:min 3 :max 15}}
              {:title "Testing og arkitektur i JavaScript-frontends"
               :blurb "JavaScript får en større og større rolle i web-prosjekter,
                       og en gjennomtenkt arkitektur og tilnærming til testing er

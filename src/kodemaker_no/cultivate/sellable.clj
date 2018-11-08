@@ -17,17 +17,11 @@
                   (:title b))
       0))
 
-(defn ensure-price [default-price sellable]
-  (if (:price sellable)
-    sellable
-    (assoc sellable :price default-price)))
-
-(defn cultivate-sellable [key raw-content default-price]
+(defn cultivate-sellable [key raw-content]
   (->> raw-content :people vals
        (mapcat (util/get-with-byline key))
        (map (partial cultivate-item raw-content))
        (group-by :title)
        vals
        (map combine-items)
-       (sort compare-by-title)
-       (map (partial ensure-price default-price))))
+       (sort compare-by-title)))

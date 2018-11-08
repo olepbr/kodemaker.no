@@ -848,6 +848,5 @@
                                    sine, mestre dem og lære hvordan man kan få
                                    dem til å \"do their bidding\"."
                            :tech [:emacs]
-                           :duration "30 minutter"
-                           :price "15.000,- (eks mva)"}]
+                           :duration "30 minutter"}]
  }
