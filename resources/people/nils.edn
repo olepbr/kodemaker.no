@@ -54,6 +54,12 @@
 
  :innate-skills [ :kotlin ]
 
+:endorsements [{:author "Sigve Litsheim"
+                 :title  "Lead Architect, Thomson Reuters"
+                 :quote  "Nils er en svært allsidig og dyktig utvikler. Han setter seg raskt inn i nye teknologier og er flink til å dele kunnskap og få med seg de andre på teamet. I Thomson Reuters jobbet han med utvikling av nytt system for å distribuere tidsserier og prognosedata i sanntid. Han videreutviklet og forbedret distribuerte beregninger med Spark/Hadoop og streaming av store datamengder med bruk av Kafka og HBase. Jeg kan varmt anbefale Nils og er sikker på at han vil være et solid tilskudd til de prosjektene han deltar på i fremtiden."}
+                ]
+
+
  :recommendations
                 [
                  {:title "Concurrency is not parallelism"
