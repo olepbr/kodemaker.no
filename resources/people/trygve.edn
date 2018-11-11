@@ -107,7 +107,7 @@
                 :customer "BN Bolig"
                 :logo "/logos/bnbolig.png"
                 :logo-width 65}
-                {:blurb "Løsning for distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, Hadoop, HBase"
+                {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                 :customer "Thomson Reuters"
                 :logo "/logos/thomson-reuters.png"
                 :logo-width 160}]
@@ -118,7 +118,7 @@
              :summary "Utvikling av media-arkivet til NRK"
              :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp
               - både nettklipp, ting som har gått på TV og råstoff"
-             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :octopus :teamcity :kubernetes :python :machinelearning]}
+             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :octopus :teamcity :kubernetes :python :machinelearning]}
             {:customer "BN-bolig / EGGS Design"
              :years [2017]
              :employer :kodemaker
@@ -437,47 +437,12 @@
                   "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
                   "Lang erfaring med Java, Groovy og Grails"]
  :certifications [{:institution "Deeplearning.ai / Coursera"
-                   :name "Deep learning specialization"
+                   :name "Deep learning specialization – 5 kurs i dyp læring med Andrew Ng"
                    :url "https://www.coursera.org/specializations/deep-learning"
                    :year 2018
                    :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/specialization/certificate/XUNMU5JLM672"
-                    :text "Statement of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Sequence Models"
-                   :url "https://www.coursera.org/learn/nlp-sequence-models"
-                   :year 2018
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/verify/AXU6TN2MTU5S"
-                    :text "Statement of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Convolutional Neural Networks"
-                   :url "https://www.coursera.org/learn/convolutional-neural-networks"
-                   :year 2017
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/records/PTT3DJSK55Q8"
-                    :text "Statement of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Structuring Machine Learning Projects"
-                   :url "https://www.coursera.org/learn/machine-learning-projects"
-                   :year 2017
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/records/8AGFLPT6UKQJ"
-                    :text "Statement of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"
-                   :url "https://www.coursera.org/learn/deep-neural-network"
-                   :year 2017
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/records/SBVPP39R97AZ"
-                    :text "Statement of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Neural Networks and Deep Learning"
-                   :url "https://www.coursera.org/learn/neural-networks-deep-learning"
-                   :year 2017
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/records/JK63TDJASKVP"
-                    :text "Statement of Accomplishment"}}
+                   {:url "https://www.coursera.org/account/accomplishments/specialization/XUNMU5JLM672"
+                    :text "Statements of Accomplishment"}}
                   {:institution "Berkeley University / edx.org"
                    :name "CS190.1x Scalable Machine Learning"
                    :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
