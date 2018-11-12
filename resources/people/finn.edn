@@ -27,17 +27,11 @@ Finn is a great guy and an even better developer, if anybody needs a high-level 
 
 
  :project-highlights [{:blurb "Full-stack utvikler på intern webløsning for formidling av avviksinformasjon hos NSB; til de reisende og internt."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"
-                       :logo-width 63}
+                       :customer "NSB"}
                       {:blurb "App Gateway hos FINN.NO"
-                       :customer "FINN"
-                       :logo "/logos/finn.png"
-                       :logo-width 100}
+                       :customer "FINN"}
                       {:blurb "Android App for ombordpersonell hos NSB"
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"
-                       :logo-width 63}]
+                       :customer "NSB"}]
  :projects [
            {:customer "Encap"
             :start "2018-10"
