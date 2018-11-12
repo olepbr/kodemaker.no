@@ -429,14 +429,11 @@
                Deltidsstilling ved siden av studier."}}
 
  :project-highlights [{:blurb "Rikt, interaktivt kart over togtrafikken. Viktig applikasjon for driftoperativt senter."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}
+                       :customer "NSB"}
                       {:blurb "Visualisering av strømforbruk for lokførere. For å trigge konkurranseinnstinkt og spare energi."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}
+                       :customer "NSB"}
                       {:blurb "Virksomhetskritisk motor for sending av toginformasjon til flere mottakere. Integrasjon med en rekke kilder."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}
+                       :customer "NSB"}
                       ]
 
  :cv {:default {:exclude-techs [:dreamweaver-mx :struts :atg-dynamo :webwork :fusioncharts :google-image-charts :weblogic :jboss-messaging :jboss-portal :hudson]}}

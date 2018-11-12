@@ -378,15 +378,12 @@
                  Jeg tror man må lete lenge etter noen som har noe negativt å si om Odin."}]
 
  :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av nytt informasjonssystem for fergedrift basert på Clojure, Kafka og Datomic."
-                       :customer "Norled"
-                       :logo "/logos/norled.svg"}
+                       :customer "Norled"}
                       {:blurb "Integrasjon av datakilder, sikkerhet og visualisering av store datamengder."
                        :customer "Telenor Digital"
-                       :logo "/logos/telenordigital.png"
-                       :logo-width 139}
+                       }
                       {:blurb "Workshops om testautomatisering, byggautomatisering, frontend- og backendutvikling og testautomatisering."
-                       :customer "Conax"
-                       :logo "/logos/conax.png"}]
+                       :customer "Conax"}]
 
  :endorsement-highlight {:author "Trond Hagen"
                         :title "Director Software Development, Conax"

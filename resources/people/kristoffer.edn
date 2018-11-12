@@ -276,17 +276,13 @@
  :project-highlights [{:blurb "Ny tjenesteplattform for Deichmanske bibliotek basert på open source.
                                Verktøy for katalogisering av bibliografiske data med RDF.
                                Kraftig og brukervennlig søk med Elasticsearch."
-                      :customer "Deichmanske bibliotek"
-                      :logo "/logos/deichman.svg"
-                      :logo-height 30}
+                      :customer "Deichmanske bibliotek"}
                      {:blurb "Elektronisk valgadministrasjonssystem for konfigurasjon og gjennomføring av valg i Norge som bare MÅ virke
                               på valgdagen, i tillegg til før og etter."
-                      :customer "Kommunal- og moderniseringsdepartementet"
-                      :logo "/logos/valgdir.png"}
+                      :customer "Kommunal- og moderniseringsdepartementet"}
                       {:blurb "REST-API for salg av bredbånd til privatmarkedet med ordentlige HATEOAS-egenskaper som styrer
                                salgsklienten gjennom bestillingsprosessen med hyperlinking."
-                      :customer "Broadnet"
-                      :logo "/logos/broadnet_transbg.png"}]
+                      :customer "Broadnet"}]
 
  :endorsement-highlight {:author "Arve Søreide"
                          :title "Program Manager IKT for nye Deichmanske hovedbibliotek"

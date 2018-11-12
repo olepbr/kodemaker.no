@@ -275,16 +275,11 @@
               :written "Flytende"}]
 
  :project-highlights [{:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"
-                       :logo-width 63}
+                       :customer "NSB"}
                       {:blurb "Planlegging og bestillingssystem for ammunisjon"
-                       :customer "Forsvaret"
-                       :logo "/logos/forsvaret.png"}
+                       :customer "Forsvaret"}
                       {:blurb "System for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy"
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"
-                       :logo-width 63}]
+                       :customer "NSB"}]
 
  }
 

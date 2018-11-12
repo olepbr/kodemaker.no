@@ -100,17 +100,11 @@
  :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]
 
  :project-highlights [{:blurb "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
-                :customer "Nrk"
-                :logo "/logos/nrk.svg"
-                :logo-width 65}
+                :customer "Nrk"}
                 {:blurb "Ny og innovativ meglerløsning. Frontend med React/Redux."
-                :customer "BN Bolig"
-                :logo "/logos/bnbolig.png"
-                :logo-width 65}
+                :customer "BN Bolig"}
                 {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
-                :customer "Thomson Reuters"
-                :logo "/logos/thomson-reuters.png"
-                :logo-width 160}]
+                :customer "Thomson Reuters"}]
 
  :projects [{:customer "NRK Origo"
              :years [2017 :ongoing]

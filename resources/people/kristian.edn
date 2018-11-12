@@ -439,16 +439,11 @@
               :subject "Ingeniør, Telekommunikasjon"}]
 
 :project-highlights [{:blurb "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
-                      :customer "Finn AS"
-                      :logo "/logos/finn.svg"
-                      :logo-width 65}
+                      :customer "Finn AS"}
 		     {:blurb "Utvikling av ny platform på AWS-stack for å håndtere data fra pantemaskiner."
-                      :customer "Tomra"
-                      :logo "/logos/tomra.png"}
+                      :customer "Tomra"}
                      {:blurb "Prototyping av ny arkitektur med fokus på skaleringsegenskaper"
-                      :customer "Thomson & Reuters"
-                      :logo "/logos/thomson-reuters.svg"
-                      :logo-width 83}]
+                      :customer "Thomson & Reuters"}]
 
 :endorsement-highlight {:author "Rune Maurtvedt"
                          :title "Teknisk Leder, Finn AS."

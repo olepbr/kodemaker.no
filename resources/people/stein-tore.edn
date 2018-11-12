@@ -288,14 +288,11 @@
 
  :cv {}
  :project-highlights [{:blurb "Scrum master og full-stack utvikler for nytt nordisk system for budleveranser."
-                       :customer "Bring"
-                       :logo "/logos/bring.svg"}
+                       :customer "Bring"}
                       {:blurb "Full-stack utvikling av system for distribusjon av trafikkinformasjon."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}
+                       :customer "NSB"}
                       {:blurb "Scrum master of full-stack utvikler for rapportsystem for togfremføring."
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}]
+                       :customer "NSB"}]
 :languages [{:language "Norsk"
               :orally "Morsmål"
               :written "Morsmål"}

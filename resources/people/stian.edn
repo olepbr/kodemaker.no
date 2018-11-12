@@ -147,14 +147,12 @@
                          him on your project."}]
 
  :project-highlights [{:blurb "Mikrotjenester, devops, clojure, groovy. "
-                       :customer "Animalia"
-                       :logo "/logos/animalia.svg"}
+                       :customer "Animalia"}
                       {:blurb "Ny løsning for IP-basert TV og sikring av digitalt innhold"
-                       :customer "Conax"
-                       :logo "/logos/conax.png"}
+                       :customer "Conax"}
                       ;{:blurb "Utvikling av nytt fondsystem for Norge og Norden"
                        ;:customer "VPS"
-                       ;:logo "/logos/vps.jpg"}
+                      ;}
                        ]                         
 
  :projects [{:customer "Animalia"

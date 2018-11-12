@@ -20,15 +20,11 @@
  :email-address "nils@kodemaker.no"
 
  :project-highlights [{:blurb "Utvikling av system for anbefaling av rubrikk-annonser. Java, Kotlin, Kafka og Postgresql."
-                       :customer "Finn"
-                       :logo "/logos/finn.svg"},
+                       :customer "Finn"},
                       {:blurb "Ansvar for utvikling og drifting av android app. Videreutvikle kjernekomponeter for bookingsystemet."
-                       :customer "Norwegian Air Shuttle"
-                       :logo "/logos/norwegian.png"},
+                       :customer "Norwegian Air Shuttle"},
                       {:blurb "Utvikling av løsning for distribusjon av tidsseriedata fra ulike markeder ved hjelp av Spark, Kafka, Hadoop og HBase."
-                       :customer "Thomson Reuters"
-                       :logo "/logos/thomson-reuters.png"
-                       }]
+                       :customer "Thomson Reuters"}]
 
 
  :presence      {

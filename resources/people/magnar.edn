@@ -813,19 +813,15 @@
  :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
                                nytt informasjonssystem for fergedrift basert på
                                Clojure og Datomic."
-                       :customer "Norled"
-                       :logo "/logos/norled.svg"
-                       :logo-height 30}
+                       :customer "Norled"}
                       {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
                                eller manuell utsending av SMS eller e-post.
                                Clojure og Datomic."
-                       :customer "Oiiku"
-                       :logo "/logos/oiiku.svg"}
+                       :customer "Oiiku"}
                       {:blurb "App for iOS og Android med Cordova og
                                ClojureScript, automatisert bygg og utrulling,
                                system for firmware-oppdateringer."
-                       :customer "Hafslund Strøm"
-                       :logo "/logos/hafslund-strom.png"}]
+                       :customer "Hafslund Strøm"}]
 
  :endorsement-highlight {:author "Owen Fraser-Green"
                          :title "Leder MyEnergy, Hafslund"

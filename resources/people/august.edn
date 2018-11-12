@@ -440,12 +440,9 @@ presentasjonen på hele konferansen!"
                   "God på arkitektur og skalerbarhet, med tilhørende devops"]
 
  :project-highlights [{:blurb "Full-stack + native app for nytt nordisk system for ekspressleveranser"
-                       :customer "Bring"
-                       :logo "/logos/bring.svg"}
+                       :customer "Bring"}
                       {:blurb "Full-stack utvikling av system for distribusjon av trafikkinformasjon"
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}
+                       :customer "NSB"}
                       {:blurb "Full-stack utvikling av system for hurtig planlegging av alternativ transport ved oppståtte avvik"
-                       :customer "NSB"
-                       :logo "/logos/nsb.png"}]
+                       :customer "NSB"}]
  }

@@ -530,17 +530,11 @@
              :tech [:vbscript :asp :iis :mssql]}]
 
  :project-highlights [{:blurb "Utvikling av nye og eksisterende løsninger for betaling, ordre og produkt."
-											 :customer "FINN.no"
-											 :logo "/logos/finn.png"
-											 :logo-width 100}
+											 :customer "FINN.no"}
 											{:blurb "Websider og selvbetjening for boligselgere. Grensesnitt og integrasjoner."
-											 :customer "BN Bolig"
-											 :logo "/logos/bnbolig.png"
-											 :logo-width 55}
+											 :customer "BN Bolig"}
 											{:blurb "Utvikling av nytt spillkonsept. Bildeanalyse, spillutvikling, grensesnitt og drift/monitorering."
-											 :customer "Oche"
-											 :logo "/logos/oche.svg"
-											 :logo-width 100}]
+											 :customer "Oche"}]
 
  :endorsement-highlight {:author "Kjell Sverre Birkeland"
 												 :title "Prosjektleder, Skatteetaten"

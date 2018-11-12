@@ -53,14 +53,11 @@
                                 development."}
 
  :project-highlights [{:blurb "Smart bordplasseringsmodul for automatisk plassering av mange event-deltakere basert på potensielt motstridende ønsker. Clojure, Kotlin og OptaPlanner."
-                       :customer "Oiiku"
-                       :logo "/logos/oiiku.svg"}
+                       :customer "Oiiku"}
                       {:blurb "Etablering og utvikling av tjenster for en ny bank for B2B markedet. Basert på bla. Kotlin, Rust, Elm og Google Cloud."
-                       :customer "Aprila Bank"
-                       :logo "/logos/aprilabank.svg"}
+                       :customer "Aprila Bank"}
                       {:blurb "Applikasjon for veterinærer og produsenter for registrering av medisinering og helserelatert informasjon. Tjenestebasert arkiktur laget med Clojure, ClojureScript, Oracle og Docker Cloud."
-                       :customer "Animalia"
-                       :logo "/logos/animalia.png"}
+                       :customer "Animalia"}
                       ]
 
 
