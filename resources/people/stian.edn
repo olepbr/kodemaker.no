@@ -146,14 +146,13 @@
                          I give Stian my best recommodation - you can never fail having
                          him on your project."}]
 
- :project-highlights [{:blurb "Mikrotjenester, devops, clojure, groovy. "
+ :project-highlights [{:blurb "Mikrotjenester, devops, clojure, groovy"
                        :customer "Animalia"}
                       {:blurb "Ny løsning for IP-basert TV og sikring av digitalt innhold"
                        :customer "Conax"}
-                      ;{:blurb "Utvikling av nytt fondsystem for Norge og Norden"
-                       ;:customer "VPS"
-                      ;}
-                       ]                         
+                      {:blurb "Utvikling av nytt fondsystem for Norge og Norden"
+                       :customer "VPS"
+                      }]                         
 
  :projects [{:customer "Animalia"
              :years [2017 :ongoing]
