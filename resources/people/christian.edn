@@ -1139,16 +1139,11 @@
               :written "Flytende"}]
 
  :project-highlights [{:blurb "App for iOS og Android utviklet med ClojureScript og Cordova, og tilstøtende backendsystemer."
-                       :customer "Hafslund Strøm"
-                       :logo "/logos/hafslund-strom.png"}
+                       :customer "Hafslund Strøm"}
                       {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
-                       :customer "Tine"
-                       :logo "/logos/tine.svg"
-                       :logo-width 65}
+                       :customer "Tine"}
                       {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"
-                       :customer "NRK"
-                       :logo "/logos/nrk.svg"
-                       :logo-width 83}]
+                       :customer "NRK"}]
 
  :endorsement-highlight {:author "Geir Børdalen"
                          :title "Prosjektleder, Origo-prosjektet, NRK"

@@ -72,15 +72,11 @@
                     delivered solution."}
 
  :project-highlights [{:blurb "Tech lead for utvikling av nytt Nordisk system for budleveranser."
-                       :customer "Bring"
-                       :logo "/logos/bring.svg"}
+                       :customer "Bring"}
                       {:blurb "Full stack utvikler og devops for ny innovativ meglerløsning."
-                       :customer "BN Bolig"
-                       :logo "/logos/bnbolig.png"
-                       :logo-width 65}
+                       :customer "BN Bolig"}
                       {:blurb "App-, backendutvikler og devops i home automation prosjekt."
-                       :customer "Hafslund Strøm"
-                       :logo "/logos/hafslund-strom.png"}]
+                       :customer "Hafslund Strøm"}]
 
  :recommendations [{:title "The Joy of Clojure"
                     :blurb "Dette er ingen intro bok om Clojure,

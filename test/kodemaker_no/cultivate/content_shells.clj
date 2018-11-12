@@ -32,7 +32,6 @@
 
 (defn project [m]
   (merge {:name "!"
-          :logo "!"
           :description "!"
           :illustration "/path"
           :awesomeness 0}

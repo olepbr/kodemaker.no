@@ -312,14 +312,11 @@
             ]
 
  :project-highlights [{:blurb "Design og utvikling av Tomra sine server-løsninger. Java, AWS"
-                       :customer "Tomra"
-                       :logo "/logos/tomra.png"}
+                       :customer "Tomra"}
                       {:blurb "Design og utvikling av kontrollsystem for seismisk data-innsamling. Java, JavaFX, Google Protocol Buffers"
-                       :customer "WesternGeco"
-                       :logo "/logos/westrngeco.png"}
+                       :customer "WesternGeco"}
                       {:blurb "Design og utvikling av Conax platform for streaming av kryptert videoinnhold. Java, Hazelcast"
-                       :customer "Conax"
-                       :logo "/logos/conax.png"}]
+                       :customer "Conax"}]
  :cv {}
  :education-summary "MA(Hons) Computing Science, University of Aberdeen, Scotland"
  :experience-since 2000

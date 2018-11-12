@@ -512,16 +512,11 @@ Det gikk bra - veldig bra."
                  ]
 
 :project-highlights [{:blurb "Teknisk arkitekt programkontor. Virksomhetsmodellering, målbilde, koordinering av sentrale IKT-iniativ"
-                     :customer "Bring"
-                     :logo "/logos/bring.svg"}
+                     :customer "Bring"}
                     {:blurb "Utvikling og DevOps på virksomhetskritiske applikasjoner."
-                     :customer "NSB"
-                     :logo "/logos/nsb.png"
-                     }
+                     :customer "NSB"}
                     {:blurb "Prosjektleder og utvikler av nytt system for måling og evaluering av rør/piper hos Forsvaret"
-                     :customer "Forsvaret"
-                     :logo "/logos/forsvaret.png"
-                     }]
+                     :customer "Forsvaret"}]
 
 :endorsement-highlight {:author "Cato Berg"
                        :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"

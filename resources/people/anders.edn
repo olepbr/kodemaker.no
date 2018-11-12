@@ -199,18 +199,14 @@
  :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
                                nytt informasjonssystem for fergedrift basert på
                                Clojure, Clojurescript og Datomic."
-                       :customer "Norled"
-                       :logo "/logos/norled.svg"
-                       :logo-height 30}
+                       :customer "Norled"}
                       {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
                                eller manuell utsending av SMS eller e-post.
                                Clojure og Datomic."
-                       :customer "Oiiku"
-                       :logo "/logos/oiiku.svg"}
+                       :customer "Oiiku"}
                       {:blurb "Utvikling av FINNs tjenester for søk og bestilling
                                av reiseprodukter."
-                       :customer "FINN.no AS"
-                       :logo "/logos/finn.svg"}]
+                       :customer "FINN.no AS"}]
 
  :endorsement-highlight {:author "Steffen Fiksdal"
                          :title "Teknisk arkitekt, BankAxept"

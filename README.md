@@ -374,9 +374,7 @@ Videre kan du nå legge til `:project-highlights` - tre prosjekter som er særli
 interessant å belyse. Velg gjerne tre prosjekter som viser litt bredde i
 profilen og/eller interessante kunder. Fremhev det mest interessante du gjorde i
 teksten. Hele beskrivelsen kommer lengre ned, så denne kan helt fint utelate
-noen punkter. Til disse prosjektene bør du ha logo - finn en på nett og legg den
-i `resources/public/logos`. Aller helst SVG, men om du ikke finner det, så bruk
-PNG.
+noen punkter. 
 
 Til slutt kan du legge til `:endorsement-highlight`, et utsnitt av den fineste
 anbefalingen du har. Klipp og lim litt, og få til et par setninger som sier noe

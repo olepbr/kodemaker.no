@@ -27,16 +27,11 @@
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase]}}                 
  
  :project-highlights [{:blurb "Design og utvikling av et nytt system for budleveranser"
-                        :customer "Bring"
-                        :logo "/logos/bring.svg"}
+                        :customer "Bring"}
                        {:blurb "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
-                        :customer "Animalia"
-                        :logo "/logos/animalia.svg"
-                        :logo-width 139}
+                        :customer "Animalia"}
                        {:blurb "Arkitektur og implementering av FINN.no iOS applikasjoner"
-                        :customer "FINN.no"
-                        :logo "/logos/finn.svg"}
-                       ]
+                        :customer "FINN.no"}]
 
  :endorsement-highlight {:author "Torkel Randem"
                          :title "Økonomi- og utviklingssjef, Animalia.no"
