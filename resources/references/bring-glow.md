@@ -3,9 +3,9 @@
 :type reference
 :img /references/rune-strandli.jpg
 :logo /logos/bnbolig.png
-:name Mr. X
-:phone +47 XXX RR YYY
-:title Chief Digital Officer, Bring Express
+:name Jerker Dammbro
+:phone +46 733 90 23 33
+:title Head of Digital Development & IT, Division Express
 :body
 
 Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 
@@ -89,19 +89,17 @@ Det har vært et pilotprosjekt for Bring i forhold til nye driftsrutiner. Vi har
 :type grid
 :content
 
-/javascript/                       /photos/tech/js.svg
-/clojure/                          /photos/tech/clojure.png
-/responsive-design/                /photos/tech/rwd.jpg 2x
-/ansible/                          /photos/tech/ansible-red.svg
-/git/                              /photos/tech/git-gray.svg
+/azure/                       /photos/tech/azure.png
+/kotlin/                          /photos/tech/kotlin.png
+/kubernetes/                /photos/tech/kubernetes.png
+/react/                          /photos/tech/react.png
+/javascript/                              /photos/tech/js.svg
 
 --------------------------------------------------------------------------------
 
 
 
-:type illustrated-column
-:title Clojure var essensielt for backenden
-:body
+
 
 
 :type participants
