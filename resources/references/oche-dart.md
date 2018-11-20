@@ -2,7 +2,7 @@
 :page-title Oche - Dart
 :type reference
 :img /references/rune-strandli.jpg
-:logo /logos/bnbolig.png
+:logo /logos/oche.svg
 :name Geir Oterhals
 :phone +47 992 18 320
 :title Supertittel, Oche Dart
@@ -52,21 +52,29 @@ maskiner og utstyr.
 :title Bildeanalyse, spillutvikling og uvant maskinpark
 :body
 
-Utrolig variert og utfordrende IT-prosjekt. Jeg har fått jobbet med 
+Utrolig variert og utfordrende IT-prosjekt. Kodemaker har jobbet med 
 bildeanalyse, spillutvikling, grensesnitt og oppsett/overvåkning av 
-maskiner og utstyr.
+maskiner og utstyr. Grensesnittet er utviklet i samarbeid med Eggs Design,
+som har stått for visuelt design og hjelp på frontend-utvikling. Hardware
+og oppsett av fysisk utstyr er utviklet i samarbeid med Alan Gorman - Not a
+Number AS, som har designet lys, kameraplassering med stativ, piler og alle
+andre mekaniske egenskaper.
 
+Prosjektet startet med en konseptfase hvor det ble utviklet en Proof of
+Concept for selve kamerateknologien. Deretter har vi gradvis bygget ut med
+optimalisering av nøyaktighet på kalibrering i parallell med utvikling av
+spill, grensesnitt og støtteverktøy/overvåkning.
 
 
 --------------------------------------------------------------------------------
 :type grid
 :content
 
-/javascript/                       /photos/tech/js.svg
+/opencv/                           /photos/tech/opencv.jpg
 /clojure/                          /photos/tech/clojure.png
 /responsive-design/                /photos/tech/rwd.jpg 2x
-/ansible/                          /photos/tech/ansible-red.svg
-/git/                              /photos/tech/git-gray.svg
+/clojurescript/                    /photos/tech/cljs.svg
+/docker/                           /photos/tech/docker.png
 
 --------------------------------------------------------------------------------
 
@@ -80,7 +88,7 @@ maskiner og utstyr.
 
 eivind
 
-Jeg trodde aldri dart kunne bli så gøy. Etter ett år med testing hver dag er det fortsatt like fett å spille :)
+Eivind startet jobben med bildeanalyse og har utviklet selve motoren for kalibrering av kameraer og gjenkjenning av piler. Han har også gjort en del videreutvikling på selve spillmotoren, samt masse frontend-utvikling for å ferdigstille design/grensesnitt mot slutten av prosjektet. Eivind var også ansvarlig for alt det fysiske - fra valg/oppsett av kameraer og annen hardware som datamaskiner, lysstyring og skjermer.
 
 magnus
 
