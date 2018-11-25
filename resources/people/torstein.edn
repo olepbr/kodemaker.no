@@ -14,6 +14,9 @@
                Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
                Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor arbeidskapasitet
                og jobber effektivt. Han lærer raskt og tenker fremover."
+
+ :innate-skills [:intellij :eclipse :toad :terminal :sql :java :ios :android :osx]
+
  :phone-number "+47 481 12 911"
  :email-address "torstein@kodemaker.no"
 
@@ -25,8 +28,6 @@
  :tech {:using-at-work [:groovy :grails :java :spring]
         :favorites-at-the-moment [:groovy :grails :angularjs]
         :want-to-learn-more [:clojure :emacs]}
-
- :innate-skills [:intellij :eclipse :toad]
 
  :qualifications ["Senior systemutvikler"
                   "Løsningsmann"
