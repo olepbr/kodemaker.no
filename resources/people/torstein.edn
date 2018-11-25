@@ -25,9 +25,9 @@
             :linkedin "/in/tmeland/"
             :github "tmetrue"}
 
- :tech {:using-at-work [:groovy :grails :java :spring]
-        :favorites-at-the-moment [:groovy :grails :angularjs]
-        :want-to-learn-more [:clojure :emacs]}
+ :tech {:using-at-work [:groovy :grails :java :spring :neptune :javascript :bootstrap]
+        :favorites-at-the-moment [:groovy :grails]
+        :want-to-learn-more [:clojure :emacs :swift]}
 
  :qualifications ["Senior systemutvikler"
                   "Løsningsmann"
