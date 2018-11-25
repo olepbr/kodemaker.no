@@ -4,15 +4,16 @@
  :start-date "2004-12-01 00:06"
  :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en 
                rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i 
-               alle ledd fra kildekode til brukeropplevelse."
- :cv/description "Torstein har lang og variert erfaring med systemutvikling.
-                  Han har vært innom de fleste aspekt innen faget og legger stor vekt på kvalitet
-                  i alle ledd. Koding er kjernen i det han jobber med og han er flink til å komme
-                  frem til løsninger på problemer.
-                  
-                  Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
-                  Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor
-                  arbeidskapasitet og jobber effektivt. Han lærer raskt og tenker fremover."
+               alle ledd fra kildekode til brukeropplevelse. Koding er kjernen i det han
+               jobber med og han er flink til å komme frem til løsninger på problemer.
+
+               Torstein har leverer moderne, elegante og brukervennlige løsninger på
+               store og små utfordringer. Han jobber like gjerne med databaser og backend
+               som med GUI og frontend.
+
+               Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
+               Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor arbeidskapasitet
+               og jobber effektivt. Han lærer raskt og tenker fremover."
  :phone-number "+47 481 12 911"
  :email-address "torstein@kodemaker.no"
 
