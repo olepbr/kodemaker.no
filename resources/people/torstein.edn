@@ -82,7 +82,7 @@
              :description "Oppgrading av Forsvarets system for ammunisjonsplanlegging.
              Integrasjon med en rekke andre system tilknyttet ammunisjonsforvaltningen.
              Oppgave: Analyse, design, test, utvikling, dokumentasjon."
-             :tech [:java :spring-boot :jpa :oracle :bootstrap :html :css :javascript]}
+             :tech [:java :spring-boot :jpa :oracle :bootstrap :html :css :javascript :git]}
             {:customer "Forsvaret"
              :years [2016]
              :employer :kodemaker
@@ -91,7 +91,7 @@
              anmodning om og behandling av materialdata. Integrasjon med
              forsvarets SAP-løsning. Oppgave: Analyse, design, test, utvikling,
              dokumentasjon"
-             :tech [:groovy :grails :oracle :sap]}
+             :tech [:groovy :grails :oracle :sap :git]}
             {:customer "Forsvaret"
              :years [2015]
              :employer :kodemaker
@@ -99,7 +99,7 @@
              :description "Videreutvikling av GBMS for datafangst og analyse av
              skyts. Integrasjon med forsvarets SAP-løsning. Oppgave: Analyse,
              design, test, utvikling, dokumentasjon"
-             :tech [:groovy :grails :oracle :sap-integrasjon]}
+             :tech [:groovy :grails :oracle :sap-integrasjon :git]}
             {:customer "Forsvaret"
              :years [2007 :ongoing]
              :employer :kodemaker
