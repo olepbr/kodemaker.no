@@ -1,23 +1,16 @@
 --------------------------------------------------------------------------------
 :page-title Bring Express - Glow
 :type reference
-:img /references/rune-strandli.jpg
-:logo /logos/bnbolig.png
+:img /references/jerker-dammbro.jpg
+:logo /logos/bring.svg
 :name Jerker Dammbro
 :phone +46 733 90 23 33
 :title Head of Digital Development & IT, Division Express
 :body
 
-Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 
-de utviklet integrasjonsplattform og digital kundefront til BN Bolig. 
-Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje 
-var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet 
-dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok 
-tak i ideer og oppgaver.
+Kodemaker deltog med upp till fyra utvecklare i ett team som utvecklade en ny plattform för våra budtjänster. 
 
-Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har 
-for oss bevist at et lite team med håndplukkede, høykompetente personer kan 
-levere raskere og bedre.
+Vi är mycket nöjda med kvalitén på leveransen, tempot i utvecklingen, fokuset på att utveckla säkra lösningar och engagemanget för projektet.
 
 
 
@@ -26,9 +19,9 @@ levere raskere og bedre.
 :title Glow - Nytt logisitikksystem
 :body
 
-Glow er et revolusjonerende prosjekt for budbil-bransjen. Glow setter kunde (avsender) og mottaker i sentrum, der de i sanntid kan følge sin leveranse. Mottakere vil f.eks. få et ganske presist leveransetidsvindu, vil kunne kommunisere direkte med sjåfør, kjøpe tilleggstjenester, og følge med på kartet når bilen nærmer seg. Kunde kan følge opp at leveransen går etter planen i sanntid.
+Glow er et innovativt prosjekt for budbil-bransjen. Glow setter kunde (avsender) og mottaker i sentrum, der de i sanntid kan følge sin leveranse. Mottakere vil f.eks. få et ganske presist leveransetidsvindu, vil kunne kommunisere direkte med sjåfør, kjøpe tilleggstjenester, og følge med på kartet når bilen nærmer seg. Kunde kan følge opp at leveransen går etter planen i sanntid.
 
-Glow var først et proof of concept, laget uten tanke på sikkerhet og skalering. Dette ble skrevet om til et produksjonklart system på ca 3,5 måned. Det nye systemet måtte blant annet kunne:
+Glow var først et proof of concept. Dette ble skrevet om til et produksjonklart system på ca 3,5 måned. Det nye systemet måtte blant annet kunne:
 
 - ta imot ordre
 - tilby verktøy for å planlegge og optimalisere leveranser inn på ruter
@@ -54,22 +47,6 @@ Fire Kodemakere og en fast ansatt laget en ny applikasjonsportefølje fra bunnen
 
 --------------------------------------------------------------------------------
 :type illustrated-column
-:body
-
-
-
-> "Her hadde vi dårlig tid, så det var viktig at vi rigget oss til slik at vi kjapt 
-> kunne levere. Eneste måten å få dette i land på var å ta full kontroll, og ha fullt 
-> ansvar. Devops all the way!
->
->
->
-> Men dette skal være om Bring ;) "
->
-> -- <cite>Alf Kristian</cite>
---------------------------------------------------------------------------------
-
-:type illustrated-column
 :title God erfaring med Kotlin
 :body
 
@@ -93,7 +70,7 @@ Det har vært et pilotprosjekt for Bring i forhold til nye driftsrutiner. Vi har
 /kotlin/                          /photos/tech/kotlin.png
 /kubernetes/                /photos/tech/kubernetes.png
 /react/                          /photos/tech/react.png
-/javascript/                              /photos/tech/js.svg
+/javascript/                             /photos/tech/js.svg
 
 --------------------------------------------------------------------------------
 
