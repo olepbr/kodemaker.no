@@ -33,7 +33,7 @@ maskiner og utstyr.
 
 :team-size 2
 :factoid-1 2 Kodemakere
-:factoid-2 2200 timer / 02.2017-09.2018
+:factoid-2 2200 timer / 10.2017-09.2018
 
 --------------------------------------------------------------------------------
 :type illustrated-column
@@ -64,7 +64,6 @@ Prosjektet startet med en konseptfase hvor det ble utviklet en Proof of
 Concept for selve kamerateknologien. Deretter har vi gradvis bygget ut med
 optimalisering av nøyaktighet på kalibrering i parallell med utvikling av
 spill, grensesnitt og støtteverktøy/overvåkning.
-
 
 --------------------------------------------------------------------------------
 :type grid
