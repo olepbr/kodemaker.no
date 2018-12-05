@@ -26,9 +26,10 @@
                       {:blurb "Videreutvikling av NSB sin løsning for visualisering av posisjonsdata for tog i sanntid"
                        :customer "NSB"}
                       ]
- :endorsement-highlight {:author "Ketil Lund"
-                         :title "Principal scientist at Forsvarets Forskningsinstitutt"
-                         :quote "Alf jobbet for oss i ca 3 mnd i forbindelse med et pilotprosjekt rundt integrasjon av ulike informasjonssystemer. Vi er svært fornøyde med jobben Alf gjorde. Han er effektiv, har stor innsatsvilje og er en trivelig person å jobbe sammen med."}
+ :endorsement-highlight {:author "Stein Engen"
+                         :title  "Senior Engineer at Norwegian Armed Forces Cyber Defence"
+                         :quote  "Jeg har hatt gleden av å benytte Alf som utvikler i to prosjekter over en 3 års periode der jeg har vært prosjektleder - begge med hovedtyngden av teknologi på Java-stack'en. Alf er en særdeles dyktig programmerer - og en sann kodemaker. I tillegg til det rent teknisk/faglige fungerer Alf utmerket i konstellasjoner der vi trekker brukerne inn for å designe løsningene. I slike settinger kreves både kreativitet og smidighet, samt at man har \"guts\" nok til å si ifra om man mener noe er feil. Alf leverer på dette også. Kan gi ham mine beste anbefalinger!"
+                         }
 
  :recommendations [{:title "Clojure from the ground up"
                     :blurb "En god begynnelse for de som ønsker å komme igang med Clojure. Passer godt til både nye programmerere og de litt mer erfarne"
@@ -225,7 +226,11 @@
                   :tech [:ejb :servlets :jsp :borland :oracle :ant]}
                  ]
                  
- :endorsements  [{:author "Ketil Lund"
+ :endorsements  [{:author "Stein Engen"
+                  :title  "Senior Engineer at Norwegian Armed Forces Cyber Defence"
+                  :quote  "Jeg har hatt gleden av å benytte Alf som utvikler i to prosjekter over en 3 års periode der jeg har vært prosjektleder - begge med hovedtyngden av teknologi på Java-stack'en. Alf er en særdeles dyktig programmerer - og en sann kodemaker. I tillegg til det rent teknisk/faglige fungerer Alf utmerket i konstellasjoner der vi trekker brukerne inn for å designe løsningene. I slike settinger kreves både kreativitet og smidighet, samt at man har \"guts\" nok til å si ifra om man mener noe er feil. Alf leverer på dette også. Kan gi ham mine beste anbefalinger!"
+                  }
+								 {:author "Ketil Lund"
                   :title  "Principal scientist at Forsvarets Forskningsinstitutt"
                   :quote  "Alf jobbet for oss i ca 3 mnd i forbindelse med et pilotprosjekt rundt integrasjon av ulike informasjonssystemer. Vi er svært fornøyde med jobben Alf gjorde. Han er effektiv, har stor innsatsvilje og er en trivelig person å jobbe sammen med."
                   }

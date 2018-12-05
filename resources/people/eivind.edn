@@ -74,7 +74,11 @@
             :description "Snowboard har vært en hobby siden videregående, og det blir fortsatt
                           noen turer hvert år. De siste årene har barna også blitt med,
                           noe som gjør det ekstra stas :)"
-            :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}]
+            :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}
+           {:title "Fløyte"
+            :description "Eivind spilte fløyte i skolekorps i ungdommen. Dette er en hobby han har tatt
+                          opp igjen for noen år siden. Spiller i Grav Musikkorps i Bærum."
+            :illustration "/illustrations/hobbies/eivind_flute.jpg"}]
 
  :blog-posts [{:url "http://eivindw.github.io/2016/01/08/comparing-gc-collectors.html"
                :title "Comparing GC Collectors"
@@ -308,13 +312,27 @@
                           Han er en team spiller og deler med stor glede av sin kompetanse, både i
                           forbindelse med parprogrammering og gjennomganger for større eller mindre grupper."}]
 
- :projects [{:customer "Bull's Eye"
+ :projects [{:customer "Animalia"
+             :years [2018]
+             :employer :kodemaker
+             :summary "API for klauvskjæring"
+             :description "Laget API for å tilby og motta data fra terminaler som brukes av
+             klauvskjærere i norske fjøs. I all hovedsak snakk om en Clojure webserver som
+             snakker med en database."
+             :tech [:clojure :oracle :openshift]}
+            {:customer "Oche Oslo AS"
              :years [2017 2018]
              :employer :kodemaker
-             :summary "Nytt spillkonsept"
-             :description "Har jobbet med utvikling av et helt nytt spillkonsept,
-             basert på bildeanalyse og fysiske spill."
-             :tech [:python :opencv :clojure :clojurescript :docker]}
+             :summary "Social darts - moderne pilspill"
+             :description "Oche tilbyr et helt nytt spillkonsept basert på dart.
+             Systemet plukker opp hvor pilene står og beregner score for spillerne
+             som visualiseres på en skjerm. Man har også en liten touch-skjerm for å
+             registrere spillere, velge spill og gjøre korreksjoner. Eivind har jobbet
+             med systemet fra konsept til ferdig utgave - med hovedansvar for bildeanalyse.
+             Som eneste utvikler på store deler av prosjektet har han hatt en finger med i
+             de fleste komponentene. Eivind var også ansvarlig for installasjon på fysiske
+             maskiner og oppsett på Oche Bar i Torggata."
+             :tech [:python :opencv :clojure :clojurescript :docker :prometheus :grafana]}
             {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
@@ -344,7 +362,7 @@
             {:customer "Skatteetaten"
              :years [2014 2015]
              :employer :bekk
-             :summary " Nytt system for skattekort og skatteoppgjør "
+             :summary "Nytt system for skattekort og skatteoppgjør"
              :description "Jobbet på prosjektet Sofus - som utvikler nytt system
              for skattekort, skattemanntall og skatteoppgjør. Det nye systemet
              skal erstatte en rekke gamle systemer basert på IBM stormaskin.

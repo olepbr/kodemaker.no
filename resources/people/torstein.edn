@@ -4,15 +4,19 @@
  :start-date "2004-12-01 00:06"
  :description "Torstein er en systemutvikler med lang erfaring fra prosjekter innen en 
                rekke områder. I sine prosjekter er han opptatt av å levere kvalitet i 
-               alle ledd fra kildekode til brukeropplevelse."
- :cv/description "Torstein har lang og variert erfaring med systemutvikling.
-                  Han har vært innom de fleste aspekt innen faget og legger stor vekt på kvalitet
-                  i alle ledd. Koding er kjernen i det han jobber med og han er flink til å komme
-                  frem til løsninger på problemer.
-                  
-                  Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
-                  Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor
-                  arbeidskapasitet og jobber effektivt. Han lærer raskt og tenker fremover."
+               alle ledd fra kildekode til brukeropplevelse. Koding er kjernen i det han
+               jobber med og han er flink til å komme frem til løsninger på problemer.
+
+               Torstein har leverer moderne, elegante og brukervennlige løsninger på
+               store og små utfordringer. Han jobber like gjerne med databaser og backend
+               som med GUI og frontend.
+
+               Torstein har jobbet med systemer på javaplattformen hele sin yrkeskarriære.
+               Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor arbeidskapasitet
+               og jobber effektivt. Han lærer raskt og tenker fremover."
+
+ :innate-skills [:intellij :eclipse :toad :terminal :sql :java :ios :android :osx]
+
  :phone-number "+47 481 12 911"
  :email-address "torstein@kodemaker.no"
 
@@ -21,18 +25,16 @@
             :linkedin "/in/tmeland/"
             :github "tmetrue"}
 
- :tech {:using-at-work [:groovy :grails :java :spring]
-        :favorites-at-the-moment [:groovy :grails :angularjs]
-        :want-to-learn-more [:clojure :emacs]}
+ :tech {:using-at-work [:groovy :grails :java :spring :neptune :javascript :bootstrap]
+        :favorites-at-the-moment [:groovy :grails]
+        :want-to-learn-more [:clojure :emacs :swift]}
 
- :innate-skills [:intellij :eclipse :toad]
-
- :qualifications ["Senior systemutvikler"
-                  "Løsningsmann"
-                  "Java EE"
-                  "Integrasjon"
-                  "Sterk på SQL"
-                  "Scrum / smidig utvikling"]
+ :qualifications ["Fullstack, åpen for alle utfordringer"
+                  "Senior systemutvikler, lang erfaring innenfor en rekke områder"
+                  "Løsningsmann, liker å løse store og små problemer"
+                  "Integrasjon, har brukt mange forskrellige integrasjonsverktøy siden 2005"
+                  "Sterk på SQL. Spesielt innen Oracle, men har også brukt PostgreSQL og SQL Server"
+                  "Scrum / smidig utvikling. Trives blant folk."]
 
  :recommendations [{:link {:url "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata" :text "Prøv kataen"}
                     :title "Onkel Bobs Bowling Game Kata"
@@ -58,14 +60,29 @@
                           ved noen holmer langt ute i havgapet."
             :illustration "/illustrations/hobbies/seiling.jpg"}]
 
+ :project-highlights [{:blurb "Modernisering av Amplan. Webapplikasjon utviklet med Spring Boot, Bootstrap, Thymeleaf."
+                       :customer "Forsvaret"}
+                      {:blurb "Nyutvikling av Material Data Portalen, et system for anmodning om og behandling av materialdata."
+                       :customer "Forsvaret"}
+                      {:blurb "Videreutvikling av GBMS. Forsvarets system for kontroll og oppfølging av kanonrør."
+                       :customer "Forsvaret"}]
+
  :projects [{:customer "Forsvaret"
-             :years [2017 :ongoing]
+             :start "2018-09"
+             :employer :kodemaker
+             :summary "FUNIF Kasse"
+             :description "Webapplikasjon for ansatte på Forsvarets Uniformsutsalg. Direkte
+             integrasjon mot SAPs transaksjoner for salgsordre, material og kunderegister.
+             Oppgave: Analyse, design, test, utvikling, dokumentasjon."
+             :tech [:neptune :javascript :abap :sap]}
+            {:customer "Forsvaret"
+             :start "2017-09"
              :employer :kodemaker
              :summary "Amplan modernisering"
              :description "Oppgrading av Forsvarets system for ammunisjonsplanlegging.
              Integrasjon med en rekke andre system tilknyttet ammunisjonsforvaltningen.
              Oppgave: Analyse, design, test, utvikling, dokumentasjon."
-             :tech [:java :spring :oracle :bootstrap :html :css :javascript]}
+             :tech [:java :spring-boot :jpa :oracle :bootstrap :html :css :javascript :git]}
             {:customer "Forsvaret"
              :years [2016]
              :employer :kodemaker
@@ -74,7 +91,7 @@
              anmodning om og behandling av materialdata. Integrasjon med
              forsvarets SAP-løsning. Oppgave: Analyse, design, test, utvikling,
              dokumentasjon"
-             :tech [:groovy :grails :oracle :sap]}
+             :tech [:groovy :grails :oracle :sap :git]}
             {:customer "Forsvaret"
              :years [2015]
              :employer :kodemaker
@@ -82,7 +99,7 @@
              :description "Videreutvikling av GBMS for datafangst og analyse av
              skyts. Integrasjon med forsvarets SAP-løsning. Oppgave: Analyse,
              design, test, utvikling, dokumentasjon"
-             :tech [:groovy :grails :oracle :sap-integrasjon]}
+             :tech [:groovy :grails :oracle :sap-integrasjon :git]}
             {:customer "Forsvaret"
              :years [2007 :ongoing]
              :employer :kodemaker
