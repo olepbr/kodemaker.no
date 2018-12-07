@@ -1,5 +1,22 @@
+--------------------------------------------------------------------------------
 
+:type reference
+:img /references/geir-oterhals.jpg
+:logo /logos/oche.svg
+:name Geir Oterhals
+:phone +47 992 18 320
+:title Prosjekteier, Oche Dart
+:class ref-top
+:body
 
+Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept [Oche](https://ochedart.com). De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt. 
+
+De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget har fungert knirkefritt siden åpningen. Vi har et veldig godt inntrykk av hele Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng. [Les mer...](/referanser/oche-dart). 
+
+--------------------------------------------------------------------------------
+
+:type mega-quote
+:title Kodemaker har bidratt med **utallige råd og idéer**
 
 --------------------------------------------------------------------------------
 :type reference
@@ -8,13 +25,12 @@
 :name Sven Westgaard
 :phone 480 81 798
 :title Leder, system og masterdata NSB Persontog
-:class ref-top
 :body
 
 Kodemaker har vært sentrale i utviklingen av systemer for distribusjon av 
 trafikkinformasjon i NSB. Ved hjelp av dyktige konsulenter har vi funnet 
 effektive og brukervennlige løsninger på komplekse problemstillinger. 
-Konsulentene fra Kodemaker har bidratt med utallige råd og ideer som gjør oss 
+Konsulentene fra Kodemaker har bidratt med utallige råd og idéer som gjør oss 
 i stand til større grad av automatisering og presisjon i leveransen overfor 
 våre kunder.
 
@@ -63,28 +79,6 @@ kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
 sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
 gjerne igjen når behovet oppstår.
 
---------------------------------------------------------------------------------
-:type mega-quote
-:title Kodemaker er blant<br> **Norges beste på frontend**
-
---------------------------------------------------------------------------------
-:page-title Schibsted Payment ID
-:type reference
-:logo /logos/spid.svg
-:img /references/bente-busch.jpg
-:name Bente Busch
-:phone +47 926 90 062
-:title Chief Analytics Officer, Schibsted Payment ID
-:body
-
-Kodemaker ga et betydelig løft til vårt prosjekt gjennom å bidra med verdifulle 
-innspill til alle ledd i utviklingen, og ikke minst leverte de et meget godt 
-produkt til avtalt tid. 
-
-Prosjektet hadde stor nytte av at de er blant Norges 
-beste på front-end, og i tillegg har inngående kompetanse om nærliggende områder. 
-Kodemaker har vært ypperlige sparringspartnere hele veien, og jeg er sikker på 
-at sluttproduktet ikke ville blitt like godt uten deres hjelp. 
 
 --------------------------------------------------------------------------------
 :type mega-quote
