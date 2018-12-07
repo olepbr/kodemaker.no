@@ -19,7 +19,7 @@ De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget 
 :title Oche - Dart på en helt ny måte
 :body
 
-Oche tilbyr en helt ny opplevelse av dart pakket inn i et gjennomført sosialt konsept for den gode opplevelsen med vennegjengen eller jobben. Det er tradisjonell dart i form av pilkast på en fysisk dartskive, men derfra og inn er alt annerledes. Alle kast blir automatisk registrert i datasystemet, og din score og plassering blir automatisk beregnet og annonsert på stor skjerm kast for kast. Det gir en helt annen opplevelse for hele gjengen, og det blir kjapt rom for kjappe kommentarer og økt forventningspress.
+[Oche](https://ochedart.com/) tilbyr en helt ny opplevelse av dart pakket inn i et gjennomført sosialt konsept for den gode opplevelsen med vennegjengen eller jobben. Det er tradisjonell dart i form av pilkast på en fysisk dartskive, men derfra og inn er alt annerledes. Alle kast blir automatisk registrert i datasystemet, og din score og plassering blir automatisk beregnet og annonsert på stor skjerm kast for kast. Det gir en helt annen opplevelse for hele gjengen, og det blir kjapt rom for kjappe kommentarer og økt forventningspress.
 
 Kodemaker har vært med å lage en del forskjellige typer spill, og da blir det opp til den enkelte å finne sin favoritt. Her vil det være rom for å enkelt utvikle nye varianter, og ikke minst kan det bli gøy med turneringer. Kodemaker har jobbet tett sammen med designere fra Eggs og en maskiningeniør fra Not A Number. Sammen har vi laget en på alle plan spennende og velfungerende løsning for dette fysiske spillkonseptet.
 
