@@ -288,7 +288,7 @@
  :qualifications ["Fullstackutvikler med fokus på backend og integrasjon"
                   "Selvstendig, effektiv og løsningsorientert"
                   "Hjelper kunder med å finne enkle løsninger på vanskelige problemer"
-                  "Variert erfaring fra mobil, backend og frontend"
+                  "Variert erfaring fra mobil, backend og frontend "
  ]
 
  :certifications [{:name "Certified Scrum Master", :year 2018}
