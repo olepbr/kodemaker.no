@@ -19,20 +19,9 @@ Vi är mycket nöjda med kvalitén på leveransen, tempot i utvecklingen, fokuse
 :title Glow - Nytt logisitikksystem
 :body
 
-Glow er et innovativt prosjekt for budbil-bransjen. Glow setter kunde (avsender) og mottaker i sentrum, der de i sanntid kan følge sin leveranse. Mottakere vil f.eks. få et ganske presist leveransetidsvindu, vil kunne kommunisere direkte med sjåfør, kjøpe tilleggstjenester, og følge med på kartet når bilen nærmer seg. Kunde kan følge opp at leveransen går etter planen i sanntid.
+Glow er et innovativt prosjekt for budbil-bransjen. Dette ble utviklet med et fokusert lite team med eksperter over relativt kort tid. Systemet har hatt fokus på høy sikkerhet, skalering, høyest mulig oppetid og stor fleksibilitet for endringer.
 
-Glow var først et proof of concept. Dette ble skrevet om til et produksjonklart system på ca 3,5 måned. Det nye systemet måtte blant annet kunne:
-
-- ta imot ordre
-- tilby verktøy for å planlegge og optimalisere leveranser inn på ruter
-- tilby sjåfører en app som verktøy for å kjøre rutene
-- tilby mottakersider for sporing
-- tilby kundesider for oppfølging
-- integrere med mange av Bring sine eksisterende systemer
-
-Glow var i tillegg et pilotprosjekt i Azure for Bring.
-
-Dette ble utviklet med et fokusert lite team med eksperter over relativt kort tid. Systemet har hatt fokus på høy sikkerhet, skalering, høyest mulig oppetid og stor fleksibilitet for endringer.
+Prosjektet er under videreutvikling og ytterligere detaljer gis kun via kontaktperson hos kunden.
 
 --------------------------------------------------------------------------------
 :type reference-meta
