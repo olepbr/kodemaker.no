@@ -1,11 +1,11 @@
 --------------------------------------------------------------------------------
 :page-title Oche - Dart
 :type reference
-:img /references/rune-strandli.jpg
+:img /references/geir-oterhals.jpg
 :logo /logos/oche.svg
 :name Geir Oterhals
 :phone +47 992 18 320
-:title Supertittel, Oche Dart
+:title Prosjekteier, Oche Dart
 :body
 
 Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært den viktigste eksterne bidragsyteren i vår suksess med Oche Dart-konseptet. De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt. 
