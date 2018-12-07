@@ -69,7 +69,7 @@ spill, grensesnitt og støtteverktøy/overvåkning.
 :type grid
 :content
 
-/opencv/                           /photos/tech/opencv.jpg
+https://opencv.org/                /photos/tech/opencv.jpg
 /clojure/                          /photos/tech/clojure.png
 /responsive-design/                /photos/tech/rwd.jpg 2x
 /clojurescript/                    /photos/tech/cljs.svg
