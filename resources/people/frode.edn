@@ -116,7 +116,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
              :description "Utvikling av appen Nimble som brukes av helsepersonell på sykehus.
                 Med den kan leger og sykepleiere registrere pasientinformasjon, legge inn prøveresultater og kommunisere seg i mellom direkte fra sengeposten.
                 Appen integrerer med andre sentrale sykehussystemer som elektronisk pasientjournal. Frode har jobbet med frontend, backend og infrastruktur."
-             :tech [:java :netty :jdbi :postgresql :javascript :react :redux :material-ui]}
+             :tech [:java :netty :jdbi :postgresql :flyway :javascript :react :redux :material-ui :swift :ios :xcode]}
             {:customer "Posten Norge AS - Digipost"
              :years [2017 2018]
              :employer :bekk
