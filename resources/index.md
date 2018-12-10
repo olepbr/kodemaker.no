@@ -125,41 +125,42 @@ utgangpunktet hadde ambisjoner om å få til.
 :type grid
 :content
 
+/frode/                            /photos/people/frode/side-profile-square.jpg
 /nils/                             /photos/people/nils/side-profile-square.jpg
-/christin/                         /photos/people/christin/side-profile-square.jpg
 /git/                              /photos/tech/git.svg
-/eivind/                           /photos/people/eivind/side-profile-square.jpg
+/christin/                         /photos/people/christin/side-profile-square.jpg
 /javascript/                       /photos/tech/js.svg
-/christian/                        /photos/people/christian/side-profile-square.jpg
+/eivind/                           /photos/people/eivind/side-profile-square.jpg
 /zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
+/christian/                        /photos/people/christian/side-profile-square.jpg
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
 /odin/                             /photos/people/odin/side-profile-square.jpg
-/august/                           /photos/people/august/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.png
-/stian/                            /photos/people/stian/side-profile-square.jpg
+/august/                           /photos/people/august/side-profile-square.jpg
 /nodejs/                           /photos/tech/nodejs-wide.jpg 2x
-/stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
+/stian/                            /photos/people/stian/side-profile-square.jpg
 /react/                            /photos/tech/react.png
-/stig/                             /photos/people/stig/side-profile-square.jpg
+/stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
 /elm/                              /photos/tech/elm.svg
+/stig/                             /photos/people/stig/side-profile-square.jpg
 /anders/                           /photos/people/anders/side-profile-square.jpg
-/kristian/                         /photos/people/kristian/side-profile-square.jpg
 /groovy/                           /photos/tech/groovy.png 2x
+/kristian/                         /photos/people/kristian/side-profile-square.jpg
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
-/finn/                             /photos/people/finn/side-profile-square.jpg
 /gradle/                           /photos/tech/gradle.svg 2x
-/alf-einar/                        /photos/people/alf-einar/side-profile-square.jpg
+/finn/                             /photos/people/finn/side-profile-square.jpg
 http://zombietdd.com               /photos/tech/ztdd.png
-/ronny/                            /photos/people/ronny/side-profile-square.jpg
+/alf-einar/                        /photos/people/alf-einar/side-profile-square.jpg
 /ruby/                             /photos/tech/ruby-square.png
+/ronny/                            /photos/people/ronny/side-profile-square.jpg
 /magnar/                           /photos/people/magnar/side-profile-square.jpg
 /magnus/                           /photos/people/magnus/side-profile-square.jpg
-/torstein/                         /photos/people/torstein/side-profile-square.jpg
 /responsive-design/                /photos/tech/rwd.jpg 2x
+/torstein/                         /photos/people/torstein/side-profile-square.jpg
 /andre/                            /photos/people/andre/side-profile-square.jpg
 /kristoffer/                       /photos/people/kristoffer/side-profile-square.jpg
-/kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
 /docker/                           /photos/tech/docker.png
+/kolbjorn/                         /photos/people/kolbjorn/side-profile-square.jpg
 /gry/                              /photos/people/gry/side-profile-square.jpg
 /trygve/                           /photos/people/trygve/side-profile-square.jpg
 
