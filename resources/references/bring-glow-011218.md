@@ -69,7 +69,7 @@ Det har vært et pilotprosjekt for Bring i forhold til nye driftsrutiner. Vi har
 
 
 :type participants
-:title Kodemakere hos BN Bolig
+:title Kodemakere hos Bring
 :content
 
 alf-kristian
