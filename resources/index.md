@@ -137,7 +137,7 @@ utgangpunktet hadde ambisjoner om å få til.
 /odin/                             /photos/people/odin/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.png
 /august/                           /photos/people/august/side-profile-square.jpg
-/nodejs/                           /photos/tech/nodejs-wide.jpg 2x
+/nodejs/                           /photos/tech/nodejs-simple.svg
 /stian/                            /photos/people/stian/side-profile-square.jpg
 /react/                            /photos/tech/react.png
 /stein-tore/                       /photos/people/stein-tore/side-profile-square.jpg
