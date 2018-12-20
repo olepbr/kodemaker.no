@@ -43,7 +43,7 @@ Det har vært sterkt fokus på å utvikle brukervennlige, skalerbare løsninger,
 
 Hele backend av systemet er skrevet fra bunnen av i Kotlin. Kotlin brukes også i Android-appen og man får dermed nyttiggjort seg denne kompetansen på flere nivåer.
 
-Frontend er skrevet i React. Appene er skrevet ved hjelp av React Native. Noen områder i appen har man måtte skrive native kode som man integrerer mot. Her har man så langt brukt Kotlin siden man i første omgang har man fokuserte på en Android versjon, men Swift vil også måtte benyttes på iOS versjonen når arbeidet på den startes om kort tid.
+Frontend er skrevet i React. Appene er skrevet ved hjelp av React Native, med ca. 80% JavaScript, og ca. 20% Kotlin (Android) og Swift (iOS). Mesteparten av funksjonaliteten i appen er skrevet med kode som er delt mellom platformene. Noen spesifikke deler av appen, som kryptering, oppdatering av data i bakgrunnen, og publisering av GPS-posisjon, er skrevet som ren native-kode.
 
 Vi har jobbet veldig tett med prosjekteiere og brukere av systemet. Det har dermed vært kort vei fra endrede og nye ønsker ble presentert til denne funksjonen fantes implementert i Glow. Er godt samarbeid med designere har sikret gode løsninger.
 
