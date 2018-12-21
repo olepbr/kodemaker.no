@@ -50,7 +50,16 @@
 
  :innate-skills         [:kotlin]
 
- :endorsements          [{:author "Sigve Litsheim"
+ :endorsements          [
+         {:author "Thor Marius Henrichsen"
+         :title "Tech Lead, Finn.no"
+         :quote "Nils er en fantastisk utvikler å ha i ethvert utviklingteam. Han har dyp teknisk forståelse i en mengde språk, og han behersker mange tilhørende rammeverk. Han er enormt effektiv, og løser komplekse oppgaver på løpende bånd. Er det noe han ikke kan, bruker han dessuten svært kort tid å å lære seg nye ting. 
+
+For vårt team i FINN.no har Nils' Kafka ekspertise vært spesielt verdifull. Han har også vært en viktig ressurs i forbindelse med Kotlin og Elm adopsjon i teamet. 
+
+Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter over på omgivelsene. Jeg kan trygt anbefale Nils videre til alle som trenger en super utvikler."
+         },
+         {:author "Sigve Litsheim"
                           :title  "Lead Architect, Thomson Reuters"
                           :quote  "Nils er en svært allsidig og dyktig utvikler. Han setter seg raskt inn i nye teknologier og er flink til å dele kunnskap og få med seg de andre på teamet. I Thomson Reuters jobbet han med utvikling av nytt system for å distribuere tidsserier og prognosedata i sanntid. Han videreutviklet og forbedret distribuerte beregninger med Spark/Hadoop og streaming av store datamengder med bruk av Kafka og HBase. Jeg kan varmt anbefale Nils og er sikker på at han vil være et solid tilskudd til de prosjektene han deltar på i fremtiden."},
                          {:author "Øystein Slørdahl Hjertvik"
