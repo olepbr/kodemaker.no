@@ -38,7 +38,7 @@
  :tech                  {
                          :favorites-at-the-moment [:elm :go :kotlin]
                          :using-at-work           [:java :kafka :kotlin :elm]
-                         :want-to-learn-more      :kubernetes
+                         :want-to-learn-more      [:elm :kotlin]
                          }
 
  :hobbies               [
