@@ -127,19 +127,22 @@
            (list " / " [:a {:href (:url certificate)}
                        (or (:text certificate) "Kursbevis")]))))
 
-(defn- education-label [{:keys [education certifications]}]
-  (if (< 0 (count certifications))
-    "Utdanning, sertifiseringer og kurs"
-    "Utdanning"))
+(defn- certifications [{:keys [certifications] :as person}]
+  (when (< 0 (count certifications))
+    (section "Sertifiseringer og kurs"
+             "certifications"
+             [:div.mod
+              [:table.table.padded
+               [:tbody
+                (table-rows certifications [:year :institution certification-detail] ["nw"])]]])))
 
-(defn- education [{:keys [education certifications] :as person}]
-  (when (< 0 (+ (count education) (count certifications)))
-    (section (education-label person)
+(defn- education [{:keys [education] :as person}]
+  (when (< 0 (count education))
+    (section "Utdanning"
              "education"
              [:div.mod
               [:table.table.padded
                [:tbody
-                (table-rows certifications [:year :institution certification-detail] ["nw"])
                 (table-rows education [year-range :institution :subject] ["nw"])]]])))
 
 (defn- languages [{:keys [languages]}]
@@ -209,8 +212,11 @@
   (concat
    [["#projects" "Prosjekter"]
     ["#endorsements" "Anbefalinger"]
-    ["#technology" "Teknologi"]
-    ["#education" (education-label person)]]
+    ["#technology" "Teknologi"]]
+   (when (< 0 (count (:certifications person)))
+     [["#certifications" "Sertifiseringer og kurs"]])
+   (when (< 0 (count (:education person)))
+     [["#education" "Utdanning"]])
    (when (< 0 (count (:appearances person)))
      [["#appearances" "Foredrag/kurs"]])
    (when (< 0 (count (:open-source-contributions person)))
@@ -262,6 +268,7 @@
          (technologies person)
          (projects person)
          (endorsements person)
+         (certifications person)
          (education person)
          (languages person)
          (appearances person)
