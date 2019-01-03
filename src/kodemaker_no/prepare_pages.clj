@@ -16,6 +16,14 @@
   (or (not-empty (link/file-path request path))
       path))
 
+(defn- fix-links [request path]
+  (when-let [path (try-optimize-path request path)]
+    (if (and (:base-url request)
+             (str/starts-with? path "/")
+             (not (str/starts-with? path "//")))
+      (str (:base-url request) path)
+      path)))
+
 (defn- get-node-text [node]
   (let [text (-> node :content first)]
     (if (string? text) text (get-node-text text))))
@@ -41,7 +49,7 @@
    [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
 
    ;; use optimized links, if possible
-   [:a] #(update-in % [:attrs :href] (partial try-optimize-path request))
+   [:a] #(update-in % [:attrs :href] (partial fix-links request))
 
    ;; give every h2 an anchor link for linkability
    [:h2] add-anchor

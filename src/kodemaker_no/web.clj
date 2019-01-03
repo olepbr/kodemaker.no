@@ -98,7 +98,8 @@
         old-files (load-export-dir)]
     (stasis/empty-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
-    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})
+    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets
+                                                       :base-url "https://www.kodemaker.no"})
     (if (= format :json)
       (println (json/write-str (dissoc (stasis/diff-maps old-files (load-export-dir)) :unchanged)))
       (do
