@@ -175,11 +175,12 @@
                     :tech [:lisp :clojure :emacs :elisp]}]
 
  :hobbies [{:title "Brettspill"
-            :description "Det er faktisk mer enn Monopol, Ludo og den
-            Forsvunnede Diamant i verden. De siste tjue årene har brettspill
-            vært gjennom en renessanse med utspring i Tyskland. Det er skikkelig
-            bra greier. Bra steder å starte er Codenames, Pandemic og Ticket to
-            Ride. Anbefales. "
+            :description "Brettspill er moro! Spesielt når du ser at det er mer
+            enn Monopol og Ludo i verden. De siste tjue årene har brettspill
+            vært gjennom en renessanse. Spillene er ikke lenger bare moro for
+            barna og en helt middels tidtrøyte for voksne. Nå kan alle ha det
+            gøy. Hvis dette var nytt for deg så kan jeg hjertelig anbefale
+            Codenames, Pandemic eller Ticket to Ride som gode steder å starte. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
  :side-projects [{:title "mytomatoes"
