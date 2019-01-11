@@ -175,20 +175,11 @@
                     :tech [:lisp :clojure :emacs :elisp]}]
 
  :hobbies [{:title "Brettspill"
-            :description "Det er mer enn Monopol og Ludo i verden. Har
-                          du prøvd Settlers? Moro, ikke sant? Det er
-                          bare begynnelsen. Det er en verden av
-                          interessante, artige, morsomme brettspill
-                          der ute - bare du kommer deg ut av
-                          bokhandleren og inn i en skikkelig
-                          brettspillforretning. Noen tips fra meg:
-                          [Dominion](http://www.spillsjefen.no/product_info.php?products_id=46439),
-                          [Galaxy
-                          Trucker](http://www.spillsjefen.no/product_info.php?products_id=32175),
-                          eller hvis dere bare er to: [Lord of the
-                          Rings: The
-                          Confrontation](http://www.spillsjefen.no/product_info.php?products_id=30129).
-                          Anbefales. "
+            :description "Det er faktisk mer enn Monopol, Ludo og den
+            Forsvunnede Diamant i verden. De siste tjue årene har brettspill
+            vært gjennom en renessanse med utspring i Tyskland. Det er skikkelig
+            bra greier. Bra steder å starte er Codenames, Pandemic og Ticket to
+            Ride. Anbefales. "
             :illustration "/illustrations/hobbies/brettspill.jpg"}]
 
  :side-projects [{:title "mytomatoes"
@@ -203,15 +194,12 @@
                   :tech [:clojure :javascript :jquery]}
 
                  {:title "Adventur Delux"
-                  :description "Et tekstbasert eventyrspill jeg har
-                                skrevet på siden 1997, på størrelse
-                                med Ringenes Herre fire ganger. Som en
-                                ung lovende sverdsvinger går du rundt,
-                                sier vittige ting og kverker en haug
-                                med orker, zombier, kannibaler og
-                                andre kjipinger. Jeg har lagd fem
-                                forskjellige editorer opp gjennom
-                                årene - i AMOS, Java, Ruby on Rails,
+                  :description "Et tekstbasert eventyrspill jeg har skrevet på
+                                siden 1997, på størrelse med Ringenes Herre fire
+                                ganger. Drager, demoner, bøllefrø og
+                                fusentaster. Jeg har lagd fem forskjellige
+                                editorer opp gjennom årene - i AMOS, Java, Ruby
+                                on Rails,
                                 [Groovy](/groovy/), samt den siste inkarnasjonen
                                 som har en [Clojure](/clojure/) backend til en
                                 Emacs Lisp frontend."
@@ -233,7 +221,7 @@
                        CSS’en eksplodert. Kunne det være noe i OOCSS? Det var jo
                        i mot alt jeg hadde lært."
                :tech [:oocss :css]}
-              {:url "http://blog.kjempekjekt.com/2012/12/16/magnar-genererer-testet-og-dokumentasjon-luke-16-2012/"
+              {:url "http://programmeringsbloggen.no/2012/12/16/magnar-genererer-testet-og-dokumentasjon-luke-16-2012/"
                :title "Å generere tester og dokumentasjon"
                :blurb "En gjestebloggpost på [Torbjørn Marø](https://twitter.com/tormaroe)
                        sin [Programmeringsblogg](http://blog.kjempekjekt.com/)
