@@ -176,7 +176,11 @@
             :url "http://execration.no/"}
            ]
 
- :blog-posts [{:url "https://cjohansen.no/git-subtree-multiple-dirs/"
+ :blog-posts [{:url "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs/"
+               :title "tools.deps, figwheel-main, Devcards, and Emacs"
+               :blurb "Hvordan sette opp et ClojureScript-prosjekt i 2019"
+               :tech [:clojurescript :clojure :tools-deps]}
+              {:url "https://cjohansen.no/git-subtree-multiple-dirs/"
                :title "Git Subtree for Multiple Directories"
                :blurb "En liten howto for hvordan man kan skille ut én eller flere mapper fra et git repo som et nytt repo, med historikken intakt."
                :tech [:git :bash]}
