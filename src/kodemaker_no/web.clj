@@ -29,6 +29,7 @@
     #"/thumbs/.*\.jpg"
     #"/forside/.*\.jpg"
     #"/references/.*\.jpg"
+    #"/fullsize-photos/.*\.jpg"
     #"/photos/.*\.jpg"
     #"/photos/.*\.svg"
     #"/photos/.*\.png"
@@ -53,6 +54,10 @@
 (def optimize
   (-> (fn [assets options]
         (-> (map #(assoc % :context-path "/assets") assets)
+            (transform-images {:regexp #"/fullsize-photos/.*\.jpg"
+                               :quality 0.3
+                               :width (* 920 2)
+                               :progressive true})
             (transform-images {:regexp #"/photos/.*\.jpg"
                                :quality 0.3
                                :width (* 290 2)
