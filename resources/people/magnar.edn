@@ -398,6 +398,7 @@
                              {:name "cegdown"             :url "https://github.com/Raynes/cegdown"               :tech [:clojure]}
                              {:name "collage"             :url "https://github.com/karls/collage"                :tech [:clojure]}
                              {:name "devcards"            :url "https://github.com/bhauman/devcards"             :tech [:clojure]}
+                             {:name "kaocha"              :url "https://github.com/lambdaisland/kaocha"          :tech [:clojure]}
                              {:name "lambdacd-git"        :url "https://github.com/flosell/lambdacd-git"         :tech [:clojure :jsch :jgit]}
                              {:name "Kalendae"            :url "https://github.com/ChiperSoft/Kalendae"          :tech [:javascript]}
                              {:name "buster-autotest"     :url "https://github.com/busterjs/buster-autotest"     :tech [:javascript]}
