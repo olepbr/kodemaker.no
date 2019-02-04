@@ -313,13 +313,13 @@
                           forbindelse med parprogrammering og gjennomganger for større eller mindre grupper."}]
 
  :projects [{:customer "Animalia"
-             :years [2018]
+             :years [2018 2019]
              :employer :kodemaker
-             :summary "API for klauvskjæring"
+             :summary "API og klient for klauvskjæring"
              :description "Laget API for å tilby og motta data fra terminaler som brukes av
              klauvskjærere i norske fjøs. I all hovedsak snakk om en Clojure webserver som
-             snakker med en database."
-             :tech [:clojure :oracle :openshift]}
+             snakker med en database. Utviklet også en web-klient for internt bruk/administrasjon."
+             :tech [:clojure :clojurescript :bootstrap :react :h2 :oracle :openshift]}
             {:customer "Oche Oslo AS"
              :years [2017 2018]
              :employer :kodemaker
