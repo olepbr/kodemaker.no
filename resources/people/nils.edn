@@ -36,9 +36,9 @@
                          }
 
  :tech                  {
-                         :favorites-at-the-moment [:elm :go :kotlin]
+                         :favorites-at-the-moment [:go :kotlin :emacs]
                          :using-at-work           [:java :kafka :kotlin :elm]
-                         :want-to-learn-more      [:elm :kotlin]
+                         :want-to-learn-more      [:elm :go :emacs]
                          }
 
  :hobbies               [
@@ -166,11 +166,11 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :projects
                         [{:customer    "Finn"
-                          :description "System for å håndtere livssyklusen til anbefalte annonser(Blink). Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
-                          :years       [2018]
+                          :description "System for å øke synlighet til utvalgte annonser. Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
+                          :years       [2018 2019]
                           :employer    :kodemaker
                           :summary     "Videreutvikle og fornye system for anbefalte annonser og oppsalgsprodukter for ekstra effekt."
-                          :tech        [:java, :kotlin, :kafka, :kubernetes, :docker, :postgresql, :spring-boot, :nodejs, :openlayers, :prebidjs]},
+                          :tech        [:java, :kotlin, :kafka, :kubernetes, :elm, :docker, :postgresql, :spring-boot, :nodejs, :openlayers, :prebidjs]},
                          {:customer    "Tieto"
                           :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
                           :years       [2017 2018]
