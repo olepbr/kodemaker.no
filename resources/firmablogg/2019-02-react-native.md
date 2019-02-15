@@ -24,6 +24,8 @@ React Navigation does not directly use the native navigation APIs on iOS and And
 
 **Eller bare bruk helt vanlig native navigation**. På iOS kan du lage en helt vanlig app med storyboards, på Android kan du lage en helt vanlig fragment-basert navigasjon med Android Jetpack. Så kan du skrive littegranne lim som gjør at dine UIViewControllers på iOS og fragments på Android rendrer sitt innhold med React Native. Ulempen er naturlig nok at du må implementere navigasjon to ganger, fordelen er at du får bra verktøystøtte på de uluke native-plattformene, og at du ikke tar på deg ansvaret med å dra inn de to svære dependenciene nevnt ovenfor.
 
+Hold deg langt unna å prøve å lage ditt eget smarte lag mellom React Native og native. Det er alt for mange race conditions og ting som kan gå galt ved å prøve å lage react-navigation eller react-native-navigation selv.
+
 ## Grafikk: bruk bitmaps, ikke vektor/SVG/...
 
 I starten tenkte vi "men man må jo bruke vektorer i 2018". Det funka sånn tålelig greit på Android, men på iOS er det rett og slett helt og holdent lagt opp til at du skal ha png-filer. Dersom du lager en ren native app for iOS ender du garantert opp med å bruke png-filer. React Native har også mye bedre innebygget støtte for png-er i stedet for vektorer. Just do it.
