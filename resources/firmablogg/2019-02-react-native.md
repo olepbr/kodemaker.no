@@ -1,5 +1,4 @@
-Jeg har vært med Kodemaker sitt team på 4 hos Bring og laget native mobilapp som sjåførene bruker mens de er ute og plukker opp og leverer pakker. Vi bruker React Native. Her er en liten samling med lærdommer og erfaringer jeg skulle ønske jeg visste før vi kom i gang
-
+Jeg har vært med Kodemaker sitt team på 4 hos Bring og laget native mobilapp som sjåførene bruker mens de er ute og plukker opp og leverer pakker. Vi bruker React Native. Her er en liten samling med ting jeg skulle ønske jeg visste før vi startet prosjektet.
 
 ## Avanserte animasjoner og UX? Skriv det som ren native
 
