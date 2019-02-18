@@ -1,3 +1,10 @@
+:title Hva jeg skulle ønske noen hadde fotalt meg om React Native
+:published 2019-02-15
+:author :august
+:tech [:react-native]
+
+:body
+
 Jeg har vært med Kodemaker sitt team på 4 hos Bring og laget native mobilapp som sjåførene bruker mens de er ute og plukker opp og leverer pakker. Vi bruker React Native. Her er en liten samling med ting jeg skulle ønske jeg visste før vi startet prosjektet.
 
 ## Avanserte animasjoner og UX? Skriv det som ren native
