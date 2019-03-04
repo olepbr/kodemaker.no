@@ -8,7 +8,7 @@
                  [optimus "0.20.2"]
                  [optimus-img-transform "0.2.0"]
                  [stasis "2.3.0" :exclusions [org.clojure/clojure]]
-                 [ring "1.4.0"]
+                 [ring "1.7.1"]
                  [hiccup "1.0.5"]
                  [enlive "1.1.6"]
                  [mapdown "0.2.1"]
@@ -25,7 +25,7 @@
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[clj-tagsoup/clj-tagsoup "0.3.0" :exclusions [org.clojure/clojure]]
                                   [hiccup-find  "1.0.0"]]
-                   :plugins [[lein-ring "0.9.7"]]
+                   :plugins [[lein-ring "0.12.5"]]
                    :source-paths ["dev" "config"]
                    :test-paths ^:replace []}
              :test {:dependencies [[midje "1.9.6"]
