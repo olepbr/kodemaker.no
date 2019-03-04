@@ -59,17 +59,16 @@
                   "Søker alltid løsninger som er enkle, driftbare, og så lette å endre som mulig. Har erfaring med at funksjonell programmering og devops bidrar til dette."
                   "Er gjerne tech lead i teams, både på grunn av sterk teknisk kompetanse og ønske om å få teams til å prestere optimalt."]
 
- :endorsement-highlight {:author "Rune Strandli"
-                         :title "Chief Digital Officer, BN Bolig"
-                         :quote "
-                    His technology skills and deliverables are unquestionable, but what
-                    we found most valuable was his ability to identify week spots and
-                    on his own initiative fill in the blanks. Key areas where
-                    Alf Kristian has taken responsibility outside his defined role
-                    is in security issues, the interconnection between development
-                    and operations, development processes, onboarding of new employees
-                    and mapping of complex and (often) diverging user needs to
-                    delivered solution."}
+ :endorsement-highlight {:author "Robin Skoglund"
+                         :title "Tech lead, web, Posten/Bring"
+                         :quote "Alf Kristian is a role model developer. He is technical to his finger
+                          tips, with a deep understanding of how code runs on a computer. He is up-to-date
+                          on which tools work well, and shines with experience and lessons learned. He is
+                          unafraid in his approach to new technology, eager to learn and always get
+                          better. But he is so much more than a technologist; he is selfless, setting
+                          aside personal development goals for the greater good of the team and the
+                          customer. He has passion for the project, and compassion for his teammates,
+                          doing what he can to strengthen the team."}
 
  :project-highlights [{:blurb "Tech lead for utvikling av nytt Nordisk system for budleveranser."
                        :customer "Bring"}
@@ -427,7 +426,22 @@
                 :date "2010-07-01"
                 :tech [:scala]}]
 
- :endorsements    [{:author "Rune Strandli"
+ :endorsements    [{:author "Robin Skoglund"
+                    :title "Tech lead, web, Posten/Bring"
+                    :quote "Alf Kristian is a role model developer. He is technical to his finger
+                    tips, with a deep understanding of how code runs on a computer. He is up-to-date
+                    on which tools work well, and shines with experience and lessons learned. He is
+                    unafraid in his approach to new technology, eager to learn and always get
+                    better. But he is so much more than a technologist; he is selfless, setting
+                    aside personal development goals for the greater good of the team and the
+                    customer. He has passion for the project, and compassion for his teammates,
+                    doing what he can to strengthen the team.
+                    <br><br>
+                    At Bring, Alf Kristian has built a development team for a new business area,
+                    really helping us gain ground, both technology-wise and business-wise. His
+                    positive attitude has helped getting things done, without sacrificing quality.
+                    I sure hope I get the chance to work with him again."}
+                   {:author "Rune Strandli"
                     :title "Chief Digital Officer, BN Bolig"
                     :quote "I had the pleasure to work with Alf Kristian as a client
                     in BN Bolig.  His role in our project was as a senior full-stack
