@@ -27,12 +27,11 @@
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:kubernetes :datascript :flexbox]
-        :using-at-work [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
-        :want-to-learn-more [:kafka-streams :unity3d :blockchain]}
+        :using-at-work           [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
+        :want-to-learn-more      [:kafka-streams :unity3d :flutter]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
-                  "Hjelper kunder med testautomatisering"
                   "Selvdrevet, samarbeidsvillig og ansvarsfull"]
 
  :blog-posts [{:url "http://odinodin.no/2015-11-14-three-cljs/"
@@ -178,8 +177,7 @@
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for
-             Norled. Jobber også med billett-app for kunder, samt app for
-             fergebillettørene."
+             Norled."
              :tech [:clojure :clojurescript :datomic :kubernetes :kafka :cassandra :datascript
                     :d3 :mapbox :reagent :mount :docker :aws :cordova]}
             {:customer "Telenor Digital"
@@ -223,8 +221,7 @@
              :description "Utvikling av system for maritim grensekontroll,
              SafeSeaNet. Bistod med å avklare funksjonelle krav, definere den
              tekniske arkitekturen og utviklet på alle lagene i applikasjonen.
-             Ansvar for å følge opp drift og den tekniske leveransen. Det ble
-             brukt Scrum som utviklingsmetodikk."
+             Ansvar for å følge opp drift og den tekniske leveransen."
              :tech [:java :groovy :jsf :facelets :html :css :javascript :jquery :spring :spring-security
                     :spring-integration :maven :web-services :cxf :jms :oracle-aq :apache-mq
                     :jenkins :sonar :jetty :oracle-appserver :oracle]}
@@ -329,18 +326,18 @@
                           pudder med snø til knærne. Da kjenner du at du lever."
             :illustration "/illustrations/hobbies/odin-ski.jpg"}]
 
- :open-source-projects [{:url "https://github.com/odinodin/data-frisk-reagent"
-                         :name "data-frisk"
+ :open-source-projects [{:url         "https://github.com/odinodin/data-frisk-reagent"
+                         :name        "data-frisk"
                          :description "Støtteverktøy for å visualisere data i trestrukturer"
-                         :tech [:clojurescript :reagent]}
-                        {:url "https://github.com/odinodin/canvas-fn"
-                         :name "Canvas-fn"
+                         :tech        [:clojurescript :reagent]}
+                        {:url         "https://github.com/odinodin/canvas-fn"
+                         :name        "Canvas-fn"
                          :description "Canvas-baserte visualiseringer laget med ClojureScript"
-                         :tech [:clojurescript :canvas]}
-                        {:url "https://github.com/odinodin/cashflow"
-                         :name "Cashflow"
+                         :tech        [:clojurescript :canvas]}
+                        {:url         "https://github.com/odinodin/cashflow"
+                         :name        "Cashflow"
                          :description "Regnskap for nettbanktransaksjoner"
-                         :tech [:clojure :react]}]
+                         :tech         [:clojure :react]}]
 
  :open-source-contributions [{:name "grgit"
                               :url "https://github.com/ajoberstar/grgit"
@@ -380,14 +377,13 @@
  :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av nytt informasjonssystem for fergedrift basert på Clojure, Kafka og Datomic."
                        :customer "Norled"}
                       {:blurb "Integrasjon av datakilder, sikkerhet og visualisering av store datamengder."
-                       :customer "Telenor Digital"
-                       }
+                       :customer "Telenor Digital"}
                       {:blurb "Workshops om testautomatisering, byggautomatisering, frontend- og backendutvikling og testautomatisering."
                        :customer "Conax"}]
 
  :endorsement-highlight {:author "Trond Hagen"
-                        :title "Director Software Development, Conax"
-                        :quote "Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
+                         :title "Director Software Development, Conax"
+                         :quote "Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
                                 til å sette seg inn i nye domener og problemstillinger. Han er alltid klar for å ta
                                 fatt på nye utfordringer uavhengig om de er store eller små, spennende eller ikke."}
 
@@ -399,12 +395,12 @@
                 :exclude-techs [:hudson :cruise-control :jsf]}}
 
  :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
- :certifications [{:name "Architecting for continuous delivery and zero downtime" :year 2015}
-                  {:name "Java 8 med Venkat Subramaniam", :year 2014}
-                  {:name "Rubykurs", :year 2012}
-                  {:name "SpringSource, Spring and Hibernate", :year 2009}
-                  {:name "Sun Java Certified Programmer, Java 5", :year 2008}
-                  {:name "RFID-kurs i Hong Kong i regi av Accenture", :year 2005}]
+ :certifications [{:year 2015 :name "Architecting for continuous delivery and zero downtime"}
+                  {:year 2014 :name "Java 8 med Venkat Subramaniam"}
+                  {:year 2012 :name "Rubykurs"}
+                  {:year 2009 :name "SpringSource, Spring and Hibernate"}
+                  {:year 2008 :name "Sun Java Certified Programmer, Java 5"}
+                  {:year 2005 :name "RFID-kurs i Hong Kong i regi av Accenture"}]
  :education [{:institution "NTNU"
               :years [2001 2002 2003 2004 2005 2006]
               :subject "Sivilingeniør/Master Datateknikk"}]}
