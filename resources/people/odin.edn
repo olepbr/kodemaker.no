@@ -28,7 +28,7 @@
 
  :tech {:favorites-at-the-moment [:kubernetes :datascript :flexbox]
         :using-at-work           [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
-        :want-to-learn-more      [:kafka-streams :unity3d :flutter]}
+        :want-to-learn-more      [:unity3d :flutter]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
