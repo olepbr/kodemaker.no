@@ -5,11 +5,11 @@ Våre nye nettsider kommer til verden.
 ## Teste lokalt
 
 Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen) om du ikke
-har den. Sats på versjon 2.3+. Hvis du har en gammel versjon under 2.0 så funker
+har den. Sats på versjon 2.8+. Hvis du har en gammel versjon under 2.0 så funker
 det garantert ikke. På OSX kan du hente den med homebrew: `brew update && brew
 install leiningen` eller med SDKMAN: `sdk install leiningen`
 
-Du må også ha JDK 1.7 eller 1.8. Sjekk med `java -version`, ellers
+Du må også ha JDK 1.11. Sjekk med `java -version`, ellers
 [last ned her](http://www.oracle.com/technetwork/java/javase/downloads/index.html) eller installer med SDKMAN.
 
 Gå så til rota av prosjektet, og

@@ -2,8 +2,7 @@
   (:require [clojure.string :as str]
             [clojure.walk :as walk]
             [kodemaker-no.cultivate.people :as people]
-            [kodemaker-no.cultivate.util :as util])
-  (:import [java.util.Date]))
+            [kodemaker-no.cultivate.util :as util]))
 
 (defn cv-url [person]
   (when-let [cv-id (-> person :presence :cv)]

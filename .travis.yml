@@ -5,6 +5,9 @@ language: clojure
 services:
   - docker
 
+jdk:
+  - openjdk11
+
 script: lein with-profile test midje
 
 env:

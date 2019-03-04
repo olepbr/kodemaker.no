@@ -6,8 +6,7 @@
             [clojure.set :as set]
             [clojure.string :as str]
             [hiccup.core :refer [html]]
-            [kodemaker-no.content :refer [load-content]]
-            [print.foo :refer :all]))
+            [kodemaker-no.content :refer [load-content]]))
 
 (defmacro dump-locals []
   `(clojure.pprint/pprint
