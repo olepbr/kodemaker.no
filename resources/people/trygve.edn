@@ -49,7 +49,7 @@
 
  :hobbies [{:title "Maskinlæring"
             :description "
-                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai), og jeg prøver så godt jeg kan å følge utviklingen på området. 
+                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai/deep-learning-specialization), og jeg prøver så godt jeg kan å følge utviklingen på området. 
                 "
             :illustration "/photos/tech/machinelearning.jpg"}
            
@@ -112,7 +112,7 @@
              :summary "Utvikling av media-arkivet til NRK"
              :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp
               - både nettklipp, ting som har gått på TV og råstoff"
-             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :octopus :teamcity :kubernetes :python :machinelearning]}
+             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :octopus :teamcity :kubernetes :python :machinelearning]}
             {:customer "BN-bolig / EGGS Design"
              :years [2017]
              :employer :kodemaker
