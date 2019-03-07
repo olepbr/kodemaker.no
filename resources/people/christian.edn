@@ -45,8 +45,8 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:aws :kubernetes :clojurescript :clojure :tools-deps]
-        :favorites-at-the-moment [:datomic :kubernetes :clojurescript]
+ :tech {:using-at-work [:aws :kubernetes :clojurescript :clojure :kafka]
+        :favorites-at-the-moment [:kubernetes :clojurescript :kafka]
         :want-to-learn-more [:haskell :go]}
 
  :qualifications ["Fullstack, jobber like gjerne med backend som frontend"
@@ -265,6 +265,17 @@
                :tech [:lisp :elisp :emacs]}]
 
  :projects [{:customer "Hafslund Strøm"
+             :employer :kodemaker
+             :summary "Utvikling av månedsrapport-tjeneste"
+             :description "Utviklet en løsning som genererer en månedsrapport på
+             epost som viser et utsnitt av grafer og informasjon fra Hafslunds
+             strøm-app. Løsningen bruker Puppeteer til å lage screenshots av
+             SVG-grafer og samler det hele sammen i en HTML-epost som er 100%
+             personalisert, og som vises pent i \"alle\" epost-klienter."
+             :tech [:clojurescript :node :kafka :dynamodb :puppeteer :aws :aws-s3 :tools-deps]
+             :start "2018-04"}
+
+            {:customer "Hafslund Strøm"
              :employer :kodemaker
              :summary "Utvikling av infrastruktur på AWS med Kubernetes"
              :description "Provisjonert ny infrastruktur for å kjøre

@@ -273,6 +273,7 @@
  :pmd :tool
  :postgresql :database
  :puppet :devops
+ :puppeteer :frontend
  :prolog :proglang
  :prototype :library
  :pygments :library
