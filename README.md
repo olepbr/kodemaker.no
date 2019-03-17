@@ -192,6 +192,9 @@ Bildene ligger i `resources/public`.
 - `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
 - `/photos/people/<person>/side-profile.jpg` Kodemaker sittende: .jpg 620x485
 - `/photos/people/<person>/side-profile-cropped.jpg` Kodemaker med kappa hode: .jpg 580x453
+- `/photos/people/<person>/side-profile-near.jpg` Kodemaker med kappa hode: .jpg 620×485
+- `/photos/people/<person>/side-profile-square.jpg` Kodemaker med kappa hode, firkanted: .jpg 485×485
+
 
 Hvis du ikke har Photoshop eller lignende, så kan du skalere bilder på
 http://scaleyourimage.com/.
