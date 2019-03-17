@@ -1,0 +1,140 @@
+{:id :olga
+ :name ["Olga" "Voronkova"]
+ :title "Systemutvikler"
+ :start-date "2019-03-01 00:09"
+ :experience-since 2013
+ :born 1988
+ :relationship-status "Gift, 1 barn"
+ :description "Olga har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
+ frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend."
+
+ :cv/description "Olga er seniorkonsulent i Kodemaker. Hun har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
+                 frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend.
+
+                 Olga er selvstendig, tar ansvar for både egen kode og det ferdige produktet, og er lett å samarbeide med. Olga er først og fremst systemutvikler, men har også hatt andre roller i prosjekter som prosjektleder, tech lead og scrum master.
+                 "
+
+ :phone-number "+47 991 60 613"
+ :email-address "olga@kodemaker.no"
+
+ :presence { :cv "olga"
+            :linkedin "/in/olgavoronkova"
+            :github "trollga"}
+
+ :tech {:using-at-work [:react :react-native :typescript :javascript]
+        :favorites-at-the-moment [:xamarin-forms :responsive-design]
+        :want-to-learn-more [:react :unity :clojure]}
+
+ :qualifications ["Erfaren mobil- og frontendutvikler"
+                  "Opptatt av designkvalitet"
+                  "Fokus på universell utforming"
+                  "Erfaring med responsiv design"]
+
+ :certifications [{:name "Certified Scrum Master", :year 2018}
+                 {:name "Xamarin Certified Mobile Developer", :year 2017}
+                 {:name "UXQB® Certified Professional for Usability and User Experience – Foundation Level", :year 2016}
+                 {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}
+ ]
+
+ ; :recommendations [{:title "Literate interactive coding: Devcards"
+ ;                    :blurb "Tester du UI-komponentene dine ved å klikke omkring
+ ;                             i applikasjonen og gjenskape situasjoner manuelt?
+ ;                             Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
+ ;                             viser vei med Devcards."
+ ;                    :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
+ ;                           :text "Se foredraget"}
+ ;                    :tech [:clojurescript :frontend :react]}]
+
+ :hobbies [{:title "Dans"
+            :description "Dans er noe jeg har drevet med nesten fra når jeg kunne gå, og har vært innom de fleste stiler. Jeg er nok mest glad i West Coast Swing, og var også med på å starte opp en klubb for det på Bårdar."
+            :illustration "/illustrations/hobbies/wcs.png"
+          }
+            {:title "Magic the gathering"
+             :description "MTG er kjempegøy! Jeg liker både å drafte og spille med ferdige deks. Jeg har 2 stykker 100-deks, og flere 60-deks, og er gjerne med og lager lokal spillelag når det er interesse for det!"
+            :illustration "/illustrations/hobbies/mtg.jpg"
+           }]
+
+ :side-projects [{:title "Spør en Biolog"
+                  :description "Spør en Biolog er en mobil-utvidelse til allerede eksisterende nettforum der det er mulig å stille spørsmål direkte til biologer. Ved hjelp av appen kan man ta bilder og sende inn spørsmål til forumet rett fra marka."
+                  :illustration "/illustrations/side-projects/bio.png"
+                ;  :link {:url "" :text "Prøv app'en"}
+                  :tech [:xamarin-forms :csharp :xaml :android :ios]}]
+
+
+ :open-source-projects [{:url "https://github.com/Altinn/DesignSystem"
+                        :name "Altinn Design System"
+                        :description "Designsystem for Altinn i regi av Brønnøysundregistrene."
+                        :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
+                  ]
+
+ :projects [{:customer "Bring"
+           :start "2019-03"
+           :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
+           :employer :kodemaker
+           :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
+           utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
+           mottagerene av pakkene (pakkesporing, osv)."
+           :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
+           {:customer "Avinor"
+           :start "2017-05"
+           :end "2018-06"
+           :summary "Avinor sin passasjerapp"
+           :employer :steria
+           :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming."
+           :tech [:xamarin-forms :xaml :csharp :ios :android :git :gitlab :zeplin :visual-studio-appcenter :voiceover :visual-studio]}
+           {:customer "Brønnøysundregistrene"
+           :start "2016-08"
+           :end "2017-04"
+           :summary "Altinn Design System"
+           :employer :steria
+           :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper."
+           :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}]
+
+ :endorsements [{:author "Torborg Galteland"
+                 :title "Daglig leder i Norsk biologforening"
+                 :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
+                ]
+
+ :cv {}
+
+ :education-summary "Master, Programmering og Nettverk, UiO"
+ :education [{:institution "UiO"
+              :years [2007 2008 2009 2010 2011 2012 2013]
+              :subject "Master, Programmering og Nettverk"}
+              {:institution "Universidad Pontificia de Salamanca"
+               :years [2010]
+               :subject "Utvekslingshalvår i Salamanca, Spania"}]
+
+ :languages [{:language "Russisk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+              {:language "Norsk"
+              :orally "Flytende"
+              :written "Flytende"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Meget god"}
+              {:language "Spansk"
+               :orally "God"
+               :written "God"}]
+
+ ; :cv {:default {:preferred-techs [:xamarin-forms :react-native
+ ;                                  :git ]}}
+
+ ; :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
+ ;                               nytt informasjonssystem for fergedrift basert på
+ ;                               Clojure og Datomic."
+ ;                       :customer "Norled"}
+ ;                      {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
+ ;                               eller manuell utsending av SMS eller e-post.
+ ;                               Clojure og Datomic."
+ ;                       :customer "Oiiku"}
+ ;                      {:blurb "App for iOS og Android med Cordova og
+ ;                               ClojureScript, automatisert bygg og utrulling,
+ ;                               system for firmware-oppdateringer."
+ ;                       :customer "Hafslund Strøm"}]
+ ;
+ :endorsement-highlight {:author "Torborg Galteland"
+                 :title "Daglig leder i Norsk biologforening"
+                 :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
+}
