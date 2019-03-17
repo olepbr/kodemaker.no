@@ -105,7 +105,7 @@
 (def presence-items
   [cv
    {:id :twitter       :baseUrl "https://twitter.com/"      :title "Twitter"}
-   {:id :linkedin      :baseUrl "https://www.linkedin.com/"      :title "LinkedIn"}
+   {:id :linkedin      :baseUrl "https://www.linkedin.com"      :title "LinkedIn"}
    {:id :stackoverflow :baseUrl "https://stackoverflow.com/" :title "StackOverflow"}
    {:id :github        :baseUrl "https://github.com/"           :title "GitHub"}
    {:id :coderwall     :baseUrl "https://coderwall.com/"    :title "Coderwall"}])
