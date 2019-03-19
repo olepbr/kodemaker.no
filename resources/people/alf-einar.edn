@@ -39,14 +39,14 @@
 
  :projects      [{:customer "Animalia"
                   :years [2018 :ongoing]
-                  :summary "Uvikler"
+                  :summary "Utvikler"
                   :employer :kodemaker
                   :description "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
                   :tech [:clojure :clojurescript :groovy :grails]}
                   
  				  {:customer "Forsvaret MDP"
                   :years [2016 2017]
-                  :summary "Forsvaret, MDP"
+                  :summary "Forsvaret, Materielldataportalen"
                   :employer :kodemaker
                   :description "Masterdata-synkronisering. Oppgaver: Analyse,
                  design, test, utvikling, dokumentasjon"
@@ -251,7 +251,7 @@ I addition he obtained a good knowledge of the Pension Business."
  :cv/description " Alf er utdannet ingeniør fra Høgskolen i S-Trøndelag og har
  jobbet med systemutvikling siden 2001. De fleste prosjekter han har vært
  involvert i har han hatt en sentral rolle tilknyttet mye ansvar. Alf kan bekle
- mange roller i et utviklingsprosjekter. I tillegg til rene utviklingsoppgaver
+ mange roller i et utviklingsprosjekt. I tillegg til rene utviklingsoppgaver
  har han ved flere anledninger fungert som arkitekt og teknisk prosjektleder.
 
  Alf liker enkle og pragmatiske løsninger som kan dekke kundens behov. Han liker
