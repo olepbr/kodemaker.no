@@ -9,9 +9,9 @@
 :class ref-top
 :body
 
-Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept [Oche](https://ochedart.com). De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt. 
+Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept [Oche](https://ochedart.com). De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt.
 
-De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget har fungert knirkefritt siden åpningen. Vi har et veldig godt inntrykk av hele Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng. [Les mer...](/referanser/oche-dart). 
+De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget har fungert knirkefritt siden åpningen. Vi har et veldig godt inntrykk av hele Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng. [Les mer...](/referanser/oche-dart).
 
 --------------------------------------------------------------------------------
 
@@ -27,11 +27,11 @@ De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget 
 :title Leder, system og masterdata NSB Persontog
 :body
 
-Kodemaker har vært sentrale i utviklingen av systemer for distribusjon av 
-trafikkinformasjon i NSB. Ved hjelp av dyktige konsulenter har vi funnet 
-effektive og brukervennlige løsninger på komplekse problemstillinger. 
-Konsulentene fra Kodemaker har bidratt med utallige råd og idéer som gjør oss 
-i stand til større grad av automatisering og presisjon i leveransen overfor 
+Kodemaker har vært sentrale i utviklingen av systemer for distribusjon av
+trafikkinformasjon i NSB. Ved hjelp av dyktige konsulenter har vi funnet
+effektive og brukervennlige løsninger på komplekse problemstillinger.
+Konsulentene fra Kodemaker har bidratt med utallige råd og idéer som gjør oss
+i stand til større grad av automatisering og presisjon i leveransen overfor
 våre kunder.
 
 --------------------------------------------------------------------------------
@@ -48,15 +48,15 @@ våre kunder.
 :title Chief Digital Officer, BN Bolig
 :body
 
-Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 
-de utviklet integrasjonsplattform og digital kundefront til BN Bolig. 
-Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje 
-var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet 
-dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok 
+Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor
+de utviklet integrasjonsplattform og digital kundefront til BN Bolig.
+Kodemaker er blant de faglig mest kompetente i bransjen, men det som kanskje
+var aller viktigst for oss var at de med sin erfaring, engasjement og smidighet
+dekket et stort spenn av tekniske behov/roller og at de på eget initiativ tok
 tak i ideer og oppgaver.
 
-Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har 
-for oss bevist at et lite team med håndplukkede, høykompetente personer kan 
+Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har
+for oss bevist at et lite team med håndplukkede, høykompetente personer kan
 levere raskere og bedre.
 
 --------------------------------------------------------------------------------
@@ -125,9 +125,10 @@ utgangpunktet hadde ambisjoner om å få til.
 :type grid
 :content
 
+/olga/                            /photos/people/olga/side-profile-square.jpg
+/git/                              /photos/tech/git.svg
 /frode/                            /photos/people/frode/side-profile-square.jpg
 /nils/                             /photos/people/nils/side-profile-square.jpg
-/git/                              /photos/tech/git.svg
 /christin/                         /photos/people/christin/side-profile-square.jpg
 /javascript/                       /photos/tech/js.svg
 /eivind/                           /photos/people/eivind/side-profile-square.jpg
@@ -144,7 +145,7 @@ utgangpunktet hadde ambisjoner om å få til.
 /elm/                              /photos/tech/elm.svg
 /stig/                             /photos/people/stig/side-profile-square.jpg
 /anders/                           /photos/people/anders/side-profile-square.jpg
-/groovy/                           /photos/tech/groovy.png 2x
+/groovy/                           /photos/tech/groovy.png
 /kristian/                         /photos/people/kristian/side-profile-square.jpg
 /fredrik/                          /photos/people/fredrik/side-profile-square.jpg
 /gradle/                           /photos/tech/gradle.svg 2x
@@ -169,4 +170,3 @@ http://zombietdd.com               /photos/tech/ztdd.png
 
 --------------------------------------------------------------------------------
 :body
-

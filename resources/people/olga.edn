@@ -8,7 +8,7 @@
  :description "Olga har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
  frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend."
 
- :cv/description "Olga er seniorkonsulent i Kodemaker. Hun har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
+ :cv/description "Olga er konsulent i Kodemaker. Hun har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
                  frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend.
 
                  Olga er selvstendig, tar ansvar for både egen kode og det ferdige produktet, og er lett å samarbeide med. Olga er først og fremst systemutvikler, men har også hatt andre roller i prosjekter som prosjektleder, tech lead og scrum master.
@@ -25,7 +25,7 @@
         :favorites-at-the-moment [:xamarin-forms :responsive-design]
         :want-to-learn-more [:react :unity :clojure]}
 
- :qualifications ["Erfaren mobil- og frontendutvikler"
+ :qualifications ["Mobil- og frontendutvikler"
                   "Opptatt av designkvalitet"
                   "Fokus på universell utforming"
                   "Erfaring med responsiv design"]
@@ -36,14 +36,12 @@
                  {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}
  ]
 
- ; :recommendations [{:title "Literate interactive coding: Devcards"
- ;                    :blurb "Tester du UI-komponentene dine ved å klikke omkring
- ;                             i applikasjonen og gjenskape situasjoner manuelt?
- ;                             Unødvendig. Tidssløseri. Frustrerende. Bruce Hauman
- ;                             viser vei med Devcards."
- ;                    :link {:url "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
- ;                           :text "Se foredraget"}
- ;                    :tech [:clojurescript :frontend :react]}]
+ ; :recommendations [{:title ""
+ ;                    :blurb ""
+ ;                    :link {:url ""
+ ;                           :text ""}
+ ;                    :tech [:teknologi :utvikling]
+                           ; }]
 
  :hobbies [{:title "Dans"
             :description "Dans er noe jeg har drevet med nesten fra når jeg kunne gå, og har vært innom de fleste stiler. Jeg er nok mest glad i West Coast Swing, og var også med på å starte opp en klubb for det på Bårdar."
@@ -80,14 +78,14 @@
            :end "2018-06"
            :summary "Avinor sin passasjerapp"
            :employer :steria
-           :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming."
+           :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming. I løpet av oppdragsperioden hadde Olga rollen som app-utvikler, men tok også på seg ansvar som tech lead og scrum master i en periode."
            :tech [:xamarin-forms :xaml :csharp :ios :android :git :gitlab :zeplin :visual-studio-appcenter :voiceover :visual-studio]}
            {:customer "Brønnøysundregistrene"
            :start "2016-08"
            :end "2017-04"
            :summary "Altinn Design System"
            :employer :steria
-           :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper."
+           :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
            :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}]
 
  :endorsements [{:author "Torborg Galteland"
