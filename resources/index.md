@@ -132,8 +132,8 @@ utgangpunktet hadde ambisjoner om å få til.
 /christin/                         /photos/people/christin/side-profile-square.jpg
 /javascript/                       /photos/tech/js.svg
 /eivind/                           /photos/people/eivind/side-profile-square.jpg
-/zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
 /christian/                        /photos/people/christian/side-profile-square.jpg
+/zombieclj-live-parprogrammering/  /photos/tech/zombieclj.png 2x
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
 /odin/                             /photos/people/odin/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.png
