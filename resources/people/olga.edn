@@ -20,7 +20,6 @@
 
  :presence { :cv "olga"
             :linkedin "/in/olgavoronkova"
-            ; :github "trollga"
           }
 
  :tech {:using-at-work [:react :react-native :typescript :javascript]
@@ -38,19 +37,19 @@
                  {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}
  ]
 
- ; :recommendations [{:title ""
- ;                    :blurb ""
- ;                    :link {:url ""
- ;                           :text ""}
- ;                    :tech [:teknologi :utvikling]
-                           ; }]
+ :recommendations [{:title "Xamarin Podcast"
+                    :blurb "Se hva som rører seg i Xamarin-verden. Informativ og morsom podcast med Matt Soucoup og James Montemagno."
+                    :link {:url "https://www.xamarinpodcast.com/"
+                           :text "Hør podcast her."}
+                    :tech [:teknologi :utvikling]
+                           }]
 
  :hobbies [{:title "Dans"
             :description "Dans er noe jeg har drevet med nesten fra når jeg kunne gå, og har vært innom de fleste stiler. Jeg er nok mest glad i West Coast Swing, og var også med på å starte opp en klubb for det på Bårdar."
             :illustration "/illustrations/hobbies/wcs.png"
           }
             {:title "Magic the gathering"
-             :description "MTG er kjempegøy! Jeg liker både å drafte og spille med ferdige decks. Jeg har 2 stykker 100-deks, og flere 60-deks, og er gjerne med og lager lokal spillelag når det er interesse for det!"
+             :description "MTG er kjempegøy! Jeg liker både å drafte og spille med ferdige decks. Jeg har 2 stykker 100-decks, og flere 60-decks, og er gjerne med og lager lokal spillelag når det er interesse for det!"
             :illustration "/illustrations/hobbies/mtg.jpg"
            }]
 
@@ -60,7 +59,15 @@
                    designprototypen. Olga hadde ansvar over mange områder i prosjektet, blant annet utvikling, design, UX, prosjektstyring, test, prodsetting og vedlikehold."
                   :illustration "/illustrations/side-projects/bio.png"
                   :link {:url "https://bio.no/artikler/491-spor-en-biolog-som-app" :text "Prøv app'en"}
-                  :tech [:xamarin-forms :csharp :xaml :android :ios]}]
+                  :tech [:xamarin-forms :csharp :xaml :android :ios :visual-studio-appcenter]}
+                  {:title "NDC Junior"
+                  :description "NDC Junior er en mini-konferanse for barn og unge i forkant av den årlige NDC konferansen, arrangert av Lær Kidsa Koding og Programutvikling.
+                  Olga hadde prosjektlederrollen for NDC Junior det andre året konferansen ble arrangert. Oppgavene gikk ut på å skaffe
+                  kursholdere, promotere eventet, koordinere påmeldingene til rundt 200 deltagere på 7 ulike kurs, og passe på at logistikken stemte på selve dagen."
+                  :illustration "/illustrations/side-projects/lkk.png"
+                  :link {:url "https://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
+                  :text "Les Olgas artikkel om konferansen i NDC magazine."}
+                    }]
 
 
  :open-source-projects [{:url "https://github.com/Altinn/DesignSystem"
@@ -94,17 +101,19 @@
     :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
   ]
 
- ;   {:customer "Brønnøysundregistrene"
- ;   :start "2016-08"
- ;   :end "2017-04"
- ;   :summary "Altinn Design System"
- ;   :employer :steria
- ;   :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
- ;   :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}]
-
  :endorsements [{:author "Torborg Galteland"
                  :title "Daglig leder i Norsk biologforening"
-                 :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
+                 :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».
+                 Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen.
+                 Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem.
+                 Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
+                 {:author "Amr Ellafy"
+                   :title "Tech Lead/Enterprise Architect"
+                   :quote "I worked with Olga on various projects. Olga is experienced, dedicated, and pleasant to work with.
+                   Our team delivered SEB new e-banking system. Olga met the deadlines, and was extremely dedicated throughout the project.
+                   C#, Javascript, and CSS are among the technologies we used.
+                   I highly recommend to future employers, and assignments."
+                 }
                 {:author "Simen Sommerfeldt"
                   :title "CTO Bouvet ASA, Koordinator Lær Kidsa Koding"
                   :quote "This conference [NDC Junior] is one of our most important yearly events.
@@ -112,9 +121,7 @@
                   and kept a keen eye on everything during the conference.
                   The result was a stunning success,with some 200 children and their parents learning to code in seven parallell tracks.
                   I am impressed by her communication skills and ability to manage expectations."
-
                 }
-
                 ]
 
  :cv {}
