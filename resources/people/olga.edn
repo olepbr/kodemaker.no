@@ -70,7 +70,7 @@
                     }]
 
 
- :open-source-contributions [{:url "https://github.com/Altinn/DesignSystem"
+ :open-source-projects [{:url "https://github.com/Altinn/DesignSystem"
                         :name "Altinn Design System"
                         :description "Designsystem for Altinn i regi av Brønnøysundregistrene."
                         :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
