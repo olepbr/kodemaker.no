@@ -98,6 +98,13 @@
     :employer :steria
     :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
     :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
+    {:customer "SEB Oslo AS"
+     :start "2015-05"
+     :end "2016-06"
+     :summary "SEB nettbank"
+     :employer :quesnay
+     :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
+     :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
   ]
 
  :endorsements [{:author "Torborg Galteland"
