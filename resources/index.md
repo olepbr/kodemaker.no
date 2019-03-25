@@ -1,6 +1,26 @@
 --------------------------------------------------------------------------------
 
 :type reference
+:img /references/petter-og-soheil.jpg
+:logo /logos/diffia-logo-light.png
+:name Soheil Dabestani og Petter Risøe
+:phone +47 938 65 439
+:title Gründere, Diffia
+:class ref-top
+:body
+
+[Diffia](https://www.diffia.com) designer innovative e-Helseløsninger for norske sykehus hvor informasjonssikkerhet, personvern og robuste system bygget på seneste teknologi er veldig sentralt. For å levere teknologi som redder liv er valget av høykvalifiserte utviklingspartnere avgjørende for å lykkes. 
+
+Kodemaker har i den anledning oss vært en perfekt partner for Diffia og har gjennom sin gode domeneforståelse, dyktige ingeniører og eksepsjonelt høye fagkompetanse levert topp kvalitet hele veien. Ressurser fra Kodemaker var i gang og en integral del av vårt team med alt fra prosess, tunge integrasjoner til nydelig front-end arbeid i løpet av noen få dager etter oppstart - vi er imponert!
+
+--------------------------------------------------------------------------------
+
+:type mega-quote
+:title Kodemaker tok en **idé til ferdig løsning på kort tid**
+
+--------------------------------------------------------------------------------
+
+:type reference
 :img /references/geir-oterhals.jpg
 :logo /logos/oche.svg
 :name Geir Oterhals
@@ -78,7 +98,6 @@ sin utvikling i disse årene. Kodemaker utmerker seg med spesielt høyt
 kompetansenivå, og ikke minst evnen til å tenke nytt og utfordre etablerte
 sannheter. Vi opplever Kodemakere som sosialt dyktige, og vi engasjerer de
 gjerne igjen når behovet oppstår.
-
 
 --------------------------------------------------------------------------------
 :type mega-quote
