@@ -130,7 +130,7 @@
                 }
                 ]
 
- :cv {}
+ :cv {:default {:preferred-techs [:xamarin-forms :js :html :sass :responsive-design ]}}
 
  :education-summary "Master, Programmering og Nettverk, UiO"
  :education [{:institution "UiO"
@@ -153,22 +153,14 @@
                :orally "God"
                :written "God"}]
 
- ; :cv {:default {:preferred-techs [:xamarin-forms :react-native
- ;                                  :git ]}}
 
- ; :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
- ;                               nytt informasjonssystem for fergedrift basert på
- ;                               Clojure og Datomic."
- ;                       :customer "Norled"}
- ;                      {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
- ;                               eller manuell utsending av SMS eller e-post.
- ;                               Clojure og Datomic."
- ;                       :customer "Oiiku"}
- ;                      {:blurb "App for iOS og Android med Cordova og
- ;                               ClojureScript, automatisert bygg og utrulling,
- ;                               system for firmware-oppdateringer."
- ;                       :customer "Hafslund Strøm"}]
- ;
+ :project-highlights [{:blurb "Native app-utvikling av nytt nordisk system for ekspressleveranser"
+                       :customer "Bring"}
+                      {:blurb "Native app-utvikling av Avinors passasjerapp."
+                       :customer "Avinor"}
+                      {:blurb "Frontendutvikling av Altinn Designsystem."
+                       :customer "Brønnøysundregistrene"}]
+
  :endorsement-highlight {:author "Torborg Galteland"
                  :title "Daglig leder i Norsk biologforening"
                  :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
