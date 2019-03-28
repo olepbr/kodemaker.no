@@ -431,6 +431,13 @@
                   "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
                   "Lang erfaring med Java, Groovy og Grails"]
  :certifications [{:institution "Deeplearning.ai / Coursera"
+                   :name "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
+                   :url "https://www.coursera.org/learn/introduction-tensorflow"
+                   :year 2019
+                   :certificate
+                   {:url "https://www.coursera.org/account/accomplishments/verify/ZSEZVPCC2MDS"
+                    :text "Statements of Accomplishment"}}
+                  {:institution "Deeplearning.ai / Coursera"
                    :name "Deep learning specialization – 5 kurs i dyp læring med Andrew Ng"
                    :url "https://www.coursera.org/specializations/deep-learning"
                    :year 2018
