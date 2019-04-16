@@ -14,8 +14,8 @@
             :linkedin "/in/trygveamundsen"}
             
  :tech {:using-at-work [:react :redux :es6 :typescript]
-        :favorites-at-the-moment [:machinelearning :face-recognition :typescript]
-        :want-to-learn-more [:pytorch :gans :idris]}
+        :favorites-at-the-moment [:machinelearning :reinforcement-learning :typescript]
+        :want-to-learn-more [:tensorflow :tensorflow-js :gans]}
 
  :innate-skills [
         :haskell :scala :ruby :python :octave :pascal :prolog :fortran
@@ -25,10 +25,12 @@
         :ddd
         :deeplearning]
 
- :recommendations [{:title "Functional Programming in Scala"
-                    :blurb "Dette er boken for deg som vil lære funksjonell programmering fra bunnen av.",
-                    :link  {:url "https://www.manning.com/books/functional-programming-in-scala"
-                            :text "Sjekk ut boka her"}
+ :recommendations [{:title "Spinning up in Deep Reinforcement Learning"
+                    :blurb "Dette er stedet å grave seg dypt ned i RL.
+                            OpenAI har gjort en kjempejobb med å samle metariale om RL 
+                            og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
+                    :link  {:url "https://spinningup.openai.com"
+                            :text "Sjekk ut nettstedet her"}
                     :tech  [:scala]}
                    
                    {:title "Learn you a Haskell for great good"

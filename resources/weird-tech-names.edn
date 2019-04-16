@@ -145,6 +145,7 @@
  :rational-clearcase "Rational ClearCase"
  :rational-rose "Rational Rose"
  :re-frame "re-frame"
+ :reinforcement-learning "Forsterkende læring (Reinforcement learning)"
  :saml "SAML"
  :siri-service-interface-for-real-time-information "SIRI (Service Interface for Real Time Information)"
  :siteminder "CA SiteMinder"
