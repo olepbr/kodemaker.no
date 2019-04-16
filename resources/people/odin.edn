@@ -26,8 +26,8 @@
             :github "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:kubernetes :datascript :flexbox]
-        :using-at-work           [:clojure :clojurescript :datomic :datascript :aws :kubernetes]
+ :tech {:favorites-at-the-moment [:clojurescript :kubernetes :flexbox]
+        :using-at-work           [:typescript :javascript :react]
         :want-to-learn-more      [:unity3d :flutter]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
@@ -172,12 +172,18 @@
                   :illustration "/illustrations/side-projects/cashflow.jpg"
                   :tech [:clojure]}]
 
- :projects [{:customer "Norled"
-             :years [2016 :ongoing]
+ :projects [{:customer "Mnemomnic"
+             :years [2019 :ongoing]
+             :employer :kodemaker
+             :summary "Semi-Automated Cyber Threat Intelligence (ACT)"
+             :description "Frontendutvikling av ACT-plattformen som er et forskningsprosjekt med mål om å utvikle nye
+             metoder for å analysere sikkerhetsangrep."
+             :tech [:javascript :typescript :react :cytoscape]}
+            {:customer "Norled"
+             :years [2016 2017 2018 2019]
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
-             :description "Utvikler nye informasjonssystemer for fergedrift for
-             Norled."
+             :description "Utvikler nye informasjonssystemer for fergedrift for Norled."
              :tech [:clojure :clojurescript :datomic :kubernetes :kafka :cassandra :datascript
                     :d3 :mapbox :reagent :mount :docker :aws :cordova]}
             {:customer "Telenor Digital"
