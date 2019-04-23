@@ -14,9 +14,9 @@
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:react :es6]
-        :using-at-work [:clojure :clojurescript :re-frame :reagent :docker]
-        :want-to-learn-more [:kubernetes :docker]}
+ :tech {:favorites-at-the-moment [:react]
+        :using-at-work [:clojure :clojurescript :re-frame :reagent :docker :okd :elasticsearch]
+        :want-to-learn-more [:kubernetes :docker :typescript :kotlin :graphql]}
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
@@ -25,7 +25,7 @@
                     :tech [:utvikling]}]
 
  :hobbies [{:title "Fallskjermhopping"
-            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger. I bilen, på toalettet, i selskap.
+            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger.
             Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
             out-of-memory-error og lignende totalt fraværende. Jeg svever på en sky, eller rettere sagt; gjennom skyene. Med hodet opp eller ned, sammen med andre glade fallskjermhoppere."
             :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
@@ -47,7 +47,7 @@
              :employer :kodemaker
              :summary "Dyrehelseportalen"
              :description "Utvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
-             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :compojure :swagger :spec :reagent :re-frame :react :websocket :bootstrap :sqlserver :oracle]}
+             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :elasticsearch :compojure :swagger :spec :reagent :re-frame :react :websocket :bootstrap :sqlserver :oracle]}
 
             {:customer "NSB"
              :start "2018-05"
@@ -445,6 +445,19 @@ frontendutvikling fra før ajax ble et begrep. Ronny har god kjennskap til
 ledende rammeverk for webutvikling på javaplattform. Er engasjert i miljøet
 rundt Groovy og Grails. Ronny er sosial og går godt overens med kunde og
 kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
+
+
+ :endorsements [{:author "Peter Hausken"
+                 :title "tidl. IT-sjef i NSB Trafikk"
+                 :quote "I løpet av sin tid som utvikler / konsulent i NSB har Ronny stått bak og deltatt i en omfattende digitalisering av NSBs operative drift. IT-verktøyene han har utviklet er i daglig bruk av flere tusen ansatt i Norge og Sverige. De har automatisert og forenklet en rekke oppgaver ved å legge brukervennlige grensesnitt utenpå andre leverandørers systemer, samt lage mindre systemer for å dekke jernbanespesifikke oppgaver.<br><br>
+                 Ronny er svært god til å forstå kundes forretning og hvordan de ulike delene henger sammen. Han har også hatt en selvstendig interesse for jernbanen som strengt tatt er ubetalelig. Han er fokusert og flink til å lage løsninger som er driftsstabile og holder svært høy kvalitet.<br><br>
+                 Han følger selv med på at løsningene han har laget faktisk fungerer, og husker godt hva som er implementert og hvorfor. Han er flink til selv å finne svakheter i løsningen som er implementert og sørger for at han eller andre gjør de utbedringene som trenges ettersom utviklingen går videre.<br><br>
+                 Ronny har vært blant de aller beste utviklerne som har jobbet for NSB, og jeg vil anbefale ham på det sterkeste."}]
+
+ :endorsement-highlight {:author "Peter Hausken"
+                         :title "tidl. IT-sjef i NSB Trafikk"
+                         :quote "Ronny har vært blant de aller beste utviklerne som har jobbet for NSB, og jeg vil anbefale ham på det sterkeste"}
+
  :education-summary "Cand. Mag. Informatikk, UiO"
  :experience-since 2000
  :qualifications ["Fullstackutvikler som liker best å jobbe med ting som synes"
@@ -453,7 +466,14 @@ kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
                   "Tar ansvar for helheten og blir gjerne en person folk går til"
                   "Sterk på frontendutvikling"
                   ]
- :certifications [{:name "Profesjonelt styrearbeid", :year 2011}
+ :certifications [{:name "Styrekurs for daglig leder og styremedlemmer"
+                   :institution "Virke"
+                   :url "https://www.virke.no/kurs-konferanser/kurs/kurs-i-styrearbeid/styrekurs-for-daglig-leder-og-styremedlemmer/"
+                   :year 2019
+                   :certificate
+                   {:url "/certificates/ronny/styrekurs.pdf"
+                    :text "Kursbevis"}}
+                  {:name "Profesjonelt styrearbeid", :year 2011}
                   {:name "Retorikk og presentasjonsteknikk", :year 2010}
                   {:name "Enonic Vertical Site, Utvikler 2 - Malutvikling", :year 2009}
                   {:name "Enonic Vertical Site, Utvikler 1 - Nettstedskonfigurasjon"

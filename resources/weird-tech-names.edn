@@ -71,6 +71,7 @@
  :fusioncharts "FusionCharts"
  :face-recognition "Fjesgjenkjenning"
  :google-image-charts "Google Image Charts"
+ :graphql "GraphQL"
  :gans "Generative Adversarial Networks"
  :h2db "H2 database"
  :haproxy "HAProxy"
