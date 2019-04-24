@@ -16,7 +16,7 @@
 
  :tech {:favorites-at-the-moment [:react]
         :using-at-work [:clojure :clojurescript :re-frame :reagent :docker :okd :elasticsearch]
-        :want-to-learn-more [:kubernetes :docker :typescript :kotlin :graphql]}
+        :want-to-learn-more [:micronaut :graalvm :kubernetes :docker :typescript :kotlin :graphql]}
 
  :recommendations [{:title "This Developer's Life"
                     :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
