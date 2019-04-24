@@ -363,6 +363,7 @@
  :vcs-analysis :methodology
  :verity-search :server
  :vertx :library
+ :vim :devtools
  :virtualisering :devops
  :visibroker :library
  :visualage :devtools

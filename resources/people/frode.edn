@@ -11,7 +11,7 @@ Han er interessert i funksjonell programmering og distribuerte systemer og er op
 
  :cv/description "Frode er en allsidig og engasjert utvikler med mange års erfaring fra forretningskritiske systemer med mange brukere, store datamengder og strenge krav til sikkerhet og tilgjengelighet.
 
-Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift. De siste årene har han jobbet mye med api-design, mikrotjenester og devops.
+Han liker å jobbe med alle deler av applikasjonene fra frontend til backend, databaser, infrastruktur og drift. De siste årene har han jobbet mye med frontend, api-design, mikrotjenester og devops.
 
 Frode liker å lære nye ting og er god til å sette seg inn i komplekse domener. Han er interessert i funksjonell programmering og distribuerte systemer og er opptatt av å lage enkle, robuste og feiltolerante systemer.
 
@@ -25,11 +25,11 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
             :linkedin "/in/nerbraten"
             :github "froden"}
 
- :tech {:using-at-work [:java :postgresql :javascript :docker :terraform]
+ :tech {:using-at-work [:kotlin :typescript :postgresql :docker]
         :favorites-at-the-moment [:elm :kotlin :haskell]
         :want-to-learn-more [:elm :kotlin :clojure]}
 
- :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban :tdd]
+ :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban :tdd :browser-devtools :windows]
 
  :recommendations [{:title "Distributed systems for fun and profit"
                     :blurb "En veldig bra innføring i grunnleggende teori og prinsipper bak distribuerte systemer. Den tar for seg på en lettlest måte hvordan fysisk avstand og samtidighet påvirker alle distribuerte systemer (i praksis alle kommersielle it-systemer), hvorfor det er viktig å ta hensyn til dette når vi utvikler systemer og hvordan dette påvirker designet av kjente systemer som Amazon Dynamo, Google BigTable og Hadoop."
@@ -109,14 +109,23 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                       {:blurb "Utvikling av appen Nimble. Et mobilt samhandlingsverktøy for helsepersonell på sykehus"
                        :customer "Diffia"}]
 
- :projects [{:customer "Diffia"
+ :projects [{:customer "Bring"
+             :employer :kodemaker
+             :start "2019-02"
+             :summary "Glow - system for budleveranser med sanntids pakkesporing."
+             :description "Utvikling av system for budleveranser som håndterer alt
+                fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
+                sanntid, og integrasjoner med mange av Bring sine systemer. Frode har jobbet med frontend, backend og drift"
+             :tech [:azure :typescript :react :redux :kotlin :gradle
+                    :postgresql :event-sourcing :cqrs :flyway :javascript :yarn]}
+            {:customer "Diffia"
              :years [2018]
              :employer :kodemaker
              :summary "Nimble - samhandlingsverktøy for helsepersonell på sykehus"
              :description "Utvikling av appen Nimble som brukes av helsepersonell på sykehus.
                 Med den kan leger og sykepleiere registrere pasientinformasjon, legge inn prøveresultater og kommunisere seg i mellom direkte fra sengeposten.
                 Appen integrerer med andre sentrale sykehussystemer som elektronisk pasientjournal. Frode har jobbet med frontend, backend og infrastruktur."
-             :tech [:java :netty :jdbi :postgresql :flyway :javascript :react :redux :material-ui :swift :ios :xcode]}
+             :tech [:java :netty :jdbi :postgresql :flyway :javascript :react :redux :material-ui :swift :ios :xcode :jira :npm]}
             {:customer "Posten Norge AS - Digipost"
              :years [2017 2018]
              :employer :bekk
@@ -124,7 +133,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
              :description "Videreutvikling av systemer på Digipost. Frode har i perioden vært teamleder for det største utviklingsteamet på Digipost."
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :postgresql :ansible :terraform
                     :cloudstack :prometheus :kibana :elasticsearch :javascript :react :nodejs :docker
-                    :haproxy :linux :centos :coreos :hazelcast :git :go
+                    :haproxy :linux :coreos :hazelcast :git :go
                     :drone :bash :npm :nexus :github :trello :slack]}
             {:customer "Posten Norge AS - Digipost"
              :employer :bekk
@@ -166,7 +175,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                           Hans roller på prosjektet inkludere utvikler, arkitekt og teamleder."
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
                     :cloudstack :kibana :elasticsearch :scala :javascript :python
-                    :apache :haproxy :bigip :linux :centos :coreos :gatling :hazelcast :jaxb :jackson :git
+                    :apache :haproxy :bigip :linux :coreos :gatling :hazelcast :jaxb :jackson :git
                     :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
             {:customer "Norwegian Air Shuttle"
              :years [2005 2006 2007 2008 2009 2010]
@@ -185,7 +194,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
  :education-summary "Sivilingeniør/Master i Kommunikasjonsteknologi fra NTNU"
  :experience-since 2005
  :qualifications ["Erfaren, engasjert og allsidig systemutvikler og arkitekt"
-                  "Full-stack, med mest erfaring fra backend"
+                  "Full-stack"
                   "Erfaring med devops, overvåkning og oppsett av infrastruktur"
                   "Interessert i funksjonell programmering, distribuerte systemer og åpen kildekode"
                   "Erfaring med kontinuerlige leveranser og autonome team"
