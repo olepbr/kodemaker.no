@@ -31,7 +31,7 @@
                             og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
                     :link  {:url "https://spinningup.openai.com"
                             :text "Sjekk ut nettstedet her"}
-                    :tech  [:scala]}
+                    :tech  [:machinelearning :deeplearning]}
                    
                    {:title "Learn you a Haskell for great good"
                     :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer 
