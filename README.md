@@ -20,6 +20,8 @@ lein ring server
 
 Voila!
 
+Etter at du har pushet skal kodmaker.no være oppdatert eter ca 15 min. Hvis ikke kan du jo sjekke [travis](https://travis-ci.org/kodemaker/kodemaker.no).
+
 ## Hvordan skal mine data se ut?
 
 Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
