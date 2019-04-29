@@ -20,7 +20,7 @@ lein ring server
 
 Voila!
 
-Etter at du har pushet skal kodmaker.no være oppdatert eter ca 15 min. Hvis ikke kan du jo sjekke [travis](https://travis-ci.org/kodemaker/kodemaker.no).
+Etter at du har pushet skal kodemaker.no være oppdatert eter ca 15 min. Hvis ikke kan du jo sjekke [travis](https://travis-ci.org/kodemaker/kodemaker.no).
 
 ## Hvordan skal mine data se ut?
 
