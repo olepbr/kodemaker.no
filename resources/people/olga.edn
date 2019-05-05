@@ -24,7 +24,7 @@
 
  :tech {:using-at-work [:react :react-native :typescript :javascript]
         :favorites-at-the-moment [:xamarin-forms :responsive-design]
-        :want-to-learn-more [:react :unity :clojure]}
+        :want-to-learn-more [:react-native :hololens :unity :wearables :clojure]}
 
  :qualifications ["Mobil- og frontendutvikler"
                   "Opptatt av designkvalitet"
@@ -105,9 +105,25 @@
      :employer :quesnay
      :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
      :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
+     {:customer "Posten og Bring"
+      :start "2016-02"
+      :end "2016-07"
+      :summary "Ingen kjenner Norge bedre - Posten og Brings Norgesquiz"
+      :employer :quesnay
+      :description "I 2016 kom Posten og Bring med kampanjen «Ingen kjenner Norge bedre», for å tydeliggjøre deres retning innen
+      fremtidens post- og logistikk, og deres miljøsatsning. Som en del av kampanjen ble det laget film, annonser, og en interaktiv Norgesquiz med
+      bilder ble tatt av Brings sjafører.
+      Olga jobbet med den nettbaserte quiz'en og implementerte frontend basert på skissene levert av Ernö.
+      Teamet bestod av en designer, en backendutvikler og en frontendutvikler."
+      :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
   ]
 
- :endorsements [{:author "Torborg Galteland"
+ :endorsements [{:author "Leo Sander Gasnier"
+                 :title "Produkteier for moderniseringsprosjektet for Altinn"
+                 :quote "Olga jobbet som utvikler på prosjektet for nytt design av Altinn.
+                 Som produkteier var det en fryd å ha Olga på teamet. Hun er grundig, proaktiv,
+                 engasjert og sprer godt humør på teamet og bidrar til godt miljø. Anbefaler henne gjerne!"}
+                {:author "Torborg Galteland"
                  :title "Daglig leder i Norsk biologforening"
                  :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».
                  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen.
