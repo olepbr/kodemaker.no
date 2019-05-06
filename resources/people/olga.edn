@@ -112,7 +112,7 @@
       :employer :quesnay
       :description "I 2016 kom Posten og Bring med kampanjen «Ingen kjenner Norge bedre», for å tydeliggjøre deres retning innen
       fremtidens post- og logistikk, og deres miljøsatsning. Som en del av kampanjen ble det laget film, annonser, og en interaktiv Norgesquiz med
-      bilder ble tatt av Brings sjafører.
+      bilder tatt av Brings sjafører.
       Olga jobbet med den nettbaserte quiz'en og implementerte frontend basert på skissene levert av Ernö.
       Teamet bestod av en designer, en backendutvikler og en frontendutvikler."
       :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
