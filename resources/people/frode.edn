@@ -91,9 +91,14 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                 :date "2007-05-01"}
                 ]
 
- :endorsements [{:author "Martin Koksrud Bekkelund"
+ :endorsements [{:author "Soheil Dabestani"
+                 :title  "CEO Diffia"
+                 :quote  "We had the pleasure to have Frode as part of the Diffia team for a while in 2018/2019. He is an excellent developer - knowledgeable, up-to-date, curious, structured, and problem solver with excellent communication skills. He impressed us with how fast he hit the ground running and was up to speed with the project within days. The team loved working with him both on a personal and a professional level. Any devteam would be lucky to have him!"}
+
+                {:author "Martin Koksrud Bekkelund"
                  :title  "Direktør for produkt- og forretningsutvikling, Posten"
                  :quote  "Jeg har hatt gleden av å arbeide tett med Frode i mer enn seks år. Frode har alle de gode egenskapene man ser etter i en kollega og dyktig utvikler. Foruten at han har svært høy faglig kompetanse, har han også god forretningsforståelse, noe som gjør det naturlig å ta med Frode i funksjonelle diskusjoner, både internt og med kunder. Frode er også en svært sympatisk person som alltid er blid og som alle liker."}
+
                 {:author "Tor Kleiberg"
                  :title  "Teknologidirektør Digipost, Posten"
                  :quote  "Frode jobbet for og med meg i teknologiavdelingen i Digipost i flere år. Jeg vil alltid huske ham som en bunnsolid og kunnskapsrik teknolog og utvikler med løsningsteft og evne til å finne og realisere gode løsninger på alle mulige utfordringer. Frode er en kjernekar og bidro med sine verdier og smittende entusiasme i stor grad til å skape en sterk, samarbeidsorientert og kvalitetsbevist arbeidskultur på prosjektet. Jeg kan uten tvil anbefale Frode på det varmeste."}]
