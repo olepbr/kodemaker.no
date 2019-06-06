@@ -9,9 +9,7 @@
 :class ref-top
 :body
 
-[Diffia](https://www.diffia.com) designer innovative e-Helseløsninger for norske sykehus hvor informasjonssikkerhet, personvern og robuste system bygget på seneste teknologi er veldig sentralt. For å levere teknologi som redder liv er valget av høykvalifiserte utviklingspartnere avgjørende for å lykkes. 
-
-Kodemaker har i den anledning vært en perfekt partner for Diffia og har gjennom sin gode domeneforståelse, dyktige ingeniører og eksepsjonelt høye fagkompetanse levert topp kvalitet hele veien. Ressurser fra Kodemaker var i gang og en integral del av vårt team med alt fra prosess, tunge integrasjoner til nydelig front-end arbeid i løpet av noen få dager etter oppstart - vi er imponert!
+Kodemaker har vært en perfekt partner for [Diffia](https://www.diffia.com) og har gjennom sin gode domeneforståelse, dyktige ingeniører og eksepsjonelt høye fagkompetanse levert topp kvalitet hele veien. Ressurser fra Kodemaker var i gang og en integral del av vårt team med alt fra prosess, tunge integrasjoner til nydelig front-end arbeid i løpet av noen få dager etter oppstart - vi er imponert!
 
 --------------------------------------------------------------------------------
 
