@@ -2,7 +2,6 @@
   (:require [kodemaker-no.cultivate.content-shells :as c]
             [kodemaker-no.cultivate.cvs :as cvs]
             [kodemaker-no.cultivate.people :as p]
-            [kodemaker-no.cultivate.tech :as t]
             [kodemaker-no.validate :refer [validate-content]]
             [midje.sweet :refer :all]))
 
@@ -95,7 +94,7 @@
 
 (defn cultivate [content]
   (let [raw (validate-content content)]
-    (cvs/cultivate-cvs raw (p/cultivate-people raw) (t/cultivate-techs raw))))
+    (cvs/cultivate-cvs raw (p/cultivate-people raw))))
 
 (def cvs (cultivate content))
 

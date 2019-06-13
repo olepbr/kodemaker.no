@@ -102,7 +102,7 @@
 (defn- add-link-to-next-cv [person content]
   (assoc person :next-person-cv-url (people/next-person-link content person cv-url)))
 
-(defn cultivate-cv [person tech content]
+(defn cultivate-cv [person content]
   (let [data ((:id person) (:people content))]
     (-> person
         (assoc :years-experience (when-let [xp (:experience-since person)]
@@ -116,8 +116,8 @@
         apply-cv-overrides
         (add-link-to-next-cv content))))
 
-(defn cultivate-cvs [raw-content people tech]
+(defn cultivate-cvs [raw-content people]
   (->> people
        (filter #(-> % second :cv))
-       (map (fn [[id person]] [id (cultivate-cv person tech raw-content)]))
+       (map (fn [[id person]] [id (cultivate-cv person raw-content)]))
        (into {})))
