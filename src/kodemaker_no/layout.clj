@@ -58,8 +58,9 @@
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
-       [:div.ocm-item [:a {:href "/folk/"} "Folkene i Kodemaker"]]
+       [:div.ocm-item [:a {:href "/blogg/"} "Blogg"]]
        [:div.ocm-item [:a {:href "/kurs/"} "Foredrag og slikt"]]
+       [:div.ocm-item [:a {:href "/folk/"} "Folkene i Kodemaker"]]
        [:div.ocm-item [:a {:href "/jobbe-hos-oss/"} "Jobbe i Kodemaker?"]]
        [:div.ocm-item [:a {:href "/kontakt/"} "Ta kontakt"]]]]
      [:div#iw ;; inner-wrapper for off-canvas menu
@@ -68,6 +69,7 @@
         [:div.bd.iw
          [:div#ocb.mod [:span] [:span] [:span]]
          [:div.mod.menu
+          [:a {:href "/blogg/"} "Blogg"]
           [:a {:href "/kurs/"} "Lær"]
           [:a {:href "/folk/"} "Folk"]
           [:a {:href "/jobbe-hos-oss/"} "Jobb"]
