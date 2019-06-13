@@ -84,10 +84,6 @@
 (defn- add-blog-posts [content {:keys [blog-posts]} tech]
   (assoc-in-unless tech [:blog-posts] empty?
                    (concat
-                    (->> (:people content)
-                         vals
-                         (mapcat (util/get-with-byline :blog-posts))
-                         (filter #(is-about tech %)))
                     (->> (vals blog-posts)
                          (filter #(is-about tech {:tech (map :id (:tech %))}))
                          (map (fn [{:keys [path title author-person blurb]}]
@@ -95,7 +91,11 @@
                                  :title title
                                  :blurb blurb
                                  :by {:name (-> author-person :name first)
-                                      :url (util/url author-person)}}))))))
+                                      :url (util/url author-person)}})))
+                    (->> (:people content)
+                         vals
+                         (mapcat (util/get-with-byline :blog-posts))
+                         (filter #(is-about tech %))))))
 
 (defn- add-upcoming [content tech]
   (assoc-in-unless tech [:upcoming] empty?
