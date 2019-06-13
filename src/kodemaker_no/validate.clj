@@ -196,12 +196,15 @@
 
 (def BlogPost
   {:title Str
-   :published Date ;; iso-8601 yyyy-mm-dd
+   (optional-key :published) Date ;; iso-8601 yyyy-mm-dd
+   (optional-key :updated) Date ;; iso-8601 yyyy-mm-dd
    (optional-key :illustration) Path
    (optional-key :presence) Str
    (optional-key :contact-form) Str
    (optional-key :contact-form-button) Str
    (optional-key :author) Str
+   (optional-key :blurb) Str
+   (optional-key :tech) Str
    :body Str})
 
 (def Article
@@ -229,6 +232,7 @@
              :raw-css {Path Str}
              :tech-names {ID Str}
              :tech-types {ID ID}
+             (optional-key :legacy-blog-posts) {Path BlogPost}
              :blog-posts {Path BlogPost}
              :video-overrides {ID VideoOverride}
              :employers {ID Str}}

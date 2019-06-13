@@ -8,13 +8,13 @@
             [kodemaker-no.cultivate.videos :refer [cultivate-videos]]))
 
 (defn cultivate-content [raw-content]
-  (let [people (cultivate-people raw-content)
-        tech (cultivate-techs raw-content)]
+  (let [people (cultivate-people raw-content)]
     (assoc raw-content
       :people people
-      :cvs (cultivate-cvs raw-content people tech)
-      :tech tech
-      :blog-posts (cultivate-blog-posts (:blog-posts raw-content) people)
+      :cvs (cultivate-cvs raw-content people)
+      :tech (cultivate-techs raw-content)
+      :legacy-blog-posts (cultivate-blog-posts raw-content (:legacy-blog-posts raw-content) people)
+      :blog-posts (cultivate-blog-posts raw-content (:blog-posts raw-content) people)
       :videos (cultivate-videos raw-content)
       :screencasts (cultivate-screencasts raw-content)
       :business-presentations (cultivate-sellable :business-presentations raw-content)

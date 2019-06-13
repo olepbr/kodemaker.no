@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.blog-pages-test
-  (:require [kodemaker-no.pages.blog-pages :refer :all]
+  (:require [kodemaker-no.date :as d]
+            [kodemaker-no.pages.blog-pages :refer :all]
             [kodemaker-no.homeless :refer [hiccup-find]]
             [midje.sweet :refer :all]
             [hiccup.core :refer [html]]
@@ -8,32 +9,32 @@
 
 (def blog-posts
   {"/nice-blog-post.md" {:title "Nice blog post"
-                         :published (parse (formatters :year-month-day) "2013-01-01")
+                         :published (d/parse-ymd "2013-01-01")
                          :illustration "/photos/sexy.jpg"
                          :body "This is nice, right?"
                          :path "/blogg/nice-blog-post/"}
    "/ausam-artikkel.md" {:title "Ausam artikkel"
-                         :published (parse (formatters :year-month-day) "2012-12-01")
+                         :published (d/parse-ymd "2012-12-01")
                          :body "This is nice, right?"
                          :path "/blogg/ausam-artikkel/"}
    "/annen-artikkel.md" {:title "Annen artikkel"
-                         :published (parse (formatters :year-month-day) "2012-12-15")
+                         :published (d/parse-ymd "2012-12-15")
                          :body "This is nice, right?"
                          :path "/blogg/annen-artikkel/"}})
 
 (defn parse-html [v]
   (html-resource (java.io.StringReader. (html v))))
 
-(fact "Gets blog post pages"
-      (let [page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))
+(fact "Gets legacy blog post pages"
+      (let [page-content (((blog-post-pages blog-posts legacy-blog-post-page) "/blogg/nice-blog-post/"))
             body (:body page-content)]
         (:title page-content) => "Nice blog post"
         (:illustration page-content) => "/photos/sexy.jpg"
         (html (first body)) => (html [:p "This is nice, right?"])
         (html (nth body 2)) => (html [:div#disqus_thread.mod])))
 
-(fact "Blog post page lists other posts in aside"
-      (let [page-content (((blog-post-pages blog-posts) "/blogg/nice-blog-post/"))
+(fact "Legacy blog post page lists other posts in aside"
+      (let [page-content (((blog-post-pages blog-posts legacy-blog-post-page) "/blogg/nice-blog-post/"))
             aside (parse-html (:aside page-content))]
         (-> aside (select [:li]) count) => 2
         (-> aside (select [:li]) first str) => #(.contains % "Annen artikkel")

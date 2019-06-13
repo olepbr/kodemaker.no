@@ -11,7 +11,7 @@
                              :presence "twitter stoyle, github stoyle"
                              :body "Velkommen til Kodemaker!"}})
 
-(def cultivated-posts (cultivate-blog-posts blog-posts {}))
+(def cultivated-posts (cultivate-blog-posts {} blog-posts {}))
 
 (let [post (cultivated-posts "/post.md")]
   (fact "Parses published date"
