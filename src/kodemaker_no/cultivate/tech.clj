@@ -81,12 +81,21 @@
                         (map combine-presentations)
                         (filter #(is-about tech %)))))
 
-(defn- add-blog-posts [content tech]
+(defn- add-blog-posts [content {:keys [blog-posts]} tech]
   (assoc-in-unless tech [:blog-posts] empty?
-                   (->> (:people content)
-                        vals
-                        (mapcat (util/get-with-byline :blog-posts))
-                        (filter #(is-about tech %)))))
+                   (concat
+                    (->> (:people content)
+                         vals
+                         (mapcat (util/get-with-byline :blog-posts))
+                         (filter #(is-about tech %)))
+                    (->> (vals blog-posts)
+                         (filter #(is-about tech {:tech (map :id (:tech %))}))
+                         (map (fn [{:keys [path title author-person blurb]}]
+                                {:url path
+                                 :title title
+                                 :blurb blurb
+                                 :by {:name (-> author-person :name first)
+                                      :url (util/url author-person)}}))))))
 
 (defn- add-upcoming [content tech]
   (assoc-in-unless tech [:upcoming] empty?
@@ -109,16 +118,16 @@
                         (map combine-side-projects)
                         (filter #(is-about tech %)))))
 
-(defn- cultivate-tech [content tech]
+(defn- cultivate-tech [content cultivated tech]
   (->> tech
        util/add-url
        (add-recommendations content)
        (add-presentations content)
        v/replace-video-urls
-       (add-blog-posts content)
+       (add-blog-posts content cultivated)
        (add-upcoming content)
        (add-side-projects content)
        (add-open-source-projects content)))
 
-(defn cultivate-techs [content]
-  (update-vals (:tech content) (partial cultivate-tech content)))
+(defn cultivate-techs [content & [cultivated]]
+  (update-vals (:tech content) (partial cultivate-tech content cultivated)))
