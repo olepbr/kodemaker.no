@@ -1,4 +1,5 @@
 :title Data hører hjemme i en database, også på framsiden
+:published 2019-06-19
 :author odin
 :tech [:datascript :clojurescript]
 
@@ -27,7 +28,7 @@ Det vi ønsker oss er å kunne gjøre vilkårlige spørringer uten å måtte hå
 tilstand er lagret ett sted. Altså en database. For at man skal få ytelse trenger man indekser og det betyr tradeoffs 
 med tanke på minnebruk og skriveytelse, men det er ikke så farlig i disse dager med kraftige klienter.
 
-[DataScript|https://github.com/tonsky/datascript] er en Clojure(Script)-basert immutable in-memory-database som støtter 
+[DataScript](https://github.com/tonsky/datascript) er en Clojure(Script)-basert immutable in-memory-database som støtter 
 spørringer via [Datalog](http://www.learndatalogtoday.org) (tenk SQL, bare bedre). Den er inspirert av 
 [Datomic](https://www.datomic.com), bare uten historikk- og persisteringstøtte.  
 
@@ -140,7 +141,7 @@ Finn alle ville dyr:
 
 ## Oppsummert
 
-Vi har brukt DataScript med stor suksess i et kundeprosjekt. Du unngår sølete, egenututviklet tilstandskode og kan 
+Vi har brukt DataScript med stor suksess i et kundeprosjekt. Du unngår sølete, egenutviklet tilstandskode og kan 
 lene deg på et gjennomtenkt spørrespråk. En bonus er at DataScript følger samme data-abstraksjon som Datomic, noe som 
 åpner opp for spennende løsninger hvor man lett kan strømme data fra baksia til fremsia. 
 [Magnar](https://www.kodemaker.no/magnar) har i så fall en 
