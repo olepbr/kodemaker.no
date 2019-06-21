@@ -38,7 +38,7 @@ Finn is a great guy and an even better developer, if anybody needs a high-level 
             :employer :kodemaker
             :summary "Javautvikler i Encap sin autentiseringsplattform"
             :description "Videreutvikling av Encap sitt kjerneprodukt."
-            :tech [:java :rest :mysql :krypto]}
+            :tech [:java :rest :mysql :krypto :spring :jenkins :oracle :json :xml :rest :soap :docker]}
            {:customer "FINN"
              :years [2017]
              :employer :kodemaker
@@ -61,7 +61,7 @@ Finn is a great guy and an even better developer, if anybody needs a high-level 
              :summary "StatusPush videreutvikling"
              :employer :kodemaker
              :years [2016 2017]
-             :tech [:android :google-cloud-messaging :groovy :jms :activemq :tomcat]
+             :tech [:android :google-cloud-messaging :groovy :jms :activemq :tomcat :react :angularjs]
              :description "Ombordpersonell varsles i sitt nettbrett om
             avvikssituasjoner fra NSBs sentrale DROPS-enhet. Serveren sentralt
             sender push notifications (v/Google Cloud Messaging) når en
