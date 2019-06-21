@@ -46,7 +46,7 @@
   [:ul (map blog-post-li blog-posts)])
 
 (defn- blog-post-lead [blog-post]
-  [:h1.hn.mbs [:a {:href (:path blog-post)} (:title blog-post)]])
+  [:h2.mbs [:a {:href (:path blog-post)} (:title blog-post)]])
 
 (defn- blog-post-body [blog-post]
   (f/to-html (:body blog-post)))
@@ -78,7 +78,8 @@
 
 (defn- render-blog-post-teaser [blog-post]
   (list
-   (blog-post-lead blog-post)
+   [:div.blog-lead
+    (blog-post-lead blog-post)]
    [:div.line
     [:div.unit.s-1of3
      [:div.bd
@@ -120,7 +121,7 @@
    :body (concat
           (list [:p.mbn.small (byline-text blog-post)]
                 [:p.mtn.small (history blog-post)]
-                (blog-post-body blog-post)
+                [:div.blog (blog-post-body blog-post)]
                 [:h2 "Diskusjon"]
                 [:p.mbn "Vi diskuterer gjerne hvor enn du finner oss. Ta kontakt!"]
                 (when-let [presence (-> blog-post :author-person :presence)]
