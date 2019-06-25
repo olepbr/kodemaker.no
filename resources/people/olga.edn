@@ -20,6 +20,7 @@
 
  :presence { :cv "olga"
             :linkedin "/in/olgavoronkova"
+            :twitter "tr0llga"
           }
 
  :tech {:using-at-work [:react :react-native :typescript :javascript]
