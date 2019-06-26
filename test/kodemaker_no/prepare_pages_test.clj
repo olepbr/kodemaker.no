@@ -8,7 +8,8 @@
    :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
    :lead [:p "Vi er et fokusert selskap."]
    :body (list [:h2 "Vi er Kodemaker"]
-               [:h2 [:span "Vi gjør det vanskelig"]])})
+               [:h2 [:span "Vi gjør det vanskelig"]]
+               [:h2 [:a {:href "/annet"} "Virkelig vanskelig"]])})
 
 (def request
   {:optimus-assets [{:path "/pk-spc-1f832dasf8.jpg"
@@ -48,4 +49,9 @@
                     :content ({:attrs {:class "anchor-marker"}
                                :content ("¶")
                                :tag :span}
-                              "Vi gjør det vanskelig")})})))
+                              "Vi gjør det vanskelig")})})
+
+   (-> page (select [:h2]) (nth 2) :content)
+   => '({:tag :a
+         :attrs {:href "/annet"}
+         :content ("Virkelig vanskelig")})))

@@ -29,7 +29,8 @@
     (if (string? text) text (get-node-text text))))
 
 (defn- wrap-in-anchor [content target]
-  (if (string? (first content))
+  (cond
+    (string? (first content))
     [{:tag :a
       :attrs {:class "anchor-link"
               :id target
@@ -37,6 +38,11 @@
       :content (into [{:tag :span
                        :attrs {:class "anchor-marker"}
                        :content "¶"}] content)}]
+
+    (= :a (-> content first :tag))
+    content
+
+    :default
     (into [(update-in (first content) [:content] #(wrap-in-anchor % target))] (rest content))))
 
 (defn- add-anchor [node]
