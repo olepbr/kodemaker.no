@@ -332,6 +332,10 @@ visuelt og fint få elementer til å bre seg over flere rader og/eller kolonner:
   </div>
 </div>
 
+<strong>NB!</strong> Dette eksempelet får en layout med to kolonner (se
+nedenfor) på mobil og skjermer under 800px, tre kolonner på skjermer som er
+store nok.
+
 For ordens skyld nevner jeg at det også finnes andre måter å gjøre colspan og
 rowspan i CSS grids, som ikke baserer seg på `grid-template-areas`.
 
