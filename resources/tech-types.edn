@@ -96,6 +96,7 @@
  :dynamodb :database
  :easerver :server
  :eclipse :devtools
+ :efs :cloud
  :ehcache :server
  :ejb :library
  :elasticsearch :database

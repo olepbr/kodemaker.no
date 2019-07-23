@@ -59,6 +59,7 @@
  :dotnet ".NET"
  :dreamweaver-mx "Dreamweaver MX"
  :dynamodb "DynamoDB"
+ :efs "EFS"
  :ejb "EJB"
  :etl "ETL"
  :express-js "Express.JS"
