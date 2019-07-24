@@ -12,7 +12,7 @@ og hvordan du kan unngå å havne i samme knipa — selvom du ikke bruker EFS).
 :body
 
 Dette er en liten historie om hvordan [EFS](https://aws.amazon.com/efs/) nærmest
-tok livet av Kubernetes-clusteret vårt, og hvordan du kan unngå å haven i samme
+tok livet av Kubernetes-clusteret vårt, og hvordan du kan unngå å havne i samme
 knipa — selvom du ikke bruker EFS.
 
 **Høsten 2018**: En kollega og jeg satt opp et Kubernetes-cluster på AWS. Vi gikk i
