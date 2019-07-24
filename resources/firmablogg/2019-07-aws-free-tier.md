@@ -26,7 +26,7 @@ hyppige restarts. Etter at dette hadde pågått en stund fikk vi av og til en
 kranglete node som Kubernetes selv ikke klarte å få skikk på.
 
 Etter å ha undersøkt logger fra appene våre, og (det vi antok var) relevante
-metrics kunne vi ikke se noen åpenbar grunn til at ting skulle bli restartet.
+metrikker kunne vi ikke se noen åpenbar grunn til at ting skulle bli restartet.
 Ettersom Kubernetes fortsatt slet med å få kontroll på enkelte noder ble vi ved
 flere anledninger tvunget til å rett og slett gå i EC2-konsollet og "fysisk"
 skru av enkelte noder. Kubernetes fikk opp en ny node, som etter kort tid gikk i
@@ -75,11 +75,10 @@ problem?
 
 Mange AWS-tjenester er såkalt "burstable". Altså har de en eller annen baseline
 performance som man kan overgå i en gitt tidsperiode hver dag. Dette systemet
-baserer seg på et credit-system - så lenge du holder deg under burst-grensa
-tjener du credits per time, og når du går over så bruker du av denne
-credit-balansen.
+baserer seg på credits - så lenge du holder deg under burst-grensa tjener du
+credits per time, og når du går over så bruker du av denne credit-balansen.
 
-EFS bruker et "burstable" system for throughput, som forklart i [dedikert
+EFS har burstable throughput, som forklart i [dedikert
 dokumentasjon](https://docs.aws.amazon.com/efs/latest/ug/performance.html#throughput-modes).
 En umiddelbar utfordring her er at AWS antar at behovet for throughput skalerer
 lineært med mengden data du lagrer på EFS. For data som er "read mostly" passer
@@ -90,19 +89,19 @@ Det konkrete problemet vi løp inn i er så vanlig at AWS har en egen FAQ-side
 dedikert til det: [Hva er greia med EFS burst
 credits?](https://aws.amazon.com/premiumsupport/knowledge-center/efs-burst-credits/)
 EFS tillater at man sparer opp 2.1TB med burst-trafikk per TB man har på et
-share. 2.1TB er minimum. Når du oppretter et nytt share starter du med full
-credit-balanse.
+share, minimum 2.1TB. Når du oppretter et nytt share **starter du med full
+credit-balanse**.
 
 Sånn så problemet ut for oss:
 
 ![AWS EFS credit-balanse på vei i grøfta](/images/blogg/burst.png)
 
-Problemet vårt kan dermed oppsummeres på følgende vis: Vi opprettet et EFS
-share for en håndfull config- og logg-filer for eldre tjenester som stort sett
-leses, over 0.05 Mbit/s. Vi startet med en credit-balanse på 2.1TB. Ettersom
-lese-behovet vårt bare ligger litt over default throughput tok det et halvt år
-før vi fikk I/O Wait-problemer som i ytterste konsekvens truet med å ta ned
-noder i Kubernetes-clusteret vårt. D'OH!
+Altså: Vi opprettet et EFS share for en håndfull config- og logg-filer for eldre
+tjenester som stort sett leses, over 0.05 Mbit/s. Vi startet med en
+credit-balanse på 2.1TB. Ettersom lese-behovet vårt bare ligger litt over
+default throughput tok det et halvt år før vi hadde brukt opp creditsene våre,
+og pod-ene fikk strupet I/O idet de skulle lese fra EFS - feks for helsesjekkene
+sine. D'OH!
 
 ## Hva skal vi lære av dette?
 
@@ -124,11 +123,20 @@ vi skal ha 100% oversikt over alle detaljer for hver av dem. Mitt håp med dette
 innlegget er at du er hakket mer nøye neste gang du ser over vilkårene for et
 sky-produkt du ikke har brukt før.
 
+Uavhengig av at vi ikke kjente til dette systemet reagerer du kanskje på at vi
+ikke oppdaget det via metrikker eller alarmer? Vi har rikelig med AWS-metrikker
+i Datadog, men vi har tydeligvis så mange at vi ikke klarer å følge aktivt med
+på alle sammen. I tillegg er alarmene våre fortsatt manuelt definert, heller enn
+å rapportere om generelle avvik - "NB! EFS Credits synker bratt". Dette er
+utfordringer vi kan løse i ettertid, men vi sitter sikkert med ytterligere slike
+skylapper som vi enda ikke kjenner.
+
 ## AWS Gratis-tier-fellen
 
-Det er fristende å kalle denne feilen et tilfelle av "AWS free tier-fellen". Den
-kan manifistere seg på to måter. Den ene er at ting slutter å fungere, som i
-vårt tilfelle. Den andre er at driftskostnadene dine plutselig skyter i været.
-Ingen av dem er spesielt morsomme, men begge er dessverre nokså vanlige. Hvordan
-skal du unngå dem? Lese vilkår, og følge med på AWS sine egne metrics, *særlig
-credits-balanse*, der det er aktuelt. Og ved å krysse fingerne.
+Det er fristende å kalle denne feilen et tilfelle av "AWS free tier-fellen", en
+felle som manifisteres seg på én av to måter. Den ene er at ting slutter å
+fungere, som i vårt tilfelle. Den andre er at driftskostnadene dine plutselig
+skyter i været. Ingen av dem er spesielt morsomme, men begge er dessverre nokså
+vanlige. Hvordan skal du unngå dem? Lese vilkår, og følge med på AWS sine egne
+metrikker, *særlig credits-balanse*, der det er aktuelt. Og ved å krysse
+fingerne.
