@@ -112,7 +112,7 @@ data fra disk under oppstart. D'OH!
 Så hva skal du, kjære leser, ta med deg fra denne lille anekdoten? Vi lærte
 opptil flere ting fra denne tabben:
 
-- *Les bruksanvisningen*
+- **Les bruksanvisningen**
 - AWS sitt burstable/credits-system brukes på mange tjenester, forstå hvilke,
   hvordan det gjelder, og ikke minst følge med på credit-balansen der det er
   aktuelt
@@ -145,5 +145,5 @@ felle som manifisteres seg på én av to måter. Den ene er at ting slutter å
 fungere, som i vårt tilfelle. Den andre er at driftskostnadene dine plutselig
 skyter i været. Ingen av dem er spesielt morsomme, men begge er dessverre nokså
 vanlige. Hvordan skal du unngå dem? Lese vilkår, og følge med på AWS sine egne
-metrikker, *særlig credits-balanse*, der det er aktuelt. Og ved å krysse
-fingerne.
+metrikker, **særlig credits-balanse**, der det er aktuelt. Og ved å krysse
+fingerne for at du klarer å følge med på alt.
