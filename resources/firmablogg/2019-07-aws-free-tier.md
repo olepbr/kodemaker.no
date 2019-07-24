@@ -96,12 +96,16 @@ Sånn så problemet ut for oss:
 
 ![AWS EFS credit-balanse på vei i grøfta](/images/blogg/burst.png)
 
-Altså: Vi opprettet et EFS share for en håndfull config- og logg-filer for eldre
-tjenester som stort sett leses, over 0.05 Mbit/s. Vi startet med en
-credit-balanse på 2.1TB. Ettersom lese-behovet vårt bare ligger litt over
-default throughput tok det et halvt år før vi hadde brukt opp creditsene våre,
-og pod-ene fikk strupet I/O idet de skulle lese fra EFS - feks for helsesjekkene
-sine. D'OH!
+Altså:
+
+- Vi opprettet et EFS share for en håndfull config- og logg-filer for eldre tjenester som stort sett leses, over 0.05 Mbit/s.
+- Vi startet med en credit-balanse på 2.1TB.
+- Ettersom lese-behovet vårt bare ligger litt over default throughput tok det et halvt år før vi hadde brukt opp creditsene våre.
+- Når creditsene var borte fikk Pods strupet I/O idet de skulle lese fra EFS.
+
+Dermed feilet en del pods helsesjekkene sine, og ble restartet av Kubernetes, om
+og om igjen. Dette forsterket problemet, da en del av tjenestene leste en del
+data fra disk under oppstart. D'OH!
 
 ## Hva skal vi lære av dette?
 
@@ -114,6 +118,9 @@ opptil flere ting fra denne tabben:
   aktuelt
 - AWS scale er muligens magnituder over din egen scale
 - Å vurdere risikoen med en gitt AWS-tjeneste er ikke-trivielt
+
+(Vi kan allerede "unngå disk i skyløsninger", men all programvare er ikke til
+all tid i en idéell tilstand).
 
 Når det oppsummeres som her så fremstår det kanskje idiotisk av oss å ikke
 orientere seg om hvordan en tjeneste fungerer før vi tar den i bruk. Dette er
