@@ -155,7 +155,8 @@
              :years [2019 :ongoing]
              :description "Utvikling av to forskjellige iOS apper, en for kunde, 
 			 og en for sjåfør. Utvikler også et Swift Framework som kan gjenbruke funksjonalitet på 
-			 tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige elektroniske låser"
+			 tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige typer elektroniske låser.
+			 \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
              :summary "Utvikling av et system for postleveranser innenfor dør"
              :tech [:swift :appcode :xcode]}
@@ -165,7 +166,7 @@
              mottak av ordre, ruteoptimalisering for sjåfører, sporing i
              sanntid, og integrasjoner med mange av Bring sine systemer. Utvikling av app for sjåfører for å støtte de 
              i sin jobb med å plukke opp og leverer pakkene til mottaker.
-             Utviker"
+             \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
              :tech [:kotlin :javascript :es6 :react :react-native :swift :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
@@ -178,7 +179,7 @@
              Animalias SSO/OAuth2 løsning, som krevde at vi utviklet et nytt
              bibliotek for å håndtere dette. Dette biblioteket vil være basis
              for migrering av de andre Grailsbaserte løsningen som Animalia har.
-             Oppgaver: Utvikler, arkitekt"
+             \nOppgaver: Utvikler, arkitekt"
              :tech
              [:grails :javascript :docker :clojure :docker-cloud :oracle :git :architecture]}
             {:customer "Animalia"
@@ -186,7 +187,8 @@
              :employer :kodemaker
              :summary "Videreutvikling av Helseservice"
              :description "Videreutvikling av Helseservice. Implementasjon av
-             nye krav og ønsker. Oppgaver: Utvikler, arkitekt"
+             nye krav og ønsker. 
+			 \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
             {:customer "Fondet for Regionale Verneombud"
              :years [2017]
@@ -197,7 +199,7 @@
              av Sekretariatsystemet medførte endringer i RVO systemet, som
              hovedsaklig gikk ut på å utvikle integrasjoner med ITX samt uttrekk
              av informasjon fra Sekretariatsystemet som skulle inn i Visma.
-             Oppgaver: Utvikler, arkitekt"
+             \nOppgaver: Utvikler, arkitekt"
              :tech [:ruby :rails :javascript :mariadb]}
             {:customer "Animalia"
              :years [2016]
@@ -218,7 +220,8 @@
              gikk ut på å implementere dette. Oppgavene som ble utført her var
              både på serversiden samt i klienten. Det ble også utført enn del
              refaktoreringer i forbindelse med dette arbeidet for å forenkle
-             datamodellen systemet bygger på. Oppgaver: Utvikler, arkitekt"
+             datamodellen systemet bygger på. 
+			 \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2016]
@@ -238,7 +241,8 @@
              For å få til dette så laget man et eget subsystem i ClojureScript
              som man integrerte inn i Kontrollene, som kommuniserer med det nye
              Helse APIet. På denne måten så vil man kunne gjenbruke dette i
-             andre systemer som f.eks Helsegris. Oppgaver: Utvikler, arkitekt"
+             andre systemer som f.eks Helsegris. 
+			 \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :groovy :grails :oracle :gradle :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2016]
@@ -248,8 +252,8 @@
              produsentregisteret Det gjøres kontinuerlig videreutvikling og
              oppgraderinger av eksisterende applikasjoner i Animalias
              produktportefølje. I denne perioden var det diverse utvidelse av
-             Sauekontrollen, samt utvidelser av Produsentregisteret Oppgaver:
-             Utvikler"
+             Sauekontrollen, samt utvidelser av Produsentregisteret 
+			 \nOppgaver: Utvikler"
              :tech [:clojure :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
             {:customer "Animalia"
              :years [2015]
@@ -259,7 +263,7 @@
              med nye tjenester samt oppdatering av frontend. Migrerer over til
              Docker og Tutum, samt innføring av en ny tjenester for håndtering
              av produsenter. Denne tjenesten vil bli benyttet av de flere andre
-             delsystemene i Animalia. Oppgaver: Utvikler"
+             delsystemene i Animalia. \nOppgaver: Utvikler"
              :tech [:clojure :javascript :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
             {:customer "Animalia"
              :years [2014]
@@ -279,7 +283,7 @@
              enkelt deployeres i forskjellige miljøer. Her bestemte vi oss for å
              se på Docker,noe som har vist seg til å passe oss bra. Jeg har
              jobbet med å finne ut av hvordan sette opp dette og automatisere
-             tjenestene rundt dette. Oppgaver: Utvikler"
+             tjenestene rundt dette. \nOppgaver: Utvikler"
              :tech [:clojure :clojurescript :docker :tutum :leiningen :oracle :jenkins :git :micro-services :architecture]}
             {:customer "Animalia"
              :years [2014]
@@ -287,13 +291,12 @@
              :summary "Oppgradering og videreutvikling av KTerm og Helse Fjørfe"
              :description "Oppgradering og videreutvikling av KTerm og Helse
              Fjørfe. Oppgradering og videreutvikling av to eksisterende systemer
-             skrevet i Groovy og Grails. Oppgaver: Utvikler"
+             skrevet i Groovy og Grails. \nOppgaver: Utvikler"
              :tech [:groovy :grails :javascript :oracle :gradle :jenkins :git]}
             {:customer "Fondet for Regionale Verneombud"
              :years [2014]
              :description "Oppgradering og videreutvikling av eksisterende
-             løsninger. Oppgradering og ny funksjonalitet i løsningene. Oppgaver:
-             Utvikler"
+             løsninger. Oppgradering og ny funksjonalitet i løsningene. \nOppgaver: Utvikler"
              :employer :kodemaker
              :summary "Oppgradering og videreutvikling"
              :tech [:ruby :rails :nginx :passenger :prawn :mysql :coffeescript :javascript
@@ -307,7 +310,7 @@
              produkter på web. Salgsportalen inkluderer en produktkatalog med
              funksjoner for vedlikehold av denne. Portalen skal integreres med
              andre fagsystemer for ordrehåndtering med mer, samt eksterne
-             tjenester for SMS og kreditsjekk. Oppgaver: Senior Java utvikler"
+             tjenester for SMS og kreditsjekk. \nOppgaver: Senior Java utvikler"
              :tech
              [:java :wicket :javascript :jee6 :jpa :hibernate :neo4j :mongodb :lucene
               :rest :jax-rs :jboss :postgresql :oracle :maven :jenkins :git :junit]}
@@ -324,7 +327,7 @@
              drive testdrevet utvikling i dette prosjektet, noe som så langt av
              en eller annen grunn ikke er så vanlig på iOS. Det har fungert
              veldig bra, og har gitt en betydelig forbedring av kodekvalitet og
-             arkitektur i applikasjonen. Oppgaver: Utvikler og mentor."
+             arkitektur i applikasjonen. \nOppgaver: Utvikler og mentor."
              :tech [:ios :cocoa :appcode :xcode :objc :cocoapods :jenkins :ruby :bamboo :architecture]}
             {:customer "FINN.no"
              :years [2011]
@@ -351,7 +354,7 @@
              Cocoapods for håndtering av avhengigheter til 3parts komponenter og
              biblioteker. Jobber nå med å forbedre og utvide den eksisterende
              applikasjonen, samt klargjøre og planlegge for de neste iOS
-             applikasjonene som skal utvikles. Oppgaver: Utvikler og mentor."
+             applikasjonene som skal utvikles. \nOppgaver: Utvikler og mentor."
              :tech [:ios :cocoa :appcode :xcode :objc :objcplusplus :architecture]}
             {:customer "Fondet for Regionale Verneombud"
              :years [2011]
@@ -366,8 +369,8 @@
              Teamet bestod av 3 utviklere fra Kodemaker, 1 interaksjonsdesigner
              fra IXD og RVO sin prosjektleder. Metodikken som ble fulgt var en
              pragmatisk variant av Kanban med web-baserte
-             prosjektoppfølgingsverktøy (AgileZen, BaseCamp med mer). Oppgaver:
-             Utvikler og teamleder."
+             prosjektoppfølgingsverktøy (AgileZen, BaseCamp med mer). 
+			 \nOppgaver: Utvikler og teamleder."
              :tech [:ruby :rails :nginx :passenger :prawn :mysql :coffeescript :javascript
                     :jquery :css :rspec :capistrano :linux :mongo-queue :rest :rubymine]}
             {:customer "Politiets Data og Materielltjeneste, PDMT"
@@ -377,7 +380,7 @@
              :description "Utvikling av system for maritim grensekontroll,
              SafeSeaNet. Integrasjon mot flere interne og eksterne systemer, vha
              både JMS og WebServices. Brukergrensesnitt implementert med JSF.
-             Oppgaver: Utvikler"
+             \nOppgaver: Utvikler"
              :tech [:java :groovy :oracle :oracle-appserver :h2db :webservices
                     :jms :maven :intellij :jsf :jira :jenkins :cqrs]}
             {:customer "Fondet for regionale verneombud."
@@ -390,7 +393,7 @@
              anleggsbransjen og følge opp betaling ved å sjekke mot bank.
              Purring og betalingsoppfordring sendes via Lindorff, samt at man
              integrerer mot Brønnøysund, samt et annet tredjeparts-system.
-             Oppgaver: Utvikler og teknisk prosjektleder."
+             \nOppgaver: Utvikler og teknisk prosjektleder."
              :tech
              [:ruby :rails :html :css :mysql :ubuntu :windows :passenger :nginx
               :cucumber :rspec :thinking-sphinx :rubymine :capistrano :rake]}
