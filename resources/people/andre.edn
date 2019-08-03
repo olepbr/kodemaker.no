@@ -19,11 +19,11 @@
                  :github        "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:kotlin, :elixir :clojure :clojurescript]
-                 :using-at-work [:kotlin, :javascript :react]
-                 :want-to-learn-more      [:haskell :scala]}
+ :tech          {:favorites-at-the-moment [:swift :kotlin, :elixir :clojure :clojurescript]
+                 :using-at-work [:swift]
+                 :want-to-learn-more      [:swift :elixir]}
 
- :cv {:default {:preferred-techs [:elixir :kotlin :clojure :clojurescript]
+ :cv {:default {:preferred-techs [:swift :elixir :kotlin :clojure :clojurescript]
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase]}}                 
  
  :project-highlights [{:blurb "Design og utvikling av et nytt system for budleveranser"
@@ -150,8 +150,17 @@
                  developer who takes pride in delivering high quality work with
                  high value for money for the customer."} ]
 
- :projects [{:customer "Bring"
-             :years [2018 :ongoing]
+ :projects [
+	 		{:customer "Posten"
+             :years [2019 :ongoing]
+             :description "Utvikling av to forskjellige iOS apper, en for kunde, 
+			 og en for sjåfør. Utvikler også et Swift Framework som kan gjenbruke funksjonalitet på 
+			 tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige elektroniske låser"
+             :employer :kodemaker
+             :summary "Utvikling av et system for postleveranser innenfor dør"
+             :tech [:swift :appcode :xcode]}
+ 			{:customer "Bring"
+             :years [2018 2019]
              :description "Utvikling av et system for budleveranser, alt fra
              mottak av ordre, ruteoptimalisering for sjåfører, sporing i
              sanntid, og integrasjoner med mange av Bring sine systemer. Utvikling av app for sjåfører for å støtte de 
@@ -159,7 +168,7 @@
              Utviker"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
-             :tech [:kotlin :javascript :es6 :react :react-native :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
+             :tech [:kotlin :javascript :es6 :react :react-native :swift :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
             {:customer "Animalia"
              :years [2017]
              :employer :kodemaker
