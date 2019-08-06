@@ -7,7 +7,7 @@
 :blurb
 
 En liten historie om hvordan EFS nærmest tok livet av Kubernetes-clusteret vårt,
-og hvordan du kan unngå å havne i samme knipa — selvom du ikke bruker EFS).
+og hvordan du kan unngå å havne i samme knipa — selvom du ikke bruker EFS.
 
 :body
 
