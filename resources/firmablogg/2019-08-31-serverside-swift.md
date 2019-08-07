@@ -37,8 +37,7 @@ Min begeistring for Swift er så stor at jeg godt kunne tenke meg å bruke det p
 
 For å teste ut dette så tenkte jeg å skrive en versjon Swift av en "mock-server" som vi benytter under utvikling av appene. Grunnen til denne mock-serveren eksisterer er at baksystemene vi går mot er veldig tunge å jobbe med, spesielt det å få satt opp riktig testdata. Jeg antar at flere kjenner seg igen i dette. Mock-serveren er skrevet i [Go](https://golang.org) av en [kollega](https://www.kodemaker.no/nils/) og har gjort hverdagen min betraktelig lettere. 
 
-Det jeg fant ut var at det er hovedsaklig tre web-rammeverk som blir benyttet for backend Swift. Disse var [Vapor](https://vapor.codes), [Kitura](https://www.kitura.io) og [Perfect](https://perfect.org)
- [Perfect](https://perfect.org). 
+Det jeg fant ut var at det er hovedsaklig tre web-rammeverk som blir benyttet for backend Swift. Disse var [Vapor](https://vapor.codes), [Kitura](https://www.kitura.io) og [Perfect](https://perfect.org). 
 Jeg bestemte meg for å teste ut [Vapor](https://vapor.codes). Serveren jeg skal skrive trenger ikke modell structer, jeg trenger heller ikke å persistere data. Det jeg trengte var å kunne lese inn noen json filer, kanskje manipulere litt på de, og så returnere et resultat. 
 
 For min del så er ulempen med Vapor at man forventer at json som man skal returnere genereres fra modell structer, så i stedet for å få hjelp av rammeverket, så motarbeidet det meg. Den endelige løsningen ble ikke så ille, men jeg hadde en følelse om at det kunne gjøres enklere, samt at jeg satt med følelsen av at Vapor sa "My way, or the highway". Det jeg ønsket meg var en [Sinatra](https://sinatrarb.com) for Swift. 
