@@ -37,14 +37,22 @@
                            :text "Les artikkelen"}
                     :tech [:clojure]}]
 
- :projects      [{:customer "Animalia"
-                  :years [2018 :ongoing]
+ :projects      [
+                 {:customer "Forsvaret"
+                   :years [2019 :ongoing]
+                   :summary "Utvikler"
+                   :employer :kodemaker
+                   :description "Videreutvikling av forsvarets Materielldataportal"
+                   :tech [:groovy :grails :bootstrap :oracle :sap :soap :rest]}
+
+                 {:customer "Animalia"
+                  :years [2018 2019]
                   :summary "Utvikler"
                   :employer :kodemaker
                   :description "Videreutvikling av eksisterende samt design og implementasjon av nye systemer innenfor kjøtt- og egg-bransjen"
                   :tech [:clojure :clojurescript :groovy :grails]}
                   
- 				  {:customer "Forsvaret MDP"
+ 				  {:customer "Forsvaret"
                   :years [2016 2017]
                   :summary "Forsvaret, Materielldataportalen"
                   :employer :kodemaker
