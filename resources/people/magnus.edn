@@ -37,7 +37,7 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :reframe :docker :python :clojurescript]
+ :tech {:using-at-work [:clojure :clojurescript :datomic :kafka :aws :influx :kubernetes]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
 
@@ -389,19 +389,37 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
- :projects [{:customer "Protector Forsikring"
-             :years [2018 :ongoing]
+ :projects [{:customer "Norled"
+             :start "2019-04"
+             :employer :kodemaker
+             :summary "Utvikling av nytt informasjonssystem for fergedrift"
+             :description "Utvikler nye informasjonssystemer for fergedrift for Norled."
+             :tech [:clojure :clojurescript :datomic :datascript :aws :kubernetes :influx :kafka :travisci]}
+            {:customer "Tomra"
+             :start "2018-10"
+             :end "2019-04"
+             :employer :kodemaker
+             :summary "Utvikling og modernisering av backoffice løsninger for pantemaskiner"
+             :description "Tomra har pantemaskiner over hele verden. Disse samler inn store mengder informasjon samt krever administrasjon fra backoffice personell.
+                           Magnus jobbet med modernisering/omskriving av software for kommunikasjon mot pantemaskiner og foretok løpende vedlikehold av administrasjonsapplikasjoner.
+                           Han jobbet også med en POC for å modularisere administrasjonsapplikasjon ved å skille ut kampanjerelatert funksjonalitet. I POC'en brukte vi Elm på frontend og REST endepunkter på backend."
+             :tech [:java :elm :javascript :typescript :gitlab :aws :sql-server]}
+
+            {:customer "Protector Forsikring"
+             :years [2018]
              :employer :kodemaker
              :summary "Utvikling av B2B og B2C forsikringsportal"
              :description "Videreutvikling og forbedring av portalløsning for self-service på forsikringsprodukter fra Protector.
                           Portalen er implementer som en SPA med REST integrasjoner mot kjernesystemene. Oppgaver:
                           Utvikling av ny funksjonalitet, teknologievaluering, mentoring på moderne funksjonell utvikling og rådgiving ifm. innføring av SCRUM/smidig prinsipper."
              :tech [:javascript :typescript :node :webpack :docker :teamcity]}
-            {:customer "(Konfidensielt)"
+            {:customer "Oche"
              :years [2018]
              :employer :kodemaker
-             :summary "Utvikling av nytt spillkonsept knyttet til Dart."
-             :description "Utvikling av nytt spillkonsept knyttet til Dart."
+             :summary "Utvikling av nytt spillkonsept knyttet for Dart."
+             :description "Ved bruk av moderne teknologi, hardware, stilig design og autentiske piltavler laget vi et nytt
+                           og spennende spillkonsept for å popularisere Dart i Norge.
+                           Magnus jobbet hovedsaklig med utvikling av dartspillenes logikk og teknisk frontend."
              :tech [:clojure :clojurescript :python]}
             {:customer "Oiiku"
              :years [2017]
