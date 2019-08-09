@@ -26,9 +26,9 @@
             :github "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:clojurescript :kubernetes :flexbox]
+ :tech {:favorites-at-the-moment [:clojurescript :kubernetes :go]
         :using-at-work           [:typescript :javascript :react]
-        :want-to-learn-more      [:unity3d :flutter]}
+        :want-to-learn-more      [:unity3d :flutter :go]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
@@ -345,7 +345,10 @@
                          :description "Regnskap for nettbanktransaksjoner"
                          :tech         [:clojure :react]}]
 
- :open-source-contributions [{:name "grgit"
+ :open-source-contributions [{:name "act"
+                              :url "https://github.com/mnemonic-no/act-frontend"
+                              :tech [:javascript :typescript :cytoscape]}
+                             {:name "grgit"
                               :url "https://github.com/ajoberstar/grgit"
                               :tech [:git :groovy]}
                              {:name "clj-time"
