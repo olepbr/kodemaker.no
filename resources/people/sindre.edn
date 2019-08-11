@@ -1,0 +1,135 @@
+{:id :sindre
+ :name ["Sindre" "Grønningen"]
+ :title "Problemløser"
+ :start-date "2019-10-01 13:37"
+ :experience-since 2010
+ :born 1986
+
+ :description "Sindre er en allsidig og meget dyktig fullstack-utvikler som er lidenskapelig opptatt av å lage gode brukeropplevelser og solid software. Han har et brennende engasjement for domenedrevet design, hvor man setter problemløsing, verdiskaping og samarbeid i fokus.\n\nSindre foretrekker å jobbe i små, autonome team som får ting gjort. Han trives med mange hatter, tar eierskap til produktene han jobber med og tar ansvar der det trengs. I tett samarbeid med domeneeksperter setter han seg alltid godt inn i domenet, og kundene setter pris på hans solide forståelse av behov og evne til å finne gode løsninger. "
+
+ :phone-number "+47 951 82 781"
+ :email-address "sindre@kodemaker.no"
+
+ :presence {:cv "sindre"
+            :linkedin "/in/sindreru"
+            :twitter "sindreru"}
+
+ :tech {:using-at-work [:angular :typescript :java :google-cloud :ddd]
+        :want-to-learn-more [:funksjonell-programmering :fsharp]}
+
+ :innate-skills [:browser-devtools :crucible :pair-programming :intellij :eclipse :visual-studio :jira
+                 :confluence :junit :lean :testing :micro-services :ci :cd :domain-modeling :code-review]
+
+ :qualifications ["Erfaren fullstack-utvikler med teft for god interaksjonsdesign"
+                  "Brenner for domenedrevet design – en fremgangsmåte for å lage solid software som er enkel å utvide"
+                  "Finner glede i å skape verdi og gode brukeropplevelser"
+                  "Gjør det vanskelige enkelt"]
+
+ :certifications [{:name "Certified Scrum Master", :year 2016}
+                  {:name "Oracle Certified Professional, Java SE 6 Programmer I", :year 2011}]
+
+ :recommendations [
+                   {:title "Domain Modeling Made Functional"
+                    :blurb "En meget god introduksjon til både domedrevet design og funksjonell programmering av pedagogiske Scott Wlaschin. Kombinasjonen DDD og funksjonell programmering i F# er rett og slett vakker!"
+                    :link {:url "https://pragprog.com/book/swdddf/domain-modeling-made-functional"
+                           :text "Kjøp boken her"}
+                    :tech [:fsharp :ddd]}
+
+                   {:title "The Past (1968) and Future of Domain (driven) Design"
+                    :blurb "Et inspirerende foredrag om softwareutviklingens historie, hvor det gikk galt og hvordan vi kan få industrien på beina igjen."
+                    :link {:url "https://dddeurope.com/2017/speakers/david-west/#talk"
+                           :text "Se foredraget her"}
+                    :tech [:teknologi :utvikling :ddd]}]
+
+ :hobbies [
+           {:title "Sandvolleyball"
+            :description "Jeg har alltid vært glad i sport, og sandvolleyball tok gleden til et nytt nivå. Ballkontroll, gode reflekser, taktikk og samarbeid er stikkord her. Det skader heller ikke at sporten kombineres godt med sommer og sol, grilling og gode venner."
+            :illustration "/illustrations/hobbies/sindre_volley.jpg"}
+
+           {:title "Reising"
+            :description "Jeg vokste opp i en reisende familie og har hatt gleden av å se store deler av verden. Noen høydepunkter er safari i Sør-Afrika og Tanzania, backpacking i Asia og road trips i USA. På reise er kameraet alltid med, og jeg har oppdaget at jeg er spesielt glad i å ta bilder av dyr – til mine reisevenners fortvilelse da vi ventet en time på at denne leoparden skulle hoppe ned fra treet sitt."
+            :illustration "/illustrations/hobbies/sindre_reise.jpg"}]
+
+ :blog-posts [
+              {:url "https://grensesnittet.computas.com/the-missing-piece-of-software-development/"
+               :title "The Missing Piece of Software Development"
+               :blurb "Et innlegg om hvordan det viktigste ved softwareutvikling muligens har druknet i teknologier og rammeverk."
+               :tech [:ddd]}
+
+              {:url "https://grensesnittet.computas.com/lost-in-translation/"
+               :title "Lost in Translation"
+               :blurb "Et innlegg om språk og misforståelser."
+               :tech [:ddd]}]
+
+ :appearances [{:title "Domenedrevet design i praksis"
+                :event "Internforedrag hos Computas"
+                :tech [:ddd]
+                :date "2015-06-01"}]
+
+ :projects [
+            {:customer "Aker Solutions"
+             :start "2017-06"
+             :end "2019-10"
+             :summary "Web-applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer"
+             :employer :computas
+             :description "Som en del av Aker Solutions sitt omfattende initiativ for å effektivisere utvikling av olje- og gassfelt, utviklet vi en web-applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer. Resultatet er en applikasjon som reduserer tiden det tar å få opp et grovt vektestimat fra dager/uker til minutter.\nJeg var ansvarlig for utviklingen av web-klienten og hadde i perioder ansvaret for UX. I andre perioder fungerte jeg som sparringspartner for UX-ansvarlig ved behov. Var sentral i design og implementasjon av backend, med et spesielt fokus på god systemarkitektur. Tok ofte initiativ til, og ledet, diskusjoner om arkitektur og modellering. Hadde i tillegg rollen som funksjonell arkitekt, med overordnet ansvar for funksjonaliteten som ble levert. Var Scrum Master i en periode. Innførte Kanban for å øke effektiviteten til teamet. Var pådriver for å bygge opp et team hvor alle bidro på både frontend og backend. Tok initiativ til å samle frontend-utviklere på tvers av teamene hos Aker Solutions til uformelle møter hvor man kunne diskutere store og små ting relatert til frontend-utvikling. Tok i tillegg ansvar for å få på plass gode rutiner for vedlikehold og videreutvikling av et felles design-bibliotek som ble brukt av alle teamene. Applikasjonen kjører på Google Cloud og Google Cloud Datastore brukes for persistering."
+             :tech [:angular :typescript :java :google-cloud :ddd :angular-material  :html :sass :webpack :yarn :nodejs :spring
+                    :gradle :google-cloud-datastore :jenkins :rest :xml :xslt :json :git :architecture :kanban :scrum :devops :tdd]}
+
+            {:customer "Mattilsynet"
+             :start "2015-04"
+             :end "2017-06"
+             :summary "Effektivisering av tilsyn hos serveringssteder"
+             :employer :computas
+             :description "I 2016 innførte Mattilsynet smilefjesordningen. Hensikten er å informere forbrukere om de hygieniske forholdene ved serveringssteder i form av smilefjes. Vi utviklet en applikasjon for gjennomføring av smilefjestilsyn som fungerer både offline og online. Systemet oppretter automatisk vedtak basert på karakterer som settes på kravpunkter av inspektørene. Resultatet av tilsynet er en generert rapport som inspektøren skriver ut og henger opp ved serveringsstedets inngang. Jeg spilte en sentral rolle i å gjøre dette prosjektet til en suksesshistorie for Mattilsynet gjennom arbeid med frontend, backend, interaksjonsdesign og utarbeidelse av tekniske og funksjonelle løsningsbeskrivelser. I prosjektet fikk jeg brukt min evne til å raskt tilegne meg ny kunnskap ved å lære meg domenedrevet design, Windows Presentation Foundation (WPF) og C# for å nevne noe. Ikke minst lærte jeg mye om tilsynsarbeid, og det var veldig gøy å finne enkle, brukervennlige løsninger for Mattilsynets kompliserte vedtaksregler."
+             :tech [:csharp :dotnet :wpf :ddd :scrum :xaml :teamcity :sqlite]}
+
+            {:customer "Mattilsynet"
+             :start "2012-09"
+             :end "2017-06"
+             :summary "MATS – saksbehandlingssystem for tilsyn og revisjon"
+             :employer :computas
+             :description "Mattilsynets Tilsynssystem (MATS) består av en saksbehandlingsapplikasjon for desktop og en selvbetjeningsløsning på web som støtter Mattilsynet i alt deres arbeid med tilsyn og revisjon innen planter, fisk, dyr og næringsmidler. Jeg har jobbet med de fleste av Mattilsynets fagområder, og har vært involvert i mange og varierte oppgaver i løpet av årene mine hos Mattilsynet. Har designet og implementert brukergrensesnitt for web og desktop. Modellert og implementert arbeidsprosesser. Generert dokumentmaler for tilsynsrapporter og fiskeeksportattester i Word og Velocity. Implementert angre-funksjonalitet i en teksteditor som ble skrevet for utforming av tilsynsrapporter. I tillegg til utvikling har jeg hatt roller som funksjonell arkitekt, UX-ansvarlig og Scrum Master. Har også bidratt med opplæring av nye prosjektmedarbeidere og holdt diverse foredrag internt på prosjektet."
+             :tech [:swing :java :javascript :tdd :kanban :jquery :hibernate :jboss :oracle :maven :ejb :sql :jsp
+                    :xml :soap :html :css :webservices :webmethods :velocity :jenkins :mercurial :scrum :kanban]}
+
+            {:customer "NAV"
+             :start "2011-02"
+             :end "2012-09"
+             :summary "Arena – saksbehandlingssystem for alt rundt arbeidsforhold"
+             :employer :computas
+             :description "Arena er Navs applikasjon for oppfølging av arbeidssøkere, arbeidsgivere og sykefravær. Jeg jobbet hovedsakelig med utvikling av backend, hvor jeg hadde hovedansvar for modellering og implementasjon av arbeidsprosesser. Jobbet med batch-jobber for blant annet import av sykefraværsstatistikk og utsendelse av brev, dokumentproduksjon, utvikling av regler for vedtaksbehandling i en regelmotor, testing og utforming av løsningsbeskrivelser. Jeg ble raskt en nøkkelperson man gikk til for å spørre om hjelp, og jeg bidro til opplæring av flere prosjektmedarbeidere gjennom presentasjoner og workshops. Ved utvikling av arbeidsprosesstøtte for sanksjonering av arbeidsgivere, leger og sykmeldte i forbindelse med sykefraværsoppfølging, spilte jeg en sentral rolle. Delprosjektet involverte rundt 20 personer, og jeg hadde til enhver tid god oversikt over den helhetlige løsningen. Var i kontinuerlig dialog med kunden for å finne de gode løsningene, og var involvert i alle lag i den tekniske implementasjonen."
+             :tech [:java :j2ee :oracle :plsql :sql :xml :svn :scrum]}
+
+            {:customer "Domstol-administrasjonen"
+             :start "2010-08"
+             :end "2011-02"
+             :summary "Lovisa – saksbehandlingssystem for rettssaker"
+             :employer :computas
+             :description "Mitt første prosjekt i arbeidslivet. Ung og nysgjerrig kastet jeg meg over java-utvikling, arbeidsprosessmodellering, kravspesifisering, utvikling av skjermbilder, testing og kvalitetssikring. Jeg lærte raskt, og fikk etter hvert ansvar for å utvikle en revidert saksflyt til bruk i konkursbehandling. Her jobbet jeg tett sammen med kunde og funksjonell arkitekt, og den endelige løsningen ble tatt meget godt i mot av sluttbrukerne."
+             :tech [:swing :java :j2ee :hibernate :maven :ejb :weblogic :mercurial :scrum]}]
+
+ :cv {:default {:preferred-techs [:google-cloud-datastore :git :kanban :ddd :java :typescript]}}
+
+ :education-summary "Sivilingeniør kommunikasjonsteknologi, NTNU"
+ :education [{:institution "NTNU"
+              :years [2005 2006 2007 2008 2009 2010]
+              :subject "Sivilingeniør i kommunikasjonsteknologi"}]
+
+ :languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Flytende"}
+             {:language "Tysk"
+              :orally "Grunnleggende"
+              :written "Grunnleggende"}]
+
+ :project-highlights [{:blurb "Cloud, devops, lean, arkitektur, fullstack, UX."
+                       :customer "Aker Solutions"}
+                      {:blurb "Suksesshistorie med smilefjes hos serveringssteder og effektivisering av tilsyn."
+                       :customer "Mattilsynet"}
+                      {:blurb "Virksomhetskritisk system for sykefraværsoppfølging, arbeidsavklaringspenger m.m."
+                       :customer "NAV"}]
+ }
