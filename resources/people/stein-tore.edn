@@ -291,7 +291,7 @@
                        :customer "Bring"}
                       {:blurb "Full-stack utvikling av system for distribusjon av trafikkinformasjon."
                        :customer "NSB"}
-                      {:blurb "Scrum master of full-stack utvikler for rapportsystem for togfremføring."
+                      {:blurb "Scrum master og full-stack utvikler for rapportsystem for togfremføring."
                        :customer "NSB"}]
 :languages [{:language "Norsk"
               :orally "Morsmål"
