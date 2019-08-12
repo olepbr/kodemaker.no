@@ -9,6 +9,7 @@
  :akka :library
  :alpine :os
  :android :os
+ :angular :frontend
  :angularjs :frontend
  :ant :devtools
  :appcode :devtools
@@ -116,6 +117,7 @@
  :flex :proglang
  :fluentd :devops
  :frp :methodology
+ :fsharp :proglang
  :fusioncharts :library
  :gcd :server
  :geb :library
@@ -129,6 +131,8 @@
  :google-adwords :tool
  :google-analytics :tool
  :google-closure :frontend
+ :google-cloud :cloud
+ :google-cloud-datastore :database
  :google-cloud-messaging :cloud
  :google-earth :tool
  :google-image-charts :library
@@ -222,6 +226,7 @@
  :markdown :specification
  :markedsforing :methodology
  :material-ui :frontend
+ :mercurial :vcs
  :mesos :devops
  :metrics :methodology
  :micro-services :methodology
@@ -383,6 +388,7 @@
  :websockets :frontend
  :websphere-studio :server
  :wiki :methodology
+ :wpf :framework
  :wslite :library
  :wordpress :server
  :yarn :tool
