@@ -54,6 +54,12 @@
             :illustration "/illustrations/hobbies/mtg.jpg"
            }]
 
+ :blog-posts [
+             {:url "https://www.kodemaker.no/blogg/2019-06-uu/"
+              :title "Universell Utforming - en sjekkliste"
+              :blurb "I 2018 fikk SAS [tvangsbøter](https://e24.no/digital/sas/sas-inngaar-forlik-i-usa-maa-punge-ut-for-daarlig-tilrettelagt-nettside/24498270) fra Difi på 150 000 per dag for brudd på likestillings- og diskrimineringsloven. Er dette noe som kan ramme andre? (Spoiler - JA!)"
+              :tech [:universell-utforming :responsive-design :web :android :ios]}]
+
  :side-projects [{:title "Spør en Biolog"
                   :description "Spør en Biolog er en mobil-utvidelse til allerede eksisterende nettforum der det er mulig å stille spørsmål direkte til biologer.
                   Ved hjelp av appen kan man ta bilder og sende inn spørsmål til forumet rett fra marka. Sammen med Norsk biologforening utarbeidet Olga først konseptet for appen og deretter
