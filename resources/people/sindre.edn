@@ -1,4 +1,5 @@
 {:id :sindre
+ :profile-active? false
  :name ["Sindre" "Grønningen"]
  :title "Problemløser"
  :start-date "2019-10-01 13:37"
@@ -106,7 +107,7 @@
              :end "2011-02"
              :summary "Lovisa – saksbehandlingssystem for rettssaker"
              :employer :computas
-             :description "Mitt første prosjekt i arbeidslivet. Ung og nysgjerrig kastet jeg meg over java-utvikling, arbeidsprosessmodellering, kravspesifisering, utvikling av skjermbilder, testing og kvalitetssikring. Jeg lærte raskt, og fikk etter hvert ansvar for å utvikle en revidert saksflyt til bruk i konkursbehandling. Her jobbet jeg tett sammen med kunde og funksjonell arkitekt, og den endelige løsningen ble tatt meget godt i mot av sluttbrukerne."
+             :description "Mitt første prosjekt i arbeidslivet. Ung og nysgjerrig kastet jeg meg over java-utvikling, arbeidsprosessmodellering, kravspesifisering, utvikling av skjermbilder, testing og kvalitetssikring. Jeg lærte raskt, og fikk etter hvert ansvar for å utvikle en revidert saksflyt til bruk i konkursbehandling. Her jobbet jeg tett sammen med kunde og funksjonell arkitekt, og den endelige løsningen ble tatt meget godt imot av sluttbrukerne."
              :tech [:swing :java :j2ee :hibernate :maven :ejb :weblogic :mercurial :scrum]}]
 
  :endorsements [{:author "Tommy Sommerseth"
