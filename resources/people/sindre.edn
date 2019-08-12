@@ -109,6 +109,10 @@
              :description "Mitt første prosjekt i arbeidslivet. Ung og nysgjerrig kastet jeg meg over java-utvikling, arbeidsprosessmodellering, kravspesifisering, utvikling av skjermbilder, testing og kvalitetssikring. Jeg lærte raskt, og fikk etter hvert ansvar for å utvikle en revidert saksflyt til bruk i konkursbehandling. Her jobbet jeg tett sammen med kunde og funksjonell arkitekt, og den endelige løsningen ble tatt meget godt i mot av sluttbrukerne."
              :tech [:swing :java :j2ee :hibernate :maven :ejb :weblogic :mercurial :scrum]}]
 
+ :endorsements [{:author "Tommy Sommerseth"
+                 :title "Produkteier for vektestimering hos Aker Solutions"
+                 :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}]
+
  :cv {:default {:preferred-techs [:google-cloud-datastore :git :kanban :ddd :java :typescript]}}
 
  :education-summary "Sivilingeniør kommunikasjonsteknologi, NTNU"
@@ -132,4 +136,8 @@
                        :customer "Mattilsynet"}
                       {:blurb "Virksomhetskritisk system for sykefraværsoppfølging, arbeidsavklaringspenger m.m."
                        :customer "NAV"}]
+
+ :endorsement-highlight {:author "Tommy Sommerseth"
+                          :title "Produkteier for vektestimering hos Aker Solutions"
+                          :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}
  }
