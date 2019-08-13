@@ -1,8 +1,8 @@
-{:id              :alf-kristian
- :name            ["Alf Kristian" "Støyle"]
- :title           "Kodemagiker"
- :start-date      "2013-10-01"
- :description     "Alf Kristian liker seg på dypt vann, med store
+{:id :alf-kristian
+ :name ["Alf Kristian" "Støyle"]
+ :title "Kodemagiker"
+ :start-date "2013-10-01"
+ :description "Alf Kristian liker seg på dypt vann, med store
  utfordringer og vanskelige mål. Dette gjelder både i privatliv
  og på jobb.
 
@@ -22,26 +22,26 @@
  for å fremheve bruken av funksjonelle språk, som Scala og
  Clojure."
 
- :phone-number    "997 92 226"
- :email-address   "alf.kristian@kodemaker.no"
+ :phone-number "997 92 226"
+ :email-address "alf.kristian@kodemaker.no"
 
- :presence        {:cv       "alf-kristian"
-                   :twitter  "stoyle"
-                   :github   "stoyle"
-                   :linkedin "/in/stoyle"}
- :upcoming        []
+ :presence {:cv "alf-kristian"
+            :twitter "stoyle"
+            :github "stoyle"
+            :linkedin "/in/stoyle"}
+ :upcoming []
 
- :hobbies         [{:title        "Funksjonell programmering"
-                    :description  "IT-verden er i stadig forandring, kravene
+ :hobbies [{:title "Funksjonell programmering"
+            :description "IT-verden er i stadig forandring, kravene
             til oppgaver som skal løses skjerpes, vi må forholde oss
             til større datamengder, lage software som yter og
             skalerer bedre, samtidig som kunder krever at vi leverer
             raskere. Etter min mening (og mange andres) er
             funksjonelle programmeringsspråk bedre verktøy for å
             imøtekomme slike krav."
-                    :illustration "/illustrations/hobbies/alf_kristian_lambda.jpg"}
-                   {:title        "Jogging og løpeteknikk"
-                    :description  "Helt siden jeg fikk en Garmin GPS klokke i
+            :illustration "/illustrations/hobbies/alf_kristian_lambda.jpg"}
+           {:title "Jogging og løpeteknikk"
+            :description "Helt siden jeg fikk en Garmin GPS klokke i
             gave, og oppdaget at man kunne tracke sin forbedring
             online, har jeg elsket å løpe. Det begynte forholdsvis
             rolig, helt til jeg ble utfordret til å løpe maraton.
@@ -49,10 +49,10 @@
             hekta. Jeg skjønte fort at normal løpeteknikk ikke er bra
             for kroppen, så jeg blir stadig observert på joggeturer
             med mine Vibram Fivefingers."
-                    :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
+            :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
 
- :tech            {:favorites-at-the-moment [:clojure :scala :kotlin :funksjonell-programmering]
-                   :want-to-learn-more      [:elixir :lisp-flavoured-erlang]}
+ :tech {:favorites-at-the-moment [:clojure :scala :kotlin :funksjonell-programmering]
+        :want-to-learn-more [:elixir :lisp-flavoured-erlang]}
 
  :qualifications ["Fullstack, jobber like gjerne med frontend som backend."
                   "Mange års erfaring med devops, og mener dette er den beste måten å utvikle systemer på."
@@ -86,9 +86,9 @@
                             føler det er forbi begynnerstadiet i FP,
                             enten det gjelder Clojure eller andre
                             spåk."
-                    :link  {:url  "http://joyofclojure.com/"
-                            :text "Offisielle sider"}
-                    :tech  [:clojure :funksjonell-programmering]}
+                    :link {:url "http://joyofclojure.com/"
+                           :text "Offisielle sider"}
+                    :tech [:clojure :funksjonell-programmering]}
                    {:title "Learn You a Haskell for Great Good!"
                     :blurb "Haskell er et programmeringsspråk som får
                             større og større påvirkningskraft på
@@ -96,9 +96,9 @@
                             introduksjon til et språk som er ganske
                             ganske annerledes. Man kan lese store
                             deler av boken på nett."
-                    :link  {:url  "http://learnyouahaskell.com/"
-                            :text "Besøk websidene"}
-                    :tech  [:funksjonell-programmering]}
+                    :link {:url "http://learnyouahaskell.com/"
+                           :text "Besøk websidene"}
+                    :tech [:funksjonell-programmering]}
                    {:title "Born to Run: A Hidden Tribe,
                            Superathletes, and the Greatest Race the
                            World Has Never Seen"
@@ -111,9 +111,9 @@
                             kommer med en alternativ teori på
                             hvorfor mennesker har blitt som vi er,
                             var vi egentlig \"født til å løpe?\""
-                    :link  {:url  "http://www.chrismcdougall.com/book.html"
-                            :text "Offisielle sider"}
-                    :tech  [:trening]}]
+                    :link {:url "http://www.chrismcdougall.com/book.html"
+                           :text "Offisielle sider"}
+                    :tech [:trening]}]
 
  :projects [{:customer "Hafslund Strøm"
              :years [2019 :ongoing]
@@ -338,55 +338,55 @@
              HTML, RTF og PDF."
              :tech [:java :oracle]}]
 
- :presentations   [{:title "Erfaringer med Clojure og Scala (og Java 8)"
-                    :blurb "På Javazone 2015, snakket Alf Kristian erfaringer med de funksjonelle språkene på JVM'en. I tillegg sammenlignet han dem med \"FP\" i Java 8."
-                    :urls  {:video "https://vimeo.com/album/3556815/video/138955227"}
-                    :date "2015-08-09"
-                    :event "JavaZone"
-                    :tech  [:clojure :scala :java8 :java :funksjonell-programmering]}
+ :presentations [{:title "Erfaringer med Clojure og Scala (og Java 8)"
+                  :blurb "På Javazone 2015, snakket Alf Kristian erfaringer med de funksjonelle språkene på JVM'en. I tillegg sammenlignet han dem med \"FP\" i Java 8."
+                  :urls {:video "https://vimeo.com/album/3556815/video/138955227"}
+                  :date "2015-08-09"
+                  :event "JavaZone"
+                  :tech [:clojure :scala :java8 :java :funksjonell-programmering]}
 
-                   {:title "Really understanding Clojure, getting into macros"
-                    :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
-                    :urls  {:video "http://vimeo.com/album/3031533/video/105758305"}
-                    :date "2014-08-10"
-                    :event "JavaZone"
-                    :tech  [:clojure :funksjonell-programmering]}
+                 {:title "Really understanding Clojure, getting into macros"
+                  :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
+                  :urls {:video "http://vimeo.com/album/3031533/video/105758305"}
+                  :date "2014-08-10"
+                  :event "JavaZone"
+                  :tech [:clojure :funksjonell-programmering]}
 
-                   {:title "Intro to Clojure"
-                    :blurb "Workshop på flatMap(Oslo)"
-                    :event "flatMap(Oslo)"
-                    :urls {:video "https://gitlab.com/stoyle/clojure-workshop-flatmap/tree/master"}
-                    :date "2014-05-01"
-                    :tech [:clojure]}
-                    
-                   {:title "Programmeringsspråket betyr alt!"
-                    :blurb "Hovedverktøyet til programmerere er
+                 {:title "Intro to Clojure"
+                  :blurb "Workshop på flatMap(Oslo)"
+                  :event "flatMap(Oslo)"
+                  :urls {:video "https://gitlab.com/stoyle/clojure-workshop-flatmap/tree/master"}
+                  :date "2014-05-01"
+                  :tech [:clojure]}
+
+                 {:title "Programmeringsspråket betyr alt!"
+                  :blurb "Hovedverktøyet til programmerere er
                   programmeringsspråket. Likevel velge vi sjeldent det
                   beste riktige verktøyet for å løse oppgavene.
                   Denne presentasjonen fokuserer på hvor viktig det er å velge
                   riktig programmeringsspråk."
-                    :date "2013-02-14"
-                    :event "Software 2013"
-                    :urls  {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
-                    :tech  [:funksjonell-programmering :clojure :scala
-                            :python :groovy :java]}
-                   {:title "Lisp er vakkert!"
-                    :blurb "Mange misliker Lisp på grunn av annerledes
+                  :date "2013-02-14"
+                  :event "Software 2013"
+                  :urls {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
+                  :tech [:funksjonell-programmering :clojure :scala
+                         :python :groovy :java]}
+                 {:title "Lisp er vakkert!"
+                  :blurb "Mange misliker Lisp på grunn av annerledes
                     syntaks. Men når man forstår hvorfor syntaksen er som
                     den er, så blir språket vakkert!"
-                    :date "2012-09-10"
-                    :event "JavaZone"
-                    :urls  {:video "http://vimeo.com/49324971"}
-                    :tech  [:lisp :clojure]}
-                   {:title "Clojure - JVM språket som er \"multi-core ready\""
-                    :blurb "En introduksjonspresentasjon om Clojure,
+                  :date "2012-09-10"
+                  :event "JavaZone"
+                  :urls {:video "http://vimeo.com/49324971"}
+                  :tech [:lisp :clojure]}
+                 {:title "Clojure - JVM språket som er \"multi-core ready\""
+                  :blurb "En introduksjonspresentasjon om Clojure,
                     som går igjennom språkets oppbygning og filosofi.
                     Forklarer også hvorfor Clojure er et bedre rustet språk
                     for fremtiden enn andre."
-                    :date "2011-09-07"
-                    :event "JavaZone"
-                    :urls  {:video "https://vimeo.com/28765670"}
-                    :tech  [:clojure :funksjonell-programmering]}]
+                  :date "2011-09-07"
+                  :event "JavaZone"
+                  :urls {:video "https://vimeo.com/28765670"}
+                  :tech [:clojure :funksjonell-programmering]}]
 
  :appearances [{:title "Lisp is beautiful!"
                 :event "Jfocus"
@@ -437,9 +437,9 @@
                 :date "2010-07-01"
                 :tech [:scala]}]
 
- :endorsements    [{:author "Robin Skoglund"
-                    :title "Tech lead, web, Posten/Bring"
-                    :quote "Alf Kristian is a role model developer. He is technical to his finger
+ :endorsements [{:author "Robin Skoglund"
+                 :title "Tech lead, web, Posten/Bring"
+                 :quote "Alf Kristian is a role model developer. He is technical to his finger
                     tips, with a deep understanding of how code runs on a computer. He is up-to-date
                     on which tools work well, and shines with experience and lessons learned. He is
                     unafraid in his approach to new technology, eager to learn and always get
@@ -452,9 +452,9 @@
                     really helping us gain ground, both technology-wise and business-wise. His
                     positive attitude has helped getting things done, without sacrificing quality.
                     I sure hope I get the chance to work with him again."}
-                   {:author "Rune Strandli"
-                    :title "Chief Digital Officer, BN Bolig"
-                    :quote "I had the pleasure to work with Alf Kristian as a client
+                {:author "Rune Strandli"
+                 :title "Chief Digital Officer, BN Bolig"
+                 :quote "I had the pleasure to work with Alf Kristian as a client
                     in BN Bolig.  His role in our project was as a senior full-stack
                     developer and architect, where he was a key resource in selecting
                     a future proof technology stack, developing a scalable and agile
@@ -472,9 +472,9 @@
                     Alf Kristian is committed and takes ownership in his assignments.
                     I have personally learned a lot from working with him and would not
                     hesitate to work with him again if I get the opportunity. "}
-                   {:author "Owen Fraser-Green"
-                    :title "Leder MyEnergy at Hafslund"
-                    :quote "Alf Kristian is the personification of one of my
+                {:author "Owen Fraser-Green"
+                 :title "Leder MyEnergy at Hafslund"
+                 :quote "Alf Kristian is the personification of one of my
                     favourite books - Smart and Gets Things Done. Having tried
                     (but alas failed) to employ him a few years ago, I was lucky
                     enough to hire him as a consultant on our Smart Home project
@@ -483,9 +483,9 @@
                     work. Our office hipster coffee club mourns his loss, as does
                     the rest of our team. I would wholeheartedly recommend Alf Kristian
                     for any project."}
-                   {:author "Rolv Seehuus"
-                    :title "Tech Lead"
-                    :quote "I learned to know Alf Kristian while he was a consultant
+                {:author "Rolv Seehuus"
+                 :title "Tech Lead"
+                 :quote "I learned to know Alf Kristian while he was a consultant
                     with us in the Analytics team in Telenor Digital. He impressed me
                     with his attitude towards commitment, and his ability to get
                     stuff done. We learned a lot together about Clojure and AWS while
@@ -496,9 +496,9 @@
                     He is a great team-mate, and I would strongly recommend
                     his services as a software developer - or Kodemaker if you like.
                     If I got another chance at having him on my team, I'd grab it."}
-                   {:author "Øyvind Møller Asbjørnsen"
-                    :title  "Head of Java Community of Practice at Capgemini"
-                    :quote  "Alf Kristian is by far one of the most talented
+                {:author "Øyvind Møller Asbjørnsen"
+                 :title "Head of Java Community of Practice at Capgemini"
+                 :quote "Alf Kristian is by far one of the most talented
                     developers I've ever worked with, and it was a true
                     pleasure to have him on my team. We worked together for
                     a year on a distributed custom build project consisting
@@ -518,9 +518,9 @@
                     developer/architect for your project, small or large,
                     then you can't go wrong with Alf Kristian. Highly
                     recommended! "}
-                   {:author "Tobias K. Torrissen"
-                    :title  "CTO Knowit Objectnet"
-                    :quote  "Alf Kristian is a passionate and talented
+                {:author "Tobias K. Torrissen"
+                 :title "CTO Knowit Objectnet"
+                 :quote "Alf Kristian is a passionate and talented
                     developer. I had the pleasure of working with Alf
                     Kristian for six years in Knowit. In addition to being a
                     great developer and consultant, he was involved in
@@ -534,9 +534,9 @@
                     Alf Kristian is a very conscientious person and I wish him
                     the best of luck with his new job and give him my warmest
                     recommendations. "}
-                   {:author "Tor Magne Hougen"
-                    :title  "Byggesjef TVINN Toll- og avgiftsdirektoratet"
-                    :quote  "Tiden hos oss i Toll og avgifts direktoratet,
+                {:author "Tor Magne Hougen"
+                 :title "Byggesjef TVINN Toll- og avgiftsdirektoratet"
+                 :quote "Tiden hos oss i Toll og avgifts direktoratet,
                     sammen med Alf Kristian var behagelig. Alfs bidrag med
                     kompetanse, kunnskap, kreativitet, samt oppførselen og
                     væremåte ga oss og teamet store felles løft. Ønsket mitt
@@ -562,7 +562,7 @@
               :written "Morsmål"}
              {:language "Engelsk"
               :orally "Meget god"
-              :written "Flytende"}] 
+              :written "Flytende"}]
 
  :workshops [{:title "Opp og stå med Clojure"
               :blurb "Clojure er en Lisp-dialekt som kjører på JVM-en (i tillegg
