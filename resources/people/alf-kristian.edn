@@ -115,8 +115,19 @@
                             :text "Offisielle sider"}
                     :tech  [:trening]}]
 
- :projects [{:customer "Bring"
-             :years [2017 :ongoing]
+ :projects [{:customer "Hafslund Strøm"
+             :years [2019 :ongoing]
+             :employer :kodemaker
+             :summary "Modernisering av plattform, videreutvikling av app og lage nye innloggede sider for privatkunder"
+             :description "Hafslund Strøm ønsket å bygge videre på plattformen som ble utviklet i Link
+             prosjektet. Ut av dette lager vi personlig månedsrapport på epost, nye innloggede
+             sider for strømkunder, samtidig med vedlikehold og utvikling av de eldre delene av plattformen.
+             Min rolle er programmerer og devops'er sammen med to andre, der vi blir bistått
+             av designere og forretningsutviklere. Med andre ord, et lite fokusert team, der alle må bidra til alt."
+             :tech [:clojure :clojurescript :scala :kubernetes :postgresql :redis :react
+                    :sbt :javascript :kafka :micro-services :git :aws :devops]}
+            {:customer "Bring"
+             :years [2017 2018]
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid."
              :description "Systemet som vi utviklet, var for budleveranser, alt
@@ -124,8 +135,8 @@
              sanntid, og integrasjoner med mange av Bring sine systemer. Jeg har
              mange roller i prosjektet, scrum master, programmere frontend,
              backend, sette opp og drifte servere"
-             :tech [:heroku :azure :javascript :es6 :react :redux :nodejs :kotlin :clojure :gradle
-                    :postgresql :event-sourcing :cqrs :flyway]}
+             :tech [:heroku :azure :kubernetes :javascript :es6 :react :redux :nodejs :kotlin
+                    :clojure :gradle :postgresql :event-sourcing :cqrs :flyway]}
             {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
@@ -161,7 +172,7 @@
              :description "Link er et prosjekt fra Hafslund med fokus på
              monitorering og automatisering i hjemmet. Jeg har jobbet med mange
              områder innen prosjektet. Blant annet salg, produkter, ordre,
-             logistikk,rapportering, generell kundeoppfølging, og tjenester som
+             logistikk, rapportering, generell kundeoppfølging, og tjenester som
              varmestyring og bevegelse. Vi er et relativt lite team, der vi har
              fullt ansvar for alt som gjøres. I tillegg til programmering, er
              jeg med på generell planlegging, og har driftsansvar. Vi drifter
