@@ -71,10 +71,10 @@
             {:customer "Aker Solutions"
              :start "2017-06"
              :end "2019-10"
-             :summary "Web-applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer"
+             :summary "Applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer"
              :employer :computas
-             :description "Som en del av Aker Solutions sitt omfattende initiativ for å effektivisere utvikling av olje- og gassfelt, utviklet vi en web-applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer. Resultatet er en applikasjon som reduserer tiden det tar å få opp et grovt vektestimat fra dager/uker til minutter.\nJeg var ansvarlig for utviklingen av web-klienten og hadde i perioder ansvaret for UX. I andre perioder fungerte jeg som sparringspartner for UX-ansvarlig. Var sentral i design og implementasjon av backend, med et spesielt fokus på god systemarkitektur. Tok ofte initiativ til, og ledet, diskusjoner om arkitektur og modellering. Hadde i tillegg rollen som funksjonell arkitekt, med overordnet ansvar for funksjonaliteten som ble levert. Var Scrum Master i en periode. Innførte Kanban for å øke effektiviteten til teamet. Var pådriver for å bygge opp et team hvor alle bidro på både frontend og backend. Tok initiativ til å samle frontend-utviklere på tvers av teamene hos Aker Solutions til uformelle møter hvor man kunne diskutere store og små ting relatert til frontend-utvikling. Tok i tillegg ansvar for å få på plass gode rutiner for vedlikehold og videreutvikling av et felles design-bibliotek som ble brukt av alle teamene. Applikasjonen kjører på Google Cloud og Google Cloud Datastore brukes for persistering."
-             :tech [:angular :typescript :java :google-cloud :ddd :angular-material  :html :sass :webpack :yarn :nodejs :spring
+             :description "Som en del av Aker Solutions sitt omfattende initiativ for å effektivisere utvikling av olje- og gassfelt, utviklet vi en applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer. Vi reduserte tiden det tar å få opp et grovt vektestimat fra dager/uker til minutter. Jeg var ansvarlig for utviklingen av web-klienten og hadde i perioder ansvaret for UX. I andre perioder fungerte jeg som sparringspartner for UX-ansvarlig. Var sentral i design og implementasjon av backend, med et spesielt fokus på god systemarkitektur. Tok ofte initiativ til, og ledet, diskusjoner om arkitektur og modellering. Hadde i tillegg rollen som funksjonell arkitekt, med overordnet ansvar for funksjonaliteten som ble levert. Var Scrum Master i en periode. Innførte Kanban for å øke effektiviteten til teamet. Var pådriver for å bygge opp et team hvor alle bidro på både frontend og backend. Tok initiativ til å samle frontend-utviklere på tvers av teamene hos Aker Solutions til uformelle møter hvor man kunne diskutere store og små ting relatert til frontend-utvikling. Tok i tillegg ansvar for å få på plass gode rutiner for vedlikehold og videreutvikling av et felles design-bibliotek som ble brukt av alle teamene."
+             :tech [:angular :typescript :java :google-cloud :ddd :es6 :angular-material  :html :sass :webpack :yarn :nodejs :spring
                     :gradle :google-cloud-datastore :jenkins :rest :xml :xslt :json :git :architecture :kanban :scrum :devops :tdd]}
 
             {:customer "Mattilsynet"
@@ -112,7 +112,10 @@
 
  :endorsements [{:author "Tommy Sommerseth"
                  :title "Produkteier for vektestimering hos Aker Solutions"
-                 :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}]
+                 :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}
+                {:author "Heidi Mork"
+                 :title "Fagansvarlig for programmering i NRK"
+                 :quote "Jeg har jobbet med Sindre på prosjektet for Smilefjesordningen i Mattilsynet. Der var vi sammen ansvarlige for valg av teknologi og arkitektur for klientapplikasjonen. Jeg kjenner Sindre som den som alltid har brukerens behov i fokus, og tilstreber å finne løsninger som er best mulig for brukeren. For å oppnå dette benytter han blant annet domenedrevet design. Han har en veldig god teknisk forståelse og setter seg lett inn i ny teknologi, i tillegg er han svært grundig og arbeidsom, og har et godt øye for detaljene. Sindre leverer alltid godt arbeid, og leter alltid etter den beste måten å løse oppgaver på."}]
 
  :cv {:default {:preferred-techs [:google-cloud-datastore :git :kanban :ddd :java :typescript]}}
 
@@ -131,7 +134,7 @@
               :orally "Grunnleggende"
               :written "Grunnleggende"}]
 
- :project-highlights [{:blurb "Cloud, devops, lean, arkitektur, fullstack, UX."
+ :project-highlights [{:blurb "Applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer."
                        :customer "Aker Solutions"}
                       {:blurb "Suksesshistorie med smilefjes hos serveringssteder og effektivisering av tilsyn."
                        :customer "Mattilsynet"}
