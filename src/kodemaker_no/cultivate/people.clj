@@ -106,3 +106,23 @@
 
 (defn cultivate-people [content]
   (h/update-vals (:people content) (partial cultivate-person content)))
+
+(defn- sort-by-published [posts]
+  (concat (->> posts
+               (filter :published)
+               (sort-by :published))
+          (remove :published posts)))
+
+(defn- prep-internal-blog-post [content blog-post]
+  (assoc blog-post :url (:path blog-post)))
+
+(defn add-blog-posts [content people blog-posts]
+  (let [posts (vals blog-posts)]
+    (->> people
+         (map (fn [[k person]]
+                [k (-> person
+                       (update :blog-posts concat (->> posts
+                                                       (filter #(= (keyword (:author %)) (:id person)))
+                                                       (map #(prep-internal-blog-post content %))))
+                       (update :blog-posts sort-by-published))]))
+         (into {}))))
