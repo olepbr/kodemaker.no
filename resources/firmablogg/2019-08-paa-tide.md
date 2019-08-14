@@ -116,8 +116,8 @@ Hva med planlegging av regelmessige hendelser med en gitt lengde. Flyruter for e
 public class Flight {
   public final String origin;
   public final String destination;
-  ZonedDateTime departure;
-  ZonedDateTIme arrival;
+  public final ZonedDateTime departure;
+  public final ZonedDateTIme arrival;
   [...]
 }
 ```
@@ -133,8 +133,8 @@ Skal man uttrykke gjentakende fremtidige hendelser med varighet bør man derfor 
 public class Flight {
   public final String origin;
   public final String destination;
-  ZonedDateTime departure;
-  Duration duration;
+  public final ZonedDateTime departure;
+  public final Duration duration;
   
   public ZonedDateTime findEndTime() {
     return departure.plus(duration);
