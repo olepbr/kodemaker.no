@@ -1,5 +1,6 @@
 :title Tid - hvor vanskelig kan det være?
 :author christin
+:published 2019-08-14
 :tech [:java]
 
 :blurb
