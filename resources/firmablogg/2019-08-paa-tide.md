@@ -92,7 +92,7 @@ public class ConferenceEvent {
   public final Instant startTime;
   public final Instant endTime;
   
-  public Event(String description, Instant start, Instant end) {
+  public ConferenceEvent(String description, Instant start, Instant end) {
     this.description = description;
     this.startTime = start;
     this.endTime = end;
