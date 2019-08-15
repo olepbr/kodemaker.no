@@ -39,7 +39,7 @@
              :years [2018]
              :employer :kodemaker
              :summary "Front- og backendutvikling"
-             :tech [:java :javascript :git :aurelia :tomcat :saml :docker :nodejs :ms-sql]}
+             :tech [:java :javascript :git :react :tomcat :saml :docker :nodejs :kafka :ms-sql]}
             {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
