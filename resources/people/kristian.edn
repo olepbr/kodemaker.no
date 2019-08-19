@@ -102,7 +102,7 @@
              og backend utvikler. Pakketere applikasjoner i docker image, legge på fiaas konfigurasjoner, legge til deploy konfigurasjoner, 
 	     legge på rest-ruter for helsesjekker, flytte database migrasjoner inn i applikasjonene og avslutningsvis sanere gamle Puppet 
              konfigurasjoner samt ta ned applikasjoner fra gammel api-rigg." 
-             :tech [:docker :kubernetes :fiaas :haproxy :rest :thrift :java :puppet]}
+             :tech [:docker :kubernetes :fiaas :redis :haproxy :rest :thrift :java :puppet]}
 	    {:customer "Tomra"
              :years [2016 2017 2018]
              :employer :kodemaker
