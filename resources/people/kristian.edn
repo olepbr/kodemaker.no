@@ -414,7 +414,7 @@
  :cv {:default {:preferred-techs [:clojure :clojurescript :java :groovy :javascript
                                   :git :svn :cvs
                                   :osx :ubuntu :redhat
-                                  :datomic :kafka :elasticsearch :dynamodb :cassandra :postgresql :mysql :oracle
+                                  :datomic :redis :kafka :elasticsearch :dynamodb :cassandra :postgresql :mysql :oracle
                                   :kubernetes :terraform :puppet :teamcity
                                   :jira :confluence :bamboo
                                   :aws-kinesis :aws-s3 :aws-lambda
