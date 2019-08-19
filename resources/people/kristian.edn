@@ -456,6 +456,8 @@
 
 :endorsement-highlight {:author "Rune Maurtvedt"
                          :title "Teknisk Leder, Finn AS."
-                         :quote "Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."
-                       }
+                         :quote "Kristian er en meget solid utvikler. Han er glad i utfordringer og er flink til å beskrive tekniske løsninger.
+                        I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
+                        Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
+                        Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}
 }
