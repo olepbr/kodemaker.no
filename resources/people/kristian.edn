@@ -56,7 +56,7 @@
             :illustration "/illustrations/hobbies/muscle-anatomy.jpg"}]
  :endorsements [{:author "Morten Hanshaugen"
                  :title "Director of Infrastructure and Operations, Finn.no"
-                 :quote "Kristian har jobbet godt og selvstendig med flere av utviklerteam i FINN 
+                 :quote "Kristian har jobbet godt og selvstendig med flere av utviklerteamene i FINN 
                          i 2018/2019. Han har implementert enkle containere, Kubernetes, Java og Redis 
                          abstraksjoner slik at kompliserte sesjonsavhengige kildekoder nå kjører godt 
                          på FINNs moderne stateless Kubernetes-infrastruktur. Kristian anser alltid 
@@ -64,7 +64,7 @@
                          Han har vært en god lagspiller som teamene har satt pris på å få hjelp av. 
                          Vi anbefaler Kristian på det varmeste."}
 		{:author "Stine Marconini Bjerke"
-                 :title "Technical Domain Architet, Tomra"
+                 :title "Technical Domain Architect, Tomra"
                  :quote "From June 2016 through March 2018, Kristian Frøhlich was 
                          part of our core development team, as a Backend/SysOps developer. 
                          He had a key role in establishing the next generation of 
