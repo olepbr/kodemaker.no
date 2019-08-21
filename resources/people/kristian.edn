@@ -454,10 +454,13 @@
                      {:blurb "Prototyping av ny arkitektur med fokus på skaleringsegenskaper"
                       :customer "Thomson & Reuters"}]
 
-:endorsement-highlight {:author "Rune Maurtvedt"
-                         :title "Teknisk Leder, Finn AS."
-                         :quote "Kristian er en meget solid utvikler. Han er glad i utfordringer og er flink til å beskrive tekniske løsninger.
-                        I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
-                        Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
-                        Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}
+:endorsement-highlight {:author "Morten Hanshaugen"
+                         :title "Director of Infrastructure and Operations, Finn.no."
+                         :quote "Kristian har jobbet godt og selvstendig med flere av utviklerteamene i FINN
+                         i 2018/2019. Han har implementert enkle containere, Kubernetes, Java og Redis
+                         abstraksjoner slik at kompliserte sesjonsavhengige kildekoder nå kjører godt
+                         på FINNs moderne stateless Kubernetes-infrastruktur. Kristian anser alltid
+                         kunnskapsoverføring som en del av løsningen og er flink til å gi tilbakemeldinger.
+                         Han har vært en god lagspiller som teamene har satt pris på å få hjelp av.
+                         Vi anbefaler Kristian på det varmeste."}
 }
