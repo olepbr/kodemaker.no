@@ -97,7 +97,7 @@
              mer spesifikt Finn sin tilnærming til Kubernetes, FIAAS(Finn Infrastructure As A Service). 
 	     Finn er i ferd med å flytte hele teknologi stacken sin over på en fremtidsrettet arkitektur
              fordi de ønsker automatisk horisontal skalering og i tillegg sanere spesialtilpassede konfigurasjoner
-             som krever dyp forståelse av arkitekturen. I hovesak handler det om å senke terskelen for utviklere
+             som krever dyp forståelse av arkitekturen. I hovedsak handler det om å senke terskelen for utviklere
              slik at teamene opererer som autonome enheter som selv har ansvar fra koding til deployment. Oppgaver: Devops
              og backend utvikler. Pakketere applikasjoner i docker image, legge på fiaas konfigurasjoner, legge til deploy konfigurasjoner, 
 	     legge på rest-ruter for helsesjekker, flytte database migrasjoner inn i applikasjonene og avslutningsvis sanere gamle Puppet 
@@ -110,7 +110,7 @@
              :description "Utvikling av ny platform på AWS stack for å håndtere
              data fra pantemaskiner. Tomra ønsket å bygge opp en helt ny
              platform på moderne teknologi for å håndere nye krav til skalering
-             og ytelse. I hovesak dreier det seg om å tilrettelegge for
+             og ytelse. I hovedsak dreier det seg om å tilrettelegge for
              horisontal skalering ved å flytte tjenester til skyen og bygge opp
              en portefølje av micro-tjenester. Oppgaver: Backend utvikler.
              Utvikling av REST-baserte api'er og prosessor-komponenter for å
