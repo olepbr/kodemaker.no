@@ -1,0 +1,230 @@
+:title Tid - hvor vanskelig kan det være? Del II   
+:author christin
+:tech [:java]
+
+:blurb
+I [del én](http://kodemaker.no/blogg/paaTide) lærte vi hvilke datatyper vi trenger i kode for å håndtere tid, men hvordan er det vi lagrer dem i en database? 
+
+:body
+I [del én](http://kodemaker.no/blogg/paaTide) la jeg ut om hvor elendig, hvor tragisk, hvor latterlig, hvor ufattelig dårlig dagens kalender og tidssystem egentlig er.  Men det er lett å klage kan du si. Er det egentlig så lett å komme på gode alternativer?     
+
+Selvsagt er det dét! Kjempelett! Med et så elendig utgangspunkt ville det jo være nær fysisk umulig å komme på noe verre.   
+
+Det har også vært seriøse forsøk på å endre kalenderen.  Det mest kjente er kanskje den [franske revolusjonære kalenderen](https://no.wikipedia.org/wiki/Den_franske_revolusjonskalender). Den franske revolusjonen skulle være starten på en mer moderne tidsalder, og da måtte de naturligvis fikse kalendersystemet.  De valgte å dele året inn i 12 måneder, hver på 30 dager. (Samme lengde på hver måned tenk!) Hver måned var delt i tre uker med 10 dager i hver. 
+Dette blir til sammen 360 dager, så da er det 5 dager igjen - 5 fest-dager! (6 dager hvert skuddår.)  Et døgn bestod av 10 timer, hver på 100 minutter. 
+Utrolig mye bedre enn det søppelet vi har av en kalender! Franskmennene brukte den i 12 år fra 1793 til 1805. Men så kom Napoleon og kastet hele greia. Skandale! 
+
+
+Men det har vært flere forsøk og forslag siden. [Swatch time](https://en.wikipedia.org/wiki/Swatch_Internet_Time) er et interessant forslag. 
+
+Og her er et veldig bra forslag presentert av Ove Gram Nipen:  
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="no" dir="ltr">13 mnd á 28 dager + nyttårsaften + evt skuddårsdag gir god forutsigbarhet og kompatibilitet med dagens system, og vil være en klar forbedring.</p>&mdash; Ove Gram Nipen (@ovegram) <a href="https://twitter.com/ovegram/status/1161606816301834240?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="no" dir="ltr">Legger du til at alle måneder starter på mandag, så blir utregning av ukedag på en gitt dato bare heltallsdivisjon. Nyttårsaften må da ikke være en ukedag. Dagen før nyttårsaften er søndag, dagen etter nyttårsaften er mandag. Skuddårsdag må også behandles slik.</p>&mdash; Ove Gram Nipen (@ovegram) <a href="https://twitter.com/ovegram/status/1161607135626747909?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="no" dir="ltr">For å forbedre systemet enda mer kan første måned være mars. Da vil september være den syvende måneden, oktober den åttende, osv. En bonus er at året begynner med en vårmåned, og at vinteren holder seg innenfor ett år. Merk at det betyr at nyttårsaften er dagen etter 28. feb.</p>&mdash; Ove Gram Nipen (@ovegram) <a href="https://twitter.com/ovegram/status/1161607710858711042?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+##Så hva er det vi venter på? 
+>Jammen du kommer aldri til å klare å endre det! Det blir så mye jobb!   
+
+Sier folk.  Denne innvendingen har man kommet med siden tidenes morgen om alle gode forslag. Fra kvinners stemmerett, 8-timers-arbeidsdag med 2 dagers helg, avvikling av slavedrift...  De sa nok det samme da folk begynte å foreslå metriske enheter.    
+
+Er du ikke glad for at folk ikke hørte på disse negative holdningene? Er du ikke glad for at det fantes folk med nok driv til å gjøre verden til et bedre sted å være? Tenk tilbake til tiden da metriske enheter ble innført. Hva tenker du om de som kjempet imot? Tenker du "Wow, det var bra folk! Skulle ønske jeg var som dem!" Har ikke du lyst til å være en av de som bidrar til at det blir bedre?  Folk har uansett bedre ting å bruke tiden sin på enn å dempe entusiasmen til de som slår et slag for at ting blir bedre.  Som George Bernard Shaw så fint sa det:
+
+>Those who say it cannot be done  should not interrupt those doing it.
+ 
+Vi har klart å komme oss vekk ifra teite måleenheter før. Vi klarer det igjen. 
+
+##Start med å bruke UTC
+Men vi trenger ikke gjøre alt på en gang.  Vi kan for eksempel starte med å bare bruke UTC istedenfor masse lokale tidssoner.  Hvis jeg bor i Tokyo, så vil arbeidstiden min kanskje være fra 23:00 til 07:00.  I New York starter arbeidsdagen 12:00 og slutter 20:00.  Det har jo ikke noe å si hvilke tall som står på klokka når man står opp om morgenen. Akkurat som at det ikke har noe å si hva måneden heter for hvilken årstid man har.  Det at de bruker samme kalender som oss i New Zealand betyr ikke at de dermed er tvunget til å ha sommer samtidig som oss.  De bader i desember og står på ski i juli.  Og ingen tenker noe mer over det.  Akkurat slik kan vi også ha det med klokka.  Vi står opp når det blir lyst og legger oss når det blir mørkt helt uavhengig av hva det måtte stå på klokka.  
+
+##Lagring av tid
+Men dette skulle jo egentlig være en praktisk guide til programmering med tid, så la meg komme til saken.  Forrige gang gikk jeg gjennom hvilke datatyper vi bruker i kode når vi jobber med tid, men hva gjør vi når vi skal lagre dem? 
+Her er det mange muligheter, med like mange overraskelser.
+Vi kan jo begynne med PostgreSQL (gjerne uttalt "Post Grayskull").   
+Postgres har kolonnetypene `timestamp` og `timestamp with time zone`. 
+La oss leke litt med dem:    
+ 
+```
+CREATE TABLE test (withoutZone timestamp, withZone timestamp with time zone);
+INSERT INTO test(withoutZone, withZone) 
+VALUES(now(), now());
+SELECT * from test;
+```
+Da får vi for eksempel følgende:
+
+```
+withoutZone                | withZone
+2019-07-31 13:19:52.013443 | 2019-07-31 13:19:52.013443 +02
+```
+
+For det første ser vi at postgres har en formening om hva klokka er `now()`.  For det andre ser vi at tiden er lik i begge kolonner, men at vi har fått med oss et UTC-offset i den andre kolonnen.       
+
+Hva skjer så når vi legger til verdier selv? For eksempel `2019-07-31T12:18:45.002+10` Altså rundt lunsjtider midt på vinteren i Australia. Vi legger den likesågodt til i begge kolonner:
+
+```
+INSERT INTO test(withoutZone, withZone) 
+VALUES('2019-07-31T12:18:45.002+10', '2019-07-31T12:18:45.002+10');
+
+withoutZone             | withZone
+2019-07-31 12:18:45.002 | 2019-07-31 04:18:45.002 +02
+```
+Hva har skjedd her? Vi ser at den første kolonnen bevarer "local time" altså at det er rundt lunsjtider. Mens den andre kolonnen bevarer "instant". Men ikke i tidssonen man sendte inn. Dette eksemplet ble kjørt på min maskin, så da har postgres 'oversatt' tiden til sin egen tidssone.
+
+Men hva skjer når vi bruker jdbc for å legge til data?
+
+```java
+var time = Timestamp.from(
+          ZonedDateTime.parse(
+              "2018-07-31T12:18:45.002+10:00",
+              ISO_ZONED_DATE_TIME)
+              .toInstant());
+try (
+    var connection = dataSource.getConnection(); 
+    var insert = connection.prepareStatement(
+        "INSERT INTO event(withoutTZ, withTZ) " + 
+        "VALUES(?, ?)", 
+        RETURN_GENERATED_KEYS)) {
+  insert.setTimestamp(1, time);
+  insert.setTimestamp(2, time);
+  insert.executeUpdate();
+}
+```
+
+Det meste av Java-biblioteker som lar deg jobbe med databaser bruker jdbc i bånn. Og for å lagre tid, bruker man datatypen `Timestamp`. Timestamp arver fra `java.util.Date` (😱) og er i bunn og grunn en wrapper rundt en long.  
+Så hva er det som faktisk ender opp i basen her?
+
+```
+withoutZone              | withZone
+2019-07-30 22:18:45.002  | 2019-07-31 04:18:45.002 +02
+```
+Hæ?  
+Hva har skjedd her? 
+Nå endte vi opp med 22:18 kvelden før i den første kolonnen og samme verdi som sist i den andre kolonnen. Hva i alle dager?  
+
+Det var fordi et sted i koden før denne snutten ble kjørt så sto det følgende: 
+
+```java
+TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
+```
+
+Dette er viktig. Databasen lagrer tid som et tall. Java lagrer også tid som et tall. Men når Java sender tid til databasen, så blir dette tallet representert som en tekst-streng.  Og for å generere denne tekst-strengen trenger Java en tidssone. Med mindre du angir en i `setTimestamp()`-metoden (se under) så bruker den det som måtte være default. Pass på å vite hva denne defaulten er. Helst bør den være UTC.  Dersom du har en prosess med UTC som default som skriver til databasen. Og en annen prosess som leser fra databasen som har lokal tidssone som default, så vil du få helt feil tid i koden. 
+
+```java
+insert.setTimestamp(1, time, Calendar.getInstance(getTimeZone(time.getZone())));
+``` 
+
+Dersom du må lagre tid i forskjellige tidssoner i databasen er du helt nødt til å lagre selve tidssone-id'en i en separat kolonne. Så kan du opprette en ZonedDateTime ved å slå sammen verdien fra en timestamp kolonne og fra tidssone-kolonnen. 
+Både `java.time` og `NodaTime` har gode måter å oversette tid fra en tidssone til en annen.  
+I Java kan man lese ut en timestamp fra databasen som UTC-tidspunkt, også konvertere den til lokal sone ved å enten beholde den "lokale tiden": 
+
+```java
+ZonedDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.UTC).withZoneSameLocal(ZoneId.of("Europe/Oslo"))
+```
+Eller ved å beholde samme instant.
+
+```java
+ZonedDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.UTC).withZoneSameInstant(ZoneId.of("Europe/Oslo"))
+```  
+Når man gjør slike konverteringer er det også greit å tenke over hva man gjør hvis tidspunktet som blir oversatt inntreffer i overagangen mellom sommer- og vintertid.
+Altså dersom tidspunktet i UTC er "2019.10.27T02:30:00Z" og vi ønsker å oversette dette til norsk tid, med samme "local time", så må vi jo ta stilling til HVILKEN 02:30 er det det er snakk om.
+Dette kan gjøres med følgende metoder:
+
+```java
+ZonedDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.UTC)
+    .withZoneSameLocal(ZoneId.of("Europe/Oslo"))
+    .withEarlierOffsetAtOverlap();
+```
+Og 
+
+```java
+ZonedDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.UTC)
+    .withZoneSameLocal(ZoneId.of("Europe/Oslo"))
+    .withLaterOffsetAtOverlap();
+```
+Av en eller annen grunn har ikke Java-metoder for å håndtere tilsvarende situasjoner i overgang til sommertid. Konverterer man tid "02:30" i døgnet med overgang til sommertid, så vil det bli oversatt til "03:30". Dersom du trenger at den velger timen før, kan du for eksempel skrive følgende funksjon:
+
+```java
+public Instant toEarliestPossibleInstant(LocalDateTime localDateTime, ZoneId zone) {
+  var transition = zone.getRules().getTransition(localDateTime);
+  var gapDuration = Optional.ofNullable(transition)
+      .filter(tr -> tr.isGap())
+      .map(tr -> tr.getDuration())
+      .orElse(Duration.ofNanos(0));
+
+  return ZonedDateTime.of(localDateTime, zone)
+      .withEarlierOffsetAtOverlap()
+      .minus(gapDuration).toInstant();
+}
+```  
+I NodaTime er man nødt til å ta stilling til begge disse scenariene hver gang man oversetter til en tidssone, ved å bruke `Resolvers`:
+
+```
+local.InZone(
+   zone, 
+   Resolvers.CreateMappingResolver(
+       Resolvers.ReturnEarlier, 
+       Resolvers.ReturnEndOfIntervalBefore))
+```
+
+For å oppsummere, så er det ofte best å lagre tid i UTC i databasen, for så å oversette til lokal tidssone ved behov i koden.
+
+##SQLServer
+
+Hver database har sine egne kolonne-typer med sine egne særheter.  Det er viktig å bli kjent med dem og være klar over eventuelle begrensninger.  Den mest overraskende jeg har vært borti er SQLServer sin kolonnetype for tid `DateTime`.  Denne har en presisjon på 3ms. All tid du lagrer i en `DateTime`-kolonne blir rundet opp eller ned til nærmeste 3ms!    
+Verdien `2019-01-01T23:59:59.999` blir lagret som `2019-01-02 00:00:00.000`    
+altså DAGEN ETTERPÅ!   
+
+`2019-01-01T23:59:59.995`,     
+`2019-01-01T23:59:59.996`,     
+`2019-01-01T23:59:59.997`,      
+`2019-01-01T23:59:59.998`     
+ender alle opp som `2019-01-01T23:59:59.997`.    
+
+`2019-01-01T23:59:59.992`,    
+`2019-01-01T23:59:59.993`,    
+`2019-01-01T23:59:59.994`     
+blir til `2019-01-01T23:59:59.993`.    
+
+`2019-01-01T23:59:59.990` og `2019-01-01T23:59:59.991` blir til `2019-01-01T23:59:59.990`.    
+
+Dette er mildt sagt uventet oppførsel for de fleste! Microsoft har åpenbart også angret litt på denne implementasjonen og har siden innført flere kolonnetyper, for eksempel `DateTime2` som lagrer det tidspunktet du faktisk sender ned.  Bruk den! 
+
+##Test mot en reell database
+Alle databaser har som nevnt allerede sine særheter, så det er viktig å ha gode automatiske tester som kjører mot en database av den typen du skal bruke i prod.  Du trenger ikke la alle testene gå mot en reell database, men du bør absolutt ha en god del. Hvordan `null` verdier blir håndtert, hvordan tid blir håndtert, det er masse rom for overraskelser når man skal lagre verdier og hente dem ut igjen. Det er best å oppdage disse i test.   
+Jeg har gode erfaringer med å kjøre opp en prod-lik database for testene - for eksempel [OpenTable Embedded PostgreSQL](https://github.com/opentable/otj-pg-embedded). For SQLServer kan man f.eks kjøre opp en [docker-container](https://hub.docker.com/_/microsoft-mssql-server). Når basen er oppe, kjører man samme [Flyway](https://flywaydb.org) migreringsskript som i prod, så har du en lokal database å teste mot. Videre kan man lage en TestRunner som starter en transaksjon før testen og ruller den tilbake igjen etter testen, slik at dataene testen bruker ikke ender opp med å affektere andre tester, noe som gjør at testene kan kjøres i parallel. 
+Hvordan dette bør/kan gjøres vil jo avhenge av hvordan database-oppsettet til prosjektet er.  Jeg kan kanskje skrive mer om et eksempel på et slikt oppsett en annen gang.
+
+##Test med `now()`
+Ofte er det nåtidspunktet man ønsker å lagre, eller sette på et felt i koden.  
+
+```java
+public Event insertNewEvent(String description) {
+  queryRunner.insert("INSERT INTO event(?, ?", Timestamp.from(Instant.now()), description);
+  ...
+}
+``` 
+Hvordan skal vi teste at denne metoden ender opp med å sette riktig tid på det som lagres? 
+
+```java
+@Test
+public void should_store_correct_time() {
+   assertThat(insertNewEvent("test").getTime()).isEqualTo(????);
+}
+```
+Her kan man bruke triks som å mocke ut selve klokka.  Istedenfor å skrive `Instant.now()`, kan man skrive `Instant.now(clock)`. Hvor clock kan være `Clock.systemUTC()` i prod, men `Clock.fixed(instant, zone)` i testen for eksempel.   
+Jeg anbefaler å IKKE gjøre dette.  Det blir mer kompleksitet, mer kode, du kommer til å ende med å skrive dine egne klokke-implementasjoner, eller mocke ut klokka.. masse støy.    
+Det er mye bedre å heller la `now` være en input-parameter i koden.  
+
+```java
+public Event insertNewEvent(Instant now, String description) {
+  queryRunner.insert("INSERT INTO event(?, ?", Timestamp.from(now), description);
+  ...
+}
+```
+I prod kalles denne metoden med Instant.now() som parameter, mens i testen din sender du inn det tidspunktet du kommer til å kjøre assert på etterpå.   
+INGEN ekstra kompleksitet   
+INGEN ekstra kode.   
+MYE enklere å teste. 
+
+
+Det får være nok for denne gang, takk for meg, og lykke til!
