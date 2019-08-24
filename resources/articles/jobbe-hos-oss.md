@@ -2,7 +2,7 @@
 
 :lead
 
-*I Kodemaker er vi 23 konsulenter som gjør karriere av å være utviklere — ikke
+*I Kodemaker er vi 24 konsulenter som gjør karriere av å være utviklere — ikke
 powerpoint-arkitekter, fagansvarlige eller mellomledere.*
 
 <img src="/fullsize-photos/stemning1.jpg"/>
