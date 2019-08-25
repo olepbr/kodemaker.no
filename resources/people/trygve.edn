@@ -1,5 +1,5 @@
 {:id :trygve
- :name ["Trygve Matland" "Amundsen"]
+ :name ["Trygve" "M. Amundsen"]
  :title "Systemutvikler"
  :start-date "1997-02-01 00:00"
  :description "
@@ -71,7 +71,11 @@
                          :date "2012-02-01"
                          :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
 
- :appearances [{:title "Fjesgjenkjenning med dlib"
+ :appearances [{:title "Littlewood violations - eller: ting er ikke alltid som de ser ut"
+                :event "Kodemaker fagdag"
+                :tech [:prime-numbers]
+                :date "2019-06-11"}
+                {:title "Fjesgjenkjenning med dlib"
                 :event "Kodemaker fagdag"
                 :tech [:face-recognition :machinelearning]
                 :date "2017-10-11"
@@ -108,13 +112,19 @@
                 {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                 :customer "Thomson Reuters"}]
 
- :projects [{:customer "NRK Origo"
-             :years [2017 :ongoing]
+ :projects [{:customer "Vy Gruppen"
+             :years [2019  :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av trafikksystemer til bruk internt i Vy gruppen og mot samarbeidspartnere"
+             :description "Utvikling trafikksystemer til bruk internt i NSB og mot samarbeidspartnere, så som integrasjon mot Värmlandstrafik, overvåkning av applikasjoner, mmm."
+             :tech [:react :redux :es6 :typescript :css :micronaut :reactive-x :groovy :azure :azure-eventhubs]}
+             {:customer "NRK Origo"
+             :years [2017 2018 2019]
              :employer :kodemaker
              :summary "Utvikling av media-arkivet til NRK"
              :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp
               - både nettklipp, ting som har gått på TV og råstoff"
-             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :octopus :teamcity :kubernetes :python :machinelearning]}
+             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
             {:customer "BN-bolig / EGGS Design"
              :years [2017]
              :employer :kodemaker
@@ -134,8 +144,8 @@
             {:customer "NSB"
              :years [2016]
              :employer :kodemaker
-             :summary "Utvikling av flere trafikksystemer til bruk internt i NSB"
-             :description "Utvikling flere trafikksystemer til bruk internt i NSB, eks. sporbruk, buss for tog."
+             :summary "Utvikling av trafikksystemer til bruk internt i NSB"
+             :description "Utvikling trafikksystemer til bruk internt i NSB, eks. sporbruk, buss for tog."
              :tech [:react :redux :es6 :svg :immutable-js :webpack :groovy :grails]}
             {:customer "Thomson Reuters"
              :years [2015]
