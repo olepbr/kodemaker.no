@@ -266,6 +266,13 @@
 
  :projects [{:customer "Hafslund Strøm"
              :employer :kodemaker
+             :summary "Utvikling av ny Min Side"
+             :description "Utviklet ny Min Side basert på kodebasen til
+             mobil-appen til Hafslund Strøm."
+             :tech [:clojurescript :aws :aws-s3 :tools-deps :resposive-design :datadog :git]
+             :start "2019-04"}
+            {:customer "Hafslund Strøm"
+             :employer :kodemaker
              :summary "Utvikling av månedsrapport-tjeneste"
              :description "Utviklet en løsning som genererer en månedsrapport på
              epost som viser et utsnitt av grafer og informasjon fra Hafslunds
@@ -283,7 +290,8 @@
              automatiserer hele livssyklusen til en app, inkludert
              provisjonering av DNS records i Route53. Hel-automatisert med kops
              og Terraform."
-             :tech [:aws :kubernetes :aws-cloudfront :aws-s3 :aws-iam :aws-route53 :terraform]
+             :tech [:aws :kubernetes :aws-cloudfront :aws-s3 :aws-iam :aws-route53 :terraform
+                    :packer :aws-ec2 :aws-iam :aws-rds :aws-route53 :aws-vpc :datadog :git]
              :start "2018-04"}
 
             {:customer "Hafslund Strøm"
@@ -291,9 +299,7 @@
              :summary "App for iOS og Android: Cordova og ClojureScript"
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøtende backend-systemer og infrastruktur."
-             :tech [:clojurescript :cordova :svg :kubernetes :terraform :d3 :packer :aws :aws-ec2
-                    :aws-iam :aws-rds :aws-route53 :aws-vpc :docker-swarm :traefik :fluentd
-                    :datadog :git :tools-deps]
+             :tech [:clojurescript :cordova :svg :kubernetes :terraform :d3 :datadog :git :tools-deps]
              :start "2018-04"}
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
@@ -1049,6 +1055,13 @@
                          ClojureScript: Komponenter for snabbdom som er
                          API-kompatible med Quiescent."
                          :tech [:clojurescript]}
+                        {:url "https://github.com/cjohansen/gadget-inspector/"
+                         :name "gadget-inspector"
+                         :description "Utviklingsverktøy for ClojureScript og
+                         Clojure - visualiserer data i en Chrome-extension slik
+                         at man har full innsikt i kjøretids-tilstanden til
+                         applikasjonene under utvikling."
+                         :tech [:clojurescript :clojure :chrome]}
                         {:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
                          :description "Et spy-/stub- og mocke-bibliotek for JavaScript."
