@@ -127,7 +127,7 @@
              :tech [:clojure :clojurescript :scala :kubernetes :postgresql :redis :react
                     :sbt :javascript :kafka :micro-services :git :aws :devops]}
             {:customer "Bring"
-             :years [2017 2019]
+             :years [2017 2018 2019]
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid."
              :description "Systemet som vi utviklet, var for budleveranser, alt
