@@ -108,10 +108,11 @@
   (h/update-vals (:people content) (partial cultivate-person content)))
 
 (defn- sort-by-published [posts]
-  (concat (->> posts
-               (filter :published)
-               (sort-by :published))
-          (remove :published posts)))
+  (seq
+   (concat (->> posts
+                (filter :published)
+                (sort-by :published))
+           (remove :published posts))))
 
 (defn- prep-internal-blog-post [content blog-post]
   (assoc blog-post :url (:path blog-post)))
