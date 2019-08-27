@@ -19,11 +19,16 @@
 	    :description "Verden er stor og har mye å vise deg - pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
 	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
 	    }]
-:endorsement-highlight  {:author "Tatiana Mostovykh"
-                 :title "Developer at Lendo AS"
-                 :quote "Finn is a master of Git, guru of Java and lord of containers. He combines deep knowledge of well-known technologies with an interest and attention to the new ones. 
+:endorsement-highlight {:author "Johan Sörmling"
+                 :title "Director Software Engineering at AllClear ID"
+                 :quote "Finn has worked for us at AllClearID for several periods as a Software engineer 
+and all of us really enjoy working with Finn, first of all because he’s a very skilled developer that 
+fast get things and delivers very good. But another important aspect with Finn that we have identified 
+is that he is really helping us with our team building, he is that sort of person that when you bring 
+him onboard to a team he helps the other members a lot and makes them even more productive. 
 
-Difficulties in task solving only spur his interest. Being a good developer, Finn is also nice and supportive person with a good sense of humor, which makes working with him very pleasant. I hope I’ll get a chance to work with Finn again. "}
+
+So, in other words working with Finn and hiring him is a case where you get 1+1=3. On top of that he is a very social person that attends to all our social events and feels like he has been in the company for a long time."}
 
 
  :project-highlights [{:blurb "Full-stack utvikler på intern webløsning for formidling av avviksinformasjon hos NSB; til de reisende og internt."
@@ -203,7 +208,7 @@ him onboard to a team he helps the other members a lot and makes them even more 
 
 So, in other words working with Finn and hiring him is a case where you get 1+1=3. On top of that he is a very social person that attends to all our social events and feels like he has been in the company for a long time."},
                 {:author "Tatiana Mostovykh"
-                 :title "Developer at Lendo AS"
+                 :title "Developer at AllClear ID"
                  :quote "Finn is a master of Git, guru of Java and lord of containers. He combines deep knowledge of well-known technologies with an interest and attention to the new ones. 
 
 Difficulties in task solving only spur his interest. Being a good developer, Finn is also nice and supportive person with a good sense of humor, which makes working with him very pleasant. I hope I’ll get a chance to work with Finn again. "},
