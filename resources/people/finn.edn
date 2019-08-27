@@ -19,11 +19,11 @@
 	    :description "Verden er stor og har mye å vise deg - pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
 	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
 	    }]
-:endorsement-highlight { :author "Elvis Nuñez"
-:title "Apps Team Lead at FINN.no"
-:quote "Finn was a consultant in my team for almost 1.5 years, we had a great collaboration and we were able to push our architecture forward.
+:endorsement-highlight  {:author "Tatiana Mostovykh"
+                 :title "Developer at Lendo AS"
+                 :quote "Finn is a master of Git, guru of Java and lord of containers. He combines deep knowledge of well-known technologies with an interest and attention to the new ones. 
 
-Finn is a great guy and an even better developer, if anybody needs a high-level Java developer/architect that can not only get things done on the development side but also talk with people and organize architectural changes then he’s your guy."}
+Difficulties in task solving only spur his interest. Being a good developer, Finn is also nice and supportive person with a good sense of humor, which makes working with him very pleasant. I hope I’ll get a chance to work with Finn again. "}
 
 
  :project-highlights [{:blurb "Full-stack utvikler på intern webløsning for formidling av avviksinformasjon hos NSB; til de reisende og internt."
