@@ -178,11 +178,9 @@ Det er ikke bare bare å skalere kvantemaskiner. Så med litt flaks, lever vi ly
 (function (GLOBAL) {
     function augustPublicPrivateKeysGoGoGo(videoElId, stepsElId) {
         var videoEl = document.getElementById(videoElId);
-        videoEl.muted = true;
         videoEl.loop = true;
         videoEl.preload = "auto";
         videoEl.removeAttribute("controls");
-        videoEl.play();
         
         var stepsEl = document.getElementById(stepsElId);
         var stepElements = stepsEl.querySelectorAll("li");
