@@ -39,7 +39,8 @@
     #"/icons/.*\.png"
     #"/icons/.*\.svg"
     #"/images/.*\.png"
-    #"/images/blogg/.*\.png"]))
+    #"/images/blogg/.*\.png"
+    #"/videos/.*\.mp4"]))
 
 (defn get-pages []
   (let [content (load-content)

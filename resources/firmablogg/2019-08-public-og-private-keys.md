@@ -24,7 +24,7 @@ Hvordan kan man helt trygt dele en hemmelighet, uten å utveksle nøkler eller h
 Dette er kanskje ikke så intuitivt. Det var ihvertfall ikke det for meg. Men det er faktisk helt mulig!
 
 <video id="back_and_forth_video" controls width="640" height="360">
-  <source src="/videos/blogg/back-and-forth.mp4" type="video/mp4">
+  <source src="/assets/videos/blogg/74d584562a22/back-and-forth.mp4" type="video/mp4">
 </video>
 
 <ol id="back_and_forth_steps">
@@ -47,7 +47,7 @@ Den ulåste hengelåsen er din public key. Det er ikke noe hemmelig med en henge
 Derfor kan du gi fra deg en ulåst hengelås, og det er helt trygt og sikkert. Da blir prosessen vår mye smartere.
 
 <video id="real_deal_video" controls width="640" height="360">
-  <source src="/videos/blogg/real-deal.mp4" type="video/mp4">
+  <source src="/assets/videos/blogg/cd69b0e1a645/real-deal.mp4" type="video/mp4">
 </video>
 
 <ol id="real_deal_steps">
