@@ -237,4 +237,7 @@
  :xmlspy "XML Spy"
  :xslt "XSLT"
  :xtractor "XTractor"
+ :ssl "SSL"
+ :rsa "RSA"
+ :ecc "ECC"
 }

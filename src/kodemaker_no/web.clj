@@ -16,6 +16,7 @@
             [optimus.strategies :refer [serve-live-assets]]
             [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
+            [ring.middleware.resource :refer [wrap-resource]]
             [stasis.core :as stasis]))
 
 (defn get-assets []
@@ -90,6 +91,7 @@
 
 (def app (-> (stasis/serve-pages get-pages)
              dummy-mail-sender
+             (wrap-resource "videos")
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
              wrap-content-type-utf-8
