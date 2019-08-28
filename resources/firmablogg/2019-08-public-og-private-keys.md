@@ -1,6 +1,7 @@
 :title Public keys og private keys
 :author august
 :tech [:ssl :rsa :ecc]
+:published 2019-08-28
 
 :blurb
 
