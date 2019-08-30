@@ -176,11 +176,11 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :projects
                         [
 			{:customer "Posten AS"
-			:description "Utvikle backend for tjenesten Innafor"
+			:summary "Utvikle backend for tjenesten 'Innenfor' -  levering av pakker innenfor døren med digitale låser."
 			:years [2019]
 			:employer :kodemaker
-			:summary "Utvikle apier for integrasjon mellom mobile apper, låser og postens systemer."
-			:tech [:kotlin :postgresql :ktor]
+			:description "Integrasjon mellom mobile apper, låser og postens systemer for å kunne la sjåførene levere pakker innenfor dør hos kunder. Håndtere signering av koder, private og public keys for engangskoder og sikkerhetsaspekter rundt kryptering, lagring og uthenting av koder. Laget en mock-server i Go for mobil-appene for å kunne teste uten å involvere tunge legacy-systemer."
+			:tech [:kotlin :postgresql :ktor :oauth :go :swagger]
 			},
 			{:customer    "Finn"
                           :description "System for å øke synlighet til utvalgte annonser. Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
