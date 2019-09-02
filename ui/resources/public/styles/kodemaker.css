@@ -1,13 +1,84 @@
 @import url(vars.css);
+@import url(fonts.css);
 @import url(base.css);
 
 body {
 }
 
-/* .bg-red {background: --var(red);} */
-/* .bg-dark-taupe {background: --var(dark-taupe);} */
-/* .bg-red {background: --var(red);} */
-/* .bg-red {background: --var(red);} */
-/* .bg-red {background: --var(red);} */
-/* .bg-red {background: --var(red);} */
-/* .bg-red {background: --var(red);} */
+.h1 {
+  color: var(--milk-chocolate);
+  font-family: "Financier Display", serif;
+  font-size: 97px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+}
+
+.h2 {
+  color: var(--milk-chocolate);
+  font-family: "Financier Text", serif;
+  font-size: 62px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.h3 {
+  color: var(--milk-chocolate);
+  font-family: "Financier Display", serif;
+  font-size: 46px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.h4 {
+  color: var(--milk-chocolate);
+  font-family: "Financier Text", serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.h5 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.p {
+  margin: 28px 0;
+}
+
+.blockquote {
+  font-style: italic;
+}
+
+/* "iPad" */
+@media only screen and (max-width: 768px) {
+  .h1 {
+    font-size: 70px;
+    line-height: 0.9;
+  }
+
+  .h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+/* "Mobil" */
+@media only screen and (max-width: 407px) {
+  .h1 {
+    font-size: 45.5px;
+    line-height: 0.9;
+  }
+}
