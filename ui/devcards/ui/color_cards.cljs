@@ -1,7 +1,6 @@
 (ns ui.color-cards
   (:require [devcards.core :refer-macros [defcard]]
-            [sablono.core :refer [html]]
-            [ui.typo :as typo]))
+            [sablono.core :refer [html]]))
 
 (def color-names ["red" "salmon" "dark-taupe" "milk-chocolate" "mine-shaft" "rose-white" "white"])
 
