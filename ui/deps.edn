@@ -6,4 +6,4 @@
 
  :aliases
  {:repl {:extra-deps {com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}}
-         :main-opts ["-m" "figwheel.main" "--build" "min-side-dev" "--repl"]}}}
+         :main-opts ["-m" "figwheel.main" "--build" "dev" "--repl"]}}}
