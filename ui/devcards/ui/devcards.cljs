@@ -1,6 +1,6 @@
 (ns ^:figwheel-hooks ui.devcards
   (:require [ui.color-cards]
-            [ui.typo-cards]
+            [ui.typography-cards]
             [devcards.core :as devcards]))
 
 (enable-console-print!)
