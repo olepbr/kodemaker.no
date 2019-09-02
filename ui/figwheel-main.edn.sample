@@ -1,0 +1,4 @@
+{:watch-dirs ["src" "devcards"]
+ :open-file-command "emacsclient"
+ :ring-server-options {:port 9560}
+ :open-url false}

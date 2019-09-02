@@ -17,3 +17,7 @@ pom.xml.asc
 cv-pdf
 .terraform
 ci/.zip
+.cpcache
+.nrepl-port
+ui/resources/public/js/
+/ui/figwheel-main.edn
