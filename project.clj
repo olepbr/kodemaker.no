@@ -23,8 +23,7 @@
   :ring {:handler kodemaker-no.web/app
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
-  :profiles {:dev {:dependencies [[clj-tagsoup/clj-tagsoup "0.3.0" :exclusions [org.clojure/clojure]]
-                                  [hiccup-find  "1.0.0"]]
+  :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]]
                    :plugins [[lein-ring "0.12.5"]
                              [lein-ancient "0.6.15"]]
                    :source-paths ["dev" "config"]
