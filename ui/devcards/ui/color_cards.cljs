@@ -13,13 +13,13 @@
 (defn color [name]
   [:div {:style {:border "1px solid #ddd"
                  :background (str "var(--" name ")")
-                 :paddingBottom "100%"
-                 :borderRadius "2px"
+                 :padding-bottom "100%"
+                 :border-radius "2px"
                  :position "relative"}}
    [:div {:style {:position "absolute"
                   :top "50%"
                   :left "50%"
-                  :fontSize "18px"
+                  :font-size "18px"
                   :transform "translate(-50%, -50%)"
                   :color (get fg-colors name "var(--mine-shaft)")}}
     name]])
@@ -27,6 +27,6 @@
 (defcard colors
   (html
    [:div {:style {:display "grid"
-                  :gridTemplateColumns "1fr 1fr 1fr 1fr"
-                  :gridGap "10px"}}
+                  :grid-template-columns "1fr 1fr 1fr 1fr"
+                  :grid-gap "10px"}}
     (map color color-names)]))
