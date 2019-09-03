@@ -2,8 +2,8 @@
   (:require [clojure.string :as str]
             [ui.elements :as e]))
 
-(defn logo []
-  [:img {:src "/img/logo.svg"}])
+(defn logo [{:keys [width]}]
+  [:img {:src "/img/logo.svg" :width width}])
 
 (def pønt-infos
   {:greater-than {:ext ".svg" :size "650px 1300px"}
@@ -34,15 +34,16 @@
 
 (defn footer []
   [:div.footer {:style (add-pønt {} [{:kind :less-than
-                                      :position "right -340px top -480px"}])}
-   [:div [:div {:style {:width "179px"}} (logo)]]
-   [:div
-    [:div "Kodemaker Systemutvikling AS"]
-    [:div "Munkedamsveien 3b"]
-    [:div "0161 OSLO"]]
-   [:div
-    [:div "Orgnr. 982099595"]
-    [:div "+47 22 82 20 80"]
-    [:div "kontakt@kodemaker.no"]]
-   [:div
+                                      :position "right -250px top -480px"}])}
+   [:div.f-logo (logo {:width 179})]
+   [:div.f-infos
+    [:div.f-address
+     [:div "Kodemaker Systemutvikling AS"]
+     [:div "Munkedamsveien 3b"]
+     [:div "0161 OSLO"]]
+    [:div.f-contact
+     [:div "Orgnr. 982099595"]
+     [:div "+47 22 82 20 80"]
+     [:div "kontakt@kodemaker.no"]]]
+   [:div.f-links
     (e/arrow-link {:text "Personvern"})]])

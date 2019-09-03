@@ -4,7 +4,7 @@
             [sablono.core :refer [html]]))
 
 (defcard logo
-  (html (layout/logo)))
+  (html (layout/logo {})))
 
 (defcard footer
   (html (layout/footer)))

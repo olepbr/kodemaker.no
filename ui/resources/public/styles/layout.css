@@ -1,8 +1,23 @@
 .footer {
-  display: flex;
   padding: 56px 0;
 }
-.footer > div {
-  flex: 1;
+
+.f-logo, .f-address, .f-contact, .f-links {
   margin: 24px 35px;
+}
+
+.f-infos {flex: 0;}
+.f-links {flex: 1;}
+
+@media only screen and (min-width: 1200px) {
+  .f-address {white-space: nowrap;}
+}
+
+@media only screen and (min-width: 1080px) {
+  .footer {display: flex;}
+  .f-logo {padding-top: 6px; flex: 1; text-align: center;}
+}
+
+@media only screen and (min-width: 690px) {
+  .f-infos {display: flex;}
 }
