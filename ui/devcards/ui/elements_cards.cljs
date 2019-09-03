@@ -5,4 +5,4 @@
 
 (defcard arrow-link
   (html (e/arrow-link {:text "Se mer"
-                       :url "https://wwww.kodemaker.no"})))
+                       :href "https://wwww.kodemaker.no"})))

@@ -34,7 +34,7 @@
 
 (defn footer []
   [:div.footer {:style (add-pønt {} [{:kind :less-than
-                                      :position "right -250px top -480px"}])}
+                                      :position "right -300px top -480px"}])}
    [:div.f-logo (logo {:width 179})]
    [:div.f-infos
     [:div.f-address
@@ -43,7 +43,7 @@
      [:div "0161 OSLO"]]
     [:div.f-contact
      [:div "Orgnr. 982099595"]
-     [:div "+47 22 82 20 80"]
-     [:div "kontakt@kodemaker.no"]]]
+     [:div [:a {:href "tel:+4722822080"} "+47 22 82 20 80"]]
+     [:div [:a {:href "mailto:kontakt@kodemaker.no"} "kontakt@kodemaker.no"]]]]
    [:div.f-links
-    (e/arrow-link {:text "Personvern"})]])
+    (e/arrow-link {:text "Personvern" :href "/personvern/"})]])
