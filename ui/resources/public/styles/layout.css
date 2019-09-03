@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  padding: 56px 0;
+}
+.footer > div {
+  flex: 1;
+  margin: 24px 35px;
+}

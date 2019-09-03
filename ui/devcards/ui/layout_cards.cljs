@@ -6,6 +6,9 @@
 (defcard logo
   (html (layout/logo)))
 
+(defcard footer
+  (html (layout/footer)))
+
 (defcard pønt
   (html
    [:div
