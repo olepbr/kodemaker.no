@@ -1,9 +1,12 @@
 @import url(vars.css);
 @import url(fonts.css);
 @import url(base.css);
+@import url(elements.css);
 
 body {
 }
+
+.ib {display: inline-block;}
 
 .h1 {
   color: var(--milk-chocolate);
