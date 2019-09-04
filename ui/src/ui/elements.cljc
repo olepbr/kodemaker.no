@@ -5,3 +5,8 @@
 
 (defn arrow-link [{:keys [text href] :as params}]
   [:a.ib {:href href} text (arrow params)])
+
+(defn icon [{:keys [type width height]}]
+  [:svg {:view-box "0 0 24 24" :width width :height height}
+   [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
+          "style" {"--svg_color" "var(--red)"}}]])

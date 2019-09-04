@@ -6,3 +6,7 @@
 (defcard arrow-link
   (html (e/arrow-link {:text "Se mer"
                        :href "https://wwww.kodemaker.no"})))
+
+(defcard icon
+  (html
+   (e/icon {:type :computer/laptop-1 :width 100})))
