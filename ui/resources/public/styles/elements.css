@@ -15,3 +15,8 @@
   border-right: 1px solid var(--red);
   transform: rotate(-45deg);
 }
+.seymour {display: flex; flex-direction: column; height: 100%;}
+.seymour-top {flex: 1;}
+.seymour-bottom {flex: 0;}
+.seymour h4 {margin: 40px 0 24px;}
+.seymour p {margin-bottom: 32px;}
