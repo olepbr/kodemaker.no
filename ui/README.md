@@ -38,3 +38,18 @@ ved å opprette filen `.dir-locals.el` og fylle den med:
 Etter at du først har opprettet denne filen må du åpne en fil i samme mappe fra
 disk (ikke bare gå til bufferet dens) for at variablene skal bli satt. Deretter
 vil CIDER droppe å prompte deg for disse valgene ved jack-in.
+
+## Ikoner
+
+På kodemaker.no bruker vi ikoner fra [Ego](https://www.ego-icons.com).
+
+Dette repoet inneholder bare de ikonene vi har brukt så langt. Resten finner du
+[her](https://github.com/kodemaker/kodemaker-icons).
+
+Grunnen til at de ligger der er for å unngå å bloate opp kodemaker.no-repoet med
+150mb ubrukte ikoner.
+
+For å bruke et slikt ikon kan du kopiere det til `ui/resources/public/icons`.
+
+Ikke bruk ikoner rett fra Ego - ved å minifisere (som er gjort i vårt eget repo)
+så sparer vi opp til 90% av størrelsen.

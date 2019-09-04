@@ -21,3 +21,4 @@ ci/.zip
 .nrepl-port
 ui/resources/public/js/
 /ui/figwheel-main.edn
+/ui/icons
