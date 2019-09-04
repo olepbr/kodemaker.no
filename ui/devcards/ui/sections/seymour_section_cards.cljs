@@ -6,7 +6,8 @@
 (defcard
   (html
    (section/render
-    {:seymours
+    {:color :white
+     :seymours
      [{:icon {:type :science/chemical :height 79}
        :title "Referanser"
        :text "Det er fleske meg ikke dårlig hvor mange artige prosjekter vi har fått være med på."
