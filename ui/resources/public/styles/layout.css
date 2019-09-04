@@ -1,3 +1,13 @@
+.section {
+  padding: 0 8.33vw;
+}
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1174px) {
+  .whitespaceorama {padding: 159px 0 192px;}
+}
 .footer {
   padding: 56px 0;
 }
@@ -20,4 +30,12 @@
 
 @media only screen and (min-width: 690px) {
   .f-infos {display: flex;}
+}
+
+.trigrid {
+  padding: 64px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-rows: repeat(100%);
+  grid-gap: 64px 8.33%;
 }
