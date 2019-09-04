@@ -28,7 +28,8 @@
           min-dimension (min w h)
           cropped-offset (- (/ (max w h) 2) (/ min-dimension 2))]
       (recur image {:offset (if (> w h) [cropped-offset 0] [0 cropped-offset]) :size [min-dimension min-dimension]}))
-    (collage/crop image (-> options :offset first)
+    (collage/crop image
+                  (-> options :offset first)
                   (-> options :offset second)
                   (-> options :size first)
                   (-> options :size second))))
@@ -54,8 +55,8 @@
             (:triangle style) (collage/triangle (:triangle style))
             (:rotate style) (collage/rotate (:rotate style))
             (= :jpg ext) (util/save cache-path
-                                    :quality (:quality style)
-                                    :progressive (:progressive style))
+                                    :quality (get size :quality 1)
+                                    :progressive (get size :progressive false))
             (= :png ext) (util/save cache-path)))))
 
 (defn get-ext [file styles]
