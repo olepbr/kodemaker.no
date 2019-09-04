@@ -5,6 +5,7 @@
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
+            [kodemaker-no.images :as images]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
@@ -90,9 +91,25 @@
            :headers {"Location" "/takk/"}})
       (handler req))))
 
+(def image-asset-config
+  {:prefix "image-assets"
+   :styles {:identity {}
+            :crazy {:duotone {:from [120 54 89] :to [255 220 190]}
+                    :crop :square
+                    :circle true
+                    :rotate 90
+                    :triangle {:position :upper-right}}}
+   :sizes {:fullsize {:width 920}
+           :photos {:width 290}
+           :references {:width 680}
+           :illustrations {:width 210}
+           :thumbs {:width 100}}
+   :resource-path "public"})
+
 (def app (-> (stasis/serve-pages get-pages)
              dummy-mail-sender
              (wrap-resource "videos")
+             (images/wrap-images image-asset-config)
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
              wrap-content-type-utf-8
