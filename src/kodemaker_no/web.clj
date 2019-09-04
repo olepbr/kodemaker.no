@@ -43,13 +43,28 @@
     #"/images/blogg/.*\.png"
     #"/videos/.*\.mp4"]))
 
+(def image-asset-config
+  {:prefix "image-assets"
+   :styles {:identity {}
+            :crazy {:duotone {:from [120 54 89] :to [255 220 190]}
+                    :crop :square
+                    :circle true
+                    :rotate 90
+                    :triangle {:position :upper-right}}}
+   :sizes {:fullsize {:width 920}
+           :photos {:width 290}
+           :references {:width 680}
+           :illustrations {:width 210}
+           :thumbs {:width 100}}
+   :resource-path "public"})
+
 (defn get-pages []
   (let [content (load-content)
         pages (-> content
                   validate-content
                   cultivate-content
                   pages/create-pages
-                  prepare-pages)]
+                  (prepare-pages image-asset-config))]
     (stasis/merge-page-sources
      {:site-pages pages
       :raw-pages (:raw-pages content)
@@ -90,21 +105,6 @@
           {:status 302
            :headers {"Location" "/takk/"}})
       (handler req))))
-
-(def image-asset-config
-  {:prefix "image-assets"
-   :styles {:identity {}
-            :crazy {:duotone {:from [120 54 89] :to [255 220 190]}
-                    :crop :square
-                    :circle true
-                    :rotate 90
-                    :triangle {:position :upper-right}}}
-   :sizes {:fullsize {:width 920}
-           :photos {:width 290}
-           :references {:width 680}
-           :illustrations {:width 210}
-           :thumbs {:width 100}}
-   :resource-path "public"})
 
 (def app (-> (stasis/serve-pages get-pages)
              dummy-mail-sender

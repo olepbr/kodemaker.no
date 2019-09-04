@@ -3,13 +3,15 @@
             [kodemaker-no.formatting :as f]
             [kodemaker-no.highlight :as hl]
             [kodemaker-no.homeless :as h]
+            [kodemaker-no.images :as images]
             [kodemaker-no.render-page :as render]
             [net.cgrand.enlive-html :as enlive]
             [optimus.link :as link]))
 
-(defn- optimize-path-fn [request]
+(defn- optimize-path-fn [image-asset-config request]
   (fn [src]
     (or (not-empty (link/file-path request src))
+        (images/realize-url image-asset-config src)
         (throw (Exception. (str "Asset not loaded: " src))))))
 
 (defn- try-optimize-path [request path]
@@ -48,11 +50,11 @@
 (defn- add-anchor [node]
   (update-in node [:content] #(wrap-in-anchor % (f/to-id-str (get-node-text node)))))
 
-(defn- tweak-pages [html request]
+(defn- tweak-pages [html image-asset-config request]
   (enlive/sniptest
    html
    ;; use optimized images
-   [:img] #(update-in % [:attrs :src] (optimize-path-fn request))
+   [:img] #(update-in % [:attrs :src] (optimize-path-fn image-asset-config request))
 
    ;; use optimized links, if possible
    [:a] #(update-in % [:attrs :href] (partial fix-links request))
@@ -69,11 +71,11 @@
       (str/replace "“" "«")
       (str/replace "”" "»")))
 
-(defn prepare-page [get-page request]
+(defn prepare-page [image-asset-config get-page request]
   (-> (get-page)
       (render/render-page request)
-      (tweak-pages request)
+      (tweak-pages image-asset-config request)
       use-norwegian-quotes))
 
-(defn prepare-pages [pages]
-  (h/update-vals pages #(partial prepare-page %)))
+(defn prepare-pages [pages image-asset-config]
+  (h/update-vals pages #(partial prepare-page image-asset-config %)))
