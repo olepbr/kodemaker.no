@@ -1,5 +1,5 @@
 :title Terningene er kastet med CSS
-:published 2019-09-01
+:published 2019-09-04
 :author magnar
 :tech [:css :html]
 
