@@ -9,7 +9,7 @@
 
 (defn arrow-link [{:keys [text href size] :as params}]
   [:a.ib {:href href
-          :class (size-classes size)}
+          :className (size-classes size)}
    text (arrow params)])
 
 (defn icon [{:keys [type width height]}]
