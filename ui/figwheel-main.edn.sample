@@ -2,4 +2,4 @@
  :open-file-command "emacsclient"
  :ring-server-options {:port 9560}
  :open-url false
- :css-dirs ["resources/public/styles"]}
+ :css-dirs ["resources/public/css"]}
