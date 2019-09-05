@@ -4,6 +4,7 @@
             [ui.layout-cards]
             [ui.sections.bruce-section-cards]
             [ui.sections.seymour-section-cards]
+            [ui.sections.vertigo-section-cards]
             [ui.typography-cards]
             [devcards.core :as devcards]))
 

@@ -172,3 +172,64 @@
     right: 0;
   }
 }
+
+.img {
+  display: block;
+}
+
+/* Vertigo component */
+
+.vertigo-media {
+  position: relative;
+}
+
+.vertigo-media .inner-media {
+  margin: 0 -8.33vw;
+  overflow: hidden;
+}
+
+.vertigo-media .img {
+  width: 100%;
+}
+
+.vertigo-content {
+  padding: 65px 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .vertigo .grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 50%) minmax(320px, 50%);
+  }
+
+  .vertigo-media .img {
+    float: right;
+    height: 650px;
+    width: auto;
+  }
+
+  .vertigo-content {
+    padding-top: 80px;
+    padding-left: 96px;
+  }
+
+  .vertigo-media .inner-media {
+    float: right;
+    padding-left: 170px;
+    margin: 0 0 0 -170px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .vertigo-media .img {
+    height: 850px;
+  }
+
+  .vertigo-content {
+    padding-top: 190px;
+  }
+}
+
+.vertigo-content .text {
+  margin: 30px 0 60px;
+}
