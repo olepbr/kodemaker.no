@@ -53,3 +53,15 @@ For å bruke et slikt ikon kan du kopiere det til `ui/resources/public/icons`.
 
 Ikke bruk ikoner rett fra Ego - ved å minifisere (som er gjort i vårt eget repo)
 så sparer vi opp til 90% av størrelsen.
+
+## UI-vokabular
+
+Det er fort gjort å ende opp med mange begreper for de samme tingene. I et spakt
+forsøk på å unngå at en overskrift heter både "heading", "title" og "big text"
+har vi her en liten ordliste over begreper som er i bruk - skal du lage nye
+komponenter, se gjerne på denne og bruk de av disse begrepene som passer før du
+introduserer nye. Takk.
+
+- `:title`: Overskrift/tittel
+- `:text`: Tekstbolk
+- `:href`: URL
