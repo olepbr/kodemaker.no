@@ -19,7 +19,6 @@
   (let [pønt (for [p pønt]
                (merge (get pønt-infos (:kind p)) p))]
     (-> style
-        (assoc :overflow "hidden")
         (assoc :background-repeat "no-repeat")
         (assoc :background-position
                (str/join ", " (map :position pønt)))
