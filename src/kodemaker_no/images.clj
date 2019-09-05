@@ -140,33 +140,3 @@
     (if (image-req? req opt)
       (serve-image req opt)
       (handler req))))
-
-(comment
-  (def image-asset-config
-    {:prefix "image-assets"
-     :styles {:round {:circle {}
-                      :duotone {:from [0 0 0]
-                                :to [120 180 255]}}}
-     :sizes {:small {:w 100 :h 75}}
-     :resource-path "public"})
-
-  (.getPath (io/resource "public/favicon.ico"))
-
-  (def url "/image-assets/small/round/fc1fcf02a8ba26f296a98079c105ed6bbb69f3b2/photos/blog/christian-johansen.png")
-
-  (digest/sha-1 "/image-assets/small/round/fc1fcf02a8ba26f296a98079c105ed6bbb69f3b2/photos/blog/christian-johansen.png")
-
-  (image-req? {:request-method :get :uri url} image-asset-config)
-  (serve-image {:uri url} image-asset-config)
-
-  (-> (inflate-spec (image-spec url) image-asset-config)
-      temp-path
-      io/file
-      .exists)
-
-  {:size {:w 100, :h 75},
-   :style {:circle {}, :duotone {:from [0 0 0], :to [120 180 255]}},
-   :ext :png,
-   :resource "..."}
-
-  )
