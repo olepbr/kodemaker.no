@@ -19,7 +19,7 @@
   (html-resource (java.io.StringReader. s)))
 
 (fact
- (let [page (parse (prepare-page get-page request))]
+ (let [page (parse (prepare-page {} get-page request))]
    (-> page (select [:title]) first :content)
    => '("Systemutvikling på høyt nivå | Kodemaker")
 
