@@ -1,10 +1,28 @@
 .section {
   padding: 0 8.33vw;
+  overflow: hidden;
 }
+
 .content {
   max-width: 1120px;
   margin: 0 auto;
 }
+
+.gutter-l {
+  margin: 0 -200px;
+  padding: 0 200px;
+}
+
+.gutter-m {
+  margin: 0 -100px;
+  padding: 0 100px;
+}
+
+.gutter-s {
+  margin: 0 -500px;
+  padding: 0 500px;
+}
+
 @media only screen and (min-width: 1174px) {
   .whitespaceorama {padding: 159px 0 192px;}
 }
