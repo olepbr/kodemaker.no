@@ -6,6 +6,9 @@
 (defcard logo
   (html (layout/logo {})))
 
+(defcard header
+  (html (layout/header)))
+
 (defcard footer
   (html (layout/footer)))
 

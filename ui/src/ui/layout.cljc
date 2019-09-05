@@ -32,15 +32,20 @@
         (assoc :background-size
                (str/join ", " (map :size pønt))))))
 
+(def menu-items
+  [{:url "/folk/" :text "Folk"}
+   {:url "/blogg/" :text "Blogg"}
+   {:url "/kurs/" :text "Lær"}
+   {:url "/jobb-hos-oss/" :text "Jobb"}
+   {:url "/kontakt/" :text "Kontakt"}])
+
 (defn header []
   [:div.header {}
    (logo {:width 176})
-   [:ul.menu.h4 {:role "navigation" :aria-label "Hovedmeny"}
-    [:li [:a {:href "/folk/"} "Folk"]]
-    [:li [:a {:href "/blogg/"} "Blogg"]]
-    [:li [:a {:href "/kurs/"} "Lær"]]
-    [:li [:a {:href "/jobb-hos-oss/"} "Jobb"]]
-    [:li [:a {:href "/kontakt/"} "Kontakt"]]]])
+   [:div.menu-toggler.h5 "Meny"]
+   [:ul.inline-menu.h5 {:role "navigation" :aria-label "Hovedmeny"}
+    (for [{:keys [url text]} menu-items]
+      [:li [:a {:href url} text]])]])
 
 (defn footer []
   [:div.footer {:style (add-pønt {} [{:kind :less-than
