@@ -41,8 +41,8 @@
     (< 200 (:width size)) (assoc :progressive true)
     :always (assoc :quality 0.3)))
 
-(defn transform-image [{:keys [resource size style cache-path ext]}]
-  (create-folders cache-path)
+(defn transform-image [{:keys [resource size style ext]} file-path]
+  (create-folders file-path)
   (let [size (if (= :jpg ext) (prepare-jpg-for-retina size) size)]
     (-> (util/load-image resource)
         (cond->
@@ -54,10 +54,10 @@
             (:circle style) collage/circle
             (:triangle style) (collage/triangle (:triangle style))
             (:rotate style) (collage/rotate (:rotate style))
-            (= :jpg ext) (util/save cache-path
+            (= :jpg ext) (util/save file-path
                                     :quality (get size :quality 1)
                                     :progressive (get size :progressive false))
-            (= :png ext) (util/save cache-path)))))
+            (= :png ext) (util/save file-path)))))
 
 (defn get-ext [file styles]
   (if (or (contains? styles :circle)
@@ -124,7 +124,7 @@
 (defn serve-image [req opt]
   (let [spec (inflate-spec (image-spec (:uri req)) opt)]
     (when-not (cached? spec)
-      (transform-image spec))
+      (transform-image spec (:cache-path spec)))
     {:status 200
      :body (io/file (:cache-path spec))}))
 
