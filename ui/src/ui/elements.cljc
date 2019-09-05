@@ -1,4 +1,5 @@
-(ns ui.elements)
+(ns ui.elements
+  (:require [clojure.string :as str]))
 
 (defn el [el params text]
   [(get params :element el) {:className (name el)} text])
