@@ -496,7 +496,7 @@ La oss prøve det. Først fjerner vi roteringen av kuben for å gjøre det tydel
 
 Nå kan vi flytte forsvinningspunktet:
 
-```
+```css
 .example {
     perspective-origin: 50% 0%;
 }
