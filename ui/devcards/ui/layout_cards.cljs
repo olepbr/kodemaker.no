@@ -5,13 +5,13 @@
 (defcard logo
   (layout/logo {}))
 
-(defcard header
-  (layout/header))
-
 (defcard menu
   [:div {:style {:position "relative"
                  :height "650px"}}
    (layout/menu {:position "absolute"})])
+
+(defcard header
+  (layout/header))
 
 (defcard footer
   (layout/footer))
