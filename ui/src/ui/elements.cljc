@@ -13,9 +13,11 @@
    text (arrow params)])
 
 (defn icon [{:keys [type width height]}]
-  [:svg {:view-box "0 0 24 24" :width width :height height}
+  [:svg {:view-box "0 0 24 24"
+         :width width
+         :height height}
    [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
-          "style" {"--svg_color" "var(--rouge)"}}]])
+          :style {"--svg_color" "var(--rouge)"}}]])
 
 (defn seymour [params]
   [:div.seymour

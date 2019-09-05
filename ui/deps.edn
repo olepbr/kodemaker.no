@@ -3,7 +3,7 @@
         org.clojure/clojurescript {:mvn/version "1.10.520"}
         com.bhauman/figwheel-main {:mvn/version "0.2.3"}
         cider/piggieback {:mvn/version "0.4.1"}
-        cjohansen/dumdom {:mvn/version "2019.09.05"}
+        cjohansen/dumdom {:mvn/version "2019.09.05-1"}
         devcards {:mvn/version "0.2.6"}}
 
  :aliases
