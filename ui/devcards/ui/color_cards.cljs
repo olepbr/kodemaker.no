@@ -1,6 +1,5 @@
 (ns ui.color-cards
-  (:require [devcards.core :refer-macros [defcard]]
-            [sablono.core :refer [html]]))
+  (:require [dumdom.devcards :refer-macros [defcard]]))
 
 (def color-names
   ["rouge"
@@ -31,8 +30,7 @@
     name]])
 
 (defcard colors
-  (html
-   [:div {:style {:display "grid"
-                  :grid-template-columns "1fr 1fr 1fr 1fr"
-                  :grid-gap "10px"}}
-    (map color color-names)]))
+  [:div {:style {:display "grid"
+                 :grid-template-columns "1fr 1fr 1fr 1fr"
+                 :grid-gap "10px"}}
+   (map color color-names)])
