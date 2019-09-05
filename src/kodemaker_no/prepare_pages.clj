@@ -11,9 +11,12 @@
 
 (defn- optimize-path-fn [image-asset-config request]
   (fn [src]
-    (or (not-empty (link/file-path request src))
-        (images/realize-url image-asset-config src)
-        (throw (Exception. (str "Asset not loaded: " src))))))
+    (let [[url skigard] (str/split src #"#")]
+      (str
+       (or (not-empty (link/file-path request url))
+           (images/realize-url image-asset-config url)
+           (throw (Exception. (str "Asset not loaded: " url))))
+       (some->> skigard (str "#"))))))
 
 (defn- try-optimize-path [request path]
   (or (not-empty (link/file-path request path))
