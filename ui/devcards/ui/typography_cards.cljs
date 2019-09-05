@@ -36,6 +36,9 @@
 (defcard paragraph
   (html [:p {} "To Kodemakere står bak det teknologiske ved Oche sitt automatiserte konsept for dartspill. Bildeanalyse, spillutvikling, grensesnitt og oppsett/overvåkning av maskiner og utstyr."]))
 
+(defcard large-text
+  (html [:p.text-l {} "The text, she is very big"]))
+
 (defcard blockquote
   (html (typography/blockquote
          {}

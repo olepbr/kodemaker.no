@@ -59,8 +59,8 @@ body {
   font-weight: 500;
 }
 
-.p {
-  margin: 28px 0;
+.text-l {
+  font-size: 31px;
 }
 
 .blockquote {
