@@ -47,7 +47,7 @@
 }
 
 .inline-menu {
-  display: flex;
+  display: none;
 }
 
 .inline-menu li + li {
@@ -55,7 +55,7 @@
 }
 
 .menu-toggler {
-  display: none;
+  display: block;
 }
 
 .menu {
@@ -84,10 +84,10 @@
 
 @media only screen and (min-width: 690px) {
   .inline-menu {
-    display: none;
+    display: flex;
   }
 
   .menu-toggler {
-    display: block;
+    display: none;
   }
 }
