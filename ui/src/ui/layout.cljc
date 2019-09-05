@@ -39,11 +39,21 @@
    {:url "/jobb-hos-oss/" :text "Jobb"}
    {:url "/kontakt/" :text "Kontakt"}])
 
+(defn menu [{:keys [position]}]
+  [:div.menu {:style {:position (or position "fixed")}}
+   [:div.menu-close-button.h5 "Lukk"]
+   [:ul.nav-list.text-l {:role "navigation" :aria-label "Hovedmeny"}
+    (for [{:keys [url text]} menu-items]
+      [:li
+       (e/arrow-link {:text text
+                      :size :large
+                      :href url})])]])
+
 (defn header []
   [:div.header {}
    (logo {:width 176})
    [:div.menu-toggler.h5 "Meny"]
-   [:ul.inline-menu.h5 {:role "navigation" :aria-label "Hovedmeny"}
+   [:ul.inline-menu.nav-list.h5 {:role "navigation" :aria-label "Hovedmeny"}
     (for [{:keys [url text]} menu-items]
       [:li [:a {:href url} text]])]])
 
