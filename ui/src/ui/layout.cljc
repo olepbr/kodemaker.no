@@ -33,29 +33,29 @@
                (str/join ", " (map :size pønt))))))
 
 (def menu-items
-  [{:url "/folk/" :text "Folk"}
-   {:url "/blogg/" :text "Blogg"}
-   {:url "/kurs/" :text "Lær"}
-   {:url "/jobb-hos-oss/" :text "Jobb"}
-   {:url "/kontakt/" :text "Kontakt"}])
+  [{:href "/folk/" :text "Folk"}
+   {:href "/blogg/" :text "Blogg"}
+   {:href "/kurs/" :text "Lær"}
+   {:href "/jobb-hos-oss/" :text "Jobb"}
+   {:href "/kontakt/" :text "Kontakt"}])
 
 (defn menu [& [{:keys [position]}]]
   [:div.menu {:style {:position (or position "fixed")}}
    [:div.menu-close-button.clickable.h5 "Lukk"]
    [:ul.nav-list.text-l {:role "navigation" :aria-label "Hovedmeny"}
-    (for [{:keys [url text]} menu-items]
+    (for [{:keys [href text]} menu-items]
       [:li
        (e/arrow-link {:text text
                       :size :large
-                      :href url})])]])
+                      :href href})])]])
 
 (defn header []
   [:div.header {}
    (logo {:width 176})
    [:div.menu-toggler.clickable.h5 "Meny"]
    [:ul.inline-menu.nav-list.h5 {:role "navigation" :aria-label "Hovedmeny"}
-    (for [{:keys [url text]} menu-items]
-      [:li [:a {:href url} text]])]])
+    (for [{:keys [href text]} menu-items]
+      [:li [:a {:href href} text]])]])
 
 (defn footer []
   [:div.footer {:style (add-pønt {} [{:kind :less-than
