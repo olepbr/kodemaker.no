@@ -18,7 +18,9 @@
             [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [ring.middleware.resource :refer [wrap-resource]]
-            [stasis.core :as stasis]))
+            [stasis.core :as stasis]
+            [clojure.string :as str]
+            [net.cgrand.enlive-html :as enlive]))
 
 (defn get-assets []
   (assets/load-assets
@@ -115,6 +117,28 @@
              wrap-content-type-utf-8
              prone/wrap-exceptions))
 
+(defn extract-images [html]
+  (let [images (transient [])]
+    (enlive/sniptest html [:img] (fn [el]
+                                   (conj! images (-> el :attrs :src))
+                                   el))
+    (persistent! images)))
+
+(defn get-images [pages-dir]
+  (->> (stasis/slurp-directory pages-dir #"\.html+$")
+       vals
+       (mapcat extract-images)
+       (into #{})))
+
+(defn export-images [pages-dir dir asset-config]
+  (let [images (->> (get-images pages-dir)
+                    (filter #(images/image-url? % asset-config)))]
+    (doseq [image images]
+      (-> image
+          images/image-spec
+          (images/inflate-spec asset-config)
+          (images/transform-image (str dir image))))))
+
 (defn- load-export-dir []
   (stasis/slurp-directory export-directory #"\.[^.]+$"))
 
@@ -126,6 +150,7 @@
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (get-pages) export-directory {:optimus-assets assets
                                                        :base-url "https://www.kodemaker.no"})
+    (export-images export-directory export-directory (assoc image-asset-config :cacheable-urls? true))
     (if (= format :json)
       (println (json/write-str (dissoc (stasis/diff-maps old-files (load-export-dir)) :unchanged)))
       (do
