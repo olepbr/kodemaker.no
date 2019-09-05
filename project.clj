@@ -18,6 +18,7 @@
                  [org.clojure/core.memoize "0.7.2"]
                  [clygments "2.0.0"]
                  [prone "2019-07-08"]
+                 [cjohansen/dumdom "2019.09.05-1"]
                  [ch.digitalfondue.jfiveparse/jfiveparse "0.5.3"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
@@ -27,7 +28,8 @@
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]]
                    :plugins [[lein-ring "0.12.5"]
                              [lein-ancient "0.6.15"]]
-                   :source-paths ["dev" "config"]
+                   :source-paths ["dev" "config" "ui/src"]
+                   :resource-paths ["ui/resources"]
                    :test-paths ^:replace []}
              :test {:dependencies [[midje "1.9.9"]
                                    [test-with-files "0.1.1"]

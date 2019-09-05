@@ -3,6 +3,7 @@
             [kodemaker-no.formatting :as f]
             [kodemaker-no.layout :as layout]
             [kodemaker-no.markup :as markup]
+            [kodemaker-no.render-new-page :as new] ;; luls
             [kodemaker-no.render-old-page :as old]))
 
 (defn- render-illustrated-column [{:keys [id title illustration illustration-url body]}]
@@ -100,6 +101,7 @@
 
 (defn render-page [page request]
   (cond
+    (:new-design? page) (new/render-page page request)
     (:sections page) (layout/with-layout request page
                        (map render-section (:sections page)))
     (:layout page) (layout/with-layout request page (:body page))

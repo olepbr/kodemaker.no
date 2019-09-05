@@ -25,7 +25,15 @@
 (defn get-assets []
   (assets/load-assets
    "public"
-   [#"/styles/.*\.css"
+   [
+    ;: ny
+    "/css/kodemaker.css"
+    #"/img/.*\..+"
+    #"/fonts/.*\..+"
+    #"/icons/.*\..+"
+
+    ;; gammal
+    #"/styles/.*\.css"
     "/favicon.ico"
     #"/certificates/.*\.pdf"
     #"/illustrations/.*\.jpg"
@@ -39,8 +47,6 @@
     #"/photos/.*\.png"
     #"/logos/.*\.png"
     #"/logos/.*\.svg"
-    #"/icons/.*\.png"
-    #"/icons/.*\.svg"
     #"/images/.*\.png"
     #"/images/blogg/.*\.png"
     #"/videos/.*\.mp4"]))
