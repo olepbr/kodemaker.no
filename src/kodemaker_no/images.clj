@@ -128,9 +128,12 @@
     {:status 200
      :body (io/file (:cache-path spec))}))
 
-(defn image-req? [req {:keys [prefix]}]
+(defn image-url? [url {:keys [prefix]}]
+  (= prefix (second (re-find path-re url))))
+
+(defn image-req? [req asset-config]
   (and (= :get (:request-method req))
-       (= prefix (second (re-find path-re (:uri req))))))
+       (image-url? (:uri req) asset-config)))
 
 (defn wrap-images [handler & [opt]]
   (fn [req]
