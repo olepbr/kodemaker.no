@@ -40,16 +40,12 @@
                    "Vi er Kodemaker")})
 
    (-> page (select [:h2]) second :content)
-   => '({:tag :span
-         :attrs nil
-         :content ({:tag :a
-                    :attrs {:class "anchor-link"
-                            :href "#vi-gjor-det-vanskelig"
-                            :id "vi-gjor-det-vanskelig"}
-                    :content ({:attrs {:class "anchor-marker"}
-                               :content ("¶")
-                               :tag :span}
-                              "Vi gjør det vanskelig")})})
+   => '({:attrs {:class "anchor-link"
+                 :href "#vi-gjor-det-vanskelig"
+                 :id "vi-gjor-det-vanskelig"}
+         :content ({:attrs {:class "anchor-marker"} :content ("¶") :tag :span}
+                   {:attrs nil :content ("Vi gjør det vanskelig") :tag :span})
+         :tag :a})
 
    (-> page (select [:h2]) (nth 2) :content)
    => '({:tag :a

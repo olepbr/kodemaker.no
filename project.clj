@@ -11,14 +11,14 @@
                  [stasis "2.5.0"]
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]
-                 [enlive "1.1.6"]
                  [mapdown "0.2.1"]
                  [me.raynes/cegdown "0.1.1"]
                  [prismatic/schema "1.1.12"]
                  [clj-time "0.15.2"]
                  [org.clojure/core.memoize "0.7.2"]
                  [clygments "2.0.0"]
-                 [prone "2019-07-08"]]
+                 [prone "2019-07-08"]
+                 [ch.digitalfondue.jfiveparse/jfiveparse "0.5.3"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app
@@ -31,6 +31,7 @@
                    :test-paths ^:replace []}
              :test {:dependencies [[midje "1.9.9"]
                                    [test-with-files "0.1.1"]
+                                   [enlive "1.1.6"]
                                    [flare "0.2.9"]]
                     :injections [(require 'flare.midje)
                                  (flare.midje/install!)]

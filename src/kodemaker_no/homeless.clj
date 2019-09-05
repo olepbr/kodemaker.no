@@ -1,7 +1,6 @@
 (ns kodemaker-no.homeless
   (:require [clojure.java.io :as io]
-            [clojure.set :as set]
-            [net.cgrand.enlive-html :as enlive]))
+            [clojure.set :as set]))
 
 (defn wrap-content-type-utf-8 [handler]
   (fn [request]

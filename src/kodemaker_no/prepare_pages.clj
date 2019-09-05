@@ -1,11 +1,12 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
+            [hiccup.core :refer [html]]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.highlight :as hl]
             [kodemaker-no.homeless :as h]
+            [kodemaker-no.html5-walker :as html5-walker]
             [kodemaker-no.images :as images]
             [kodemaker-no.render-page :as render]
-            [net.cgrand.enlive-html :as enlive]
             [optimus.link :as link]))
 
 (defn- optimize-path-fn [image-asset-config request]
@@ -26,45 +27,41 @@
       (str (:base-url request) path)
       path)))
 
-(defn- get-node-text [node]
-  (let [text (-> node :content first)]
-    (if (string? text) text (get-node-text text))))
-
-(defn- wrap-in-anchor [content target]
-  (cond
-    (string? (first content))
-    [{:tag :a
-      :attrs {:class "anchor-link"
-              :id target
-              :href (str "#" target)}
-      :content (into [{:tag :span
-                       :attrs {:class "anchor-marker"}
-                       :content "¶"}] content)}]
-
-    (= :a (-> content first :tag))
-    content
-
-    :default
-    (into [(update-in (first content) [:content] #(wrap-in-anchor % target))] (rest content))))
-
 (defn- add-anchor [node]
-  (update-in node [:content] #(wrap-in-anchor % (f/to-id-str (get-node-text node)))))
+  (when-not (= "a" (.getNodeName (first (.getChildNodes node))))
+    (let [id-str (f/to-id-str (.getTextContent node))]
+      (.setInnerHTML
+       node
+       (html
+        [:a.anchor-link {:id id-str :href (str "#" id-str)}
+         [:span.anchor-marker "¶"]
+         (.getInnerHTML node)])))))
+
+(defn update-attr [node attr f]
+  (.setAttribute node attr (f (.getAttribute node attr))))
+
+(defn replace-attr [node attr-before attr-after f]
+  (.setAttribute node attr-after (f (.getAttribute node attr-before)))
+  (.removeAttribute node attr-before))
 
 (defn- tweak-pages [html image-asset-config request]
-  (enlive/sniptest
+  (html5-walker/replace
    html
-   ;; use optimized images
-   [:img] #(update-in % [:attrs :src] (optimize-path-fn image-asset-config request))
+   {
+    ;; use optimized images
+    [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
 
-   ;; use optimized links, if possible
-   [:a] #(update-in % [:attrs :href] (partial fix-links request))
+    ;; use optimized svgs
+    [:svg :use] #(replace-attr % "href" "xlink:href" (optimize-path-fn image-asset-config request))
 
-   ;; give every h2 an anchor link for linkability
-   [:h2] add-anchor
+    [:h2] add-anchor
 
-   ;; Syntax highlight fenced code blockse
-   [:pre :code] hl/maybe-highlight-node
-   [:pre] hl/maybe-add-hilite-class))
+    ;; use optimized links, if possible
+    [:a] #(update-attr % "href" (partial fix-links request))
+
+    ;; Syntax highlight fenced code blocks
+    [:pre :code] hl/maybe-highlight-node
+    [:pre] hl/add-hilite-class}))
 
 (defn- use-norwegian-quotes [html]
   (-> html

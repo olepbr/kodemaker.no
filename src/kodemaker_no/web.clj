@@ -1,26 +1,26 @@
 (ns kodemaker-no.web
-  (:require [clojure.core.memoize]
+  (:require clojure.core.memoize
             [clojure.data.json :as json]
+            [clojure.string :as str]
             [config :refer [export-directory]]
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
+            [kodemaker-no.html5-walker :as html5-walker]
             [kodemaker-no.images :as images]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
-            [optimus.assets :as assets]
-            [optimus.export]
             [optimus-img-transform.core :refer [transform-images]]
+            [optimus.assets :as assets]
+            optimus.export
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
             [optimus.strategies :refer [serve-live-assets]]
             [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [ring.middleware.resource :refer [wrap-resource]]
-            [stasis.core :as stasis]
-            [clojure.string :as str]
-            [net.cgrand.enlive-html :as enlive]))
+            [stasis.core :as stasis]))
 
 (defn get-assets []
   (assets/load-assets
@@ -118,11 +118,8 @@
              prone/wrap-exceptions))
 
 (defn extract-images [html]
-  (let [images (transient [])]
-    (enlive/sniptest html [:img] (fn [el]
-                                   (conj! images (-> el :attrs :src))
-                                   el))
-    (persistent! images)))
+  (for [node (html5-walker/find html [:img])]
+    (.getAttribute node "src")))
 
 (defn get-images [pages-dir]
   (->> (stasis/slurp-directory pages-dir #"\.html+$")
