@@ -6,7 +6,7 @@
 (defcard
   (html
    (section/render
-    {:color :white
+    {:color :blanc
      :seymours
      [{:icon {:type :science/chemical :height 79}
        :title "Referanser"

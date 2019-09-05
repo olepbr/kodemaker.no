@@ -2,12 +2,19 @@
   (:require [devcards.core :refer-macros [defcard]]
             [sablono.core :refer [html]]))
 
-(def color-names ["red" "salmon" "dark-taupe" "milk-chocolate" "mine-shaft" "rose-white" "white"])
+(def color-names
+  ["rouge"
+   "taupe-foncé"
+   "chocolat-au-lait"
+   "puits-de-mine"
+   "blanc-rose"
+   "blanc"
+   "saumon"])
 
 (def fg-colors
-  {"mine-shaft" "var(--white)"
-   "dark-taupe" "var(--white)"
-   "milk-chocolate" "var(--white)"})
+  {"puits-de-mine" "var(--blanc)"
+   "taupe-foncé" "var(--blanc)"
+   "chocolat-au-lait" "var(--blanc)"})
 
 (defn color [name]
   [:div {:style {:border "1px solid #ddd"
@@ -20,7 +27,7 @@
                   :left "50%"
                   :font-size "18px"
                   :transform "translate(-50%, -50%)"
-                  :color (get fg-colors name "var(--mine-shaft)")}}
+                  :color (get fg-colors name "var(--puits-de-mine)")}}
     name]])
 
 (defcard colors

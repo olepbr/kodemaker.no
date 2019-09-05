@@ -2,7 +2,7 @@ html,
 body {
   background: var(--white);
   box-sizing: border-box;
-  color: var(--mine-shaft);
+  color: var(--puits-de-mine);
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 21px;
   font-weight: normal;

@@ -10,7 +10,7 @@ body {
 .ib {display: inline-block;}
 
 .h1 {
-  color: var(--milk-chocolate);
+  color: var(--chocolat-au-lait);
   font-family: "Financier Display", serif;
   font-size: 97px;
   font-weight: 600;
@@ -21,7 +21,7 @@ body {
 }
 
 .h2 {
-  color: var(--milk-chocolate);
+  color: var(--chocolat-au-lait);
   font-family: "Financier Text", serif;
   font-size: 62px;
   font-weight: normal;
@@ -32,7 +32,7 @@ body {
 }
 
 .h3 {
-  color: var(--milk-chocolate);
+  color: var(--chocolat-au-lait);
   font-family: "Financier Display", serif;
   font-size: 46px;
   font-weight: 500;
@@ -43,7 +43,7 @@ body {
 }
 
 .h4 {
-  color: var(--milk-chocolate);
+  color: var(--chocolat-au-lait);
   font-family: "Financier Text", serif;
   font-size: 30px;
   font-weight: 500;

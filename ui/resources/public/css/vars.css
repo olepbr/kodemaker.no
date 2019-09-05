@@ -1,9 +1,11 @@
+/* Farger er på fransk fordi 1) det er kultivert, 2) det omgår en bug i css-optimizeren */
+
 :root {
-  --red: #ff524b;
-  --dark-taupe: #784949;
-  --milk-chocolate: #591e1e;
-  --mine-shaft: #222222;
-  --rose-white: #fffafa;
-  --white: #fff;
-  --salmon: #ff817c;
+  --rouge: #ff524b;
+  --taupe-foncé: #784949;
+  --chocolat-au-lait: #591e1e;
+  --puits-de-mine: #222222;
+  --blanc-rose: #fffafa;
+  --blanc: #fff;
+  --saumon: #ff817c;
 }
