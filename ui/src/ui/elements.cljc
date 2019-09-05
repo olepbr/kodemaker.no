@@ -19,11 +19,11 @@
    [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
           :style {"--svg_color" "var(--rouge)"}}]])
 
-(defn seymour [params]
+(defn seymour [{:keys [icon title text link]}]
   [:div.seymour
    [:div.seymour-top
-    (icon (:icon params))
-    (t/h4 {} (:title params))
-    [:p (:text params)]]
+    (icon icon)
+    (t/h4 {} title)
+    [:p text]]
    [:div.seymour-bottom
-    (arrow-link (:link params))]])
+    (arrow-link link)]])
