@@ -20,3 +20,9 @@
               :text "Vi har kun erfarne konsulenter med oss, som liker å bryne seg på vanskelige oppgaver."
               :link {:text "Se referanser"
                      :href "/referanser/"}}))
+
+(defcard round-media
+  (e/round-media {:image "/devcard_images/person.png"
+                  :title "Geir Oterhals"
+                  :lines ["Prosjektleder, Oche Dart"
+                          "+47 992 18 320"]}))

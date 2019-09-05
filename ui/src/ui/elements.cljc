@@ -2,7 +2,10 @@
   (:require [clojure.string :as str]))
 
 (defn el [el params text]
-  [(get params :element el) {:className (name el)} text])
+  [(get params :element el)
+   {:className (str (name el)
+                    (when-let [cn (:className params)]
+                      (str " " cn)))} text])
 
 (def h1 (partial el :h1))
 (def h2 (partial el :h2))
@@ -44,3 +47,11 @@
     [:p text]]
    [:div.seymour-bottom
     (arrow-link link)]])
+
+(defn round-media [{:keys [image title lines]}]
+  [:div.round-media
+   [:div.media-element
+    [:img.img {:src image}]]
+   [:div.media-content
+    (h4 {:className "title"} title)
+    [:p (interpose [:br] lines)]]])
