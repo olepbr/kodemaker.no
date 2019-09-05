@@ -54,7 +54,8 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
+a, .clickable {
+  cursor: pointer;
   color: inherit;
+  text-decoration: none;
 }

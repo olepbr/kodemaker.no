@@ -6,8 +6,9 @@
   (layout/logo {}))
 
 (defcard menu
-  [:div {:style {:position "relative"
-                 :height "650px"}}
+  [:div.bd-with-menu
+   {:style {:position "relative"
+            :height "650px"}}
    (layout/menu {:position "absolute"})])
 
 (defcard header

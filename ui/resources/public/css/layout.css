@@ -60,11 +60,16 @@
 
 .menu {
   background-color: var(--blanc-rose);
+  display: none;
   padding: 121px 47px 47px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.bd-with-menu .menu {
+  display: block;
 }
 
 .menu-close-button {
@@ -83,11 +88,6 @@
   }
 
   .menu-toggler {
-    cursor: pointer;
     display: block;
-  }
-
-  .menu-toggler:hover {
-    text-decoration: underline;
   }
 }
