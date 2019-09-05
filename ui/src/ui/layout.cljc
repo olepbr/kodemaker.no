@@ -32,10 +32,20 @@
         (assoc :background-size
                (str/join ", " (map :size pønt))))))
 
+(defn header []
+  [:div.header {}
+   (logo {:width 176})
+   [:ul.menu.h4 {:role "navigation" :aria-label "Hovedmeny"}
+    [:li [:a {:href "/folk/"} "Folk"]]
+    [:li [:a {:href "/blogg/"} "Blogg"]]
+    [:li [:a {:href "/kurs/"} "Lær"]]
+    [:li [:a {:href "/jobb-hos-oss/"} "Jobb"]]
+    [:li [:a {:href "/kontakt/"} "Kontakt"]]]])
+
 (defn footer []
   [:div.footer {:style (add-pønt {} [{:kind :less-than
                                       :position "right -300px top -480px"}])}
-   [:div.f-logo (logo {:width 179})]
+   [:div.f-logo (logo {:width 176})]
    [:div.f-infos
     [:div.f-address
      [:div "Kodemaker Systemutvikling AS"]

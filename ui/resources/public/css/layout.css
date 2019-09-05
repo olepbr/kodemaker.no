@@ -39,3 +39,22 @@
   grid-template-rows: repeat(100%);
   grid-gap: 64px 8.33%;
 }
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0;
+}
+
+.menu li + li {
+  margin-left: 32px;
+}
