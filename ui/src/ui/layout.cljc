@@ -7,6 +7,7 @@
 
 (def pønt-infos
   {:greater-than {:ext ".svg" :size "650px 1300px"}
+   :greater-than-small {:ext ".svg" :size "450px 900px"}
    :less-than {:ext ".svg" :size "650px 1300px"}
    :descending-line {:ext ".svg" :size "650px"}
    :ascending-line {:ext ".svg" :size "650px"}
