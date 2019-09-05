@@ -1114,6 +1114,8 @@
                          :tech [:javascript :functional-programming]}]
  :open-source-contributions [{:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :redhat :ssh]}
                              {:name "Optimus" :url "https://github.com/magnars/optimus" :tech [:clojure :web-performance]}
+                             {:name "Stasis" :url "https://github.com/magnars/stasis" :tech [:clojure]}
+                             {:name "Collage" :url "https://github.com/karls/collage" :tech [:clojure]}
                              {:name "karma-referee" :url "https://github.com/cjohansen/karma-referee" :tech [:javascript :testing]}
                              {:name "carousel-js" :url "https://github.com/cjohansen/carousel-js" :tech [:javascript]}]
 
