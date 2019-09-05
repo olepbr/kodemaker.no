@@ -4,8 +4,13 @@
 (defn arrow [{:keys [width]}]
   [:div.arrow [:div.arrow-head]])
 
-(defn arrow-link [{:keys [text href] :as params}]
-  [:a.ib {:href href} text (arrow params)])
+(def size-classes
+  {:large "text-l"})
+
+(defn arrow-link [{:keys [text href size] :as params}]
+  [:a.ib {:href href
+          :class (size-classes size)}
+   text (arrow params)])
 
 (defn icon [{:keys [type width height]}]
   [:svg {:view-box "0 0 24 24" :width width :height height}

@@ -7,6 +7,11 @@
   (html (e/arrow-link {:text "Se mer"
                        :href "https://wwww.kodemaker.no"})))
 
+(defcard big-arrow-link
+  (html (e/arrow-link {:text "Se mer"
+                       :size :large
+                       :href "https://wwww.kodemaker.no"})))
+
 (defcard icon
   (html
    (e/icon {:type :computer/laptop-1 :width 100})))
