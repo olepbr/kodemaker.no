@@ -26,6 +26,9 @@
 .round-media .media-element .img {border-radius: 50%;}
 .round-media .media-content {flex: 1 0 auto;}
 .round-media .title {margin-bottom: 8px;}
+.vert-round-media {flex-direction: column;}
+.vert-round-media .media-element {margin-bottom: 16px;}
+.vert-round-media .media-content {color: var(--chocolat-au-lait);}
 
 .text p + p {margin-top: 28px;}
 

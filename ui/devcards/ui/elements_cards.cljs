@@ -27,6 +27,12 @@
                   :lines ["Prosjektleder, Oche Dart"
                           "+47 992 18 320"]}))
 
+(defcard vert-round-media
+  (e/vert-round-media {:image "/devcard_images/magnus.jpg"
+                       :lines ["Systemutvikler"
+                               "+47 992 18 320"
+                               "magnus@kodemaker.no"]}))
+
 (defcard blockquote
   (e/blockquote
    {:quote

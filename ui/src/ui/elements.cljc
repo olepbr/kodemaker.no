@@ -53,19 +53,33 @@
    [:div.seymour-bottom
     (arrow-link (:link params))]])
 
-(defn round-media [{:keys [image title lines]}]
-  [:div.round-media
+(def media-image-sizes
+  {"vcard-small" 92
+   "vcard-medium" 120})
+
+(defn round-media [{:keys [image title lines className image-class]}]
+  [:div.round-media {:className className}
    [:div.media-element
-    [:img.img.image-style-small-round {:width 92 :src (str image)}]]
+    (let [image-class (or image-class "vcard-small")]
+      [:img.img {:className (str "image-style-" (or image-class "vcard-small"))
+                 :width (media-image-sizes image-class)
+                 :src (str image)}])]
    [:div.media-content
-    (h4 {:className "title"} title)
+    (when title (h4 {:className "title"} title))
     [:p (interpose [:br] lines)]]])
 
-(defn article [{:keys [title content aside image alignment]}]
+(defn vert-round-media [params]
+  (round-media (assoc params
+                      :className "vert-round-media"
+                      :image-class "vcard-medium")))
+
+(defn article [{:keys [title sub-title content aside image alignment]}]
   [:div.article {:className (str "article-" (name (or alignment :balanced)))}
    [:div.article-content {}
     (when title
       (h3 {:element :h2} title))
+    (when sub-title
+      (h4 {:element :h3} sub-title))
     content]
    [:div.article-aside {}
     (when image

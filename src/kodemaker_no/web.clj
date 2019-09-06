@@ -61,10 +61,17 @@
    :resource-path "public"
    :transformations
 
-   {:vcard
-    {:transformations [[:crop {:preset :square}]]
+   {:vcard-small
+    {:transformations [[:fit {:width 184 :height 184}]
+                       [:crop {:preset :square}]]
      :retina-optimized? true
      :width 92}
+
+    :vcard-medium
+    {:transformations [[:fit {:width 240 :height 240}]
+                       [:crop {:preset :square}]]
+     :retina-optimized? true
+     :width 120}
 
     :bruce-top
     {:transformations
@@ -150,7 +157,9 @@
     {:transformations [[:fit {:width 380 :height 380}]
                        [:crop {:preset :square}]
                        rouge-duotone
-                       [:triangle :lower-left]]}}})
+                       [:triangle :lower-left]]}
+
+    }})
 
 (defn get-pages []
   (let [content (load-content)
