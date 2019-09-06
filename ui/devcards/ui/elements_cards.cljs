@@ -96,3 +96,18 @@ optimalisering av nøyaktighet på kalibrering i parallell med utvikling av spil
 grensesnitt og støtteverktøy/overvåkning.")
     :image "/devcard_images/dart-triangle.png"
     :alignment :back}))
+
+(defcard article-with-sub-title
+  (e/article
+   {:sub-title "Eivind B Waaler"
+    :content (e/text "Eivind startet jobben med bildeanalyse og har utviklet
+    selve motoren for kalibrering av kameraer og gjenkjenning av piler. Han har
+    også gjort en del videreutvikling på selve spillmotoren, samt masse
+    frontend-utvikling for å ferdigstille design/grensesnitt mot slutten av
+    prosjektet. Eivind var også ansvarlig for alt det fysiske - fra valg/oppsett
+    av kameraer og annen hardware som datamaskiner, lysstyring og skjermer.")
+    :aside (e/vert-round-media {:image "/devcard_images/magnus.jpg"
+                                :lines ["Systemutvikler"
+                                        "+47 992 18 320"
+                                        "magnus@kodemaker.no"]})
+    :alignment :balanced}))
