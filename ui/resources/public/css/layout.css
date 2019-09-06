@@ -8,6 +8,11 @@
   margin: 0 auto;
 }
 
+.gutter-xl {
+  margin: 0 -500px;
+  padding: 0 500px;
+}
+
 .gutter-l {
   margin: 0 -200px;
   padding: 0 200px;
@@ -19,8 +24,8 @@
 }
 
 .gutter-s {
-  margin: 0 -500px;
-  padding: 0 500px;
+  margin: 0 -50px;
+  padding: 0 50px;
 }
 
 @media only screen and (min-width: 1174px) {
@@ -233,4 +238,151 @@
 
 .vertigo-content .text {
   margin: 30px 0 60px;
+}
+
+.pønt-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.pønt-section .content {
+  position: relative;
+}
+
+.pønt-section .img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .pønt-item {
+    overflow: visible;
+    margin-bottom: 60px;
+  }
+
+  .bottom-circle,
+  .bottom-triangle {
+    position: relative;
+    top: -140px;
+    margin-bottom: -80px;
+  }
+
+  .bottom-triangle {
+    margin-bottom: -140px;
+  }
+
+  .top-circle .img,
+  .top-triangle .img {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pønt-section .content {
+    height: 1140px;
+  }
+
+  .portrait-1 .img,
+  .portrait-2 .img {
+    width: 335px;
+  }
+
+  .portrait-2 {
+    position: absolute;
+    top: 0;
+    left: -170px;
+  }
+
+  .portrait-1 {
+    position: absolute;
+    top: 740px;
+    right: -170px;
+  }
+
+  .top-circle,
+  .bottom-circle {
+    width: 325px;
+  }
+
+  .top-triangle,
+  .bottom-triangle {
+    width: 180px;
+  }
+
+  .top-triangle {
+    position: absolute;
+    top: 248px;
+    right: 0;
+  }
+
+  .bottom-circle {
+    position: absolute;
+    top: 278px;
+    right: 0;
+  }
+
+  .top-circle {
+    position: absolute;
+    top: 530px;
+    left: 0;
+  }
+
+  .bottom-triangle {
+    position: absolute;
+    top: 700px;
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pønt-section .content {
+    height: 560px;
+  }
+
+  .pønt-section {
+    padding-top: 210px;
+    padding-bottom: 210px;
+  }
+
+  .portrait-2 {
+    left: -300px;
+    top: 160px;
+  }
+
+  .top-triangle,
+  .bottom-triangle {
+    width: 220px;
+  }
+
+  .top-circle,
+  .bottom-circle {
+    max-width: 390px;
+    width: 24vw;
+  }
+
+  .bottom-triangle {
+    left: 106px;
+    top: 160px;
+  }
+
+  .top-circle {
+    left: 126px;
+    top: 0;
+  }
+
+  .bottom-circle {
+    left: auto;
+    right: 140px;
+    top: 200px;
+  }
+
+  .top-triangle {
+    left: auto;
+    right: 154px;
+    top: 185px;
+  }
+
+  .portrait-1 {
+    right: -300px;
+    top: 0;
+  }
 }
