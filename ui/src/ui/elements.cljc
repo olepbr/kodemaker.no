@@ -51,7 +51,7 @@
 (defn round-media [{:keys [image title lines]}]
   [:div.round-media
    [:div.media-element
-    [:img.img {:src image}]]
+    [:img.img.image-style-small-round {:width 92 :src (str image)}]]
    [:div.media-content
     (h4 {:className "title"} title)
     [:p (interpose [:br] lines)]]])

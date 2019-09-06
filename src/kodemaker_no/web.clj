@@ -54,13 +54,9 @@
   {:prefix "image-assets"
    :resource-path "public"
    :transformations
-   {:identity {}
-    :crazy {:transformations [[:crop {:preset :square}]
-                              [:duotone [120 54 89] [255 220 190]]
-                              [:circle nil]
-                              [:triangle :upper-right]
-                              [:rotate 90]]
-            :width 300}}})
+   {:vcard {:transformations [[:crop {:preset :square}]]
+            :retina-optimized? true
+            :width 92}}})
 
 (defn get-pages []
   (let [content (load-content)

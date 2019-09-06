@@ -20,3 +20,9 @@
 .seymour-bottom {flex: 0;}
 .seymour h4 {margin: 40px 0 24px;}
 .seymour p {margin-bottom: 32px;}
+
+.round-media {display: flex;}
+.round-media .media-element {flex: 0 0 auto; margin-right: 30px;}
+.round-media .media-element .img {border-radius: 50%;}
+.round-media .media-content {flex: 1 0 auto;}
+.round-media .title {margin-bottom: 8px;}
