@@ -1,19 +1,18 @@
 (ns kodemaker-no.web
   (:require clojure.core.memoize
             [clojure.data.json :as json]
-            [clojure.string :as str]
             [config :refer [export-directory]]
+            [imagine.core :as imagine]
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [kodemaker-no.html5-walker :as html5-walker]
-            [kodemaker-no.images :as images]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.assets :as assets]
-            optimus.export
+            [optimus.export]
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
             [optimus.strategies :refer [serve-live-assets]]
@@ -53,18 +52,15 @@
 
 (def image-asset-config
   {:prefix "image-assets"
-   :styles {:identity {}
-            :crazy {:duotone {:from [120 54 89] :to [255 220 190]}
-                    :crop :square
-                    :circle true
-                    :rotate 90
-                    :triangle {:position :upper-right}}}
-   :sizes {:fullsize {:width 920}
-           :photos {:width 290}
-           :references {:width 680}
-           :illustrations {:width 210}
-           :thumbs {:width 100}}
-   :resource-path "public"})
+   :resource-path "public"
+   :transformations
+   {:identity {}
+    :crazy {:transformations [[:crop {:preset :square}]
+                              [:duotone [120 54 89] [255 220 190]]
+                              [:circle nil]
+                              [:triangle :upper-right]
+                              [:rotate 90]]
+            :width 300}}})
 
 (defn get-pages []
   (let [content (load-content)
@@ -117,7 +113,7 @@
 (def app (-> (stasis/serve-pages get-pages)
              dummy-mail-sender
              (wrap-resource "videos")
-             (images/wrap-images image-asset-config)
+             (imagine/wrap-images image-asset-config)
              (optimus/wrap get-assets optimize serve-live-assets)
              wrap-content-type
              wrap-content-type-utf-8
@@ -133,14 +129,16 @@
        (mapcat extract-images)
        (into #{})))
 
+(defn get-image-assets [pages-dir asset-config]
+  (->> (get-images pages-dir)
+       (filter #(imagine/image-url? % asset-config))))
+
 (defn export-images [pages-dir dir asset-config]
-  (let [images (->> (get-images pages-dir)
-                    (filter #(images/image-url? % asset-config)))]
-    (doseq [image images]
-      (-> image
-          images/image-spec
-          (images/inflate-spec asset-config)
-          (images/transform-image (str dir image))))))
+  (doseq [image (get-image-assets pages-dir asset-config)]
+    (-> image
+        imagine/image-spec
+        (imagine/inflate-spec asset-config)
+        (imagine/transform-image-to-file (str dir image)))))
 
 (defn- load-export-dir []
   (stasis/slurp-directory export-directory #"\.[^.]+$"))
@@ -161,3 +159,11 @@
         (println "Export complete:")
         (stasis/report-differences old-files (load-export-dir))
         (println)))))
+
+(comment
+  (export-images "./build/" "./build/" image-asset-config)
+
+  (get-image-assets "./build/" image-asset-config)
+
+
+  )

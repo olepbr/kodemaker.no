@@ -5,7 +5,7 @@
             [kodemaker-no.highlight :as hl]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.html5-walker :as html5-walker]
-            [kodemaker-no.images :as images]
+            [imagine.core :as imagine]
             [kodemaker-no.render-page :as render]
             [optimus.link :as link]))
 
@@ -14,7 +14,7 @@
     (let [[url skigard] (str/split src #"#")]
       (str
        (or (not-empty (link/file-path request url))
-           (images/realize-url image-asset-config url)
+           (imagine/realize-url image-asset-config url)
            (throw (Exception. (str "Asset not loaded: " url))))
        (some->> skigard (str "#"))))))
 
