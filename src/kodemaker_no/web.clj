@@ -79,7 +79,9 @@
                                     [:crop {:width 666
                                             :height 666
                                             :offset-x :right
-                                            :offset-y :bottom}]]}}})
+                                            :offset-y :bottom}]]}
+    :vertigo {:height 850
+              :retina-optimized? true}}})
 
 (defn get-pages []
   (let [content (load-content)

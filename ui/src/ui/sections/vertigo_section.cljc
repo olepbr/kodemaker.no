@@ -13,7 +13,7 @@
                     :position "right -300px top -410px"}]))}
      [:div.vertigo-media
       [:div.inner-media
-       [:img.img {:src image}]]]
+       [:img.img.image-style-vertigo {:src image}]]]
      [:div.vertigo-content
       [:div.inner-content
        (e/h2 {} title)

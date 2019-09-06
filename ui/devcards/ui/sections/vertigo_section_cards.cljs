@@ -11,4 +11,4 @@
     skryte av og vise frem."
     :link {:text "Se mer"
            :href "/jobb/"}
-    :image "/devcard_images/dart.jpg"}))
+    :image "/devcard_images/vertigo.jpg"}))
