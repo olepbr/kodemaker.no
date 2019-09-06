@@ -13,9 +13,9 @@
 (def h4 (partial el :h4))
 (def h5 (partial el :h5))
 
-(defn blockquote [params content]
-  [:blockquote {:className "blockquote"}
-   (let [sentences (str/split content #"\n\n")
+(defn blockquote [{:keys [quote]}]
+  [:blockquote.blockquote {}
+   (let [sentences (str/split quote #"\n\n")
          sentences (concat [(str "«" (first sentences))] (rest sentences))]
      (map
       (fn [sentence] [:p {:className "p"} sentence])

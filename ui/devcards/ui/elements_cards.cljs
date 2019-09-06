@@ -26,3 +26,12 @@
                   :title "Geir Oterhals"
                   :lines ["Prosjektleder, Oche Dart"
                           "+47 992 18 320"]}))
+
+(defcard blockquote
+  (e/blockquote
+   {:quote
+    "Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept Oche. De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt.
+
+De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget
+har fungert knirkefritt siden åpningen. Vi har et veldig godt inntrykk av hele
+Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."}))

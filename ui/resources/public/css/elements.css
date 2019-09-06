@@ -26,3 +26,6 @@
 .round-media .media-element .img {border-radius: 50%;}
 .round-media .media-content {flex: 1 0 auto;}
 .round-media .title {margin-bottom: 8px;}
+
+.blockquote p + p {margin-top: 28px;}
+
