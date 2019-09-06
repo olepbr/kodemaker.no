@@ -137,7 +137,20 @@
     {:transformations [[:fit {:width 220 :height 220}]
                        [:crop {:preset :square}]
                        rouge-duotone
-                       [:triangle :upper-right]]}}})
+                       [:triangle :upper-right]]}
+
+    :bottom-half-circle
+    {:transformations [[:fit {:width 380 :height 380}]
+                       [:crop {:preset :square}]
+                       chocolate-au-lait-duotone
+                       [:circle]
+                       [:crop {:width 380 :height 190 :offset-y :bottom}]]}
+
+    :rouge-triangle-medium
+    {:transformations [[:fit {:width 380 :height 380}]
+                       [:crop {:preset :square}]
+                       rouge-duotone
+                       [:triangle :lower-left]]}}})
 
 (defn get-pages []
   (let [content (load-content)

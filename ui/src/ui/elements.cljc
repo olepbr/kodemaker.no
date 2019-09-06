@@ -13,8 +13,13 @@
 (def h4 (partial el :h4))
 (def h5 (partial el :h5))
 
+(defn text [text]
+  [:div.text
+   (for [sentence (str/split text #"\n\n")]
+     [:p.p sentence])])
+
 (defn blockquote [{:keys [quote]}]
-  [:blockquote.blockquote {}
+  [:blockquote.blockquote.text {}
    (let [sentences (str/split quote #"\n\n")
          sentences (concat [(str "«" (first sentences))] (rest sentences))]
      (map
@@ -55,3 +60,17 @@
    [:div.media-content
     (h4 {:className "title"} title)
     [:p (interpose [:br] lines)]]])
+
+(defn article [{:keys [title content aside image alignment]}]
+  [:div.article {:className (str "article-" (name (or alignment :balanced)))}
+   [:div.article-content {}
+    (when title
+      (h3 {:element :h2} title))
+    content]
+   [:div.article-aside {}
+    (when image
+      [:img.img {:className (cond
+                              (= :front alignment) "image-style-bottom-half-circle"
+                              :default "image-style-rouge-triangle-medium")
+                 :src image}])
+    aside]])

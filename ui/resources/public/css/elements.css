@@ -27,5 +27,13 @@
 .round-media .media-content {flex: 1 0 auto;}
 .round-media .title {margin-bottom: 8px;}
 
-.blockquote p + p {margin-top: 28px;}
+.text p + p {margin-top: 28px;}
 
+.article {display: flex;}
+.article-content {flex: 0 0 55%;}
+.article-aside {flex: 0 0 45%; padding-left: 110px;}
+.article-balanced {align-items: center;}
+.article-front {align-items: flex-start;}
+.article-back {align-items: flex-end;}
+.article-back .img {opacity: 0.75;}
+.article .h3 {margin-bottom: 32px;}
