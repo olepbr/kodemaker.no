@@ -25,5 +25,5 @@
       (e/h1 {} title)
       [:p.text text]
       (e/arrow-link link)]
-     [:img.bruce-image-top {:src image-top}]
-     [:img.bruce-image-right {:src image-right}]]]])
+     [:img.bruce-image-top.image-style-bruce-top {:src image-top}]
+     [:img.bruce-image-right.image-style-bruce-right {:src image-right}]]]])

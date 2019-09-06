@@ -50,13 +50,36 @@
     #"/images/blogg/.*\.png"
     #"/videos/.*\.mp4"]))
 
+(def rouge-duotone
+  [:duotone [255 82 75] [255 255 255]])
+
+(def chocolate-au-lait-duotone
+  [:duotone [89 30 30] [255 255 255]])
+
 (def image-asset-config
   {:prefix "image-assets"
    :resource-path "public"
    :transformations
    {:vcard {:transformations [[:crop {:preset :square}]]
             :retina-optimized? true
-            :width 92}}})
+            :width 92}
+    :bruce-top {:transformations [[:resize {:smallest 774}]
+                                  [:crop {:preset :square}]
+                                  rouge-duotone
+                                  [:circle]
+                                  [:triangle :lower-left]
+                                  [:crop {:width 666
+                                          :height 383
+                                          :offset-y :bottom}]]}
+    :bruce-right {:transformations [[:resize {:smallest 774}]
+                                    [:crop {:preset :square}]
+                                    chocolate-au-lait-duotone
+                                    [:circle]
+                                    [:triangle :lower-right]
+                                    [:crop {:width 666
+                                            :height 666
+                                            :offset-x :right
+                                            :offset-y :bottom}]]}}})
 
 (defn get-pages []
   (let [content (load-content)
