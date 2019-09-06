@@ -60,28 +60,84 @@
   {:prefix "image-assets"
    :resource-path "public"
    :transformations
-   {:vcard {:transformations [[:crop {:preset :square}]]
-            :retina-optimized? true
-            :width 92}
-    :bruce-top {:transformations [[:resize {:smallest 774}]
-                                  [:crop {:preset :square}]
-                                  rouge-duotone
-                                  [:circle]
-                                  [:triangle :lower-left]
-                                  [:crop {:width 666
-                                          :height 383
-                                          :offset-y :bottom}]]}
-    :bruce-right {:transformations [[:resize {:smallest 774}]
-                                    [:crop {:preset :square}]
-                                    chocolate-au-lait-duotone
-                                    [:circle]
-                                    [:triangle :lower-right]
-                                    [:crop {:width 666
-                                            :height 666
-                                            :offset-x :right
-                                            :offset-y :bottom}]]}
-    :vertigo {:height 850
-              :retina-optimized? true}}})
+
+   {:vcard
+    {:transformations [[:crop {:preset :square}]]
+     :retina-optimized? true
+     :width 92}
+
+    :bruce-top
+    {:transformations
+     [[:resize {:smallest 774}]
+      [:crop {:preset :square}]
+      rouge-duotone
+      [:circle]
+      [:triangle :lower-left]
+      [:crop {:width 666
+              :height 383
+              :offset-y :bottom}]]}
+
+    :bruce-right
+    {:transformations
+     [[:resize {:smallest 774}]
+      [:crop {:preset :square}]
+      chocolate-au-lait-duotone
+      [:circle]
+      [:triangle :lower-right]
+      [:crop {:width 666
+              :height 666
+              :offset-x :right
+              :offset-y :bottom}]]}
+
+    :vertigo
+    {:height 850
+     :retina-optimized? true}
+
+    :rouge-portrait-pønt
+    {:transformations [[:fit {:width 670 :height 800}]
+                       rouge-duotone]
+     :width 335
+     :retina-optimized? true}
+
+    :chocolate-portrait-pønt
+    {:transformations [[:fit {:width 670 :height 800}]
+                       chocolate-au-lait-duotone]
+     :width 335
+     :retina-optimized? true}
+
+    :rouge-circle-pønt
+    {:transformations
+     [[:fit {:width 900 :height 900}]
+      [:crop {:preset :square}]
+      rouge-duotone
+      [:circle]
+      [:triangle :upper-right]
+      [:crop {:width 775
+              :offset-x :right
+              :offset-y :top}]]}
+
+    :chocolate-circle-pønt
+    {:transformations
+     [[:fit {:width 900 :height 900}]
+      [:crop {:preset :square}]
+      chocolate-au-lait-duotone
+      [:circle]
+      [:triangle :lower-left]
+      [:crop {:width 775
+              :offset-x :left
+              :offset-y :bottom}]]}
+
+    :chocolate-triangle-pønt
+    {:transformations [[:fit {:width 220 :height 220}]
+                       [:crop {:preset :square}]
+                       chocolate-au-lait-duotone
+                       [:triangle :lower-left]]}
+
+    :rouge-triangle-pønt
+    {:transformations [[:fit {:width 220 :height 220}]
+                       [:crop {:preset :square}]
+                       rouge-duotone
+                       [:triangle :upper-right]]}}})
 
 (defn get-pages []
   (let [content (load-content)
