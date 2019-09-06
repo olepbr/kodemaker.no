@@ -161,5 +161,9 @@
 
   (get-image-assets "./build/" image-asset-config)
 
+  (-> "/image-assets/vcard/_/photos/people/magnar/side-profile-square.jpg"
+      imagine/image-spec
+      (imagine/inflate-spec image-asset-config)
+      (imagine/transform-image-to-file "ui/resources/public/devcard_images/person.png"))
 
   )
