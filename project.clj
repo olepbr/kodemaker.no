@@ -38,6 +38,6 @@
                     :injections [(require 'flare.midje)
                                  (flare.midje/install!)]
                     :plugins [[lein-midje "3.2.1"]]
-                    :source-paths ["config"]
+                    :source-paths ["config" "ui/src"]
                     :test-paths ["test"]
-                    :resource-paths ["test/resources"]}})
+                    :resource-paths ["test/resources" "ui/resources"]}})
