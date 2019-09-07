@@ -159,7 +159,10 @@
                        rouge-duotone
                        [:triangle :lower-left]]}
 
-    }})
+    :profile-medium
+    {:transformations [[:fit {:width 600 :height 800}]]
+     :retina-optimized? true
+     :width 300}}})
 
 (defn get-pages []
   (let [content (load-content)

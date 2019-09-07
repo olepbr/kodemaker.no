@@ -111,3 +111,13 @@ grensesnitt og støtteverktøy/overvåkning.")
                                         "+47 992 18 320"
                                         "magnus@kodemaker.no"]})
     :alignment :balanced}))
+
+(defcard curtain-left
+  (e/curtain
+   {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]
+    :side :left}))
+
+(defcard curtain-right
+  (e/curtain
+   {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]
+    :side :right}))

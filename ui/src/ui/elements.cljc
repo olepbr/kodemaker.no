@@ -88,3 +88,8 @@
                               :default "image-style-rouge-triangle-medium")
                  :src image}])
     aside]])
+
+(defn curtain [{:keys [content side]}]
+  [:span.curtain {:className (str "curtain-" (or (some-> side name) "left"))}
+   content])
+
