@@ -53,25 +53,48 @@
    [:div.seymour-bottom
     (arrow-link (:link params))]])
 
-(def media-image-sizes
-  {"vcard-small" 92
-   "vcard-medium" 120})
+(defn curtain-class [side]
+  (str "curtain-" (or (some-> side name) "left")))
 
-(defn round-media [{:keys [image title lines className image-class]}]
-  [:div.round-media {:className className}
-   [:div.media-element
-    (let [image-class (or image-class "vcard-small")]
-      [:img.img {:className (str "image-style-" (or image-class "vcard-small"))
-                 :width (media-image-sizes image-class)
-                 :src (str image)}])]
+(defn curtain [{:keys [content side]}]
+  [:span.curtain {:className (curtain-class side)}
+   content])
+
+(defn media [{:keys [title content class image]}]
+  [:div.media {:className class}
+   [:div.media-element {}
+    [:img.img {:className (str "image-style-" (:type image)
+                               (when-let [side (:curtain image)]
+                                 (str " " (curtain-class side))))
+               :src (:src image)}]]
    [:div.media-content
     (when title (h4 {:className "title"} title))
-    [:p (interpose [:br] lines)]]])
+    content]])
+
+(defn round-media [params]
+  (media (assoc params
+                :class "round-media"
+                :content [:p (interpose [:br] (:lines params))]
+                :image {:src (:image params)
+                        :type "vcard-small"
+                        :size 92})))
 
 (defn vert-round-media [params]
-  (round-media (assoc params
-                      :className "vert-round-media"
-                      :image-class "vcard-medium")))
+  (media (assoc params
+                :class "round-media vert-round-media"
+                :content [:p (interpose [:br] (:lines params))]
+                :image {:src (:image params)
+                        :type "vcard-medium"
+                        :size 120})))
+
+(defn illustrated [params]
+  (media (assoc params
+                :class "illustrated"
+                :content [:p (interpose [:br] (:lines params))]
+                :image {:src (:image params)
+                        :type "profile-medium"
+                        :size 300
+                        :curtain (:curtain params)})))
 
 (defn article [{:keys [title sub-title content aside image alignment]}]
   [:div.article {:className (str "article-" (name (or alignment :balanced)))}
@@ -88,8 +111,3 @@
                               :default "image-style-rouge-triangle-medium")
                  :src image}])
     aside]])
-
-(defn curtain [{:keys [content side]}]
-  [:span.curtain {:className (str "curtain-" (or (some-> side name) "left"))}
-   content])
-

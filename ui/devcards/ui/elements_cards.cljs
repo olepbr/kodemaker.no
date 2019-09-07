@@ -121,3 +121,29 @@ grensesnitt og støtteverktøy/overvåkning.")
   (e/curtain
    {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]
     :side :right}))
+
+(defcard illustrated
+  (e/illustrated
+   {:image "/devcard_images/profile.jpg"
+    :title "Justin Moore"
+    :lines ["Systemutvikler"
+            "+47 934 17 480"
+            "christin@kodemaker.no"]}))
+
+(defcard illustrated-left
+  (e/illustrated
+   {:image "/devcard_images/profile.jpg"
+    :title "Justin Moore"
+    :curtain :left
+    :lines ["Systemutvikler"
+            "+47 934 17 480"
+            "christin@kodemaker.no"]}))
+
+(defcard illustrated-right
+  (e/illustrated
+   {:image "/devcard_images/profile.jpg"
+    :title "Justin Moore"
+    :curtain :right
+    :lines ["Systemutvikler"
+            "+47 934 17 480"
+            "christin@kodemaker.no"]}))

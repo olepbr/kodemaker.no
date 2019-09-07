@@ -21,19 +21,27 @@
 .seymour h4 {margin: 40px 0 24px;}
 .seymour p {margin-bottom: 32px;}
 
-.round-media {display: flex;}
-.round-media .media-element {flex: 0 0 auto; margin-right: 30px;}
-.round-media .media-element .img {border-radius: 50%;}
-.round-media .media-content {flex: 1 0 auto;}
-.round-media .title {margin-bottom: 8px;}
+.media {display: flex;}
+.media .media-element {flex: 0 0 auto;}
+.media-element .img {width: 100%;}
+.media .media-content {flex: 1 0 auto;}
+.media .title {margin-bottom: 8px;}
+
+.round-media .media-element {margin-right: 30px;}
+.round-media .media-element .img {border-radius: 50%; max-width: 92px;}
 
 .vert-round-media {align-items: center;}
 .vert-round-media .media-content {color: var(--chocolat-au-lait);}
+.vert-round-media .media-element .img {max-width: 120px;}
 
 @media only screen and (min-width: 800px) {
   .vert-round-media {flex-direction: column; align-items: flex-start;}
   .vert-round-media .media-element {margin-bottom: 16px;}
 }
+
+.illustrated {flex-direction: column; align-items: flex-start;}
+.illustrated .media-element {margin-bottom: 32px;}
+.illustrated .media-element .img {max-width: 300px;}
 
 .text p + p {margin-top: 28px;}
 
