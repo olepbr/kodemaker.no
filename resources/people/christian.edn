@@ -1056,6 +1056,13 @@
                          internett. Kan brukes som en Ring-middleware, eller til
                          å generere transformerte/optimaliserte bilder til disk."
                          :tech [:clojure]}
+                        {:url "https://github.com/cjohansen/pharmacist/"
+                         :name "pharmacist"
+                         :description "Et bibliotek for deklarativ utførelse av
+                         en serie operasjoner som kanskje kan feile. Typisk
+                         use-case er orkestrering av nettverkskall, men
+                         Pharmacist er ikke begrenset til dette."
+                         :tech [:clojure :clojurescript]}
                         {:url "https://github.com/cjohansen/dumdom/"
                          :name "dumdom"
                          :description "Et lettvektsalternativ til React for
@@ -1119,7 +1126,8 @@
                          :name "Dome"
                          :description "Funksjonell verktøykasse for DOM-manipulering."
                          :tech [:javascript :functional-programming]}]
- :open-source-contributions [{:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :redhat :ssh]}
+ :open-source-contributions [{:name "Quiescent" :url "https://github.com/cjohansen/quiescent/", :tech [:clojure :react]}
+                             {:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :redhat :ssh]}
                              {:name "Optimus" :url "https://github.com/magnars/optimus" :tech [:clojure :web-performance]}
                              {:name "Stasis" :url "https://github.com/magnars/stasis" :tech [:clojure]}
                              {:name "Collage" :url "https://github.com/karls/collage" :tech [:clojure]}
