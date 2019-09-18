@@ -11,6 +11,7 @@ h3 {font-size: 25px;}
 .xlarge {font-size: 36px; line-height: 1.0;}
 
 .illustration, .mod, h1, h3, h4, h5, p, ul, ol, hr, dl, .img, pre {margin: 20px;}
+.blog h2 {margin: 20px;}
 h2 {margin: 60px 0 20px; padding: 5px 20px;}
 hr {margin-left: 0; margin-right: 0;}
 ul {margin-left: 45px;}
