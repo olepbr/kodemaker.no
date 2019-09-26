@@ -47,7 +47,7 @@ Hvem vet vel bedre hva som leveres enn de som faktisk **leverer**? Gi utviklerne
 tilgang til billing, og inkluder rapporten i passende jevnlige ritualer, så som
 retro. En prosjektleder vil kanskje ikke rynke på nesa over en månedlig regning
 på noen tusen blankpolerte dollars, mens en utvikler som vet at det som er
-levert så langt like gjerne kunne kjørt på en VPS til $50 kommer til å få ticks
+levert så langt like gjerne kunne kjørt på en VPS til $50 kommer til å få tics
 av de samme tallene.
 
 På den andre siden burde utviklerne ha et ativt forhold til kostnader når de
