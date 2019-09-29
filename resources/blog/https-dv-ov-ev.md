@@ -25,7 +25,7 @@ DV er den enkleste, raskeste og billigste måten å sikre kryptere webtrafikk p�
 
 ## 2. OV
 
-Organization validated. OV og EV må du betale for, og de som selger disse sertifikatene sier at det er mer tillit til websider med denne typen sertifikater. Det er litt uklart for meg hvorfor en skal kjøre dette, og hvem som faktisk bruker det. De som selger det er litt vage, og det mistenker er fordi de ikke helt klarer å selge det inn. Litt kjapp googling så ser det ut til å ligge rundt $200 pr år for disse sertifikatene.
+Organization validated. OV og EV må du betale for, og de som selger disse sertifikatene sier at det er mer tillit til websider med denne typen sertifikater (enn DV). Det er litt uklart for meg hvorfor en skal kjøpe akuratt OV, og hvem som faktisk bruker det. Jeg merker at de som selger det er litt vage hvorfor en skal kjøpe denne sertifikattypen og bruker bare generelle salgspitcher om økt sikkerhet og tillitt. Litt kjapp googling så ser det ut til å ligge rundt $200 pr år for disse sertifikatene.
 
 ## 3. EV
 
@@ -39,5 +39,5 @@ Jeg er veldig tvilende til verdien av OV - og er skeptisk til sertifikatutsteder
 
 Min konklusjon er at vanlige nettsider kan holde trygt seg til DV (Let's Encrypt). I hvertfall i starten. Du _må_ jo ha kryptert https trafikk, og verdien ligger der først og fremst!
 
-EV der i mot - er forfengelighet. Jeg tror ikke jeg hadde reagert på om nettbanken min manglet det. Men for oss som jobber med softwareutvikling så er det nyttig å vite at disse nivåene av https -sertifikater eksisterer.
+EV der i mot - er forfengelighet. Jeg tror ikke jeg hadde reagert på om nettbanken min manglet det. Men for oss som jobber med softwareutvikling så er det nyttig å vite at disse nivåene av https -sertifikater eksisterer. Sikkerheten til en webside ligger tross alt i koden, infrastruktur og andre sikkerhetsmekanismer som kan svikte og ikke om du bruker et fancy https sertifikat.
 ...
