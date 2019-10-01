@@ -212,14 +212,19 @@
            :headers {"Location" "/takk/"}})
       (handler req))))
 
-(def app (-> (stasis/serve-pages get-pages)
-             dummy-mail-sender
-             (wrap-resource "videos")
-             (imagine/wrap-images image-asset-config)
-             (optimus/wrap get-assets optimize serve-live-assets)
-             wrap-content-type
-             wrap-content-type-utf-8
-             prone/wrap-exceptions))
+(defn create-app []
+  (-> (stasis/serve-pages get-pages)
+      dummy-mail-sender
+      (wrap-resource "videos")
+      (imagine/wrap-images image-asset-config)
+      (optimus/wrap get-assets optimize serve-live-assets)
+      wrap-content-type
+      wrap-content-type-utf-8
+      prone/wrap-exceptions))
+
+(declare app)
+(defn init-app! [] ;; this horrible thing is here for "lein ring server"
+  (def app (create-app)))
 
 (defn extract-images [html]
   (for [node (html5-walker/find-nodes html [:img])]

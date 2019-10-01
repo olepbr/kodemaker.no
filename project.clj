@@ -23,6 +23,7 @@
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app
+         :init kodemaker-no.web/init-app!
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]]

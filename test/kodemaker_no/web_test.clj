@@ -1,10 +1,12 @@
 (ns kodemaker-no.web-test
-  (:require [kodemaker-no.web :refer :all]
+  (:require [kodemaker-no.web :as web]
             [midje.sweet :refer :all]
             [net.cgrand.enlive-html :refer [select html-resource]]))
 
 (defn parse [s]
   (html-resource (java.io.StringReader. s)))
+
+(def app (web/create-app))
 
 (fact
  "En helt enkel ende-til-ende test for å fange opp dusterier."
@@ -24,7 +26,7 @@
 (fact
  "Får vi 200 på hele siten? (del 1)" :slow :slow-1
 
- (let [urls (take split-index (keys (get-pages)))]
+ (let [urls (take split-index (keys (web/get-pages)))]
    (doseq [url urls]
      {:status (-> (app {:uri url}) :status)
       :uri url} => {:status 200 :uri url})))
@@ -32,7 +34,7 @@
 (fact
  "Får vi 200 på hele siten? (del 2)" :slow :slow-2
 
- (let [urls (drop split-index (keys (get-pages)))]
+ (let [urls (drop split-index (keys (web/get-pages)))]
    (doseq [url urls]
      {:status (-> (app {:uri url}) :status)
       :uri url} => {:status 200 :uri url})))
