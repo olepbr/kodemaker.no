@@ -26,7 +26,10 @@
          :init kodemaker-no.web/init-app!
          :port 3333}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
-  :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]]
+  :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]
+                                  [integrant "0.7.0"]
+                                  [integrant/repl "0.3.1"]]
+                   :repl-options {:init-ns repl}
                    :plugins [[lein-ring "0.12.5"]
                              [lein-ancient "0.6.15"]]
                    :source-paths ["dev" "config" "ui/src"]
