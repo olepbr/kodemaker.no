@@ -10,7 +10,7 @@
    :app/handler {:new-site? true}})
 
 (defmethod ig/init-key :app/handler [_ opts]
-  (web/create-app))
+  (web/create-app opts))
 
 (defmethod ig/init-key :adapter/jetty [_ {:keys [handler] :as opts}]
   (jetty/run-jetty handler (-> opts (dissoc :handler) (assoc :join? false))))
@@ -20,7 +20,7 @@
 
 (integrant.repl/set-prep! (constantly config))
 
-(c.t.n.r/set-refresh-dirs "src" "test" "dev")
+(c.t.n.r/set-refresh-dirs "src" "dev")
 
 (defn start []
   (integrant.repl/go))

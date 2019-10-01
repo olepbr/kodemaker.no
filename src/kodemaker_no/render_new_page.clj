@@ -1,12 +1,14 @@
 (ns kodemaker-no.render-new-page
-  (:require [dumdom.string :as dumdom]
+  (:require [clojure.java.io :as io]
+            [dumdom.string :as dumdom]
             [optimus.link :as link]
             [ui.layout :as layout]
-            [ui.sections.seymour-section :as seymour-section]
-            [clojure.java.io :as io]))
+            [ui.sections.bruce-section :as bruce-section]
+            [ui.sections.seymour-section :as seymour-section]))
 
 (defn render-section [section]
   (case (:kind section)
+    :bruce (bruce-section/render section)
     :seymour (seymour-section/render section)
     :footer (layout/footer)))
 
@@ -29,29 +31,3 @@
      [:body
       [:script (slurp (io/resource "public/scripts/analytics.js"))]
       (map render-section (:sections page))]])))
-
-(comment
-  (render-page
-   {:sections [{:kind :seymour
-                :color :white
-                :seymours
-                [{:icon {:type :science/chemical :height 79}
-                  :title "Referanser"
-                  :text "Det er fleske meg ikke dårlig hvor mange artige prosjekter vi har fått være med på."
-                  :link {:text "Se referanser"
-                         :href "/referanser/"}}
-                 {:icon {:type :science/robot-1 :height 79}
-                  :title "Sjekk ut hvem vi har på laget 'æ, guttær!"
-                  :text "Vi har kun erfarne konsulenter med oss som liker å bryne seg på vanskelig oppgaver."
-                  :link {:text "Våre ansatte"
-                         :href "/folk/"}}
-                 {:icon {:type :computer/laptop-1 :height 79}
-                  :title "Kurs og workshops"
-                  :text "Her er en ganske kort tekst."
-                  :link {:text "Vi kan tilby"
-                         :href "/kurs/"}}]}
-               {:kind :footer}]}
-   {:optimus-assets kodemaker-no.web/optimized-assets})
-
-
-  )
