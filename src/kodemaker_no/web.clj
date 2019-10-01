@@ -17,7 +17,7 @@
             [optimus-img-transform.core :refer [transform-images]]
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
-            [optimus.strategies :refer [serve-live-assets]]
+            optimus.strategies
             [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [ring.middleware.resource :refer [wrap-resource]]
@@ -105,7 +105,7 @@
     (-> (atomic/serve-pages)
         (wrap-resource "videos")
         (imagine/wrap-images images/image-asset-config)
-        (optimus/wrap get-assets optimizations/none serve-live-assets)
+        (optimus/wrap get-assets optimizations/none optimus.strategies/serve-live-assets-autorefresh)
         wrap-content-type
         wrap-content-type-utf-8
         prone/wrap-exceptions)
@@ -113,7 +113,7 @@
         dummy-mail-sender
         (wrap-resource "videos")
         (imagine/wrap-images images/image-asset-config)
-        (optimus/wrap get-assets optimize serve-live-assets)
+        (optimus/wrap get-assets optimize optimus.strategies/serve-live-assets-autorefresh)
         wrap-content-type
         wrap-content-type-utf-8
         prone/wrap-exceptions)))
