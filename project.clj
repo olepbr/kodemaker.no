@@ -19,7 +19,7 @@
                  [clygments "2.0.0"]
                  [prone "2019-07-08"]
                  [cjohansen/dumdom "2019.09.05-1"]
-                 [ch.digitalfondue.jfiveparse/jfiveparse "0.5.3"]]
+                 [html5-walker "2019-10-01"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app

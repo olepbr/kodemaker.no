@@ -1,11 +1,11 @@
 (ns kodemaker-no.prepare-pages
   (:require [clojure.string :as str]
             [hiccup.core :refer [html]]
+            [html5-walker.core :as html5-walker]
+            [imagine.core :as imagine]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.highlight :as hl]
             [kodemaker-no.homeless :as h]
-            [kodemaker-no.html5-walker :as html5-walker]
-            [imagine.core :as imagine]
             [kodemaker-no.render-page :as render]
             [optimus.link :as link]))
 
@@ -48,7 +48,7 @@
   (.removeAttribute node attr-before))
 
 (defn- tweak-pages [html image-asset-config request]
-  (html5-walker/replace
+  (html5-walker/replace-in-document
    html
    {
     ;; use optimized images

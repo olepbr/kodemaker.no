@@ -1,13 +1,13 @@
 (ns kodemaker-no.highlight
-  (:require [clygments.core :as pygments]
-            [kodemaker-no.html5-walker :as html5-walker]
-            [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [clygments.core :as pygments]
+            [html5-walker.core :as html5-walker]))
 
 (defn- extract-code
   "Pulls out just the highlighted code, removing needless fluff and
   stuff from the Pygments treatment."
   [highlighted]
-  (.getInnerHTML (first (html5-walker/find highlighted [:pre]))))
+  (.getInnerHTML (first (html5-walker/find-nodes highlighted [:pre]))))
 
 (defn highlight
   "Extracts code from the node contents, and highlights it according

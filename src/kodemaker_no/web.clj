@@ -2,17 +2,17 @@
   (:require clojure.core.memoize
             [clojure.data.json :as json]
             [config :refer [export-directory]]
+            [html5-walker.core :as html5-walker]
             [imagine.core :as imagine]
             [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
-            [kodemaker-no.html5-walker :as html5-walker]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
-            [optimus-img-transform.core :refer [transform-images]]
             [optimus.assets :as assets]
             [optimus.export]
+            [optimus-img-transform.core :refer [transform-images]]
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
             [optimus.strategies :refer [serve-live-assets]]
@@ -222,7 +222,7 @@
              prone/wrap-exceptions))
 
 (defn extract-images [html]
-  (for [node (html5-walker/find html [:img])]
+  (for [node (html5-walker/find-nodes html [:img])]
     (.getAttribute node "src")))
 
 (defn get-images [pages-dir]
