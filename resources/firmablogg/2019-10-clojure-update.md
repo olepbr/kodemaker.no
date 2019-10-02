@@ -35,7 +35,7 @@ og en funksjon `add-new-zombie` som skal brukes til å oppdatere verdien bak den
 
 Det er naturligvis *ille dust* at det finnes en funksjon `add-new-zombie`. Vi
 vil heller ha [små byggeklosser enn små
-funksjoner](https://kodemaker.no/blogg/2019-07-gammelt-triks-ny-kontekst/).
+funksjoner](https://www.kodemaker.no/blogg/2019-07-gammelt-triks-ny-kontekst/).
 
 Dermed kan vi dra koden inn via en anonym funksjon:
 
