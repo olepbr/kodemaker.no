@@ -1,0 +1,24 @@
+[;; meta
+
+ {:db/ident :tx-source/file-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ ;; page
+
+ {:db/ident :page/uri
+  :db/valueType :db.type/string
+  :db/unique :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :page/kind
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ ;; tech
+
+ {:db/ident :tech/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ ]
