@@ -4,13 +4,18 @@
             [optimus.link :as link]
             [ui.layout :as layout]
             [ui.sections.bruce-section :as bruce-section]
-            [ui.sections.seymour-section :as seymour-section]))
+            [ui.sections.pønt-section :as pønt-section]
+            [ui.sections.seymour-section :as seymour-section]
+            [ui.sections.vertigo-section :as vertigo-section]))
 
 (defn render-section [section]
-  (case (:kind section)
-    :bruce (bruce-section/render section)
-    :seymour (seymour-section/render section)
-    :footer (layout/footer)))
+  ((case (:kind section)
+     :bruce bruce-section/render
+     :footer layout/footer
+     :pønt pønt-section/render
+     :seymour seymour-section/render
+     :vertigo vertigo-section/render)
+   section))
 
 (defn- head-title [title]
   (if-let [title-str (or (:head title) (and (string? title) title))]

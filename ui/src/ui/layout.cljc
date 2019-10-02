@@ -26,7 +26,7 @@
 
         (assoc :background-image
                (->> (for [{:keys [kind ext]} pønt]
-                      (str "url(/img/pønt/" (name kind) ext ")"))
+                      (str "url(/img/p-nt/" (name kind) ext ")"))
                     (str/join ", ")))
 
         (assoc :background-size
@@ -57,7 +57,7 @@
     (for [{:keys [href text]} menu-items]
       [:li [:a {:href href} text]])]])
 
-(defn footer []
+(defn footer [_]
   [:div.footer {:style (add-pønt {} [{:kind :less-than
                                       :position "right -300px top -480px"}])}
    [:div.f-logo (logo {:width 176})]

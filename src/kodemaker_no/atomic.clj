@@ -35,6 +35,8 @@
 
 (defn serve-pages []
   (fn [request]
-    {:status 200
-     :body (render-page frontpage request)
-     :headers {"Content-Type" "text/html"}}))
+    (if (= "/" (:uri request))
+      {:status 200
+       :body (render-page frontpage request)
+       :headers {"Content-Type" "text/html"}}
+      {:status 404})))

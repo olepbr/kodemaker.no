@@ -1,6 +1,6 @@
 (ns ui.layout-cards
-  (:require [ui.layout :as layout]
-            [dumdom.devcards :refer-macros [defcard]]))
+  (:require [dumdom.devcards :refer-macros [defcard]]
+            [ui.layout :as layout]))
 
 (defcard logo
   (layout/logo {}))
@@ -15,7 +15,7 @@
   (layout/header))
 
 (defcard footer
-  (layout/footer))
+  (layout/footer {}))
 
 (defcard pønt
   [:div
