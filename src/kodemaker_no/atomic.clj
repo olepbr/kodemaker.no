@@ -11,8 +11,8 @@
                       tunge integrasjoner."
                :link {:text "Jobb med oss"
                       :href "/jobb/"}
-               :image-top (images/url-to :bruce-top "foto/alf-kristian-confirmation-bias.jpg")
-               :image-right (images/url-to :bruce-right "foto/alf-kristian-confirmation-bias.jpg")}
+               :image-top (images/url-to :bruce-top "foto/christian-1.jpg")
+               :image-right (images/url-to :bruce-right "foto/nils-1.jpg")}
               {:kind :seymour
                :color :blanc-rose
                :seymours
