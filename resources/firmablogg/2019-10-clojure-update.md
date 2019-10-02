@@ -43,7 +43,7 @@ Dermed kan vi dra koden inn via en anonym funksjon:
 (update game :zombies #(conj % (new-zombie)))
 ```
 
-Hmfr. "Jeg trodde liksom det skulle være så lite syntax i denne JVM-lispen, din
+Hmfr. "Jeg trodde liksom det skulle være så lite syntax i denne JVM-lispen din,
 Magnar?" sier du kanskje. "Hva i alle verdens land og rike er disse skigardene og
 prosenttegnene?"
 
