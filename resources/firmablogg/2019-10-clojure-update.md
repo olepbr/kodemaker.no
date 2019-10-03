@@ -35,7 +35,7 @@ og en funksjon `add-new-zombie` som skal brukes til å oppdatere verdien bak den
 
 Det er naturligvis *ille dust* at det finnes en funksjon `add-new-zombie`. Vi
 vil heller ha [små byggeklosser enn små
-funksjoner](https://www.kodemaker.no/blogg/2019-07-gammelt-triks-ny-kontekst/).
+funksjoner](/blogg/2019-07-gammelt-triks-ny-kontekst/).
 
 Dermed kan vi dra koden inn via en anonym funksjon:
 
@@ -54,7 +54,7 @@ Jeg er enig. Jeg skjemmes litt. Vi kan skrive en skikkelig funksjonsliteral iste
 ```
 
 Som du kanskje ser så er `%` en slags anaforisk parameter -- spesiell syntaks for
-å vinne kodegolfturninger. Det er ikke det som gjør meg glad når jeg koder.
+å vinne kodegolfturneringer. Det er ikke det som gjør meg glad når jeg koder.
 
 ## Her er det
 
@@ -84,7 +84,7 @@ Det leser: "Oppdater spillet sine zombier ved å legge til en ny zombie." Svit.
 
 Dette trikset funker også med `update-in` og `swap!`. Sistnevnte oppdaterer
 Clojure sine atomer, et slags [fengsel for muterbar
-state](https://kodemaker.no/interaktiv-programmering-med-clojurescript/).
+state](/interaktiv-programmering-med-clojurescript/).
 
 Vi trenger altså ikke skrive:
 
