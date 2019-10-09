@@ -1,5 +1,6 @@
 :title Verdt å vite om Set i JavaScript 
 :author odin
+:published 2019-10-09
 :tech [:javascript]
 
 :blurb
