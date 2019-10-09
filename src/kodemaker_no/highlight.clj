@@ -14,9 +14,9 @@
   to the given language (extracted from the node's class name)."
   [node]
   (let [lang (some-> node (.getAttribute "class") not-empty keyword)
-        code (cond-> (.getInnerHTML node)
-               (= :html lang) (-> (str/replace "&lt;" "<")
-                                  (str/replace "&gt;" ">")))]
+        code (-> (.getInnerHTML node)
+                 (str/replace "&lt;" "<")
+                 (str/replace "&gt;" ">"))]
     ;; Certain code samples (like a 14Kb HTML string embedded in JSON) trips up
     ;; Pygments (too much recursion). When that happens, skip highlighting
     (try
