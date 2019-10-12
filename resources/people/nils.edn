@@ -51,15 +51,15 @@
  :innate-skills         [:kotlin]
 
  :endorsements          [
-         {:author "Thor Marius Henrichsen"
-         :title "Tech Lead, Finn.no"
-         :quote "Nils er en fantastisk utvikler å ha i ethvert utviklingteam. Han har dyp teknisk forståelse i en mengde språk, og han behersker mange tilhørende rammeverk. Han er enormt effektiv, og løser komplekse oppgaver på løpende bånd. Er det noe han ikke kan, bruker han dessuten svært kort tid å å lære seg nye ting. 
+                         {:author "Thor Marius Henrichsen"
+                          :title "Tech Lead, Finn.no"
+                          :quote "Nils er en fantastisk utvikler å ha i ethvert utviklingteam. Han har dyp teknisk forståelse i en mengde språk, og han behersker mange tilhørende rammeverk. Han er enormt effektiv, og løser komplekse oppgaver på løpende bånd. Er det noe han ikke kan, bruker han dessuten svært kort tid å å lære seg nye ting. 
 
 For vårt team i FINN.no har Nils' Kafka ekspertise vært spesielt verdifull. Han har også vært en viktig ressurs i forbindelse med Kotlin og Elm adopsjon i teamet. 
 
 Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter over på omgivelsene. Jeg kan trygt anbefale Nils videre til alle som trenger en super utvikler."
-         },
-         {:author "Sigve Litsheim"
+                          },
+                         {:author "Sigve Litsheim"
                           :title  "Lead Architect, Thomson Reuters"
                           :quote  "Nils er en svært allsidig og dyktig utvikler. Han setter seg raskt inn i nye teknologier og er flink til å dele kunnskap og få med seg de andre på teamet. I Thomson Reuters jobbet han med utvikling av nytt system for å distribuere tidsserier og prognosedata i sanntid. Han videreutviklet og forbedret distribuerte beregninger med Spark/Hadoop og streaming av store datamengder med bruk av Kafka og HBase. Jeg kan varmt anbefale Nils og er sikker på at han vil være et solid tilskudd til de prosjektene han deltar på i fremtiden."},
                          {:author "Øystein Slørdahl Hjertvik"
@@ -75,227 +75,231 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
 
  :recommendations
-                        [
-                         {:title "Concurrency is not parallelism"
-                          :blurb "Concurrency og parallelisme er to begreper som blandes sammen. Rob Pike, en av skaperene av Go,
+ [
+  {:title "Concurrency is not parallelism"
+   :blurb "Concurrency og parallelisme er to begreper som blandes sammen. Rob Pike, en av skaperene av Go,
                          forklarer forskjellen og hvordan dette concurrency kan håndteres i Go. Det foretrukne patternet i Go er
                          'Communicating Sequential Processes' (CSP) som også blir brukt av andre språk. CSP implementasjonen i
                          Go er brukt som grunnlag for implementasjon i flere andre språk som Clojure og Kotlin."
-                          :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
-                                  :text "Til video/slides"},
-                          :tech  [:go :concurrency]},
+   :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
+           :text "Til video/slides"},
+   :tech  [:go :concurrency]},
 
-                         {:title "Teach Yourself Programming in Ten Years"
-                          :blurb "Kan man plukke opp en programmeringsbok og lære programmering på 24 timer eller 21 dager? Nei.
+  {:title "Teach Yourself Programming in Ten Years"
+   :blurb "Kan man plukke opp en programmeringsbok og lære programmering på 24 timer eller 21 dager? Nei.
                   Peter Norvig skriver litt om hva som skal til for å bli en dyktig programmerer og kommer med tips til veien
                   man kan gå for å bli en god programmerer."
-                          :link  {:url  "http://norvig.com/21-days.html"
-                                  :text "Les artikkelen"}
-                          :tech  [:programming]}
+   :link  {:url  "http://norvig.com/21-days.html"
+           :text "Les artikkelen"}
+   :tech  [:programming]}
 
-                         ]
- :presentations
-                        [
-			{:title "Parsing binary weather data with Go"
-			:blurb "GRIB er et binært filformat som brukes for å distribuere værmeldinger og værobservasjoner. Jeg har laget et bibliotek for dette og presenterer det på \"Go Oslo User Group\""
-			:date "2019-04-05"
-			:tech [:go]
-			:urls {:slides "https://github.com/nilsmagnus/what-is-griblib"}
-			},
-                         {:title "Lyntale: Tracking location of your neighbours wearable"
-                          :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
+  ]
+ :presentations[
+                {:title "3,5 teknikker for tryggere håndtering av meldinger"
+                 :blurb "I dette foredraget viser jeg hvordan du kan prosessere meldinger fra Kafka på en tryggere måte. Jeg har destillert ned min erfaring fra meldingsbaserte arkitekturer til 3,5 patterns som vil komme godt med i ethvert event-basert system - ikke bare de som bruker Kafka."
+                 :date  "2019-09-12"
+                 :event "JavaZone"
+                 :tech  [:kafka]
+                 :urls  {:video "https://vimeo.com/360814664"}
+                 },
+                {:title "Parsing binary weather data with Go"
+                 :blurb "GRIB er et binært filformat som brukes for å distribuere værmeldinger og værobservasjoner. Jeg har laget et bibliotek for dette og presenterer det på \"Go Oslo User Group\""
+                 :date "2019-04-05"
+                 :tech [:go]
+                 :urls {:slides "https://github.com/nilsmagnus/what-is-griblib"}
+                 },
+                {:title "Lyntale: Tracking location of your neighbours wearable"
+                 :blurb "På javazone 2016 viste jeg frem hvor lett det er å overvåke alle bluetooth-enheter i nærheten med en egenlaget Android app og en backend skrevet i Go.
                          Det blir ekstra skummelt når jeg sender dataene til google-appengine og lar alle med appen installert abonnere
                          på puls-klokken til han som sitter ved siden av deg. Bluetooth var ikke bygd med tanke på personvern, det du har rundt håndleddet er en digital sauebjelle!
 
                          Lyntalen ble senere holdt som foredrag på ISF sin høstkonferanse 2017.
                          "
-                          :date  "2011-09-07"
-                          :event "JavaZone"
-                          :tech  [:android :bluetooth :go]
-                          :urls  {:video "https://vimeo.com/181936877"}}
-                         ]
+                 :date  "2011-09-07"
+                 :event "JavaZone"
+                 :tech  [:android :bluetooth :go]
+                 :urls  {:video "https://vimeo.com/181936877"}}
+                ]
 
  :open-source-contributions
-                        [
-			{:name "Retriable Kafka Consumer" :url "https://github.com/finn-no/retriable-kafka-consumer" :tech [:kafka :java]}
-			{:name "Ktor-Swagger" :url "https://github.com/nielsfalk/ktor-swagger" :tech [:kotlin] }
-			,
-                         {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go]},
-                         {:name "Unleash-go-client" :url "https://github.com/Unleash/unleash-client-go" :tech [:go, :unleash]},
-                         {:name "Influx/Telegraf" :url "https://github.com/influxdata/telegraf/pull/3309" :tech [:go, :telegraf]}
-                         ]
+ [
+  {:name "Retriable Kafka Consumer" :url "https://github.com/finn-no/retriable-kafka-consumer" :tech [:kafka :java]}
+  {:name "Ktor-Swagger" :url "https://github.com/nielsfalk/ktor-swagger" :tech [:kotlin] }
+  ,
+  {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go]},
+  {:name "Unleash-go-client" :url "https://github.com/Unleash/unleash-client-go" :tech [:go, :unleash]},
+  {:name "Influx/Telegraf" :url "https://github.com/influxdata/telegraf/pull/3309" :tech [:go, :telegraf]}
+  ]
 
 
  :open-source-projects
-                        [
-                         {:url         "https://github.com/nilsmagnus/grib"
-                          :name        "grib"
-                          :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
+ [
+  {:url         "https://github.com/nilsmagnus/grib"
+   :name        "grib"
+   :description "Et bibliotek for å parse værdata-filer i det binære formatet 'grib'. Biblioteket er skrevet i Go og er en videreutvikling av et forlatt bibliotek.
                          Utviklet funksjoner som gjør det mulig å streame grib-filer samtidig som man filtrerer på innholdet."
-                          :tech        [:go]},
-                         {:url         "https://github.com/nilsmagnus/silhouette"
-                          :name        "Silhouette Words"
-                          :description "En webapp laget for lærere som driver med alfabetisering."
-                          :tech        [:react :javascript :css :npm :webpack :jsx]},
-                         {:url         "https://github.com/nilsmagnus/wsdl2java"
-                          :name        "wsdl2java"
-                          :description "Et plugin for gradle for å generere java-kode fra webservice-kontrakter."
-                          :tech        [:gradle :groovy]},
-                         ]
+   :tech        [:go]},
+  {:url         "https://github.com/nilsmagnus/silhouette"
+   :name        "Silhouette Words"
+   :description "En webapp laget for lærere som driver med alfabetisering."
+   :tech        [:react :javascript :css :npm :webpack :jsx]},
+  {:url         "https://github.com/nilsmagnus/wsdl2java"
+   :name        "wsdl2java"
+   :description "Et plugin for gradle for å generere java-kode fra webservice-kontrakter."
+   :tech        [:gradle :groovy]},
+  ]
 
  :side-projects
-                        [
-                         {:title        "vintilbud.no"
-                          :link         {:url "https://vintilbud.no" :text "Tilbud på varer fra vinmonopolet"}
-                          :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en web-app der man kan filtrere på type og sortere på ulike parametere. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
-                          :illustration "/illustrations/side-projects/vintilbud.png"
-                          :tech         [:go :google-appengine :elm]
-                          },
-                         {:title        "pushify.xyz"
-                          :link         {:url "https://pushify.xyz" :text "Pushify"}
-                          :description  "Pushify lar deg sende og motta push-meldinger uten å måtte installere en app, en såkalt progressive web app(pwa). Det eneste man trenger er å gå til nettsiden og begynne å bruke appen. Service workers sørger for at du får push-meldinger selv om nettleseren er lukket. Jeg lagde appen for å kunne motta push-meldinger fra hjemme-automasjonssystemet mitt og for å lære om Elm og pwa. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
-                          :illustration "/illustrations/side-projects/pushify.png"
-                          :tech         [:go :google-appengine :elm :pwa]
-                          },
-                         {:title        "Analyse av værdata"
-                          :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
-                          :illustration "/illustrations/side-projects/weathergraph.png"
-                          :tech         [:go :kubernetes :machinelearning :influxdb]
-                          },
+ [
+  {:title        "vintilbud.no"
+   :link         {:url "https://vintilbud.no" :text "Tilbud på varer fra vinmonopolet"}
+   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en web-app der man kan filtrere på type og sortere på ulike parametere. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
+   :illustration "/illustrations/side-projects/vintilbud.png"
+   :tech         [:go :google-appengine :elm]
+   },
+  {:title        "pushify.xyz"
+   :link         {:url "https://pushify.xyz" :text "Pushify"}
+   :description  "Pushify lar deg sende og motta push-meldinger uten å måtte installere en app, en såkalt progressive web app(pwa). Det eneste man trenger er å gå til nettsiden og begynne å bruke appen. Service workers sørger for at du får push-meldinger selv om nettleseren er lukket. Jeg lagde appen for å kunne motta push-meldinger fra hjemme-automasjonssystemet mitt og for å lære om Elm og pwa. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
+   :illustration "/illustrations/side-projects/pushify.png"
+   :tech         [:go :google-appengine :elm :pwa]
+   },
+  {:title        "Analyse av værdata"
+   :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
+   :illustration "/illustrations/side-projects/weathergraph.png"
+   :tech         [:go :kubernetes :machinelearning :influxdb]
+   }
 
-                         {:title        "Ship (tidligere DHL Tracker)"
-                          :description  "En enkel app for android jeg lagde etter å ha irritert meg over
-                         at DHL ikke har laget noe sånt selv. Live push-meldinger til telefonen din for
-                         hver status-oppdatering for pakken din som er underveis. Backend er skrevet i go og appen i kotlin.
-                         Støtter i dag pakker fra posten, postnord og flere dhl-distributører. "
-                          :link         {:url "https://play.google.com/store/apps/details?id=no.nilsapp.trakpak.ship" :text "Prøv app'en"}
-                          :illustration "/illustrations/side-projects/android-ship-app.png"
-                          :tech         [:android :kotlin :go :app-engine]}
-                         ]
+  ]
 
  :projects
-                        [
-			{:customer "Posten AS"
-			:summary "Utvikle backend for tjenesten 'Innenfor' -  levering av pakker innenfor døren med digitale låser."
-			:years [2019]
-			:employer :kodemaker
-			:description "Integrasjon mellom mobile apper, låser og postens systemer for å kunne la sjåførene levere pakker innenfor dør hos kunder. Håndtere signering av koder, private og public keys for engangskoder og sikkerhetsaspekter rundt kryptering, lagring og uthenting av koder. Laget en mock-server i Go for mobil-appene for å kunne teste uten å involvere tunge legacy-systemer."
-			:tech [:kotlin :postgresql :ktor :oauth :go :swagger]
-			},
-			{:customer    "Finn"
-                          :description "System for å øke synlighet til utvalgte annonser. Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
-                          :years       [2018 2019]
-                          :employer    :kodemaker
-                          :summary     "Videreutvikle og fornye system for anbefalte annonser og oppsalgsprodukter for ekstra effekt."
-                          :tech        [:java, :kotlin, :kafka, :kubernetes, :elm, :docker, :postgresql, :spring-boot, :nodejs, :openlayers, :prebidjs]},
-                         {:customer    "Tieto"
-                          :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
-                          :years       [2017 2018]
-                          :employer    :kodemaker
-                          :summary     "Videreutvikling av system for virtuelle bankkontoer og nyutvikling av applikasjon for automatiske betalinger."
-                          :tech        [:java, :docker, :docker-compose :spring :hibernate :db2 :maven]},
-                         {:customer    "Western Geco"
-                          :description "Utvikling av nytt produkt for landseismikk. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
-                          :years       [2017]
-                          :employer    :kodemaker
-                          :summary     "Utviklig av kontrollsystem for innsamling av seismisk data på land."
-                          :tech        [:java, :bash, :grpc, :google-protocol-buffers :javafx :docker]}
-                         {:customer    "Thomson Reuters"
-                          :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
-                          :years       [2016 2017]
-                          :employer    :kodemaker
-                          :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
-                          :tech        [:java, :vertx, :kafka, :spark, :hbase :zookeeper :kibana]}
-                         {:customer              "Thomson Reuters"
-                          :years                 [2016]
-                          :exclude-from-profile? true
-                          :employer              :bytecode
-                          :summary               "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
-                          :description           "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
-                          :tech                  [:hbase :spark :kafka :java :zookeeper :vertx :kibana :java]}
-                         {:customer    "Norwegian Air Shuttle"
-                          :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
-                          :years       [2012 2016]
-                          :employer    :webstep
-                          :summary     "Utvikling og vedlikehold av backend for booking-systemet"
-                          :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
-                                        :java :jboss :hibernate :bash :groovy :play :jquery :intellij
-                                        :junit :testng :xml :git :hystrix]}
-                         {:customer              "Storebrand Aktuarsystemer"
-                          :description           "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
-                          :years                 [2011 2012]
-                          :exclude-from-profile? true
-                          :employer              :webstep
-                          :summary               "Kundeportal og integrasjon av fagsystem."
-                          :tech                  [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2
-                                                  :java :apache-cxf :html :css :intellij :gradle :maven :nexus
-                                                  :teamcity :seapine :bamboo :junit :itext :svn :jdbc]}
-                         {:customer              "Statens Pensjonskasse, PERFORM"
-                          :years                 [2009]
-                          :exclude-from-profile? true
-                          :employer              :accenture
-                          :summary               "PERFORM, Uvikling av kjernefunksjonalitet for pensjonsreformen."
-                          :description           "Oppgaver: Utvikling av kjernesystemet i
+ [
+  {:customer    "Finn"
+   :description "Distribusjon av annonser med økt synlighet. Prosessere meldinger for endring på annonser og håndtere livssyklus for effekt-produkter for annonser på finn.no."
+   :years       [2019]
+   :employer    :kodemaker
+   :summary     "Videreutvikle og fornye system for annonser med effekt-produkter."
+   :tech        [:java, :kotlin, :kafka, :kubernetes, :elm, :docker, :postgresql, :spring-boot]},
+  {:customer "Posten AS"
+   :summary "Utvikle backend for tjenesten 'Innenfor' -  levering av pakker innenfor døren med digitale låser."
+   :years [2019]
+   :employer :kodemaker
+   :description "Integrasjon mellom mobile apper, låser og postens systemer for å kunne la sjåførene levere pakker innenfor dør hos kunder. Håndtere signering av koder, private og public keys for engangskoder og sikkerhetsaspekter rundt kryptering, lagring og uthenting av koder. Laget en mock-server i Go for mobil-appene for å kunne teste uten å involvere tunge legacy-systemer."
+   :tech [:kotlin :postgresql :ktor :oauth :go :swagger]
+   },
+  {:customer    "Finn"
+   :description "System for å øke synlighet til utvalgte annonser. Prosessere meldinger for endring på annonser og håndtere aktivering/deaktivering av Blink. Integrere anbefalte annonser på kart.finn.no. Jobbe med tilrettelegging av annonse-bud med prebid.js."
+   :years       [2018 2019]
+   :employer    :kodemaker
+   :summary     "Videreutvikle og fornye system for anbefalte annonser og oppsalgsprodukter for ekstra effekt."
+   :tech        [:java, :kotlin, :kafka, :kubernetes, :elm, :docker, :postgresql, :spring-boot, :nodejs, :openlayers, :prebidjs]},
+  {:customer    "Tieto"
+   :description "Modernisere utviklingsplatform og heve kodekvalitet. Modernisering av legacy kode. Videreutvikle kjernesystemer for bankvirksomhet."
+   :years       [2017 2018]
+   :employer    :kodemaker
+   :summary     "Videreutvikling av system for virtuelle bankkontoer og nyutvikling av applikasjon for automatiske betalinger."
+   :tech        [:java, :docker, :docker-compose :spring :hibernate :db2 :maven]},
+  {:customer    "Western Geco"
+   :description "Utvikling av nytt produkt for landseismikk. Administrere sensorer og data-innhøsting fra sensorer. Scripting av installasjon på redhat."
+   :years       [2017]
+   :employer    :kodemaker
+   :summary     "Utviklig av kontrollsystem for innsamling av seismisk data på land."
+   :tech        [:java, :bash, :grpc, :google-protocol-buffers :javafx :docker]}
+  {:customer    "Thomson Reuters"
+   :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
+   :years       [2016 2017]
+   :employer    :kodemaker
+   :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+   :tech        [:java, :vertx, :kafka, :spark, :hbase :zookeeper :kibana]}
+  {:customer              "Thomson Reuters"
+   :years                 [2016]
+   :exclude-from-profile? true
+   :employer              :bytecode
+   :summary               "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+   :description           "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
+   :tech                  [:hbase :spark :kafka :java :zookeeper :vertx :kibana :java]}
+  {:customer    "Norwegian Air Shuttle"
+   :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
+   :years       [2012 2016]
+   :employer    :webstep
+   :summary     "Utvikling og vedlikehold av backend for booking-systemet"
+   :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
+                 :java :jboss :hibernate :bash :groovy :play :jquery :intellij
+                 :junit :testng :xml :git :hystrix]}
+  {:customer              "Storebrand Aktuarsystemer"
+   :description           "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
+   :years                 [2011 2012]
+   :exclude-from-profile? true
+   :employer              :webstep
+   :summary               "Kundeportal og integrasjon av fagsystem."
+   :tech                  [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2
+                           :java :apache-cxf :html :css :intellij :gradle :maven :nexus
+                           :teamcity :seapine :bamboo :junit :itext :svn :jdbc]}
+  {:customer              "Statens Pensjonskasse, PERFORM"
+   :years                 [2009]
+   :exclude-from-profile? true
+   :employer              :accenture
+   :summary               "PERFORM, Uvikling av kjernefunksjonalitet for pensjonsreformen."
+   :description           "Oppgaver: Utvikling av kjernesystemet i
                   pensjonsbehandlings-systemet etter nye regler om
                   pensjonsreformen."
-                          :tech                  [:spring-batch :spring-core :java :eclipse :jsf :junit :fitnesse
-                                                  :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
-                                                  :squirrel-sql :xml :jetty :mockito :sonar :tdd :ci :web-services
-                                                  :apache-cxf]}
-                         {:customer              "Storebrand Livsforsikring"
-                          :years                 [2008]
-                          :exclude-from-profile? true
-                          :employer              :accenture
-                          :summary               "Ytelsesvurdering av kjernesystem, fondskjøp med BankID"
-                          :description           "Oppgaver: Første integrasjon med BankID for
+   :tech                  [:spring-batch :spring-core :java :eclipse :jsf :junit :fitnesse
+                           :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
+                           :squirrel-sql :xml :jetty :mockito :sonar :tdd :ci :web-services
+                           :apache-cxf]}
+  {:customer              "Storebrand Livsforsikring"
+   :years                 [2008]
+   :exclude-from-profile? true
+   :employer              :accenture
+   :summary               "Ytelsesvurdering av kjernesystem, fondskjøp med BankID"
+   :description           "Oppgaver: Første integrasjon med BankID for
                   Storebrand for kjøp av fond på nett. Lage sparekalkulator med
                   anbefaling av fondsvalg. Evaluering av fagsystem for kjøp og
                   salg av fond. Ytelsesvurdering og vurdering av
                   integrasjonsmetoden mot fagsystemet."
-                          :tech                  [:bankid :java :bamboo :nexus :soa :maven :ant :eclipse :jira
-                                                  :xml :castor-xml :prolink :css :javascript]}
-                         {:customer              "Karolinska Institutet, Genbanken"
-                          :years                 [2008]
-                          :exclude-from-profile? true
-                          :employer              :ibm
-                          :summary               "Portal for gen-banken."
-                          :description           "Oppgaver: Lage en sikker portal for genbanken
+   :tech                  [:bankid :java :bamboo :nexus :soa :maven :ant :eclipse :jira
+                           :xml :castor-xml :prolink :css :javascript]}
+  {:customer              "Karolinska Institutet, Genbanken"
+   :years                 [2008]
+   :exclude-from-profile? true
+   :employer              :ibm
+   :summary               "Portal for gen-banken."
+   :description           "Oppgaver: Lage en sikker portal for genbanken
                   slik at store datasett av genomer skal kunne deles mellom
                   forskere."
-                          :tech                  [:portlets :websphere-portal :websphere :geronimo :pki :ssl :java :junit :jsr-168]}
-                         {:customer              "Norsk Boligbyggerlag, NBBL"
-                          :years                 [2007]
-                          :exclude-from-profile? true
-                          :employer              :ibm
-                          :summary               "Utvikling av web-portal med timeregistrering og billagsføring."
-                          :description           "Oppgaver: I samarbeid med BOB (Bergen og Omegn
+   :tech                  [:portlets :websphere-portal :websphere :geronimo :pki :ssl :java :junit :jsr-168]}
+  {:customer              "Norsk Boligbyggerlag, NBBL"
+   :years                 [2007]
+   :exclude-from-profile? true
+   :employer              :ibm
+   :summary               "Utvikling av web-portal med timeregistrering og billagsføring."
+   :description           "Oppgaver: I samarbeid med BOB (Bergen og Omegn
                   Boligbyggerlag) lage en portal for å samle all
                   nett-aktiviteten til NBBL. Lage web-applikasjoner for
                   timeregistrering og bilagsregistrering."
-                          :tech                  [:quickr :java :junit :eclipse :ibm-rational-application-developer
-                                                  :dojo :javascript :css :html :webservices]}
-                         {:customer              "Atmel Corporation"
-                          :years                 [2006]
-                          :exclude-from-profile? true
-                          :employer              :atmel
-                          :summary               "Porte UI biblioteker til ny prosessortype."
-                          :description           "Atmel designer og produserer micro-controllere. Porte GUI biblioteker for linux til ny 32-bits microcontroller(AVR32). Siden AVR32 bruker big-endian var det nødvendig
+   :tech                  [:quickr :java :junit :eclipse :ibm-rational-application-developer
+                           :dojo :javascript :css :html :webservices]}
+  {:customer              "Atmel Corporation"
+   :years                 [2006]
+   :exclude-from-profile? true
+   :employer              :atmel
+   :summary               "Porte UI biblioteker til ny prosessortype."
+   :description           "Atmel designer og produserer micro-controllere. Porte GUI biblioteker for linux til ny 32-bits microcontroller(AVR32). Siden AVR32 bruker big-endian var det nødvendig
                   med en del tilpasninger i biblioteker for å kunne brukes. Det var også en del utfordringer til at ny compiler oppførte seg annerledes enn gcc på en del corner-cases som f.eks var-args ."
-                          :tech                  [:c :bash :linux-kernel :linux]}
-                         {:customer              "NTNU"
-                          :years                 [2002 2003 2004 2005 2006 2007]
-                          :exclude-from-profile? true
-                          :employer              :study-part-time
-                          :description           "Studentassistent i IT-intro.
+   :tech                  [:c :bash :linux-kernel :linux]}
+  {:customer              "NTNU"
+   :years                 [2002 2003 2004 2005 2006 2007]
+   :exclude-from-profile? true
+   :employer              :study-part-time
+   :description           "Studentassistent i IT-intro.
                   Undervisningsassistent i Menneske-Maskin-Interaksjon(MMI) og
                   Mikrokontrollere"
-                          :tech                  [:java :fortran :sql :html :css :c]}]
+   :tech                  [:java :fortran :sql :html :css :c]}]
 
  :blog-posts
-                        [{:url   "https://nilsmagnus.github.io/post/go-tensorflow/"
-                          :title "Using your tensorflow model with go"
-                          :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
-                          :tech  [:go :tensorflow :machinelearning]}]
+ [{:url   "https://nilsmagnus.github.io/post/go-tensorflow/"
+   :title "Using your tensorflow model with go"
+   :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
+   :tech  [:go :tensorflow :machinelearning]}]
 
  :cv                    {}
  :education-summary     "Sivilingeniør/Master Datateknikk, NTNU"
@@ -309,7 +313,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                          {:institution "NTNU/USP"
                           :years       [2004 2005]
                           :subject
-                                       "Utvekslingsår ved Universidade de São Paulo(USP), Brasil"}]
+                          "Utvekslingsår ved Universidade de São Paulo(USP), Brasil"}]
 
  :qualifications        ["Fullstackutvikler med fokus på backend og integrasjon"
                          "Selvstendig, effektiv og løsningsorientert"
