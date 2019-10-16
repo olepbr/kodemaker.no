@@ -16,7 +16,8 @@
   (let [lang (some-> node (.getAttribute "class") not-empty keyword)
         code (-> (.getInnerHTML node)
                  (str/replace "&lt;" "<")
-                 (str/replace "&gt;" ">"))]
+                 (str/replace "&gt;" ">")
+                 (str/replace "&amp;" "&"))]
     ;; Certain code samples (like a 14Kb HTML string embedded in JSON) trips up
     ;; Pygments (too much recursion). When that happens, skip highlighting
     (try
