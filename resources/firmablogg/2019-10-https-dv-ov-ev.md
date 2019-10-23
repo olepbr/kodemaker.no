@@ -1,5 +1,5 @@
 :title HTTPS sertifikater og tillitsnivåer
-:published 2019-09-15
+:published 2019-10-23
 :author finn
 :tech [:https]
 
@@ -7,7 +7,7 @@
 
 Du har kanskje sett at når du browser nettbanken din så står hele navnet på banken ved siden av URL-en.
 
-![Bilde av kjøkkenbordet](/images/blogg/finn/ev-cert-sbanken.PNG)
+![Bilde av kjøkkenbordet](/images/blogg/ev-cert-sbanken.PNG)
 
 Hva er dette for noe?
 
