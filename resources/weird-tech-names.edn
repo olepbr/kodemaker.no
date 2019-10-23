@@ -84,6 +84,7 @@
  :hpunix "HP Unix"
  :hsqldb "HSQLDB"
  :html "HTML"
+ :https "HTTPS"
  :ibm-content-manager-ondemand "IBM Content Manager OnDemand"
  :ibm-bluemix "IBM Bluemix"
  :iis "MS IIS"
