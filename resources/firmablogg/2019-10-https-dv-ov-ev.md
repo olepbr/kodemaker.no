@@ -29,18 +29,18 @@ DV er den enkleste, raskeste og billigste måten å sikre kryptere webtrafikk p�
 
 ## 2. OV - Organization validated
 
-OV og EV må du betale for, og de som selger disse sertifikatene sier at det er mer tillit til websider med denne typen sertifikater (enn DV). Det er litt uklart for meg hvorfor en skal kjøpe akuratt OV, og hvem som faktisk bruker det. De som selger det er litt vage på hvorfor en skal kjøpe denne sertifikattypen og bruker bare generelle salgspitcher om økt sikkerhet og tillitt. Ut fra litt kjapp googling ser det ut til å ligge rundt $200 pr år for disse sertifikatene.
+OV og EV må du betale for, og de som selger disse sertifikatene sier at det er mer tillit til websider med denne typen sertifikater (enn DV). Det er litt uklart for meg hvorfor en skal kjøpe akkurat OV, og hvem som faktisk bruker det. De som selger det er litt vage på hvorfor en skal kjøpe denne sertifikattypen og bruker bare generelle salgspitcher om økt sikkerhet og tillitt. Ut fra litt kjapp googling ser det ut til å ligge rundt $200 pr år for disse sertifikatene.
 
 ## 3. EV - Extended validation
 
-De som selger EV-sertifikater sier at det er maks tillit til websider med disse sertifikatene. EV blir kalt 'Banking level' tillit til sertifikatet. Her er det DigiCert og Tha som råder og disse setifikatene koster fort $400 i året.
+De som selger EV-sertifikater sier at det er maks tillit til websider med disse sertifikatene. EV blir kalt 'Banking level' tillit til sertifikatet. Her er det DigiCert og Tha som råder og disse sertifikatene koster fort $400 i året.
 
 Her dukker firmanavnet ditt opp ved siden av URL-en og skal signalisere maks tillitt til nettstedet ditt.
 
 ## Hva skal vi tenke?
 
-Jeg er veldig tvilende til verdien av OV - og er skeptisk til sertifikatutstederene sitt insentiv her. Å selge sertifikater er god butikk, de koster jo gjerne flere hundre dollar pr år. Bransjen overspiller nok verdien til disse sertifikatene og hvor aktivt forhold en vanlig surfer på internett har til det. 
+Jeg er veldig tvilende til verdien av OV - og er skeptisk til sertifikatutstederene sitt insentiv her. Å selge sertifikater er god butikk, de koster jo gjerne flere hundre dollar per år. Bransjen overspiller nok verdien til disse sertifikatene og hvor aktivt forhold en vanlig surfer på internett har til det. 
 
-Min konklusjon er at vanlige nettsider kan holde trygt seg til DV (Let's Encrypt). I hvertfall i starten. Du _må_ jo ha kryptert https trafikk, og verdien ligger først og fremst der!
+Min konklusjon er at vanlige nettsider trygt kan holde seg til DV (Let's Encrypt). I hvert fall i starten. Du _må_ jo ha kryptert HTTPS-trafikk, og verdien ligger først og fremst der!
 
 EV derimot - er forfengelighet. Jeg tror ikke jeg hadde reagert på om nettbanken min manglet det. Men for oss som jobber med softwareutvikling så er det nyttig å vite at disse nivåene av HTTPS-sertifikater eksisterer. Sikkerheten til en webside ligger tross alt i koden, infrastruktur og andre sikkerhetsmekanismer som kan svikte og ikke om du bruker et fancy HTTPS-sertifikat.
