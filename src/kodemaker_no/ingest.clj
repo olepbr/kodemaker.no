@@ -1,13 +1,22 @@
 (ns kodemaker-no.ingest
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
+            [clojure.string :as str]
             [datomic-type-extensions.api :as d]
+            [kodemaker-no.ingestion.tech]
+            [kodemaker-no.ingestion.tech-types]
             [kodemaker-no.ingestion.weird-tech-names]))
 
 (defn find-create-tx-fn [file-name]
   (cond
     (= "weird-tech-names.edn" file-name)
-    kodemaker-no.ingestion.weird-tech-names/create-tx))
+    kodemaker-no.ingestion.weird-tech-names/create-tx
+
+    (= "tech-types.edn" file-name)
+    kodemaker-no.ingestion.tech-types/create-tx
+
+    (re-find #"tech/.+\.edn" file-name)
+    kodemaker-no.ingestion.tech/create-tx))
 
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
@@ -40,12 +49,14 @@
 
 (comment
   (require '[kodemaker-no.atomic :as a])
-  (def conn (a/create-database (str "datomic:mem://" (d/squuid))))
 
   (def conn (d/connect "datomic:mem://kodemaker"))
-  (:tech/name (d/entity (d/db conn) :tech/actionscript))
+  (:tech/type (d/entity (d/db conn) :tech/alpine))
 
   (def file-name "weird-tech-names.edn")
+  (def file-name "tech-types.edn")
+  (def file-name "tech/aws.edn")
+  (def file-name "tech/clojure.edn")
 
   (ingest conn file-name)
 

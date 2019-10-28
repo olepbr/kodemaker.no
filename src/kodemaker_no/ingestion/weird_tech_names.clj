@@ -1,7 +1,4 @@
-(ns kodemaker-no.ingestion.weird-tech-names
-  (:require [clojure.edn :as edn]
-            [clojure.java.io :as io]
-            [datomic-type-extensions.api :as d]))
+(ns kodemaker-no.ingestion.weird-tech-names)
 
 (defn create-tx [id->name]
   (for [[id tech-name] id->name]
