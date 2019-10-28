@@ -5,6 +5,7 @@
             datomic.api
             [datomic-type-extensions.api :as d]
             java-time-literals.core
+            kodemaker-no.ingestion.firmablogg
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
             kodemaker-no.ingestion.weird-tech-names
