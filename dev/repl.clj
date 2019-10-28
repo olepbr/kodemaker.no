@@ -33,7 +33,7 @@
 
 (integrant.repl/set-prep! (constantly config))
 
-(c.t.n.r/set-refresh-dirs "src" "dev")
+(c.t.n.r/set-refresh-dirs "src" "dev" "ui/src")
 
 (defn start []
   (integrant.repl/go))
