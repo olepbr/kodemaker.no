@@ -10,8 +10,9 @@
    :site :tech/site
    :ad :tech/ad})
 
-(defn create-tx [tech]
+(defn create-tx [file-name tech]
   [(-> tech
        (select-keys (keys tech-keys))
        (set/rename-keys tech-keys)
-       (update :db/ident #(keyword "tech" (name %))))])
+       (update :db/ident #(keyword "tech" (name %)))
+       (assoc :page/uri (str (second (re-find #"tech(.*).edn" file-name)) "/")))])

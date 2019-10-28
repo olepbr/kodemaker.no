@@ -4,9 +4,10 @@
             [clojure.string :as str]
             datomic.api
             [datomic-type-extensions.api :as d]
-            [kodemaker-no.ingestion.tech]
-            [kodemaker-no.ingestion.tech-types]
-            [kodemaker-no.ingestion.weird-tech-names]))
+            kodemaker-no.ingestion.tech
+            kodemaker-no.ingestion.tech-types
+            kodemaker-no.ingestion.weird-tech-names
+            [mapdown.core :as mapdown]))
 
 (defn find-create-tx-fn [file-name]
   (cond
@@ -17,12 +18,21 @@
     kodemaker-no.ingestion.tech-types/create-tx
 
     (re-find #"tech/.+\.edn" file-name)
-    kodemaker-no.ingestion.tech/create-tx))
+    kodemaker-no.ingestion.tech/create-tx
+
+    (re-find #"firmablogg/.+\.md" file-name)
+    kodemaker-no.ingestion.firmablogg/create-tx))
 
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
     (when-let [f (find-create-tx-fn file-name)]
-      (f (edn/read-string (slurp r))))))
+      (f file-name ((cond
+                      (str/ends-with? file-name ".edn")
+                      edn/read-string
+
+                      (str/ends-with? file-name ".md")
+                      mapdown/parse)
+                    (slurp r))))))
 
 (def attrs-to-keep #{:db/ident
                      :db/txInstant})
@@ -71,6 +81,6 @@
 
   (def db (d/db conn))
 
-  (d/entity db :tech/actionscript)
+  (:blog-post/author (d/entity db [:page/uri "/blogg/2019-06-datascript/"]))
 
   )
