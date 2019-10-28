@@ -1,0 +1,45 @@
+(ns kodemaker-no.files
+  (:require [clojure.java.io :as io]
+            [clojure.string :as str])
+  (:import java.io.File
+           java.util.regex.Pattern))
+
+(def fsep (java.io.File/separator))
+(def fsep-regex-str (java.util.regex.Pattern/quote fsep))
+
+(defn normalize-path [^String path]
+  (if (= fsep "/")
+    path
+    (.replaceAll path fsep-regex-str "/")))
+
+(defn get-path [#^File path]
+  (normalize-path (.getPath path)))
+
+(defn- just-the-filename [^String path]
+  (last (str/split path (re-pattern fsep))))
+
+(defn- emacs-file-artefact? [^String path]
+  (let [filename (just-the-filename path)]
+    (or (.startsWith filename ".#")
+        (and (.startsWith filename "#")
+             (.endsWith filename "#")))))
+
+(defn- emacs-file? [^File file]
+  (-> file get-path emacs-file-artefact?))
+
+(defn find-file-names [dir regex]
+  (let [dir (io/as-file dir)
+        path-len (inc (count (get-path dir)))
+        path-from-dir #(subs (get-path %) path-len)]
+    (sequence
+     (comp
+      (filter #(.isFile %))
+      (remove emacs-file?)
+      (map path-from-dir)
+      (filter #(re-find regex %)))
+     (file-seq dir))))
+
+(comment
+  (find-file-names "resources" #"(md|edn)$")
+
+  )

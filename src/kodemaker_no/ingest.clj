@@ -4,7 +4,7 @@
             [clojure.string :as str]
             datomic.api
             [datomic-type-extensions.api :as d]
-            java-time-literals.core
+            [kodemaker-no.files :as files]
             kodemaker-no.ingestion.firmablogg
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
@@ -67,6 +67,10 @@
       (catch Exception e
         (throw (ex-info "Unable to assert" {:tx tx
                                             :file-name file-name} e))))))
+
+(defn ingest-all [conn directory]
+  (doseq [file-name (files/find-file-names directory #"(md|edn)$")]
+    (ingest conn file-name)))
 
 (comment
   (require '[kodemaker-no.atomic :as a])

@@ -3,9 +3,16 @@
             [integrant.core :as ig]
             integrant.repl
             [kodemaker-no.atomic :as a]
+            [kodemaker-no.ingest :as ingest]
             [kodemaker-no.ingestion-watcher :as ingestion-watcher]
             [kodemaker-no.web :as web]
             [ring.adapter.jetty :as jetty]))
+
+(defmacro with-timing-info [name exp]
+  `(let [start# (System/currentTimeMillis)
+         res# ~exp]
+     (println "[app]" ~name "in" (- (System/currentTimeMillis) start#) "ms")
+     res#))
 
 (def config
   {:adapter/jetty {:port 3333 :handler (ig/ref :app/handler)}
@@ -14,22 +21,30 @@
    :dev/ingestion-watcher {:directory "resources" :conn (ig/ref :datomic/conn)}})
 
 (defmethod ig/init-key :app/handler [_ opts]
-  (web/create-app opts))
+  (with-timing-info "Created web app"
+    (web/create-app opts)))
 
 (defmethod ig/init-key :adapter/jetty [_ {:keys [handler] :as opts}]
-  (jetty/run-jetty handler (-> opts (dissoc :handler) (assoc :join? false))))
+  (with-timing-info "Started jetty"
+    (jetty/run-jetty handler (-> opts (dissoc :handler) (assoc :join? false)))))
 
 (defmethod ig/halt-key! :adapter/jetty [_ server]
-  (.stop server))
+  (with-timing-info "Stopped jetty"
+    (.stop server)))
 
 (defmethod ig/init-key :datomic/conn [_ {:keys [uri]}]
-  (a/create-database uri))
+  (with-timing-info "Created database"
+    (a/create-database uri)))
 
 (defmethod ig/init-key :dev/ingestion-watcher [_ {:keys [directory conn]}]
-  (ingestion-watcher/start! directory conn))
+  (with-timing-info "Ingested all data"
+    (ingest/ingest-all conn directory))
+  (with-timing-info "Started watcher"
+   (ingestion-watcher/start! directory conn)))
 
 (defmethod ig/halt-key! :dev/ingestion-watcher [_ watcher]
-  (ingestion-watcher/stop! watcher))
+  (with-timing-info "Stopped watcher"
+    (ingestion-watcher/stop! watcher)))
 
 (integrant.repl/set-prep! (constantly config))
 
