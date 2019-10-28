@@ -19,7 +19,6 @@
  :atg-dynamo "ATG Dynamo"
  :auth0 "Auth0"
  :automated-acceptance-testing "Automatisert akseptansetesting"
- :aws "AWS"
  :aws-api-gateway "AWS Api Gateway"
  :aws-cloudfront "Cloudfront"
  :aws-cloudwatch "Cloudwatch"
