@@ -19,7 +19,7 @@
                  [clygments "2.0.0"]
                  [prone "2019-07-08"]
                  [cjohansen/dumdom "2019.09.05-1"]
-                 [juxt/dirwatch "0.2.5"]
+                 [hawk "0.2.11"]
                  [com.datomic/datomic-free "0.9.5697"]
                  [datoms-differ "2019-08-26"]
                  [datomic-type-extensions "2019-09-04"]
