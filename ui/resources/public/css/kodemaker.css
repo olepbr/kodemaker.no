@@ -9,7 +9,7 @@ body {
 
 .ib {display: inline-block;}
 
-.h1 {
+.h0 {
   color: var(--chocolat-au-lait);
   font-family: "Financier Display", serif;
   font-size: 97px;
@@ -17,6 +17,17 @@ body {
   font-style: normal;
   font-stretch: normal;
   line-height: 0.93;
+  letter-spacing: normal;
+}
+
+.h1 {
+  color: var(--chocolat-au-lait);
+  font-family: "Financier Display", serif;
+  font-size: 84px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.15;
   letter-spacing: normal;
 }
 
@@ -69,7 +80,7 @@ body {
 
 /* "iPad" */
 @media only screen and (max-width: 900px) {
-  .h1 {
+  .h0 {
     font-size: 70px;
     line-height: 0.9;
   }
@@ -81,9 +92,16 @@ body {
 }
 
 /* "Mobil" */
-@media only screen and (max-width: 407px) {
-  .h1 {
+@media only screen and (max-width: 420px) {
+  .h0 {
     font-size: 45.5px;
     line-height: 0.9;
   }
+
+  .h1 {
+    font-size: 46px;
+    line-height: normal;
+  }
 }
+
+.tac {text-align: center;}

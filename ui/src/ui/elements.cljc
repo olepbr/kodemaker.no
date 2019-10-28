@@ -7,6 +7,9 @@
                     (when-let [cn (:className params)]
                       (str " " cn)))} text])
 
+(defn h0 [params text]
+  [:h1.h0 params text])
+
 (def h1 (partial el :h1))
 (def h2 (partial el :h2))
 (def h3 (partial el :h3))

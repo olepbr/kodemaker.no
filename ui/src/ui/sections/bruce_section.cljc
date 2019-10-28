@@ -22,7 +22,7 @@
                     :position "left 700px top -40px"}]))}
      [:div.bruce-header (l/header)]
      [:div.bruce-content
-      (e/h1 {} title)
+      (e/h0 {} title)
       [:p.text text]
       (e/arrow-link link)]
      [:img.bruce-image-top.image-style-bruce-top {:src image-top}]
