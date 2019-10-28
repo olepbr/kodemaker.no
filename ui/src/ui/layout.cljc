@@ -57,18 +57,25 @@
     (for [{:keys [href text]} menu-items]
       [:li [:a {:href href} text]])]])
 
+(defn header-section [_]
+  [:div.section.header-section
+   [:div.content
+    (header)]])
+
 (defn footer [_]
-  [:div.footer {:style (add-pønt {} [{:kind :less-than
-                                      :position "right -300px top -480px"}])}
-   [:div.f-logo (logo {:width 176})]
-   [:div.f-infos
-    [:div.f-address
-     [:div "Kodemaker Systemutvikling AS"]
-     [:div "Munkedamsveien 3b"]
-     [:div "0161 OSLO"]]
-    [:div.f-contact
-     [:div "Orgnr. 982099595"]
-     [:div [:a {:href "tel:+4722822080"} "+47 22 82 20 80"]]
-     [:div [:a {:href "mailto:kontakt@kodemaker.no"} "kontakt@kodemaker.no"]]]]
-   [:div.f-links
-    (e/arrow-link {:text "Personvern" :href "/personvern/"})]])
+  [:div.section {:style (add-pønt {} [{:kind :less-than
+                                       :position "right -300px top -480px"}])}
+   [:div.content
+    [:div.footer
+     [:div.f-logo (logo {:width 176})]
+     [:div.f-infos
+      [:div.f-address
+       [:div "Kodemaker Systemutvikling AS"]
+       [:div "Munkedamsveien 3b"]
+       [:div "0161 OSLO"]]
+      [:div.f-contact
+       [:div "Orgnr. 982099595"]
+       [:div [:a {:href "tel:+4722822080"} "+47 22 82 20 80"]]
+       [:div [:a {:href "mailto:kontakt@kodemaker.no"} "kontakt@kodemaker.no"]]]]
+     [:div.f-links
+      (e/arrow-link {:text "Personvern" :href "/personvern/"})]]]])

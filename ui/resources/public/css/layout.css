@@ -32,7 +32,9 @@
   .whitespaceorama {padding: 159px 0 192px;}
 }
 .footer {
-  padding: 56px 0;
+  margin: 0 -35px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .f-logo, .f-address, .f-contact, .f-links {
@@ -48,7 +50,7 @@
 
 @media only screen and (min-width: 1080px) {
   .footer {display: flex;}
-  .f-logo {padding-top: 6px; flex: 1; text-align: center;}
+  .f-logo {padding-top: 6px; flex: 1;}
 }
 
 @media only screen and (min-width: 690px) {
@@ -67,6 +69,12 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.header-section {
+  background-color: var(--blanc-rose);
+  padding-top: 72px;
+  padding-bottom: 59px;
 }
 
 .inline-menu {

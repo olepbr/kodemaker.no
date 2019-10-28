@@ -12,7 +12,7 @@
    (layout/menu {:position "absolute"})])
 
 (defcard header
-  (layout/header))
+  (layout/header-section {}))
 
 (defcard footer
   (layout/footer {}))

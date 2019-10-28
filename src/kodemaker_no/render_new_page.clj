@@ -14,6 +14,7 @@
      :banner banner-section/render
      :bruce bruce-section/render
      :footer layout/footer
+     :header layout/header-section
      :pønt pønt-section/render
      :seymour seymour-section/render
      :vertigo vertigo-section/render)
