@@ -1,13 +1,14 @@
 (ns ^:figwheel-hooks ui.devcards
-  (:require [ui.color-cards]
+  (:require [devcards.core :as devcards]
+            [ui.color-cards]
             [ui.elements-cards]
             [ui.layout-cards]
+            [ui.sections.banner-section-cards]
             [ui.sections.bruce-section-cards]
             [ui.sections.pønt-section-cards]
             [ui.sections.seymour-section-cards]
             [ui.sections.vertigo-section-cards]
-            [ui.typography-cards]
-            [devcards.core :as devcards]))
+            [ui.typography-cards]))
 
 (enable-console-print!)
 
