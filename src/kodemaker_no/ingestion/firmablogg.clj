@@ -22,4 +22,5 @@
        (update-in-existing [:tech] #(for [s (read-string %)]
                                       {:db/ident (keyword "tech" (name s))}))
        (set/rename-keys blog-post-keys)
-       (assoc :page/uri (str "/blogg" (second (re-find #"firmablogg(.*).md" file-name)) "/")))])
+       (assoc :page/uri (str "/blogg" (second (re-find #"firmablogg(.*).md" file-name)) "/"))
+       (assoc :page/kind :blog-post))])
