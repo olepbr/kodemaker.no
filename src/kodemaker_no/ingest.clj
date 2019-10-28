@@ -2,6 +2,7 @@
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
             [clojure.string :as str]
+            datomic.api
             [datomic-type-extensions.api :as d]
             [kodemaker-no.ingestion.tech]
             [kodemaker-no.ingestion.tech-types]
@@ -27,25 +28,33 @@
                      :db/txInstant})
 
 (defn retract-tx [db file-name]
-  (when-let [tx-id (d/q '[:find ?e .
-                          :in $ ?file-name
-                          :where
-                          [?e :tx-source/file-name ?file-name]]
-                        db
-                        file-name)]
+  (when-let [tx-id (datomic.api/q '[:find ?e .
+                                :in $ ?file-name
+                                :where
+                                [?e :tx-source/file-name ?file-name]]
+                              db
+                              file-name)]
     (keep
      (fn [[e a v t]]
        (when (= tx-id t)
-         (let [attr (:ident (d/attribute db a))]
+         (let [attr (:ident (datomic.api/attribute db a))]
            (when (not (attrs-to-keep attr))
              [:db/retract e attr v]))))
-     (d/datoms db :eavt))))
+     (datomic.api/datoms db :eavt))))
 
 (defn ingest [conn file-name]
-  (when-let [tx (retract-tx (d/db conn) file-name)]
-    @(d/transact conn tx))
+  (when-let [tx (retract-tx (datomic.api/db conn) file-name)]
+    (try
+      @(datomic.api/transact conn tx)
+      (catch Exception e
+        (throw (ex-info "Unable to retract" {:tx tx
+                                             :file-name file-name} e)))))
   (when-let [tx (create-tx file-name)]
-    @(d/transact conn (conj tx [:db/add (d/tempid :db.part/tx) :tx-source/file-name file-name]))))
+    (try
+      @(d/transact conn (conj tx [:db/add (d/tempid :db.part/tx) :tx-source/file-name file-name]))
+      (catch Exception e
+        (throw (ex-info "Unable to assert" {:tx tx
+                                            :file-name file-name} e))))))
 
 (comment
   (require '[kodemaker-no.atomic :as a])
