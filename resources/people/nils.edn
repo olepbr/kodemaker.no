@@ -297,6 +297,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :blog-posts
  [{:url   "https://nilsmagnus.github.io/post/go-tensorflow/"
+   :published "2017-07-03"
    :title "Using your tensorflow model with go"
    :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
    :tech  [:go :tensorflow :machinelearning]}]

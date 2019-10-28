@@ -182,160 +182,190 @@
                 :url "http://www.youtube.com/watch?v=WKHWazblpbc"
                 :launch-date "2014-03-17"}]
 
- :blog-posts [{:url "http://rundis.github.io/blog/2017/elm_bootstrap_launch.html"
+ :blog-posts [{:url "https://rundis.github.io/blog/2017/elm_bootstrap_launch.html"
+               :published "2017-03-01"
                :title "Introducing Elm Bootstrap"
                :blurb "Lansering av mitt nye Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap. Du får en oversikt over hva og hvorfor samt litt historie om hvordan biblioteket ble til."
                :tech [:elm :bootstrap]}
-              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part6.html"
+              {:url "https://rundis.github.io/blog/2016/haskel_elm_spa_part6.html"
+               :published "2016-11-21"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 6: Elm 0.18 Upgrade"
                :blurb "I min blogserie om å lage en CRUD applikasjon i Elm og Haskell har tiden kommer for å oppgradere Elm koden til versjon 0.18.
                Mye av oppgraderingen denne gangen kunne automatiseres vha verktøy fra Elm Community. Resten av endringene var relativt mekaniske. Posten går relativt detaljert til verks med å sammelikne forskjellene mellom 0.17 og 0.18."
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2016/elm_light_ast.html"
+              {:url "https://rundis.github.io/blog/2016/elm_light_ast.html"
+               :published "2019-09-15"
                :title "Elm Light 0.4.0 - AST driven Elm features in Light Table using PEG.js"
                :blurb "For å kunne tilby enda mer avansert Elm støtte i Light Table har jeg implementert en hjemmesnekret AST vha peg.js. Dette har gitt vesentlig
                forbedret autocomplete og endel hendige refactor relaterte funksjoner."
                :tech [:elm :clojurescript :pegjs :javascript]}
-              {:url "http://rundis.github.io/blog/2016/type_confused.html"
+              {:url "https://rundis.github.io/blog/2016/type_confused.html"
+               :published "2016-06-13"
                :title "Oh no! Learning Elm has gotten me confused about static vs dynamic typing."
                :blurb "Etter lenge å ha vært overbevist om at dynamisk typing var det eneste saliggjørende reflekterer jeg over
                min gryende tvil etter å ha brukt en solid dose tid på å sette meg inn i statisk typede funksjonelle språk."
                :tech [:elm :haskell :clojure :groovy]}
-              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part5.html"
+              {:url "https://rundis.github.io/blog/2016/haskel_elm_spa_part5.html"
+               :published "2016-05-30"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 5: Elm 0.17 Upgrade"
                :blurb "I min blogserie om å lage en CRUD applikasjon i Elm og Haskell har tiden kommer for å oppgradere Elm koden til versjon 0.17.
                Ting har på overflaten endret seg dramatisk siden 0.16, men en strukutert gjennomgang av prosessen viser at de fleste endringene er trivielle og sluttresultat
                er unektelig bedre enn forrige versjon."
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2016/elm_maybe.html"
+              {:url "https://rundis.github.io/blog/2016/elm_maybe.html"
+               :published "2016-04-16"
                :title "Elm Maybe - Dealing with null/Nothing"
                :blurb "Tony Hoare ansees som mannen som fant opp null reference. Han kaller det sitt billion dollar mistake. I Elm har man ikke null og de problemene
                det medfører. I stedet bruker man en eksplisitt type man kaller Maybe (noen språk kaller det Option). I denne blogposten tar jeg for meg hvordan det er å jobbe med Maybe verdier og sammenligner
                litt med JavaScript. Det er ikke mange gode unnskyldninger for å ta med null i ett nytt språk, men enda så skjer det med nye språk som blir laget den dag i dag. Forstå det den som kan."
                :tech [:elm :javascript]}
-              {:url "http://rundis.github.io/blog/2016/elm_light_modules.html"
+              {:url "https://rundis.github.io/blog/2016/elm_light_modules.html"
+               :published "2016-03-14"
                :title "Elm and ClojureScript joining forces in the elm-light plugin"
                :blurb "Jeg tenkte det måtte være kult å se om man kunne få Elm og ClojureScript til å spille sammen i Light Table.
                I denne blogposten forklarer jeg hvordan jeg implementerte en Modul utforsker vha både Elm og ClojureScript"
                :tech [:elm :clojurescript :lighttable]}
-              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part4.html"
+              {:url "https://rundis.github.io/blog/2016/haskel_elm_spa_part4.html"
+               :published "2016-03-01"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 4: Feature creep"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. Tiden har kommet for å
                peise på med mer funksjonalitet og en god del refaktorering. Her får jeg kjørt meg skikkelig på både Elm og Haskell"
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part3.html"
+              {:url "https://rundis.github.io/blog/2016/haskel_elm_spa_part3.html"
+               :published "2016-01-19"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 3: Routing"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
                implementerer jeg routing i Elm frontenden"
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2016/haskel_elm_spa_part2.html"
+              {:url "https://rundis.github.io/blog/2016/haskel_elm_spa_part2.html"
+               :published "2016-01-14"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 2: Persistence up and running"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I denne episoden
                implementerer jeg persistens vha en god gammeldags relasjonsdatabase"
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
+              {:url "https://rundis.github.io/blog/2015/haskell_elm_spa_part1.html"
+               :published "2015-12-28"
                :title "Typed up CRUD SPA with Haskell and Elm - Part 1: Spike time"
                :blurb "Blogserie som omhandler min ferd for å lære meg statiske sterkt typed funksjonelle språk. I serien tar
                jeg for meg utvikling av en CRUD applikasjon med Elm til frontend og Haskell for backend. Førte episode
                tar for seg en spike for å få en helt enkel basis på plass."
                :tech [:elm :haskell]}
-              {:url "http://rundis.github.io/blog/2015/elm_sweeper.html"
+              {:url "https://rundis.github.io/blog/2015/elm_sweeper.html"
+               :published "2015-11-10"
                :title "Minesweeper - a brief journey from JavaScript/React to Elm"
                :blurb "Jeg tar utgangspunkt i en minesveiper implementasjon fra [Christian Johansen](/christian/) i JavaScript/React og hviser hvordan man kan implementere det samme spillet i Elm.
                Bloggposten sammenligner flere implementasjonsdetajer og reflekterer kort om statisk vs. dynamisk typing."
                :tech [:elm :javascript :react]}
-              {:url "http://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
+              {:url "https://rundis.github.io/blog/2015/clojurescript_performance_tuning.html"
+               :published "2015-08-04"
                :title "ClojureScript - Performance tuning rewrite-cljs"
                :blurb "Rewrite-cljs er mitt bibliotek for å traversere og omskrive clojure/clojurescript kode. I denne blogposten
                forteller jeg litt om hvordan jeg tunet ytelsen bl.a ved å komme nærmere jernet (JavaScript)"
                :tech [:clojure :clojurescript :javascript]}
-              {:url "http://rundis.github.io/blog/2015/parembrace.html"
+              {:url "https://rundis.github.io/blog/2015/parembrace.html"
+               :published "2015-06-12"
                :title "Showcasing rewrite-cljs - Parembrace for Light Table"
                :blurb "En liten fortelling om stegene jeg gikk igjennom for å lage en skikkelig paredit plugin for Clojure/ClojureScript i Light Table.
                Et nytt ClojureScript bibliotek ble unnfanget i processen."
                :tech [:clojure :clojurescript]}
-              {:url "http://rundis.github.io/blog/2015/lt_react.html"
+              {:url "https://rundis.github.io/blog/2015/lt_react.html"
+               :published "2015-04-22"
                :title "Implementing a Clojure ns-browser in Light Table with React"
                :blurb "Buzzword compliant post om hvordan man elegant kan bruke React.JS for implementering av view-logikk i Light Table.
                Posten går også i dybden på den grunnleggende arkiteturen i Light Table"
                :tech [:clojure :clojurescript]}
-              {:url "http://rundis.github.io/blog/2015/clojure_dates.html"
+              {:url "https://rundis.github.io/blog/2015/clojure_dates.html"
+               :published "2015-03-27"
                :title "Taming those pesky datetimes in a clojure stack"
                :blurb "En liten erfaringsrapport med tips og triks for hvordan håndtere datoer i Clojure/ClojureScript i en tjeneste/lagdelt arkitektur"
                :tech [:clojure :clojurescript]}
-              {:url "http://rundis.github.io/blog/2015/buddy_auth_part4.html"
+              {:url "https://rundis.github.io/blog/2015/buddy_auth_part4.html"
+               :published "2015-03-25"
                :title "Securing Clojure Microservices using buddy - Part 4: Secure and liberate a service app"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                I del 4 ser vi på hvordan vi kan sikre en service app basert som benytter REST-biblioteket Liberator"
                :tech [:clojure :buddy :microservices]}
-              {:url "http://rundis.github.io/blog/2015/clj_light_thread.html"
+              {:url "https://rundis.github.io/blog/2015/clj_light_thread.html"
+               :published "2015-03-16"
                :title "Implementing a Clojure threading refactoring in ClojureScript using Light Table"
                :blurb "En kort gjennomgang av hvordan man kan implementere en refaktoreringsfunksjon i Light Table vha clojure.zip"
                :tech [:clojure :clojurescript :lighttable]}
-              {:url "http://rundis.github.io/blog/2015/buddy_auth_part3.html"
+              {:url "https://rundis.github.io/blog/2015/buddy_auth_part3.html"
+               :published "2015-02-15"
                :title "Securing Clojure Microservices using buddy - Part 3: Token revocation"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
                :tech [:clojure :buddy :microservices]}
-              {:url "http://rundis.github.io/blog/2015/buddy_auth_part2.html"
+              {:url "https://rundis.github.io/blog/2015/buddy_auth_part2.html"
+               :published "2015-02-02"
                :title "Securing Clojure Microservices using buddy - Part 2: WebApp authentication and authorization"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
                :tech [:clojure :buddy :microservices]}
-              {:url "http://rundis.github.io/blog/2015/buddy_auth_part1.html"
+              {:url "https://rundis.github.io/blog/2015/buddy_auth_part1.html"
+               :published "2015-01-27"
                :title "Securing Clojure Microservices using buddy - Part 1: Creating Auth Tokens"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                Del 1 handler om å lage en service som generer signerte tokens for bruk i autentisering og autorisasjon."
                :tech [:clojure :buddy :microservices]}
-              {:url "http://rundis.github.io/blog/2015/bootify-ring.html"
+              {:url "https://rundis.github.io/blog/2015/bootify-ring.html"
+               :published "2015-01-19"
                :title "Bootifying my ring app"
                :blurb "[Boot.clj] (https://github.com/boot-clj/boot) er et spennende alternative til Leiningen for bygging av clojure applikasjoner.
                Jeg deler noen erfaringer med bruk av Boot.clj i et clojure ring prosjekt"
                :tech [:clojure :boot]}
-              {:url "http://rundis.github.io/blog/2014/gr_lt_part5.html"
+              {:url "https://rundis.github.io/blog/2014/gr_lt_part5.html"
+               :published "2014-06-18"
                :title "A Groovy Light Table client - Step 5: Gradle dependencies in Light Table with dagre-D3"
                :blurb "Del 5 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                en dugandes Groovy plugin for Light Table. Del 5 kombinerer det rike api'et i Gradle
                og fleksibiliteten i Light Table til å vise dependency grafer vha D3. Kule greier !"
                :tech [:clojurescript :groovy :gradle :lighttable]}
-              {:url "http://rundis.github.io/blog/2014/gr_lt_part4.html"
+              {:url "https://rundis.github.io/blog/2014/gr_lt_part4.html"
+               :published "2014-05-26"
                :title "A Groovy Light Table client - Step 4: Exploring new avenues with Gradle"
                :blurb "Del 4 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                en dugandes Groovy plugin for Light Table. Del 4 handler om implementasjon av Gradle støtte
                for uthenting og bruk av classpath, samt opplisting og eksevkvering av tasks"
                :tech [:clojurescript :groovy :gradle :lighttable]}
-              {:url "http://rundis.github.io/blog/2014/gr_lt_part3.html"
+              {:url "https://rundis.github.io/blog/2014/gr_lt_part3.html"
+               :published "2014-05-14"
                :title "A Groovy Light Table client - Step 3: Running out of quick wins"
                :blurb "Del 3 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                en dugandes Groovy plugin for Light Table. Del 3 handler om noen små forbedringer
                for å gi en REPL lignende opplevelse med Groovy."
                :tech [:clojurescript :groovy :lighttable]}
-              {:url "http://rundis.github.io/blog/2014/gr_lt_part2.html"
+              {:url "https://rundis.github.io/blog/2014/gr_lt_part2.html"
+               :published "2014-02-23"
                :title "A Groovy Light Table client - Step 2: Evaluating Code"
                :blurb "Del 2 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                en dugandes Groovy plugin for Light Table. Del 2 handler om hvordan jeg får
                evaluert Groovy kode og vist resultater inline i Light Table."
                :tech [:clojurescript :groovy :lighttable]}
-              {:url "http://rundis.github.io/blog/2014/gr_lt_part1.html"
+              {:url "https://rundis.github.io/blog/2014/gr_lt_part1.html"
+               :published "2014-02-16"
                :title "A Groovy Light Table client - Step 1: Connecting the client"
                :blurb "Del 1 i en blog serie hvor jeg beskriver stegene jeg tar for å forsøke å lage
                en dugandes Groovy plugin for Light Table. I denne posten beskriver jeg hvordan
                jeg kobler opp Light Table til en Groovy klient-prosess."
                :tech [:clojurescript :groovy :lighttable]}
 
-              {:url "http://codewader.blogspot.no/2014/02/getting-my-feet-wet-with-clojure-using.html"
+              {:url "https://codewader.blogspot.no/2014/02/getting-my-feet-wet-with-clojure-using.html"
+               :published "2014-02-09"
                :title "Getting my feet wet with Clojure using Light Table"
                :blurb "En liten erfaringsrapport fra mine første steg med å skrive produksjonskode i Clojure
                ved bruk av Light Table IDE."
                :tech [:clojure :lighttable]}
 
-              {:url "http://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
+              {:url "https://codewader.blogspot.no/2013/08/javascript-testing-in-your-jvm-projects.html"
+               :published "2013-08-19"
                :title "Javascript testing in your JVM projects using Gradle and BusterJS"
                :blurb "Hadde det ikke vært kjekt om du kunne inkludert javascript testing som en del
                av CI for JVM prosjektet ditt ? Gradle Buster Plugin to the rescue !"
                :tech [:gradle :javascript :buster-js]}
 
-              {:url "http://codewader.blogspot.no/2011/08/groovy-infatuation-growing.html"
+              {:url "https://codewader.blogspot.no/2011/08/groovy-infatuation-growing.html"
+               :published "2013-08-19"
                :title "A groovy infatuation growing"
                :blurb "Etter mange år med java begynte jeg så smått å bli litt lei. Det var jo mange
                andre språk på JVM plattformen der ute. Etter å ha jobbet med gradle en periode

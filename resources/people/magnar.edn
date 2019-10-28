@@ -207,14 +207,16 @@
                   :illustration "/illustrations/side-projects/adventur.jpg"
                   :link {:url "https://www.adventur.no" :text "Prøv spillet"}}]
 
- :blog-posts [{:url "http://framsieutvikling.no/post/753317476"
+ :blog-posts [{:url "https://framsieutvikling.no/post/753317476"
+               :published "2010-06-30"
                :title "5 JavaScript-uvaner du må legge av deg"
                :blurb "Jeg tør påstå at JavaScript er et av språkene
                        som er mest utsatt for cargo culting. For noen år siden
                        var det utstrakt klipping og liming, og uvanene spredte
                        seg fortere enn du kunne si globalt navnerom. Her er noen saker du må slutte med."
                :tech [:javascript]}
-              {:url "http://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
+              {:url "https://framsieutvikling.no/post/36198524225/oocss-et-paradigmeskifte"
+               :published "2012-11-21"
                :title "OOCSS: Et paradigmeskifte"
                :blurb "Jeg satt min stolthet i å skrive slank HTML. Jeg kjente
                        alle triksene i boka for å få nettlesere til å oppføre
@@ -223,13 +225,15 @@
                        i mot alt jeg hadde lært."
                :tech [:oocss :css]}
               {:url "http://programmeringsbloggen.no/2012/12/16/magnar-genererer-testet-og-dokumentasjon-luke-16-2012/"
+               :published "2012-12-16"
                :title "Å generere tester og dokumentasjon"
                :blurb "En gjestebloggpost på [Torbjørn Marø](https://twitter.com/tormaroe)
                        sin [Programmeringsblogg](http://blog.kjempekjekt.com/)
                        om å kombinere testing og dokumentasjon ved hjelp av makroer
                        og Emacs Lisp sin homoikonisitet."
                :tech [:emacs :emacs-lisp :testing :homoikonisitet]}
-              {:url "http://framsieutvikling.no/post/37707914430/boker-for-vordende-framsiefolk"
+              {:url "https://framsieutvikling.no/post/37707914430/boker-for-vordende-framsiefolk"
+               :published "2012-12-11"
                :title "Bøker for vordende framsiefolk"
                :blurb "En kamerat og kollega som stort sett har holdt
                        seg til baksia, fortalte meg at han ville bli
@@ -238,20 +242,23 @@
                        jeg er essensielle for vordende
                        framsieutviklere."
                :tech [:frontend]}
-              {:url "http://framsieutvikling.no/post/36337881618"
+              {:url "https://framsieutvikling.no/post/36337881618"
+               :published "2012-11-23"
                :title "Ingrediensene i Responsive Webdesign"
                :blurb "Responsive Design handler om at nettsia tilpasser seg
                        størrelsen på skjermen. Det kommer som et svar på det voksende
                        mylderet av enheter i varierende størrelser som besøker nettsidene
                        våre. Her ser jeg på de to hovedingrediensene."
                :tech [:responsive-design]}
-              {:url "http://framsieutvikling.no/post/84304693872"
+              {:url "https://framsieutvikling.no/post/84304693872"
+               :published "2014-04-30"
                :title "Responsiv design: Hva gjør vi med IE?"
                :blurb "Nesten alle nettlesere forstår media queries. Men det er fortsatt en hel
                        del stakkars jævler der ute som bruker IE 8. Hvem skal tenke på dem?
                        Joda, det er oss, det."
                :tech [:responsive-design]}
               {:url "http://whattheemacsd.com"
+               :published "2014-11-15"
                :title "What the .emacs.d!?"
                :blurb "En lang samling med triks og tips for å sette
                        opp Emacs'en din sjæl. Høyt anbefalt over å dumpe inn

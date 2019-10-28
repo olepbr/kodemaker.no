@@ -24,22 +24,27 @@
             :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
             :illustration "/illustrations/hobbies/robot-prototype.png"}],
  :blog-posts [{:url "http://kranglefant.tumblr.com/post/30266564679/programming-like-a-pirate-alt-shift-m"
+               :published "2012-08-26"
                :title "Programming like a pirate"
                :blurb "Jeg utfordrer clean-code-prinsippet om å ekstrahere all kode ut i metoder med kun et par linjer. Det er noen fallgruver man bør passe seg for."
                :tech [:design :arkitektur]}
               {:url "http://kranglefant.tumblr.com/post/131808192355/future-proof"
+               :published "2015-10-24"
                :title "Future proof"
                :blurb "Tanker og anbefalinger om hvordan gjøre en applikasjon lettere å jobbe med over tid."
                :tech [:design :arkitektur]}
               {:url "https://qristin.wordpress.com/2015/05/10/hvem-og-hva-er-det-vi-kjemper-imot/"
+               :published "2015-05-10"
                :title "Hvem og hva er det vi kjemper imot"
                :blurb "Problemene vi står overfor med IT-utvikling i offentlig sektor."
                :tech [:design :arkitektur]}
               {:url "http://kranglefant.tumblr.com/post/32472145738/losing-loose-coupling"
+               :published "2012-09-28"
                :title "Losing loose coupling"
                :blurb "Om verdien ved å begrense hva en applikasjon gjør, å bestemme seg for en implementasjon og funksjonalitet."
                :tech [:design :arkitektur]}
               {:url "http://kranglefant.tumblr.com/post/39777803002/reuse-refuse"
+               :published "2013-01-05"
                :title "Reuse? Refuse"
                :blurb "Gjenbrukbarhet kan føre til lavere kvalitet og dårligere brukeropplevelser."
                :tech [:design :arkitektur]}

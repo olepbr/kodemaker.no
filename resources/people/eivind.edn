@@ -81,6 +81,7 @@
             :illustration "/illustrations/hobbies/eivind_flute.jpg"}]
 
  :blog-posts [{:url "http://eivindw.github.io/2016/01/08/comparing-gc-collectors.html"
+               :published "2016-01-08"
                :title "Comparing GC Collectors"
                :blurb "Innlegg som viser litt av forskjellen mellom de alternative GC collectorene
                        som er tilgjengelige i standard Java HotSpot VM. Tanken var å vise en enkel
@@ -93,6 +94,7 @@
                        for å angi en ukjent verdi. Skrevet før vi fikk Option i Java.."
                :tech [:java :scala]}
               {:url "http://urn.nb.no/URN:NBN:no-25670"
+               :published "2010-06-01"
                :title "Embedding Efficient DSLs on the JVM : A review of alternative languages"
                :blurb "Masteroppgaven Eivind skrev på UiO i 2010. Viser en sammenligning av forskjellige
                        JVM-baserte språk forhold til bruk i domene-spesifikke språk. Ser på aspekter

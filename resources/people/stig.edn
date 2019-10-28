@@ -75,6 +75,7 @@ Det gikk bra - veldig bra."
             :url "http://langrenn.ilh.no/"}]
 
  :blog-posts [{:url "http://stigmelling.github.io/blog/blog/2015/nmultra.html"
+               :published "2015-12-15"
                :title "Liveresultater på NM Ultralang i orientering 2015"
                :blurb "En introduksjon til en resultattjeneste som bare måtte virke ved første forsøk."
                :tech [:javascript :aws]}]

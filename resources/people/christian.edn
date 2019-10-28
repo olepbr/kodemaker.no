@@ -177,58 +177,72 @@
            ]
 
  :blog-posts [{:url "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs/"
+               :pubished "2019-01-18"
                :title "tools.deps, figwheel-main, Devcards, and Emacs"
                :blurb "Hvordan sette opp et ClojureScript-prosjekt i 2019"
                :tech [:clojurescript :clojure :tools-deps]}
               {:url "https://cjohansen.no/git-subtree-multiple-dirs/"
+               :published "2018-05-03"
                :title "Git Subtree for Multiple Directories"
                :blurb "En liten howto for hvordan man kan skille ut én eller flere mapper fra et git repo som et nytt repo, med historikken intakt."
                :tech [:git :bash]}
               {:url "https://cjohansen.no/processing-data-with-clojure-and-golang/"
+               :published "2018-04-20"
                :title "Processing Data with Clojure and Go"
                :blurb "En sammenligning av samme algoritme implementert i Clojure og Go sammen med med litt synsing om ytelse, type-systemer, og uttrykkskraft."
                :tech [:go :clojure :clojure-spec]}
               {:url "https://cjohansen.no/a-better-playlist-shuffle-with-golang/"
+               :published "2019-04-19"
                :title "A Better Playlist Shuffle with Go"
                :blurb "\"Shuffle\" i eksempelvis Spotify burde være smartere enn ren tilfeldighet. I dette innlegget presenterer jeg en alternativ algoritme med implementasjon i Go."
                :tech [:go]}
               {:url "https://cjohansen.no/optimized-optimus-asset-paths-clojurescript/"
+               :published "2018-03-31"
                :title "Optimized Optimus Asset Paths from ClojureScript"
                :blurb "Hvordan eksponere Optimus asset-paths fra Clojure til ClojureScript via en macro"
                :tech [:clojure :clojurescript :optimus]}
               {:url "https://cjohansen.no/letsencrypt-haproxy-ssl/"
+               :published "2018-03-10"
                :title "Securing HAProxy sites with Let's Encrypt SSL Certificates"
                :blurb "En gjennomgang av oppsett av SSL-sertifikater fra Let's Encrypt med HAProxy"
                :tech [:haproxy :letsencrypt :docker :centos]}
               {:url "https://cjohansen.no/aws-apigw-proxy-cloudformation/"
+               :published "2017-12-11"
                :title "Api Gateway Proxy Resource with Cloudformation"
                :blurb "Cloudformation-oppsett for proxy-ressurser fra AWS Api Gateway"
                :tech [:aws-api-gateway :aws-cloudformation]}
               {:url "https://cjohansen.no/idempotent-cloudformation-updates/"
+               :published "2017-10-19"
                :title "Idempotent Cloudformation Updates"
                :blurb "Hvordan sørge for at Cloudformation-oppdateringer blir helt idempotente"
                :tech [:aws-cloudformation :bash]}
               {:url "https://cjohansen.no/referentially-transparent-crud/"
+               :published "2017-06-17"
                :title "Referentially Transparent CRUD"
                :blurb "Artikkel om hvordan Datomic lar deg implementere tradisjonell CRUD med referentially transparent funksjonell kode."
                :tech [:datomic :clojure :datalog :immutability :functional-programming]}
               {:url "https://cjohansen.no/annotating-datomic-transactions/"
+               :published "2017-06-17"
                :title "Annotating Datomic transactions"
                :blurb "En artikkel om Datomics transaksjoner, og hvordan de kan utvides med app-spesifik informasjon for bedre auditing og mer."
                :tech [:datomic :clojure :datalog]}
               {:url "https://cjohansen.no/querying-across-datomic-databases/"
+               :published "2017-06-17"
                :title "Querying across Datomic databases"
                :blurb "Et konkret eksempel på hvordan du kan gjøre datalog spørringer over flere databaser samtidig med Datomic."
                :tech [:datomic :clojure :datalog]}
               {:url "http://www.sitepoint.com/immutability-javascript/"
+               :published "2015-04-22"
                :title "Immutability in JavaScript"
                :blurb "Introduksjon til immutability, og hvordan jobbe med immutable data i JavaScript"
                :tech [:javascript :immutability]}
               {:url "http://www.sitepoint.com/immutability-react/"
+               :published "2015-05-07"
                :title "Immutability in React"
                :blurb "Artikkelen bygger videre på artikkelen om immutability i JavaScript, og viser immutable data i sving i en React-applikasjon."
                :tech [:javascript :react :immutability]}
               {:url "http://www.sitepoint.com/thinking-outside-dom-concepts-setup/"
+               :published "2016-04-09"
                :title "Thinking outside the DOM"
                :blurb "Hvordan tenker man egentlig design i JavaScript? Gjelder
               konsepter som løse koblinger og 'single responsibility' også på
@@ -237,6 +251,7 @@
               problemer i JavaScript med gode design-prinsipper i hånda."
                :tech [:javascript]}
               {:url "https://cjohansen.no/building-static-sites-in-clojure-with-stasis/"
+               :published "2014-03-10"
                :title "Building Static Sites in Clojure With Stasis"
                :blurb "En lang tutorial-style bloggpost om å lage statiske
                        websider i Clojure med blant annet biblioteket Stasis.
@@ -244,12 +259,14 @@
                        web-biblioteker for Clojure."
                :tech [:clojure :stasis :optimus]}
               {:url "https://cjohansen.no/clojure-to-die-for/"
+               :published "2014-03-11"
                :title "Clojure to die for"
                :blurb "En liten feiring av helt hverdagslige idiomer of småtriks
                som gjør det å jobbe med Clojure til en fantastisk god
                opplevelse"
                :tech [:clojure]}
               {:url "https://cjohansen.no/an-introduction-to-elisp/"
+               :published "2012-07-01"
                :title "An introduction to Emacs Lisp"
                :blurb "Etter å ha brukt Emacs i mange år, og nylig ha gått
                        gjennom [The Little

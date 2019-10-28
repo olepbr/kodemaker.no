@@ -411,19 +411,23 @@ presentasjonen på hele konferansen!"
 
 
  :blog-posts
- [{:url "http://augustl.com/blog/2016/datomic_the_most_innovative_db_youve_never_heard_of/"
+ [{:url "https://augustl.com/blog/2016/datomic_the_most_innovative_db_youve_never_heard_of/"
+   :published "2016-01-20"
    :title "Datomic: The most innovative DB you've never heard of"
    :blurb "Alt for få utviklere kjenner til Datomic, som på en måte er bedre enn man har kapasitet til å forestille seg før man har prøvd den litt selv."
    :tech [:datomic]}
-  {:url "http://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
+  {:url "https://augustl.com/blog/2014/jdk8_react_rendering_on_server/"
+   :published "2014-03-20"
    :title "JDK8 + Facebook React: Rendering single page apps on the server"
    :blurb "En proof-of-concept på å gjenbruke React-komponenter til å få single page apps til å funke både på server og klient, uten at du trenger å gjøre noe særlig for å tilpasse JS-koden din."
    :tech [:java :react]}
-  {:url "http://augustl.com/blog/2014/an_immutable_operating_system/"
+  {:url "https://augustl.com/blog/2014/an_immutable_operating_system/"
+   :published "2014-02-02"
    :title "An immutable operating system"
    :blurb "Hjerne-dump av tankene mine om et operativsystem jeg lenge har hatt lyst til å lage (og nå har begynt å hacke på). Til tross for svært lite tabloid stil fikk den en del oppmerksomhet, og endte opp på forsiden til Hacker News."
    :tech [:c :immutability]}
-  {:url "http://augustl.com/blog/2013/zeromq_instead_of_http/"
+  {:url "https://augustl.com/blog/2013/zeromq_instead_of_http/"
+   :published "2013-07-22"
    :title "ZeroMQ instead of HTTP, for internal services"
    :blurb "Det er vanlig å bruke HTTP når man trenger RPC, altså at du har en eller annen klient som trenger å snakke med en server. I denne bloggposten forklarer jeg hvorfor og hvordan du kan og bør bruke ZeroMQ i stedet for, eller i tillegg til, HTTP. Det er svært mange fordeler med ZeroMQ som er fundamentalt umulig å løse med HTTP."
    :tech [:clojure :zeromq :http]}]

@@ -54,6 +54,7 @@
    (optional-key :blog-posts) [{:url URL
                                 :title Str
                                 :blurb Str
+                                :published Date ;; iso-8601 yyyy-mm-dd
                                 (optional-key :cv/blurb) Str
                                 (optional-key :tech) [ID]}]
 
