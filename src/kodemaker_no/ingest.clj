@@ -4,6 +4,7 @@
             [clojure.string :as str]
             datomic.api
             [datomic-type-extensions.api :as d]
+            java-time-literals.core
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
             kodemaker-no.ingestion.weird-tech-names
@@ -81,6 +82,6 @@
 
   (def db (d/db conn))
 
-  (:blog-post/author (d/entity db [:page/uri "/blogg/2019-06-datascript/"]))
+  (:blog-post/published (d/entity db [:page/uri "/blogg/2019-06-datascript/"]))
 
   )
