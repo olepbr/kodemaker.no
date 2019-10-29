@@ -30,6 +30,9 @@
     (re-find #"firmablogg/.+\.md" file-name)
     kodemaker-no.ingestion.firmablogg/create-tx
 
+    (re-find #"blog/.+\.md" file-name)
+    kodemaker-no.ingestion.firmablogg/create-legacy-tx
+
     (re-find #"people/.+\.edn" file-name)
     kodemaker-no.ingestion.person/create-tx))
 
