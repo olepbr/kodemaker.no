@@ -30,7 +30,6 @@
 
 (defn extract-team [section]
   (letfn [(add-member [team member]
-            (prn member)
             (if member
               (conj team (update member :project-participation/role str/trim))
               team))]
