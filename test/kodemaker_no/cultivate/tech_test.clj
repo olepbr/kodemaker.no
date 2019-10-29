@@ -1,6 +1,7 @@
 (ns kodemaker-no.cultivate.tech-test
   (:require [kodemaker-no.cultivate.tech :refer :all]
             [midje.sweet :refer :all]
+            [kodemaker-no.date :as d]
             [kodemaker-no.validate :refer [validate-content]]
             [kodemaker-no.cultivate.content-shells :as c]
             [clj-time.core :refer [local-date]]))
@@ -119,6 +120,7 @@
  (-> content
      (assoc-in [:people :magnar :blog-posts]
                [{:url "http://framsieutvikling.no/post/753317476"
+                 :published "2010-06-30"
                  :title "5 JavaScript-uvaner du må legge av deg"
                  :blurb "Jeg tør påstå at JavaScript er et av språkene
                        som er mest utsatt for cargo culting. For noen år siden
@@ -129,6 +131,7 @@
      cultivate :javascript :blog-posts)
 
  => [{:url "http://framsieutvikling.no/post/753317476"
+      :published "2010-06-30"
       :title "5 JavaScript-uvaner du må legge av deg"
       :blurb "Jeg tør påstå at JavaScript er et av språkene
                        som er mest utsatt for cargo culting. For noen år siden

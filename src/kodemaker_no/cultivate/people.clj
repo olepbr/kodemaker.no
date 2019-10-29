@@ -117,6 +117,10 @@
 (defn- prep-internal-blog-post [content blog-post]
   (assoc blog-post :url (:path blog-post)))
 
+(defn- ensure-published-date [blog-post]
+  (cond-> blog-post
+    (string? (:published blog-post)) (update :published d/parse-ymd)))
+
 (defn add-blog-posts [content people blog-posts]
   (let [posts (vals blog-posts)]
     (->> people
@@ -125,5 +129,6 @@
                        (update :blog-posts concat (->> posts
                                                        (filter #(= (keyword (:author %)) (:id person)))
                                                        (map #(prep-internal-blog-post content %))))
+                       (update :blog-posts #(map ensure-published-date %))
                        (update :blog-posts sort-by-published))]))
          (into {}))))
