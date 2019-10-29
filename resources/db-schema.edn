@@ -462,4 +462,38 @@
  {:db/ident :reference/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
+
+ ;; video
+
+ {:db/ident :video/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :video/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :video/by
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :video/blurb
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :video/date
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :video/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :video/embed-code
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :video/direct-link?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
  ]

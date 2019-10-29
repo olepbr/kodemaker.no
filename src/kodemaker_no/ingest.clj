@@ -95,9 +95,10 @@
 (comment
   (require '[kodemaker-no.atomic :as a])
 
-  (a/create-database "datomic:mem://kodemaker")
   (datomic.api/delete-database "datomic:mem://kodemaker")
+  (a/create-database "datomic:mem://kodemaker")
   (def conn (d/connect "datomic:mem://kodemaker"))
+  (ingest-all conn "resources")
 
   (def file-name "weird-tech-names.edn")
   (def file-name "tech-types.edn")
@@ -108,7 +109,6 @@
   (ingest conn "tech-types.edn")
   (ingest conn "firmablogg/2019-06-datascript.md")
   (ingest conn "people/christian.edn")
-  (ingest-all conn "resources")
 
   (def db (d/db conn))
 

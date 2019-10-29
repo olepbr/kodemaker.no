@@ -2,6 +2,7 @@
   (:require [clojure.set :as set]
             [kodemaker-no.homeless :refer [update-in-existing select-renamed-keys map-vals
                                            parse-local-date parse-local-date-time]]
+            [kodemaker-no.ingestion.video :as video]
             [clojure.string :as str]))
 
 (def person-keys
@@ -134,24 +135,24 @@
         presentations (concat (:presentations person)
                               (:upcoming person)
                               (:appearances person))]
-    [(-> person
-         (select-renamed-keys person-keys)
-         (assoc :db/ident ident)
-         (assoc :person/presentations (mapv presentation-data presentations))
-         (update-in-existing [:person/screencasts] #(mapv screencast-data %))
-         (update-in-existing [:person/projects] #(mapv project-data %))
-         (update-in-existing [:person/open-source-projects] data-with-tech)
-         (update-in-existing [:person/open-source-contributions] data-with-tech)
-         (update-in-existing [:person/side-projects] data-with-tech)
-         (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
-         (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
-         (update-in-existing [:person/start-date] parse-local-date-time)
-         (update-in-existing [:person/innate-skills] prep-techs)
-         (update-in-existing [:person/experience-since] str)
-         (assoc :person/family-name (last (:name person)))
-         (assoc :person/given-name (str/join " " (drop-last 1 (:name person))))
-         (merge (map-vals prep-techs (select-renamed-keys (:tech person) tech-keys)))
-         (maybe-pagify file-name))]))
+    (-> person
+        (select-renamed-keys person-keys)
+        (assoc :db/ident ident)
+        (assoc :person/presentations (mapv presentation-data presentations))
+        (update-in-existing [:person/screencasts] #(mapv screencast-data %))
+        (update-in-existing [:person/projects] #(mapv project-data %))
+        (update-in-existing [:person/open-source-projects] data-with-tech)
+        (update-in-existing [:person/open-source-contributions] data-with-tech)
+        (update-in-existing [:person/side-projects] data-with-tech)
+        (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
+        (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
+        (update-in-existing [:person/start-date] parse-local-date-time)
+        (update-in-existing [:person/innate-skills] prep-techs)
+        (update-in-existing [:person/experience-since] str)
+        (assoc :person/family-name (last (:name person)))
+        (assoc :person/given-name (str/join " " (drop-last 1 (:name person))))
+        (merge (map-vals prep-techs (select-renamed-keys (:tech person) tech-keys)))
+        (maybe-pagify file-name))))
 
 (def cv-keys
   {:preferred-techs :cv/preferred-techs
@@ -183,10 +184,13 @@
       (update-in-existing [:blog-post/tech] prep-techs)))
 
 (defn create-tx [file-name person]
-  (concat
-   (profile-data file-name person)
-   (cv-data file-name person)
-   (map (partial blog-post-data (qualify "person" (:id person))) (:blog-posts person))))
+  (let [person-ident (qualify "person" (:id person))
+        profile (profile-data file-name person)]
+    (concat
+     [profile]
+     (cv-data file-name person)
+     (map (partial blog-post-data person-ident) (:blog-posts person))
+     (keep (partial video/video-data person-ident) (:person/presentations profile)))))
 
 (comment
   (create-tx "people/christian.edn" (read-string (slurp (clojure.java.io/resource "people/christian.edn"))))
