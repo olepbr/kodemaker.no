@@ -10,6 +10,7 @@
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
             kodemaker-no.ingestion.weird-tech-names
+            kodemaker-no.ingestion.employers
             [mapdown.core :as mapdown]))
 
 (defn find-create-tx-fn [file-name]
@@ -19,6 +20,9 @@
 
     (= "tech-types.edn" file-name)
     kodemaker-no.ingestion.tech-types/create-tx
+
+    (= "employers.edn" file-name)
+    kodemaker-no.ingestion.employers/create-tx
 
     (re-find #"tech/.+\.edn" file-name)
     kodemaker-no.ingestion.tech/create-tx
@@ -32,6 +36,7 @@
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
     (when-let [f (find-create-tx-fn file-name)]
+      (println "Ingesting" file-name)
       (f file-name ((cond
                       (str/ends-with? file-name ".edn")
                       edn/read-string
@@ -91,7 +96,9 @@
 
   (ingest conn "weird-tech-names.edn")
   (ingest conn "tech-types.edn")
+  (ingest conn "firmablogg/2019-06-datascript.md")
   (ingest conn "people/christian.edn")
+  (ingest-all conn "resources")
 
   (def db (d/db conn))
 

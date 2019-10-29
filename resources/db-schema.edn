@@ -366,4 +366,10 @@
   :db/valueType :db.type/ref
   :db/isComponent true
   :db/cardinality :db.cardinality/many}
+
+ ;; employer
+
+ {:db/ident :employer/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
  ]
