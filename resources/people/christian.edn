@@ -177,7 +177,7 @@
            ]
 
  :blog-posts [{:url "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs/"
-               :pubished "2019-01-18"
+               :published "2019-01-18"
                :title "tools.deps, figwheel-main, Devcards, and Emacs"
                :blurb "Hvordan sette opp et ClojureScript-prosjekt i 2019"
                :tech [:clojurescript :clojure :tools-deps]}
