@@ -5,6 +5,7 @@
             datomic.api
             [datomic-type-extensions.api :as d]
             [kodemaker-no.files :as files]
+            kodemaker-no.ingestion.article
             kodemaker-no.ingestion.firmablogg
             kodemaker-no.ingestion.person
             kodemaker-no.ingestion.tech
@@ -34,7 +35,10 @@
     kodemaker-no.ingestion.firmablogg/create-legacy-tx
 
     (re-find #"people/.+\.edn" file-name)
-    kodemaker-no.ingestion.person/create-tx))
+    kodemaker-no.ingestion.person/create-tx
+
+    (re-find #"articles/.+\.md" file-name)
+    kodemaker-no.ingestion.article/create-tx))
 
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
@@ -90,7 +94,6 @@
   (a/create-database "datomic:mem://kodemaker")
   (datomic.api/delete-database "datomic:mem://kodemaker")
   (def conn (d/connect "datomic:mem://kodemaker"))
-  (:tech/type (d/entity (d/db conn) :tech/alpine))
 
   (def file-name "weird-tech-names.edn")
   (def file-name "tech-types.edn")
