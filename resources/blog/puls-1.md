@@ -1,5 +1,5 @@
 :title Kodemaker PULS #1
-:published 2015-9-30
+:published 2015-09-30
 :author august
 :body
 
