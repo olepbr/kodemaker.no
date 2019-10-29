@@ -1,8 +1,9 @@
 (ns kodemaker-no.homeless
-  (:require [clojure.set :as set]
-            [clojure.string :as str])
-  (:import java.time.LocalDate
-           java.time.LocalDateTime))
+  (:require [clojure.java.io :as io]
+            [clojure.set :as set]
+            [clojure.string :as str]
+            [mapdown.core :as mapdown])
+  (:import [java.time LocalDate LocalDateTime]))
 
 (defn wrap-content-type-utf-8 [handler]
   (fn [request]
@@ -118,3 +119,9 @@
   (->> m
        (map (fn [[k v]] [k (f v)]))
        (into {})))
+
+(defn slurp-mapdown-resource [file-name]
+  (-> file-name
+      io/resource
+      slurp
+      mapdown/parse))
