@@ -1,5 +1,5 @@
 (ns kodemaker-no.ingestion.tech
-  (:require [clojure.set :as set]))
+  (:require [kodemaker-no.homeless :refer [select-renamed-keys]]))
 
 (def tech-keys
   {:id :db/ident
@@ -12,8 +12,7 @@
 
 (defn create-tx [file-name tech]
   [(-> tech
-       (select-keys (keys tech-keys))
-       (set/rename-keys tech-keys)
+       (select-renamed-keys tech-keys)
        (update :db/ident #(keyword "tech" (name %)))
        (assoc :page/uri (str (second (re-find #"tech(.*).edn" file-name)) "/"))
        (assoc :page/kind :tech-page))])
