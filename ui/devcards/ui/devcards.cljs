@@ -5,6 +5,7 @@
             [ui.layout-cards]
             [ui.sections.banner-section-cards]
             [ui.sections.bruce-section-cards]
+            [ui.sections.intro-section-cards]
             [ui.sections.pønt-section-cards]
             [ui.sections.seymour-section-cards]
             [ui.sections.vertigo-section-cards]

@@ -16,11 +16,6 @@
 (def h4 (partial el :h4))
 (def h5 (partial el :h5))
 
-(defn text [text]
-  [:div.text
-   (for [sentence (str/split text #"\n\n")]
-     [:p.p sentence])])
-
 (defn blockquote [{:keys [quote]}]
   [:blockquote.blockquote.text {}
    (let [sentences (str/split quote #"\n\n")

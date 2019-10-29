@@ -43,7 +43,9 @@
 .illustrated .media-element {margin-bottom: 32px;}
 .illustrated .media-element .img {max-width: 300px;}
 
+.text {line-height: 1.52;}
 .text p + p {margin-top: 28px;}
+.text a {color: var(--rouge);}
 
 .article {overflow: auto;}
 .article-balanced .article-aside {margin-top: 68px;}

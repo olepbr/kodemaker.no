@@ -31,6 +31,7 @@
 @media only screen and (min-width: 1174px) {
   .whitespaceorama {padding: 159px 0 192px;}
 }
+
 .footer {
   margin: 0 -35px;
   padding-top: 56px;
@@ -401,4 +402,9 @@
 
 @media only screen and (max-width: 420px) {
   .banner-logo { width: 87px; }
+}
+
+.banner-ws {
+  margin-top: 80px;
+  margin-bottom: 110px;
 }
