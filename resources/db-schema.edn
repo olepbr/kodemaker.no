@@ -402,4 +402,64 @@
  {:db/ident :article/body
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
+
+ ;; project participation
+
+ {:db/ident :project-participation/role
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ ;; reference
+
+ {:db/ident :reference/page-title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/image
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/signee-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/signee-phone
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/signee-title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/logo
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/blurb
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/sections
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :reference/team
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :reference/project-start
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/project-end
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/project-hours
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :reference/techs
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
  ]

@@ -105,13 +105,6 @@ server-oppsett.
 
 --------------------------------------------------------------------------------
 
-
-
-:type illustrated-column
-:title Clojure var essensielt for backenden
-:body
-
-
 :type participants
 :title Kodemakere hos BN Bolig
 :content
@@ -135,8 +128,5 @@ Trygve kom inn som et friskt pust i vår frontend-utvikling, og uten ham hadde v
 neppe klarte å levere etter den ambisiøse planen i tide. Hans tidligere og ferske 
 erfaring med React og Redux, ga oss en flying start. Alltid plass i prosjekter for
 en rolig, erfaren og produktiv ringrev.
-
-
-
 
 --------------------------------------------------------------------------------

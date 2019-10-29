@@ -9,6 +9,7 @@
             kodemaker-no.ingestion.blog
             kodemaker-no.ingestion.employers
             kodemaker-no.ingestion.person
+            kodemaker-no.ingestion.reference
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
             kodemaker-no.ingestion.weird-tech-names
@@ -38,7 +39,10 @@
     kodemaker-no.ingestion.person/create-tx
 
     (re-find #"articles/.+\.md" file-name)
-    kodemaker-no.ingestion.article/create-tx))
+    kodemaker-no.ingestion.article/create-tx
+
+    (re-find #"references/.+\.md" file-name)
+    kodemaker-no.ingestion.reference/create-tx))
 
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
