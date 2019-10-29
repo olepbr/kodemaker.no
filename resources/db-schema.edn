@@ -15,6 +15,24 @@
   :db/valueType :db.type/keyword
   :db/cardinality :db.cardinality/one}
 
+ ;; Attributes used to override certain attributes specifically for the CV
+
+ {:db/ident :cv/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :cv/blurb
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :cv/preferred-techs
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :cv/exclude-techs
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
  ;; tech
 
  {:db/ident :tech/name
@@ -56,6 +74,10 @@
   :dte/valueType :java.time/local-date
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :blog-post/external-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :blog-post/illustration
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
@@ -75,4 +97,273 @@
  {:db/ident :blog-post/body
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
+
+ ;; presentation
+ {:db/ident :presentation/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :presentation/event-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/event-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/call-to-action-text
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/call-to-action-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/date
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/video-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/slides-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/source-url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation/direct-link?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ ;; screencasts
+
+ {:db/ident :screencast/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :screencast/blurb
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :screencast/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :screencast/illustration
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :screencast/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :screencast/published
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :screencast/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ ;; open source project
+
+ {:db/ident :oss-project/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :oss-project/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :oss-project/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :oss-project/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ ;; presentation product
+
+ {:db/ident :presentation-product/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation-product/kind
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation-product/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation-product/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :presentation-product/duration
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation-product/min-participants
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :presentation-product/max-participants
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
+ ;; person
+
+ {:db/ident :person/given-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/family-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/start-date
+  :dte/valueType :java.time/local-date-time
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/adminstration?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/quit?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/profile-active?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/phone-number
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/email-address
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/presence
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/using-at-work
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/favorites-at-the-moment
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/want-to-learn-more
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/recommendations
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/hobbies
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/side-projects
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/presentations
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/screencasts
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/open-source-projects
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/open-source-contributions
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/projects
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/endorsements
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/experience-since
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/qualifications
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/innate-skills
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/employments
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/education
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/languages
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/project-highlights
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/endorsement-highlight
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/certifications
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/business-presentations
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/workshops
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
  ]

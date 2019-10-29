@@ -1,6 +1,8 @@
 (ns kodemaker-no.homeless
-  (:require [clojure.java.io :as io]
-            [clojure.set :as set]))
+  (:require [clojure.set :as set]
+            [clojure.string :as str])
+  (:import java.time.LocalDate
+           java.time.LocalDateTime))
 
 (defn wrap-content-type-utf-8 [handler]
   (fn [request]
@@ -92,3 +94,27 @@
   (->> root
        (hiccup-nodes)
        (filter #(hiccup-symbol-matches? q (first %)))))
+
+(defn select-renamed-keys [m ks]
+  (-> m
+      (select-keys (keys ks))
+      (set/rename-keys ks)))
+
+(defn parse-local-date [date-str]
+  (LocalDate/parse date-str))
+
+(defn- ensure-clock [ts]
+  (if (re-find #"T\d\d:\d\d" ts)
+    ts
+    (str ts "T00:00")))
+
+(defn parse-local-date-time [datetime-str]
+  (-> datetime-str
+      (str/replace #" " "T")
+      ensure-clock
+      LocalDateTime/parse))
+
+(defn map-vals [f m]
+  (->> m
+       (map (fn [[k v]] [k (f v)]))
+       (into {})))
