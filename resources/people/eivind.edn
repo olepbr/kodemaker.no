@@ -89,6 +89,7 @@
                        applikasjon."
                :tech [:java :gc :performance]}
               {:url "http://open.bekk.no/java-scala-null"
+               :published "2010-07-01"
                :title "null som ukjent"
                :blurb "Post som snakker om fordelen med Scala sin Option-type kontra bruken av null
                        for å angi en ukjent verdi. Skrevet før vi fikk Option i Java.."
