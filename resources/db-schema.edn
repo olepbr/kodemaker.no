@@ -247,7 +247,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :person/adminstration?
+ {:db/ident :person/administration?
   :db/valueType :db.type/boolean
   :db/cardinality :db.cardinality/one}
 
@@ -335,7 +335,7 @@
 
  {:db/ident :person/employments
   :dte/valueType :data/edn
-  :db/cardinality :db.cardinality/many}
+  :db/cardinality :db.cardinality/one}
 
  {:db/ident :person/education
   :dte/valueType :data/edn

@@ -108,7 +108,7 @@
                     :tech [:clojurescript :editor]}]
 
  :presentations [{:title "3 grunner til at ClojureScript gir deg superkrefter"
-                  :date "2016-09-8"
+                  :date "2016-09-08"
                   :event "JavaZone"
                   :blurb "Trenden i webutvikling går mot mer og mer avanserte klienter skrevet i JavaScript.
                   ClojureScript er et pragmatisk språk som hjelper deg til å lage enklere løsninger. Her belyser jeg
@@ -116,7 +116,7 @@
                   :tech [:clojurescript :web :figwheel :devcards :javascript]
                   :urls {:video "https://vimeo.com/181925282"}}
                  {:title "Interaktiv programmering med ClojureScript"
-                  :date "2015-09-9"
+                  :date "2015-09-09"
                   :event "JavaZone"
                   :blurb "Interaktiv programmering er en teknikk som gir deg en umiddelbar nærhet til koden din og
                   åpner opp for en ekstremt kort feedbackloop."
