@@ -1,5 +1,5 @@
-(ns kodemaker-no.ingestion.firmablogg
-  (:require [kodemaker-no.homeless :refer [update-in-existing parse-local-date select-renamed-keys]]))
+(ns kodemaker-no.ingestion.blog
+  (:require [kodemaker-no.homeless :as h]))
 
 (def blog-post-keys
   {:title :blog-post/title
@@ -13,12 +13,12 @@
 
 (defn blog-post-tx [file-name blog-post]
   (-> blog-post
-      (update-in-existing [:published] parse-local-date)
-      (update-in-existing [:updated] parse-local-date)
-      (update-in-existing [:author] (fn [s] {:db/ident (keyword "person" s)}))
-      (update-in-existing [:tech] #(for [s (read-string %)]
+      (h/update-in-existing [:published] h/parse-local-date)
+      (h/update-in-existing [:updated] h/parse-local-date)
+      (h/update-in-existing [:author] (fn [s] {:db/ident (keyword "person" s)}))
+      (h/update-in-existing [:tech] #(for [s (read-string %)]
                                      {:db/ident (keyword "tech" (name s))}))
-      (select-renamed-keys blog-post-keys)
+      (h/select-renamed-keys blog-post-keys)
       (assoc :page/uri (str "/blogg" (second (re-find #"(?:firmablogg|blog)(.*).md" file-name)) "/"))
       (assoc :page/kind :blog-post)))
 

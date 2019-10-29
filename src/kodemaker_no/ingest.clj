@@ -2,16 +2,16 @@
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
             [clojure.string :as str]
-            datomic.api
             [datomic-type-extensions.api :as d]
+            datomic.api
             [kodemaker-no.files :as files]
             kodemaker-no.ingestion.article
-            kodemaker-no.ingestion.firmablogg
+            kodemaker-no.ingestion.blog
+            kodemaker-no.ingestion.employers
             kodemaker-no.ingestion.person
             kodemaker-no.ingestion.tech
             kodemaker-no.ingestion.tech-types
             kodemaker-no.ingestion.weird-tech-names
-            kodemaker-no.ingestion.employers
             [mapdown.core :as mapdown]))
 
 (defn find-create-tx-fn [file-name]
@@ -29,10 +29,10 @@
     kodemaker-no.ingestion.tech/create-tx
 
     (re-find #"firmablogg/.+\.md" file-name)
-    kodemaker-no.ingestion.firmablogg/create-tx
+    kodemaker-no.ingestion.blog/create-tx
 
     (re-find #"blog/.+\.md" file-name)
-    kodemaker-no.ingestion.firmablogg/create-legacy-tx
+    kodemaker-no.ingestion.blog/create-legacy-tx
 
     (re-find #"people/.+\.edn" file-name)
     kodemaker-no.ingestion.person/create-tx
