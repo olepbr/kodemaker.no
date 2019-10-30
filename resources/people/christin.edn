@@ -8,7 +8,9 @@
 
  Christin er pragmatisk når det kommer til teknologivalg, og lærer veldig fort der det er behov for å sette seg inn i noe nytt.  Hun er over gjennomsnittet opptatt av å lage de enkleste og mest kostnadseffektive løsningene for sine kunder.  
 
- Hun er dessuten en erfaren foredragsholder, og har en egen [blogg](http://kranglefant.tumblr.com) om softwareutvikling."
+ Hun er dessuten en ettertraktet foredragsholder, og holder keynotes og foredrag på konferanser og interne arrangementer både innenlands- og utenlands.
+
+ Til sist har hun og to blogger. En [på engelsk](http://kranglefant.tumblr.com/) som nesten utelukkende handler om programmering, og [en på norsk](https://qristin.wordpress.com/) med mye fokus på IT i norsk offentlig sektor."
 
  :phone-number "+47 90 29 29 26"
  :email-address "christin@kodemaker.no"
@@ -18,8 +20,8 @@
             :linkedin "/in/christin-gorman-2321aa1"
             :github "christingorman"}
 
- :tech {:using-at-work [:java :postgres :javascript :kubernetes :aws :cpp :android :swift]
-        :want-to-learn-more [:clojure]}
+ :tech {:using-at-work [:java :postgres :javascript :kubernetes :aws]
+        :want-to-learn-more [:elixir :go :clojure]}
  :hobbies [{:title "Roboter"
             :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
             :illustration "/illustrations/hobbies/robot-prototype.png"}],
@@ -63,6 +65,18 @@
                   :thumb "/thumbs/videos/reuse-refuse.jpg"
                   :tech [:design]
                   :date "2017-09-14"}
+                 {:title "It's about time"
+                  :event "NDC Oslo 2019"
+                  :blurb "Hvorfor er det så vanskelig med tid i programmering?"
+                  :urls {:video "https://youtu.be/Nhhm5yC2HCo"}
+                  :tech [:dotnet :fsharp]
+                  :date "2019-06-12"}
+                 {:title "From initial request to app in production in 3 weeks"
+                  :event "JavaZone 2019"
+                  :blurb "Eksempel på hvor lite som skal til for å lage noe som gir verdi"
+                  :urls {:video "https://vimeo.com/showcase/6264904/video/360782295"}
+                  :tech [:java]
+                  :date "2019-06-12"}
                  {:title "Sustainable code - what they don't teach you"
                   :blurb "En applikasjon koster mer å forvalte enn å utvikle. Likevel blir de fleste kodebaser optimalisert for arbeidet gjort i prosjektfasen før prodsetting. Jeg kommer med noen tanker rundt hva vi kan gjøre annerledes for å gjøre applikasjoner lettere å forvalte."
                   :date "2015-09-13"
