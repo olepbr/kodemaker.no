@@ -50,6 +50,14 @@
     :rouge-duotone
     {:transformations [rouge-duotone]}
 
+    :mega-banner
+    {:transformations
+     [chocolate-au-lait-duotone
+      ;;rouge-duotone
+      ]
+     :width 1400
+     :retina-optimized? true}
+
     :vertigo
     {:height 850
      :retina-optimized? true}
