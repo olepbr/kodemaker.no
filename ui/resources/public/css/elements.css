@@ -60,14 +60,23 @@
 
 .video-tags {margin: 24px 0 13px;}
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 850px) {
   .article {display: flex;}
-  .article-content {flex: 0 0 55%;}
-  .article-aside {flex: 0 0 45%; padding-left: 110px; float: none; max-width: 100%;}
+  .article-content {flex: 0 0 50%;}
+  .article-aside {flex: 0 0 50%; padding-left: 50px; float: none; max-width: 100%;}
   .article .article-aside {margin-top: 0;}
   .article-balanced {align-items: center;}
   .article-front {align-items: flex-start;}
   .article-back {align-items: flex-end;}
+}
+
+@media only screen and (min-width: 968px) {
+  .article-content {flex: 0 0 55%;}
+  .article-aside {flex: 45%;}
+}
+
+@media only screen and (min-width: 1068px) {
+  .article-aside {padding-left: 110px;}
 }
 
 .article-back .img {opacity: 0.75;}
