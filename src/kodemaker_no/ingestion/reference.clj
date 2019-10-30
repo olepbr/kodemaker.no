@@ -6,6 +6,7 @@
 (def reference-keys
   {:page-title :reference/page-title
    :img :reference/image
+   :portrait :reference/portrait
    :name :reference/signee-name
    :phone :reference/signee-phone
    :title :reference/signee-title

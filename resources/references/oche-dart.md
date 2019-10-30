@@ -2,6 +2,7 @@
 :page-title Oche - Dart
 :type reference
 :img /references/geir-oterhals.jpg
+:portrait /references/geir-oterhals-portrett.png
 :logo /logos/oche.svg
 :name Geir Oterhals
 :phone +47 992 18 320
