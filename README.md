@@ -82,6 +82,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL} ;; må ha minst en av disse URLene
+                                   (optional-key :thumb) Str
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
 
    (optional-key :upcoming) [{:title Str ;; Kommende kurs eller presentasjoner

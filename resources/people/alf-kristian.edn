@@ -341,6 +341,7 @@
  :presentations [{:title "Erfaringer med Clojure og Scala (og Java 8)"
                   :blurb "På Javazone 2015, snakket Alf Kristian erfaringer med de funksjonelle språkene på JVM'en. I tillegg sammenlignet han dem med \"FP\" i Java 8."
                   :urls {:video "https://vimeo.com/album/3556815/video/138955227"}
+                  :thumb "/thumbs/videos/erfaringer-clojure-scala.jpg"
                   :date "2015-08-09"
                   :event "JavaZone"
                   :tech [:clojure :scala :java8 :java :funksjonell-programmering]}
@@ -348,6 +349,7 @@
                  {:title "Really understanding Clojure, getting into macros"
                   :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
                   :urls {:video "http://vimeo.com/album/3031533/video/105758305"}
+                  :thumb "/thumbs/videos/really-understanding-clojure.jpg"
                   :date "2014-08-10"
                   :event "JavaZone"
                   :tech [:clojure :funksjonell-programmering]}
@@ -368,6 +370,7 @@
                   :date "2013-02-14"
                   :event "Software 2013"
                   :urls {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}
+                  :thumb "/thumbs/videos/progsprak-betyr-alt.jpg"
                   :tech [:funksjonell-programmering :clojure :scala
                          :python :groovy :java]}
                  {:title "Lisp er vakkert!"
@@ -377,6 +380,7 @@
                   :date "2012-09-10"
                   :event "JavaZone"
                   :urls {:video "http://vimeo.com/49324971"}
+                  :thumb "/thumbs/videos/lisp-er-vakkert.jpg"
                   :tech [:lisp :clojure]}
                  {:title "Clojure - JVM språket som er \"multi-core ready\""
                   :blurb "En introduksjonspresentasjon om Clojure,

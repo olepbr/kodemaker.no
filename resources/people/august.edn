@@ -63,6 +63,7 @@ presentasjonen på hele konferansen!"
  [{:title "The imminent revolution of functional append-only databases"
    :blurb "I de fleste domener har gammel data høy verdi. Det bør ikke være ditt ansvar å løse dette manuelt med tradisjonelle muterbare databaser. Få en introduksjon til ny grensesprengende database-teknologi som løser dette problemet for deg."
    :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
+   :thumb "/thumbs/videos/imminent-revolution.jpg"
    :date "2014-05-13"
    :event "flatMap(Oslo)"
    :tech [:datomic :eventstore :clojure :immutability]}
@@ -84,12 +85,14 @@ presentasjonen på hele konferansen!"
   {:title "You probably don't know how the internet actually works"
    :blurb "En slags kjapp intro til hvordan internett egentlig funker. Halvparten om routing og slikt, resten om krypto."
    :urls {:video "http://vimeo.com/74406482"}
+   :thumb "/thumbs/videos/how-the-internet-works.jpg"
    :date "2013-09-10"
    :event "JavaZone"
    :tech [:ip :openssl]}
-    {:title "WTF is Datomic?"
+  {:title "WTF is Datomic?"
    :blurb "Introduksjon til hvordan i alle dager en immutable database kan funke, og hvorfor det er bra greier."
    :urls {:video "http://vimeo.com/user18356272/review/66548971/99370e0950"}
+   :thumb "/thumbs/videos/datomic-wtf.jpg"
    :date "2013-05-14"
    :tech [:datomic :clojure :immutability]}]
 
@@ -376,7 +379,7 @@ presentasjonen på hele konferansen!"
    :description "Ambisiøst test-toolkit for JavaScript."
    :tech [:javascript :testing]}
   {:url "https://github.com/augustl/halt"
-                         :name "HALT"
+   :name "HALT"
    :description "Ambisiøst operativsystem-prosjekt."
    :tech [:javascript :testing]}
   {:url "https://github.com/augustl/net-http-cheat-sheet"

@@ -109,14 +109,16 @@
                           applikasjoner concurrent. Mye live eksempel."
                   :date "2016-09-08"
                   :tech [:java :concurrency :akka :vertx :hystrix :rxjava :quasar]
-                  :urls {:video "https://vimeo.com/182070294"}}
+                  :urls {:video "https://vimeo.com/182070294"}
+                  :thumb "/thumbs/videos/concurrency-java.jpg"}
                  {:title "Sammenligning av GC-alternativer"
                   :event "javaBin"
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
                   :tech [:java :performance :gc]
-                  :urls {:video "https://vimeo.com/158720082"}}
+                  :urls {:video "https://vimeo.com/158720082"}
+                  :thumb "/thumbs/videos/gc-alternativer.jpg"}
                  {:title "Plugin-basert arkitektur i Java!"
                   :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2015 om bruk av plugins for å
@@ -125,14 +127,16 @@
                           i separate tjenester på et senere tidspunkt."
                   :date "2015-09-10"
                   :tech [:java :micro-services :plugins]
-                  :urls {:video "https://vimeo.com/album/3556815/video/138954653"}}
+                  :urls {:video "https://vimeo.com/album/3556815/video/138954653"}
+                  :thumb "/thumbs/videos/plugin-basert-arkitektur.jpg"}
                  {:title "Calculating Taxes Using Functional Programming and Akka"
                   :event "flatMap"
                   :blurb "Presentasjon fra flatMap 2015 - om erfaringer med Akka og
                           Java 8 ifm. prosjekt hos Skatteetaten."
                   :date "2015-04-28"
                   :tech [:java :akka]
-                  :urls {:video "https://vimeo.com/channels/flatmap2015/128468976"}}
+                  :urls {:video "https://vimeo.com/channels/flatmap2015/128468976"}
+                  :thumb "/thumbs/videos/calculating-taxes-with-fp.jpg"}
 		 {:title "Lyntale: Du MÅ ikke velge et rammeverk!"
                   :event "JavaZone"
 		  :blurb "Lyntale fra JavaZone 2014 rundt valg av JavaScript-rammeverk."
@@ -154,7 +158,8 @@
 		    	  concurrency og ytelse."
 		  :date "2013-09-12"
 		  :tech [:java :akka :grid :hazelcast]
-		  :urls {:video "https://vimeo.com/album/2525252/video/74553206"}}
+		  :urls {:video "https://vimeo.com/album/2525252/video/74553206"}
+                  :thumb "/thumbs/videos/grid-til-akka.jpg"}
                  {:title "Hazelcast: Open Source In-Memory Data Grid"
                   :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2012 som introduserer Hazelcast.
@@ -162,7 +167,8 @@
                           erfaringer fra bruk av rammeverket i Skatteetaten."
                   :date "2012-09-13"
                   :tech [:java :grid :hazelcast]
-                  :urls {:video "https://vimeo.com/49386944"}}
+                  :urls {:video "https://vimeo.com/49386944"}
+                  :thumb "/thumbs/videos/hazelcast.jpg"}
                  {:title "Funksjonell Programmering på JVM"
                   :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2010. Hovedsaklig en presentasjon av

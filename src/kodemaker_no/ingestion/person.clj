@@ -1,9 +1,9 @@
 (ns kodemaker-no.ingestion.person
   (:require [clojure.set :as set]
+            [clojure.string :as str]
             [kodemaker-no.homeless :refer [update-in-existing select-renamed-keys map-vals
                                            parse-local-date parse-local-date-time]]
-            [kodemaker-no.ingestion.video :as video]
-            [clojure.string :as str]))
+            [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
   {:cv/description :cv/description
@@ -60,7 +60,8 @@
    :event :presentation/event-name
    :date :presentation/date
    :direct-link? :presentation/direct-link?
-   :url :presentation/source-url})
+   :url :presentation/source-url
+   :thumb :presentation/thumb})
 
 (def presentation-url-keys
   {:video :presentation/video-url

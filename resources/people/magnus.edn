@@ -103,7 +103,8 @@
                   :event "JavaZone"
                   :tech [:elm]
                   :date "2016-09-07"
-                  :urls {:video "https://vimeo.com/181814362"}}
+                  :urls {:video "https://vimeo.com/181814362"}
+                  :thumb "/thumbs/videos/elm-awesomesauce.jpg"}
                  {:title "Functional Frontends with Elm"
                   :blurb "Lyntale hvor jeg lager en enkel Chat klient med Elm"
                   :event "Oslo Socially Functional Meetup"
@@ -116,6 +117,7 @@
                            Live koding står også på blokka !"
                   :event "Flatmap Oslo"
                   :urls {:video "https://vimeo.com/165928866"}
+                  :thumb "/thumbs/videos/frp-for-web-using-elm.jpg"
                   :tech [:elm]
                   :date "2016-05-02"}
 
@@ -125,6 +127,7 @@
                   :event "JavaZone"
                   :tech [:gradle :groovy]
                   :urls {:video "http://vimeo.com/49375218"}
+                  :thumb "/thumbs/videos/gradle-det-er-ditt-bygg.jpg"
                   :date "2012-09-13"}]
 
  :screencasts [{:title "Elm package docs preview in Light Table"

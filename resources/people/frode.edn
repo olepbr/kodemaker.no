@@ -61,7 +61,8 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                   :blurb "Presentasjon fra JavaZone 2012 om praktisk bruk av hypermedia og lenker i REST-apier"
                   :date "2012-09-12"
                   :tech [:rest :hypermedia :api]
-                  :urls {:video "https://vimeo.com/49392437"}}
+                  :urls {:video "https://vimeo.com/49392437"}
+                  :thumb "/thumbs/videos/hypermedia-api.jpg"}
                  ]
 
  :appearances [

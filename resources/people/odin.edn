@@ -114,14 +114,16 @@
                   ClojureScript er et pragmatisk språk som hjelper deg til å lage enklere løsninger. Her belyser jeg
                   flere grunner til at ClojureScript er verdt å vurdere til ditt neste prosjekt."
                   :tech [:clojurescript :web :figwheel :devcards :javascript]
-                  :urls {:video "https://vimeo.com/181925282"}}
+                  :urls {:video "https://vimeo.com/181925282"}
+                  :thumb "/thumbs/videos/clojurescript-gir-deg-superkrefter.jpg"}
                  {:title "Interaktiv programmering med ClojureScript"
                   :date "2015-09-09"
                   :event "JavaZone"
                   :blurb "Interaktiv programmering er en teknikk som gir deg en umiddelbar nærhet til koden din og
                   åpner opp for en ekstremt kort feedbackloop."
                   :tech [:clojurescript :web :figwheel]
-                  :urls {:video "https://vimeo.com/138862375"}}
+                  :urls {:video "https://vimeo.com/138862375"}
+                  :thumb "/thumbs/videos/interaktiv-clojurescript.jpg"}
                  {:title "Webutvikling med Clojure"
                   :date "2014-09-11"
                   :event "JavaZone"
@@ -129,7 +131,8 @@
                           vurdere Clojure? Fordi det gir deg enklere løsninger, raskere utvikling og færre feil.
                           Ta sjansen til å bli kjent med et språk som vil forandre måten du tenker på."
                   :tech [:clojure :clojurescript :web]
-                  :urls {:video "https://vimeo.com/105857867"}}
+                  :urls {:video "https://vimeo.com/105857867"}
+                  :thumb "/thumbs/videos/webutvikling-med-clojure.jpg"}
                  {:title "Elektronisk tekstbehandling"
                   :date "2013-09-11"
                   :event "JavaZone"
@@ -141,7 +144,8 @@
                           Her får du en oversikt over Unix-verktøy for å
                           strukturere og filtrere tekst."
                   :tech [:shell :unix]
-                  :urls {:video "https://vimeo.com/74309669"}}
+                  :urls {:video "https://vimeo.com/74309669"}
+                  :thumb "/thumbs/videos/elektronisk-tekstbehandling.jpg"}
                  {:title "Better and groovier tests with Spock"
                   :date "2012-09-13"
                   :event "JavaZone"
@@ -150,7 +154,8 @@
                           lesbare og presise tester, samtidig som det optimaliserer
                           for utviklerproduktivitet."
                   :tech [:spock :testing :java :groovy]
-                  :urls {:video "https://vimeo.com/49476112"}}
+                  :urls {:video "https://vimeo.com/49476112"}
+                  :thumb "/thumbs/videos/better-and-groovier-tests.jpg"}
                  {:title "Bedre tester med Groovy"
                   :event "Communities in Action (CiA)"
                   :blurb ""

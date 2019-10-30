@@ -54,11 +54,13 @@
                   :date "2011-09-13"
                   :event "JavaZone"
                   :tech [:orm :frameworks :hibernate]
-                  :urls {:video "https://vimeo.com/28885655"}}
+                  :urls {:video "https://vimeo.com/28885655"}
+                  :thumb "/thumbs/videos/hibernate-cake-mix.jpg"}
                  {:title "Reuse? Refuse"
                   :event "JavaZone 2017"
                   :blurb "Fallgruver innen gjenbruk og felleskomponenter."
                   :urls {:video "https://vimeo.com/233817459"}
+                  :thumb "/thumbs/videos/reuse-refuse.jpg"
                   :tech [:design]
                   :date "2017-09-14"}
                  {:title "Sustainable code - what they don't teach you"
@@ -66,83 +68,97 @@
                   :date "2015-09-13"
                   :event "JavaZone"
                   :tech [:design :smidig :arkitektur]
-                  :urls {:video "https://vimeo.com/138774243"}}
+                  :urls {:video "https://vimeo.com/138774243"}
+                  :thumb "/thumbs/videos/sustainable-code.jpg"}
                  {:title "Offentlig IT v2.0"
                   :blurb "Tanker om hva vi må få til og hva som så ofte går galt med IT i offentlig sektor"
                   :date "2016-10-30"
                   :event "TDC"
                   :tech [:design :smidig :arkitektur]
-                  :urls {:video "https://vimeo.com/189664989"}}
+                  :urls {:video "https://vimeo.com/189664989"}
+                  :thumb "/thumbs/videos/offentlig-it-v2.jpg"}
                  {:title "Anbud eller ta ansvaret selv?"
                   :event "Smidig Digitalisering av offentlig sektor"
                   :blurb "Bør staten drive med softwareutvikling? Hva skjer når man setter utvikling ut på anbud?"
                   :tech [:design]
                   :urls {:video "https://vimeo.com/97470673"}
+                  :thumb "/thumbs/videos/anbud-eller-ansvar.jpg"
                   :date "2014-08-01"}
                  {:title "What developers need from their product/project manager"
                   :event "Product Tank - Oslo"
                   :blurb "Hva er det utviklere trenger og forventer av sine prosjektledere/produkteiere?"
                   :tech [:smidig]
                   :urls {:video "https://vimeo.com/160150795"}
+                  :thumb "/thumbs/videos/what-devs-need-from-managers.jpg"
                   :date "2016-04-03"}
                  {:title "De første delleveransene skal være stygge"
                   :blurb "I smidig produktutvikling er det viktig med fortløpende validering av løsningen. Man vil finne potensielle feil raskt. Man skal ikke vente med at applikasjonen er ferdig før man viser den. Det at de første leveransene er mangelfulle er en del av den nødvendige prosessen og må ikke sees som feil."
                   :date "2012-09-13"
                   :event "Smidigkonferansen"
                   :tech [:design :smidig]
-                  :urls {:video "https://vimeo.com/album/3114636/video/53188003"}}
+                  :urls {:video "https://vimeo.com/album/3114636/video/53188003"}
+                  :thumb "/thumbs/videos/stygge-og-uferdige.jpg"}
                  {:title "How to make your code last forever"
                   :event "SCNA (Los Angeles)"
                   :tech [:design]
                   :blurb "Hvordan skrive kode som kan vedlikeholdes over tid."
                   :date "2015-12-01"
-                  :urls {:video "https://vimeo.com/146928263"}}
+                  :urls {:video "https://vimeo.com/146928263"}
+                  :thumb "/thumbs/videos/software-forever.jpg"}
                  {:title "Fix that!"
                   :blurb "Når alle skriver rundt problemet istedenfor å løse det..."
                   :tech [:design]
                   :event "JavaZone"
                   :urls {:video "https://vimeo.com/105869247"}
+                  :thumb "/thumbs/videos/fix-that.jpg"
                   :date "2014-09-10"}
                  {:title "Smidige utviklere spør ikke om råd"
                   :blurb "Smidig utvikling handler om å være reaktiv fremfor proaktiv.  Istedenfor å analysere i forkant, validerer man antakelsene sine fortløpende.  Vi må slutte å be om avklaringer i forkant og heller test ut teoriene våre og sjekke om de faktisk fungerer i virkeligheten."
                   :date "2012-09-13"
                   :event "Smidigkonferansen"
                   :tech [:design :smidig]
-                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}}
+                  :urls {:video "https://vimeo.com/album/2596640/video/78730519"}
+                  :thumb "/thumbs/videos/ikke-spor-om-lov.jpg"}
                  {:title "Erfaringsrapport fra eSøknad Bostøtte"
                   :blurb "Kjapp gjennom gang av sukksesser og utfordringer med å innføre elektronisk søknad for Bostøtte"
                   :tech [:design]
                   :event "Smidigkonferansen"
                   :urls {:video "https://vimeo.com/110736913"}
+                  :thumb "/thumbs/videos/esoknad-bostotte.jpg"
                   :date "2014-11-01"}
                  {:title "So SQL"
                   :event "JavaZone"
                   :blurb "Et konkret eksempel på hvordan man kan skrive egen kode fra bunnen av, uten generiske rammeverk."
                   :tech [:sql]
                   :urls {:video "https://vimeo.com/74354408"}
+                  :thumb "/thumbs/videos/so-sql.jpg"
                   :date "2013-09-10"}
                  {:title "Readable code"
                   :blurb "Når det gjelder kode - er lett å lese det samme som god?"
                   :date "2012-09-13"
                   :event "JavaZone"
                   :tech [:design]
-                  :urls {:video "https://vimeo.com/49484333"}}
+                  :urls {:video "https://vimeo.com/49484333"}
+                  :thumb "/thumbs/videos/readable-code.jpg"}
                  {:title "Architects in Scrum is like mayonnaise in cake"
                   :event "Booster"
                   :blurb "Hvorfor hierarkisk rollefordeling med ledere og arkitekter ikke fungerer så bra med smidige prinsipper."
                   :tech [:design]
                   :urls {:video "https://vimeo.com/52325469"}
+                  :thumb "/thumbs/videos/mayonaise.jpg"
                   :date "2012-08-01"}
                  {:title "Det er de smarteste folkene som innfører byråkrati"
                   :tech [:design]
                   :blurb "Alle klager over byråkrati, så hvordan har det seg at vi til stadighet innfører mer av det?"
                   :event "Smidigkonferansen"
                   :urls {:video "https://vimeo.com/30577204"}
+                  :thumb "/thumbs/videos/verste-byrakrati.jpg"
                   :date "2011-11-02"}
                  {:title "Bruk og kast utvikling"
                   :event "Smidigkonferansen"
                   :blurb "Innen IT er bruk og kast en god ting."
                   :urls {:video "https://vimeo.com/144824087"}
+                  :thumb "/thumbs/videos/bruk-og-kast.jpg"
                   :tech [:design]
                   :date "2015-11-02"}]
 

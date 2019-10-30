@@ -276,14 +276,16 @@
                   :event "JavaZone"
                   :date "2018-09-13"
                   :tech [:design :functional-programming :frontend]
-                  :urls {:video "https://vimeo.com/289851906"}}
+                  :urls {:video "https://vimeo.com/289851906"}
+                  :thumb "/thumbs/videos/strom-data-til-nettleseren.jpg"}
                  {:title "16 minutter om Pure Functions"
                   :blurb "Jeg snakker hva, hvorfor og hvordan om Pure Functions,
                           i et utbrudd av entusiasme etter å ha jobbet med en
                           kodebase basert på disse prinsippene et par år."
                   :date "2015-12-16"
                   :tech [:design :functional-programming :immutability :clojure]
-                  :urls {:video "http://www.youtube.com/watch?v=ag603CBk2TY"}}
+                  :urls {:video "http://www.youtube.com/watch?v=ag603CBk2TY"}
+                  :thumb "/thumbs/videos/16-minutter-om-pure-functions.jpg"}
                  {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Christian og jeg parprogrammerer på et nettspill med
                   Clojure og ClojureScript. Syns du det er moro å se folk
@@ -294,7 +296,8 @@
                   :event "JavaZone"
                   :date "2014-09-10"
                   :tech [:clojure :clojurescript :react :functional-programming]
-                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
+                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}
+                  :thumb "/thumbs/videos/zombieclj-live.jpg"}
                  {:title "Zombie TDD: Live parprogrammering"
                   :blurb "Christian og jeg setter oss ned med emacsen og
                           parprogrammerer foran publikum. Se hvordan to typer
@@ -303,7 +306,8 @@
                   :date "2012-09-12"
                   :event "JavaZone"
                   :tech [:javascript :tdd :testing]
-                  :urls {:video "http://vimeo.com/49485653"}}
+                  :urls {:video "http://vimeo.com/49485653"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
                  {:title "Emacs Rocks WebDev Special"
                   :blurb "A high speed tour through some pretty darn snazzy
                  features of Emacs when developing for the web. Even if you're
@@ -312,7 +316,8 @@
                   :date "2013-05-23"
                   :event "WebRebels"
                   :tech [:emacs :javascript]
-                  :urls {:video "http://www.youtube.com/watch?v=TMoPuv-xXMM"}}
+                  :urls {:video "http://www.youtube.com/watch?v=TMoPuv-xXMM"}
+                  :thumb "/thumbs/videos/emacs-rocks-webrebels.jpg"}
                  {:title "Lyntale: Wrap Ajax'en din"
                   :blurb "Jeg tegner og forteller hvordan du får ryddig kode og
                           trivelig testing ved å wrappe ajaxen din."

@@ -575,7 +575,8 @@
                   :tech [:aws :terraform :kubernetes]
                   :date "2018-09-13"
                   :urls {:video "https://vimeo.com/289627521"
-                         :slides "https://2018.javazone.no/program/1f3d689b-9f01-4856-ada5-b200f6076936"}}
+                         :slides "https://2018.javazone.no/program/1f3d689b-9f01-4856-ada5-b200f6076936"}
+                  :thumb "/thumbs/videos/to-the-cloud.jpg"}
                  {:title "I put 7 years of meal data in Datomic - Here's what I learned"
                   :blurb "Datomic is an append-only database, designed from the
                   ground up with modern applications and hardware in mind. It
@@ -597,7 +598,8 @@
                   :event "JavaZone"
                   :tech [:javascript]
                   :date "2015-09-10"
-                  :urls {:video "https://vimeo.com/album/3556815/video/138956041"}}
+                  :urls {:video "https://vimeo.com/album/3556815/video/138956041"}
+                  :thumb "/thumbs/videos/ecmascript-2015.jpg"}
                  {:title "You can't change this: Immutability in JavaScript"
                   :blurb "Hva er immutability? Hva er hensikten? Kan man benytte
                   seg av det i JavaScript? Hvordan? Hvilke konsekvenser har
@@ -606,7 +608,8 @@
                   :tech [:javascript :react :immutability]
                   :event "NDC"
                   :date "2015-06-19"
-                  :urls {:video "https://vimeo.com/131643024"}}
+                  :urls {:video "https://vimeo.com/131643024"}
+                  :thumb "/thumbs/videos/immutable-js.jpg"}
                  {:title "Immutable JavaScript"
                   :blurb "When it comes to functional programming techniques
                   seeing widespread adoption in the JavaScript community,
@@ -618,7 +621,8 @@
                   :date "2015-05-22"
                   :event "Web Rebels"
                   :tech [:javascript :immutability]
-                  :urls {:video "https://vimeo.com/128790457"}}
+                  :urls {:video "https://vimeo.com/128790457"}
+                  :thumb "/thumbs/videos/immutable-javascript-wr.jpg"}
                  {:title "ZombieCLJ: Live parprogrammering"
                   :blurb "Se Christian og Magnar parprogrammere på nettspill
                   med Clojure og ClojureScript.
@@ -631,7 +635,8 @@
                   :date "2014-09-10"
                   :event "JavaZone"
                   :tech [:clojure :clojurescript :react]
-                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}}
+                  :urls {:video "http://vimeo.com/album/3031533/video/105777538"}
+                  :thumb "/thumbs/videos/zombieclj-live.jpg"}
                  {:title "Functional UI Programming"
                   :blurb "En introduksjon til React.js, med sammenligning av
                   populære MC*-rammeverk, samt et eksempel på bruk i form av
@@ -640,6 +645,7 @@
                   :date "2014-05-13"
                   :event "flatMap(Oslo)"
                   :urls {:video "http://vimeo.com/user18356272/review/96639841/5556b7d3ab"}
+                  :thumb "/thumbs/videos/functional-ui.jpg"
                   :tech [:javascript :clojurescript :react :om]}
                  {:title "Zombie TDD: Live parprogrammering"
                   :blurb "Magnar og jeg setter oss ned med emacsen
@@ -649,13 +655,15 @@
                   :date "2012-09-12"
                   :event "JavaZone"
                   :tech [:javascript :tdd :testing]
-                  :urls {:video "http://vimeo.com/49485653"}}
+                  :urls {:video "http://vimeo.com/49485653"}
+                  :thumb "/thumbs/videos/zombie-tdd-live.jpg"}
                  {:title "Pure JavaScript"
                   :blurb "Kast de objekt-orienterte krykkene og se denne
                   introduksjonen til funksjonell programmering med JavaScript"
                   :date "2012-06-11"
                   :event "NDC"
                   :urls {:video "http://vimeo.com/43808808"}
+                  :thumb "/thumbs/videos/pure-javascript.jpg"
                   :tech [:javascript]
                   :direct-link? true}
                  {:title "Test-driven JavaScript Development"
@@ -684,6 +692,7 @@
                   :event "JavaZone"
                   :urls {:video "http://vimeo.com/28723225"
                          :slides "http://cjohansen.no/talks/2011/mythbusters/#1"}
+                  :thumb "/thumbs/videos/js-mythbusters.jpg"
                   :tech [:javascript]}
                  ]
 

@@ -101,6 +101,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                  :event "JavaZone"
                  :tech  [:kafka]
                  :urls  {:video "https://vimeo.com/360814664"}
+                 :thumb "/thumbs/videos/teknikker-for-meldinger.jpg"
                  },
                 {:title "Parsing binary weather data with Go"
                  :blurb "GRIB er et binært filformat som brukes for å distribuere værmeldinger og værobservasjoner. Jeg har laget et bibliotek for dette og presenterer det på \"Go Oslo User Group\""
@@ -118,7 +119,8 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                  :date  "2011-09-07"
                  :event "JavaZone"
                  :tech  [:android :bluetooth :go]
-                 :urls  {:video "https://vimeo.com/181936877"}}
+                 :urls  {:video "https://vimeo.com/181936877"}
+                 :thumb "/thumbs/videos/track-your-neighbour.jpg"}
                 ]
 
  :open-source-contributions
