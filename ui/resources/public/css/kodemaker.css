@@ -70,6 +70,10 @@ body {
   font-weight: 500;
 }
 
+.anchor-marker {
+  display: none;
+}
+
 .text-l {
   font-size: 31px;
 }
