@@ -3,20 +3,20 @@
             [dumdom.string :as dumdom]
             [optimus.link :as link]
             [ui.layout :as layout]
+            [ui.sections.article-section :as article-section]
             [ui.sections.banner-section :as banner-section]
             [ui.sections.bruce-section :as bruce-section]
-            [ui.sections.intro-section :as intro-section]
             [ui.sections.pønt-section :as pønt-section]
             [ui.sections.seymour-section :as seymour-section]
             [ui.sections.vertigo-section :as vertigo-section]))
 
 (defn render-section [section]
   ((case (:kind section)
+     :article article-section/render
      :banner banner-section/render
      :bruce bruce-section/render
      :footer layout/footer
      :header layout/header-section
-     :intro intro-section/render
      :pønt pønt-section/render
      :seymour seymour-section/render
      :vertigo vertigo-section/render)

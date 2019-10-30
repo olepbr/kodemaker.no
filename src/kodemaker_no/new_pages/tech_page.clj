@@ -6,7 +6,8 @@
               {:kind :banner
                :text (:tech/name tech)
                :logo (:tech/illustration tech)}
-              {:kind :intro
+              {:kind :article
                :article {:title (str "Hva er " (:tech/name tech))
-                         :text (f/to-html (:tech/description tech))}}
+                         :content [:div.text
+                                   (f/to-html (:tech/description tech))]}}
               {:kind :footer}]})

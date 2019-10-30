@@ -104,15 +104,17 @@
                         :size 300
                         :curtain (:curtain params)})))
 
-(defn article [{:keys [title sub-title content aside image alignment]}]
+(defn article [{:keys [title sub-title content aside aside-title image alignment]}]
   [:div.article {:className (str "article-" (name (or alignment :balanced)))}
    [:div.article-content {}
     (when title
-      (h3 {:element :h2} title))
+      [:h2.h3 title])
     (when sub-title
-      (h4 {:element :h3} sub-title))
+      [:h3.h4 sub-title])
     content]
    [:div.article-aside {}
+    (when aside-title
+      [:h2.h3 aside-title])
     (when image
       [:img.img {:className (cond
                               (= :front alignment) "image-style-bottom-half-circle"
