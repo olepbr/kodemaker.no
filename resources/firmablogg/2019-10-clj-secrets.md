@@ -1,5 +1,6 @@
 :title Maskert config med Clojure
 :author alf-kristian
+:published 2019-10-30
 :tech [:clojure]
 
 :blurb
@@ -20,7 +21,7 @@ Her er et triks for å maskere secrets i config.
 
 Ved å logge config i oppstart av en app, har vi et bedre utgangspunkt for å forstå appen.
 Vi kan lett verifisere om vi har prod-verdier lokalt, eller enda verre -- lokale verdier i prod?
-Vi kan lett sjekke hvilken port som er konfigurert, hvor URL'ene peker, og kanskje også om
+Vi kan lett sjekke hvilken port som er konfigurert, hvor URL-ene peker, og kanskje også om
 vi har satt riktig passord.
 
 Configen ser kanskje ut som følger:
@@ -65,7 +66,7 @@ må funke:
 
 Om du ikke er vant til Clojure, tenker du kanskje, "hæ, er dette et problem"? Du er antakeligvis 
 vant til at config er en spesiell greie, pakket inn i en klasse med et eget api. Sånn er det ikke i
-Clojure. Der bruker vi maps, sets og vector til å representere så og si all data.
+Clojure. Der bruker vi maps, sets og vectors til å representere så og si all data.
 De har et åpent api, massevis av funksjoner som kan lese og manipulere dem.
 
 Det finnes også flere måter å konvertere disse strukturene, f.eks. til tekst, som loggern
@@ -123,8 +124,8 @@ In action:
 
 Whoa, nå begynner det å ligne på noe.
 
-Clojure har mange måter å konvertere data til tekst, `str`.
-Som i dette tilfellet ender opp med `.toString`, er bare en av dem. `pr` og `prn` gjør det på en annen måte:
+Clojure har mange måter å konvertere data til tekst. `str`,
+som i dette tilfellet ender opp med `.toString`, er bare en av dem. `pr` og `prn` gjør det på en annen måte:
 
 ```clj
 (prn (Config. 10000 "jdbc:postgresql://localhost:5435/db" "mitt superhemmelige passord"))
@@ -132,7 +133,7 @@ Som i dette tilfellet ender opp med `.toString`, er bare en av dem. `pr` og `prn
 => nil
 ```
 
-`pr`, og alle varianter av denne, kan en kontrollere med `print-method` en multi-metode:
+`pr`, og alle varianter av denne, kan kontrolleres med `print-method`, en multi-metode:
 
 ```clj
 (defmethod print-method config.Config [m w]
@@ -224,7 +225,7 @@ with-masked-secrets (->> config
                          pr-str)
 ```
 
-Dette er egentlig ganske vanlig Clojure kode. En transformasjon av en datastruktur til en annen. Dette er stegene:
+Dette er egentlig ganske vanlig Clojure-kode. En transformasjon av en datastruktur til en annen. Dette er stegene:
 
 1. Vi mapper om alle verdier under keys som slutter med "secret" til første karakter og ******, alt annet uforandret.
 2. Vi har nå en seq som inneholder key-value tupler, `[[key value]]`, vi kjører det igjennom `(into {})` for å lage et map.
@@ -237,13 +238,13 @@ ks (keys config)
 vs (map config ks)
 ```
 
-Så begynner vi med metaprogrammeringen. Da vi skal bruke nøklene til å lage feltnavn, trenger vi symboler, `kss`:
+Så begynner vi med metaprogrammeringen. Da vi skal bruke nøklene til å lage feltnavn trenger vi symboler, `kss`:
 
 ```clj
 kss (map symbol ks)
 ``` 
  
-I tilfelle vi ønsker maskere flere maps, må hvert kall generere forskjellige klasser, hvis ikke får vi navnekollisjon.
+I tilfelle vi ønsker å maskere flere maps, må hvert kall generere forskjellige klasser, hvis ikke får vi navnekollisjon.
 Clojures auto-gensym `#` gir oss unike navn, den må brukes sammen med en syntax quote \`, en back-tick:
 
 ```clj
@@ -259,9 +260,10 @@ c (eval `(defrecord ~class-name [~@kss]
 
 Om du myser litt ser du kanskje likheten med oppbygging av defrecord vi hadde over?
 
-Her bygger vi dynamisk opp en defrecord. Den inneholder feltene som config mappet vårt inneholder via `kss`.
-Og så overrider vi toString med den maskerte verdien. Til slutt `eval`-uerer vi dette, som trigger clojure
-compilatoren, og vi ender opp med en java.lang.Class.
+Her bygger vi dynamisk opp kallet til `defrecord`. Den inneholder feltene som
+config mappet vårt inneholder via `kss`. Og så overrider vi toString med den
+maskerte verdien. Til slutt `eval`-uerer vi dette, som trigger
+Clojure-kompilatoren, og vi ender opp med en `java.lang.Class`.
 
 
 For å være dynamiske må vi håndtere at Config kan ha havnet i en pakke/namespace som vi ikke helt har kontroll
@@ -279,7 +281,7 @@ Dette blir f.eks. `hs.config/Config__12721__auto__.`. Da er vi klare til å inst
 masked-config (eval `(~constructor ~@vs))
 ```
 
-Nesten i mål nå. Vi trenger bare å fikse print-method for klassen vår, og returnere resultatet:
+Nesten i mål nå. Vi trenger bare å fikse `print-method` for klassen vår, og returnere resultatet:
 
 ```clj
 (let [...]
@@ -306,7 +308,7 @@ til et map f.eks. med `into`:
 Så om du velger denne strategien, må du likevel ha kontroll på configen din, men det har du vel?
 
 Når sant skal sies, grunnen til at vi lagde denne løsningen var at vi ikke hadde 100 % kontroll på
-configen vår. Ved en feilsituasjon ble litt for mye logga, blant annet et kontekst objekt som inneholdt
+configen vår. Ved en feilsituasjon ble litt for mye logga, blant annet et kontekst-map som inneholdt
 config...ooops! Dette løste problemet for oss.
 
 ### En oppgave til leser
