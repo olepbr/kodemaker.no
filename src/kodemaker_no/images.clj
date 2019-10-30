@@ -47,6 +47,9 @@
               :offset-x :right
               :offset-y :bottom}]]}
 
+    :rouge-duotone
+    {:transformations [rouge-duotone]}
+
     :vertigo
     {:height 850
      :retina-optimized? true}

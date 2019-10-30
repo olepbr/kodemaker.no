@@ -21,6 +21,12 @@
               :link {:text "Se referanser"
                      :href "/referanser/"}}))
 
+(defcard video-thumb
+  (e/video-thumb {:img "/devcard_images/to-the-cloud.jpg"
+                  :tags "JAVA, SCALA"
+                  :url "#"
+                  :title "To the cloud"}))
+
 (defcard round-media
   (e/round-media {:image "/devcard_images/person.png"
                   :title "Geir Oterhals"

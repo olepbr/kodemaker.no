@@ -51,6 +51,16 @@
    [:div.seymour-bottom
     (arrow-link (:link params))]])
 
+(defn video-thumb [params]
+  [:div
+   [:div.video-thumb
+    [:img {:className "image-style-rouge-duotone"
+           :src (:img params)}]
+    [:div.video-overlay [:div.video-indicator]]]
+   [:p.tags.video-tags (:tags params)]
+   [:p.text [:a.link {:href (:url params)}
+             (:title params)]]])
+
 (defn curtain-class [side]
   (str "curtain-" (or (some-> side name) "left")))
 
