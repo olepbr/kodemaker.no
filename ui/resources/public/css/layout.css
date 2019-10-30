@@ -128,6 +128,17 @@
   position: relative;
 }
 
+.bruce .gutter {
+  background-repeat: no-repeat;
+  background-position: left 300px bottom 220px,
+                       left 87px top -240px,
+                       left -40px bottom -265px;
+  background-image: url("../img/p-nt/dotgrid-flat.gif"),
+                    url("../img/p-nt/descending-line.svg"),
+                    url("../img/p-nt/greater-than-small.svg");
+  background-size: auto, 650px, 450px 900px;
+}
+
 .bruce-header {
   position: relative;
   z-index: 2;
@@ -135,58 +146,188 @@
 
 .bruce .gutter {
   padding-top: 80px;
-  padding-bottom: 155px;
+  padding-bottom: 400px;
 }
 
 .bruce .bruce-content {
-  margin-top: 270px;
+  margin-top: 85px;
   max-width: 620px;
 }
 
 .bruce .text {
-  margin: 24px 0 70px;
+  margin: 24px 0 40px;
 }
 
-.bruce-image-top,
-.bruce-image-right {
+.bruce-image-front,
+.bruce-image-back {
   position: absolute;
-  width: 360px;
+  width: 240px;
 }
 
-.bruce-image-top {
-  top: 0;
-  left: 300px;
+.bruce-image-front img,
+.bruce-image-back img {
+  display: block;
+  max-width: 100%;
+}
+
+.bruce-image-front {
+  bottom: 130px;
+  left: -44px;
   opacity: 0.75;
   z-index: 1;
 }
 
-.bruce-image-right {
-  top: 240px;
-  right: -50px;
+.bruce-image-back {
+  bottom: -10px;
+  right: -10px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 750px) {
+  .bruce .gutter {
+    background-position: left 100px bottom -315px,
+                         left -360px bottom -232px,
+                         left 400px top -240px,
+                         left 282px top -100px;
+    background-image: url("../img/p-nt/dotgrid.png"),
+                      url("../img/p-nt/ascending-line.svg"),
+                      url("../img/p-nt/descending-line.svg"),
+                      url("../img/p-nt/greater-than-small.svg");
+    background-size: auto, 650px, 650px, 450px 900px;
+    padding-bottom: 130px;
+  }
+
   .bruce .text {
     max-width: 350px;
   }
+
+  .bruce-image-front,
+  .bruce-image-back {
+    width: 46%;
+  }
+
+  .bruce .bruce-content {
+    margin-top: 200px;
+  }
+
+  .bruce-image-front {
+    bottom: auto;
+    left: 250px;
+    top: -90px;
+    top: -13%;
+  }
+
+  .bruce-image-back {
+    bottom: auto;
+    right: -20px;
+    top: 360px;
+  }
 }
 
-@media only screen and (min-width: 1400px) {
-  .bruce-image-top,
-  .bruce-image-right {
+@media only screen and (min-width: 1000px) {
+  .bruce .gutter {
+    background-position: left 100px bottom -325px,
+                         left -357px bottom -325px,
+                         left -480px top 440px,
+                         right -380px top -0px,
+                         left 60px top -220px,
+                         left 680px top -20px;
+    background-image: url("../img/p-nt/dotgrid.png"),
+                      url("../img/p-nt/dotgrid.png"),
+                      url("../img/p-nt/ascending-line.svg"),
+                      url("../img/p-nt/descending-line.svg"),
+                      url("../img/p-nt/descending-line.svg"),
+                      url("../img/p-nt/greater-than-small.svg");
+    background-size: auto, auto, 650px, 650px, 650px, 450px 900px;
+    padding-bottom: 130px;
+  }
+
+  .bruce .bruce-content {
+    margin-top: 290px;
+  }
+
+  .bruce .text {
+    max-width: 100%;
+  }
+
+  .bruce-image-front,
+  .bruce-image-back {
     width: 666px;
   }
 
-  .bruce-image-top {
-    left: 350px;
+  .bruce-image-front {
+    left: 35%;
+    top: -280px;
+  }
+
+  .bruce-image-back {
+    left: 55%;
+    top: auto;
+    bottom: 0;
   }
 }
 
-@media only screen and (min-width: 1800px) {
-  .bruce-image-right {
-    right: 0;
-  }
-}
+/* background-repeat: no-repeat; */
+/* background-position: left 300px bottom 220px, */
+/*                      left -325px bottom -140px, */
+/*                      left 87px top -240px, */
+/*                      left 880px top -240px, */
+/*                      left -40px bottom -265px; */
+/* background-image: url("../img/p-nt/dotgrid-flat.gif"), */
+/*                   url("../img/p-nt/ascending-line.svg"), */
+/*                   url("../img/p-nt/descending-line.svg"), */
+/*                   url("../img/p-nt/descending-line.svg"), */
+/*                   url("../img/p-nt/greater-than-small.svg"); */
+/* background-size: auto, 650px, 650px, 650px, 450px 900px; */
+
+/* .bruce-image-front, */
+/* .bruce-image-back { */
+/*   position: absolute; */
+/*   width: 360px; */
+/* } */
+
+/* .bruce .bruce-content { */
+/*   margin-top: 270px; */
+/* } */
+
+/* .bruce .text { */
+/*   margin: 24px 0 70px; */
+/* } */
+
+/* @media only screen and (min-width: 900px) { */
+/*   .bruce-image-back { */
+/*     right: -50px; */
+/*   } */
+/* } */
+
+/* @media only screen and (min-width: 1200px) { */
+/*   .bruce-image-front, */
+/*   .bruce-image-back { */
+/*     width: 666px; */
+/*   } */
+/* } */
+
+/* @media only screen and (min-width: 1400px) { */
+/*   .bruce-image-back { */
+/*     right: -50px; */
+/*   } */
+
+/*   .bruce-image-front { */
+/*     width: 1120px; */
+/*     left: auto; */
+/*     right: auto; */
+/*   } */
+
+/*   .bruce-image-front img { */
+/*     position: absolute; */
+/*     right: 200px; */
+/*   } */
+/* } */
+
+/* @media only screen and (min-width: 1800px) { */
+/*   .bruce-image-back { */
+/*     right: 0; */
+/*   } */
+/* } */
 
 .img {
   display: block;

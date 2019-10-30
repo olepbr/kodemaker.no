@@ -10,5 +10,5 @@
     tar komplekse oppgaver med tunge integrasjoner."
     :link {:text "Jobb med oss"
            :href "/jobb/"}
-    :image-top "/devcard_images/bruce-top.png"
-    :image-right "/devcard_images/bruce-right.png"}))
+    :image-front "/devcard_images/bruce-front.png"
+    :image-back "/devcard_images/bruce-back.png"}))

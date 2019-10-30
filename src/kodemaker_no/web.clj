@@ -168,9 +168,10 @@
 
   (get-image-assets "./build/" images/image-asset-config)
 
-  (-> "/image-assets/vcard-medium/_/photos/people/magnar/side-profile-square.jpg"
+
+  (-> "/image-assets/bruce-front/_/km/DSCF9720.jpg"
       imagine/image-spec
       (imagine/inflate-spec images/image-asset-config)
-      (imagine/transform-image-to-file "ui/resources/public/devcard_images/person.png"))
+      (imagine/transform-image-to-file "ui/resources/public/devcard_images/bruce-front.png"))
 
   )

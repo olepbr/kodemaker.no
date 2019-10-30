@@ -24,7 +24,7 @@
      :retina-optimized? true
      :width 120}
 
-    :bruce-top
+    :bruce-front
     {:transformations
      [[:resize {:smallest 774}]
       [:crop {:preset :square}]
@@ -32,10 +32,10 @@
       [:circle]
       [:triangle :lower-left]
       [:crop {:width 666
-              :height 383
+              :height 666
               :offset-y :bottom}]]}
 
-    :bruce-right
+    :bruce-back
     {:transformations
      [[:resize {:smallest 774}]
       [:crop {:preset :square}]
