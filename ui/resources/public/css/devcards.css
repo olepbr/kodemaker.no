@@ -2,8 +2,15 @@ body .com-rigsomelight-devcards-card-base,
 body .com-rigsomelight-devcards-card-base-no-pad {background: #fff;}
 body .com-rigsomelight-devcards-panel-heading {background: #fffafa;}
 
-body .com-rigsomelight-devcards-container {width: auto; max-width: 1482px;}
-body .com-rigsomelight-devcards-devcard-padding {padding: 0; margin-top: 0; border: 20px solid #fffafa; border-top: 1px solid #fffafa;}
+body .com-rigsomelight-devcards-container {width: auto; max-width: 1882px;}
+body .com-rigsomelight-devcards-devcard-padding {padding: 0; margin-top: 0; border: none; border-top: 1px solid #fffafa;}
+
+@media only screen and (min-width: 800px) {
+  body .com-rigsomelight-devcards-devcard-padding {
+    border: 20px solid #fffafa;
+    border-top-width: 1px;
+  }
+}
 
 /* body .com-rigsomelight-devcards-card-base, */
 /* body .com-rigsomelight-devcards-card-base-no-pad {border-color: rgb(0,0,0);} */
