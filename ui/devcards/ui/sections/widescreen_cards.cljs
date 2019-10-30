@@ -5,5 +5,5 @@
 
 (defcard
   (section/render
-   {:image "/devcard-images/geir.jpg"
+   {:image "/devcard_images/geir.jpg"
     :alt "Geir Oterhals på Oche"}))
