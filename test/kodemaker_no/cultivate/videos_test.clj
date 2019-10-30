@@ -13,6 +13,7 @@
        :name ["Magnar" "Sveen"]
        :presentations [{:title "Zombie TDD: Live parprogrammering"
                         :id :zombie-tdd-live-at-javazone
+                        :date "2019-10-01"
                         :blurb "Progger på JavaZone"
                         :tech [:javascript]
                         :urls {:video "http://vimeo.com/49485653"}}]})
@@ -23,6 +24,7 @@
        :name ["Christian" "Johansen"]
        :presentations [{:title "Zombie TDD: Live parprogrammering"
                         :id :zombie-tdd-live-at-javazone
+                        :date "2019-10-01"
                         :blurb "Progger på JavaZone"
                         :tech [:javascript]
                         :urls {:video "http://vimeo.com/49485653"}}]})
@@ -33,10 +35,12 @@
        :name ["Sten Morten" "MA"]
        :presentations [{:title "En deilig implementert AND (Teknologihuset)"
                         :blurb "Et dypdykk inn i clojure.core"
+                        :date "2019-10-01"
                         :tech [:clojure]
                         :urls {:video "http://programmerer.com/2013/06/en-deilig-implementer-and-video/"}}
                        {:title "Programmeringsspråket betyr alt!"
                         :blurb "Hovedverktøyet til programmerere"
+                        :date "2019-09-01"
                         :tech [:clojure]
                         :urls {:video "http://www.youtube.com/watch?v=y5PSRn56ZWo"}}]})}}))
 

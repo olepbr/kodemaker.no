@@ -102,6 +102,7 @@
                           Foredraget består av noen få slides og en solid dose med live-coding !"
                   :event "JavaZone"
                   :tech [:elm]
+                  :date "2016-09-07"
                   :urls {:video "https://vimeo.com/181814362"}}
                  {:title "Functional Frontends with Elm"
                   :blurb "Lyntale hvor jeg lager en enkel Chat klient med Elm"

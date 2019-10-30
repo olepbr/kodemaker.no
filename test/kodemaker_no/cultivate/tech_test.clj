@@ -59,14 +59,17 @@
                [{:title "Pure JavaScript"
                  :blurb "Kast de objekt-orienterte krykkene."
                  :urls {:video "http://vimeo.com/43808808"}
+                 :date "2012-09-12"
                  :tech [:javascript]}
                 {:title "Zombie TDD: Live parprogrammering"
                  :blurb "Vi setter oss ned med emacsen."
                  :tech [:javascript :tdd]
+                 :date "2012-09-12"
                  :urls {:video "http://vimeo.com/49485653"}}])
      (assoc-in [:people :magnar :presentations]
                [{:title "Zombie TDD: Live parprogrammering"
                  :blurb "Vi setter oss ned med emacsen."
+                 :date "2012-09-12"
                  :tech [:javascript :tdd]
                  :urls {:video "http://vimeo.com/49485653"}}])
 

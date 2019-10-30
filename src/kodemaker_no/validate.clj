@@ -63,7 +63,7 @@
                                    :blurb Str
                                    :tech [ID]
                                    (optional-key :event) Str ;; Konferansenavn etc
-                                   (optional-key :date) Date ;; iso-8601 yyyy-mm-dd
+                                   :date Date ;; iso-8601 yyyy-mm-dd
                                    :urls {(optional-key :video) URL
                                           (optional-key :slides) URL
                                           (optional-key :source) URL} ;; må ha minst en av disse URLene
