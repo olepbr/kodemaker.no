@@ -9,6 +9,7 @@
             [ui.sections.pønt-section-cards]
             [ui.sections.seymour-section-cards]
             [ui.sections.vertigo-section-cards]
+            [ui.sections.widescreen-cards]
             [ui.typography-cards]))
 
 (enable-console-print!)

@@ -8,6 +8,10 @@
   margin: 0 auto;
 }
 
+.content-l {
+  max-width: 1400px;
+}
+
 .gutter-xl {
   margin: 0 -500px;
   padding: 0 500px;
@@ -266,9 +270,7 @@
   }
 }
 
-.img {
-  display: block;
-}
+.img {max-width: 100%; display: block;}
 
 /* Vertigo component */
 
@@ -486,3 +488,6 @@
   margin-top: 80px;
   margin-bottom: 110px;
 }
+
+/* Widescreen section */
+.widescreen {padding: 0;}
