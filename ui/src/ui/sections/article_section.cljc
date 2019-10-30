@@ -2,7 +2,7 @@
   (:require [ui.elements :as e]
             [ui.layout :as l]))
 
-(defn render [{:keys [article]}]
-  [:div.section
+(defn render [{:keys [article background]}]
+  [:div.section {:style {:background background}}
    [:div.content
     (e/article article)]])
