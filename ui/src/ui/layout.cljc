@@ -50,15 +50,15 @@
                       :href href})])]])
 
 (defn header []
-  [:div.header {}
+  [:div.header
    (logo {:width 176})
    [:div.menu-toggler.clickable.h5 "Meny"]
    [:ul.inline-menu.nav-list.h5 {:role "navigation" :aria-label "Hovedmeny"}
     (for [{:keys [href text]} menu-items]
       [:li [:a {:href href} text]])]])
 
-(defn header-section [_]
-  [:div.section.header-section
+(defn header-section [{:keys [pønt]}]
+  [:div.section.header-section {:style (when pønt (add-pønt {} pønt))}
    [:div.content
     (header)]])
 
