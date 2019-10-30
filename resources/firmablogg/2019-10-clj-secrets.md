@@ -210,7 +210,7 @@ Og sist, men ikke minst:
 => nil
 ```
 
-Mission accomplished! `masked-config` har nå generalisert maskeringen. Alt du nå trenger å huske på
+Mission accomplished! `masked-secrets` har nå generalisert maskeringen. Alt du nå trenger å huske på
 er å gi secrets postfixen `-secret`.
 
 Jeg lovte å gå igjennom dette steg for steg. Først skaper vi `with-masked-secrets`:
