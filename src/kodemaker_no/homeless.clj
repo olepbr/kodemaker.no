@@ -40,6 +40,34 @@
     (update-in m path f)
     m))
 
+(defn max-key*
+  "Returns the x for which (k x) is greatest.
+  Differs from `max-key` in that it uses `compare` instead of `>`."
+  {:static true}
+  ([k x] x)
+  ([k x y] (if (pos? (compare (k x) (k y))) x y))
+  ([k x y & more]
+   (reduce #(max-key* k %1 %2) (max-key* k x y) more)))
+
+(defn min-key*
+  "Returns the x for which (k x) is least.
+  Differs from `min-key` in that it uses `compare` instead of `<`."
+  {:static true}
+  ([k x] x)
+  ([k x y] (if (neg? (compare (k x) (k y))) x y))
+  ([k x y & more]
+   (reduce #(min-key* k %1 %2) (min-key* k x y) more)))
+
+(defn max-by [k coll & [default]]
+  (if (seq coll)
+    (apply max-key* k coll)
+    default))
+
+(defn min-by [k coll & [default]]
+  (if (seq coll)
+    (apply min-key* k coll)
+    default))
+
 (defn update-in* [m path f]
   "Like update-in, but can map over lists by nesting paths."
   (if (vector? (last path))
