@@ -32,6 +32,7 @@
    (dumdom/render
     [:html
      [:head
+      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Lato:300,400&display=swap"}]
       [:link {:rel "stylesheet" :href (link/file-path request "/css/kodemaker.css")}]
       [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]
       [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
