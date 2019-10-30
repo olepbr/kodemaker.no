@@ -14,6 +14,6 @@
       [:p.text text]
       (e/arrow-link link)]
      [:div.bruce-image-front
-      [:img.image-style-bruce-front {:src image-front}]]
+      [:img {:src image-front}]]
      [:div.bruce-image-back
-      [:img.image-style-bruce-back {:src image-back}]]]]])
+      [:img {:src image-back}]]]]])
