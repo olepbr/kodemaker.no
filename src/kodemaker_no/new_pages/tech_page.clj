@@ -14,7 +14,7 @@
       pres
       (-> (assoc :aside-title "Foredrag")
           (assoc :aside (e/video-thumb
-                         {:img (:presentation/thumb pres)
+                         {:img (str "/rouge-duotone/" (:presentation/thumb pres))
                           :tags (:person/given-name (:person/_presentations pres))
                           :url (:page/uri pres)
                           :title (:presentation/title pres)}))))))

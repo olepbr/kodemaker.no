@@ -47,7 +47,7 @@
   (.setAttribute node attr-after (f (.getAttribute node attr-before)))
   (.removeAttribute node attr-before))
 
-(defn- tweak-pages [html image-asset-config request]
+(defn- tweak-page-markup [html image-asset-config request]
   (html5-walker/replace-in-document
    html
    {
@@ -71,10 +71,15 @@
       (str/replace "“" "«")
       (str/replace "”" "»")))
 
+(defn post-process-page [html image-asset-config request]
+  (-> html
+      (tweak-page-markup image-asset-config request)
+      use-norwegian-quotes))
+
 (defn prepare-page [image-asset-config get-page request]
   (-> (get-page)
       (render/render-page request)
-      (tweak-pages image-asset-config request)
+      (tweak-page-markup image-asset-config request)
       use-norwegian-quotes))
 
 (defn prepare-pages [pages image-asset-config]

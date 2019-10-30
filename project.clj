@@ -7,7 +7,7 @@
                  [org.clojure/data.json "0.2.6"]
                  [optimus "0.20.2"]
                  [optimus-img-transform "0.3.1" :exclusions [fivetonine/collage]]
-                 [cjohansen/imagine "2019.10.02"]
+                 [cjohansen/imagine "2019.10.31"]
                  [stasis "2.5.0"]
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]

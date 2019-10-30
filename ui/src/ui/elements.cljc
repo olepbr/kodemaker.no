@@ -54,8 +54,7 @@
 (defn video-thumb [params]
   [:div
    [:div.video-thumb
-    [:img {:className "image-style-rouge-duotone"
-           :src (:img params)}]
+    [:img {:src (:img params)}]
     [:div.video-overlay [:div.video-indicator]]]
    [:p.tags.video-tags (:tags params)]
    [:p.text [:a.link {:href (:url params)}

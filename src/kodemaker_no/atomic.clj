@@ -3,9 +3,11 @@
             [clojure.java.io :as io]
             [datomic-type-extensions.api :as d]
             [java-time-dte.install :refer [define-dte]]
+            [kodemaker-no.images :as images]
             [kodemaker-no.new-pages.blog-post :as blog-post]
             [kodemaker-no.new-pages.frontpage :as frontpage]
             [kodemaker-no.new-pages.tech-page :as tech-page]
+            [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
 
 (define-dte :data/edn :db.type/string
@@ -21,7 +23,9 @@
 
 (defn serve-page [page request]
   {:status 200
-   :body (render-page page request)
+   :body (-> page
+             (render-page request)
+             (post-process-page images/image-asset-config request))
    :headers {"Content-Type" "text/html"}})
 
 (defn handle-request [conn request]
