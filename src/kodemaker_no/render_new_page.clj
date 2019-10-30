@@ -8,7 +8,8 @@
             [ui.sections.bruce-section :as bruce-section]
             [ui.sections.pønt-section :as pønt-section]
             [ui.sections.seymour-section :as seymour-section]
-            [ui.sections.vertigo-section :as vertigo-section]))
+            [ui.sections.vertigo-section :as vertigo-section]
+            [ui.sections.widescreen-section :as widescreen-section]))
 
 (defn render-section [section]
   ((case (:kind section)
@@ -19,7 +20,8 @@
      :header layout/header-section
      :pønt pønt-section/render
      :seymour seymour-section/render
-     :vertigo vertigo-section/render)
+     :vertigo vertigo-section/render
+     :widescreen widescreen-section/render)
    section))
 
 (defn- head-title [title]
