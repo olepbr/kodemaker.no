@@ -60,7 +60,7 @@
 
 .video-tags {margin: 24px 0 13px;}
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 1000px) {
   .article {display: flex;}
   .article-content {flex: 0 0 50%;}
   .article-aside {flex: 0 0 50%; padding-left: 50px; float: none; max-width: 100%;}
@@ -70,12 +70,12 @@
   .article-back {align-items: flex-end;}
 }
 
-@media only screen and (min-width: 968px) {
+@media only screen and (min-width: 1120px) {
   .article-content {flex: 0 0 55%;}
   .article-aside {flex: 45%;}
 }
 
-@media only screen and (min-width: 1068px) {
+@media only screen and (min-width: 1200px) {
   .article-aside {padding-left: 110px;}
 }
 
