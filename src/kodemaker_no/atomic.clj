@@ -36,8 +36,8 @@
     :else
     (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
       (serve-page (case (:page/kind e)
-                    :tech-page (tech-page/create-page e)
-                    :blog-post (blog-post/create-page e))
+                    :page.kind/tech (tech-page/create-page e)
+                    :page.kind/blog-post (blog-post/create-page e))
                   request))))
 
 (defn serve-pages [conn]

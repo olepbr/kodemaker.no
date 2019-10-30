@@ -13,7 +13,7 @@
   [(-> article
        (h/select-renamed-keys article-keys)
        (assoc :page/uri (str (second (re-find #"articles(.*).md" file-name)) "/"))
-       (assoc :page/kind :article))])
+       (assoc :page/kind :page.kind/article))])
 
 (comment
   (defn ingest-article [file-name]

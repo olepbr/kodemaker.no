@@ -15,4 +15,4 @@
        (select-renamed-keys tech-keys)
        (update :db/ident #(keyword "tech" (name %)))
        (assoc :page/uri (str (second (re-find #"tech(.*).edn" file-name)) "/"))
-       (assoc :page/kind :tech-page))])
+       (assoc :page/kind :page.kind/tech))])

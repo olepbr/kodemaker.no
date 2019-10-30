@@ -20,7 +20,7 @@
                                      {:db/ident (keyword "tech" (name s))}))
       (h/select-renamed-keys blog-post-keys)
       (assoc :page/uri (str "/blogg" (second (re-find #"(?:firmablogg|blog)(.*).md" file-name)) "/"))
-      (assoc :page/kind :blog-post)))
+      (assoc :page/kind :page.kind/blog-post)))
 
 (defn create-tx [file-name blog-post]
   [(blog-post-tx file-name blog-post)])

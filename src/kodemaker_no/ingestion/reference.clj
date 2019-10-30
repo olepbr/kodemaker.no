@@ -77,7 +77,7 @@
 (defn create-tx [file-name reference-sections]
   [(-> (extract-section-data reference-sections)
        (assoc :page/uri (str "/referanser" (second (re-find #"references(.*).md" file-name)) "/"))
-       (assoc :page/kind :reference))])
+       (assoc :page/kind :page.kind/reference))])
 
 (comment
   (let [file-name "references/nsb-personalbillett.md"]

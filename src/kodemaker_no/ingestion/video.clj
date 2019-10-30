@@ -51,7 +51,7 @@
     (cond-> (h/select-renamed-keys presentation video-keys)
       (create-video-page-for-presentation? presentation)
       (merge {:page/uri url
-              :page/kind :video})
+              :page/kind :page.kind/video})
 
       :always (merge {:db/ident (video-id presentation)
                       :video/by [{:db/ident person-ident}]

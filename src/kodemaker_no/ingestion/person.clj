@@ -48,7 +48,7 @@
   (if (get person :person/profile-active? true)
     (-> person
         (assoc :page/uri (url file-name))
-        (assoc :page/kind :profile-page))
+        (assoc :page/kind :page.kind/profile))
     person))
 
 (def presentation-keys
@@ -163,7 +163,7 @@
   (when (and (not (:administration? person))
              (not (:quit? person)))
     [(merge {:page/uri (str "/cv" (url file-name))
-             :page/kind :cv-page}
+             :page/kind :page.kind/cv}
             (-> (:cv person)
                 (select-renamed-keys cv-keys)
                 (update-in-existing [:cv/preferred-techs] prep-techs)
