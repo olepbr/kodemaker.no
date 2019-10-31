@@ -48,3 +48,20 @@
         {:status 404
          :body "Eg fann han ikkje"
          :headers {"Content-Type" "text/html"}})))
+
+(comment
+  (def conn (d/connect "datomic:mem://kodemaker"))
+
+  (def reference
+    (->> (d/q '[:find ?e
+                :in $ ?uri
+                :where
+                [?e :page/uri ?uri]]
+              (d/db conn)
+              "/referanser/oche-dart/")
+         ffirst
+         (d/entity (d/db conn))))
+
+  (into {} reference)
+
+)
