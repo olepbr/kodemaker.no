@@ -105,6 +105,9 @@
                 pegdown-options)
     s))
 
+(defn markdown [s]
+  [:div.text (to-html s)])
+
 (defn link-to-person [person]
   [:a {:href (:url person)} (:name person)])
 
