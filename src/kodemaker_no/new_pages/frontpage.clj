@@ -1,5 +1,4 @@
-(ns kodemaker-no.new-pages.frontpage
-  (:require [kodemaker-no.images :as images]))
+(ns kodemaker-no.new-pages.frontpage)
 
 (defn create-page []
   {:sections [{:kind :bruce
@@ -10,8 +9,8 @@
                       tunge integrasjoner."
                :link {:text "Jobb med oss"
                       :href "/jobb/"}
-               :image-top (images/url-to :bruce-top "foto/christian-1.jpg")
-               :image-right (images/url-to :bruce-right "foto/nils-1.jpg")}
+               :image-front "/bruce-front/foto/christian-1.jpg"
+               :image-back "/bruce-back/foto/nils-1.jpg"}
               {:kind :seymour
                :color :blanc-rose
                :seymours
