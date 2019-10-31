@@ -96,7 +96,7 @@
               :position "top 0 left -400px"}]
       :article {:alignment :back
                 :content (e/blockquote {:quote blurb})
-                :aside (e/round-media {:image (str "/vcard-small/" portrait)
+                :aside (e/round-media {:image (some->> portrait (str "/vcard-small/"))
                                        :title signee-name
                                        :lines [signee-title
                                                signee-phone]})}}]
