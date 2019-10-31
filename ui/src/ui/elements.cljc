@@ -31,8 +31,8 @@
   {:large "text-l"})
 
 (defn arrow-link [{:keys [text href size] :as params}]
-  [:a.ib {:href href
-          :className (size-classes size)}
+  [:a.link.ib {:href href
+               :className (size-classes size)}
    text (arrow params)])
 
 (defn icon [{:keys [type width height]}]
