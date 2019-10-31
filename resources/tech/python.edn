@@ -1,0 +1,5 @@
+{:id :python
+ :name "Python"
+ :type :proglang
+ :illustration "/photos/tech/python-logo.png"
+ :site "https://www.python.org/"}

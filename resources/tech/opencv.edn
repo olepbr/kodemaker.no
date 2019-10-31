@@ -1,0 +1,5 @@
+{:id :opencv
+ :name "OpenCV"
+ :type :library
+ :illustration "/photos/tech/opencv.jpg"
+ :site "https://opencv.org/"}
