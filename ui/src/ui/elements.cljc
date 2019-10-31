@@ -138,3 +138,12 @@
                                :default "image-style-rouge-triangle-medium")
                   :src image}])
      aside]]])
+
+(defn stats [{:keys [icon-type icon-count stats]}]
+  [:div.stats {}
+   (repeat icon-count
+           (icon {:type icon-type
+                  :color :chocolat-au-lait
+                  :width 44}))
+   (for [stat stats]
+     [:p stat])])

@@ -86,3 +86,5 @@
 .curtain {display: inline-block; overflow: hidden;}
 .curtain-left {border-bottom-left-radius: 80% 65%;}
 .curtain-right {border-bottom-right-radius: 80% 65%;}
+
+.stats {color: var(--chocolat-au-lait)}
