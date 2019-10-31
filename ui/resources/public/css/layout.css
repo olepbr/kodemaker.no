@@ -484,10 +484,7 @@
   .banner-logo { width: 87px; }
 }
 
-.banner-ws {
-  margin-top: 80px;
-  margin-bottom: 110px;
-}
+.banner-ws {margin-top: 80px; margin-bottom: 30px;}
 
 /* Widescreen section */
 .widescreen {padding: 0;}

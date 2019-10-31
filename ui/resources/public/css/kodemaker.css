@@ -109,9 +109,16 @@ body {
 }
 
 .tac {text-align: center;}
-.mbl {margin-bottom: 60px;}
+
+.mts, .mvs {margin-top: 16px;}
+.mbs, .mvs {margin-bottom: 16px;}
+.mtm, .mvm {margin-top: 32px;}
+.mbm, .mvm {margin-bottom: 32px;}
+.mtl, .mvl {margin-top: 64px;}
+.mbl, .mvl {margin-bottom: 64px;}
 
 .tags {
+  text-transform: uppercase;
   font-family: Lato;
   font-size: 16px;
   font-weight: 300;

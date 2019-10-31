@@ -45,6 +45,7 @@
 
 .text {line-height: 1.52;}
 .text p + p {margin-top: 28px;}
+.link,
 .text a {color: var(--rouge);}
 
 .article {overflow: auto;}
