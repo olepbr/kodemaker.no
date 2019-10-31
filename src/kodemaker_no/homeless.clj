@@ -153,3 +153,9 @@
       io/resource
       slurp
       mapdown/parse))
+
+(defn qualify [ns kw]
+  (keyword ns (name kw)))
+
+(defn prep-techs [techs]
+  (map (fn [tech] {:db/ident (qualify "tech" tech)}) techs))

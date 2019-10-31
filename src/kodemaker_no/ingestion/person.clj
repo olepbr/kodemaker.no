@@ -1,8 +1,8 @@
 (ns kodemaker-no.ingestion.person
-  (:require [clojure.set :as set]
-            [clojure.string :as str]
-            [kodemaker-no.homeless :refer [update-in-existing select-renamed-keys map-vals
-                                           parse-local-date parse-local-date-time]]
+  (:require [clojure.string :as str]
+            [kodemaker-no.homeless :refer [map-vals parse-local-date parse-local-date-time
+                                           select-renamed-keys update-in-existing
+                                           prep-techs qualify]]
             [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
@@ -34,12 +34,6 @@
    :endorsement-highligh :person/endorsement-highligh
    :business-presentations :person/business-presentations
    :workshops :person/workshops})
-
-(defn qualify [ns kw]
-  (keyword ns (name kw)))
-
-(defn prep-techs [techs]
-  (map (fn [tech] {:db/ident (qualify "tech" tech)}) techs))
 
 (defn url [file-name]
   (str (second (re-find #"people(.*).edn" file-name)) "/"))

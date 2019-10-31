@@ -439,6 +439,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :project-participation/person
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
  ;; reference
 
  {:db/ident :reference/page-title
@@ -479,6 +483,7 @@
 
  {:db/ident :reference/team
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :reference/project-start

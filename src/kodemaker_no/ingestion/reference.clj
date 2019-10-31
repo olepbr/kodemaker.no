@@ -11,6 +11,7 @@
    :phone :reference/signee-phone
    :title :reference/signee-title
    :logo :reference/logo
+   :techs :reference/techs
    :body :reference/blurb})
 
 (defn- build-date [y m]
@@ -24,11 +25,6 @@
       (and to-year to-month) (assoc :reference/project-end (build-date to-year to-month))
       hours (assoc :reference/project-hours (Integer/parseInt hours)))))
 
-(defn extract-techs [section]
-  (keep #(when-let [[_ tech] (re-find #"/([^\s]+)/" %)]
-           {:db/ident (keyword "tech" tech)})
-        (str/split (:content section) #"\n")))
-
 (defn extract-team [section]
   (letfn [(add-member [team member]
             (if member
@@ -41,7 +37,10 @@
         (nil? line) (add-member team member)
 
         (re-find #"^[^\s\.]+$" line)
-        (recur lines {:db/ident (keyword "person" line)} (add-member team member))
+        (recur
+         lines
+         {:project-participation/person {:db/ident (keyword "person" line)}}
+         (add-member team member))
 
         :default
         (recur lines (if member
@@ -56,16 +55,12 @@
       (assoc reference :reference/sections (vec (map-indexed #(assoc %2 :idx %1) sections)))
       (case (:type input)
         :reference
-        (recur sections (h/select-renamed-keys input reference-keys) inputs)
+        (recur sections (-> (h/select-renamed-keys input reference-keys)
+                            (h/update-in-existing [:reference/techs] (comp h/prep-techs read-string))) inputs)
 
         :reference-meta
         (recur (conj sections (dissoc input :team-size :factoid-1 :factoid-2))
                (merge reference (extract-scope input))
-               inputs)
-
-        :grid
-        (recur (conj sections (dissoc input :content))
-               (assoc reference :reference/techs (extract-techs input))
                inputs)
 
         :participants
@@ -81,19 +76,11 @@
        (assoc :page/kind :page.kind/reference))])
 
 (comment
-  (let [file-name "references/nsb-personalbillett.md"]
+  (let [file-name "references/oche-dart.md"]
     (create-tx file-name (h/slurp-mapdown-resource file-name)))
 
   (extract-scope {:factoid-2 "950 timer / 02.2014-08.2014"})
   (extract-scope {:factoid-2 "01.2017-09.2017"})
-
-  (extract-techs "
-/javascript/                       /photos/tech/js.svg
-/clojure/                          /photos/tech/clojure.svg
-/responsive-design/                /photos/tech/rwd.jpg 2x
-/ansible/                          /photos/tech/ansible-red.svg
-/git/                              /photos/tech/git-gray.svg
-")
 
   (extract-team "
 
