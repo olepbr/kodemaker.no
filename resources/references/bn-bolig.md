@@ -6,6 +6,7 @@
 :name Rune Strandli
 :phone +47 922 97 460
 :title Chief Digital Officer, BN Bolig
+:techs [:javascript :clojure :responsive-design :ansible :git]
 :body
 
 Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 
@@ -90,8 +91,6 @@ JavaScript/ES6 og React.js, bygget med webpack og deployet med Shipit.js.
 Vi la opp til å jobbe så smidig som mulig, med deployment til prod så ofte som 
 mulig. Altså såkalt continuous delivery, både for frontend, backend og 
 server-oppsett.
-
-
 
 --------------------------------------------------------------------------------
 :type grid
