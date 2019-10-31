@@ -105,7 +105,7 @@
     (-> (atomic/serve-pages (:conn opts))
         (wrap-resource "videos")
         (imagine/wrap-images images/image-asset-config)
-        (optimus/wrap get-assets optimizations/none optimus.strategies/serve-live-assets)
+        (optimus/wrap get-assets optimizations/none optimus.strategies/serve-live-assets-autorefresh)
         wrap-content-type
         wrap-content-type-utf-8
         prone/wrap-exceptions)
