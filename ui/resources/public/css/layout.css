@@ -496,6 +496,11 @@
 
 .profile-image {max-width: 450px;}
 
+@media only screen and (max-width: 449px) {
+  .profile-cv {margin: 32px 0;}
+  .profile-contact {margin-bottom: 64px;}
+}
+
 @media only screen and (min-width: 450px) and (max-width: 999px) {
   .profile-section { display: grid; grid-template-columns: 35% auto; grid-column-gap: 60px;}
   .profile-title { grid-column: 2 / span 1; grid-row: 1 / span 1; }
