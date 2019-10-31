@@ -526,3 +526,8 @@
 .profile-icons a {width: 24px; margin-right: 24px;}
 .profile-icons svg { width: 24px; }
 .profile-icons a:last-child {margin-right: 0;}
+
+/* Grid section */
+.grid-section {
+  margin: 40px 0;
+}
