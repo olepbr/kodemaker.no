@@ -53,7 +53,7 @@
          reference {}
          [input & inputs] (map #(update % :type keyword) inputs)]
     (if (nil? input)
-      (assoc reference :reference/sections sections)
+      (assoc reference :reference/sections (vec (map-indexed #(assoc %2 :idx %1) sections)))
       (case (:type input)
         :reference
         (recur sections (h/select-renamed-keys input reference-keys) inputs)

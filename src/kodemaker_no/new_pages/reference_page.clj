@@ -46,5 +46,5 @@
                                        :title signee-name
                                        :lines [signee-title
                                                signee-phone]})}}]
-    (keep (partial render-section reference) sections)
+    (keep (partial render-section reference) (sort-by :idx sections))
     [{:kind :footer}])})
