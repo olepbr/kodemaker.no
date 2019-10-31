@@ -71,7 +71,7 @@ spill, grensesnitt og støtteverktøy/overvåkning.
 :content
 
 https://opencv.org/                /photos/tech/opencv.jpg
-/clojure/                          /photos/tech/clojure.png
+/clojure/                          /photos/tech/clojure.svg
 https://www.python.org/            /photos/tech/python-logo.png 2x
 /clojurescript/                    /photos/tech/cljs.svg
 /docker/                           /photos/tech/docker.png

@@ -151,13 +151,13 @@
                 :launch-date "2015-10-29"}
                {:title "A pinch of Clojure love to Light Table"
                 :description "Screencast som demonstrerer kule features i min Light Table refactoring plugin"
-                :illustration "/photos/tech/clojure.png"
+                :illustration "/photos/tech/clojure.svg"
                 :tech [:clojurescript :lighttable :clojure]
                 :url "https://youtu.be/1yk8nsjJxb0"
                 :launch-date "2015-04-14"}
                {:title "Clojure refactoring in Light Table"
                 :description "Screencast som demonstrerer litt av min Light Table refactoring plugin"
-                :illustration "/photos/tech/clojure.png"
+                :illustration "/photos/tech/clojure.svg"
                 :tech [:clojurescript :lighttable :clojure]
                 :url "https://www.youtube.com/watch?v=xlGpRTVIkYQ"
                 :launch-date "2015-03-07"}

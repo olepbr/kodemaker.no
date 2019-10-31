@@ -98,7 +98,7 @@ server-oppsett.
 :content
 
 /javascript/                       /photos/tech/js.svg
-/clojure/                          /photos/tech/clojure.png
+/clojure/                          /photos/tech/clojure.svg
 /responsive-design/                /photos/tech/rwd.jpg 2x
 /ansible/                          /photos/tech/ansible-red.svg
 /git/                              /photos/tech/git-gray.svg
