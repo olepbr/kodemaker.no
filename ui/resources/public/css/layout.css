@@ -527,6 +527,10 @@
 .profile-icons svg { width: 24px; }
 .profile-icons a:last-child {margin-right: 0;}
 
+.article-section .article-wrapper + .article-wrapper {
+  margin-top: 64px;
+}
+
 /* Grid section */
 .grid-section {
   margin: 40px 0;

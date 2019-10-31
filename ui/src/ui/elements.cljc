@@ -116,12 +116,13 @@
                         :curtain (:curtain params)})))
 
 (defn article [{:keys [title sub-title content aside aside-title image alignment
-                       mecha-title mecha-sub-title]}]
-  [:div
+                       mecha-title mecha-sub-title mecha-sub-title-style]}]
+  [:div.article-wrapper
    (when (or mecha-title mecha-sub-title)
      [:div.mbl
       (when mecha-title [:h1.h0 mecha-title])
-      (when mecha-title [:h2.h5 mecha-sub-title])])
+      (when mecha-sub-title [:h2 {:className (or mecha-sub-title-style "h5")}
+                             mecha-sub-title])])
    [:div.article {:className (str "article-" (name (or alignment :balanced)))}
     [:div.article-content {}
      (when title
