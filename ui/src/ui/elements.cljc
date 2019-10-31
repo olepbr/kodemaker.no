@@ -147,3 +147,9 @@
                   :width 44}))
    (for [stat stats]
      [:p stat])])
+
+(defn grid [items]
+  [:div.grid
+   (for [{:keys [href alt image]} items]
+     [:div.grid-item
+      [:a {:href href} [:img.img {:src image :alt alt}]]])])
