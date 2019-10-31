@@ -44,11 +44,9 @@
 (defmethod render-section :grid [db {:reference/keys [techs]} _]
   {:kind :grid
    :items (for [tech (map #(d/entity db [:db/ident %]) techs)]
-            (do
-              (println (:tech/name tech) (:tech/illustration tech) tech)
-              {:alt (:tech/name tech)
-               :href (:page/uri tech)
-               :image (:tech/illustration tech)}))})
+            {:alt (:tech/name tech)
+             :href (:page/uri tech)
+             :image (:tech/illustration tech)})})
 
 (defmethod render-section :illustrated-column [db reference {:keys [title sub-title body]}]
   {:kind :article
