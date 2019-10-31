@@ -43,7 +43,6 @@
 .illustrated .media-element {margin-bottom: 32px;}
 .illustrated .media-element .img {max-width: 300px;}
 
-.text {line-height: 1.52;}
 .text p + p {margin-top: 28px;}
 .link,
 .text a {color: var(--rouge);}
