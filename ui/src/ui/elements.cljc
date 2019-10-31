@@ -114,7 +114,7 @@
                        mecha-title mecha-sub-title]}]
   [:div
    (when (or mecha-title mecha-sub-title)
-     [:div.mecha
+     [:div.mbl
       (when mecha-title [:h1.h0 mecha-title])
       (when mecha-title [:h2.h5 mecha-sub-title])])
    [:div.article {:className (str "article-" (name (or alignment :balanced)))}

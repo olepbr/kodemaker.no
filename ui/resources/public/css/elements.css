@@ -48,7 +48,6 @@
 .link,
 .text a {color: var(--rouge);}
 
-.mecha {padding-bottom: 64px;}
 .article {overflow: auto;}
 .article-balanced .article-aside {margin-top: 68px;}
 .article-front .article-aside {float: right; margin-top: 120px;}
