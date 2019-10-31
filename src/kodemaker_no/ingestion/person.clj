@@ -135,13 +135,15 @@
   {:title :side-project/title
    :description :side-project/description
    :illustration :side-project/illustration
-   :link :side-project/link
    :tech :side-project/tech})
 
 (defn side-project-data [side-project]
   (-> side-project
       (select-renamed-keys side-project-keys)
-      (update-in-existing [:side-project/tech] prep-techs)))
+      (update-in-existing [:side-project/tech] prep-techs)
+      (cond-> (:link side-project)
+        (assoc :side-project/url (-> side-project :link :url)
+               :side-project/link-text (-> side-project :link :text)))))
 
 (defn profile-data [file-name person]
   (let [ident (qualify "person" (:id person))

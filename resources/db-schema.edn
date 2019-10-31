@@ -115,8 +115,12 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :side-project/link
-  :dte/valueType :data/edn
+ {:db/ident :side-project/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :side-project/link-text
+  :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :side-project/tech
