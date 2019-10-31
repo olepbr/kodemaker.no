@@ -131,6 +131,18 @@
       (update-in-existing [:presentation-product/tech] prep-techs)
       (assoc :presentation-product/kind kind)))
 
+(def side-project-keys
+  {:title :side-project/title
+   :description :side-project/description
+   :illustration :side-project/illustration
+   :link :side-project/link
+   :tech :side-project/tech})
+
+(defn side-project-data [side-project]
+  (-> side-project
+      (select-renamed-keys side-project-keys)
+      (update-in-existing [:side-project/tech] prep-techs)))
+
 (defn profile-data [file-name person]
   (let [ident (qualify "person" (:id person))
         presentations (concat (:presentations person)
@@ -144,7 +156,7 @@
         (update-in-existing [:person/projects] #(mapv project-data %))
         (update-in-existing [:person/open-source-projects] data-with-tech)
         (update-in-existing [:person/open-source-contributions] data-with-tech)
-        (update-in-existing [:person/side-projects] data-with-tech)
+        (update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
         (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
         (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
         (update-in-existing [:person/start-date] parse-local-date-time)
@@ -195,5 +207,11 @@
 
 (comment
   (create-tx "people/christian.edn" (read-string (slurp (clojure.java.io/resource "people/christian.edn"))))
+
+  (require '[datomic.api :as d])
+  (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
+
+  (d/touch (first (:person/side-projects (d/entity db :person/odin))))
 
   )

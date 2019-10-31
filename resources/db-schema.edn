@@ -102,6 +102,27 @@
   :db/valueType :db.type/boolean
   :db/cardinality :db.cardinality/one}
 
+ ;; side-projects
+ {:db/ident :side-project/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :side-project/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :side-project/illustration
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :side-project/link
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :side-project/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
  ;; presentation
  {:db/ident :presentation/title
   :db/valueType :db.type/string
@@ -300,7 +321,8 @@
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/side-projects
-  :dte/valueType :data/edn
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/presentations
