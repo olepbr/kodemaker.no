@@ -7,21 +7,21 @@
    [:div.content
     [:div.gutter.gutter-xl
      [:div.pønt-item.portrait-1
-      [:img.img.image-style-chocolate-triangle-pønt {:src portrait-1}]]
+      [:img.img.image-style-chocolate-triangle {:src portrait-1}]]
 
      [:div.pønt-item.top-triangle
-      [:img.img.image-style-rouge-triangle-pønt {:src top-triangle}]]
+      [:img.img.image-style-rouge-triangle {:src top-triangle}]]
 
      [:div.pønt-item.bottom-circle
       [:img.img.image-style-chocolate-circle-pønt {:src bottom-circle}]]
 
      [:div.pønt-item.portrait-2
-      [:img.img.image-style-rouge-triangle-pønt {:src portrait-2}]]
+      [:img.img.image-style-rouge-triangle {:src portrait-2}]]
 
      [:div.pønt-item.top-circle
       [:img.img.image-style-rouge-circle-pønt {:src top-circle}]]
 
      [:div.pønt-item.bottom-triangle
-      [:img.img.image-style-chocolate-triangle-pønt {:src bottom-triangle}]]]
+      [:img.img.image-style-chocolate-triangle {:src bottom-triangle}]]]
 
     ]])

@@ -53,9 +53,11 @@
 
 (defn teaser [{:keys [link tags text title url]}]
   [:div.teaser
-   [:a.link {:href url} title]
+   (if url
+     [:a.link {:href url} title]
+     title)
    [:p.tags.mvs tags]
-   [:p.mbm text]
+   [:p.text.mbm text]
    (when link (arrow-link link))])
 
 (defn video-thumb [params]

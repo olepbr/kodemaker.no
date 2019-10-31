@@ -74,7 +74,7 @@
      :width 335
      :retina-optimized? true}
 
-    :rouge-circle-pønt
+    :rouge-circle
     {:transformations
      [[:fit {:width 900 :height 900}]
       [:crop {:preset :square}]
@@ -85,7 +85,7 @@
               :offset-x :right
               :offset-y :top}]]}
 
-    :chocolate-circle-pønt
+    :chocolate-circle
     {:transformations
      [[:fit {:width 900 :height 900}]
       [:crop {:preset :square}]
@@ -96,13 +96,13 @@
               :offset-x :left
               :offset-y :bottom}]]}
 
-    :chocolate-triangle-pønt
+    :chocolate-triangle
     {:transformations [[:fit {:width 220 :height 220}]
                        [:crop {:preset :square}]
                        chocolate-au-lait-duotone
                        [:triangle :lower-left]]}
 
-    :rouge-triangle-pønt
+    :rouge-triangle
     {:transformations [[:fit {:width 220 :height 220}]
                        [:crop {:preset :square}]
                        rouge-duotone

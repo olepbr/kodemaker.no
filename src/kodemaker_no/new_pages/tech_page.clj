@@ -19,8 +19,6 @@
                           :url (:page/uri pres)
                           :title (:presentation/title pres)}))))))
 
-;; TODO: fix to nye foredrag av Christin uten thumb
-
 (defn create-page [tech]
   {:sections
    [{:kind :header}
@@ -33,6 +31,20 @@
                              (f/to-html (:tech/description tech))]
                    :alignment :front}
                   (add-main-aside tech))}
+    (let [side-project (->> (:side-project/_tech tech)
+                            shuffle
+                            first)]
+      {:kind :article
+       :article {:title "Sideprosjekter"
+                 :content (e/teaser (cond-> {:title (:side-project/title side-project)
+                                             :tags (str "av " (:person/given-name (:person/_side-projects side-project)))
+                                             :text (:side-project/description side-project)}
+                                      (:side-project/link side-project)
+                                      (-> (assoc :url (:url (:side-project/link side-project))
+                                                 :link {:text (:text (:side-project/link side-project))
+                                                        :href (:url (:side-project/link side-project))}))))
+                 :image (str "/chocolate-triangle/" (:side-project/illustration side-project))}
+       :background :blanc-rose})
     {:kind :footer}]})
 
 (comment
