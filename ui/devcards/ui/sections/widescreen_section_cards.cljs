@@ -1,4 +1,4 @@
-(ns ui.sections.widescreen-cards
+(ns ui.sections.widescreen-section-cards
   (:require [dumdom.devcards :refer-macros [defcard]]
             [ui.elements :as e]
             [ui.sections.widescreen-section :as section]))
