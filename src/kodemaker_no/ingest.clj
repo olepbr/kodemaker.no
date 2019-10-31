@@ -47,14 +47,17 @@
 (defn create-tx [file-name]
   (when-let [r (io/resource file-name)]
     (when-let [f (find-create-tx-fn file-name)]
-      (println "Ingesting" file-name)
-      (f file-name ((cond
-                      (str/ends-with? file-name ".edn")
-                      edn/read-string
+      (try
+        (f file-name ((cond
+                        (str/ends-with? file-name ".edn")
+                        edn/read-string
 
-                      (str/ends-with? file-name ".md")
-                      mapdown/parse)
-                    (slurp r))))))
+                        (str/ends-with? file-name ".md")
+                        mapdown/parse)
+                      (slurp r)))
+        (catch Exception e
+          (println "Failed to ingest" file-name)
+          (prn e))))))
 
 (def attrs-to-keep #{:db/ident
                      :db/txInstant})
