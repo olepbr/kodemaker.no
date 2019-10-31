@@ -35,12 +35,15 @@
                :className (size-classes size)}
    text (arrow params)])
 
-(defn icon [{:keys [type width height]}]
-  [:svg {:view-box "0 0 24 24"
+(def viewboxes
+  {:custom/person "0 0 44 44"})
+
+(defn icon [{:keys [type width height color]}]
+  [:svg {:view-box (or (viewboxes type) "0 0 24 24")
          :width width
          :height height}
    [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
-          :style {"--svg_color" "var(--rouge)"}}]])
+          :style {"--svg_color" (str "var(--" (or (some-> color name)) ")")}}]])
 
 (defn seymour [params]
   [:div.seymour
