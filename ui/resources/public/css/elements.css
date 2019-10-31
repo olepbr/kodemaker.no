@@ -43,7 +43,23 @@
 .illustrated .media-element {margin-bottom: 32px;}
 .illustrated .media-element .img {max-width: 300px;}
 
-.text p + p {margin-top: 28px;}
+.text p + p,
+.text p + ul,
+.text p + ol,
+.text p + blockquote,
+.text ul + p,
+.text ul + ul,
+.text ul + ol,
+.text ul + blockquote,
+.text ol + p,
+.text ol + ul,
+.text ol + ol,
+.text ol + blockquote,
+.text blockquote + p,
+.text blockquote + ul,
+.text blockquote + ol,
+.text blockquote + blockquote {margin-top: 28px;}
+
 .link,
 .text a {color: var(--rouge);}
 
