@@ -110,20 +110,26 @@
                         :size 300
                         :curtain (:curtain params)})))
 
-(defn article [{:keys [title sub-title content aside aside-title image alignment]}]
-  [:div.article {:className (str "article-" (name (or alignment :balanced)))}
-   [:div.article-content {}
-    (when title
-      [:h2.h3 title])
-    (when sub-title
-      [:h3.h4 sub-title])
-    content]
-   [:div.article-aside {}
-    (when aside-title
-      [:h2.h3 aside-title])
-    (when image
-      [:img.img {:className (cond
-                              (= :front alignment) "image-style-bottom-half-circle"
-                              :default "image-style-rouge-triangle-medium")
-                 :src image}])
-    aside]])
+(defn article [{:keys [title sub-title content aside aside-title image alignment
+                       mecha-title mecha-sub-title]}]
+  [:div
+   (when (or mecha-title mecha-sub-title)
+     [:div.mecha
+      (when mecha-title [:h1.h0 mecha-title])
+      (when mecha-title [:h2.h5 mecha-sub-title])])
+   [:div.article {:className (str "article-" (name (or alignment :balanced)))}
+    [:div.article-content {}
+     (when title
+       [:h2.h3 title])
+     (when sub-title
+       [:h3.h4 sub-title])
+     content]
+    [:div.article-aside {}
+     (when aside-title
+       [:h2.h3 aside-title])
+     (when image
+       [:img.img {:className (cond
+                               (= :front alignment) "image-style-bottom-half-circle"
+                               :default "image-style-rouge-triangle-medium")
+                  :src image}])
+     aside]]])
