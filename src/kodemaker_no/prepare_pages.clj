@@ -48,23 +48,30 @@
   (.removeAttribute node attr-before))
 
 (defn- tweak-page-markup [html image-asset-config request]
-  (html5-walker/replace-in-document
-   html
-   {
-    ;; use optimized images
-    [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
+  (try
+    (html5-walker/replace-in-document
+     html
+     {
+      ;; use optimized images
+      [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
 
-    ;; use optimized svgs
-    [:svg :use] #(replace-attr % "href" "xlink:href" (optimize-path-fn image-asset-config request))
+      ;; use optimized svgs
+      [:svg :use] #(replace-attr % "href" "xlink:href" (optimize-path-fn image-asset-config request))
 
-    [:h2] add-anchor
+      [:h2] add-anchor
 
-    ;; use optimized links, if possible
-    [:a] #(update-attr % "href" (partial fix-links request))
+      ;; use optimized links, if possible
+      [:a] #(update-attr % "href" (partial fix-links request))
 
-    ;; Syntax highlight fenced code blocks
-    [:pre :code] hl/maybe-highlight-node
-    [:pre] hl/add-hilite-class}))
+      ;; Syntax highlight fenced code blocks
+      [:pre :code] hl/maybe-highlight-node
+      [:pre] hl/add-hilite-class})
+    (catch Exception e
+      (throw (ex-info "Error while tweaking page markup"
+                      {:html html
+                       :image-asset-config image-asset-config
+                       :request request}
+                      e)))))
 
 (defn- use-norwegian-quotes [html]
   (-> html
