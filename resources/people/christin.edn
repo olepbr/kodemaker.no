@@ -69,12 +69,14 @@
                   :event "NDC Oslo 2019"
                   :blurb "Hvorfor er det så vanskelig med tid i programmering?"
                   :urls {:video "https://youtu.be/Nhhm5yC2HCo"}
+                  :thumb "/thumbs/videos/its-about-time-ndc.jpg"
                   :tech [:dotnet :fsharp]
                   :date "2019-06-12"}
                  {:title "From initial request to app in production in 3 weeks"
                   :event "JavaZone 2019"
                   :blurb "Eksempel på hvor lite som skal til for å lage noe som gir verdi"
                   :urls {:video "https://vimeo.com/showcase/6264904/video/360782295"}
+                  :thumb "/thumbs/videos/three-weeks-to-prod.jpg"
                   :tech [:java]
                   :date "2019-06-12"}
                  {:title "Sustainable code - what they don't teach you"

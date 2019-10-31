@@ -19,6 +19,8 @@
                           :url (:page/uri pres)
                           :title (:presentation/title pres)}))))))
 
+;; TODO: fix to nye foredrag av Christin uten thumb
+
 (defn create-page [tech]
   {:sections
    [{:kind :header}

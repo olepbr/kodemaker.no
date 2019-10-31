@@ -491,3 +491,6 @@
 
 /* Widescreen section */
 .widescreen {padding: 0;}
+
+/* Article section */
+.article-section {padding-top: 80px; padding-bottom: 80px;}

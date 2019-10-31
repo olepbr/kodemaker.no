@@ -20,7 +20,6 @@
 (defcard bottom-aligned
   (section/render
    {:article {:alignment :back
-              :title "Hva er Kubernetes"
               :content (e/blockquote
                         {:quote
                          "Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept Oche. De har jobbet godt sammen med flere andre aktører i et hektisk prosjekt.
