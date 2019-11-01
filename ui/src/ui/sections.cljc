@@ -58,8 +58,6 @@
   [:div.section {:style (l/add-pønt {}
                                     [{:kind :greater-than
                                       :position "top -270px left 12%"}
-                                     {:kind :descending-line
-                                      :position "top -500px right 0px"}
                                      {:kind :dotgrid
                                       :position "bottom -150px right -150px"}])}
    [:div.content.header-section
