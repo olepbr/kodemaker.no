@@ -4,6 +4,7 @@
             [datomic-type-extensions.api :as d]
             [java-time-dte.install :refer [define-dte]]
             [kodemaker-no.images :as images]
+            [kodemaker-no.new-pages.article-page :as article-page]
             [kodemaker-no.new-pages.blog-post :as blog-post]
             [kodemaker-no.new-pages.frontpage :as frontpage]
             [kodemaker-no.new-pages.profile-page :as profile-page]
@@ -34,6 +35,7 @@
 (defn handle-request [conn request]
   (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
     (serve-page (case (:page/kind e)
+                  :page.kind/article (article-page/create-page e)
                   :page.kind/blog-post (blog-post/create-page e)
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/profile (profile-page/create-page e)

@@ -19,5 +19,5 @@
   (defn ingest-article [file-name]
     (create-tx file-name (h/slurp-mapdown-resource file-name)))
 
-  (ingest-article "articles/kompetanse.md")
+  (ingest-article "articles/jobbe-hos-oss.md")
   )

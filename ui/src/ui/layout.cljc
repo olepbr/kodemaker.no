@@ -36,7 +36,7 @@
   [{:href "/folk/" :text "Folk"}
    {:href "/blogg/" :text "Blogg"}
    {:href "/kurs/" :text "Lær"}
-   {:href "/jobb-hos-oss/" :text "Jobb"}
+   {:href "/jobbe-hos-oss/" :text "Jobb"}
    {:href "/kontakt/" :text "Kontakt"}])
 
 (defn menu [& [{:keys [position]}]]
