@@ -51,7 +51,7 @@
 
 (defn header []
   [:div.header
-   (logo {:width 176})
+   [:a {:href "/"} (logo {:width 176})]
    [:div.menu-toggler.clickable.h5 "Meny"]
    [:ul.inline-menu.nav-list.h5 {:role "navigation" :aria-label "Hovedmeny"}
     (for [{:keys [href text]} menu-items]
