@@ -3,7 +3,8 @@
             [kodemaker-no.homeless :refer [map-vals parse-local-date parse-local-date-time
                                            select-renamed-keys update-in-existing
                                            prep-techs qualify]]
-            [kodemaker-no.ingestion.video :as video]))
+            [kodemaker-no.ingestion.video :as video]
+            [clojure.java.io :as io]))
 
 (def person-keys
   {:cv/description :cv/description
@@ -214,13 +215,16 @@
   (let [person-ident (qualify "person" (:id person))
         profile (profile-data file-name person)]
     (concat
-     [profile]
+     [(let [picture-path (str "/foto/profiles/" (name (:id person)) ".jpg")
+            pic (io/resource (str "public" picture-path))]
+        (cond-> profile
+          pic (assoc :person/profile-picture picture-path)))]
      (cv-data file-name person)
      (map (partial blog-post-data person-ident) (:blog-posts person))
      (keep (partial video/video-data person-ident) (:person/presentations profile)))))
 
 (comment
-  (create-tx "people/christian.edn" (read-string (slurp (clojure.java.io/resource "people/christian.edn"))))
+  (create-tx "people/magnar.edn" (read-string (slurp (clojure.java.io/resource "people/magnar.edn"))))
 
   (require '[datomic.api :as d])
   (def conn (d/connect "datomic:mem://kodemaker"))

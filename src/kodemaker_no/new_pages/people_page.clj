@@ -5,7 +5,7 @@
 (defn person-card [idx {:person/keys [full-name title phone-number email-address] :as person}]
   {:content
    (e/illustrated
-    {:image (str "/profile-medium/foto/profiles/" (name (:db/ident person)) ".jpg")
+    {:image (str "/profile-medium" (or (:person/profile-picture person) "/foto/mask.jpg"))
      :title full-name
      :curtain (let [modifier (mod idx 7)]
                 (cond

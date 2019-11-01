@@ -307,6 +307,10 @@
   :dte/valueType :java.time/local-date-time
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :person/profile-picture
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :person/description
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
