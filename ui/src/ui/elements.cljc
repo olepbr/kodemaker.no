@@ -43,7 +43,7 @@
          :width width
          :height height}
    [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
-          :style {"--svg_color" (str "var(--" (or (some-> color name)) ")")}}]])
+          :style {"--svg_color" (str "var(--" (or (some-> color name) "rouge") ")")}}]])
 
 (defn seymour [params]
   [:div.seymour
