@@ -112,8 +112,6 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
            "+47 934 17 480"
            "christin@kodemaker.no"]})
 
-(def colors ["red" "blue" "yellow" "purple"])
-
 (defcard grid-section
   (sections/grid-section
    {:grid-type :card-grid
