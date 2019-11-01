@@ -12,8 +12,6 @@
    :start-date :person/start-date
    :description :person/description
    :administration? :person/administration?
-   :quit? :person/quit?
-   :profile-active? :person/profile-active?
    :phone-number :person/phone-number
    :email-address :person/email-address
    :presence :person/presence
@@ -40,7 +38,7 @@
   (str (second (re-find #"people(.*).edn" file-name)) "/"))
 
 (defn maybe-pagify [person file-name]
-  (if (get person :person/profile-active? true)
+  (if (get person :person/profile-active?)
     (-> person
         (assoc :page/uri (url file-name))
         (assoc :page/kind :page.kind/profile))
@@ -179,6 +177,8 @@
         (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
         (assoc :person/full-name (str/join " " (:name person)))
+        (assoc :person/profile-active? (get person :profile-active? true))
+        (assoc :person/quit? (get person :quit? false))
         (merge (map-vals prep-techs (select-renamed-keys (:tech person) tech-keys)))
         (maybe-pagify file-name))))
 

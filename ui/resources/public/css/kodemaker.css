@@ -741,7 +741,13 @@ a, .clickable {
 
 /* Grid section */
 .grid-section {
-  margin: 40px 0;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.grid-header-section .grid-section {
+  padding-top: 80px;
+  padding-bottom: 160px;
 }
 
 .box-grid {
@@ -769,7 +775,7 @@ a, .clickable {
 @media only screen and (min-width: 600px) {
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 300px));
+    grid-template-columns: 1fr 1fr;
     grid-gap: 64px 8%;
     justify-content: space-between;
   }
@@ -777,7 +783,7 @@ a, .clickable {
 
 @media only screen and (min-width: 900px) {
   .card-grid {
-    grid-template-columns: repeat(3, minmax(auto, 300px));
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

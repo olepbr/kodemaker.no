@@ -12,6 +12,7 @@
      :bruce sections/bruce-section
      :footer layout/footer
      :grid sections/grid-section
+     :grid-header sections/grid-header-section
      :header layout/header-section
      :profile sections/profile-section
      :pønt sections/pønt-section

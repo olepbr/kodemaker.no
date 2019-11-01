@@ -35,13 +35,24 @@
      [:div.bruce-image-back
       [:img {:src image-back}]]]]])
 
-(defn grid-section [{:keys [items grid-type] :as params}]
+(defn grid-section-content [{:keys [items grid-type]}]
+  [:div.content
+   ((case grid-type
+      :box-grid e/box-grid
+      :card-grid e/card-grid) items)])
+
+(defn grid-section [params]
   [:div.section.grid-section
    {:style (stylish {} params)}
-   [:div.content
-    ((case grid-type
-       :box-grid e/box-grid
-       :card-grid e/card-grid) items)]])
+   (grid-section-content params)])
+
+(defn grid-header-section [params]
+  [:div.section.grid-header-section
+   {:style (stylish {} params)}
+   [:div.content.header-section
+    (l/header)]
+   [:div.grid-section
+    (grid-section-content params)]])
 
 (def github-icon
   [:svg {:viewBox "0 0 24 24"}
