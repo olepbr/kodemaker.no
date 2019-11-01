@@ -52,9 +52,7 @@
 
     :mega-banner
     {:transformations
-     [chocolate-au-lait-duotone
-      ;;rouge-duotone
-      ]
+     [chocolate-au-lait-duotone]
      :width 1400
      :retina-optimized? true}
 
