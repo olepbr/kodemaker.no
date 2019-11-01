@@ -158,8 +158,9 @@
         (update-in-existing [:person/start-date] parse-local-date-time)
         (update-in-existing [:person/innate-skills] prep-techs)
         (update-in-existing [:person/experience-since] str)
+        (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
-        (assoc :person/given-name (str/join " " (drop-last 1 (:name person))))
+        (assoc :person/full-name (str/join " " (:name person)))
         (merge (map-vals prep-techs (select-renamed-keys (:tech person) tech-keys)))
         (maybe-pagify file-name))))
 

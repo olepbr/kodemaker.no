@@ -13,6 +13,7 @@
      :footer layout/footer
      :grid sections/grid-section
      :header layout/header-section
+     :profile sections/profile-section
      :pønt sections/pønt-section
      :seymour sections/seymour-section
      :vertigo sections/vertigo-section

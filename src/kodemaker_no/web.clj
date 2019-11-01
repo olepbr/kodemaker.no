@@ -30,6 +30,7 @@
     ;: ny
     "/css/kodemaker.css"
     #"/img/.*\..+"
+    #"/foto/.*\..+"
     #"/fonts/.*\..+"
     #"/icons/.*\..+"
 

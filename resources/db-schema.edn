@@ -268,6 +268,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :person/full-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :person/title
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

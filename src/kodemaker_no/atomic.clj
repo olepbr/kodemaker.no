@@ -6,6 +6,7 @@
             [kodemaker-no.images :as images]
             [kodemaker-no.new-pages.blog-post :as blog-post]
             [kodemaker-no.new-pages.frontpage :as frontpage]
+            [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
@@ -32,10 +33,11 @@
 (defn handle-request [conn request]
   (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
     (serve-page (case (:page/kind e)
+                  :page.kind/blog-post (blog-post/create-page e)
                   :page.kind/frontpage (frontpage/create-page)
-                  :page.kind/tech (tech-page/create-page e)
+                  :page.kind/profile (profile-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
-                  :page.kind/blog-post (blog-post/create-page e))
+                  :page.kind/tech (tech-page/create-page e))
                 request)))
 
 (defn serve-pages [conn]
