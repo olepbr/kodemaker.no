@@ -87,6 +87,7 @@
 (defn render-section [section]
   [:div.body
    (case (:type section)
+     "about" (render-illustrated-column section)
      "illustrated-column" (render-illustrated-column section)
      "centered-column" (render-centered-column section)
      "mega-heading" [:h1.hn.pth {:id (:id section)} (:title section)]
