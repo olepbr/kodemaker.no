@@ -153,9 +153,6 @@
 (defn image-link [{:keys [href image alt]}]
   [:a {:href href} [:img.img {:src image :alt alt}]])
 
-(defn image-link [{:keys [href image alt]}]
-  [:a {:href href} [:img.img {:src image :alt alt}]])
-
 (defn grid [items]
   [:div.grid
    (for [{:keys [content size]} items]
