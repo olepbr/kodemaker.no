@@ -1,7 +1,7 @@
 {:id :kafka
  :name "Kafka"
  :type :database
- :illustration "/photos/tech/apache-kafka.png"
+ :illustration "/photos/tech/apache-kafka.svg"
  :site "https://kafka.apache.org/"
  :description
  "Kafka er en open-source 'distribuert streaming plattform', ofte brukt som en meldingsbuss med stor trafikk og lav forsinkelse. 
