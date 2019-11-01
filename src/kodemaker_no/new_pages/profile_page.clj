@@ -45,8 +45,8 @@
                               :url (:recommendation/url recommendation)
                               :text (:recommendation/description recommendation)}
                        (:recommendation/link-text recommendation)
-                       (assoc :link {:text (:side-project/link-text recommendation)
-                                     :href (:side-project/url recommendation)}))))})
+                       (assoc :link {:text (:recommendation/link-text recommendation)
+                                     :href (:recommendation/url recommendation)}))))})
      {:kind :footer}]
     (remove nil?)
     (map (fn [color section]
