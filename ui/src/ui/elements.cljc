@@ -16,6 +16,27 @@
 (def h4 (partial el :h4))
 (def h5 (partial el :h5))
 
+(defn comma-separated [coll]
+  (drop 1 (interleave (into (list " og " "")
+                            (repeat (dec (count coll)) ", "))
+                      coll)))
+
+(defn tech-tags [{:keys [prefix techs]}]
+  [:span.tags prefix " "
+   (comma-separated (for [tech techs]
+                      (if (:page/uri tech)
+                        [:a {:href (:page/uri tech)}
+                         (:tech/name tech)]
+                        (:tech/name tech))))])
+
+(defn person-tags [{:keys [prefix people]}]
+  [:span.tags prefix " "
+   (comma-separated (for [person people]
+                      (if (:page/uri person)
+                        [:a {:href (:page/uri person)}
+                         (:person/given-name person)]
+                        (:person/given-name person))))])
+
 (defn blockquote [{:keys [quote]}]
   [:blockquote.blockquote.text {}
    (let [sentences (str/split quote #"\n\n")

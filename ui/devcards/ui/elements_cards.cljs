@@ -2,6 +2,18 @@
   (:require [dumdom.devcards :refer-macros [defcard]]
             [ui.elements :as e]))
 
+(defcard tech-tags
+  (e/tech-tags {:prefix "Laget med"
+                :techs [{:tech/name "Java" :page/uri "#"}
+                        {:tech/name "Spring" :page/uri "#"}
+                        {:tech/name "Maven" :page/uri "#"}]}))
+
+(defcard person-tags
+  (e/person-tags {:prefix "Av"
+                  :people [{:person/given-name "Jon" :page/uri "#"}
+                           {:person/given-name "Garfield" :page/uri "#"}
+                           {:person/given-name "Cthulhu" :page/uri "#"}]}))
+
 (defcard arrow-link
   (e/arrow-link {:text "Se mer"
                  :href "https://wwww.kodemaker.no"}))
