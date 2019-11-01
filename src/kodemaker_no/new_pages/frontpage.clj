@@ -12,7 +12,11 @@
                :image-front "/bruce-front/foto/christian-1.jpg"
                :image-back "/bruce-back/foto/nils-1.jpg"}
               {:kind :seymour
-               :color :blanc-rose
+               :background :blanc-rose
+               :pønt [{:kind :greater-than
+                       :position "bottom -550px left -310px"}
+                      {:kind :ascending-line
+                       :position "top -500px right -440px"}]
                :seymours
                [{:icon {:type :science/chemical :height 79}
                  :title "Referanser"

@@ -23,5 +23,9 @@
      :cv {:text "Se full CV"
           :url (str "/cv/" (name (:db/ident person)) "/")}
      :description (f/markdown (:person/description person))
-     :presence (fix-presence (:person/presence person))}
+     :presence (fix-presence (:person/presence person))
+     :pønt [{:kind :greater-than
+             :position "top -270px left 12%"}
+            {:kind :dotgrid
+             :position "bottom -150px right -150px"}]}
     {:kind :footer}]})

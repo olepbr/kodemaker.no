@@ -2,24 +2,27 @@
   (:require [ui.elements :as e]
             [ui.layout :as l]))
 
-(defn article-section [{:keys [articles pønt class background]}]
+(defn stylish [style {:keys [background pønt]}]
+  (cond-> (assoc style :background-color (str "var(--" (name (or background :blanc)) ")"))
+    pønt (l/add-pønt pønt)))
+
+(defn article-section [{:keys [articles class] :as params}]
   [:div.section.article-section
    {:className class
-    :style (cond-> {:background-color (when background (str "var(--" (name background) ")"))}
-             pønt (l/add-pønt pønt))}
+    :style (stylish {} params)}
    [:div.content
     (map e/article articles)]])
 
-(defn banner-section [{:keys [logo text]}]
+(defn banner-section [{:keys [logo text] :as params}]
   [:div.section
-   {:style {:background-color (str "var(--blanc)")}}
+   {:style (stylish {} params)}
    [:div.content.tac.banner-ws
     [:img.banner-logo {:src logo}]
     (e/h1 {} text)]])
 
-(defn bruce-section [{:keys [title text link image-front image-back]}]
+(defn bruce-section [{:keys [title text link image-front image-back] :as params}]
   [:div.section.bruce
-   {:style {:background-color (str "var(--blanc)")}}
+   {:style (stylish {} params)}
    [:div.content
     [:div.gutter.gutter-l
      [:div.bruce-header (l/header)]
@@ -32,9 +35,9 @@
      [:div.bruce-image-back
       [:img {:src image-back}]]]]])
 
-(defn grid-section [{:keys [items grid-type background]}]
+(defn grid-section [{:keys [items grid-type] :as params}]
   [:div.section.grid-section
-   {:style {:background-color (when background (str "var(--" background ")"))}}
+   {:style (stylish {} params)}
    [:div.content
     ((case grid-type
        :box-grid e/box-grid
@@ -56,12 +59,8 @@
   [:svg {:viewBox "0 0 24 24"}
    [:path {:d "M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 4.557z"}]])
 
-(defn profile-section [{:keys [full-name title mobile mail description image presence cv]}]
-  [:div.section {:style (l/add-pønt {}
-                                    [{:kind :greater-than
-                                      :position "top -270px left 12%"}
-                                     {:kind :dotgrid
-                                      :position "bottom -150px right -150px"}])}
+(defn profile-section [{:keys [full-name title mobile mail description image presence cv] :as params}]
+  [:div.section {:style (stylish {} params)}
    [:div.content.header-section
     (l/header)]
    [:div.content.profile-section
@@ -87,8 +86,8 @@
     [:div.profile-desc
      description]]])
 
-(defn pønt-section [{:keys [portrait-1 portrait-2 top-triangle bottom-triangle top-circle bottom-circle]}]
-  [:div.section.pønt-section {:style {:background-color (str "var(--blanc-rose)")}}
+(defn pønt-section [{:keys [portrait-1 portrait-2 top-triangle bottom-triangle top-circle bottom-circle] :as params}]
+  [:div.section.pønt-section {:style (stylish {} params)}
    [:div.content
     [:div.gutter.gutter-xl
      [:div.pønt-item.portrait-1
@@ -109,27 +108,21 @@
      [:div.pønt-item.bottom-triangle
       [:img.img.image-style-chocolate-triangle {:src bottom-triangle}]]]]])
 
-(defn seymour-section [{:keys [color seymours]}]
-  [:div.section {:style (-> {:background-color (str "var(--" (name (or color :blanc)) ")")}
-                            (l/add-pønt [{:kind :greater-than
-                                          :position "bottom -550px left -310px"}
-                                         {:kind :ascending-line
-                                          :position "top -500px right -440px"}]))}
+(defn seymour-section [{:keys [seymours] :as params}]
+  [:div.section {:style (stylish {} params)}
    [:div.content.whitespaceorama
     [:div.trigrid
      (for [seymour seymours]
        [:div
         (e/seymour seymour)])]]])
 
-(defn vertigo-section [{:keys [title text link image]}]
+(defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo
-   {:style {:background-color (str "var(--blanc)")}}
+   {:style (stylish {} params)}
    [:div.content
     [:div.gutter.gutter-l.grid
-     {:style (-> {}
-                 (l/add-pønt
-                  [{:kind :less-than
-                    :position "right -300px top -410px"}]))}
+     {:style (l/add-pønt {} [{:kind :less-than
+                              :position "right -300px top -410px"}])}
      [:div.vertigo-media
       [:div.inner-media
        [:img.img.image-style-vertigo {:src image}]]]
@@ -139,9 +132,9 @@
        [:p.text text]
        (e/arrow-link link)]]]]])
 
-(defn widescreen-section [{:keys [image alt background]}]
+(defn widescreen-section [{:keys [image alt] :as params}]
   [:div.section.widescreen
-   {:style {:background-color (when background (str "var(--" (name background) ")"))}}
+   {:style (stylish {} params)}
    [:div.content
     [:div.content-l
      [:img.img {:src image :alt alt}]]]])

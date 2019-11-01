@@ -138,7 +138,11 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
                   [:p "Trygve har lang og solid erfaring innen faget systemutvikling. Han er entusiastisk opptatt av fagområdet, tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han evner å finne enkle løsninger på kompliserte problemstillinger. Han er resultatorientert og målrettet og leverer høy kvalitet. Han trives utmerket i det kunnskapsrike fagmiljøet i Kodemaker, og kommuniserer godt med kunder og kolleger."]]
     :presence {:twitter "#"
                :github "#"
-               :linkedin "#"}}))
+               :linkedin "#"}
+    :pønt [{:kind :greater-than
+            :position "top -270px left 12%"}
+           {:kind :dotgrid
+            :position "bottom -150px right -150px"}]}))
 
 (defcard pønt-section
   (sections/pønt-section
@@ -151,7 +155,10 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
 
 (defcard seymour-section
   (sections/seymour-section
-   {:color :blanc
+   {:pønt [{:kind :greater-than
+            :position "bottom -550px left -310px"}
+           {:kind :ascending-line
+            :position "top -500px right -440px"}]
     :seymours
     [{:icon {:type :science/chemical :height 79}
       :title "Referanser"
