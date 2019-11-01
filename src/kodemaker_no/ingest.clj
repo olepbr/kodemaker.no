@@ -11,23 +11,24 @@
             kodemaker-no.ingestion.person
             kodemaker-no.ingestion.reference
             kodemaker-no.ingestion.tech
-            kodemaker-no.ingestion.tech-types
-            kodemaker-no.ingestion.weird-tech-names
             [mapdown.core :as mapdown]))
 
 (defn find-create-tx-fn [file-name]
   (cond
     (= "weird-tech-names.edn" file-name)
-    kodemaker-no.ingestion.weird-tech-names/create-tx
+    kodemaker-no.ingestion.tech/create-tech-name-tx
 
     (= "tech-types.edn" file-name)
-    kodemaker-no.ingestion.tech-types/create-tx
+    kodemaker-no.ingestion.tech/create-tech-type-tx
 
-    (= "employers.edn" file-name)
-    kodemaker-no.ingestion.employers/create-tx
+    (re-find #"tech-stubs/.+\.edn" file-name)
+    kodemaker-no.ingestion.tech/create-tx
 
     (re-find #"tech/.+\.edn" file-name)
     kodemaker-no.ingestion.tech/create-tx
+
+    (= "employers.edn" file-name)
+    kodemaker-no.ingestion.employers/create-tx
 
     (re-find #"firmablogg/.+\.md" file-name)
     kodemaker-no.ingestion.blog/create-tx
