@@ -127,6 +127,27 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ ;; recommendations
+ {:db/ident :recommendation/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :recommendation/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :recommendation/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :recommendation/link-text
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :recommendation/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
  ;; presentation
  {:db/ident :presentation/title
   :db/valueType :db.type/string
@@ -321,7 +342,8 @@
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/recommendations
-  :dte/valueType :data/edn
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/hobbies
