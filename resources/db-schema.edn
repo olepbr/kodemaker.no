@@ -389,7 +389,7 @@
 
  {:db/ident :person/experience-since
   :db/valueType :db.type/string
-  :db/cardinality :db.cardinality/many}
+  :db/cardinality :db.cardinality/one}
 
  {:db/ident :person/qualifications
   :db/valueType :db.type/string

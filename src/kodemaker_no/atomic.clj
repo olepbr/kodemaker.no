@@ -8,6 +8,7 @@
             [kodemaker-no.new-pages.frontpage :as frontpage]
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
+            [kodemaker-no.new-pages.people-page :as people-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
@@ -37,7 +38,8 @@
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/profile (profile-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
-                  :page.kind/tech (tech-page/create-page e))
+                  :page.kind/tech (tech-page/create-page e)
+                  :page.kind/people (people-page/create-page e))
                 request)))
 
 (defn serve-pages [conn]
@@ -49,6 +51,15 @@
 
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
+
+  (->> conn
+       d/db
+       (d/q '[:find ?kind
+              :in $
+              :where
+              [?e :page/kind ?kind]])
+       (map first)
+       set)
 
   (def reference
     (->> (d/q '[:find ?e
