@@ -8,8 +8,8 @@
                         {:tech/name "Spring" :page/uri "#"}
                         {:tech/name "Maven" :page/uri "#"}]}))
 
-(defcard person-tags
-  (e/person-tags {:prefix "Av"
+(defcard people-tags
+  (e/people-tags {:prefix "Av"
                   :people [{:person/given-name "Jon" :page/uri "#"}
                            {:person/given-name "Garfield" :page/uri "#"}
                            {:person/given-name "Cthulhu" :page/uri "#"}]}))

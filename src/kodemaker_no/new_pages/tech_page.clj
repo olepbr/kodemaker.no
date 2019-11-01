@@ -15,7 +15,8 @@
       (-> (assoc :aside-title "Foredrag")
           (assoc :aside (e/video-thumb
                          {:img (str "/rouge-duotone/" (:presentation/thumb pres))
-                          :tags (:person/given-name (:person/_presentations pres))
+                          :tags (e/people-tags {:prefix "Av"
+                                                :people [(:person/_presentations pres)]})
                           :url (:page/uri pres)
                           :title (:presentation/title pres)}))))))
 
@@ -37,7 +38,8 @@
       {:kind :article
        :articles [{:title "Sideprosjekter"
                    :content (e/teaser (cond-> {:title (:side-project/title side-project)
-                                               :tags (str "av " (:person/given-name (:person/_side-projects side-project)))
+                                               :tags (e/people-tags {:prefix "Av"
+                                                                     :people [(:person/_side-projects side-project)]})
                                                :text (:side-project/description side-project)
                                                :url (:side-project/url side-project)}
                                         (:side-project/link-text side-project)

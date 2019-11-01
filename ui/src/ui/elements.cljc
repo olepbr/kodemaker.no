@@ -29,7 +29,7 @@
                          (:tech/name tech)]
                         (:tech/name tech))))])
 
-(defn person-tags [{:keys [prefix people]}]
+(defn people-tags [{:keys [prefix people]}]
   [:span.tags prefix " "
    (comma-separated (for [person (filter :person/given-name people)]
                       (if (:page/uri person)
