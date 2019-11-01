@@ -6,6 +6,7 @@
 :name Claes Bergsten
 :phone +47 916 68 984
 :title Tech Lead Payment, Schibsted Payment ID
+:techs [:javascript :clojure :ansible :optimus :stasis]
 :body
 
 Sammen med Kodemaker ønsket vi å øke kvaliteten på vår tekniske
