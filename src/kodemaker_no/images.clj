@@ -10,6 +10,7 @@
 (def image-asset-config
   {:prefix "image-assets"
    :resource-path "public"
+   :disk-cache? true
    :transformations
 
    {:vcard-small
