@@ -623,10 +623,6 @@ a, .clickable {
   margin-top: 64px;
 }
 
-/* Grid section */
-.grid-section {
-  margin: 40px 0;
-}
 .arrow {
   width: 169px;
   padding-bottom: 9px;
@@ -670,7 +666,7 @@ a, .clickable {
 
 .illustrated {flex-direction: column; align-items: flex-start;}
 .illustrated .media-element {margin-bottom: 32px;}
-.illustrated .media-element .img {max-width: 300px;}
+/* .illustrated .media-element .img {max-width: 300px;} */
 
 .text p + p,
 .text p + ul,
@@ -733,23 +729,46 @@ a, .clickable {
 
 .stats {color: var(--chocolat-au-lait)}
 
-.grid {
+/* Grid section */
+.grid-section {
+  margin: 40px 0;
+}
+
+.box-grid {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px -20px;
 }
 
-.grid-item {
+.box-grid-item {
   flex: 0 0 16.6%;
   padding: 0 10px 20px;
 }
 
-.gs-2 {
+.box-grid-span-2 {
   flex: 0 0 33.3%;
 }
 
-body {
+@media only screen and (max-width: 600px) {
+  .card-grid-item {
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 300px));
+    grid-gap: 64px 8%;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(auto, 300px));
+  }
 }
 
 .ib {display: inline-block;}

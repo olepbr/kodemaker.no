@@ -32,11 +32,13 @@
      [:div.bruce-image-back
       [:img {:src image-back}]]]]])
 
-(defn grid-section [{:keys [items background]}]
+(defn grid-section [{:keys [items grid-type background]}]
   [:div.section.grid-section
    {:style {:background-color (when background (str "var(--" background ")"))}}
    [:div.content
-    (e/grid items)]])
+    ((case grid-type
+       :box-grid e/box-grid
+       :card-grid e/card-grid) items)]])
 
 (def github-icon
   [:svg {:viewBox "0 0 24 24"}

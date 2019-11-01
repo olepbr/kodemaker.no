@@ -153,8 +153,13 @@
 (defn image-link [{:keys [href image alt]}]
   [:a {:href href} [:img.img {:src image :alt alt}]])
 
-(defn grid [items]
-  [:div.grid
+(defn box-grid [items]
+  [:div.box-grid
    (for [{:keys [content size]} items]
-     [:div.grid-item {:className (when size (str "gs-" size))}
+     [:div.box-grid-item {:className (when size (str "box-grid-span-" size))}
       content])])
+
+(defn card-grid [items]
+  [:div.card-grid
+   (for [{:keys [content]} items]
+     [:div.card-grid-item content])])

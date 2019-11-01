@@ -67,7 +67,8 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
 
 (defcard grid-section
   (sections/grid-section
-   {:items [{:content
+   {:grid-type :box-grid
+    :items [{:content
              (e/image-link
               {:image "/devcard_images/opencv.jpg"
                :alt "OpenCV"
@@ -103,6 +104,26 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
               {:image "/devcard_images/kubernetes.png"
                :alt "Kubernetes"
                :href "/kubernetes/"})}]}))
+
+(def card-data
+  {:image "/devcard_images/profile.jpg"
+   :title "Justin Moore"
+   :lines ["Systemutvikler"
+           "+47 934 17 480"
+           "christin@kodemaker.no"]})
+
+(def colors ["red" "blue" "yellow" "purple"])
+
+(defcard grid-section
+  (sections/grid-section
+   {:grid-type :card-grid
+    :items (->> [(assoc card-data :curtain :left)
+                 card-data
+                 card-data
+                 card-data
+                 card-data
+                 (assoc card-data :curtain :right)]
+                (map (fn [data] {:content (e/illustrated data)})))}))
 
 (defcard profile-section
   (sections/profile-section

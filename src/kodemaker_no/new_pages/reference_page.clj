@@ -55,6 +55,7 @@
 
 (defmethod render-section :grid [db {:reference/keys [grid-blocks]} _]
   {:kind :grid
+   :grid-type :box-grid
    :items (for [{:block/keys [url image size]} (sort-by :block/idx grid-blocks)]
             {:content (e/image-link {:href url :image image})
              :size size})})
