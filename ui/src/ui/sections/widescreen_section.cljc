@@ -5,6 +5,6 @@
 (defn render [{:keys [image alt background]}]
   [:div.section.widescreen
    {:style {:background-color (when background (str "var(--" (name background) ")"))}}
-   [:div.content.content-l
-    [:img.img {:src image :alt alt}]]])
-
+   [:div.content
+    [:div.content-l
+     [:img.img {:src image :alt alt}]]]])
