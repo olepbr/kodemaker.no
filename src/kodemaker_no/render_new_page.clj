@@ -16,6 +16,7 @@
      :profile sections/profile-section
      :pønt sections/pønt-section
      :seymour sections/seymour-section
+     :titled sections/titled-section
      :vertigo sections/vertigo-section
      :widescreen sections/widescreen-section)
    section))

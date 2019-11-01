@@ -63,7 +63,7 @@
   [:div.section {:style (stylish {} params)}
    [:div.content.header-section
     (l/header)]
-   [:div.content.profile-section
+   [:div.content.profile-section.mbxl
     [:div.profile-title
      [:h1.h1 full-name]
      [:h5.h5.mbm title]]
@@ -115,6 +115,14 @@
      (for [seymour seymours]
        [:div
         (e/seymour seymour)])]]])
+
+(defn titled-section [{:keys [title content] :as params}]
+  [:div.section.titled-section {:style (stylish {} params)}
+   [:div.content
+    [:div.titled-title
+     [:h3.h3 title]]
+    [:div.titled-content
+     content]]])
 
 (defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo
