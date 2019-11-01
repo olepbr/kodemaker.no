@@ -2,9 +2,10 @@
   (:require [ui.elements :as e]
             [ui.layout :as l]))
 
-(defn render [{:keys [article articles pønt background]}]
+(defn render [{:keys [article articles pønt class background]}]
   [:div.section.article-section
-   {:style (cond-> {:background-color (when background (str "var(--" (name background) ")"))}
+   {:className class
+    :style (cond-> {:background-color (when background (str "var(--" (name background) ")"))}
              pønt (l/add-pønt pønt))}
    [:div.content
     (e/article article)

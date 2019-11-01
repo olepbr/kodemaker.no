@@ -22,6 +22,7 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng.
 :type about
 :title Oche
 :sub-title Dart på en helt ny måte
+:image /foto/dartpiler.jpg
 :body
 
 [Oche](https://ochedart.com/) tilbyr en helt ny opplevelse av dart pakket inn i
@@ -56,6 +57,7 @@ maskiner og utstyr.
 
 :type illustrated-column
 :title Bildeanalyse, spillutvikling og uvant maskinpark
+:image /foto/dartskive.jpg
 :body
 
 Utrolig variert og utfordrende IT-prosjekt. Kodemaker har jobbet med 

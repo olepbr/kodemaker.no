@@ -8,11 +8,23 @@
 
 (defmethod render-section :default [_ _ _] nil)
 
-(defmethod render-section :about [db reference {:keys [title sub-title body]}]
+(def alignments
+  {"front" :front
+   "back" :back
+   "balanced" :balanced})
+
+(defn alignment [default {:keys [alignment]}]
+  (or (alignments alignment) default))
+
+(defn image-url [default-style {:keys [image image-style]}]
+  (when image
+    (format "/%s%s " (or default-style image-style) image)))
+
+(defmethod render-section :about [_ _ {:keys [title sub-title body] :as section}]
   {:kind :article
-   :pønt [{:kind :dotgrid
-           :position "top 270px left 940px"}]
-   :article {:alignment :front
+   :class "responsive-article-dots"
+   :article {:alignment (alignment :front section)
+             :image (image-url "bottom-half-circle" section)
              :mecha-title title
              :mecha-sub-title sub-title
              :content (f/markdown body)}})
@@ -48,9 +60,10 @@
              :image image
              :size size})})
 
-(defmethod render-section :illustrated-column [db reference {:keys [title sub-title body]}]
+(defmethod render-section :illustrated-column [_ _ {:keys [title sub-title body] :as section}]
   {:kind :article
-   :article {:alignment :front
+   :article {:alignment (alignment :back section)
+             :image (image-url "rouge-triangle-medium" section)
              :title title
              :sub-title sub-title
              :content (f/markdown body)}})

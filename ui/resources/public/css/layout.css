@@ -493,6 +493,19 @@
 /* Article section */
 .article-section {padding-top: 80px; padding-bottom: 80px;}
 
+.responsive-article-dots {
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 85%;
+  background-image: url(../img/p-nt/dotgrid.png);
+  background-size: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .responsive-article-dots {
+    background-position: top 262px left 85%;
+  }
+}
+
 /* Profile section */
 
 .profile-image {max-width: 450px;}
