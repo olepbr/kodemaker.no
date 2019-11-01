@@ -443,6 +443,24 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
 
+ ;; grid blocks
+
+ {:db/ident :block/idx
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :block/url
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :block/image
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :block/size
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
  ;; reference
 
  {:db/ident :reference/page-title
@@ -500,6 +518,11 @@
 
  {:db/ident :reference/techs
   :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :reference/grid-blocks
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  ;; video

@@ -12,7 +12,8 @@
              :href "/clojure/"}
             {:image "/devcard_images/python-logo.png"
              :alt "Python"
-             :href "/python/"}
+             :href "/python/"
+             :size 2}
             {:image "/devcard_images/cljs.svg"
              :alt "ClojureScript"
              :href "/clojurescript/"}

@@ -47,6 +47,18 @@
                        (update member :project-participation/role str "\n" line)
                        member) team)))))
 
+(defn extract-grid [{:keys [content]}]
+  (->> (str/split content #"\n")
+       (remove empty?)
+       (map-indexed
+        #(let [[url image size] (str/split %2 #"\s+")]
+           {:block/idx %1
+            :block/url url
+            :block/image image
+            :block/size (if-let [[_ s] (re-find #"(\d+)x" (or size ""))]
+                          (Integer/parseInt s)
+                          1)}))))
+
 (defn extract-section-data [inputs]
   (loop [sections []
          reference {}
@@ -62,6 +74,9 @@
         (recur (conj sections (dissoc input :team-size :factoid-1 :factoid-2))
                (merge reference (extract-scope input))
                inputs)
+
+        :grid
+        (recur (conj sections input) (assoc reference :reference/grid-blocks (extract-grid input)) inputs)
 
         :participants
         (recur (conj sections (dissoc input :content))

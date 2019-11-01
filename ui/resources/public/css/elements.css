@@ -105,15 +105,17 @@
 .stats {color: var(--chocolat-au-lait)}
 
 .grid {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 -10px -20px;
 }
 
-.grid-item .img {
-  max-width: fit-content;
-  max-height: 165px;
-  margin: 0 10px 20px;
-  height: 8.9vw;
+.grid-item {
+  flex: 0 0 16.6%;
+  padding: 0 10px 20px;
+}
+
+.gs-2 {
+  flex: 0 0 33.3%;
 }

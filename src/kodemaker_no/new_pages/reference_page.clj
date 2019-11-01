@@ -41,12 +41,12 @@
                          (format "%s timer / %s-%s" project-hours start end)
                          (format "%s-%s" start end)))]})}})
 
-(defmethod render-section :grid [db {:reference/keys [techs]} _]
+(defmethod render-section :grid [db {:reference/keys [grid-blocks]} _]
   {:kind :grid
-   :items (for [tech (map #(d/entity db [:db/ident %]) techs)]
-            {:alt (:tech/name tech)
-             :href (:page/uri tech)
-             :image (:tech/illustration tech)})})
+   :items (for [{:block/keys [url image size]} (sort-by :block/idx grid-blocks)]
+            {:href url
+             :image image
+             :size size})})
 
 (defmethod render-section :illustrated-column [db reference {:keys [title sub-title body]}]
   {:kind :article

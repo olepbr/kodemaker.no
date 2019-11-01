@@ -152,6 +152,6 @@
 
 (defn grid [items]
   [:div.grid
-   (for [{:keys [href alt image]} items]
-     [:div.grid-item
+   (for [{:keys [href alt image size]} items]
+     [:div.grid-item {:className (when size (str "gs-" size))}
       [:a {:href href} [:img.img {:src image :alt alt}]]])])
