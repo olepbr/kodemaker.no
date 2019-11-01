@@ -38,7 +38,7 @@
      (when-let [recommendations (seq (:person/recommendations person))]
        {:kind :titled
         :title (str (f/genitive-name (:person/given-name person)) " anbefalinger")
-        :contents (for [recommendation recommendations]
+        :contents (for [recommendation (take 3 recommendations)]
                     (e/teaser
                      (cond-> {:title (:recommendation/title recommendation)
                               :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)})
