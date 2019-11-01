@@ -20,28 +20,39 @@ Vi var opptatt av å bygge et lite, agilt og selvorganisert team. Kodemaker har
 for oss bevist at et lite team med håndplukkede, høykompetente personer kan 
 levere raskere og bedre.
 
-
-
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type about
 :title Lansering av ny innovativ eiendomsmegler
 :body
 
-BN Bolig er en eiendomsmegler som ble startet på 3 måneder med ny, innovativ digital, kundefront. Dette for å kunne levere bedre tjenester til kjøpere, selgere og interessenter i boligsalgsprosesser.
+BN Bolig er en eiendomsmegler som ble startet på 3 måneder med ny, innovativ
+digital, kundefront. Dette for å kunne levere bedre tjenester til kjøpere,
+selgere og interessenter i boligsalgsprosesser.
 
-Kodemaker, i samarbeid med Eggs Design, designet, utviklet og driftet løsningen i lanseringsperioden og de første månedene etterpå. 
+Kodemaker, i samarbeid med Eggs Design, designet, utviklet og driftet løsningen
+i lanseringsperioden og de første månedene etterpå.
 
-Eggs og Kodemaker var med på alle delene av selskapets oppstart. Herunder det å jobbe med visjon, mål, profil, reklame-strategier med mere. BN Bolig ønsket å bli utfordret på eiendomsmeglerbransjens “satte sannheter”, som var en ekstra stor utfordring for prosjektets oppstart. I begynnelsen ble det lansert mange hårete mål.
+Eggs og Kodemaker var med på alle delene av selskapets oppstart. Herunder det å
+jobbe med visjon, mål, profil, reklame-strategier med mere. BN Bolig ønsket å
+bli utfordret på eiendomsmeglerbransjens “satte sannheter”, som var en ekstra
+stor utfordring for prosjektets oppstart. I begynnelsen ble det lansert mange
+hårete mål.
 
-Det å lansere på så kort tid krevde sterkt fokus fra alle designerne og programmerere. De første 3 månedene var hektiske. Eggs stilte med designere på alle nivåer, og folk som var gode på CSS. Kodemaker stod for programmeringen, frontend, backend, samt oppsett av servere og drifting. Selskapene samarbeidet veldig godt, og vi klarte sammen målsettingen om å “gå live” 31. mars.
-
+Det å lansere på så kort tid krevde sterkt fokus fra alle designerne og
+programmerere. De første 3 månedene var hektiske. Eggs stilte med designere på
+alle nivåer, og folk som var gode på CSS. Kodemaker stod for programmeringen,
+frontend, backend, samt oppsett av servere og drifting. Selskapene samarbeidet
+veldig godt, og vi klarte sammen målsettingen om å “gå live” 31. mars.
 
 --------------------------------------------------------------------------------
 :type reference-meta
 :title BN Bolig
 :body
 
-Tre Kodemakere i team leverte i starten av 2017 en digital kundefront på årets 3 første måneder. Dette for å kunne levere bedre tjenester til kjøpere, selgere og interessenter i boligsalgsprosesser. Prosjektet ferdigstilt og overlevert til kunden med to Kodemakere i sluttfasen.
+Tre Kodemakere i team leverte i starten av 2017 en digital kundefront på årets 3
+første måneder. Dette for å kunne levere bedre tjenester til kjøpere, selgere og
+interessenter i boligsalgsprosesser. Prosjektet ferdigstilt og overlevert til
+kunden med to Kodemakere i sluttfasen.
 
 :team-size 3
 :factoid-1 3 (2) Kodemakere
@@ -51,7 +62,7 @@ Tre Kodemakere i team leverte i starten av 2017 en digital kundefront på årets
 :type illustrated-column
 :body
 
-bnbolig.no består av:
+## bnbolig.no består av:
 
 - Presentasjon av BN Bolig
 - Automatisk prisestimat av vilkårlige boliger i Oslo
@@ -63,8 +74,8 @@ kunne levere. Eneste måten å få dette i land på var å ta full kontroll, og 
 ansvar. Devops all the way!"
 > 
 > -- <cite>Alf Kristian</cite>
---------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------
 :type illustrated-column
 :title Clojure var essensielt for backenden
 :illustration /illustrations/references/bnbolig-front.png

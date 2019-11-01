@@ -19,7 +19,7 @@ oppdragsgiver.
 Anbefales sterkt!
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type about
 :title Administrering av personalbilletter
 :body
 

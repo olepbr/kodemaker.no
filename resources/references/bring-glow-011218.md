@@ -16,7 +16,7 @@ Vi är mycket nöjda med kvalitén på leveransen, tempot i utvecklingen, fokuse
 att utveckla säkra lösningar och engagemanget för projektet.
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type about
 :title Glow - Nytt logisitikksystem
 :body
 

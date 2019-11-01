@@ -19,7 +19,7 @@ våre problemstillinger og vi endte med en løsning som leverte mer enn vi i
 utgangpunktet hadde ambisjoner om å få til.
 
 --------------------------------------------------------------------------------
-:type illustrated-column
+:type about
 :title Teknisk dokumentasjon på kritisk sti
 :body
 
