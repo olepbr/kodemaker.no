@@ -23,11 +23,11 @@
 (defmethod render-section :about [_ _ {:keys [title sub-title body] :as section}]
   {:kind :article
    :class "responsive-article-dots"
-   :article {:alignment (alignment :front section)
-             :image (image-url "bottom-half-circle" section)
-             :mecha-title title
-             :mecha-sub-title sub-title
-             :content (f/markdown body)}})
+   :articles [{:alignment (alignment :front section)
+               :image (image-url "bottom-half-circle" section)
+               :mecha-title title
+               :mecha-sub-title sub-title
+               :content (f/markdown body)}]})
 
 (def mmYYYY (DateTimeFormatter/ofPattern "MM.YYYY"))
 
@@ -37,21 +37,21 @@
    {:keys [title body]}]
   {:kind :article
    :background :blanc-rose
-   :article
-   {:title title
-    :content (f/to-html body)
-    :aside (e/stats
-            {:icon-type :custom/person
-             :icon-count (count team)
-             :stats [(let [developers (count team)]
-                       (if (= 1 developers)
-                         "Én Kodemaker"
-                         (format "%s Kodemakere" (count team))))
-                     (let [start (.format project-start mmYYYY)
-                           end (.format project-end mmYYYY)]
-                       (if project-hours
-                         (format "%s timer / %s-%s" project-hours start end)
-                         (format "%s-%s" start end)))]})}})
+   :articles
+   [{:title title
+     :content (f/to-html body)
+     :aside (e/stats
+             {:icon-type :custom/person
+              :icon-count (count team)
+              :stats [(let [developers (count team)]
+                        (if (= 1 developers)
+                          "Én Kodemaker"
+                          (format "%s Kodemakere" (count team))))
+                      (let [start (.format project-start mmYYYY)
+                            end (.format project-end mmYYYY)]
+                        (if project-hours
+                          (format "%s timer / %s-%s" project-hours start end)
+                          (format "%s-%s" start end)))]})}]})
 
 (defmethod render-section :grid [db {:reference/keys [grid-blocks]} _]
   {:kind :grid
@@ -62,11 +62,11 @@
 
 (defmethod render-section :illustrated-column [_ _ {:keys [title sub-title body] :as section}]
   {:kind :article
-   :article {:alignment (alignment :back section)
-             :image (image-url "rouge-triangle-medium" section)
-             :title title
-             :sub-title sub-title
-             :content (f/markdown body)}})
+   :articles [{:alignment (alignment :back section)
+               :image (image-url "rouge-triangle-medium" section)
+               :title title
+               :sub-title sub-title
+               :content (f/markdown body)}]})
 
 (defmethod render-section :participants [db {:reference/keys [team]} {:keys [title]}]
   (let [articles
@@ -105,11 +105,11 @@
       :background :blanc-rose
       :pønt [{:kind :ascending-line
               :position "top 0 left -400px"}]
-      :article {:alignment :back
-                :content (e/blockquote {:quote blurb})
-                :aside (e/round-media {:image (some->> portrait (str "/vcard-small/"))
-                                       :title signee-name
-                                       :lines [signee-title
-                                               signee-phone]})}}]
+      :articles [{:alignment :back
+                  :content (e/blockquote {:quote blurb})
+                  :aside (e/round-media {:image (some->> portrait (str "/vcard-small/"))
+                                         :title signee-name
+                                         :lines [signee-title
+                                                 signee-phone]})}]}]
     (keep (partial render-section (d/entity-db reference) reference) (sort-by :idx sections))
     [{:kind :footer}])})

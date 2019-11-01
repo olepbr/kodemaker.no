@@ -26,24 +26,24 @@
      :text (:tech/name tech)
      :logo (:tech/illustration tech)}
     {:kind :article
-     :article (-> {:title (str "Hva er " (:tech/name tech))
-                   :content [:div.text
-                             (f/to-html (:tech/description tech))]
-                   :alignment :front}
-                  (add-main-aside tech))}
+     :articles [(-> {:title (str "Hva er " (:tech/name tech))
+                     :content [:div.text
+                               (f/to-html (:tech/description tech))]
+                     :alignment :front}
+                    (add-main-aside tech))]}
     (let [side-project (->> (:side-project/_tech tech)
                             shuffle
                             first)]
       {:kind :article
-       :article {:title "Sideprosjekter"
-                 :content (e/teaser (cond-> {:title (:side-project/title side-project)
-                                             :tags (str "av " (:person/given-name (:person/_side-projects side-project)))
-                                             :text (:side-project/description side-project)
-                                             :url (:side-project/url side-project)}
-                                      (:side-project/link-text side-project)
-                                      (assoc :link {:text (:side-project/link-text side-project)
-                                                    :href (:side-project/url side-project)})))
-                 :image (str "/chocolate-triangle/" (:side-project/illustration side-project))}
+       :articles [{:title "Sideprosjekter"
+                   :content (e/teaser (cond-> {:title (:side-project/title side-project)
+                                               :tags (str "av " (:person/given-name (:person/_side-projects side-project)))
+                                               :text (:side-project/description side-project)
+                                               :url (:side-project/url side-project)}
+                                        (:side-project/link-text side-project)
+                                        (assoc :link {:text (:side-project/link-text side-project)
+                                                      :href (:side-project/url side-project)})))
+                   :image (str "/chocolate-triangle/" (:side-project/illustration side-project))}]
        :background :blanc-rose})
     {:kind :footer}]})
 
