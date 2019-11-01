@@ -359,6 +359,7 @@ a, .clickable {
 }
 
 .vertigo-media .img {
+  max-width: fit-content;
   width: 100%;
 }
 
