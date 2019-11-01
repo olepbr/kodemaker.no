@@ -56,8 +56,7 @@
 (defmethod render-section :grid [db {:reference/keys [grid-blocks]} _]
   {:kind :grid
    :items (for [{:block/keys [url image size]} (sort-by :block/idx grid-blocks)]
-            {:href url
-             :image image
+            {:content (e/image-link {:href url :image image})
              :size size})})
 
 (defmethod render-section :illustrated-column [_ _ {:keys [title sub-title body] :as section}]
