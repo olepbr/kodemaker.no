@@ -30,17 +30,13 @@
    :headers {"Content-Type" "text/html"}})
 
 (defn handle-request [conn request]
-  (cond
-    (= "/" (:uri request))
-    (serve-page (frontpage/create-page) request)
-
-    :else
-    (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
-      (serve-page (case (:page/kind e)
-                    :page.kind/tech (tech-page/create-page e)
-                    :page.kind/reference (reference-page/create-page e)
-                    :page.kind/blog-post (blog-post/create-page e))
-                  request))))
+  (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
+    (serve-page (case (:page/kind e)
+                  :page.kind/frontpage (frontpage/create-page)
+                  :page.kind/tech (tech-page/create-page e)
+                  :page.kind/reference (reference-page/create-page e)
+                  :page.kind/blog-post (blog-post/create-page e))
+                request)))
 
 (defn serve-pages [conn]
   (fn [request]
