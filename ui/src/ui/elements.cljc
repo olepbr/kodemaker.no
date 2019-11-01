@@ -23,7 +23,7 @@
 
 (defn tech-tags [{:keys [prefix techs]}]
   [:span.tags prefix " "
-   (comma-separated (for [tech techs]
+   (comma-separated (for [tech (filter :tech/name techs)]
                       (if (:page/uri tech)
                         [:a {:href (:page/uri tech)}
                          (:tech/name tech)]
@@ -31,7 +31,7 @@
 
 (defn person-tags [{:keys [prefix people]}]
   [:span.tags prefix " "
-   (comma-separated (for [person people]
+   (comma-separated (for [person (filter :person/given-name people)]
                       (if (:page/uri person)
                         [:a {:href (:page/uri person)}
                          (:person/given-name person)]
