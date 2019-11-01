@@ -15,6 +15,12 @@
   :db/valueType :db.type/keyword
   :db/cardinality :db.cardinality/one}
 
+ ;; generic attributes
+
+ {:db/ident :list/idx
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one}
+
  ;; Attributes used to override certain attributes specifically for the CV
 
  {:db/ident :cv/description

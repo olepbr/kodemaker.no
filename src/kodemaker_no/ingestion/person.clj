@@ -146,10 +146,11 @@
    :link-text :recommendation/link-text
    :tech :recommendation/tech})
 
-(defn recommendation-data [recommendation]
+(defn recommendation-data [idx recommendation]
   (-> recommendation
+      (update-in-existing [:tech] prep-techs)
       (select-renamed-keys recommendation-keys)
-      (update-in-existing [:recommendation/tech] prep-techs)
+      (assoc :list/idx idx)
       (cond-> (:link recommendation)
         (assoc :recommendation/url (-> recommendation :link :url)
                :recommendation/link-text (-> recommendation :link :text)))))
@@ -168,7 +169,7 @@
         (update-in-existing [:person/open-source-projects] data-with-tech)
         (update-in-existing [:person/open-source-contributions] data-with-tech)
         (update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
-        (update-in-existing [:person/recommendations] (partial mapv #(recommendation-data %)))
+        (update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
         (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
         (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
         (update-in-existing [:person/start-date] parse-local-date-time)
