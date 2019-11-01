@@ -92,9 +92,15 @@
         (throw (ex-info "Unable to assert" {:tx tx
                                             :file-name file-name} e))))))
 
+(def static-pages
+  {"/" :page.kind/frontpage
+   "/folk/" :page.kind/people})
+
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]
-    (ingest conn file-name)))
+    (ingest conn file-name))
+  @(datomic.api/transact conn (map (fn [[uri kind]]
+                                     {:page/uri uri :page/kind kind}) static-pages)))
 
 (comment
   (require '[kodemaker-no.atomic :as a])
