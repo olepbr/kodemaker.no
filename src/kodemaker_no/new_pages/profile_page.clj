@@ -14,15 +14,14 @@
 
 (defn create-page [person]
   {:sections
-   [{:kind :header}
-    {:kind :profile
+   [{:kind :profile
      :full-name (:person/full-name person)
      :image (str "/foto/profiles/" (name (:db/ident person)) ".jpg")
      :title (:person/title person)
      :mobile (:person/phone-number person)
      :mail (:person/email-address person)
      :cv {:text "Se full CV"
-          :url "#"}
+          :url (str "/cv/" (name (:db/ident person)) "/")}
      :description (f/markdown (:person/description person))
      :presence (fix-presence (:person/presence person))}
     {:kind :footer}]})

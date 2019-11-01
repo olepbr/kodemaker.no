@@ -58,7 +58,8 @@
       [:li [:a {:href href} text]])]])
 
 (defn header-section [{:keys [pønt]}]
-  [:div.section.header-section {:style (when pønt (add-pønt {} pønt))}
+  [:div.section.header-section.bg-blanc-rose
+   {:style (when pønt (add-pønt {} pønt))}
    [:div.content
     (header)]])
 
