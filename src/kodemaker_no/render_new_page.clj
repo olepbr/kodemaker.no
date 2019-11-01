@@ -3,27 +3,20 @@
             [dumdom.string :as dumdom]
             [optimus.link :as link]
             [ui.layout :as layout]
-            [ui.sections.article-section :as article-section]
-            [ui.sections.banner-section :as banner-section]
-            [ui.sections.bruce-section :as bruce-section]
-            [ui.sections.grid-section :as grid-section]
-            [ui.sections.pønt-section :as pønt-section]
-            [ui.sections.seymour-section :as seymour-section]
-            [ui.sections.vertigo-section :as vertigo-section]
-            [ui.sections.widescreen-section :as widescreen-section]))
+            [ui.sections :as sections]))
 
 (defn render-section [section]
   ((case (:kind section)
-     :article article-section/render
-     :banner banner-section/render
-     :bruce bruce-section/render
+     :article sections/article-section
+     :banner sections/banner-section
+     :bruce sections/bruce-section
      :footer layout/footer
-     :grid grid-section/render
+     :grid sections/grid-section
      :header layout/header-section
-     :pønt pønt-section/render
-     :seymour seymour-section/render
-     :vertigo vertigo-section/render
-     :widescreen widescreen-section/render)
+     :pønt sections/pønt-section
+     :seymour sections/seymour-section
+     :vertigo sections/vertigo-section
+     :widescreen sections/widescreen-section)
    section))
 
 (defn- head-title [title]
