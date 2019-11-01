@@ -116,13 +116,13 @@
        [:div
         (e/seymour seymour)])]]])
 
-(defn titled-section [{:keys [title content] :as params}]
+(defn titled-section [{:keys [title contents] :as params}]
   [:div.section.titled-section {:style (stylish {} params)}
    [:div.content
     [:div.titled-title
      [:h3.h3 title]]
     [:div.titled-content
-     content]]])
+     (interpose [:div.mbl] contents)]]])
 
 (defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo

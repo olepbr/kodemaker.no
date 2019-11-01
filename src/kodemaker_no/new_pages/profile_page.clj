@@ -38,8 +38,7 @@
      (when-let [recommendations (seq (:person/recommendations person))]
        {:kind :titled
         :title (str (f/genitive-name (:person/given-name person)) " anbefalinger")
-        :content [:div
-                  (for [recommendation recommendations]
+        :contents (for [recommendation recommendations]
                     (e/teaser
                      (cond-> {:title (:recommendation/title recommendation)
                               :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)})
@@ -47,7 +46,7 @@
                               :text (:recommendation/description recommendation)}
                        (:recommendation/link-text recommendation)
                        (assoc :link {:text (:side-project/link-text recommendation)
-                                     :href (:side-project/url recommendation)}))))]})
+                                     :href (:side-project/url recommendation)}))))})
      {:kind :footer}]
     (remove nil?)
     (map (fn [color section]
