@@ -40,6 +40,12 @@
 (defn year-range [years]
   (str/join ", " (map year-range-str (consecutive-years years))))
 
+(defn genitive-name [first-name]
+  (str first-name
+       (if (.endsWith first-name "s")
+         "'"
+         "s")))
+
 (def norwegian-char-replacements
   {"æ" "e"
    "ø" "o"
