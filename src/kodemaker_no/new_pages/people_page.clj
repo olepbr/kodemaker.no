@@ -1,11 +1,12 @@
 (ns kodemaker-no.new-pages.people-page
   (:require [datomic-type-extensions.api :as d]
+            [kodemaker-no.homeless :as h]
             [ui.elements :as e]))
 
 (defn person-card [idx {:person/keys [full-name title phone-number email-address] :as person}]
   {:content
    (e/illustrated
-    {:image (str "/profile-medium" (or (:person/profile-picture person) "/foto/mask.jpg"))
+    {:image (str "/profile-medium" (h/profile-picture person))
      :title full-name
      :href (:page/uri person)
      :curtain (let [modifier (mod idx 7)]

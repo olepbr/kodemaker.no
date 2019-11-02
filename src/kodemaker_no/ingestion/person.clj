@@ -211,14 +211,22 @@
       (update-in-existing [:blog-post/published] parse-local-date)
       (update-in-existing [:blog-post/tech] prep-techs)))
 
+(defn profile-pics [{:keys [id]}]
+  (some->> (str "public/foto/profiles/" (name id))
+           io/resource
+           io/as-file
+           file-seq
+           (map #(.getPath %))
+           (filter #(re-find #"\.jpg$" %))
+           (map #(second (str/split % #"public")))))
+
 (defn create-tx [file-name person]
   (let [person-ident (qualify "person" (:id person))
         profile (profile-data file-name person)]
     (concat
-     [(let [picture-path (str "/foto/profiles/" (name (:id person)) ".jpg")
-            pic (io/resource (str "public" picture-path))]
+     [(let [pics (profile-pics person)]
         (cond-> profile
-          pic (assoc :person/profile-picture picture-path)))]
+          (seq pics) (assoc :person/profile-pictures (vec pics))))]
      (cv-data file-name person)
      (map (partial blog-post-data person-ident) (:blog-posts person))
      (keep (partial video/video-data person-ident) (:person/presentations profile)))))

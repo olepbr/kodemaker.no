@@ -159,3 +159,6 @@
 
 (defn prep-techs [techs]
   (map (fn [tech] {:db/ident (qualify "tech" tech)}) techs))
+
+(defn profile-picture [{:person/keys [profile-pictures]}]
+  (or (some-> profile-pictures shuffle first) "/foto/mask.jpg"))

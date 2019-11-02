@@ -1,7 +1,7 @@
 (ns kodemaker-no.new-pages.profile-page
-  (:require [clojure.string :as str]
-            [datomic-type-extensions.api :as d]
+  (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]
             [ui.elements :as e]))
 
 (def presence-base-urls
@@ -23,7 +23,7 @@
    (->>
     [{:kind :profile
       :full-name (:person/full-name person)
-      :image (str "/foto/profiles/" (name (:db/ident person)) ".jpg")
+      :image (h/profile-picture person)
       :title (:person/title person)
       :mobile (:person/phone-number person)
       :mail (:person/email-address person)
