@@ -25,6 +25,16 @@
  :hobbies [{:title "Roboter"
             :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
             :illustration "/illustrations/hobbies/robot-prototype.png"}],
+ :endorsements [{:author "Mia Norman"
+                 :title "Vice President, Development and Operation, Tomra"
+                 :quote "Christin er en meget fremoverlent utvikler med mye energi og stor entusiasme for faget.
+                 Hun har en kjempeevne til å stille gode kritiske spørsmål, tenke nytt og jobbe kreativt i daglige problemstillinger.
+                 «Kan vi ikke bare gjøre det da?» er en kjent kommentar fra Christin som god pådriver for å teste ut hypoteser raskt gjennom protyper.
+                 Generelt er Christin en imponerende effektiv utvikler med stor kapasitet.
+                 Hun er en person som alltid stiller opp, tar stort ansvar og setter seg fort inn i nye saker.
+                 Hun er inkluderende og er sterk i teamsamarbeid, bidrar med mye faglig kompetanse i tillegg til mye humor og god stemning.
+                 Jeg kan gi mine varmeste anbefalinger og er helt trygg på at Christin vil være en verdifull deltaker i mange forskjellige type prosjekter."
+                }]
  :blog-posts [{:url "http://kranglefant.tumblr.com/post/30266564679/programming-like-a-pirate-alt-shift-m"
                :published "2012-08-26"
                :title "Programming like a pirate"
