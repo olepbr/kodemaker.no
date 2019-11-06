@@ -98,6 +98,10 @@ Jeg bruker [cmder](https://cmder.net/). Det er egentlig ikke så mye å si om de
 
 ![cmder og git under Windows 10](/images/blogg/win10_cmder.jpg)
 
+EDIT: I disse dager bruker jeg faktisk Windows sin nye innebyggede terminal, som finnes i preview. Mye mere minimalistisk enn cmder, som har tusen millioner options. Også digg at copy/paste bare er ctrl+shift+c/v.
+
+Kan installeres [fra Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701), eller [bygges fra source](https://github.com/microsoft/terminal) om du vil.
+
 ## Bootcamp på en Apple-maskin
 
 Jeg kjører enn så lenge Windows 10 i bootcamp på en Apple-maskin. Men.... Jeg har bestilt meg en PC!!!
