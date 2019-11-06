@@ -50,6 +50,7 @@
     #"/logos/.*\.png"
     #"/logos/.*\.svg"
     #"/images/.*\.png"
+    #"/images/.*\.jpg"
     #"/images/blogg/.*\.png"
     #"/videos/.*\.mp4"]))
 
