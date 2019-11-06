@@ -1,4 +1,4 @@
-:title Jeg velger Windows 10, det beste utviklingsmijløet (for meg)
+:title Jeg velger Windows 10, det beste utviklingsmiljøet (for meg)
 :author august
 :published 2019-11-06
 :blurb
