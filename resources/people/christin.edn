@@ -35,6 +35,11 @@
                  Hun er inkluderende og er sterk i teamsamarbeid, bidrar med mye faglig kompetanse i tillegg til mye humor og god stemning.
                  Jeg kan gi mine varmeste anbefalinger og er helt trygg på at Christin vil være en verdifull deltaker i mange forskjellige type prosjekter."
                 }]
+ :endorsement-highlight {:author "Mia Norman"
+												 :title "Vice President, Development and Operation, Tomra"
+												 :quote "Christin har en kjempeevne til å stille gode kritiske spørsmål, tenke nytt og jobbe kreativt i daglige problemstillinger.
+                                «Kan vi ikke bare gjøre det da?» er en kjent kommentar fra Christin som god pådriver for å teste ut hypoteser raskt gjennom protyper.
+                                Generelt er Christin en imponerende effektiv utvikler med stor kapasitet."}
  :blog-posts [{:url "http://kranglefant.tumblr.com/post/30266564679/programming-like-a-pirate-alt-shift-m"
                :published "2012-08-26"
                :title "Programming like a pirate"
