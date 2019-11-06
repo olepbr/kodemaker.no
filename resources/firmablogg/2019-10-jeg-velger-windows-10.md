@@ -77,6 +77,7 @@ Hei, alle sammen!\nDette er en fin bloggpost, synes jeg.\n\nTakk for meg!
 Når en som bruker macOS eller Linux sjekker in den fila, og jeg puller git-repoet ditt, så.. **ENDRER GIT HVORDAN FILA SER UT PÅ DISK**. Wtfasflkjsdflkjsdflkj.
 
 Den blir seende sånn ut:
+
 ```text
 Hei, alle sammen!\r\nDette er en fin bloggpost, synes jeg.\r\n\r\nTakk for meg!
 ```
