@@ -85,13 +85,20 @@
    utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
    mottagerene av pakkene (pakkesporing, osv)."
    :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
+   {:customer "Rikshospitalet"
+     :start "2018-07"
+     :end "2018-07"
+     :summary "Bistand i et HoloCare prosjekt"
+     :employer :steria
+     :description "HoloCare er innovasjonssenter for utvikling av mixed reality-løsninger innen helse. Olga hadde et sterkt ønske om å lære seg denne teknologien, og jobbet derfor under sommeren med et team på fire på ett av prosjektene til HoloCare."
+     :tech [:hololens :unity :csharp]}
   {:customer "Avinor"
    :start "2017-05"
    :end "2018-06"
    :summary "Avinor sin passasjerapp"
    :employer :steria
    :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming. I løpet av oppdragsperioden hadde Olga rollen som app-utvikler, men tok også på seg ansvar som tech lead og scrum master i en periode."
-   :tech [:xamarin-forms :xaml :csharp :ios :android :git :gitlab :zeplin :visual-studio-appcenter :voiceover :visual-studio]}
+   :tech [:xamarin-forms :xaml :csharp :ios :android :gitlab :zeplin :visual-studio-appcenter :voiceover :talkback :visual-studio]}
    {:customer "Brønnøysundregistrene"
     :start "2016-08"
     :end "2017-04"
