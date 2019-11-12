@@ -14,7 +14,7 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :tech {:using-at-work [:java :spring :gradle :javascript :nodejs :git :intellij :jira :osx :mongodb :docker]}
+ :tech {:using-at-work [:java :springboot :gradle :javascript :nodejs :git :intellij :jira :osx :mongodb :docker]}
 
  :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
@@ -35,11 +35,12 @@
 
  :projects [{:customer "Protector Forsikring ASA"
              :description "Videreutvikling og vedlikehold av Protectors applikasjoner for administrasjon av forsikringspoliser
-             i Protectors skadeforsikringsvirksomhet i bedriftsmarkeder i Norge, Sverige, Finnland, Danmark og Storbritannia."
+             i Protectors skadeforsikringsvirksomhet i bedriftsmarkeder i Norge, Sverige, Finnland, Danmark og Storbritannia.
+             Integrasjoner mot de forskjellige lands registre og andre tjenester."
              :years [2018]
              :employer :kodemaker
              :summary "Front- og backendutvikling"
-             :tech [:java :javascript :git :react :angularjs :spring :tomcat :saml :docker :nodejs :kafka :ms-sql]}
+             :tech [:java :javascript :git :react :angularjs :springboot :tomcat :saml :docker :nodejs :kafka :ms-sql]}
             {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
