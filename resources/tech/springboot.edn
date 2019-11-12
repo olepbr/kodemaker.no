@@ -1,0 +1,13 @@
+{:id :springboot
+ :name "Spring Boot"
+ :type :framework
+ :illustration "/photos/tech/spring.png"
+ :site "https://spring.io/projects/spring-boot"
+ :description "Spring Boot er en plattform for å bygge applikasjoner i Java, f.eks webapplikasjoner og mikrotjenester. 
+Det meste kommer ut av boksen med avhengigheter i kuraterte versjonssammensetninger som noen med bedre tid enn deg har funnet ut passer sammen.
+Kjernen i Spring Boot er autokonfigurasjon med java-annotasjoner, og så lenge du vil koble til én av hver ting, 
+f.eks én database eller REST-tjeneste, blir det nesten for enkelt. Dette passer bra hvis du vil lage mikrotjenester som skal være gode på hver sin greie.
+Skal du stikke sugerøret nedi flere av samme type må det litt konfigurasjon til, men ikke mye. 
+Spring Boot-applikasjonen blir til en jar-fil som du kan kjøre standalone, gjerne inni et passelig Docker-image med en JVM fra før som du enten har funnet, eller satt sammen selv. 
+War-filer er det vel ingen som lager lenger.
+"} 
