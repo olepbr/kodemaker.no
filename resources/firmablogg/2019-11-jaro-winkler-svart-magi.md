@@ -1,5 +1,6 @@
 :title Jaro-Winkler - svart magi?
 :author stig
+:published 2019-11-13
 
 :blurb
 
