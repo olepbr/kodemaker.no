@@ -1,5 +1,4 @@
 {:id :sindre
- :profile-active? false
  :name ["Sindre" "Grønningen"]
  :title "Problemløser"
  :start-date "2019-10-01 13:37"
@@ -15,7 +14,7 @@
             :linkedin "/in/sindreru"
             :twitter "sindreru"}
 
- :tech {:using-at-work [:angular :typescript :java :google-cloud :ddd]
+ :tech {:using-at-work [:kotlin :react :redux :ddd]
         :want-to-learn-more [:funksjonell-programmering :fsharp]}
 
  :innate-skills [:browser-devtools :crucible :pair-programming :intellij :eclipse :visual-studio :jira
@@ -70,6 +69,16 @@
                 :date "2015-06-01"}]
 
  :projects [
+            {:customer "Bring"
+             :employer :kodemaker
+             :start "2019-10"
+             :summary "Applikasjon for budleveranser med sporing av pakker i sanntid"
+             :description "Utvikling av system for budleveranser som håndterer alt
+                fra mottak av ordre, optimalisering av ruter for sjåfører, sporing av pakker i
+                sanntid, og integrasjoner med mange av Bring sine systemer."
+             :tech [:azure :typescript :react :redux :kotlin :gradle
+                    :postgresql :event-sourcing :cqrs :flyway :javascript :yarn]}
+
             {:customer "Aker Solutions"
              :start "2017-06"
              :end "2019-10"
