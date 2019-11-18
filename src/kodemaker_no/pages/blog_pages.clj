@@ -92,9 +92,6 @@
       (f/to-html (:blurb blog-post))
       [:p [:a {:href (:path blog-post)} "Les hele"]]]]]))
 
-(defn- disqus-script []
-  (slurp (clojure.java.io/resource "public/scripts/blog-post.js")))
-
 (defn legacy-blog-post-page [blog-post blog-posts]
   {:title (:title blog-post)
    :illustration (:illustration blog-post)
@@ -110,10 +107,7 @@
                  (r/render-contact-form
                   {:body (:contact-form blog-post)
                    :button (:contact-form-button blog-post)
-                   :placeholder "E-post eller tlf"}))
-               [:div#disqus_thread.mod]
-               [:script (str "var disqus_identifier='" (:path blog-post) "';"
-                             (disqus-script))])})
+                   :placeholder "E-post eller tlf"})))})
 
 (defn blog-post-page [blog-post blog-posts]
   {:title (:title blog-post)
@@ -126,10 +120,7 @@
                 [:p.mbn "Vi diskuterer gjerne hvor enn du finner oss. Ta kontakt!"]
                 (when-let [presence (-> blog-post :author-person :presence)]
                   [:div.bd
-                   (pp/render-presence (dissoc presence :cv))])
-                [:div#disqus_thread.mod]
-                [:script (str "var disqus_identifier='" (:path blog-post) "';"
-                              (disqus-script))])
+                   (pp/render-presence (dissoc presence :cv))]))
           (blog-post-aside blog-post blog-posts))})
 
 (defn blog-post-pages [blog-posts & [page-fn]]
