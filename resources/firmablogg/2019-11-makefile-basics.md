@@ -77,7 +77,7 @@ Vi lager nye targets i Makefila vår og setter avhengighetene mellom targetene:
 		# rydd opp etter oss
 		rm -f events test mybinary
 
-Her er `test`-targetet satt opp med avhengighet til alle filene som slutter på `.go` og til `events`-targetet, dvs både main.go og alle andre filer i samme mappe. Det oppdaterte targetet `mybinary` har nå avhengighet til både `test` og `events` og vil kjøres på nytt hver gang disse targetene blir oppdatert. Test-targetet vil kun kjøre om noen av test.go-filene er oppdatert eller filen test ikke finnes fra før. `events` vil kun bli oppdatert når en `.proto` fil endrer seg.
+Her er `test`-targetet satt opp med avhengighet til alle filene som slutter på `test.go` og til `events`-targetet, dvs både main.go og alle andre filer i samme mappe. Det oppdaterte targetet `mybinary` har nå avhengighet til både `test` og `events` og vil kjøres på nytt hver gang disse targetene blir oppdatert. Test-targetet vil kun kjøre om noen av test.go-filene er oppdatert eller filen test ikke finnes fra før. `events` vil kun bli oppdatert når en `.proto` fil endrer seg.
 
 For hygienens skyld lager vi et `clean` target som sletter filene som blir produsert av de andre targetene. Test-targetet lager en tom fil for å markere at testene er up to date. 
 
