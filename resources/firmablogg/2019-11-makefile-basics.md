@@ -3,6 +3,10 @@
 :published 2019-11-20
 :tech [:make]
 
+:blurb
+
+Etter å ha slåss mot og med maven, gradle, grunt og diverse moderne byggeverktøy så er det deilig å se at den gamle traveren `make` ofte er et bedre og enklere alternativ.
+
 :body
 
 Etter å ha slåss mot og med maven, gradle, grunt og diverse moderne byggeverktøy så er det deilig å se at den gamle traveren `make` ofte er et bedre og enklere alternativ.
