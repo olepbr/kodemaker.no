@@ -1,0 +1,6 @@
+{:id :make
+ :name "Make"
+ :type :devtools
+ :site "https://www.gnu.org/software/make/"
+ :description
+ "Make er et verktøy for å bygge software på en enkel og grei måte. I motsetning til mange av de moderne byggeverktøyene som vil gjøre alt for deg så gjør make det enkelt og greit for deg å gjøre alt du vil, slik du vil. Dette verktøyet fra 1976 har innebygd støtte for inkrementelle bygg, variabler og funksjoner. Akkurat det du trenger av et effektivt byggeverktøy!"}
