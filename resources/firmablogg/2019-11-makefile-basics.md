@@ -11,7 +11,7 @@ Etter å ha slåss mot og med maven, gradle, grunt og diverse moderne byggeverkt
 
 Etter å ha slåss mot og med maven, gradle, grunt og diverse moderne byggeverktøy så er det deilig å se at den gamle traveren `make` ofte er et bedre og enklere alternativ.
 
-_GNU Make_  er et byggesystem som ble laget i 1976. Make er ikke knyttet til å gjøre bygg for ett spesifikt programmeringsspråk og det er bygget opp av enkle konsepter som gjør det robust og fleksibelt som gjør at det enkelt kan tilpasses nye språk. 
+_GNU Make_  er et byggesystem som ble laget i 1976. Make er ikke knyttet til å gjøre bygg for ett spesifikt programmeringsspråk og det er bygget opp av enkle konsepter som gjør det robust og fleksibelt slik at det enkelt kan tilpasses nye språk. 
 
 I denne bloggposten får du med deg det viktigste du trenger for å lage en effektiv Makefile. 
 
@@ -55,7 +55,7 @@ Et target består av et vilkårlig antall kommandoer som kjøres i sekvens. Hvis
 
 ## Flere targets, faktisk inkrementell bygging
 
-Et byggescript har som regel flere targets som er avhengig av hverandre. Vi ønsker å kanskje å kjøre testene før vi bygger en applikasjon, gjøre linting, generere kode for binære schema eller annen galskap. 
+Et byggescript har som regel flere targets som er avhengig av hverandre. Vi ønsker f.eks. å kjøre testene før vi bygger en applikasjon, gjøre linting, generere kode for binære schema eller annen galskap. 
 
 Vi lager nye targets i Makefila vår og setter avhengighetene mellom targetene:
 
