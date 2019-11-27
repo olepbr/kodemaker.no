@@ -92,20 +92,28 @@ now.valueOf() === now.getTime();
 Nå som du har peiling på hvilke regler som styrer konvertering kan vi se litt på
 hvor disse reglene tas i bruk.
 
-### < / >
+### < og >
 
 Disse to operatorene gir kun mening for tall, og konverter sine argumenter til
 tall:
 
 ```js
-3 < "4" //=> 3 < Number("4") => 3 < 4 => true
-null < 1 //=> Number(null) < 1 => 0 < 1 => true
--1 < null //=> -1 < Number(null) => -1 < 0 => true
+3 < "4" //=> 3 < Number("4")
+        //=> 3 < 4
+        //=> true
+
+null < 1 //=> Number(null) < 1
+         //=> 0 < 1
+         //=> true
+
+-1 < null //=> -1 < Number(null)
+          //=> -1 < 0
+          //=> true
 ```
 
 Med det eksempelet har vi fått forklart 2/3 av det første kodeeksempelet vårt.
 
-Legg merke til at dette kan blir nokså klovnete med objekter:
+Legg merke til at dette kan bli nokså klovnete med objekter:
 
 ```js
 var clown = {
@@ -116,7 +124,9 @@ var clown = {
   }
 };
 
-clown < 33 //=> ToPrimitive(clown) < 33 => 32 < 33 => true
+clown < 33 //=> ToPrimitive(clown) < 33
+           //=> 32 < 33
+           //=> true
 ```
 
 Eller med `toString`:
@@ -129,7 +139,10 @@ var clown = {
   }
 };
 
-clown < 57 //=> ToPrimitive(clown) < 57 => Number("56") < 57 => 56 < 57 => true
+clown < 57 //=> ToPrimitive(clown) < 57
+           //=> Number("56") < 57
+           //=> 56 < 57
+           //=> true
 ```
 
 ### +
@@ -148,8 +161,14 @@ Noen eksempler med tall:
 
 ```js
 2 + 3 //=> 5
-2 + true //=> 2 + Number(true) => 2 + 1 => 3
-true + 4 //=> Number(true) + 4 => 1 + 4 => 5
+
+2 + true //=> 2 + Number(true)
+         //=> 2 + 1
+         //=> 3
+
+true + 4 //=> Number(true) + 4
+         //=> 1 + 4
+         //=> 5
 ```
 
 Fordi du kun får konkatenering når du har et objekt med i dansen, kan du få et
