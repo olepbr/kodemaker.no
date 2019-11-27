@@ -1,6 +1,7 @@
 :title JavaScript Coercion 101
 :author christian
 :tech [:javascript]
+:published 2019-11-27
 
 :blurb
 
@@ -203,7 +204,7 @@ den](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-abstract-eq
    `x === y` (primitive verdier matcher "seg selv" - bortsett fra `NaN`, objekt
    `x` og `y` er kun like dersom det er samme instans - ingen verdi-likhet for
    objekter).
-2. Hvis `x` og `y` er `null` og `undefined`, eller omvendt, returner `true`
+2. Hvis `x` og `y` begge er `null` eller `undefined`, returner `true`
 3. Hvis ett argument er et tall og det andre en streng, konverter strengen til
    et tall og start på nytt
 4. Hvis én av argumentene er en boolean, konverter den til et tall og start på
