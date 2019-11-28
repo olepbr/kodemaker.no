@@ -54,6 +54,12 @@
             :illustration "/illustrations/hobbies/mtg.jpg"
            }]
 
+   :blog-posts [{:url "http://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
+                 :published "2014-05-20"
+                 :title "Code club for juniors"
+                 :blurb "Hvorfor er det viktig at barn ikke bare er forbrukere av teknologien, men også dens skapere? Artikkelen er skrevet i forkant av første \"Lær kidsa koder NDC\" samlingen, og beskriver de ulike aktivitetene i kodeklubben, med oppstartstips til en ny lokal kodeklubb."
+                 }]
+
  :side-projects [{:title "Spør en Biolog"
                   :description "Spør en Biolog er en mobil-utvidelse til allerede eksisterende nettforum der det er mulig å stille spørsmål direkte til biologer.
                   Ved hjelp av appen kan man ta bilder og sende inn spørsmål til forumet rett fra marka. Sammen med Norsk biologforening utarbeidet Olga først konseptet for appen og deretter
@@ -68,7 +74,13 @@
                   :illustration "/illustrations/side-projects/lkk.png"
                   :link {:url "https://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
                   :text "Les Olgas artikkel om konferansen i NDC magazine."}
-                    }]
+                  }
+                  {:title "Social graphs - change of metrics’ distribution with scale (Masteroppgave)"
+                  :description "Sosiale nettverk er systemer bestående av flere enheter som interagerer med hverandre for å oppnå ønsket funksjonalitet. Denne interaksjonen kan bli modellert i grafer, som gir systemdesignere muligheten til å forske og utvikle nye løsninger. Ekte interaksjonsdata kreves for å bygge modeller av grafer, men er av ulike årsaker ofte vanskelig å få tak i. For å forbigå denne hindringen, finnes det mange innsamlings- og modelleringsalgoritmer av data. Arbeidet vårt bestod i å sammenligne de ulike teknikkene med det originale data-settet, basert på målingene av forhåndsdefinerte graf-egenskaper."
+                  :illustration "/illustrations/side-projects/uni.png"
+                  :link {:url "https://www.duo.uio.no/bitstream/handle/10852/41631/Voronkova-Master.pdf?sequence=11&isAllowed=y"
+                  :text "Les masteroppgaven"}
+                  }]
 
 
  :open-source-contributions [{:url "https://github.com/Altinn/DesignSystem"
