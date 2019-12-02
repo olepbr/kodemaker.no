@@ -38,6 +38,12 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
                       {:blurb "Android App for ombordpersonell hos NSB"
                        :customer "NSB"}]
  :projects [
+            {:customer "Politiet"
+             :start "2019-10"
+             :employer :kodemaker
+             :summary "Javautvikler, devops"
+             :description "Migrering til Kubernetes. Arkitektur, dokumentasjon, estimering og utforming av ny proxy-løsninger for biometriske data"
+             :tech [:kubernetes :java :vault :biometrics]}
            {:customer "Encap"
             :start "2018-10"
             :employer :kodemaker
