@@ -12,7 +12,11 @@
  :tech {:favorites-at-the-moment [:javascript :kotlin :java]
        :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
- :hobbies [{:title "Foto"
+ :hobbies [{:title "Podcaster"
+            :description "Finn og August lager Podcasten Utviklingslandet. Dette er en uformell podcast for utviklere hvor vi prater om det som engasjerer oss"
+            :illustration "/illustrations/hobbies/utviklingslandet.jpg"
+            }
+           {:title "Foto"
             :description "Alle liker å se på bilder. Et speilrefleks lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3 -format."
             :illustration "/illustrations/hobbies/finn-flue.jpg"}
 	    {:title "Reise"
@@ -225,9 +229,10 @@ Difficulties in task solving only spur his interest. Being a good developer, Fin
 Finn is a great guy and an even better developer, if anybody needs a high-level Java developer/architect that can not only get things done on the development side but also talk with people and organize architectural changes then he’s your guy."}
                 ]
  
- :certifications [{:name "Retorikk", :year 2010}
-                  {:name "Certified Scrum Master", :year 2006}
-                  {:name "Sun Certified Programmer Java 1.5", :year 2006}]
+ :certifications [{:name "Styrekurs for daglig leder og styremedlemmer" :year 2019}
+                  {:name "Retorikk" :year 2010}
+                  {:name "Certified Scrum Master" :year 2006}
+                  {:name "Sun Certified Programmer Java 1.5" :year 2006}]
  :education [{:institution "Den Polytekniske høyskole"
               :years [1999 2000 2001]
               :subject "Høyskolekandidat IT"}]
