@@ -47,7 +47,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :employer :kodemaker
              :summary "Javautvikler, devops"
              :description "Migrering til Kubernetes. Arkitektur, dokumentasjon, estimering og utforming av ny proxy-løsninger for biometriske data"
-             :tech [:kubernetes :java :vault :biometrics]}
+             :tech [:kubernetes :docker :java :vault :biometrics]}
            {:customer "Encap"
             :start "2018-10"
             :employer :kodemaker
