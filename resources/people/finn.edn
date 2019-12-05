@@ -201,7 +201,9 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              Hos Mobitech var Finn med i utviklingen av flere av Mobitech sine produkter: Mobitechs billetéring back office, Point of sale for bl.a NSB/Narvesen, programvare for billettautomater, passasjerinformasjonssystem / infomonitor busskur (i Tromsø og på Gardermoen)"
              :tech [:delphi :csharp :sql]}]
 
- :cv {:default {:preferred-techs [:java :javascript :git :kotlin :ubuntu]}}
+ :cv {:default {
+                :preferred-techs [:java :javascript :android :git :kotlin :ubuntu]
+                :exclude-techs [:delphi :cvs :hudson]}}
 
 :cv/description "Finn har lang erfaring innen programmering. Han trives best
  med begge hendene i kildekoden. Han er engasjert i open source, og har god
