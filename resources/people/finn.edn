@@ -193,7 +193,13 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              forvaltningsteamet for baksystemetet for billettransaksjoner.
              Oppgaver: Backend Javautvikler J2EE."
              :tech [:java :jboss :ejb :hibernate :jpa :spring :activemq :junit :svn :cvs :maven :jira :confluence]}
-            ]
+            {:customer "Mobitech AS (fast ansatt)"
+             :years [2001 2006]
+             :employer :mobitech
+             :summary "Utvikler i diverse kollektivtrafikk -systemer"
+             :description "Mobitech leverer produkter og tjenester til kollektivtilbydere.
+             Hos Mobitech var Finn med i utviklingen av flere av Mobitech sine produkter: Mobitechs billetéring back office, Point of sale for bl.a NSB/Narvesen, programvare for billettautomater, passasjerinformasjonssystem / infomonitor busskur (i Tromsø og på Gardermoen)"
+             :tech [:delphi :csharp :sql]}]
 
  :cv {:default {:preferred-techs [:java :javascript :git :kotlin :ubuntu]}}
 
