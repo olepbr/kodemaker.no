@@ -10,7 +10,7 @@
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
  :tech {:favorites-at-the-moment [:javascript :kotlin :java]
-       :want-to-learn-more []}
+        :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
  :hobbies [{:title "Podcaster"
             :description "Finn og August lager Podcasten Utviklingslandet. Dette er en uformell podcast for utviklere hvor vi prater om det som engasjerer oss"
@@ -19,13 +19,13 @@
            {:title "Foto"
             :description "Alle liker å se på bilder. Et speilrefleks lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3 -format."
             :illustration "/illustrations/hobbies/finn-flue.jpg"}
-	    {:title "Reise"
-	    :description "Verden er stor og har mye å vise deg - pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
-	    :illustration "/illustrations/hobbies/finn-newyork.jpg"
-	    }]
-:endorsement-highlight {:author "Johan Sörmling"
-                 :title "Director Software Engineering at AllClear ID"
-                 :quote "Finn has worked for us at AllClearID for several periods as a Software engineer 
+           {:title "Reise"
+            :description "Verden er stor og har mye å vise deg - Pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
+            :illustration "/illustrations/hobbies/finn-newyork.jpg"
+            }]
+ :endorsement-highlight {:author "Johan Sörmling"
+                         :title "Director Software Engineering at AllClear ID"
+                         :quote "Finn has worked for us at AllClearID for several periods as a Software engineer 
 and all of us really enjoy working with Finn, first of all because he’s a very skilled developer that 
 fast get things and delivers very good. But another important aspect with Finn that we have identified 
 is that he is really helping us with our team building, he is that sort of person that when you bring 
@@ -48,13 +48,13 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :summary "Javautvikler, devops"
              :description "Migrering til Kubernetes. Arkitektur, dokumentasjon, estimering og utforming av ny proxy-løsninger for biometriske data"
              :tech [:kubernetes :docker :java :vault :biometrics]}
-           {:customer "Encap"
-            :start "2018-10"
-            :employer :kodemaker
-            :summary "Javautvikler i Encap sin autentiseringsplattform"
-            :description "Videreutvikling av Encap sitt kjerneprodukt."
-            :tech [:java :rest :mysql :krypto :spring :jenkins :oracle :json :xml :rest :soap :docker]}
-           {:customer "FINN"
+            {:customer "Encap"
+             :start "2018-10"
+             :employer :kodemaker
+             :summary "Javautvikler i Encap sin autentiseringsplattform"
+             :description "Videreutvikling av Encap sitt kjerneprodukt."
+             :tech [:java :rest :mysql :krypto :spring :jenkins :oracle :json :xml :rest :soap :docker]}
+            {:customer "FINN"
              :years [2017]
              :employer :kodemaker
              :summary "Javautvikler i FINN sitt Apps Core -team."
@@ -205,7 +205,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
                 :preferred-techs [:java :javascript :android :git :kotlin :ubuntu]
                 :exclude-techs [:delphi :cvs :hudson]}}
 
-:cv/description "Finn har lang erfaring innen programmering. Han trives best
+ :cv/description "Finn har lang erfaring innen programmering. Han trives best
  med begge hendene i kildekoden. Han er engasjert i open source, og har god
  kjennskap til trendene i bransjen."
  :born 1978
