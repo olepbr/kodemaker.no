@@ -12,7 +12,6 @@ google.maps.event.addDomListener(window, "load", function () {
         center: kmhq,
         zoom: 15
     });
-
     var marker = new google.maps.Marker({
         position: kmhq,
         map: map,
