@@ -67,7 +67,7 @@
                      (cond-> {:title (:recommendation/title recommendation)
                               :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)})
                               :url (:recommendation/url recommendation)
-                              :text (f/to-html (:recommendation/description recommendation))}
+                              :content (f/to-html (:recommendation/description recommendation))}
                        (:recommendation/link-text recommendation)
                        (assoc :link {:text (:recommendation/link-text recommendation)
                                      :href (:recommendation/url recommendation)}))))})
@@ -84,7 +84,7 @@
                        {:title (:blog-post/title blog-post)
                         :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/tech)})
                         :url url
-                        :text (f/to-html (:blog-post/blurb blog-post))
+                        :content (f/to-html (:blog-post/blurb blog-post))
                         :link (when url {:text "Les artikkel" :href url})})))})
 
      {:kind :footer}]

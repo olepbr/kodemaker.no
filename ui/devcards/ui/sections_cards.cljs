@@ -181,7 +181,7 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
                 {:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
                  :tags "Kafka og Performance"
                  :url "#"
-                 :text "Fantastisk bra artikkel om logg som sentralt system for integrasjon, konsistens og asynkron meldingsutveksling. Skrevet av mannen bak Kafka. Bør leses av alle som har interesse av arkitektur hos større bedrifter med flere systemer som skal snakke sammen."
+                 :content "Fantastisk bra artikkel om logg som sentralt system for integrasjon, konsistens og asynkron meldingsutveksling. Skrevet av mannen bak Kafka. Bør leses av alle som har interesse av arkitektur hos større bedrifter med flere systemer som skal snakke sammen."
                  :link {:text "Les artikkel"
                         :href "#"}})]}))
 

@@ -75,13 +75,13 @@
    [:div.seymour-bottom
     (arrow-link (:link params))]])
 
-(defn teaser [{:keys [link tags text title url]}]
+(defn teaser [{:keys [link tags content title url]}]
   [:div.teaser
    (if url
      [:a.link {:href url} title]
      title)
    [:div.tags.mvs tags]
-   [:div.text.mbm text]
+   [:div.text.mbm content]
    (when link (arrow-link link))])
 
 (defn video-thumb [params]

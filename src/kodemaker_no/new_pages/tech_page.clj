@@ -41,7 +41,7 @@
                     :content (e/teaser (cond-> {:title (:side-project/title side-project)
                                                 :tags (e/people-tags {:prefix "Av"
                                                                       :people [(:person/_side-projects side-project)]})
-                                                :text (:side-project/description side-project)
+                                                :content (:side-project/description side-project)
                                                 :url (:side-project/url side-project)}
                                          (:side-project/link-text side-project)
                                          (assoc :link {:text (:side-project/link-text side-project)
