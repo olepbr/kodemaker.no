@@ -585,6 +585,22 @@ a, .clickable {
   }
 }
 
+/* Enumeration section */
+
+.enumeration-section {padding-top: 64px; padding-bottom: 64px;}
+.enum-cats {margin-top: 48px;}
+.enum-label {color: var(--empereur);}
+
+@media only screen and (min-width: 900px) {
+  .enum-cat {display: flex; margin-top: 20px;}
+  .enum-label {width: 257px; margin-right: 60px; flex-shrink: 0;}
+}
+
+@media only screen and (max-width: 899px) {
+  .enum-cat {margin-top: 44px;}
+  .enum-items {margin-top: 12px;}
+}
+
 /* Profile section */
 
 .profile-image {max-width: 450px;}
@@ -620,7 +636,6 @@ a, .clickable {
 }
 
 .titled-title { width: 257px; }
-
 @media only screen and (max-width: 899px) {
   .titled-title { margin-bottom: 64px; }
 }
