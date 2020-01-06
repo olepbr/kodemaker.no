@@ -85,6 +85,24 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
                      "+47 992 18 320"]})
     :alignment :balanced}))
 
+(defcard article-content-aligned-aside
+  (e/article
+   {:title "En tittel"
+    :content (e/blockquote
+              {:quote "Kodemaker tok en idé til ferdig løsning på kort tid, og
+de har vært en viktig ekstern bidragsyter i utviklingen av vårt konsept Oche. De
+har jobbet godt sammen med flere andre aktører i et hektisk prosjekt.
+
+De er flinke, sier hva de mener og lager det vi ønsker. Softwaren de har laget
+har fungert knirkefritt siden åpningen. Vi har et veldig godt inntrykk av hele
+Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
+    :aside (e/round-media
+            {:image "/devcard_images/person.png"
+             :title "Geir Oterhals"
+             :lines ["Prosjektleder, Oche Dart"
+                     "+47 992 18 320"]})
+    :alignment :content}))
+
 (defcard top-aside-article
   (e/article
    {:content [:div.text [:p "Oche tilbyr en helt ny opplevelse av dart pakket

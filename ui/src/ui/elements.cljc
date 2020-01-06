@@ -144,22 +144,32 @@
                         :size 300
                         :curtain (:curtain params)})))
 
-(defn article [{:keys [title sub-title annotation content aside aside-title image
-                       alignment mecha-title mecha-sub-title mecha-sub-title-style]}]
+(defn article-header [{:keys [title sub-title annotation]}]
+  (->> (list
+        (when title
+          [:h2.h3 title])
+        (when sub-title
+          [:h3.h4 sub-title])
+        (when annotation
+          [:p.annotation.text-s annotation]))
+       (remove nil?)))
+
+(defn article [{:keys [content aside aside-title image alignment mecha-title
+                       mecha-sub-title mecha-sub-title-style] :as article}]
   [:div.article-wrapper
    (when (or mecha-title mecha-sub-title)
      [:div.mbl
       (when mecha-title [:h1.h0 mecha-title])
       (when mecha-sub-title [:h2 {:className (or mecha-sub-title-style "h5")}
                              mecha-sub-title])])
+   (when (= :content alignment)
+     [:div.article
+      [:div.article-content
+       (article-header article)]])
    [:div.article {:className (str "article-" (name (or alignment :balanced)))}
     [:div.article-content {}
-     (when title
-       [:h2.h3 title])
-     (when sub-title
-       [:h3.h4 sub-title])
-     (when annotation
-       [:p.annotation.text-s annotation])
+     (when-not (= :content alignment)
+       (article-header article))
      content]
     [:div.article-aside {}
      (when aside-title
