@@ -2,20 +2,16 @@
   (:require [ui.elements :as e]
             [ui.layout :as l]))
 
-(defn stylish [style {:keys [background pønt]}]
-  (cond-> (assoc style :background-color (str "var(--" (name (or background :blanc)) ")"))
-    pønt (l/add-pønt pønt)))
-
 (defn article-section [{:keys [articles class] :as params}]
   [:div.section.article-section
    {:className class
-    :style (stylish {} params)}
+    :style (l/stylish {} params)}
    [:div.content
     (map e/article articles)]])
 
 (defn banner-section [{:keys [logo text] :as params}]
   [:div.section
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    [:div.content.tac.banner-ws
     (when logo
       [:img.banner-logo {:src logo}])
@@ -23,7 +19,7 @@
 
 (defn bruce-section [{:keys [title text link image-front image-back] :as params}]
   [:div.section.bruce
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    [:div.content
     [:div.gutter.gutter-l
      [:div.bruce-header (l/header)]
@@ -44,12 +40,12 @@
 
 (defn grid-section [params]
   [:div.section.grid-section
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    (grid-section-content params)])
 
 (defn grid-header-section [params]
   [:div.section.grid-header-section
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    [:div.content.header-section
     (l/header)]
    [:div.grid-section
@@ -72,7 +68,7 @@
    [:path {:d "M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 4.557z"}]])
 
 (defn profile-section [{:keys [full-name title mobile mail description image presence cv] :as params}]
-  [:div.section {:style (stylish {} params)}
+  [:div.section {:style (l/stylish {} params)}
    [:div.content.header-section
     (l/header)]
    [:div.content.profile-section.mbxl
@@ -99,7 +95,7 @@
      description]]])
 
 (defn pønt-section [{:keys [portrait-1 portrait-2 top-triangle bottom-triangle top-circle bottom-circle] :as params}]
-  [:div.section.pønt-section {:style (stylish {} params)}
+  [:div.section.pønt-section {:style (l/stylish {} params)}
    [:div.content
     [:div.gutter.gutter-xl
      [:div.pønt-item.portrait-1
@@ -121,7 +117,7 @@
       [:img.img.image-style-chocolate-triangle {:src bottom-triangle}]]]]])
 
 (defn seymour-section [{:keys [seymours] :as params}]
-  [:div.section {:style (stylish {} params)}
+  [:div.section {:style (l/stylish {} params)}
    [:div.content.whitespaceorama
     [:div.trigrid
      (for [seymour seymours]
@@ -129,7 +125,7 @@
         (e/seymour seymour)])]]])
 
 (defn titled-section [{:keys [title contents] :as params}]
-  [:div.section.titled-section {:style (stylish {} params)}
+  [:div.section.titled-section {:style (l/stylish {} params)}
    [:div.content
     [:div.titled-title
      [:h3.h3 title]]
@@ -153,7 +149,7 @@
 
 (defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    [:div.content
     [:div.gutter.gutter-l.grid
      {:style (l/add-pønt {} [{:kind :less-than
@@ -169,7 +165,7 @@
 
 (defn widescreen-section [{:keys [image alt] :as params}]
   [:div.section.widescreen
-   {:style (stylish {} params)}
+   {:style (l/stylish {} params)}
    [:div.content
     [:div.content-l
      [:img.img {:src image :alt alt}]]]])

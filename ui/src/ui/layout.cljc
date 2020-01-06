@@ -32,6 +32,10 @@
         (assoc :background-size
                (str/join ", " (map :size pønt))))))
 
+(defn stylish [style {:keys [background pønt]}]
+  (cond-> (assoc style :background-color (str "var(--" (name (or background :blanc)) ")"))
+    pønt (add-pønt pønt)))
+
 (def menu-items
   [{:href "/folk/" :text "Folk"}
    {:href "/blogg/" :text "Blogg"}
@@ -57,9 +61,9 @@
     (for [{:keys [href text]} menu-items]
       [:li [:a {:href href} text]])]])
 
-(defn header-section [{:keys [pønt]}]
-  [:div.section.header-section.bg-blanc-rose
-   {:style (when pønt (add-pønt {} pønt))}
+(defn header-section [section]
+  [:div.section.header-section
+   {:style (stylish {} section)}
    [:div.content
     (header)]])
 
