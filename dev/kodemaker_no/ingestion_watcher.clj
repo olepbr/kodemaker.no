@@ -13,6 +13,7 @@
        (fn [_ e]
          (let [file-path (subs (.getAbsolutePath (:file e)) chop-length)]
            (when (ingest/ingest conn file-path)
+             (ingest/perform-last-minute-changes conn)
              (println "[watcher]"
                       (case (:kind e)
                         :create "Ingested"

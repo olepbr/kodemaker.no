@@ -162,3 +162,13 @@
 
 (defn profile-picture [{:person/keys [profile-pictures]}]
   (or (some-> profile-pictures shuffle first) "/foto/mask.jpg"))
+
+(defn capitalize [s]
+  (str (.toUpperCase (subs s 0 1))
+       (subs s 1)))
+
+(defn str-for-humans [id]
+  (-> id
+      name
+      (str/replace "-" " ")
+      capitalize))

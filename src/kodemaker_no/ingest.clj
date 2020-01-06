@@ -2,9 +2,10 @@
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
             [clojure.string :as str]
-            [datomic-type-extensions.api :as d]
             datomic.api
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.files :as files]
+            [kodemaker-no.homeless :as homeless]
             kodemaker-no.ingestion.article
             kodemaker-no.ingestion.blog
             kodemaker-no.ingestion.employers
@@ -96,11 +97,21 @@
   {"/" :page.kind/frontpage
    "/folk/" :page.kind/people})
 
+(defn techs-without-name [db]
+  (->> (d/q '[:find [?v ...] :where [_ :db/ident ?v]] db)
+       (filter #(= "tech" (namespace %)))
+       (remove #(:tech/name (d/entity db %)))))
+
+(defn perform-last-minute-changes [conn]
+  @(datomic.api/transact conn (for [tech-id (techs-without-name (d/db conn))]
+                                [:db/add tech-id :tech/name (homeless/str-for-humans tech-id)])))
+
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]
     (ingest conn file-name))
-  @(datomic.api/transact conn (map (fn [[uri kind]]
-                                     {:page/uri uri :page/kind kind}) static-pages)))
+  @(datomic.api/transact conn (for [[uri kind] static-pages]
+                                {:page/uri uri :page/kind kind}))
+  (perform-last-minute-changes conn))
 
 (comment
   (require '[kodemaker-no.atomic :as a])
