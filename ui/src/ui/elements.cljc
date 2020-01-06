@@ -21,21 +21,21 @@
                             (repeat (dec (count coll)) ", "))
                       coll)))
 
-(defn tech-tags [{:keys [prefix techs]}]
+(defn tech-tags [{:keys [prefix techs class]}]
   (when (seq techs)
-    [:span.tags prefix " "
+    [:span {:className class} prefix " "
      (comma-separated (for [tech (filter :tech/name techs)]
                         (if (:page/uri tech)
-                          [:a {:href (:page/uri tech)}
+                          [:a.link {:href (:page/uri tech)}
                            (:tech/name tech)]
                           (:tech/name tech))))]))
 
-(defn people-tags [{:keys [prefix people]}]
+(defn people-tags [{:keys [prefix people class]}]
   (when (seq people)
-    [:span.tags prefix " "
+    [:span {:className class} prefix " "
      (comma-separated (for [person (filter :person/given-name people)]
                         (if (:page/uri person)
-                          [:a {:href (:page/uri person)}
+                          [:a.link {:href (:page/uri person)}
                            (:person/given-name person)]
                           (:person/given-name person))))]))
 

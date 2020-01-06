@@ -4,12 +4,19 @@
 
 (defcard tech-tags
   (e/tech-tags {:prefix "Laget med"
+                :class "tags"
                 :techs [{:tech/name "Java" :page/uri "#"}
                         {:tech/name "Spring" :page/uri "#"}
                         {:tech/name "Maven" :page/uri "#"}]}))
 
+(defcard straight-tech-tags
+  (e/tech-tags {:prefix "Om"
+                :techs [{:tech/name "Java" :page/uri "#"}
+                        {:tech/name "Spring" :page/uri "#"}
+                        {:tech/name "Maven" :page/uri "#"}]}))
 (defcard people-tags
   (e/people-tags {:prefix "Av"
+                  :class "tags"
                   :people [{:person/given-name "Jon" :page/uri "#"}
                            {:person/given-name "Garfield" :page/uri "#"}
                            {:person/given-name "Cthulhu" :page/uri "#"}]}))

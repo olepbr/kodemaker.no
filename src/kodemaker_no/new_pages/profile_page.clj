@@ -65,7 +65,8 @@
         :contents (for [recommendation (take 3 (sort-by :list/idx recommendations))]
                     (e/teaser
                      (cond-> {:title (:recommendation/title recommendation)
-                              :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)})
+                              :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)
+                                                  :class "tags"})
                               :url (:recommendation/url recommendation)
                               :content (f/to-html (:recommendation/description recommendation))}
                        (:recommendation/link-text recommendation)
@@ -82,7 +83,8 @@
                                   (:blog-post/external-url blog-post))]
                       (e/teaser
                        {:title (:blog-post/title blog-post)
-                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/tech)})
+                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/tech)
+                                            :class "tags"})
                         :url url
                         :content (f/to-html (:blog-post/blurb blog-post))
                         :link (when url {:text "Les artikkel" :href url})})))})
