@@ -17,7 +17,8 @@
   [:div.section
    {:style (stylish {} params)}
    [:div.content.tac.banner-ws
-    [:img.banner-logo {:src logo}]
+    (when logo
+      [:img.banner-logo {:src logo}])
     (e/h1 {} text)]])
 
 (defn bruce-section [{:keys [title text link image-front image-back] :as params}]
