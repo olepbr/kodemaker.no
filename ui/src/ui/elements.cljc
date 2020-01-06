@@ -80,8 +80,8 @@
    (if url
      [:a.link {:href url} title]
      title)
-   [:p.tags.mvs tags]
-   [:p.text.mbm text]
+   [:div.tags.mvs tags]
+   [:div.text.mbm text]
    (when link (arrow-link link))])
 
 (defn video-thumb [params]

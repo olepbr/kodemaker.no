@@ -67,10 +67,26 @@
                      (cond-> {:title (:recommendation/title recommendation)
                               :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)})
                               :url (:recommendation/url recommendation)
-                              :text (:recommendation/description recommendation)}
+                              :text (f/to-html (:recommendation/description recommendation))}
                        (:recommendation/link-text recommendation)
                        (assoc :link {:text (:recommendation/link-text recommendation)
                                      :href (:recommendation/url recommendation)}))))})
+
+     ;; Bloggposter
+
+     (when-let [blog-posts (seq (:blog-post/_author person))]
+       {:kind :titled
+        :title "Bloggposter"
+        :contents (for [blog-post (take 3 (reverse (sort-by :blog-post/published blog-posts)))]
+                    (let [url (or (:page/uri blog-post)
+                                  (:blog-post/external-url blog-post))]
+                      (e/teaser
+                       {:title (:blog-post/title blog-post)
+                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/tech)})
+                        :url url
+                        :text (f/to-html (:blog-post/blurb blog-post))
+                        :link (when url {:text "Les artikkel" :href url})})))})
+
      {:kind :footer}]
     (remove nil?)
     (map (fn [color section]
