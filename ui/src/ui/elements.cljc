@@ -142,8 +142,8 @@
                         :size 300
                         :curtain (:curtain params)})))
 
-(defn article [{:keys [title sub-title content aside aside-title image alignment
-                       mecha-title mecha-sub-title mecha-sub-title-style]}]
+(defn article [{:keys [title sub-title annotation content aside aside-title image
+                       alignment mecha-title mecha-sub-title mecha-sub-title-style]}]
   [:div.article-wrapper
    (when (or mecha-title mecha-sub-title)
      [:div.mbl
@@ -156,6 +156,8 @@
        [:h2.h3 title])
      (when sub-title
        [:h3.h4 sub-title])
+     (when annotation
+       [:p.annotation.text-s annotation])
      content]
     [:div.article-aside {}
      (when aside-title

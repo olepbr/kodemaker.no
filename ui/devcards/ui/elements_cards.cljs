@@ -136,6 +136,17 @@ spill, grensesnitt og støtteverktøy/overvåkning."]]
                                         "magnus@kodemaker.no"]})
     :alignment :balanced}))
 
+(defcard annotated-article
+  (e/article
+   {:title "En superinteressant bloggartikkel"
+    :content [:div.text [:p "Eivind startet jobben med bildeanalyse og har utviklet
+    selve motoren for kalibrering av kameraer og gjenkjenning av piler. Han har
+    også gjort en del videreutvikling på selve spillmotoren, samt masse
+    frontend-utvikling for å ferdigstille design/grensesnitt mot slutten av
+    prosjektet. Eivind var også ansvarlig for alt det fysiske - fra valg/oppsett
+    av kameraer og annen hardware som datamaskiner, lysstyring og skjermer."]]
+    :annotation "23.10.2019"}))
+
 (defcard curtain-left
   (e/curtain
    {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]

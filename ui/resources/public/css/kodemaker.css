@@ -734,6 +734,10 @@ a, .clickable {
 .article .h3, .article .text h1 {margin-bottom: 50px;}
 .article .h4, .article .text h1 {margin-bottom: 16px;}
 
+.annotation {color: var(--empereur);}
+.article .h3 + .annotation {margin: -42px 0 32px;}
+.article .h4 + .annotation {margin: -8px 0 8px;}
+
 .curtain {display: inline-block; overflow: hidden;}
 .curtain-left {border-bottom-left-radius: 80% 65%;}
 .curtain-right {border-bottom-right-radius: 80% 65%;}
@@ -855,9 +859,8 @@ a, .clickable {
   display: none;
 }
 
-.text-l {
-  font-size: 31px;
-}
+.text-l {font-size: 31px;}
+.text-s {font-size: 16px;}
 
 .blockquote {
   font-style: italic;
