@@ -22,20 +22,22 @@
                       coll)))
 
 (defn tech-tags [{:keys [prefix techs]}]
-  [:span.tags prefix " "
-   (comma-separated (for [tech (filter :tech/name techs)]
-                      (if (:page/uri tech)
-                        [:a {:href (:page/uri tech)}
-                         (:tech/name tech)]
-                        (:tech/name tech))))])
+  (when (seq techs)
+    [:span.tags prefix " "
+     (comma-separated (for [tech (filter :tech/name techs)]
+                        (if (:page/uri tech)
+                          [:a {:href (:page/uri tech)}
+                           (:tech/name tech)]
+                          (:tech/name tech))))]))
 
 (defn people-tags [{:keys [prefix people]}]
-  [:span.tags prefix " "
-   (comma-separated (for [person (filter :person/given-name people)]
-                      (if (:page/uri person)
-                        [:a {:href (:page/uri person)}
-                         (:person/given-name person)]
-                        (:person/given-name person))))])
+  (when (seq people)
+    [:span.tags prefix " "
+     (comma-separated (for [person (filter :person/given-name people)]
+                        (if (:page/uri person)
+                          [:a {:href (:page/uri person)}
+                           (:person/given-name person)]
+                          (:person/given-name person))))]))
 
 (defn blockquote [{:keys [quote]}]
   [:blockquote.blockquote.text {}
