@@ -133,7 +133,7 @@
      (interpose [:div.mbl] contents)]]])
 
 (defn enumeration-section [{:keys [title categories] :as params}]
-  [:div.section.enumeration-section {:style (stylish {} params)}
+  [:div.section.enumeration-section {:style (l/stylish {} params)}
    [:div.content
     [:h3.h3 title]
     [:div.enum-cats

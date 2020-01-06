@@ -23,7 +23,7 @@
 (defn create-page [tech]
   {:sections
    (->>
-    [{:kind :header}
+    [{:kind :header :background :chablis}
      {:kind :banner
       :text (:tech/name tech)
       :logo (:tech/illustration tech)}

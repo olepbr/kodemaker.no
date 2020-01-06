@@ -6,6 +6,7 @@
    "taupe-foncé"
    "chocolat-au-lait"
    "puits-de-mine"
+   "chablis"
    "blanc-rose"
    "blanc"
    "saumon"])
