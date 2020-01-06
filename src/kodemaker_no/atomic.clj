@@ -5,7 +5,7 @@
             [java-time-dte.install :refer [define-dte]]
             [kodemaker-no.images :as images]
             [kodemaker-no.new-pages.article-page :as article-page]
-            [kodemaker-no.new-pages.blog-post :as blog-post]
+            [kodemaker-no.new-pages.blog :as blog]
             [kodemaker-no.new-pages.frontpage :as frontpage]
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
@@ -36,7 +36,8 @@
   (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
     (serve-page (case (:page/kind e)
                   :page.kind/article (article-page/create-page e)
-                  :page.kind/blog-post (blog-post/create-page e)
+                  :page.kind/blog (blog/create-index-page (d/db conn))
+                  :page.kind/blog-post (blog/create-post-page e)
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/profile (profile-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
@@ -53,6 +54,7 @@
 
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
 
   (->> conn
        d/db
