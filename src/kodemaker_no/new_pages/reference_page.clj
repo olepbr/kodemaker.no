@@ -18,7 +18,7 @@
 
 (defn image-url [default-style {:keys [image image-style]}]
   (when image
-    (format "/%s%s " (or default-style image-style) image)))
+    (format "/%s%s" (or default-style image-style) image)))
 
 (defmethod render-section :about [_ _ {:keys [title sub-title body] :as section}]
   {:kind :article
@@ -98,7 +98,7 @@
              {:kind :descending-line
               :position "left 80vw top 0"}]}
      {:kind :widescreen
-      :image (str "/mega-banner/" image)
+      :image (str "/mega-banner" image)
       :background :blanc-rose
       :alt (format "%s, %s" signee-name signee-title)}
      {:kind :article
@@ -107,7 +107,7 @@
               :position "top 0 left -400px"}]
       :articles [{:alignment :back
                   :content (e/blockquote {:quote blurb})
-                  :aside (e/round-media {:image (some->> portrait (str "/vcard-small/"))
+                  :aside (e/round-media {:image (some->> portrait (str "/vcard-small"))
                                          :title signee-name
                                          :lines [signee-title
                                                  signee-phone]})}]}]
