@@ -34,20 +34,17 @@
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]
                                   [integrant "0.7.0"]
-                                  [integrant/repl "0.3.1"]]
+                                  [integrant/repl "0.3.1"]
+                                  [midje "1.9.9"]
+                                  [test-with-files "0.1.1"]
+                                  [enlive "1.1.6"]
+                                  [flare "0.2.9"]]
                    :repl-options {:init-ns repl}
+                   :injections [(require 'flare.midje)
+                                (flare.midje/install!)]
                    :plugins [[lein-ring "0.12.5"]
-                             [lein-ancient "0.6.15"]]
+                             [lein-ancient "0.6.15"]
+                             [lein-midje "3.2.1"]]
                    :source-paths ["dev" "config" "ui/src"]
                    :resource-paths ["ui/resources"]
-                   :test-paths ^:replace []}
-             :test {:dependencies [[midje "1.9.9"]
-                                   [test-with-files "0.1.1"]
-                                   [enlive "1.1.6"]
-                                   [flare "0.2.9"]]
-                    :injections [(require 'flare.midje)
-                                 (flare.midje/install!)]
-                    :plugins [[lein-midje "3.2.1"]]
-                    :source-paths ["config" "ui/src"]
-                    :test-paths ["test"]
-                    :resource-paths ["test/resources" "ui/resources"]}})
+                   :test-paths ["test"]}})

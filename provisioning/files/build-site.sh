@@ -30,7 +30,7 @@ else
     if [ "$current_head" != $(git rev-parse HEAD) ] ||
        [ ! -f /var/www/kodemaker.no/current/index.html ] ||
        [ ! -z "$FORCE" ]; then
-        ../bin/lein with-profile test midje
+        ../bin/lein midje
         if [ $? -eq 0 ]; then
             log "Building"
             ../bin/lein build-site

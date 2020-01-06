@@ -566,7 +566,7 @@ med det hostnamet du bestiller sertifikat for.
 Supert! Gjør gjerne det, men husk å kjøre testene:
 
 ```sh
-lein with-profile test midje :autotest
+lein midje :autotest
 ```
 
 Du kan få en innføring i hvordan koden fungerer i
