@@ -1,11 +1,11 @@
 (ns kodemaker-no.pages.blog-pages-test
-  (:require [kodemaker-no.date :as d]
-            [kodemaker-no.pages.blog-pages :refer :all]
-            [kodemaker-no.homeless :refer [hiccup-find]]
-            [midje.sweet :refer :all]
+  (:require [clj-time.format :refer [parse formatters]]
             [hiccup.core :refer [html]]
-            [net.cgrand.enlive-html :refer [select html-resource]]
-            [clj-time.format :refer [parse formatters]]))
+            [kodemaker-no.date :as d]
+            [kodemaker-no.homeless :refer [hiccup-find]]
+            [kodemaker-no.pages.blog-pages :refer :all]
+            [midje.sweet :refer :all]
+            [net.cgrand.enlive-html :refer [select html-resource]]))
 
 (def blog-posts
   {"/nice-blog-post.md" {:title "Nice blog post"
@@ -30,7 +30,7 @@
             body (:body page-content)]
         (:title page-content) => "Nice blog post"
         (:illustration page-content) => "/photos/sexy.jpg"
-        (html (first body)) => (html [:p "This is nice, right?"])))
+        (html (first body)) => "<p>This is nice, right?</p>\n"))
 
 (fact "Legacy blog post page lists other posts in aside"
       (let [page-content (((blog-post-pages blog-posts legacy-blog-post-page) "/blogg/nice-blog-post/"))

@@ -1,5 +1,6 @@
 (ns kodemaker-no.pages.person-pages-test
   (:require [clj-time.core :as time]
+            [clojure.string :as str]
             [hiccup.core :refer [html]]
             [kodemaker-no.pages.person-pages :refer :all]
             [midje.sweet :refer :all]))
@@ -15,6 +16,9 @@
    :email-address "magnar@kodemaker.no"
    :next-person-url "/anders/"})
 
+(defn remove-flexmark-quirky-newlines [s]
+  (str/replace s "</p>\n" "</p>"))
+
 (defn page [& {:as extras}]
   (((person-pages [(merge magnar extras)]) "/magnar/")))
 
@@ -25,24 +29,25 @@
                              :head "Magnar Sveen"
                              :arrow "/anders/"})
 
-(fact (-> (page) :lead) => "<p>The <em>description</em></p>")
+(fact (-> (page) :lead) => "<p>The <em>description</em></p>\n")
 
-(fact (-> (page) :aside html) => (html [:div.illustration.mbn
-                                        [:img {:src "/photos/magnars/half-figure.jpg"}]]
-                                       [:div.tight
-                                        [:hr.mtn.s-3of4]
-                                        [:h4 "Magnar Sveen"]
-                                        [:p
-                                         "Framsieutvikler" "<br>"
-                                         [:span.nowrap "+47 918 56 425"] "<br>"
-                                         [:a {:href "mailto:magnar@kodemaker.no"}
-                                          "magnar@kodemaker.no"]]]))
+(fact (-> (page) :aside html remove-flexmark-quirky-newlines)
+      => (html [:div.illustration.mbn
+                [:img {:src "/photos/magnars/half-figure.jpg"}]]
+               [:div.tight
+                [:hr.mtn.s-3of4]
+                [:h4 "Magnar Sveen"]
+                [:p
+                 "Framsieutvikler" "<br>"
+                 [:span.nowrap "+47 918 56 425"] "<br>"
+                 [:a {:href "mailto:magnar@kodemaker.no"}
+                  "magnar@kodemaker.no"]]]))
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er **bra**."
                                     :link {:url "http://example.com" :text "Les detta"}
                                     :tech [{:name "Clojure", :url "/clojure/"}]}])
-           :body html)
+           :body html remove-flexmark-quirky-newlines)
 
       => (html [:h2.mhn "Magnars anbefalinger"]
                [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]
@@ -57,7 +62,7 @@
                             :description "Hjemmesnekra spill."
                             :url "http://www.adventur.no"
                             :illustration "/photos/hobbies/adventur.jpg"}])
-           :body html)
+           :body html remove-flexmark-quirky-newlines)
 
       => (html [:h2.mhn "Snakker gjerne om"]
                [:div.bd

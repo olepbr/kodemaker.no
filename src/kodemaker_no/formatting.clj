@@ -1,7 +1,23 @@
 (ns kodemaker-no.formatting
   (:require [clojure.string :as str]
-            [kodemaker-no.markup :as markup]
-            [me.raynes.cegdown :as md]))
+            [kodemaker-no.markup :as markup])
+  (:import [com.vladsch.flexmark.ext.autolink AutolinkExtension]
+           [com.vladsch.flexmark.ext.gfm.strikethrough StrikethroughExtension]
+           [com.vladsch.flexmark.ext.tables TablesExtension]
+           [com.vladsch.flexmark.ext.typographic TypographicExtension]
+           [com.vladsch.flexmark.html HtmlRenderer]
+           [com.vladsch.flexmark.parser Parser]
+           [com.vladsch.flexmark.util.data MutableDataSet]))
+
+(def flexmark-opts (-> (MutableDataSet.)
+                       (.set Parser/EXTENSIONS [(AutolinkExtension/create)
+                                                (StrikethroughExtension/create)
+                                                (TablesExtension/create)
+                                                (TypographicExtension/create)])))
+
+(defn md-to-html [s]
+  (->> (.parse (.build (Parser/builder flexmark-opts)) s)
+       (.render (.build (HtmlRenderer/builder flexmark-opts)))))
 
 (defn no-widows [s]
   "Avoid typographic widows by adding a non-breaking space between the
@@ -99,16 +115,12 @@
     (concat (take 1 lines)
             (map #(subs* % superflous-spaces) (drop 1 lines)))))
 
-(def pegdown-options ;; https://github.com/sirthias/pegdown
-  [:autolinks :fenced-code-blocks :strikethrough :quotes :smarts])
-
 (defn to-html [s]
   (if (string? s)
-    (md/to-html (->> s
+    (md-to-html (->> s
                      str/split-lines
                      unindent-but-first
-                     (str/join "\n"))
-                pegdown-options)
+                     (str/join "\n")))
     s))
 
 (defn markdown [s]

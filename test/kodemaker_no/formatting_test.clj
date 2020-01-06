@@ -7,8 +7,16 @@
       (no-widows "Hello there, are you Slartibartfast?") => "Hello there, are you Slartibartfast?")
 
 (fact "We process markdown."
-      (to-html "# hi\nhow are you") => "<h1>hi</h1><p>how are you</p>"
-      (to-html "```clojure\n(+ 3 3)\n```") => "<pre><code class=\"clojure\">(+ 3 3)\n</code></pre>")
+      (to-html "# hi\nhow are you") => "<h1>hi</h1>\n<p>how are you</p>\n"
+      (to-html "```clojure\n(+ 3 3)\n```") => "<pre><code class=\"language-clojure\">(+ 3 3)\n</code></pre>\n")
+
+(fact "We link to stuff."
+      (to-html "Send mail til post@kodemaker.no da vel.")
+      => "<p>Send mail til <a href=\"mailto:post@kodemaker.no\">post@kodemaker.no</a> da vel.</p>\n")
+
+(fact "We strike through text."
+      (to-html "Denne teksten er ~~strøket gjennom~~.")
+      => "<p>Denne teksten er <del>strøket gjennom</del>.</p>\n")
 
 (fact "We are friendly to markdown from edn-files, de-indenting the text properly."
       (to-html "The first line usually has no indentation,
@@ -26,11 +34,11 @@
                     Some code here
 
                 So, we handle it. Neat, huh?")
-      => (str "<p>The first line usually has no indentation, but then the second line has quite a lot. This normally isn&rsquo;t a problem for markdown.</p>"
-              "<p>But when you add a second paragraph, things go to hell in a handbasket. This is suddenly a highly indented code block. Not what you wanted at all.</p>"
-              "<p>The problem is of course increased further when you want an actual code block, like this:</p>"
-              "\n<pre><code>Some code here\n</code></pre>"
-              "<p>So, we handle it. Neat, huh?</p>"))
+      => (str "<p>The first line usually has no indentation,\nbut then the second line has quite a lot.\nThis normally isn&rsquo;t a problem for markdown.</p>\n"
+              "<p>But when you add a second paragraph, things\ngo to hell in a handbasket. This is suddenly a\nhighly indented code block. Not what you wanted\nat all.</p>\n"
+              "<p>The problem is of course increased further when you\nwant an actual code block, like this:</p>"
+              "\n<pre><code>Some code here\n</code></pre>\n"
+              "<p>So, we handle it. Neat, huh?</p>\n"))
 
 (fact (comma-separated ["1"]) => ["1"]
       (comma-separated ["1" "2"]) => ["1" " og " "2"]

@@ -13,7 +13,7 @@
   "Extracts code from the node contents, and highlights it according
   to the given language (extracted from the node's class name)."
   [node]
-  (let [lang (some-> node (.getAttribute "class") not-empty keyword)
+  (let [lang (some-> node (.getAttribute "class") not-empty (str/replace #"language-" "") keyword)
         code (-> (.getInnerHTML node)
                  (str/replace "&lt;" "<")
                  (str/replace "&gt;" ">")

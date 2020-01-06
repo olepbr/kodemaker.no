@@ -1,7 +1,8 @@
 (ns kodemaker-no.pages.tech-pages-test
-  (:require [kodemaker-no.pages.tech-pages :refer :all]
-            [midje.sweet :refer :all]
-            [hiccup.core :refer [html]]))
+  (:require [clojure.string :as str]
+            [hiccup.core :refer [html]]
+            [kodemaker-no.pages.tech-pages :refer :all]
+            [midje.sweet :refer :all]))
 
 (def react
   {:url "/react/"
@@ -12,9 +13,12 @@
 (defn page [& {:as extras}]
   (((tech-pages [(merge react extras)]) "/react/")))
 
+(defn remove-flexmark-quirky-newlines [s]
+  (str/replace s "</p>\n" "</p>"))
+
 (fact (-> (page) :title) => "React")
 (fact (-> (page) :illustration) => "/photos/tech/react.jpg")
-(fact (-> (page) :lead) => "<p>The description</p>")
+(fact (-> (page) :lead) => "<p>The description</p>\n")
 
 (fact (->> (page :recommendations [{:title "Anbefaling 1"
                                     :blurb "Denne er bra."
@@ -23,7 +27,7 @@
                                           :url "/magnar/"}
                                          {:name "Finn"
                                           :url "/finnjoh/"}]}])
-           :body html)
+           :body html remove-flexmark-quirky-newlines)
 
       => (html [:h2.mhn "Våre anbefalinger"]
                [:h3 [:a {:href "http://example.com"} "Anbefaling 1"]]

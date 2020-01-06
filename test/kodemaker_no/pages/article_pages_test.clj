@@ -25,9 +25,9 @@ Vi har både små og store."
 
       => {:title "Systemutvikling på høyt nivå"
           :illustration "/photos/kolbjorn/side-profile-cropped.jpg"
-          :lead "<p>Vi er et fokusert selskap.</p>"
-          :body "<h2>Teknologisk i front</h2><p>Svært god teknologikunnskap.</p><h2>Konsulenttjenester innen systemutvikling</h2><p>Våre konsulenter.</p><p>Med lang erfaring.</p><h2>Språk, plattformer og utviklingsmiljøer</h2><p>Vi har både små og store.</p>"
-          :aside "<p><a href=\"/kolbjorn.html\">Kolbjørn Jetne</a></p><p>&ldquo;Erfaringer fra tøffere tider&rdquo;</p>"})
+          :lead "<p>Vi er et fokusert selskap.</p>\n"
+          :body "<h2>Teknologisk i front</h2>\n<p>Svært god teknologikunnskap.</p>\n<h2>Konsulenttjenester innen systemutvikling</h2>\n<p>Våre konsulenter.</p>\n<p>Med lang erfaring.</p>\n<h2>Språk, plattformer og utviklingsmiljøer</h2>\n<p>Vi har både små og store.</p>\n"
+          :aside "<p><a href=\"/kolbjorn.html\">Kolbjørn Jetne</a></p>\n<p>&ldquo;Erfaringer fra tøffere tider&rdquo;</p>\n"})
 
 (fact "It handles articles with passthrough sections containing markup."
       (article-page {:title "Referanser"
@@ -40,8 +40,8 @@ Mer, mer, mer!"
 
 Punkt 2"})
       => {:title "Referanser"
-          :lead "<div>Hupp</div><p>Mer, mer, mer!</p>"
-          :aside "<p>Punkt 1</p><h3>Heading</h3><p>Punkt 2</p>"})
+          :lead "<div>Hupp</div>\n<p>Mer, mer, mer!</p>\n"
+          :aside "<p>Punkt 1</p>\n<h3>Heading</h3>\n<p>Punkt 2</p>\n"})
 
 (fact "It allows articles to have meta."
       (article-page {:title "Referanser"
