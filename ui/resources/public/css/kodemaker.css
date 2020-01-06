@@ -680,6 +680,7 @@ a, .clickable {
 .media .media-content {flex: 1 0 0;}
 .media .media-content .title {margin-bottom: 8px;}
 
+.round-media {align-items: center;}
 .round-media .media-element {margin-right: 30px;}
 .round-media .media-element .img {border-radius: 50%; max-width: 92px;}
 
