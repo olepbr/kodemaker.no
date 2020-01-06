@@ -677,8 +677,8 @@ a, .clickable {
 .media {display: flex;}
 .media .media-element {flex: 0 0 auto;}
 .media-element .img {width: 100%;}
-.media .media-content {flex: 1 0 auto;}
 .media .title {margin-bottom: 8px;}
+.media .media-content {flex: 1 0 0;}
 
 .round-media .media-element {margin-right: 30px;}
 .round-media .media-element .img {border-radius: 50%; max-width: 92px;}
