@@ -83,7 +83,8 @@
    (if url
      [:a.link {:href url} title]
      title)
-   [:div.tags.mvs tags]
+   (when tags
+     [:div.tags.mvs tags])
    [:div.text.mbm content]
    (when link (arrow-link link))])
 
