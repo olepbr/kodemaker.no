@@ -214,6 +214,7 @@
  :pmd "PMD"
  :postgresql "PostgreSQL"
  :prototype "Prototype.JS"
+ :quic "QUIC"
  :saltstack "SaltStack"
  :soap "SOAP"
  :sse "Server-sent events"
