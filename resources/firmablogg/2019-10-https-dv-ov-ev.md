@@ -5,11 +5,7 @@
 
 :blurb
 
-Du har kanskje sett at når du browser nettbanken din så står hele navnet på banken ved siden av URL-en.
-
-![Sbanken verifisert av nettleseren](/images/blogg/ev-sbanken.png)
-
-Hva er dette for noe?
+Du har kanskje sett at når du browser nettbanken din så står hele navnet på banken ved siden av URL-en. Hva er dette for noe?
 
 :body
 
