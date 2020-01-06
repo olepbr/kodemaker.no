@@ -10,6 +10,7 @@
      :article sections/article-section
      :banner sections/banner-section
      :bruce sections/bruce-section
+     :enumeration sections/enumeration-section
      :footer layout/footer
      :grid sections/grid-section
      :grid-header sections/grid-header-section

@@ -18,6 +18,14 @@
 (defn unwrap-idents [entity k]
   (map (partial d/entity (d/entity-db entity)) (k entity)))
 
+(def technology-categories
+  [[:person/favorites-at-the-moment "Favoritter for tiden:"]
+   [:person/using-at-work "Bruker på jobben:"]
+   [:person/want-to-learn-more "Vil lære mer:"]])
+
+(defn any-technology-categories? [person]
+  (boolean (some (fn [[k _]] (seq (k person))) technology-categories)))
+
 (defn create-page [person]
   {:sections
    (->>
@@ -35,6 +43,22 @@
               :position "top -270px left 12%"}
              {:kind :dotgrid
               :position "bottom -150px right -150px"}]}
+
+     ;; Teknologi
+
+     (when (any-technology-categories? person)
+       {:kind :enumeration
+        :title "Teknologi"
+        :categories (for [[k label] technology-categories]
+                      {:label label
+                       :items (for [tech (unwrap-idents person k)]
+                                {:text (:tech/name tech)
+                                 :href (:page/uri tech)})})
+        :pønt [{:kind :dotgrid
+                :position "top -344px right -150px"}]})
+
+     ;; Anbefalinger
+
      (when-let [recommendations (seq (:person/recommendations person))]
        {:kind :titled
         :title (str (f/genitive-name (:person/given-name person)) " anbefalinger")
@@ -52,3 +76,14 @@
     (map (fn [color section]
            (assoc section :background color))
          (cycle [:blanc :blanc-rose])))})
+
+(comment
+  (def conn (:datomic/conn integrant.repl.state/system))
+  (def db (d/db conn))
+
+  (def person (d/entity db :person/magnar))
+
+  (map kodemaker-no.render-new-page/render-section (:sections (create-page person)))
+
+
+  )
