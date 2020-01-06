@@ -53,8 +53,9 @@
 (def size-classes
   {:large "text-l"})
 
-(defn arrow-link [{:keys [text href size] :as params}]
+(defn arrow-link [{:keys [text href size title] :as params}]
   [:a.link.ib {:href href
+               :title title
                :className (size-classes size)}
    text (arrow params)])
 
