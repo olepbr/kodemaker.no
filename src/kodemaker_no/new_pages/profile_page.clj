@@ -91,7 +91,7 @@
     (remove nil?)
     (map (fn [color section]
            (assoc section :background color))
-         (cycle [:blanc :blanc-rose])))})
+         (cycle [:blanc :chablis])))})
 
 (comment
   (def conn (:datomic/conn integrant.repl.state/system))
