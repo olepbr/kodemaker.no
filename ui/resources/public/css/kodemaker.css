@@ -703,9 +703,10 @@ a, .clickable {
 .text h2 a {color: inherit;}
 
 .article {overflow: auto;}
-.article-balanced .article-aside {margin-top: 68px;}
-.article-front .article-aside {float: right; margin-top: 120px;}
-.article-back .article-aside {max-width: 75%; float: right; margin-top: 48px;}
+.article-align-balanced .article-aside {margin-top: 68px;}
+.article-align-front .article-aside {float: right; margin-top: 120px;}
+.article-align-content .article-aside {margin-top: 64px;}
+.article-align-back .article-aside {max-width: 75%; float: right; margin-top: 48px;}
 .article img {max-width: 100%;}
 
 .video-thumb {position: relative; display: inline-block;}
@@ -720,9 +721,9 @@ a, .clickable {
   .article-content {flex: 0 0 50%;}
   .article-aside {flex: 0 0 50%; padding-left: 50px; float: none; max-width: 100%;}
   .article .article-aside {margin-top: 0;}
-  .article-balanced {align-items: center;}
-  .article-front {align-items: flex-start;}
-  .article-back {align-items: flex-end;}
+  .article-align-balanced {align-items: center;}
+  .article-align-front {align-items: flex-start;}
+  .article-align-back {align-items: flex-end;}
 }
 
 @media only screen and (min-width: 1120px) {

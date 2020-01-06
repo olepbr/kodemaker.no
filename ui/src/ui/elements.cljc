@@ -163,10 +163,10 @@
       (when mecha-sub-title [:h2 {:className (or mecha-sub-title-style "h5")}
                              mecha-sub-title])])
    (when (= :content alignment)
-     [:div.article
+     [:div.article {:className (str "article-align-" (name (or alignment :balanced)))}
       [:div.article-content
        (article-header article)]])
-   [:div.article {:className (str "article-" (name (or alignment :balanced)))}
+   [:div.article {:className (str "article-align-" (name (or alignment :balanced)))}
     [:div.article-content {}
      (when-not (= :content alignment)
        (article-header article))
