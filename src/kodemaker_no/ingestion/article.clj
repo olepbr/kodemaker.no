@@ -4,6 +4,7 @@
 (def article-keys
   {:title :article/title
    :illustration :article/illustration
+   :layout :article/layout
    :aside :article/aside
    :lead :article/lead
    :meta :article/meta
@@ -13,7 +14,8 @@
   [(-> article
        (h/select-renamed-keys article-keys)
        (assoc :page/uri (str (second (re-find #"articles(.*).md" file-name)) "/"))
-       (assoc :page/kind :page.kind/article))])
+       (assoc :page/kind :page.kind/article)
+       (h/update-in-existing [:article/layout] keyword))])
 
 (comment
   (defn ingest-article [file-name]

@@ -216,7 +216,8 @@
    (optional-key :aside) Str
    :lead Str
    (optional-key :meta) Str
-   (optional-key :body) Str})
+   (optional-key :body) Str
+   (optional-key :layout) Str})
 
 (def VideoOverride
   {(optional-key :blurb) Str

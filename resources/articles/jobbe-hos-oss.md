@@ -1,4 +1,5 @@
 :title Jobbe i Kodemaker?
+:layout simple
 
 :lead
 
