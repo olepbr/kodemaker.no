@@ -2,7 +2,9 @@
   (:require [datomic-type-extensions.api :as d]
             [ui.elements :as e]
             [kodemaker-no.homeless :as h]
-            [kodemaker-no.formatting :as f])
+            [kodemaker-no.formatting :as f]
+            [ui.sections :as sections]
+            [clojure.set :as set])
   (:import java.time.format.DateTimeFormatter))
 
 (defn format-date [date]
@@ -14,6 +16,60 @@
 (defn techs [post]
   (let [db (d/entity-db post)]
     (map #(d/entity db %) (:blog-post/tech post))))
+
+(defn small-teaser [post]
+  (e/teaser
+   {:title (:blog-post/title post)
+    :annotation (format-date (:blog-post/published post))
+    :url (:page/uri post)}))
+
+(defn active-posts [db post-eids]
+  (->> post-eids
+       (map #(d/entity db %))
+       (filter :page/uri)
+       (remove :blog-post/archived?)))
+
+(defn blog-posts-by-published [db]
+  (->> db
+       (d/q '[:find ?e
+              :in $
+              :where
+              [?e :blog-post/published ?p]])
+       (map first)
+       (active-posts db)
+       (sort-by :blog-post/published)
+       reverse))
+
+(defn relevant-posts [post]
+  (let [tech (:blog-post/tech post)
+        author (:blog-post/author post)
+        db (d/entity-db post)]
+    (->> (d/q '[:find [?e ...]
+                :in $ [?tech ...]
+                :where
+                [?e :blog-post/tech ?tech]]
+              db tech)
+         (active-posts db)
+         (remove #(= (:db/id %) (:db/id post)))
+         (map (fn [p]
+                [(cond-> (count (set/intersection tech (:blog-post/tech p)))
+                   (= (:blog-post/author p) author) inc)
+                 p]))
+         (sort-by (comp - first))
+         (map second))))
+
+(defn related-posts [post]
+  (let [latest (blog-posts-by-published (d/entity-db post))
+        relevant (relevant-posts post)]
+    (->> (into latest (take 3 relevant))
+         (h/distinct-by :db/id)
+         (take 3))))
+
+(def icons
+  {:twitter sections/twitter-icon
+   :linkedin sections/linkedin-icon
+   :stack-overflow sections/stackoverflow-icon
+   :github sections/github-icon})
 
 (defn create-post-page [{:blog-post/keys [published updated title body] :as blog-post}]
   {:sections
@@ -39,20 +95,18 @@
                   :title (:person/full-name author)
                   :lines [(:person/title author)
                           (:person/email-address author)]}))}
+    {:kind :definitions
+     :definitions (->> [(when-let [links (seq (:blog-post/discussion-links blog-post))]
+                          {:title "Diskusjon"
+                           :contents (->> links
+                                          (sort-by :list/idx)
+                                          (map #(e/teaser {:title (:text %)
+                                                           :icon (icons (:icon %))
+                                                           :url (:url %)})))})
+                        {:title "Mer fra bloggen"
+                         :contents (map small-teaser (related-posts blog-post))}]
+                       (remove nil?))}
     {:kind :footer}]})
-
-(defn blog-posts [db]
-  (->> db
-       (d/q '[:find ?e
-              :in $
-              :where
-              [?e :blog-post/published ?p]])
-       (map first)
-       (map #(d/entity db %))
-       (filter :page/uri)
-       (remove :blog-post/archived?)
-       (sort-by :blog-post/published)
-       reverse))
 
 (defn blog-post-teaser [post]
   {:kind :article
@@ -83,7 +137,7 @@
               :position "left 33% top 0"}
              {:kind :descending-line
               :position "left 80vw top 0"}]}]
-    (->> (blog-posts db)
+    (->> (blog-posts-by-published db)
          (map blog-post-teaser)
          (map (fn [color section]
                 (assoc section :background color))

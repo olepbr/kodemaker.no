@@ -8,9 +8,10 @@
 (defn render-section [section]
   ((case (:kind section)
      :article sections/article-section
-     :container sections/container-section
      :banner sections/banner-section
      :bruce sections/bruce-section
+     :container sections/container-section
+     :definitions sections/definition-section
      :enumeration sections/enumeration-section
      :footer layout/footer
      :grid sections/grid-section

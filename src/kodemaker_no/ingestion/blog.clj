@@ -17,13 +17,15 @@
   {"twitter.com" "Twitter"
    "www.linkedin.com" "LinkedIn"
    "www.kode24.no" "Kode24"
-   "www.facebook.com" "Facebook"})
+   "www.facebook.com" "Facebook"
+   "stackoverflow.com" "Stack Overflow"
+   "github.com" "GitHub"})
 
 (def host-icon
   {"twitter.com" :twitter
    "www.linkedin.com" :linkedin
-   "www.kode24.no" :kode24
-   "www.facebook.com" :facebook})
+   "stackoverflow.com" :stack-overflow
+   "github.com" :github})
 
 (defn- parse-discussion-links [s]
   (->> (str/split s #"\n")
