@@ -32,6 +32,21 @@
      [:div.bruce-image-back
       [:img {:src image-back}]]]]])
 
+(defn enumeration-section [{:keys [title categories] :as params}]
+  [:div.section.enumeration-section {:style (l/stylish {} params)}
+   [:div.content
+    [:h3.h3 title]
+    [:div.enum-cats
+     (for [category categories]
+       [:div.enum-cat
+        [:div.enum-label (:label category)]
+        [:div.enum-items
+         (e/comma-separated
+          (for [item (:items category)]
+            (if (:href item)
+              [:a.link {:href (:href item)} (:text item)]
+              (:text item))))]])]]])
+
 (defn grid-section-content [{:keys [items grid-type]}]
   [:div.content
    ((case grid-type
@@ -131,21 +146,6 @@
      [:h3.h3 title]]
     [:div.titled-content
      (interpose [:div.mbl] contents)]]])
-
-(defn enumeration-section [{:keys [title categories] :as params}]
-  [:div.section.enumeration-section {:style (l/stylish {} params)}
-   [:div.content
-    [:h3.h3 title]
-    [:div.enum-cats
-     (for [category categories]
-       [:div.enum-cat
-        [:div.enum-label (:label category)]
-        [:div.enum-items
-         (e/comma-separated
-          (for [item (:items category)]
-            (if (:href item)
-              [:a.link {:href (:href item)} (:text item)]
-              (:text item))))]])]]])
 
 (defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo

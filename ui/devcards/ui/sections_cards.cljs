@@ -65,6 +65,26 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
     :image-front "/devcard_images/bruce-front.png"
     :image-back "/devcard_images/bruce-back.png"}))
 
+(defcard enumeration-section
+  (sections/enumeration-section
+   {:title "Teknologi"
+    :categories [{:label "Favoritter for tiden:"
+                  :items [{:text "Python" :href "/"}
+                          {:text "ClojureScript" :href "/"}]}
+                 {:label "Bruker på jobben:"
+                  :items [{:text "Python" :href "/"}
+                          {:text "OpenCV"}
+                          {:text "Clojure" :href "/"}
+                          {:text "ClojureScript" :href "/"}]}
+                 {:label "Vil lære mer:"
+                  :items [{:text "Clojure" :href "/"}
+                          {:text "Emacs" :href "/"}
+                          {:text "Rust"}
+                          {:text "Go" :href "/"}
+                          {:text "R"}
+                          {:text "Machine learning"}
+                          {:text "ClojureScript" :href "/"}]}]}))
+
 (defcard grid-section
   (sections/grid-section
    {:grid-type :box-grid
@@ -184,26 +204,6 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
                  :content "Fantastisk bra artikkel om logg som sentralt system for integrasjon, konsistens og asynkron meldingsutveksling. Skrevet av mannen bak Kafka. Bør leses av alle som har interesse av arkitektur hos større bedrifter med flere systemer som skal snakke sammen."
                  :link {:text "Les artikkel"
                         :href "#"}})]}))
-
-(defcard enumeration-section
-  (sections/enumeration-section
-   {:title "Teknologi"
-    :categories [{:label "Favoritter for tiden:"
-                  :items [{:text "Python" :href "/"}
-                          {:text "ClojureScript" :href "/"}]}
-                 {:label "Bruker på jobben:"
-                  :items [{:text "Python" :href "/"}
-                          {:text "OpenCV"}
-                          {:text "Clojure" :href "/"}
-                          {:text "ClojureScript" :href "/"}]}
-                 {:label "Vil lære mer:"
-                  :items [{:text "Clojure" :href "/"}
-                          {:text "Emacs" :href "/"}
-                          {:text "Rust"}
-                          {:text "Go" :href "/"}
-                          {:text "R"}
-                          {:text "Machine learning"}
-                          {:text "ClojureScript" :href "/"}]}]}))
 
 (defcard vertigo-section
   (sections/vertigo-section
