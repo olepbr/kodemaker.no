@@ -29,6 +29,9 @@
 (defcard h5
   (e/h5 {} "Kontakt"))
 
+(defcard h6
+  (e/h6 {} "Kontakt"))
+
 (defcard h1-acting-as-h5
   (e/h5 {:element :h1} "Kontakt"))
 
