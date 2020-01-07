@@ -58,7 +58,7 @@ Vi har også 60 sekunder i et minutt.  Bortsett fra en og annen gang da ett seku
 ### Millisekunder
 Først når vi er nede på millisekund-nivå begynner ting å ordne seg litt. For her ENDELIG har vi ordentlige metriske enheter. Det er 1000 millisekunder i et sekund. Takk og lov.  Bortsett fra hvis du for eksempel jobber med java, og koden din kjører idet et skuddsekund skal legges til. For da vil java runtime’en sakke ned prosesseringen, slik at de siste 1000 sekundene i døgnet varer ett millisekund ekstra.  Jobber du med .Net derimot kan det hende at det siste sekundet varer dobbelt så lenge, eller så kan det hende klokka rett og slett kommer til å være feil med ett sekund, frem til NTP-synk vil justere tiden til å komme tilbake igjen til standard UTC. Men dette avhenger helt av det underliggende operativsystemet, så det er ikke godt å vite hva som kommer til å skje i praksis. Lykke til!  Går det galt [er du i alle fall ikke alene om det.](https://blog.cloudflare.com/how-and-why-the-leap-second-affected-cloudflare-dns/)
 
-### Standardisering
+## Standardisering
 Jeg tror vi trygt kan konstatere at dette er, med god margin, det dårligste systemet for beregning av noe som helst, noen sinne.  
 
 Takk og lov jobbes det med standardisering. UTC er en god start. UTC fungerer som en tidssone, basert på Greenwitch Mean Time (GMT), men inneholder ingen sommertidsjusteringer.  Det er ment som et standardisert svar på spørsmålet “hvor mye er klokka?”.   Om du er i Sydney, eller i Stockholm, så vil svaret være det samme. Det er klokkeslett vi kan være enige om på tvers av kloden.  
@@ -71,7 +71,7 @@ Ja, her har vi et eksempel på at man har brukt søsken-metoden for konfliktløs
 
 Så det ble hetende UTC. Så er det like urettferdig for alle. 
 
-### Instant, ZonedDateTime og LocalDateTime
+## Instant, ZonedDateTime og LocalDateTime
 I det nyeste tidsbiblioteket til java, og i biblioteket [NodaTime](https://nodatime.org/) for .Net har vi 3 hovedkonsepter vi bruker for å jobbe med tid. 
 
 Vi har `Instant`, `LocalDateTime` og `ZonedDateTime` 
@@ -87,7 +87,7 @@ HOLD DERE FOR GUDS SKYLD UNNA!
 
 .Net har også innebygde datatyper for tidshåndtering.  `DateTime`, `DateTimeOffset` osv.  Disse er betydelig bedre enn java sine opprinnelige Dato-klasser, men de støtter for eksempel ikke justering mellom sommer- og vintertid på noen god måte. Med andre ord er du nesten dømt til å skrive kode som feiler 2 ganger i året.  I tillegg er arbeid med forskjellige tidssoner heller ikke helt enkelt.  Jeg anbefaler å bruke biblioteket NodaTime, som lar deg resonnere korrekt rundt tid med en gang.  Du vil ikke angre.
 
-### Planlegging
+## Planlegging
 Men, la oss nå ta for oss noen konkrete eksempler på programmering med tid. 
 
 La oss si du lager en applikasjon der du skal planlegge ting.  En konferanse for eksempel.  En konferanse skjer på et tidspunkt på et sted, og består selv av mange forskjellige hendelser: foredrag, lunsj, fest-middag, osv.  Hvordan skal vi modellere dette i koden? 
@@ -115,7 +115,7 @@ Likevel kan vi ikke bruke Instant.
 
 Fordi vi med fremtidige datoer rett og slett ikke kan vite med sikkerhet når på tidslinjen klokka 0900, 13. desember i Oslo vil være.  Regler for sommertid kan bli justert mellom nå og da, og isåfall vil 09:00 den 13.desember intreffe på et helt annet tidspunkt.  ZonedDateTime er det eneste konseptet som kan garantere oss at vi ender opp med korrekt tidspunkt.  
 
-### Hendelser med varighet
+## Hendelser med varighet
 Hva med planlegging av regelmessige hendelser med en gitt lengde. Flyruter for eksempel. Flyselskap har regelmessige ruter mellom forskjellige destinasjoner.  Utreise fra Oslo lørdag klokka 23, ankomst Marokko 05:00 søndag morgen. Hvilke datatyper bruker vi her? Skal vi bruke en startdato og en sluttdato uttrykt med ZonedDateTime?  
 
 ```java
