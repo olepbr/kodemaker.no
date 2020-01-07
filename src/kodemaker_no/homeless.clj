@@ -172,3 +172,14 @@
       name
       (str/replace "-" " ")
       capitalize))
+
+(defn distinct-by [k xs]
+  (loop [used #{}
+         res []
+         xs xs]
+    (let [x (first xs)
+          xk (k x)]
+      (cond
+        (empty? xs) res
+        (contains? used xk) (recur used res (rest xs))
+        :default (recur (conj used xk) (conj res x) (rest xs))))))
