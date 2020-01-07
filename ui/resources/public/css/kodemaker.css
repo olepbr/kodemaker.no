@@ -590,7 +590,7 @@ a, .clickable {
 
 /* Enumeration section */
 
-.enumeration-section {padding-top: 64px; padding-bottom: 64px;}
+.enumeration-section {padding-top: 64px; padding-bottom: 80px;}
 .enum-cats {margin-top: 48px;}
 .enum-label {color: var(--empereur);}
 
