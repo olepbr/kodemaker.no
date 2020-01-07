@@ -15,6 +15,7 @@
 (def h3 (partial el :h3))
 (def h4 (partial el :h4))
 (def h5 (partial el :h5))
+(def h6 (partial el :h6))
 
 (defn comma-separated [coll]
   (drop 1 (interleave (into (list " og " "")

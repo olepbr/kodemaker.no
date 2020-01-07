@@ -888,6 +888,12 @@ a, .clickable {
   font-weight: 500;
 }
 
+.h6, .text h6 {
+  color: var(--chocolat-au-lait);
+  font-size: 21px;
+  font-weight: normal;
+}
+
 .anchor-marker {
   display: none;
 }
