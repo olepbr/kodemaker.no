@@ -67,9 +67,9 @@
    [:div.content
     (header)]])
 
-(defn footer [_]
-  [:div.section {:style (add-pønt {} [{:kind :less-than
-                                       :position "right -300px top -480px"}])}
+(defn footer [section]
+  [:div.section {:style (stylish {} (assoc section :pønt [{:kind :less-than
+                                                           :position "right -300px top -480px"}]))}
    [:div.content
     [:div.footer
      [:div.f-logo (logo {:width 176})]
