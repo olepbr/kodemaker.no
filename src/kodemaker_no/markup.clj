@@ -17,4 +17,5 @@
   (str/replace html #"</p>$" (str (hiccup/html node) "</p>")))
 
 (defn strip-paragraph [s]
-  (subs s 3 (- (count s) 4)))
+  (let [s (str/trim s)]
+    (subs s 3 (- (count s) 4))))
