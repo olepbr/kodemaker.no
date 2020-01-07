@@ -49,11 +49,12 @@
      (when (any-technology-categories? person)
        {:kind :enumeration
         :title "Teknologi"
-        :categories (for [[k label] technology-categories]
-                      {:label label
-                       :items (for [tech (unwrap-idents person k)]
-                                {:text (:tech/name tech)
-                                 :href (:page/uri tech)})})
+        :categories (->> (for [[k label] technology-categories]
+                           {:label label
+                            :items (for [tech (unwrap-idents person k)]
+                                     {:text (:tech/name tech)
+                                      :href (:page/uri tech)})})
+                         (remove (comp empty? :items)))
         :pønt [{:kind :dotgrid
                 :position "top -344px right -150px"}]})
 
