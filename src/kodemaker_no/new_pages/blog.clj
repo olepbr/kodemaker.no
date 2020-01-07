@@ -45,14 +45,14 @@
         author (:blog-post/author post)
         db (d/entity-db post)]
     (->> (d/q '[:find [?e ...]
-                :in $ [?tech ...]
+                :in $ ?url [?tech ...]
                 :where
-                [?e :blog-post/tech ?tech]]
-              db tech)
+                [?e :blog-post/tech ?tech]
+                (not [?e :page/uri ?url])]
+              db (:page/uri post) tech)
          (active-posts db)
-         (remove #(= (:db/id %) (:db/id post)))
          (map (fn [p]
-                [(cond-> (count (set/intersection tech (:blog-post/tech p)))
+                [(cond-> (* 2 (count (set/intersection tech (:blog-post/tech p))))
                    (= (:blog-post/author p) author) inc)
                  p]))
          (sort-by (comp - first))
@@ -61,9 +61,14 @@
 (defn related-posts [post]
   (let [latest (blog-posts-by-published (d/entity-db post))
         relevant (relevant-posts post)]
-    (->> (into latest (take 3 relevant))
+    (->> (concat (take 1 latest)
+                 (take 3 relevant)
+                 (take 3 (drop 1 latest)))
          (h/distinct-by :db/id)
-         (take 3))))
+         (remove #(= (:db/id %) (:db/id post)))
+         (take 3)
+         (sort-by :blog-post/published)
+         reverse)))
 
 (def icons
   {:twitter sections/twitter-icon
