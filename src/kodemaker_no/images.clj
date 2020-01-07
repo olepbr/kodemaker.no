@@ -34,7 +34,7 @@
       [:triangle :lower-left]
       [:crop {:width 666
               :height 666
-              :offset-y :bottom}]]}
+              :origin-y :bottom}]]}
 
     :bruce-back
     {:transformations
@@ -45,8 +45,7 @@
       [:triangle :lower-right]
       [:crop {:width 666
               :height 666
-              :offset-x :right
-              :offset-y :bottom}]]}
+              :origin [:right :bottom]}]]}
 
     :rouge-duotone
     {:transformations [rouge-duotone]}
@@ -81,8 +80,7 @@
       [:circle]
       [:triangle :upper-right]
       [:crop {:width 775
-              :offset-x :right
-              :offset-y :top}]]}
+              :origin [:right :top]}]]}
 
     :chocolate-circle
     {:transformations
@@ -92,8 +90,7 @@
       [:circle]
       [:triangle :lower-left]
       [:crop {:width 775
-              :offset-x :left
-              :offset-y :bottom}]]}
+              :origin [:left :bottom]}]]}
 
     :chocolate-triangle
     {:transformations [[:fit {:width 220 :height 220}]
@@ -112,7 +109,7 @@
                        [:crop {:preset :square}]
                        chocolate-au-lait-duotone
                        [:circle]
-                       [:crop {:width 380 :height 190 :offset-y :bottom}]]}
+                       [:crop {:width 380 :height 190 :origin-y :bottom}]]}
 
     :rouge-triangle-medium
     {:transformations [[:fit {:width 380 :height 380}]
