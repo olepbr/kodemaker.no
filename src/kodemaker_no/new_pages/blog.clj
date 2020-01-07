@@ -34,6 +34,7 @@
    :articles
    [{:alignment :content
      :title (:blog-post/title post)
+     :href (:page/uri post)
      :annotation (.format (DateTimeFormatter/ofPattern "dd.MM.yyyy") (:blog-post/published post))
      :content [:div
                [:div.text.mbm (f/to-html (:blog-post/blurb post))]

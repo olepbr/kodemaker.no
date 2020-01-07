@@ -144,10 +144,12 @@
                         :size 300
                         :curtain (:curtain params)})))
 
-(defn article-header [{:keys [title sub-title annotation]}]
+(defn article-header [{:keys [title href sub-title annotation]}]
   (->> (list
         (when title
-          [:h2.h3 title])
+          [:h2.h3 (if href
+                    [:a {:href href} title]
+                    title)])
         (when sub-title
           [:h3.h4 sub-title])
         (when annotation
