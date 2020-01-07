@@ -108,6 +108,10 @@
   :db/valueType :db.type/boolean
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :blog-post/discussion-links
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/many}
+
  ;; side-projects
  {:db/ident :side-project/title
   :db/valueType :db.type/string

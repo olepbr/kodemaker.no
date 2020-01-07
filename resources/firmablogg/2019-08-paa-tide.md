@@ -1,6 +1,12 @@
 :title Tid - hvor vanskelig kan det være?
 :author christin
 :published 2019-08-14
+:discussion
+https://twitter.com/KODEMAKER/status/1161532881744859137
+https://www.linkedin.com/posts/christin-gorman-2321aa1_tid-hvor-vanskelig-kan-detv%C3%A6re-activity-6567682241147744256-kmuf
+https://www.kode24.no/guider/tid---hvor-vanskelig-kan-det-vaere/71490509
+https://www.facebook.com/christin.gorman/posts/10156236732105474
+
 :tech [:java]
 
 :blurb
