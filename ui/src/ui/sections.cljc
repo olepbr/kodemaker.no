@@ -163,6 +163,22 @@
     [:div.titled-content
      (interpose [:div.mbl] contents)]]])
 
+(defn definition [{:keys [title contents]}]
+  [:div.definition
+   [:div.definition-title
+    [:h3.h6 title]]
+   [:div.definition-content
+    (seq contents)]])
+
+(defn definition-section [{:keys [definitions] :as params}]
+  [:div.section.definition-section {:style (l/stylish {} params)}
+   [:div.content
+    [:hr.definition-separator]
+    (->> definitions
+         (map definition)
+         (interpose [:hr.definition-separator]))
+    [:hr.definition-separator]]])
+
 (defn vertigo-section [{:keys [title text link image] :as params}]
   [:div.section.vertigo
    {:style (l/stylish {} params)}

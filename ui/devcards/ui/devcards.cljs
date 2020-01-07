@@ -6,6 +6,7 @@
             ui.sections.article-section-cards
             ui.sections.banner-section-cards
             ui.sections.bruce-section-cards
+            ui.sections.definition-section-cards
             ui.sections.enumeration-section-cards
             ui.sections.grid-section-cards
             ui.sections.hip-section-cards
