@@ -58,17 +58,39 @@
          (sort-by (comp - first))
          (map second))))
 
+(defn adjacent-posts [xs x]
+  (loop [newer nil
+         [curr & xs] xs]
+    (cond
+      (nil? curr) nil
+      (= x curr) (remove nil? [newer (first xs)])
+      :default (recur curr xs))))
+
 (defn related-posts [post]
   (let [latest (blog-posts-by-published (d/entity-db post))
-        relevant (relevant-posts post)]
-    (->> (concat (take 1 latest)
-                 (take 3 relevant)
-                 (take 3 (drop 1 latest)))
+        relevant (relevant-posts post)
+        [next-post previous-post] (adjacent-posts latest post)]
+    (->> (concat (take 3 relevant)
+                 [next-post previous-post]
+                 (take 4 latest))
+         (remove nil?)
          (h/distinct-by :db/id)
          (remove #(= (:db/id %) (:db/id post)))
          (take 3)
          (sort-by :blog-post/published)
          reverse)))
+
+(comment
+  (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
+  (def post (d/entity db [:page/uri "/blogg/2019-10-javascript-sets/"]))
+  (def post (d/entity db [:page/uri "/blogg/2019-10-cljss/"]))
+  (def post (d/entity db [:page/uri "/blogg/2019-12-quic/"]))
+  (def post (d/entity db [:page/uri "/blogg/javascript-coercion/"]))
+  (def post (d/entity db [:page/uri "/blogg/2019-09-terningene-er-kastet/"]))
+
+  (map :page/uri (related-posts post))
+)
 
 (def icons
   {:twitter sections/twitter-icon
