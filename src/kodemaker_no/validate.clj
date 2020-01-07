@@ -56,8 +56,7 @@
                                 :blurb Str
                                 :published Date ;; iso-8601 yyyy-mm-dd
                                 (optional-key :cv/blurb) Str
-                                (optional-key :tech) [ID]
-                                (optional-key :discussion) Str}]
+                                (optional-key :tech) [ID]}]
 
    (optional-key :presentations) [{:title Str ;; foredrag som du selv har holdt
                                    (optional-key :id) ID ;; brukes til å generere URL for video-presentasjoner
@@ -208,6 +207,7 @@
    (optional-key :author) Str
    (optional-key :blurb) Str
    (optional-key :tech) Str
+   (optional-key :discussion) Str
    :body Str})
 
 (def Article
