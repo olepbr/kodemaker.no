@@ -5,8 +5,41 @@
             [kodemaker-no.formatting :as f])
   (:import java.time.format.DateTimeFormatter))
 
-(defn create-post-page [blog-post]
-  {:sections [{:kind :footer}]})
+(defn format-date [date]
+  (.format (DateTimeFormatter/ofPattern "dd.MM.yyyy") date))
+
+(defn author [post]
+  (d/entity (d/entity-db post) (:blog-post/author post)))
+
+(defn techs [post]
+  (let [db (d/entity-db post)]
+    (map #(d/entity db %) (:blog-post/tech post))))
+
+(defn create-post-page [{:blog-post/keys [published updated title body] :as blog-post}]
+  {:sections
+   [{:kind :header
+     :background :chablis}
+    {:kind :container
+     :content (e/simple-article
+               {:title title
+                :annotation (str "Publisert "
+                                 (format-date published)
+                                 (when updated
+                                   (str ", sist oppdatert " (format-date updated))))
+                :content (f/to-html body)})
+     :pønt [{:kind :greater-than
+             :position "top -440px left 90px"}
+            {:kind :descending-line
+             :position "top -540px right 90px"}]}
+    {:kind :container
+     :class "container-section-tight"
+     :content (let [author (author blog-post)]
+                (e/round-media
+                 {:image (str "/vcard-small" (h/profile-picture author))
+                  :title (:person/full-name author)
+                  :lines [(:person/title author)
+                          (:person/email-address author)]}))}
+    {:kind :footer}]})
 
 (defn blog-posts [db]
   (->> db
@@ -21,13 +54,6 @@
        (sort-by :blog-post/published)
        reverse))
 
-(defn author [post]
-  (d/entity (d/entity-db post) (:blog-post/author post)))
-
-(defn techs [post]
-  (let [db (d/entity-db post)]
-    (map #(d/entity db %) (:blog-post/tech post))))
-
 (defn blog-post-teaser [post]
   {:kind :article
    :class "article-section-tight"
@@ -35,7 +61,7 @@
    [{:alignment :content
      :title (:blog-post/title post)
      :href (:page/uri post)
-     :annotation (.format (DateTimeFormatter/ofPattern "dd.MM.yyyy") (:blog-post/published post))
+     :annotation (format-date (:blog-post/published post))
      :content [:div
                [:div.text.mbm (f/to-html (:blog-post/blurb post))]
                [:p (e/arrow-link {:text "Les artikkelen"
