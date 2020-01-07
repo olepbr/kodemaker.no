@@ -717,6 +717,7 @@ a, .clickable {
 .illustrated .media-element {margin-bottom: 32px;}
 
 .text > * {margin-top: 28px;}
+.article-text > * {margin-top: 32px;}
 .text > *:first-child {margin-top: 0;}
 
 .link,

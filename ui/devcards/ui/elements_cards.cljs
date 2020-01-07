@@ -172,6 +172,22 @@ spill, grensesnitt og støtteverktøy/overvåkning."]]
     av kameraer og annen hardware som datamaskiner, lysstyring og skjermer."]]
     :annotation "23.10.2019"}))
 
+(defcard simple-article
+  (e/simple-article
+   {:title "En rett-frem artikkel som bruker all bredde den får"
+    :annotation "Publisert 02.02.2020"
+    :content [:div.text.article-text
+              [:p
+               "Denne innholdsblokka er ikke bare " [:code ".text"]
+               ", neida, den er også " [:code ".article-text"] ", en dedikert
+               tekst-klasse som blant annet brukes i blogg-innlegg, som får
+               flotte seg med litt ekstra white-space, og litt annen størrelse
+               på headinger."]
+              [:h2 "Se bare på meg"]
+              [:p "Du ville kanskje ikke gjettet at overskriften over var en h2?
+              Galskap, den ser jo ut som en h3, og bare sjekk all luften over
+              den. Elegant. Luksuriøst."]]}))
+
 (defcard curtain-left
   (e/curtain
    {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]
