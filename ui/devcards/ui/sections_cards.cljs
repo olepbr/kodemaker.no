@@ -143,6 +143,13 @@ Kodemaker, og de fremstår som en dyktig, jovial og humørfylt gjeng."})
                  (assoc card-data :curtain :right)]
                 (map (fn [data] {:content (e/illustrated data)})))}))
 
+(defcard hip-section
+  (sections/hip-section
+   {:title "Eivind snakker gjerne om"
+    :single {:title "Fløyte"
+             :content "Eivind spilte fløyte i skolekorps i ungdommen. Dette er en hobby han har tatt opp igjen for noen år siden. Spiller i Grav Musikkorps i Bærum."
+             :image "/devcard_images/eivind_snowboard.png"}}))
+
 (defcard profile-section
   (sections/profile-section
    {:full-name "Trygve M. Amundsen"

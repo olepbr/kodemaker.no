@@ -643,6 +643,26 @@ a, .clickable {
   .titled-title { margin-bottom: 64px; }
 }
 
+.hip-section {padding-top: 64px; padding-bottom: 64px;}
+.hip-title {width: 317px;} /* 257 (aside) + 60 (aside margin) */
+
+.hip-single-box {background: var(--chablis);}
+
+@media only screen and (min-width: 1100px) {
+  .hip-single-box { padding: 64px 25% 80px 500px; margin: 0 320px 48px -500px; position: relative;}
+  .hip-single-img {position: absolute; right: -320px; margin-top: 7px; width: 40%; max-width: 543px;}
+}
+
+@media only screen and (min-width: 589px) and (max-width: 1099px) {
+  .hip-single-box {padding: 64px 80px 190px 500px; margin: 0 80px 48px -500px; position: relative;}
+  .hip-single-img {position: absolute; right: -80px; bottom: -110px; width: 458px;}
+}
+
+@media only screen and (max-width: 588px) {
+  .hip-single-box {margin: 0 -500px 272px -500px; padding: 64px 500px 80px 500px; position: relative;}
+  .hip-single-img {position: absolute; left: 50%; margin-left: -272px; bottom: -272px; width: 544px; height: 272px;}
+}
+
 .profile-icons a {width: 24px; margin-right: 24px;}
 .profile-icons svg { width: 24px; }
 .profile-icons a:last-child {margin-right: 0;}
