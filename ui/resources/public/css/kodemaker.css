@@ -571,7 +571,9 @@ a, .clickable {
 
 /* Article section */
 .titled-section,
-.article-section {padding-top: 80px; padding-bottom: 80px;}
+.article-section,
+.container-section {padding-top: 80px; padding-bottom: 80px;}
+.container-section-tight {padding-top: 40px; padding-bottom: 40px;}
 
 .article-section-tight {padding-top: 64px; padding-bottom: 64px;}
 
