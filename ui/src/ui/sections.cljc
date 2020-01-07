@@ -9,6 +9,13 @@
    [:div.content
     (map e/article articles)]])
 
+(defn simple-article-section [{:keys [article class] :as params}]
+  [:div.section.article-section
+   {:className class
+    :style (l/stylish {} params)}
+   [:div.content
+    (e/simple-article article)]])
+
 (defn banner-section [{:keys [logo text] :as params}]
   [:div.section
    {:style (l/stylish {} params)}

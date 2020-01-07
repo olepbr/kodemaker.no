@@ -183,6 +183,16 @@
                   :src image}])
      aside]]])
 
+(defn simple-article [{:keys [title annotation content]}]
+  [:div.article-wrapper
+   [:div.simple-article
+    (when title
+      [:div.mbl
+       [:h1.h1 title]
+       (when annotation
+         [:p.annotation annotation])])
+    [:div.text.article-text content]]])
+
 (defn stats [{:keys [icon-type icon-count stats]}]
   [:div.stats {}
    (repeat icon-count

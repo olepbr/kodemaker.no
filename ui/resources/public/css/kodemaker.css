@@ -722,6 +722,10 @@ a, .clickable {
 .link,
 .text a {color: var(--rouge);}
 .text h2 a {color: inherit;}
+.article-text h2 {margin-top: 120px;}
+
+.text img {display: block; max-width: 100%;}
+.article-text img {margin: 64px 0;}
 
 .article {overflow: auto;}
 .article-align-balanced .article-aside {margin-top: 68px;}
@@ -760,6 +764,7 @@ a, .clickable {
 .article .h4, .article .text h1 {margin-bottom: 16px;}
 
 .annotation {color: var(--empereur);}
+.simple-article .annotation {color: var(--taupe-foncé);}
 .article .h3 + .annotation {margin: -42px 0 32px;}
 .article .h4 + .annotation {margin: -8px 0 8px;}
 
@@ -852,7 +857,7 @@ a, .clickable {
   letter-spacing: normal;
 }
 
-.h3, .text h3 {
+.h3, .text h3, .article-text h2 {
   color: var(--chocolat-au-lait);
   font-family: "Financier Display", serif;
   font-size: 46px;

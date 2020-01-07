@@ -8,6 +8,7 @@
 (defn render-section [section]
   ((case (:kind section)
      :article sections/article-section
+     :simple-article sections/simple-article-section
      :banner sections/banner-section
      :bruce sections/bruce-section
      :enumeration sections/enumeration-section
