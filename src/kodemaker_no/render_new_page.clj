@@ -15,6 +15,7 @@
      :grid sections/grid-section
      :grid-header sections/grid-header-section
      :header layout/header-section
+     :hip sections/hip-section
      :profile sections/profile-section
      :pønt sections/pønt-section
      :seymour sections/seymour-section

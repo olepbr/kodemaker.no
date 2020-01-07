@@ -105,11 +105,18 @@
                        [:triangle :upper-right]]}
 
     :bottom-half-circle
-    {:transformations [[:fit {:width 380 :height 380}]
+    {:transformations [[:fit {:width 380 :height 380 :scale-up? true}]
                        [:crop {:preset :square}]
                        chocolate-au-lait-duotone
                        [:circle]
                        [:crop {:width 380 :height 190 :origin-y :bottom}]]}
+
+    :big-bottom-half-circle
+    {:transformations [[:fit {:width 544 :height 544 :scale-up? true}]
+                       [:crop {:preset :square}]
+                       chocolate-au-lait-duotone
+                       [:circle]
+                       [:crop {:width 544 :height 272 :origin-y :bottom}]]}
 
     :rouge-triangle-medium
     {:transformations [[:fit {:width 380 :height 380}]

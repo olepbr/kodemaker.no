@@ -1,5 +1,6 @@
 (ns kodemaker-no.new-pages.profile-page
-  (:require [datomic-type-extensions.api :as d]
+  (:require [clojure.set :as set]
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
             [ui.elements :as e]))
@@ -73,6 +74,16 @@
                        (:recommendation/link-text recommendation)
                        (assoc :link {:text (:recommendation/link-text recommendation)
                                      :href (:recommendation/url recommendation)}))))})
+
+     ;; Snakker gjerne om
+
+     (when-let [hobbies (seq (:person/hobbies person))]
+       {:kind :hip
+        :title (str (:person/given-name person) " snakker gjerne om")
+        :single (let [hobby (first hobbies)]
+                  {:title (:title hobby)
+                   :content (f/to-html (:description hobby))
+                   :image (str "/big-bottom-half-circle" (:illustration hobby))})})
 
      ;; Bloggposter
 

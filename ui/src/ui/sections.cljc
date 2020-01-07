@@ -67,7 +67,7 @@
     (grid-section-content params)]])
 
 (defn hip-section [{:keys [title single] :as params}]
-  [:div.section.hip-section {:style (l/stylish {} params)}
+  [:div.section.hip-section {:style (l/stylish {} (assoc params :background :blanc))}
    [:div.content
     [:div.hip-single-box
      [:div.hip-title.mbxl [:h3.h3 title]]
