@@ -919,6 +919,8 @@ a, .clickable {
   color: var(--empereur);
 }
 
+.tags .link {color: var(--empereur);}
+
 @font-face {
   font-family: "Financier Display";
   font-weight: 400;
