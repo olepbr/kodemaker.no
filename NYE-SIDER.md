@@ -23,6 +23,10 @@ Gå deretter til http://localhost:3333
 
 Bilder brukes ganske annerledes i det nye designet, og må derfor oppdateres.
 
+Dersom du syns det er vanskelig å finne bilder, så er det en idé å gå til
+[Pixabay](http://pixabay.com/) og finne et bilde der. De er gratis å bruke, også
+til kommersielt bruk.
+
 ### Snakker gjerne om ...
 
 Her trenger nesten alle nye bilder. Du finner dem under:
@@ -38,8 +42,8 @@ For hobbyen som står først i lista:
 For hobby nummer to:
 
  - 800x800 jpg
- - mulig å croppe til både portrett og landskap (altså, ha det mest interessante delen av motivet i midten)
+ - mulig å croppe til både portrett (3/4) og litt landskap (8/7) (altså, ha det mest interessante delen av motivet i midten)
  - unngå helhvit bakgrunn (snø er greit, #fff ikke)
 
-Vi viser ikke flere enn to hobbyer på sidene. Dersom du har mer å vise frem, kan
+Vi viser ikke flere enn to hobbyer på sidene. Har du mer å vise frem, kan
 du godt flytte det til sideprosjekter eller tilsvarende.
