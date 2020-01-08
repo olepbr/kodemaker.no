@@ -182,7 +182,6 @@
  :collectionjson "Collection+JSON"
  :jaxrs "JAX-RS"
  :zeromq "ZeroMQ"
- :http "HTTP"
  :objc "Objective-C"
  :objcplusplus "Objective C++"
  :openssl "OpenSSL"
