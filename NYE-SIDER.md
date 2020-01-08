@@ -35,13 +35,16 @@ Her trenger nesten alle nye bilder. Du finner dem under:
 
 For hobbyen som står først i lista:
 
- - 544x272 jpg
+ - 600x300 jpg
  - må se bra ut etter at den har blitt en (nedre) halvsirkel
  - unngå helhvit bakgrunn (snø er greit, #fff ikke)
 
+PS! Enn så lenge (håper vi får fikset det snart) så må du lage et 600x600-bilde,
+hvor bare nedre halvdel ender opp med å bli brukt.
+
 For hobby nummer to:
 
- - 800x800 jpg
+ - 600x600 jpg
  - mulig å croppe til både portrett (3/4) og litt landskap (8/7) (altså, ha det mest interessante delen av motivet i midten)
  - unngå helhvit bakgrunn (snø er greit, #fff ikke)
 
