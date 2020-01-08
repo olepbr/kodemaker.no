@@ -1,10 +1,10 @@
 (ns kodemaker-no.new-pages.blog
-  (:require [datomic-type-extensions.api :as d]
-            [ui.elements :as e]
-            [kodemaker-no.homeless :as h]
+  (:require [clojure.set :as set]
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
-            [ui.sections :as sections]
-            [clojure.set :as set])
+            [kodemaker-no.homeless :as h]
+            [ui.elements :as e]
+            [ui.icons :as icons])
   (:import java.time.format.DateTimeFormatter))
 
 (defn format-date [date]
@@ -114,10 +114,10 @@
 )
 
 (def icons
-  {:twitter sections/twitter-icon
-   :linkedin sections/linkedin-icon
-   :stack-overflow sections/stackoverflow-icon
-   :github sections/github-icon})
+  {:twitter icons/twitter
+   :linkedin icons/linkedin
+   :stack-overflow icons/stackoverflow
+   :github icons/github})
 
 (defn create-post-page [{:blog-post/keys [published updated title body] :as blog-post}]
   {:sections
