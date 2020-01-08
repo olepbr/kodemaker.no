@@ -1,4 +1,4 @@
-:title Introduksjon til bildeanalyse
+:title Introduksjon til bildeanalyse
 :author eivind
 :tech [:opencv :python :bildeanalyse]
 :published 2019-09-11

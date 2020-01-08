@@ -1,4 +1,4 @@
-:title Fleksibel layout med CSS Grids
+:title Fleksibel layout med CSS Grids
 :author christian
 :tech [:css :frontend]
 :published 2019-07-03

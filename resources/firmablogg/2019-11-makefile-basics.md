@@ -1,4 +1,4 @@
-:title Hva i $@ $< * er en Makefile
+:title Hva i $@ $< * er en Makefile
 :author nils
 :published 2019-11-20
 :tech [:make :arbeidsflyt :byggesystemer]

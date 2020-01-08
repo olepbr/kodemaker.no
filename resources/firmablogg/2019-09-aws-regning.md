@@ -1,4 +1,4 @@
-:title Når AWS-regninga blir skyhøy
+:title Når AWS-regninga blir skyhøy
 :author christian
 :tech [:aws :cloud]
 :published 2019-09-25

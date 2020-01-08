@@ -1,4 +1,4 @@
-:title Hva jeg skulle ønske noen hadde fortalt meg om React Native
+:title Hva jeg skulle ønske noen hadde fortalt meg om React Native
 :published 2019-06-11
 :author august
 :tech [:react-native :android :ios]
