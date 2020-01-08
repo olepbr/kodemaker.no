@@ -753,10 +753,16 @@ a, .clickable {
 .titled-title { width: 257px; }
 .definition-title {width: 304px;}
 
-.definition-separator {
+.definition-separator,
+.definition-separator-strong {
   border: none;
   border-top: 1px solid var(--rose-aube);
   margin-bottom: 32px;
+}
+
+.definition-separator-strong {
+  margin-top: 32px;
+  border-color: var(--chocolat-au-lait);
 }
 
 @media only screen and (max-width: 899px) {

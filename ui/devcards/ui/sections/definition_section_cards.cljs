@@ -36,3 +36,21 @@
                   {:title "Jeg velger Windows, det beste utviklingsmiljøet (for meg)"
                    :annotation "16.10.2019"
                    :url "/blogg/windoze/"})]}]}))
+
+(defcard titled-definition-section
+  (sections/definition-section
+    {:title "Teknologi"
+     :definitions
+     [{:title "Programmeringsspråk"
+       :contents [[:p.text.mbm
+                   [:a {:href "/java/"} "Java"]
+                   ", Scala, "
+                   [:a {:href "/clojure/"} "Clojure"]
+                   ", JavaScript, Groovy, "
+                   [:a {:href "/clojurescript"} "ClojureScript"]
+                   ", Ruby, Python, C++, Node.js, TypeScript, "
+                   [:a {:href "/vbscript/"} "VBScript"]]]}
+      {:title "Utviklingsverktøy"
+       :contents [[:p.text.mbm "Maven, " [:a {:href "/emacs/"} "Emacs"] ", IntelliJ IDEA"]]}
+      {:title "Versjonskontroll"
+       :contents [[:p.text.mbm "CVS, Subversion, Git"]]}]}))

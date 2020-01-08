@@ -161,10 +161,13 @@
    [:div.definition-content
     (seq contents)]])
 
-(defn definition-section [{:keys [definitions] :as params}]
+(defn definition-section [{:keys [definitions title] :as params}]
   [:div.section.definition-section {:style (l/stylish {} params)}
    [:div.content
-    [:hr.definition-separator]
+    (if title
+      (list [:h2.h3 title]
+            [:hr.definition-separator-strong])
+      [:hr.definition-separator])
     (->> definitions
          (map definition)
          (interpose [:hr.definition-separator]))
