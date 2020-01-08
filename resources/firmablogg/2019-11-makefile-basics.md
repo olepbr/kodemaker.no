@@ -1,7 +1,7 @@
 :title Hva i $@ $< * er en Makefile
 :author nils
 :published 2019-11-20
-:tech [:make]
+:tech [:make :arbeidsflyt :byggesystemer]
 
 :blurb
 

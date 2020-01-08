@@ -1,7 +1,7 @@
 :title Terningene er kastet med CSS
 :published 2019-09-04
 :author magnar
-:tech [:css :html]
+:tech [:css :html :frontend]
 
 :blurb
 

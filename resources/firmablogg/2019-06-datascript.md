@@ -1,7 +1,7 @@
 :title Data hører hjemme i en database, også på framsiden
 :published 2019-06-19
 :author odin
-:tech [:datascript :clojurescript]
+:tech [:datascript :clojurescript :functional-programming :frontend]
 
 :blurb
 

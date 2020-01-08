@@ -1,6 +1,6 @@
 :title Bildeanalyse #2: Linjer
 :author eivind
-:tech [:opencv :python]
+:tech [:opencv :python :bildeanalyse]
 :published 2019-09-18
 
 :blurb
@@ -26,7 +26,7 @@ registreringsskilt på et bilde av en bil, vinkelen på et hustak eller hva som 
 annet som dreier seg om ting som utgjør relativt rette streker på et bilde. Jeg har
 for eksempel brukt det til å kjenne igjen de forskjellige sektorene på en dartskive.
 
-##Dagens eksempel
+## Dagens eksempel
 
 Jeg har et kjøkkenbord som ser veldig fint ut når det er ryddig. Dagens noe teoretiske
 eksempel går ut på å bygge et system som kan ta bilde av dette kjøkkenbordet og finne
@@ -45,7 +45,7 @@ En observasjon jeg gjør meg er at kantene på bordet ser ut til å utgjøre gan
 distinkte linjer i bildet. Så planen min er altså å finne disse linjene og gjøre noe
 smart som avgrenser området vårt basert på dette.
 
-##Hough Transform - finne linjer
+## Hough Transform - finne linjer
 
 En vanlig måte å finne linjer i bilder er å bruke
 [Hough Transform](https://en.wikipedia.org/wiki/Hough_transform). Det er en relativt
@@ -55,7 +55,7 @@ ligger innenfor en ønsket klasse - for eksempel linjer. Den kan også brukes ti
 finne sirkler og andre fasonger. Selve teorien er godt forklart i
 [Wikipedia-artikkelen](https://en.wikipedia.org/wiki/Hough_transform).
 
-###Forarbeid - klargjøre bildet
+### Forarbeid - klargjøre bildet
 
 OpenCV sin [implementasjon av Hough Transform](https://docs.opencv.org/master/d6/d10/tutorial_py_houghlines.html)
 krever et binært bilde som input. Så vi starter med å lese inn bildet og konvertere
@@ -85,7 +85,7 @@ i grunn. Dette blir da utgangspunktet vårt for å finne linjer:
 
 ![Canny Edge Detection](/images/blogg/ba_linjer_canny.png)
 
-###Deteksjon av unike linjer
+### Deteksjon av unike linjer
 
 Nå er vi endelig klare til å prøve å finne disse linjene. Det er jo mange linjer i
 bildet, men vi vet en del om de vi er ute etter så vi får prøve å tilpasse etter det.
@@ -160,7 +160,7 @@ Jeg slang på litt printing også - for å være sikker på at vi virkelig bare 
 linjer igjen. Ser ut som vi hadde litt flaks med den avrundingen. Ofte vil man nok
 oppleve at man må jobbe litt mer for å plukke ut kun de linjene man faktisk vil ha.
 
-##Klar for å finne objekter
+## Klar for å finne objekter
 
 Nå som vi har funnet linjene som utgjør kanten på bordet har vi et perfekt
 utgangspunkt når vi skal sjekke om bordet er tomt eller ikke. Og det er et fint tema

@@ -1,6 +1,6 @@
 :title La applikasjonen din overleve et kafka-krasj
 :author nils
-:tech [:kafka]
+:tech [:kafka :mq]
 :published 2019-07-10
 
 :blurb

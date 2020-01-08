@@ -1,7 +1,7 @@
 :title Enklere backender med færre rammeverk - og Swift?
 :published 2019-08-07
 :author andre
-:tech [:swift]
+:tech [:swift :backend]
 
 :blurb
 

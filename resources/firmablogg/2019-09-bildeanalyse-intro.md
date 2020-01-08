@@ -1,6 +1,6 @@
 :title Introduksjon til bildeanalyse
 :author eivind
-:tech [:opencv :python]
+:tech [:opencv :python :bildeanalyse]
 :published 2019-09-11
 
 :blurb
@@ -21,7 +21,7 @@ en ny type dartspill. [Oche-prosjektet](https://ochedart.com/) ble vellykket, og
 tilbyr i dag sosial dart i Torggata. Jobben med dette spillet ga mersmak, og i
 dette innlegget skal jeg vise deg hvordan du kommer i gang med bildeanalyse.
 
-##Valg av språk og rammeverk
+## Valg av språk og rammeverk
 
 På universitetet gjorde vi bildeanalyse i
 [MATLAB](https://se.mathworks.com/products/matlab.html).
@@ -40,13 +40,13 @@ OpenCV-Python er egentlig bare en NumPy-matrise du kan fikle med så mye du vil.
 
 Så da ble det for min del altså OpenCV og Python. Installasjon neste.
 
-##Installere
+## Installere
 
 Jeg har en MacBook Pro - så da blir dette en slags oppskrift basert på det. Jeg har
 kjørt all koden i produksjon på Linux - så det er ikke noe stress om du ikke liker
 Mac.
 
-###Python, virtualenv + OpenCV
+### Python, virtualenv + OpenCV
 
 På min Mac er det noe gamle Python 2-greier installert fra før. Det duger ikke - så
 det første jeg gjør på en ny maskin er å installere nyeste Python (denne gir deg
@@ -81,7 +81,7 @@ pip install opencv-python
 
 Det var det. Fire kommandoer og fiks ferdig klar til å bildeanalysere verden!
 
-##Komme i gang
+## Komme i gang
 
 For å redigere Python-koden bruker jeg [Emacs](https://www.gnu.org/software/emacs/)
 med [Elpy-pakken](https://github.com/jorgenschaefer/elpy). Du kan sikkert bruke
@@ -122,7 +122,7 @@ Disse funksjonene for å vise bilder og flytte vinduer og sånt har jeg egentlig
 brukt i produksjonskode - men de er kjekke for å kjapt se resultater under
 utvikling.
 
-##Bittelitt videre
+## Bittelitt videre
 
 Ok. Nå som vi har OpenCV oppe med Python og greier kan vi prøve oss på å gjøre noe
 med bildet. Det man typisk gjør i bildeanalyse er å få bildet over i svarthvit og
@@ -205,7 +205,7 @@ jeg har brukt i mitt eksempel - med litt enkel forklaring av teorien bak:
 - [Image Thresholding](https://docs.opencv.org/master/d7/d4d/tutorial_py_thresholding.html)
 - [Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html)
 
-##Klar ferdig gå!
+## Klar ferdig gå!
 
 Alright. Det var det for denne gang. Nå bør du være i stand til å lese inn bilder og
 starte jobben med å få noe fornuftig ut av dem. Jeg kommer tilbake med fler posts

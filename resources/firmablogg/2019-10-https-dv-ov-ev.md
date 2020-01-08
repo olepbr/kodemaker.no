@@ -1,7 +1,7 @@
 :title HTTPS-sertifikater og tillitsnivåer
 :published 2019-10-23
 :author finn
-:tech [:https]
+:tech [:https :ssl :http]
 
 :blurb
 

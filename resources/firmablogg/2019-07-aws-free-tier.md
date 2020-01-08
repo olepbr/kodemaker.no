@@ -1,7 +1,7 @@
 :title AWS Free Tier
 :published 2019-06-11
 :author christian
-:tech [:aws :efs]
+:tech [:aws :efs :cloud]
 :published 2019-07-24
 
 :blurb

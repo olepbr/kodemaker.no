@@ -1,7 +1,7 @@
 :title Jeg velger Windows 10, det beste utviklingsmiljøet (for meg)
 :author august
 :published 2019-11-06
-:tech [:windows]
+:tech [:windows :arbeidsflyt]
 :blurb
 
 Linux, macOS eller Windows 10? Jeg har landa på den siste.

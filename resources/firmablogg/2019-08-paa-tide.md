@@ -7,7 +7,7 @@ https://www.linkedin.com/posts/christin-gorman-2321aa1_tid-hvor-vanskelig-kan-de
 https://www.kode24.no/guider/tid---hvor-vanskelig-kan-det-vaere/71490509
 https://www.facebook.com/christin.gorman/posts/10156236732105474
 
-:tech [:java]
+:tech [:java :design]
 
 :blurb
 Jeg har drevet med programmering i snart 20 år, og i nesten hvert eneste prosjekt jeg har vært med i har vi endt opp med problemer, misforståelser og diskusjoner rundt tid. Er det mulig? Hvor vanskelig kan det være?
