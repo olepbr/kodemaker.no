@@ -723,9 +723,9 @@ a, .clickable {
 }
 
 .icon-link svg {width: 24px; margin-right: 24px; fill: var(--chocolat-au-lait);}
-.profile-icons a {width: 24px; margin-right: 24px;}
-.profile-icons svg { width: 24px; }
-.profile-icons a:last-child {margin-right: 0;}
+.icon-links a {width: 24px; margin-right: 24px;}
+.icon-links svg { width: 24px; fill: var(--chocolat-au-lait);}
+.icon-links a:last-child {margin-right: 0;}
 
 .icon-link {
   display: flex;

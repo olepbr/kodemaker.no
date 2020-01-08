@@ -218,3 +218,9 @@
   [:div.card-grid
    (for [{:keys [content]} items]
      [:div.card-grid-item content])])
+
+(defn icon-link-row [{:keys [links class]}]
+  [:div.icon-links {:className class}
+   (for [{:keys [href title icon target]} links]
+     [:a {:href href :target target :title title}
+      icon])])

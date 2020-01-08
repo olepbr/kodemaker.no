@@ -1,6 +1,7 @@
 (ns ui.elements-cards
   (:require [dumdom.devcards :refer-macros [defcard]]
-            [ui.elements :as e]))
+            [ui.elements :as e]
+            [ui.icons :as icons]))
 
 (defcard tech-tags
   (e/tech-tags {:prefix "Laget med"
@@ -223,3 +224,15 @@ spill, grensesnitt og støtteverktøy/overvåkning."]]
     :lines ["Systemutvikler"
             "+47 934 17 480"
             "christin@kodemaker.no"]}))
+
+(defcard icon-row
+  (e/icon-link-row
+   {:links [{:href "https://www.linkedin.com/in/christianjohansen"
+             :target "_blank"
+             :icon (icons/icon :linkedin)}
+            {:href "https://twitter.com/cjno"
+             :target "_blank"
+             :icon (icons/icon :twitter)}
+            {:href "https://github.com/cjohansen"
+             :target "_blank"
+             :icon (icons/icon :github)}]}))

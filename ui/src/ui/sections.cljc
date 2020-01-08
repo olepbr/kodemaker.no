@@ -112,15 +112,7 @@
     [:div.profile-contact
      [:div [:a {:href (str "tel:" mobile)} mobile]]
      [:div [:a {:href (str "mailto:" mail)} mail]]
-     [:div.profile-icons.mtm
-      (when-let [url (:linkedin presence)]
-        [:a {:href url :target "_blank"} icons/linkedin])
-      (when-let [url (:stackoverflow presence)]
-        [:a {:href url :target "_blank"} icons/stackoverflow])
-      (when-let [url (:twitter presence)]
-        [:a {:href url :target "_blank"} icons/twitter])
-      (when-let [url (:github presence)]
-        [:a {:href url :target "_blank"} icons/github])]]
+     (e/icon-link-row {:links presence :class "mtm"})]
     [:div.profile-desc
      description]]])
 
