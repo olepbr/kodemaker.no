@@ -1,6 +1,7 @@
 (ns ui.sections.definition-section-cards
   (:require [dumdom.devcards :refer-macros [defcard]]
             [ui.elements :as e]
+            [ui.icons :as icons]
             [ui.sections :as sections]))
 
 (defcard definition-section
@@ -9,15 +10,15 @@
     [{:title "Diskusjon"
       :contents [(e/teaser
                   {:title "Twitter'n"
-                   :icon sections/twitter-icon
+                   :icon icons/twitter
                    :url "https://twitter.com"})
                  (e/teaser
                   {:title "Linker'n"
-                   :icon sections/linkedin-icon
+                   :icon icons/linkedin
                    :url "https://www.linkedin.com"})
                  (e/teaser
                   {:title "StackOverflyt"
-                   :icon sections/stackoverflow-icon
+                   :icon icons/stackoverflow
                    :url "https://stackoverflow.com"})
                  (e/teaser
                   {:title "En helt ukjent lenke"
