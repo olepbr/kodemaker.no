@@ -84,7 +84,7 @@
              hobby-2 (when dos
                        {:title (:title dos)
                         :content (f/to-html (:description dos))
-                        :image (str "/rouge-portrait" (:illustration dos))})]
+                        :image (str "/hobby-square" (:illustration dos))})]
          {:kind :hip
           :title (str (:person/given-name person) " snakker gjerne om")
           (if hobby-2 :left :single) hobby-1

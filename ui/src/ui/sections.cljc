@@ -93,7 +93,7 @@
          [:img.hip-left-img {:src (:image left)}]]]
        [:div.hip-right-box
         [:div.hip-right-inner
-         [:div.hip-right-img {:style {:background-image (str "url(" (:image right) ")")}}]
+         [:div.hip-right-img.w-style-img {:style {:background-image (str "url(" (:image right) ")")}}]
          [:div.hip-label.mbs (:title right)]
          [:div (:content right)]]]])]])
 

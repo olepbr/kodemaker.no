@@ -25,7 +25,7 @@
                  [datomic-type-extensions "2019-09-04"]
                  [java-time-dte "2018-04-18"]
                  [java-time-literals "2018-04-06"]
-                 [html5-walker "2019-10-01"]]
+                 [html5-walker "2020-01-08"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler kodemaker-no.web/app

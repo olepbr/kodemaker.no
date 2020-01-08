@@ -47,6 +47,12 @@
   (.setAttribute node attr-after (f (.getAttribute node attr-before)))
   (.removeAttribute node attr-before))
 
+(defn replace-urls-fn [f]
+  (fn [style]
+    (str/replace style #"url\((.+)\)"
+                 (fn [[_ url]]
+                   (str "url(" (f url) ")")))))
+
 (defn- tweak-page-markup [html image-asset-config request]
   (try
     (html5-walker/replace-in-document
@@ -54,6 +60,7 @@
      {
       ;; use optimized images
       [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
+      [:.w-style-img] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
 
       ;; use optimized svgs
       [:svg :use] #(replace-attr % "href" "xlink:href" (optimize-path-fn image-asset-config request))
