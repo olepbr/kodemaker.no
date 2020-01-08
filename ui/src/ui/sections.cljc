@@ -74,14 +74,28 @@
    [:div.grid-section
     (grid-section-content params)]])
 
-(defn hip-section [{:keys [title single] :as params}]
+(defn hip-section [{:keys [title single left right] :as params}]
   [:div.section.hip-section {:style (l/stylish {} (assoc params :background :blanc))}
    [:div.content
-    [:div.hip-single-box
-     [:div.hip-title.mbxl [:h3.h3 title]]
-     [:div.mbs (:title single)]
-     [:img.hip-single-img {:src (:image single)}]
-     [:div (:content single)]]]])
+    (when single
+      [:div.hip-single-box
+       [:div.hip-title [:h3.h3 title]]
+       [:div.hip-label.mbs (:title single)]
+       [:img.hip-single-img {:src (:image single)}]
+       [:div (:content single)]])
+    (when (and left right)
+      [:div.hip-pair
+       [:div
+        [:div.hip-left-box
+         [:div.hip-title [:h3.h3 title]]
+         [:div.hip-label.mbs (:title left)]
+         [:div (:content left)]
+         [:img.hip-left-img {:src (:image left)}]]]
+       [:div.hip-right-box
+        [:div.hip-right-inner
+         [:div.hip-right-img {:style {:background-image (str "url(" (:image right) ")")}}]
+         [:div.hip-label.mbs (:title right)]
+         [:div (:content right)]]]])]])
 
 (defn profile-section [{:keys [full-name title mobile mail description image presence cv] :as params}]
   [:div.section {:style (l/stylish {} params)}

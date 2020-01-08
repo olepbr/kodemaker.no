@@ -77,13 +77,18 @@
 
      ;; Snakker gjerne om
 
-     (when-let [hobbies (seq (:person/hobbies person))]
-       {:kind :hip
-        :title (str (:person/given-name person) " snakker gjerne om")
-        :single (let [hobby (first hobbies)]
-                  {:title (:title hobby)
-                   :content (f/to-html (:description hobby))
-                   :image (str "/big-bottom-half-circle" (:illustration hobby))})})
+     (when-let [[uno dos] (seq (:person/hobbies person))]
+       (let [hobby-1 {:title (:title uno)
+                      :content (f/to-html (:description uno))
+                      :image (str "/big-bottom-half-circle" (:illustration uno))}
+             hobby-2 (when dos
+                       {:title (:title dos)
+                        :content (f/to-html (:description dos))
+                        :image (str "/rouge-portrait" (:illustration dos))})]
+         {:kind :hip
+          :title (str (:person/given-name person) " snakker gjerne om")
+          (if hobby-2 :left :single) hobby-1
+          :right hobby-2}))
 
      ;; Bloggposter
 

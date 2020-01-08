@@ -658,24 +658,68 @@ a, .clickable {
   .definition-title { margin-bottom: 64px; }
 }
 
+/* hip-section */
+
 .hip-section {padding-top: 64px; padding-bottom: 64px;}
 .hip-title {width: 317px;} /* 257 (aside) + 60 (aside margin) */
+.hip-title,
+.hip-label {color: var(--chocolat-au-lait);}
 
-.hip-single-box {background: var(--chablis);}
+.hip-left-box,
+.hip-right-box,
+.hip-single-box {background: var(--chablis); position: relative;}
 
 @media only screen and (min-width: 1100px) {
-  .hip-single-box { padding: 64px 25% 80px 500px; margin: 0 320px 48px -500px; position: relative;}
+  .hip-title {margin-bottom: 80px;}
+  .hip-single-box { padding: 64px 25% 80px 500px; margin: 0 320px 48px -500px;}
   .hip-single-img {position: absolute; right: -320px; margin-top: 7px; width: 40%; max-width: 543px;}
 }
 
 @media only screen and (min-width: 589px) and (max-width: 1099px) {
-  .hip-single-box {padding: 64px 80px 190px 500px; margin: 0 80px 48px -500px; position: relative;}
+  .hip-title {margin-bottom: 64px;}
+  .hip-single-box {padding: 64px 80px 190px 500px; margin: 0 80px 48px -500px;}
   .hip-single-img {position: absolute; right: -80px; bottom: -110px; width: 458px;}
 }
 
 @media only screen and (max-width: 588px) {
-  .hip-single-box {margin: 0 -500px 272px -500px; padding: 64px 500px 80px 500px; position: relative;}
+  .hip-title {margin-bottom: 64px;}
+  .hip-single-box {margin: 0 -500px 272px -500px; padding: 64px 500px 80px 500px;}
   .hip-single-img {position: absolute; left: 50%; margin-left: -272px; bottom: -272px; width: 544px; height: 272px;}
+}
+
+.hip-right-img {background-repeat: no-repeat; background-position: center center; background-size: cover;}
+
+@media only screen and (min-width: 1100px) {
+  .hip-pair {display: flex; align-items: top;}
+  .hip-left-box {padding: 64px 80px 208px 500px; margin-left: -500px;}
+  .hip-left-img {position: absolute; margin-top: 80px; width: 43%;}
+  .hip-right-box {margin-top: 307px; margin-right: -500px; padding-right: 500px;}
+  .hip-right-inner {padding: 205px 80px 112px 80px; position: relative;}
+  .hip-right-img {position: absolute; top: -267px; left: 50%; margin-left: -167px; width: 335px; height: 400px;}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1099px) {
+  .hip-left-box {margin-right: 162px; margin-right: 18%; margin-left: -8.33vw; padding: 80px 80px 80px 8.33vw;}
+  .hip-left-img {position: absolute; width: 78%; z-index: 9999; margin-top: 80px; margin-left: -150px;}
+  .hip-right-box {margin-left: 232px; margin-left: 25%; margin-right: -8.33vw; padding: 464px 8.33vw 80px 80px;}
+  .hip-right-img {position: absolute; width: 50%; min-width: 290px; height: 400px; top: 0; right: 0;}
+}
+
+@media only screen and (max-width: 599px) {
+  .hip-left-box {margin: 0 -8.33vw 364px; padding: 64px 8.33vw 64px 8.33vw;}
+  .hip-left-img {position: absolute; margin-top: 64px; width: 600px; left: 50%; margin-left: -300px;}
+  .hip-right-box {margin: 0 -8.33vw; padding: 48px 8.33vw 80px 8.33vw;}
+  .hip-right-img {width: 100vw; height: 100vw; margin: -48px -8.33vw 48px -8.33vw;}
+}
+
+@media only screen and (max-width: 450px) {
+  .hip-left-box {margin-bottom: 314px;}
+  .hip-left-img {width: 500px; margin-left: -250px;}
+}
+
+@media only screen and (max-width: 350px) {
+  .hip-left-box {margin-bottom: 264px;}
+  .hip-left-img {width: 400px; margin-left: -200px;}
 }
 
 .icon-link svg {width: 24px; margin-right: 24px; fill: var(--chocolat-au-lait);}
