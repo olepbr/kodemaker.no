@@ -1,6 +1,7 @@
 :title Kubernetes deployments uten nedetid
 :author christian
-:tech [:kubernetes]
+:tech [:kubernetes :cd]
+:published 2020-01-08
 
 :blurb
 
