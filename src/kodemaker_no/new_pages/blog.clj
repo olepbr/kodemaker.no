@@ -27,7 +27,8 @@
   (->> post-eids
        (map #(d/entity db %))
        (filter :page/uri)
-       (remove :blog-post/archived?)))
+       (remove :blog-post/archived?)
+       (filter :blog-post/published)))
 
 (defn blog-posts-by-published [db]
   (->> db
