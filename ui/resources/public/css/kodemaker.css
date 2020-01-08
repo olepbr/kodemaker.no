@@ -898,6 +898,8 @@ a, .clickable {
 
 .link,
 .text a {color: var(--rouge);}
+.link:hover,
+.text a:hover {text-decoration: underline;}
 .text h2 a {color: inherit;}
 .article-text h2 {margin-top: 80px;}
 .article-text h3 {margin-top: 64px;}
