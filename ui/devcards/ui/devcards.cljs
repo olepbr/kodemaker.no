@@ -6,6 +6,7 @@
             ui.sections.article-section-cards
             ui.sections.banner-section-cards
             ui.sections.bruce-section-cards
+            ui.sections.cv-intro-section-cards
             ui.sections.definition-section-cards
             ui.sections.enumeration-section-cards
             ui.sections.grid-section-cards
@@ -14,7 +15,6 @@
             ui.sections.pønt-section-cards
             ui.sections.seymour-section-cards
             ui.sections.titled-section-cards
-            ui.sections.vcard-section-cards
             ui.sections.vertigo-section-cards
             ui.sections.widescreen-section-cards
             ui.typography-cards))

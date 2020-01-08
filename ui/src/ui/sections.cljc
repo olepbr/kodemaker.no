@@ -193,9 +193,18 @@
     [:div.content-l
      [:img.img {:src image :alt alt}]]]])
 
-(defn vcard-section [{:keys [image friendly-name full-name title contact-lines links] :as params}]
-  [:div.section.vcard-section
-   [:div.vcard-wrapper
+(defn cv-highlight [{:keys [title text href]}]
+  [:div.cv-highlight
+   [:h3.h4.mbs title]
+   [:p text]
+   (when href
+     [:p.mts (e/arrow-link {:href href :text "Les mer"})])])
+
+(defn cv-intro-section [{:keys [image friendly-name full-name title contact-lines links
+                                experience qualifications quote description highlights]
+                         :as params}]
+  [:div.section.cv-section
+   [:div.cv-wrapper
     {:style (->> (merge {:background :chablis
                          :pønt [{:kind :greater-than
                                  :position "left 0 top -280px"}]}
@@ -203,15 +212,29 @@
                  (l/stylish {}))}
     [:div.content.header-section
      (l/header)]
-    [:div.content.vcard-content
-     [:div.vcard-image
+    [:div.content.cv-content
+     [:div.cv-image
       [:img
        {:src image
         :alt (str "Profilbilde av " full-name)}]]
-     [:div.vcard-info
+     [:div.cv-essentials
       [:h1.h1 full-name]
-      [:p.vcard-title title]
-      [:div.vcard-details
-       [:p.h6.vcard-contact
+      [:p.cv-title title]
+      [:div.cv-details
+       [:p.h6.cv-contact
         (interpose [:br] contact-lines)]
-       (e/icon-link-row {:links links})]]]]])
+       (e/icon-link-row {:links links})]]]]
+   [:div.content.cv-intro
+    [:div.cv-intro-text
+     [:div.mbxl
+      [:h2.h4 experience]
+      [:ul.dotted (for [q qualifications] [:li q])]]
+     (when quote
+       [:div.mbxxl
+        [:div.mbm (e/blockquote {:quote (:text quote)})]
+        (when-let [source (:source quote)]
+          [:p [:cite "- " (:source quote)]])])
+     [:h2.h3 "Om " friendly-name]
+     [:div.text description]]
+    [:div.cv-highlights
+     (map cv-highlight highlights)]]])

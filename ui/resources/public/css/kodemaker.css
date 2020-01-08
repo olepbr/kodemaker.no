@@ -56,9 +56,10 @@ ol {
   margin: 0;
 }
 
-li {
-  margin-left: 32px;
-}
+ul {list-style: none}
+li {margin-left: 32px;}
+.text ul li, .dotted li {margin: 0 0 16px 20px;}
+.text ul li::before, .dotted li::before {content: "•"; color: var(--rouge); display: inline-block; width: 1em; margin-left: -1em}
 
 dd {
   margin: 0;
@@ -610,12 +611,12 @@ a, .clickable {
 
 /* CV section */
 
-.vcard-wrapper {
+.cv-wrapper {
   margin: 0 -8.33vw;
   padding: 0 8.33vw;
 }
 
-.vcard-image {
+.cv-image {
   height: 380px;
   margin-bottom: 32px;
   margin-left: -8.33vw;
@@ -623,53 +624,94 @@ a, .clickable {
   position: relative;
 }
 
-.vcard-image img {
+.cv-image img {
   display: block;
   width: 91.67vw;
 }
 
-.vcard-contact,
-.vcard-title,
-.vcard-details {padding-bottom: 32px;}
+.cv-contact,
+.cv-title,
+.cv-details,
+.cv-intro h2 {padding-bottom: 32px;}
+
+.cv-intro {clear: both; overflow: hidden;}
+.cv-intro-text {margin: 50px 0 80px;}
+.cv-highlight {margin-bottom: 64px;}
 
 @media only screen and (min-width: 500px) {
-  .vcard-wrapper {min-height: 344px;}
-  .vcard-image img {max-width: 100%;}
+  .cv-image img {max-width: 100%;}
+  .cv-intro-text {margin: 100px 0 120px;}
 
-  .vcard-image {
-    float: left;
+  .cv-image {
+    position: absolute;
     height: auto;
     margin-bottom: 0;
     margin-right: 96px;
     width: 300px;
   }
 
-  .vcard-info {
-    overflow: hidden;
-    padding-top: 56px;
+  .cv-essentials {
+    min-height: 344px;
+    padding: 56px 0 0 315px;
+  }
+
+  .cv-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .vcard-image {
-    margin-left: -8.33vw;
+  .cv-image {
+    margin-left: -80px;
     width: 384px;
   }
 
-  .vcard-image img {max-width: 100%;}
-  .vcard-info {padding-bottom: 80px;}
-  .vcard-title {padding-bottom: 54px;}
+  .cv-image img {max-width: 100%;}
+  .cv-title {padding-bottom: 54px;}
 
-  .vcard-details {
+  .cv-essentials {
+    min-height: 420px;
+    padding-left: 400px;
+  }
+
+  .cv-details {
     align-items: flex-end;
     display: flex;
     padding-bottom: 0;
   }
 
-  .vcard-contact {
+  .cv-contact {
     margin-right: 100px;
     padding-bottom: 0;
   }
+
+  .cv-intro {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: visible;
+    clear: none;
+  }
+
+  .cv-highlights {
+    flex: 0 0 400px;
+    padding: 180px 96px 0 0;
+    display: block;
+  }
+
+  .cv-intro-text {
+    margin: 80px 0;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .cv-essentials {
+    min-height: 0;
+    padding-bottom: 80px;
+  }
+
+  .cv-highlights {padding-top: 240px;}
 }
 
 /* Profile section */
@@ -1015,10 +1057,11 @@ a, .clickable {
   font-weight: 500;
 }
 
-.h6, .text h6, .article-text h5 {
+.h6, .text h6, .article-text h5, cite {
   color: var(--chocolat-au-lait);
   font-size: 21px;
   font-weight: normal;
+  font-style: normal;
 }
 
 .article-text .codehilite {
@@ -1055,13 +1098,10 @@ a, .clickable {
     font-size: 30px;
     font-weight: 500;
   }
-}
 
-/* "Mobil" */
-@media only screen and (max-width: 420px) {
-  .h0 {
-    font-size: 45.5px;
-    line-height: 0.9;
+  .h3, .text h3 {
+    font-size: 30px;
+    font-weight: 500;
   }
 }
 
@@ -1074,6 +1114,18 @@ a, .clickable {
 .mtl, .mvl {margin-top: 64px;}
 .mbl, .mvl {margin-bottom: 64px;}
 .mbxl {margin-bottom: 80px;}
+.mbxxl {margin-bottom: 120px;}
+
+/* "Mobil" */
+@media only screen and (max-width: 420px) {
+  .h0 {
+    font-size: 45.5px;
+    line-height: 0.9;
+  }
+
+  .mbxl {margin-bottom: 64px;}
+  .mbxxl {margin-bottom: 80px;}
+}
 
 .tags {
   text-transform: uppercase;
