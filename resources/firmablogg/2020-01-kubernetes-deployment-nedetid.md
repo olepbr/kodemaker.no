@@ -7,14 +7,14 @@
 
 Når du deployer appen din til det romskipet av en rigg som er Kubernetes så
 skjer det uten noen form for nedetid, ikkesant? Dårlige nyheter: med mindre du
-har gått veldig aktiv inn for det har tjenestene dine svært sannsynlig litt
+har gått veldig aktivt inn for det har tjenestene dine svært sannsynlig litt
 nedetid under deployment. Men hvorfor?
 
 :body
 
 Når du deployer appen din til det romskipet av en rigg som er Kubernetes så
 skjer det uten noen form for nedetid, ikkesant? Dårlige nyheter: med mindre du
-har gått veldig aktiv inn for det har tjenestene dine svært sannsynlig litt
+har gått veldig aktivt inn for det har tjenestene dine svært sannsynlig litt
 nedetid under deployment. Men hvorfor?
 
 ## Har du et problem?
