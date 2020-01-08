@@ -38,8 +38,8 @@
  :aws-vpc :cloud
  :azure :cloud
  :babel :tool
- :bankid :library
  :bamboo :tool
+ :bankid :library
  :bash :proglang
  :browser-devtools :devtools
  :browserify :library
@@ -57,14 +57,14 @@
  :clojure-spec :library
  :cobol :proglang
  :cocoapods :library
- :codenarc :tool
  :code-review :methodology
+ :codenarc :tool
  :coffeescript :proglang
  :collectionjson :specification
  :compass :library
  :complus :library
- :component :library
  :compojure :library
+ :component :library
  :concourse :devops
  :confluence :tool
  :cordova :frontend
@@ -77,8 +77,8 @@
  :csharp :proglang
  :css :frontend
  :cvs :vcs
- :cygwin :devtool
  :cxf :server
+ :cygwin :devtool
  :dashing :tool
  :datadog :devops
  :datascript :database
@@ -88,10 +88,10 @@
  :ddd :methodology
  :delphi :proglang
  :digital-ocean :cloud
- :dojo :library
- :domain-modeling :methodology
  :docker-cloud :cloud
  :docker-swarm :cloud
+ :dojo :library
+ :domain-modeling :methodology
  :dotnet :framework
  :dreamweaver-mx :devtools
  :dynamodb :database
@@ -121,12 +121,11 @@
  :fusioncharts :library
  :gcd :server
  :geb :library
- :gerrit :tool
  :geronimo :server
+ :gerrit :tool
  :git-svn :vcs
  :github :vcs
  :gitlab :vcs
- :mks :vcs
  :glassfish :server
  :google-adwords :tool
  :google-analytics :tool
@@ -145,7 +144,6 @@
  :grunt :library
  :gwt :framework
  :h2db :database
- :heroku :cloud
  :hadoop :library
  :hamcrest :library
  :haproxy :devops
@@ -153,6 +151,7 @@
  :hazlecast :server
  :hbase :server
  :hdfs :library
+ :heroku :cloud
  :hibernate-search :library
  :honeysql :library
  :hpunix :os
@@ -176,19 +175,19 @@
  :jasperreport :server
  :java-ee :proglang
  :javafx :library
- :jdbc :library
- :jersey :library
- :jenkins :devops
- :jetty :server
- :jira :tool
  :jaxrs :tool
  :jboss :server
  :jboss-messaging :server
  :jboss-portal :server
  :jbossws :library
  :jbuilder :library
- :joomla :server
+ :jdbc :library
+ :jenkins :devops
+ :jersey :library
+ :jetty :server
+ :jira :tool
  :jool :library
+ :joomla :server
  :jpa :library
  :jquery :frontend
  :jquery-mobile :library
@@ -203,9 +202,9 @@
  :karma :library
  :kibana :server
  :koha :library
- :kubernetes :devops
- :krypto :methodology
  :kotlin :proglang
+ :krypto :methodology
+ :kubernetes :devops
  :leiningen :devtools
  :less :frontend
  :letsencrypt :security
@@ -231,17 +230,18 @@
  :metrics :methodology
  :micro-services :methodology
  :midje :library
+ :mks :vcs
  :mocha :library
  :mockito :library
- :mongodb :database
  :mongo-queue :server
+ :mongodb :database
  :monit :devops
  :mono :framework
- :mule :server
  :mqseries-integrator :server
  :ms-access :database
  :ms-exchange :server
  :mscpp :proglang
+ :mule :server
  :mysql :database
  :neo4j :database
  :netty :server
@@ -267,8 +267,8 @@
  :oracle-portal :server
  :osx :os
  :packer :devops
- :pascal :proglang
  :pair-programming :methodology
+ :pascal :proglang
  :passenger :server
  :peoplesoft-crm :server
  :phantomjs :library
@@ -278,13 +278,13 @@
  :play :framework
  :pmd :tool
  :postgresql :database
- :puppet :devops
- :puppeteer :frontend
  :prolog :proglang
  :prototype :library
+ :puppet :devops
+ :puppeteer :frontend
+ :pwa :frontend
  :pygments :library
  :python :proglang
- :pwa :frontend
  :quartz :library
  :rails :framework
  :rake :library
@@ -300,13 +300,13 @@
  :rest :specification
  :retrospectives :methodology
  :ring :library
+ :rspec :library
  :ruby :proglang
  :rubymine :devtools
  :rust :proglang
- :rspec :library
- :sap :server
  :saltstack :devops
  :saml :security
+ :sap :server
  :sass :frontend
  :sbt :devtools
  :scalatra :framework
@@ -328,22 +328,22 @@
  :spring-integration :framework
  :spring-mvc :framework
  :spring-security :security
- :story-points :methodology
- :sybase :database
- :systemjs :devtools
+ :sqlite :database
+ :sqlserver :database
+ :squirrel-sql :library
  :sse :frontend
  :ssh :library
  :stash :vcs
  :static-analysis :methodology
+ :statsd :server
+ :story-points :methodology
  :struts :framework
  :struts2 :framework
- :svn :vcs
- :sqlite :database
- :sqlserver :database
- :squirrel-sql :library
- :statsd :server
  :sublime-text :devtools
+ :svn :vcs
  :swing :library
+ :sybase :database
+ :systemjs :devtools
  :teamcity :devops
  :terminal :devtools
  :terraform :devops
@@ -372,28 +372,25 @@
  :vim :devtools
  :virtualisering :devops
  :visibroker :library
- :visualage :devtools
  :visual-basic :proglang
  :visual-source-safe :vcs
  :visual-studio :devtools
+ :visualage :devtools
  :vmware-esxi :devops
  :watir :library
- :webwork :framework
- :wicket :library
- :windows :os
  :wcf :framework
  :webgl :frontend
  :weblogic :server
  :webpack :tool
  :websockets :frontend
  :websphere-studio :server
+ :webwork :framework
+ :wicket :library
  :wiki :methodology
+ :windows :os
+ :wordpress :server
  :wpf :framework
  :wslite :library
- :wordpress :server
- :yarn :tool
- :zeromq :server
- :zookeeper :library
  :xalan :server
  :xcode :devtools
  :xerces :tool
@@ -401,4 +398,7 @@
  :xmlspy :tool
  :xslt :specification
  :xtractor :library
+ :yarn :tool
+ :zeromq :server
+ :zookeeper :library
  }
