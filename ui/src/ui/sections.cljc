@@ -192,3 +192,26 @@
    [:div.content
     [:div.content-l
      [:img.img {:src image :alt alt}]]]])
+
+(defn vcard-section [{:keys [image friendly-name full-name title contact-lines links] :as params}]
+  [:div.section.vcard-section
+   [:div.vcard-wrapper
+    {:style (->> (merge {:background :chablis
+                         :pønt [{:kind :greater-than
+                                 :position "left 0 top -280px"}]}
+                        params)
+                 (l/stylish {}))}
+    [:div.content.header-section
+     (l/header)]
+    [:div.content.vcard-content
+     [:div.vcard-image
+      [:img
+       {:src image
+        :alt (str "Profilbilde av " full-name)}]]
+     [:div.vcard-info
+      [:h1.h1 full-name]
+      [:p.vcard-title title]
+      [:div.vcard-details
+       [:p.h6.vcard-contact
+        (interpose [:br] contact-lines)]
+       (e/icon-link-row {:links links})]]]]])

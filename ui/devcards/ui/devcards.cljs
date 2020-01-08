@@ -14,6 +14,7 @@
             ui.sections.pønt-section-cards
             ui.sections.seymour-section-cards
             ui.sections.titled-section-cards
+            ui.sections.vcard-section-cards
             ui.sections.vertigo-section-cards
             ui.sections.widescreen-section-cards
             ui.typography-cards))
