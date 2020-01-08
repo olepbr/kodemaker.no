@@ -41,7 +41,11 @@
        (sort-by :blog-post/published)
        reverse))
 
-(defn relevant-posts [post]
+(defn relevant-posts
+  "Picks posts that share at least one tech with the reference post. Returns a
+  list of posts sorted by the most relevant first (most shared techs). Ties are
+  weighted in favor of posts with the same author."
+  [post]
   (let [tech (:blog-post/tech post)
         author (:blog-post/author post)
         db (d/entity-db post)]
@@ -67,17 +71,33 @@
       (= x curr) (remove nil? [newer (first xs)])
       :default (recur curr xs))))
 
-(defn related-posts [post]
-  (let [latest (blog-posts-by-published (d/entity-db post))
+(defn related-posts
+  "Tries to pick n related posts to present as further reading. It's a bit
+  involved, but here's our goals for this:
+
+  1. It should be possible to eventually visit every post by following these
+     links from post to post
+  2. If there are relevant posts, like part 2, same topic etc, some of those
+     should be included
+  3. Most posts should have something new as related
+
+  At the very least, include the post published before this one - if this is the
+  first post, include the latest one published. This creates a circle, so one
+  can reach every post. Fill the remaining spots with topically related posts,
+  if possible, and pad out the remaining spots with the post published after
+  this one, then just some newly published posts."
+  [post & n]
+  (let [n (or n 5)
+        latest (blog-posts-by-published (d/entity-db post))
         relevant (relevant-posts post)
         [next-post previous-post] (adjacent-posts latest post)]
-    (->> (concat (take 3 relevant)
-                 [next-post previous-post]
-                 (take 4 latest))
+    (->> (concat (take (dec n) relevant)
+                 [(or previous-post (first latest)) next-post]
+                 (take (inc n) latest))
          (remove nil?)
          (h/distinct-by :db/id)
          (remove #(= (:db/id %) (:db/id post)))
-         (take 3)
+         (take n)
          (sort-by :blog-post/published)
          reverse)))
 
