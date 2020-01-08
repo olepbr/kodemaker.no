@@ -5,7 +5,7 @@ body .com-rigsomelight-devcards-panel-heading {background: #fffafa;}
 body .com-rigsomelight-devcards-container {width: auto; max-width: 1882px;}
 body .com-rigsomelight-devcards-devcard-padding {padding: 0; margin-top: 0; border: none; border-top: 1px solid #fffafa;}
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
   body .com-rigsomelight-devcards-devcard-padding {
     border: 20px solid #fffafa;
     border-top-width: 1px;
