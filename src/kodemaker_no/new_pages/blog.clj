@@ -132,10 +132,14 @@
                                  (when updated
                                    (str ", sist oppdatert " (format-date updated))))
                 :content (f/to-html body)})
-     :pønt [{:kind :greater-than
-             :position "top -440px left 90px"}
-            {:kind :descending-line
-             :position "top -540px right 90px"}]}
+     :pønt (->> [{:kind :dotgrid
+                  :position "top -50px right 0"}
+                 {:kind :descending-line
+                  :position "top -240px right 0"}
+                 {:kind :ascending-line
+                  :position "top 0 right -50px"}]
+                shuffle
+                (take 1))}
     {:kind :container
      :class "container-section-tight"
      :content (let [author (author blog-post)]
@@ -177,18 +181,39 @@
                 :lines [(e/tech-tags {:prefix "Om"
                                       :techs (techs post)})]}))}]})
 
+(def pønts
+  [{:kind :dotgrid
+    :position "top 50px right -100px"}
+   {:kind :descending-line
+    :position "top -240px right 0"}
+   {:kind :ascending-line
+    :position "top 0 left -150px"}
+   {:kind :greater-than
+    :position "top -400px left -450px"}
+   {:kind :less-than
+    :position "top -400px right -450px"}])
+
+(defn pønt-a-few [sections]
+  (loop [sections (vec sections)
+         idx 0
+         skip (cycle (shuffle [2 3 4]))
+         pønts (cycle (shuffle (concat pønts pønts)))]
+    (if (<= (count sections) idx)
+      sections
+      (recur (assoc-in sections [idx :pønt] (take 1 pønts))
+             (+ idx (first skip))
+             (rest skip)
+             (rest pønts)))))
+
 (defn create-index-page [db]
   {:sections
    (concat
     [{:kind :header
-      :bg-color :blanc
-      :pønt [{:kind :descending-line
-              :position "left 33% top 0"}
-             {:kind :descending-line
-              :position "left 80vw top 0"}]}]
+      :bg-color :blanc}]
     (->> (blog-posts-by-published db)
          (map blog-post-teaser)
          (map (fn [color section]
                 (assoc section :background color))
-              (cycle [:blanc :blanc-rose])))
+              (cycle [:blanc :blanc-rose]))
+         pønt-a-few)
     [{:kind :footer}])})
