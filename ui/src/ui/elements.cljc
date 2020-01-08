@@ -186,14 +186,14 @@
                   :src image}])
      aside]]])
 
-(defn simple-article [{:keys [title annotation content]}]
+(defn simple-article [{:keys [title tags annotation content]}]
   [:div.article-wrapper
    [:div.simple-article
-    (when title
+    (when (or title tags annotation)
       [:div.mbl
-       [:h1.h1 title]
-       (when annotation
-         [:p.annotation annotation])])
+       (when title [:h1.h1 title])
+       (when tags [:div.tags.mvs tags])
+       (when annotation [:p.annotation annotation])])
     [:div.text.article-text content]]])
 
 (defn stats [{:keys [icon-type icon-count stats]}]

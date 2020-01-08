@@ -126,6 +126,7 @@
     {:kind :container
      :content (e/simple-article
                {:title title
+                :tags (e/tech-tags {:techs (techs blog-post)})
                 :annotation (str "Publisert "
                                  (format-date published)
                                  (when updated
