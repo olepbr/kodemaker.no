@@ -93,7 +93,7 @@
 
 (defn video-thumb [params]
   [:div
-   [:div.video-thumb {:className (:class params)}
+   [:a.video-thumb {:href (:url params) :className (:class params)}
     [:img.img {:src (:img params)}]
     [:div.video-overlay [:div.video-indicator]]]
    [:p.tags.video-tags (:tags params)]
