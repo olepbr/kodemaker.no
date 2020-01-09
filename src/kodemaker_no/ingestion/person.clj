@@ -1,10 +1,7 @@
 (ns kodemaker-no.ingestion.person
   (:require [clojure.java.io :as io]
             [clojure.string :as str]
-            [kodemaker-no.homeless :refer [map-vals keep-vals parse-local-date
-                                           parse-local-date-time prep-tech-list
-                                           prep-techs qualify select-renamed-keys
-                                           update-in-existing]]
+            [kodemaker-no.homeless :as h]
             [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
@@ -72,13 +69,13 @@
 
 (defn presentation-data [presentation]
   (-> presentation
-      (select-renamed-keys presentation-keys)
+      (h/select-renamed-keys presentation-keys)
       (merge
-       (select-renamed-keys (:urls presentation) presentation-url-keys)
-       (select-renamed-keys (:location presentation) location-keys)
-       (select-renamed-keys (:call-to-action presentation) call-to-action-keys))
-      (update-in-existing [:presentation/techs] prep-techs)
-      (update-in-existing [:presentation/date] parse-local-date)))
+       (h/select-renamed-keys (:urls presentation) presentation-url-keys)
+       (h/select-renamed-keys (:location presentation) location-keys)
+       (h/select-renamed-keys (:call-to-action presentation) call-to-action-keys))
+      (h/update-in-existing [:presentation/techs] h/prep-techs)
+      (h/update-in-existing [:presentation/date] h/parse-local-date)))
 
 (def screencast-keys
   {:title :screencast/title
@@ -92,9 +89,9 @@
 
 (defn screencast-data [screencast]
   (-> screencast
-      (update-in-existing [:published] parse-local-date)
-      (update-in-existing [:tech] prep-techs)
-      (select-renamed-keys screencast-keys)))
+      (h/update-in-existing [:published] h/parse-local-date)
+      (h/update-in-existing [:tech] h/prep-techs)
+      (h/select-renamed-keys screencast-keys)))
 
 (def tech-keys
   {:using-at-work :person/using-at-work
@@ -115,11 +112,11 @@
 
 (defn project-data [project]
   (-> project
-      (update-in-existing [:employer] (fn [employer] {:db/ident (qualify "employer" employer)}))
-      (update-in-existing [:tech] prep-techs)
-      (update-in-existing [:start] #(parse-local-date (str % "-01")))
-      (update-in-existing [:end] #(parse-local-date (str % "-01")))
-      (select-renamed-keys project-keys)))
+      (h/update-in-existing [:employer] (fn [employer] {:db/ident (h/qualify "employer" employer)}))
+      (h/update-in-existing [:tech] h/prep-techs)
+      (h/update-in-existing [:start] #(h/parse-local-date (str % "-01")))
+      (h/update-in-existing [:end] #(h/parse-local-date (str % "-01")))
+      (h/select-renamed-keys project-keys)))
 
 (def open-source-keys
   {:url :oss-project/url
@@ -129,8 +126,8 @@
 
 (defn open-source-project [project]
   (-> project
-      (update-in-existing [:tech] prep-techs)
-      (select-renamed-keys open-source-keys)))
+      (h/update-in-existing [:tech] h/prep-techs)
+      (h/select-renamed-keys open-source-keys)))
 
 (def presentation-product-keys
   {:title :presentation-product/title
@@ -142,8 +139,8 @@
 
 (defn presentation-product-data [kind presentation]
   (-> presentation
-      (select-renamed-keys presentation-product-keys)
-      (update-in-existing [:presentation-product/techs] prep-techs)
+      (h/select-renamed-keys presentation-product-keys)
+      (h/update-in-existing [:presentation-product/techs] h/prep-techs)
       (assoc :presentation-product/kind kind)))
 
 (def side-project-keys
@@ -154,8 +151,8 @@
 
 (defn side-project-data [side-project]
   (-> side-project
-      (select-renamed-keys side-project-keys)
-      (update-in-existing [:side-project/techs] prep-techs)
+      (h/select-renamed-keys side-project-keys)
+      (h/update-in-existing [:side-project/techs] h/prep-techs)
       (cond-> (:link side-project)
         (assoc :side-project/url (-> side-project :link :url)
                :side-project/link-text (-> side-project :link :text)))))
@@ -169,41 +166,41 @@
 
 (defn recommendation-data [idx recommendation]
   (-> recommendation
-      (update-in-existing [:tech] prep-techs)
-      (select-renamed-keys recommendation-keys)
+      (h/update-in-existing [:tech] h/prep-techs)
+      (h/select-renamed-keys recommendation-keys)
       (assoc :list/idx idx)
       (cond-> (:link recommendation)
         (assoc :recommendation/url (-> recommendation :link :url)
                :recommendation/link-text (-> recommendation :link :text)))))
 
 (defn profile-data [file-name person]
-  (let [ident (qualify "person" (:id person))
+  (let [ident (h/qualify "person" (:id person))
         presentations (concat (:presentations person)
                               (:upcoming person)
                               (:appearances person))]
     (-> person
-        (select-renamed-keys person-keys)
+        (h/select-renamed-keys person-keys)
         (assoc :db/ident ident)
         (assoc :person/presentations (mapv presentation-data presentations))
-        (update-in-existing [:person/screencasts] #(mapv screencast-data %))
-        (update-in-existing [:person/projects] #(mapv project-data %))
-        (update-in-existing [:person/open-source-projects] #(map open-source-project %))
-        (update-in-existing [:person/open-source-contributions] #(map open-source-project %))
-        (update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
-        (update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
-        (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
-        (update-in-existing [:person/endorsements] #(mapv (fn [idx item] (assoc item :list/idx idx)) (range) %))
-        (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
-        (update-in-existing [:person/start-date] parse-local-date-time)
-        (update-in-existing [:person/innate-skills] prep-techs)
-        (update-in-existing [:person/experience-since] str)
-        (update-in-existing [:person/experience-since] #(Integer/parseInt %))
+        (h/update-in-existing [:person/screencasts] #(mapv screencast-data %))
+        (h/update-in-existing [:person/projects] #(mapv project-data %))
+        (h/update-in-existing [:person/open-source-projects] #(map open-source-project %))
+        (h/update-in-existing [:person/open-source-contributions] #(map open-source-project %))
+        (h/update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
+        (h/update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
+        (h/update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
+        (h/update-in-existing [:person/endorsements] #(mapv (fn [idx item] (assoc item :list/idx idx)) (range) %))
+        (h/update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
+        (h/update-in-existing [:person/start-date] h/parse-local-date-time)
+        (h/update-in-existing [:person/innate-skills] h/prep-techs)
+        (h/update-in-existing [:person/experience-since] str)
+        (h/update-in-existing [:person/experience-since] #(Integer/parseInt %))
         (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
         (assoc :person/full-name (str/join " " (:name person)))
         (assoc :person/profile-active? (get person :profile-active? true))
         (assoc :person/quit? (get person :quit? false))
-        (merge (map-vals prep-techs (select-renamed-keys (:tech person) tech-keys)))
+        (merge (h/map-vals h/prep-techs (h/select-renamed-keys (:tech person) tech-keys)))
         (maybe-pagify file-name))))
 
 (def cv-keys
@@ -212,7 +209,7 @@
 
 (defn prep-tech-preferences [techs]
   (->> techs
-       prep-techs
+       h/prep-techs
        (map-indexed (fn [idx tech]
                       {:list/idx idx
                        :list/ref tech}))))
@@ -225,9 +222,9 @@
              :cv/person (select-keys profile [:db/ident])}
             (select-keys person [:cv/description])
             (-> (get-in person [:cv :default])
-                (select-renamed-keys cv-keys)
-                (update-in-existing [:cv/preferred-techs] prep-tech-preferences)
-                (update-in-existing [:cv/exclude-techs] prep-techs)))]))
+                (h/select-renamed-keys cv-keys)
+                (h/update-in-existing [:cv/preferred-techs] prep-tech-preferences)
+                (h/update-in-existing [:cv/exclude-techs] h/prep-techs)))]))
 
 (def blog-post-keys
   {:blog-post/external-url :url
@@ -240,11 +237,11 @@
 
 (defn blog-post-data [author-id blog-post]
   (-> blog-post
-      (keep-vals blog-post-keys)
+      (h/keep-vals blog-post-keys)
       (assoc :blog-post/author {:db/ident author-id})
-      (update-in-existing [:blog-post/published] parse-local-date)
-      (update-in-existing [:blog-post/techs] prep-techs)
-      (update-in-existing [:blog-post/tech-list] prep-tech-list)))
+      (h/update-in-existing [:blog-post/published] h/parse-local-date)
+      (h/update-in-existing [:blog-post/techs] h/prep-techs)
+      (h/update-in-existing [:blog-post/tech-list] h/prep-tech-list)))
 
 (defn profile-pics [{:keys [id]}]
   (some->> (str "public/foto/profiles/" (name id))
@@ -256,7 +253,7 @@
            (map #(second (str/split % #"public")))))
 
 (defn create-tx [file-name person]
-  (let [person-ident (qualify "person" (:id person))
+  (let [person-ident (h/qualify "person" (:id person))
         profile (profile-data file-name person)]
     (concat
      [(let [pics (profile-pics person)]
