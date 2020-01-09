@@ -89,7 +89,7 @@
                                   (:blog-post/external-url blog-post))]
                       (e/teaser
                        {:title (:blog-post/title blog-post)
-                        :tags (e/tech-tags {:techs (h/unwrap-ident-list blog-post :blog-post/tech-list)
+                        :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list blog-post :blog-post/tech-list))
                                             :class "tags"})
                         :url url
                         :content (f/to-html (:blog-post/blurb blog-post))
@@ -110,7 +110,7 @@
                                   {:class (str style " " class)
                                    :img (str "/" style "/" (:presentation/thumb pres))
                                    :tags (e/tech-tags {:class "tags"
-                                                       :techs (h/unwrap-ident-list pres :presentation/tech-list)})
+                                                       :techs (take 5 (h/unwrap-ident-list pres :presentation/tech-list))})
                                    :url (or (:page/uri pres)
                                             (:presentation/video-url pres))
                                    :title (:presentation/title pres)})})
