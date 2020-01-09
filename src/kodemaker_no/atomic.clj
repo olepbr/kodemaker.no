@@ -3,6 +3,7 @@
             [clojure.java.io :as io]
             [datomic-type-extensions.api :as d]
             [java-time-dte.install :refer [define-dte]]
+            [java-time-literals.core :as jte]
             [kodemaker-no.images :as images]
             [kodemaker-no.new-pages.article-page :as article-page]
             [kodemaker-no.new-pages.blog :as blog]
@@ -14,9 +15,11 @@
             [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
 
+::jte/keep
+
 (define-dte :data/edn :db.type/string
   [this] (pr-str this)
-  [^String s] (edn/read-string s))
+  [^String s] (read-string s))
 
 (defn create-database [uri]
   (d/create-database uri)
