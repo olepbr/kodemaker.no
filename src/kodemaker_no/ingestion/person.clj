@@ -82,20 +82,22 @@
       (h/update-in-existing [:presentation/date] h/parse-local-date)))
 
 (def screencast-keys
-  {:title :screencast/title
-   :blurb :screencast/blurb
-   :description :screencast/description
-   :illustration :screencast/illustration
-   :tech :screencast/techs
-   :published :screencast/published
-   :url :screencast/url
+  {:screencast/title :title
+   :screencast/blurb :blurb
+   :screencast/description :description
+   :screencast/illustration :illustration
+   :screencast/techs :tech
+   :screencast/tech-list :tech
+   :screencast/published :published
+   :screencast/url :url
    :cv/blurb :cv/blurb})
 
 (defn screencast-data [screencast]
   (-> screencast
-      (h/update-in-existing [:published] h/parse-local-date)
-      (h/update-in-existing [:tech] h/prep-techs)
-      (h/select-renamed-keys screencast-keys)))
+      (h/keep-vals screencast-keys)
+      (h/update-in-existing [:screencast/published] h/parse-local-date)
+      (h/update-in-existing [:screencast/techs] h/prep-techs)
+      (h/update-in-existing [:screencast/tech-list] h/prep-tech-list)))
 
 (def tech-keys
   {:using-at-work :person/using-at-work

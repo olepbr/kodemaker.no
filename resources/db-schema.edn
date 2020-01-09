@@ -263,6 +263,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :screencast/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  {:db/ident :screencast/published
   :dte/valueType :java.time/local-date
   :db/cardinality :db.cardinality/one}
