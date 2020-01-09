@@ -207,3 +207,6 @@
         (empty? xs) res
         (contains? used xk) (recur used res (rest xs))
         :default (recur (conj used xk) (conj res x) (rest xs))))))
+
+(defn unwrap-idents [entity k]
+  (map (partial d/entity (d/entity-db entity)) (k entity)))
