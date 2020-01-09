@@ -135,6 +135,7 @@
  :jstl "JSTL"
  :junit "JUnit"
  :ldap "LDAP"
+ :less "LESS"
  :letsencrypt "Let's Encrypt"
  :lighttable "Light Table"
  :lisp-flavoured-erlang "Lisp Flavoured Erlang"
