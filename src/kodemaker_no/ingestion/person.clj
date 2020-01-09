@@ -161,15 +161,17 @@
       (assoc :presentation-product/kind kind)))
 
 (def side-project-keys
-  {:title :side-project/title
-   :description :side-project/description
-   :illustration :side-project/illustration
-   :tech :side-project/techs})
+  {:side-project/title :title
+   :side-project/description :description
+   :side-project/illustration :illustration
+   :side-project/techs :tech
+   :side-project/tech-list :tech})
 
 (defn side-project-data [side-project]
   (-> side-project
-      (h/select-renamed-keys side-project-keys)
+      (h/keep-vals side-project-keys)
       (h/update-in-existing [:side-project/techs] h/prep-techs)
+      (h/update-in-existing [:side-project/tech-list] h/prep-tech-list)
       (cond-> (:link side-project)
         (assoc :side-project/url (-> side-project :link :url)
                :side-project/link-text (-> side-project :link :text)))))

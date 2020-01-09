@@ -152,6 +152,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :side-project/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  ;; recommendations
  {:db/ident :recommendation/title
   :db/valueType :db.type/string
