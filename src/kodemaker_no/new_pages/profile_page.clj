@@ -26,7 +26,7 @@
       :mobile (:person/phone-number person)
       :mail (:person/email-address person)
       :cv {:text "Se full CV"
-           :url (str "/cv/" (name (:db/ident person)) "/")}
+           :url (:page/uri (:cv/_person person))}
       :description (f/markdown (:person/description person))
       :presence (person/prep-presence-links (:person/presence person))
       :pønt [{:kind :greater-than
@@ -127,13 +127,17 @@
                               seq)]
        {:kind :titled
         :title "Prosjekter"
-        :contents (for [project projects]
-                    [:div
-                     [:div.h4-light (:project/customer project)]
-                     (e/tech-tags {:class "tags"
-                                   :techs (take 5 (unwrap-idents project :project/tech))})
-                     [:div.mts
-                      (f/to-html (:project/description project))]])})
+        :contents (->
+                   (for [project projects]
+                     [:div
+                      [:div.h4-light (:project/customer project)]
+                      (e/tech-tags {:class "tags"
+                                    :techs (take 5 (unwrap-idents project :project/tech))})
+                      [:div.mts
+                       (f/to-html (:project/description project))]])
+                   vec (conj
+                        (e/arrow-link {:text "Se flere prosjekter"
+                                       :href (:page/uri (:cv/_person person))})))})
 
 
      {:kind :footer}]
