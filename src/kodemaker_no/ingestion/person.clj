@@ -1,5 +1,6 @@
 (ns kodemaker-no.ingestion.person
   (:require [clojure.java.io :as io]
+            [clojure.set :as set]
             [clojure.string :as str]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.ingestion.video :as video]))
@@ -44,16 +45,16 @@
     person))
 
 (def presentation-keys
-  {:id :db/ident
-   :title :presentation/title
-   :description :presentation/description
-   :blurb :presentation/description
-   :tech :presentation/techs
-   :event :presentation/event-name
-   :date :presentation/date
-   :direct-link? :presentation/direct-link?
-   :url :presentation/source-url
-   :thumb :presentation/thumb})
+  {:db/ident :id
+   :presentation/title :title
+   :presentation/description :description
+   :presentation/techs :tech
+   :presentation/tech-list :tech
+   :presentation/event-name :event
+   :presentation/date :date
+   :presentation/direct-link? :direct-link?
+   :presentation/source-url :url
+   :presentation/thumb :thumb})
 
 (def presentation-url-keys
   {:video :presentation/video-url
@@ -70,12 +71,14 @@
 
 (defn presentation-data [presentation]
   (-> presentation
-      (h/select-renamed-keys presentation-keys)
+      (set/rename-keys {:blurb :description})
+      (h/keep-vals presentation-keys)
       (merge
        (h/select-renamed-keys (:urls presentation) presentation-url-keys)
        (h/select-renamed-keys (:location presentation) location-keys)
        (h/select-renamed-keys (:call-to-action presentation) call-to-action-keys))
       (h/update-in-existing [:presentation/techs] h/prep-techs)
+      (h/update-in-existing [:presentation/tech-list] h/prep-tech-list)
       (h/update-in-existing [:presentation/date] h/parse-local-date)))
 
 (def screencast-keys

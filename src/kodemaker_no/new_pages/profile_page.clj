@@ -110,7 +110,7 @@
                                   {:class (str style " " class)
                                    :img (str "/" style "/" (:presentation/thumb pres))
                                    :tags (e/tech-tags {:class "tags"
-                                                       :techs (unwrap-idents pres :presentation/techs)})
+                                                       :techs (h/unwrap-ident-list pres :presentation/tech-list)})
                                    :url (or (:page/uri pres)
                                             (:presentation/video-url pres))
                                    :title (:presentation/title pres)})})

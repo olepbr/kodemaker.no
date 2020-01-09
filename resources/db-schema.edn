@@ -196,6 +196,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :presentation/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  {:db/ident :presentation/event-name
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
