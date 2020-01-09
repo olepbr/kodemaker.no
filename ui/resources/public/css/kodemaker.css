@@ -746,13 +746,13 @@ a, .clickable {
   .profile-desc { grid-column: 2 / span 1; grid-row: 3 / span 1; margin-top: 54px;}
 
   .titled-title {float: left; margin-right: 60px;}
-  .definition-title {float: left; margin-right: 90px;}
+  .definition-title {float: left; margin-right: 96px;}
   .definition-content,
   .titled-content {overflow: hidden;}
 }
 
 .titled-title { width: 257px; }
-.definition-title {width: 310px;}
+.definition-title {width: 304px;}
 .definition-content {margin-bottom: 32px;}
 .definition-content .teaser + .teaser {margin-top: 32px;}
 
@@ -1080,7 +1080,10 @@ a, .clickable {
   letter-spacing: normal;
 }
 
-.h4-light {font-weight: normal;}
+.h4-light {
+  font-family: "Financier Display", serif;
+  font-weight: normal;
+}
 
 .h5, .text h5, .article-text h4 {
   color: var(--chocolat-au-lait);

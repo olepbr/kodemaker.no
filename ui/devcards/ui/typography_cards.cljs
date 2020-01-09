@@ -26,6 +26,9 @@
 (defcard h1-acting-as-h4
   (e/h4 {:element :h1} "Se hvem vi er på laget"))
 
+(defcard h4-light
+  [:h4.h4-light "Se hvem vi er på laget"])
+
 (defcard h5
   (e/h5 {} "Kontakt"))
 
@@ -40,4 +43,7 @@
 
 (defcard large-text
   [:p.text-l {} "The text, she is very big"])
+
+(defcard small-text
+  [:p.text-s {} "The text, she is not so big"])
 
