@@ -1110,7 +1110,8 @@ a, .clickable {
 }
 
 .text-l {font-size: 31px;}
-.article-text .codehilite, .text-s {font-size: 16px;}
+.article-text .codehilite,
+.text-s {font-size: 16px;}
 
 .blockquote {
   font-style: italic;

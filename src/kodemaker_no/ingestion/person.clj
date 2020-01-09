@@ -1,10 +1,10 @@
 (ns kodemaker-no.ingestion.person
-  (:require [clojure.string :as str]
+  (:require [clojure.java.io :as io]
+            [clojure.string :as str]
             [kodemaker-no.homeless :refer [map-vals parse-local-date parse-local-date-time
                                            select-renamed-keys update-in-existing
                                            prep-techs qualify]]
-            [kodemaker-no.ingestion.video :as video]
-            [clojure.java.io :as io]))
+            [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
   {:cv/description :cv/description
@@ -191,6 +191,7 @@
         (update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
         (update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
         (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
+        (update-in-existing [:person/endorsements] #(mapv (fn [idx item] (assoc item :list/idx idx)) (range) %))
         (update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
         (update-in-existing [:person/start-date] parse-local-date-time)
         (update-in-existing [:person/innate-skills] prep-techs)

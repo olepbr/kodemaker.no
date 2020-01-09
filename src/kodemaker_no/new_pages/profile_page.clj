@@ -121,7 +121,7 @@
      ;; Prosjekter
 
      (when-let [projects (->> (:person/projects person)
-                              (sort-by :project/end)
+                              (sort-by :project/start)
                               reverse
                               (take 3)
                               seq)]
@@ -137,6 +137,25 @@
                        (f/to-html (:project/description project))]])
                    vec (conj
                         (e/arrow-link {:text "Se flere prosjekter"
+                                       :href (:page/uri (:cv/_person person))})))})
+
+     ;; Referanser
+
+     (when-let [endorsements (->> (:person/endorsements person)
+                                  (sort-by :list/idx)
+                                  (take 3)
+                                  seq)]
+       {:kind :titled
+        :title "Referanser"
+        :contents (->
+                   (for [endorsement endorsements]
+                     [:div
+                      [:div.h4-light (:author endorsement)]
+                      [:div.text-s.annotation.mts (:title endorsement)]
+                      [:div.mts.text
+                       (f/to-html (str "«" (:quote endorsement) "»"))]])
+                   vec (conj
+                        (e/arrow-link {:text "Se flere referanser"
                                        :href (:page/uri (:cv/_person person))})))})
 
 
