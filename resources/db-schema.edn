@@ -21,6 +21,10 @@
   :db/valueType :db.type/long
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :list/ref
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
  ;; Attributes used to override certain attributes specifically for the CV
 
  {:db/ident :cv/description
@@ -33,6 +37,7 @@
 
  {:db/ident :cv/preferred-techs
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :cv/exclude-techs
@@ -41,6 +46,7 @@
 
  {:db/ident :cv/person
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/one}
 
  ;; tech
@@ -422,11 +428,13 @@
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/open-source-projects
-  :dte/valueType :data/edn
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/open-source-contributions
-  :dte/valueType :data/edn
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/projects
