@@ -1,9 +1,10 @@
 (ns kodemaker-no.ingestion.person
   (:require [clojure.java.io :as io]
             [clojure.string :as str]
-            [kodemaker-no.homeless :refer [map-vals parse-local-date parse-local-date-time
-                                           select-renamed-keys update-in-existing
-                                           prep-techs qualify]]
+            [kodemaker-no.homeless :refer [map-vals remove-vals parse-local-date
+                                           parse-local-date-time prep-tech-list
+                                           prep-techs qualify select-renamed-keys
+                                           update-in-existing]]
             [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
@@ -229,19 +230,22 @@
                 (update-in-existing [:cv/exclude-techs] prep-techs)))]))
 
 (def blog-post-keys
-  {:url :blog-post/external-url
-   :title :blog-post/title
-   :blurb :blog-post/blurb
-   :published :blog-post/published
-   :tech :blog-post/techs
+  {:blog-post/external-url :url
+   :blog-post/title :title
+   :blog-post/blurb :blurb
+   :blog-post/published :published
+   :blog-post/techs :tech
+   :blog-post/tech-list :tech
    :cv/blurb :cv/blurb})
 
 (defn blog-post-data [author-id blog-post]
   (-> blog-post
-      (select-renamed-keys blog-post-keys)
+      (map-vals blog-post-keys)
+      (remove-vals nil?)
       (assoc :blog-post/author {:db/ident author-id})
       (update-in-existing [:blog-post/published] parse-local-date)
-      (update-in-existing [:blog-post/techs] prep-techs)))
+      (update-in-existing [:blog-post/techs] prep-techs)
+      (update-in-existing [:blog-post/tech-list] prep-tech-list)))
 
 (defn profile-pics [{:keys [id]}]
   (some->> (str "public/foto/profiles/" (name id))

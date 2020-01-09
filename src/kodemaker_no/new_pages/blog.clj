@@ -14,8 +14,7 @@
   (d/entity (d/entity-db post) (:blog-post/author post)))
 
 (defn techs [post]
-  (let [db (d/entity-db post)]
-    (map #(d/entity db %) (:blog-post/techs post))))
+  (h/unwrap-ident-list post :blog-post/tech-list))
 
 (defn small-teaser [post]
   (e/teaser

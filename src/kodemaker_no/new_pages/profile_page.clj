@@ -89,7 +89,7 @@
                                   (:blog-post/external-url blog-post))]
                       (e/teaser
                        {:title (:blog-post/title blog-post)
-                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/techs)
+                        :tags (e/tech-tags {:techs (h/unwrap-ident-list blog-post :blog-post/tech-list)
                                             :class "tags"})
                         :url url
                         :content (f/to-html (:blog-post/blurb blog-post))

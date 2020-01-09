@@ -3,15 +3,16 @@
             [kodemaker-no.homeless :as h]))
 
 (def blog-post-keys
-  {:title :blog-post/title
-   :published :blog-post/published
-   :updated :blog-post/updated
-   :illustration :blog-post/illustration
-   :author :blog-post/author
-   :blurb :blog-post/blurb
-   :tech :blog-post/techs
-   :body :blog-post/body
-   :discussion :blog-post/discussion-links})
+  {:blog-post/title :title
+   :blog-post/published :published
+   :blog-post/updated :updated
+   :blog-post/illustration :illustration
+   :blog-post/author :author
+   :blog-post/blurb :blurb
+   :blog-post/techs :tech
+   :blog-post/tech-list :tech
+   :blog-post/body :body
+   :blog-post/discussion-links :discussion})
 
 (def host-text
   {"twitter.com" "Twitter"
@@ -42,10 +43,12 @@
       (h/update-in-existing [:published] h/parse-local-date)
       (h/update-in-existing [:updated] h/parse-local-date)
       (h/update-in-existing [:author] (fn [s] {:db/ident (keyword "person" s)}))
-      (h/update-in-existing [:tech] #(for [s (read-string %)]
-                                     {:db/ident (keyword "tech" (name s))}))
+      (h/update-in-existing [:tech] read-string)
       (h/update-in-existing [:discussion] parse-discussion-links)
-      (h/select-renamed-keys blog-post-keys)
+      (h/map-vals blog-post-keys)
+      (h/remove-vals nil?)
+      (h/update-in-existing [:blog-post/techs] h/prep-techs)
+      (h/update-in-existing [:blog-post/tech-list] h/prep-tech-list)
       (assoc :page/uri (str "/blogg" (second (re-find #"(?:firmablogg|blog)(.*).md" file-name)) "/"))
       (assoc :page/kind :page.kind/blog-post)))
 

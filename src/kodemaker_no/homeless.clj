@@ -2,6 +2,7 @@
   (:require [clojure.java.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
             [mapdown.core :as mapdown])
   (:import [java.time LocalDate LocalDateTime]))
 
@@ -159,6 +160,22 @@
 
 (defn prep-techs [techs]
   (map (fn [tech] {:db/ident (qualify "tech" tech)}) techs))
+
+(defn prep-tech-list [techs]
+  (map-indexed (fn [idx tech]
+                 {:list/idx idx
+                  :list/ref {:db/ident (qualify "tech" tech)}})
+               techs))
+
+(defn entity-seq [coll]
+  (->> coll
+       (sort-by :list/idx)
+       (map #(or (:list/ref %) %))))
+
+(defn unwrap-ident-list [entity k]
+  (let [db (d/entity-db entity)]
+    (->> (entity-seq (k entity))
+         (map #(d/entity db %)))))
 
 (defn profile-picture [{:person/keys [profile-pictures]}]
   (or (some-> profile-pictures shuffle first) "/foto/mask.jpg"))
