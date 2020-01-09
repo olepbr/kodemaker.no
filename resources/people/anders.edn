@@ -172,7 +172,7 @@
              utførende i utarbeidelse av bedriftstilpasset metodikk for
              sikkerhetsanalyse av tjenester. Utførende analytiker og veileder
              for sikkerhetsanalyse av tjenester. Rolle: Analytiker"
-             :tech nil}
+             :tech []}
             {:customer "NETS AS"
              :years [2003 2004 2005]
              :employer :nets

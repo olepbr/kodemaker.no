@@ -39,6 +39,10 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :cv/person
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
  ;; tech
 
  {:db/ident :tech/name
@@ -289,6 +293,44 @@
   :db/valueType :db.type/long
   :db/cardinality :db.cardinality/one}
 
+ ;; projects
+
+ {:db/ident :project/customer
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/summary
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/employer
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/exclude-from-profile?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/years
+  :dte/valueType :data/edn
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/start
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/end
+  :dte/valueType :java.time/local-date
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :project/tech
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
  ;; person
 
  {:db/ident :person/given-name
@@ -388,7 +430,8 @@
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/projects
-  :dte/valueType :data/edn
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/endorsements
@@ -396,7 +439,7 @@
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/experience-since
-  :db/valueType :db.type/string
+  :db/valueType :db.type/long
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :person/qualifications

@@ -100,12 +100,28 @@
    :favorites-at-the-moment :person/favorites-at-the-moment
    :want-to-learn-more :person/want-to-learn-more})
 
+(def project-keys
+  {:customer :project/customer
+   :summary :project/summary
+   :employer :project/employer
+   :description :project/description
+   :exclude-from-profile? :project/exclude-from-profile?
+   :years :project/years
+   :start :project/start
+   :end :project/end
+   :tech :project/tech
+   :cv/description :cv/description})
+
 (defn project-data [project]
-  (-> project
-      (update-in-existing [:employer] #(qualify "employer" %))
-      (update-in-existing [:tech] prep-techs)
-      (update-in-existing [:start] #(parse-local-date (str % "-01")))
-      (update-in-existing [:end] #(parse-local-date (str % "-01")))))
+  (let [p (-> project
+              (update-in-existing [:employer] (fn [employer] {:db/ident (qualify "employer" employer)}))
+              (update-in-existing [:tech] prep-techs)
+              (update-in-existing [:start] #(parse-local-date (str % "-01")))
+              (update-in-existing [:end] #(parse-local-date (str % "-01")))
+              (select-renamed-keys project-keys))]
+    (when (some nil? (vals p))
+      (clojure.pprint/pprint p))
+    p))
 
 (defn data-with-tech [xs]
   (mapv #(update-in-existing % [:tech] prep-techs) xs))
@@ -174,6 +190,7 @@
         (update-in-existing [:person/start-date] parse-local-date-time)
         (update-in-existing [:person/innate-skills] prep-techs)
         (update-in-existing [:person/experience-since] str)
+        (update-in-existing [:person/experience-since] #(Integer/parseInt %))
         (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
         (assoc :person/full-name (str/join " " (:name person)))
@@ -186,12 +203,14 @@
   {:preferred-techs :cv/preferred-techs
    :exclude-techs :cv/exclude-techs})
 
-(defn cv-data [file-name person]
+(defn cv-data [file-name person profile]
   (when (and (not (:administration? person))
              (not (:quit? person)))
     [(merge {:page/uri (str "/cv" (url file-name))
-             :page/kind :page.kind/cv}
-            (-> (:cv person)
+             :page/kind :page.kind/cv
+             :cv/person (select-keys profile [:db/ident])}
+            (select-keys person [:cv/description])
+            (-> (get-in person [:cv :default])
                 (select-renamed-keys cv-keys)
                 (update-in-existing [:cv/preferred-techs] prep-techs)
                 (update-in-existing [:cv/exclude-techs] prep-techs)))]))
@@ -227,7 +246,7 @@
      [(let [pics (profile-pics person)]
         (cond-> profile
           (seq pics) (assoc :person/profile-pictures (vec pics))))]
-     (cv-data file-name person)
+     (cv-data file-name person profile)
      (map (partial blog-post-data person-ident) (:blog-posts person))
      (keep (partial video/video-data person-ident) (:person/presentations profile)))))
 
