@@ -100,6 +100,7 @@
      (when-let [presentations (->> (:person/presentations person)
                                    (filter :presentation/thumb)
                                    (filter :presentation/video-url)
+                                   (sort-by :list/idx)
                                    seq)]
        {:kind :titled
         :title "Foredrag"
@@ -121,8 +122,7 @@
      ;; Prosjekter
 
      (when-let [projects (->> (:person/projects person)
-                              (sort-by :project/start)
-                              reverse
+                              (sort-by :list/idx)
                               (take 3)
                               seq)]
        {:kind :titled
