@@ -113,18 +113,23 @@
    :cv/description :cv/description})
 
 (defn project-data [project]
-  (let [p (-> project
-              (update-in-existing [:employer] (fn [employer] {:db/ident (qualify "employer" employer)}))
-              (update-in-existing [:tech] prep-techs)
-              (update-in-existing [:start] #(parse-local-date (str % "-01")))
-              (update-in-existing [:end] #(parse-local-date (str % "-01")))
-              (select-renamed-keys project-keys))]
-    (when (some nil? (vals p))
-      (clojure.pprint/pprint p))
-    p))
+  (-> project
+      (update-in-existing [:employer] (fn [employer] {:db/ident (qualify "employer" employer)}))
+      (update-in-existing [:tech] prep-techs)
+      (update-in-existing [:start] #(parse-local-date (str % "-01")))
+      (update-in-existing [:end] #(parse-local-date (str % "-01")))
+      (select-renamed-keys project-keys)))
 
-(defn data-with-tech [xs]
-  (mapv #(update-in-existing % [:tech] prep-techs) xs))
+(def open-source-keys
+  {:url :oss-project/url
+   :name :oss-project/name
+   :description :oss-project/description
+   :tech :oss-project/tech})
+
+(defn open-source-project [project]
+  (-> project
+      (update-in-existing [:tech] prep-techs)
+      (select-renamed-keys open-source-keys)))
 
 (def presentation-product-keys
   {:title :presentation-product/title
@@ -181,8 +186,8 @@
         (assoc :person/presentations (mapv presentation-data presentations))
         (update-in-existing [:person/screencasts] #(mapv screencast-data %))
         (update-in-existing [:person/projects] #(mapv project-data %))
-        (update-in-existing [:person/open-source-projects] data-with-tech)
-        (update-in-existing [:person/open-source-contributions] data-with-tech)
+        (update-in-existing [:person/open-source-projects] #(map open-source-project %))
+        (update-in-existing [:person/open-source-contributions] #(map open-source-project %))
         (update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
         (update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
         (update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
@@ -203,6 +208,13 @@
   {:preferred-techs :cv/preferred-techs
    :exclude-techs :cv/exclude-techs})
 
+(defn prep-tech-preferences [techs]
+  (->> techs
+       prep-techs
+       (map-indexed (fn [idx tech]
+                      {:list/idx idx
+                       :list/ref tech}))))
+
 (defn cv-data [file-name person profile]
   (when (and (not (:administration? person))
              (not (:quit? person)))
@@ -212,7 +224,7 @@
             (select-keys person [:cv/description])
             (-> (get-in person [:cv :default])
                 (select-renamed-keys cv-keys)
-                (update-in-existing [:cv/preferred-techs] prep-techs)
+                (update-in-existing [:cv/preferred-techs] prep-tech-preferences)
                 (update-in-existing [:cv/exclude-techs] prep-techs)))]))
 
 (def blog-post-keys
