@@ -88,7 +88,7 @@
      [:p.annotation.text-s annotation])
    (when tags
      [:div.tags.mvs tags])
-   [:div.text.mbm content]
+   (when content [:div.text.mbm content])
    (when link (arrow-link link))])
 
 (defn video-thumb [params]

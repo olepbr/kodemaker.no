@@ -59,6 +59,7 @@ ol {
 ul {list-style: none}
 li {margin-left: 32px;}
 .text ul li, .dotted li {margin: 0 0 16px 20px;}
+.dotted-tight li {margin-bottom: 0;}
 .text ul li::before, .dotted li::before {content: "•"; color: var(--rouge); display: inline-block; width: 1em; margin-left: -1em}
 
 dd {
@@ -745,13 +746,15 @@ a, .clickable {
   .profile-desc { grid-column: 2 / span 1; grid-row: 3 / span 1; margin-top: 54px;}
 
   .titled-title {float: left; margin-right: 60px;}
-  .definition-title {float: left; margin-right: 96px;}
+  .definition-title {float: left; margin-right: 90px;}
   .definition-content,
   .titled-content {overflow: hidden;}
 }
 
 .titled-title { width: 257px; }
-.definition-title {width: 304px;}
+.definition-title {width: 310px;}
+.definition-content {margin-bottom: 32px;}
+.definition-content .teaser + .teaser {margin-top: 32px;}
 
 .definition-separator,
 .definition-separator-strong {
@@ -878,7 +881,7 @@ a, .clickable {
 
 .round-media {align-items: center;}
 .round-media .media-element {margin-right: 30px;}
-.round-media .media-element .img {border-radius: 50%; max-width: 92px;}
+.round-media .media-element .img, .round-img {border-radius: 50%; max-width: 92px;}
 
 .vert-round-media {align-items: center;}
 .vert-round-media .media-content {color: var(--chocolat-au-lait);}
@@ -1048,7 +1051,7 @@ a, .clickable {
   letter-spacing: normal;
 }
 
-.h4, .text h4, .article-text h3 {
+.h4, .h4-light, .text h4, .article-text h3 {
   color: var(--chocolat-au-lait);
   font-family: "Financier Text", serif;
   font-size: 30px;
@@ -1058,6 +1061,8 @@ a, .clickable {
   line-height: normal;
   letter-spacing: normal;
 }
+
+.h4-light {font-weight: normal;}
 
 .h5, .text h5, .article-text h4 {
   color: var(--chocolat-au-lait);

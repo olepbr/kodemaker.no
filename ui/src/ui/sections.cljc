@@ -154,12 +154,23 @@
     [:div.titled-content
      (interpose [:div.mbl] contents)]]])
 
-(defn definition [{:keys [title contents]}]
+(defmulti definition (fn [p] (:type p)))
+
+(defmethod definition :separator [{:keys [title category]}]
   [:div.definition
-   [:div.definition-title
-    [:h3.h6 title]]
+   (when category [:p.h6 category])
+   [:h3.h4.mbm title]])
+
+(defmethod definition :complex-title [{:keys [title contents]}]
+  [:div.definition
+   [:div.definition-title title]
    [:div.definition-content
     (seq contents)]])
+
+(defmethod definition :default [params]
+  (definition (-> params
+                  (assoc :type :complex-title)
+                  (assoc :title [:h4.h6 (or (:title params) " ")]))))
 
 (defn definition-section [{:keys [definitions title] :as params}]
   [:div.section.definition-section {:style (l/stylish {} params)}
