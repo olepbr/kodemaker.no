@@ -231,6 +231,42 @@
                         [:p subject]]})
           educations)}))
 
+(defn presentation-url [presentation]
+  (or (:page/uri presentation)
+      (:presentation/video-url presentation)
+      (:presentation/slides-url presentation)
+      (:presentation/source-url presentation)))
+
+(defn render-presentations [[year presentations]]
+  {:title (str year)
+   :contents
+   [[:ul.dotted.dotted-tight
+     (map (fn [presentation]
+            [:li
+             (if-let [url (presentation-url presentation)]
+               [:a.link {:href url} (:presentation/title presentation)]
+               (:presentation/title presentation))
+             (when-let [event (:presentation/event-name presentation)]
+               (list " ("
+                     (if-let [url (:presentation/event-url presentation)]
+                       [:a {:href url} event]
+                       event)
+                     ")"))])
+          presentations)]]})
+
+(defn presentation-section [cv person]
+  (when-let [presentations (seq (:person/presentations person))]
+    {:kind :definitions
+     :title "Presentasjoner"
+     :definitions
+     (->> presentations
+          (sort-by :presentation/date)
+          reverse
+          (group-by (comp #(.getYear %) :presentation/date))
+          (sort-by first)
+          reverse
+          (map render-presentations))}))
+
 (defn create-page [cv]
   (let [person (cv-profile cv)]
     {:sections
@@ -252,6 +288,7 @@
            (endorsements-section cv person)
            (certifications-section cv person)
            (education-section cv person)
+           (presentation-section cv person)
            {:kind :footer}]
           (remove nil?))}))
 
