@@ -110,12 +110,27 @@
    :tech :project/techs
    :cv/description :cv/description})
 
+(defn year-range [start end]
+  (let [end (if (= :ongoing end)
+              (java.time.LocalDate/now)
+              end)]
+    (cond
+      (and (nil? start) (nil? end)) nil
+      (or (nil? start) (nil? end)) [(.getYear (or start end))]
+      :default (range (.getYear start) (inc (.getYear end))))))
+
+(defn possibly-infer-years [project]
+  (if (nil? (:project/years project))
+    (assoc project :project/years (year-range (:project/start project) (:project/end project)))
+    project))
+
 (defn project-data [project]
   (-> project
       (h/update-in-existing [:employer] (fn [employer] {:db/ident (h/qualify "employer" employer)}))
       (h/update-in-existing [:tech] h/prep-techs)
       (h/update-in-existing [:start] #(h/parse-local-date (str % "-01")))
       (h/update-in-existing [:end] #(h/parse-local-date (str % "-01")))
+      possibly-infer-years
       (h/select-renamed-keys project-keys)))
 
 (def open-source-keys
