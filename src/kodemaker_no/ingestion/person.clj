@@ -5,32 +5,33 @@
             [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
-  {:cv/description :cv/description
-   :title :person/title
-   :start-date :person/start-date
+  {:administration? :person/administration?
+   :business-presentations :person/business-presentations
+   :certifications :person/certifications
    :description :person/description
-   :administration? :person/administration?
-   :phone-number :person/phone-number
+   :education :person/education
    :email-address :person/email-address
-   :presence :person/presence
-   :recommendations :person/recommendations
-   :hobbies :person/hobbies
-   :side-projects :person/side-projects
-   :screencasts :person/screencasts
-   :open-source-projects :person/open-source-projects
-   :open-source-contributions :person/open-source-contributions
-   :projects :person/projects
+   :employments :person/employments
+   :endorsement-highlight :person/endorsement-highlight
    :endorsements :person/endorsements
    :experience-since :person/experience-since
-   :qualifications :person/qualifications
+   :hobbies :person/hobbies
    :innate-skills :person/innate-skills
-   :employments :person/employments
-   :education :person/education
    :languages :person/languages
+   :open-source-contributions :person/open-source-contributions
+   :open-source-projects :person/open-source-projects
+   :phone-number :person/phone-number
+   :presence :person/presence
    :project-highlights :person/project-highlights
-   :endorsement-highlight :person/endorsement-highlight
-   :business-presentations :person/business-presentations
-   :workshops :person/workshops})
+   :projects :person/projects
+   :qualifications :person/qualifications
+   :recommendations :person/recommendations
+   :screencasts :person/screencasts
+   :side-projects :person/side-projects
+   :start-date :person/start-date
+   :title :person/title
+   :workshops :person/workshops
+   :cv/description :cv/description})
 
 (defn url [file-name]
   (str (second (re-find #"people(.*).edn" file-name)) "/"))
