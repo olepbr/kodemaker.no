@@ -317,6 +317,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :presentation-product/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  {:db/ident :presentation-product/duration
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

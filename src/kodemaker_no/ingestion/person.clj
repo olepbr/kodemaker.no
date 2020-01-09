@@ -154,17 +154,19 @@
       (h/update-in-existing [:oss-project/tech-list] h/prep-tech-list)))
 
 (def presentation-product-keys
-  {:title :presentation-product/title
-   :description :presentation-product/description
-   :tech :presentation-product/techs
-   :duration :presentation-product/duration
-   :min-participants :presentation-product/min-participants
-   :max-participants :presentation-product/max-participants})
+  {:presentation-product/title :title
+   :presentation-product/description :description
+   :presentation-product/techs :tech
+   :presentation-product/tech-list :tech
+   :presentation-product/duration :duration
+   :presentation-product/min-participants :min-participants
+   :presentation-product/max-participants :max-participants})
 
 (defn presentation-product-data [kind presentation]
   (-> presentation
-      (h/select-renamed-keys presentation-product-keys)
+      (h/keep-vals presentation-product-keys)
       (h/update-in-existing [:presentation-product/techs] h/prep-techs)
+      (h/update-in-existing [:presentation-product/tech-list] h/prep-tech-list)
       (assoc :presentation-product/kind kind)))
 
 (def side-project-keys
