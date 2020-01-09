@@ -264,11 +264,11 @@ a, .clickable {
 }
 
 .bruce-image-back {
-  bottom: -10px;
-  right: -10px;
+  bottom: -35px;
+  right: -20px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   .bruce .gutter {
     background-position: left 100px bottom -315px,
                          left -360px bottom -232px,
@@ -311,8 +311,8 @@ a, .clickable {
 
 @media only screen and (min-width: 1000px) {
   .bruce .gutter {
-    background-position: left 100px bottom -325px,
-                         left -357px bottom -325px,
+    background-position: left 100px bottom -270px,
+                         left -357px bottom -270px,
                          left -480px top 440px,
                          right -380px top -0px,
                          left 60px top -220px,
@@ -324,7 +324,7 @@ a, .clickable {
                       url("../img/p-nt/descending-line.svg"),
                       url("../img/p-nt/greater-than-small.svg");
     background-size: auto, auto, 650px, 650px, 650px, 450px 900px;
-    padding-bottom: 130px;
+    padding-bottom: 195px;
   }
 
   .bruce .bruce-content {
@@ -348,7 +348,7 @@ a, .clickable {
   .bruce-image-back {
     left: 55%;
     top: auto;
-    bottom: 0;
+    bottom: 65px;
   }
 }
 
