@@ -93,8 +93,8 @@
 
 (defn video-thumb [params]
   [:div
-   [:div.video-thumb
-    [:img {:src (:img params)}]
+   [:div.video-thumb {:className (:class params)}
+    [:img.img {:src (:img params)}]
     [:div.video-overlay [:div.video-indicator]]]
    [:p.tags.video-tags (:tags params)]
    [:p.text [:a.link {:href (:url params)}
@@ -218,6 +218,14 @@
   [:div.card-grid
    (for [{:keys [content]} items]
      [:div.card-grid-item content])])
+
+(defn tango-grid [items]
+  [:div.tango-grid
+   (map
+    (fn [{:keys [content]} class]
+      [:div.tango-grid-item {:className class} content])
+    items
+    (concat [nil nil] (repeat "hide-below-600")))])
 
 (defn icon-link-row [{:keys [links class]}]
   [:div.icon-links {:className class}

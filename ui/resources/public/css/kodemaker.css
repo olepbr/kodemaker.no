@@ -920,6 +920,7 @@ a, .clickable {
 .video-thumb {position: relative; display: inline-block;}
 .video-overlay {pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;display: flex;justify-content: center;align-items: center;}
 .video-indicator {width: 60px; height: 60px; border: 6px solid var(--blanc); border-radius: 30px;  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.5); background: var(--rouge); position: relative;}
+.video-thumb-chocolate .video-indicator {background: var(--chocolat-au-lait);}
 .video-indicator::after {content: ''; position: absolute; width: 0; height: 0; top: 12px; left: 17px; border-top: 12px solid transparent; border-right: 20px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid var(--blanc);}
 
 .video-tags {margin: 24px 0 13px;}
@@ -954,6 +955,9 @@ a, .clickable {
 .curtain {display: inline-block; overflow: hidden;}
 .curtain-left {border-bottom-left-radius: 80% 65%;}
 .curtain-right {border-bottom-right-radius: 80% 65%;}
+
+.curtain-short-right {border-bottom-right-radius: 45% 80%;}
+.curtain-short-top {border-top-right-radius: 45% 80%;}
 
 .stats {color: var(--chocolat-au-lait)}
 
@@ -1003,6 +1007,20 @@ a, .clickable {
   .card-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+@media only screen and (min-width: 600px) {
+  .tango-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px 18px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .tango-grid-item {margin-bottom: 64px;}
+  .hide-below-600 {display: none;}
 }
 
 .ib {display: inline-block;}

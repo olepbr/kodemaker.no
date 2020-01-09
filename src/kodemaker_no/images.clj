@@ -47,6 +47,14 @@
               :height 666
               :origin [:right :bottom]}]]}
 
+    :video-thumb-rouge
+    {:transformations [[:fit {:width 640 :height 360 :scale-up? true :offset-x :left :offset-y :bottom}]
+                       rouge-duotone]}
+
+    :video-thumb-chocolate
+    {:transformations [[:fit {:width 640 :height 360 :scale-up? true :offset-x :left :offset-y :bottom}]
+                       chocolate-au-lait-duotone]}
+
     :rouge-duotone
     {:transformations [rouge-duotone]}
 

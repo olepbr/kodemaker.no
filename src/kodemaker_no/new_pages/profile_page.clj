@@ -113,6 +113,29 @@
                         :content (f/to-html (:blog-post/blurb blog-post))
                         :link (when url {:text "Les artikkel" :href url})})))})
 
+     ;; Foredrag (videoer)
+
+     (when-let [presentations (->> (:person/presentations person)
+                                   (filter :presentation/thumb)
+                                   (filter :presentation/video-url)
+                                   seq)]
+       {:kind :titled
+        :title "Foredrag"
+        :contents [(e/tango-grid
+                    (map
+                     (fn [pres style class]
+                       {:content (e/video-thumb
+                                  {:class (str style " " class)
+                                   :img (str "/" style "/" (:presentation/thumb pres))
+                                   :tags (e/tech-tags {:class "tags"
+                                                       :techs (unwrap-idents pres :presentation/tech)})
+                                   :url (or (:page/uri pres)
+                                            (:presentation/video-url pres))
+                                   :title (:presentation/title pres)})})
+                     (take 4 (reverse (sort-by :presentation/date presentations)))
+                     ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
+                     ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))]})
+
      {:kind :footer}]
     (remove nil?)
     (map (fn [color section]
