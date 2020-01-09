@@ -55,6 +55,7 @@
  :checkstyle :tool
  :ci :methodology
  :clojure-spec :library
+ :cloud :cloud
  :cobol :proglang
  :cocoapods :library
  :code-review :methodology
@@ -81,6 +82,7 @@
  :cygwin :devtool
  :dashing :tool
  :datadog :devops
+ :datalog :database
  :datascript :database
  :db2 :database
  :dbartisan :library
@@ -116,6 +118,7 @@
  :flash :framework
  :flex :proglang
  :fluentd :devops
+ :frontend :frontend
  :frp :methodology
  :fsharp :proglang
  :fusioncharts :library
@@ -247,6 +250,7 @@
  :netty :server
  :nexus :server
  :nginx :devops
+ :node :proglang
  :notes :server
  :oauth2 :security
  :objc :proglang
@@ -297,6 +301,7 @@
  :redux :library
  :redux-frontent :frontend
  :release-management :methodology
+ :responsive-design :frontend
  :rest :specification
  :retrospectives :methodology
  :ring :library
@@ -314,6 +319,7 @@
  :secureway-directory-stellent-cms :server
  :selenium :library
  :sente :library
+ :serverless :cloud
  :sinatra :library
  :sinon :library
  :siteminder :server
@@ -323,6 +329,7 @@
  :sonar :tool
  :sourcesafe :vcs
  :splunk :server
+ :spotify-api :specification
  :spring-batch :framework
  :spring-boot :framework
  :spring-integration :framework
@@ -340,6 +347,7 @@
  :struts :framework
  :struts2 :framework
  :sublime-text :devtools
+ :svg :frontend
  :svn :vcs
  :swing :library
  :sybase :database
