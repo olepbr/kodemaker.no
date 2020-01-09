@@ -196,6 +196,9 @@
                       (assoc project :idx idx)))
        (mapv project-data)))
 
+(defn as-ordered-list [xs]
+  (mapv #(assoc %2 :list/idx %1) (range) xs))
+
 (defn profile-data [file-name person]
   (let [ident (h/qualify "person" (:id person))
         presentations (concat (:presentations person)
@@ -212,12 +215,13 @@
         (h/update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
         (h/update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
         (h/update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
-        (h/update-in-existing [:person/endorsements] #(mapv (fn [idx item] (assoc item :list/idx idx)) (range) %))
+        (h/update-in-existing [:person/endorsements] as-ordered-list)
         (h/update-in-existing [:person/workshops] (partial mapv #(presentation-product-data :workshop %)))
         (h/update-in-existing [:person/start-date] h/parse-local-date-time)
         (h/update-in-existing [:person/innate-skills] h/prep-techs)
         (h/update-in-existing [:person/experience-since] str)
         (h/update-in-existing [:person/experience-since] #(Integer/parseInt %))
+        (h/update-in-existing [:person/education] as-ordered-list)
         (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
         (assoc :person/full-name (str/join " " (:name person)))
