@@ -4,15 +4,16 @@
   (:import java.time.LocalDate))
 
 (def reference-keys
-  {:page-title :reference/page-title
-   :img :reference/image
-   :portrait :reference/portrait
-   :name :reference/signee-name
-   :phone :reference/signee-phone
-   :title :reference/signee-title
-   :logo :reference/logo
-   :techs :reference/techs
-   :body :reference/blurb})
+  {:reference/page-title :page-title
+   :reference/image :img
+   :reference/portrait :portrait
+   :reference/signee-name :name
+   :reference/signee-phone :phone
+   :reference/signee-title :title
+   :reference/logo :logo
+   :reference/techs :techs
+   :reference/tech-list :techs
+   :reference/blurb :body})
 
 (defn- build-date [y m]
   (LocalDate/of (Integer/parseInt y) (Integer/parseInt m) 1))
@@ -67,8 +68,13 @@
       (assoc reference :reference/sections (vec (map-indexed #(assoc %2 :idx %1) sections)))
       (case (:type input)
         :reference
-        (recur sections (-> (h/select-renamed-keys input reference-keys)
-                            (h/update-in-existing [:reference/techs] (comp h/prep-techs read-string))) inputs)
+        (recur sections
+               (-> input
+                   (h/update-in-existing [:techs] read-string)
+                   (h/keep-vals reference-keys)
+                   (h/update-in-existing [:reference/techs] h/prep-techs)
+                   (h/update-in-existing [:reference/tech-list] h/prep-tech-list))
+               inputs)
 
         :reference-meta
         (recur (conj sections (dissoc input :team-size :factoid-1 :factoid-2))

@@ -655,6 +655,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :reference/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  {:db/ident :reference/grid-blocks
   :db/valueType :db.type/ref
   :db/isComponent true
