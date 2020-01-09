@@ -156,10 +156,12 @@
 
 (defmulti definition (fn [p] (:type p)))
 
-(defmethod definition :separator [{:keys [title category]}]
-  [:div.definition
+(defmethod definition :separator [{:keys [title description category]}]
+  [:div.definition.mbm
    (when category [:p.h6 category])
-   [:h3.h4.mbm title]])
+   [:h3.h4 title]
+   (when description
+     [:div.text.mts description])])
 
 (defmethod definition :complex-title [{:keys [title contents]}]
   [:div.definition

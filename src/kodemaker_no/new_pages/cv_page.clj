@@ -3,7 +3,8 @@
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.new-pages.person :as person]
-            [ui.elements :as e]))
+            [ui.elements :as e])
+  (:import java.time.format.DateTimeFormatter))
 
 (defn years-of-experience [{:person/keys [experience-since]}]
   (let [years (when experience-since
@@ -109,15 +110,14 @@
   (def person (d/entity db :person/christian))
   (def cv (:cv/_person person))
 
-  (->> (d/db conn)
-       (d/q '[:find ?e .
-              :in $
-              :where
-              [?e :page/uri "/cv/christian/"]])
-       (d/entity db)
-       :cv/preferred-techs
+  (->> (:person/projects person)
        (sort-by :list/idx)
-       (map :list/ref))
+       first
+       :project/employer
+       (d/entity db)
+       :employer/name)
+
+  (into {}  (first (:person/projects person)))
 
   (all-techs db cv person))
 
@@ -134,6 +134,50 @@
      :definitions (->> tech-order
                        (map #(prep-tech techs %))
                        (filter identity))}))
+
+(defn format-year-month [date]
+  (when date
+    (.format (DateTimeFormatter/ofPattern "MM.yyyy") date)))
+
+(defn- year-range [{:project/keys [years start end]}]
+  (if start
+    (str (format-year-month start) " - " (format-year-month end))
+    (f/year-range years)))
+
+
+
+(defn render-project [project]
+  {:title (list (:project/customer project) [:br] (year-range project))
+   :contents [[:h4.h6 [:em (:project/summary project)]]
+              [:div.text
+               (f/to-html (or (:cv/description project) (:project/description project)))]
+              [:p.text-s.annotation.mts
+               (->> (h/unwrap-idents project :project/tech)
+                    (map :tech/name)
+                    e/comma-separated)]]})
+
+(defn render-employer [employer employment projects]
+  (into
+   [{:type :separator
+     :category "Arbeidsgiver"
+     :title (:employer/name employer)
+     :description (some-> employment :description f/to-html)}]
+   (map render-project projects)))
+
+(defn employment [person employer]
+  (get-in person [:person/employments (keyword (name employer))]))
+
+(defn projects-section [cv person]
+  (let [db (d/entity-db person)]
+    {:kind :definitions
+     :title "Prosjekter"
+     :id "projects"
+     :definitions
+     (->> (:person/projects person)
+          (sort-by :list/idx)
+          (group-by :project/employer)
+          (mapcat (fn [[employer projects]]
+                    (render-employer (d/entity db employer) (employment person employer) projects))))}))
 
 (defn create-page [cv]
   (let [person (cv-profile cv)]
@@ -152,5 +196,6 @@
        :description (f/to-html (:person/description person))
        :highlights (map project-highlight (:person/project-highlights person))}
       (technology-section cv person)
+      (projects-section cv person)
       {:kind :footer}]}))
 
