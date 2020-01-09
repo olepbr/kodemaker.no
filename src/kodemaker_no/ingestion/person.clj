@@ -108,6 +108,7 @@
    :start :project/start
    :end :project/end
    :tech :project/techs
+   :idx :list/idx
    :cv/description :cv/description})
 
 (defn year-range [start end]
@@ -188,6 +189,12 @@
         (assoc :recommendation/url (-> recommendation :link :url)
                :recommendation/link-text (-> recommendation :link :text)))))
 
+(defn prep-projects [projects]
+  (->> projects
+       (map-indexed (fn [idx project]
+                      (assoc project :idx idx)))
+       (mapv project-data)))
+
 (defn profile-data [file-name person]
   (let [ident (h/qualify "person" (:id person))
         presentations (concat (:presentations person)
@@ -198,7 +205,7 @@
         (assoc :db/ident ident)
         (assoc :person/presentations (mapv presentation-data presentations))
         (h/update-in-existing [:person/screencasts] #(mapv screencast-data %))
-        (h/update-in-existing [:person/projects] #(mapv project-data %))
+        (h/update-in-existing [:person/projects] prep-projects)
         (h/update-in-existing [:person/open-source-projects] #(map open-source-project %))
         (h/update-in-existing [:person/open-source-contributions] #(map open-source-project %))
         (h/update-in-existing [:person/side-projects] (partial mapv #(side-project-data %)))
