@@ -141,15 +141,17 @@
       (h/select-renamed-keys project-keys)))
 
 (def open-source-keys
-  {:url :oss-project/url
-   :name :oss-project/name
-   :description :oss-project/description
-   :tech :oss-project/techs})
+  {:oss-project/url :url
+   :oss-project/name :name
+   :oss-project/description :description
+   :oss-project/techs :tech
+   :oss-project/tech-list :tech})
 
 (defn open-source-project [project]
   (-> project
-      (h/update-in-existing [:tech] h/prep-techs)
-      (h/select-renamed-keys open-source-keys)))
+      (h/keep-vals open-source-keys)
+      (h/update-in-existing [:oss-project/techs] h/prep-techs)
+      (h/update-in-existing [:oss-project/tech-list] h/prep-tech-list)))
 
 (def presentation-product-keys
   {:title :presentation-product/title
