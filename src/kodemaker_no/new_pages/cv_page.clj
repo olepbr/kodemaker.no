@@ -106,9 +106,12 @@
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
-
-  (def person (d/entity db :person/christian))
+  (def person (d/entity db :person/trygve))
   (def cv (:cv/_person person))
+
+  (->> (:person/certifications person)
+       (group-by :year)
+       (sort-by (comp - first)))
 
   (->> (:person/projects person)
        (sort-by :list/idx)
@@ -179,23 +182,63 @@
           (mapcat (fn [[employer projects]]
                     (render-employer (d/entity db employer) (employment person employer) projects))))}))
 
+(defn endorsements-section [cv person]
+  (when-let [endorsements (seq (sort-by :list/idx (:person/endorsements person)))]
+    {:kind :definitions
+     :title "Anbefalinger"
+     :definitions (->> endorsements
+                       (map (fn [endorsement]
+                              {:type :complex-title
+                               :title [:div
+                                       [:h3.h4-light (:author endorsement)]
+                                       [:p (:title endorsement)]]
+                               :contents [(e/blockquote endorsement)]})))}))
+
+(defn render-certifications [[year certifications]]
+  {:title (str year)
+   :contents
+   [[:ul.dotted.dotted-tight
+     (map (fn [{:keys [name year institution url certificate]}]
+            [:li
+             (if url
+               [:a.link {:href url} name]
+               name)
+             (when institution
+               (format " (%s)" institution))
+             (when certificate
+               (list " - " [:a.link {:href (:url certificate)} (or (:text certificate) "Kursbevis")]))])
+          certifications)]]})
+
+(defn certifications-section [cv person]
+  (when-let [certifications (seq (:person/certifications person))]
+    {:kind :definitions
+     :title "Sertifiseringer og kurs"
+     :definitions
+     (->> certifications
+          (group-by :year)
+          (sort-by (comp - first))
+          (map render-certifications))}))
+
 (defn create-page [cv]
   (let [person (cv-profile cv)]
     {:sections
-     [{:kind :cv-intro
-       :image (h/profile-picture person)
-       :friendly-name (:person/given-name person)
-       :full-name (:person/full-name person)
-       :title (:person/title person)
-       :contact-lines [(:person/phone-number person)
-                       (:person/email-address person)]
-       :links (person/prep-presence-links (:person/presence person))
-       :experience (format "%s med %s erfaring" (:person/title person) (years-of-experience person))
-       :qualifications (:person/qualifications person)
-       :quote (endorsement-highlight person)
-       :description (f/to-html (:person/description person))
-       :highlights (map project-highlight (:person/project-highlights person))}
-      (technology-section cv person)
-      (projects-section cv person)
-      {:kind :footer}]}))
+     (->> [{:kind :cv-intro
+            :image (h/profile-picture person)
+            :friendly-name (:person/given-name person)
+            :full-name (:person/full-name person)
+            :title (:person/title person)
+            :contact-lines [(:person/phone-number person)
+                            (:person/email-address person)]
+            :links (person/prep-presence-links (:person/presence person))
+            :experience (format "%s med %s erfaring" (:person/title person) (years-of-experience person))
+            :qualifications (:person/qualifications person)
+            :quote (endorsement-highlight person)
+            :description (f/to-html (:person/description person))
+            :highlights (map project-highlight (:person/project-highlights person))}
+           (technology-section cv person)
+           (projects-section cv person)
+           (endorsements-section cv person)
+           (certifications-section cv person)
+           {:kind :footer}]
+          (remove nil?))}))
 
