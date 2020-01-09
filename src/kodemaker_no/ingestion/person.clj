@@ -49,7 +49,7 @@
    :title :presentation/title
    :description :presentation/description
    :blurb :presentation/description
-   :tech :presentation/tech
+   :tech :presentation/techs
    :event :presentation/event-name
    :date :presentation/date
    :direct-link? :presentation/direct-link?
@@ -76,7 +76,7 @@
        (select-renamed-keys (:urls presentation) presentation-url-keys)
        (select-renamed-keys (:location presentation) location-keys)
        (select-renamed-keys (:call-to-action presentation) call-to-action-keys))
-      (update-in-existing [:presentation/tech] prep-techs)
+      (update-in-existing [:presentation/techs] prep-techs)
       (update-in-existing [:presentation/date] parse-local-date)))
 
 (def screencast-keys
@@ -84,7 +84,7 @@
    :blurb :screencast/blurb
    :description :screencast/description
    :illustration :screencast/illustration
-   :tech :screencast/tech
+   :tech :screencast/techs
    :published :screencast/published
    :url :screencast/url
    :cv/blurb :cv/blurb})
@@ -109,7 +109,7 @@
    :years :project/years
    :start :project/start
    :end :project/end
-   :tech :project/tech
+   :tech :project/techs
    :cv/description :cv/description})
 
 (defn project-data [project]
@@ -124,7 +124,7 @@
   {:url :oss-project/url
    :name :oss-project/name
    :description :oss-project/description
-   :tech :oss-project/tech})
+   :tech :oss-project/techs})
 
 (defn open-source-project [project]
   (-> project
@@ -134,7 +134,7 @@
 (def presentation-product-keys
   {:title :presentation-product/title
    :description :presentation-product/description
-   :tech :presentation-product/tech
+   :tech :presentation-product/techs
    :duration :presentation-product/duration
    :min-participants :presentation-product/min-participants
    :max-participants :presentation-product/max-participants})
@@ -142,19 +142,19 @@
 (defn presentation-product-data [kind presentation]
   (-> presentation
       (select-renamed-keys presentation-product-keys)
-      (update-in-existing [:presentation-product/tech] prep-techs)
+      (update-in-existing [:presentation-product/techs] prep-techs)
       (assoc :presentation-product/kind kind)))
 
 (def side-project-keys
   {:title :side-project/title
    :description :side-project/description
    :illustration :side-project/illustration
-   :tech :side-project/tech})
+   :tech :side-project/techs})
 
 (defn side-project-data [side-project]
   (-> side-project
       (select-renamed-keys side-project-keys)
-      (update-in-existing [:side-project/tech] prep-techs)
+      (update-in-existing [:side-project/techs] prep-techs)
       (cond-> (:link side-project)
         (assoc :side-project/url (-> side-project :link :url)
                :side-project/link-text (-> side-project :link :text)))))
@@ -164,7 +164,7 @@
    :blurb :recommendation/description
    :url :recommendation/url
    :link-text :recommendation/link-text
-   :tech :recommendation/tech})
+   :tech :recommendation/techs})
 
 (defn recommendation-data [idx recommendation]
   (-> recommendation
@@ -233,7 +233,7 @@
    :title :blog-post/title
    :blurb :blog-post/blurb
    :published :blog-post/published
-   :tech :blog-post/tech
+   :tech :blog-post/techs
    :cv/blurb :cv/blurb})
 
 (defn blog-post-data [author-id blog-post]
@@ -241,7 +241,7 @@
       (select-renamed-keys blog-post-keys)
       (assoc :blog-post/author {:db/ident author-id})
       (update-in-existing [:blog-post/published] parse-local-date)
-      (update-in-existing [:blog-post/tech] prep-techs)))
+      (update-in-existing [:blog-post/techs] prep-techs)))
 
 (defn profile-pics [{:keys [id]}]
   (some->> (str "public/foto/profiles/" (name id))

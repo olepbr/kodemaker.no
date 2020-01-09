@@ -4,7 +4,7 @@
             [ui.elements :as e]))
 
 (defn add-main-aside [article tech]
-  (let [pres (->> (:presentation/_tech tech)
+  (let [pres (->> (:presentation/_techs tech)
                   (filter :presentation/thumb)
                   (max-by :presentation/date))]
     (cond-> {:title (str "Hva er " (:tech/name tech))
@@ -34,7 +34,7 @@
                                 (f/to-html (:tech/description tech))]
                       :alignment :front}
                      (add-main-aside tech))]}
-     (when-let [side-project (some->> (:side-project/_tech tech)
+     (when-let [side-project (some->> (:side-project/_techs tech)
                                       shuffle
                                       first)]
        {:kind :article

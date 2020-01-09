@@ -6,9 +6,9 @@
 (defn parse [s]
   (html-resource (java.io.StringReader. s)))
 
-(def app (web/create-app))
+#_(def app (web/create-app))
 
-(fact
+#_(fact
  "En helt enkel ende-til-ende test for å fange opp dusterier."
 
  (let [result (app {:uri "/magnar/"})]
@@ -23,7 +23,7 @@
 
 (def split-index 75)
 
-(fact
+#_(fact
  "Får vi 200 på hele siten? (del 1)" :slow :slow-1
 
  (let [urls (take split-index (keys (web/get-pages)))]
@@ -31,7 +31,7 @@
      {:status (-> (app {:uri url}) :status)
       :uri url} => {:status 200 :uri url})))
 
-(fact
+#_(fact
  "Får vi 200 på hele siten? (del 2)" :slow :slow-2
 
  (let [urls (drop split-index (keys (web/get-pages)))]

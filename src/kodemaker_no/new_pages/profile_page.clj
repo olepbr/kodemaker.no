@@ -56,7 +56,7 @@
         :contents (for [recommendation (take 3 (sort-by :list/idx recommendations))]
                     (e/teaser
                      (cond-> {:title (:recommendation/title recommendation)
-                              :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/tech)
+                              :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/techs)
                                                   :class "tags"})
                               :url (:recommendation/url recommendation)
                               :content (f/to-html (:recommendation/description recommendation))}
@@ -89,7 +89,7 @@
                                   (:blog-post/external-url blog-post))]
                       (e/teaser
                        {:title (:blog-post/title blog-post)
-                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/tech)
+                        :tags (e/tech-tags {:techs (unwrap-idents blog-post :blog-post/techs)
                                             :class "tags"})
                         :url url
                         :content (f/to-html (:blog-post/blurb blog-post))
@@ -110,7 +110,7 @@
                                   {:class (str style " " class)
                                    :img (str "/" style "/" (:presentation/thumb pres))
                                    :tags (e/tech-tags {:class "tags"
-                                                       :techs (unwrap-idents pres :presentation/tech)})
+                                                       :techs (unwrap-idents pres :presentation/techs)})
                                    :url (or (:page/uri pres)
                                             (:presentation/video-url pres))
                                    :title (:presentation/title pres)})})
@@ -132,7 +132,7 @@
                      [:div
                       [:div.h4-light (:project/customer project)]
                       (e/tech-tags {:class "tags"
-                                    :techs (take 5 (unwrap-idents project :project/tech))})
+                                    :techs (take 5 (unwrap-idents project :project/techs))})
                       [:div.mts
                        (f/to-html (:project/description project))]])
                    vec (conj

@@ -106,7 +106,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :blog-post/tech
+ {:db/ident :blog-post/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -143,7 +143,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :side-project/tech
+ {:db/ident :side-project/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -164,7 +164,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :recommendation/tech
+ {:db/ident :recommendation/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -177,7 +177,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :presentation/tech
+ {:db/ident :presentation/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -239,7 +239,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :screencast/tech
+ {:db/ident :screencast/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -265,7 +265,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :oss-project/tech
+ {:db/ident :oss-project/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -283,7 +283,7 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :presentation-product/tech
+ {:db/ident :presentation-product/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -333,7 +333,7 @@
   :dte/valueType :java.time/local-date
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :project/tech
+ {:db/ident :project/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
@@ -642,7 +642,7 @@
   :dte/valueType :java.time/local-date
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :video/tech
+ {:db/ident :video/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 

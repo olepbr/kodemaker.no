@@ -1,6 +1,6 @@
 (ns kodemaker-no.ingestion.blog
-  (:require [kodemaker-no.homeless :as h]
-            [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [kodemaker-no.homeless :as h]))
 
 (def blog-post-keys
   {:title :blog-post/title
@@ -9,7 +9,7 @@
    :illustration :blog-post/illustration
    :author :blog-post/author
    :blurb :blog-post/blurb
-   :tech :blog-post/tech
+   :tech :blog-post/techs
    :body :blog-post/body
    :discussion :blog-post/discussion-links})
 

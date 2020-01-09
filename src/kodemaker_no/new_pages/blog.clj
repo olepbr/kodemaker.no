@@ -15,7 +15,7 @@
 
 (defn techs [post]
   (let [db (d/entity-db post)]
-    (map #(d/entity db %) (:blog-post/tech post))))
+    (map #(d/entity db %) (:blog-post/techs post))))
 
 (defn small-teaser [post]
   (e/teaser
@@ -46,18 +46,18 @@
   list of posts sorted by the most relevant first (most shared techs). Ties are
   weighted in favor of posts with the same author."
   [post]
-  (let [tech (:blog-post/tech post)
+  (let [tech (:blog-post/techs post)
         author (:blog-post/author post)
         db (d/entity-db post)]
     (->> (d/q '[:find [?e ...]
                 :in $ ?url [?tech ...]
                 :where
-                [?e :blog-post/tech ?tech]
+                [?e :blog-post/techs ?tech]
                 (not [?e :page/uri ?url])]
               db (:page/uri post) tech)
          (active-posts db)
          (map (fn [p]
-                [(cond-> (* 2 (count (set/intersection tech (:blog-post/tech p))))
+                [(cond-> (* 2 (count (set/intersection tech (:blog-post/techs p))))
                    (= (:blog-post/author p) author) inc)
                  p]))
          (sort-by (comp - first))

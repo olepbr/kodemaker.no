@@ -43,19 +43,19 @@
   [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend])
 
 (defn side-project-techs [person]
-  (mapcat :side-project/tech (:person/side-projects person)))
+  (mapcat :side-project/techs (:person/side-projects person)))
 
 (defn blog-post-techs [person]
-  (mapcat :blog-post/tech (:blog-post/_author person)))
+  (mapcat :blog-post/techs (:blog-post/_author person)))
 
 (defn screencast-techs [person]
-  (mapcat :screencast/tech (:person/screencasts person)))
+  (mapcat :screencast/techs (:person/screencasts person)))
 
 (defn presentation-techs [person]
-  (mapcat :presentation/tech (:person/presentations person)))
+  (mapcat :presentation/techs (:person/presentations person)))
 
 (defn business-presentation-techs [person]
-  (mapcat :presentation-product/tech (:person/business-presentations person)))
+  (mapcat :presentation-product/techs (:person/business-presentations person)))
 
 (defn open-source-techs [person]
   (->> (concat (:person/open-source-projects person)
@@ -63,7 +63,7 @@
        (mapcat :tech)))
 
 (defn project-techs [person]
-  (mapcat :project/tech (:person/projects person)))
+  (mapcat :project/techs (:person/projects person)))
 
 (defn preferred-techs [cv]
   (->> (:cv/preferred-techs cv)
