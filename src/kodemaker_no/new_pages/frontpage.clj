@@ -33,4 +33,20 @@
                  :text "Her er en ganske kort tekst."
                  :link {:text "Vi kan tilby"
                         :href "/kurs/"}}]}
+              {:kind :vertigo
+               :title "Artikler og innsikt"
+               :text "I Kodemaker sitter vi på mye kunnskap og erfaring innen et bredt
+    spekter av forretningsområder og teknologi. Dette ønsker vi å dele med deg
+    slik at vi sammen kan bli gode, og levere IT-prosjekter vi begge ønsker å
+    skryte av og vise frem."
+               :link {:text "Se mer"
+                      :href "/jobb/"}
+               :image "/foto/nils-1.jpg"}
+              {:kind :pønt
+               :portrait-1 "/rouge-portrait/foto/christian-1.jpg"
+               :portrait-2 "/chocolate-portrait/foto/christian-1.jpg"
+               :top-triangle "/rouge-triangle/foto/christian-1.png"
+               :bottom-triangle "/chocolate-triangle/foto/christian-1.png"
+               :top-circle "/rouge-circle/foto/christian-1.png"
+               :bottom-circle "/chocolate-circle/foto/christian-1.png"}
               {:kind :footer}]})
