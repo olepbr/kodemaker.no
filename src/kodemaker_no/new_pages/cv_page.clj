@@ -2,6 +2,7 @@
   (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
+            [kodemaker-no.markup :as m]
             [kodemaker-no.new-pages.person :as person]
             [ui.elements :as e])
   (:import java.time.format.DateTimeFormatter))
@@ -106,7 +107,7 @@
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
-  (def person (d/entity db :person/trygve))
+  (def person (d/entity db :person/christian))
   (def cv (:cv/_person person))
 
   (->> (:person/certifications person)
@@ -267,6 +268,49 @@
           reverse
           (map render-presentations))}))
 
+(defn open-source-projects [person]
+  (concat
+   (:person/open-source-projects person)
+   (:person/open-source-contributions person)))
+
+(defn proglang [project]
+  (->> (h/unwrap-ident-list project :oss-project/techs)
+       (filter #(= :proglang (:tech/type %)))
+       first))
+
+(defn oss-project [project]
+  [:li.text.inline-text
+   [:a {:href (:oss-project/url project)} (:oss-project/name project)]
+   " - "
+   (m/strip-paragraph (f/to-html (:oss-project/description project)))])
+
+(defn oss-contrib [project]
+  [:a {:href (:oss-project/url project)}
+   (:oss-project/name project)])
+
+(defn open-source-section [cv person]
+  (when-let [projects (seq (open-source-projects person))]
+    (let [db (d/entity-db cv)
+          by-techs (group-by (comp :db/ident proglang) projects)]
+      {:kind :definitions
+       :title "Bidrag til fri programvare"
+       :definitions
+       (->> by-techs
+            keys
+            (prefer-techs (preferred-techs cv))
+            (map (fn [tech]
+                   (let [projects (get by-techs tech)]
+                     {:title (:tech/name (d/entity db tech))
+                      :contents [[:ul.dotted.dotted-tight
+                                  (map oss-project (filter :oss-project/description projects))
+                                  (when-let [contribs (->> projects
+                                                           (remove :oss-project/description)
+                                                           seq)]
+                                    [:li.text
+                                     "Har bidratt til "
+                                     (e/comma-separated
+                                      (map oss-contrib contribs))])]]}))))})))
+
 (defn create-page [cv]
   (let [person (cv-profile cv)]
     {:sections
@@ -289,6 +333,7 @@
            (certifications-section cv person)
            (education-section cv person)
            (presentation-section cv person)
+           (open-source-section cv person)
            {:kind :footer}]
           (remove nil?))}))
 
