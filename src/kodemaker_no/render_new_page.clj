@@ -6,26 +6,28 @@
             [ui.sections :as sections]))
 
 (defn render-section [section]
-  ((case (:kind section)
-     :article sections/article-section
-     :banner sections/banner-section
-     :bruce sections/bruce-section
-     :container sections/container-section
-     :cv-intro sections/cv-intro-section
-     :definitions sections/definition-section
-     :enumeration sections/enumeration-section
-     :footer layout/footer
-     :grid sections/grid-section
-     :grid-header sections/grid-header-section
-     :header layout/header-section
-     :hip sections/hip-section
-     :profile sections/profile-section
-     :pønt sections/pønt-section
-     :seymour sections/seymour-section
-     :titled sections/titled-section
-     :vertigo sections/vertigo-section
-     :widescreen sections/widescreen-section)
-   section))
+  (try
+    ((case (:kind section)
+       :article sections/article-section
+       :banner sections/banner-section
+       :bruce sections/bruce-section
+       :container sections/container-section
+       :cv-intro sections/cv-intro-section
+       :definitions sections/definition-section
+       :enumeration sections/enumeration-section
+       :footer layout/footer
+       :grid sections/grid-section
+       :grid-header sections/grid-header-section
+       :header layout/header-section
+       :hip sections/hip-section
+       :profile sections/profile-section
+       :pønt sections/pønt-section
+       :seymour sections/seymour-section
+       :titled sections/titled-section
+       :vertigo sections/vertigo-section
+       :widescreen sections/widescreen-section) section)
+    (catch Exception e
+      (throw (ex-info (format "Unable to render section: %s" (.getMessage e)) {:section section})))))
 
 (defn- head-title [title]
   (if-let [title-str (or (:head title) (and (string? title) title))]
