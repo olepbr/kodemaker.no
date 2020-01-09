@@ -142,15 +142,16 @@
   (when date
     (.format (DateTimeFormatter/ofPattern "MM.yyyy") date)))
 
-(defn- year-range [{:project/keys [years start end]}]
+(defn- year-range [years & [start end]]
   (if start
     (str (format-year-month start) " - " (format-year-month end))
     (f/year-range years)))
 
-
+(defn- project-year-range [project]
+  (year-range (:project/years project) (:project/start project) (:project/end project)))
 
 (defn render-project [project]
-  {:title (list (:project/customer project) [:br] (year-range project))
+  {:title (list (:project/customer project) [:br] (project-year-range project))
    :contents [[:h4.h6 [:em (:project/summary project)]]
               [:div.text
                (f/to-html (or (:cv/description project) (:project/description project)))]
@@ -219,6 +220,17 @@
           (sort-by (comp - first))
           (map render-certifications))}))
 
+(defn education-section [cv person]
+  (when-let [educations (seq (sort-by :list/idx (:person/education person)))]
+    {:kind :definitions
+     :title "Utdanning"
+     :definitions
+     (map (fn [{:keys [institution years subject]}]
+            {:title (year-range years)
+             :contents [[:h4.h6 [:em institution]]
+                        [:p subject]]})
+          educations)}))
+
 (defn create-page [cv]
   (let [person (cv-profile cv)]
     {:sections
@@ -239,6 +251,7 @@
            (projects-section cv person)
            (endorsements-section cv person)
            (certifications-section cv person)
+           (education-section cv person)
            {:kind :footer}]
           (remove nil?))}))
 
