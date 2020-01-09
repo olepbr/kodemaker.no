@@ -172,8 +172,9 @@
                   (assoc :type :complex-title)
                   (assoc :title [:h4.h6 (or (:title params) " ")]))))
 
-(defn definition-section [{:keys [definitions title] :as params}]
-  [:div.section.definition-section {:style (l/stylish {} params)}
+(defn definition-section [{:keys [definitions title id] :as params}]
+  [:div.section.definition-section {:style (l/stylish {} params)
+                                    :id id}
    [:div.content
     (if title
       (list [:h2.h3 title]

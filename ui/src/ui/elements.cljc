@@ -22,14 +22,18 @@
                             (repeat (dec (count coll)) ", "))
                       coll)))
 
+(defn enumerate-techs [techs]
+  (comma-separated
+   (for [tech (filter :tech/name techs)]
+     (if (:page/uri tech)
+       [:a.link {:href (:page/uri tech)}
+        (:tech/name tech)]
+       (:tech/name tech)))))
+
 (defn tech-tags [{:keys [prefix techs class]}]
   (when (seq techs)
     [:span {:className class} prefix " "
-     (comma-separated (for [tech (filter :tech/name techs)]
-                        (if (:page/uri tech)
-                          [:a.link {:href (:page/uri tech)}
-                           (:tech/name tech)]
-                          (:tech/name tech))))]))
+     (enumerate-techs techs)]))
 
 (defn people-tags [{:keys [prefix people class]}]
   (when (seq people)

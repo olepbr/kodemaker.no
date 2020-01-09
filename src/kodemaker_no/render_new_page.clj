@@ -11,6 +11,7 @@
      :banner sections/banner-section
      :bruce sections/bruce-section
      :container sections/container-section
+     :cv-intro sections/cv-intro-section
      :definitions sections/definition-section
      :enumeration sections/enumeration-section
      :footer layout/footer

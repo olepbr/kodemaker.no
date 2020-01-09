@@ -7,6 +7,7 @@
             [kodemaker-no.images :as images]
             [kodemaker-no.new-pages.article-page :as article-page]
             [kodemaker-no.new-pages.blog :as blog]
+            [kodemaker-no.new-pages.cv-page :as cv-page]
             [kodemaker-no.new-pages.frontpage :as frontpage]
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
@@ -43,6 +44,7 @@
                   :page.kind/blog-post (blog/create-post-page e)
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/profile (profile-page/create-page e)
+                  :page.kind/cv (cv-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
                   :page.kind/tech (tech-page/create-page e)
                   :page.kind/people (people-page/create-page e))
