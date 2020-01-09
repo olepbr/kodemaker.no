@@ -140,7 +140,8 @@
                                :written (enum "Grunnleggende" "God" "Meget god" "Flytende" "Morsmål")}]
 
    (optional-key :project-highlights) [{:customer Str
-                                        :blurb Str}]
+                                        :blurb Str
+                                        (optional-key :link) Str}]
 
    (optional-key :endorsement-highlight) {:author Str ;; Kort utsnitt fra den fineste anbefalingen din
                                           :quote Str  ;; Brukes øverst på CV-en
