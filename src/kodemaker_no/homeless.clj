@@ -149,6 +149,13 @@
        (map (fn [[k v]] [k (f v)]))
        (into {})))
 
+(defn keep-vals [f m]
+  (->> m
+       (keep (fn [[k v]]
+               (when-let [new-v (f v)]
+                 [k new-v])))
+       (into {})))
+
 (defn slurp-mapdown-resource [file-name]
   (-> file-name
       io/resource

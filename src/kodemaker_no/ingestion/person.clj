@@ -1,7 +1,7 @@
 (ns kodemaker-no.ingestion.person
   (:require [clojure.java.io :as io]
             [clojure.string :as str]
-            [kodemaker-no.homeless :refer [map-vals remove-vals parse-local-date
+            [kodemaker-no.homeless :refer [map-vals keep-vals parse-local-date
                                            parse-local-date-time prep-tech-list
                                            prep-techs qualify select-renamed-keys
                                            update-in-existing]]
@@ -240,8 +240,7 @@
 
 (defn blog-post-data [author-id blog-post]
   (-> blog-post
-      (map-vals blog-post-keys)
-      (remove-vals nil?)
+      (keep-vals blog-post-keys)
       (assoc :blog-post/author {:db/ident author-id})
       (update-in-existing [:blog-post/published] parse-local-date)
       (update-in-existing [:blog-post/techs] prep-techs)
