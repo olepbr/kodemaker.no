@@ -105,16 +105,17 @@
    :want-to-learn-more :person/want-to-learn-more})
 
 (def project-keys
-  {:customer :project/customer
-   :summary :project/summary
-   :employer :project/employer
-   :description :project/description
-   :exclude-from-profile? :project/exclude-from-profile?
-   :years :project/years
-   :start :project/start
-   :end :project/end
-   :tech :project/techs
-   :idx :list/idx
+  {:project/customer :customer
+   :project/summary :summary
+   :project/employer :employer
+   :project/description :description
+   :project/exclude-from-profile? :exclude-from-profile?
+   :project/years :years
+   :project/start :start
+   :project/end :end
+   :project/techs :tech
+   :project/tech-list :tech
+   :list/idx :idx
    :cv/description :cv/description})
 
 (defn year-range [start end]
@@ -133,12 +134,13 @@
 
 (defn project-data [project]
   (-> project
-      (h/update-in-existing [:employer] (fn [employer] {:db/ident (h/qualify "employer" employer)}))
-      (h/update-in-existing [:tech] h/prep-techs)
-      (h/update-in-existing [:start] #(h/parse-local-date (str % "-01")))
-      (h/update-in-existing [:end] #(h/parse-local-date (str % "-01")))
-      possibly-infer-years
-      (h/select-renamed-keys project-keys)))
+      (h/keep-vals project-keys)
+      (h/update-in-existing [:project/employer] (fn [employer] {:db/ident (h/qualify "employer" employer)}))
+      (h/update-in-existing [:project/techs] h/prep-techs)
+      (h/update-in-existing [:project/tech-list] h/prep-tech-list)
+      (h/update-in-existing [:project/start] #(h/parse-local-date (str % "-01")))
+      (h/update-in-existing [:project/end] #(h/parse-local-date (str % "-01")))
+      possibly-infer-years))
 
 (def open-source-keys
   {:oss-project/url :url

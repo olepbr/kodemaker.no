@@ -132,7 +132,7 @@
                      [:div
                       [:div.h4-light (:project/customer project)]
                       (e/tech-tags {:class "tags"
-                                    :techs (take 5 (unwrap-idents project :project/techs))})
+                                    :techs (take 5 (h/unwrap-ident-list project :project/tech-list))})
                       [:div.mts
                        (f/to-html (:project/description project))]])
                    vec (conj
