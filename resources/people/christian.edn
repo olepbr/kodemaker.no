@@ -566,7 +566,16 @@
              :tech [:html :css :php]
              :years [2002 2003]}]
 
- :presentations [{:title "To the Cloud"
+ :presentations [{:title "Kosetime: Live parprogrammering og zombier"
+                  :blurb "[Magnar](/magnar/) og [jeg](/christian/)
+                  parprogrammerer funksjonelt med Clojure og ClojureScript på
+                  JavaZone."
+                  :event "JavaZone"
+                  :tech [:clojure :clojurescript :functional-programming]
+                  :date "2019-09-11"
+                  :urls {:video "https://vimeo.com/362770913"}
+                  :thumb "/thumbs/videos/tomsinger-2019.jpg"}
+                 {:title "To the Cloud"
                   :blurb "AWS lover uendelig skalering og fleksibilitet ved
                   klikk på en knapp. Men er det egentlig så enkelt? Jeg går
                   gjennom en del problemstillinger du møter når du går til
