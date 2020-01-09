@@ -177,16 +177,18 @@
                :side-project/link-text (-> side-project :link :text)))))
 
 (def recommendation-keys
-  {:title :recommendation/title
-   :blurb :recommendation/description
-   :url :recommendation/url
-   :link-text :recommendation/link-text
-   :tech :recommendation/techs})
+  {:recommendation/title :title
+   :recommendation/description :blurb
+   :recommendation/url :url
+   :recommendation/link-text :link-text
+   :recommendation/techs :tech
+   :recommendation/tech-list :tech})
 
 (defn recommendation-data [idx recommendation]
   (-> recommendation
-      (h/update-in-existing [:tech] h/prep-techs)
-      (h/select-renamed-keys recommendation-keys)
+      (h/keep-vals recommendation-keys)
+      (h/update-in-existing [:recommendation/techs] h/prep-techs)
+      (h/update-in-existing [:recommendation/tech-list] h/prep-tech-list)
       (assoc :list/idx idx)
       (cond-> (:link recommendation)
         (assoc :recommendation/url (-> recommendation :link :url)

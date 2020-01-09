@@ -56,7 +56,7 @@
         :contents (for [recommendation (take 3 (sort-by :list/idx recommendations))]
                     (e/teaser
                      (cond-> {:title (:recommendation/title recommendation)
-                              :tags (e/tech-tags {:techs (unwrap-idents recommendation :recommendation/techs)
+                              :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list recommendation :recommendation/tech-list))
                                                   :class "tags"})
                               :url (:recommendation/url recommendation)
                               :content (f/to-html (:recommendation/description recommendation))}

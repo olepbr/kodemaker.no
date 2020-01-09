@@ -178,6 +178,11 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :recommendation/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
  ;; presentation
  {:db/ident :presentation/title
   :db/valueType :db.type/string
