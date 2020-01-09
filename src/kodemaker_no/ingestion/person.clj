@@ -30,7 +30,7 @@
    :education :person/education
    :languages :person/languages
    :project-highlights :person/project-highlights
-   :endorsement-highligh :person/endorsement-highligh
+   :endorsement-highlight :person/endorsement-highlight
    :business-presentations :person/business-presentations
    :workshops :person/workshops})
 
