@@ -907,6 +907,8 @@ a, .clickable {
 .article-text h2 {margin-top: 80px;}
 .article-text h3 {margin-top: 64px;}
 
+.link.skip-underline {text-decoration: inherit;}
+
 .text img {display: block; max-width: 100%;}
 .article-text img {margin: 64px 0;}
 

@@ -55,9 +55,10 @@
   {:large "text-l"})
 
 (defn arrow-link [{:keys [text href size title] :as params}]
-  [:a.link.ib {:href href
-               :title title
-               :className (size-classes size)}
+  [:a.link.ib.skip-underline
+   {:href href
+    :title title
+    :className (size-classes size)}
    text (arrow params)])
 
 (def viewboxes
