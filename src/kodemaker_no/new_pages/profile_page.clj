@@ -118,6 +118,24 @@
                      ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
                      ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))]})
 
+     ;; Prosjekter
+
+     (when-let [projects (->> (:person/projects person)
+                              (sort-by :project/end)
+                              reverse
+                              (take 3)
+                              seq)]
+       {:kind :titled
+        :title "Prosjekter"
+        :contents (for [project projects]
+                    [:div
+                     [:div.h4-light (:project/customer project)]
+                     (e/tech-tags {:class "tags"
+                                   :techs (take 5 (unwrap-idents project :project/tech))})
+                     [:div.mts
+                      (f/to-html (:project/description project))]])})
+
+
      {:kind :footer}]
     (remove nil?)
     (map (fn [color section]
