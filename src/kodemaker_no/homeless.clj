@@ -35,9 +35,9 @@
     (assoc-in m path v)
     m))
 
-(defn update-in-existing [m path f]
+(defn update-in-existing [m path & args]
   (if-not (nil? (get-in m path))
-    (update-in m path f)
+    (apply update-in m path args)
     m))
 
 (defn max-key*
