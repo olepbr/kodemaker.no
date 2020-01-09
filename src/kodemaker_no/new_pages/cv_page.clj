@@ -311,6 +311,41 @@
                                      (e/comma-separated
                                       (map oss-contrib contribs))])]]}))))})))
 
+(defn one-of [m ks]
+  (loop [[k & ks] ks]
+    (if (nil? k)
+      nil
+      (or (get m k)
+          (recur ks)))))
+
+(defn side-project [project]
+  {:title (one-of project [:cv/title :screencast/title :side-project/title :blog-post/title])
+   :url (one-of project [:page/uri :screencast/url :side-project/url :blog-post/external-url])
+   :summary (one-of project [:cv/description :side-project/description :screencast/description :blog-post/blurb])})
+
+(defn prefix-title [prefix]
+  (fn [project]
+    (update-in project [:title] #(str prefix %))))
+
+(defn other-contributions [person]
+  (concat
+   (map side-project (:person/screencasts person))
+   (map side-project (:person/side-projects person))
+   (map (comp (prefix-title "Artikkel: ") side-project) (:blog-post/_author person))))
+
+(defn other-contributions-section [cv person]
+  (when-let [contribs (seq (other-contributions person))]
+    {:kind :definitions
+     :title "Andre faglige bidrag"
+     :definitions
+     [{:contents
+       (->> contribs
+            (map (fn [{:keys [title url summary]}]
+                   (e/teaser
+                    {:url url
+                     :title title
+                     :content [:div.text (f/to-html summary)]}))))}]}))
+
 (defn create-page [cv]
   (let [person (cv-profile cv)]
     {:sections
@@ -334,6 +369,7 @@
            (education-section cv person)
            (presentation-section cv person)
            (open-source-section cv person)
+           (other-contributions-section cv person)
            {:kind :footer}]
           (remove nil?))}))
 
