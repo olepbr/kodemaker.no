@@ -177,6 +177,7 @@
                  {:customer "FOKIV"
                   :years [2006]
                   :summary "FOBID"
+                  :employer :forsvaret
                   :description "Informasjonssystem over alle forsvarets
                  publikasjoner (FOBID). Oppgaver: Dynamisk transformering av
                  dokumenter vha XSLT. Søkefunksjonalitet. Forretningslogikk."
@@ -185,6 +186,7 @@
                  {:customer "FMI"
                   :years [2006]
                   :summary "Medieregister"
+                  :employer :forsvaret
                   :description "Informasjonssystem over forsvarets film og
                   bildearkiv (Medieregister). Oppgaver: Utvikling av søk, kunde-
                   og bestillings systemet. Utvikling av søk, kunde- og
@@ -194,6 +196,7 @@
                  {:customer "FLO"
                   :years [2005]
                   :summary "Beskop2"
+                  :employer :forsvaret
                   :description "Ledelses informasjonssystem over alt materiell i
                   forsvaret (Beskop2). Oppgaver: Analyse, Design, Test,
                   Utvikling."
@@ -202,6 +205,7 @@
                  {:customer "FOHK"
                   :years [2004]
                   :summary "Ferdaball"
+                  :employer :forsvaret
                   :description "Forsvarets erfaringdatabase Lessons
                   Learned (Ferdaball). Oppgaver: Analyse, Design, Test, Utvikling,
                   Dokumentasjon."
@@ -210,24 +214,28 @@
                  {:customer "FLO"
                   :years [2003]
                   :summary "Beskop"
+                  :employer :forsvaret
                   :description "Ledelses informasjonssystem over alt materiell i
                   forsvaret (Beskop). Oppgaver: Analyse, Design, Utvikling."
                   :tech [:pojo :jdbc :struts :borland :oracle :ant]}
                  {:customer "SVI"
                   :years [2002]
                   :summary "SVI"
+                  :employer :forsvaret
                   :description "Kvalitetsikringssystem for forsvarets operative
                   avdelinger. Oppgaver: Analyse, Design, Utvikling."
                   :tech [:ejb :struts :borland :oracle :ant]}
                  {:customer "FLO"
                   :years [2002]
                   :summary "FLO"
+                  :employer :forsvaret
                   :description "Sertifisert opplæring (portal).
                   Kursadministrasjonssystem (Sopp). Oppgaver: Analyse, Design,
                   Utvikling"
                   :tech [:ejb :servlets :jsp :borland :apache :oracle :ant]}
                  {:customer "FLO"
                   :years [2001]
+                  :employer :forsvaret
                   :summary "FLO"
                   :description "Webshop på forsvarets Intranet for Forsvarets
                   uniformsutsalg (Funif). Oppgaver: Analyse, Design, Utvikling"
