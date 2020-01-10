@@ -3,6 +3,10 @@
             [kodemaker-no.homeless :as h :refer [map-vals max-by]]
             [ui.elements :as e]))
 
+(defn presentation-uri [pres]
+  (or (:page/uri pres)
+      (:presentation/video-url pres)))
+
 (defn get-main-aside [merged-presentations]
   (when-let [pres (some->> merged-presentations
                            (filter :presentation/thumb)
@@ -13,13 +17,8 @@
        :tags (e/people-tags {:prefix "Av"
                              :class "tags"
                              :people (:presentation/people pres)})
-       :url (or (:page/uri pres)
-                (:presentation/video-url pres))
+       :url (presentation-uri pres)
        :title (:presentation/title pres)})]))
-
-(defn presentation-uri [pres]
-  (or (:page/uri pres)
-      (:presentation/video-url pres)))
 
 (defn merge-presentations [presentations]
   (-> (h/select-first-keys presentations
@@ -27,6 +26,7 @@
                            :presentation/date
                            :presentation/video-url
                            :presentation/title
+                           :presentation/description
                            :page/uri})
       (assoc :presentation/people (keep :person/_presentations presentations))))
 
@@ -34,8 +34,7 @@
   (-> (h/select-first-keys recommendations
                            #{:recommendation/title
                              :recommendation/url
-                             :recommendation/description
-                             :recommendation/link-text})
+                             :recommendation/description})
       (assoc :recommendation/people (keep :person/_recommendations recommendations))))
 
 (defn create-page [tech]
@@ -72,15 +71,51 @@
                                                              (comp - count :recommendation/description)))
                                               (take 5))]
                       (e/teaser
-                       (cond-> {:title (:recommendation/title recommendation)
-                                :tags (e/people-tags {:prefix "Anbefalt av"
-                                                      :people (:recommendation/people recommendation)
-                                                      :class "tags"})
-                                :url (:recommendation/url recommendation)
-                                :content (f/to-html (:recommendation/description recommendation))}
-                         (:recommendation/link-text recommendation)
-                         (assoc :link {:text (:recommendation/link-text recommendation)
-                                       :href (:recommendation/url recommendation)}))))})
+                       {:title (:recommendation/title recommendation)
+                        :tags (e/people-tags {:prefix "Anbefalt av"
+                                              :people (:recommendation/people recommendation)
+                                              :class "tags"})
+                        :url (:recommendation/url recommendation)
+                        :content (f/to-html (:recommendation/description recommendation))}))})
+
+       ;; Foredrag
+
+       (when-let [presentations (->> merged-presentations
+                                     (filter :presentation/thumb)
+                                     (filter :presentation/video-url)
+                                     (sort-by :presentation/date)
+                                     (reverse)
+                                     (next)
+                                     seq)]
+         {:kind :titled
+          :title "Våre foredrag"
+          :contents [(e/tango-grid
+                      (map
+                       (fn [pres style class]
+                         {:content [:div
+                                    (e/video-thumb
+                                     {:class (str style " " class)
+                                      :img (str "/" style "/" (:presentation/thumb pres))
+                                      :tags (e/people-tags {:class "tags"
+                                                            :people (:presentation/people pres)})
+                                      :url (presentation-uri pres)
+                                      :title (:presentation/title pres)})
+                                    [:div.text
+                                     (f/to-html (:presentation/description pres))]]})
+                       (take 4 presentations)
+                       ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
+                       ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))
+                     (when-let [remaining (seq (drop 4 presentations))]
+                       [:div
+                        (for [pres remaining]
+                          [:div.mbm
+                           [:a.link {:href (presentation-uri pres)}
+                            (:presentation/title pres)]
+                           [:div
+                            (e/people-tags {:class "tags"
+                                            :people (:presentation/people pres)})]
+                           [:div.text
+                            (f/to-html (:presentation/description pres))]])])]})
 
        {:kind :footer}]
       (remove nil?)
@@ -93,7 +128,9 @@
   (require '[datomic-type-extensions.api :as d])
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
+  (def tech (d/entity db :tech/clojure))
 
+  (create-page tech)
 
   (->>
    (for [[e file] (d/q '[:find ?e ?file
