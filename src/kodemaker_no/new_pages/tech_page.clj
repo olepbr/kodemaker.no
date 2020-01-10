@@ -104,34 +104,35 @@
                                  all-presentations)]
            {:kind :titled
             :title "Våre foredrag"
-            :contents [(when (seq to-show-in-grid)
-                         (e/tango-grid
-                          (map
-                           (fn [pres style class]
-                             {:content [:div
-                                        (e/video-thumb
-                                         {:class (str style " " class)
-                                          :img (str "/" style "/" (:presentation/thumb pres))
-                                          :tags (e/people-tags {:class "tags"
-                                                                :people (:presentation/people pres)})
-                                          :url (presentation-uri pres)
-                                          :title (:presentation/title pres)})
-                                        [:div.text
-                                         (f/to-html (:presentation/description pres))]]})
-                           to-show-in-grid
-                           ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
-                           ["curtain curtain-short-right" nil nil "curtain curtain-short-top"])))
-                       (when (seq remaining)
-                         [:div
-                          (for [pres remaining]
-                            [:div.mbm
-                             [:a.link {:href (presentation-uri pres)}
-                              (:presentation/title pres)]
-                             [:div
-                              (e/people-tags {:class "tags"
-                                              :people (:presentation/people pres)})]
-                             [:div.text
-                              (f/to-html (:presentation/description pres))]])])]}))
+            :contents (->> [(when (seq to-show-in-grid)
+                              (e/tango-grid
+                               (map
+                                (fn [pres style class]
+                                  {:content [:div
+                                             (e/video-thumb
+                                              {:class (str style " " class)
+                                               :img (str "/" style "/" (:presentation/thumb pres))
+                                               :tags (e/people-tags {:class "tags"
+                                                                     :people (:presentation/people pres)})
+                                               :url (presentation-uri pres)
+                                               :title (:presentation/title pres)})
+                                             [:div.text
+                                              (f/to-html (:presentation/description pres))]]})
+                                to-show-in-grid
+                                ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
+                                ["curtain curtain-short-right" nil nil "curtain curtain-short-top"])))
+                            (when (seq remaining)
+                              [:div
+                               (for [pres remaining]
+                                 [:div.mbm
+                                  [:a.link {:href (presentation-uri pres)}
+                                   (:presentation/title pres)]
+                                  [:div
+                                   (e/people-tags {:class "tags"
+                                                   :people (:presentation/people pres)})]
+                                  [:div.text
+                                   (f/to-html (:presentation/description pres))]])])]
+                           (remove nil?))}))
 
        ;; Bloggposter
 
