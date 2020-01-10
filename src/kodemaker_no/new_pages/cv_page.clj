@@ -307,7 +307,7 @@
 (defn side-project [project]
   {:title (one-of project [:cv/title :screencast/title :side-project/title :blog-post/title])
    :url (one-of project [:page/uri :screencast/url :side-project/url :blog-post/external-url])
-   :summary (one-of project [:cv/description :side-project/description :screencast/description :blog-post/blurb])})
+   :summary (one-of project [:cv/description :cv/blurb :side-project/description :screencast/description :blog-post/blurb])})
 
 (defn prefix-title [prefix]
   (fn [project]
