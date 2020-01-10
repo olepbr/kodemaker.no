@@ -75,9 +75,8 @@
       [:pre] hl/add-hilite-class})
     (catch Exception e
       (throw (ex-info "Error while tweaking page markup"
-                      {:html html
-                       :image-asset-config image-asset-config
-                       :request request}
+                      {:image-asset-config image-asset-config
+                       :request (dissoc request :optimus-assets)}
                       e)))))
 
 (defn- use-norwegian-quotes [html]
