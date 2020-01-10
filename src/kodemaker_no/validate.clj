@@ -31,6 +31,10 @@
               (optional-key :github) Str ;; brukernavn
               (optional-key :coderwall) Str} ;; brukernavn
 
+   (optional-key :profile-overview-picture) Path ;; Hvis du ikke ønsker tilfeldig bilde på profiloversikten
+   (optional-key :profile-page-picture) Path ;; Hvis du ikke ønsker tilfeldig bilde på profilsiden
+   (optional-key :cv-picture) Path ;; Hvis du ikke ønsker tilfeldig bilde på CV-en
+
    (optional-key :tech) {(optional-key :using-at-work) [ID]
                          (optional-key :favorites-at-the-moment) [ID]
                          (optional-key :want-to-learn-more) [ID]}

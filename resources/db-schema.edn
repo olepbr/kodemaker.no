@@ -403,6 +403,22 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/many}
 
+ {:db/ident :person/portraits
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/profile-overview-picture
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/profile-page-picture
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/cv-picture
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :person/description
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

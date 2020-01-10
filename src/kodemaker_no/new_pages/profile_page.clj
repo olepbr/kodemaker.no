@@ -21,7 +21,7 @@
    (->>
     [{:kind :profile
       :full-name (:person/full-name person)
-      :image (h/profile-picture person)
+      :image (:person/profile-page-picture person)
       :title (:person/title person)
       :mobile (:person/phone-number person)
       :mail (:person/email-address person)

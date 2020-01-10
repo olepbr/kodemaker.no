@@ -9,6 +9,7 @@
   {:administration? :person/administration?
    :business-presentations :person/business-presentations
    :certifications :person/certifications
+   :cv-picture :person/cv-picture
    :description :person/description
    :education :person/education
    :email-address :person/email-address
@@ -23,6 +24,8 @@
    :open-source-projects :person/open-source-projects
    :phone-number :person/phone-number
    :presence :person/presence
+   :profile-overview-picture :person/profile-overview-picture
+   :profile-page-picture :person/profile-page-picture
    :project-highlights :person/project-highlights
    :projects :person/projects
    :qualifications :person/qualifications
@@ -294,19 +297,47 @@
            (filter #(re-find #"\.jpg$" %))
            (map #(second (str/split % #"public")))))
 
+(def overridable-pictures
+  [:person/profile-overview-picture
+   :person/profile-page-picture
+   :person/cv-picture])
+
+(defn add-overridable-pictures [profile pictures]
+  (loop [profile profile
+         [k & ks] overridable-pictures
+         pics (if (seq pictures)
+                (cycle pictures)
+                (repeat "/foto/mask.jpg"))]
+    (cond
+      (nil? k) profile
+      (nil? (get profile k)) (recur (assoc profile k (first pics)) ks (rest pics))
+      :default (recur profile ks pics))))
+
+(defn add-pictures [profile pictures]
+  [(let [in-use (vec (vals (select-keys profile overridable-pictures)))
+         required-pics (- (count overridable-pictures) (count in-use))
+         unused (remove (set in-use) pictures)
+         portraits (remove #(re-find #"\bno-circle\b" %) pictures)]
+     (cond-> profile
+       (seq pictures) (assoc :person/profile-pictures (vec pictures))
+       (seq portraits) (assoc :person/portraits (vec portraits))
+       :always (add-overridable-pictures
+                (if (< (count unused) required-pics)
+                  (concat (shuffle (into unused portraits)) (shuffle in-use))
+                  (shuffle unused)))))])
+
 (defn create-tx [file-name person]
   (let [person-ident (h/qualify "person" (:id person))
         profile (profile-data file-name person)]
     (concat
-     [(let [pics (profile-pics person)]
-        (cond-> profile
-          (seq pics) (assoc :person/profile-pictures (vec pics))))]
+     (add-pictures profile (profile-pics person))
      (cv-data file-name person profile)
      (map (partial blog-post-data person-ident) (:blog-posts person))
      (keep (partial video/video-data person-ident) (:person/presentations profile)))))
 
 (comment
   (create-tx "people/magnar.edn" (read-string (slurp (clojure.java.io/resource "people/magnar.edn"))))
+  (create-tx "people/stig.edn" (read-string (slurp (clojure.java.io/resource "people/stig.edn"))))
 
   (require '[datomic.api :as d])
   (def conn (d/connect "datomic:mem://kodemaker"))
@@ -314,4 +345,22 @@
 
   (d/touch (first (:person/recommendations (d/entity db :person/odin))))
 
+  (add-pictures
+   {:person/cv-picture "/images/cv.jpg"}
+   []
+   [])
+
+  (add-pictures {} [] [])
+
+  (add-pictures
+   {}
+   ["/images/a.jpg"
+    "/images/b.jpg"]
+   ["/images/portraits/1.jpg"
+    "/images/portraits/2.jpg"])
+
+  (add-overridable-pictures
+   {:person/cv-picture "/images/cv.jpg"}
+   ["/images/a.jpg"
+    "/images/b.jpg"])
   )

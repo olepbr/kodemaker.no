@@ -19,6 +19,13 @@ lein repl
 
 Gå deretter til http://localhost:3333
 
+## Bilder og bytes
+
+Bilder bør for det meste være JPG, ikke PNG, på grunn av filstørrelse. I begge
+tilfeller er det veldig fint om du kjører bildet gjennom tinypng.com for å
+ytterligere trimme ned størrelsen. Eventuelt spør pent Magnar eller Christian om
+hjelp til dette etter at du har lagt dem til.
+
 ## Oppdater bilder
 
 Bilder brukes ganske annerledes i det nye designet, og må derfor oppdateres.
@@ -50,3 +57,26 @@ For hobby nummer to:
 
 Vi viser ikke flere enn to hobbyer på sidene. Har du mer å vise frem, kan
 du godt flytte det til sideprosjekter eller tilsvarende.
+
+### Profilbilder
+
+Ideellt sett har du minst 3, men gjerne flere profilbilder liggende under
+`resources/public/foto/profiles/[dittnavn]`. Disse bildene velges det tilfeldig
+fra hver gang siten bygges, og det gjøres et forsøk på å ikke bruke samme bilde
+mer enn én gang (så langt det er mulig). Du kan påvirke valg av bilder på
+følgende måte:
+
+- Legge til og slette bilder fra din mappe. Bildene må ha oppløsning 600x800.
+- Til bruk i sirkel croppes bildene fra midten. Dersom dette gir et rart utsnitt
+  for et bilde, legg til "no-circle" i filnavnet, så blir ikke bildet brukt i
+  sirkler, eks: `resources/public/foto/profiles/stig/stig-no-circle.jpg`.
+
+Du kan også velge enkelte bilder selv, men da vil de ikke variere mellom deploys
+og siten blir litt tristere, så det er ikke anbefalt:
+
+- Velg selv bilde til CV-en ved å sette `:cv-picture` til
+  `"/foto/profiles/[dittnavn]/abc.jpg"` i profil-edn-fila di.
+- Velg selv bilde til folk-siden ved å sette `:profile-overview-picture` til
+  `"/foto/profiles/[dittnavn]/abc.jpg"` i profil-edn-fila di.
+- Velge selv bilde til profilen din ved å sette `:profile-picture` til
+  `"/foto/profiles/[dittnavn]/abc.jpg"` i profil-edn-fila di.

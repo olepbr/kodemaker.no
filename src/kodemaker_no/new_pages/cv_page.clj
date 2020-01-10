@@ -110,6 +110,11 @@
   (def person (d/entity db :person/christian))
   (def cv (:cv/_person person))
 
+  (:person/profile-overview-picture person)
+  (:person/profile-page-picture person)
+  (:person/cv-picture person)
+  (:person/profile-pictures person)
+
   (->> (:person/certifications person)
        (group-by :year)
        (sort-by (comp - first)))
@@ -350,7 +355,7 @@
   (let [person (cv-profile cv)]
     {:sections
      (->> [{:kind :cv-intro
-            :image (h/profile-picture person)
+            :image (:person/cv-picture person)
             :friendly-name (:person/given-name person)
             :full-name (:person/full-name person)
             :title (:person/title person)
