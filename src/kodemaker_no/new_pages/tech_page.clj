@@ -8,19 +8,6 @@
   (or (:page/uri pres)
       (:presentation/video-url pres)))
 
-(defn get-main-aside [merged-presentations]
-  (when-let [pres (some->> merged-presentations
-                           (filter :presentation/thumb)
-                           (max-by :presentation/date))]
-    [:div.hide-below-1000
-     (e/video-thumb
-      {:img (str "/rouge-duotone/" (:presentation/thumb pres))
-       :tags (e/people-tags {:prefix "Av"
-                             :class "tags"
-                             :people (:presentation/people pres)})
-       :url (presentation-uri pres)
-       :title (:presentation/title pres)})]))
-
 (defn change-1st-person-to-3rd [value entity person-lookup]
   (str/replace value #"\b[jJ]eg\b"
                (let [person (person-lookup entity)]
@@ -59,7 +46,16 @@
         merged-recommendations (->> (:recommendation/_techs tech)
                                     (group-by :recommendation/url)
                                     vals
-                                    (map merge-recommendations))]
+                                    (map merge-recommendations))
+        all-presentations (->> merged-presentations
+                               (filter #(< 80 (count (:presentation/description % ""))))
+                               (sort-by :presentation/date)
+                               (reverse)
+                               seq)
+        presentation-stars (->> all-presentations
+                                (filter :presentation/thumb)
+                                (filter :presentation/video-url))
+        headliner (first presentation-stars)]
     {:sections
      (->>
       [{:kind :header :background :chablis}
@@ -69,7 +65,15 @@
         :article {:content [:div.text
                             (f/to-html (:tech/description tech))]
                   :alignment :front
-                  :aside (get-main-aside merged-presentations)}
+                  :aside (when headliner
+                           [:div.hide-below-1000
+                            (e/video-thumb
+                             {:img (str "/rouge-duotone/" (:presentation/thumb headliner))
+                              :tags (e/people-tags {:prefix "Av"
+                                                    :class "tags"
+                                                    :people (:presentation/people headliner)})
+                              :url (presentation-uri headliner)
+                              :title (:presentation/title headliner)})])}
         :pønt [{:kind :greater-than
                 :position "top -410px right 60vw"}
                {:kind :dotgrid
@@ -94,42 +98,44 @@
 
        ;; Foredrag
 
-       (when-let [presentations (->> merged-presentations
-                                     (filter :presentation/thumb)
-                                     (filter :presentation/video-url)
-                                     (sort-by :presentation/date)
-                                     (reverse)
-                                     (next)
-                                     seq)]
-         {:kind :titled
-          :title "Våre foredrag"
-          :contents [(e/tango-grid
-                      (map
-                       (fn [pres style class]
-                         {:content [:div
-                                    (e/video-thumb
-                                     {:class (str style " " class)
-                                      :img (str "/" style "/" (:presentation/thumb pres))
-                                      :tags (e/people-tags {:class "tags"
-                                                            :people (:presentation/people pres)})
-                                      :url (presentation-uri pres)
-                                      :title (:presentation/title pres)})
-                                    [:div.text
-                                     (f/to-html (:presentation/description pres))]]})
-                       (take 4 presentations)
-                       ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
-                       ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))
-                     (when-let [remaining (seq (drop 4 presentations))]
-                       [:div
-                        (for [pres remaining]
-                          [:div.mbm
-                           [:a.link {:href (presentation-uri pres)}
-                            (:presentation/title pres)]
-                           [:div
-                            (e/people-tags {:class "tags"
-                                            :people (:presentation/people pres)})]
-                           [:div.text
-                            (f/to-html (:presentation/description pres))]])])]})
+       (when all-presentations
+         (let [to-show-in-grid (take 4 (next presentation-stars))
+               remaining (remove (into #{headliner} to-show-in-grid)
+                                 all-presentations)]
+           {:kind :titled
+            :title "Våre foredrag"
+            :contents [(when (seq to-show-in-grid)
+                         (e/tango-grid
+                          (map
+                           (fn [pres style class]
+                             {:content [:div
+                                        (e/video-thumb
+                                         {:class (str style " " class)
+                                          :img (str "/" style "/" (:presentation/thumb pres))
+                                          :tags (e/people-tags {:class "tags"
+                                                                :people (:presentation/people pres)})
+                                          :url (presentation-uri pres)
+                                          :title (:presentation/title pres)})
+                                        [:div.text
+                                         (f/to-html (:presentation/description pres))]]})
+                           to-show-in-grid
+                           ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
+                           ["curtain curtain-short-right" nil nil "curtain curtain-short-top"])))
+                       (when (seq remaining)
+                         [:div
+                          (for [pres remaining]
+                            [:div.mbm
+                             [:a.link {:href (presentation-uri pres)}
+                              (:presentation/title pres)]
+                             [:div
+                              (e/people-tags {:class "tags"
+                                              :people (:presentation/people pres)})]
+                             [:div.text
+                              (f/to-html (:presentation/description pres))]])])]}))
+
+       ;; Bloggposter
+
+
 
        {:kind :footer}]
       (remove nil?)
