@@ -6,35 +6,35 @@
             [kodemaker-no.ingestion.video :as video]))
 
 (def person-keys
-  {:administration? :person/administration?
-   :business-presentations :person/business-presentations
-   :certifications :person/certifications
-   :cv-picture :person/cv-picture
-   :description :person/description
-   :education :person/education
-   :email-address :person/email-address
-   :employments :person/employments
-   :endorsement-highlight :person/endorsement-highlight
-   :endorsements :person/endorsements
-   :experience-since :person/experience-since
-   :hobbies :person/hobbies
-   :innate-skills :person/innate-skills
-   :languages :person/languages
-   :open-source-contributions :person/open-source-contributions
-   :open-source-projects :person/open-source-projects
-   :phone-number :person/phone-number
-   :presence :person/presence
-   :profile-overview-picture :person/profile-overview-picture
-   :profile-page-picture :person/profile-page-picture
-   :project-highlights :person/project-highlights
-   :projects :person/projects
-   :qualifications :person/qualifications
-   :recommendations :person/recommendations
-   :screencasts :person/screencasts
-   :side-projects :person/side-projects
-   :start-date :person/start-date
-   :title :person/title
-   :workshops :person/workshops
+  {:person/administration? :administration?
+   :person/business-presentations :business-presentations
+   :person/certifications :certifications
+   :person/cv-picture :cv-picture
+   :person/description :description
+   :person/education :education
+   :person/email-address :email-address
+   :person/employments :employments
+   :person/endorsement-highlight :endorsement-highlight
+   :person/endorsements :endorsements
+   :person/experience-since :experience-since
+   :person/hobbies :hobbies
+   :person/innate-skills :innate-skills
+   :person/languages :languages
+   :person/open-source-contributions :open-source-contributions
+   :person/open-source-projects :open-source-projects
+   :person/phone-number :phone-number
+   :person/presence :presence
+   :person/profile-overview-picture :profile-overview-picture
+   :person/profile-page-picture :profile-page-picture
+   :person/project-highlights :project-highlights
+   :person/projects :projects
+   :person/qualifications :qualifications
+   :person/recommendations :recommendations
+   :person/screencasts :screencasts
+   :person/side-projects :side-projects
+   :person/start-date :start-date
+   :person/title :title
+   :person/workshops :workshops
    :cv/description :cv/description})
 
 (defn url [file-name]
@@ -60,26 +60,26 @@
    :presentation/thumb :thumb})
 
 (def presentation-url-keys
-  {:video :presentation/video-url
-   :slides :presentation/slides-url
-   :source :presentation/source-url})
+  {:presentation/video-url :video
+   :presentation/slides-url :slides
+   :presentation/source-url :source})
 
 (def location-keys
-  {:title :presentation/event-name
-   :url :presentation/event-url})
+  {:presentation/event-name :title
+   :presentation/event-url :url})
 
 (def call-to-action-keys
-  {:text :presentation/call-to-action-text
-   :url :presentation/call-to-action-url})
+  {:presentation/call-to-action-text :text
+   :presentation/call-to-action-url :url})
 
 (defn presentation-data [presentation]
   (-> presentation
       (set/rename-keys {:blurb :description})
       (h/keep-vals presentation-keys)
       (merge
-       (h/select-renamed-keys (:urls presentation) presentation-url-keys)
-       (h/select-renamed-keys (:location presentation) location-keys)
-       (h/select-renamed-keys (:call-to-action presentation) call-to-action-keys))
+       (h/keep-vals (:urls presentation {}) presentation-url-keys)
+       (h/keep-vals (:location presentation {}) location-keys)
+       (h/keep-vals (:call-to-action presentation {}) call-to-action-keys))
       (h/update-in-existing [:presentation/techs] h/prep-techs)
       (h/update-in-existing [:presentation/tech-list] h/prep-tech-list)
       (h/update-in-existing [:presentation/date] h/parse-local-date)))
@@ -103,9 +103,9 @@
       (h/update-in-existing [:screencast/tech-list] h/prep-tech-list)))
 
 (def tech-keys
-  {:using-at-work :person/using-at-work
-   :favorites-at-the-moment :person/favorites-at-the-moment
-   :want-to-learn-more :person/want-to-learn-more})
+  {:person/using-at-work :using-at-work
+   :person/favorites-at-the-moment :favorites-at-the-moment
+   :person/want-to-learn-more :want-to-learn-more})
 
 (def project-keys
   {:project/customer :customer
@@ -223,7 +223,7 @@
                               (:upcoming person)
                               (:appearances person))]
     (-> person
-        (h/select-renamed-keys person-keys)
+        (h/keep-vals person-keys)
         (assoc :db/ident ident)
         (assoc :person/presentations (mapv presentation-data presentations))
         (h/update-in-existing [:person/screencasts] #(mapv screencast-data %))
@@ -245,12 +245,12 @@
         (assoc :person/full-name (str/join " " (:name person)))
         (assoc :person/profile-active? (get person :profile-active? true))
         (assoc :person/quit? (get person :quit? false))
-        (merge (h/map-vals h/prep-techs (h/select-renamed-keys (:tech person) tech-keys)))
+        (merge (h/map-vals h/prep-techs (h/keep-vals (:tech person {}) tech-keys)))
         (maybe-pagify file-name))))
 
 (def cv-keys
-  {:preferred-techs :cv/preferred-techs
-   :exclude-techs :cv/exclude-techs})
+  {:cv/preferred-techs :preferred-techs
+   :cv/exclude-techs :exclude-techs})
 
 (defn prep-tech-preferences [techs]
   (->> techs
@@ -266,8 +266,8 @@
              :page/kind :page.kind/cv
              :cv/person (select-keys profile [:db/ident])}
             (select-keys person [:cv/description])
-            (-> (get-in person [:cv :default])
-                (h/select-renamed-keys cv-keys)
+            (-> (get-in person [:cv :default] {})
+                (h/keep-vals cv-keys)
                 (h/update-in-existing [:cv/preferred-techs] prep-tech-preferences)
                 (h/update-in-existing [:cv/exclude-techs] h/prep-techs)))]))
 

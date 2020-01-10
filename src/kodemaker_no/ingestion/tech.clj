@@ -1,20 +1,20 @@
 (ns kodemaker-no.ingestion.tech
-  (:require [kodemaker-no.homeless :refer [select-renamed-keys qualify]]))
+  (:require [kodemaker-no.homeless :as h]))
 
 (def tech-keys
-  {:id :db/ident
-   :name :tech/name
-   :description :tech/description
-   :type :tech/type
-   :illustration :tech/illustration
-   :site :tech/site
-   :ad :tech/ad})
+  {:db/ident :id
+   :tech/name :name
+   :tech/description :description
+   :tech/type :type
+   :tech/illustration :illustration
+   :tech/site :site
+   :tech/ad :ad})
 
-(def qualify-tech-kw (partial qualify "tech"))
+(def qualify-tech-kw (partial h/qualify "tech"))
 
 (defn create-tx [file-name tech]
   [(-> tech
-       (select-renamed-keys tech-keys)
+       (h/keep-vals tech-keys)
        (update :db/ident qualify-tech-kw)
        (merge (when (:description tech)
                 {:page/uri (str (second (re-find #"tech(.*).edn" file-name)) "/")

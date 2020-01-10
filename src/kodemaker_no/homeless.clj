@@ -125,11 +125,6 @@
        (hiccup-nodes)
        (filter #(hiccup-symbol-matches? q (first %)))))
 
-(defn select-renamed-keys [m ks]
-  (-> m
-      (select-keys (keys ks))
-      (set/rename-keys ks)))
-
 (defn parse-local-date [date-str]
   (LocalDate/parse date-str))
 

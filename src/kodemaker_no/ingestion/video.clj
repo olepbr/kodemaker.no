@@ -40,15 +40,15 @@
     (:presentation/video-url presentation)))
 
 (def video-keys
-  {:title :video/title
-   :blurb :video/blurb
-   :date :video/date
-   :embed-code :video/embed-code
-   :direct-link? :video/direct-link?})
+  {:video/title :title
+   :video/blurb :blurb
+   :video/date :date
+   :video/embed-code :embed-code
+   :video/direct-link? :direct-link?})
 
 (defn video-data [person-ident presentation]
   (when-let [url (video-url presentation)]
-    (cond-> (h/select-renamed-keys presentation video-keys)
+    (cond-> (h/keep-vals presentation video-keys)
       (create-video-page-for-presentation? presentation)
       (merge {:page/uri url
               :page/kind :page.kind/video})
