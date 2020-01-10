@@ -363,7 +363,7 @@
             :contact-lines [(:person/phone-number person)
                             (:person/email-address person)]
             :links (person/prep-presence-links (:person/presence person))
-            :experience (format "%s med %s erfaring" (:person/title person) (years-of-experience person))
+            :experience (format "Utvikler med %s erfaring" (years-of-experience person))
             :qualifications (:person/qualifications person)
             :quote (endorsement-highlight person)
             :description (f/to-html (:person/description person))
