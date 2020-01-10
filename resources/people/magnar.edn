@@ -265,7 +265,15 @@
                        noen andres config og håpe det blir bra."
                :tech [:emacs]}]
 
- :presentations [{:title "Strøm data til nettleseren uten å lage det på nytt hver gang"
+ :presentations [{:title "Kosetime: Live parprogrammering og zombier"
+                  :blurb "[Christian](/christian/) og jeg parprogrammerer
+                  funksjonelt med Clojure og ClojureScript på JavaZone."
+                  :event "JavaZone"
+                  :tech [:clojure :clojurescript :functional-programming]
+                  :date "2019-09-11"
+                  :urls {:video "https://vimeo.com/362770913"}
+                  :thumb "/thumbs/videos/tomsinger-2019.jpg"}
+                 {:title "Strøm data til nettleseren uten å lage det på nytt hver gang"
                   :blurb "Vi gikk bort fra skreddersydd data-streaming per
                           feature og kvittet oss med kilovis med kode. Ikke var
                           det noe moro å skrive den koden heller. Når vi legger
