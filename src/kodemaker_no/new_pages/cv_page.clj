@@ -315,9 +315,12 @@
 
 (defn other-contributions [person]
   (concat
-   (map side-project (:person/screencasts person))
-   (map side-project (:person/side-projects person))
-   (map (comp (prefix-title "Artikkel: ") side-project) (:blog-post/_author person))))
+   (map side-project (sort-by :list/idx (:person/screencasts person)))
+   (map side-project (sort-by :list/idx (:person/side-projects person)))
+   (->> (:blog-post/_author person)
+        (sort-by :blog-post/published)
+        reverse
+        (map (comp (prefix-title "Artikkel: ") side-project)))))
 
 (defn other-contributions-section [cv person]
   (when-let [contribs (seq (other-contributions person))]
