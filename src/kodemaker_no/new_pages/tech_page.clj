@@ -30,11 +30,23 @@
                            :page/uri})
       (assoc :presentation/people (keep :person/_presentations presentations))))
 
+(defn merge-recommendations [recommendations]
+  (-> (h/select-first-keys recommendations
+                           #{:recommendation/title
+                             :recommendation/url
+                             :recommendation/description
+                             :recommendation/link-text})
+      (assoc :recommendation/people (keep :person/_recommendations recommendations))))
+
 (defn create-page [tech]
   (let [merged-presentations (->> (:presentation/_techs tech)
                                   (group-by presentation-uri)
                                   vals
-                                  (map merge-presentations))]
+                                  (map merge-presentations))
+        merged-recommendations (->> (:recommendation/_techs tech)
+                                    (group-by :recommendation/url)
+                                    vals
+                                    (map merge-recommendations))]
     {:sections
      (->>
       [{:kind :header :background :chablis}
@@ -50,8 +62,31 @@
                {:kind :dotgrid
                 :position "top -110px left 80vw"}]}
 
+       ;; Anbefalinger
+
+       (when (seq merged-recommendations)
+         {:kind :titled
+          :title "Våre anbefalinger"
+          :contents (for [recommendation (->> merged-recommendations
+                                              (sort-by (juxt (comp - count :recommendation/people)
+                                                             (comp - count :recommendation/description)))
+                                              (take 5))]
+                      (e/teaser
+                       (cond-> {:title (:recommendation/title recommendation)
+                                :tags (e/people-tags {:prefix "Anbefalt av"
+                                                      :people (:recommendation/people recommendation)
+                                                      :class "tags"})
+                                :url (:recommendation/url recommendation)
+                                :content (f/to-html (:recommendation/description recommendation))}
+                         (:recommendation/link-text recommendation)
+                         (assoc :link {:text (:recommendation/link-text recommendation)
+                                       :href (:recommendation/url recommendation)}))))})
+
        {:kind :footer}]
-      (remove nil?))}))
+      (remove nil?)
+      (map (fn [color section]
+             (assoc section :background color))
+           (cycle [:chablis :blanc])))}))
 
 (comment
 
