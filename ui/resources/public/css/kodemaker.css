@@ -1093,6 +1093,8 @@ a, .clickable {
   font-weight: 500;
 }
 
+.b {font-weight: bold;}
+
 .h6, .text h6, .article-text h5, cite {
   color: var(--chocolat-au-lait);
   font-size: 21px;

@@ -134,7 +134,7 @@
                       (->
                        (for [project (take to-show projects)]
                          [:div
-                          [:div.h4-light (:project/customer project)]
+                          [:div.h6.b (:project/customer project)]
                           (e/tech-tags {:class "tags"
                                         :techs (take 5 (h/unwrap-ident-list project :project/tech-list))})
                           [:div.mts
@@ -157,7 +157,7 @@
                       (->
                        (for [endorsement (take to-show endorsements)]
                          [:div
-                          [:div.h4-light (:author endorsement)]
+                          [:div.h6.b (:author endorsement)]
                           [:div.text-s.annotation.mts (:title endorsement)]
                           [:div.mts.text
                            (f/to-html (str "«" (:quote endorsement) "»"))]])
