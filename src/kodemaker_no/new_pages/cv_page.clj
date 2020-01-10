@@ -39,10 +39,11 @@
    :cloud "Skytjenester"
    :security "Sikkerhet"
    :tool "Verktøy"
-   :frontend "Frontend"})
+   :frontend "Frontend"
+   :cv/other "Annet"})
 
 (def tech-order
-  [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend])
+  [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend :cv/other])
 
 (defn side-project-techs [person]
   (mapcat :side-project/techs (:person/side-projects person)))
@@ -116,7 +117,9 @@
      :contents [[:p.text (e/enumerate-techs techs)]]}))
 
 (defn technology-section [cv person]
-  (let [techs (all-techs (d/entity-db cv) cv person)]
+  (let [techs (all-techs (d/entity-db cv) cv person)
+        other-techs (seq (mapcat identity (vals (apply dissoc techs tech-order))))
+        techs (assoc techs :cv/other other-techs)]
     {:kind :definitions
      :title "Teknologi"
      :id "technology"
