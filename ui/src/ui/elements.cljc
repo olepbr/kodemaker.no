@@ -226,11 +226,8 @@
 
 (defn tango-grid [items]
   [:div.tango-grid
-   (map
-    (fn [{:keys [content]} class]
-      [:div.tango-grid-item {:className class} content])
-    items
-    (concat [nil nil] (repeat "hide-below-600")))])
+   (for [{:keys [content class]} items]
+     [:div.tango-grid-item {:className class} content])])
 
 (defn icon-link-row [{:keys [links class]}]
   [:div.icon-links {:className class}

@@ -108,9 +108,10 @@
           :title "Foredrag"
           :contents [(e/tango-grid
                       (map
-                       (fn [pres style class]
-                         {:content (e/video-thumb
-                                    {:class (str style " " class)
+                       (fn [pres style video-class grid-class]
+                         {:class grid-class
+                          :content (e/video-thumb
+                                    {:class (str style " " video-class)
                                      :img (str "/" style "/" (:presentation/thumb pres))
                                      :tags (e/tech-tags {:class "tags"
                                                          :techs (take 5 (h/unwrap-ident-list pres :presentation/tech-list))})
@@ -119,7 +120,8 @@
                                      :title (:presentation/title pres)})})
                        (take 4 (reverse (sort-by :presentation/date presentations)))
                        ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
-                       ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))]})
+                       ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]
+                       [nil nil "hide-below-600" "hide-below-600"]))]})
 
        ;; Prosjekter
 
