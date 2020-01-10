@@ -276,8 +276,8 @@
 
 (defn open-source-projects [person]
   (concat
-   (:person/open-source-projects person)
-   (:person/open-source-contributions person)))
+   (sort-by :list/idx (:person/open-source-projects person))
+   (sort-by :list/idx (:person/open-source-contributions person))))
 
 (defn proglang [project]
   (->> (h/unwrap-ident-list project :oss-project/techs)
