@@ -566,6 +566,8 @@
              :tech [:html :css :php]
              :years [2002 2003]}]
 
+ :cv-picture "/foto/profiles/christian/DSCF1411.jpg"
+
  :presentations [{:title "Kosetime: Live parprogrammering og zombier"
                   :blurb "[Magnar](/magnar/) og [jeg](/christian/)
                   parprogrammerer funksjonelt med Clojure og ClojureScript på
