@@ -157,7 +157,7 @@
    (map render-project projects)))
 
 (defn employment [person employer]
-  (get-in person [:person/employments (keyword (name employer))]))
+  (get-in person [:person/employments (some-> employer name keyword)]))
 
 (defn projects-section [cv person]
   (let [db (d/entity-db person)]
