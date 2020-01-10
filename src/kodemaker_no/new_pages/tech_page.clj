@@ -55,7 +55,7 @@
         presentation-stars (->> all-presentations
                                 (filter :presentation/thumb)
                                 (filter :presentation/video-url))
-        headliner (first presentation-stars)]
+        headliner (when (:tech/description tech) (first presentation-stars))]
     {:sections
      (->>
       [{:kind :header :background :chablis}
@@ -99,7 +99,7 @@
        ;; Foredrag
 
        (when all-presentations
-         (let [to-show-in-grid (take 4 (next presentation-stars))
+         (let [to-show-in-grid (take 4 (remove #{headliner} presentation-stars))
                remaining (remove (into #{headliner} to-show-in-grid)
                                  all-presentations)]
            {:kind :titled

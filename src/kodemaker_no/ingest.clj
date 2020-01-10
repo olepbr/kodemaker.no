@@ -11,7 +11,7 @@
             kodemaker-no.ingestion.employers
             kodemaker-no.ingestion.person
             kodemaker-no.ingestion.reference
-            kodemaker-no.ingestion.tech
+            [kodemaker-no.ingestion.tech :as tech]
             [mapdown.core :as mapdown]))
 
 (defn find-create-tx-fn [file-name]
@@ -98,16 +98,24 @@
    "/folk/" :page.kind/people
    "/blogg/" :page.kind/blog})
 
-(defn techs-without-name [db]
+(defn techs [db]
   (->> (d/q '[:find [?v ...] :where [_ :db/ident ?v]] db)
        (filter #(= "tech" (namespace %)))
-       (remove #(:tech/name (d/entity db %)))))
+       (map #(d/entity db %))))
+
+(defn techs-without-name [db]
+  (->> (techs db)
+       (remove :tech/name)
+       (map :db/ident)))
 
 (defn perform-last-minute-changes [conn]
   @(datomic.api/transact conn (for [tech-id (techs-without-name (d/db conn))]
                                 [:db/add tech-id :tech/name (homeless/str-for-humans tech-id)]))
   @(datomic.api/transact conn (for [[post-id picture] (blog/blog-post-author-images (d/db conn))]
-                                [:db/add post-id :blog-post/author-picture picture])))
+                                [:db/add post-id :blog-post/author-picture picture]))
+  @(datomic.api/transact conn (->> (techs (d/db conn))
+                                   (filter tech/is-page?)
+                                   (map tech/page))))
 
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]

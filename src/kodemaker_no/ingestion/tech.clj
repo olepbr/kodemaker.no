@@ -15,10 +15,21 @@
 (defn create-tx [file-name tech]
   [(-> tech
        (h/keep-vals tech-keys)
-       (update :db/ident qualify-tech-kw)
-       (merge (when (:description tech)
-                {:page/uri (str (second (re-find #"tech(.*).edn" file-name)) "/")
-                 :page/kind :page.kind/tech})))])
+       (update :db/ident qualify-tech-kw))])
+
+(defn is-page? [tech]
+  (or (:tech/description tech)
+      (< 5 (+ (* 10 (count (:presentation/_techs tech)))
+              (* 6 (count (:presentation-product/_techs tech)))
+              (* 5 (count (:screencast/_techs tech)))
+              (* 5 (count (:blog-post/_techs tech)))
+              (* 2 (count (:side-project/_techs tech)))
+              (* 1 (count (:recommendation/_techs tech)))))))
+
+(defn page [tech]
+  {:db/ident (:db/ident tech)
+   :page/uri (str "/" (name (:db/ident tech)) "/")
+   :page/kind :page.kind/tech})
 
 (defn create-tech-type-tx [file-name id->type]
   (for [[id type] id->type]
