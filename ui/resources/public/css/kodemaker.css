@@ -1121,7 +1121,7 @@ a, .clickable {
 .article-text .codehilite,
 .text-s {font-size: 16px;}
 
-.blockquote {
+.blockquote, .text blockquote {
   font-style: italic;
 }
 
