@@ -35,15 +35,6 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
- {:db/ident :cv/preferred-techs
-  :db/valueType :db.type/ref
-  :db/isComponent true
-  :db/cardinality :db.cardinality/many}
-
- {:db/ident :cv/exclude-techs
-  :db/valueType :db.type/ref
-  :db/cardinality :db.cardinality/many}
-
  {:db/ident :cv/person
   :db/valueType :db.type/ref
   :db/isComponent true
@@ -551,6 +542,16 @@
   :db/valueType :db.type/ref
   :db/isComponent true
   :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/preferred-techs
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :person/exclude-techs
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
 
  ;; employer
 

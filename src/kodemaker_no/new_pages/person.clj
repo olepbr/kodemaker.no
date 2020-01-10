@@ -1,5 +1,6 @@
 (ns kodemaker-no.new-pages.person
-  (:require [ui.icons :as icons]))
+  (:require [ui.icons :as icons]
+            [kodemaker-no.homeless :as h]))
 
 (def presence-base-urls
   {:twitter "https://twitter.com/"
@@ -17,3 +18,21 @@
               {:href url
                :target "_blank"
                :icon (icons/icon k)}))))
+
+(defn prefer-techs [preferred techs]
+  (if (seq preferred)
+    (let [pref-count (count preferred)]
+      (sort-by (fn [tech]
+                 (let [idx (.indexOf preferred tech)]
+                   ;; If there is a preference for this tech, use it's index in
+                   ;; the sorted list of preferences. Otherwise, return the
+                   ;; number of preferences, which will keep the prior sort
+                   ;; order for techs for which there is no preference, and
+                   ;; place them all after the preferred techs.
+                   (if (<= 0 idx)
+                     idx
+                     pref-count))) techs))
+    techs))
+
+(defn preferred-techs [person]
+  (h/entity-seq (:person/preferred-techs person)))

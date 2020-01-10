@@ -5,6 +5,10 @@
             [kodemaker-no.homeless :as h]
             [kodemaker-no.ingestion.video :as video]))
 
+(def cv-keys
+  {:person/preferred-techs :preferred-techs
+   :person/exclude-techs :exclude-techs})
+
 (def person-keys
   {:person/administration? :administration?
    :person/business-presentations :business-presentations
@@ -217,6 +221,13 @@
 (defn as-ordered-list [xs]
   (mapv #(assoc %2 :list/idx %1) (range) xs))
 
+(defn prep-tech-preferences [techs]
+  (->> techs
+       h/prep-techs
+       (map-indexed (fn [idx tech]
+                      {:list/idx idx
+                       :list/ref tech}))))
+
 (defn profile-data [file-name person]
   (let [ident (h/qualify "person" (:id person))
         presentations (concat (:presentations person)
@@ -224,6 +235,7 @@
                               (:appearances person))]
     (-> person
         (h/keep-vals person-keys)
+        (merge (h/keep-vals (get-in person [:cv :default] {}) cv-keys))
         (assoc :db/ident ident)
         (assoc :person/presentations (mapv presentation-data presentations))
         (h/update-in-existing [:person/screencasts] #(mapv screencast-data %))
@@ -240,6 +252,8 @@
         (h/update-in-existing [:person/experience-since] str)
         (h/update-in-existing [:person/experience-since] #(Integer/parseInt %))
         (h/update-in-existing [:person/education] as-ordered-list)
+        (h/update-in-existing [:person/preferred-techs] prep-tech-preferences)
+        (h/update-in-existing [:person/exclude-techs] h/prep-techs)
         (assoc :person/given-name (first (:name person)))
         (assoc :person/family-name (last (:name person)))
         (assoc :person/full-name (str/join " " (:name person)))
@@ -248,28 +262,13 @@
         (merge (h/map-vals h/prep-techs (h/keep-vals (:tech person {}) tech-keys)))
         (maybe-pagify file-name))))
 
-(def cv-keys
-  {:cv/preferred-techs :preferred-techs
-   :cv/exclude-techs :exclude-techs})
-
-(defn prep-tech-preferences [techs]
-  (->> techs
-       h/prep-techs
-       (map-indexed (fn [idx tech]
-                      {:list/idx idx
-                       :list/ref tech}))))
-
 (defn cv-data [file-name person profile]
   (when (and (not (:administration? person))
              (not (:quit? person)))
     [(merge {:page/uri (str "/cv" (url file-name))
              :page/kind :page.kind/cv
              :cv/person (select-keys profile [:db/ident])}
-            (select-keys person [:cv/description])
-            (-> (get-in person [:cv :default] {})
-                (h/keep-vals cv-keys)
-                (h/update-in-existing [:cv/preferred-techs] prep-tech-preferences)
-                (h/update-in-existing [:cv/exclude-techs] h/prep-techs)))]))
+            (select-keys person [:cv/description]))]))
 
 (def blog-post-keys
   {:blog-post/external-url :url

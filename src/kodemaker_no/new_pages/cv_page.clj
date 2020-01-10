@@ -67,26 +67,6 @@
 (defn project-techs [person]
   (mapcat :project/techs (:person/projects person)))
 
-(defn preferred-techs [cv]
-  (->> (:cv/preferred-techs cv)
-       (sort-by :list/idx)
-       (map :list/ref)))
-
-(defn prefer-techs [preferred techs]
-  (if (seq preferred)
-    (let [pref-count (count preferred)]
-      (sort-by (fn [tech]
-                 (let [idx (.indexOf preferred tech)]
-                   ;; If there is a preference for this tech, use it's index in
-                   ;; the sorted list of preferences. Otherwise, return the
-                   ;; number of preferences, which will keep the prior sort
-                   ;; order for techs for which there is no preference, and
-                   ;; place them all after the preferred techs.
-                   (if (<= 0 idx)
-                     idx
-                     pref-count))) techs))
-    techs))
-
 (defn all-techs [db cv person]
   (->> (concat (:person/using-at-work person)
                (:person/innate-skills person)
@@ -96,11 +76,11 @@
                (presentation-techs person)
                (open-source-techs person)
                (project-techs person))
-       (remove (or (:cv/exclude-techs cv) #{}))
+       (remove (or (:person/exclude-techs person) #{}))
        frequencies
        (sort-by (comp - second))
        (map first)
-       (prefer-techs (preferred-techs cv))
+       (person/prefer-techs (person/preferred-techs person))
        (map #(d/entity db %))
        (group-by :tech/type)))
 
@@ -303,7 +283,7 @@
        :definitions
        (->> by-techs
             keys
-            (prefer-techs (preferred-techs cv))
+            (person/prefer-techs (person/preferred-techs person))
             (map (fn [tech]
                    (let [projects (get by-techs tech)]
                      {:title (:tech/name (d/entity db tech))
