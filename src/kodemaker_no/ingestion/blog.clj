@@ -1,5 +1,6 @@
 (ns kodemaker-no.ingestion.blog
   (:require [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.homeless :as h]))
 
 (def blog-post-keys
@@ -57,7 +58,36 @@
 (defn create-legacy-tx [file-name blog-post]
   [(assoc (blog-post-tx file-name blog-post) :blog-post/archived? true)])
 
+(defn shuffle-author-pictures [author]
+  (let [pictures (-> (or (seq (:person/portraits author)) [(:person/cv-picture author)])
+                     shuffle
+                     cycle)]
+    (->> (:blog-post/_author author)
+         (filter :blog-post/published)
+         (filter :page/uri)
+         (sort-by :blog-post/published)
+         (map-indexed (fn [idx post]
+                        [(:db/id post) (nth pictures idx)]))
+         vec)))
+
+(defn blog-post-author-images [db]
+  (->> (d/q '[:find [?e ...]
+              :in $
+              :where
+              [?p :blog-post/published]
+              [?p :page/uri]
+              [?p :blog-post/author ?e]]
+            db)
+       (map #(d/entity db %))
+       (mapcat shuffle-author-pictures)))
+
 (comment
+  (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
+
+  (blog-post-author-images db)
+
+
   (defn ingest-blog-post [file-name & [f]]
     (->> file-name
          clojure.java.io/resource

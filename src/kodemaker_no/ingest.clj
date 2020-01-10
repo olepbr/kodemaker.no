@@ -7,7 +7,7 @@
             [kodemaker-no.files :as files]
             [kodemaker-no.homeless :as homeless]
             kodemaker-no.ingestion.article
-            kodemaker-no.ingestion.blog
+            [kodemaker-no.ingestion.blog :as blog]
             kodemaker-no.ingestion.employers
             kodemaker-no.ingestion.person
             kodemaker-no.ingestion.reference
@@ -105,7 +105,9 @@
 
 (defn perform-last-minute-changes [conn]
   @(datomic.api/transact conn (for [tech-id (techs-without-name (d/db conn))]
-                                [:db/add tech-id :tech/name (homeless/str-for-humans tech-id)])))
+                                [:db/add tech-id :tech/name (homeless/str-for-humans tech-id)]))
+  @(datomic.api/transact conn (for [[post-id picture] (blog/blog-post-author-images (d/db conn))]
+                                [:db/add post-id :blog-post/author-picture picture])))
 
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]

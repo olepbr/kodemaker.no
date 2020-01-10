@@ -179,9 +179,6 @@
     (->> (entity-seq (k entity))
          (map #(d/entity db %)))))
 
-(defn profile-picture [{:person/keys [profile-pictures]}]
-  (or (some-> profile-pictures shuffle first) "/foto/mask.jpg"))
-
 (defn capitalize [s]
   (str (.toUpperCase (subs s 0 1))
        (subs s 1)))

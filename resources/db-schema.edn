@@ -102,6 +102,10 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :blog-post/author-picture
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :blog-post/blurb
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

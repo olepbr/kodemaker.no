@@ -143,7 +143,7 @@
      :class "container-section-tight"
      :content (let [author (author blog-post)]
                 (e/round-media
-                 {:image (str "/vcard-small" (h/profile-picture author))
+                 {:image (str "/vcard-small" (:blog-post/author-picture blog-post))
                   :title (:person/full-name author)
                   :lines [(:person/title author)
                           (:person/email-address author)]}))}
@@ -175,7 +175,7 @@
                                   :href (:page/uri post)})]]
      :aside (let [author (author post)]
               (e/round-media
-               {:image (str "/vcard-small" (h/profile-picture author))
+               {:image (str "/vcard-small" (:blog-post/author-picture post))
                 :title (:person/full-name author)
                 :lines [(e/tech-tags {:prefix "Om"
                                       :techs (techs post)})]}))}]})
