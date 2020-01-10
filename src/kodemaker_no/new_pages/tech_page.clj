@@ -3,53 +3,35 @@
             [kodemaker-no.homeless :refer [map-vals max-by]]
             [ui.elements :as e]))
 
-(defn add-main-aside [article tech]
-  (let [pres (->> (:presentation/_techs tech)
-                  (filter :presentation/thumb)
-                  (max-by :presentation/date))]
-    (cond-> {:title (str "Hva er " (:tech/name tech))
-             :content [:div.text
-                       (f/to-html (:tech/description tech))]
-             :alignment :front}
-      pres
-      (-> (assoc :aside-title "Foredrag")
-          (assoc :aside (e/video-thumb
-                         {:img (str "/rouge-duotone/" (:presentation/thumb pres))
-                          :tags (e/people-tags {:prefix "Av"
-                                                :class "tags"
-                                                :people [(:person/_presentations pres)]})
-                          :url (:page/uri pres)
-                          :title (:presentation/title pres)}))))))
+(defn get-main-aside [tech]
+  (when-let [pres (some->> (:presentation/_techs tech)
+                           (filter :presentation/thumb)
+                           (max-by :presentation/date))]
+    [:div.hide-below-1000
+     (e/video-thumb
+      {:img (str "/rouge-duotone/" (:presentation/thumb pres))
+       :tags (e/people-tags {:prefix "Av"
+                             :class "tags"
+                             :people [(:person/_presentations pres)]})
+       :url (:page/uri pres)
+       :title (:presentation/title pres)})]))
 
 (defn create-page [tech]
   {:sections
    (->>
     [{:kind :header :background :chablis}
-     {:kind :banner
-      :text (:tech/name tech)
-      :logo (:tech/illustration tech)}
-     {:kind :article
-      :articles [(-> {:title (str "Hva er " (:tech/name tech))
-                      :content [:div.text
-                                (f/to-html (:tech/description tech))]
-                      :alignment :front}
-                     (add-main-aside tech))]}
-     (when-let [side-project (some->> (:side-project/_techs tech)
-                                      shuffle
-                                      first)]
-       {:kind :article
-        :articles [{:title "Sideprosjekter"
-                    :content (e/teaser (cond-> {:title (:side-project/title side-project)
-                                                :class "tags"
-                                                :tags (e/people-tags {:prefix "Av"
-                                                                      :people [(:person/_side-projects side-project)]})
-                                                :content (:side-project/description side-project)
-                                                :url (:side-project/url side-project)}
-                                         (:side-project/link-text side-project)
-                                         (assoc :link {:text (:side-project/link-text side-project)
-                                                       :href (:side-project/url side-project)})))
-                    :image (str "/chocolate-triangle/" (:side-project/illustration side-project))}]
-        :background :blanc-rose})
+     {:kind :tech-intro
+      :title (:tech/name tech)
+      :logo (:tech/illustration tech)
+      :article {:content [:div.text
+                          (f/to-html (:tech/description tech))]
+                :alignment :front
+                :aside (get-main-aside tech)}
+      :pønt [{:kind :greater-than
+              :position "top -410px right 60vw"}
+             {:kind :dotgrid
+              :position "top -110px left 80vw"}]}
+
      {:kind :footer}]
     (remove nil?))})
 

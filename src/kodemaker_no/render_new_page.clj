@@ -23,6 +23,7 @@
        :profile sections/profile-section
        :pønt sections/pønt-section
        :seymour sections/seymour-section
+       :tech-intro sections/tech-intro-section
        :titled sections/titled-section
        :vertigo sections/vertigo-section
        :widescreen sections/widescreen-section) section)

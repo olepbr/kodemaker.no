@@ -147,6 +147,17 @@
        [:div
         (e/seymour seymour)])]]])
 
+(defn tech-intro-section [{:keys [title logo article] :as params}]
+  [:div.section
+   {:style (l/stylish {} params)}
+   [:div.content.mbl
+    [:div.tac.banner-ws
+     (when logo
+       [:img.banner-logo {:src logo}])
+     (e/h1 {} title)]
+    [:div.mtl
+     (e/article article)]]])
+
 (defn titled-section [{:keys [title contents] :as params}]
   [:div.section.titled-section {:style (l/stylish {} params)}
    [:div.content
