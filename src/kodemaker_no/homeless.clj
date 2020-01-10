@@ -202,3 +202,12 @@
 
 (defn unwrap-idents [entity k]
   (map (partial d/entity (d/entity-db entity)) (k entity)))
+
+(defn select-first-keys [coll keys]
+  (reduce
+   (fn [m k]
+     (if-let [v (some k coll)]
+       (assoc m k v)
+       m))
+   {}
+   keys))

@@ -1,10 +1,10 @@
 (ns kodemaker-no.new-pages.tech-page
   (:require [kodemaker-no.formatting :as f]
-            [kodemaker-no.homeless :refer [map-vals max-by]]
+            [kodemaker-no.homeless :as h :refer [map-vals max-by]]
             [ui.elements :as e]))
 
-(defn get-main-aside [tech]
-  (when-let [pres (some->> (:presentation/_techs tech)
+(defn get-main-aside [merged-presentations]
+  (when-let [pres (some->> merged-presentations
                            (filter :presentation/thumb)
                            (max-by :presentation/date))]
     [:div.hide-below-1000
@@ -12,28 +12,46 @@
       {:img (str "/rouge-duotone/" (:presentation/thumb pres))
        :tags (e/people-tags {:prefix "Av"
                              :class "tags"
-                             :people [(:person/_presentations pres)]})
-       :url (:page/uri pres)
+                             :people (:presentation/people pres)})
+       :url (or (:page/uri pres)
+                (:presentation/video-url pres))
        :title (:presentation/title pres)})]))
 
-(defn create-page [tech]
-  {:sections
-   (->>
-    [{:kind :header :background :chablis}
-     {:kind :tech-intro
-      :title (:tech/name tech)
-      :logo (:tech/illustration tech)
-      :article {:content [:div.text
-                          (f/to-html (:tech/description tech))]
-                :alignment :front
-                :aside (get-main-aside tech)}
-      :pønt [{:kind :greater-than
-              :position "top -410px right 60vw"}
-             {:kind :dotgrid
-              :position "top -110px left 80vw"}]}
+(defn presentation-uri [pres]
+  (or (:page/uri pres)
+      (:presentation/video-url pres)))
 
-     {:kind :footer}]
-    (remove nil?))})
+(defn merge-presentations [presentations]
+  (-> (h/select-first-keys presentations
+                         #{:presentation/thumb
+                           :presentation/date
+                           :presentation/video-url
+                           :presentation/title
+                           :page/uri})
+      (assoc :presentation/people (keep :person/_presentations presentations))))
+
+(defn create-page [tech]
+  (let [merged-presentations (->> (:presentation/_techs tech)
+                                  (group-by presentation-uri)
+                                  vals
+                                  (map merge-presentations))]
+    {:sections
+     (->>
+      [{:kind :header :background :chablis}
+       {:kind :tech-intro
+        :title (:tech/name tech)
+        :logo (:tech/illustration tech)
+        :article {:content [:div.text
+                            (f/to-html (:tech/description tech))]
+                  :alignment :front
+                  :aside (get-main-aside merged-presentations)}
+        :pønt [{:kind :greater-than
+                :position "top -410px right 60vw"}
+               {:kind :dotgrid
+                :position "top -110px left 80vw"}]}
+
+       {:kind :footer}]
+      (remove nil?))}))
 
 (comment
 
