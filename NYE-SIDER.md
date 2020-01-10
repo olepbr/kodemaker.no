@@ -91,3 +91,7 @@ og siten blir litt tristere, så det er ikke anbefalt:
   `"/foto/profiles/[dittnavn]/abc.jpg"` i profil-edn-fila di.
 - Velge selv bilde til profilen din ved å sette `:profile-picture` til
   `"/foto/profiles/[dittnavn]/abc.jpg"` i profil-edn-fila di.
+
+### Tech logoer
+
+Disse er helst SVG, og uten navnet på teknologien hvis mulig.
