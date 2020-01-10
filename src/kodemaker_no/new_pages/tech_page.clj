@@ -90,7 +90,7 @@
 
 (comment
 
-  (require '[datomic.api :as d])
+  (require '[datomic-type-extensions.api :as d])
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
 

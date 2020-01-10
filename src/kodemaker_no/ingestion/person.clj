@@ -344,7 +344,7 @@
   (create-tx "people/magnar.edn" (read-string (slurp (clojure.java.io/resource "people/magnar.edn"))))
   (create-tx "people/stig.edn" (read-string (slurp (clojure.java.io/resource "people/stig.edn"))))
 
-  (require '[datomic.api :as d])
+  (require '[datomic-type-extensions.api :as d])
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
 
