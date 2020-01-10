@@ -280,7 +280,7 @@
    (sort-by :list/idx (:person/open-source-contributions person))))
 
 (defn proglang [project]
-  (->> (h/unwrap-ident-list project :oss-project/techs)
+  (->> (h/unwrap-ident-list project :oss-project/tech-list)
        (filter #(= :proglang (:tech/type %)))
        first))
 
