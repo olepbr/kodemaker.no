@@ -26,6 +26,9 @@ tilfeller er det veldig fint om du kjører bildet gjennom tinypng.com for å
 ytterligere trimme ned størrelsen. Eventuelt spør pent Magnar eller Christian om
 hjelp til dette etter at du har lagt dem til.
 
+**NB!** Bildesystemet vårt finner enn så lenge ikke bilder med JPEG extension,
+bruk JPG/jpg.
+
 ## Oppdater bilder
 
 Bilder brukes ganske annerledes i det nye designet, og må derfor oppdateres.
@@ -70,6 +73,14 @@ følgende måte:
 - Til bruk i sirkel croppes bildene fra midten. Dersom dette gir et rart utsnitt
   for et bilde, legg til "no-circle" i filnavnet, så blir ikke bildet brukt i
   sirkler, eks: `resources/public/foto/profiles/stig/stig-no-circle.jpg`.
+- "Tag" bilder med `no-cv` for å unngå at det brukes på CV: eks:
+  `resources/public/foto/profiles/stig/stig-no-cv.jpg`
+- "Tag" bilder med `no-profile` for å unngå at det brukes på profilsiden: eks:
+  `resources/public/foto/profiles/stig/stig-no-profile.jpg`
+- "Tag" bilder med `no-overview` for å unngå at det brukes på folk-siden: eks:
+  `resources/public/foto/profiles/stig/stig-no-overview.jpg`
+
+Filnavn-tags kan kombineres: `resources/public/foto/profiles/stig/stig-no-profile-no-cv.jpg`.
 
 Du kan også velge enkelte bilder selv, men da vil de ikke variere mellom deploys
 og siten blir litt tristere, så det er ikke anbefalt:

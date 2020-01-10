@@ -302,29 +302,34 @@
    :person/profile-page-picture
    :person/cv-picture])
 
+(def exclusion-tags
+  {:person/profile-overview-picture "no-overview"
+   :person/profile-page-picture "no-profile"
+   :person/cv-picture "no-cv"})
+
+(defn select-picture [profile k pictures]
+  (if-let [picture (get profile k)]
+    picture
+    (let [pictures (some-> pictures shuffle)
+          in-use (vec (vals (select-keys profile overridable-pictures)))
+          usable (remove #(re-find (re-pattern (format "\\b%s\\b" (exclusion-tags k))) %) pictures)]
+      (or (first (remove (set in-use) usable))
+          (first usable)
+          (first pictures)
+          "/foto/mask.jpg"))))
+
 (defn add-overridable-pictures [profile pictures]
   (loop [profile profile
-         [k & ks] overridable-pictures
-         pics (if (seq pictures)
-                (cycle pictures)
-                (repeat "/foto/mask.jpg"))]
-    (cond
-      (nil? k) profile
-      (nil? (get profile k)) (recur (assoc profile k (first pics)) ks (rest pics))
-      :default (recur profile ks pics))))
+         [k & ks] overridable-pictures]
+    (if (nil? k)
+      profile
+      (recur (assoc profile k (select-picture profile k pictures)) ks))))
 
 (defn add-pictures [profile pictures]
-  [(let [in-use (vec (vals (select-keys profile overridable-pictures)))
-         required-pics (- (count overridable-pictures) (count in-use))
-         unused (remove (set in-use) pictures)
-         portraits (remove #(re-find #"\bno-circle\b" %) pictures)]
-     (cond-> profile
+  [(let [portraits (remove #(re-find #"\bno-circle\b" %) pictures)]
+     (cond-> (add-overridable-pictures profile pictures)
        (seq pictures) (assoc :person/profile-pictures (vec pictures))
-       (seq portraits) (assoc :person/portraits (vec portraits))
-       :always (add-overridable-pictures
-                (if (< (count unused) required-pics)
-                  (concat (shuffle (into unused portraits)) (shuffle in-use))
-                  (shuffle unused)))))])
+       (seq portraits) (assoc :person/portraits (vec portraits))))])
 
 (defn create-tx [file-name person]
   (let [person-ident (h/qualify "person" (:id person))
