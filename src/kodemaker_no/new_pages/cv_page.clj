@@ -137,7 +137,9 @@
   (year-range (:project/years project) (:project/start project) (:project/end project)))
 
 (defn render-project [project]
-  {:title (list (:project/customer project) [:br] (project-year-range project))
+  {:title (list (or (:cv/customer project)
+                    (:project/customer project))
+                [:br] (project-year-range project))
    :contents [[:h4.h6 [:em (:project/summary project)]]
               [:div.text
                (f/to-html (or (:cv/description project) (:project/description project)))]

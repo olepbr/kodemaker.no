@@ -123,7 +123,8 @@
    :project/techs :tech
    :project/tech-list :tech
    :list/idx :idx
-   :cv/description :cv/description})
+   :cv/description :cv/description
+   :cv/customer :cv/customer})
 
 (defn year-range [start end]
   (let [end (if (= :ongoing end)
