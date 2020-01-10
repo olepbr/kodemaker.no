@@ -320,6 +320,7 @@
    (map side-project (sort-by :list/idx (:person/screencasts person)))
    (map side-project (sort-by :list/idx (:person/side-projects person)))
    (->> (:blog-post/_author person)
+        (remove :blog-post/archived?)
         (sort-by :blog-post/published)
         reverse
         (map (comp (prefix-title "Artikkel: ") side-project)))))
