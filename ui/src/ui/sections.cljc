@@ -104,11 +104,12 @@
    [:div.content.profile-section.mbxl
     [:div.profile-title
      [:h1.h1 full-name]
-     [:h5.h5.mbm title]]
+     [:h5.h5.mbs title]]
     [:div.profile-image [:img.img {:src image}]]
-    [:div.profile-cv
-     (e/arrow-link {:text (:text cv)
-                    :href (:url cv)})]
+    (when cv
+     [:div.profile-cv
+      (e/arrow-link {:text (:text cv)
+                     :href (:url cv)})])
     [:div.profile-contact
      [:div [:a {:href (str "tel:" mobile)} mobile]]
      [:div [:a {:href (str "mailto:" mail)} mail]]

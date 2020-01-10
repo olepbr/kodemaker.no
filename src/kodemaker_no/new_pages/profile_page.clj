@@ -17,6 +17,7 @@
   (boolean (some (fn [[k _]] (seq (k person))) technology-categories)))
 
 (defn create-page [person]
+  (let [cv-uri (:page/uri (:cv/_person person))]
   {:sections
    (->>
     [{:kind :profile
@@ -25,8 +26,9 @@
       :title (:person/title person)
       :mobile (:person/phone-number person)
       :mail (:person/email-address person)
-      :cv {:text "Se full CV"
-           :url (:page/uri (:cv/_person person))}
+         :cv (when cv-uri
+               {:text "Se full CV"
+                :url cv-uri})
       :description (f/markdown (:person/description person))
       :presence (person/prep-presence-links (:person/presence person))
       :pønt [{:kind :greater-than
@@ -88,82 +90,87 @@
                     (let [url (or (:page/uri blog-post)
                                   (:blog-post/external-url blog-post))]
                       (e/teaser
-                       {:title (:blog-post/title blog-post)
-                        :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list blog-post :blog-post/tech-list))
-                                            :class "tags"})
-                        :url url
-                        :content (f/to-html (:blog-post/blurb blog-post))
-                        :link (when url {:text "Les artikkel" :href url})})))})
+                         {:title (:blog-post/title blog-post)
+                          :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list blog-post :blog-post/tech-list))
+                                              :class "tags"})
+                          :url url
+                          :content (f/to-html (:blog-post/blurb blog-post))
+                          :link (when url {:text "Les artikkel" :href url})})))})
 
-     ;; Foredrag (videoer)
+       ;; Foredrag (videoer)
 
-     (when-let [presentations (->> (:person/presentations person)
-                                   (filter :presentation/thumb)
-                                   (filter :presentation/video-url)
-                                   (sort-by :list/idx)
-                                   seq)]
-       {:kind :titled
-        :title "Foredrag"
-        :contents [(e/tango-grid
-                    (map
-                     (fn [pres style class]
-                       {:content (e/video-thumb
-                                  {:class (str style " " class)
-                                   :img (str "/" style "/" (:presentation/thumb pres))
-                                   :tags (e/tech-tags {:class "tags"
-                                                       :techs (take 5 (h/unwrap-ident-list pres :presentation/tech-list))})
-                                   :url (or (:page/uri pres)
-                                            (:presentation/video-url pres))
-                                   :title (:presentation/title pres)})})
-                     (take 4 (reverse (sort-by :presentation/date presentations)))
-                     ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
-                     ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))]})
+       (when-let [presentations (->> (:person/presentations person)
+                                     (filter :presentation/thumb)
+                                     (filter :presentation/video-url)
+                                     (sort-by :list/idx)
+                                     seq)]
+         {:kind :titled
+          :title "Foredrag"
+          :contents [(e/tango-grid
+                      (map
+                       (fn [pres style class]
+                         {:content (e/video-thumb
+                                    {:class (str style " " class)
+                                     :img (str "/" style "/" (:presentation/thumb pres))
+                                     :tags (e/tech-tags {:class "tags"
+                                                         :techs (take 5 (h/unwrap-ident-list pres :presentation/tech-list))})
+                                     :url (or (:page/uri pres)
+                                              (:presentation/video-url pres))
+                                     :title (:presentation/title pres)})})
+                       (take 4 (reverse (sort-by :presentation/date presentations)))
+                       ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
+                       ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]))]})
 
-     ;; Prosjekter
+       ;; Prosjekter
 
-     (when-let [projects (->> (:person/projects person)
-                              (sort-by :list/idx)
-                              (take 3)
-                              seq)]
-       {:kind :titled
-        :title "Prosjekter"
-        :contents (->
-                   (for [project projects]
-                     [:div
-                      [:div.h4-light (:project/customer project)]
-                      (e/tech-tags {:class "tags"
-                                    :techs (take 5 (h/unwrap-ident-list project :project/tech-list))})
-                      [:div.mts
-                       (f/to-html (:project/description project))]])
-                   vec (conj
-                        (e/arrow-link {:text "Se flere prosjekter"
-                                       :href (:page/uri (:cv/_person person))})))})
+       (when-let [projects (->> (:person/projects person)
+                                (sort-by :list/idx)
+                                seq)]
+         {:kind :titled
+          :title "Prosjekter"
+          :contents (let [num (count projects)
+                          to-show (if cv-uri 3 8)
+                          show-more-link? (and cv-uri (< to-show num))]
+                      (->
+                       (for [project (take to-show projects)]
+                         [:div
+                          [:div.h4-light (:project/customer project)]
+                          (e/tech-tags {:class "tags"
+                                        :techs (take 5 (h/unwrap-ident-list project :project/tech-list))})
+                          [:div.mts
+                           (f/to-html (:project/description project))]])
+                       vec
+                       (cond-> show-more-link?
+                         (conj (e/arrow-link {:text "Se flere prosjekter"
+                                              :href (str cv-uri "#prosjekter")})))))})
 
-     ;; Referanser
+       ;; Referanser
 
-     (when-let [endorsements (->> (:person/endorsements person)
-                                  (sort-by :list/idx)
-                                  (take 3)
-                                  seq)]
-       {:kind :titled
-        :title "Referanser"
-        :contents (->
-                   (for [endorsement endorsements]
-                     [:div
-                      [:div.h4-light (:author endorsement)]
-                      [:div.text-s.annotation.mts (:title endorsement)]
-                      [:div.mts.text
-                       (f/to-html (str "«" (:quote endorsement) "»"))]])
-                   vec (conj
-                        (e/arrow-link {:text "Se flere referanser"
-                                       :href (:page/uri (:cv/_person person))})))})
+       (when-let [endorsements (->> (:person/endorsements person)
+                                    (sort-by :list/idx)
+                                    seq)]
+         {:kind :titled
+          :title "Referanser"
+          :contents (let [num (count endorsements)
+                          to-show (if cv-uri 3 8)
+                          show-more-link? (and cv-uri (< to-show num))]
+                      (->
+                       (for [endorsement (take to-show endorsements)]
+                         [:div
+                          [:div.h4-light (:author endorsement)]
+                          [:div.text-s.annotation.mts (:title endorsement)]
+                          [:div.mts.text
+                           (f/to-html (str "«" (:quote endorsement) "»"))]])
+                       vec (cond-> show-more-link?
+                             (conj (e/arrow-link {:text "Se flere referanser"
+                                                  :href (str cv-uri "#anbefalinger")})))))})
 
 
-     {:kind :footer}]
-    (remove nil?)
-    (map (fn [color section]
-           (assoc section :background color))
-         (cycle [:blanc :chablis])))})
+       {:kind :footer}]
+      (remove nil?)
+      (map (fn [color section]
+             (assoc section :background color))
+           (cycle [:blanc :chablis])))}))
 
 (comment
   (def conn (:datomic/conn integrant.repl.state/system))

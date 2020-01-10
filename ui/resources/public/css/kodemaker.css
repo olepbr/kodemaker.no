@@ -724,12 +724,12 @@ a, .clickable {
   .profile-contact {margin-bottom: 64px;}
 }
 
-@media only screen and (min-width: 450px) and (max-width: 999px) {
+@media only screen and (min-width: 450px) and (max-width: 900px) {
   .profile-section { display: grid; grid-template-columns: 35% auto; grid-column-gap: 60px;}
   .profile-title { grid-column: 2 / span 1; grid-row: 1 / span 1; }
   .profile-image { grid-column: 1 / span 1; grid-row: 1 / span 3; }
   .profile-cv { grid-column: 2 / span 1; grid-row: 2 / span 1; }
-  .profile-contact { grid-column: 2 / span 1; grid-row: 3 / span 1; margin-top: 54px;}
+  .profile-contact { grid-column: 2 / span 1; grid-row: 3 / span 1; margin-top: 16px; align-self: end;}
   .profile-desc { grid-column: 1 / span 2; grid-row: 4 / span 1; margin-top: 54px;}
 }
 
@@ -737,7 +737,7 @@ a, .clickable {
   .profile-section { display: grid; grid-template-columns: 45% auto; grid-column-gap: 30px;}
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 901px) {
   .profile-section { display: grid; grid-template-columns: 257px auto; grid-column-gap: 60px;}
   .profile-title { grid-column: 2 / span 1; grid-row: 1 / span 1; margin-top: 56px;}
   .profile-image { grid-column: 1 / span 1; grid-row: 1 / span 2; }
