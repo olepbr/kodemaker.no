@@ -32,12 +32,12 @@
             :url "http://hoppfallskjerm.no"}]
 
  :open-source-contributions [
-                             {:name "grails-core", :url "https://github.com/grails/grails-core", :tech [:grails]}
-                             {:name "grails-doc", :url "https://github.com/grails/grails-doc", :tech [:grails]}
-                             {:name "grails-profile-repository", :url "https://github.com/grails/grails-profile-repository", :tech [:grails]}
-                             {:name "grails-maven-archetype", :url "https://github.com/grails/grails-maven-archetype", :tech [:grails]}
-                             {:name "grails-wkhtmltopdf", :url "https://github.com/rlovtangen/grails-wkhtmltopdf", :tech [:grails]}
-                             {:name "grails-build-info", :url "https://github.com/mjhugo/grails-build-info", :tech [:grails]}
+                             {:name "grails-core", :url "https://github.com/grails/grails-core", :tech [:grails :groovy]}
+                             {:name "grails-doc", :url "https://github.com/grails/grails-doc", :tech [:grails :groovy]}
+                             {:name "grails-profile-repository", :url "https://github.com/grails/grails-profile-repository", :tech [:grails :groovy]}
+                             {:name "grails-maven-archetype", :url "https://github.com/grails/grails-maven-archetype", :tech [:grails :groovy]}
+                             {:name "grails-wkhtmltopdf", :url "https://github.com/rlovtangen/grails-wkhtmltopdf", :tech [:grails :groovy]}
+                             {:name "grails-build-info", :url "https://github.com/mjhugo/grails-build-info", :tech [:grails :groovy]}
                              ]
 
  :projects [
