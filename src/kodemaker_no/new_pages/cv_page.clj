@@ -192,6 +192,7 @@
 (defn endorsements-section [cv person]
   (when-let [endorsements (seq (sort-by :list/idx (:person/endorsements person)))]
     {:kind :definitions
+     :id "endorsements"
      :title "Anbefalinger"
      :definitions (->> endorsements
                        (map (fn [endorsement]
