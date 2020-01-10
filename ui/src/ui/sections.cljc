@@ -156,7 +156,9 @@
        [:img.banner-logo {:src logo}])
      (e/h1 {} title)]
     [:div.mtl
-     (e/article article)]]])
+     (if (:aside article)
+       (e/article article)
+       (e/simple-article article))]]])
 
 (defn titled-section [{:keys [title contents] :as params}]
   [:div.section.titled-section {:style (l/stylish {} params)}
