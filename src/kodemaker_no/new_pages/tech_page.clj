@@ -1,5 +1,6 @@
 (ns kodemaker-no.new-pages.tech-page
-  (:require [kodemaker-no.formatting :as f]
+  (:require [clojure.string :as str]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h :refer [map-vals max-by]]
             [ui.elements :as e]))
 
@@ -20,21 +21,34 @@
        :url (presentation-uri pres)
        :title (:presentation/title pres)})]))
 
+(defn change-1st-person-to-3rd [value entity person-lookup]
+  (str/replace value #"\b[jJ]eg\b"
+               (let [person (person-lookup entity)]
+                 (str "[" (:person/given-name person) "](" (:page/uri person) ")"))))
+
+(defn choose-and-change [choose change k & args]
+  (fn [entities]
+    (when-let [entity (choose entities)]
+      {k (apply change (k entity) entity args)})))
+
 (defn merge-presentations [presentations]
-  (-> (h/select-first-keys presentations
-                         #{:presentation/thumb
-                           :presentation/date
-                           :presentation/video-url
-                           :presentation/title
-                           :presentation/description
-                           :page/uri})
+  (-> (h/select-keys-by presentations
+                        {:presentation/thumb first
+                         :presentation/date first
+                         :presentation/video-url first
+                         :presentation/title first
+                         :presentation/description (choose-and-change first
+                                                                      change-1st-person-to-3rd
+                                                                      :presentation/description
+                                                                      :person/_presentations)
+                         :page/uri first})
       (assoc :presentation/people (keep :person/_presentations presentations))))
 
 (defn merge-recommendations [recommendations]
-  (-> (h/select-first-keys recommendations
-                           #{:recommendation/title
-                             :recommendation/url
-                             :recommendation/description})
+  (-> (h/select-keys-by recommendations
+                        {:recommendation/title first
+                         :recommendation/url first
+                         :recommendation/description first})
       (assoc :recommendation/people (keep :person/_recommendations recommendations))))
 
 (defn create-page [tech]
@@ -131,6 +145,11 @@
   (def tech (d/entity db :tech/clojure))
 
   (create-page tech)
+
+  (->> (:presentation/_techs tech)
+       (group-by presentation-uri)
+       vals
+       (map merge-presentations))
 
   (->>
    (for [[e file] (d/q '[:find ?e ?file
