@@ -112,18 +112,23 @@
                 {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                 :customer "Thomson Reuters"}]
 
- :projects [{:customer "Vy Gruppen"
+ :projects [{:customer "Forsvaret"
              :years [2019  :ongoing]
              :employer :kodemaker
-             :summary "Utvikling av trafikksystemer til bruk internt i Vy gruppen og mot samarbeidspartnere"
-             :description "Utvikling trafikksystemer til bruk internt i NSB og mot samarbeidspartnere, så som integrasjon mot Värmlandstrafik, overvåkning av applikasjoner, mmm."
-             :tech [:react :redux :es6 :typescript :css :micronaut :reactive-x :groovy :azure :azure-eventhubs]}
+             :summary "Prototype for løsning for innrapportering av materiell"
+             :description "Prototype for løsning for innrapportering av materiell i forbindelse med utstyrskjøp, samt endringer av Materielldataportalen."
+             :tech [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
+             {:customer "Vy Gruppen"
+             :years [2019]
+             :employer :kodemaker
+             :summary "Utvikling av trafikksystemer for Vy og samarbeidspartnere"
+             :description "Utvikling av trafikksystemer til bruk internt i Vy og mot samarbeidspartnere, så som integrasjon mot Värmlandstrafik, overvåkning av applikasjoner, mmm."
+             :tech [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-eventhubs :mysql :groovy :gradle]}
              {:customer "NRK Origo"
              :years [2017 2018 2019]
              :employer :kodemaker
              :summary "Utvikling av media-arkivet til NRK"
-             :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp
-              - både nettklipp, ting som har gått på TV og råstoff"
+             :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV og råstoff"
              :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
             {:customer "BN-bolig / EGGS Design"
              :years [2017]
