@@ -111,15 +111,26 @@ Punktene kobler vi sammen til en figur som vi kan trekke fra det originale bilde
 at vi sitter igjen med et bilde som kun viser bordet. Alt det rundt er maskert bort:
 
 ```python
-  img = cv.imread("bordet.jpg", cv.IMREAD_UNCHANGED)   # Les inn bildet
-  height, width, _ = img.shape                         # Finn bildets dimensjoner
+# Les inn bildet
+img = cv.imread("bordet.jpg", cv.IMREAD_UNCHANGED)
 
-  lines = findLines(img)                               # Finn linjene i bildet
-  isects = findIntersections(img, lines)               # Finn krysning mellom linjene
+# Finn bildets dimensjoner
+height, width, _ = img.shape
 
-  mask = np.zeros([height, width], dtype = np.uint8)   # Lag et nytt bilde med samme dimensjoner
-  cv.fillPoly(mask, np.array([isects], np.int32), 255) # Tegn mellom krysningspunktene
-  maskedImg = cv.bitwise_and(img, img, mask=mask)      # Bruk det nye bildet som maske
+# Finn linjene i bildet
+lines = findLines(img)
+
+# Finn krysning mellom linjene
+isects = findIntersections(img, lines)
+
+# Lag et nytt bilde med samme dimensjoner
+mask = np.zeros([height, width], dtype = np.uint8)
+
+# Tegn mellom krysningspunktene
+cv.fillPoly(mask, np.array([isects], np.int32), 255)
+
+# Bruk det nye bildet som maske
+maskedImg = cv.bitwise_and(img, img, mask=mask)
 ```
 
 Vi er jo bare interessert i å se på tingene som faktisk ligger på bordet. Ikke stoler og
