@@ -1,7 +1,7 @@
 :title Bildeanalyse #3: Objekter
 :author eivind
-:tech [:opencv :python]
-:published 2019-10-19
+:tech [:opencv :python :bildeanalyse]
+:published 2020-01-15
 
 :blurb
 
@@ -12,11 +12,11 @@ som lar oss si noe om hva det er vi ser på.
 
 :body
 
-I min [forrige post](https://www.kodemaker.no/blogg/2019-09-bildeanalyse-linjer/) så
-vi på hvordan vi kan finne linjer i et bilde. Dette brukte vi for å finne kantene på
-et bord, og tegnet inn resultatet i originalbildet. Vi har altså nå et bord hvor vi
-vet hvor kantene går - og skal jobbe videre med dette for å finne ut noe om hva som
-er på bordet:
+I min [forrige post](/blogg/2019-09-bildeanalyse-linjer/) så vi på hvordan vi
+kan finne linjer i et bilde. Dette brukte vi for å finne kantene på et bord, og
+tegnet inn resultatet i originalbildet. Vi har altså nå et bord hvor vi vet hvor
+kantene går - og skal jobbe videre med dette for å finne ut noe om hva som er på
+bordet:
 
 ![4 linjer](/images/blogg/ba_linjer_fire.png)
 
@@ -24,7 +24,7 @@ Vi må lage oss et utsnitt basert på kantene vi har funnet. Så skal vi se på 
 inni dette utsnittet for å prøve å analysere oss frem til hvor mange ting som ligger
 på bordet, og hvilke egenskaper disse har.
 
-##Utsnitt basert på linjer
+## Utsnitt basert på linjer
 
 Når man driver med linjer og punkter blir det fort en del funksjoner som minner om
 mattetimene fra skolen. Funksjonen som tegner linjene i forrige post regner egentlig
@@ -128,7 +128,7 @@ tingene som står på bordet:
 
 ![Maskert bord](/images/blogg/ba_objekter_mask.png)
 
-##Finne objekter i bildet - contour detection
+## Finne objekter i bildet - contour detection
 
 For å finne objekter bruker vi noe som kalles
 [contour detection](https://docs.opencv.org/master/df/d0d/tutorial_find_contours.html).
@@ -179,7 +179,7 @@ spørsmålet - med fine blå kanter rundt de tingene vi fant:
 
 ![Bord med objekter markert](/images/blogg/ba_objekter_resultat.png)
 
-##Konklusjon
+## Konklusjon
 
 Gjennom 3 forskjellige poster har jeg nå vist litt av hva man kan gjøre med Python og
 OpenCV. Bibliotekene er som tidligere nevnt superraske - og kan gjøre ganske avanserte
