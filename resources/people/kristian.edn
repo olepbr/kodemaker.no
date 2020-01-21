@@ -89,8 +89,26 @@
                         I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
                         Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
                         Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]
- :projects [{:customer "Finn AS"
-             :years [2018 :ongoing]
+ :projects [{:customer "Statistisk Sentralbyrå(SSB)"
+             :years [2019 2020 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av en helt ny sky-plattform basert på GCP og Kubernetes."
+             :description "BIP - Byråets IT-plattform er en helt ny plattform basert på managed Kubernetes som kjøres på GCP.
+             SSB ønsket å bygge en helt ny arkitektur med sterkt fokus på sikkerhet hvor alle applikasjoner(ca 400-500) etterhvert 
+             skal kjøres. Sikkerheten ivaretas ved å integrere Istio i  plattformen og bygge alle tjenester inn i et service-mesh. Dette 
+             betyr at alle requester inn i plattformen må gjennom en Istio-proxy før den endelige applikasjonen nåes. Slik kan man enkelt
+             filtrere og tilgangsstyre alle forespørsler som går inn til plattformen på laveste nivå. BIP er også en fremtidsrettet sky-plattform 
+             hvor det legges opp til høy grad av selvbetjening slik at utviklere selv enkelt kan rulle ut nye applikasjoner etter behov. 
+             Selve plattformen er også bygd rundt prinsipper man kjenner fra tradisjonell utvikling i en typisk lagdelt arkitektur. Det er lagt 
+             opp til høy grad av automatisering hvor Ansible på toppnivå kjøres og trigger kall videre nedover i verdikjeden hvor 
+             Terraform-konfigurasjoner dynamisk genereres, konfigurering av Sealed-Secrets controller og en cluster-spesifikk 
+             Flux(Kubernetes Operator). Flux er avhengig av at det allerede finnes initielt oppsett av Helm(pakke-manager for Kubernetes) 
+             releaser via spesifiserte Helm-charts. Flux sin primæroppgave er å se etter endringer i kodebasen og umiddelbart deploye disse ut i 
+             clusteret når de detekteres. Flux er en implentasjon av GitOps-tankegangen hvor Git er den ene og fulle sannhet og alle endringer 
+             skal reflektres umiddelbart. Flux er i hovedsak kontinuerlig integrasjon på plafform-nivå." 
+             :tech [:docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :drone :jinja2]}
+            {:customer "Finn AS"
+             :years [2018 2019]
              :employer :kodemaker
              :summary "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
              :description "Migrering av applikasjoner fra gammel api-rigg til Kubernetes,
@@ -447,12 +465,12 @@
               :years [1997 1998 1999 2000]
               :subject "Ingeniør, Telekommunikasjon"}]
 
-:project-highlights [{:blurb "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
+:project-highlights [{:blurb "Utvikling av en helt ny sky-plattform basert på GCP og Kubernetes."
+                      :customer "Statistisk Sentralbyrå(SSB)"}
+                     {:blurb "Migrering av applikasjoner fra gammel infrastruktur til Kubernetes."
                       :customer "Finn AS"}
 		     {:blurb "Utvikling av ny platform på AWS-stack for å håndtere data fra pantemaskiner."
-                      :customer "Tomra"}
-                     {:blurb "Prototyping av ny arkitektur med fokus på skaleringsegenskaper"
-                      :customer "Thomson & Reuters"}]
+                      :customer "Tomra"}]
 
 :endorsement-highlight {:author "Morten Hanshaugen"
                          :title "Director of Infrastructure and Operations, Finn.no."
