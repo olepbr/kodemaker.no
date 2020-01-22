@@ -105,7 +105,7 @@
              Flux(Kubernetes Operator). Flux er avhengig av at det allerede finnes initielt oppsett av Helm(pakke-manager for Kubernetes) 
              releaser via spesifiserte Helm-charts. Flux sin primæroppgave er å se etter endringer i kodebasen og umiddelbart deploye disse ut i 
              clusteret når de detekteres. Flux er en implentasjon av GitOps-tankegangen hvor Git er den ene og fulle sannhet og alle endringer 
-             skal reflektres umiddelbart. Flux er i hovedsak kontinuerlig integrasjon på plafform-nivå." 
+             skal reflektres umiddelbart. Flux er i hovedsak kontinuerlig integrasjon på plattform-nivå." 
              :tech [:docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :drone :jinja2]}
             {:customer "Finn AS"
              :years [2018 2019]
