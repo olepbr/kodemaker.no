@@ -83,7 +83,7 @@ Hvorfor ta en kopi av immutable data?!
 
 Alt vi trenger å gjøre er å lage en ny rot-node, en ny node etter den og en ny data-node, og så kan vi bare peke på all den gamle dataen. Husk, den gamle datastrukturen er immutable, når alt kommer til alt. Så hele ideen her er at den _aldri_ vil endre seg.
 
-Og med det forstod du Clojure sin state-modell. Selve verdiene er alltid immutable. Du kan lage funksjoner som tar imot en immutable verdi, som returnerer en oppdater immutable verdi. Å lage nye immutable verdier er billig - fordi du kan dele nesten alle dataene i den nye datastrukturen med den gamle.
+Og med det forstod du Clojure sin state-modell. Selve verdiene er alltid immutable. Du kan lage funksjoner som tar imot en immutable verdi, som returnerer en oppdatert immutable verdi. Å lage nye immutable verdier er billig - fordi du kan dele nesten alle dataene i den nye datastrukturen med den gamle.
 
 
 Yay!
