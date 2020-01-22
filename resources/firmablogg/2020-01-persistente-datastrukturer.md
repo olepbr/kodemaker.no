@@ -61,15 +61,13 @@ CoW er teknisk sett en type persistent datastruktur.
 
 Men, CoW er best når dataene er mutable. Når dataene dine er immutable hele vegen igjennom, har du et annet valg.
 
-Det andre valget er ..
-
 ## Structural sharing - jepp jepp jepp
 
 Dette er det _jeg_ kaller en persistent datastruktur.
 
 Ok.
 
-Vi har en svær datastruktur. Vi vet at den er immutable. Vi ønsker å endre en liten del av den. Vilken optimalisering kan vi gjøre her?
+Vi har en svær datastruktur. Vi vet at den er immutable. Vi ønsker å endre en liten del av den. Hvilken optimalisering kan vi gjøre her?
 
 Ser du det enda?
 
@@ -81,7 +79,7 @@ Den gamle datastrukturen _er immutable_. Så vi kan bare gjenbruke den!
 
 Ser du hva som skjedde?
 
-Hvorfor ta en kopi av immutable data!
+Hvorfor ta en kopi av immutable data?!
 
 Alt vi trenger å gjøre er å lage en ny rot-node, en ny node etter den og en ny data-node, og så kan vi bare peke på all den gamle dataen. Husk, den gamle datastrukturen er immutable, når alt kommer til alt. Så hele ideen her er at den _aldri_ vil endre seg.
 
@@ -105,7 +103,7 @@ Vel, det viser seg at det faktisk er kjappere i praksis å gjøre det på den m�
 
 Tenk på det som generasjoner i garbage collection. Under panseret, er dataene dine i "eden" space eller "tenured" space. Som er fancy ord for: data som nettopp ble laget og som ble kastet bort med en gang, garbage collectes annerledes enn langtlevende data. Dette skjer fullstendig under panseret, som en ytelsesoptimalisering, uten at du må knote for å få det til å funke.
 
-## _Enda_ en stilig greie
+## Enda en stilig greie
 
 La oss si at du har en sånn typisk funksjon som er en tight loop som legger på 100-vis av greier på et map, basert på en data stream eller noe sånt. En CSV-fil eller en database eller noe parsing eller noe sånt.
 
