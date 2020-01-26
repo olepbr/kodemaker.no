@@ -2,15 +2,18 @@
  :name ["August" "Lilleaas"]
  :title "Systemutvikler"
  :start-date "2012-01-01"
- :description "August er opptatt av enkle løsninger og gode brukeropplevelser,
- og er glad i å bli utfordret. Han er like erfaren på backend som på frontend,
- og jobber med webapplikasjoner, sanntidssystemer og mobilapplikasjoner. På
- fritiden driver han med alt fra testrammeverk til operativsystemer, og er
- sulten på å lære alt om det meste."
+ :description "August er en allsidig utvikler med erfaring fra mobilapper på Android og iOS, webutvikling og
+ operativsystemutvikling, til  backend og databaser, DevOps og kontiluerlige leveranser.
+
+ Han startet med PHP, fortsatte med Ruby on Rails, og har landet på JVM-språk som Clojure, Kotlin, Groovy - og
+ litt Java.
+
+ August er aktiv foredragsholder, med det aller høyest rangerte foredraget på JavaZone 2013. Han driver også en
+ podcast på [utviklingslandet.no](https://utviklingslandet.no)"
  :cv/description "August er full-stack webutvikler, og har tidligere jobbet som iOS-apputvikler.
 
 Han startet med Ruby on Rails, og beveget seg over på JVM-plattformen i 2012 og
-har erfaring med Clojure, Kotlin, Grails/Groovy og Spring
+har erfaring med Clojure, Kotlin, Grails/Groovy og React Native.
 
 August liker å snakke, og du kan få et godt inntrykk av hvordan han oppleves ved
 å se presentasjonen [You Probably Don't Know How The Internet Actually Works](https://vimeo.com/74406482) fra
@@ -25,17 +28,9 @@ presentasjonen på hele konferansen!"
             :stackoverflow "/users/26051/august-lilleaas"
             :github "augustl"}
 
- :tech {:favorites-at-the-moment [:datomic, :react]
-        :using-at-work [:react :react-native :kotlin :android :postgresql :azure]
+ :tech {:favorites-at-the-moment [:datomic :react]
+        :using-at-work [:react :clojure :clojurescript :sqlserver :azure]
         :want-to-learn-more [:c :haskell]}
-
- :upcoming
- [{:title "Datomic: The most innovative DB you've never heard of"
-   :description "En presentasjon som evangeliserer Datomic, som alt for få utviklere kjenner til og bruker. Her skal horisonter utvides og antagelser utslettes."
-   :tech [:clojure :datomic :groovy]
-   :url "http://gr8conf.eu/#/talk/477"
-   :location {:title "Gr8Conf EU 2017, København" :url "http://gr8conf.eu/"}
-   :date "2017-06-01"}]
 
  :recommendations
  [{:title "Simple Made Easy"
@@ -60,7 +55,15 @@ presentasjonen på hele konferansen!"
    :illustration "/illustrations/hobbies/august_bjj.jpg"}]
 
  :presentations
- [{:title "The imminent revolution of functional append-only databases"
+ [{:title "Datomic - the most innovative DB you've never heard of"
+   :event "Kotlin Conf 2018, Amsterdam"
+   :blurb "Datomic is a strange database. The writer is single threaded. It writes to other databases and has no storage of its own. It has a completely different API for reads and writes. Queries runs on the client, not the server. Time travel is built in, and you can query the history of your database.
+
+   In this talk, you'll learn where Datomic fits and for which use cases the above are good ideas, how Datomic actually invented very little and stands on the shoulders of BigTable and VoltDB, all using Kotlin, of course :)"
+   :tech [:clojure :datomic :kotlin]
+   :urls {:video "https://kotlinconf.com/2018/talks/#date=5-october&session=38447"}
+   :date "2018-10-05"}
+  {:title "The imminent revolution of functional append-only databases"
    :blurb "I de fleste domener har gammel data høy verdi. Det bør ikke være ditt ansvar å løse dette manuelt med tradisjonelle muterbare databaser. Få en introduksjon til ny grensesprengende database-teknologi som løser dette problemet for deg."
    :urls {:video "http://vimeo.com/user18356272/review/96634125/3419ad5e0a"}
    :thumb "/thumbs/videos/imminent-revolution.jpg"
@@ -141,8 +144,17 @@ presentasjonen på hele konferansen!"
    :date "2011-06-01"}]
 
  :projects
- [{:customer "Bring"
+ [{:customer "Animalia"
+   :start "2019-09"
+   :summary "Helsegris - journalsystem for dyrevelferd for grisebønder"
+   :description "Videreutvikling og forvalting av Helsegris-applikasjonen. Innføring av DevOps og kontinuerlig
+   leveranser, hvor prodsetting skjer mange ganger om uken/dagen, i stedet for store releaser med mange måneders
+   mellomrom."
+   :employer :kodemaker
+   :tech [:clojure :clojurescript :react :sqlserver :azure]}
+  {:customer "Bring"
    :start "2018-04"
+   :end "2019-08"
    :summary "Glow - hele stacken til Bring Express (trafikkstyring, levering av pakker, pakkesporing til mottagere, ...)"
    :employer :kodemaker
    :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
