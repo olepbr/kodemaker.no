@@ -22,9 +22,9 @@ Dette skal jeg ikke prøve å selge, fordi det er et vanskelig salg.
 
 Som i, jeg kjenner noen som ikke er spesielt begeistret for immutable verdier, og jeg aner ikke hvordan jeg skal selge det til dem.
 
-_Personlig_ så foretrekker jeg jo helt klart å bruke ting som _fundamentalt eliminerer_ hele **kategorier** med bugs fra koden min.
+Immutability vil fundamentalt eliminere **hele kategorier** med bugs fra koden din. Det gir deg helt nye modelleringsmuligheter, som å gjøre en "hva hvis"-operasjon på dataene dine uten å være redd for at du ødelegger tilstanden din.
 
-Beklager, klarte visst ikke å la være. Jeg ønsker oppriktig ikke å rakke ned på de som ikke liker immutability. Jeg bare skjønner meg ikke på dem.
+Men, hvis jeg sier dette til noen som ikke liker immutability, er svaret stort sett en variant av: "jeg har ikke det problemet". Uten at jeg forstår hvordan det kan ha seg. Men sånn er det visst bare.
 
 ## Problemet med immutable verdier er at de er immutable
 
