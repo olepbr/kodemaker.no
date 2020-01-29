@@ -12,8 +12,8 @@ av.
 :body
 
 Det er mange store stilaser å velge blant for din frontendarkitektur, men
-trenger du all leamikken? Her er en enkel arkitektur som jeg har hatt mye glede
-av.
+trenger du all leamikken? I denne bloggposten forteller jeg om en enkel
+arkitektur som jeg har hatt mye glede av.
 
 Her er de viktigste poengene:
 
@@ -54,7 +54,7 @@ Det er hele dataflyten. Når det kommer endringer til dataene, skjer alt dette o
 igjen. [Virtual DOM](https://github.com/snabbdom/snabbdom)-trikset (gjort
 populært av React) lar oss gjør dette uten store ytelsesproblemer.*
 
-<small>* Ut av boksen for ClojureScript, men store JavaScript-prosjekter må kanskje ty til immutable.js</small>
+<small class="tiny">* Ut av boksen for ClojureScript, men store JavaScript-prosjekter må kanskje ty til immutable.js</small>
 
 ## Generiske komponenter
 
