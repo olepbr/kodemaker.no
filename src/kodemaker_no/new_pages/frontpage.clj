@@ -9,8 +9,8 @@
                       tunge integrasjoner."
                :link {:text "Hvem er Kodemaker?"
                       :href "/jobb/"}
-               :image-front "/bruce-front/foto/christian-1.jpg"
-               :image-back "/bruce-back/foto/nils-1.jpg"}
+               :image-front "/bruce-front/foto/folk.jpg"
+               :image-back "/bruce-back/foto/arduino.jpg"}
               {:kind :seymour
                :background :blanc-rose
                :pønt [{:kind :greater-than
