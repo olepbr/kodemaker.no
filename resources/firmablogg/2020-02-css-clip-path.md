@@ -1,6 +1,7 @@
 :title Klippe med CSS
 :author odin
-:tech [:css :web]
+:tech [:css :web :frontend]
+:published 2020-02-05
 
 :blurb
 CSS slutter aldri å overraske. Noen ganger ramler man over noe som man i utgangspunktet ikke 
