@@ -70,7 +70,7 @@ Men hva da med actions? Skal ikke `RegistrationButton` gjøre noe annet enn
 `SignInButton`? Jo, men hvilke handlinger som skal utføres sendes også inn til
 komponenten som data.
 
-Enklet fortalt:
+Enkelt fortalt:
 
 ```
 PrimaryButton({action: ["register-user"]})
@@ -83,7 +83,7 @@ på en event-bus. Denne overvåkes av main-funksjonen, som så gjennomfører han
 
 Observer hvordan alle pilene strømmer ut fra `main`, og én vei. Event bus-en er
 grepet som inverterer avhengigheten slik at vi kan kommunisere handlinger uten å
-innføre sirkulære avhengigheter eller *grøss* to-veis databinding.
+innføre sirkulære avhengigheter.
 
 ## Fra domenedata til generiske komponenter
 
