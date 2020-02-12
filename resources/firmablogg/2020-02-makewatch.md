@@ -1,6 +1,7 @@
 :title Kontinuerlig bygging med make
 :author nils
 :tech [:make]
+:published 2020-02-12
 
 :blurb
 
