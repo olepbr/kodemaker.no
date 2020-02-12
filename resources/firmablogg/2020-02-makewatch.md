@@ -110,7 +110,7 @@ Gratulerer, du har nå en makefil som restarter applikasjonen din hver gang kild
 
 ## Passer kontinuerlig bygging for meg?
 
-Kontinuerlig bygging med make fungerer utmerket med applikasjoner tar kort tid å bygge. For språk som `go` og `elm` så vil byggetiden til en applikasjon ofte krype ned mot millisekunder og kontinuerlig bygging kan gi en kort feedbackloop. Det du evt mister ved å restarte appen er en eventuelt opparbeided tilstand, med mindre du håndterer det eksplisitt ved oppstart/avslutning.
+Kontinuerlig bygging med make fungerer utmerket med applikasjoner som tar kort tid å bygge. For språk som `go` og `elm` så vil byggetiden til en applikasjon ofte krype ned mot millisekunder og kontinuerlig bygging kan gi en kort feedbackloop. Det du evt mister ved å restarte appen er en eventuelt opparbeided tilstand, med mindre du håndterer det eksplisitt ved oppstart/avslutning.
 
 Hvis du derimot har en applikasjon som tar lang tid å bygge/starte så oppleves nok ikke kontinuerlig bygging som noe verdifullt fordi mye av tiden vil gå med til å vente på bygging og restarting. Om du har en slik treg applikasjon er det kanskje på tide å se seg om etter en smidigere platform som gir en kortere feedbackloop?
 
