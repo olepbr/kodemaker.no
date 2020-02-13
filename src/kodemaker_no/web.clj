@@ -33,6 +33,7 @@
    [
     ;: ny
     "/css/kodemaker.css"
+    "/css/pygments.css"
     #"/img/.*\..+"
     #"/foto/.*\..+"
     #"/fonts/.*\..+"
