@@ -1,6 +1,7 @@
 :title Hjælp, vi må ha en app!
 :author olga
 :tech [:android :ios :web :native :kryss-plattform :hybrid :pwa]
+:published 2020-02-26
 
 :blurb
 
