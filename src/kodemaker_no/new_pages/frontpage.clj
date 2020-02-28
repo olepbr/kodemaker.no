@@ -7,8 +7,8 @@
                       trygge på sine meninger. Våre folk har sterkt fokus på
                       kompetanseoverføring i team og tar komplekse oppgaver med
                       tunge integrasjoner."
-               :link {:text "Hvem er Kodemaker?"
-                      :href "/jobb/"}
+               :link {:text "Hvem er vi?"
+                      :href "/folk/"}
                :image-front "/bruce-front/foto/folk.jpg"
                :image-back "/bruce-back/foto/arduino.jpg"}
               {:kind :seymour
