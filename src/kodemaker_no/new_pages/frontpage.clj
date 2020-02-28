@@ -20,7 +20,7 @@
                :seymours
                [{:icon {:type :science/chemical :height 79}
                  :title "Referanser"
-                 :text "Vi har kun erfarne konsulenter med oss som liker å bryne seg på vanskelige oppgaver."
+                 :text ""
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
                 {:icon {:type :science/robot-1 :height 79}
