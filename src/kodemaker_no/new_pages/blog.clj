@@ -145,6 +145,7 @@
                 (e/round-media
                  {:image (str "/vcard-small" (:blog-post/author-picture blog-post))
                   :title (:person/full-name author)
+                  :href (:page/uri author)
                   :lines [(:person/title author)
                           (:person/email-address author)]}))}
     {:kind :definitions
@@ -177,6 +178,7 @@
               (e/round-media
                {:image (str "/vcard-small" (:blog-post/author-picture post))
                 :title (:person/full-name author)
+                :href (:page/uri author)
                 :lines [(e/tech-tags {:prefix "Om"
                                       :techs (techs post)})]}))}]})
 
