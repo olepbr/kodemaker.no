@@ -48,19 +48,20 @@
   (let [tech (:blog-post/techs post)
         author (:blog-post/author post)
         db (d/entity-db post)]
-    (->> (d/q '[:find [?e ...]
-                :in $ ?url [?tech ...]
-                :where
-                [?e :blog-post/techs ?tech]
-                (not [?e :page/uri ?url])]
-              db (:page/uri post) tech)
-         (active-posts db)
-         (map (fn [p]
-                [(cond-> (* 2 (count (set/intersection tech (:blog-post/techs p))))
-                   (= (:blog-post/author p) author) inc)
-                 p]))
-         (sort-by (comp - first))
-         (map second))))
+    (when-not (empty? tech)
+      (->> (d/q '[:find [?e ...]
+                  :in $ ?url [?tech ...]
+                  :where
+                  [?e :blog-post/techs ?tech]
+                  (not [?e :page/uri ?url])]
+                db (:page/uri post) tech)
+           (active-posts db)
+           (map (fn [p]
+                  [(cond-> (* 2 (count (set/intersection tech (:blog-post/techs p))))
+                     (= (:blog-post/author p) author) inc)
+                   p]))
+           (sort-by (comp - first))
+           (map second)))))
 
 (defn adjacent-posts [xs x]
   (loop [newer nil
@@ -141,7 +142,7 @@
                 (take 1))}
     {:kind :container
      :class "container-section-tight"
-     :content (let [author (author blog-post)]
+     :content (when-let [author (author blog-post)]
                 (e/round-media
                  {:image (str "/vcard-small" (:blog-post/author-picture blog-post))
                   :title (:person/full-name author)
