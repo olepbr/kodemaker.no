@@ -9,9 +9,9 @@
             [kodemaker-no.new-pages.blog :as blog]
             [kodemaker-no.new-pages.cv-page :as cv-page]
             [kodemaker-no.new-pages.frontpage :as frontpage]
+            [kodemaker-no.new-pages.people-page :as people-page]
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
-            [kodemaker-no.new-pages.people-page :as people-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
@@ -26,7 +26,6 @@
   (d/create-database uri)
   (let [conn (d/connect uri)]
     @(d/transact conn (edn/read-string (slurp (io/resource "db-schema.edn"))))
-
     conn))
 
 (defn serve-page [page request]
@@ -36,26 +35,37 @@
              (post-process-page images/image-asset-config request))
    :headers {"Content-Type" "text/html"}})
 
-(defn handle-request [conn request]
-  (when-let [e (d/entity (d/db conn) [:page/uri (:uri request)])]
+(defn handle-request [db request]
+  (when-let [e (d/entity db [:page/uri (:uri request)])]
     (serve-page (case (:page/kind e)
                   :page.kind/article (article-page/create-page e)
-                  :page.kind/blog (blog/create-index-page (d/db conn))
+                  :page.kind/blog (blog/create-index-page db)
                   :page.kind/blog-post (blog/create-post-page e)
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/profile (profile-page/create-page e)
                   :page.kind/cv (cv-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
                   :page.kind/tech (tech-page/create-page e)
-                  :page.kind/people (people-page/create-page e))
+                  :page.kind/people (people-page/create-page e)
+                  :page.kind/video {:body "N/A"})
                 request)))
 
 (defn serve-pages [conn]
   (fn [request]
-    (or (handle-request conn request)
+    (or (handle-request (d/db conn) request)
         {:status 404
          :body "Eg fann han ikkje"
          :headers {"Content-Type" "text/html"}})))
+
+(defn get-pages [db request]
+  (into {}
+        (for [uri (d/q '[:find [?uri ...] :where [_ :page/uri ?uri]] db)]
+          (try
+            [uri (:body (handle-request db (assoc request :uri uri)))]
+            (catch Exception e
+              (throw (ex-info (str "Unable to render page " uri)
+                              {:uri uri}
+                              e)))))))
 
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))

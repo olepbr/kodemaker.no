@@ -31,7 +31,8 @@
   :ring {:handler kodemaker-no.web/app
          :init kodemaker-no.web/init-app!
          :port 3333}
-  :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]}
+  :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]
+            "build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]
                                   [integrant "0.7.0"]
                                   [integrant/repl "0.3.1"]

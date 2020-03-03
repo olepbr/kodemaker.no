@@ -2,6 +2,7 @@
   (:require clojure.core.memoize
             [clojure.data.json :as json]
             [config :refer [export-directory]]
+            [datomic-type-extensions.api :as d]
             [html5-walker.core :as html5-walker]
             [imagine.core :as imagine]
             [kodemaker-no.atomic :as atomic]
@@ -9,6 +10,7 @@
             [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [kodemaker-no.images :as images]
+            [kodemaker-no.ingest :as ingest]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.validate :refer [validate-content]]
@@ -165,11 +167,32 @@
         (stasis/report-differences old-files (load-export-dir))
         (println)))))
 
+(defn export-new [& args]
+  (let [[format] (map read-string args)
+        assets (optimize (get-assets) {})
+        old-files (load-export-dir)
+        request {:optimus-assets assets
+                 :base-url "https://www.kodemaker.no"}
+        conn (atomic/create-database (str "datomic:mem://" (d/squuid)))]
+    (ingest/ingest-all conn "resources")
+    (stasis/empty-directory! export-directory)
+    (optimus.export/save-assets assets export-directory)
+    (stasis/export-pages (atomic/get-pages (d/db conn) request) export-directory request)
+    (export-images export-directory export-directory (assoc images/image-asset-config :cacheable-urls? true))
+    (if (= format :json)
+      (println (json/write-str (dissoc (stasis/diff-maps old-files old-files) :unchanged)))
+      (do
+        (println)
+        (println "Export complete:")
+        (stasis/report-differences old-files old-files)
+        (println)))))
+
 (comment
   (export-images "./build/" "./build/" images/image-asset-config)
 
   (get-image-assets "./build/" images/image-asset-config)
 
+  (export-new)
 
   (-> "/image-assets/mega-banner/_/references/geir-oterhals.jpg"
       imagine/image-spec
