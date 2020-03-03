@@ -171,8 +171,7 @@
   (let [[format] (map read-string args)
         assets (optimize (get-assets) {})
         old-files (load-export-dir)
-        request {:optimus-assets assets
-                 :base-url "https://www.kodemaker.no"}
+        request {:optimus-assets assets}
         conn (atomic/create-database (str "datomic:mem://" (d/squuid)))]
     (ingest/ingest-all conn "resources")
     (stasis/empty-directory! export-directory)
