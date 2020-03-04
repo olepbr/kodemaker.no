@@ -1,11 +1,12 @@
 :title Kontinuerlig utrulling - også på klienten
 :author christian
 :tech [:frontend]
+:published 2020-03-04
 
 :blurb
 
 Du har en Single Page Application (SPA). Brukerne har typisk appen åpen i
-nettleseren lenge - mange dager eller til og med uker. Samtidig sitter du og
+nettleseren lenge - mange dager, eller til og med uker. Samtidig sitter du og
 dytter ut nye versjoner opptil flere ganger om dagen. Hvordan i alle dager skal
 du sørge for at folk ikke blir sittende på en gammel frontend som kanskje har
 bugs du allerede har fiksa, eller bruker en utdatert API-klient? Vel, her får du
@@ -14,7 +15,7 @@ ett forslag.
 :body
 
 Du har en Single Page Application (SPA). Brukerne har typisk appen åpen i
-nettleseren lenge - mange dager eller til og med uker. Samtidig sitter du og
+nettleseren lenge - mange dager, eller til og med uker. Samtidig sitter du og
 dytter ut nye versjoner opptil flere ganger om dagen. Hvordan i alle dager skal
 du sørge for at folk ikke blir sittende på en gammel frontend som kanskje har
 bugs du allerede har fiksa, eller bruker en utdatert API-klient?
@@ -70,8 +71,8 @@ echo ';window.APP = {version:"'$(cat version.txt)'"};' >> app.js
 Etter at appen har starta opp må den periodisk høre med serveren om det finnes
 en nyere versjon. Dette kan gjøres ved å polle fila vi sjekka ved oppstart, og
 sammenligne versjonen med den vi fant ved oppstart. Dersom de er forskjellige så
-venter en ny og (forhåpentligvis) bedre versjon (ingen WYSIWYG-editor altså,
-lover). Foreløpig skal vi kun notere oss dette:
+venter en ny og (forhåpentligvis) bedre versjon. Foreløpig skal vi kun notere
+oss dette:
 
 ```js
 function pollVersion() {
