@@ -122,22 +122,28 @@
    [:div.content
     [:div.gutter.gutter-xl
      [:div.pønt-item.portrait-1
-      [:img.img.image-style-chocolate-triangle {:src portrait-1}]]
+      [:a {:href (:href portrait-1) :title (:title portrait-1)}
+       [:img.img.image-style-chocolate-triangle {:src (:img portrait-1)}]]]
 
      [:div.pønt-item.top-triangle
-      [:img.img.image-style-rouge-triangle {:src top-triangle}]]
+      [:a {:href (:href top-triangle) :title (:title top-triangle)}
+       [:img.img.image-style-rouge-triangle {:src (:img top-triangle)}]]]
 
      [:div.pønt-item.bottom-circle
-      [:img.img.image-style-chocolate-circle-pønt {:src bottom-circle}]]
+      [:a {:href (:href bottom-circle) :title (:title bottom-circle)}
+       [:img.img.image-style-chocolate-circle-pønt {:src (:img bottom-circle)}]]]
 
      [:div.pønt-item.portrait-2
-      [:img.img.image-style-rouge-triangle {:src portrait-2}]]
+      [:a {:href (:href portrait-2) :title (:title portrait-2)}
+       [:img.img.image-style-rouge-triangle {:src (:img portrait-2)}]]]
 
      [:div.pønt-item.top-circle
-      [:img.img.image-style-rouge-circle-pønt {:src top-circle}]]
+      [:a {:href (:href top-circle) :title (:title top-circle)}
+       [:img.img.image-style-rouge-circle-pønt {:src (:img top-circle)}]]]
 
      [:div.pønt-item.bottom-triangle
-      [:img.img.image-style-chocolate-triangle {:src bottom-triangle}]]]]])
+      [:a {:href (:href bottom-triangle) :title (:title bottom-triangle)}
+       [:img.img.image-style-chocolate-triangle {:src (:img bottom-triangle)}]]]]]])
 
 (defn seymour-section [{:keys [seymours] :as params}]
   [:div.section {:style (l/stylish {} params)}

@@ -43,10 +43,22 @@
                       :href "/jobb/"}
                :image "/foto/nils-1.jpg"}
               {:kind :pønt
-               :portrait-1 "/rouge-portrait/foto/christian-1.jpg"
-               :portrait-2 "/chocolate-portrait/foto/christian-1.jpg"
-               :top-triangle "/rouge-triangle/foto/christian-1.png"
-               :bottom-triangle "/chocolate-triangle/foto/christian-1.png"
-               :top-circle "/rouge-circle/foto/christian-1.png"
-               :bottom-circle "/chocolate-circle/foto/christian-1.png"}
+               :portrait-1 {:img "/rouge-portrait/foto/christian-1.jpg"
+                            :href "/christian/"
+                            :title "Christian Johansen"}
+               :portrait-2 {:img "/chocolate-portrait/foto/christian-1.jpg"
+                            :href "/christian/"
+                            :title "Christian Johansen"}
+               :top-triangle {:img "/rouge-triangle/foto/christian-1.png"
+                              :href "/christian/"
+                              :title "Christian Johansen"}
+               :bottom-triangle {:img "/chocolate-triangle/foto/christian-1.png"
+                                 :href "/christian/"
+                                 :title "Christian Johansen"}
+               :top-circle {:img "/rouge-circle/foto/christian-1.png"
+                            :href "/christian/"
+                            :title "Christian Johansen"}
+               :bottom-circle {:img "/chocolate-circle/foto/christian-1.png"
+                               :href "/christian/"
+                               :title "Christian Johansen"}}
               {:kind :footer}]})
