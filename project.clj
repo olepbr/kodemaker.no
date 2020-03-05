@@ -28,9 +28,9 @@
                  [html5-walker "2020-01-08"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
-  :ring {:handler kodemaker-no.web/app
-         :init kodemaker-no.web/init-app!
-         :port 3333}
+  :ring {:handler repl/ring-app
+         :init repl/init-app-for-ring!
+         :port 3334}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]
             "build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]

@@ -122,10 +122,6 @@
         wrap-content-type-utf-8
         prone/wrap-exceptions)))
 
-(declare app)
-(defn init-app! [] ;; this horrible thing is here for "lein ring server"
-  (def app (create-app)))
-
 (defn extract-images [html]
   (for [node (html5-walker/find-nodes html [:img])]
     (.getAttribute node "src")))

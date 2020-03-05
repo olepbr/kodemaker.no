@@ -58,3 +58,9 @@
 
 (defn reset []
   (integrant.repl/reset))
+
+(declare ring-app)
+(defn init-app-for-ring! []
+  (integrant.repl/set-prep! (constantly (dissoc config :adapter/jetty)))
+  (start)
+  (def ring-app (:app/handler integrant.repl.state/system)))
