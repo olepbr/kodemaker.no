@@ -55,8 +55,8 @@ end
 
 Jeg regner med at du ser hva det siste uttrykket skriver ut?
 
-Elixir har en god del syntaks og en god del konsepter. Men for denne bloggposten
-trenger du ikke forstå så veldig mye mer.
+Elixir har en god del syntaks og en god del konsepter. Men for hva vi skal gå
+gjennom i dag trenger du ikke forstå så veldig mye mer.
 
 ## Prosesser
 
@@ -65,7 +65,7 @@ håndteres av BEAM. Man kan konseptuelt tenke på prosessene som OS-prosesser,
 men de er ikke det. Den eneste måte prosesser kan kommunisere med hverandre på
 er via meldinger.
 
-En prosess kan dessuten kun håndtere én slik melding om gangen. Om prosessen
+En prosess kan dessuten kun håndtere én slik melding om gangen. Dersom prosessen
 gjør et blokkerende kall, så vil prosessen i praksis være låst og kan ikke
 håndtere flere meldinger før kallet har returnert eller timet ut.
 
@@ -76,7 +76,8 @@ uvanlig å ha millioner prosesser i en Erlang-applikasjon.
 ## Funksjonell programmering og immutability
 
 Elixir (og Erlang) har ingen muterbare datastrukturer. Dette betyr i praksis at
-verdier aldri endrer seg, at man skaper nye datastrukturer via transformasjon.
+verdier aldri endrer seg, og at man skaper nye datastrukturer via
+transformasjon.
 
 Men, et program må ha muterbar tilstand, i hvert fall noen steder. Dette løser
 man med prosesser.
