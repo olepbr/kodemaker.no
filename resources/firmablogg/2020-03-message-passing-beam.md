@@ -1,4 +1,4 @@
-:title Elixir: prosesser og meldinger
+:title Elixir: Prosesser og meldinger
 :author alf-kristian 
 :published 2020-03-11
 
@@ -8,8 +8,8 @@
 
 Elixir er et relativt nytt språk som kjører på Erlang VM'en BEAM. Dette er en
 annerledes plattform, som har vist seg å være svært robust, skalerbar og
-tillater høy oppetid. En av årsakene til dette er minnehåndtering, som er svart
-annerledes fra mange andre plattformer.
+tillater høy oppetid. En av årsakene til dette er minnehåndteringen, som er
+svært annerledes fra mange andre plattformer.
 
 :body
 
@@ -19,7 +19,7 @@ ble derfor designet for robusthet, skalerbarhet og høy oppetid. Dette vil jeg
 påstå er krav til de fleste applikasjoner i dag, men kanskje ikke alle
 plattformene hadde dette som primærmål da de ble designet.
 
-I dag skal vi se på en av tingene som gjør at BEAM skalerer så bra,
+I dag skal vi se på en av tingene som gjør at BEAM skalerer så bra -
 meldingsutveksling og minnehåndtering - og samtidig bruke det moderne
 programmeringsspråket Elixir.
 
@@ -28,7 +28,7 @@ programmeringsspråket Elixir.
 For å komme i gang, vi må nesten se på litt enkel kode.
 
 ```elixir
-# Tildeling (som egentlig er pattern matching)  
+# Tildeling (som egentlig er pattern matching)
 a = 1
 
 # Funksjoner
@@ -40,7 +40,8 @@ f.(1) # gir 2
 # Så en async prosess, som bare skriver hello world og terminerer
 spawn fn -> IO.puts "Hello world" end
 
-# Om prosesser skal snakke sammen trenger de å vite om hverandre, vi trenger process identifiers (PIDs)
+# Om prosesser skal snakke sammen trenger de å vite om hverandre,
+# vi trenger process identifiers (PIDs)
 parent = self() # typisk #PID<0.601.0>
 
 # Oppretter en prosess som sender melding til meg selv
@@ -50,7 +51,6 @@ spawn fn -> send parent, "Hello from me" end
 receive do 
   msg -> IO.puts "Received message: '#{msg}'" 
 end
-
 ```
 
 Jeg regner med at du ser hva det siste uttrykket skriver ut?
@@ -60,18 +60,18 @@ trenger du ikke forstå så veldig mye mer.
 
 ## Prosesser
 
-BEAM sine startes altså med "spawn". De er lettvekt, helt isolerte og håndteres
-av BEAM. Man kan konseptuelt tenke på prosessene som en OS-prosess, men de er
-ikke det. Den eneste måte prosesser kan kommunisere med hverandre på er via
-meldinger.
+BEAM sine prosesser startes altså med "spawn". De er lettvekt, helt isolerte og
+håndteres av BEAM. Man kan konseptuelt tenke på prosessene som OS-prosesser,
+men de er ikke det. Den eneste måte prosesser kan kommunisere med hverandre på
+er via meldinger.
 
 En prosess kan dessuten kun håndtere én slik melding om gangen. Om prosessen
 gjør et blokkerende kall, så vil prosessen i praksis være låst og kan ikke
 håndtere flere meldinger før kallet har returnert eller timet ut.
 
-Du synes kanskje dette høres tungt ut å blokkere en hel prosess? Men en prosess
-er som sagt en lettvekts greie, så om du trenger fler, så starter du flere. Det
-er ikke uvanlig å ha millioner prosesser i en Erlang-applikasjon.
+Du synes kanskje det høres tungt ut å blokkere en hel prosess? En prosess er som
+sagt en lettvekts greie, så om du trenger fler, så starter du flere. Det er ikke
+uvanlig å ha millioner prosesser i en Erlang-applikasjon.
 
 ## Funksjonell programmering og immutability
 
@@ -88,7 +88,7 @@ defmodule Counter do
     receive do
         :inc -> run(state + 1)
         {:current, to} -> send to, state
-      end
+    end
   end
 end
 
@@ -153,10 +153,8 @@ altså en av egenskapene som gjør at BEAM applikasjoner skalerer så bra.
 Erlang bundles med OTP (Open Telephone Platform), som er mye av årsaken de gode
 egenskapene til Erlang-applikasjoner.
 
-Elixir-communitiet har utviklet webrammeverket Phoenix, som gjør at bruken av Erlang
-og OTP blir veldig enkel.
+Elixir-communitiet har utviklet webrammeverket Phoenix, som gjør bruken av
+Erlang og OTP veldig enkel.
 
-Som du kanskje skjønner finnes mange flere fordeler med denne plattformen. Du
-skal ikke se bort ifra at vi skriver mer om dette ved en annen anledning.
-
-
+Som du kanskje skjønner finnes mange flere fordeler med denne plattformen. Vi
+kommer til å skrive mer om dette i tiden fremover, så følg med.
