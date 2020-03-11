@@ -146,7 +146,7 @@ Dette gjør garbage collection (GC) veldig mye enklere.
 
 På andre plattformer så må GC traversere hele heapen og også stoppe
 applikasjoner fra å prosessere, for å fullføre en full GC. På BEAM er det ingen
-store heaps å traverse, og mange prosesser dør før det er behov for GC. Dette er
+store heaps å traversere, og mange prosesser dør før det er behov for GC. Dette er
 altså en av egenskapene som gjør at BEAM applikasjoner skalerer så bra.
 
 ## Toppen av isfjellet
