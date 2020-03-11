@@ -116,7 +116,7 @@
              :years [2020  :ongoing]
              :employer :kodemaker
              :summary "Nytt terminalverktøy"
-             :description "Ny løsning for å øke levereingskapasiteten til kolonial.no"
+             :description "Ny løsning for pakking av varer på paller for distribusjon, med hensikt å øke leveringskapasiteten til kolonial.no"
              :tech [:react :es6 :typescript :graphql :python :django :postgresql]}
              {:customer "Forsvaret"
              :years [2019  2020]
