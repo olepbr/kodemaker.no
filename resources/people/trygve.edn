@@ -112,11 +112,17 @@
                 {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                 :customer "Thomson Reuters"}]
 
- :projects [{:customer "Forsvaret"
-             :years [2019  :ongoing]
+ :projects [{:customer "Kolonial.no"
+             :years [2020  :ongoing]
              :employer :kodemaker
-             :summary "Prototype for løsning for innrapportering av materiell"
-             :description "Prototype for løsning for innrapportering av materiell i forbindelse med utstyrskjøp, samt endringer av Materielldataportalen."
+             :summary "Nytt terminalverktøy"
+             :description "Ny løsning for å øke levereingskapasiteten til kolonial.no"
+             :tech [:react :es6 :typescript :graphql :python :django :postgresql]}
+             {:customer "Forsvaret"
+             :years [2019  2020]
+             :employer :kodemaker
+             :summary "Løsning for innrapportering av materiell i skyen."
+             :description "Bla. løsning der leverandører av alt fra fregatter til sokker skal her levere materiell-underlaget til forsvaret begrensede plattform."
              :tech [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
              {:customer "Vy Gruppen"
              :years [2019]
