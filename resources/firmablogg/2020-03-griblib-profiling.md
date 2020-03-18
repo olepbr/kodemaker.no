@@ -1,6 +1,7 @@
 :title Profilering av kode i Go
 :author nils
 :tech [:go]
+:published 2020-03-18
 
 :blurb
 
