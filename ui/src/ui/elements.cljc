@@ -225,7 +225,7 @@
      [:div.card-grid-item content])])
 
 (defn tango-grid [items]
-  [:div.tango-grid
+  [:div.tango-grid {:style {:grid-gap "64px"}}
    (for [{:keys [content class]} items]
      [:div.tango-grid-item {:className class} content])])
 
@@ -234,3 +234,27 @@
    (for [{:keys [href title icon target]} links]
      [:a {:href href :target target :title title}
       icon])])
+
+(defn google-map [{:keys [zoom lat lon title api-key map-marker-url]}]
+  [:div
+   [:div {:id "google-map" :style {:height "441px"}}]
+   [:script
+    (str "
+var initMap = function () {
+    var kmhq = new google.maps.LatLng(" lat ", " lon ");
+    var map = new google.maps.Map(document.getElementById('google-map'), {
+        center: kmhq,
+        zoom: " zoom "
+    });
+    var marker = new google.maps.Marker({
+        position: kmhq,
+        map: map,
+        title: '<address>" title "</address>',
+        icon: '" map-marker-url "'
+    });
+};
+")]
+   [:script
+    {:type "text/javascript"
+     :src (str "https://maps.googleapis.com/maps/api/js?key=" api-key
+               "&callback=initMap")}]])

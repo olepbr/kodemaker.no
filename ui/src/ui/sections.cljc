@@ -40,6 +40,39 @@
      [:div.bruce-image-back
       [:img {:src image-back}]]]]])
 
+(defn contact-section [{:keys [email phone address contacts link] :as params}]
+  [:div.section.bruce.contact-section
+   {:style (l/stylish {} params)}
+   [:div.content.mbxxl
+    [:div.header-section (l/header)]
+    [:div.contact-header.tac.mtxxl
+     [:div email]
+     [:div phone]
+     [:div address]]
+    [:div.contacts-1
+     (for [contact contacts]
+       [:div.mbl
+        (e/round-media
+         {:image (:image-round contact)
+          :title (:name contact)
+          :lines [(:title contact)
+                  (:phone contact)
+                  (:email contact)]})])
+     (e/arrow-link link)]
+    [:div.contacts-2
+     (e/tango-grid (for [contact contacts]
+                     {:content
+                      (e/illustrated
+                       {:curtain (:curtain contact)
+                        :image (:image-tall contact)
+                        :title (:name contact)
+                        :lines [(:title contact)
+                                (:phone contact)
+                                (:email contact)]})}))
+     (e/arrow-link link)]
+    [:div.contact-map
+     (e/google-map (:map params))]]])
+
 (defn enumeration-section [{:keys [title categories] :as params}]
   [:div.section.enumeration-section {:style (l/stylish {} params)}
    [:div.content
