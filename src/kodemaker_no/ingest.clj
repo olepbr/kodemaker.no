@@ -96,7 +96,8 @@
 (def static-pages
   {"/" :page.kind/frontpage
    "/folk/" :page.kind/people
-   "/blogg/" :page.kind/blog})
+   "/blogg/" :page.kind/blog
+   "/kontakt/" :page.kind/contact})
 
 (defn techs [db]
   (->> (d/q '[:find [?v ...] :where [_ :db/ident ?v]] db)
