@@ -25,7 +25,7 @@ Det første jeg gjør er å legge inn en entry i `/etc/hosts` med verdien `127.0
 
 ## Skriv din egen URL-redirecter
 
-Dessverre finnes det ingenting på min maskin som svarer på port :80 og pathen `/link`. Så vi lager en URL-redirecter. Her oppfordrer jeg deg til å lage en redirecter i favorittspråket ditt, men her er all koden til mitt forslag, skrevet i go:
+Dessverre finnes det ingenting på min maskin som svarer på port :80 eller :443 og pathen `/link`. Så jeg lager en egen URL-redirecter. Her oppfordrer jeg deg til å lage en redirecter i favorittspråket ditt, men her er all koden til mitt forslag, skrevet i go:
 
 ```
 import (
