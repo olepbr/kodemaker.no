@@ -49,6 +49,7 @@
       [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/ico"}]
       [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/x-icon"}]
       [:link {:href (link/file-path request "/favicon.ico") :rel "shortcut icon" :type "image/vnd.microsoft.icon"}]
+      [:link {:href "/atom.xml" :rel "alternate" :title "Kodemakerblogg" :type "application/atom+xml"}]
       [:title (head-title (:title page))]]
      [:body
       [:script (slurp (io/resource "public/scripts/analytics.js"))]

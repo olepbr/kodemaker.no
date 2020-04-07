@@ -11,8 +11,10 @@
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [kodemaker-no.images :as images]
             [kodemaker-no.ingest :as ingest]
+            [kodemaker-no.new-pages.blog :as blog]
             [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
+            [kodemaker-no.rss :as rss]
             [kodemaker-no.validate :refer [validate-content]]
             [optimus.assets :as assets]
             optimus.export
@@ -154,6 +156,9 @@
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (get-pages) export-directory {:optimus-assets assets
                                                        :base-url "https://www.kodemaker.no"})
+    (let [conn (atomic/create-database (str "datomic:mem://" (d/squuid)))]
+      (ingest/ingest-all conn "resources")
+      (spit (str export-directory "atom.xml") (rss/atom-xml (blog/blog-posts-by-published (d/db conn)))))
     (export-images export-directory export-directory (assoc images/image-asset-config :cacheable-urls? true))
     (if (= format :json)
       (println (json/write-str (dissoc (stasis/diff-maps old-files (load-export-dir)) :unchanged)))
@@ -173,6 +178,7 @@
     (stasis/empty-directory! export-directory)
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (atomic/get-pages (d/db conn) request) export-directory request)
+    (spit (str export-directory "atom.xml") (rss/atom-xml (blog/blog-posts-by-published (d/db conn))))
     (export-images export-directory export-directory (assoc images/image-asset-config :cacheable-urls? true))
     (if (= format :json)
       (println (json/write-str (dissoc (stasis/diff-maps old-files old-files) :unchanged)))
