@@ -38,7 +38,7 @@
             :xmlns:media "http://search.yahoo.com/mrss/"}
      [:id "urn:www.kodemaker.no:feed"]
      [:updated
-      (str (:blog-post/published post) "T07:00:00+02:00")]
+      (str (:blog-post/published (first blog-posts)) "T07:00:00+02:00")]
      [:title {:type "text"} "Kodemaker sin blogg"]
      [:link {:rel "self" :href "https://www.kodemaker.no/atom.xml"}]
      (map entry blog-posts)])))
