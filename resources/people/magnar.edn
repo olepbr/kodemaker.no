@@ -719,7 +719,17 @@
              :years [1999 2000]
              :tech [:html :asp :sql :ms-access :javascript :visual-interdev]}]
 
- :endorsements [{:author "Owen Fraser-Green"
+ :endorsements [{:author "Vidar Litlehamar"
+                 :title "IT Sjef, Norled"
+                 :quote "Magnar fremstår som solid, trygg og særdeles
+                effektiv, både «oppe i tårnet» med arbeidet med å oversette
+                domene til arkitektur, så vel som i håndverket med å produsere
+                nydelig, effektiv kode. Det er det at han leverer i toppklasse
+                på begge disse områdene og samtidig elsker å lære bort, som for
+                meg gjør at Magnar skiller seg ut. Når han i tillegg er en svært
+                omgjengelig fyr er det ikke annet å gjøre enn å trille
+                terningkast seks og gi ham de aller beste anbefalinger."}
+                {:author "Owen Fraser-Green"
                  :title "Leder MyEnergy, Hafslund"
                  :quote "Magnar is one of the smartest full-stack developers
                          I've ever met. I had the great pleasure of working with
