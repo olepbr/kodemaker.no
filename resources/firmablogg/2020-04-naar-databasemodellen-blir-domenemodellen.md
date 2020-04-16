@@ -96,7 +96,7 @@ opprettelse av produktkoder. Funksjonen sørger for at kodene starter med to sif
 tegnene er store bokstaver. Du utvider funksjonen med et nytt lovlig format og tar deg et eple.
 
 I neste oppgave lager du deg en funksjon for å veksle mellom valutaer. Funksjonen tar inn en pris og den nye 
-valutaen. Typen `Pris` består av et beløp ("int") og en valuta ("enum"), og opprettes med en funksjon som sjekker 
+valutaen. Typen `Pris` består av et beløp ("double") og en valuta ("enum"), og opprettes med en funksjon som sjekker 
 at beløpet er større enn 0. "Fort gjort", sier du og slår hendene sammen.
 
 Ny dag, ny oppgave. Du skal støtte registrering av butikkadresser, og, heldig for deg, finnes det allerede en 
