@@ -27,7 +27,7 @@
 
  :recommendations [{:title "Spinning up in Deep Reinforcement Learning"
                     :blurb "Dette er stedet å grave seg dypt ned i RL.
-                            OpenAI har gjort en kjempejobb med å samle metariale om RL 
+                            OpenAI har gjort en kjempejobb med å samle materiale om RL 
                             og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
                     :link  {:url "https://spinningup.openai.com"
                             :text "Sjekk ut nettstedet her"}
@@ -113,74 +113,85 @@
                 :customer "Thomson Reuters"}]
 
  :projects [{:customer "Kolonial.no"
-             :years [2020  :ongoing]
+             :years [2020]
              :employer :kodemaker
              :summary "Nytt terminalverktøy"
-             :description "Ny løsning for pakking av varer på paller for distribusjon, med hensikt å øke leveringskapasiteten til kolonial.no"
+             :description "Utvikling av ny løsning for pakking av varer på paller for distribusjon, 
+                           med hensikt å øke leveringskapasiteten til kolonial.no.
+                           Trygve bidro med utvikling av frontend og backend."
              :tech [:react :es6 :typescript :graphql :python :django :postgresql]}
              {:customer "Forsvaret"
              :years [2019  2020]
              :employer :kodemaker
-             :summary "Løsning for innrapportering av materiell i skyen."
-             :description "Bla. løsning der leverandører av alt fra fregatter til sokker skal her levere materiell-underlaget til forsvaret begrensede plattform."
+             :summary "PoC for innrapportering av materiell i skyen"
+             :description "Laget et _Proof of Concept_ som skal bidra til at forsvarets eksterne leverandører
+                           lettere skal kunne levere materiell-underlag til forsvaret begrensede plattform fra skyen.
+                           Trygve har også bidratt med videreutvikling av materielldataportalen, 
+                           som er en løsning for innrapportering av materiell som ligger utenfor forsvarets SAP plattform"
              :tech [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
              {:customer "Vy Gruppen"
              :years [2019]
              :employer :kodemaker
-             :summary "Utvikling av trafikksystemer for Vy og samarbeidspartnere"
-             :description "Utvikling av trafikksystemer til bruk internt i Vy og mot samarbeidspartnere, så som integrasjon mot Värmlandstrafik, overvåkning av applikasjoner, mmm."
+             :summary "Utvikling av trafikksystemer for Vy og deres nordiske samarbeidspartnere"
+             :description "Utvikling av trafikksystemer til bruk internt i Vy og av Vy's nordiske samarbeidspartnere. 
+                           Bl.a integrasjon mot Värmlandstrafik, system for applikasjonsovervåkning, m.fl."
              :tech [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-eventhubs :mysql :groovy :gradle]}
              {:customer "NRK Origo"
              :years [2017 2018 2019]
              :employer :kodemaker
-             :summary "Utvikling av media-arkivet til NRK"
-             :description "Søk og registrering av metadata i NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV og råstoff"
+             :summary "Videreutvikling av media-arkivet til NRK"
+             :description "Videreutvikling av media-arkivet til NRK, som omhandler søk og registrering av metadata i 
+                           NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV, råstoff, mm."
              :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
-            {:customer "BN-bolig / EGGS Design"
+            {:customer "BN Bolig"
              :years [2017]
              :employer :kodemaker
-             :summary "Front-end til BN-bolig"
-             :description "BN-bank og Eiendomsmegler1 starter ny eiendomsmegler.
-             Prosjektet kjører hos EGGS Design som en 'Corporate Startup' etter
-             Lean prinsipper."
+             :summary "Utvikling av løsning for boligsalg på nett"
+             :description "BN Bolig er en eiendomsmegler startet av BN Bank og Eiendomsmegler1.
+                           Trygve jobbet hovedakelig med utvikling av frontend på bnbolig.no.
+                           EGGS Design stod for designet, og prosjektet ble kjørt som et 'Corporate Startup' etter
+                           Lean prinsipper."
              :tech [:react :redux :es6 :webpack :svg :clojure]}
             {:customer "Thomson Reuters"
              :years [2016]
              :employer :kodemaker
-             :summary "Ferdigstillelse av ny løsning for distribusjon av fremskrevne tidsserier"
-             :description "Ferdigstillelse av ny løsning for distribusjon
-             av fremskrevne tidsserier fra forskjellige markeder."
+             :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+             :description "Ferdigstillelse av løsning for intern distribusjon av fremskrevne tidsserier 
+                           fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase.
+                           Gjennomførte også en foranalyse av varslingssystem for vær- og naturkatastrofer. 
+                           Denne løsningen ble beklageligvis lagt på is av eksterne årsaker."
              :tech
              [:java :spark :kafka :hbase :hadoop :zookeeper :docker :logstash :puppet]}
             {:customer "NSB"
              :years [2016]
              :employer :kodemaker
              :summary "Utvikling av trafikksystemer til bruk internt i NSB"
-             :description "Utvikling trafikksystemer til bruk internt i NSB, eks. sporbruk, buss for tog."
+             :description "Utvikling trafikksystemer til bruk internt i NSB, bla. Bari, buss for tog, sporbruk på stasjoner, m.fl."
              :tech [:react :redux :es6 :svg :immutable-js :webpack :groovy :grails]}
             {:customer "Thomson Reuters"
              :years [2015]
              :employer :kodemaker
-             :summary "Utvikling av distribusjon av fremskrevne tidsserier for forskjellige markeder"
-             :description "Utvikling av proof-of-concept for ny løsning for CDB:
-             distribusjon av fremskrevne tidsserier fra forskjellige markeder."
+             :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+             :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier 
+                           fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
              :tech [:java :spark :kafka :hbase :hadoop :zookeeper :logstash :puppet]}
             {:customer "Animalia"
              :years [2015 2015]
              :employer :kodemaker
              :summary "Oppgradering av system for Sauekontrollen og Storfekjøttkontrollen"
              :description "Samordning av funksjoner samt nye funksjoner
-             innen avlsarbeid mm. Programmering, mentoring, løsningsdesign, arkitektur og integrasjon av systemer for sau-, storfe-, og fjørfe-hold."
+                           innen avlsarbeid mm. Programmering, mentoring, løsningsdesign, 
+                           arkitektur og integrasjon av systemer for sau-, storfe-, og fjørfe-hold."
              :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
                     :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
              :years [2014]
              :exclude-from-profile? true
              :employer :kodemaker
-             :summary "Større oppgradering av system"
+             :summary "Oppgradering av system for klassifiseringskontroll på slakterier"
              :description "Større oppgradering av system for
-             klassifiseringskontroll på slakterier. Bedre opplegg for
-             kurs/eksamen samt tilpasning til nye brukergrupper."
+                           klassifiseringskontroll på slakterier. Bedre opplegg for
+                           kurs/eksamen samt tilpasning til nye brukergrupper."
              :tech [:groovy :grails :camel :bootstrap :spock :css :javascript :jquery
                     :spring-security :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
@@ -189,11 +200,11 @@
              :employer :kodemaker
              :summary "Utvikling av sauekontrollen"
              :description "Utvikling av sauekontrollen - et system for drift av
-             sauebesetninger. Systemet gir en helhetlig oversikt over dyrene og
-             deres produksjon fra fødsel til slakting, samt avlsarbeid. Brukerne
-             kan så analysere resultatene i sin besetning og sette seg nye mål.
-             Brukes av over 4000 sauebønder. Programmering, mentoring,
-             arkitektur og prosess-støtte."
+                           sauebesetninger. Systemet gir en helhetlig oversikt over dyrene og
+                           deres produksjon fra fødsel til slakting, samt avlsarbeid. Brukerne
+                           kan så analysere resultatene i sin besetning og sette seg nye mål.
+                           Brukes av over 4000 sauebønder. Programmering, mentoring,
+                           arkitektur og prosess-støtte."
              :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
                     :jenkins :git :oracle :ansible :nginx :buster-js]}
             {:customer "Animalia"
@@ -202,11 +213,11 @@
              :employer :kodemaker
              :summary "Utvikling av storfekjøttkontrollen"
              :description "Utvikling av storfekjøttkontrollen - en
-             landsomfattende husdyrkontroll for kjøttfe, kjøttfekrysninger og
-             fôringsdyr. Systemet gir en helhetlig oversikt over helsestatus,
-             tilvekst, slaktekvalitet og fruktbarhetsresultater. Brukes av over
-             3000 storfebønder. Programmering, mentoring, arkitektur og scrum
-             prosess-støtte."
+                           landsomfattende husdyrkontroll for kjøttfe, kjøttfekrysninger og
+                           fôringsdyr. Systemet gir en helhetlig oversikt over helsestatus,
+                           tilvekst, slaktekvalitet og fruktbarhetsresultater. Brukes av over
+                           3000 storfebønder. Programmering, mentoring, arkitektur og scrum
+                           prosess-støtte."
              :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
                     :jenkins :git :oracle]}
             {:customer "Animalia"
