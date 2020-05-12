@@ -26,7 +26,9 @@
                  [datomic-type-extensions "2019-09-04"]
                  [java-time-dte "2018-04-18"]
                  [java-time-literals "2018-04-06"]
-                 [html5-walker "2020-01-08"]]
+                 [html5-walker "2020-01-08"]
+                 [clj-http "3.10.1"]
+                 [cheshire "5.10.0"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler repl/ring-app
