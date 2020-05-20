@@ -40,7 +40,12 @@
    :security "Sikkerhet"
    :tool "Verktøy"
    :frontend "Frontend"
-   :cv/other "Annet"})
+   :cv/other "Annet"
+   :library "Bibliotek"
+   :framework "Rammeverk"
+   :specification "Spesifikasjoner"
+   :server "Server
+   "})
 
 (def tech-order
   [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend :cv/other])

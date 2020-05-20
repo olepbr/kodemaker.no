@@ -4,7 +4,9 @@
             [cheshire.core :refer :all]
             [java-time-literals.core :as jte]
             [datomic-type-extensions.api :as d]
-            [clojure.string :as str])
+            [clojure.string :as str]
+            [kodemaker-no.new-pages.cv-page :as page]
+            [kodemaker-no.new-pages.person :as person])
   (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -84,6 +86,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; cv cleanup stuff
 
+(defn- delete-technologies [user-id cv-id]
+  "Similar to delete-cv-part, but cannot delete ;uncategorized technologies"
+  (let [part-name :technologies
+        cvp-cv (http-get ((api :cvs) user-id cv-id))]
+    (doseq [part (filter #(not (:uncategorized %)) (get cvp-cv part-name))]
+      (http-delete ((api :cv-part) user-id cv-id (name part-name) (:_id part))))))
+
 (defn- delete-cv-part [part-name user-id cv-id]
   "Delete cv part such as project_experiences, courses etc.
    A part must be a list where each item hava an '_id' attribute"
@@ -103,7 +112,9 @@
       (delete-cv-part :educations user-id cv-id)
       (delete-cv-part :key_qualifications user-id cv-id)
       (delete-cv-part :presentations user-id cv-id)
-      (delete-cv-part :project_experiences user-id cv-id))))
+      (delete-cv-part :project_experiences user-id cv-id)
+      (delete-technologies user-id cv-id)
+      )))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; cv data generation stuff
@@ -119,6 +130,24 @@
 (defn- pull-tech [db tech-ref]
   (db-pull-by-id db (:db/id tech-ref)))
 
+(defn all-techs-by-type [db person]
+  "NOTE: Almost identical to page/all-techs, but still different"
+  (->> (concat (:person/using-at-work person)
+               (:person/innate-skills person)
+               (page/side-project-techs person)
+               (page/blog-post-techs person)
+               (page/screencast-techs person)
+               (page/presentation-techs person)
+               (page/open-source-techs person)
+               (page/project-techs person))
+       (remove (or (:person/exclude-techs person) #{}))
+       frequencies
+       (sort-by (comp - second))
+       (map first)
+       (person/prefer-techs (:person/preferred-techs person))
+       (map (partial pull-tech db))
+       (group-by :tech/type)))
+
 (defn- generate-project-experience-skills [db project]
   (let [tech-refs (:project/techs project)
         techs (map (partial pull-tech db) tech-refs)]
@@ -133,7 +162,6 @@
                                              (str-or-nil "Certificate-name:" (:text (:certificate certification)))
                                              (str-or-nil "Certificate-url:" (:url (:certificate certification)))]))}
    :year             (:year certification)})
-
 
 (defn- generate-education [education]
   {:school    {:no (:institution education)}
@@ -203,6 +231,13 @@
    :month            (.getMonthValue (:presentation/date presentation))
    :year             (.getYear (:presentation/date presentation))})
 
+(defn- generate-technologies [db person]
+  (for [[tech-type techs] (all-techs-by-type db person)]
+    {:category          {:no (or (page/tech-labels tech-type) tech-type)}
+     :uncategorized     (nil? tech-type)
+     :technology_skills (map (fn [tech] {:tags {:no (:tech/name tech)}}) techs)}))
+
+
 (defn- generate-cv [db person]
   {:telefon             (:person/phone-number person)
    :twitter             (:twitter (:person/presence person))
@@ -210,7 +245,9 @@
    :educations          (map generate-education (:person/education person))
    :key_qualifications  (generate-key-qualifications db person)
    :presentations       (map generate-presentation (:person/presentations person))
-   :project_experiences (map (partial generate-project db) (:person/projects person))})
+   :project_experiences (map (partial generate-project db) (:person/projects person))
+   :technologies        (generate-technologies db person)
+   })
 
 (defn- generate-user [person company-config]
   {:country_id (:country-id company-config)
@@ -256,6 +293,7 @@
          (catch Exception e
            (println "Failed creating cv for" email ": " e)
            (println "Person data is:" person)
+           (println "Generated cv is:" cv)
            (str "Failed creating cv for " email)))))
 
 (defn export-all-cvs [db]
@@ -263,8 +301,8 @@
     (->> (find-all-persons db)
          (filter #(not (:person/quit? %)))
          (filter :person/profile-active?)
-         ;(drop 25)                                          ; TODO testing
-         ;(take 1)                                           ; TODO testing
+         (drop 25)                                          ; TODO testing
+         (take 1)                                           ; TODO testing
          (run! (partial export-cv db company-config)))))
 
 
@@ -273,7 +311,17 @@
 (comment
   (start)
 
+  ; After (start), load this file in REPL
+
   (ns kodemaker-no.export.cvpartner)
+
+  ; export all
+  (map str (export-all-cvs db))
+
+  ; trygve local here
+  (def trygve (d/pull db '[*] 17592186045673))
+
+  (generate-technologies db trygve)
 
   ; datomic
   (def conn (d/connect "datomic:mem://kodemaker"))
@@ -285,9 +333,6 @@
   ; Need company for create user
   (http-get (api :companies))
 
-  ; trygve local here
-  (def trygve (d/pull db '[*] 17592186045673))
-
   ; trygve cvpartner here
   (find-user-by-email (:person/email-address trygve))
   (http-get (str/join "/" [(api :users) "5ea84086af75491055e94423"]))
@@ -297,7 +342,6 @@
   (update-cv trygve)
   (export-cv (get-company-config) 17592186045673)
 
-  (map str (export-all-cvs db))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; Old stuff
