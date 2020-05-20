@@ -1,6 +1,7 @@
 :title Nostalgibølge
 :author odin
 :tech [:css :web :clojurescript]
+:published 2020-05-20
 
 :blurb
 Jeg husker det som om det var i går. Dagen da Commodore ble byttet ut med en Amiga 500. Det var første gang jeg 
