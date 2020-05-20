@@ -73,7 +73,7 @@
       (<= 200 status 299) (:body response)
       (= 404 status) nil
       :else (do
-              (prn (str "Failed while getting url " url))
+              (println "Failed while getting url " url)
               (prn response)
               (throw (Exception. "Error"))))))
 
@@ -101,6 +101,7 @@
       ;(delete-cv-part :courses user-id cv-id)
       (delete-cv-part :certifications user-id cv-id)
       (delete-cv-part :educations user-id cv-id)
+      (delete-cv-part :key_qualifications user-id cv-id)
       (delete-cv-part :presentations user-id cv-id)
       (delete-cv-part :project_experiences user-id cv-id))))
 
@@ -115,9 +116,12 @@
 (defn- generate-tech [tech]
   {:tags {:no (:tech/name tech)}})
 
+(defn- pull-tech [db tech-ref]
+  (db-pull-by-id db (:db/id tech-ref)))
+
 (defn- generate-project-experience-skills [db project]
   (let [tech-refs (:project/techs project)
-        techs (map #(db-pull-by-id db (:db/id %)) tech-refs)]
+        techs (map (partial pull-tech db) tech-refs)]
     (map generate-tech techs)))
 
 (defn- generate-certification [certification]
@@ -129,6 +133,53 @@
                                              (str-or-nil "Certificate-name:" (:text (:certificate certification)))
                                              (str-or-nil "Certificate-url:" (:url (:certificate certification)))]))}
    :year             (:year certification)})
+
+
+(defn- generate-education [education]
+  {:school    {:no (:institution education)}
+   :degree    {:no (:subject education)}
+   :year_from (first (:years education))
+   :year_to   (last (:years education))})
+
+(defn- generate-key-qualifications [db person]
+  [
+   {:label            {:no "Beskrivelse, person"}
+    :long_description {:no (:person/description person)}
+    :tag_line         {:no ""}}
+   {:label            {:no "Beskrivelse, cv"}
+    :long_description {:no (:cv/description person)}
+    :tag_line         {:no ""}}
+   {:label            {:no "Nøkkelkvalifikasjoner"}
+    :long_description {:no (:person/title person)}
+    :key_points       (map (fn [qual] {:name {:no qual}}) (:person/qualifications person))}
+   {:label      {:no "Prefererte teknologier"}
+    :key_points (map (fn [tech-ref]
+                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                     (:person/preferred-techs person))}
+   {:label      {:no "Bruker på jobben"}
+    :key_points (map (fn [tech-ref]
+                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                     (:person/using-at-work person))}
+   {:label      {:no "Favoritter for tiden"}
+    :key_points (map (fn [tech-ref]
+                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                     (:person/favorites-at-the-moment person))}
+   {:label      {:no "Vil lære mer av"}
+    :key_points (map (fn [tech-ref]
+                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                     (:person/want-to-learn-more person))}
+   {:label      {:no "Open source bidrag"}
+    :key_points (map (fn [osc]
+                       {:name             {:no (:oss-project/name osc)}
+                        :long_description {:no (str/join
+                                                 "\n"
+                                                 (filter identity
+                                                         [(str-or-nil "Url:" (:oss-project/url osc))
+                                                          (str-or-nil "Techs:" (map (fn [tech-ref]
+                                                                                      {:name {:no (:tech-name (pull-tech db tech-ref))}})
+                                                                                    (:oss-project/tech-list osc)))
+                                                          ]))}})
+                     (:person/open-source-contributions person))}])
 
 
 (defn- generate-project [db project]
@@ -152,17 +203,12 @@
    :month            (.getMonthValue (:presentation/date presentation))
    :year             (.getYear (:presentation/date presentation))})
 
-(defn- generate-education [education]
-  {:school    {:no (:institution education)}
-   :degree    {:no (:subject education)}
-   :year_from (first (:years education))
-   :year_to   (last (:years education))})
-
 (defn- generate-cv [db person]
   {:telefon             (:person/phone-number person)
    :twitter             (:twitter (:person/presence person))
    :certifications      (map generate-certification (:person/certifications person))
    :educations          (map generate-education (:person/education person))
+   :key_qualifications  (generate-key-qualifications db person)
    :presentations       (map generate-presentation (:person/presentations person))
    :project_experiences (map (partial generate-project db) (:person/projects person))})
 
@@ -217,8 +263,8 @@
     (->> (find-all-persons db)
          (filter #(not (:person/quit? %)))
          (filter :person/profile-active?)
-         (drop 24)                                          ; TODO testing
-         (take 2)                                           ; TODO testing
+         ;(drop 25)                                          ; TODO testing
+         ;(take 1)                                           ; TODO testing
          (run! (partial export-cv db company-config)))))
 
 
