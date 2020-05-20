@@ -1,8 +1,11 @@
 (ns kodemaker-no.export.cvpartner
-  (:require [clj-http.client :as http]
+  (:require [clojure.string :as str]
+            [clj-http.client :as http]
             [cheshire.core :refer :all]
+            [java-time-literals.core :as jte]
             [datomic-type-extensions.api :as d]
-            [clojure.string :as str]))
+            [clojure.string :as str])
+  (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; config stuff
@@ -31,11 +34,11 @@
 (def authorization-header {"Authorization" (str "Token token=" authorization-token)})
 
 (def api
-  {:companies           (str site "/api/v1/countries")
-   :users               (str site "/api/v1/users")
-   :cvs                 (fn [user-id cv-id] (str/join "/" [site "api/v3/cvs" user-id cv-id]))
-   :project-experiences (fn [user-id cv-id project-id] (str/join "/" [site "api/v3/cvs" user-id cv-id "project_experiences" project-id]))
-   :import-json         (fn [user-id cv-id] (str/join "/" [site "api/v1/cvs" user-id cv-id "import_json"]))})
+  {:companies   (str site "/api/v1/countries")
+   :users       (str site "/api/v1/users")
+   :cvs         (fn [user-id cv-id] (str/join "/" [site "api/v3/cvs" user-id cv-id]))
+   :cv-part     (fn [user-id cv-id part-name id] (str/join "/" [site "api/v3/cvs" user-id cv-id part-name id]))
+   :import-json (fn [user-id cv-id] (str/join "/" [site "api/v1/cvs" user-id cv-id "import_json"]))})
 
 (defn- post-multipart [_url body]
   "Really a specialized version for posting cvs to the import_json api.
@@ -81,23 +84,33 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; cv cleanup stuff
 
-(defn- delete-all-project-experience [user-id cv-id]
+(defn- delete-cv-part [part-name user-id cv-id]
+  "Delete cv part such as project_experiences, courses etc.
+   A part must be a list where each item hava an '_id' attribute"
   (let [cvp-cv (http-get ((api :cvs) user-id cv-id))]
-    ;(run! (partial delete-project-experience user-id cv-id) (:project_experiences cvp-cv)))
-    (doseq [project (:project_experiences cvp-cv)]
-      (http-delete ((api :project-experiences) user-id cv-id (:_id project))))))
+    (doseq [part (get cvp-cv part-name)]
+      (http-delete ((api :cv-part) user-id cv-id (name part-name) (:_id part))))))
 
 (defn- cleanup-cv [cvp-user]
   "The api is so constructed that one must manually remove cv, one part at a time"
-  (let [cvp-cv (http-get ((api :cvs) (:user_id cvp-user) (:default_cv_id cvp-user)))]
-    (prn "Cleaning up cv for " (:email cvp-user))
+  (let [cvp-cv (http-get ((api :cvs) (:user_id cvp-user) (:default_cv_id cvp-user)))
+        user-id (:user_id cvp-user)
+        cv-id (:default_cv_id cvp-user)]
+    (println "Cleaning up cv for" (:email cvp-user))
     (do
-      ; + many more deletes
-      (delete-all-project-experience (:user_id cvp-user) (:default_cv_id cvp-user)))))
-
+      ;(delete-cv-part :courses user-id cv-id)
+      (delete-cv-part :certifications user-id cv-id)
+      (delete-cv-part :educations user-id cv-id)
+      (delete-cv-part :presentations user-id cv-id)
+      (delete-cv-part :project_experiences user-id cv-id))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; cv data generation stuff
+
+(defn- str-or-nil [label value]
+  (if value
+    (str label value)
+    nil))
 
 (defn- generate-tech [tech]
   {:tags {:no (:tech/name tech)}})
@@ -106,6 +119,16 @@
   (let [tech-refs (:project/techs project)
         techs (map #(db-pull-by-id db (:db/id %)) tech-refs)]
     (map generate-tech techs)))
+
+(defn- generate-certification [certification]
+  {:name             {:no (:name certification)}
+   :organizer        {:no (:institution certification)}
+   :long_description {:no (str/join "\n"
+                                    (filter identity
+                                            [(str-or-nil "Url:" (:url certification))
+                                             (str-or-nil "Certificate-name:" (:text (:certificate certification)))
+                                             (str-or-nil "Certificate-url:" (:url (:certificate certification)))]))}
+   :year             (:year certification)})
 
 
 (defn- generate-project [db project]
@@ -117,9 +140,31 @@
    :project_experience_skills (generate-project-experience-skills db project)
    :disabled                  false})
 
+(defn- generate-presentation [presentation]
+  {:description      {:no (:presentation/title presentation)}
+   :long_description {:no (str/join "\n"
+                                    (filter identity
+                                            [(str-or-nil "Description:" (:presentation/description presentation))
+                                             (str-or-nil "Event-name:" (:presentation/event-name presentation))
+                                             (str-or-nil "Event-url:" (:presentation/event-url presentation))
+                                             (str-or-nil "Source-url:" (:presentation/source-url presentation))
+                                             (str-or-nil "Slides-url:" (:presentation/slides-url presentation))]))}
+   :month            (.getMonthValue (:presentation/date presentation))
+   :year             (.getYear (:presentation/date presentation))})
+
+(defn- generate-education [education]
+  {:school    {:no (:institution education)}
+   :degree    {:no (:subject education)}
+   :year_from (first (:years education))
+   :year_to   (last (:years education))})
 
 (defn- generate-cv [db person]
-  {:project_experiences (map (partial generate-project db) (:person/projects person))})
+  {:telefon             (:person/phone-number person)
+   :twitter             (:twitter (:person/presence person))
+   :certifications      (map generate-certification (:person/certifications person))
+   :educations          (map generate-education (:person/education person))
+   :presentations       (map generate-presentation (:person/presentations person))
+   :project_experiences (map (partial generate-project db) (:person/projects person))})
 
 (defn- generate-user [person company-config]
   {:country_id (:country-id company-config)
@@ -152,7 +197,7 @@
   (let [cv (generate-cv db person)
         email (:person/email-address person)
         cvp-user (find-user-by-email email)]
-    (prn "Creating cv for " email)
+    (println "Creating cv for" email)
     (try (if cvp-user
            (do
              (cleanup-cv cvp-user)
@@ -163,6 +208,8 @@
                (update-cv cv)))
          (str "Created cv for " email)
          (catch Exception e
+           (println "Failed creating cv for" email ": " e)
+           (println "Person data is:" person)
            (str "Failed creating cv for " email)))))
 
 (defn export-all-cvs [db]
@@ -170,7 +217,7 @@
     (->> (find-all-persons db)
          (filter #(not (:person/quit? %)))
          (filter :person/profile-active?)
-         (drop 18)                                           ; TODO testing
+         (drop 24)                                          ; TODO testing
          (take 2)                                           ; TODO testing
          (run! (partial export-cv db company-config)))))
 
