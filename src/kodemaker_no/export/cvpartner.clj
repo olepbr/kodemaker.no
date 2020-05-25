@@ -6,7 +6,7 @@
             [datomic-type-extensions.api :as d]
             [clojure.string :as str]
             [kodemaker-no.new-pages.cv-page :as page]
-            [kodemaker-no.new-pages.person :as person])
+            [kodemaker-no.new-pages.person :refer [prefer-techs]])
   (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -130,7 +130,7 @@
 (defn- pull-tech [db tech-ref]
   (db-pull-by-id db (:db/id tech-ref)))
 
-(defn all-techs-by-type [db person]
+(defn- all-techs-by-type [db person]
   "NOTE: Almost identical to page/all-techs, but still different"
   (->> (concat (:person/using-at-work person)
                (:person/innate-skills person)
@@ -140,7 +140,7 @@
                (page/presentation-techs person)
                (page/open-source-techs person)
                (page/project-techs person))
-       (remove (or (:person/exclude-techs person) #{}))
+       (remove (or (set (:person/exclude-techs person)) #{}))
        frequencies
        (sort-by (comp - second))
        (map first)
