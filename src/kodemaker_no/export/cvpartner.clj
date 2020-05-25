@@ -111,6 +111,7 @@
       (delete-cv-part :certifications user-id cv-id)
       (delete-cv-part :educations user-id cv-id)
       (delete-cv-part :key_qualifications user-id cv-id)
+      (delete-cv-part :languages user-id cv-id)
       (delete-cv-part :presentations user-id cv-id)
       (delete-cv-part :project_experiences user-id cv-id)
       (delete-technologies user-id cv-id)
@@ -212,6 +213,13 @@
                      (:person/open-source-contributions person))}])
 
 
+(defn- generate-language [language]
+  {:name  {:no (:language language)}
+   :level {:no (str/join "\n"
+                         (filter identity
+                                 [(str-or-nil "Orally: " (:orally language))
+                                  (str-or-nil "Written: " (:written language))]))}})
+
 (defn- generate-project [db project]
   {:customer                  {:no (:project/customer project)}
    :description               {:no (:project/summary project)}
@@ -249,7 +257,7 @@
    :presentations       (map generate-presentation (:person/presentations person))
    :project_experiences (map (partial generate-project db) (:person/projects person))
    :technologies        (generate-technologies db person)
-   })
+   :languages           (map generate-language (:person/languages person))})
 
 (defn- generate-user [person company-config]
   {:country_id (:country-id company-config)
