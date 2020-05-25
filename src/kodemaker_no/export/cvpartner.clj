@@ -144,7 +144,7 @@
        frequencies
        (sort-by (comp - second))
        (map first)
-       (person/prefer-techs (:person/preferred-techs person))
+       (prefer-techs (:person/preferred-techs person))
        (map (partial pull-tech db))
        (group-by :tech/type)))
 
@@ -202,11 +202,10 @@
                         :long_description {:no (str/join
                                                  "\n"
                                                  (filter identity
-                                                         [(str-or-nil "Url:" (:oss-project/url osc))
-                                                          (str-or-nil "Techs:" (map (fn [tech-ref]
-                                                                                      {:name {:no (:tech-name (pull-tech db tech-ref))}})
-                                                                                    (:oss-project/tech-list osc)))
-                                                          ]))}})
+                                                         [(str-or-nil "Url: " (:oss-project/url osc))
+                                                          (str-or-nil "Techs: " (map (fn [tech-ref]
+                                                                                       {:name {:no (:tech-name (pull-tech db tech-ref))}})
+                                                                                     (:oss-project/tech-list osc)))]))}})
                      (:person/open-source-contributions person))}])
 
 
@@ -269,7 +268,7 @@
      :company-id "5ea83fbf0d5a2501a3ea8ce2"                 ; from another user?
      :office-id  "5ea83fcb9039f30e1ce2047d"}))              ; from another user?
 
-(defn create-or-update-user [user]
+(defn- create-or-update-user [user]
   (http-post {:user user} (api :users)))
 
 (defn- update-cv [cvp-user cv]
@@ -301,54 +300,55 @@
     (->> (find-all-persons db)
          (filter #(not (:person/quit? %)))
          (filter :person/profile-active?)
-         (drop 25)                                          ; TODO testing
-         (take 1)                                           ; TODO testing
+         ;(drop 12)                                          ; TODO testing
+         ;(take 1)                                          ; TODO testing
          (run! (partial export-cv db company-config)))))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; REPL stuff
 (comment
+
+  ;;;;;;;;;;;;;;;;;
+  ; To run in repl:
+
+  ; first start datomic database
   (start)
 
-  ; After (start), load this file in REPL
+  ; then load this file in REPL
+  ; (intellij: shift-cmd-L)
 
+  ; finally set namespace for access to functions
   (ns kodemaker-no.export.cvpartner)
+
+  ; set datomic
+  (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
+
+  ;;;;;;;;;;;;;;;;;
+  ; useful commands
 
   ; export all
   (map str (export-all-cvs db))
 
-  ; trygve local here
+  ; get test person from datomic
   (def trygve (d/pull db '[*] 17592186045673))
+  (def test-person (first (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "olga@kodemaker.no"]] db)))
+  (generate-cv db test-person)
+  (generate-technologies db test-person)
 
-  (generate-technologies db trygve)
-
-  ; datomic
-  (def conn (d/connect "datomic:mem://kodemaker"))
-  (def db (d/db conn))
-
-  ; All person ids
-  (d/q '[:find ?e :where [?e :person/full-name]] db)
-
-  ; Need company for create user
+  ; need company for create user
   (http-get (api :companies))
 
-  ; trygve cvpartner here
-  (find-user-by-email (:person/email-address trygve))
-  (http-get (str/join "/" [(api :users) "5ea84086af75491055e94423"]))
+  ; all person ids
+  (d/q '[:find ?e :where [?e :person/full-name]] db)
 
-  (generate-cv trygve)
+  ; cvpartner data here
+  (def test-user (find-user-by-email "trygve@kodemaker.no"))
+  (def test-cv (http-get ((api :cvs) (:_id test-user) (:default_cv_id test-user))))
 
-  (update-cv trygve)
-  (export-cv (get-company-config) 17592186045673)
-
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; Old stuff
-
-  ;
+  ; datomic queries
   (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/given-name "Trygve"]] db)
-  (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "trygve@kodemaker.no"]] db)
-  ; NOT: (d/q '[:find [(pull ?e [*]) ...] :where [?e :id 17592186045673]] db)
+  (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "olga@kodemaker.no"]] db)
 
   )
