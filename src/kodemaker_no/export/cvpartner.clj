@@ -119,6 +119,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; cv data generation stuff
 
+(defn- trim-newlines [s]
+  (str/replace s #"\n\s+" "\n"))
+
 (defn- str-or-nil [label value]
   (if value
     (str label value)
@@ -158,9 +161,9 @@
    :organizer        {:no (:institution certification)}
    :long_description {:no (str/join "\n"
                                     (filter identity
-                                            [(str-or-nil "Url:" (:url certification))
-                                             (str-or-nil "Certificate-name:" (:text (:certificate certification)))
-                                             (str-or-nil "Certificate-url:" (:url (:certificate certification)))]))}
+                                            [(str-or-nil "Url: " (:url certification))
+                                             (str-or-nil "Certificate-name: " (:text (:certificate certification)))
+                                             (str-or-nil "Certificate-url: " (:url (:certificate certification)))]))}
    :year             (:year certification)})
 
 (defn- generate-education [education]
@@ -172,10 +175,10 @@
 (defn- generate-key-qualifications [db person]
   [
    {:label            {:no "Beskrivelse, person"}
-    :long_description {:no (:person/description person)}
+    :long_description {:no (trim-newlines (:person/description person))}
     :tag_line         {:no ""}}
    {:label            {:no "Beskrivelse, cv"}
-    :long_description {:no (:cv/description person)}
+    :long_description {:no (trim-newlines (:cv/description person))}
     :tag_line         {:no ""}}
    {:label            {:no "Nøkkelkvalifikasjoner"}
     :long_description {:no (:person/title person)}
@@ -212,7 +215,7 @@
 (defn- generate-project [db project]
   {:customer                  {:no (:project/customer project)}
    :description               {:no (:project/summary project)}
-   :long_description          {:no (:project/description project)}
+   :long_description          {:no (trim-newlines (:project/description project))}
    :year_from                 (first (:project/years project))
    :year_to                   (last (:project/years project))
    :project_experience_skills (generate-project-experience-skills db project)
@@ -222,11 +225,11 @@
   {:description      {:no (:presentation/title presentation)}
    :long_description {:no (str/join "\n"
                                     (filter identity
-                                            [(str-or-nil "Description:" (:presentation/description presentation))
-                                             (str-or-nil "Event-name:" (:presentation/event-name presentation))
-                                             (str-or-nil "Event-url:" (:presentation/event-url presentation))
-                                             (str-or-nil "Source-url:" (:presentation/source-url presentation))
-                                             (str-or-nil "Slides-url:" (:presentation/slides-url presentation))]))}
+                                            [(str-or-nil "Description: " (:presentation/description presentation))
+                                             (str-or-nil "Event-name: " (:presentation/event-name presentation))
+                                             (str-or-nil "Event-url: " (:presentation/event-url presentation))
+                                             (str-or-nil "Source-url: " (:presentation/source-url presentation))
+                                             (str-or-nil "Slides-url: " (:presentation/slides-url presentation))]))}
    :month            (.getMonthValue (:presentation/date presentation))
    :year             (.getYear (:presentation/date presentation))})
 
