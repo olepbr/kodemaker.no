@@ -71,12 +71,13 @@
              Norled. Jobber også med billett-app for kunder, samt app for
              fergebillettørene."
              :tech [:clojure :clojurescript :kubernetes :datomic :datascript :reagent :mount :docker
-                    :aws :cordova :html :css :responsive-design :kafka :influxdb :lambdacd
-                    :travisci]
+                    :aws :aws-vpc :aws-s3 :aws-route53 :aws-iam :nginx :cordova :html :css :responsive-design :kafka
+                    :influxdb :lambdacd :ci :cd :alpine :ubuntu :datadog :event-sourcing :cqrs :figwheel :dynamodb
+                    :aws-ec2 :bash :clojure-spec :cloud :travisci]
              :years [2016 :ongoing]}
             {:customer "Oiiku"
              :employer :kodemaker
-             :years [2015 :ongoing]
+             :years [2015]
              :summary "Arrangementsystemer"
              :description "Oiiku utvikler nettbaserte tjenester for organisering
              og gjennomføring av arrangmenter. Oiiku blir benyttet ved flere
@@ -184,7 +185,7 @@
              for å sikre integritet av utveklsing av finansielle transaksjoner
              mellom BBS og kunder. Rolle: Utvikler"
              :tech
-             [:c :cpp :java :jni :linux :solaris :hp-nonstop]}
+             [:c :java :jni :linux :solaris :hp-nonstop]}
             {:customer "NETS AS"
              :years [2002 2003]
              :employer :nets
@@ -198,7 +199,7 @@
 
  :project-highlights [{:blurb "Arkitektur, infrastruktur og implementasjon av
                                nytt informasjonssystem for fergedrift basert på
-                               Clojure, Clojurescript og Datomic."
+                               Clojure, Clojurescript, Datomic og Kafka."
                        :customer "Norled"}
                       {:blurb "Robust meldingsmodul for tidsstyrt, event-styrt
                                eller manuell utsending av SMS eller e-post.
@@ -217,7 +218,7 @@
 
  :education-summary "Institutt for Informatikk, UiO"
  :cv/description "Anders er en svært engasjert, ansvarstagende og pragmatisk
- konsulent. I løpet av sine 14 år i bransjen har han hovedsakelig besittet
+ konsulent. I løpet av sine 16 år i bransjen har han hovedsakelig besittet
  roller som utvikler og løsningsarkitekt i flere større prosjekter, fra
  sikkerhetsløsninger for bank, finans og offentlige tjenester til kommersielle
  reiselivsprodukter.
@@ -253,6 +254,10 @@
                         {:url "https://github.com/andersfurseth/rubberlike"
                          :name "rubberlike"
                          :description "Et verktøy for å enkelt spinne opp embedded ElasticSearch servere"
+                         :tech [:clojure]}
+                        {:url "https://github.com/andersfurseth/jiffy"
+                         :name "jiffy"
+                         :description "Port av Java Time til Clojurescript"
                          :tech [:clojure]}]
 
  :open-source-contributions [{:name "midje"
@@ -260,4 +265,7 @@
                               :tech [:clojure]}
                              {:name "stubadub"
                               :url "https://github.com/magnars/stubadub"
+                              :tech [:clojure]}
+                             {:name "datomic-type-extensions"
+                              :url "https://github.com/magnars/datomic-type-extensions"
                               :tech [:clojure]}]}
