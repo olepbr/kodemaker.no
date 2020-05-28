@@ -151,7 +151,7 @@ presentasjonen på hele konferansen!"
    leveranser, hvor prodsetting skjer mange ganger om uken/dagen, i stedet for store releaser med mange måneders
    mellomrom."
    :employer :kodemaker
-   :tech [:clojure :clojurescript :react :sqlserver :azure]}
+   :tech [:clojure :clojurescript :react :sqlserver :azure :kubernetes :docker :openshift]}
   {:customer "Bring"
    :start "2018-04"
    :end "2019-08"
@@ -160,7 +160,7 @@ presentasjonen på hele konferansen!"
    :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
    utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
    mottagerene av pakkene (pakkesporing, osv)."
-   :tech [:react :react-native :kotlin :android :postgresql :azure]}
+   :tech [:react :react-native :kotlin :android :postgresql :azure :kubernetes :docker]}
   {:customer "NSB"
    :start "2015-01"
    :end "2018-03"
