@@ -310,7 +310,8 @@
                (update-cv cv)))
          (println "  Successfully created cv for " email)
          (catch Exception e
-           (println "==> Failed creating cv for" email ": " e)
+           (println "==> Failed creating cv for" email ". See error file for details.")
+           (.println *err* (str "==> Failed creating cv for " email ": " e))
            ;(println "Person data is:" person)
            ;(println "Generated cv is:" cv)
            ))))

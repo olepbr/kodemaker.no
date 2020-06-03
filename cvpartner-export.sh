@@ -17,4 +17,4 @@ echo "Generering av cv-er fra kodemaker.no til cvpartner.no startet..."
 echo "Du kan følge med på genereringen på http://kodemaker.cvpartner.no :)"
 echo ""
 
-lein cvpartner-export $*
+lein cvpartner-export $* 2>cvpartner.error.txt
