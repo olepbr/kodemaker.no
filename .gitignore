@@ -22,3 +22,5 @@ ci/.zip
 ui/resources/public/js/
 /ui/figwheel-main.edn
 /ui/icons
+/.envrc
+/secret.envrc

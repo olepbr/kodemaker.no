@@ -5,14 +5,17 @@
             [java-time-literals.core :as jte]
             [datomic-type-extensions.api :as d]
             [clojure.string :as str]
+            [kodemaker-no.atomic :as atomic]
+            [kodemaker-no.ingest :as ingest]
             [kodemaker-no.new-pages.cv-page :as page]
-            [kodemaker-no.new-pages.person :refer [prefer-techs]])
+            [kodemaker-no.new-pages.person :refer [prefer-techs]]
+            [repl])
   (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; config stuff
 
-(def authorization-token "hemmelig api key til cvpartner")
+(def authorization-token (System/getenv "CVPARTNER_AUTHORIZATION_TOKEN"))
 (def site "https://kodemaker.cvpartner.com")
 
 
@@ -23,9 +26,12 @@
   (d/pull db '[*] id))
 
 (defn- find-all-person-ids [db]
-  (map #(first %1) (d/q '[:find ?e :where [?e :person/full-name]] db)))
+  (map #(first %1) (d/q '[:find ?e :where [?e :person/email-address]] db)))
 
-(defn- find-all-persons [db]
+(defn- find-person-by-email [db email]
+  (db-pull-by-id db (first (first (d/q '[:find ?e :in $ ?email :where [?e :person/email-address ?email]] db email)))))
+
+(defn- find-all-people [db]
   (->> (find-all-person-ids db)
        (map (partial db-pull-by-id db))))
 
@@ -79,7 +85,7 @@
               (prn response)
               (throw (Exception. "Error"))))))
 
-(defn- find-user-by-email [email]
+(defn- find-cvuser-by-email [email]
   (http-get-or-nil (str (api :users) "/find?email=" email)))
 
 
@@ -105,7 +111,6 @@
   (let [cvp-cv (http-get ((api :cvs) (:user_id cvp-user) (:default_cv_id cvp-user)))
         user-id (:user_id cvp-user)
         cv-id (:default_cv_id cvp-user)]
-    (println "Cleaning up cv for" (:email cvp-user))
     (do
       ;(delete-cv-part :courses user-id cv-id)
       (delete-cv-part :certifications user-id cv-id)
@@ -289,32 +294,50 @@
 (defn- export-cv [db company-config person]
   (let [cv (generate-cv db person)
         email (:person/email-address person)
-        cvp-user (find-user-by-email email)]
+        cvp-user (find-cvuser-by-email email)]
     (println "Creating cv for" email)
     (try (if cvp-user
            (do
+             (println "  Removing existing cv...")
              (cleanup-cv cvp-user)
+             (println "  Creating new...")
              (update-cv cvp-user cv))
            (-> person
+               (println "  Create new user...")
                (generate-user company-config)
                (create-or-update-user)
+               (println "  Creating cv...")
                (update-cv cv)))
-         (str "Created cv for " email)
+         (println "  Successfully created cv for " email)
          (catch Exception e
-           (println "Failed creating cv for" email ": " e)
-           (println "Person data is:" person)
-           (println "Generated cv is:" cv)
-           (str "Failed creating cv for " email)))))
+           (println "==> Failed creating cv for" email ": " e)
+           ;(println "Person data is:" person)
+           ;(println "Generated cv is:" cv)
+           ))))
 
-(defn export-all-cvs [db]
-  (let [company-config (get-company-config)]
-    (->> (find-all-persons db)
-         (filter #(not (:person/quit? %)))
-         (filter :person/profile-active?)
-         ;(drop 12)                                          ; TODO testing
-         ;(take 1)                                          ; TODO testing
-         (run! (partial export-cv db company-config)))))
-
+(defn cvpartner-export [& args]
+  "To be used from shell script"
+  (let [conn (atomic/create-database (str "datomic:mem://" (d/squuid)))]
+    (ingest/ingest-all conn "resources")
+    (let [db (d/db conn)
+          names (vec args)
+          company-config (get-company-config)
+          people (if (some #{"all"} names)
+                   (->> (find-all-people db)
+                        (filter #(not (:person/quit? %)))
+                        (filter :person/profile-active?)
+                        ;(drop 12)                           ; TODO testing
+                        ;(take 2)                            ; TODO testing
+                        )
+                   (->> names
+                        (map (fn [name]
+                               (let [email-address (str name "@kodemaker.no")
+                                     person (find-person-by-email db email-address)]
+                                 (if (:db/id person)
+                                   person
+                                   (println "==> Could not find person with email address " email-address)))))
+                        (filter identity)))]
+      (doseq [person people] (export-cv db company-config person)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; REPL stuff
@@ -355,7 +378,7 @@
   (d/q '[:find ?e :where [?e :person/full-name]] db)
 
   ; cvpartner data here
-  (def test-user (find-user-by-email "trygve@kodemaker.no"))
+  (def test-user (find-cvuser-by-email "trygve@kodemaker.no"))
   (def test-cv (http-get ((api :cvs) (:_id test-user) (:default_cv_id test-user))))
 
   ; datomic queries
