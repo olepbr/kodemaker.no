@@ -121,7 +121,7 @@
 ; cv data generation stuff
 
 (defn- trim-newlines [s]
-  (str/replace s #"\n\s+" "\n"))
+  (if (nil? s) s (str/replace s #"\n\s+" "\n")))
 
 (defn- str-or-nil [label value]
   (if value
