@@ -6,9 +6,9 @@
             [datomic-type-extensions.api :as d]
             [clojure.string :as str]
             [kodemaker-no.atomic :as atomic]
+            [kodemaker-no.homeless :as h]
             [kodemaker-no.ingest :as ingest]
-            [kodemaker-no.new-pages.cv-page :as page]
-            [kodemaker-no.new-pages.person :refer [prefer-techs]])
+            [kodemaker-no.new-pages.cv-page :as page])
   (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,18 +21,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; datomic stuff
 
-(defn- db-pull-by-id [db id]
-  (d/pull db '[*] id))
-
 (defn- find-all-person-ids [db]
   (d/q '[:find [?e ...] :where [?e :person/email-address]] db))
 
 (defn- find-person-by-email [db email]
-  (db-pull-by-id db (d/q '[:find ?e . :in $ ?email :where [?e :person/email-address ?email]] db email)))
+  ; TODO must be a way to simplify d/entity .... d/q
+  (d/entity db (d/q '[:find ?e . :in $ ?email :where [?e :person/email-address ?email]] db email)))
 
 (defn- find-all-people [db]
   (->> (find-all-person-ids db)
-       (map (partial db-pull-by-id db))))
+       (map #(d/entity db %))))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -107,8 +105,7 @@
 
 (defn- cleanup-cv [cvp-user]
   "The api is so constructed that one must manually remove cv, one part at a time"
-  (let [cvp-cv (http-get ((api :cvs) (:user_id cvp-user) (:default_cv_id cvp-user)))
-        user-id (:user_id cvp-user)
+  (let [user-id (:user_id cvp-user)
         cv-id (:default_cv_id cvp-user)]
     (do
       ;(delete-cv-part :courses user-id cv-id)
@@ -132,34 +129,10 @@
     (str label value)
     nil))
 
-(defn- generate-tech [tech]
-  {:tags {:no (:tech/name tech)}})
-
-(defn- pull-tech [db tech-ref]
-  (db-pull-by-id db (:db/id tech-ref)))
-
-(defn- all-techs-by-type [db person]
-  "NOTE: Almost identical to page/all-techs, but still different"
-  (->> (concat (:person/using-at-work person)
-               (:person/innate-skills person)
-               (page/side-project-techs person)
-               (page/blog-post-techs person)
-               (page/screencast-techs person)
-               (page/presentation-techs person)
-               (page/open-source-techs person)
-               (page/project-techs person))
-       (remove (or (set (:person/exclude-techs person)) #{}))
-       frequencies
-       (sort-by (comp - second))
-       (map first)
-       (prefer-techs (:person/preferred-techs person))
-       (map (partial pull-tech db))
-       (group-by :tech/type)))
-
 (defn- generate-project-experience-skills [db project]
   (let [tech-refs (:project/techs project)
-        techs (map (partial pull-tech db) tech-refs)]
-    (map generate-tech techs)))
+        techs (map (partial d/entity db) tech-refs)]
+    (map (fn [tech] {:tags {:no (:tech/name tech)}}) techs)))
 
 (defn- generate-certification [certification]
   {:name             {:no (:name certification)}
@@ -190,19 +163,19 @@
     :key_points       (map (fn [qual] {:name {:no qual}}) (:person/qualifications person))}
    {:label      {:no "Prefererte teknologier"}
     :key_points (map (fn [tech-ref]
-                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
-                     (:person/preferred-techs person))}
+                       {:name {:no (:tech/name (d/entity db tech-ref))}})
+                     (h/entity-seq (:person/preferred-techs person)))}
    {:label      {:no "Bruker på jobben"}
     :key_points (map (fn [tech-ref]
-                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                       {:name {:no (:tech/name (d/entity db tech-ref))}})
                      (:person/using-at-work person))}
    {:label      {:no "Favoritter for tiden"}
     :key_points (map (fn [tech-ref]
-                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                       {:name {:no (:tech/name (d/entity db tech-ref))}})
                      (:person/favorites-at-the-moment person))}
    {:label      {:no "Vil lære mer av"}
     :key_points (map (fn [tech-ref]
-                       {:name {:no (:tech/name (pull-tech db tech-ref))}})
+                       {:name {:no (:tech/name (d/entity db tech-ref))}})
                      (:person/want-to-learn-more person))}
    {:label      {:no "Open source bidrag"}
     :key_points (map (fn [osc]
@@ -212,7 +185,7 @@
                                                  (filter identity
                                                          [(str-or-nil "Url: " (:oss-project/url osc))
                                                           (str-or-nil "Techs: " (map (fn [tech-ref]
-                                                                                       {:name {:no (:tech-name (pull-tech db tech-ref))}})
+                                                                                       {:name {:no (:tech-name (d/entity db tech-ref))}})
                                                                                      (:oss-project/tech-list osc)))]))}})
                      (:person/open-source-contributions person))}])
 
@@ -246,7 +219,7 @@
    :year             (.getYear (:presentation/date presentation))})
 
 (defn- generate-technologies [db person]
-  (for [[tech-type techs] (all-techs-by-type db person)]
+  (for [[tech-type techs] (page/all-techs db nil person)]
     {:category          {:no (or (page/tech-labels tech-type) tech-type)}
      :uncategorized     (nil? tech-type)
      :technology_skills (map (fn [tech] {:tags {:no (:tech/name tech)}}) techs)}))
@@ -366,8 +339,8 @@
   (map str (export-all-cvs db))
 
   ; get test person from datomic
-  (def trygve (d/pull db '[*] 17592186045673))
-  (def test-person (first (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "olga@kodemaker.no"]] db)))
+  (def trygve (d/entity db :person/trygve))
+  (def test-person (d/entity db :person/olga))
   (generate-cv db test-person)
   (generate-technologies db test-person)
 
