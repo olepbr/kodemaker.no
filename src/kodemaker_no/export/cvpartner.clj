@@ -8,8 +8,7 @@
             [kodemaker-no.atomic :as atomic]
             [kodemaker-no.ingest :as ingest]
             [kodemaker-no.new-pages.cv-page :as page]
-            [kodemaker-no.new-pages.person :refer [prefer-techs]]
-            [repl])
+            [kodemaker-no.new-pages.person :refer [prefer-techs]])
   (:import java.time.LocalDate))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,10 +25,10 @@
   (d/pull db '[*] id))
 
 (defn- find-all-person-ids [db]
-  (map #(first %1) (d/q '[:find ?e :where [?e :person/email-address]] db)))
+  (d/q '[:find [?e ...] :where [?e :person/email-address]] db))
 
 (defn- find-person-by-email [db email]
-  (db-pull-by-id db (first (first (d/q '[:find ?e :in $ ?email :where [?e :person/email-address ?email]] db email)))))
+  (db-pull-by-id db (d/q '[:find ?e . :in $ ?email :where [?e :person/email-address ?email]] db email)))
 
 (defn- find-all-people [db]
   (->> (find-all-person-ids db)
@@ -325,7 +324,7 @@
           company-config (get-company-config)
           people (if (some #{"all"} names)
                    (->> (find-all-people db)
-                        (filter #(not (:person/quit? %)))
+                        (remove :person/quit?)
                         (filter :person/profile-active?)
                         ;(drop 12)                           ; TODO testing
                         ;(take 2)                            ; TODO testing

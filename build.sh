@@ -25,8 +25,6 @@ prod-env() {
 bucket="s3://kodemaker-www/"
 target="build"
 
-if [-f ]
-
 echo "Syncing down production site for accurate build diffs"
 mkdir -p "$target"
 pushd "$target" > /dev/null
