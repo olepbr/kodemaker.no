@@ -561,6 +561,29 @@ ellers vil Ansible feile når det forsøkes å bestille sertifikat, ettersom
 den prosessen krever at serveren du er på er tilgjengelig over internett
 med det hostnamet du bestiller sertifikat for.
 
+## Eksporter cv-er til cvpartner.no
+Kjør følgende script og følg oppskriften du får. 
+
+```sh
+./cvpartner-export.sh
+```
+
+Du vil bli bedt om å opprette filen `secret.envrc` fra malen `secret-sample.envrc` 
+og legge inn cvpartner api token i denne. Og så må du source denne: 
+```sh
+. ./secret.envrc
+```
+
+Eller du kan bruke [direnv](https://direnv.net/) for å source den automatisk (anbefalt).
+
+Når du er ferdig satt opp kan du eksportere én og én eller alle:
+```sh
+./cvpartner-export.sh kolbjorn gry stian 
+./cvpartner-export.sh all
+```
+ 
+> Husk å gjør `git pull` for å få med siste endringer på cv-er!
+
 ## Bidra til koden
 
 Supert! Gjør gjerne det, men husk å kjøre testene:

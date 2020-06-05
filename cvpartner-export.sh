@@ -6,6 +6,13 @@ if [ ! -f ./secret.envrc ]; then
   exit
 fi
 
+if [ -z "${CVPARTNER_AUTHORIZATION_TOKEN}" ] ||
+   [ "${CVPARTNER_AUTHORIZATION_TOKEN}" == "hemmelig" ]; then
+  echo "Miljøvariabel CVPARTNER_AUTHORIZATION_TOKEN er ikke satt opp"
+  echo "Følg beskrivelsen i filen  ./secret-sample.envrc"
+  exit
+fi
+
 if [ $# -eq 0 ]; then
   echo "Usage: $0 [<name-as-in-email>* | 'all']"
   echo "Example: $0 kolbjorn"
