@@ -51,5 +51,5 @@
                              [lein-ancient "0.6.15"]
                              [lein-midje "3.2.1"]]
                    :source-paths ["dev" "config" "ui/src"]
-                   :resource-paths ["ui/resources"]
+                   :resource-paths ["ui/resources" "test/resources"]
                    :test-paths ["test"]}})

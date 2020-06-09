@@ -225,7 +225,7 @@
      :technology_skills (map (fn [tech] {:tags {:no (:tech/name tech)}}) techs)}))
 
 
-(defn- generate-cv [db person]
+(defn generate-cv [db person]
   {:telefon             (:person/phone-number person)
    :twitter             (:twitter (:person/presence person))
    :certifications      (map generate-certification (:person/certifications person))
