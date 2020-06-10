@@ -182,7 +182,8 @@ statements etter hverandre.
 
 Årsaken er at Clojure-kode er bygget opp av [expressions - ikke
 statements](https://fsharpforfunandprofit.com/posts/expressions-vs-statements/).
-Årsaken er immutability. Uten et sted å mellomlagre state, så er man i større
-grad tvunget til å nøste uttrykk. Det kan fort gå ut over lesbarheten.
+Årsaken er [immutability](/immutability/). Uten et sted å mellomlagre state, så
+er man i større grad tvunget til å nøste uttrykk. Det kan fort gå ut over
+lesbarheten.
 
 Thread first `->` og last `->>` gir oss mye av den lesbarheten tilbake.
