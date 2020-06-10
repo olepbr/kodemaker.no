@@ -175,10 +175,10 @@ Grøss.
 
 ## Til slutt, hvorfor trenger vi disse?
 
-Det er et interessant spørsmål, fordi det er lett å tenke at det handler om lisp
-- og alle parentesene. Det er ikke tilfelle. Når man skriver Emacs Lisp, for
-eksempel, så er det god gammeldags imperativ kode: En lang rekke med statements
-etter hverandre.
+Det er et interessant spørsmål, fordi det er lett å tenke at det handler om
+lisp - og alle parentesene. Det er ikke tilfelle. Når man skriver Emacs Lisp,
+for eksempel, så er det god gammeldags imperativ kode: En lang rekke med
+statements etter hverandre.
 
 Årsaken er at Clojure-kode er bygget opp av [expressions - ikke
 statements](https://fsharpforfunandprofit.com/posts/expressions-vs-statements/).
