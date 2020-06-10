@@ -83,8 +83,8 @@ Du kan se at `->>` også syr sammen uttrykket ved å plassere forrige element in
 men denne gangen i siste parameterposisjon.
 
 Og det er egentlig alt du trenger å vite. `->` og `->>` gjør koden din mer
-lesbar ved å omgå dyp nøsting. Men hvis artikkelen var ferdig her, så hadde du
-jo ikke fått vite om hemmeligheten i clojure.core.
+lesbar ved å omgå dyp nøsting. Men hvis du slutter å lese her, så får du jo ikke
+vite om hemmeligheten i clojure.core.
 
 ## Hemmeligheten i clojure.core
 
@@ -176,9 +176,9 @@ Grøss.
 ## Til slutt, hvorfor trenger vi disse?
 
 Det er et interessant spørsmål, fordi det er lett å tenke at det handler om lisp
-sine parenteser. Det er ikke tilfelle. Når man skriver Emacs Lisp, for eksempel,
-så er det god gammeldags imperativ kode: En lang rekke med statements etter
-hverandre.
+- og alle parentesene. Det er ikke tilfelle. Når man skriver Emacs Lisp, for
+eksempel, så er det god gammeldags imperativ kode: En lang rekke med statements
+etter hverandre.
 
 Årsaken er at Clojure-kode er bygget opp av [expressions - ikke
 statements](https://fsharpforfunandprofit.com/posts/expressions-vs-statements/).
