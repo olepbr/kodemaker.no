@@ -124,7 +124,14 @@
                              {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                               :customer "Thomson Reuters"}]
 
- :projects                  [{:customer    "Kolonial.no"
+ :projects                  [{:customer    "Kodemaker"
+                              :years       [2020]
+                              :employer    :kodemaker
+                              :summary     "Integrasjon av kodemakers cv-er mot cvpartner.no"
+                              :description "Laget integrasjon mellom Kodemakers egenutviklede system for cv-er,
+                                            og cvpartner.no, slik at Kodemaker får utnyttet de mulighetene cvpartner tilbyr."
+                              :tech        [:clojure :datomic :rest]}
+                             {:customer    "Kolonial.no"
                               :years       [2020]
                               :employer    :kodemaker
                               :summary     "Nytt terminalverktøy"
@@ -261,7 +268,7 @@
                                                       klassifiseringskontroll på slakterier, system for mottak og
                                                       innhenting av slakteopplysninger, og system for visning av
                                                       slakt-statistikk."
-                              :tech                  [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :git]}
+                              :tech                  [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :git :scrum]}
                              {:customer              "Nordea"
                               :exclude-from-profile? true
                               :years                 [2010]
@@ -281,7 +288,7 @@
                               :description           "Bistand med prosjektoppstart av nytt
                                                       kredittinformasjons-system. Oppsett av komplett CI-miljø, etablere
                                                       prosess. Utvikling grensesnitt mellom back- og frontend."
-                              :tech                  [:git :svn :hudson :maven :spring :spring-mvc :appfuse :jetty :tomcat :canoo-webtest]}
+                              :tech                  [:git :svn :scrum :hudson :maven :spring :spring-mvc :appfuse :jetty :tomcat :canoo-webtest]}
                              {:customer              "VPS"
                               :years                 [2009 2010]
                               :exclude-from-profile? true
