@@ -1,525 +1,535 @@
-{:id :trygve
- :name ["Trygve" "M. Amundsen"]
- :title "Systemutvikler"
- :start-date "1997-02-01 00:00"
- :description "
-    Trygve har lang og solid erfaring innen faget systemutvikling. Han er entusiastisk opptatt av fagområdet, tilegner seg raskt ny kunnskap og følger nøye med på nyvinninger. Han evner å finne enkle løsninger på kompliserte problemstillinger. Han er resultatorientert og målrettet og leverer høy kvalitet. Han trives utmerket i det kunnskapsrike fagmiljøet i Kodemaker, og kommuniserer godt med kunder og kolleger.    "
+{:id                        :trygve
+ :name                      ["Trygve" "M. Amundsen"]
+ :title                     "Systemutvikler"
+ :start-date                "1997-02-01 00:00"
+ :description               "Trygve har lang og solid erfaring innen faget systemutvikling.
+                             Han er entusiastisk opptatt av fagområdet, tilegner seg raskt ny kunnskap
+                             og følger nøye med på nyvinninger. Han evner å finne enkle løsninger på
+                             kompliserte problemstillinger.
+                             Han er resultatorientert og målrettet og leverer høy kvalitet.
+                             Han trives utmerket i det kunnskapsrike fagmiljøet i Kodemaker,
+                             og kommuniserer godt med kunder og kolleger."
 
- :phone-number "+47 9206 1819"
- :email-address "trygve@kodemaker.no"
+ :phone-number              "+47 9206 1819"
+ :email-address             "trygve@kodemaker.no"
 
- :presence {:cv "trygve"
-            :twitter "trygvea"
-            :github "trygvea"
-            :linkedin "/in/trygveamundsen"}
-            
- :tech {:using-at-work [:react :redux :es6 :typescript]
-        :favorites-at-the-moment [:machinelearning :reinforcement-learning :typescript]
-        :want-to-learn-more [:tensorflow :tensorflow-js :gans]}
+ :presence                  {:cv       "trygve"
+                             :twitter  "trygvea"
+                             :github   "trygvea"
+                             :linkedin "/in/trygveamundsen"}
 
- :innate-skills [
-        :haskell :scala :ruby :python :octave :pascal :prolog :fortran
-        :redux-frontend
-        :intellij :browser-devtools
-        :osx :linux
-        :ddd
-        :deeplearning]
+ :tech                      {:using-at-work           [:react :redux :es6 :typescript]
+                             :favorites-at-the-moment [:machinelearning :reinforcement-learning :typescript]
+                             :want-to-learn-more      [:tensorflow :tensorflow-js :gans]}
 
- :recommendations [{:title "Spinning up in Deep Reinforcement Learning"
-                    :blurb "Dette er stedet å grave seg dypt ned i RL.
-                            OpenAI har gjort en kjempejobb med å samle materiale om RL 
-                            og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
-                    :link  {:url "https://spinningup.openai.com"
-                            :text "Sjekk ut nettstedet her"}
-                    :tech  [:machinelearning :deeplearning]}
-                   
-                   {:title "Learn you a Haskell for great good"
-                    :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer 
-                            de små grå på en spennende måte. Denne boka er for deg som har bakgrunn i mer imperative språk, men den gir deg en morsom og klarsynt innføring i små og store funksjonelle abstraksjoner."                     
-                    :link  {:url "http://learnyouahaskell.com/"
-                            :text "Sjekk ut boka her"}
-                    :tech  [:haskell]}]
-                    
- :side-projects
-                [{:title        "Fjesgjenkjenning"
-                  :description  "Bruke bilbioteket [dlib](http://blog.dlib.net) til å kjenne igjen alle kodemakere basert på kun étt bilde per person."
-                  :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
-                  :illustration "/illustrations/side-projects/trygve-og-einar.png"
-                  :tech         [ :python :dlib :machinelearning :deeplearning]
-                  }]
+ :innate-skills             [
+                             :haskell :scala :ruby :python :octave :pascal :prolog :fortran
+                             :redux-frontend
+                             :intellij :browser-devtools
+                             :osx :linux
+                             :ddd
+                             :deeplearning]
 
+ :recommendations           [{:title "Spinning up in Deep Reinforcement Learning"
+                              :blurb "Dette er stedet å grave seg dypt ned i RL.
+                                      OpenAI har gjort en kjempejobb med å samle materiale om RL
+                                      og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
+                              :link  {:url  "https://spinningup.openai.com"
+                                      :text "Sjekk ut nettstedet her"}
+                              :tech  [:machinelearning :deeplearning]}
 
- :hobbies [{:title "Maskinlæring"
-            :description "
-                De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'. Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer), aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai/deep-learning-specialization), og jeg prøver så godt jeg kan å følge utviklingen på området. 
-                "
-            :illustration "/photos/tech/machinelearning.jpg"}
-           
-           {:title "Klatring"
-            :description "
-                Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag hjemme og i utlandet. På grunn av små barn har det ikke vært så mye klatring de siste årene, men etterhvert som ungene blir større øyner jeg håp for å øke aktiviteten igjen."
-            :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
-           
-           {:title "MC"
-            :description "Har vært ivrig motorsykkel-entusiast i mange år, selv om dette også er en aktivitet som ikke akkurat er enkelt å praktisere når man har små barn. Men om noen år... :)"
-            :illustration "/illustrations/hobbies/trygve-mc.jpg"}]
- 
- :presentations [{:title "Groovy collection API"
-                         :blurb "En oversikt over groovy's collection api"
-                         :tech [:groovy]
-                         :event "Communities in Action"
-                         :date "2012-02-01"
-                         :urls {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
+                             {:title "Learn you a Haskell for great good"
+                              :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer
+                                      de små grå på en spennende måte. Denne boka er for deg som har bakgrunn i
+                                      mer imperative språk, men den gir deg en morsom og klarsynt innføring i
+                                      små og store funksjonelle abstraksjoner."
+                              :link  {:url  "http://learnyouahaskell.com/"
+                                      :text "Sjekk ut boka her"}
+                              :tech  [:haskell]}]
 
- :appearances [{:title "Littlewood violations - eller: ting er ikke alltid som de ser ut"
-                :event "Kodemaker fagdag"
-                :tech [:prime-numbers]
-                :date "2019-06-11"}
-                {:title "Fjesgjenkjenning med dlib"
-                :event "Kodemaker fagdag"
-                :tech [:face-recognition :machinelearning]
-                :date "2017-10-11"
-                :urls {:source "https://github.com/trygvea/face-recognition-dlib"}}
-               {:title "Pure stateful computations i javascript"
-                :event "Kodemaker fagdag"
-                :tech [:es6]
-                :date "2016-10-09"
-                :urls {:source "https://github.com/trygvea/funkjs"}}
-               {:title "Deep Learning / dyp læring"
-                :event "Kodemaker fagdag"
-                :tech [:deeplearning :machinelearning]
-                :date "2015-05-21"}
-               {:title "Groovy (vs. clojure og scala)"
-                :event "Javazones julemøte 2011"
-                :tech [:es6]
-                :date "2011-12-08"}
-               {:title "GPARS - concurrency patterns in Groovy"
-                :event "Kodemaker fagdag"
-                :tech [:groovy]
-                :date "2010-01-22"}]
+ :side-projects             [{:title        "Fjesgjenkjenning"
+                              :description  "Bruke bilbioteket [dlib](http://blog.dlib.net) til å kjenne igjen
+                                             alle kodemakere basert på kun étt bilde per person."
+                              :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
+                              :illustration "/illustrations/side-projects/trygve-og-einar.png"
+                              :tech         [:python :dlib :machinelearning :deeplearning]
+                              }]
 
- :open-source-projects [{:url "http://grails.org/plugin/class-diagram"
-                         :name "Grails class diagram plugin"
-                         :description "The ClassDiagram plugin provides an UML-like diagram of your grails domain classes. (Dette prosjektet er ikke oppdatert til nyere versjoner av grails)"
-                         :tech [:groovy :grails]}]
-                         
+ :hobbies                   [{:title        "Maskinlæring"
+                              :description  "De siste årene har jeg hatt spesiellt fokus på maskinlæring og 'Big Data'.
+                                             Jeg har gått noen [kurs på Stanford og Berkeley](http://www.kodemaker.no/cv/trygve/#sertifiseringer),
+                                             aller sist [Andrew Ng's kursserie på Coursera](https://www.deeplearning.ai/deep-learning-specialization),
+                                             og jeg prøver så godt jeg kan å følge utviklingen på området. "
+                              :illustration "/photos/tech/machinelearning.jpg"}
+
+                             {:title        "Klatring"
+                              :description  "Var for noen år siden lidenskapelig opptatt av klatring i fjell og crag
+                                             hjemme og i utlandet. På grunn av små barn har det ikke vært så mye
+                                             klatring de siste årene, men etterhvert som ungene blir større
+                                             øyner jeg håp for å øke aktiviteten igjen."
+                              :illustration "/illustrations/hobbies/trygve-klatring.jpg"}
+
+                             {:title        "MC"
+                              :description  "Har vært ivrig motorsykkel-entusiast i mange år, selv om dette også er en
+                                             aktivitet som ikke akkurat er enkelt å praktisere når man har små barn.
+                                             Men om noen år... :)"
+                              :illustration "/illustrations/hobbies/trygve-mc.jpg"}]
+
+ :presentations             [{:title "Groovy collection API"
+                              :blurb "En oversikt over groovy's collection api"
+                              :tech  [:groovy]
+                              :event "Communities in Action"
+                              :date  "2012-02-01"
+                              :urls  {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
+
+ :appearances               [{:title "Littlewood violations - eller: ting er ikke alltid som de ser ut"
+                              :event "Kodemaker fagdag"
+                              :tech  [:prime-numbers]
+                              :date  "2019-06-11"}
+                             {:title "Fjesgjenkjenning med dlib"
+                              :event "Kodemaker fagdag"
+                              :tech  [:face-recognition :machinelearning]
+                              :date  "2017-10-11"
+                              :urls  {:source "https://github.com/trygvea/face-recognition-dlib"}}
+                             {:title "Pure stateful computations i javascript"
+                              :event "Kodemaker fagdag"
+                              :tech  [:es6]
+                              :date  "2016-10-09"
+                              :urls  {:source "https://github.com/trygvea/funkjs"}}
+                             {:title "Deep Learning / dyp læring"
+                              :event "Kodemaker fagdag"
+                              :tech  [:deeplearning :machinelearning]
+                              :date  "2015-05-21"}
+                             {:title "Groovy (vs. clojure og scala)"
+                              :event "Javazones julemøte 2011"
+                              :tech  [:es6]
+                              :date  "2011-12-08"}
+                             {:title "GPARS - concurrency patterns in Groovy"
+                              :event "Kodemaker fagdag"
+                              :tech  [:groovy]
+                              :date  "2010-01-22"}]
+
+ :open-source-projects      [{:url         "http://grails.org/plugin/class-diagram"
+                              :name        "Grails class diagram plugin"
+                              :description "The ClassDiagram plugin provides an UML-like diagram of your grails
+                                            domain classes. (Dette prosjektet er ikke oppdatert til nyere versjoner av grails)"
+                              :tech        [:groovy :grails]}]
+
  :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]
 
- :project-highlights [{:blurb "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
-                :customer "Nrk"}
-                {:blurb "Ny og innovativ meglerløsning. Frontend med React/Redux."
-                :customer "BN Bolig"}
-                {:blurb "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
-                :customer "Thomson Reuters"}]
+ :project-highlights        [{:blurb    "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
+                              :customer "Nrk"}
+                             {:blurb    "Ny og innovativ meglerløsning. Frontend med React/Redux."
+                              :customer "BN Bolig"}
+                             {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
+                              :customer "Thomson Reuters"}]
 
- :projects [{:customer "Kolonial.no"
-             :years [2020]
-             :employer :kodemaker
-             :summary "Nytt terminalverktøy"
-             :description "Utvikling av ny løsning for pakking av varer på paller for distribusjon, 
-                           med hensikt å øke leveringskapasiteten til kolonial.no.
-                           Trygve bidro med utvikling av frontend og backend."
-             :tech [:react :es6 :typescript :graphql :python :django :postgresql]}
-             {:customer "Forsvaret"
-             :years [2019  2020]
-             :employer :kodemaker
-             :summary "PoC for innrapportering av materiell i skyen"
-             :description "Laget et _Proof of Concept_ som skal bidra til at forsvarets eksterne leverandører
-                           lettere skal kunne levere materiell-underlag til forsvaret begrensede plattform fra skyen.
-                           Trygve har også bidratt med videreutvikling av materielldataportalen, 
-                           som er en løsning for innrapportering av materiell som ligger utenfor forsvarets SAP plattform"
-             :tech [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
-             {:customer "Vy Gruppen"
-             :years [2019]
-             :employer :kodemaker
-             :summary "Utvikling av trafikksystemer for Vy og deres nordiske samarbeidspartnere"
-             :description "Utvikling av trafikksystemer til bruk internt i Vy og av Vy's nordiske samarbeidspartnere. 
-                           Bl.a integrasjon mot Värmlandstrafik, system for applikasjonsovervåkning, m.fl."
-             :tech [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-eventhubs :mysql :groovy :gradle]}
-             {:customer "NRK Origo"
-             :years [2017 2018 2019]
-             :employer :kodemaker
-             :summary "Videreutvikling av media-arkivet til NRK"
-             :description "Videreutvikling av media-arkivet til NRK, som omhandler søk og registrering av metadata i 
-                           NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV, råstoff, mm."
-             :tech [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
-            {:customer "BN Bolig"
-             :years [2017]
-             :employer :kodemaker
-             :summary "Utvikling av løsning for boligsalg på nett"
-             :description "BN Bolig er en eiendomsmegler startet av BN Bank og Eiendomsmegler1.
-                           Trygve jobbet hovedakelig med utvikling av frontend på bnbolig.no.
-                           EGGS Design stod for designet, og prosjektet ble kjørt som et 'Corporate Startup' etter
-                           Lean prinsipper."
-             :tech [:react :redux :es6 :webpack :svg :clojure]}
-            {:customer "Thomson Reuters"
-             :years [2016]
-             :employer :kodemaker
-             :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
-             :description "Ferdigstillelse av løsning for intern distribusjon av fremskrevne tidsserier 
-                           fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase.
-                           Gjennomførte også en foranalyse av varslingssystem for vær- og naturkatastrofer. 
-                           Denne løsningen ble beklageligvis lagt på is av eksterne årsaker."
-             :tech
-             [:java :spark :kafka :hbase :hadoop :zookeeper :docker :logstash :puppet]}
-            {:customer "NSB"
-             :years [2016]
-             :employer :kodemaker
-             :summary "Utvikling av trafikksystemer til bruk internt i NSB"
-             :description "Utvikling trafikksystemer til bruk internt i NSB, bla. Bari, buss for tog, sporbruk på stasjoner, m.fl."
-             :tech [:react :redux :es6 :svg :immutable-js :webpack :groovy :grails]}
-            {:customer "Thomson Reuters"
-             :years [2015]
-             :employer :kodemaker
-             :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
-             :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier 
-                           fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
-             :tech [:java :spark :kafka :hbase :hadoop :zookeeper :logstash :puppet]}
-            {:customer "Animalia"
-             :years [2015 2015]
-             :employer :kodemaker
-             :summary "Oppgradering av system for Sauekontrollen og Storfekjøttkontrollen"
-             :description "Samordning av funksjoner samt nye funksjoner
-                           innen avlsarbeid mm. Programmering, mentoring, løsningsdesign, 
-                           arkitektur og integrasjon av systemer for sau-, storfe-, og fjørfe-hold."
-             :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
-                    :jenkins :git :oracle :ansible :nginx :buster-js]}
-            {:customer "Animalia"
-             :years [2014]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Oppgradering av system for klassifiseringskontroll på slakterier"
-             :description "Større oppgradering av system for
-                           klassifiseringskontroll på slakterier. Bedre opplegg for
-                           kurs/eksamen samt tilpasning til nye brukergrupper."
-             :tech [:groovy :grails :camel :bootstrap :spock :css :javascript :jquery
-                    :spring-security :jenkins :git :oracle :ansible :nginx :buster-js]}
-            {:customer "Animalia"
-             :years [2013 2014]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Utvikling av sauekontrollen"
-             :description "Utvikling av sauekontrollen - et system for drift av
-                           sauebesetninger. Systemet gir en helhetlig oversikt over dyrene og
-                           deres produksjon fra fødsel til slakting, samt avlsarbeid. Brukerne
-                           kan så analysere resultatene i sin besetning og sette seg nye mål.
-                           Brukes av over 4000 sauebønder. Programmering, mentoring,
-                           arkitektur og prosess-støtte."
-             :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
-                    :jenkins :git :oracle :ansible :nginx :buster-js]}
-            {:customer "Animalia"
-             :years [2012 2013]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Utvikling av storfekjøttkontrollen"
-             :description "Utvikling av storfekjøttkontrollen - en
-                           landsomfattende husdyrkontroll for kjøttfe, kjøttfekrysninger og
-                           fôringsdyr. Systemet gir en helhetlig oversikt over helsestatus,
-                           tilvekst, slaktekvalitet og fruktbarhetsresultater. Brukes av over
-                           3000 storfebønder. Programmering, mentoring, arkitektur og scrum
-                           prosess-støtte."
-             :tech [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
-                    :jenkins :git :oracle]}
-            {:customer "Animalia"
-             :years [2011 2012]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Nytt system for veterinærkontroller av fjørfe"
-             :description "Nytt system for veterinærkontroller av fjørfe.
-             Programmering, mentoring, arkitektur og scrum prosess-støtte."
-             :tech [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins
-                    :git :oracle]}
-            {:customer "NSB"
-             :years [2011]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Bistand med passasjerinformasjonssystem for Flirt-togene"
-             :description "Bistand med utvikling av passasjerinformasjonssystem
-             for de nye Flirt-togene, samt system for presentasjon av togsammensetningsplan. Oppstart av system for presentasjon av
-             togsammensetningsplan."
-             :tech [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :svn]}
-            {:customer "Animalia"
-             :years [2010 2011]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Systemer for kontroll av slakterier"
-             :description "Bistand i forbindelse med etablering av ny arkitektur
-             og plattform for systemutvikling og drift, samt mentoring og
-             prosessstøtte under innføring av scrum. Utvikling av system for
-             klassifiseringskontroll på slakterier, system for mottak og
-             innhenting av slakteopplysninger, og system for visning av
-             slakt-statistikk."
-             :tech [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :git]}
-            {:customer "Nordea"
-             :exclude-from-profile? true
-             :years [2010]
-             :employer :kodemaker
-             :summary "Oppgradering av system for Flerkonto."
-             :description "Bistand med konvertering av applikasjon Flerkonto fra
-             weblogic 6 til weblogic 8.1. Herunder tilknytning til LDAP,
-             oppgradering av weblogic-spesifikk kode for pålogging,
-             refaktorering av feilhåndtering og logging, samt bistand under
-             deployment og testing."
-             :tech [:weblogic :rational-clearcase :maven :spring :ldap :git :jetty]}
-            {:customer "Lindorff Decision / IXD"
-             :years [2010]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Oppgradering av kredittinformasjonssystem."
-             :description "Bistand med prosjektoppstart av nytt
-             kredittinformasjons-system. Oppsett av komplett CI-miljø, etablere
-             prosess. Utvikling grensesnitt mellom back- og frontend."
-             :tech [:git :svn :hudson :maven :spring :spring-mvc :appfuse :jetty :tomcat :canoo-webtest]}
-            {:customer "VPS"
-             :years [2009 2010]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Videreutvikling av VPS Investortjeneste."
-             :description "Tilpasning av VPS Investortjeneste til nytt
-             Fondssystem, samt videreutvikling av VPS Investortjeneste."
-             :tech [:java :j2ee :db2 :maven :groovy]}
-            {:customer "ICA, EMS-Programmet"
-             :years [2006 2007 2008 2009]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Handelssystem, delsystem for prissetting."
-             :description "Programmerer og systemarkitekt i EMS Price (European
-             Merchandising System - ICA og Albert Heijns nye handelssystem,
-             delsystem for prissetting)."
-             :tech [:java :j2ee :hibernate :spring :spring-mvc :swing :jms :webservices :jax-ws
-                    :jaxb :groovy :junit :ant :maven :cruise-control :hudson :hp-loadrunner
-                    :optimizeit-profiler :jira :confluence :websphere :oracle :plsql]}
-            {:customer "ICA, EMS-Programmet"
-             :years [2005]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Handelssystem, Web Service utvikling."
-             :description "Utvikling av Web Services for EMS Forecasting og EMS
-             Monitoring."
-             :tech [:java :j2ee :webservices :jax-ws :jaxb :hibernate :websphere :oracle]}
-            {:customer "ICA, EMS-Programmet"
-             :years [2002 2003 2004 2005]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Handelssystem, delsystem for innkjøp."
-             :description "Programmerer i EMS Buying (European Merchandising
-             System, ICA og Albert Heijns nye handelssystem, delsystem for
-             innkjøp)."
-             :tech [:java :j2ee :jms :swing :junit :ant :oracle :websphere :versata-workflow :webmethods-integrasjon]}
-            {:customer "NetCom AS "
-             :years [2002]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "NetComs forhandlersystem."
-             :description "Videreutvikling av NetComs forhandlersystem."
-             :tech [:j2ee :weblogic :oracle]}
-            {:customer "Familien Amundsen"
-             :years [2001]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Pappapermisjon"
-             :description "Meget lærerikt. Sovepauser og kveldstimer brukes (som før) til faglig oppdatering."
-             :tech [:bleier]}
-            {:customer "Inspera AS / DBC-Munin "
-             :years [2001]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "Portal for samfunnsfag i VGS."
-             :description "Utvikling av samfun.net, et hjelpemiddel for
-             undervisning i samfunnsfag for videregående skole, og vinner av to
-             diplomer i Gulltaggen-2001."
-             :tech [:j2ee :tomcat :oracle :xml :xslt :jdbc]}
-            {:customer "DBC-Munin AS "
-             :years [2001]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "System for reiselivsbedrifter."
-             :description "Utvikling av system for
-             reiselivsbedrifter (www.norwayapartments.com, pers.no, m.fl.), med
-             bl.a. løsning for bestilling og betaling over nett. Vinner av gull
-             og hederlig omtale på reiselivsbransjens (HSMAI) prisutdeling i
-             2002."
-             :tech [:j2ee :weblogic :oracle :ejb :servlets :xml :xslt :jdbc :pki]}
-            {:customer "SAS DATA Norge "
-             :years [1998 1999 2000 2001]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "System for feilhåndtering på fly."
-             :description "Design og utvikling av system for håndtering av feil
-             på fly."
-             :tech [:java :ejb :weblogic :oracle :swing :rational-rose :rational-clearcase]}
-            {:customer "SAS DATA Norge"
-             :years [1997]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "System for flyvedlikehold."
-             :description "Vedlikehold og utvikling av Oracle-basert system for
-             flyvedlikehold."
-             :tech [:plsql :oracle]}
-            {:customer "Norsk Kjøtt/Nord Norges salgslag"
-             :years [1997]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "System for markedsanalyse og salgsoppfølgning."
-             :description "Utvikling av system for markedanalyse og
-             salgsoppfølging."
-             :tech [:qb-vision :windows]}
-            {:customer "Norsk Hestesenter"
-             :years [1997]
-             :exclude-from-profile? true
-             :employer :kodemaker
-             :summary "System for avlsanalyse & avlsplanlegging."
-             :description "Systemskisse, kravanalyse og spesifikasjon av nytt
-             system for bruk i avlsanalyse og avlsplanlegging."
-             :tech [:architecture]}
-            {:customer "Heimevernet"
-             :years [1996]
-             :exclude-from-profile? true
-             :employer :mandator
-             :summary "System for vedlikehold av Heimevernets krigsorganisasjon."
-             :description "Design og utvikling av system for vedlikehold av
-             Heimevernets krigsorganisasjon (AKOS)."
-             :tech [:architecture]}
-            {:customer "Mustad AS"
-             :years [1995]
-             :exclude-from-profile? true
-             :employer :mandator
-             :summary "Ledelsesinformasjonssystem basert på MPS- og OLFI-informasjon."
-             :description "Design og utvikling av Ledelsesinformasjonssystem
-             basert på MPS- og OLFI-informasjon."
-             :tech [:ms-access]}
-            {:customer "Gjensidige forsikring"
-             :years [1995]
-             :exclude-from-profile? true
-             :employer :mandator
-             :summary "Nytt sentralt kundesystem for Gjensidige."
-             :description "Utvikling av nytt sentralt kundesystem for Gjensidige."
-             :tech [:db2]}
-            {:customer "Statoil ASA"
-             :years [1994]
-             :exclude-from-profile? true
-             :employer :mandator
-             :summary "Meldingsformidlingssystem"
-             :description "Utvikling av TCP/IP-basert meldingssystem for Unix-,
-             VAX-, og Windows-klienter koblet opp mot Statoils sentrale
-             økonomisystem."
-             :tech [:c :tcp]}
-            {:customer "SAS"
-             :years [1994]
-             :exclude-from-profile? true
-             :employer :sas-data
-             :summary "System for kommisjonsavregning for hotell."
-             :description "Tilbudsarbeide, forstudier, kravanalyser mm. primært
-             mot kunder i SAS flyvedlikehold (prosjekt HMP/PAMP) og SAS
-             International Hotels (system for kommisjonsavregning)."
-             :tech [:cpp :windows]}
-            {:customer "SAS"
-             :years [1989 1990 1991 1992 1993 1994]
-             :exclude-from-profile? true
-             :employer :sas-data
-             :summary "System for flyvedlikehold, m.fl."
-             :description "Analyse og utvikling i prosjekt HMP/PAMP, et
-             MPS-prosjekt for SAS flyvedlikehold. Virksomhetsanalyser,
-             utarbeidelse av mindre forstudier og analyser mot forskjellige
-             kunder."
-             :tech [:plsql :c]}
-            {:customer "SAS"
-             :years [1984 1985 1986 1987 1988 1989]
-             :exclude-from-profile? true
-             :employer :sas-data
-             :summary "Database administrator, Telon (4GL) support/administrasjon, Cobol programmering."
-             :description "Lokal Database Administrator og teknisk support IBM
-             mainframe (IMS/MVS). Telon (IMS 4GL) support / adminstrasjon i
-             Skandinavia. Installasjon / modifikasjon / kurs / metodestøtte /
-             teknisk support."
-             :tech [:ims :mvs :cobol :telon :focus :turbo-pascal :dataflex :oracle]}]
- 
- :cv {:default {:preferred-techs [
-                    :java :javascript :es6 :typescript :groovy :python 
-                    :react :redux :immutable-js
-                    :osx :linux
-                    :intellij :docker :ddd]
-                :exclude-techs []}}
+ :projects                  [{:customer    "Kolonial.no"
+                              :years       [2020]
+                              :employer    :kodemaker
+                              :summary     "Nytt terminalverktøy"
+                              :description "Utvikling av ny løsning for pakking av varer på paller for distribusjon,
+                                            med hensikt å øke leveringskapasiteten til kolonial.no.
+                                            Trygve bidro med utvikling av frontend og backend."
+                              :tech        [:react :es6 :typescript :graphql :python :django :postgresql]}
+                             {:customer    "Forsvaret"
+                              :years       [2019 2020]
+                              :employer    :kodemaker
+                              :summary     "PoC for innrapportering av materiell i skyen"
+                              :description "Laget et _Proof of Concept_ som skal bidra til at forsvarets eksterne leverandører
+                                            lettere skal kunne levere materiell-underlag til forsvaret begrensede plattform fra skyen.
+                                            Trygve har også bidratt med videreutvikling av materielldataportalen,
+                                            som er en løsning for innrapportering av materiell som ligger utenfor forsvarets SAP plattform"
+                              :tech        [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
+                             {:customer    "Vy Gruppen"
+                              :years       [2019]
+                              :employer    :kodemaker
+                              :summary     "Utvikling av trafikksystemer for Vy og deres nordiske samarbeidspartnere"
+                              :description "Utvikling av trafikksystemer til bruk internt i Vy og av Vy's nordiske samarbeidspartnere.
+                                            Bl.a integrasjon mot Värmlandstrafik, system for applikasjonsovervåkning, m.fl."
+                              :tech        [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-eventhubs :mysql :groovy :gradle]}
+                             {:customer    "NRK Origo"
+                              :years       [2017 2018 2019]
+                              :employer    :kodemaker
+                              :summary     "Videreutvikling av media-arkivet til NRK"
+                              :description "Videreutvikling av media-arkivet til NRK, som omhandler søk og registrering av metadata i
+                                            NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV, råstoff, mm."
+                              :tech        [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
+                             {:customer    "BN Bolig"
+                              :years       [2017]
+                              :employer    :kodemaker
+                              :summary     "Utvikling av løsning for boligsalg på nett"
+                              :description "BN Bolig er en eiendomsmegler startet av BN Bank og Eiendomsmegler1.
+                                            Trygve jobbet hovedakelig med utvikling av frontend på bnbolig.no.
+                                            EGGS Design stod for designet, og prosjektet ble kjørt som et 'Corporate Startup' etter
+                                            Lean prinsipper."
+                              :tech        [:react :redux :es6 :webpack :svg :clojure]}
+                             {:customer    "Thomson Reuters"
+                              :years       [2016]
+                              :employer    :kodemaker
+                              :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+                              :description "Ferdigstillelse av løsning for intern distribusjon av fremskrevne tidsserier
+                                            fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase.
+                                            Gjennomførte også en foranalyse av varslingssystem for vær- og naturkatastrofer.
+                                            Denne løsningen ble beklageligvis lagt på is av eksterne årsaker."
+                              :tech
+                                           [:java :spark :kafka :hbase :hadoop :zookeeper :docker :logstash :puppet]}
+                             {:customer    "NSB"
+                              :years       [2016]
+                              :employer    :kodemaker
+                              :summary     "Utvikling av trafikksystemer til bruk internt i NSB"
+                              :description "Utvikling trafikksystemer til bruk internt i NSB, bla. Bari, buss for tog, sporbruk på stasjoner, m.fl."
+                              :tech        [:react :redux :es6 :svg :immutable-js :webpack :groovy :grails]}
+                             {:customer    "Thomson Reuters"
+                              :years       [2015]
+                              :employer    :kodemaker
+                              :summary     "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier"
+                              :description "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier
+                                            fra forskjellige markeder ved hjelp av bl.a. Spark, Kafka, Hadoop og HBase."
+                              :tech        [:java :spark :kafka :hbase :hadoop :zookeeper :logstash :puppet]}
+                             {:customer    "Animalia"
+                              :years       [2015 2015]
+                              :employer    :kodemaker
+                              :summary     "Oppgradering av system for Sauekontrollen og Storfekjøttkontrollen"
+                              :description "Samordning av funksjoner samt nye funksjoner
+                                            innen avlsarbeid mm. Programmering, mentoring, løsningsdesign,
+                                            arkitektur og integrasjon av systemer for sau-, storfe-, og fjørfe-hold."
+                              :tech        [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
+                                            :jenkins :git :oracle :ansible :nginx :buster-js]}
+                             {:customer              "Animalia"
+                              :years                 [2014]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Oppgradering av system for klassifiseringskontroll på slakterier"
+                              :description           "Større oppgradering av system for
+                                                      klassifiseringskontroll på slakterier. Bedre opplegg for
+                                                      kurs/eksamen samt tilpasning til nye brukergrupper."
+                              :tech                  [:groovy :grails :camel :bootstrap :spock :css :javascript :jquery
+                                                      :spring-security :jenkins :git :oracle :ansible :nginx :buster-js]}
+                             {:customer              "Animalia"
+                              :years                 [2013 2014]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Utvikling av sauekontrollen"
+                              :description           "Utvikling av sauekontrollen - et system for drift av
+                                                      sauebesetninger. Systemet gir en helhetlig oversikt over dyrene og
+                                                      deres produksjon fra fødsel til slakting, samt avlsarbeid. Brukerne
+                                                      kan så analysere resultatene i sin besetning og sette seg nye mål.
+                                                      Brukes av over 4000 sauebønder. Programmering, mentoring,
+                                                      arkitektur og prosess-støtte."
+                              :tech                  [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
+                                                      :jenkins :git :oracle :ansible :nginx :buster-js]}
+                             {:customer              "Animalia"
+                              :years                 [2012 2013]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Utvikling av storfekjøttkontrollen"
+                              :description           "Utvikling av storfekjøttkontrollen - en
+                                                      landsomfattende husdyrkontroll for kjøttfe, kjøttfekrysninger og
+                                                      fôringsdyr. Systemet gir en helhetlig oversikt over helsestatus,
+                                                      tilvekst, slaktekvalitet og fruktbarhetsresultater. Brukes av over
+                                                      3000 storfebønder. Programmering, mentoring, arkitektur og scrum
+                                                      prosess-støtte."
+                              :tech                  [:groovy :grails :bootstrap :spock :css :javascript :jquery :spring-security
+                                                      :jenkins :git :oracle]}
+                             {:customer              "Animalia"
+                              :years                 [2011 2012]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Nytt system for veterinærkontroller av fjørfe"
+                              :description           "Nytt system for veterinærkontroller av fjørfe.
+                                                      Programmering, mentoring, arkitektur og scrum prosess-støtte."
+                              :tech                  [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins
+                                                      :git :oracle]}
+                             {:customer              "NSB"
+                              :years                 [2011]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Bistand med passasjerinformasjonssystem for Flirt-togene"
+                              :description           "Bistand med utvikling av passasjerinformasjonssystem
+                                                      for de nye Flirt-togene, samt system for presentasjon av togsammensetningsplan.
+                                                      Oppstart av system for presentasjon av togsammensetningsplan."
+                              :tech                  [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :svn]}
+                             {:customer              "Animalia"
+                              :years                 [2010 2011]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Systemer for kontroll av slakterier"
+                              :description           "Bistand i forbindelse med etablering av ny arkitektur
+                                                      og plattform for systemutvikling og drift, samt mentoring og
+                                                      prosessstøtte under innføring av scrum. Utvikling av system for
+                                                      klassifiseringskontroll på slakterier, system for mottak og
+                                                      innhenting av slakteopplysninger, og system for visning av
+                                                      slakt-statistikk."
+                              :tech                  [:groovy :grails :css :javascript :jquery :spring-security :camel :jenkins :git]}
+                             {:customer              "Nordea"
+                              :exclude-from-profile? true
+                              :years                 [2010]
+                              :employer              :kodemaker
+                              :summary               "Oppgradering av system for Flerkonto."
+                              :description           "Bistand med konvertering av applikasjon Flerkonto fra
+                                                      weblogic 6 til weblogic 8.1. Herunder tilknytning til LDAP,
+                                                      oppgradering av weblogic-spesifikk kode for pålogging,
+                                                      refaktorering av feilhåndtering og logging, samt bistand under
+                                                      deployment og testing."
+                              :tech                  [:weblogic :rational-clearcase :maven :spring :ldap :git :jetty]}
+                             {:customer              "Lindorff Decision / IXD"
+                              :years                 [2010]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Oppgradering av kredittinformasjonssystem."
+                              :description           "Bistand med prosjektoppstart av nytt
+                                                      kredittinformasjons-system. Oppsett av komplett CI-miljø, etablere
+                                                      prosess. Utvikling grensesnitt mellom back- og frontend."
+                              :tech                  [:git :svn :hudson :maven :spring :spring-mvc :appfuse :jetty :tomcat :canoo-webtest]}
+                             {:customer              "VPS"
+                              :years                 [2009 2010]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Videreutvikling av VPS Investortjeneste."
+                              :description           "Tilpasning av VPS Investortjeneste til nytt
+                                                      Fondssystem, samt videreutvikling av VPS Investortjeneste."
+                              :tech                  [:java :j2ee :db2 :maven :groovy]}
+                             {:customer              "ICA, EMS-Programmet"
+                              :years                 [2006 2007 2008 2009]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Handelssystem, delsystem for prissetting."
+                              :description           "Programmerer og systemarkitekt i EMS Price (European
+                                                      Merchandising System - ICA og Albert Heijns nye handelssystem,
+                                                      delsystem for prissetting)."
+                              :tech                  [:java :j2ee :hibernate :spring :spring-mvc :swing :jms :webservices :jax-ws
+                                                      :jaxb :groovy :junit :ant :maven :cruise-control :hudson :hp-loadrunner
+                                                      :optimizeit-profiler :jira :confluence :websphere :oracle :plsql]}
+                             {:customer              "ICA, EMS-Programmet"
+                              :years                 [2005]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Handelssystem, Web Service utvikling."
+                              :description           "Utvikling av Web Services for EMS Forecasting og EMS
+                                                      Monitoring."
+                              :tech                  [:java :j2ee :webservices :jax-ws :jaxb :hibernate :websphere :oracle]}
+                             {:customer              "ICA, EMS-Programmet"
+                              :years                 [2002 2003 2004 2005]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Handelssystem, delsystem for innkjøp."
+                              :description           "Programmerer i EMS Buying (European Merchandising
+                                                      System, ICA og Albert Heijns nye handelssystem, delsystem for
+                                                      innkjøp)."
+                              :tech                  [:java :j2ee :jms :swing :junit :ant :oracle :websphere :versata-workflow :webmethods-integrasjon]}
+                             {:customer              "NetCom AS "
+                              :years                 [2002]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "NetComs forhandlersystem."
+                              :description           "Videreutvikling av NetComs forhandlersystem."
+                              :tech                  [:j2ee :weblogic :oracle]}
+                             {:customer              "Familien Amundsen"
+                              :years                 [2001]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Pappapermisjon"
+                              :description           "Meget lærerikt. Sovepauser og kveldstimer brukes (som før) til faglig oppdatering."
+                              :tech                  [:bleier]}
+                             {:customer              "Inspera AS / DBC-Munin "
+                              :years                 [2001]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "Portal for samfunnsfag i VGS."
+                              :description           "Utvikling av samfun.net, et hjelpemiddel for
+                                                      undervisning i samfunnsfag for videregående skole, og vinner av to
+                                                      diplomer i Gulltaggen-2001."
+                              :tech                  [:j2ee :tomcat :oracle :xml :xslt :jdbc]}
+                             {:customer              "DBC-Munin AS "
+                              :years                 [2001]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "System for reiselivsbedrifter."
+                              :description           "Utvikling av system for
+                                                      reiselivsbedrifter (www.norwayapartments.com, pers.no, m.fl.), med
+                                                      bl.a. løsning for bestilling og betaling over nett. Vinner av gull
+                                                      og hederlig omtale på reiselivsbransjens (HSMAI) prisutdeling i
+                                                      2002."
+                              :tech                  [:j2ee :weblogic :oracle :ejb :servlets :xml :xslt :jdbc :pki]}
+                             {:customer              "SAS DATA Norge "
+                              :years                 [1998 1999 2000 2001]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "System for feilhåndtering på fly."
+                              :description           "Design og utvikling av system for håndtering av feil
+                                                      på fly."
+                              :tech                  [:java :ejb :weblogic :oracle :swing :rational-rose :rational-clearcase]}
+                             {:customer              "SAS DATA Norge"
+                              :years                 [1997]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "System for flyvedlikehold."
+                              :description           "Vedlikehold og utvikling av Oracle-basert system for
+                                                      flyvedlikehold."
+                              :tech                  [:plsql :oracle]}
+                             {:customer              "Norsk Kjøtt/Nord Norges salgslag"
+                              :years                 [1997]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "System for markedsanalyse og salgsoppfølgning."
+                              :description           "Utvikling av system for markedanalyse og
+                                                      salgsoppfølging."
+                              :tech                  [:qb-vision :windows]}
+                             {:customer              "Norsk Hestesenter"
+                              :years                 [1997]
+                              :exclude-from-profile? true
+                              :employer              :kodemaker
+                              :summary               "System for avlsanalyse & avlsplanlegging."
+                              :description           "Systemskisse, kravanalyse og spesifikasjon av nytt
+                                                      system for bruk i avlsanalyse og avlsplanlegging."
+                              :tech                  [:architecture]}
+                             {:customer              "Heimevernet"
+                              :years                 [1996]
+                              :exclude-from-profile? true
+                              :employer              :mandator
+                              :summary               "System for vedlikehold av Heimevernets krigsorganisasjon."
+                              :description           "Design og utvikling av system for vedlikehold av
+                                                      Heimevernets krigsorganisasjon (AKOS)."
+                              :tech                  [:architecture]}
+                             {:customer              "Mustad AS"
+                              :years                 [1995]
+                              :exclude-from-profile? true
+                              :employer              :mandator
+                              :summary               "Ledelsesinformasjonssystem basert på MPS- og OLFI-informasjon."
+                              :description           "Design og utvikling av Ledelsesinformasjonssystem
+                                                      basert på MPS- og OLFI-informasjon."
+                              :tech                  [:ms-access]}
+                             {:customer              "Gjensidige forsikring"
+                              :years                 [1995]
+                              :exclude-from-profile? true
+                              :employer              :mandator
+                              :summary               "Nytt sentralt kundesystem for Gjensidige."
+                              :description           "Utvikling av nytt sentralt kundesystem for Gjensidige."
+                              :tech                  [:db2]}
+                             {:customer              "Statoil ASA"
+                              :years                 [1994]
+                              :exclude-from-profile? true
+                              :employer              :mandator
+                              :summary               "Meldingsformidlingssystem"
+                              :description           "Utvikling av TCP/IP-basert meldingssystem for Unix-,
+                                                      VAX-, og Windows-klienter koblet opp mot Statoils sentrale
+                                                      økonomisystem."
+                              :tech                  [:c :tcp]}
+                             {:customer              "SAS"
+                              :years                 [1994]
+                              :exclude-from-profile? true
+                              :employer              :sas-data
+                              :summary               "System for kommisjonsavregning for hotell."
+                              :description           "Tilbudsarbeide, forstudier, kravanalyser mm. primært
+                                                      mot kunder i SAS flyvedlikehold (prosjekt HMP/PAMP) og SAS
+                                                      International Hotels (system for kommisjonsavregning)."
+                              :tech                  [:cpp :windows]}
+                             {:customer              "SAS"
+                              :years                 [1989 1990 1991 1992 1993 1994]
+                              :exclude-from-profile? true
+                              :employer              :sas-data
+                              :summary               "System for flyvedlikehold, m.fl."
+                              :description           "Analyse og utvikling i prosjekt HMP/PAMP, et
+                                                      MPS-prosjekt for SAS flyvedlikehold. Virksomhetsanalyser,
+                                                      utarbeidelse av mindre forstudier og analyser mot forskjellige
+                                                      kunder."
+                              :tech                  [:plsql :c]}
+                             {:customer              "SAS"
+                              :years                 [1984 1985 1986 1987 1988 1989]
+                              :exclude-from-profile? true
+                              :employer              :sas-data
+                              :summary               "Database administrator, Telon (4GL) support/administrasjon, Cobol programmering."
+                              :description           "Lokal Database Administrator og teknisk support IBM
+                                                      mainframe (IMS/MVS). Telon (IMS 4GL) support / adminstrasjon i
+                                                      Skandinavia. Installasjon / modifikasjon / kurs / metodestøtte /
+                                                      teknisk support."
+                              :tech                  [:ims :mvs :cobol :telon :focus :turbo-pascal :dataflex :oracle]}]
 
- :cv/description "Trygve er entusiastisk opptatt av fagområdet systemutvikling. 
- Han tilegner seg raskt ny kunnskap og følger godt med på nyvinninger innen fagområdet. 
- Han evner å finne enkle løsninger på kompliserte problemstillinger, er resultatorientert og målrettet og leverer
- høy kvalitet. Han trives utmerket i fagmiljøet i Kodemaker, og kommuniserer godt med kunder og kolleger.
+ :cv                        {:default {:preferred-techs [:java :javascript :es6 :typescript :groovy :python
+                                                         :react :redux :immutable-js
+                                                         :osx :linux
+                                                         :intellij :docker :ddd]
+                                       :exclude-techs   []}}
 
- Trygve har jobbet med mange forskjellige teknologier, arkitektur, organisasjon og prosesser, 
- og han har derfor opparbeidet seg en unik forståelse for fagområdet og teknologianvendelser i prosjekter. 
- Etter mange år med Java plattform, groovy,
- grails har han de siste årene også jobbet med bl.a Big Data, moderne frontend, og han har også tatt en del 
- kurs i maskinlæring og dyp læring.
- 
- Han har gjennom å studere språk som Haskell, Scala og Clojure fått en grundig
- forståelse for funksjonell programmering, som han bruker i sitt daglige
- arbeid."
- 
- :education-summary "Ingeniør fra Kongsberg Ingeniørhøgskole, Bedriftsøkonomisk
- Institutt, Matematikk ved Universitetet i Oslo"
- :experience-since 1984
- :qualifications ["Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
-                  "Erfaring med forskjellige former for funksjonell programmering"
-                  "Erfaring fra Big Data med Apache Spark, Kafka, Hadoop, HBase"
-                  "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
-                  "Lang erfaring med Java, Groovy og Grails"]
- :certifications [{:institution "Deeplearning.ai / Coursera"
-                   :name "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
-                   :url "https://www.coursera.org/learn/introduction-tensorflow"
-                   :year 2019
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/verify/ZSEZVPCC2MDS"
-                    :text "Statements of Accomplishment"}}
-                  {:institution "Deeplearning.ai / Coursera"
-                   :name "Deep learning specialization – 5 kurs i dyp læring med Andrew Ng"
-                   :url "https://www.coursera.org/specializations/deep-learning"
-                   :year 2018
-                   :certificate
-                   {:url "https://www.coursera.org/account/accomplishments/specialization/XUNMU5JLM672"
-                    :text "Statements of Accomplishment"}}
-                  {:institution "Berkeley University / edx.org"
-                   :name "CS190.1x Scalable Machine Learning"
-                   :url "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
-                   :year 2015
-                   :certificate
-                   {:url "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
-                    :text "Honor Code Certificate"}}
-                  {:institution "Berkeley University / edx.org"
-                   :name "CS100.1x Introduction to Big Data with Apache Spark"
-                   :url "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
-                   :year 2015
-                   :certificate
-                   {:url "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
-                    :text "Honor Code Certificate"}}
-                  {:institution " Stanford University / coursera.org"
-                   :name "Machine Learning med Andrew Ng"
-                   :url "http://www.coursera.org/learn/machine-learning"
-                   :year 2012
-                   :certificate
-                   {:url "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"
-                    :text "Statement of Accomplishment"}}
-                  {:name "Profesjonellt styrearbeid", :year 2011}
-                  {:name "Retorikk", :year 2010}
-                  {:name "JavaScript/JQuery", :year 2009}
-                  {:name "Ruby on Rails", :year 2008}
-                  {:name "Certified ScrumMaster", :year 2006}]
- :relationship-status "Gift, 2 barn"
- :born 1961
- :education [{:institution "Handelshøyskolen BI"
-              :years [1991 1992]
-              :subject "Bedriftsøkonomistudiet"}
-             {:institution "Universitet i Oslo"
-              :years [1987]
-              :subject "8 vekttall matematikk"}
-             {:institution "Kongsberg Ingeniørhøyskole"
-              :years [1982 1983]
-              :subject "Datateknikk, påbygning"}
-             {:institution "Kongsberg Ingeniørhøyskole"
-              :years [1980 1981 1982]
-              :subject "Datateknikk"}]
-:endorsement-highlight {:author "Ståle Bie"
-                         :title "Avdelingsleder, SAS Data"
-                         :quote "Han storkoser seg når det umulige blir mulig og skyr ingen anstrengelser. 
-                                Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}
-}
+ :cv/description            "Trygve er entusiastisk opptatt av fagområdet systemutvikling.
+                             Han tilegner seg raskt ny kunnskap og følger godt med på nyvinninger innen fagområdet.
+                             Han evner å finne enkle løsninger på kompliserte problemstillinger, er resultatorientert og målrettet og leverer
+                             høy kvalitet. Han trives utmerket i fagmiljøet i Kodemaker, og kommuniserer godt med kunder og kolleger.
+
+                             Trygve har jobbet med mange forskjellige teknologier, arkitektur, organisasjon og prosesser,
+                             og han har derfor opparbeidet seg en unik forståelse for fagområdet og teknologianvendelser i prosjekter.
+                             Etter mange år med Java plattform, groovy,
+                             grails har han de siste årene også jobbet med bl.a Big Data, moderne frontend, og han har også tatt en del
+                             kurs i maskinlæring og dyp læring.
+
+                             Han har gjennom å studere språk som Haskell, Scala og Clojure fått en grundig
+                             forståelse for funksjonell programmering, som han bruker i sitt daglige
+                             arbeid."
+
+ :education-summary         "Ingeniør fra Kongsberg Ingeniørhøgskole, Bedriftsøkonomisk
+                             Institutt, Matematikk ved Universitetet i Oslo"
+ :experience-since          1984
+
+ :qualifications            ["Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
+                             "Erfaring med forskjellige former for funksjonell programmering"
+                             "Erfaring fra Big Data med Apache Spark, Kafka, Hadoop, HBase"
+                             "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
+                             "Lang erfaring med Java, Groovy og Grails"]
+
+ :certifications            [{:institution "Deeplearning.ai / Coursera"
+                              :name        "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
+                              :url         "https://www.coursera.org/learn/introduction-tensorflow"
+                              :year        2019
+                              :certificate {:url  "https://www.coursera.org/account/accomplishments/verify/ZSEZVPCC2MDS"
+                                            :text "Statements of Accomplishment"}}
+                             {:institution "Deeplearning.ai / Coursera"
+                              :name        "Deep learning specialization – 5 kurs i dyp læring med Andrew Ng"
+                              :url         "https://www.coursera.org/specializations/deep-learning"
+                              :year        2018
+                              :certificate {:url  "https://www.coursera.org/account/accomplishments/specialization/XUNMU5JLM672"
+                                            :text "Statements of Accomplishment"}}
+                             {:institution "Berkeley University / edx.org"
+                              :name        "CS190.1x Scalable Machine Learning"
+                              :url         "http://www.edx.org/course/scalable-machine-learning-uc-berkeleyx-cs190-1x"
+                              :year        2015
+                              :certificate {:url  "/certificates/trygve/Berkeley-Certificate-CS190.1x.pdf"
+                                            :text "Honor Code Certificate"}}
+                             {:institution "Berkeley University / edx.org"
+                              :name        "CS100.1x Introduction to Big Data with Apache Spark"
+                              :url         "http://www.edx.org/course/introduction-big-data-apache-spark-uc-berkeleyx-cs100-1x"
+                              :year        2015
+                              :certificate {:url  "/certificates/trygve/Berkeley-Certificate-CS100.1x.pdf"
+                                            :text "Honor Code Certificate"}}
+                             {:institution " Stanford University / coursera.org"
+                              :name        "Machine Learning med Andrew Ng"
+                              :url         "http://www.coursera.org/learn/machine-learning"
+                              :year        2012
+                              :certificate {:url  "/certificates/trygve/MachineLearning-StatementOfAccomplishment.pdf"
+                                            :text "Statement of Accomplishment"}}
+                             {:name "Profesjonellt styrearbeid", :year 2011}
+                             {:name "Retorikk", :year 2010}
+                             {:name "JavaScript/JQuery", :year 2009}
+                             {:name "Ruby on Rails", :year 2008}
+                             {:name "Certified ScrumMaster", :year 2006}]
+
+ :relationship-status       "Gift, 2 barn"
+ :born                      1961
+
+ :education                 [{:institution "Handelshøyskolen BI"
+                              :years       [1991 1992]
+                              :subject     "Bedriftsøkonomistudiet"}
+                             {:institution "Universitet i Oslo"
+                              :years       [1987]
+                              :subject     "8 vekttall matematikk"}
+                             {:institution "Kongsberg Ingeniørhøyskole"
+                              :years       [1982 1983]
+                              :subject     "Datateknikk, påbygning"}
+                             {:institution "Kongsberg Ingeniørhøyskole"
+                              :years       [1980 1981 1982]
+                              :subject     "Datateknikk"}]
+
+ :endorsement-highlight     {:author "Ståle Bie"
+                             :title  "Avdelingsleder, SAS Data"
+                             :quote  "Han storkoser seg når det umulige blir mulig og skyr ingen anstrengelser.
+                                      Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}}
