@@ -1,0 +1,117 @@
+{:id                        :johndoe
+ :name                      ["John" "Doe"]
+ :title                     "Systemutvikler"
+ :start-date                "1997-02-01 00:00"
+ :description               "
+                             John har lang og solid erfaring innen faget systemutvikling."
+
+ :phone-number              "+47 9206 1819"
+ :email-address             "johndoe@kodemaker.no"
+
+ :presence                  {:cv       "johndoe"
+                             :twitter  "johndoe"
+                             :github   "johndoe"
+                             :linkedin "/in/johndoe"}
+
+ :tech                      {:using-at-work           [:react :redux :typescript]
+                             :favorites-at-the-moment [:reinforcement-learning]
+                             :want-to-learn-more      [:tensorflow-js]}
+
+ :innate-skills             [:pascal :prolog :fortran]
+
+ :recommendations           [{:title "Spinning up in Deep Reinforcement Learning"
+                              :blurb "Dette er stedet å grave seg dypt ned i RL."
+                              :link  {:url  "https://spinningup.openai.com"
+                                      :text "Sjekk ut nettstedet her"}
+                              :tech  [:machinelearning]}]
+
+ :side-projects             [{:title        "Fjesgjenkjenning"
+                              :description  "Bruke bilbioteket [dlib](http://blog.dlib.net) til å kjenne igjen alle kodemakere"
+                              :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
+                              :illustration "/illustrations/side-projects/trygve-og-einar.png"
+                              :tech         [:python :dlib :machinelearning]
+                              }]
+
+ :hobbies                   [{:title        "Maskinlæring"
+                              :description  "De siste årene har jeg hatt spesiellt fokus på maskinlæring."
+                              :illustration "/photos/tech/machinelearning.jpg"}]
+
+ :presentations             [{:title "Groovy collection API"
+                              :blurb "En oversikt over groovy's collection api"
+                              :tech  [:groovy]
+                              :event "Communities in Action"
+                              :date  "2012-02-01"
+                              :urls  {:slides "http://www.slideshare.net/trygvea/groovy-collection-api-as-held-on-ci-a"}}]
+
+ :appearances               [{:title "Deep Learning / dyp læring"
+                              :event "Kodemaker fagdag"
+                              :tech  [:deeplearning :machinelearning]
+                              :date  "2015-05-21"}
+                             ]
+
+ :open-source-projects      [{:url         "http://grails.org/plugin/class-diagram"
+                              :name        "Grails class diagram plugin"
+                              :description "The ClassDiagram plugin provides an UML-like diagram of your grails domain classes."
+                              :tech        [:groovy :grails]}]
+
+ :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]
+
+ :project-highlights        [{:blurb    "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
+                              :customer "Nrk"}
+                             {:blurb    "Ny og innovativ meglerløsning. Frontend med React/Redux."
+                              :customer "BN Bolig"}
+                             {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
+                              :customer "Thomson Reuters"}]
+
+ :projects                  [{:customer    "Kolonial.no"
+                              :years       [2020]
+                              :employer    :kodemaker
+                              :summary     "Nytt terminalverktøy"
+                              :description "Utvikling av ny løsning..."
+                              :tech        [:react :typescript]}
+                             {:customer    "Forsvaret"
+                              :years       [2019 2020]
+                              :employer    :kodemaker
+                              :summary     "PoC for innrapportering av materiell i skyen"
+                              :description "Laget et _Proof of Concept_..."
+                              :tech        [:react :redux]}
+                             {:customer              "SAS"
+                              :years                 [1989 1990 1991 1992 1993 1994]
+                              :exclude-from-profile? true
+                              :employer              :sas-data
+                              :summary               "System for flyvedlikehold, m.fl."
+                              :description           "Analyse og utvikling ..."
+                              :tech                  [:plsql :c]}]
+
+ :cv                        {:default {:preferred-techs [
+                                                         :typescript :groovy]
+                                       :exclude-techs   []}}
+
+ :cv/description            "John er entusiastisk opptatt av fagområdet systemutvikling..."
+
+ :education-summary         "Ingeniør fra Kongsberg Ingeniørhøgskole..."
+ :experience-since          1984
+ :qualifications            ["Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
+                             "Erfaring med forskjellige former for funksjonell programmering"]
+ :certifications            [{:institution "Deeplearning.ai / Coursera"
+                              :name        "Introduction to TensorFlow for Artificial Intelligence,,,"
+                              :url         "https://www.coursera.org/learn/introduction-tensorflow"
+                              :year        2019
+                              :certificate
+                                           {:url  "https://www.coursera.org/account/accomplishments/verify/ZSEZVPCC2MDS"
+                                            :text "Statements of Accomplishment"}}
+                             {:name "Certified ScrumMaster", :year 2006}]
+ :relationship-status       "Gift, 2 barn"
+ :born                      1961
+ :education                 [{:institution "Handelshøyskolen BI"
+                              :years       [1991 1992]
+                              :subject     "Bedriftsøkonomistudiet"}
+                             {:institution "Universitet i Oslo"
+                              :years       [1987]
+                              :subject     "8 vekttall matematikk"}]
+
+ :endorsement-highlight     {:author "Ståle Bie"
+                             :title  "Avdelingsleder, SAS Data"
+                             :quote  "Han storkoser seg når det umulige blir mulig og skyr ingen anstrengelser.
+                                Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}
+ }

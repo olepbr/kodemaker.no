@@ -25,7 +25,7 @@
        (map (juxt :id identity))
        (into {})))
 
-(defn- slurp-edn-map [file]
+(defn slurp-edn-map [file]
   (read-string-strictly [file (slurp file)]))
 
 (defn load-content []

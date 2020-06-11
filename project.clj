@@ -26,14 +26,17 @@
                  [datomic-type-extensions "2019-09-04"]
                  [java-time-dte "2018-04-18"]
                  [java-time-literals "2018-04-06"]
-                 [html5-walker "2020-01-08"]]
+                 [html5-walker "2020-01-08"]
+                 [clj-http "3.10.1"]
+                 [cheshire "5.10.0"]]
   :jvm-opts ["-Xmx768M"
              "-Djava.awt.headless=true"]
   :ring {:handler repl/ring-app
          :init repl/init-app-for-ring!
          :port 3334}
   :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]
-            "build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]}
+            "build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]
+            "cvpartner-export" ["run" "-m" "kodemaker-no.export.cvpartner/cvpartner-export"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]
                                   [integrant "0.7.0"]
                                   [integrant/repl "0.3.1"]
@@ -48,5 +51,5 @@
                              [lein-ancient "0.6.15"]
                              [lein-midje "3.2.1"]]
                    :source-paths ["dev" "config" "ui/src"]
-                   :resource-paths ["ui/resources"]
+                   :resource-paths ["ui/resources" "test/resources"]
                    :test-paths ["test"]}})
