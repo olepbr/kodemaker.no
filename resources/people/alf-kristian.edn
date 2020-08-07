@@ -554,7 +554,6 @@
 
  :cv {}
  :born 1978
- :relationship-status "Samboer"
  :education-summary "Sivilingeniør Kommunikasjonsteknologi NTNU"
  :experience-since 2004
  :certifications [{:name "Sun Certified Enterprise Architect" :year 2006}

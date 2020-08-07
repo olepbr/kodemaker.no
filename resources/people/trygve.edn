@@ -526,7 +526,6 @@
                              {:name "Ruby on Rails", :year 2008}
                              {:name "Certified ScrumMaster", :year 2006}]
 
- :relationship-status       "Gift, 2 barn"
  :born                      1961
 
  :education                 [{:institution "Handelshøyskolen BI"

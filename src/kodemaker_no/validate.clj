@@ -127,7 +127,6 @@
 
    ;; For CV-er
    (optional-key :born) Num
-   (optional-key :relationship-status) Str
    (optional-key :education-summary) Str
    (optional-key :experience-since) Num
    (optional-key :qualifications) [Str]

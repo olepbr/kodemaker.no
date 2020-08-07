@@ -592,7 +592,6 @@
                   {:name "Sun Certified Web Component Developer (SCWCD)", :year 2002}
                   {:name "Certified ATG Dynamo Developer", :year 2002}
                   {:name "Sun Certified Java Programmer (SCJP)", :year 2001}]
- :relationship-status "Gift, 2 barn"
  :born 1976
  :education [{:institution "UiO"
               :years [2008 2009 2010]

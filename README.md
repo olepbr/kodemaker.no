@@ -135,7 +135,6 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
    ;; For CV-er
    (optional-key :born) Num
-   (optional-key :relationship-status) Str
    (optional-key :education-summary) Str
    (optional-key :experience-since) Num
    (optional-key :qualifications) [Str]
@@ -344,7 +343,6 @@ Helt til slutt er det også mulig å legge til disse to feltene, men det er
 kanskje mulig å diskutere hvor relevante de er:
 
 - `:born`
-- `:relationship-status`
 
 ### Nytt CV-design
 
