@@ -1,0 +1,215 @@
+{:id :ashild
+ :name ["Åshild" "Kaldahl" "Thorrud"]
+ :title "Systemutvikler"
+ :start-date "2020-10-01"
+ :experience-since 2011
+ :born 1986
+ :relationship-status "Samboer"
+ :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
+    Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
+    Åshild foretrekker frontendutvikling, men liker fremfor alt en variert 
+    arbeidshverdag der hun kan løse det meste selv, uten å være avhengig av andre.
+
+    Åshild tar til seg ny kunnskap raskt og effektivt, og deler dette gjerne dette
+    videre med andre. Hun liker tett samarbeid med andre utviklere, designere og
+    testere. Åshild liker å lage gode løsninger for de som skal bruke dem, og er 
+    opptatt av at koden skal være enkel å forvalte, og forstå."
+
+:cv/description "Åshild fremstår som en proaktiv, strukturert og kompetent person. 
+    Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
+    Åshild foretrekker frontendutvikling, men liker fremfor alt en variert arbeidshverdag 
+    der hun kan løse det meste selv, uten å være avhengig av andre.
+
+    Åshild liker å lage gode løsninger for de som skal bruke dem, og er opptatt av at 
+    løsningene skal være enkle, selv om problemstillingene er kompliserte. Hun
+    er opptatt av at koden skal være enkel å forvalte, og forstå.
+
+    Åshild tar til seg ny kunnskap raskt og effektivt, og deler dette gjerne dette
+    videre med andre. Hun liker tett samarbeid med andre utviklere, designere og testere."
+
+:innate-skills []
+
+:phone-number "+47 922 42 895"
+:email-address "ashild@kodemaker.no"
+
+:presence {:cv "ashild"
+            :twitter "thorrud"
+            :linkedin "/in/åshild-kaldahl-thorrud-05ab6b1a/"
+            :github "thorrud"}
+
+:tech {:using-at-work [:react :java :sql :docker]
+        :favorites-at-the-moment [:java :react]
+        :want-to-learn-more [:clojurescript :kafka]}
+
+:qualifications ["Fullstack, jobber gjerne med hele stacken"
+                  "Erfaring med oppsett av frontendapplikasjoner"
+                  "Liker enkle løsninger og små team"
+                  "Utviser initiativ, omgjengelighet, utholdenhet og god arbeidsmoral"]
+
+:hobbies [{:title "Ski"
+            :description "Jeg har alltid likt fysisk aktivitet, gjerne sammen med andre. Elsker å stå på ski i pudder!
+            Hver helg er gjerne holdt av til skikjøring om vinteren, i tilfelle det kommer snø. Kjører mest heisbasert
+            frikjøring, men er ikke fremmed for en topptur eller langrennstur heller."
+            :illustration "/illustrations/hobbies/ashild_ski.jpg"}
+           {:title "Fotball"
+            :description "Ikke så mye å se på, men å spille selv. Spilte seriøst mye fotball fra jeg var 8-26 år, mens de
+            siste årene har det blitt litt bedriftsfotball (ikke nødvendigvis med min egen bedrift, opererer på en måte som
+            en konsulent her og). Spiller som regel cageball i Nydalen ukentlig. Er egentlig glad i nesten all slags sport og
+            driver også med turorientering, sykling, fjellturer ++"
+            :illustration "/illustrations/hobbies/ashild_fotball.jpg"}
+           ]
+
+:projects [{:customer "Statnett"
+            :employer :webstep
+            :summary "Videreutvikling på Operatør Informasjon System (OIS)"
+            :description "Fullstackutvikler på OIS sine applikasjoner som brukes av både eksterne
+            konsesjonærer og interne planleggere. Har stort sett jobbet med en innrapporteringsløsning
+            for konsesjonærer av planer for tvungen utkobling av forbruk og gjenoppretting, 
+            samt saksbehandling og oversikt for Statnett."
+            :tech [:typescript :react :wicket :java :git :sql :docker]
+            :start "2020-01"}
+    
+            {:customer "Norgesgruppen Data"
+            :employer :webstep
+            :summary "Utviklet en applikasjon for leveranseplanlegging"
+            :description "Fullstackutvikler på ny applikasjon for leveranseplanlegging
+            til bruk av dagligvarebutikker og ASKO, med UI basert på React/Redux.
+            Satt opp frontend-prosjektet. Tok i bruk Okta innloggingsløsning basert
+            på OAuth 2.0 og OpenId Connect. Skilte ut felles UI-komponenter til 
+            eget bibliotek til gjenbruk for NGFLYT-løsningen og Leveranseplanleggeren."
+            :tech [:javascript :react :redux :java :springboot :sql :okta :git]
+            :start "2019-03"}
+    
+            {:customer "Norgesgruppen Data"
+            :employer :webstep
+            :summary "Utviklet ny NGFLYT håndholdt- og webløsning"
+            :description "Fullstackutvikler på ny NGFLYT-applikasjon for håndholdte 
+            enheter (Zebra, iOS, Android), samt ny NGFLYT-webapplikasjon. Hensikten 
+            med prosjektene var å forenkle dagens varebestillingsløsning (NGFLYT) for 
+            både automatisk og manuell bestilling fra dagligvarebutikker."
+            :tech [:javascript :react :redux :java :sql :git :svn]
+            :start "2017-08"}
+
+            {:customer "SpareBank1 Gruppen AS"
+            :employer :capgemini
+            :summary "Videreutviklet sparingsapplikasjonene i nettbanken"
+            :description "Tech lead og utvikler på sparingsappene. Disse skulle inneholde
+            alt fra forretningsområdet sparing i SpareBank 1. Dette ble til slutt tre 
+            applikasjoner: PM-sparing, BM-sparing og Fondshandel-Betjent, for hhv. privat marked, 
+            bedriftsmarkedet og rådgiverkanal. Vi utviklet felles backendkode for mobilbank, PM- og BM-sparing. 
+            All kode ble også skrevet om fra JSF til REST og React/Redux."
+            :tech [:javascript :react :redux :java :git :docker]
+            :start "2014-10"}
+
+            {:customer "SpareBank1 Gruppen AS"
+            :employer :capgemini
+            :summary "NPA (Ny portalarkitektur) var et stort prosjekt som gikk ut på å splitte 
+            nettbanken opp i flere applikasjoner med en felles kjernefunksjonalitet."
+            :description "Ble en del av dette teamet i noen måneder for å splitte ut fondsløsningen 
+            til PM-sparing fra nettbankkoden. Dette ble gjort ved å migrere eksisterende kode til ny 
+            arkitektur. "
+            :tech [:javascript :backbone.js :jsf :java :jenkins]
+            :start "2014-03"}
+
+            {:customer "SpareBank1 Gruppen AS"
+            :employer :capgemini
+            :summary "Utviklet fondsløsning i mobilbanken"
+            :description "Utvikler på mobilbankteamet noen måneder for å implementere fondsløsningen
+             i mobilbanken. Dette innebærte å lage et nytt GUI som koblet seg på eksisterende 
+            backend i nettbanken. "
+            :tech [:javascript :backbone.js :rest :java :jenkins]
+            :start "2013-12"}
+
+             {:customer "SpareBank1 Gruppen AS"
+            :employer :capgemini
+            :summary "Forvaltning og videreutvikling av nettbank og en rådgiverkanal."
+            :description "Jobbet som utvikler på portalløsningen til SpareBank1. Dette innebærte
+             forvaltning og videreutvikling av nettbank og en rådgiverkanal. Utviklet ny funksjonalitet 
+             for frontend og backend, og hadde spesielt ansvar for fondshandelapplikasjonen i nettbanken
+              og rådgiverkanalen. "
+            :tech [:javascript :backbone.js :jsf :java :jenkins :git]
+            :start "2013-03"}
+
+            {:customer "SpareBank1 Gruppen AS"
+            :employer :capgemini
+            :summary "Utviklet fondsløsning for nettbank og rådgiverkanal"
+            :description "Deltok i prosjektet siden oppstarten og var i designfasen involvert i 
+            spesifisering og skisser av skjermbilder. Var delvis funksjonelt ansvarlig, i tillegg
+             til fullstackutvikler. Var en svært sentral ressurs i prosjektet og var involvert i 
+             de fleste utfordringer som dukket opp. "
+            :tech [:jsf :java :jenkins :git ]
+            :start "2013-03"}
+
+            {:customer "Bærum kommunne"
+            :employer :capgemini
+            :summary "Var med i designfasen for et nytt IT-system som støttet prosessene knyttet 
+            til budsjett, økonomi og rapportering (BØR)."
+            :description "Jobbet som utvikler i det tekniske teamet. Var med i designfasen av prosjektet 
+            og jobbet med integrasjon av komponenter til større enheter av systemet."
+            :tech []
+            :start "2011-11"}]
+
+:cv-picture "/foto/profiles/ashild/ashild.jpg"
+
+:presentations [{:title "Content Security Policy - Hva er din side lastet med?"
+                  :blurb "En kjapp introduksjon og how-to til bruk av CSP på
+                  JavaZone."
+                  :event "JavaZone"
+                  :date "2014-09-11"
+                  :urls {:video "https://vimeo.com/105869246"}
+                  }]
+
+:appearances [{:title "Kurs i React/Redux"
+                :event "2 dagers kveldskurs for Norgesgruppen Data"
+                :tech [:react :redux]
+                :date "2019-12-06"}
+            {:title "Kurs i Heroku"
+            :event "Introkurs til Heroku internt i Capgemini"
+            :tech [:heroku]
+            :date "2013-03-13"}]
+
+:endorsements [{:author "Brit Kaaresen"
+                 :title "Teamleder, Team Sparing, SpareBank1"
+                 :quote "Jeg gir mine beste anbefalinger av deg, Åshild.
+                 Du er en dyktig utvikler som bidrar både sosialt og ikke 
+                 minst faglig! Du jobber godt i både teamarbeid men også mer 
+                 selvstendig. Du er gjerne med på å diskutere/finne nye 
+                 løsninger/metoder i tillegg til at du tar ansvar for det man 
+                 evt måtte forvalte. Jeg ønsker deg lykke til!"}]
+
+:education-summary "Kommunikasjonsteknologi, NTNU"
+:education [{:institution "Kommunikasjonsteknologi, NTNU"
+              :years [2006 2007 2008 2009 2010 2011]
+              :subject "Kommunikasjonsteknologi"}]
+
+:languages [{:language "Norsk"
+              :orally "Morsmål"
+              :written "Morsmål"}
+             {:language "Engelsk"
+              :orally "Meget god"
+              :written "Meget god"}]
+
+ :project-highlights [{:blurb "Webapplikasjon fra scratch for leveranseplanlegging utviklet med React/Redux og Java."
+                       :customer "Norgesgruppen Data"}
+                      {:blurb "Tech lead for Team Sparing i nettbanken til SpareBank1"
+                       :customer "SpareBank1"}
+                      {:blurb "Splittet opp monolitten i SpareBank1 til en distribuert arkitektur"
+                       :customer "Sparebank1"}]
+
+ :endorsement-highlight {:author "Brit Kaaresen"
+                         :title "Teamleder, Team Sparing, SpareBank1"
+                         :quote "Du er en dyktig utvikler som bidrar både sosialt og ikke 
+                 minst faglig! Du jobber godt i både teamarbeid men også mer 
+                 selvstendig. Du er gjerne med på å diskutere/finne nye 
+                 løsninger/metoder i tillegg til at du tar ansvar for det man 
+                 evt måtte forvalte."}
+
+:cv {:default {:preferred-techs [:react :typescript :java
+                :intellij :terminal 
+                :osx :ubuntu
+                :docker]}}
+
+:certifications [{:name "Sun Certified Java Programmer"
+    :year 2011
+    }]
+}
