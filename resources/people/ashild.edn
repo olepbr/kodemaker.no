@@ -34,7 +34,7 @@
 
 :presence {:cv "ashild"
             :twitter "thorrud"
-            :linkedin "/in/åshild-kaldahl-thorrud-05ab6b1a/"
+            :linkedin "/in/ashildthorrud/"
             :github "thorrud"}
 
 :tech {:using-at-work [:react :java :sql :docker]
@@ -108,7 +108,7 @@
             :description "Ble en del av dette teamet i noen måneder for å splitte ut fondsløsningen 
             til PM-sparing fra nettbankkoden. Dette ble gjort ved å migrere eksisterende kode til ny 
             arkitektur. "
-            :tech [:javascript :backbone.js :jsf :java :jenkins]
+            :tech [:javascript :jsf :java :jenkins]
             :start "2014-03"}
 
             {:customer "SpareBank1 Gruppen AS"
@@ -117,7 +117,7 @@
             :description "Utvikler på mobilbankteamet noen måneder for å implementere fondsløsningen
              i mobilbanken. Dette innebærte å lage et nytt GUI som koblet seg på eksisterende 
             backend i nettbanken. "
-            :tech [:javascript :backbone.js :rest :java :jenkins]
+            :tech [:javascript :rest :java :jenkins]
             :start "2013-12"}
 
              {:customer "SpareBank1 Gruppen AS"
@@ -127,7 +127,7 @@
              forvaltning og videreutvikling av nettbank og en rådgiverkanal. Utviklet ny funksjonalitet 
              for frontend og backend, og hadde spesielt ansvar for fondshandelapplikasjonen i nettbanken
               og rådgiverkanalen. "
-            :tech [:javascript :backbone.js :jsf :java :jenkins :git]
+            :tech [:javascript :jsf :java :jenkins :git]
             :start "2013-03"}
 
             {:customer "SpareBank1 Gruppen AS"
@@ -155,6 +155,7 @@
                   :blurb "En kjapp introduksjon og how-to til bruk av CSP på
                   JavaZone."
                   :event "JavaZone"
+                  :tech []
                   :date "2014-09-11"
                   :urls {:video "https://vimeo.com/105869246"}
                   }]
