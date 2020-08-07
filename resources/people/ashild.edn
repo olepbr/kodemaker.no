@@ -2,6 +2,7 @@
  :name ["Åshild" "Kaldahl" "Thorrud"]
  :title "Systemutvikler"
  :start-date "2020-10-01"
+ :profile-active? false
  :experience-since 2011
  :born 1986
  :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
