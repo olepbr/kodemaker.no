@@ -219,7 +219,6 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                   {:name "Sun Certified Java Programmer for Java 1.5", :year 2005}
                   {:name "Notes Domino 6/6.5 Application Developer Foundation Skills", :year 2005}
                   ]
- :relationship-status "Gift, 3 barn"
  :born 1980
  :education [{:institution "NTNU"
               :years [2000 2001 2002 2003 2004 2005]

@@ -379,7 +379,6 @@
  :certifications [{:name "Certified Scrum Master", :year 2007}
                   {:name "TDD", :year 2008}
                   {:name "Java Specialist Master Class", :year 2009}]
- :relationship-status "Gift med 2 barn"
  :born 1978
  :education [{:institution "University of Aberdeen"
               :years [2000 2001 2002 2003]

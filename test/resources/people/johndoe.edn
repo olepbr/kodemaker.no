@@ -101,7 +101,6 @@
                                            {:url  "https://www.coursera.org/account/accomplishments/verify/ZSEZVPCC2MDS"
                                             :text "Statements of Accomplishment"}}
                              {:name "Certified ScrumMaster", :year 2006}]
- :relationship-status       "Gift, 2 barn"
  :born                      1961
  :education                 [{:institution "Handelshøyskolen BI"
                               :years       [1991 1992]

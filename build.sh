@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -u
+
 function format-date() {
   timestamp=$1
   format="$2"
@@ -33,6 +35,11 @@ popd > /dev/null
 
 echo "Building site"
 diffs=$(lein build-site :json)
+
+if [ $? -ne 0 ]; then
+  echo "Failed to build site, aborting"
+  exit 1
+fi
 
 echo "Generating PDFs"
 $(aws ecr get-login --region eu-west-1 --no-include-email)

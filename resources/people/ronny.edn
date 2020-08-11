@@ -483,7 +483,6 @@ kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
                    "Sun Certified Web Component Developer for Java 2 platform, Enterprise Edition"
                    :year 2003}
                   {:name "Sun Certified Programmer for Java 2 platform", :year 2001}]
- :relationship-status "Gift, 3 barn"
  :born 1975
  :innate-skills [:postgresql :ruby :objc :xcode :textmate :sublime-text :terminal :osx :h2db :hsqldb :sqlite :google-analytics :eclipse :scrum :architecture :testing :ci :cd :micro-services :php :maven :jetty]
  :education [{:institution "Universitet i Oslo"

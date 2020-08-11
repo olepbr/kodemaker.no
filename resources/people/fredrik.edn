@@ -247,7 +247,6 @@
                   {:name "Sun Certified Business Component Developer", :year 2006}
                   {:name "Sun Certified Java Developer", :year 2005}
                   {:name "Sun Certified Java Programmer", :year 2003}]
- :relationship-status "Samboer"
  :born 1976
  :education [{:institution "Høgskolen i Gjøvik"
               :years [1997 1998 1999]

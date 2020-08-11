@@ -195,7 +195,6 @@
                    :year 2009}
                   {:name "Scrummaster", :year 2008}
                   {:name "TDD", :year 2008}]
- :relationship-status "Samboer, 4 barn"
  :born 1975
  :education [{:institution "NTNU"
               :years [1997 1998 1999 2000 2001 2002]

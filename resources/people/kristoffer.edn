@@ -257,7 +257,6 @@
  Certified SCRUM Master."
  :education-summary "Cand Scient, UiO, Inst. for Informatikk"
  :experience-since 1997
- :relationship-status "Gift, 3 barn"
  :born 1967
  :education [{:institution "Universitet i Oslo"
               :years [1997]

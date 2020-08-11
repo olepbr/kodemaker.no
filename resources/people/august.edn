@@ -449,7 +449,6 @@ presentasjonen på hele konferansen!"
 
  :cv {}
  :experience-since 2006
- :relationship-status "Gift, 1 barn"
  :born 1986
  :education [{:institution "Norges Musikkhøgskole"
               :years [2005 2006 2007]
