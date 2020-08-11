@@ -42,7 +42,8 @@
         :favorites-at-the-moment [:java :react]
         :want-to-learn-more [:clojurescript :kafka]}
 
-:qualifications ["Fullstack, jobber gjerne med hele stacken"
+:qualifications ["Starter i Kodemaker 1.oktober"
+                "Fullstack, jobber gjerne med hele stacken"
                   "Erfaring med oppsett av frontendapplikasjoner"
                   "Liker enkle løsninger og små team"
                   "Utviser initiativ, omgjengelighet, utholdenhet og god arbeidsmoral"]
