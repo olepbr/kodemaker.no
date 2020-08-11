@@ -1,11 +1,13 @@
 {:id :ashild
- :name ["Åshild" "Kaldahl" "Thorrud"]
+ :name ["Åshild" "K." "Thorrud"]
  :title "Systemutvikler"
  :start-date "2020-10-01"
  :experience-since 2011
  :born 1986
  :relationship-status "Samboer"
- :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
+ :description "Starter i Kodemaker 1.oktober.
+ 
+    Åshild fremstår som en proaktiv, strukturert og kompetent person.
     Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
     Åshild foretrekker frontendutvikling, men liker fremfor alt en variert 
     arbeidshverdag der hun kan løse det meste selv, uten å være avhengig av andre.
