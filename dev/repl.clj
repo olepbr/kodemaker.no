@@ -67,4 +67,5 @@
 
 (comment
   (start)
+  (reset)
   )
