@@ -348,7 +348,8 @@
 
 (defn create-page [cv]
   (let [person (cv-profile cv)]
-    {:sections
+    {:title (format "%s CV" (:person/full-name person))
+     :sections
      (->> [{:kind :cv-intro
             :image (:person/cv-picture person)
             :friendly-name (:person/given-name person)
