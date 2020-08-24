@@ -25,11 +25,19 @@
                     :tech [:utvikling]}]
 
  :hobbies [{:title "Fallskjermhopping"
-            :description "Vi utviklere er rare. Tenker på programmering hele tiden. Går og grunner på problemstillinger, tenker ut løsninger.
-            Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på fallskjermfeltet i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
-            out-of-memory-error og lignende totalt fraværende. Jeg svever på en sky, eller rettere sagt; gjennom skyene. Med hodet opp eller ned, sammen med andre glade fallskjermhoppere."
-            :illustration "/illustrations/hobbies/fallskjerm-ronny.jpg"
-            :url "http://hoppfallskjerm.no"}]
+            :description "Som utvikler er det lett å ta med seg jobben hjem. Gå og grunne på problemstillinger og tenke ut løsninger.
+            Derfor trenger jeg et sted jeg kan koble helt ut. Det gjør jeg når jeg hopper fallskjerm. En dag på flyplassen i strålende sol, glade mennesker, ett hopp i timen - da er stacktrace,
+            out-of-memory-error og lignende totalt fraværende."
+            :illustration "/illustrations/hobbies/ronny-fallskjerm.jpg"
+            :url "http://hoppfallskjerm.no"}
+
+           {:title "Ishockey"
+            :description "Med to gutter som spiller hockey, blir det mange timer i Skedsmo ishall.
+            Er med som trener på laget til yngstemann. Draktsponsor er selvfølgelig Kodemaker.
+            Spiller også med en gjeng selv, for moro skyld. Utrolig intensiv og bra trening, og ikke minst veldig gøy!
+            Når vi skal se de voksne spille, så er det Storhamar som er laget."
+            :illustration "/illustrations/hobbies/ronny-hockey.jpg"
+            :url "http://skedsmoik.no"}]
 
  :open-source-contributions [
                              {:name "grails-core", :url "https://github.com/grails/grails-core", :tech [:grails :groovy]}
