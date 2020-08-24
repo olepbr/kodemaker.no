@@ -18,7 +18,8 @@
 
 (defn create-page [person]
   (let [cv-uri (:page/uri (:cv/_person person))]
-  {:sections
+    {:title (:person/full-name person)
+   :sections
    (->>
     [{:kind :profile
       :full-name (:person/full-name person)
