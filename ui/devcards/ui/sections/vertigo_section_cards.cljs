@@ -11,5 +11,5 @@
     slik at vi sammen kan bli gode, og levere IT-prosjekter vi begge ønsker å
     skryte av og vise frem."
     :link {:text "Se mer"
-           :href "/jobb/"}
+           :href "/jobbe-hos-oss/"}
     :image "/devcard_images/vertigo.jpg"}))

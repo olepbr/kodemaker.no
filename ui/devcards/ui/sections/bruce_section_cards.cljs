@@ -10,6 +10,6 @@
     sine meninger. Våre folk har sterkt fokus på kompetanseoverføring i team og
     tar komplekse oppgaver med tunge integrasjoner."
     :link {:text "Jobb med oss"
-           :href "/jobb/"}
+           :href "/jobbe-hos-oss/"}
     :image-front "/devcard_images/bruce-front.png"
     :image-back "/devcard_images/bruce-back.png"}))
