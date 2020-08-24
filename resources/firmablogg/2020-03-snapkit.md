@@ -52,7 +52,7 @@ Nedenfor er noen eksempler på hvordan man definerer ett parent-view som har ett
 ![Enkel UI](/images/blogg/design-sample.png)
 
 
-```
+```swift
 view.translatesAutoresizingMaskIntoConstraints = false
 subview.topAnchor.constraint(
 	equalTo: view.safeAreaLayoutGuide.topAnchor, 
@@ -70,7 +70,7 @@ subview.trailingAnchor.constraint(equalTo:
 
 alternativt
 
-```
+```swift
 view.translatesAutoresizingMaskIntoConstraints = false
 let constraints = [
     subview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
@@ -83,7 +83,7 @@ NSLayoutConstraint.activate(constraints)
 
 eller dersom du virkelig liker å ha det vondt:
 
-```
+```swift
 view.translatesAutoresizingMaskIntoConstraints = false
 NSLayoutConstraint(
 	item: scrollView, 
@@ -167,7 +167,7 @@ Denne feilmeldingen vil for vårt eksempel fortsette 285 linjer til med lignende
 [SnapKit](http://snapkit.io) er et lite bibliotek som har som mål å gjøre Auto Layout enklere å bruke. Jeg har benyttet dette i to prosjekter, hvor det ene har gått gjennom en gradvis omskriving fra Nib/Storyboard, og det har vært en veldig tilfredstillene øvelse. For å gi en smakebit på hvordan bruk av SnapKit kan se ut så har vi et eksempel under:
 
 
-```
+```swift
 subview.snp.makeConstraints {
     $0.top.left.equalTo(self.view.safeAreaLayoutGuide).offset(10)
     $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
@@ -214,7 +214,7 @@ Uten SnapKit så vil man klø seg i hodet og lure på “Hvilket UIScrollView”
 
 Man kan navngi constraints også:
 
-```
+```swift
 subview.snp.makeConstraints {
     $0.left.top.equalTo(self.view.safeAreaLayoutGuide).offset(10)
     $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-20)

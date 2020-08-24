@@ -27,7 +27,7 @@ Det første jeg gjør er å legge inn en entry i `/etc/hosts` med verdien `127.0
 
 Dessverre finnes det ingenting på min maskin som svarer på port :80 eller :443 og pathen `/link`. Så jeg lager en egen URL-redirecter. Her oppfordrer jeg deg til å lage en redirecter i favorittspråket ditt, men her er all koden til mitt forslag, skrevet i go:
 
-```
+```go
 import (
 	"fmt"
 	"log"
@@ -73,7 +73,7 @@ For å kunne kjøre https på localhost kunne jeg generert mine egne sertifikate
 
 Den enkleste løsningen for å deploye en slik tilstandsløs app til skyen er å deploye til google sin app-engine løsning. Det jeg trenger er enn app.yaml fil som sier at jeg bruker go og at alle URLer skal håndteres av appen:
 
-```
+```yml
 runtime: go112
 
 handlers:
@@ -93,7 +93,7 @@ Deretter spesifiserer jeg hvilket gcp-prosjekt jeg vil jobbe med og deployer med
 20-30 sekunder senere svarer appen min på https://cleanredirect.appspot.com. Nå må jeg bare oppdatere `/etc/hosts` for å bruke cloud-varianten av URL-redirecteren min:
 
 
-```/etc/hosts
+```
 slack-redir.net cleanredirect.appspot.com
 ```
 
