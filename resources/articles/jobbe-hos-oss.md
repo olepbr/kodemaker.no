@@ -65,3 +65,6 @@ Fyr av en mail til [kontakt@kodemaker.no](mailto:kontakt@kodemaker.no), så avta
 vi en prat, lunsj eller kaffekopp.
 
 <img src="/fullsize-photos/gruppebilde.jpg"/>
+
+Hva!? Har vi glemt meteren? Fortvil ikke, dette bildet ble tatt i fordums tid.
+Den gangen man kunne få plass til 25 folk på ett bilde. Trivelig gjeng, da. [Lyst til å bli med?](mailto:kontakt@kodemaker.no)
