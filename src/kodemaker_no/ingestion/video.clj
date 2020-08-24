@@ -6,8 +6,10 @@
 (defn find-video [^String url]
   (when url
     (cond
-      (.startsWith url "http://www.youtube.com/watch?v=") {:type :youtube, :id (subs url 31)}
-      (.startsWith url "http://vimeo.com/album/") {:type :vimeo, :id (second (re-find #"http://vimeo.com/album/\d+/video/(\d+)" url))}
+      (re-find #"https?://www.youtube.com/watch\?v=" url) {:type :youtube, :id (subs url (if (.startsWith url "https") 32 31))}
+      (re-find #"https?://youtu.be/" url) {:type :youtube, :id (subs url (if (.startsWith url "https") 17 16))}
+      (re-find #"https?://vimeo.com/album/" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/album/\d+/video/(\d+)" url))}
+      (re-find #"https?://vimeo.com/showcase/" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/showcase/\d+/video/(\d+)" url))}
       (re-find #"https?://vimeo.com/\d+" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/(\d+)" url))}
       (re-find #"https?://vimeo.com/user\d+/review/\d+/\S+" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/user\d+/review/(\d+)/\S+" url))}
       :else nil)))
