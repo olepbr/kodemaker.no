@@ -56,7 +56,8 @@
                                 (filter :presentation/thumb)
                                 (filter :presentation/video-url))
         headliner (when (:tech/description tech) (first presentation-stars))]
-    {:sections
+    {:title (:tech/name tech)
+     :sections
      (->>
       [{:kind :header :background :chablis}
        {:kind :tech-intro
