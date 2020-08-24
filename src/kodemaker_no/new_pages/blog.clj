@@ -120,7 +120,8 @@
    :github icons/github})
 
 (defn create-post-page [{:blog-post/keys [published updated title body] :as blog-post}]
-  {:sections
+  {:title title
+   :sections
    [{:kind :header
      :background :chablis}
     {:kind :container
