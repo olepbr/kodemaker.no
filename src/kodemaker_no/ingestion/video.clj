@@ -1,5 +1,6 @@
 (ns kodemaker-no.ingestion.video
-  (:require [kodemaker-no.formatting :as f]
+  (:require [datomic-type-extensions.api :as d]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]))
 
 (defn find-video [^String url]
@@ -10,19 +11,6 @@
       (re-find #"https?://vimeo.com/\d+" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/(\d+)" url))}
       (re-find #"https?://vimeo.com/user\d+/review/\d+/\S+" url) {:type :vimeo, :id (second (re-find #"https?://vimeo.com/user\d+/review/(\d+)/\S+" url))}
       :else nil)))
-
-(defn- create-embed-code [url]
-  (let [{:keys [type id]} (find-video url)]
-    (case type
-      :youtube [:div.video-embed
-                [:iframe {:src (str "//www.youtube.com/embed/" id)
-                          :frameborder "0"
-                          :allowfullscreen true}]]
-      :vimeo [:div.video-embed
-              [:iframe {:src (str "//player.vimeo.com/video/" id "?title=0&amp;byline=0&amp;portrait=0")
-                        :frameborder "0"
-                        :allowfullscreen true}]]
-      nil)))
 
 (defn- create-video-page-for-presentation? [presentation]
   (and (not (:presentation/direct-link? presentation))
@@ -40,11 +28,12 @@
     (:presentation/video-url presentation)))
 
 (def video-keys
-  {:video/title :title
-   :video/blurb :blurb
-   :video/date :date
-   :video/embed-code :embed-code
-   :video/direct-link? :direct-link?})
+  {:video/title :presentation/title
+   :video/blurb :presentation/description
+   :video/date :presentation/date
+   :video/url :presentation/video-url
+   :video/techs :presentation/techs
+   :video/tech-list :presentation/tech-list})
 
 (defn video-data [person-ident presentation]
   (when-let [url (video-url presentation)]
@@ -54,5 +43,12 @@
               :page/kind :page.kind/video})
 
       :always (merge {:db/ident (video-id presentation)
-                      :video/by [{:db/ident person-ident}]
-                      :video/url url}))))
+                      :video/by [{:db/ident person-ident}]}))))
+
+(comment
+  (def conn (d/connect "datomic:mem://kodemaker"))
+  (def db (d/db conn))
+
+  (d/touch (d/entity db :kosetime-live-parprogrammering-og-zombier))
+
+  )

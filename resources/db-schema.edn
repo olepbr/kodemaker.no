@@ -240,6 +240,10 @@
   :db/valueType :db.type/boolean
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :presentation/video
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
  ;; screencasts
 
  {:db/ident :screencast/title
@@ -716,11 +720,7 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}
 
- {:db/ident :video/embed-code
-  :db/valueType :db.type/string
-  :db/cardinality :db.cardinality/one}
-
- {:db/ident :video/direct-link?
-  :db/valueType :db.type/boolean
-  :db/cardinality :db.cardinality/one}
- ]
+ {:db/ident :video/tech-list
+  :db/valueType :db.type/ref
+  :db/isComponent true
+  :db/cardinality :db.cardinality/many}]

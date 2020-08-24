@@ -14,6 +14,7 @@
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
+            [kodemaker-no.new-pages.video-page :as video-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
 
@@ -49,7 +50,7 @@
                   :page.kind/reference (reference-page/create-page e)
                   :page.kind/tech (tech-page/create-page e)
                   :page.kind/people (people-page/create-page e)
-                  :page.kind/video {:body "N/A"})
+                  :page.kind/video (video-page/create-page e))
                 request)))
 
 (defn serve-pages [conn]

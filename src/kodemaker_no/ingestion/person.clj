@@ -229,6 +229,12 @@
                       {:list/idx idx
                        :list/ref tech}))))
 
+(defn add-inline-video-information [person-ident presentation]
+  (let [video (video/video-data person-ident presentation)]
+    (cond-> presentation
+      video (assoc :presentation/video video)
+      (:page/uri video) (assoc :presentation/video-url (:page/uri video)))))
+
 (defn profile-data [file-name person]
   (let [ident (h/qualify "person" (:id person))
         presentations (concat (:presentations person)
@@ -238,7 +244,8 @@
         (h/keep-vals person-keys)
         (merge (h/keep-vals (get-in person [:cv :default] {}) cv-keys))
         (assoc :db/ident ident)
-        (assoc :person/presentations (mapv presentation-data presentations))
+        (assoc :person/presentations (->> (mapv presentation-data presentations)
+                                          (mapv #(add-inline-video-information ident %))))
         (h/update-in-existing [:person/screencasts] #(as-ordered-list (map screencast-data %)))
         (h/update-in-existing [:person/projects] prep-projects)
         (h/update-in-existing [:person/open-source-projects] #(as-ordered-list (map open-source-project %)))
@@ -337,8 +344,7 @@
     (concat
      (add-pictures profile (profile-pics person))
      (cv-data file-name person profile)
-     (map (partial blog-post-data person-ident) (:blog-posts person))
-     (keep (partial video/video-data person-ident) (:person/presentations profile)))))
+     (map (partial blog-post-data person-ident) (:blog-posts person)))))
 
 (comment
   (create-tx "people/magnar.edn" (read-string (slurp (clojure.java.io/resource "people/magnar.edn"))))

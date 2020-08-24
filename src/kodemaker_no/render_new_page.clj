@@ -12,6 +12,7 @@
        :banner sections/banner-section
        :bruce sections/bruce-section
        :contact sections/contact-section
+       :content :content
        :container sections/container-section
        :cv-intro sections/cv-intro-section
        :definitions sections/definition-section
