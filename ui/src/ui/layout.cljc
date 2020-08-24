@@ -39,7 +39,7 @@
 (def menu-items
   [{:href "/folk/" :text "Folk"}
    {:href "/blogg/" :text "Blogg"}
-   {:href "/kurs/" :text "Lær"}
+   #_{:href "/kurs/" :text "Lær"}
    {:href "/jobbe-hos-oss/" :text "Jobb"}
    {:href "/kontakt/" :text "Kontakt"}])
 
