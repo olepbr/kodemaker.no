@@ -10,7 +10,8 @@
    :image-tall (first (:person/profile-pictures person))})
 
 (defn create-page [db]
-  {:sections
+  {:title "Kontakt"
+   :sections
    [{:kind :contact
      :email "kontakt@kodemaker.no"
      :phone "+47 22 82 20 80"
