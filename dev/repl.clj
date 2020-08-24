@@ -64,3 +64,7 @@
   (integrant.repl/set-prep! (constantly (dissoc config :adapter/jetty)))
   (start)
   (def ring-app (:app/handler integrant.repl.state/system)))
+
+(comment
+  (start)
+  )
