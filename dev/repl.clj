@@ -24,8 +24,8 @@
   (with-timing-info "Created web app"
     (web/create-app opts)))
 
-(defmethod ig/init-key :adapter/jetty [_ {:keys [handler] :as opts}]
-  (with-timing-info "Started jetty"
+(defmethod ig/init-key :adapter/jetty [_ {:keys [handler port] :as opts}]
+  (with-timing-info (str "Started jetty on port " port)
     (jetty/run-jetty handler (-> opts (dissoc :handler) (assoc :join? false)))))
 
 (defmethod ig/halt-key! :adapter/jetty [_ server]
