@@ -84,7 +84,7 @@ data "archive_file" "rewrite" {
   }
 }
 
-resource "aws_lambda_function" "basic_auth" {
+resource "aws_lambda_function" "url_rewrite" {
   provider = "aws.us-east-1"
   function_name = "kodemaker-www-url-rewrite"
   filename = "${data.archive_file.rewrite.output_path}"
@@ -154,7 +154,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
     lambda_function_association {
       event_type = "viewer-request"
-      lambda_arn = "${aws_lambda_function.basic_auth.qualified_arn}"
+      lambda_arn = "${aws_lambda_function.url_rewrite.qualified_arn}"
       include_body = false
     }
   }
