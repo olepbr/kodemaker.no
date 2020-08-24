@@ -20,7 +20,8 @@ cache:
   - $HOME/.m2
   - /home/travis/build/kodemaker/kodemaker.no/build
 
-after_success:
-  - pip install --user awscli
-  - export PATH=$PATH:$HOME/.local/bin
-  - ./build.sh
+deploy:
+  provider: script
+  script: ./build.sh
+  on:
+    branch: master
