@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  version = "~> 1.0"
+  version = "~> 2.0"
   region = "eu-west-1"
 
   assume_role {
@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 provider "aws" {
-  version = "~> 1.0"
+  version = "~> 2.0"
   region = "us-east-1"
   alias = "us-east-1"
 

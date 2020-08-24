@@ -86,11 +86,11 @@ data "archive_file" "rewrite" {
 
 resource "aws_lambda_function" "url_rewrite" {
   provider = "aws.us-east-1"
-  function_name = "kodemaker-www-url-rewrite"
+  function_name = "kodemaker-url-rewrite"
   filename = "${data.archive_file.rewrite.output_path}"
   source_code_hash = "${data.archive_file.rewrite.output_base64sha256}"
   role = "${aws_iam_role.lambda_role.arn}"
-  runtime = "nodejs8.10"
+  runtime = "nodejs12.x"
   handler = "lambda.handler"
   memory_size = 128
   timeout = 3
