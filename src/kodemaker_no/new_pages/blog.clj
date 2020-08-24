@@ -209,7 +209,8 @@
              (rest pønts)))))
 
 (defn create-index-page [db]
-  {:sections
+  {:title "Blogg"
+   :sections
    (concat
     [{:kind :header
       :bg-color :blanc}]
