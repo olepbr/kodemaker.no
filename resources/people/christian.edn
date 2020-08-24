@@ -44,8 +44,8 @@
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
- :tech {:using-at-work [:aws :kubernetes :clojurescript :clojure :kafka]
-        :favorites-at-the-moment [:kubernetes :clojurescript :kafka]
+ :tech {:using-at-work [:sanity :aws :kubernetes :clojurescript :clojure]
+        :favorites-at-the-moment [:sanity :clojure :clojurescript]
         :want-to-learn-more [:haskell :go]}
 
  :qualifications ["Fullstack, jobber like gjerne med backend som frontend"
@@ -140,19 +140,7 @@
                             viser samtidig hvordan dagens mest populære
                             MVC-rammeverk for JavaScript er langt fra å tilby en
                             tilfredstillende løsning på problemene vi som
-                            frontendutviklere møter."}
-                   {:title "Dance you Imps!"
-                    :blurb "Uncle Bob Martin skriver et knallgodt innlegg om
-                    hvordan ORM-er ikke egentlig er ORM-er. Dette sitatet
-                    oppsummerer på mange måter hovedpoenget:
-
-                    \"What is a data structure? It's a bunch of public data with
-                    no methods. Compare that to an object which is a bunch of
-                    public methods with no visible data. These two things are
-                    the exact opposites of each other!\""
-                    :link {:url "http://blog.8thlight.com/uncle-bob/2013/10/01/Dance-You-Imps.html"
-                           :text "Les artikkelen"}
-                    :tech [:orm :design]}]
+                            frontendutviklere møter."}]
  :hobbies [{:title "Mat, brød og øl"
             :description "Som programmerer tar jeg stor glede i å skape. Som
                           aspirerende hobbykokk tas denne gleden ut i skaperverk
@@ -280,13 +268,36 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Hafslund Strøm"
+ :projects [{:customer "Fortum"
+             :employer :kodemaker
+             :summary "Utvikling av nettsted"
+             :description "Utviklet nytt nettsted for Fortums
+             strømtilbud ([strom.fortum.no](https://strom.fortum.no)). Innholdet
+             forvaltes i det hodeløse CMS-et Sanity, mens nettsidene er god
+             gammeldags statisk HTML, levert av en Clojure-applikasjon bak
+             Varnish for maksimal ytelse."
+             :tech [:sanity :clojure :varnish :resposive-design :datadog :git]
+             :start "2020-04"}
+
+            {:customer "Fortum"
+             :employer :kodemaker
+             :summary "Smart bestillingsskjema for strøm"
+             :description "Utviklet et smart bestillingsskjema for strøm.
+             Løsningen søker opp kunden i flere registre, inkludert Elhub, og
+             klarer i de aller fleste tilfeller å hjelpe folk med å bestille
+             strøm ved å kun oppgi telefonnummer og epost-adresse. Løsningen
+             passerte ekstern sikkerhets- og personvernsgjennomgang med glans."
+             :tech [:clojurescript :clojure :postgresql :responsive-design :datadog :git :aws :aws-s3 :tools-deps]
+             :start "2019-10"}
+
+            {:customer "Hafslund Strøm"
              :employer :kodemaker
              :summary "Utvikling av ny Min Side"
              :description "Utviklet ny Min Side basert på kodebasen til
              mobil-appen til Hafslund Strøm."
              :tech [:clojurescript :aws :aws-s3 :tools-deps :resposive-design :datadog :git]
              :start "2019-04"}
+
             {:customer "Hafslund Strøm"
              :employer :kodemaker
              :summary "Utvikling av månedsrapport-tjeneste"

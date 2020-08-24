@@ -23,6 +23,7 @@
  :aws-cloudformation "AWS CloudFormation"
  :aws-cloudfront "Cloudfront"
  :aws-cloudwatch "Cloudwatch"
+ :aws-ec2 "AWS EC2"
  :aws-ecs "AWS ECS"
  :aws-iam "AWS IAM"
  :aws-kinesis "Kinesis"

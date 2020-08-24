@@ -311,6 +311,7 @@
  :rust :proglang
  :saltstack :devops
  :saml :security
+ :sanity :cloud
  :sap :server
  :sass :frontend
  :sbt :devtools
