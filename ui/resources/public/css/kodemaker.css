@@ -11,6 +11,10 @@
   --saumon: #ff817c;
   --empereur: #545454;
   --rose-aube: #f5e9e9;
+
+  /* Syntax highlighting, ikke godkjent av Hr Designer */
+  --chambray: #335c81;
+  --indigo: #4062bb;
 }
 
 html,
