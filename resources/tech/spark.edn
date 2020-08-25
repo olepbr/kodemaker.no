@@ -1,4 +1,4 @@
-{:id :ansible
+{:id :spark
  :name "Apache Spark"
  :type :server
  :illustration "/photos/tech/spark-logo.png"

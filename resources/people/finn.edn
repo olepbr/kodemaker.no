@@ -53,7 +53,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :employer :kodemaker
              :summary "Javautvikler i Encap sin autentiseringsplattform"
              :description "Videreutvikling av Encap sitt kjerneprodukt."
-             :tech [:java :rest :mysql :krypto :spring :jenkins :oracle :json :xml :rest :soap :docker]}
+             :tech [:java :rest :mysql :kryptografi :spring :jenkins :oracle :json :rest :soap :docker]}
             {:customer "FINN"
              :years [2017]
              :employer :kodemaker
@@ -71,7 +71,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              distribuerbart produkt med sikkerhet i kjernen. Utviklere har ikke
              tilgang til produksjonssystemet, som byr på andre utfordringer enn
              en gjerne er vant med i tradisjonell web."
-             :tech [:java :jetty :soap :hibernate :oracle :mysql :krypto]}
+             :tech [:java :jetty :soap :hibernate :oracle :mysql :kryptografi]}
             {:customer "NSB"
              :summary "StatusPush videreutvikling"
              :employer :kodemaker
@@ -129,7 +129,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              til Status er single page webapps laget med angular og react."
              :tech [:groovy :javascript :grails :gorm :gradle :oracle :windows-server
                     :centos :ansible :tomcat :angularjs :react :html5 :css :bootstrap
-                    :spock :webservices :xml :json :rest]}
+                    :spock :webservices :json :rest]}
             {:customer "NSB"
              :years [2011]
              :employer :kodemaker
@@ -156,7 +156,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :description "Rapp Utvikling av en applikasjon for oppsett og
              mottak av undersøkelser / skjema på nett. Oppgaver: Utvikler,
              frontend og backend."
-             :tech [:groovy :grails :html5 :jquery :ajax :jquery-mobile :junit :svn :mysql :mongodb
+             :tech [:groovy :grails :html5 :jquery :jquery-mobile :junit :svn :mysql :mongodb
                     :soap :rest :html5]}
             {:customer "NSB"
              :years [2010]

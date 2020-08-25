@@ -166,7 +166,7 @@ presentasjonen på hele konferansen!"
    sentral (DROPS). Rolle: Full-stack webutvikler, devops, eneste utvikler på
    prosjektet Implementerte av avansert GUI med React og websockets, for at
    flere brukere i sanntid kan jobbe med tiltaksplan for samme tog."
-   :tech [:groovy :gradle :react :oracle :mariadb :active-mq :liquibase :ansible]}
+   :tech [:groovy :gradle :react :oracle :mariadb :activemq :liquibase :ansible]}
   {:customer "NSB"
    :start "2013-04"
    :end "2018-03"
@@ -188,7 +188,7 @@ presentasjonen på hele konferansen!"
    Innførte React og skrev om de delene av Angular.JS-appen som egnet seg dårlig
    til Angular, kodemessig og ytelsesmessig."
    :tech [:groovy :gradle :grails :react :angular-js
-          :oracle :active-mq :liquibase :ansible]}
+          :oracle :activemq :liquibase :ansible]}
   {:customer "Oiiku"
    :years [2012 2013]
    :employer :kodemaker

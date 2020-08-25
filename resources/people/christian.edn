@@ -68,7 +68,7 @@
                  shuffle-funksjon som tar hensyn til at \"alle skal få sitt\".
                  Jeg lager en tjeneste i Go som løser dette svært essensielle
                  problemet."
-                  :tech [:go :aws-lambda :serverless :aws-api-gateway :spotify-api]
+                  :tech [:go :aws-lambda :serverless :aws-api-gateway]
                   :illustration "/illustrations/side-projects/shufflify.png"
                   :link {:url "https://shufflify.io/"
                          :text "Tjenesten er ikke lansert enda"}}
@@ -1149,7 +1149,7 @@
                         {:url "https://gitorious.org/gitorious/makeup"
                          :name "Makeup"
                          :description "Et Ruby-bibliotek for å rendre markdown med kodeblokker som syntax highlightes."
-                         :tech [:ruby :markdown :pygments]}
+                         :tech [:ruby :pygments]}
                         {:url "https://github.com/cjohansen/use_case"
                          :name "UseCase"
                          :description "Strukturerte abstraksjoner for

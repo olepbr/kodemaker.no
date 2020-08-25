@@ -347,7 +347,7 @@
                               :description           "Utvikling av samfun.net, et hjelpemiddel for
                                                       undervisning i samfunnsfag for videregående skole, og vinner av to
                                                       diplomer i Gulltaggen-2001."
-                              :tech                  [:j2ee :tomcat :oracle :xml :xslt :jdbc]}
+                              :tech                  [:j2ee :tomcat :oracle :xslt :jdbc]}
                              {:customer              "DBC-Munin AS "
                               :years                 [2001]
                               :exclude-from-profile? true
@@ -358,7 +358,7 @@
                                                       bl.a. løsning for bestilling og betaling over nett. Vinner av gull
                                                       og hederlig omtale på reiselivsbransjens (HSMAI) prisutdeling i
                                                       2002."
-                              :tech                  [:j2ee :weblogic :oracle :ejb :servlets :xml :xslt :jdbc :pki]}
+                              :tech                  [:j2ee :weblogic :oracle :ejb :servlets :xslt :jdbc :pki]}
                              {:customer              "SAS DATA Norge "
                               :years                 [1998 1999 2000 2001]
                               :exclude-from-profile? true

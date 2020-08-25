@@ -192,7 +192,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                           Disse integrasjonspunktene inkluderer bl.a. databaser, Amadeus GDS, SAP, kredittkortvalidering, BizTalk, økonomisystemer, diverse flyplassystemer,
                           norwegian.no, BankNorwegian og CallNorwegian. Frode var en del av et lite team som jobbet tett med flere avdelinger hos kunden og
                           samarbeidet med team fra andre konsulentselskaper. Teamet hadde ansvar for utvikling, testing, deployment og overvåkning i produksjon."
-             :tech [:java :jboss :apache-axis :xml :jaxb :jbossws :cxf :aop :linux :junit :testng :maven :hudson :git :svn :cvs :ant :cruisecontrol :eclipse]}
+             :tech [:java :jboss :apache-axis :jaxb :jbossws :cxf :aop :linux :junit :testng :maven :hudson :git :svn :cvs :ant :cruisecontrol :eclipse]}
              ]
 
  :cv {}

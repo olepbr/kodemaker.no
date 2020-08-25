@@ -139,7 +139,7 @@
                   med Angular og React."
                   :tech [:groovy :javascript :grails :gorm :gradle :oracle :centos
                          :ansible :tomcat :react :html :css :bootstrap :spock :webservices
-                         :xml :json :rest]}
+                         :json :rest]}
                  {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
                   :years [2016]
                   :employer :kodemaker
@@ -241,7 +241,7 @@
                   :employer :avenir
                   :description "Forprosjekt - rettskilder Forprosjekt for
                   Rettskildene på nav.no Oppgaver: Utvikler (frontend)"
-                  :tech [:vertical-site :xml :xslt :css :html]}
+                  :tech [:vertical-site :xslt :css :html]}
                  {:customer "NAV"
                   :years [2007]
                   :employer :avenir

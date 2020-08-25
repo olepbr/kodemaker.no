@@ -208,7 +208,7 @@
              Primæroppgave i prosjektet var å utvikle selve integrasjonsbussen.
              Utviklet også en Agresso-emulator som gjorde det lett å
              verifisere/teste. Lite prosjekt, kun 2 utviklere."
-             :tech [:springcore :jdbc :boot :xml :rest :oracle :h2 :git :maven :jenkins
+             :tech [:springcore :jdbc :boot :rest :oracle :h2 :git :maven :jenkins
                     :jira :confluence :stash]}
             {:customer "NSB"
              :years [2014]

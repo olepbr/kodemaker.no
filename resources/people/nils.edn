@@ -226,7 +226,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :summary     "Utvikling og vedlikehold av backend for booking-systemet"
    :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
                  :java :jboss :hibernate :bash :groovy :play :jquery :intellij
-                 :junit :testng :xml :git :hystrix]}
+                 :junit :testng :git :hystrix]}
   {:customer              "Storebrand Aktuarsystemer"
    :description           "Ny kundeportal for pensjonskassene som forvaltes av Storebrand Pensjonstjenester."
    :years                 [2011 2012]
@@ -246,7 +246,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                   pensjonsreformen."
    :tech                  [:spring-batch :spring-core :java :eclipse :jsf :junit :fitnesse
                            :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
-                           :squirrel-sql :xml :jetty :mockito :sonar :tdd :ci :web-services
+                           :squirrel-sql :jetty :mockito :sonar :tdd :ci :web-services
                            :apache-cxf]}
   {:customer              "Storebrand Livsforsikring"
    :years                 [2008]
@@ -259,7 +259,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                   salg av fond. Ytelsesvurdering og vurdering av
                   integrasjonsmetoden mot fagsystemet."
    :tech                  [:bankid :java :bamboo :nexus :soa :maven :ant :eclipse :jira
-                           :xml :castor-xml :prolink :css :javascript]}
+                           :castor-xml :prolink :css :javascript]}
   {:customer              "Karolinska Institutet, Genbanken"
    :years                 [2008]
    :exclude-from-profile? true

@@ -144,7 +144,7 @@
              :years [2007]
              :description "Finansportal Utvikling av Ciceros Finansportal
              Oppgaver: Senior Java- / frontendutvikler."
-             :tech [:java :jsp :struts2 :ajax :css :html :sql :portlets :oracle-portal
+             :tech [:java :jsp :struts2 :css :html :sql :portlets :oracle-portal
                     :oracle-appserver :eclipse :maven :svn :spring :junit :hudson]}
             {:customer "CSAM/Rikshospitalet"
              :employer :objectware

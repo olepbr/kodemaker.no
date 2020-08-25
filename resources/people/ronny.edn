@@ -149,7 +149,7 @@
              :description "Trafficnow. Utvikling av et API for status på
              trafikken i øyeblikket. Oppgaver: Arkitekt / senior Javautvikler."
              :tech [:tomcat :groovy :grails :java :spring :spock :git :svn :apache :ehcache
-                    :rest :json :xml :google-image-charts]}
+                    :rest :json :google-image-charts]}
 
             {:customer "NSB"
              :start "2013-10"
@@ -171,7 +171,7 @@
              :description "Usroid. Utvikling av en OpenID provider for innlogging
              med NSB-brukere i Jernbaneverkets applikasjon for togfremføring;
              FIDO. Oppgaver: Arkitekt / senior Javautvikler."
-             :tech [:tomcat :groovy :grails :java :spring :gradle :asciidoctor :openid :html
+             :tech [:tomcat :groovy :grails :java :spring :gradle :openid :html
                     :css :bootstrap :git :svn :apache :ehcache :quartz :soap :rest :ad]}
 
             {:customer "NSB"
@@ -272,7 +272,7 @@
              frontendarkitekt / senior Javautvikler / frontendutvikler."
              :tech [:tomcat :groovy :grails :java :html :javascript :css :sass :react :redux :es6 :babel
                     :jspm :systemjs :npm :flex :actionscript :blazeds :spring :jms :camel :junit :git :svn
-                    :asciidoctor :gradle :maven-2 :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
+                    :gradle :maven-2 :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
 
             {:customer "NSB"
              :start "2008-11"
@@ -312,7 +312,7 @@
              delapplikasjon i Struts 2. Gjennomførte overgang fra CVS til
              Subversion. Laget en proof of concept på bruk av Flex."
              :tech [:java :jboss-portal :ejb :hibernate :jpa :spring :jboss-messaging :selenium ;EJB 2.1 og 3.0
-                    :junit :testng :css :html :javascript :ajax :jquery :struts2 :webwork
+                    :junit :testng :css :html :javascript :jquery :struts2 :webwork
                     :flex :actionscript :json :svn :cvs :maven-2 :apache]}
 
             {:customer "CSAM/Rikshospitalet"

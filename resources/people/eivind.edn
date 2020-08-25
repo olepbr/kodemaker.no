@@ -401,7 +401,7 @@
              frontend arbeid ifm. admin- og test-grensesnitt. Hans fremste
              bidrag i prosjektet var nok å være pragmatisk og målrettet for å få
              jobben gjort."
-             :tech [:java :guice :jersey :xml :jaxb :abdera :jetty :akka :camel :oracle :altinn :ibm-datapower]}
+             :tech [:java :guice :jersey :jaxb :abdera :jetty :akka :camel :oracle :altinn :ibm-datapower]}
             {:customer "Statens vegvesen"
              :years [2013]
              :employer :bekk
@@ -419,7 +419,7 @@
              Hazelcast, samt andre versjon som baserte seg på Java tråder og et
              sentralt dokumentlager. Et spennende prosjekt hvor Eivind ble kjent
              med mange flinke mennesker og mye spennende teknologi."
-             :tech [:java :hazelcast :guice :jersey :xml :abdera :jetty :glassfish :oracle :altinn]}
+             :tech [:java :hazelcast :guice :jersey :abdera :jetty :glassfish :oracle :altinn]}
             {:customer "Skatteetaten"
              :years [2011 2012]
              :employer :bekk

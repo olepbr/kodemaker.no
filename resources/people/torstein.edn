@@ -133,7 +133,7 @@
              :summary "Optimalisering og videreutvikling av LMS"
              :description "Optimalisering og videreutvikling av LMS.
              Oppgaver: Senior Javautvikler."
-             :tech [:j2ee :java :servlets :xml :xslt :jdbc :caucho-resin :postgres]}
+             :tech [:j2ee :java :servlets :xslt :jdbc :caucho-resin :postgres]}
             {:customer "Fagsenteret for kjøtt"
              :years [2004]
              :employer :kodemaker
@@ -152,7 +152,7 @@
              utvikler for produksjonsstøttesystem for e-læringskurs med
              swingklient og flashklient. Innbar også oppfølging og coaching av
              utviklingsteamet."
-             :tech [:j2ee :java :xml :xslt :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+             :tech [:j2ee :java :xslt :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
             {:customer "Mintra AS"
              :years [2003]
              :employer :norbooking
@@ -162,7 +162,7 @@
              produksjonsstøttesystem for e-læringskurs med swingklient og
              flashklient. Innbar også oppfølging og coaching av
              utviklingsteamet."
-             :tech [:j2ee :java :xml :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+             :tech [:j2ee :java :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
             {:customer "Norbooking AS"
              :years [2002]
              :employer :norbooking
@@ -170,7 +170,7 @@
              :description "Reiselivssystem Drift og videreutvikling av
              reiselivssystemet jeg hadde vært med å utvikle i DBC-Munin
              AS/Inspera AS. Oppgaver: Ansvarlig"
-             :tech [:j2ee :java :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}
+             :tech [:j2ee :java :ejb :jdbc :swing :jms :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}
             {:customer "Interne prosjekter"
              :years [1999]
              :employer :dbc
@@ -179,7 +179,7 @@
              presentasjon, publisering , booking, fakturering og lagerstyring
              for små og mellomstore reiselivsbedrifter. Utvikling av moduler til
              bruk i e-læringssystem Oppgaver: Javautvikler."
-             :tech [:j2ee :java :servlets :ejb :jdbc :swing :jms :xml :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}]
+             :tech [:j2ee :java :servlets :ejb :jdbc :swing :jms :xslt :javascript :weblogic :jboss :jetty :tomcat :oracle]}]
 
  :cv {}
  :education-summary "Sivilingeniør NTNU, Realfag UiB"

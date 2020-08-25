@@ -630,7 +630,7 @@
              :tech [:j2ee :ejb :websphere-portal :tivoli :db2 :secureway-directory-stellent-cms
                     :adobe-reachform :webservices :pki :ant :log4j :junit :cvs :xerces
                     :xalan :websphere-studio]}
-            {:customer "Pwc internt"
+            {:customer "PWC internt"
              :years [2002 2003]
              :exclude-from-profile? true
              :employer :pwc-england
@@ -643,7 +643,7 @@
              portlets, integrasjon mot SSO, design og utvikling av
              integrasjonsgrensesnitt Rolle: Teknisk arkitekt."
              :tech [:peoplesoft-crm :websphere :mqseries-integrator :siteminder
-                    :epicentric-portal :java :j2ee :xml :xslt :soap :jbuilder]}
+                    :epicentric-portal :java :j2ee :xslt :soap :jbuilder]}
             {:customer "Pwc internt"
              :years [2002 2003]
              :exclude-from-profile? true
@@ -654,7 +654,7 @@
              Systemet hadde hovedsaklig partnere som brukergruppe, og blir
              benyttet globalt. Oppgaver: Analyse/design, koordinering mot indisk
              outsourcet team, arkitekturprototype, databasedesign."
-             :tech [:iis :complus :mssql :rational-suite :asp :visual-basic :xml :xslt
+             :tech [:iis :complus :mssql :rational-suite :asp :visual-basic :xslt
                     :siteminder :epicentric-portal]}
             {:customer "Pwc internt"
              :years [2002]
@@ -669,8 +669,8 @@
              mot portal, rådgivning integrasjon mot SSO, design og utvikling av
              portlets."
              :tech [:epicentric-portal :websphere :siteminder :iplanet-enterprise-directory
-                    :verity-search :oracle :db2 :mssql :notes :iis :mqseries :java :j2ee
-                    :asp :xml :xslt :xmlspy :eclipse :rational-suite]}
+                    :verity-search :oracle :db2 :mssql :lotus-notes :iis :mqseries :java :j2ee
+                    :asp :xslt py :eclipse :rational-suite]}
             {:customer "HM C&E - Engelske tolldirektoratet"
              :years [2001 2002]
              :exclude-from-profile? true
@@ -687,7 +687,7 @@
              :summary "Råd på nett, Unit Linked"
              :description "Utvikling av tjenester for Storebrands nettbank.
              Oppgaver: Team ledelse, OOAD, utvikling og mentoring."
-             :tech [:java :j2ee :websphere :visual-age :notes :togetherj :junit :xalan :xerces :xml :xslt :db2]}
+             :tech [:java :j2ee :websphere :visual-age :lotus-notes :togetherj :junit :xalan :xerces :xslt :db2]}
             {:customer "Aftenposten"
              :years [1999 2000]
              :exclude-from-profile? true

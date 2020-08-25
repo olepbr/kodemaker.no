@@ -181,7 +181,7 @@
                   :description "Informasjonssystem over alle forsvarets
                  publikasjoner (FOBID). Oppgaver: Dynamisk transformering av
                  dokumenter vha XSLT. Søkefunksjonalitet. Forretningslogikk."
-                  :tech [:hibernate :spring :spring-mvc :lucene :xml :xslt :jetty :tomcat :oracle
+                  :tech [:hibernate :spring :spring-mvc :lucene :xslt :jetty :tomcat :oracle
                          :mysql :maven :junit :jmock]}
                  {:customer "FMI"
                   :years [2006]
@@ -209,7 +209,7 @@
                   :description "Forsvarets erfaringdatabase Lessons
                   Learned (Ferdaball). Oppgaver: Analyse, Design, Test, Utvikling,
                   Dokumentasjon."
-                  :tech [:hibernate :spring :webwork :jsp :velocity :xml :jboss
+                  :tech [:hibernate :spring :webwork :jsp :velocity :jboss
                          :tomcat :oracle :mysql :maven :junit :jmock]}
                  {:customer "FLO"
                   :years [2003]

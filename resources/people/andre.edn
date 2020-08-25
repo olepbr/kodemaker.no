@@ -433,7 +433,7 @@
              serverinstanser som hver av disse kjørte opptil 1000 samtidige
              klienter."
              :tech [:java :jboss :spring :oracle :aws-ec2 :jmeter :jdbc :junit :dbunit
-                    :cruisecontrol :easymock :webservices :xml :uml :intellij :architecture]}
+                    :cruisecontrol :easymock :webservices :uml :intellij :architecture]}
             {:customer "Telenor Mobil"
              :years [2007]
              :employer :kodemaker
@@ -445,7 +445,7 @@
              foreta kall til Mobils mellomvare plattform Cos, og fast nett via
              en Service bus fra BEA."
              :tech [:java :j2ee :weblogic :spring :sybase :jdbc :junit :dbunit :cruise-control
-                    :easymock :aspectj :webservices :xml :uml :intellij :architecture]}
+                    :easymock :aspectj :webservices :uml :intellij :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [2005]
              :employer :kodemaker
@@ -467,7 +467,7 @@
              arkitektur. Teamleder, funksjonell arkitekt for «nettnære systemer»
              etc. Deltok i flere intern prosjekter som arkitekt og utvikler."
              :tech [:java :j2ee :weblogic :spring :corba :sybase :jdbc :oracle :junit :dbunit
-                    :cruisecontrol :mockobjects :aspectj :servlet :webservices :xml :uml :intellij :architecture]}
+                    :cruisecontrol :mockobjects :aspectj :servlet :webservices :uml :intellij :architecture]}
             {:customer "Arrive, Nordea, Europay Norway"
              :years [2002]
              :employer :objectware

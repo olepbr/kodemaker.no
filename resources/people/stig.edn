@@ -382,7 +382,7 @@ Det gikk bra - veldig bra."
              Sentrale teknologier: EJB, MDB, JMS, JSP, XML, XSLT, CVS, JMX,
              HTML, CSS, JavaMail, Distribuerte transaksjoner, SQL, IBM MQ
              Series, IBM integrasjonsadaptre."
-             :tech [:ejb :mdb :jms :jsp :xml :xslt :cvs :jmx :html :css :javamail :sql]}
+             :tech [:ejb :mdb :jms :jsp :xslt :cvs :jmx :html :css :javamail :sql]}
             {:customer "NSB Ekspressgods"
              :years [2001]
              :employer :sap

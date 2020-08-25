@@ -299,7 +299,7 @@
              var med å integrere Enonic CMS med FAST søkemotor. Løsninger er
              basert Java. Nettstedet har vunnet flere priser i ettertid.
              Oppgaver: Utvikler"
-             :tech [:java :jee :xsl :xml :javascript :html]}
+             :tech [:java :jee :xsl :javascript :html]}
             {:customer "Fjordland"
              :years [2005 2006]
              :employer :avenir
@@ -310,7 +310,7 @@
              videre benyttet en del JavaScript på sidene, samt
              søkefunksjonalitet. Applikasjonen kjørte på Websphere Application
              Server 6.0. Oppgaver: Utvikler"
-             :tech [:java :xsl :xml :javascript :html :css]}
+             :tech [:java :xsl :javascript :html :css]}
             {:customer "Fjordland"
              :years [2005]
              :employer :avenir
@@ -320,7 +320,7 @@
              data i Enonic CMS. Dataene ble hentet inn jevnlig slik at de ansatte i
              Fjordland skulle slippe å synkronisere dataene manuelt. Oppgaver:
              Utvikler"
-             :tech [:java :xsl :xml]}
+             :tech [:java :xsl]}
             {:customer "NAV"
              :years [2005]
              :employer :avenir
@@ -329,11 +329,11 @@
              :description "Oppsett av publiseringsløsning
              basert på Enonic CMS. Bygget webside i henhold til kundens ønskede
              design. Oppgaver: Utvikler"
-             :tech [:java :xsl :xml :html :css]}
+             :tech [:java :xsl :html :css]}
             {:customer "Atmel"
              :years [2004 2005]
              :employer :atmel
-        :exclude-from-profile? true
+             :exclude-from-profile? true
              :description "Deltidsstilling ved siden av studier. Drifting av
              serverpark benyttet til design av microcontrollere."
              :tech [:linux]}]
@@ -374,4 +374,4 @@ smidig utvikling siden 2005."
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}]              
-}
+ }

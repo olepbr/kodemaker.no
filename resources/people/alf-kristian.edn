@@ -164,7 +164,7 @@
              :summary "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder."
              :description "Utvikling av løsning for intern distribusjon av
              fremskrevne tidsserier fra forskjellige markeder."
-             :tech [:java8 :apache-spark :kafka :hbase :hadoop :zookeeper :logstash]}
+             :tech [:java8 :spark :kafka :hbase :hadoop :zookeeper :logstash]}
             {:customer "Hafslund Strøm"
              :years [2014 2015 2016]
              :employer :kodemaker
