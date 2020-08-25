@@ -16,9 +16,7 @@
             
 
 
-            
-:tech {:favorites-at-the-moment [:teamsalg :nettverksbygging :historie]
-        :want-to-learn-more [:markedsforing :innovasjonsmiljoer]}
+
         
 :recommendations [{:title "Good to Great"
                     :link {:url "http://en.wikipedia.org/wiki/Good_to_Great"
@@ -29,8 +27,11 @@
                             
             
 :hobbies [{:title "Golf"
-            :description "Herlig å tilbringe en dag på golfbanen i konkurranse med dårlige venner. Jeg skal vinne. Merkelig hvor ofte de forløsende tankene som løser alle verdensproblemer kommer når skuldrene senkes.  Forretningsmøter på golfbanen, enda mer genialt ;)"
-            :illustration "/illustrations/hobbies/golf-kolbjorn.jpg"}]
+            :description "Herlig å tilbringe en dag på golfbanen i konkurranse med dårlige venner. Merkelig hvor ofte de forløsende tankene som løser alle verdensproblemer kommer når skuldrene senkes.  Forretningsmøter på golfbanen, enda mer genialt!"
+            :illustration "/illustrations/hobbies/golf-kolbjorn2.jpg"}
+            {:title "Fotball"
+            :description "Alt for lenge siden jeg var aktiv selv, men fotball er gøy. Både å følge egne gutter, og ikke minst Manchester United. Alltid det beste laget..."
+            :illustration "/illustrations/hobbies/fotball-kolbjorn.jpg"}]
             
 :endorsements [{
                  :author "Tonje Magnussøn"
