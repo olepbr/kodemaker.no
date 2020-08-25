@@ -28,8 +28,8 @@ presentasjonen på hele konferansen!"
             :stackoverflow "/users/26051/august-lilleaas"
             :github "augustl"}
 
- :tech {:favorites-at-the-moment [:datomic :react]
-        :using-at-work [:react :clojure :clojurescript :sqlserver :azure]
+ :tech {:favorites-at-the-moment [:datomic :clojurescript]
+        :using-at-work [:elixir :phoenix :postgresql :azure]
         :want-to-learn-more [:c :haskell]}
 
  :recommendations
@@ -42,12 +42,7 @@ presentasjonen på hele konferansen!"
    :link {:url "http://vimeo.com/user18356272/review/66548859/4f724d6341"
           :text "Se foredraget"}
    :tech [:scheme :logic-programming]
-   :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}
-  {:title "Locked doors, headaches, and intellectual need"
-   :link {:url "http://mkremins.github.io/blog/doors-headaches-intellectual-need/"
-          :text "Les bloggposten"}
-   :tech [:functional-programming :monads]
-   :blurb "Mitt anbefalte monad-tutorial. Her lærer du å fiske, i stedet for å få monad-burritoen servert, og får forklart hvorfor du og jeg ikke klarer å forstå monads."}]
+   :blurb "Spol til 0:45:00. Sannsynligvis det villeste du noen gang har sett. Generere alle programmer som returnerer tallet 6? Lett! Hva med å generere et program som returnerer et program som returnerer seg selv når det kalles? Naturligvis. Alt dette med Scheme og miniKanren, en logikkmotor av William Byrd & Daniel Friedman"}]
 
  :hobbies
  [{:title "Brasiliansk Jiu-Jitsu"
