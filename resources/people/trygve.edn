@@ -144,7 +144,7 @@
                               :employer    :kodemaker
                               :summary     "PoC for innrapportering av materiell i skyen"
                               :description "Laget et _Proof of Concept_ som skal bidra til at forsvarets eksterne leverandører
-                                            lettere skal kunne levere materiell-underlag til forsvaret begrensede plattform fra skyen.
+                                            lettere skal kunne levere materiell-underlag til forsvarets begrensede plattform.
                                             Trygve har også bidratt med videreutvikling av materielldataportalen,
                                             som er en løsning for innrapportering av materiell som ligger utenfor forsvarets SAP plattform"
                               :tech        [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
