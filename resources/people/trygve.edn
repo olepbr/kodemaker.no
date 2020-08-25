@@ -485,6 +485,12 @@
                              "Lang erfaring med Java, Groovy og Grails"]
 
  :certifications            [{:institution "University of Alberta / Coursera"
+                              :name        "Sample-based Learning Methods"
+                              :url         "https://www.coursera.org/learn/fundamentals-of-reinforcement-learning"
+                              :year        2020
+                              :certificate {:url  "https://coursera.org/share/3cd72e85541d6cc0f06b311412338c79"
+                                            :text "Course Certificate"}}
+                             {:institution "University of Alberta / Coursera"
                               :name        "Fundamentals of Reinforcement Learning"
                               :url         "https://www.coursera.org/learn/fundamentals-of-reinforcement-learning"
                               :year        2020
