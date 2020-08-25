@@ -123,6 +123,21 @@
                        ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
                        ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]
                        [nil nil "hide-below-600" "hide-below-600"]))]})
+       ;; Screencasts
+
+       (when-let [screencasts (seq (:person/screencasts person))]
+         {:kind :titled
+          :title "Screencasts"
+          :contents (for [screencast (take 3 (sort-by :list/idx screencasts))]
+                      (let [url (:screencast/url screencast)]
+                        (e/illustrated-teaser
+                         {:title (:screencast/title screencast)
+                          :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list screencast :screencast/tech-list))
+                                              :class "tags"})
+                          :url url
+                          :illustration (:screencast/illustration screencast)
+                          :content (f/to-html (:screencast/blurb screencast))
+                          :link (when url {:text "Se screencast" :href url})})))})
 
        ;; Prosjekter
 
