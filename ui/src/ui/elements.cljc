@@ -108,7 +108,7 @@
     [:div.teaser-content
      (when tags
        [:div.tags.mvs tags])
-     (when content [:div.text.mbm content])]
+     (when content [:div.text.mts.mbm content])]
     (when illustration
       [:div.teaser-illustration.mts
        [:img.img {:src illustration}]])
