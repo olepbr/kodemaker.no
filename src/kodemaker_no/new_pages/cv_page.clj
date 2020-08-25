@@ -152,7 +152,7 @@
               [:div.text
                (f/to-html (or (:cv/description project) (:project/description project)))]
               [:p.text-s.annotation.mts
-               (->> (h/unwrap-idents project :project/techs)
+               (->> (h/unwrap-ident-list project :project/tech-list)
                     (map :tech/name)
                     e/comma-separated)]]})
 
