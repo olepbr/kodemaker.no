@@ -469,7 +469,6 @@
 
  {:db/ident :person/hobbies
   :dte/valueType :data/edn
-  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/side-projects
