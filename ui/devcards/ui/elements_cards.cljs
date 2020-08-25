@@ -49,6 +49,16 @@
              :link {:text "Les artikkel"
                     :href "#"}}))
 
+(defcard illustrated-teaser
+  (e/illustrated-teaser
+   {:title "Analyse av værdata"
+    :tags "av Nils, Stig og Stig"
+    :url "#"
+    :illustration "/devcard_images/weather.png"
+    :content "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
+    :link {:text "Les artikkel"
+           :href "#"}}))
+
 (defcard video-thumb
   (e/video-thumb {:img "/devcard_images/to-the-cloud.jpg"
                   :tags "JAVA, SCALA"

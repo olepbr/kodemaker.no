@@ -587,6 +587,32 @@ a, .clickable {
   }
 }
 
+/* Illustrated teasers */
+
+.teaser-illustration {
+  margin: 32px 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .illustrated-teaser {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .teaser-content {
+    flex: 1 1 0;
+  }
+
+  .teaser-illustration {
+    flex: 0 0 220px;
+    margin: 0 0 0 48px;
+  }
+
+  .teaser-link {
+    flex: 0 0 100%;
+  }
+}
+
 /* Banner section */
 
 .banner-logo { width: 174px; }
@@ -1152,7 +1178,7 @@ a, .clickable {
   letter-spacing: normal;
 }
 
-.h4, .h4-light, .text h4, .article-text h3 {
+.h4, .h4-light, .text h4, .article-text h3, .h4 a:link, .h4-light a:link {
   color: var(--chocolat-au-lait);
   font-family: "Financier Text", serif;
   font-size: 30px;
@@ -1163,7 +1189,7 @@ a, .clickable {
   letter-spacing: normal;
 }
 
-.h4-light {
+.h4-light, .h4-light a:link {
   font-family: "Financier Display", serif;
   font-weight: normal;
 }

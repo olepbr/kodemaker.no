@@ -96,6 +96,26 @@
    (when content [:div.text.mbm content])
    (when link (arrow-link link))])
 
+(defn illustrated-teaser [{:keys [link annotation tags content icon title url illustration]}]
+  [:div.teaser
+   [:h3.h4-light
+    (if url
+      [:a.link {:href url :className (when icon "icon-link")} icon title]
+      title)]
+   (when annotation
+     [:p.annotation.text-s annotation])
+   [:div.illustrated-teaser
+    [:div.teaser-content
+     (when tags
+       [:div.tags.mvs tags])
+     (when content [:div.text.mbm content])]
+    (when illustration
+      [:div.teaser-illustration.mts
+       [:img.img {:src illustration}]])
+    (when link
+      [:div.teaser-link
+       (arrow-link link)])]])
+
 (defn video-thumb [params]
   [:div
    [:a.video-thumb {:href (:url params) :className (:class params)}
