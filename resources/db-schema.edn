@@ -293,6 +293,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :oss-project/contribution?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :oss-project/techs
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many}

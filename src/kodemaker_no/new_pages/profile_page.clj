@@ -2,6 +2,7 @@
   (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
+            [kodemaker-no.new-pages.open-source :as oss]
             [kodemaker-no.new-pages.person :as person]
             [ui.elements :as e]))
 
@@ -32,6 +33,31 @@
     ["video-thumb-rouge" "video-thumb-chocolate" "video-thumb-chocolate" "video-thumb-rouge"]
     ["curtain curtain-short-right" nil nil "curtain curtain-short-top"]
     [nil nil "hide-below-600" "hide-below-600"])))
+
+(defn by-preferred-techs [person tech-f xs]
+  (let [tech-order (->> (:person/preferred-techs person)
+                        (sort-by :list/idx)
+                        (map :list/ref))
+        indifferent (count (:person/preferred-techs person))]
+    (sort-by #(let [idx (.indexOf tech-order (tech-f %))]
+                (if (<= 0 idx)
+                  idx
+                  indifferent)) xs)))
+
+(defn open-source-contributions [person]
+  (->>
+   (concat (sort-by :list/idx (:person/open-source-projects person))
+           (sort-by :list/idx  (:person/open-source-contributions person)))
+   (group-by oss/significant-tech)
+   (sort-by (comp - count second))
+   (by-preferred-techs person (comp :db/ident first))
+   (map (fn [[tech xs]]
+          {:tech tech
+           :projects (remove :oss-project/contribution? xs)
+           :contributions (filter :oss-project/contribution? xs)}))))
+
+(defn oss-project-link [{:oss-project/keys [url name]}]
+  [:a {:href url} name])
 
 (defn create-page [person]
   (let [cv-uri (:page/uri (:cv/_person person))]
@@ -166,6 +192,22 @@
                           :content (f/to-html (:side-project/description side-project))
                           :link (when url {:text (:side-project/link-text side-project) :href url})})))})
 
+       ;; Open source
+
+       (when-let [oss-techs (seq (open-source-contributions person))]
+         {:kind :titled
+          :title "Open source"
+          :contents (for [{:keys [tech projects contributions]} oss-techs]
+                      (e/teaser
+                       {:title [:h3.h4 (:tech/name tech)]
+                        :content [:ul
+                                  (for [project projects]
+                                    [:li "Utviklet " (oss-project-link project)
+                                     ". " (f/markdown (:oss-project/description project))])
+                                  (when (seq contributions)
+                                    [:li "Har bidratt til "
+                                     (f/comma-separated (map oss-project-link contributions))])]}))})
+
        ;; Prosjekter
 
        (when-let [projects (->> (:person/projects person)
@@ -222,6 +264,11 @@
   (def db (d/db conn))
 
   (def person (d/entity db :person/magnar))
+
+  (open-source-contributions person)
+
+  (into {} (first (:person/open-source-contributions person)))
+
 
   (map kodemaker-no.render-new-page/render-section (:sections (create-page person)))
 

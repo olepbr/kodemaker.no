@@ -2,9 +2,9 @@
   (:require [clojure.java.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
-            [optimus.assets.creation]
             [kodemaker-no.homeless :as h]
-            [kodemaker-no.ingestion.video :as video]))
+            [kodemaker-no.ingestion.video :as video]
+            [optimus.assets.creation]))
 
 (def cv-keys
   {:person/preferred-techs :preferred-techs
@@ -164,6 +164,10 @@
       (h/update-in-existing [:oss-project/techs] h/prep-techs)
       (h/update-in-existing [:oss-project/tech-list] h/prep-tech-list)))
 
+(defn open-source-contribution [project]
+  (-> (open-source-project project)
+      (assoc :oss-project/contribution? true)))
+
 (def presentation-product-keys
   {:presentation-product/title :title
    :presentation-product/description :description
@@ -251,7 +255,7 @@
         (h/update-in-existing [:person/screencasts] #(as-ordered-list (map screencast-data %)))
         (h/update-in-existing [:person/projects] prep-projects)
         (h/update-in-existing [:person/open-source-projects] #(as-ordered-list (map open-source-project %)))
-        (h/update-in-existing [:person/open-source-contributions] #(as-ordered-list (map open-source-project %)))
+        (h/update-in-existing [:person/open-source-contributions] #(as-ordered-list (map open-source-contribution %)))
         (h/update-in-existing [:person/side-projects] #(as-ordered-list (map side-project-data %)))
         (h/update-in-existing [:person/recommendations] (partial map-indexed #(recommendation-data %1 %2)))
         (h/update-in-existing [:person/business-presentations] (partial mapv #(presentation-product-data :presentation %)))
