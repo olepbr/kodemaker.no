@@ -69,7 +69,7 @@
 
      ;; Snakker gjerne om
 
-     (when-let [[uno dos] (seq (:person/hobbies person))]
+     (when-let [[uno dos] (seq (sort-by :list/idx (:person/hobbies person)))]
        (let [hobby-1 {:title (:title uno)
                       :content (f/to-html (:description uno))
                       :image (str "/big-bottom-half-circle" (:illustration uno))}

@@ -246,6 +246,7 @@
         (assoc :db/ident ident)
         (assoc :person/presentations (->> (mapv presentation-data presentations)
                                           (mapv #(add-inline-video-information ident %))))
+        (h/update-in-existing [:person/hobbies] as-ordered-list)
         (h/update-in-existing [:person/screencasts] #(as-ordered-list (map screencast-data %)))
         (h/update-in-existing [:person/projects] prep-projects)
         (h/update-in-existing [:person/open-source-projects] #(as-ordered-list (map open-source-project %)))
