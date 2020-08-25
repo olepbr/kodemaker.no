@@ -184,13 +184,13 @@
                   :illustration "/illustrations/side-projects/cashflow.jpg"
                   :tech [:clojure]}]
 
- :projects [{:customer "Mnemomnic"
+ :projects [{:customer "Mnemonic"
              :years [2019 :ongoing]
              :employer :kodemaker
              :summary "Semi-Automated Cyber Threat Intelligence (ACT)"
-             :description "Frontendutvikling av ACT-plattformen som er et forskningsprosjekt med mål om å utvikle nye
-             metoder for å analysere sikkerhetsangrep."
-             :tech [:javascript :typescript :react :cytoscape]}
+             :description "Frontend- og backendutvikling av ACT-plattformen som er et forskningsprosjekt med mål om å utvikle nye
+             metoder for å analysere sikkerhetsangrep. Frontendutvikling på Argus, sikkerhetsproduktet til Mnemonic."
+             :tech [:javascript :typescript :react :cytoscape :java]}
             {:customer "Norled"
              :years [2016 2017 2018 2019]
              :employer :kodemaker
