@@ -61,6 +61,7 @@
       ;; use optimized images
       [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
       [:.w-style-img] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
+      [:video :source] #(update-attr % "src" (optimize-path-fn image-asset-config request))
 
       ;; use optimized svgs
       [:svg :use] #(replace-attr % "href" "xlink:href" (optimize-path-fn image-asset-config request))
