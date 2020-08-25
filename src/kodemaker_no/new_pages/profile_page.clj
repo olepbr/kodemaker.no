@@ -150,6 +150,22 @@
                           :content (f/to-html (:screencast/blurb screencast))
                           :link (when url {:text "Se screencast" :href url})})))})
 
+       ;; Sideprosjekter
+
+       (when-let [side-projects (seq (:person/side-projects person))]
+         {:kind :titled
+          :title "Sideprosjekter"
+          :contents (for [side-project (take 3 (sort-by :list/idx side-projects))]
+                      (let [url (:side-project/url side-project)]
+                        (e/illustrated-teaser
+                         {:title (:side-project/title side-project)
+                          :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list side-project :side-project/tech-list))
+                                              :class "tags"})
+                          :url url
+                          :illustration (:side-project/illustration side-project)
+                          :content (f/to-html (:side-project/description side-project))
+                          :link (when url {:text (:side-project/link-text side-project) :href url})})))})
+
        ;; Prosjekter
 
        (when-let [projects (->> (:person/projects person)
