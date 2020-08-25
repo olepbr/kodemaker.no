@@ -31,16 +31,7 @@
             :linkedin "/in/stoyle"}
  :upcoming []
 
- :hobbies [{:title "Funksjonell programmering"
-            :description "IT-verden er i stadig forandring, kravene
-            til oppgaver som skal løses skjerpes, vi må forholde oss
-            til større datamengder, lage software som yter og
-            skalerer bedre, samtidig som kunder krever at vi leverer
-            raskere. Etter min mening (og mange andres) er
-            funksjonelle programmeringsspråk bedre verktøy for å
-            imøtekomme slike krav."
-            :illustration "/illustrations/hobbies/alf_kristian_lambda.jpg"}
-           {:title "Jogging og løpeteknikk"
+ :hobbies [{:title "Jogging og løpeteknikk"
             :description "Helt siden jeg fikk en Garmin GPS klokke i
             gave, og oppdaget at man kunne tracke sin forbedring
             online, har jeg elsket å løpe. Det begynte forholdsvis
@@ -49,7 +40,16 @@
             hekta. Jeg skjønte fort at normal løpeteknikk ikke er bra
             for kroppen, så jeg blir stadig observert på joggeturer
             med mine Vibram Fivefingers."
-            :illustration "/illustrations/hobbies/alf_kristian_five_fingers.jpg"}]
+            :illustration "/illustrations/hobbies/alf_kristian_run.jpg"}
+           {:title "Funksjonell programmering"
+            :description "IT-verden er i stadig forandring, kravene
+            til oppgaver som skal løses skjerpes, vi må forholde oss
+            til større datamengder, lage software som yter og
+            skalerer bedre, samtidig som kunder krever at vi leverer
+            raskere. Etter min mening (og mange andres) er
+            funksjonelle programmeringsspråk bedre verktøy for å
+            imøtekomme slike krav."
+            :illustration "/illustrations/hobbies/alf_kristian_fractal.jpg"}]
 
  :tech {:favorites-at-the-moment [:clojure :scala :kotlin :funksjonell-programmering]
         :want-to-learn-more [:elixir :lisp-flavoured-erlang]}
