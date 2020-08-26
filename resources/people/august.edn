@@ -139,8 +139,15 @@ presentasjonen på hele konferansen!"
    :date "2011-06-01"}]
 
  :projects
- [{:customer "Animalia"
+ [{:customer "Posten"
+   :start "2020-08"
+   :summary "AMOI.no Levering på døra fra nisjebutikker i Oslo"
+   :description "Fullstack-utvikling, i høy grad selv-drevet, lite team med startup-vibe og mye autonomi."
+   :employer :kodemaker
+   :tech [:elixir :phoenix :postgresql :azure]}
+  {:customer "Animalia"
    :start "2019-09"
+   :end "2020-02"
    :summary "Helsegris - journalsystem for dyrevelferd for grisebønder"
    :description "Videreutvikling og forvalting av Helsegris-applikasjonen. Innføring av DevOps og kontinuerlig
    leveranser, hvor prodsetting skjer mange ganger om uken/dagen, i stedet for store releaser med mange måneders
