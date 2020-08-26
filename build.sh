@@ -79,4 +79,4 @@ env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --inclu
 #   env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths $paths
 # fi
 
-env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths / /*
+env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths / "/*"
