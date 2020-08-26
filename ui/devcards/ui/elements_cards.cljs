@@ -189,6 +189,33 @@ spill, grensesnitt og støtteverktøy/overvåkning."]]
               Galskap, den ser jo ut som en h3, og bare sjekk all luften over
               den. Elegant. Luksuriøst."]]}))
 
+(defcard attributed-content
+  (e/attributed-content {:title [:h2.h4 "Kodemaker tok idé til ferdig løsning på kort tid"]
+                         :person {:image "/devcard_images/person.png"
+                                  :lines [[:strong "Geir Oterhals"]
+                                          "Prosjektleder, Oche Dart"
+                                          "+47 992 18 320"]}
+                         :logo {:image "/devcard_images/oche.svg"
+                                :title "Oche"
+                                :href "https://ochedart.com/"}
+                         :link {:text "Les mer"
+                                :href "#"}
+                         :content (e/blockquote
+                                   {:quote
+                                    "Kodemaker tok en idé til ferdig
+                                           løsning på kort tid, og de har vært
+                                           en viktig ekstern bidragsyter i
+                                           utviklingen av vårt konsept Oche. De
+                                           har jobbet godt sammen med flere
+                                           andre aktører i et hektisk prosjekt.
+                                           De er flinke, sier hva de mener og
+                                           lager det vi ønsker. Softwaren de har
+                                           laget har fungert knirkefritt siden
+                                           åpningen. Vi har et veldig godt
+                                           inntrykk av hele Kodemaker, og de
+                                           fremstår som en dyktig, jovial og
+                                           humørfylt gjeng."})}))
+
 (defcard curtain-left
   (e/curtain
    {:content [:img.img {:width "300" :src "/devcard_images/profile.jpg"}]

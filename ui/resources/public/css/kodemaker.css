@@ -992,6 +992,32 @@ a, .clickable {
 
 .stats {color: var(--chocolat-au-lait)}
 
+@media only screen and (max-width: 400px) {
+  .ac-person .media {display: block;}
+  .ac-person .media-element {margin-bottom: 23px;}
+}
+@media only screen and (max-width: 899px) {
+  .ac-content {margin-bottom: 48px;}
+  .ac-person {display: flex; align-items: center;}
+  .ac-person .media {flex: 1;}
+  .ac-person .ac-logo {width: 150px;}
+  .acc {display: none;}
+}
+@media only screen and (max-width: 600px) {
+  .ac-logo {display: none;}
+}
+.ac-link {margin-top: 56px;}
+@media only screen and (min-width: 900px) {
+  .ac-link {display: none;}
+  .ac-person {min-width: 384px; padding-right: 25px;}
+  .ac-title {margin-left: 384px;}
+  .ac-person .ac-logo {display: none;}
+  .attributed-content {display: flex; flex-direction: row-reverse;}
+  .acc {display: flex; margin-top: 48px; align-items: center;}
+  .acc-link {flex: 1;}
+  .acc-logo {width: 150px;}
+}
+
 /* Grid section */
 .grid-section {
   padding-bottom: 40px;

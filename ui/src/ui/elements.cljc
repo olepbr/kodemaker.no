@@ -235,6 +235,22 @@
      [:a {:href href :target target :title title}
       icon])])
 
+(defn attributed-content [{:keys [title person logo link content]}]
+  [:div
+   [:div.ac-title.mbm title]
+   [:div.attributed-content
+    [:div.ac-content
+     content
+     [:div.acc
+      [:div.acc-link (arrow-link link)]
+      [:div.acc-logo [:img.img {:src (:image logo)}]]]]
+    [:div.ac-person
+     (round-media person)
+     [:div.ac-logo
+      [:img.img {:src (:image logo)}]]]
+    [:div.ac-link
+     (arrow-link link)]]])
+
 (defn google-map [{:keys [zoom lat lon title api-key map-marker-url]}]
   [:div
    [:div {:id "google-map" :style {:height "441px"}}]
