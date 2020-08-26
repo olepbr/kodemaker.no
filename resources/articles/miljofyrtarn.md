@@ -4,7 +4,7 @@
 
 <img src="/logos/miljofyrtarn.png">
 
-:body
+:lead
 
 Kodemaker som miljøfyrtårn.
 
@@ -13,7 +13,7 @@ Vi i Kodemaker Systemutvikling AS tar miljøvern på alvor. Vi har vært sertifi
 Kodemakers klima- og miljørapport er tilgjengelig ved forespørsel.
 
 
-## Hvordan kontakte oss?
+### Hvordan kontakte oss?
 
 
 *Kodemaker Systemutvikling AS*
@@ -26,6 +26,7 @@ Email: kontakt@kodemaker.no
 
 
 
-## Sist oppdatert
+### Sist oppdatert
+
 Sist oppdatert av Kolbjørn Jetne 19.08.20
 
