@@ -38,7 +38,7 @@
                       :href "/blogg/"}
                :image "/foto/nils-1.jpg"}
               {:kind :pønt
-               :portrait-1 {:img "/rouge-portrait/foto/ashild-f.png"
+               :portrait-1 {:img "/rouge-portrait/foto/ashild-f.jpg"
                             :href "/ashild/"
                             :title "Åshild Thorrud"}
                :portrait-2 {:img "/chocolate-portrait/foto/kristian-f.jpg"
@@ -50,10 +50,10 @@
                :bottom-triangle {:img "/chocolate-triangle/foto/finn-f.jpg"
                                  :href "/finn/"
                                  :title "Finn Johnsen"}
-               :top-circle {:img "/rouge-circle/foto/christian-1.png"
+               :top-circle {:img "/rouge-circle/foto/ashild-f.jpg"
                             :href "/christian/"
                             :title "Christian Johansen"}
-               :bottom-circle {:img "/chocolate-circle/foto/arduino.png"
+               :bottom-circle {:img "/chocolate-circle/foto/arduino.jpg"
                                :href "/blogg/"
                                :title "Bloggen vår"}}
               {:kind :footer}]})
