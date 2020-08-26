@@ -22,6 +22,6 @@ cache:
 
 deploy:
   provider: script
-  script: ./build.sh
+  script: ./deploy.sh
   on:
     branch: master
