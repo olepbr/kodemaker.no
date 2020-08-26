@@ -25,7 +25,7 @@
       {:class grid-class
        :content (e/video-thumb
                  {:class (str style " " video-class)
-                  :img (str "/" style "/" image)
+                  :img (str "/" style image)
                   :tags (e/tech-tags {:class "tags"
                                       :techs (take 5 tech-list)})
                   :url url
