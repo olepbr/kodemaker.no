@@ -4,8 +4,8 @@
   {:sections [{:kind :bruce
                :title "Engasjert miljø - erfarne utviklere"
                :text "Vi er ansvarlige, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
-               :link {:text "Les mer"
-                      :href "/referanser/"}
+               :link {:text "Ta kontakt"
+                      :href "/kontakt/"}
                :image-front "/bruce-front/foto/folk.jpg"
                :image-back "/bruce-back/foto/arduino.jpg"}
               {:kind :seymour
@@ -17,7 +17,7 @@
                :seymours
                [{:icon {:type :science/chemical :height 79}
                  :title "Referanser"
-                 :text "Vi har spennende og utfordende kunder. Sammen har vi utviklet mange nye løsninger."
+                 :text "Vi har interessante og utfordende kunder. Sammen har vi utviklet spennende nye løsninger."
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
                 {:icon {:type :science/robot-1 :height 79}
