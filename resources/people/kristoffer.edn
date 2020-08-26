@@ -1,9 +1,9 @@
 {:id :kristoffer
  :name ["Kristoffer" "Moe"]
- :title "Seniorkonsulent"
+ :title "Utvikler"
  :start-date "2003-09-01 09:00"
- :description "Kristoffer har vært i konsulentbransjen lenge, og bidrar gjerne på alle lag i systemutvikling, fra database opp
- til brukergrensesnitt, selv om hovedfokus er på Java. Han liker å skrive kode så deklarativt som mulig, med navn som er
+ :description "Kristoffer har vært i konsulentbransjen en stund, og bidrar gjerne på alle lag i systemutvikling, fra database opp
+ til brukergrensesnitt, selv om hovedfokus er på Java og Kotlin. Han liker å skrive kode så deklarativt som mulig, med navn som er
  selvforklarende. Han har alltid kundens behov i tankene, er analytisk men også pragmatisk innstilt og holder kjepphestene
  innelåst i stallen og verktøykassen fri for gyldne hammere. Kristoffer gir seg ikke før oppgaven er løst."
 
@@ -14,7 +14,7 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :tech {:using-at-work [:java :springboot :gradle :javascript :nodejs :git :intellij :jira :osx :mongodb :docker]}
+ :tech {:using-at-work [:kotlin :springboot :gradle :javascript :git :intellij :docker :k8s]}
 
  :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
@@ -33,11 +33,17 @@
                     gjør deg mindre sårbar for hersing ved å lese denne artikkelen med tegninger for dummies. Les den gjerne en gang til."}]
 
 
- :projects [{:customer "Protector Forsikring ASA"
+ :projects [{:customer "Bring"
+             :summary "Utvikling av ny prismotor."
+             :description "Utvikling av en ny komponent for prissetting, fakturering og regnskapsføring av transportoppdrag for Bring Bud & Express og Home delivery."
+             :years [2020]
+             :employer :kodemaker
+             :tech [:kotlin :azure :gradle :postgresql :flyway :git :springboot :tomcat :docker]}
+             {:customer "Protector Forsikring ASA"
              :description "Videreutvikling og vedlikehold av Protectors applikasjoner for administrasjon av forsikringspoliser
              i Protectors skadeforsikringsvirksomhet i bedriftsmarkeder i Norge, Sverige, Finnland, Danmark og Storbritannia.
              Integrasjoner mot de forskjellige lands registre og andre tjenester."
-             :years [2018]
+             :years [2018 2019 2020]
              :employer :kodemaker
              :summary "Front- og backendutvikling"
              :tech [:java :javascript :git :react :angularjs :springboot :tomcat :saml :docker :nodejs :kafka :ms-sql]}
@@ -61,7 +67,7 @@
              :years [2012 2013]
              :employer :kodemaker
              :summary "Utvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig til bedriftsmarkedet. REST-api for salg av ADSL til privatmarkedet"
-             :tech [:wicket :java :mongodb :jboss
+             :tech [:wicket :java :mongodb :ajax :jboss :collectionjson
                     :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jaxrs
                     :jboss :puppet :postgresql :oracle :mongodb :maven :jenkins :git]}
             {:customer "Sparebank1 Gruppen"
@@ -70,7 +76,7 @@
              :employer :kodemaker
              :summary "Implementasjon av ny sikkerhetsløsning"
              :tech [:jsf :java :openam :bankid :weblogic :css :fatwire :git :jira
-                    :confluence :siteminder :javascript :bash :mockito :openam :apache
+                    :confluence :siteminder :javascript :ajax :bash :mockito :openam :apache
                     :linux :pki :saml :tomcat :jetty :maven :rpm :bankid :weblogic :fatwire]}
             {:customer "NKI Nettstudier"
              :years [2011]
@@ -104,7 +110,7 @@
              javakode/konfigurasjon til java 1.6 og Weblogic 10.3. Innføring av
              Gradle som nytt byggesystem"
              :tech [:java :jms :jmx :sql :axis :xfire :maven :gradle :groovy :spring :jms :weblogic
-                    :xslt :sybase :mks]}
+                    :xml :xslt :sybase :mks :wiki]}
             {:customer "Hotell.no"
              :years [2009]
              :employer :kodemaker
@@ -118,8 +124,8 @@
              :years [2008 2009]
              :employer :kodemaker
              :summary "SurfSammen, Personalisering, Motor"
-             :tech [:java :jsp :tsql :cvs :jira :confluence :t-sql :sybase :solr :fast
-                    :spring :javascript :jquery :css :html :webtrends]}
+             :tech [:java :ajax :jsp :tsql :cvs :jira :confluence :t-sql :sybase :solr :fast
+                    :spring :javascript :jquery :css :xml :html :webtrends]}
             {:customer "Telenor Mobil AS"
              :years [2007]
              :employer :kodemaker
@@ -142,7 +148,7 @@
              :employer :kodemaker
              :summary "Matrikkelen"
              :tech[:java :oracle-locator :mule :weblogic :swing :hibernate :j2ee :weblogic
-                   :hibernate :soa :xslt]}
+                   :hibernate :soa :xml :xslt]}
             {:customer "Forsvaret (FLO/IKT) "
              :years [2003]
              :employer :kodemaker
@@ -153,7 +159,7 @@
              Videreutvikling av web-baserte registre med søkefunksjonalitet og
              rapporter. Integrasjon mot andre logistikksystemer.
              Publiseringsløsning for håndbok og nyheter."
-             :tech [:java :jboss :jsp :jasperreports :spring :oracle :lucene :magnolia-cms]}
+             :tech [:java :jboss :jsp :jasperreport :spring :oracle :lucene :magnolia-cms]}
             {:customer "ICA Norge AS"
              :years [2003]
              :employer :kodemaker
@@ -177,7 +183,7 @@
              datakilder (Agresso, SalesMaker og Active Directory). Utvikle
              webbasert løsning for innsamling av problemer og løsninger i
              husbyggeprosess."
-             :tech [:java :j2ee :weblogic :mssql :xslt :xtractor]}
+             :tech [:java :j2ee :weblogic :mssql :xml :xslt :xtractor]}
             {:customer "Legion AS"
              :years [2001]
              :employer :elan-it
