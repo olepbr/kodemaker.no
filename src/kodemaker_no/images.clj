@@ -17,13 +17,15 @@
     {:transformations [[:fit {:width 184 :height 184}]
                        [:crop {:preset :square}]]
      :retina-optimized? true
-     :width 92}
+     :retina-quality 0.4
+     :width 184} ;; todo: kan reduseres til 92 når imagine dobler riktig
 
     :vcard-medium
     {:transformations [[:fit {:width 240 :height 240}]
                        [:crop {:preset :square}]]
      :retina-optimized? true
-     :width 120}
+     :retina-quality 0.4
+     :width 240} ;; todo: kan reduseres til 120 når imagine dobler riktig
 
     :bruce-front
     {:transformations
@@ -62,29 +64,34 @@
     {:transformations
      [chocolate-au-lait-duotone]
      :width 1400
-     :retina-optimized? true}
+     :retina-optimized? true
+     :retina-quality 0.4}
 
     :vertigo
     {:height 850
-     :retina-optimized? true}
+     :retina-optimized? true
+     :retina-quality 0.4}
 
     :hobby-square
     {:transformations [[:fit {:width 1200 :height 1200 :scale-up? true}]
                        rouge-duotone]
      :width 600
-     :retina-optimized? true}
+     :retina-optimized? true
+     :retina-quality 0.4}
 
     :rouge-portrait
     {:transformations [[:fit {:width 670 :height 800 :scale-up? true}]
                        rouge-duotone]
      :width 335
-     :retina-optimized? true}
+     :retina-optimized? true
+     :retina-quality 0.4}
 
     :chocolate-portrait
     {:transformations [[:fit {:width 670 :height 800}]
                        chocolate-au-lait-duotone]
      :width 335
-     :retina-optimized? true}
+     :retina-optimized? true
+     :retina-quality 0.4}
 
     :rouge-circle
     {:transformations
@@ -107,13 +114,13 @@
               :origin [:left :bottom]}]]}
 
     :chocolate-triangle
-    {:transformations [[:fit {:width 220 :height 220}]
+    {:transformations [[:fit {:width 440 :height 440}]
                        [:crop {:preset :square}]
                        chocolate-au-lait-duotone
                        [:triangle :lower-left]]}
 
     :rouge-triangle
-    {:transformations [[:fit {:width 220 :height 220}]
+    {:transformations [[:fit {:width 440 :height 440}]
                        [:crop {:preset :square}]
                        rouge-duotone
                        [:triangle :upper-right]]}
@@ -141,6 +148,7 @@
     :profile-medium
     {:transformations [[:fit {:width 600 :height 800}]]
      :retina-optimized? true
+     :retina-quality 0.4
      :width 300}}})
 
 (defn url-to [transform file-path]
