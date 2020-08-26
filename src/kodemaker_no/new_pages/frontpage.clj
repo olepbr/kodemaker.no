@@ -50,7 +50,7 @@
                :bottom-triangle {:img "/chocolate-triangle/foto/finn-f.jpg"
                                  :href "/finn/"
                                  :title "Finn Johnsen"}
-               :top-circle {:img "/rouge-circle/foto/ashild-f.jpg"
+               :top-circle {:img "/rouge-circle/foto/christian-1.jpg"
                             :href "/christian/"
                             :title "Christian Johansen"}
                :bottom-circle {:img "/chocolate-circle/foto/arduino.jpg"
