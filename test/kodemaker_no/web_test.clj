@@ -6,6 +6,10 @@
 (defn parse [s]
   (html-resource (java.io.StringReader. s)))
 
+(fact
+ (web/extract-images "<div><img src=\"foo.png\"/><div class=\"foo w-style-img\" style=\"background: url(bar.jpg)\"></div></div>") => ["foo.png" "bar.jpg"]
+ )
+
 #_(def app (web/create-app))
 
 #_(fact

@@ -125,9 +125,20 @@
         wrap-content-type-utf-8
         prone/wrap-exceptions)))
 
+(defn extract-style-urls [node]
+  (some->> (.getAttribute node "style")
+           (re-seq #"url\((.+?)\)")
+           (map second)))
+
 (defn extract-images [html]
-  (for [node (html5-walker/find-nodes html [:img])]
-    (.getAttribute node "src")))
+  (flatten
+   (concat
+    (for [node (html5-walker/find-nodes html [:img])]
+      (.getAttribute node "src"))
+    (for [node (html5-walker/find-nodes html [:.w-style-img])]
+      (extract-style-urls))
+    (for [node (html5-walker/find-nodes html [:.section])]
+      (extract-style-urls)))))
 
 (defn get-images [pages-dir]
   (->> (stasis/slurp-directory pages-dir #"\.html+$")
