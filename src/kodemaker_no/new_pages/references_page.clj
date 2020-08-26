@@ -16,6 +16,8 @@
      :sections
      [{:kind :header}
       {:kind :hyrule
+       :pønt [{:kind :greater-than
+               :position "top -400px left -450px"}]
        :contents (map-indexed
                   (fn [idx {:reference/keys [image signee-name signee-title signee-phone page-title
                                              portrait blurb quote sections logo company href] :as reference}]
