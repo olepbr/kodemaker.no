@@ -670,7 +670,7 @@
              portlets."
              :tech [:epicentric-portal :websphere :siteminder :iplanet-enterprise-directory
                     :verity-search :oracle :db2 :mssql :lotus-notes :iis :mqseries :java :j2ee
-                    :asp :xslt py :eclipse :rational-suite]}
+                    :asp :xslt :eclipse :rational-suite]}
             {:customer "HM C&E - Engelske tolldirektoratet"
              :years [2001 2002]
              :exclude-from-profile? true
