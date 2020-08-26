@@ -3,9 +3,9 @@
 (defn create-page []
   {:sections [{:kind :bruce
                :title "Engasjert miljø - erfarne utviklere"
-               :text "Vi er erfarne, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
-               :link {:text "Ta kontakt?"
-                      :href "/kontakt/"}
+               :text "Vi er ansvarlige, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
+               :link {:text "Erfaringer?"
+                      :href "/referanser/"}
                :image-front "/bruce-front/foto/folk.jpg"
                :image-back "/bruce-back/foto/arduino.jpg"}
               {:kind :seymour
@@ -26,10 +26,10 @@
                  :link {:text "Ta en titt?"
                         :href "/folk/"}}
                 {:icon {:type :computer/laptop-1 :height 79}
-                 :title "Kurs og foredrag"
-                 :text "Vi ønkser å dele kunnskap. Covid-19 har gjort det vanskeligere, men hør med oss hvis du finner noe av interesse?"
-                 :link {:text "Vi kan tilby"
-                        :href "/kurs/"}}]}
+                 :title "Jobbe hos oss"
+                 :text "Det er ikke ofte vi ansetter nye Kodemakere, men kanskje du er vår neste kollega?"
+                 :link {:text "Jobbe hos oss?"
+                        :href "/jobbe-hos-oss/"}}]}
               {:kind :vertigo
                :title "Kunnskap og innsikt"
                :text "I Kodemaker sitter vi på mye kunnskap og erfaring innen et bredt
@@ -50,9 +50,9 @@
                :bottom-triangle {:img "/chocolate-triangle/foto/finn-f.jpg"
                                  :href "/finn/"
                                  :title "Finn Johnsen"}
-               :top-circle {:img "/rouge-circle/foto/christian-1.jpg"
-                            :href "/christian/"
-                            :title "Christian Johansen"}
+               :top-circle {:img "/rouge-circle/foto/finn-f3.jpg"
+                            :href "/finn/"
+                            :title "Finn Johnsen"}
                :bottom-circle {:img "/chocolate-circle/foto/arduino.jpg"
                                :href "/blogg/"
                                :title "Bloggen vår"}}

@@ -10,6 +10,7 @@
 :title Head of Digital Development & IT, Division Express
 :techs [:azure :kotlin :kubernetes :react :javascript]
 :quote Vi är mycket nöjda med kvalitén på leveransen
+:priority 1
 :body
 
 Kodemaker deltog med upp till fyra utvecklare i ett team som utvecklade en ny

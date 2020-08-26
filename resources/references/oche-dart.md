@@ -11,7 +11,7 @@
 :title Prosjekteier, Oche Dart
 :techs [:opencv :clojure :python :clojurescript :docker]
 :quote Kodemaker tok en idé til ferdig løsning på kort tid
-:priority 1
+:priority 2
 :body
 
 Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig
