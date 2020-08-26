@@ -25,7 +25,7 @@
           :lat 59.914432
           :lon 10.731476
           :title "Munkedamsveien 3, 0161 Oslo"
-          :api-key "AIzaSyD4_-OBiH5c-yA1RIYyLT0gWKE0sdCXFeo" ;;"AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w"
+          :api-key "add-your-own-google-maps-api-key-for-localhost"
           :map-marker-url "/devcard_images/map-marker.png"}
     :link {:text "Alle ansatte"
            :href "/folk/"}
