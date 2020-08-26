@@ -98,10 +98,9 @@
 
 (defn illustrated-teaser [{:keys [link annotation tags content icon title url illustration]}]
   [:div.teaser
-   [:h3.h4-light
-    (if url
-      [:a.link {:href url :className (when icon "icon-link")} icon title]
-      title)]
+   (if url
+     [:a.link {:href url :className (when icon "icon-link")} icon title]
+     title)
    (when annotation
      [:p.annotation.text-s annotation])
    [:div.illustrated-teaser
