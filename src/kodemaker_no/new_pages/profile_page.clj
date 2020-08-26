@@ -2,6 +2,7 @@
   (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
+            [kodemaker-no.new-pages.blog :as blog]
             [kodemaker-no.new-pages.open-source :as oss]
             [kodemaker-no.new-pages.person :as person]
             [ui.elements :as e]))
@@ -106,8 +107,7 @@
          {:kind :titled
           :title "Bloggposter"
           :contents (for [blog-post (take 3 (reverse (sort-by :blog-post/published blog-posts)))]
-                      (let [url (or (:page/uri blog-post)
-                                    (:blog-post/external-url blog-post))]
+                      (let [url (blog/post-url blog-post)]
                         (e/teaser
                          {:title (:blog-post/title blog-post)
                           :tags (e/tech-tags {:techs (take 5 (h/unwrap-ident-list blog-post :blog-post/tech-list))

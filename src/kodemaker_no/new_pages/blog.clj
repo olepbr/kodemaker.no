@@ -163,6 +163,13 @@
                        (remove nil?))}
     {:kind :footer}]})
 
+(defn published [post]
+  (format-date (:blog-post/published post)))
+
+(defn post-url [blog-post]
+  (or (:page/uri blog-post)
+      (:blog-post/external-url blog-post)))
+
 (defn blog-post-teaser [post]
   {:kind :article
    :class "article-section-tight"
@@ -170,15 +177,15 @@
    [{:alignment :content
      :title (:blog-post/title post)
      :href (:page/uri post)
-     :annotation (format-date (:blog-post/published post))
+     :annotation (published post)
      :content [:div
                [:div.text.mbm (f/to-html (:blog-post/blurb post))]
                [:p (e/arrow-link {:text "Les artikkelen"
                                   :title (:blog-post/title post)
-                                  :href (:page/uri post)})]]
+                                  :href (post-url post)})]]
      :aside (let [author (author post)]
               (e/round-media
-               {:image (str "/vcard-small" (:blog-post/author-picture post))
+               {:image (when (:blog-post/author-picture post) (str "/vcard-small" (:blog-post/author-picture post)))
                 :title (:person/full-name author)
                 :href (:page/uri author)
                 :lines [(e/tech-tags {:prefix "Om"
@@ -208,16 +215,19 @@
              (rest skip)
              (rest pønts)))))
 
+(defn list-blog-posts [posts]
+  (->> posts
+       (map blog-post-teaser)
+       (map (fn [color section]
+              (assoc section :background color))
+            (cycle [:blanc :blanc-rose]))
+       pønt-a-few))
+
 (defn create-index-page [db]
   {:title "Blogg"
    :sections
    (concat
     [{:kind :header
       :bg-color :blanc}]
-    (->> (blog-posts-by-published db)
-         (map blog-post-teaser)
-         (map (fn [color section]
-                (assoc section :background color))
-              (cycle [:blanc :blanc-rose]))
-         pønt-a-few)
+    (list-blog-posts (blog-posts-by-published db))
     [{:kind :footer}])})

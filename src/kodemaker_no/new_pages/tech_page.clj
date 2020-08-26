@@ -1,7 +1,9 @@
 (ns kodemaker-no.new-pages.tech-page
   (:require [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h :refer [map-vals max-by]]
+            [kodemaker-no.new-pages.blog :as blog]
             [ui.elements :as e]))
 
 (defn presentation-uri [pres]
@@ -111,38 +113,48 @@
                             (f/to-html (:presentation/description pres))]])])]
                     (remove nil?))}))
 
+(defn blog-post-sections [tech]
+  (when-let [posts (->> (:blog-post/_techs tech)
+                        (group-by blog/post-url)
+                        vals
+                        (apply concat)
+                        (sort-by :blog-post/published)
+                        reverse
+                        seq)]
+    (-> (vec (blog/list-blog-posts posts))
+        (assoc-in [0 :articles 0 :mecha-title] "Bloggposter"))))
+
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
      :sections
      (->>
-      [{:kind :header :background :chablis}
-       {:kind :tech-intro
-        :title (:tech/name tech)
-        :logo (:tech/illustration tech)
-        :article {:content [:div.text
-                            (f/to-html (:tech/description tech))]
-                  :alignment :front
-                  :aside (when-let [headliner (:headliner presentations)]
-                           [:div.hide-below-1000
-                            (e/video-thumb
-                             {:img (str "/rouge-duotone/" (:presentation/thumb headliner))
-                              :tags (e/people-tags {:prefix "Av"
-                                                    :class "tags"
-                                                    :people (:presentation/people headliner)})
-                              :url (presentation-uri headliner)
-                              :title (:presentation/title headliner)})])}
-        :pønt [{:kind :greater-than
-                :position "top -410px right 60vw"}
-               {:kind :dotgrid
-                :position "top -110px left 80vw"}]}
+      (concat
+       [{:kind :header :background :chablis}
+        {:kind :tech-intro
+         :title (:tech/name tech)
+         :logo (:tech/illustration tech)
+         :article {:content [:div.text
+                             (f/to-html (:tech/description tech))]
+                   :alignment :front
+                   :aside (when-let [headliner (:headliner presentations)]
+                            [:div.hide-below-1000
+                             (e/video-thumb
+                              {:img (str "/rouge-duotone/" (:presentation/thumb headliner))
+                               :tags (e/people-tags {:prefix "Av"
+                                                     :class "tags"
+                                                     :people (:presentation/people headliner)})
+                               :url (presentation-uri headliner)
+                               :title (:presentation/title headliner)})])}
+         :pønt [{:kind :greater-than
+                 :position "top -410px right 60vw"}
+                {:kind :dotgrid
+                 :position "top -110px left 80vw"}]}
 
-       (recommendations-section tech)
-       (presentations-section presentations)
-
-       ;; Bloggposter
-
-       {:kind :footer}]
+        (recommendations-section tech)
+        (presentations-section presentations)]
+       (blog-post-sections tech)
+       [{:kind :footer}])
       (remove nil?)
       (map (fn [color section]
              (assoc section :background color))
