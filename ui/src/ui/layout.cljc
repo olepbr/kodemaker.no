@@ -90,4 +90,5 @@
        [:div [:a {:href "tel:+4722822080"} "+47 22 82 20 80"]]
        [:div [:a {:href "mailto:kontakt@kodemaker.no"} "kontakt@kodemaker.no"]]]]
      [:div.f-links
-      (e/arrow-link {:text "Personvern" :href "/personvern/"})]]]])
+      [:div (e/arrow-link {:text "Personvern" :href "/personvern/"})]
+      [:div (e/arrow-link {:text "Miljøfyrtårn" :href "/miljofyrtarn/"})]]]]])
