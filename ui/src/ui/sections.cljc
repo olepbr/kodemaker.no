@@ -252,8 +252,8 @@
     [:div.gutter.gutter-l.grid
      {:style (l/add-pønt {} [{:kind :less-than
                               :position "right -300px top -410px"}])}
-     [:div.vertigo-media.r-img {:style {:background-image (str "url(" image ")")
-                                        :background-position (or image-center "50% 50%")}}]
+     [:div.vertigo-media.r-img.w-style-img {:style {:background-image (str "url(" image ")")
+                                                    :background-position (or image-center "50% 50%")}}]
      [:div.vertigo-content
       [:div.inner-content
        (e/h2 {} title)
