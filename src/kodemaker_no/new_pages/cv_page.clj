@@ -2,7 +2,6 @@
   (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h]
-            [kodemaker-no.markup :as m]
             [kodemaker-no.new-pages.person :as person]
             [ui.elements :as e])
   (:import java.time.format.DateTimeFormatter))
@@ -264,48 +263,13 @@
           reverse
           (map render-presentations))}))
 
-(defn open-source-projects [person]
-  (concat
-   (sort-by :list/idx (:person/open-source-projects person))
-   (sort-by :list/idx (:person/open-source-contributions person))))
-
-(defn proglang [project]
-  (->> (h/unwrap-ident-list project :oss-project/tech-list)
-       (filter #(= :proglang (:tech/type %)))
-       first))
-
-(defn oss-project [project]
-  [:li.text.inline-text
-   [:a {:href (:oss-project/url project)} (:oss-project/name project)]
-   " - "
-   (m/strip-paragraph (f/to-html (:oss-project/description project)))])
-
-(defn oss-contrib [project]
-  [:a {:href (:oss-project/url project)}
-   (:oss-project/name project)])
-
 (defn open-source-section [cv person]
-  (when-let [projects (seq (open-source-projects person))]
-    (let [db (d/entity-db cv)
-          by-techs (group-by (comp :db/ident proglang) projects)]
-      {:kind :definitions
-       :title "Bidrag til fri programvare"
-       :definitions
-       (->> by-techs
-            keys
-            (person/prefer-techs (person/preferred-techs person))
-            (map (fn [tech]
-                   (let [projects (get by-techs tech)]
-                     {:title (:tech/name (d/entity db tech))
-                      :contents [[:ul.dotted.dotted-tight
-                                  (map oss-project (filter :oss-project/description projects))
-                                  (when-let [contribs (->> projects
-                                                           (remove :oss-project/description)
-                                                           seq)]
-                                    [:li.text
-                                     "Har bidratt til "
-                                     (e/comma-separated
-                                      (map oss-contrib contribs))])]]}))))})))
+  (when-let [{:keys [title techs]} (person/prepare-open-source-projects person)]
+    {:kind :definitions
+     :title title
+     :definitions (for [{:keys [title markup]} techs]
+                    {:title title
+                     :contents [markup]})}))
 
 (defn one-of [m ks]
   (loop [[k & ks] ks]

@@ -1,6 +1,9 @@
 (ns kodemaker-no.new-pages.person
-  (:require [ui.icons :as icons]
-            [kodemaker-no.homeless :as h]))
+  (:require [datomic-type-extensions.api :as d]
+            [kodemaker-no.homeless :as h]
+            [kodemaker-no.new-pages.open-source :as oss]
+            [ui.elements :as e]
+            [ui.icons :as icons]))
 
 (def presence-base-urls
   {:twitter "https://twitter.com/"
@@ -36,3 +39,31 @@
 
 (defn preferred-techs [person]
   (h/entity-seq (:person/preferred-techs person)))
+
+(defn open-source-projects [person]
+  (concat
+   (sort-by :list/idx (:person/open-source-projects person))
+   (sort-by :list/idx (:person/open-source-contributions person))))
+
+(defn prepare-open-source-projects [person]
+  (when-let [projects (seq (open-source-projects person))]
+    (let [db (d/entity-db person)
+          by-techs (group-by (comp :db/ident oss/proglang) projects)]
+      {:title "Bidrag til fri programvare"
+       :techs
+       (->> by-techs
+            (sort-by (comp - count second))
+            keys
+            (prefer-techs (preferred-techs person))
+            (map (fn [tech]
+                   (let [projects (get by-techs tech)]
+                     {:title (:tech/name (d/entity db tech))
+                      :markup [:ul.dotted.dotted-tight
+                               (map oss/format-project (filter :oss-project/description projects))
+                               (when-let [contribs (->> projects
+                                                        (remove :oss-project/description)
+                                                        seq)]
+                                 [:li.text
+                                  "Har bidratt til "
+                                  (e/comma-separated
+                                   (map oss/format-contribution contribs))])]}))))})))

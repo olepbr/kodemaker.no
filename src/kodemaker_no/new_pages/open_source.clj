@@ -1,17 +1,23 @@
 (ns kodemaker-no.new-pages.open-source
-  (:require [datomic-type-extensions.api :as d]))
+  (:require [datomic-type-extensions.api :as d]
+            [kodemaker-no.formatting :as f]
+            [kodemaker-no.homeless :as h]
+            [kodemaker-no.markup :as m]))
 
 (defn proglang [project]
-  (let [db (d/entity-db project)]
-    (->> (:oss-project/techs project)
-         (map #(d/entity db [:db/ident %]))
-         (filter (comp #{:proglang} :tech/type))
-         first)))
+  (->> (h/unwrap-ident-list project :oss-project/tech-list)
+       (filter #(= :proglang (:tech/type %)))
+       first))
 
-(defn significant-tech [project]
-  (or (proglang project)
-      (->> [:db/ident (first (:oss-project/techs project))]
-           (d/entity (d/entity-db project)))))
+(defn format-project [project]
+  [:li.text.inline-text
+   [:a {:href (:oss-project/url project)} (:oss-project/name project)]
+   " - "
+   (m/strip-paragraph (f/to-html (:oss-project/description project)))])
+
+(defn format-contribution [project]
+  [:a {:href (:oss-project/url project)}
+   (:oss-project/name project)])
 
 (comment
 
@@ -20,7 +26,6 @@
   (def magnar (d/entity db [:db/ident :person/magnar]))
 
   (into {} (first (:person/open-source-contributions magnar)))
-  (into {} (significant-tech (first (:person/open-source-contributions magnar))))
   (into {} (proglang (first (:person/open-source-contributions magnar))))
 
 )
