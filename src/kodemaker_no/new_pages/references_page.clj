@@ -11,6 +11,7 @@
                                [?e :reference/page-title]]
                              db)
                         (map #(d/entity db %))
+                        (remove #(= "hidden" (:reference/priority %)))
                         (sort-by #(:reference/priority % "99999")))]
     {:title "Våre referanser"
      :sections
