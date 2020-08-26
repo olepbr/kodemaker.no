@@ -74,24 +74,47 @@ resource "aws_iam_role_policy_attachment" "basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-data "archive_file" "rewrite" {
+data "archive_file" "viewer_request" {
   type = "zip"
   output_path = "${path.module}/.zip/rewrite.zip"
 
   source {
-    filename = "lambda.js"
-    content = "${file("${path.module}/lambda.js")}"
+    filename = "viewer-request.js"
+    content = "${file("${path.module}/viewer-request.js")}"
   }
 }
 
-resource "aws_lambda_function" "url_rewrite" {
+resource "aws_lambda_function" "viewer_request" {
   provider = "aws.us-east-1"
-  function_name = "kodemaker-url-rewrite"
-  filename = "${data.archive_file.rewrite.output_path}"
-  source_code_hash = "${data.archive_file.rewrite.output_base64sha256}"
+  function_name = "kodemaker-url-rewriter"
+  filename = "${data.archive_file.viewer_request.output_path}"
+  source_code_hash = "${data.archive_file.viewer_request.output_base64sha256}"
   role = "${aws_iam_role.lambda_role.arn}"
   runtime = "nodejs12.x"
-  handler = "lambda.handler"
+  handler = "viewer-request.handler"
+  memory_size = 128
+  timeout = 3
+  publish = true
+}
+
+data "archive_file" "viewer_response" {
+  type = "zip"
+  output_path = "${path.module}/.zip/headers.zip"
+
+  source {
+    filename = "viewer-response.js"
+    content = "${file("${path.module}/viewer-response.js")}"
+  }
+}
+
+resource "aws_lambda_function" "viewer_response" {
+  provider = "aws.us-east-1"
+  function_name = "kodemaker-security-headers"
+  filename = "${data.archive_file.viewer_response.output_path}"
+  source_code_hash = "${data.archive_file.viewer_response.output_base64sha256}"
+  role = "${aws_iam_role.lambda_role.arn}"
+  runtime = "nodejs12.x"
+  handler = "viewer-response.handler"
   memory_size = 128
   timeout = 3
   publish = true
@@ -154,7 +177,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
     lambda_function_association {
       event_type = "viewer-request"
-      lambda_arn = "${aws_lambda_function.url_rewrite.qualified_arn}"
+      lambda_arn = "${aws_lambda_function.viewer_request.qualified_arn}"
+      include_body = false
+    }
+
+    lambda_function_association {
+      event_type = "viewer-response"
+      lambda_arn = "${aws_lambda_function.viewer_response.qualified_arn}"
       include_body = false
     }
   }
