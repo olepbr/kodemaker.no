@@ -185,6 +185,24 @@ a, .clickable {
   display: block;
 }
 
+#mobile-menu {
+  background-color: var(--blanc-rose);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.close-menu {
+  margin: 72px 8.33vw;
+  float: right;
+}
+
+#mobile-menu ul {
+  margin-top: 140px;
+}
+
 .menu {
   background-color: var(--blanc-rose);
   display: none;

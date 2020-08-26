@@ -56,7 +56,14 @@
 (defn header []
   [:div.header
    [:a {:href "/"} (logo {:width 176})]
-   [:div.menu-toggler.clickable.h5 "Meny"]
+   [:div.menu-toggler.clickable.h5 {:onclick "document.getElementById('mobile-menu').style.display='block'"}
+    "Meny"]
+   [:div#mobile-menu {:style {:display "none"}}
+    [:div.close-menu.clickable {:onclick "document.getElementById('mobile-menu').style.display='none'"}
+     "× Lukk"]
+    [:ul
+     (for [item menu-items]
+       [:li.mts (e/arrow-link item)])]]
    [:ul.inline-menu.nav-list.h5 {:role "navigation" :aria-label "Hovedmeny"}
     (for [{:keys [href text]} menu-items]
       [:li [:a {:href href} text]])]])
