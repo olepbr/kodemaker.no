@@ -131,14 +131,10 @@
            (map second)))
 
 (defn extract-images [html]
-  (flatten
-   (concat
-    (for [node (html5-walker/find-nodes html [:img])]
-      (.getAttribute node "src"))
-    (for [node (html5-walker/find-nodes html [:.w-style-img])]
-      (extract-style-urls node))
-    (for [node (html5-walker/find-nodes html [:.section])]
-      (extract-style-urls node)))))
+  (-> (for [node (html5-walker/find-nodes html [:img])]
+        (.getAttribute node "src"))
+      (into (mapcat extract-style-urls (html5-walker/find-nodes html [:.w-style-img])))
+      (into (mapcat extract-style-urls (html5-walker/find-nodes html [:.section])))))
 
 (defn get-images [pages-dir]
   (->> (stasis/slurp-directory pages-dir #"\.html+$")

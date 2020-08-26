@@ -7,7 +7,12 @@
   (html-resource (java.io.StringReader. s)))
 
 (fact
- (web/extract-images "<div><img src=\"foo.png\"/><div class=\"foo w-style-img\" style=\"background: url(bar.jpg)\"></div></div>") => ["foo.png" "bar.jpg"]
+ (web/extract-images "
+<div>
+  <img src=\"foo.png\"/>
+  <div class=\"foo w-style-img\" style=\"background: url(bar.jpg)\"></div>
+  <div class=\"bar w-style-img\"></div>
+</div>") => ["bar.jpg" "foo.png"]
  )
 
 #_(def app (web/create-app))
