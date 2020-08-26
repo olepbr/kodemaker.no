@@ -11,8 +11,12 @@
    :reference/signee-phone :phone
    :reference/signee-title :title
    :reference/logo :logo
+   :reference/company :company
+   :reference/href :href
    :reference/techs :techs
    :reference/tech-list :techs
+   :reference/quote :quote
+   :reference/priority :priority
    :reference/blurb :body})
 
 (defn- build-date [y m]

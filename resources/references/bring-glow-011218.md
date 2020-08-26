@@ -3,10 +3,13 @@
 :type reference
 :img /references/jerker-dammbro.jpg
 :logo /logos/bring.svg
+:company Bring
+:href https://www.bring.no/
 :name Jerker Dammbro
 :phone +46 733 90 23 33
-:title Head of Digital Development & IT, Division Express
+:title Head of Digital Development & IT, Division Express
 :techs [:azure :kotlin :kubernetes :react :javascript]
+:quote Vi är mycket nöjda med kvalitén på leveransen
 :body
 
 Kodemaker deltog med upp till fyra utvecklare i ett team som utvecklade en ny

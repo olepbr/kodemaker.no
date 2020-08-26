@@ -3,10 +3,12 @@
 :type reference
 :img /references/rune-strandli.jpg
 :logo /logos/bnbolig.png
+:company BN Bolig
 :name Rune Strandli
 :phone +47 922 97 460
-:title Chief Digital Officer, BN Bolig
+:title Chief Digital Officer, BN Bolig
 :techs [:javascript :clojure :responsive-design :ansible :git]
+:quote Kodemaker er blant de faglig mest kompetente i bransjen
 :body
 
 Kodemaker deltok med fullstackutviklere i et kryssfunksjonellt team hvor 

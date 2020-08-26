@@ -2,11 +2,14 @@
 :page-title NSB Personalbillett
 :type reference
 :logo /logos/nsb.png
+:company NSB
 :img /references/bengt-lyng.jpg
 :name Bengt Lyng
 :phone +47 924 33 836
-:title Avdelingssjef, NSB Fellestjenester IT
+:title Avdelingssjef, NSB Fellestjenester IT
 :techs [:tomcat :git :maven :wicket :javascript :spring :java :bootstrap :hibernate :mssql]
+:quote Kodemaker har bidratt med utallige råd og idéer
+:priority z
 :body
 
 Kodemaker leverte ny teknisk løsning på kortere tid enn vi

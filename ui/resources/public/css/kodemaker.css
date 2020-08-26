@@ -1227,6 +1227,8 @@ a, .clickable {
 .mbxl {margin-bottom: 80px;}
 .mbxxl {margin-bottom: 120px;}
 
+.mw500 {max-width: 500px;}
+
 /* "Mobil" */
 @media only screen and (max-width: 420px) {
   .h0 {

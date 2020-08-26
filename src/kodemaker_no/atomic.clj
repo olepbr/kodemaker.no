@@ -13,6 +13,7 @@
             [kodemaker-no.new-pages.people-page :as people-page]
             [kodemaker-no.new-pages.profile-page :as profile-page]
             [kodemaker-no.new-pages.reference-page :as reference-page]
+            [kodemaker-no.new-pages.references-page :as references-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
             [kodemaker-no.new-pages.video-page :as video-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
@@ -48,6 +49,7 @@
                   :page.kind/profile (profile-page/create-page e)
                   :page.kind/cv (cv-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
+                  :page.kind/references (references-page/create-page e)
                   :page.kind/tech (tech-page/create-page e)
                   :page.kind/people (people-page/create-page e)
                   :page.kind/video (video-page/create-page e))

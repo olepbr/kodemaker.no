@@ -97,7 +97,8 @@
   {"/" :page.kind/frontpage
    "/folk/" :page.kind/people
    "/blogg/" :page.kind/blog
-   "/kontakt/" :page.kind/contact})
+   "/kontakt/" :page.kind/contact
+   "/referanser/" :page.kind/references})
 
 (defn techs [db]
   (->> (d/q '[:find [?v ...] :where [_ :db/ident ?v]] db)

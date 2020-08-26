@@ -4,10 +4,14 @@
 :img /references/geir-oterhals.jpg
 :portrait /references/geir-oterhals-portrett.png
 :logo /logos/oche.svg
+:company Oche
+:href https://ochedart.com/
 :name Geir Oterhals
 :phone +47 992 18 320
-:title Prosjekteier, Oche Dart
+:title Prosjekteier, Oche Dart
 :techs [:opencv :clojure :python :clojurescript :docker]
+:quote Kodemaker tok en idé til ferdig løsning på kort tid
+:priority 1
 :body
 
 Kodemaker tok en idé til ferdig løsning på kort tid, og de har vært en viktig
