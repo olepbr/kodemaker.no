@@ -1,7 +1,12 @@
 :title Miljøfyrtårn
 
-:lead
-Kodemaker som miljøfyrtårn
+:aside
+
+<img src="/logos/miljofyrtarn.png">
+
+:body
+
+Kodemaker som miljøfyrtårn.
 
 Vi i Kodemaker Systemutvikling AS tar miljøvern på alvor. Vi har vært sertifisert som Miljøfyrtårn siden 2014, og oppfordrer alle andre til å forsøke det samme.
 
