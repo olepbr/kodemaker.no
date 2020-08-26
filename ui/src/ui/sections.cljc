@@ -249,7 +249,7 @@
   [:div.section.vertigo
    {:style (l/stylish {} params)}
    [:div.content
-    [:div.gutter.gutter-l.grid
+    [:div.gutter.gutter-l.grid.w-style-img
      {:style (l/add-pønt {} [{:kind :less-than
                               :position "right -300px top -410px"}])}
      [:div.vertigo-media.r-img.w-style-img {:style {:background-image (str "url(" image ")")
@@ -278,7 +278,7 @@
                                 experience qualifications quote description highlights]
                          :as params}]
   [:div.section.cv-section
-   [:div.cv-wrapper
+   [:div.cv-wrapper.w-style-img
     {:style (->> (merge {:background :chablis
                          :pønt [{:kind :greater-than
                                  :position "left 0 top -280px"}]}
