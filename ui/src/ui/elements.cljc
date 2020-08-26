@@ -114,15 +114,15 @@
 
 (defn media [{:keys [title href content class image]}]
   [:div.media {:className class}
-   [:div.media-element {}
-    (when (:src image)
+   (when (:src image)
+     [:div.media-element {}
       (let [image [:img.img {:className (str "image-style-" (:type image)
                                              (when-let [side (:curtain image)]
                                                (str " " (curtain-class side))))
                              :src (:src image)}]]
         (if href
           [:a {:href href} image]
-          image)))]
+          image))])
    [:div.media-content
     (when title (h4 {:className "title"} (if href [:a {:href href} title] title)))
     content]])
