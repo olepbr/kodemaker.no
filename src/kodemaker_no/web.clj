@@ -136,9 +136,9 @@
     (for [node (html5-walker/find-nodes html [:img])]
       (.getAttribute node "src"))
     (for [node (html5-walker/find-nodes html [:.w-style-img])]
-      (extract-style-urls))
+      (extract-style-urls node))
     (for [node (html5-walker/find-nodes html [:.section])]
-      (extract-style-urls)))))
+      (extract-style-urls node)))))
 
 (defn get-images [pages-dir]
   (->> (stasis/slurp-directory pages-dir #"\.html+$")
