@@ -2,7 +2,7 @@
   (:require [clojure.string :as str]
             [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
-            [kodemaker-no.homeless :as h :refer [map-vals max-by]]
+            [kodemaker-no.homeless :as h :refer [map-vals]]
             [kodemaker-no.new-pages.blog :as blog]
             [ui.elements :as e]))
 
@@ -121,8 +121,11 @@
                         (sort-by :blog-post/published)
                         reverse
                         seq)]
-    (-> (vec (blog/list-blog-posts posts))
-        (assoc-in [0 :articles 0 :mecha-title] "Bloggposter"))))
+    (blog/list-blog-posts posts)))
+
+(defn screencasts-section [tech]
+  (when-let [screencasts (->> (:screencast/_techs tech)
+                              (group-by identity))]))
 
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
@@ -152,7 +155,14 @@
                  :position "top -110px left 80vw"}]}
 
         (recommendations-section tech)
-        (presentations-section presentations)]
+        (presentations-section presentations)
+        (screencasts-section tech)
+
+        ;; (references-section tech)
+        ;; (side-projects-section tech)
+        ;; (open-source-section tech)
+
+        ]
        (blog-post-sections tech)
        [{:kind :footer}])
       (remove nil?)
@@ -166,6 +176,16 @@
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
   (def tech (d/entity db :tech/clojure))
+
+  (->> (:blog-post/_techs tech)
+       (group-by blog/post-url)
+       vals
+       (apply concat)
+       (sort-by :blog-post/published)
+       reverse
+       seq
+       first
+       (into {}))
 
   (create-page tech)
 
