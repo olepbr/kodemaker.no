@@ -123,7 +123,7 @@
      :summary "SEB nettbank"
      :employer :quesnay
      :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
-     :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
+     :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
      {:customer "Posten og Bring"
       :start "2016-02"
       :end "2016-07"
@@ -134,7 +134,7 @@
       bilder tatt av Brings sjafører.
       Olga jobbet med den nettbaserte quiz'en og implementerte frontend basert på skissene levert av Ernö.
       Teamet bestod av en designer, en backendutvikler og en frontendutvikler."
-      :tech [:html :bootstrap :jquery :css :c-sharp :responsive-design]}
+      :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
   ]
 
  :endorsements [{:author "Leo Sander Gasnier"
