@@ -72,7 +72,7 @@
                   :description  "Jeg hadde som guttunge en plakat på veggen av Clay Regazzoni kjørende i en Ferrari F1 bil.
                   Om det var det som fikk i gang interessen for Formel 1 vet jeg ikke helt, men etter å vært på mitt første F1 løp på Silverstone i 1991, så var jeg solgt.
                   Følger med hver løpshelg fra start til slutt"
-                  :illustration "/illustrations/hobbies/kimi-f1.jpg"}
+                  :illustration "/illustrations/hobbies/f1.jpg"}
                   ]
 
  :blog-posts [{:url "http://bonkowski.net/posts/refactoring-in-appcode"
