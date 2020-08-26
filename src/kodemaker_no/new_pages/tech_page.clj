@@ -143,7 +143,7 @@
                    :aside (when-let [headliner (:headliner presentations)]
                             [:div.hide-below-1000
                              (e/video-thumb
-                              {:img (str "/rouge-duotone/" (:presentation/thumb headliner))
+                              {:img (str "/rouge-duotone" (:presentation/thumb headliner))
                                :tags (e/people-tags {:prefix "Av"
                                                      :class "tags"
                                                      :people (:presentation/people headliner)})
