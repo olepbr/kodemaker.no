@@ -19,10 +19,6 @@ exports.handler = (event, context, callback) => {
     "Referrer-Policy": [{
       key: "Referrer-Policy",
       value: "strict-origin"
-    }],
-    "Feature-Policy": [{
-      key: "Feature-Policy",
-      value: "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
     }]
   });
 
