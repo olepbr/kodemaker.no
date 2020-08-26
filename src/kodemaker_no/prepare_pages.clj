@@ -49,9 +49,10 @@
 
 (defn replace-urls-fn [f]
   (fn [style]
-    (str/replace style #"url\((.+?)\)"
-                 (fn [[_ url]]
-                   (str "url(" (f url) ")")))))
+    (when style
+      (str/replace style #"url\((.+?)\)"
+                   (fn [[_ url]]
+                     (str "url(" (f url) ")"))))))
 
 (defn- tweak-page-markup [html image-asset-config request]
   (try
