@@ -49,7 +49,7 @@
 
 (defn replace-urls-fn [f]
   (fn [style]
-    (str/replace style #"url\((.+)\)"
+    (str/replace style #"url\((.+?)\)"
                  (fn [[_ url]]
                    (str "url(" (f url) ")")))))
 

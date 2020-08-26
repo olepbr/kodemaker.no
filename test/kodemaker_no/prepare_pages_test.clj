@@ -1,5 +1,6 @@
 (ns kodemaker-no.prepare-pages-test
-  (:require [kodemaker-no.prepare-pages :refer :all]
+  (:require [clojure.string :as str]
+            [kodemaker-no.prepare-pages :refer :all]
             [midje.sweet :refer :all]
             [net.cgrand.enlive-html :refer [select html-resource]]))
 
@@ -17,6 +18,10 @@
 
 (defn parse [s]
   (html-resource (java.io.StringReader. s)))
+
+(fact
+ ((replace-urls-fn str/upper-case) "url(foobar)") => "url(FOOBAR)"
+ ((replace-urls-fn str/upper-case) "url(foobar), url(barfoo)") => "url(FOOBAR), url(BARFOO)")
 
 (fact
  (let [page (parse (prepare-page {} get-page request))]
