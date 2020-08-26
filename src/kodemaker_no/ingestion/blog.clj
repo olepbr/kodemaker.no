@@ -64,7 +64,6 @@
                      cycle)]
     (->> (:blog-post/_author author)
          (filter :blog-post/published)
-         (filter :page/uri)
          (sort-by :blog-post/published)
          (map-indexed (fn [idx post]
                         [(:db/id post) (nth pictures idx)]))
@@ -75,7 +74,6 @@
               :in $
               :where
               [?p :blog-post/published]
-              [?p :page/uri]
               [?p :blog-post/author ?e]]
             db)
        (map #(d/entity db %))
