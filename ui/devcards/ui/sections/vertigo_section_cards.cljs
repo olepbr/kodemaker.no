@@ -12,4 +12,5 @@
     skryte av og vise frem."
     :link {:text "Se mer"
            :href "/jobbe-hos-oss/"}
-    :image "/devcard_images/vertigo.jpg"}))
+    :image "/devcard_images/vertigo.jpg"
+    :image-center "25% 25%"}))

@@ -385,17 +385,8 @@ a, .clickable {
 /* Vertigo component */
 
 .vertigo-media {
-  position: relative;
-}
-
-.vertigo-media .inner-media {
   margin: 0 -8.33vw;
-  overflow: hidden;
-}
-
-.vertigo-media .img {
-  max-width: fit-content;
-  width: 100%;
+  padding-bottom: 110%;
 }
 
 .vertigo-content {
@@ -403,15 +394,18 @@ a, .clickable {
 }
 
 @media only screen and (min-width: 680px) {
+  .vertigo-media {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
   .vertigo .grid {
     display: grid;
     grid-template-columns: minmax(200px, 50%) minmax(320px, 50%);
   }
 
-  .vertigo-media .img {
-    float: right;
+  .vertigo-media .r-img {
     height: 650px;
-    width: auto;
   }
 
   .vertigo-content {
@@ -427,7 +421,7 @@ a, .clickable {
 }
 
 @media only screen and (min-width: 900px) {
-  .vertigo-media .img {
+  .vertigo-media .r-img {
     height: 850px;
   }
 
@@ -1273,6 +1267,8 @@ a, .clickable {
 .mbxxl {margin-bottom: 120px;}
 
 .mw500 {max-width: 500px;}
+
+.r-img {background-size: cover;}
 
 /* "Mobil" */
 @media only screen and (max-width: 420px) {
