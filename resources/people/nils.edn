@@ -36,9 +36,9 @@
                          }
 
  :tech                  {
-                         :favorites-at-the-moment [:go :kotlin :emacs]
-                         :using-at-work           [:kotlin :ktor]
-                         :want-to-learn-more      [:elm :go :emacs]
+                         :favorites-at-the-moment [:go :emacs :postgres]
+                         :using-at-work           [:kotlin :java :postgres :kafka]
+                         :want-to-learn-more      [:ios :flutter :nats :emacs]
                          }
 
  :hobbies               [
@@ -177,7 +177,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  [
   {:customer    "Finn"
    :description "Distribusjon av annonser med økt synlighet. Prosessere meldinger for endring på annonser og håndtere livssyklus for effekt-produkter for annonser på finn.no."
-   :years       [2019]
+   :years       [2019 2020]
    :employer    :kodemaker
    :summary     "Videreutvikle og fornye system for annonser med effekt-produkter."
    :tech        [:java, :kotlin, :kafka, :kubernetes, :elm, :docker, :postgresql, :spring-boot]},
@@ -323,7 +323,8 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
                          "Variert erfaring fra mobil, backend og frontend "
                          ]
 
- :certifications        [{:name "Certified Scrum Master", :year 2018}
+ :certifications        [{:name "Cryptography I, Coursera/Stanford", :year 2020}
+                         {:name "Certified Scrum Master", :year 2018}
                          {:name        "Machine Learning by Stanford University on Coursera"
                           :year        2017
                           :certificate {:url  "https://www.coursera.org/account/accomplishments/certificate/SWGVUHARZM5Y"
