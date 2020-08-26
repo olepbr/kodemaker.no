@@ -130,6 +130,11 @@
          [:div.hip-label.mbs (:title right)]
          [:div (:content right)]]]])]])
 
+(defn hyrule-section [{:keys [contents] :as params}]
+  [:div.section.hyrule-section {:style (l/stylish {} params)}
+   [:div.content
+    (interpose [:hr.hyrule] contents)]])
+
 (defn profile-section [{:keys [full-name title mobile mail description image presence cv] :as params}]
   [:div.section {:style (l/stylish {} params)}
    [:div.content.header-section
@@ -140,9 +145,9 @@
      [:h5.h5.mbs title]]
     [:div.profile-image [:img.img {:src image}]]
     (when cv
-     [:div.profile-cv
-      (e/arrow-link {:text (:text cv)
-                     :href (:url cv)})])
+      [:div.profile-cv
+       (e/arrow-link {:text (:text cv)
+                      :href (:url cv)})])
     [:div.profile-contact
      [:div [:a {:href (str "tel:" mobile)} mobile]]
      [:div [:a {:href (str "mailto:" mail)} mail]]

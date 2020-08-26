@@ -168,6 +168,11 @@ a, .clickable {
   padding-bottom: 59px;
 }
 
+.hyrule-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .inline-menu {
   display: none;
 }
@@ -1017,6 +1022,8 @@ a, .clickable {
   .acc-link {flex: 1;}
   .acc-logo {width: 150px;}
 }
+
+.hyrule {background: var(--rose-aube); height: 1px; border:none; margin: 80px 0;}
 
 /* Grid section */
 .grid-section {

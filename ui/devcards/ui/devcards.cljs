@@ -12,6 +12,7 @@
             ui.sections.enumeration-section-cards
             ui.sections.grid-section-cards
             ui.sections.hip-section-cards
+            ui.sections.hyrule-section-cards
             ui.sections.profile-section-cards
             ui.sections.pønt-section-cards
             ui.sections.seymour-section-cards
