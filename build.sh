@@ -34,7 +34,7 @@ env $(prod-env) aws s3 sync $bucket .
 popd > /dev/null
 
 echo "Building site"
-diffs=$(lein build-site :json)
+diffs=$(lein build-new-site :json)
 
 if [ $? -ne 0 ]; then
   echo "Failed to build site, aborting"
