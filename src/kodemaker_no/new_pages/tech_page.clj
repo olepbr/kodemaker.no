@@ -91,7 +91,7 @@
                            {:content [:div
                                       (e/video-thumb
                                        {:class (str style " " video-class)
-                                        :img (str "/" style "/" (:presentation/thumb pres))
+                                        :img (str "/" style (:presentation/thumb pres))
                                         :tags (e/people-tags {:class "tags"
                                                               :people (:presentation/people pres)})
                                         :url (presentation-uri pres)
