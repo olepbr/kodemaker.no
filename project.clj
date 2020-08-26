@@ -8,7 +8,7 @@
                  [org.clojure/data.xml "0.0.7"]
                  [optimus "1.0.0-rc3"]
                  [optimus-img-transform "0.3.1" :exclusions [fivetonine/collage]]
-                 [cjohansen/imagine "2020.08.27"]
+                 [cjohansen/imagine "2020.08.25"]
                  [stasis "2.5.0"]
                  [ring "1.7.1"]
                  [hiccup "1.0.5"]
