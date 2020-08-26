@@ -4,7 +4,7 @@
   {:sections [{:kind :bruce
                :title "Engasjert miljø - erfarne utviklere"
                :text "Vi er ansvarlige, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
-               :link {:text "Erfaringer?"
+               :link {:text "Les mer"
                       :href "/referanser/"}
                :image-front "/bruce-front/foto/folk.jpg"
                :image-back "/bruce-back/foto/arduino.jpg"}
@@ -17,24 +17,24 @@
                :seymours
                [{:icon {:type :science/chemical :height 79}
                  :title "Referanser"
-                 :text "Vi har spennende og utfordende kunder. Sammen har vi utviklet mange nye løsninger. Noen av de kan du lese om her."
+                 :text "Vi har spennende og utfordende kunder. Sammen har vi utviklet mange nye løsninger."
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
                 {:icon {:type :science/robot-1 :height 79}
                  :title "Hvem er kodemakerne?"
-                 :text "Vi er erfarne, sultne og sosiale konsulenter som liker å bryne oss på de vanskeligere oppgavene. Svært godt miljø!"
-                 :link {:text "Ta en titt?"
+                 :text "Vi er erfarne, sultne og sosiale konsulenter som liker å bryne oss på de vanskeligere oppgavene."
+                 :link {:text "Se kodemakere"
                         :href "/folk/"}}
                 {:icon {:type :computer/laptop-1 :height 79}
                  :title "Jobbe hos oss"
                  :text "Det er ikke ofte vi ansetter nye Kodemakere, men kanskje du er vår neste kollega?"
-                 :link {:text "Jobbe hos oss?"
+                 :link {:text "Se jobb"
                         :href "/jobbe-hos-oss/"}}]}
               {:kind :vertigo
                :title "Kunnskap og innsikt"
                :text "I Kodemaker sitter vi på mye kunnskap og erfaring innen et bredt
     spekter av forretningsområder og teknologi. Vi liker å dele kunnskap, og er stadig ute etter ny lærdom selv. Vi har pleid å holde en del foredrag på konferanser og lignende, men i nåsitutasjonen er kanskje blogging det enkleste. Kanskje du finner noe interessant?"
-               :link {:text "Let her"
+               :link {:text "Les blogger"
                       :href "/blogg/"}
                :image "/foto/nils-1.jpg"
                :image-center "60% 0%"}

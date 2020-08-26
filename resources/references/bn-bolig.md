@@ -2,6 +2,7 @@
 :page-title BN Bolig
 :type reference
 :img /references/rune-strandli.jpg
+:portrait /references/rune-strandli-portrett.jpg
 :logo /logos/bnbolig.png
 :company BN Bolig
 :name Rune Strandli

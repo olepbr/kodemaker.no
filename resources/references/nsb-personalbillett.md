@@ -9,7 +9,7 @@
 :title Avdelingssjef, NSB Fellestjenester IT
 :techs [:tomcat :git :maven :wicket :javascript :spring :java :bootstrap :hibernate :mssql]
 :quote Kodemaker har bidratt med utallige råd og idéer
-:priority z
+:priority hidden
 :body
 
 Kodemaker leverte ny teknisk løsning på kortere tid enn vi

@@ -4,6 +4,7 @@
 :logo /logos/spid.svg
 :company Schibsted Payment
 :img /references/claes-bergsten.jpg
+:portrait /references/claes-bergsten-portrett.jpg
 :name Claes Bergsten
 :phone +47 916 68 984
 :title Tech Lead Payment, Schibsted Payment ID
