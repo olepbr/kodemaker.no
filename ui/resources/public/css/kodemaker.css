@@ -63,7 +63,7 @@ ol {
 ul {list-style: none}
 li {margin-left: 32px;}
 .text ul li, .dotted li {margin: 0 0 16px 20px;}
-.text ul li::before, .dotted li::before {content: "•"; color: var(--rouge); display: inline-block; width: 1em; margin-left: -1em}
+.text ul li::before, .dotted li::before {content: "•"; color: var(--rouge); display: inline-block; width: 1em; margin-left: -1em; float: left;}
 .dotted-tight li, .text .dotted-tight li {margin-bottom: 0;}
 
 dd {
