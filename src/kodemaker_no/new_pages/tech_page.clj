@@ -168,6 +168,40 @@
                                              (:screencast/blurb screencast)))
                      :link (when url {:text "Se screencast" :href url})})))}))
 
+(defn merge-side-projects [side-projects]
+  (-> (h/select-keys-by side-projects
+                        {:side-project/title first
+                         :side-project/url first
+                         :side-project/link-text first
+                         :side-project/illustration first
+                         :list/idx first
+                         :side-project/description (choose-and-change first
+                                                                      change-1st-person-to-3rd
+                                                                      :side-project/description
+                                                                      :person/_side-projects)})
+      (assoc :side-project/people (keep :person/_side-projects side-projects))))
+
+(defn side-projects-section [tech]
+  (when-let [side-projects (->> (:side-project/_techs tech)
+                                (group-by :side-project/url)
+                                vals
+                                (map merge-side-projects)
+                                (sort-by (comp names-sort-key :side-project/people))
+                                seq)]
+    {:kind :titled
+     :title "Våre sideprosjekter"
+     :contents (for [side-project side-projects]
+                 (let [url (:side-project/url side-project)]
+                   (e/illustrated-teaser
+                    {:title (:side-project/title side-project)
+                     :tags (e/people-tags {:prefix "Av"
+                                           :people (:side-project/people side-project)
+                                           :class "tags"})
+                     :url url
+                     :illustration (:side-project/illustration side-project)
+                     :content (f/to-html (:side-project/description side-project))
+                     :link (when url {:text (:side-project/link-text side-project) :href url})})))}))
+
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
@@ -198,9 +232,9 @@
         (recommendations-section tech)
         (presentations-section presentations)
         (screencasts-section tech)
+        (side-projects-section tech)
 
         ;; (references-section tech)
-        ;; (side-projects-section tech)
         ;; (open-source-section tech)
 
         ]
