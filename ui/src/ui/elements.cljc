@@ -35,14 +35,17 @@
     [:span {:className class} prefix " "
      (enumerate-techs techs)]))
 
+(defn enumerate-people [people]
+  (comma-separated (for [person (filter :person/given-name people)]
+                     (if (:page/uri person)
+                       [:a.link {:href (:page/uri person)}
+                        (:person/given-name person)]
+                       (:person/given-name person)))))
+
 (defn people-tags [{:keys [prefix people class]}]
   (when (seq people)
     [:span {:className class} prefix " "
-     (comma-separated (for [person (filter :person/given-name people)]
-                        (if (:page/uri person)
-                          [:a.link {:href (:page/uri person)}
-                           (:person/given-name person)]
-                          (:person/given-name person))))]))
+     (enumerate-people people)]))
 
 (defn blockquote [{:keys [quote]}]
   [:blockquote.blockquote.text {}
