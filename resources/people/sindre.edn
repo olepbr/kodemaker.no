@@ -42,13 +42,13 @@
                     :tech [:teknologi :utvikling :ddd]}]
 
  :hobbies [
+            {:title "Reise"
+             :description "Jeg vokste opp i en familie som alltid har reist mye, og har hatt gleden av å se store deler av verden. Noen høydepunkter er safari i Sør-Afrika og Tanzania, backpacking i Asia og road trips i USA. På reise er kameraet alltid med, og jeg har oppdaget at jeg er spesielt glad i å ta bilder av dyr – til mine reisevenners fortvilelse da vi ventet en time på at denne leoparden skulle hoppe ned fra treet sitt."
+             :illustration "/illustrations/hobbies/sindre_leopard.jpg"}
+
            {:title "Sandvolleyball"
             :description "Jeg har alltid vært glad i sport, og da spesielt sandvolleyball. Ballkontroll, gode reflekser, taktikk og samarbeid er stikkord her. Det skader heller ikke at sporten kombineres godt med sommer og sol, grilling og gode venner."
-            :illustration "/illustrations/hobbies/sindre_volley.jpg"}
-
-           {:title "Reising"
-            :description "Jeg vokste opp i en familie som alltid har reist mye, og har hatt gleden av å se store deler av verden. Noen høydepunkter er safari i Sør-Afrika og Tanzania, backpacking i Asia og road trips i USA. På reise er kameraet alltid med, og jeg har oppdaget at jeg er spesielt glad i å ta bilder av dyr – til mine reisevenners fortvilelse da vi ventet en time på at denne leoparden skulle hoppe ned fra treet sitt."
-            :illustration "/illustrations/hobbies/sindre_reise.jpg"}]
+            :illustration "/illustrations/hobbies/sindre_volley.jpg"}]
 
  :blog-posts [
               {:url "https://grensesnittet.computas.com/the-missing-piece-of-software-development/"
