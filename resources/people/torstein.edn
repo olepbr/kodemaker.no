@@ -133,7 +133,7 @@
              :summary "Optimalisering og videreutvikling av LMS"
              :description "Optimalisering og videreutvikling av LMS.
              Oppgaver: Senior Javautvikler."
-             :tech [:j2ee :java :servlets :xslt :jdbc :caucho-resin :postgres]}
+             :tech [:j2ee :java :servlets :xslt :jdbc :caucho-resin :postgresql]}
             {:customer "Fagsenteret for kjøtt"
              :years [2004]
              :employer :kodemaker
@@ -152,7 +152,7 @@
              utvikler for produksjonsstøttesystem for e-læringskurs med
              swingklient og flashklient. Innbar også oppfølging og coaching av
              utviklingsteamet."
-             :tech [:j2ee :java :xslt :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+             :tech [:j2ee :java :xslt :ejb :jdbc :jms :swing :jboss :mssql :postgresql :actionscript]}
             {:customer "Mintra AS"
              :years [2003]
              :employer :norbooking
@@ -162,7 +162,7 @@
              produksjonsstøttesystem for e-læringskurs med swingklient og
              flashklient. Innbar også oppfølging og coaching av
              utviklingsteamet."
-             :tech [:j2ee :java :ejb :jdbc :jms :swing :jboss :mssql :postgres :actionscript]}
+             :tech [:j2ee :java :ejb :jdbc :jms :swing :jboss :mssql :postgresql :actionscript]}
             {:customer "Norbooking AS"
              :years [2002]
              :employer :norbooking

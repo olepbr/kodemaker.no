@@ -165,7 +165,7 @@
                 }
                 ]
 
- :cv {:default {:preferred-techs [:xamarin-forms :js :html :sass :responsive-design ]}}
+ :cv {:default {:preferred-techs [:xamarin-forms :html :sass :responsive-design ]}}
 
  :education-summary "Master, Programmering og Nettverk, UiO"
  :education [{:institution "UiO"

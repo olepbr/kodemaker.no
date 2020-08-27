@@ -14,7 +14,7 @@
  :presence {:cv "kristoffer"
             :linkedin "/in/kristoffermoe"}
 
- :tech {:using-at-work [:kotlin :springboot :gradle :javascript :git :intellij :docker :k8s]}
+ :tech {:using-at-work [:kotlin :springboot :gradle :javascript :git :intellij :docker :kubernetes]}
 
  :recommendations [{:title "Programming Antiobjects"
                     :link {:url "https://www.cs.colorado.edu/~ralex/papers/PDF/OOPSLA06antiobjects.pdf"
@@ -25,7 +25,7 @@
                     Lukten av Pacman setter seg i spillbrettet, og det er brettet som styrer spøkelsene etter Pacman. Lukten av fotballen
                     sprer seg i gressmatten, og spillerne blir sendt i retning av den. Oppgaven deres blir å sparke ballen vekk fra
                      stanken fra det andre laget. Det gir interessante omganger fotball, særlig hvis det er flere baller på banen."}
-                     {:title "Functors, Applicatives, And Monads In Pictures"
+                   {:title "Functors, Applicatives, And Monads In Pictures"
                     :link {:url "http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html"
                            :text "Les artikkel"}
                     :tech [:funksjonell-programmering]
@@ -39,7 +39,7 @@
              :years [2020]
              :employer :kodemaker
              :tech [:kotlin :azure :gradle :postgresql :flyway :git :springboot :tomcat :docker]}
-             {:customer "Protector Forsikring ASA"
+            {:customer "Protector Forsikring ASA"
              :description "Videreutvikling og vedlikehold av Protectors applikasjoner for administrasjon av forsikringspoliser
              i Protectors skadeforsikringsvirksomhet i bedriftsmarkeder i Norge, Sverige, Finnland, Danmark og Storbritannia.
              Integrasjoner mot de forskjellige lands registre og andre tjenester."
@@ -67,16 +67,16 @@
              :years [2012 2013]
              :employer :kodemaker
              :summary "Utvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig til bedriftsmarkedet. REST-api for salg av ADSL til privatmarkedet"
-             :tech [:wicket :java :mongodb :ajax :jboss :collectionjson
-                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jax-rs
-                    :jboss :puppet :postgresql :oracle :mongodb :maven :jenkins :git]}
+             :tech [:wicket :java :mongodb :jboss :j2ee :jpa :hibernate :neo4j
+                    :mongodb :lucene :rest :jax-rs :jboss :puppet :postgresql :oracle
+                    :mongodb :maven :jenkins :git]}
             {:customer "Sparebank1 Gruppen"
              :description "Proof-of-concept med CA SiteMinder som hyllevareprodukt. Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM."
              :years [2011 2012]
              :employer :kodemaker
              :summary "Implementasjon av ny sikkerhetsløsning"
              :tech [:jsf :java :openam :bankid :weblogic :css :fatwire :git :jira
-                    :confluence :siteminder :javascript :ajax :bash :mockito :openam :apache
+                    :confluence :siteminder :javascript :bash :mockito :openam :apache
                     :linux :pki :saml :tomcat :jetty :maven :rpm :bankid :weblogic :fatwire]}
             {:customer "NKI Nettstudier"
              :years [2011]
@@ -110,7 +110,7 @@
              javakode/konfigurasjon til java 1.6 og Weblogic 10.3. Innføring av
              Gradle som nytt byggesystem"
              :tech [:java :jms :jmx :sql :axis :xfire :maven :gradle :groovy :spring :jms :weblogic
-                    :xml :xslt :sybase :mks :wiki]}
+                    :xslt :sybase :mks]}
             {:customer "Hotell.no"
              :years [2009]
              :employer :kodemaker
@@ -124,8 +124,8 @@
              :years [2008 2009]
              :employer :kodemaker
              :summary "SurfSammen, Personalisering, Motor"
-             :tech [:java :ajax :jsp :tsql :cvs :jira :confluence :t-sql :sybase :solr :fast
-                    :spring :javascript :jquery :css :xml :html :webtrends]}
+             :tech [:java :jsp :tsql :cvs :jira :confluence :t-sql :sybase :solr :fast
+                    :spring :javascript :jquery :css :html :webtrends]}
             {:customer "Telenor Mobil AS"
              :years [2007]
              :employer :kodemaker
@@ -148,7 +148,7 @@
              :employer :kodemaker
              :summary "Matrikkelen"
              :tech[:java :oracle-locator :mule :weblogic :swing :hibernate :j2ee :weblogic
-                   :hibernate :soa :xml :xslt]}
+                   :hibernate :soa :xslt]}
             {:customer "Forsvaret (FLO/IKT) "
              :years [2003]
              :employer :kodemaker
@@ -159,7 +159,7 @@
              Videreutvikling av web-baserte registre med søkefunksjonalitet og
              rapporter. Integrasjon mot andre logistikksystemer.
              Publiseringsløsning for håndbok og nyheter."
-             :tech [:java :jboss :jsp :jasperreport :spring :oracle :lucene :magnolia-cms]}
+             :tech [:java :jboss :jsp :jasper-reports :spring :oracle :lucene :magnolia-cms]}
             {:customer "ICA Norge AS"
              :years [2003]
              :employer :kodemaker
@@ -183,7 +183,7 @@
              datakilder (Agresso, SalesMaker og Active Directory). Utvikle
              webbasert løsning for innsamling av problemer og løsninger i
              husbyggeprosess."
-             :tech [:java :j2ee :weblogic :mssql :xml :xslt :xtractor]}
+             :tech [:java :j2ee :weblogic :mssql :xslt :xtractor]}
             {:customer "Legion AS"
              :years [2001]
              :employer :elan-it
@@ -233,22 +233,22 @@
                   Han er meget effektiv og disiplinert, med sans for detaljer og tar like gjerne enkle som komplekse oppgaver.
                   Kristoffers sans for humor kommer godt med i ethvert utviklingsteam, og han glir lett inn i miljøet.
                   Det var et tap for FINN at vi ikke lenger kunne ha Kristoffer med oss videre."
-             }
-             {:author "Johan Gedde-Dahl"
-              :title "Virksomhetsarkitekt, Sparebank1 Gruppen"
-              :quote "Kristoffer ble kastet ut på dypt vann med en minimal innføring - og leverte varene med begrenset oppfølging."
-             }
-             {
-               :author "Arve Søreide",
-               :title "Program Manager IKT for nye Deichmanske hovedbibliotek"
-               :quote "Applikasjonsprosjektet for nye Deichmanske hovedbibliotek har som mål å levere en fremtidsrettet og robust plattform for
+                 }
+                {:author "Johan Gedde-Dahl"
+                 :title "Virksomhetsarkitekt, Sparebank1 Gruppen"
+                 :quote "Kristoffer ble kastet ut på dypt vann med en minimal innføring - og leverte varene med begrenset oppfølging."
+                 }
+                {
+                 :author "Arve Søreide",
+                 :title "Program Manager IKT for nye Deichmanske hovedbibliotek"
+                 :quote "Applikasjonsprosjektet for nye Deichmanske hovedbibliotek har som mål å levere en fremtidsrettet og robust plattform for
                 utvikling av bibliotektjenester i Oslo. Kristoffer kom inn i prosjektet i en krevende fase som satte store krav til både 
                 prosessforståelse og utviklerferdigheter. Kristoffer viste tydelig at han besitter begge egenskaper, og han satte seg raskt inn i
                 både ny teknologi og nytt domene. Kristoffer er konstruktiv og argumenterer med faglig tyngde når en skal ta viktige veivalg, og er
                 en effektiv programmerer som leverer kode av høy kvalitet. Han er en omgjengelig og vennlig kollega, som vi gjerne anbefaler varmt
                 til andre."
-             }
-             ]
+                 }
+                ]
 
  :cv {}
  :cv/description "Kristoffer har Cand Scient-grad fra Universitetet i Oslo og
@@ -282,13 +282,13 @@
  :project-highlights [{:blurb "Ny tjenesteplattform for Deichmanske bibliotek basert på open source.
                                Verktøy for katalogisering av bibliografiske data med RDF.
                                Kraftig og brukervennlig søk med Elasticsearch."
-                      :customer "Deichmanske bibliotek"}
-                     {:blurb "Elektronisk valgadministrasjonssystem for konfigurasjon og gjennomføring av valg i Norge som bare MÅ virke
+                       :customer "Deichmanske bibliotek"}
+                      {:blurb "Elektronisk valgadministrasjonssystem for konfigurasjon og gjennomføring av valg i Norge som bare MÅ virke
                               på valgdagen, i tillegg til før og etter."
-                      :customer "Kommunal- og moderniseringsdepartementet"}
+                       :customer "Kommunal- og moderniseringsdepartementet"}
                       {:blurb "REST-API for salg av bredbånd til privatmarkedet med ordentlige HATEOAS-egenskaper som styrer
                                salgsklienten gjennom bestillingsprosessen med hyperlinking."
-                      :customer "Broadnet"}]
+                       :customer "Broadnet"}]
 
  :endorsement-highlight {:author "Arve Søreide"
                          :title "Program Manager IKT for nye Deichmanske hovedbibliotek"
@@ -297,4 +297,4 @@
                                  som vi gjerne anbefaler varmt til andre."}
 
 
-}
+ }

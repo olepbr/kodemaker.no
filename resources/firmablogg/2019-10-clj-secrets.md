@@ -1,7 +1,7 @@
 :title Maskert config med Clojure
 :author alf-kristian
 :published 2019-10-30
-:tech [:clojure :functional-programming]
+:tech [:clojure :funksjonell-programmering]
 
 :blurb
 

@@ -1,7 +1,7 @@
 :title Et lite Clojure-triks til å bli glad av
 :author magnar
 :published 2019-10-02
-:tech [:clojure :functional-programming]
+:tech [:clojure :funksjonell-programmering]
 
 :blurb
 

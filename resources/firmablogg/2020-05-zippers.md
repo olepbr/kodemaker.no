@@ -1,7 +1,7 @@
 :title Clojure zippers - snasen traversering og manipulering av trær
 :published 2020-05-13
 :author magnus
-:tech [:clojure :functional-programming]
+:tech [:clojure :funksjonell-programmering]
 
 :blurb
 

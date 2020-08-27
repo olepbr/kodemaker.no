@@ -1,6 +1,6 @@
 :title Et gammelt triks i en ny kontekst
 :author magnar
-:tech [:design :clojure :functional-programming]
+:tech [:design :clojure :funksjonell-programmering]
 :published 2019-07-17
 
 :blurb

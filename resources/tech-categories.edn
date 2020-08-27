@@ -96,7 +96,8 @@
    :heroku
    :ibm-bluemix
    :serverless
-   :tutum]}
+   :tutum
+   :travis-ci]}
 
  :concept
  {:label "Metode og tilnærming"
@@ -469,6 +470,7 @@
    :itext
    :mdb
    :micronaut
+   :opencv
    :optimalj
    :prawn
    :reactive-x
@@ -518,6 +520,7 @@
   :idx 217
   :techs
   [:aleph
+   :boot
    :clojure-spec
    :component
    :core-async
@@ -552,6 +555,7 @@
    :mq-series-integrator
    :mqtt
    :mule
+   :nats
    :oracle-aq
    :quartz
    :visibroker
@@ -985,5 +989,7 @@
   [:bleier
    :consulting
    :database
-   :hjernen]}
+   :hjernen
+   :utvikling
+   :web]}
  }
