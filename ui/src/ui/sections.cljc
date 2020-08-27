@@ -55,6 +55,7 @@
         (e/round-media
          {:image (:image-round contact)
           :title (:name contact)
+          :href (:href contact)
           :lines [(:title contact)
                   (:phone contact)
                   (:email contact)]})])
@@ -66,6 +67,7 @@
                        {:curtain (:curtain contact)
                         :image (:image-tall contact)
                         :title (:name contact)
+                        :href (:href contact)
                         :lines [(:title contact)
                                 (:phone contact)
                                 (:email contact)]})}))

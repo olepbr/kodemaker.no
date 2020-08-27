@@ -4,6 +4,7 @@
 (defn contact [person]
   {:name (:person/full-name person)
    :title (:person/title person)
+   :href (:page/uri person)
    :phone (:person/phone-number person)
    :email (:person/email-address person)
    :image-round (str "/vcard-small" (first (:person/portraits person)))
