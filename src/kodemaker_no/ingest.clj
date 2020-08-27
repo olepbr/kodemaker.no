@@ -5,6 +5,7 @@
             datomic.api
             [datomic-type-extensions.api :as d]
             [kodemaker-no.files :as files]
+            [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as homeless]
             kodemaker-no.ingestion.article
             [kodemaker-no.ingestion.blog :as blog]
@@ -110,6 +111,19 @@
        (remove :tech/name)
        (map :db/ident)))
 
+(defn find-uncategorized-techs [db]
+  (->> (d/q '[:find ?e ?file
+              :in $
+              :where
+              [?e :tech/name]
+              [?e :db/ident _ ?t]
+              [?t :tx-source/file-name ?file]]
+            db)
+       (map #(vector (d/entity db (first %)) (second %)))
+       (remove (comp :tech/type first))
+       (map (fn [[tech file]]
+              [(:db/ident tech) file]))))
+
 (defn perform-last-minute-changes [conn]
   @(datomic.api/transact conn (for [tech-id (techs-without-name (d/db conn))]
                                 [:db/add tech-id :tech/name (homeless/str-for-humans tech-id)]))
@@ -117,7 +131,13 @@
                                 [:db/add post-id :blog-post/author-picture picture]))
   @(datomic.api/transact conn (->> (techs (d/db conn))
                                    (filter tech/is-page?)
-                                   (map tech/page))))
+                                   (map tech/page)))
+  (when-let [techs (seq (find-uncategorized-techs (d/db conn)))]
+    (throw (ex-info (format "Det har sneket seg inn techs som ikke er kategorisert! Sørg for å enten fikse stavingen av %s (fra %s) eller legg %s til i resources/tech-categories."
+                            (str/join (f/comma-separated (map first techs)))
+                            (str/join (f/comma-separated (set (map second techs))))
+                            (if (< 1 (count techs)) "dem" "den"))
+                    {:techs techs}))))
 
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]
@@ -147,6 +167,18 @@
    (read-string (slurp (io/resource "tech-categories.edn"))))
 
   (def db (d/db conn))
+
+  (->> (d/q '[:find ?e ?file
+              :in $
+              :where
+              [?e :tech/name]
+              [?e :db/ident _ ?t]
+              [?t :tx-source/file-name ?file]]
+            db)
+       (map #(vector (d/entity db (first %)) (second %)))
+       (remove (comp :tech/type first))
+       (map (fn [[tech file]]
+              (str (:db/ident tech) " - " file))))
 
   (:blog-post/published (d/entity db [:page/uri "/blogg/2019-06-datascript/"]))
 
