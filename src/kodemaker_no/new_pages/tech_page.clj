@@ -154,7 +154,7 @@
                               (sort-by (comp names-sort-key :screencast/people))
                               seq)]
     {:kind :titled
-     :title "Screencasts"
+     :title "Våre screencasts"
      :contents (for [screencast screencasts]
                  (let [url (:screencast/url screencast)]
                    (e/illustrated-teaser
