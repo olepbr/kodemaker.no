@@ -115,7 +115,7 @@
     (when single
       [:div.hip-single-box
        [:div.hip-title [:h3.h3 title]]
-       [:div.hip-label.mbs (:title single)]
+       [:div.hip-label.mbs [:strong (:title single)]]
        [:img.hip-single-img {:src (:image single)}]
        [:div (:content single)]])
     (when (and left right)
@@ -123,13 +123,13 @@
        [:div
         [:div.hip-left-box
          [:div.hip-title [:h3.h3 title]]
-         [:div.hip-label.mbs (:title left)]
+         [:div.hip-label.mbs [:strong (:title left)]]
          [:div (:content left)]
          [:img.hip-left-img {:src (:image left)}]]]
        [:div.hip-right-box
         [:div.hip-right-inner
          [:div.hip-right-img.w-style-img {:style {:background-image (str "url(" (:image right) ")")}}]
-         [:div.hip-label.mbs (:title right)]
+         [:div.hip-label.mbs [:strong (:title right)]]
          [:div (:content right)]]]])]])
 
 (defn hyrule-section [{:keys [contents] :as params}]
