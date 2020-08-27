@@ -26,8 +26,7 @@ nydelig front-end arbeid i løpet av noen få dager etter oppstart - vi er impon
 
 Nimble er en klinikers assistent i lomma. Den gjør det mulig for klinikere å kommunisere og samhandle med annet
 helsepersonell på sykehuset. De kan dokumentere pasientinformasjon direkte fra sengeposten og umiddelbart dele
-det med hele pleieteamet. Nimble samler strukturerte data og bruker maskinlæring og AI til å
-automatisere administrative oppgaver som stjeler tid som heller kunne blitt brukt på pasientene.
+det med hele pleieteamet.
 
 ![Nimble arbeidsflyt](/illustrations/references/nimble.png)
 
