@@ -5,6 +5,7 @@
             [kodemaker-no.export.cvpartner :refer :all]
             [kodemaker-no.files :as files]
             [kodemaker-no.ingest :as ingest]
+            [kodemaker-no.new-pages.cv-page :as cv]
             [kodemaker-no.validate :refer [validate-content ID Person]]
             [midje.sweet :refer :all]
             schema.core))
@@ -13,7 +14,7 @@
   (let [johndoe-filename "people/johndoe.edn"]
     (doseq [file-name (files/find-file-names "resources/tech" #"(md|edn)$")]
       (ingest/ingest conn (str "tech/" file-name)))
-    (ingest/ingest conn "tech-types.edn")
+    (ingest/ingest conn "tech-categories.edn")
     (ingest/ingest conn johndoe-filename)
     (ingest/perform-last-minute-changes conn)
     (let [person (content/slurp-edn-map (str "test/resources" "/" johndoe-filename))]
@@ -155,23 +156,16 @@
                                       {:tags {:no "Python"}}
                                       {:tags {:no "C"}}
                                       {:tags {:no "Prolog"}}
+                                      {:tags {:no "Fortran"}}
                                       {:tags {:no "Pascal"}}]
                   :uncategorized     false}
-                 {:category          {:no "Frontend"}
-                  :technology_skills [{:tags {:no "React"}}]
-                  :uncategorized     false}
-                 {:category          {:no "Metodikk"}
+                 {:category {:no "Annet"},
+                  :uncategorized false,
                   :technology_skills [{:tags {:no "Maskinlæring"}}
-                                      {:tags {:no "Dyp læring"}}]
-                  :uncategorized     false}
-                 {:category          {:no "Bibliotek"}
-                  :technology_skills [{:tags {:no "Redux"}}]
-                  :uncategorized     false}
-                 {:category          {:no nil}
-                  :technology_skills [{:tags {:no "Plsql"}}
-                                      {:tags {:no "Fortran"}}
-                                      {:tags {:no "Dlib"}}]
-                  :uncategorized     true}]
+                                      {:tags {:no "Dyp læring"}}
+                                      {:tags {:no "Dlib"}}
+                                      {:tags {:no "Plsql"}}
+                                      {:tags {:no "React"}}
+                                      {:tags {:no "Redux"}}]}]
                 :in-any-order)
           )))
-

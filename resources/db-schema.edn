@@ -44,6 +44,16 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ ;; tech categories
+
+ {:db/ident :tech-category/label
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :tech-category/parent
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one}
+
  ;; tech
 
  {:db/ident :tech/name

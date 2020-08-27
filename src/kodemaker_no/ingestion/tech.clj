@@ -5,7 +5,6 @@
   {:db/ident :id
    :tech/name :name
    :tech/description :description
-   :tech/type :type
    :tech/illustration :illustration
    :tech/site :site
    :tech/ad :ad})
@@ -31,10 +30,17 @@
    :page/uri (str "/" (name (:db/ident tech)) "/")
    :page/kind :page.kind/tech})
 
-(defn create-tech-type-tx [file-name id->type]
-  (for [[id type] id->type]
-    {:db/ident (qualify-tech-kw id)
-     :tech/type type}))
+(defn create-tech-category-tx [_ categories]
+  (mapcat (fn [[type {:keys [label idx techs parent]}]]
+            (let [tech-type (h/qualify "tech-category" type)]
+              (conj
+               (for [id techs]
+                 {:db/ident (qualify-tech-kw id)
+                  :tech/type tech-type})
+               (cond-> {:db/ident tech-type}
+                 label (assoc :tech-category/label label)
+                 parent (assoc :tech-category/parent (h/qualify "tech-category" parent))
+                 idx (assoc :list/idx idx))))) categories))
 
 (defn create-tech-name-tx [file-name id->name]
   (for [[id tech-name] id->name]

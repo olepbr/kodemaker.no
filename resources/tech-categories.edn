@@ -1,775 +1,989 @@
-;; Kategorisering av typer tech for teknologier som ikke har sin egen side
-;; enda.
-;; Typen brukes til å plassere teknologien i rett kategori på CV-en.
-{:abap :proglang
- :abdera :other
- :actionscript :proglang
- :activemq :messaging
- :activex :webdev
- :ad :security
- :adobe-reachform :webdev
- :agresso :software
- :ajaxanywhere :library
- :akka :library
- :aleph :library
- :algoritmer :concept
- :alpine :platform
- :analysis :methodology
- :android :platform
- :android-intents :apps
- :angular :frontend
- :angular-material :frontend
- :angularjs :frontend
- :ansible :devops
- :ant :devtools
- :aop :methodology
- :apache :webdev
- :apache-axis :webdev
- :apache-jena :webdev
- :apache-mq :messaging
- :apache-poi :library
- :apns :apps
- :appcode :devtools
- :appfuse :platform
- :applescript :proglang
- :architecture :methodology
- :arduino :platform
- :arkitektur :other
- :arrow :library
- :asana :coop
- :asp :webdev
- :aspectj :library
- :aspnet :webdev
- :atg-dynamo :webdev
- :atom :other
- :atomic-design :frontend
- :auth0 :service
- :automated-acceptance-testing :methodology
- :aws :cloud
- :aws-api-gateway :cloud
- :aws-cloudformation :cloud
- :aws-cloudfront :cloud
- :aws-cloudwatch :cloud
- :aws-ec2 :cloud
- :aws-ecs :cloud
- :aws-iam :cloud
- :aws-kinesis :cloud
- :aws-lambda :cloud
- :aws-rds :cloud
- :aws-route53 :cloud
- :aws-s3 :cloud
- :aws-vpc :cloud
- :awt :desktop
- :axis :library
- :azure :cloud
- :azure-event-hubs :messaging
- :babel :devtools
- :backbone :frontend
- :bamboo :devops
- :bankid :security
- :bash :proglang
- :bc4j :platform
- :bigip :network
- :bildeanalyse :methodology
- :birt :monitoring
- :blazeds :messaging
- :bleier :other
- :blockchains :other
- :bluetooth :platform
- :bootstrap :frontend
- :borland :devtools
- :browser-devtools :devtools
- :browserify :webdev
- :buddy :security
- :business :other
- :buster-js :testing
- :busybox :platform
- :c :proglang
- :c3 :library
- :camel :messaging
- :canoo-webtest :testing
- :canvas :frontend
- :capistrano :devops
- :cas :security
- :cassandra :database
- :castor-xml :library
- :caucho-resin :webdev
- :cd :methodology
- :cef :frontend
- :centos :platform
- :cesiumjs :frontend
- :chai :testing
- :checkstyle :devtools
- :cheetah :webdev
- :ci :methodology
- :cics :service
- :clojure :proglang
- :clojure-spec :library
- :clojurescript :proglang
- :cloud :devops
- :cloudstack :cloud
- :cobol :proglang
- :cocoa :apps
- :cocoapods :devtools
- :code-review :methodology
- :codenarc :devtools
- :coffeescript :proglang
- :compass :frontend
- :complus :desktop
- :compojure :webdev
- :component :library
- :concourse :devops
- :concurrency :methodology
- :confluence :coop
- :consulting :other
- :corba :messaging
- :cordova :apps
- :core-async :library
- :core-text :apps
- :coreos :platform
- :cpp :proglang
- :cqrs :methodology
- :crucible :devops
- :cruise-control :devops
- :cruisecontrol :devops
- :csharp :proglang
- :css :frontend
- :cucumber :testing
- :cvs :devtools
- :cxf :webdev
- :cygwin :devtools
- :cytoscape :service
- :d3 :frontend
- :dashing :monitoring
- :database :other
- :datadog :monitoring
- :dataflex :proglang
- :datalog :database
- :datascript :database
- :datomic :database
- :db2 :database
- :dbartisan :devtools
- :dbfit :webdev
- :dbunit :testing
- :ddd :methodology
- :deeplearning :ai
- :delphi :proglang
- :derby :database
- :design :other
- :devcards :frontend
- :devops :methodology
- :digital-ocean :cloud
- :distributed-systems :other
- :django :webdev
- :dlib :library
- :docker :devops
- :docker-cloud :cloud
- :docker-compose :devops
- :docker-swarm :cloud
- :dojo :frontend
- :domain-modeling :methodology
- :domino :software
- :dotnet :platform
- :dreamweaver-mx :devtools
- :drools :library
- :dropwizard :webdev
- :dropwizard-metrics :monitoring
- :dynamodb :database
- :easerver :webdev
- :easymock :testing
- :ecc :security
- :eclipse :devtools
- :efs :cloud
- :ehcache :devops
- :ejb :platform
- :elasticsearch :search
- :electron :desktop
- :elisp :proglang
- :elixir :proglang
- :elm :proglang
- :emacs :devtools
- :enonic-cms :service
- :epicentric-portal :webdev
- :erlang :proglang
- :erwin :software
- :es6 :proglang
- :escenic :service
- :etl :other
- :event-sourcing :methodology
- :eventstore :database
- :excel :software
- :expectations :testing
- :express :webdev
- :express-js :frontend
- :ext-js :frontend
- :ezpublish :service
- :face-recognition :ai
- :facelets :webdev
- :fast :search
- :fatwire :service
- :figwheel :devtools
- :findbugs :devtools
- :fitnesse :testing
- :flash :frontend
- :flex :proglang
- :fluentd :monitoring
- :flutter :apps
- :flux :devops
- :flyway :database
- :fortran :proglang
- :frontend :frontend
- :frp :methodology
- :fsharp :proglang
- :funksjonell-programmering :methodology
- :fuseki :platform
- :fusioncharts :frontend
- :gans :ai
- :gatling :testing
- :gcc :platform
- :gcd :apps
- :gcp :cloud
- :geb :testing
- :gemfire :service
- :genova :other
- :geotools :library
- :geronimo :webdev
- :gerrit :coop
- :git :devtools
- :git-svn :devtools
- :github :coop
- :gitlab :coop
- :glassfish :webdev
- :go :proglang
- :google-analytics :service
- :google-appengine :cloud
- :google-closure :frontend
- :google-cloud :cloud
- :google-cloud-datastore :database
- :google-cloud-messaging :cloud
- :google-cloud-to-device-android-push :apps
- :google-earth :service
- :google-guice :library
- :google-image-charts :frontend
- :google-maps :frontend
- :google-protocol-buffers :other
- :gorm :database
- :graalvm :platform
- :gradle :devtools
- :grafana :monitoring
- :grails :webdev
- :graphite :monitoring
- :graphql :webdev
- :grasshopper :other
- :griffon :platform
- :grinder :testing
- :groovy :proglang
- :groovyws :webdev
- :grpc :library
- :grunt :devtools
- :gulp :devtools
- :gwt :webdev
- :h2db :database
- :hadoop :devops
- :hamcrest :library
- :haproxy :devops
- :haskell :proglang
- :hateoas :methodology
- :hazelcast :devtools
- :hbase :database
- :hdfs :devops
- :helm :devops
- :heroku :cloud
- :hibernate :database
- :hibernate-search :search
- :highcharts :frontend
- :hive :database
- :hjernen :other
- :hololens :platform
- :homoikonisitet :other
- :honeysql :database
- :hp-loadrunner :testing
- :hp-nonstop :platform
- :hpunix :platform
- :hsqldb :database
- :html :frontend
- :html5 :webdev
- :http :frontend
- :https :webdev
- :hudson :devops
- :hugsql :database
- :hypermedia :webdev
- :hystrix :devops
- :ibm-aix :platform
- :ibm-bluemix :cloud
- :ibm-component-broker :service
- :ibm-content-manager-ondemand :service
- :ibm-datapower :service
- :ibm-mq :messaging
- :ibm-rational-application-developer :service
- :ibm-websphere :webdev
- :idris :proglang
- :iis :webdev
- :immutability :methodology
- :immutable-js :frontend
- :ims :platform
- :influxdb :database
- :intellij :devtools
- :interbase :database
- :interconnect :other
- :ios :platform
- :iot :platform
- :ip :platform
- :iplanet-enterprise-directory :webdev
- :istio :devops
- :itext :library
- :j2ee :proglang
- :j2me :platform
- :j2se :platform
- :jackson :library
- :jade :frontend
- :jasmine :testing
- :jasper-reports :other
- :jasperserver :monitoring
- :java :proglang
- :java-mail :library
- :java-sound-framework :library
- :javafx :platform
- :javascript :proglang
- :jawr :frontend
- :jax-rs :webdev
- :jax-ws :webdev
- :jaxb :library
- :jaxrs :webdev
- :jboss :webdev
- :jboss-messaging :messaging
- :jboss-portal :webdev
- :jbossws :webdev
- :jbpm :platform
- :jbuilder :platform
- :jdbc :database
- :jdbi :database
- :jenkins :devops
- :jersey :library
- :jest :testing
- :jetty :webdev
- :jfc :desktop
- :jgit :library
- :jinja2 :webdev
- :jira :coop
- :jmeter :monitoring
- :jmock :testing
- :jms :messaging
- :jmx :library
- :jni :library
- :jool :library
- :joomla :service
- :joss :webdev
- :jpa :database
- :jprofiler :devtools
- :jquery :frontend
- :jquery-mobile :apps
- :jrebel :devtools
- :js-test-driver :testing
- :jsch :security
- :jsf :webdev
- :jsp :webdev
- :jspm :devtools
- :jsr-168 :webdev
- :jstl :webdev
- :jsx :frontend
- :junit :testing
- :junitee :testing
- :kafka :messaging
- :kanban :methodology
- :karma :testing
- :kibana :monitoring
- :koha :service
- :kotlin :proglang
- :kryptografi :security
- :ktor :webdev
- :kubernetes :devops
- :lambdacd :devops
- :ldap :database
- :lean :methodology
- :leiningen :devtools
- :less :frontend
- :letsencrypt :service
- :liberator :webdev
- :lighttable :devtools
- :linux :platform
- :linux-kernel :platform
- :liquibase :database
- :lisp :proglang
- :lisp-flavoured-erlang :proglang
- :log4j :monitoring
- :logic-programming :methodology
- :logstash :monitoring
- :lombok :library
- :lotus-notes :software
- :lucene :search
- :mac-os :platform
- :machine-learning :ai
- :magnolia-cms :service
- :mailgun :service
- :make :devtools
- :mapbox :frontend
- :mariadb :database
- :material-ui :frontend
- :maven :devtools
- :maven-junit :devtools
- :mdb :library
- :media-highway :service
- :media-home-platform :platform
- :mercurial :devtools
- :mesos :devops
- :metrics :monitoring
- :micro-services :methodology
- :micronaut :library
- :middlegen :database
- :midje :testing
- :mks :devtools
- :mocha :testing
- :mockito :testing
- :mockobjects :testing
- :mongo-queue :messaging
- :mongodb :database
- :monit :monitoring
- :mono :platform
- :mount :library
- :mq :messaging
- :mq-series :messaging
- :mq-series-integrator :messaging
- :mqtt :messaging
- :ms-access :database
- :ms-dna :other
- :ms-exchange :software
- :ms-market :other
- :mscpp :proglang
- :mssql :database
- :mts :other
- :mule :messaging
- :munin :monitoring
- :mustache :webdev
- :mvs :platform
- :mysql :database
- :neo4j :database
- :neptune :other
- :netty :webdev
- :nexus :devtools
- :nginx :devops
- :node :proglang
- :nodejs :proglang
- :novell-extend-composer-appserver :webdev
- :novell-netware :platform
- :npm :devtools
- :oauth :security
- :oauth2 :security
- :objc :proglang
- :objcplusplus :proglang
- :oc4j :webdev
- :octave :proglang
- :octopus :devops
- :oidc :security
- :okd :devops
- :okta :security
- :om :frontend
- :om-next :frontend
- :oocss :frontend
- :open-source :other
- :openam :security
- :openhab :iot
- :openid :security
- :openjpa :database
- :openlayers :frontend
- :openshift :devops
- :openssl :security
- :opensso :security
- :optimalj :library
- :optimizeit-profiler :devtools
- :optimus :webdev
- :oracle :database
- :oracle-appserver :webdev
- :oracle-aq :messaging
- :oracle-jdeveloper :devtools
- :oracle-locator :database
- :oracle-portal :webdev
- :oracle9ias :webdev
- :orion :other
- :osx :platform
- :packer :devops
- :pair-programming :methodology
- :paradox :other
- :pascal :proglang
- :passenger :devops
- :passiv-rfid :platform
- :patternlab :frontend
- :pegjs :frontend
- :peoplesoft-crm :service
- :perl :proglang
- :phantomjs :testing
- :phoenix :webdev
- :photoshop :software
- :php :proglang
- :pki :security
- :play :webdev
- :plsql :database
- :plugins :concept
- :podcast :concept
- :pojo :concept
- :portlets :webdev
- :postgresql :database
- :powerbuilder :devtools
- :powerdesigner :devtools
- :prawn :library
- :prebidjs :service
- :prime-numbers :concept
- :primefaces :webdev
- :programming :concept
- :prolink :service
- :prolog :proglang
- :prometheus :monitoring
- :prototype :frontend
- :pswincom :service
- :pthread :platform
- :puppet :devops
- :puppeteer :frontend
- :pwa :apps
- :pygments :frontend
- :python :proglang
- :qb-vision :platform
- :quartz :messaging
- :quasar :webdev
- :quic :webdev
- :quickr :service
- :quiescent :frontend
- :r :proglang
- :rack :webdev
- :ractive :frontend
- :rad :webdev
- :rails :webdev
- :rake :devtools
- :rational-clearcase :devtools
- :rational-rose :devtools
- :rational-suite :devtools
- :rbac :security
- :rdf :webdev
- :re-frame :frontend
- :react :frontend
- :react-native :apps
- :reactive-cocoa :apps
- :reactive-programming :concept
- :reactive-x :library
- :reagent :frontend
- :redhat :platform
- :redis :database
- :redux :frontend
- :reinforcement-learning :ai
- :release-management :methodology
- :responsive-design :frontend
- :rest :webdev
- :resteasy :webdev
- :ring :webdev
- :rpm :platform
- :rsa :security
- :rspec :testing
- :rss :webdev
- :ruby :proglang
- :rubymine :devtools
- :rup :platform
- :rust :proglang
- :rxjava :library
- :saaj :library
- :saltstack :devops
- :saml :security
- :sanity :service
- :sap :service
- :sass :frontend
- :sbt :devtools
- :scala :proglang
- :scalatra :webdev
- :scheme :proglang
- :screenscraping :concept
- :scrum :methodology
- :sealed-secrets :devops
- :seapine :service
- :secureway-directory-stellent-cms :service
- :security :concept
- :selenium :testing
- :sente :frontend
- :serverless :cloud
- :servlets :webdev
- :shell :platform
- :shipit :devops
- :silverstream :other
- :sinatra :webdev
- :sinon :testing
- :siri-service-interface-for-real-time-information :apps
- :site-server-commerce :service
- :sitemesh :webdev
- :siteminder :service
- :slack :coop
- :slick :database
- :smidig :concept
- :snmp :network
- :soa :concept
- :soap :other
- :software-craftsmanship :concept
- :solaris :platform
- :solr :search
- :sonar :devtools
- :sourcesafe :devtools
- :spark :devops
- :splunk :monitoring
- :spock :testing
- :spring :webdev
- :spring-batch :other
- :spring-boot :webdev
- :spring-integration :other
- :spring-jdbc :database
- :spring-mvc :platform
- :spring-security :security
- :spring-web-flow :webdev
- :spring-ws :webdev
- :springboot :webdev
- :springsource-tool-suite :devtools
- :sql :database
- :sql-reporting-services :database
- :sql-server :database
- :sqlite :database
- :squirrel-sql :database
- :sse :frontend
- :ssh :platform
- :ssl :security
- :sso :security
- :stash :coop
- :stasis :webdev
- :statsd :monitoring
- :struts :webdev
- :struts2 :webdev
- :sublime-text :devtools
- :svg :frontend
- :svn :devtools
- :swagger :webdev
- :swift :proglang
- :swing :desktop
- :swing-admin-console :desktop
- :sybase :database
- :systemjs :devtools
- :t-sql :database
- :talkback :other
- :tandem :other
- :tapestry :webdev
- :tcp :network
- :tdd :methodology
- :teamcity :devops
- :teknologi :concept
- :telegraf :database
- :telon :library
- :tensorflow :ai
- :tensorflow-js :ai
- :teradata-tcrm :monitoring
- :terminal :devtools
- :terminator :platform
- :terraform :devops
- :testing :methodology
- :testng :testing
- :textmate :devtools
- :thinking-sphinx :search
- :thrift :platform
- :tivoli :monitoring
- :toad :devops
- :togetherj :devtools
- :tomcat :webdevvops
- :tooling :concept
- :tools-deps :devtools
- :traefik :devops
- :travelfusion :service
- :trello :coop
- :trening :concept
- :tsql :database
- :turbo-pascal :proglang
- :tutum :cloud
- :twilio :service
- :typescript :proglang
- :ubuntu :platform
- :udp :network
- :uml :other
- :unfiltered :webdev
- :unit-testing :testing
- :unity :desktop
- :unity3d :webdev
- :universell-utforming :methodology
- :unix :platform
- :unleash :library
- :vagrant :devtools
- :varnish :devops
- :vault :devops
- :vavr :library
- :vba :proglang
- :vbscript :proglang
- :velocity :webdev
- :verity-search :search
- :versata :library
- :versata-workflow :library
- :vertical-site :service
- :vertx :library
- :vim :devtools
- :virtualisering :methodology
- :visibroker :messaging
- :visio :software
- :visual-age :devtools
- :visual-basic :proglang
- :visual-interdev :devtools
- :visual-source-safe :devtools
- :visual-studio :devtools
- :visual-studio-appcenter :devtools
- :visualage :devtools
- :vmware-esxi :devops
- :voiceover :frontend
- :watir :testing
- :wcf :desktop
- :wearables :iot
- :weave :devops
- :web-performance :other
- :web-services :methodology
- :webgl :frontend
- :weblogic :service
- :weblogic-portal :webdev
- :webmacro :webdev
- :webmethods :webdev
- :webpack :devtools
- :webservices :concept
- :websocket :webdev
- :websockets :frontend
- :websphere :webdev
- :websphere-portal :webdev
- :websphere-studio :devtools
- :webtrends :webdev
- :webwork :webdev
- :wicket :webdev
- :wildfly :webdev
- :windows :platform
- :windows-nt :platform
- :windows-server :platform
- :wkhtmltopdf :library
- :wordpress :service
- :wpf :other
- :wsrp :messaging
- :xalan :webdev
- :xamarin :apps
- :xamarin-forms :apps
- :xaml :apps
- :xcode :devtools
- :xdoclet :library
- :xerces :library
- :xfire :other
- :xfire-webservices :other
- :xmlspy :devtools
- :xsd :other
- :xslt :proglang
- :xtractor :library
- :yarn :devtools
- :zeplin :software
- :zeromq :messaging
- :zipkin :monitoring
- :zookeeper :database}
+;; Kategorisering av typer teknologier. Typen brukes til å plassere teknologien
+;; i rett kategori på CV-en. Det er ikke lov å bruke ukategoriserte techs, så
+;; hvis du har brukt noe nytt, legg den til på rett sted i denne fila.
+;;
+;; Kategorien :concept kan brukes til ting som ikke direkte er en teknologi,
+;; eksempelvis "metode og tilnærming", som er etiketten vi bruker på CV-en.
+;;
+;; "Kategorien" :excluded er for ting som av en eller annen grunn trengs brukt
+;; som en tag-aktig sak, men som ikke hører hjemme på CV-en. Eksempel er Trygve
+;; sine bleier fra pappapermisjonen.
+
+;; Én tech per linje er git-vennlig. Vennligst etterstreb å holde listene
+;; alfabetisk sortert, så blir det litt lettere å plassere og finne ting.
+
+{:development
+ {:label "Utvikling"
+  :parent :other
+  :idx 75}
+
+ :web-app
+ {:label "Web- og apputvikling"
+  :parent :development
+  :idx 65}
+
+ :ai
+ {:label "Kunstig intelligens"
+  :parent :development
+  :idx 70
+  :techs
+  [:deeplearning
+   :face-recognition
+   :gans
+   :machine-learning
+   :reinforcement-learning
+   :tensorflow
+   :tensorflow-js]}
+
+ :apps
+ {:label "Apputvikling"
+  :parent :web-app
+  :idx 80
+  :techs
+  [:android-intents
+   :apns
+   :cocoa
+   :cordova
+   :core-text
+   :gcd
+   :google-cloud-to-device-android-push
+   :jquery-mobile
+   :pwa
+   :reactive-cocoa
+   :siri-service-interface-for-real-time-information
+   :wearables]}
+
+ :cross-platform
+ {:label "Kryssplattform"
+  :parent :apps
+  :idx 85
+  :techs
+  [:flutter
+   :react-native
+   :xamarin
+   :xamarin-forms
+   :xaml]}
+
+ :cloud
+ {:label "Skytjenester"
+  :parent :devops
+  :idx 30
+  :techs
+  [:aws
+   :aws-api-gateway
+   :aws-cloudformation
+   :aws-cloudfront
+   :aws-cloudwatch
+   :aws-ec2
+   :aws-ecs
+   :aws-iam
+   :aws-kinesis
+   :aws-lambda
+   :aws-rds
+   :aws-route53
+   :aws-s3
+   :aws-vpc
+   :azure
+   :cloudstack
+   :digital-ocean
+   :docker-cloud
+   :docker-swarm
+   :efs
+   :gcp
+   :google-appengine
+   :google-cloud
+   :google-cloud-messaging
+   :heroku
+   :ibm-bluemix
+   :serverless
+   :tutum]}
+
+ :concept
+ {:label "Metode og tilnærming"
+  :parent :other
+  :idx 160
+  :techs
+  [:algoritmer
+   :analysis
+   :aop
+   :architecture
+   :arkitektur
+   :automated-acceptance-testing
+   :bildeanalyse
+   :blockchains
+   :business
+   :cd
+   :ci
+   :code-review
+   :concurrency
+   :cqrs
+   :ddd
+   :design
+   :devops
+   :distributed-systems
+   :domain-modeling
+   :event-sourcing
+   :frp
+   :funksjonell-programmering
+   :hateoas
+   :homoikonisitet
+   :immutability
+   :kanban
+   :lean
+   :logic-programming
+   :micro-services
+   :open-source
+   :pair-programming
+   :plugins
+   :podcast
+   :pojo
+   :prime-numbers
+   :programming
+   :reactive-programming
+   :release-management
+   :screenscraping
+   :scrum
+   :security
+   :smidig
+   :soa
+   :soap
+   :software-craftsmanship
+   :tdd
+   :teknologi
+   :testing
+   :tooling
+   :trening
+   :uml
+   :universell-utforming
+   :virtualisering
+   :web-performance
+   :web-services
+   :webservices]}
+
+ :coop
+ {:label "Samhandling"
+  :parent :software
+  :idx 170
+  :techs
+  [:asana
+   :confluence
+   :gerrit
+   :github
+   :gitlab
+   :jira
+   :slack
+   :stash
+   :trello]}
+
+ :data
+ {:label "Data"
+  :parent :other
+  :idx 95}
+
+ :database
+ {:label "Database"
+  :parent :data
+  :idx 90
+  :techs
+  [:cassandra
+   :datalog
+   :datascript
+   :datomic
+   :db2
+   :derby
+   :dynamodb
+   :eventstore
+   :flyway
+   :google-cloud-datastore
+   :gorm
+   :h2db
+   :hbase
+   :hibernate
+   :hive
+   :honeysql
+   :hsqldb
+   :hugsql
+   :influxdb
+   :interbase
+   :jdbc
+   :jdbi
+   :jpa
+   :ldap
+   :liquibase
+   :mariadb
+   :middlegen
+   :mongodb
+   :ms-access
+   :mssql
+   :mysql
+   :neo4j
+   :openjpa
+   :oracle
+   :oracle-locator
+   :plsql
+   :postgresql
+   :redis
+   :slick
+   :spring-jdbc
+   :sql
+   :sql-reporting-services
+   :sql-server
+   :sqlite
+   :squirrel-sql
+   :sybase
+   :t-sql
+   :telegraf
+   :tsql
+   :zookeeper]}
+
+ :desktop
+ {:label "Desktop"
+  :parent :web-app
+  :idx 150
+  :techs
+  [:awt
+   :complus
+   :electron
+   :jfc
+   :swing
+   :swing-admin-console
+   :unity
+   :wcf]}
+
+ :devops
+ {:label "Devops"
+  :parent :other
+  :idx 40
+  :techs
+  [:ansible
+   :bamboo
+   :capistrano
+   :cloud
+   :concourse
+   :crucible
+   :cruise-control
+   :cruisecontrol
+   :docker
+   :docker-compose
+   :ehcache
+   :flux
+   :hadoop
+   :haproxy
+   :hdfs
+   :helm
+   :hudson
+   :hystrix
+   :istio
+   :jenkins
+   :kubernetes
+   :lambdacd
+   :mesos
+   :nginx
+   :octopus
+   :okd
+   :openshift
+   :packer
+   :passenger
+   :puppet
+   :saltstack
+   :sealed-secrets
+   :shipit
+   :spark
+   :teamcity
+   :terraform
+   :toad
+   :traefik
+   :varnish
+   :vault
+   :vmware-esxi
+   :weave]}
+
+ :devtools
+ {:label "Utviklingsverktøy"
+  :parent :other
+  :idx 20
+  :techs
+  [:babel
+   :browser-devtools
+   :checkstyle
+   :cocoapods
+   :codenarc
+   :dbartisan
+   :findbugs
+   :hazelcast
+   :jprofiler
+   :jspm
+   :mks
+   :nexus
+   :npm
+   :optimizeit-profiler
+   :oracle-jdeveloper
+   :rational-rose
+   :rational-suite
+   :sonar
+   :springsource-tool-suite
+   :systemjs
+   :terminal
+   :togetherj
+   :vagrant
+   :visual-age
+   :visual-interdev
+   :visual-source-safe
+   :visualage
+   :yarn]}
+
+ :build-tools
+ {:label "Byggeverktøy"
+  :parent :devtools
+  :idx 15
+  :techs
+  [:ant
+   :figwheel
+   :gradle
+   :grunt
+   :gulp
+   :leiningen
+   :make
+   :maven
+   :maven-junit
+   :rake
+   :sbt
+   :tools-deps
+   :webpack]}
+
+ :editors
+ {:label "Utviklingsmiljøer"
+  :parent :devtools
+  :idx 16
+  :techs
+  [:appcode
+   :borland
+   :cygwin
+   :dreamweaver-mx
+   :eclipse
+   :emacs
+   :intellij
+   :jrebel
+   :lighttable
+   :powerbuilder
+   :powerdesigner
+   :rubymine
+   :sublime-text
+   :textmate
+   :vim
+   :visual-studio
+   :visual-studio-appcenter
+   :websphere-studio
+   :xcode
+   :xmlspy]}
+
+ :vcs
+ {:label "Versjonskontroll"
+  :parent :devtools
+  :idx 17
+  :techs
+  [:cvs
+   :git
+   :git-svn
+   :mercurial
+   :rational-clearcase
+   :sourcesafe
+   :svn]}
+
+ :frontend
+ {:label "Frontend"
+  :parent :webdev
+  :idx 60
+  :techs
+  [:angular
+   :angular-material
+   :angularjs
+   :atomic-design
+   :backbone
+   :bootstrap
+   :canvas
+   :cef
+   :cesiumjs
+   :compass
+   :css
+   :d3
+   :devcards
+   :dojo
+   :express-js
+   :ext-js
+   :flash
+   :frontend
+   :fusioncharts
+   :google-closure
+   :google-image-charts
+   :google-maps
+   :highcharts
+   :html
+   :http
+   :immutable-js
+   :jade
+   :jawr
+   :jquery
+   :jsx
+   :less
+   :mapbox
+   :material-ui
+   :om
+   :om-next
+   :oocss
+   :openlayers
+   :patternlab
+   :pegjs
+   :prototype
+   :puppeteer
+   :pygments
+   :quiescent
+   :ractive
+   :re-frame
+   :react
+   :reagent
+   :redux
+   :responsive-design
+   :sass
+   :sente
+   :sse
+   :svg
+   :voiceover
+   :webgl
+   :websockets]}
+
+ :library
+ {:label "Biblioteker"
+  :parent :development
+  :idx 220
+  :techs
+  [:ajaxanywhere
+   :axis
+   :c3
+   :castor-xml
+   :dlib
+   :drools
+   :geotools
+   :grpc
+   :hamcrest
+   :itext
+   :mdb
+   :micronaut
+   :optimalj
+   :prawn
+   :reactive-x
+   :saaj
+   :telon
+   :unleash
+   :vavr
+   :versata
+   :versata-workflow
+   :vertx
+   :wkhtmltopdf
+   :xdoclet
+   :xerces
+   :xtractor]}
+
+ :jvm
+ {:label "JVM"
+  :parent :library
+  :idx 215
+  :techs
+  [:apache-poi
+   :aspectj
+   :google-guice
+   :jackson
+   :java-mail
+   :java-sound-framework
+   :jaxb
+   :jersey
+   :jgit
+   :jmx
+   :jni
+   :jool
+   :lombok
+   :rxjava
+   :spring-mvc]}
+
+ :scala
+ {:label "Scala"
+  :parent :jvm
+  :idx 216
+  :techs
+  [:akka]}
+
+ :clojure
+ {:label "Clojure"
+  :parent :jvm
+  :idx 217
+  :techs
+  [:aleph
+   :clojure-spec
+   :component
+   :core-async
+   :mount]}
+
+ :kotlin
+ {:label "Kotlin"
+  :parent :jvm
+  :idx 218
+  :techs
+  [:arrow
+   ]}
+
+ :messaging
+ {:label "Meldingssystemer"
+  :parent :data
+  :idx 130
+  :techs
+  [:activemq
+   :apache-mq
+   :azure-event-hubs
+   :blazeds
+   :camel
+   :corba
+   :ibm-mq
+   :jboss-messaging
+   :jms
+   :kafka
+   :mongo-queue
+   :mq
+   :mq-series
+   :mq-series-integrator
+   :mqtt
+   :mule
+   :oracle-aq
+   :quartz
+   :visibroker
+   :wsrp
+   :zeromq]}
+
+ :monitoring
+ {:label "Logging og monitorering"
+  :parent :devops
+  :idx 50
+  :techs
+  [:birt
+   :dashing
+   :datadog
+   :dropwizard-metrics
+   :fluentd
+   :grafana
+   :graphite
+   :jasperserver
+   :jmeter
+   :kibana
+   :log4j
+   :logstash
+   :metrics
+   :monit
+   :munin
+   :prometheus
+   :splunk
+   :statsd
+   :teradata-tcrm
+   :tivoli
+   :zipkin]}
+
+ :network
+ {:label "Nettverk"
+  :parent :platform
+  :idx 210
+  :techs
+  [:bigip
+   :snmp
+   :tcp
+   :udp]}
+
+ :platform
+ {:label "Plattform"
+  :parent :other
+  :idx 200
+  :techs
+  [:alpine
+   :android
+   :appfuse
+   :arduino
+   :bc4j
+   :bluetooth
+   :busybox
+   :centos
+   :coreos
+   :dotnet
+   :ejb
+   :fuseki
+   :gcc
+   :graalvm
+   :griffon
+   :hololens
+   :hp-nonstop
+   :hpunix
+   :ibm-aix
+   :ims
+   :ios
+   :iot
+   :ip
+   :j2me
+   :j2se
+   :javafx
+   :jbpm
+   :jbuilder
+   :linux
+   :linux-kernel
+   :mac-os
+   :media-home-platform
+   :mono
+   :mvs
+   :novell-netware
+   :openhab
+   :osx
+   :passiv-rfid
+   :pthread
+   :qb-vision
+   :redhat
+   :rpm
+   :rup
+   :shell
+   :solaris
+   :ssh
+   :terminator
+   :thrift
+   :ubuntu
+   :unix
+   :windows
+   :windows-nt
+   :windows-server]}
+
+ :proglang
+ {:label "Programmeringsspråk"
+  :idx 10
+  :techs
+  [:abap
+   :actionscript
+   :applescript
+   :bash
+   :c
+   :clojure
+   :clojurescript
+   :cobol
+   :coffeescript
+   :cpp
+   :csharp
+   :dataflex
+   :delphi
+   :elisp
+   :elixir
+   :elm
+   :erlang
+   :es6
+   :flex
+   :fortran
+   :fsharp
+   :go
+   :groovy
+   :haskell
+   :idris
+   :j2ee
+   :java
+   :javascript
+   :kotlin
+   :lisp
+   :lisp-flavoured-erlang
+   :mscpp
+   :node
+   :nodejs
+   :objc
+   :objcplusplus
+   :octave
+   :pascal
+   :perl
+   :php
+   :prolog
+   :python
+   :r
+   :ruby
+   :rust
+   :scala
+   :scheme
+   :swift
+   :turbo-pascal
+   :typescript
+   :vba
+   :vbscript
+   :visual-basic
+   :xslt]}
+
+ :search
+ {:label "Søk"
+  :parent :data
+  :idx 120
+  :techs
+  [:elasticsearch
+   :fast
+   :hibernate-search
+   :lucene
+   :solr
+   :thinking-sphinx
+   :verity-search]}
+
+ :security
+ {:label "Sikkerhet og kryptografi"
+  :parent :other
+  :idx 140
+  :techs
+  [:ad
+   :bankid
+   :buddy
+   :cas
+   :ecc
+   :jsch
+   :kryptografi
+   :oauth
+   :oauth2
+   :oidc
+   :okta
+   :openam
+   :openid
+   :openssl
+   :opensso
+   :pki
+   :rbac
+   :rsa
+   :saml
+   :spring-security
+   :ssl
+   :sso]}
+
+ :service
+ {:label "Tjenester"
+  :parent :software
+  :idx 190
+  :techs
+  [:auth0
+   :cics
+   :cytoscape
+   :enonic-cms
+   :escenic
+   :ezpublish
+   :fatwire
+   :gemfire
+   :google-analytics
+   :google-earth
+   :ibm-component-broker
+   :ibm-content-manager-ondemand
+   :ibm-datapower
+   :ibm-rational-application-developer
+   :joomla
+   :koha
+   :letsencrypt
+   :magnolia-cms
+   :mailgun
+   :media-highway
+   :peoplesoft-crm
+   :prebidjs
+   :prolink
+   :pswincom
+   :quickr
+   :sanity
+   :sap
+   :seapine
+   :secureway-directory-stellent-cms
+   :site-server-commerce
+   :siteminder
+   :travelfusion
+   :twilio
+   :vertical-site
+   :weblogic :wordpress]}
+
+ :software
+ {:label "Software"
+  :parent :other
+  :idx 180
+  :techs
+  [:agresso
+   :domino
+   :erwin
+   :excel
+   :lotus-notes
+   :ms-exchange
+   :photoshop
+   :visio
+   :zeplin]}
+
+ :testing
+ {:label "Testing"
+  :parent :development
+  :idx 110
+  :techs
+  [:buster-js
+   :canoo-webtest
+   :chai
+   :cucumber
+   :dbunit
+   :easymock
+   :expectations
+   :fitnesse
+   :gatling
+   :geb
+   :grinder
+   :hp-loadrunner
+   :jasmine
+   :jest
+   :jmock
+   :js-test-driver
+   :junit
+   :junitee
+   :karma
+   :midje
+   :mocha
+   :mockito
+   :mockobjects
+   :phantomjs
+   :rspec
+   :selenium
+   :sinon
+   :spock
+   :testng
+   :unit-testing
+   :watir]}
+
+ :webdev
+ {:label "Webutvikling"
+  :parent :web-app
+  :idx 100
+  :techs
+  [:activex
+   :adobe-reachform
+   :apache
+   :apache-axis
+   :apache-jena
+   :asp
+   :aspnet
+   :atg-dynamo
+   :browserify
+   :caucho-resin
+   :cheetah
+   :compojure
+   :cxf
+   :dbfit
+   :django
+   :dropwizard
+   :easerver
+   :epicentric-portal
+   :express
+   :facelets
+   :geronimo
+   :glassfish
+   :grails
+   :graphql
+   :groovyws
+   :gwt
+   :html5
+   :https
+   :hypermedia
+   :ibm-websphere
+   :iis
+   :iplanet-enterprise-directory
+   :jax-rs
+   :jax-ws
+   :jaxrs
+   :jboss
+   :jboss-portal
+   :jbossws
+   :jetty
+   :jinja2
+   :joss
+   :jsf
+   :jsp
+   :jsr-168
+   :jstl
+   :ktor
+   :liberator
+   :mustache
+   :netty
+   :novell-extend-composer-appserver
+   :oc4j
+   :optimus
+   :oracle-appserver
+   :oracle-portal
+   :oracle9ias
+   :phoenix
+   :play
+   :portlets
+   :primefaces
+   :quasar
+   :quic
+   :rack
+   :rad
+   :rails
+   :rdf
+   :rest
+   :resteasy
+   :ring
+   :rss
+   :scalatra
+   :servlets
+   :sinatra
+   :sitemesh
+   :spring
+   :spring-boot
+   :spring-web-flow
+   :spring-ws
+   :springboot
+   :stasis
+   :struts
+   :struts2
+   :swagger
+   :tapestry
+   :tomcat
+   :unfiltered
+   :unity3d
+   :velocity
+   :weblogic-portal
+   :webmacro
+   :webmethods
+   :websocket
+   :websphere
+   :websphere-portal
+   :webtrends
+   :webwork
+   :wicket
+   :wildfly
+   :xalan
+   ]}
+
+ :other
+ {:label "Annet"
+  :idx 230
+  :techs
+  [:abdera
+   :atom
+   :etl
+   :genova
+   :google-protocol-buffers
+   :grasshopper
+   :interconnect
+   :jasper-reports
+   :ms-dna
+   :ms-market
+   :mts
+   :neptune
+   :orion
+   :paradox
+   :silverstream
+   :spring-batch
+   :spring-integration
+   :talkback
+   :tandem
+   :wpf
+   :xfire
+   :xfire-webservices
+   :xsd]}
+
+ :excluded
+ {:techs
+  [:bleier
+   :consulting
+   :database
+   :hjernen]}
+ }

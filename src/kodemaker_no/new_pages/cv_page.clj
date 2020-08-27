@@ -27,56 +27,6 @@
 (defn cv-profile [cv]
   (d/entity (d/entity-db cv) (:cv/person cv)))
 
-(def new-tech-categories
-  {:proglang "Programmeringsspråk"
-   :devtools "Utviklingsverktøy"
-   :coop "Samhandling"
-   :database "Database"
-   :messaging "Meldingssystemer"
-   :devops "Devops"
-   :desktop "Desktop"
-   :cloud "Skytjenester"
-   :security "Sikkerhet"
-   :frontend "Frontend"
-   :methodology "Metodikk"
-   :testing "Testing"
-   :search "Søk"
-   :software "Software"
-   :service "Tjenester"
-   :webdev "Webutvikling"
-   :other "Annet"
-   :apps "Apputvikling"
-   :monitoring "Logging og monitorering"
-   :platform "Plattform"
-   :library "Bibliotek"
-   :ai "Kunstig intelligens"
-
-   :concept "Konsept" ;; Hold utenfor
-   :iot "Internet of Things"
-   :network "Nettverk"
-   })
-
-(def tech-labels
-  {:proglang "Programmeringsspråk"
-   :devtools "Utviklingsverktøy"
-   :vcs "Versjonskontroll"
-   :methodology "Metodikk"
-   :os "Operativsystem"
-   :database "Database"
-   :devops "Devops"
-   :cloud "Skytjenester"
-   :security "Sikkerhet"
-   :tool "Verktøy"
-   :frontend "Frontend"
-   :cv/other "Annet"
-   :library "Bibliotek"
-   :framework "Rammeverk"
-   :specification "Spesifikasjoner"
-   :server "Server"})
-
-(def tech-order
-  [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend :cv/other])
-
 (defn side-project-techs [person]
   (mapcat :side-project/techs (:person/side-projects person)))
 
@@ -100,7 +50,7 @@
 (defn project-techs [person]
   (mapcat :project/techs (:person/projects person)))
 
-(defn all-techs [db cv person]
+(defn gather-all-techs [db cv person]
   (->> (concat (:person/using-at-work person)
                (:person/innate-skills person)
                (side-project-techs person)
@@ -114,14 +64,15 @@
        (sort-by (comp - second))
        (map first)
        (person/prefer-techs (person/preferred-techs person))
-       (map #(d/entity db %))
-       (group-by :tech/type)))
+       (map #(d/entity db %))))
 
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
   (def person (d/entity db :person/christian))
   (def cv (:cv/_person person))
+
+  (into {} (d/entity db [:db/ident :tech/clojure]))
 
   (:person/profile-overview-picture person)
   (:person/profile-page-picture person)
@@ -141,23 +92,54 @@
 
   (into {}  (first (:person/projects person)))
 
-  (all-techs db cv person))
+  (->> (gather-all-techs db cv person)
+       (group-by :tech/type)
+       (map (fn [[category techs]]
+              [(d/entity db [:db/ident category]) techs])))
 
-(defn- prep-tech [all-techs tech-type]
-  (when-let [techs (get all-techs tech-type)]
-    {:title (get tech-labels tech-type)
-     :contents [[:p.text (e/enumerate-techs techs)]]}))
+  )
+
+(defn prep-tech-category [[category techs]]
+  {:title (:tech-category/label category)
+   :contents [[:p.text (e/enumerate-techs techs)]]})
+
+(defn get-category [db cat]
+  (d/entity db [:db/ident cat]))
+
+(defn expand-category [db categories to-expand techs]
+  (let [parent (:tech-category/parent (get-category db to-expand))]
+    (-> categories
+        (dissoc to-expand)
+        (update parent concat techs))))
+
+(defn categorize-evenly [{:keys [threshold]} techs]
+  (let [db (d/entity-db (first techs))]
+    (loop [categories (group-by :tech/type techs)]
+      (if-let [expandable (some->> categories
+                                   (filter (fn [[cat techs]]
+                                             (and (< (count techs) threshold)
+                                                  (:tech-category/parent (get-category db cat)))))
+                                   first)]
+        (recur (apply expand-category db categories expandable))
+        categories))))
+
+(defn compile-cv-techs [person]
+  (let [db (d/entity-db person)
+        cv (:cv/_person person)
+        techs (gather-all-techs db cv person)]
+    (->> techs
+         (categorize-evenly {:threshold (max 5 (/ (count techs) 9))})
+         (map (fn [[cat techs]]
+                [(d/entity db [:db/ident cat]) techs]))
+         (filter (comp :tech-category/label first))
+         (sort-by (comp :list/idx first)))))
 
 (defn technology-section [cv person]
-  (let [techs (all-techs (d/entity-db cv) cv person)
-        other-techs (seq (mapcat identity (vals (apply dissoc techs tech-order))))
-        techs (assoc techs :cv/other other-techs)]
-    {:kind :definitions
-     :title "Teknologi"
-     :id "technology"
-     :definitions (->> tech-order
-                       (map #(prep-tech techs %))
-                       (filter identity))}))
+  {:kind :definitions
+   :title "Teknologi"
+   :id "technology"
+   :definitions (->> (compile-cv-techs person)
+                     (map prep-tech-category))})
 
 (defn format-year-month [date]
   (when date

@@ -3,12 +3,10 @@
             [clj-http.client :as http]
             [clojure.string :as str]
             [datomic-type-extensions.api :as d]
-            [java-time-literals.core :as jte]
             [kodemaker-no.atomic :as atomic]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.ingest :as ingest]
-            [kodemaker-no.new-pages.cv-page :as page])
-  (:import java.time.LocalDate))
+            [kodemaker-no.new-pages.cv-page :as cv]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; config stuff
@@ -220,11 +218,10 @@
    :year             (.getYear (:presentation/date presentation))})
 
 (defn- generate-technologies [db person]
-  (for [[tech-type techs] (page/all-techs db nil person)]
-    {:category          {:no (or (page/tech-labels tech-type) tech-type)}
-     :uncategorized     (nil? tech-type)
+  (for [[category techs] (cv/compile-cv-techs person)]
+    {:category {:no (:tech-category/label category)}
+     :uncategorized false
      :technology_skills (map (fn [tech] {:tags {:no (:tech/name tech)}}) techs)}))
-
 
 (defn generate-cv [db person]
   {:telefon             (:person/phone-number person)

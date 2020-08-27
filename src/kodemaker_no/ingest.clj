@@ -19,8 +19,8 @@
     (= "weird-tech-names.edn" file-name)
     kodemaker-no.ingestion.tech/create-tech-name-tx
 
-    (= "tech-types.edn" file-name)
-    kodemaker-no.ingestion.tech/create-tech-type-tx
+    (= "tech-categories.edn" file-name)
+    kodemaker-no.ingestion.tech/create-tech-category-tx
 
     (re-find #"tech-stubs/.+\.edn" file-name)
     kodemaker-no.ingestion.tech/create-tx
@@ -143,6 +143,10 @@
   (ingest conn "tech-types.edn")
   (ingest conn "firmablogg/2019-06-datascript.md")
   (ingest conn "people/christian.edn")
+
+  (kodemaker-no.ingestion.tech/create-tech-category-tx
+   "tech-categories.edn"
+   (read-string (slurp (io/resource "tech-categories.edn"))))
 
   (def db (d/db conn))
 
