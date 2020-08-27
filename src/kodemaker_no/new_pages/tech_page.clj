@@ -263,11 +263,7 @@
         (presentations-section presentations)
         (screencasts-section tech)
         (side-projects-section tech)
-        (open-source-section tech)
-
-        ;; (references-section tech)
-
-        ]
+        (open-source-section tech)]
        (blog-post-sections tech)
        [{:kind :footer}])
       (remove nil?)

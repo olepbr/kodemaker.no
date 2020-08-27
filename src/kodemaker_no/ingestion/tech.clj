@@ -20,7 +20,7 @@
 (defn is-page? [tech]
   (or (:tech/description tech)
       (< 5 (+ (* 10 (count (:presentation/_techs tech)))
-              (* 6 (count (:presentation-product/_techs tech)))
+              #_(* 6 (count (:presentation-product/_techs tech)))
               (* 5 (count (:screencast/_techs tech)))
               (* 5 (count (:blog-post/_techs tech)))
               (* 2 (count (:side-project/_techs tech)))
