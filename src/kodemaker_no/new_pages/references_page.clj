@@ -23,8 +23,8 @@
                   (fn [idx {:reference/keys [image signee-name signee-title signee-phone page-title
                                              portrait blurb quote sections logo company href] :as reference}]
                     (e/attributed-content {:title (if (= 0 idx)
-                                                    [:h1.h3.mw500 quote]
-                                                    [:h2.h4 quote])
+                                                    [:h1.h3.mw500 [:a {:href (:page/uri reference)} quote]]
+                                                    [:h2.h4 [:a {:href (:page/uri reference)} quote]])
                                            :person {:image (some->> portrait (str "/vcard-small"))
                                                     :lines [[:strong signee-name]
                                                             signee-title
