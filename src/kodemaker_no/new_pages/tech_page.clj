@@ -3,6 +3,7 @@
             [datomic-type-extensions.api :as d]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as h :refer [map-vals]]
+            [kodemaker-no.markup :as m]
             [kodemaker-no.new-pages.blog :as blog]
             [ui.elements :as e]))
 
@@ -202,6 +203,35 @@
                      :content (f/to-html (:side-project/description side-project))
                      :link (when url {:text (:side-project/link-text side-project) :href url})})))}))
 
+(defn merge-oss-projects [projects]
+  (-> (h/select-keys-by projects
+                        {:oss-project/url first
+                         :oss-project/name first
+                         :oss-project/description first
+                         :list/idx first})
+      (assoc :oss-project/people (concat (keep :person/_open-source-projects projects)
+                                         (keep :person/_open-source-contributions projects)))))
+
+(defn format-oss-project [{:oss-project/keys [url name description]}]
+  [:li.text.inline-text
+   [:a {:href url} name]
+   (some->> description f/to-html m/strip-paragraph (str " - "))])
+
+(defn open-source-section [tech]
+  (when-let [projects (->> (:oss-project/_techs tech)
+                           (group-by :oss-project/url)
+                           vals
+                           (map merge-oss-projects)
+                           seq)]
+    {:kind :titled
+     :title "Vår fri programvare"
+     :contents [(e/teaser
+                 {:content [:ul.dotted.dotted-tight
+                            (->> (concat
+                                  (sort-by :oss-project/name (filter :oss-project/description projects))
+                                  (sort-by :oss-project/name (remove :oss-project/description projects)))
+                                 (map format-oss-project))]})]}))
+
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
@@ -233,9 +263,9 @@
         (presentations-section presentations)
         (screencasts-section tech)
         (side-projects-section tech)
+        (open-source-section tech)
 
         ;; (references-section tech)
-        ;; (open-source-section tech)
 
         ]
        (blog-post-sections tech)
