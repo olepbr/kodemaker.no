@@ -447,7 +447,25 @@ a, .clickable {
   max-width: 100%;
 }
 
-.top-triangle {z-index: 99;}
+.bottom-circle {
+  -webkit-clip-path: polygon(0% 0%, 20% 0%, 100% 80%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 20% 0%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+.top-triangle {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+.bottom-triangle {
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+.top-circle {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 20%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 20%);
+}
 
 @media only screen and (max-width: 767px) {
   .pønt-item {
@@ -466,8 +484,8 @@ a, .clickable {
     margin-bottom: -140px;
   }
 
-  .top-circle .img,
-  .top-triangle .img {
+  .top-circle,
+  .top-triangle {
     float: right;
   }
 }
