@@ -467,7 +467,7 @@ a, .clickable {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 20%);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 640px) {
   .pønt-item {
     overflow: visible;
     margin-bottom: 60px;
@@ -487,10 +487,14 @@ a, .clickable {
   .top-circle,
   .top-triangle {
     float: right;
+    margin-bottom: -25vw;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 480px) {.top-circle, .top-triangle {margin-bottom: -10vw;} }
+@media only screen and (max-width: 340px) {.top-circle, .top-triangle {margin-bottom: 0;} }
+
+@media only screen and (min-width: 630px) {
   .pønt-section .content {
     height: 1140px;
   }
@@ -503,41 +507,45 @@ a, .clickable {
   .portrait-2 {
     position: absolute;
     top: 0;
-    left: -170px;
+    left: -310px;
+    margin-left: 25vw;
   }
 
   .portrait-1 {
     position: absolute;
     top: 740px;
-    right: -170px;
+    right: -310px;
+    margin-right: 25vw;
   }
 
   .top-circle,
   .bottom-circle {
-    width: 325px;
+    width: 52vw;
   }
 
   .top-triangle,
   .bottom-triangle {
-    width: 180px;
+    width: 260px;
   }
 
   .top-triangle {
     position: absolute;
-    top: 248px;
-    right: 0;
+    top: 228px;
+    right: -20px;
   }
 
   .bottom-circle {
     position: absolute;
-    top: 278px;
-    right: 0;
+    top: 468px;
+    right: -20px;
+    margin-right: -5vw;
+    margin-top: -26vw;
   }
 
   .top-circle {
     position: absolute;
     top: 530px;
-    left: 0;
+    left: -40px;
   }
 
   .bottom-triangle {
@@ -546,6 +554,70 @@ a, .clickable {
     left: 0;
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .pønt-section .content {
+    height: 560px;
+  }
+
+  .pønt-section {
+    padding-top: 210px;
+    padding-bottom: 210px;
+  }
+
+  .portrait-1 {
+    right: -310px;
+    margin-right: 17vw;
+    top: 0;
+  }
+
+  .portrait-2 {
+    left: -310px;
+    margin-left: 17vw;
+    top: 160px;
+  }
+
+  .top-triangle,
+  .bottom-triangle {
+    width: 18vw;
+    max-width: 250px;
+  }
+
+  .top-circle,
+  .bottom-circle {
+    max-width: 390px;
+    width: 27vw;
+  }
+
+  .bottom-triangle {
+    left: 40px;
+    margin-left: 17vw;
+    top: 160px;
+  }
+
+  .top-circle {
+    left: -45px;
+    margin-left: 17vw;
+    top: 0;
+  }
+
+  .bottom-circle {
+    left: auto;
+    right: 10px;
+    margin-top: 0;
+    margin-right: 16vw;
+    top: 200px;
+  }
+
+  .top-triangle {
+    left: auto;
+    right: 40px;
+    margin-right: 17vw;
+    top: 185px;
+  }
+}
+
+/* 0 på 1200, -300 på 1620 */
 
 @media only screen and (min-width: 1200px) {
   .pønt-section .content {
@@ -557,46 +629,112 @@ a, .clickable {
     padding-bottom: 210px;
   }
 
+  .portrait-1 {
+    margin-right: 280px;
+    right: -36vw;
+    top: 0;
+  }
+
   .portrait-2 {
-    left: -300px;
+    margin-left: 280px;
+    left: -36vw;
     top: 160px;
   }
 
   .top-triangle,
   .bottom-triangle {
-    width: 13vw;
+    width: 250px;
   }
 
   .top-circle,
   .bottom-circle {
-    max-width: 390px;
-    width: 24vw;
+    max-width: 28vw;
+    width: 28vw;
+  }
+
+  .bottom-triangle {
+    left: -27vw;
+    margin-left: 532px;
+    top: 160px;
+  }
+
+  .top-circle {
+    left: -13vw;
+    margin-left: 298px;
+    top: 0;
+  }
+
+  .bottom-circle {
+    left: auto;
+    right: -33vw;
+    margin-right: 586px;
+    top: 200px;
+  }
+
+  .top-triangle {
+    left: auto;
+    right: -27vw;
+    margin-right: 532px;
+    top: 185px;
+  }
+
+}
+
+@media only screen and (min-width: 1620px) {
+  .pønt-section .content {
+    height: 560px;
+  }
+
+  .pønt-section {
+    padding-top: 210px;
+    padding-bottom: 210px;
+  }
+
+  .portrait-2 {
+    left: -300px;
+    margin-left: 0;
+    top: 160px;
+  }
+
+  .top-triangle,
+  .bottom-triangle {
+    width: 250px;
+  }
+
+  .top-circle,
+  .bottom-circle {
+    width: 390px;
   }
 
   .bottom-triangle {
     left: 106px;
+    margin-left: 0;
     top: 160px;
   }
 
   .top-circle {
     left: 126px;
+    margin-left: 0;
     top: 0;
   }
 
   .bottom-circle {
     left: auto;
     right: 140px;
+    margin-right: 0;
     top: 200px;
   }
 
   .top-triangle {
     left: auto;
     right: 154px;
+    margin-right: 0;
     top: 185px;
   }
 
   .portrait-1 {
     right: -300px;
+    margin-right: 0;
     top: 0;
   }
 }
