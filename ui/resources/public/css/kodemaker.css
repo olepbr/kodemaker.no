@@ -954,6 +954,11 @@ a, .clickable {
 .round-media .media-element {margin-right: 30px;}
 .round-media .media-element .img, .round-img {border-radius: 50%; max-width: 92px;}
 
+@media only screen and (max-width: 400px) {
+  .round-media.media {display: block;}
+  .round-media .media-element {margin-bottom: 23px;}
+}
+
 .vert-round-media {align-items: center;}
 .vert-round-media .media-content {color: var(--chocolat-au-lait);}
 .vert-round-media .media-element .img {max-width: 120px;}
@@ -1040,10 +1045,6 @@ a, .clickable {
 
 .stats {color: var(--chocolat-au-lait)}
 
-@media only screen and (max-width: 400px) {
-  .ac-person .media {display: block;}
-  .ac-person .media-element {margin-bottom: 23px;}
-}
 @media only screen and (max-width: 899px) {
   .ac-content {margin-bottom: 48px;}
   .ac-person {display: flex; align-items: center;}
