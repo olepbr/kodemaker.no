@@ -250,6 +250,7 @@
         (h/update-in-existing [:person/hobbies] as-ordered-list)
         (h/update-in-existing [:person/screencasts] #(as-ordered-list (map screencast-data %)))
         (h/update-in-existing [:person/projects] prep-projects)
+        (h/update-in-existing [:person/qualifications] #(as-ordered-list (for [q %] {:qualification/text q})))
         (h/update-in-existing [:person/open-source-projects] #(as-ordered-list (map open-source-project %)))
         (h/update-in-existing [:person/open-source-contributions] #(as-ordered-list (map open-source-project %)))
         (h/update-in-existing [:person/side-projects] #(as-ordered-list (map side-project-data %)))

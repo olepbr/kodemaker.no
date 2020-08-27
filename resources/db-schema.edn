@@ -510,8 +510,13 @@
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :person/qualifications
-  :db/valueType :db.type/string
+  :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
+
+ {:db/ident :qualification/text
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
 
  {:db/ident :person/innate-skills
   :db/valueType :db.type/ref

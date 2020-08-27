@@ -1,10 +1,9 @@
 (ns kodemaker-no.export.cvpartner
-  (:require [clojure.string :as str]
+  (:require [cheshire.core :refer :all]
             [clj-http.client :as http]
-            [cheshire.core :refer :all]
-            [java-time-literals.core :as jte]
-            [datomic-type-extensions.api :as d]
             [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
+            [java-time-literals.core :as jte]
             [kodemaker-no.atomic :as atomic]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.ingest :as ingest]
@@ -160,7 +159,7 @@
     :tag_line         {:no ""}}
    {:label            {:no "Nøkkelkvalifikasjoner"}
     :long_description {:no (:person/title person)}
-    :key_points       (map (fn [qual] {:name {:no qual}}) (:person/qualifications person))}
+    :key_points       (map (fn [qual] {:name {:no (:qualification/text qual)}}) (:person/qualifications person))}
    {:label      {:no "Prefererte teknologier"}
     :key_points (map (fn [tech-ref]
                        {:name {:no (:tech/name (d/entity db tech-ref))}})

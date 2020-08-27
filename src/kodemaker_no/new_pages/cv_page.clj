@@ -351,7 +351,9 @@
                             (:person/email-address person)]
             :links (person/prep-presence-links (:person/presence person))
             :experience (format "Utvikler med %s erfaring" (years-of-experience person))
-            :qualifications (:person/qualifications person)
+            :qualifications (->> (:person/qualifications person)
+                                 (sort-by :list/idx)
+                                 (map :qualification/text))
             :quote (endorsement-highlight person)
             :description (f/to-html (:person/description person))
             :highlights (map project-highlight (:person/project-highlights person))}
