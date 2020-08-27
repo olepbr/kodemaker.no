@@ -36,7 +36,7 @@
     spekter av forretningsområder og teknologi. Vi liker å dele kunnskap, og er stadig ute etter ny lærdom selv. Vi har pleid å holde en del foredrag på konferanser og lignende, men i nåsitutasjonen er kanskje blogging det enkleste. Kanskje du finner noe interessant?"
                :link {:text "Les blogger"
                       :href "/blogg/"}
-               :image "/foto/nils-1.jpg"
+               :image "/foto/christin-foredrag.jpg"
                :image-center "60% 0%"}
               {:kind :pønt
                :portrait-1 {:img "/rouge-portrait/foto/ashild-f.jpg"
