@@ -56,7 +56,7 @@
 (defn header []
   [:div.header
    [:a {:href "/"} (logo {:width 176})]
-   [:div.menu-toggler.clickable.h5 {:onclick "document.getElementById('mobile-menu').style.display='block'"}
+   [:div.menu-toggler.clickable.h5 {:onclick "var mm = document.getElementById('mobile-menu'); mm.style.display='block'; mm.ontouchmove = function (e) { e.preventDefault(); };"}
     "Meny"]
    [:div#mobile-menu {:style {:display "none"}}
     [:div.close-menu.clickable {:onclick "document.getElementById('mobile-menu').style.display='none'"}
