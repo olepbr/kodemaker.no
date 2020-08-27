@@ -99,7 +99,7 @@
              :description "Videreutvikling av GBMS for datafangst og analyse av
              skyts. Integrasjon med forsvarets SAP-løsning. Oppgave: Analyse,
              design, test, utvikling, dokumentasjon"
-             :tech [:groovy :grails :oracle :sap-integrasjon :git]}
+             :tech [:groovy :grails :oracle :sap :git]}
             {:customer "Forsvaret"
              :years [2007 :ongoing]
              :employer :kodemaker
@@ -116,7 +116,7 @@
              :summary "Tolldeklarasjonssystem"
              :description "TVINN System for behandling av tolldeklarasjoner.
              Oppgaver: Senior Javautvikler."
-             :tech [:j2ee :j2se :spring :hibernate :genova-8 :rational-rose :sybase]}
+             :tech [:j2ee :j2se :spring :hibernate :genova :rational-rose :sybase]}
             {:customer "Forsvaret"
              :years [2005]
              :employer :kodemaker

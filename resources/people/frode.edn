@@ -40,7 +40,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                     :blurb "Meget inspirerende bloggpost av Jay Kreps, mannen bak Kafka hos LinkedIn, om hvordan en replikert, append-only log kan brukes til integrasjon og asynkron meldingsutveksling med høy throughput og lav latency."
                     :link {:url "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
                            :text "Les artikkel"}
-                    :tech [:kafka :performance]}
+                    :tech [:kafka]}
        {:title "The Phoenix Project"
         :blurb "En fornøyelig bok om en mellomleder i IT-avdelingen i en stor bedrift som får i oppgave å redde selskapets massive forsinkede IT-prosjekt som truer hele selskapets fremtid. Han får hjelp av et mystisk styremedlem med en teori om at IT har mer til felles med produksjon av biler enn man skulle tro. Meget underholdene bok om prinsippene fra lean manufacturing og starten på devopsbevegelsen."
         :link {:url "https://itrevolution.com/book/the-phoenix-project/"
@@ -50,7 +50,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
         :blurb "En lettbeint og underholdene introduksjon til Haskell. Anbefales til alle som vil lære Haskell. Les gjerne denne før du går over til mer omfattende bøker."
         :link {:url "http://learnyouahaskell.com/"
              :text "Til boken"}
-        :tech [:haskell :functional-programming]}]
+        :tech [:haskell :funksjonell-programmering]}]
 
 ;; :hobbies [{:title "Foto"
 ;;            :description "TLDR"
@@ -60,7 +60,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                   :event "JavaZone"
                   :blurb "Presentasjon fra JavaZone 2012 om praktisk bruk av hypermedia og lenker i REST-apier"
                   :date "2012-09-12"
-                  :tech [:rest :hypermedia :api]
+                  :tech [:rest :hypermedia]
                   :urls {:video "https://vimeo.com/49392437"}
                   :thumb "/thumbs/videos/hypermedia-api.jpg"}
                  ]
@@ -72,7 +72,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                 :tech [:scala :scalatra :mongodb :angularjs]}
                {:title "Monader du allerede kjenner"
                 :event "Fagdag"
-                :tech [:scala :functional-programming]
+                :tech [:scala :funksjonell-programmering]
                 :date "2013-11-01"}
                {:title "Intro til Scala"
                 :event "Chalmers i Gøteborg"
@@ -140,13 +140,13 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :postgresql :ansible :terraform
                     :cloudstack :prometheus :kibana :elasticsearch :javascript :react :nodejs :docker
                     :haproxy :linux :coreos :hazelcast :git :go
-                    :drone :bash :npm :nexus :github :trello :slack]}
+                     :bash :npm :nexus :github :trello :slack]}
             {:customer "Posten Norge AS - Digipost"
              :employer :bekk
              :summary "Digipost Faktura"
              :years [2015 2016]
              :description "Utvikling av løsning for fakturabetaling i Digipost. Løsningen gjør det mulig å betale fakturaer mottatt i Digipost direkte i nettbanken. Frode hadde en sentral rolle i prosjektet fra planlegging til implementasjon. Prosjektet bestod i to hoveddeler: Del 1 involverte integrasjon med bank-APIer for å kunne betale fra Digipost. Del 2 bestod i å utvikle API-er som bankene kan bruke til å hente fakturainformasjon fra Digipost for betaling i nettbanken."
-             :tech [:java :jetty :jersey :spring :hibernate :postgresql :springws]}
+             :tech [:java :jetty :jersey :spring :hibernate :postgresql :spring-ws]}
             {:customer "Posten Norge AS - Digipost"
              :employer :bekk
              :summary "Volum og ytelsestestrigg"
@@ -182,7 +182,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
              :tech [:java :jetty :jersey :spring :hibernate :dropwizard :oracle :postgresql :ansible :terraform
                     :cloudstack :kibana :elasticsearch :scala :javascript :python
                     :apache :haproxy :bigip :linux :coreos :gatling :hazelcast :jaxb :jackson :git
-                    :jenkins :drone :bash :jquery :npm :nexus :github :trello :slack]}
+                    :jenkins :bash :jquery :npm :nexus :github :trello :slack]}
             {:customer "Norwegian Air Shuttle"
              :years [2005 2006 2007 2008 2009 2010]
              :employer :bekk

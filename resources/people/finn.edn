@@ -3,7 +3,7 @@
  :title "Utvikler"
  :start-date "2008-10-01"
  :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
- :innate-skills [:java :kotlin :git :unittesting]
+ :innate-skills [:java :kotlin :git :unit-testing]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
             :twitter "finnjohnsen"
@@ -47,13 +47,13 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :employer :kodemaker
              :summary "Javautvikler, devops"
              :description "Migrering til Kubernetes. Arkitektur, dokumentasjon, estimering og utforming av ny proxy-løsninger for biometriske data"
-             :tech [:kubernetes :docker :java :vault :biometrics]}
+             :tech [:kubernetes :docker :java :vault]}
             {:customer "Encap"
              :start "2018-10"
              :employer :kodemaker
              :summary "Javautvikler i Encap sin autentiseringsplattform"
              :description "Videreutvikling av Encap sitt kjerneprodukt."
-             :tech [:java :rest :mysql :kryptografi :spring :jenkins :oracle :json :rest :soap :docker]}
+             :tech [:java :rest :mysql :kryptografi :spring :jenkins :oracle :rest :soap :docker]}
             {:customer "FINN"
              :years [2017]
              :employer :kodemaker
@@ -92,7 +92,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              bistand for innføring av MasterPass i sin betalingsplattform. I
              tillegg blei det litt plukkoppgaver i diverse andre
              integrasjonspunkter."
-             :tech [:java :soap :aws :eureka :payex]}
+             :tech [:java :soap :aws]}
             {:customer "NSB"
              :years [2015]
              :employer :kodemaker
@@ -129,7 +129,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              til Status er single page webapps laget med angular og react."
              :tech [:groovy :javascript :grails :gorm :gradle :oracle :windows-server
                     :centos :ansible :tomcat :angularjs :react :html5 :css :bootstrap
-                    :spock :webservices :json :rest]}
+                    :spock :webservices :rest]}
             {:customer "NSB"
              :years [2011]
              :employer :kodemaker
@@ -147,7 +147,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :summary "NSB App (Android & iOS)"
              :description "NSB app Deltok i et Scrum -team som utviklet
              mobil-app for NSB. Android og iPhone. Oppgaver: Backendutvikler."
-             :tech [:rest :json :apple-push-notification-system :google-cloud-to-device-android-push
+             :tech [:rest :apns :google-cloud-to-device-android-push
                     :jboss :webservices :jetty :svn :hudson :maven]}
             {:customer "NSB"
              :years [2011]

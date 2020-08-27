@@ -1,6 +1,6 @@
 :title Hjælp, vi må ha en app!
 :author olga
-:tech [:android :ios :web :native :kryss-plattform :hybrid :pwa :react-native :xamarin :xamarin-forms :cordova]
+:tech [:android :ios :web :pwa :react-native :xamarin :xamarin-forms :cordova]
 :published 2020-02-26
 
 :blurb

@@ -36,8 +36,8 @@
                          }
 
  :tech                  {
-                         :favorites-at-the-moment [:go :emacs :postgres]
-                         :using-at-work           [:kotlin :java :postgres :kafka]
+                         :favorites-at-the-moment [:go :emacs :postgresql]
+                         :using-at-work           [:kotlin :java :postgresql :kafka]
                          :want-to-learn-more      [:ios :flutter :nats :emacs]
                          }
 
@@ -168,7 +168,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
   {:title        "Analyse av værdata"
    :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
    :illustration "/illustrations/side-projects/weathergraph.png"
-   :tech         [:go :kubernetes :machinelearning :influxdb]
+   :tech         [:go :kubernetes :machine-learning :influxdb]
    }
 
   ]
@@ -224,7 +224,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :years       [2012 2016]
    :employer    :webstep
    :summary     "Utvikling og vedlikehold av backend for booking-systemet"
-   :tech        [:java, :apache-cxf, :guice, :android, :jboss :junit, :maven, :oracle
+   :tech        [:java, :cxf, :google-guice, :android, :jboss :junit, :maven, :oracle
                  :java :jboss :hibernate :bash :groovy :play :jquery :intellij
                  :junit :testng :git :hystrix]}
   {:customer              "Storebrand Aktuarsystemer"
@@ -233,8 +233,8 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :exclude-from-profile? true
    :employer              :webstep
    :summary               "Kundeportal og integrasjon av fagsystem."
-   :tech                  [:java :html :css :javascript :jquery :mssql :apache-cxf :struts2
-                           :java :apache-cxf :html :css :intellij :gradle :maven :nexus
+   :tech                  [:java :html :css :javascript :jquery :mssql :struts2
+                           :cxf :intellij :gradle :maven :nexus
                            :teamcity :seapine :bamboo :junit :itext :svn :jdbc]}
   {:customer              "Statens Pensjonskasse, PERFORM"
    :years                 [2009]
@@ -244,10 +244,10 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :description           "Oppgaver: Utvikling av kjernesystemet i
                   pensjonsbehandlings-systemet etter nye regler om
                   pensjonsreformen."
-   :tech                  [:spring-batch :spring-core :java :eclipse :jsf :junit :fitnesse
+   :tech                  [:spring-batch :spring :java :eclipse :jsf :junit :fitnesse
                            :jira :crucible :hibernate :java :maven :hudson :scrum :spring :sybase
                            :squirrel-sql :jetty :mockito :sonar :tdd :ci :web-services
-                           :apache-cxf]}
+                           :cxf]}
   {:customer              "Storebrand Livsforsikring"
    :years                 [2008]
    :exclude-from-profile? true
@@ -302,7 +302,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :published "2017-07-03"
    :title "Using your tensorflow model with go"
    :blurb "En forklaring på hva som skal til for å bruke en ferdig-trent tensorflow-model fra go med kode for å trene en enkel modell i python og kode for å bruke modellen fra go."
-   :tech  [:go :tensorflow :machinelearning]}]
+   :tech  [:go :tensorflow :machine-learning]}]
 
  :cv                    {}
  :education-summary     "Sivilingeniør/Master Datateknikk, NTNU"

@@ -48,12 +48,12 @@
                             sammen."
                     :link {:url "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
                            :text "Les artikkel"}
-                    :tech [:kafka :performance]}
+                    :tech [:kafka]}
                    {:title "Use the index, Luke"
-                    :blurb "Veldig god innføring i database ytelse og tuning."
+                    :blurb "Veldig god innføring i databaseytelse og -tuning."
                     :link {:url "http://use-the-index-luke.com/"
                            :text "Til website"}
-                    :tech [:database :performance]}
+                    :tech [:database]}
 		   {:title "Balancing Workload Across Nodes with Akka 2"
 		    :blurb "Artikkel som beskriver en distribuert utdeling av jobber
                             ved bruk av Akka, etter
@@ -68,7 +68,7 @@
                             de brukes/konfigureres."
 		    :link {:url "https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/"
 		    	   :text "Til website"}
-		    :tech [:java :gc :performance]}]
+		    :tech [:java]}]
 
  :hobbies [{:title "Snowboard"
             :description "Snowboard har vært en hobby siden videregående, og det blir fortsatt
@@ -87,7 +87,7 @@
                        som er tilgjengelige i standard Java HotSpot VM. Tanken var å vise en enkel
                        sammenligning slik at det skal være enklere å gjøre noe ligende for din egen
                        applikasjon."
-               :tech [:java :gc :performance]}
+               :tech [:java]}
               {:url "http://open.bekk.no/java-scala-null"
                :published "2010-07-01"
                :title "null som ukjent"
@@ -116,7 +116,7 @@
                   :blurb "Lyntale hos javaBin som viser hvordan man kan sammenligne de forskjellige
                           GC implementasjonene i standard JVM."
                   :date "2016-03-03"
-                  :tech [:java :performance :gc]
+                  :tech [:java]
                   :urls {:video "https://vimeo.com/158720082"}
                   :thumb "/thumbs/videos/gc-alternativer.jpg"}
                  {:title "Plugin-basert arkitektur i Java!"
@@ -149,7 +149,7 @@
                           programmering i Java. Sammenligner forskjellige rammeverk
                           og prøver å gi noen gode scenarier for bruk."
 		  :date "2014-09-10"
-		  :tech [:java :akka :performance :rxjava]
+		  :tech [:java :akka :rxjava]
 		  :urls {:video "http://2014.javazone.no/presentation.html?id=7e7f10a7"}}
 		 {:title "Fra Grid til Akka!"
                   :event "JavaZone"
@@ -157,7 +157,7 @@
                           grid-produktet Hazelcast med Akka forhold til
 		    	  concurrency og ytelse."
 		  :date "2013-09-12"
-		  :tech [:java :akka :grid :hazelcast]
+		  :tech [:java :akka :hazelcast]
 		  :urls {:video "https://vimeo.com/album/2525252/video/74553206"}
                   :thumb "/thumbs/videos/grid-til-akka.jpg"}
                  {:title "Hazelcast: Open Source In-Memory Data Grid"
@@ -166,7 +166,7 @@
                           Gir en innføring til grid og Hazelcast med en del
                           erfaringer fra bruk av rammeverket i Skatteetaten."
                   :date "2012-09-13"
-                  :tech [:java :grid :hazelcast]
+                  :tech [:java :hazelcast]
                   :urls {:video "https://vimeo.com/49386944"}
                   :thumb "/thumbs/videos/hazelcast.jpg"}
                  {:title "Funksjonell Programmering på JVM"
@@ -191,7 +191,7 @@
                {:title "Fra Grid til Akka!"
                 :date "2013-05-12"
                 :event "flatMap(Oslo)"
-                :tech [:java :akka :grid :hazelcast]}
+                :tech [:java :akka :hazelcast]}
                {:title "Nyheter i Java 8"
                 :event "javaBin julemøte Oslo"
                 :tech [:java]
@@ -335,7 +335,7 @@
              :description "Laget API for å tilby og motta data fra terminaler som brukes av
              klauvskjærere i norske fjøs. I all hovedsak snakk om en Clojure webserver som
              snakker med en database. Utviklet også en web-klient for internt bruk/administrasjon."
-             :tech [:clojure :clojurescript :bootstrap :react :h2 :oracle :openshift]}
+             :tech [:clojure :clojurescript :bootstrap :react :h2db :oracle :openshift]}
             {:customer "Oche Oslo AS"
              :years [2017 2018]
              :employer :kodemaker
@@ -386,7 +386,7 @@
              opp første versjon av alle modulene, med bygg og deploy. Var også
              med å utvikle et eget rammeverk for å definere fremtidens
              skatteberegning som en slags DSL."
-             :tech [:java :akka :dropwizard :jetty :jersey :oracle-database :ibm-datapower
+             :tech [:java :akka :dropwizard :jetty :jersey :oracle :ibm-datapower
                     :javascript]}
             {:customer "Skatteetaten"
              :years [2013 2014]
@@ -401,7 +401,7 @@
              frontend arbeid ifm. admin- og test-grensesnitt. Hans fremste
              bidrag i prosjektet var nok å være pragmatisk og målrettet for å få
              jobben gjort."
-             :tech [:java :guice :jersey :jaxb :abdera :jetty :akka :camel :oracle :altinn :ibm-datapower]}
+             :tech [:java :google-guice :jersey :jaxb :abdera :jetty :akka :camel :oracle :ibm-datapower]}
             {:customer "Statens vegvesen"
              :years [2013]
              :employer :bekk
@@ -419,7 +419,7 @@
              Hazelcast, samt andre versjon som baserte seg på Java tråder og et
              sentralt dokumentlager. Et spennende prosjekt hvor Eivind ble kjent
              med mange flinke mennesker og mye spennende teknologi."
-             :tech [:java :hazelcast :guice :jersey :abdera :jetty :glassfish :oracle :altinn]}
+             :tech [:java :hazelcast :google-guice :jersey :abdera :jetty :glassfish :oracle]}
             {:customer "Skatteetaten"
              :years [2011 2012]
              :employer :bekk

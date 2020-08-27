@@ -1,6 +1,6 @@
 :title Python og ytelse
 :author eivind
-:tech [:opencv :python :performance]
+:tech [:opencv :python]
 :published 2020-02-19
 
 :blurb

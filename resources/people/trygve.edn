@@ -19,12 +19,12 @@
                              :linkedin "/in/trygveamundsen"}
 
  :tech                      {:using-at-work           [:react :redux :es6 :typescript]
-                             :favorites-at-the-moment [:machinelearning :reinforcement-learning :typescript]
+                             :favorites-at-the-moment [:machine-learning :reinforcement-learning :typescript]
                              :want-to-learn-more      [:tensorflow :tensorflow-js :gans]}
 
  :innate-skills             [
                              :haskell :scala :ruby :python :octave :pascal :prolog :fortran
-                             :redux-frontend
+                             :redux
                              :intellij :browser-devtools
                              :osx :linux
                              :ddd
@@ -36,7 +36,7 @@
                                       og laget mange eksempler som gjør det mulig å teste ut RL på ordentlig.",
                               :link  {:url  "https://spinningup.openai.com"
                                       :text "Sjekk ut nettstedet her"}
-                              :tech  [:machinelearning :deeplearning]}
+                              :tech  [:machine-learning :deeplearning]}
 
                              {:title "Learn you a Haskell for great good"
                               :blurb "Haskell et purt (pure) funksjonelt programmeringspråket som utfordrer
@@ -52,7 +52,7 @@
                                              alle kodemakere basert på kun étt bilde per person."
                               :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
                               :illustration "/illustrations/side-projects/trygve-og-einar.png"
-                              :tech         [:python :dlib :machinelearning :deeplearning]
+                              :tech         [:python :dlib :machine-learning :deeplearning]
                               }]
 
  :hobbies                   [{:title        "Maskinlæring"
@@ -88,7 +88,7 @@
                               :date  "2019-06-11"}
                              {:title "Fjesgjenkjenning med dlib"
                               :event "Kodemaker fagdag"
-                              :tech  [:face-recognition :machinelearning]
+                              :tech  [:face-recognition :machine-learning]
                               :date  "2017-10-11"
                               :urls  {:source "https://github.com/trygvea/face-recognition-dlib"}}
                              {:title "Pure stateful computations i javascript"
@@ -98,7 +98,7 @@
                               :urls  {:source "https://github.com/trygvea/funkjs"}}
                              {:title "Deep Learning / dyp læring"
                               :event "Kodemaker fagdag"
-                              :tech  [:deeplearning :machinelearning]
+                              :tech  [:deeplearning :machine-learning]
                               :date  "2015-05-21"}
                              {:title "Groovy (vs. clojure og scala)"
                               :event "Javazones julemøte 2011"
@@ -147,21 +147,21 @@
                                             lettere skal kunne levere materiell-underlag til forsvarets begrensede plattform.
                                             Trygve har også bidratt med videreutvikling av materielldataportalen,
                                             som er en løsning for innrapportering av materiell som ligger utenfor forsvarets SAP plattform"
-                              :tech        [:react :redux :es6 :typescript :docker :azure :azure-cloud :groovy :gradle :oracle]}
+                              :tech        [:react :redux :es6 :typescript :docker :azure :groovy :gradle :oracle]}
                              {:customer    "Vy Gruppen"
                               :years       [2019]
                               :employer    :kodemaker
                               :summary     "Utvikling av trafikksystemer for Vy og deres nordiske samarbeidspartnere"
                               :description "Utvikling av trafikksystemer til bruk internt i Vy og av Vy's nordiske samarbeidspartnere.
                                             Bl.a integrasjon mot Värmlandstrafik, system for applikasjonsovervåkning, m.fl."
-                              :tech        [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-eventhubs :mysql :groovy :gradle]}
+                              :tech        [:react :redux :es6 :typescript :micronaut :reactive-x :azure :azure-event-hubs :mysql :groovy :gradle]}
                              {:customer    "NRK Origo"
                               :years       [2017 2018 2019]
                               :employer    :kodemaker
                               :summary     "Videreutvikling av media-arkivet til NRK"
                               :description "Videreutvikling av media-arkivet til NRK, som omhandler søk og registrering av metadata i
                                             NRKs enorme mengde av videoklipp nettklipp, ting som har gått på TV, råstoff, mm."
-                              :tech        [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machinelearning]}
+                              :tech        [:javascript :react :redux :es6 :typescript :webpack :babel :yarn :css :nodejs :elasticsearch :electron :octopus :teamcity :kubernetes :python :machine-learning]}
                              {:customer    "BN Bolig"
                               :years       [2017]
                               :employer    :kodemaker
@@ -324,7 +324,7 @@
                               :description           "Programmerer i EMS Buying (European Merchandising
                                                       System, ICA og Albert Heijns nye handelssystem, delsystem for
                                                       innkjøp)."
-                              :tech                  [:java :j2ee :jms :swing :junit :ant :oracle :websphere :versata-workflow :webmethods-integrasjon]}
+                              :tech                  [:java :j2ee :jms :swing :junit :ant :oracle :websphere :versata-workflow :webmethods]}
                              {:customer              "NetCom AS "
                               :years                 [2002]
                               :exclude-from-profile? true
@@ -451,7 +451,7 @@
                                                       mainframe (IMS/MVS). Telon (IMS 4GL) support / adminstrasjon i
                                                       Skandinavia. Installasjon / modifikasjon / kurs / metodestøtte /
                                                       teknisk support."
-                              :tech                  [:ims :mvs :cobol :telon :focus :turbo-pascal :dataflex :oracle]}]
+                              :tech                  [:ims :mvs :cobol :telon :turbo-pascal :dataflex :oracle]}]
 
  :cv                        {:default {:preferred-techs [:java :javascript :es6 :typescript :groovy :python
                                                          :react :redux :immutable-js

@@ -76,7 +76,7 @@
                   :description "Et grundig videokurs i funksjonell programmering
                   med JavaScript. Laget for Packt forlag i 2015."
                   :illustration "/illustrations/side-projects/functional-js.jpg"
-                  :tech [:javascript :nodejs :functional-programming]
+                  :tech [:javascript :nodejs :funksjonell-programmering]
                   :link {:url "https://www.packtpub.com/web-development/learning-functional-javascript-video"
                          :text "Sjekk ut kurset"}}
                  {:title "Test-Driven JavaScript Development"
@@ -207,7 +207,7 @@
                :published "2017-06-17"
                :title "Referentially Transparent CRUD"
                :blurb "Artikkel om hvordan Datomic lar deg implementere tradisjonell CRUD med referentially transparent funksjonell kode."
-               :tech [:datomic :clojure :datalog :immutability :functional-programming]}
+               :tech [:datomic :clojure :datalog :immutability :funksjonell-programmering]}
               {:url "https://cjohansen.no/annotating-datomic-transactions/"
                :published "2017-06-17"
                :title "Annotating Datomic transactions"
@@ -276,7 +276,7 @@
              forvaltes i det hodeløse CMS-et Sanity, mens nettsidene er god
              gammeldags statisk HTML, levert av en Clojure-applikasjon bak
              Varnish for maksimal ytelse."
-             :tech [:sanity :clojure :varnish :resposive-design :datadog :git]
+             :tech [:sanity :clojure :varnish :responsive-design :datadog :git]
              :start "2020-04"}
 
             {:customer "Fortum"
@@ -295,7 +295,7 @@
              :summary "Utvikling av ny Min Side"
              :description "Utviklet ny Min Side basert på kodebasen til
              mobil-appen til Hafslund Strøm."
-             :tech [:clojurescript :aws :aws-s3 :tools-deps :resposive-design :datadog :git]
+             :tech [:clojurescript :aws :aws-s3 :tools-deps :responsive-design :datadog :git]
              :start "2019-04"}
 
             {:customer "Hafslund Strøm"
@@ -583,7 +583,7 @@
                   parprogrammerer funksjonelt med Clojure og ClojureScript på
                   JavaZone."
                   :event "JavaZone"
-                  :tech [:clojure :clojurescript :functional-programming]
+                  :tech [:clojure :clojurescript :funksjonell-programmering]
                   :date "2019-09-11"
                   :urls {:video "https://vimeo.com/362770913"}
                   :thumb "/thumbs/videos/tomsinger-2019.jpg"}
@@ -871,7 +871,7 @@
                {:title "Pure, functional JavaScript"
                 :event "Felix Aker Brygge"
                 :date "2012-12-01"
-                :tech [:javascript :functional-programming]}
+                :tech [:javascript :funksjonell-programmering]}
                {:title "Test-driven JavaScript Development, 3-dagers kurs"
                 :event "Programutvikling"
                 :date "2012-11-01"
@@ -883,7 +883,7 @@
                {:title "Pure, functional JavaScript"
                 :event "Øredev"
                 :date "2012-11-01"
-                :tech [:functional-programming :javascript]}
+                :tech [:funksjonell-programmering :javascript]}
                {:title "JavaScript for programmers, 3-dagers kurs"
                 :event "Programutvikling"
                 :date "2012-10-01"
@@ -895,7 +895,7 @@
                {:title "Pure, functional JavaScript"
                 :event "JavaZone"
                 :date "2012-09-08"
-                :tech [:functional-programming :javascript]}
+                :tech [:funksjonell-programmering :javascript]}
                {:title "JavaScript Basics"
                 :event "InMeta"
                 :date "2012-09-07"
@@ -919,7 +919,7 @@
                {:title "Pure, functional JavaScript"
                 :event "WebRebels"
                 :date "2012-05-10"
-                :tech [:functional-programming :javascript]}
+                :tech [:funksjonell-programmering :javascript]}
                {:title "Test-driven JavaScript Development, 3-dagers kurs"
                 :event "Programutvikling"
                 :date "2012-05-09"
@@ -935,7 +935,7 @@
                {:title "Pure, functional JavaScript"
                 :event "SDC (Sverige)"
                 :date "2012-04-08"
-                :tech [:functional-programming :javascript]}
+                :tech [:funksjonell-programmering :javascript]}
                {:title "Buster.JS"
                 :event "Bergen NNUH"
                 :date "2012-03-10"
@@ -967,7 +967,7 @@
                {:title "Step away from the for-loop!"
                 :event "Framsia"
                 :date "2012-01-10"
-                :tech [:javascript :functional-programming]}
+                :tech [:javascript :funksjonell-programmering]}
                {:title "Introduction to JavaScript"
                 :event "Unit4"
                 :date "2012-01-09"
@@ -1117,7 +1117,7 @@
                          Clojure - visualiserer data i en Chrome-extension slik
                          at man har full innsikt i kjøretids-tilstanden til
                          applikasjonene under utvikling."
-                         :tech [:clojurescript :clojure :chrome]}
+                         :tech [:clojurescript :clojure]}
                         {:url "https://github.com/cjohansen/Sinon.JS/"
                          :name "Sinon.JS"
                          :description "Et spy-/stub- og mocke-bibliotek for JavaScript."
@@ -1163,11 +1163,11 @@
                         {:url "https://github.com/culljs/culljs/"
                          :name "Cull.JS"
                          :description "Funksjonell verktøykasse for JavaScript."
-                         :tech [:javascript :functional-programming]}
+                         :tech [:javascript :funksjonell-programmering]}
                         {:url "https://github.com/culljs/dome/"
                          :name "Dome"
                          :description "Funksjonell verktøykasse for DOM-manipulering."
-                         :tech [:javascript :functional-programming]}]
+                         :tech [:javascript :funksjonell-programmering]}]
  :open-source-contributions [{:name "Quiescent" :url "https://github.com/cjohansen/quiescent/", :tech [:clojure :react]}
                              {:name "Gitorious" :url "http://gitorious.org/gitorious/", :tech [:ruby :git :rails :redhat :ssh]}
                              {:name "Optimus" :url "https://github.com/magnars/optimus" :tech [:clojure :web-performance]}
@@ -1239,7 +1239,7 @@
                          innovasjon – og alltid positive innstilling."}
 
  :cv {:default {:preferred-techs [:clojure :clojurescript
-                                  :functional-programming :immutability
+                                  :funksjonell-programmering :immutability
                                   :emacs :terminal
                                   :osx :centos :alpine :ubuntu :ios
                                   :docker :nginx :haproxy]}}

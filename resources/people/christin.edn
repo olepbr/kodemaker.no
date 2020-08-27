@@ -20,7 +20,7 @@
             :linkedin "/in/christin-gorman-2321aa1"
             :github "christingorman"}
 
- :tech {:using-at-work [:java :postgres :javascript :kubernetes :aws]
+ :tech {:using-at-work [:java :postgresql :javascript :kubernetes :aws]
         :want-to-learn-more [:elixir :go :clojure]}
  :hobbies [{:title "Roboter"
             :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
@@ -70,7 +70,7 @@
                   :blurb "Jeg snakker om problemene med generiske rammeverk generelt og Hibernate og ORMer spesielt."
                   :date "2011-09-13"
                   :event "JavaZone"
-                  :tech [:orm :frameworks :hibernate]
+                  :tech [:hibernate]
                   :urls {:video "https://vimeo.com/28885655"}
                   :thumb "/thumbs/videos/hibernate-cake-mix.jpg"}
                  {:title "Reuse? Refuse"
@@ -285,7 +285,7 @@
              :description "Bostøtte-tilbakekrav: Husbanken laget en applikasjon som brukes ved mistanke om svindel.
              Saksbehandlere kan gå over alle utbetalinger og gjøre nye beregninger basert på endret informasjon for å se om en bostøtte-mottaker har fått for mye utbetalt bostøtte. Jeg var med på både design og utvikling av hele løsningen, både frontend og backend, arkitektur og UX."
              :years [2012, 2013]
-             :tech [:java :jboss :jsf :primefaces :springbatch :jpa :sql-server]}
+             :tech [:java :jboss :jsf :primefaces :spring-batch :jpa :sql-server]}
             {:customer "Statnett"
              :summary "Front- og backendutvikler i prosjekt LARM, et markedsstyringssystem for kjøp av reservekraft fra strømprodusenter for å holde den nasjonale strømfrekvensen stabil."
              :employer :steria
@@ -311,7 +311,7 @@
              :description "Utvikling av et system for å registrere og søke gjennom erfaringer gjort i forbindelse med jobbing på oljerig. Web-interface samt desktop-applikasjoner med synkroniseringsmuligheter for installasjoner på platformer med dårlig internett-oppkobling.
              Jeg var ansvarlig for alt unntatt den egenutviklede ORMen brukt for databaseoppkobling."
              :years [2005, 2006]
-             :tech [:csharp :aspnet :oracle :sqlserver]}
+             :tech [:csharp :aspnet :oracle :sql-server]}
             {:customer "KCA Deutag"
              :years [2003]
              :employer :well-data

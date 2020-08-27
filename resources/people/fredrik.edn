@@ -77,7 +77,7 @@
              fra innholdsleverandører og setter sammen skreddersydde pakker til
              hvert enkelt togsett. 
              Oppgaver: Senior Javautvikler / frontendutvikler."
-             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :boostrap :git :jenkins]}
+             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :bootstrap :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "FILI"
@@ -103,7 +103,7 @@
              generere databasen som styrer passasjerinformasjons-anleggene
              ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l.
              Oppgaver: Senior Javautvikler / frontendutvikler"
-             :tech [:griffon :groovy :java :spring :junit :svn :maven :java-soundframework]}
+             :tech [:griffon :groovy :java :spring :junit :svn :maven :java-sound-framework]}
             {:customer "HRM Group"
              :employer :kodemaker
              :summary "Lederindeksen"
@@ -157,7 +157,7 @@
              vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
              bruk på flere sykehus i Vestmanlän i Sverige. Oppgaver: Senior Java
              / frontendutvikler. Portalutvikling av ajaxintensive portlets."
-             :tech [:java :jsp :struts :prototype :ajaxanywhere :json :javascript
+             :tech [:java :jsp :struts :prototype :ajaxanywhere :javascript
                     :css :html :portlets :oracle-portal :oracle-appserver :intellij
                     :ant :svn :cvs :jstl :spring :junit :hudson]}
             {:customer "Skatteetaten"

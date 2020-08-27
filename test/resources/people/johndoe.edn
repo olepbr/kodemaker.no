@@ -23,13 +23,13 @@
                               :blurb "Dette er stedet å grave seg dypt ned i RL."
                               :link  {:url  "https://spinningup.openai.com"
                                       :text "Sjekk ut nettstedet her"}
-                              :tech  [:machinelearning]}]
+                              :tech  [:machine-learning]}]
 
  :side-projects             [{:title        "Fjesgjenkjenning"
                               :description  "Bruke bilbioteket [dlib](http://blog.dlib.net) til å kjenne igjen alle kodemakere"
                               :link         {:url "https://github.com/trygvea/face-recognition-dlib" :text "Se koden her"}
                               :illustration "/illustrations/side-projects/trygve-og-einar.png"
-                              :tech         [:python :dlib :machinelearning]
+                              :tech         [:python :dlib :machine-learning]
                               }]
 
  :hobbies                   [{:title        "Maskinlæring"
@@ -45,7 +45,7 @@
 
  :appearances               [{:title "Deep Learning / dyp læring"
                               :event "Kodemaker fagdag"
-                              :tech  [:deeplearning :machinelearning]
+                              :tech  [:deeplearning :machine-learning]
                               :date  "2015-05-21"}
                              ]
 

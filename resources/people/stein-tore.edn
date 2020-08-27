@@ -139,7 +139,7 @@
                   med Angular og React."
                   :tech [:groovy :javascript :grails :gorm :gradle :oracle :centos
                          :ansible :tomcat :react :html :css :bootstrap :spock :webservices
-                         :json :rest]}
+                         :rest]}
                  {:customer "Barne- og ungdomspsykiatrisk poliklinikk"
                   :years [2016]
                   :employer :kodemaker
@@ -199,7 +199,7 @@
                   teknologivalg og krav. Oppgaver: Utvikler, frontendutvikler,
                   Teamleder i perioder, webutvikling,
                   applikasjonsintegrasjoner (SOA), analyse og design"
-                  :tech [:java :spring-mvc :hibernate :maven :spring-mvc :jquery :json :jrebel]}
+                  :tech [:java :spring-mvc :hibernate :maven :spring-mvc :jquery :jrebel]}
                  {:customer "Verdipapirsentralen"
                   :years [2008]
                   :employer :avenir
@@ -235,7 +235,7 @@
                   :description "Døgnåpen Forvaltning Nyutvikling av
                   foreldrepengeveilederen på nav.no. Oppgaver: Estimering og
                   utvikling (frontend og backend)"
-                  :tech [:java :j2ee :spring-mvc :hibernate :navs-rammeverk :rad :websphere]}
+                  :tech [:java :j2ee :spring-mvc :hibernate :rad :websphere]}
                  {:customer "NAV"
                   :years [2007]
                   :employer :avenir

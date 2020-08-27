@@ -85,8 +85,8 @@
              :summary "Applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer"
              :employer :computas
              :description "Som en del av Aker Solutions sitt omfattende initiativ for å effektivisere utvikling av olje- og gassfelt, utviklet vi en applikasjon for estimering av vekt og tyngdepunkt av olje- og gassplattformer. Vi reduserte tiden det tar å få opp et grovt vektestimat fra dager/uker til minutter. Jeg var ansvarlig for utviklingen av web-klienten og hadde i perioder ansvaret for UX. I andre perioder fungerte jeg som sparringspartner for UX-ansvarlig. Var sentral i design og implementasjon av backend, med et spesielt fokus på god systemarkitektur. Tok ofte initiativ til, og ledet, diskusjoner om arkitektur og modellering. Hadde i tillegg rollen som funksjonell arkitekt, med overordnet ansvar for funksjonaliteten som ble levert. Var Scrum Master i en periode. Innførte Kanban for å øke effektiviteten til teamet. Var pådriver for å bygge opp et team hvor alle bidro på både frontend og backend. Tok initiativ til å samle frontend-utviklere på tvers av teamene hos Aker Solutions til uformelle møter hvor man kunne diskutere store og små ting relatert til frontend-utvikling. Tok i tillegg ansvar for å få på plass gode rutiner for vedlikehold og videreutvikling av et felles design-bibliotek som ble brukt av alle teamene."
-             :tech [:angular :typescript :java :google-cloud :ddd :es6 :angular-material  :html :sass :webpack :yarn :nodejs :spring
-                    :gradle :google-cloud-datastore :jenkins :rest :xslt :json :git :architecture :kanban :scrum :devops :tdd]}
+             :tech [:angular :typescript :java :gcp :ddd :es6 :angular-material  :html :sass :webpack :yarn :nodejs :spring
+                    :gradle :google-cloud-datastore :jenkins :rest :xslt :git :architecture :kanban :scrum :devops :tdd]}
 
             {:customer "Mattilsynet"
              :start "2015-04"

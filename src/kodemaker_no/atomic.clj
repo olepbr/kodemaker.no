@@ -72,18 +72,21 @@
                               {:uri uri}
                               e)))))))
 
+
+
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
 
-  (->> conn
-       d/db
-       (d/q '[:find ?kind
-              :in $
-              :where
-              [?e :page/kind ?kind]])
-       (map first)
-       set)
+  (->> "tech-categories.edn"
+       io/resource
+       slurp
+       read-string
+       (group-by second)
+       (map (fn [[k v]] [k (sort (map first v))]))
+       (into {})
+       pr-str
+       (spit "/tmp/lol.edn"))
 
   (def reference
     (->> (d/q '[:find ?e

@@ -28,7 +28,7 @@
                      {:title "Functors, Applicatives, And Monads In Pictures"
                     :link {:url "http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html"
                            :text "Les artikkel"}
-                    :tech [:functional-programming]
+                    :tech [:funksjonell-programmering]
                     :blurb "Hvis du også føler at bruk av begreper som \"skolemisering\" og \"monader\" ikke er annet enn hersketeknikk,
                     gjør deg mindre sårbar for hersing ved å lese denne artikkelen med tegninger for dummies. Les den gjerne en gang til."}]
 
@@ -46,7 +46,7 @@
              :years [2018 2019 2020]
              :employer :kodemaker
              :summary "Front- og backendutvikling"
-             :tech [:java :javascript :git :react :angularjs :springboot :tomcat :saml :docker :nodejs :kafka :ms-sql]}
+             :tech [:java :javascript :git :react :angularjs :springboot :tomcat :saml :docker :nodejs :kafka :mssql]}
             {:customer "Nye Deichman — Applikasjonsprosjektet"
              :description "Utvikling av fremtidens biblioteksystem"
              :years [2015 2016 2017]
@@ -68,7 +68,7 @@
              :employer :kodemaker
              :summary "Utvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig til bedriftsmarkedet. REST-api for salg av ADSL til privatmarkedet"
              :tech [:wicket :java :mongodb :ajax :jboss :collectionjson
-                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jaxrs
+                    :j2ee :jpa :hibernate :neo4j :mongodb :lucene :rest :jax-rs
                     :jboss :puppet :postgresql :oracle :mongodb :maven :jenkins :git]}
             {:customer "Sparebank1 Gruppen"
              :description "Proof-of-concept med CA SiteMinder som hyllevareprodukt. Implementerte felles innlogginsløsning og sikkerhetslag basert på OpenAM."
@@ -94,7 +94,7 @@
              og mer modulær plattform for effektiv publisering av nettutgavene
              til 50–60 lokalaviser i Norge. Sterk fokus på ytelse og korrekt
              bruk at HTTP- og HTML-standarder."
-             :tech [:java :spring :jsp :css :javascript :jetty :linux :atom :rss :xsl :varnish
+             :tech [:java :spring :jsp :css :javascript :jetty :linux :atom :rss :xslt :varnish
                     :escenic :svn :jira]}
             {:customer "SpareBank1 Gruppen"
              :years [2010]
@@ -206,7 +206,7 @@
              :description "EJB-basert system for styring av distribusjon av
              kundedata. Pilotprosjekt for innføring av EJB i Telenor Bedrift.
              Utviklet EJB’er for styring av datadistribusjon."
-             :tech [:java :ejb :gemstone :oracle]}
+             :tech [:java :ejb :oracle]}
             {:customer "Gjensidige NOR"
              :years [1999]
              :employer :objectware

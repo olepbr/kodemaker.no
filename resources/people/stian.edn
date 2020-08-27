@@ -255,7 +255,7 @@
              for inkluderende arbeidsliv. Prosjektet besto i å kartlegge og
              utvikle nettstedet. Løsningen benytter emneord for navigasjon
              Oppgaver: Senior utvikler"
-             :tech [:maven :java :xsl :enonic-cms]}
+             :tech [:maven :java :xslt :enonic-cms]}
             {:customer "NAV"
              :years [2007]
              :employer :avenir
@@ -266,7 +266,7 @@
              Python-kode for å tilpasse dokumentprosesseringen, samt å tilpasse
              søkeresultatet for å oppnå ønsket resultat Oppgaver: Senior
              utvikler"
-             :tech [:java :python :xsl :maven]}
+             :tech [:java :python :xslt :maven]}
             {:customer "NAV"
              :years [2007]
              :employer :avenir
@@ -276,7 +276,7 @@
              implementerte en intern bestillingsløsning for NAV. Løsningen er
              bygd på Java/JEE og kommuniserer med backend-system via web
              services. Oppgaver: Utvikler"
-             :tech [:java :web-services :jee]}
+             :tech [:java :web-services :j2ee]}
             {:customer "Carrot Communications"
              :years [2007]
              :employer :avenir
@@ -288,7 +288,7 @@
              services som kaller backend betalingsløsning. Videre implementerte
              Stian en løsning for påfylling av kontantkort via SMS for Chess.
              Oppgaver: Utvikler"
-             :tech [:java :web-services :jee :struts :css]}
+             :tech [:java :web-services :j2ee :struts :css]}
             {:customer "NAV"
              :years [2006]
              :employer :avenir
@@ -299,7 +299,7 @@
              var med å integrere Enonic CMS med FAST søkemotor. Løsninger er
              basert Java. Nettstedet har vunnet flere priser i ettertid.
              Oppgaver: Utvikler"
-             :tech [:java :jee :xsl :javascript :html]}
+             :tech [:java :j2ee :xslt :javascript :html]}
             {:customer "Fjordland"
              :years [2005 2006]
              :employer :avenir
@@ -310,7 +310,7 @@
              videre benyttet en del JavaScript på sidene, samt
              søkefunksjonalitet. Applikasjonen kjørte på Websphere Application
              Server 6.0. Oppgaver: Utvikler"
-             :tech [:java :xsl :javascript :html :css]}
+             :tech [:java :xslt :javascript :html :css]}
             {:customer "Fjordland"
              :years [2005]
              :employer :avenir
@@ -320,7 +320,7 @@
              data i Enonic CMS. Dataene ble hentet inn jevnlig slik at de ansatte i
              Fjordland skulle slippe å synkronisere dataene manuelt. Oppgaver:
              Utvikler"
-             :tech [:java :xsl]}
+             :tech [:java :xslt]}
             {:customer "NAV"
              :years [2005]
              :employer :avenir
@@ -329,7 +329,7 @@
              :description "Oppsett av publiseringsløsning
              basert på Enonic CMS. Bygget webside i henhold til kundens ønskede
              design. Oppgaver: Utvikler"
-             :tech [:java :xsl :html :css]}
+             :tech [:java :xslt :html :css]}
             {:customer "Atmel"
              :years [2004 2005]
              :employer :atmel

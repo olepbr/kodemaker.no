@@ -1,7 +1,7 @@
 :title Brukergrensesnitt i kode på Apples plattformer
 :published 2020-03-25
 :author andre
-:tech [:swift :ios :macOS]
+:tech [:swift :ios :mac-os]
 
 :blurb
 

@@ -27,6 +27,35 @@
 (defn cv-profile [cv]
   (d/entity (d/entity-db cv) (:cv/person cv)))
 
+(def new-tech-categories
+  {:proglang "Programmeringsspråk"
+   :devtools "Utviklingsverktøy"
+   :coop "Samhandling"
+   :database "Database"
+   :messaging "Meldingssystemer"
+   :devops "Devops"
+   :desktop "Desktop"
+   :cloud "Skytjenester"
+   :security "Sikkerhet"
+   :frontend "Frontend"
+   :methodology "Metodikk"
+   :testing "Testing"
+   :search "Søk"
+   :software "Software"
+   :service "Tjenester"
+   :webdev "Webutvikling"
+   :other "Annet"
+   :apps "Apputvikling"
+   :monitoring "Logging og monitorering"
+   :platform "Plattform"
+   :library "Bibliotek"
+   :ai "Kunstig intelligens"
+
+   :concept "Konsept" ;; Hold utenfor
+   :iot "Internet of Things"
+   :network "Nettverk"
+   })
+
 (def tech-labels
   {:proglang "Programmeringsspråk"
    :devtools "Utviklingsverktøy"
@@ -43,8 +72,7 @@
    :library "Bibliotek"
    :framework "Rammeverk"
    :specification "Spesifikasjoner"
-   :server "Server
-   "})
+   :server "Server"})
 
 (def tech-order
   [:proglang :devtools :vcs :methodology :os :database :devops :cloud :security :tool :frontend :cv/other])

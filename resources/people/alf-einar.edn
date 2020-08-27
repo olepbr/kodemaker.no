@@ -162,7 +162,7 @@
                  ammunisjon (Amplan4). Integrasjon med forsvarets SAP-løsning.
                  Oppgaver: Analyse, design, test, utvikling, dokumentasjon"
                   :tech [:hibernate :spring :spring-mvc :oracle :joss :jsp :maven :jetty
-                         :javacript :html :junit :groovy :spring-security :sap]}
+                         :javascript :html :junit :groovy :spring-security :sap]}
 
                  {:customer "Forsvaret"
                   :years [2007]

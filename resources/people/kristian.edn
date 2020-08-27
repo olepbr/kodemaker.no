@@ -106,7 +106,7 @@
              releaser via spesifiserte Helm-charts. Flux sin primæroppgave er å se etter endringer i kodebasen og umiddelbart deploye disse ut i 
              clusteret når de detekteres. Flux er en implentasjon av GitOps-tankegangen hvor Git er den ene og fulle sannhet og alle endringer 
              skal reflektres umiddelbart. Flux er i hovedsak kontinuerlig integrasjon på plattform-nivå." 
-             :tech [:docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :drone :jinja2]}
+             :tech [:docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :jinja2]}
             {:customer "Finn AS"
              :years [2018 2019]
              :employer :kodemaker
@@ -120,7 +120,7 @@
              og backend utvikler. Pakketere applikasjoner i docker image, legge på fiaas konfigurasjoner, legge til deploy konfigurasjoner, 
 	     legge på rest-ruter for helsesjekker, flytte database migrasjoner inn i applikasjonene og avslutningsvis sanere gamle Puppet 
              konfigurasjoner samt ta ned applikasjoner fra gammel api-rigg." 
-             :tech [:docker :kubernetes :fiaas :redis :haproxy :rest :thrift :java :puppet]}
+             :tech [:docker :kubernetes :redis :haproxy :rest :thrift :java :puppet]}
 	    {:customer "Tomra"
              :years [2016 2017 2018]
              :employer :kodemaker
@@ -139,7 +139,7 @@
              kunder, f.eks til statistiske formål, rapportering eller ren
              overvåking av pantemaskiner."
              :tech [:aws :aws-kinesis :aws-s3 :aws-lambda :dynamodb :kubernetes :terraform :vavr
-                    :functional-programming :sparkjava :lombok]}
+                    :funksjonell-programmering :spark :lombok]}
             {:customer "Animalia"
              :years [2016]
              :employer :kodemaker
@@ -208,7 +208,7 @@
              Primæroppgave i prosjektet var å utvikle selve integrasjonsbussen.
              Utviklet også en Agresso-emulator som gjorde det lett å
              verifisere/teste. Lite prosjekt, kun 2 utviklere."
-             :tech [:springcore :jdbc :boot :rest :oracle :h2 :git :maven :jenkins
+             :tech [:spring :jdbc :spring-boot :rest :oracle :h2db :git :maven :jenkins
                     :jira :confluence :stash]}
             {:customer "NSB"
              :years [2014]
@@ -246,7 +246,7 @@
              Javautvikler. Primæroppgave var å designe og utvikle nye API'er
              tilpasset nytt annonsestyringssystem. Medium prosjekt, 4-5
              utviklere."
-             :tech [:java :adtechhelios :emediate :spring :spring-mvc :mockito :junit :rest]}
+             :tech [:java :spring :spring-mvc :mockito :junit :rest]}
             {:customer "Finn AS"
              :years [2011 2012]
              :employer :kodemaker
@@ -395,7 +395,7 @@
              Oppgaver: Senior Utvikler, Arkitekt. Primæroppgave var å utvikle ny
              beregningsmotor med fokus på gjenbrukbarhet og fleksibilitet mhp
              pluggbare moduler. Medium prosjekt, 2-3 utviklere."
-             :tech [:java :spring :jee :xsd]}
+             :tech [:java :spring :j2ee :xsd]}
             {:customer "Finntech AS"
              :years [2006]
              :employer :tieto-enator-tele
@@ -436,7 +436,7 @@
                                   :kubernetes :terraform :puppet :teamcity
                                   :jira :confluence :bamboo
                                   :aws-kinesis :aws-s3 :aws-lambda
-                                  :scrum :functional-programming :frp :micro-services]}}
+                                  :scrum :funksjonell-programmering :frp :micro-services]}}
  :cv/description " Kristian er først og fremst en solid utvikler og konsulent
  som brenner for å utvikle gode løsninger for krevende kunder. Han har bred
  erfaring på tvers av flere bransjer og domener som blant annet inkluderer

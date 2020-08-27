@@ -73,7 +73,7 @@
              :tech [:clojure :clojurescript :kubernetes :datomic :datascript :reagent :mount :docker
                     :aws :aws-vpc :aws-s3 :aws-route53 :aws-iam :nginx :cordova :html :css :responsive-design :kafka
                     :influxdb :lambdacd :ci :cd :alpine :ubuntu :datadog :event-sourcing :cqrs :figwheel :dynamodb
-                    :aws-ec2 :bash :clojure-spec :cloud :travisci]
+                    :aws-ec2 :bash :clojure-spec :cloud :travis-ci]
              :years [2016 :ongoing]}
             {:customer "Oiiku"
              :employer :kodemaker

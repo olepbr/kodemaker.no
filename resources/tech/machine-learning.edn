@@ -1,4 +1,4 @@
-{:id :machinelearning
+{:id :machine-learning
  :name "Maskinlæring"
  :type :methodology
  :illustration "/photos/tech/machinelearning.jpg"

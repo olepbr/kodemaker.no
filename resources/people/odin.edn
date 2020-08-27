@@ -104,7 +104,7 @@
                             vi ikke stiller spørsmål ved de lenger. Det finnes et enormt rom for forbedring!"
                     :link {:url "http://www.lighttable.com/2014/05/16/pain-we-forgot/"
                            :text "Det vi glemte"}
-                    :tech [:clojurescript :editor]}]
+                    :tech [:clojurescript]}]
 
  :presentations [{:title "3 grunner til at ClojureScript gir deg superkrefter"
                   :date "2016-09-08"
@@ -252,7 +252,7 @@
              utvikling, vedlikehold av applikasjonsrammeverket og tett samarbeid
              med underleverandører. I tillegg med på å etablere og holde
              sertifiseringskurs i NAVs nye SOA-plattform."
-             :tech [:java :jsf :spring :spring-webflow :spring-batch :hibernate :websphere]}
+             :tech [:java :jsf :spring :spring-web-flow :spring-batch :hibernate :websphere]}
             {:customer "NAV Pensjonsprogrammet, Tjenesteintroduksjon"
              :years [2008]
              :employer :accenture

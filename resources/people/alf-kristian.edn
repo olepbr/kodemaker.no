@@ -164,7 +164,7 @@
              :summary "Utvikling av løsning for intern distribusjon av fremskrevne tidsserier fra forskjellige markeder."
              :description "Utvikling av løsning for intern distribusjon av
              fremskrevne tidsserier fra forskjellige markeder."
-             :tech [:java8 :spark :kafka :hbase :hadoop :zookeeper :logstash]}
+             :tech [:java :spark :kafka :hbase :hadoop :zookeeper :logstash]}
             {:customer "Hafslund Strøm"
              :years [2014 2015 2016]
              :employer :kodemaker
@@ -254,7 +254,7 @@
              skrive om, og forbedre arkitektur, til de mange batchene som knar
              data i tollvesenets fortollingssystem. Oppgaver: Arkitekt og
              programmerer i Scrum-team"
-             :tech [:java :weblogic :spring :sybase :jasperreports :genova :maven]}
+             :tech [:java :weblogic :spring :sybase :jasper-reports :genova :maven]}
             {:customer "Kommuneforlaget"
              :years [2010]
              :exclude-from-profile? true
@@ -344,7 +344,7 @@
                   :thumb "/thumbs/videos/erfaringer-clojure-scala.jpg"
                   :date "2015-08-09"
                   :event "JavaZone"
-                  :tech [:clojure :scala :java8 :java :funksjonell-programmering]}
+                  :tech [:clojure :scala :java :java :funksjonell-programmering]}
 
                  {:title "Really understanding Clojure, getting into macros"
                   :blurb "På Javazone 2014, snakket Alf Kristian om Clojure sine makroer. Det ble et dypdykk inn i en av Clojure sine kraftigste features"
@@ -400,7 +400,7 @@
                 :event "JavaZone"
                 :urls {:video "https://github.com/stoyle/functional-workshop"}
                 :date "2012-09-10"
-                :tech [:functional-programming]}
+                :tech [:funksjonell-programmering]}
                {:title "What is (still) painful while developing Scala"
                 :event "flatMap(Oslo)"
                 :date "2012-05-10"

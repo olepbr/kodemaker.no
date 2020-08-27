@@ -170,7 +170,7 @@
              \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
-             :tech [:kotlin :javascript :es6 :react :react-native :swift :functional-programming :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
+             :tech [:kotlin :javascript :es6 :react :react-native :swift :funksjonell-programmering :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
             {:customer "Animalia"
              :years [2017]
              :employer :kodemaker
@@ -313,7 +313,7 @@
              andre fagsystemer for ordrehåndtering med mer, samt eksterne
              tjenester for SMS og kreditsjekk. \nOppgaver: Senior Java utvikler"
              :tech
-             [:java :wicket :javascript :jee6 :jpa :hibernate :neo4j :mongodb :lucene
+             [:java :wicket :javascript :j2ee :jpa :hibernate :neo4j :mongodb :lucene
               :rest :jax-rs :jboss :postgresql :oracle :maven :jenkins :git :junit]}
             {:customer "FINN.no"
              :years [2012]
@@ -467,7 +467,7 @@
              arkitektur. Teamleder, funksjonell arkitekt for «nettnære systemer»
              etc. Deltok i flere intern prosjekter som arkitekt og utvikler."
              :tech [:java :j2ee :weblogic :spring :corba :sybase :jdbc :oracle :junit :dbunit
-                    :cruisecontrol :mockobjects :aspectj :servlet :webservices :uml :intellij :architecture]}
+                    :cruisecontrol :mockobjects :aspectj :servlets :webservices :uml :intellij :architecture]}
             {:customer "Arrive, Nordea, Europay Norway"
              :years [2002]
              :employer :objectware
@@ -477,7 +477,7 @@
              concept for bruk av webservices i Objectware og Nordeas
              egenutviklede J2EE baserte rammeverk JEFF/Coffee. Design og
              utvikling av en online saldooversikt for EuroCard-kunder"
-             :tech [:java :j2ee :websphere :visual-age-for-java :sybase :architecture]}
+             :tech [:java :j2ee :websphere :visual-age :sybase :architecture]}
             {:customer "Gjensidige NOR"
              :years [2002]
              :employer :objectware
@@ -511,14 +511,14 @@
              på toppen av Servlet API'et, samt en screenscraping løsning pga at
              tilsvarende løsningen ikke eksisterte eller ikke var modne til bruk
              i produksjon."
-             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet :cvs :architecture]}
+             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlets :cvs :architecture]}
             {:customer "Bankenes Betalingssentral, BBS"
              :years [1998]
              :summary "Kompetansebase"
              :employer :objectware
              :description "Kompetansebase – Design og utvikling av en
              kompetansebase for internt bruk i BBS."
-             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlet :cvs :architecture]}
+             :tech [:java :jbuilder :webmacro :tandem :mvs :screenscraping :awt :swing :servlets :cvs :architecture]}
             {:customer "Norges Bank"
              :years [1998]
              :summary "Utvikling av et system for håndtering av Nattsafer"
@@ -533,7 +533,7 @@
              :description "Design og utvikling av «Persona», et
              administrasjonssystem for utstedelse og vedlikehold av magnetkort
              for kortbaserte låssystemer"
-             :tech [:delphi :interbase :ole :architecture]}
+             :tech [:delphi :interbase :architecture]}
             {:customer "IT-Medicine"
              :years [1996]
              :summary "An Encyclopedia of Oral Mucosal Lesions"

@@ -1,6 +1,6 @@
 :title Alle utviklere bør kjenne til persistente datastrukturer
 :author august
-:tech [:clojure :datastrukturer]
+:tech [:clojure]
 :published 2020-01-21
 
 :blurb

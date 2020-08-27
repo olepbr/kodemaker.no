@@ -36,7 +36,7 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :clojurescript :datomic :kafka :aws :influx :kubernetes]
+ :tech {:using-at-work [:clojure :clojurescript :datomic :kafka :aws :influxdb :kubernetes]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
 
@@ -63,14 +63,14 @@
  :recommendations [{:title "Inventing on principle"
                     :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
                            :text "Se foredraget"}
-                    :tech [:tooling :design :kreativitet :observasjon]
+                    :tech [:tooling :design]
                     :blurb "Fantastisk foredrag av Brett Victor. Programmering er et kreativt yrke. Det er antageligvis mye lettere å være kreativ dersom man kan ta, se, observere og endre helt fritt og dynamisk på et kjørende program.
                             Hadde det ikke vært digg å kunne spole tilbake det du nettopp gjorde i appen din, endre noen parametere og så kjøre på nytt. Kanskje tom for å sammenligne.
                             Dette foredraget var bl.a med på å inspirere mye av tankene rundt verktøy som Light Table og programmeringspråket Elm"}
                    {:title "Let's be Mainstream"
                     :link {:url "https://www.youtube.com/watch?v=oYk8CKH7OhE"
                            :text "Se foredraget"}
-                    :tech [:elm :functional-programming]
+                    :tech [:elm :funksjonell-programmering]
                     :blurb "Evan Czaplicki (forfatter av Elm) forsøker å få med hardcore funksjonelle programmerere (med en hang for typer) til å begynne å kommunisere
                             med utenforstående på mer forståelige termer. Etter å ha sett denne fikk jeg endelig lyst til å kikke på et typet funksjonelt språk."}
                    {:title "Test-driven JavaScript Development"
@@ -287,7 +287,7 @@
                :title "Securing Clojure Microservices using buddy - Part 4: Secure and liberate a service app"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                I del 4 ser vi på hvordan vi kan sikre en service app basert som benytter REST-biblioteket Liberator"
-               :tech [:clojure :buddy :microservices]}
+               :tech [:clojure :buddy]}
               {:url "https://rundis.github.io/blog/2015/clj_light_thread.html"
                :published "2015-03-16"
                :title "Implementing a Clojure threading refactoring in ClojureScript using Light Table"
@@ -298,19 +298,19 @@
                :title "Securing Clojure Microservices using buddy - Part 3: Token revocation"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                I del 3 ser vi på mulige løsninger for å trekke tilbake tokens vha refresh tokens"
-               :tech [:clojure :buddy :microservices]}
+               :tech [:clojure :buddy]}
               {:url "https://rundis.github.io/blog/2015/buddy_auth_part2.html"
                :published "2015-02-02"
                :title "Securing Clojure Microservices using buddy - Part 2: WebApp authentication and authorization"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                Del 2 handler om å bruk av tokens og cookies for autentisering og autorisasjon i en clojure web applikasjon."
-               :tech [:clojure :buddy :microservices]}
+               :tech [:clojure :buddy]}
               {:url "https://rundis.github.io/blog/2015/buddy_auth_part1.html"
                :published "2015-01-27"
                :title "Securing Clojure Microservices using buddy - Part 1: Creating Auth Tokens"
                :blurb "En blogserie hvor jeg ser på autentisering og autorisasjon i en clojure microservices arkitektur med bruk av [Buddy](https://github.com/funcool/buddy).
                Del 1 handler om å lage en service som generer signerte tokens for bruk i autentisering og autorisasjon."
-               :tech [:clojure :buddy :microservices]}
+               :tech [:clojure :buddy]}
               {:url "https://rundis.github.io/blog/2015/bootify-ring.html"
                :published "2015-01-19"
                :title "Bootifying my ring app"
@@ -394,7 +394,7 @@
                         {:url "https://github.com/rundis/AsciiLight"
                          :name "AsciiLight"
                          :description "Light Table plugin for live-edit visning av Asiidoctor dokumenter"
-                         :tech [:lighttable :clojurescript :asciidoc]}
+                         :tech [:lighttable :clojurescript]}
                         {:url "https://github.com/rundis/lt-snippets"
                          :name "lt-snippets"
                          :description "Snippet/templates plugin for Light Table"
@@ -427,7 +427,7 @@
              :employer :kodemaker
              :summary "Utvikling av nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for Norled."
-             :tech [:clojure :clojurescript :datomic :datascript :aws :kubernetes :influx :kafka :travisci]}
+             :tech [:clojure :clojurescript :datomic :datascript :aws :kubernetes :influxdb :kafka :travis-ci]}
             {:customer "Tomra"
              :start "2018-10"
              :end "2019-04"
@@ -476,7 +476,7 @@
              Integrasjon mot diverse 3.parts løsninger, etablering av
              mikrotjenster, teknologievalueringer, frontend utvikling,
              automatisert testing mm."
-             :tech [:kotlin :elm :postgresql :google-cloud :gitlab :kubernetes :rust :aws]}
+             :tech [:kotlin :elm :postgresql :gcp :gitlab :kubernetes :rust :aws]}
             {:customer "Animalia - Dyrehelseportalen"
              :years [2016]
              :employer :kodemaker
@@ -489,7 +489,7 @@
              er nå under kontinuerlig videreutvikling. Oppgaver: Analyse, design
              og full-stack utvikling av en mikrotjeneste-basert arkitektur med
              flere sluttbruker-applikasjoner."
-             :tech [:clojure :clojurescript :re-frame :docker :oracle :sql-server :elastic-search
+             :tech [:clojure :clojurescript :re-frame :docker :oracle :sql-server :elasticsearch
                     :docker :docker-cloud :bootstrap :jenkins]}
             {:customer "Animalia - Vedlikehold og videreutvikling"
              :years [2015]
@@ -508,7 +508,7 @@
              dyrehelse for griser. Det er også et mål for prosjektet å lage
              endel gjenbrukbare tjenester. Oppgaver: Utvikling, mentoring og
              veiledning på utvikling av tjenestearkitekturer."
-             :tech [:clojure :clojurescript :docker :ansible :bootstrap :reactjs :busterjs
+             :tech [:clojure :clojurescript :docker :ansible :bootstrap :react :buster-js
                     :jenkins :oracle]}
             {:customer "Animalia - Sauekontrollen"
              :years [2013]
@@ -516,7 +516,7 @@
              :summary "Full-stack utvikling i Grails"
              :description "Full-stack utvikling i Grails. Prosjektekspert på
              JavaScript/TDD og provisjonering (Ansible)."
-             :tech [:grails :groovy :jquery :bootstrap :ansible :busterjs :oracle :tomcat :jenkins :git :spock]}
+             :tech [:grails :groovy :jquery :bootstrap :ansible :buster-js :oracle :tomcat :jenkins :git :spock]}
             {:customer "Animalia - Storfekjøttkontrollen"
              :years [2012]
              :employer :kodemaker
@@ -546,7 +546,7 @@
              systemutvikling generelt. Forbedring av eksisterende
              utviklingsprosess, bistand med innføring av nye produktive verktøy
              og disipliner."
-             :tech [:java :plsql :gradle :teamcity :svn :dotnet :junit :apache-camel :spring :oracle]}
+             :tech [:java :plsql :gradle :teamcity :svn :dotnet :junit :camel :spring :oracle]}
             {:customer "Forsvaret FLO/IKT"
              :years [2010]
              :employer :kodemaker
@@ -595,7 +595,7 @@
              Team admin, Ytelsesoptimlisering."
              :tech [:java :spring :jboss :jboss-portal :jboss-messaging :jbossws :hibernate
                     :apache :postgresql :oracle :flash :quartz :maven :ant :junit :junitee :easymock
-                    :contestj :aop :cruise-control :eclipse :intellij :cvs :jira :confluence]}
+                    :aop :cruise-control :eclipse :intellij :cvs :jira :confluence]}
             {:customer "EDB ASA"
              :years [2005]
              :exclude-from-profile? true
@@ -615,8 +615,8 @@
              barnehager. Oppgaver: Etablering av IT arkitektur mål og plan,
              Teknisk ansvarling mot outsourcings leverandør,
              teknologievalueringer, rådgivning på prosess og metode."
-             :tech [:dotnet :visual-studio :csharp :sql-server-2000 :sql-reporting-services
-                    :ms-exchange :dashboard-portal]}
+             :tech [:dotnet :visual-studio :csharp :sql-server :sql-reporting-services
+                    :ms-exchange]}
             {:customer "IBM Danmark"
              :years [2003]
              :exclude-from-profile? true
@@ -642,7 +642,7 @@
              kjernesystemer. Oppgaver: Arkitektur governance, Design/utvikling av
              portlets, integrasjon mot SSO, design og utvikling av
              integrasjonsgrensesnitt Rolle: Teknisk arkitekt."
-             :tech [:peoplesoft-crm :websphere :mqseries-integrator :siteminder
+             :tech [:peoplesoft-crm :websphere :mq-series-integrator :siteminder
                     :epicentric-portal :java :j2ee :xslt :soap :jbuilder]}
             {:customer "Pwc internt"
              :years [2002 2003]
@@ -669,7 +669,7 @@
              mot portal, rådgivning integrasjon mot SSO, design og utvikling av
              portlets."
              :tech [:epicentric-portal :websphere :siteminder :iplanet-enterprise-directory
-                    :verity-search :oracle :db2 :mssql :lotus-notes :iis :mqseries :java :j2ee
+                    :verity-search :oracle :db2 :mssql :lotus-notes :iis :mq-series :java :j2ee
                     :asp :xslt :eclipse :rational-suite]}
             {:customer "HM C&E - Engelske tolldirektoratet"
              :years [2001 2002]
@@ -758,7 +758,7 @@
                  would have no hesitation recommending Karl for his technical
                  capability and clarity of thought"}]
 
- :cv {:default {:preferred-techs [:elm :clojure :clojurescript :kotlin :functional-programming :immutability]}}
+ :cv {:default {:preferred-techs [:elm :clojure :clojurescript :kotlin :funksjonell-programmering :immutability]}}
  :education-summary "Datateknikk HIBU, BI"
 
  :certifications [{:name "Sertifisert ScrumMaster", :year 2008}

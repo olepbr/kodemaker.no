@@ -55,7 +55,7 @@
              :employer :kodemaker
              :summary "Dyrehelseportalen"
              :description "Utvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
-             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :elasticsearch :compojure :swagger :spec :reagent :re-frame :react :websocket :bootstrap :sqlserver :oracle]}
+             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :elasticsearch :compojure :swagger :clojure-spec :reagent :re-frame :react :websocket :bootstrap :sql-server :oracle]}
 
             {:customer "NSB"
              :start "2018-05"
@@ -63,7 +63,7 @@
              :employer :kodemaker
              :summary "Tjenestevarsling"
              :description "Utvikling av en applikasjon for oppfølging av endringer i tjeneste for lokførere og konduktører"
-             :tech [:tomcat :groovy :grails :create-react-app :yarn :node :react :redux :jest :sse :gradle :java :spring :spock :git :haproxy :activemq :mariadb]}
+             :tech [:tomcat :groovy :grails :yarn :node :react :redux :jest :sse :gradle :java :spring :spock :git :haproxy :activemq :mariadb]}
 
             {:customer "NSB"
              :start "2018-01"
@@ -149,7 +149,7 @@
              :description "Trafficnow. Utvikling av et API for status på
              trafikken i øyeblikket. Oppgaver: Arkitekt / senior Javautvikler."
              :tech [:tomcat :groovy :grails :java :spring :spock :git :svn :apache :ehcache
-                    :rest :json :google-image-charts]}
+                    :rest :google-image-charts]}
 
             {:customer "NSB"
              :start "2013-10"
@@ -248,7 +248,7 @@
              visning av informasjon om tog, med tilhørende ruteplan,
              passeringshistorikk, meldinger og lignende. Oppgaver: Arkitekt /
              frontendarkitekt / senior Javautvikler / frontendutvikler."
-             :tech [:tomcat :groovy :grails :java :html :javascript :css :jquery :rwd
+             :tech [:tomcat :groovy :grails :java :html :javascript :css :jquery :responsive-design
                     :spring :mysql :junit :spock :geb :git :svn :rest :bootstrap :apache :ehcache :quartz :struts2]}
 
             {:customer "NSB"
@@ -272,7 +272,7 @@
              frontendarkitekt / senior Javautvikler / frontendutvikler."
              :tech [:tomcat :groovy :grails :java :html :javascript :css :sass :react :redux :es6 :babel
                     :jspm :systemjs :npm :flex :actionscript :blazeds :spring :jms :camel :junit :git :svn
-                    :gradle :maven-2 :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
+                    :gradle :maven :ehcache :quartz :mysql :soap :rest :bootstrap :apache :svg]}
 
             {:customer "NSB"
              :start "2008-11"
@@ -285,7 +285,7 @@
              Oppgaver: Senior Javautvikler / frontendarkitekt /
              frontendutvikler."
              :tech [:tomcat :struts2 :groovy :java :html :javascript :css :prototype :spring :junit
-                    :fusioncharts :svn :maven-2 :oracle :quartz :apache-poi]}
+                    :fusioncharts :svn :maven :oracle :quartz :apache-poi]}
 
             {:customer "NSB"
              :start "2008-11"
@@ -313,7 +313,7 @@
              Subversion. Laget en proof of concept på bruk av Flex."
              :tech [:java :jboss-portal :ejb :hibernate :jpa :spring :jboss-messaging :selenium ;EJB 2.1 og 3.0
                     :junit :testng :css :html :javascript :jquery :struts2 :webwork
-                    :flex :actionscript :json :svn :cvs :maven-2 :apache]}
+                    :flex :actionscript :svn :cvs :maven :apache]}
 
             {:customer "CSAM/Rikshospitalet"
              :start "2003-09"
@@ -327,7 +327,7 @@
              vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
              bruk på flere sykehus i Vestmanlän i Sverige. Oppgaver: Senior Java
              / frontendutvikler. Portalutvikling av ajaxintensive portlets."
-             :tech [:java :jsp :struts :prototype :ajaxanywhere :json :javascript :css
+             :tech [:java :jsp :struts :prototype :ajaxanywhere :javascript :css
                     :html :portlets :oracle-portal :oc4j :intellij :ant :svn :cvs
                     :jstl :spring :junit :hudson :apache-poi :watir]}
 
@@ -369,7 +369,7 @@
              Produktet bestod av en rekke webservices som ble solgt til banker
              og finansinstitusjoner. Oppgaver: Hadde ansvaret for utvikling
              av en administrasjonsapplikasjon. Utvikling av webtjenester."
-             :tech [:jsp :struts :servlets :webservices :jclass :orion :mysql :javascript :css
+             :tech [:jsp :struts :servlets :webservices :orion :mysql :javascript :css
                     :html :cvs :ant :intellij :oracle9ias :j2ee :cruise-control :dreamweaver-mx]}
 
             {:customer "Gjensidige NOR"
@@ -381,7 +381,7 @@
              salgsstøtteapplikasjoner for salg av diverse forsikringsprodukter.
              Oppgaver: Design og utvikling av javaklient samt utvikling av
              servertjeneste for generering av PDF og lagring til OnDemand."
-             :tech [:jfc :ibm-content-manager-ondemand :db2 :pdf :rational-rose
+             :tech [:jfc :ibm-content-manager-ondemand :db2 :rational-rose
                     :rational-clearcase :intellij]}
 
             {:customer "Tybring Gjedde ASA"
@@ -405,7 +405,7 @@
              salgsstøtteapplikasjoner for salg av diverse forsikringsprodukter.
              Oppgaver: Design og utvikling av javaklient samt utvikling av
              servertjeneste for generering av PDF og lagring til OnDemand."
-             :tech [:jfc :ibm-content-manager-ondemand :db2 :pdf :rational-rose
+             :tech [:jfc :ibm-content-manager-ondemand :db2 :rational-rose
                     :rational-clearcase :intellij]}
 
             {:customer "Tybring Gjedde ASA"
