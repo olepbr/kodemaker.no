@@ -140,8 +140,8 @@
                                                                     :person/_screencasts)})
       (assoc :screencast/people (keep :person/_screencasts screencasts))))
 
-(defn screencasters [screencast]
-  (->> (:screencast/people screencast)
+(defn names-sort-key [people]
+  (->> people
        (map :person/given-name)
        sort
        str/join))
@@ -151,7 +151,7 @@
                               (group-by :screencast/url)
                               vals
                               (map merge-screencasts)
-                              (sort-by screencasters)
+                              (sort-by (comp names-sort-key :screencast/people))
                               seq)]
     {:kind :titled
      :title "Screencasts"
