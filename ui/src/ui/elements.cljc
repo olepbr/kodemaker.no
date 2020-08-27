@@ -89,9 +89,10 @@
 
 (defn teaser [{:keys [link annotation tags content icon title url]}]
   [:div.teaser
-   (if url
-     [:a.link {:href url :className (when icon "icon-link")} icon title]
-     title)
+   (when title
+     (if url
+       [:a.link {:href url :className (when icon "icon-link")} icon title]
+       title))
    (when annotation
      [:p.annotation.text-s annotation])
    (when tags
