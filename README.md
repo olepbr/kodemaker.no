@@ -399,11 +399,11 @@ Eksempler på for generelle beskrivelser: Entusiastisk, engasjert, ansvarsfull, 
 Teknologi-seksjonen på CV-en din samles inn fra alle relevante steder du har
 nevnt "techs": prosjekter, foredrag, "using at work", open source-bidrag osv.
 Alle disse samles i en liste, som sorteres på antall forekomster. Deretter
-grupperes listen etter tech-typer. Typen på techs er angitt enten i
-`resources/tech/<navn>.edn` (som `:type`), eller i `resources/tech-types.edn`.
-Hvis du har meninger om kategorisering er det bare å slå seg løs. Dersom du
-legger til tecs vi ikke har fra før, så må du gi den en type for at den skal
-dukke opp på teknologi-sammendraget på CV-en din.
+grupperes listen etter tech-typer. Typen på techs er angitt i
+`resources/tech-categories.edn`. Hvis du har meninger om kategorisering er det
+bare å slå seg løs. Dersom du legger til tecs vi ikke har fra før, så må du gi
+den en type for at den skal dukke opp på teknologi-sammendraget på CV-en din.
+Gjør du ikke det så vil du få en feil ved innlasting av data.
 
 Du kan påvirke teknologisammendraget på noen måter:
 

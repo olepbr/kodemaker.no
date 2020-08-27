@@ -38,7 +38,6 @@
    :legacy-blog-posts (mapdown/slurp-directory "resources/blog/" #"\.md$")
    :blog-posts (mapdown/slurp-directory "resources/firmablogg/" #"\.md$")
    :tech-names (slurp-edn-map "resources/weird-tech-names.edn")
-   :tech-types (slurp-edn-map "resources/tech-types.edn")
    :video-overrides (slurp-edn-map "resources/video-overrides.edn")
    :employers (slurp-edn-map "resources/employers.edn")
    })

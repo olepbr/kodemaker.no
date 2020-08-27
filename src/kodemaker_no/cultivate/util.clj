@@ -23,8 +23,7 @@
       (str-for-humans id)))
 
 (defn tech-type [content id]
-  (or (-> content :tech id :type)
-      (-> content :tech-types id)))
+  (or (-> content :tech id :type)))
 
 (defn look-up-tech [content id]
   (if-let [tech (get-in content [:tech id])]

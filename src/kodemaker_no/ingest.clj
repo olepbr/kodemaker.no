@@ -135,12 +135,10 @@
   (ingest-all conn "resources")
 
   (def file-name "weird-tech-names.edn")
-  (def file-name "tech-types.edn")
   (def file-name "tech/aws.edn")
   (def file-name "tech/clojure.edn")
 
   (ingest conn "weird-tech-names.edn")
-  (ingest conn "tech-types.edn")
   (ingest conn "firmablogg/2019-06-datascript.md")
   (ingest conn "people/christian.edn")
 

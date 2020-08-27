@@ -77,19 +77,6 @@
       {:id :magnar
        :name ["Magnar" "Sveen"]})}
 
-    :tech-types {:java :proglang
-                 :jira :methodology
-                 :tdd :methodology
-                 :bash :proglang
-                 :sinon :library
-                 :clojure :proglang
-                 :clojurescript :proglang
-                 :javascript :proglang
-                 :groovy :proglang
-                 :unix :os
-                 :haskell :proglang
-                 :kotlin :proglang}
-
     :employers {:kodemaker "Kodemaker AS"}}))
 
 (defn cultivate [content]
@@ -114,22 +101,6 @@
     {:description "Beskrivelse1" :customer "Bank1"}])
 
   (fact
-   "Groups techs by type"
-   (->> cvs :christian :techs keys set) => #{:proglang :library :methodology :os})
-
-  (fact
-   "Orders techs by most frequently referenced"
-   (->> cvs :christian :techs :proglang (map :id)) => [:java :clojure :clojurescript :bash])
-
-  (fact
-   "Skews tech ordering by preferred techs"
-   (->> cvs :kjetil :techs :proglang (map :id)) => [:kotlin :groovy :java :javascript])
-
-  (fact
-   "Excludes some techs"
-   (->> cvs :christian :techs :methodology (map :id)) => [:tdd])
-
-  (fact
    "Compiles techs from all self-effort fields"
    (->> cvs :christian :techs vals (apply concat) (map :id) set) =>
    #{:java :clojure :clojurescript :bash :sinon :tdd :unix})
@@ -141,9 +112,4 @@
 
   (fact
    "Combines appearances with presentations and sorts by date"
-   (->> cvs :christian :appearances (map :title)) => ["Annet foredrag" "Foredrag"])
-
-  (fact
-   "Combines open source projects and contributions, and groups by programming language"
-   (->> cvs :christian :open-source-contributions keys) => ["Java" "Clojure"]
-   (->> cvs :christian :open-source-contributions vals (map #(map :name %))) => [["Sinon.JS"] ["Buster.JS"]]))
+   (->> cvs :christian :appearances (map :title)) => ["Annet foredrag" "Foredrag"]))

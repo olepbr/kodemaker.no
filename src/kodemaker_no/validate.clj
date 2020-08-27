@@ -239,7 +239,6 @@
              :raw-pages {Path Str}
              :raw-css {Path Str}
              :tech-names {ID Str}
-             :tech-types {ID ID}
              (optional-key :legacy-blog-posts) {Path BlogPost}
              :blog-posts {Path BlogPost}
              :video-overrides {ID VideoOverride}

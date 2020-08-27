@@ -10,7 +10,6 @@
           :tech-names {}
           :blog-posts {}
           :video-overrides {}
-          :tech-types {}
           :employers {}}
          m))
 
