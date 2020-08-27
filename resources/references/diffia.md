@@ -10,6 +10,7 @@
 :title Gründere, Diffia
 :techs [:react :redux :java :postgresql :git]
 :quote Kodemaker har vært en perfekt partner for Diffia
+:priority 1
 :body
 
 Kodemaker har vært en perfekt partner for Diffia og 
