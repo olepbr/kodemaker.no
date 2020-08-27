@@ -126,11 +126,14 @@
 (defn merge-screencasts [screencasts]
   (-> (h/select-keys-by screencasts
                         {:screencast/title first
-                         :screencast/blurb first
                          :screencast/illustration first
                          :screencast/url first
                          :screencast/published first
                          :list/idx first
+                         :screencast/blurb (choose-and-change first
+                                                              change-1st-person-to-3rd
+                                                              :screencast/blurb
+                                                              :person/_screencasts)
                          :screencast/description (choose-and-change first
                                                                     change-1st-person-to-3rd
                                                                     :screencast/description
