@@ -159,7 +159,9 @@
     :tag_line         {:no ""}}
    {:label            {:no "Nøkkelkvalifikasjoner"}
     :long_description {:no (:person/title person)}
-    :key_points       (map (fn [qual] {:name {:no (:qualification/text qual)}}) (:person/qualifications person))}
+    :key_points       (->> (:person/qualifications person)
+                           (sort-by :list/idx)
+                           (map (fn [qual] {:name {:no (:qualification/text qual)}})))}
    {:label      {:no "Prefererte teknologier"}
     :key_points (map (fn [tech-ref]
                        {:name {:no (:tech/name (d/entity db tech-ref))}})
