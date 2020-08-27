@@ -79,12 +79,20 @@
        (map #(d/entity db %))
        (mapcat shuffle-author-pictures)))
 
+(defn blogged-techs [db]
+  (->> (d/q '[:find ?tech
+              :in $
+              :where
+              [_ :blog-post/techs ?t]
+              [?t :db/ident ?tech]]
+            db)
+       (map first)))
+
 (comment
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
 
   (blog-post-author-images db)
-
 
   (defn ingest-blog-post [file-name & [f]]
     (->> file-name

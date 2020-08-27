@@ -132,6 +132,10 @@
   @(datomic.api/transact conn (->> (techs (d/db conn))
                                    (filter tech/is-page?)
                                    (map tech/page)))
+  @(datomic.api/transact conn (for [tech (blog/blogged-techs (d/db conn))]
+                                {:page/uri (format "/blogg/%s" (name tech))
+                                 :page/kind :page.kind/blog-category
+                                 :blog-category/tech tech}))
   (when-let [techs (seq (find-uncategorized-techs (d/db conn)))]
     (throw (ex-info (format "Det har sneket seg inn techs som ikke er kategorisert! Sørg for å enten fikse stavingen av %s (fra %s) eller legg %s til i resources/tech-categories."
                             (str/join (f/comma-separated (map first techs)))
@@ -168,17 +172,13 @@
 
   (def db (d/db conn))
 
-  (->> (d/q '[:find ?e ?file
-              :in $
-              :where
-              [?e :tech/name]
-              [?e :db/ident _ ?t]
-              [?t :tx-source/file-name ?file]]
-            db)
-       (map #(vector (d/entity db (first %)) (second %)))
-       (remove (comp :tech/type first))
-       (map (fn [[tech file]]
-              (str (:db/ident tech) " - " file))))
+  (d/q '[:find ?uri ?tech
+         :in $
+         :where
+         [?e :page/kind :page/blog-category]
+         [?e :page/uri ?uri]
+         [?e :blog-category/tech ?tech]]
+       db)
 
   (:blog-post/published (d/entity db [:page/uri "/blogg/2019-06-datascript/"]))
 

@@ -43,6 +43,7 @@
     (serve-page (case (:page/kind e)
                   :page.kind/article (article-page/create-page e)
                   :page.kind/blog (blog/create-index-page db)
+                  :page.kind/blog-category (blog/create-category-index-page db e)
                   :page.kind/blog-post (blog/create-post-page e)
                   :page.kind/frontpage (frontpage/create-page)
                   :page.kind/contact (contact-page/create-page db)

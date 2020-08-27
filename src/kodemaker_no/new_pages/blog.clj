@@ -29,16 +29,20 @@
        (remove :blog-post/archived?)
        (filter :blog-post/published)))
 
-(defn blog-posts-by-published [db]
-  (->> db
-       (d/q '[:find ?e
-              :in $
-              :where
-              [?e :blog-post/published ?p]])
+(defn active-posts-by-published [db posts]
+  (->> posts
        (map first)
        (active-posts db)
        (sort-by :blog-post/published)
        reverse))
+
+(defn blog-posts-by-published [db]
+  (->> (d/q '[:find ?e
+              :in $
+              :where
+              [?e :blog-post/published ?p]]
+            db)
+       (active-posts-by-published db)))
 
 (defn relevant-posts
   "Picks posts that share at least one tech with the reference post. Returns a
@@ -170,6 +174,10 @@
   (or (:page/uri blog-post)
       (:blog-post/external-url blog-post)))
 
+(defn link-to-tech-blog [tech]
+  (-> (into {} tech)
+      (assoc :page/uri (format "/blogg/%s" (name (:db/ident tech))))))
+
 (defn blog-post-teaser [post]
   {:kind :article
    :class "article-section-tight"
@@ -189,7 +197,7 @@
                 :title (:person/full-name author)
                 :href (:page/uri author)
                 :lines [(e/tech-tags {:prefix "Om"
-                                      :techs (techs post)})]}))}]})
+                                      :techs (map link-to-tech-blog (techs post))})]}))}]})
 
 (def pønts
   [{:kind :dotgrid
@@ -231,3 +239,23 @@
       :bg-color :blanc}]
     (list-blog-posts (blog-posts-by-published db))
     [{:kind :footer}])})
+
+(defn tech-blog-posts-by-published [db tech]
+  (->> (d/q '[:find ?e
+              :in $ ?t
+              :where
+              [?e :blog-post/published ?p]
+              [?e :blog-post/techs ?t]]
+            db tech)
+       (active-posts-by-published db)))
+
+(defn create-category-index-page [db page]
+  (let [tech (d/entity db [:db/ident (:blog-category/tech page)])]
+    {:title (format "Blogg: %s" (:tech/name tech))
+     :sections
+     (concat
+      [{:kind :header
+        :bg-color :blanc}]
+      (->> (tech-blog-posts-by-published db (:db/ident tech))
+           list-blog-posts)
+      [{:kind :footer}])}))
