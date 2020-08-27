@@ -1,11 +1,11 @@
 (ns kodemaker-no.export.cvpartner-test
-  (:require [kodemaker-no.export.cvpartner :refer :all]
+  (:require [datomic-type-extensions.api :as d]
             [kodemaker-no.atomic :as atomic]
             [kodemaker-no.content :as content]
+            [kodemaker-no.export.cvpartner :refer :all]
             [kodemaker-no.files :as files]
             [kodemaker-no.ingest :as ingest]
             [kodemaker-no.validate :refer [validate-content ID Person]]
-            [datomic-type-extensions.api :as d]
             [midje.sweet :refer :all]
             schema.core))
 
@@ -74,8 +74,8 @@
                  {:label            {:no "Beskrivelse, cv"}
                   :long_description {:no "John er entusiastisk opptatt av fagområdet systemutvikling..."}
                   :tag_line         {:no ""}}
-                 {:key_points       [{:name {:no "Erfaring med forskjellige former for funksjonell programmering"}}
-                                     {:name {:no "Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"}}]
+                 {:key_points       [{:name {:no "Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"}}
+                                     {:name {:no "Erfaring med forskjellige former for funksjonell programmering"}}]
                   :label            {:no "Nøkkelkvalifikasjoner"}
                   :long_description {:no "Systemutvikler"}}
                  {:key_points [{:name {:no "TypeScript"}}
