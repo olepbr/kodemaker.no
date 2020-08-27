@@ -96,7 +96,7 @@
    :screencast/illustration :illustration
    :screencast/techs :tech
    :screencast/tech-list :tech
-   :screencast/published :published
+   :screencast/published :launch-date
    :screencast/url :url
    :cv/blurb :cv/blurb})
 

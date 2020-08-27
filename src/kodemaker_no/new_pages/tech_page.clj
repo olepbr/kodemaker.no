@@ -123,9 +123,47 @@
                         seq)]
     (blog/list-blog-posts posts)))
 
+(defn merge-screencasts [screencasts]
+  (-> (h/select-keys-by screencasts
+                        {:screencast/title first
+                         :screencast/blurb first
+                         :screencast/illustration first
+                         :screencast/url first
+                         :screencast/published first
+                         :list/idx first
+                         :screencast/description (choose-and-change first
+                                                                    change-1st-person-to-3rd
+                                                                    :screencast/description
+                                                                    :person/_screencasts)})
+      (assoc :screencast/people (keep :person/_screencasts screencasts))))
+
+(defn screencasters [screencast]
+  (->> (:screencast/people screencast)
+       (map :person/given-name)
+       sort
+       str/join))
+
 (defn screencasts-section [tech]
   (when-let [screencasts (->> (:screencast/_techs tech)
-                              (group-by identity))]))
+                              (group-by :screencast/url)
+                              vals
+                              (map merge-screencasts)
+                              (sort-by screencasters)
+                              seq)]
+    {:kind :titled
+     :title "Screencasts"
+     :contents (for [screencast screencasts]
+                 (let [url (:screencast/url screencast)]
+                   (e/illustrated-teaser
+                    {:title (:screencast/title screencast)
+                     :tags (e/people-tags {:prefix "Av"
+                                           :people (:screencast/people screencast)
+                                           :class "tags"})
+                     :url url
+                     :illustration (:screencast/illustration screencast)
+                     :content (f/to-html (or (:screencast/description screencast)
+                                             (:screencast/blurb screencast)))
+                     :link (when url {:text "Se screencast" :href url})})))}))
 
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
@@ -176,6 +214,10 @@
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
   (def tech (d/entity db :tech/clojure))
+
+  (screencasts-section tech)
+
+  (into {} (second (:screencast/_techs tech)))
 
   (->> (:blog-post/_techs tech)
        (group-by blog/post-url)
