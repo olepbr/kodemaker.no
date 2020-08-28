@@ -251,10 +251,7 @@
                                                :people [(blog/author post)]
                                                :class "tags"})
                          :url url
-                         :content (f/to-html (:blog-post/blurb post))
-                         :link (when url
-                                 {:text "Les artikkelen"
-                                  :href url})})))
+                         :content (f/to-html (:blog-post/blurb post))})))
                  (< 3 (count blog-posts))
                  (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
                             (e/teaser
