@@ -20,11 +20,11 @@
             :linkedin "/in/christin-gorman-2321aa1"
             :github "christingorman"}
 
- :tech {:using-at-work [:java :postgresql :javascript :kubernetes :aws]
+ :tech {:using-at-work [:elixir :phoenix :postgresql :azure]
         :want-to-learn-more [:elixir :go :clojure]}
- :hobbies [{:title "Roboter"
-            :description "Jobber med å lage en spillplatform basert på roboter. Jeg ønsker å gjenskape spillopplevelsen fra dataspill i den virkelige verden."
-            :illustration "/illustrations/hobbies/robot-prototype.png"}],
+ :hobbies [{:title "Forbedring av IT i offentlig sektor"
+            :description "Litt sær hobby, men etter jeg selv var med på et stort anbudsprosjekt og ble slått av hvor ineffektivt det er å jobbe slik, har jeg brukt mye fritid på å skrive og snakke om IT i offentlig sektor og hvordan vi kan få slutt på disse store IT-fiaskoene vi har sett altfor mye av."
+            :illustration "/illustrations/hobbies/evangelisten.jpg"}],
  :endorsements [{:author "Mia Norman"
                  :title "Vice President, Development and Operations, Tomra"
                  :quote "Christin er en meget fremoverlent utvikler med mye energi og stor entusiasme for faget.
@@ -198,8 +198,15 @@
                            :tech [:design :smidig :arkitektur]
                            :duration "1 time"}]
 
- :projects [{:customer "Tomra"
+ :projects [{:customer "Bring"
+						 :start "2020-02"
+						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
+						 :employer :kodemaker
+						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (http://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
+						 :tech [:elixir :phoenix :azure :postgresql]},
+						{:customer "Tomra"
              :start "2017-09"
+             :end "2020-02"
              :summary "Videreutvikling og nyutvikling av IT-systemene som samler inn data fra pantemaskiner;
              system-overvåkning, håndtering av kvitterings-innløsning i butikk og utbetalinger via PayPal."
              :employer :kodemaker
@@ -363,12 +370,13 @@
              :tech [:vba :ms-access]}
             ]
 
- :project-highlights [{:blurb "Design og utvikling av Tomra sine server-løsninger. Java, AWS"
+ :project-highlights [{:blurb "Design og utvikling av AMOI.no. En lokal markedsplass på nett med 'same day delivery'.  Elixir, Azure"
+											 :customer "Bring"}
+											{:blurb "Design og utvikling av Tomra sine server-løsninger. Java, AWS"
                        :customer "Tomra"}
                       {:blurb "Design og utvikling av kontrollsystem for seismisk data-innsamling. Java, JavaFX, Google Protocol Buffers"
                        :customer "WesternGeco"}
-                      {:blurb "Design og utvikling av Conax platform for streaming av kryptert videoinnhold. Java, Hazelcast"
-                       :customer "Conax"}]
+											]
  :cv {}
  :education-summary "MA(Hons) Computing Science, University of Aberdeen, Scotland"
  :experience-since 2000
