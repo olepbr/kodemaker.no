@@ -28,36 +28,42 @@
             [stasis.core :as stasis]))
 
 (defn get-assets []
-  (assets/load-assets
-   "public"
-   [
-    ;: ny
-    "/css/kodemaker.css"
-    "/css/pygments.css"
-    #"/img/.*\..+"
-    #"/foto/.*\..+"
-    #"/fonts/.*\..+"
-    #"/icons/.*\..+"
+  (concat
+   (assets/load-assets
+    "public"
+    [
+     ;: ny
+     "/css/kodemaker.css"
+     "/css/pygments.css"
+     #"/img/.*\..+"
+     #"/foto/.*\..+"
+     #"/fonts/.*\..+"
+     #"/icons/.*\..+"
 
-    ;; gammal
-    #"/styles/.*\.css"
-    "/favicon.ico"
-    #"/certificates/.*\.pdf"
-    #"/illustrations/.*\.jpg"
-    #"/illustrations/.*\.png"
-    #"/thumbs/.*\.jpg"
-    #"/forside/.*\.jpg"
-    #"/references/.*\.jpg"
-    #"/fullsize-photos/.*\.jpg"
-    #"/photos/.*\.jpg"
-    #"/photos/.*\.svg"
-    #"/photos/.*\.png"
-    #"/logos/.*\.png"
-    #"/logos/.*\.svg"
-    #"/images/.*\.png"
-    #"/images/.*\.jpg"
-    #"/images/blogg/.*\.png"
-    #"/videos/.*\.mp4"]))
+     ;; gammal
+     #"/styles/.*\.css"
+     "/favicon.ico"
+     #"/certificates/.*\.pdf"
+     #"/illustrations/.*\.jpg"
+     #"/illustrations/.*\.png"
+     #"/thumbs/.*\.jpg"
+     #"/forside/.*\.jpg"
+     #"/references/.*\.jpg"
+     #"/fullsize-photos/.*\.jpg"
+     #"/photos/.*\.jpg"
+     #"/photos/.*\.svg"
+     #"/photos/.*\.png"
+     #"/logos/.*\.png"
+     #"/logos/.*\.svg"
+     #"/images/.*\.png"
+     #"/images/.*\.jpg"
+     #"/images/blogg/.*\.png"
+     #"/videos/.*\.mp4"])
+   (assets/load-bundle
+    "public"
+    "styles.css"
+    ["/css/kodemaker.css"
+     "/css/pygments.css"])))
 
 (defn get-pages []
   (let [content (load-content)
