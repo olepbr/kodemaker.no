@@ -112,23 +112,50 @@
         (dissoc to-expand)
         (update parent concat techs))))
 
-(defn categorize-evenly [{:keys [threshold]} techs]
-  (let [db (d/entity-db (first techs))]
-    (loop [categories (group-by :tech/type techs)]
-      (if-let [expandable (some->> categories
-                                   (filter (fn [[cat techs]]
-                                             (and (< (count techs) threshold)
-                                                  (:tech-category/parent (get-category db cat)))))
-                                   first)]
-        (recur (apply expand-category db categories expandable))
-        categories))))
+(defn square [n]
+  (* n n))
+
+(defn mean [xs]
+  (/ (reduce + xs) (count xs)))
+
+(defn standard-deviation [xs]
+  (Math/sqrt (/ (reduce + (map square (map - xs (repeat (mean xs)))))
+                (- (count xs) 1 ))))
+
+(defn calculate-category-deviation [categories]
+  (->> categories
+       (map (comp count second))
+       standard-deviation))
+
+(defn limit-category-count [{:keys [desired-categories]} categories]
+  (let [db (d/entity-db (-> categories first second first))]
+    (loop [categories categories]
+      (let [expandable (some->> categories
+                                (sort-by (comp count second))
+                                (filter (fn [[cat techs]]
+                                          (:tech-category/parent (get-category db cat))))
+                                )]
+        (if (or (<= (count categories) desired-categories)
+                (nil? (seq expandable)))
+          categories
+          (recur (->> expandable
+                      (map #(apply expand-category db categories %))
+                      (map (juxt identity calculate-category-deviation))
+                      (sort-by second)
+                      ffirst)))))))
+
+(defn maintain-sort-order [techs categories]
+  (map (fn [[category xs]]
+         [category (sort-by #(.indexOf techs %) xs)])
+       categories))
 
 (defn compile-cv-techs [person]
   (let [db (d/entity-db person)
-        cv (:cv/_person person)
-        techs (gather-all-techs db cv person)]
+        techs (gather-all-techs db (:cv/_person person) person)]
     (->> techs
-         (categorize-evenly {:threshold (max 5 (/ (count techs) 9))})
+         (group-by :tech/type)
+         (limit-category-count {:desired-categories (min 9 (/ (count techs) 4))})
+         (maintain-sort-order techs)
          (map (fn [[cat techs]]
                 [(d/entity db [:db/ident cat]) techs]))
          (filter (comp :tech-category/label first))

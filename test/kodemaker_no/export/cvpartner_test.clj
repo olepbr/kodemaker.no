@@ -159,13 +159,15 @@
                                       {:tags {:no "Fortran"}}
                                       {:tags {:no "Pascal"}}]
                   :uncategorized     false}
-                 {:category {:no "Annet"},
-                  :uncategorized false,
+                 {:category {:no "Web- og apputvikling"}
+                  :technology_skills [{:tags {:no "React"}}
+                                      {:tags {:no "Redux"}}]
+                  :uncategorized false}
+                 {:category {:no "Annet"}
                   :technology_skills [{:tags {:no "Maskinlæring"}}
                                       {:tags {:no "Dyp læring"}}
-                                      {:tags {:no "Dlib"}}
                                       {:tags {:no "Plsql"}}
-                                      {:tags {:no "React"}}
-                                      {:tags {:no "Redux"}}]}]
+                                      {:tags {:no "Dlib"}}]
+                  :uncategorized false}]
                 :in-any-order)
           )))
