@@ -5,6 +5,7 @@
             [kodemaker-no.homeless :as h :refer [map-vals]]
             [kodemaker-no.markup :as m]
             [kodemaker-no.new-pages.blog :as blog]
+            [kodemaker-no.new-pages.open-source :as oss]
             [ui.elements :as e]))
 
 (defn presentation-uri [pres]
@@ -194,13 +195,15 @@
                      :link (when url {:text (:side-project/link-text side-project) :href url})})))}))
 
 (defn merge-oss-projects [projects]
-  (-> (h/select-keys-by projects
-                        {:oss-project/url first
-                         :oss-project/name first
-                         :oss-project/description first
-                         :list/idx first})
-      (assoc :oss-project/people (concat (keep :person/_open-source-projects projects)
-                                         (keep :person/_open-source-contributions projects)))))
+  (let [developers (keep :person/_open-source-projects projects)
+        contributors (keep :person/_open-source-contributions projects)]
+    (-> (h/select-keys-by projects
+                          {:oss-project/url first
+                           :oss-project/name first
+                           :oss-project/description first
+                           :list/idx first})
+        (assoc :oss-project/developers (seq developers))
+        (assoc :oss-project/people (concat developers contributors)))))
 
 (defn format-oss-project [{:oss-project/keys [url name description]}]
   [:li.text.inline-text
@@ -216,11 +219,18 @@
     {:kind :titled
      :title "Vår fri programvare"
      :contents [(e/teaser
-                 {:content [:ul.dotted.dotted-tight
-                            (->> (concat
-                                  (sort-by :oss-project/name (filter :oss-project/description projects))
-                                  (sort-by :oss-project/name (remove :oss-project/description projects)))
-                                 (map format-oss-project))]})]}))
+                 {:content (let [projects (concat
+                                           (sort-by :oss-project/name (filter :oss-project/description projects))
+                                           (sort-by :oss-project/name (remove :oss-project/description projects)))
+                                 developments (filter :oss-project/developers projects)]
+                             [:ul.dotted.dotted-tight
+                              (map format-oss-project developments)
+                              (when-let [contributions (seq (remove :oss-project/developers projects))]
+                                [:li.text.inline-text
+                                 (format "Vi har%s bidratt til "
+                                         (if (seq developments) " også" ""))
+                                 (e/comma-separated
+                                  (map oss/format-contribution contributions))])])})]}))
 
 (defn blog-post-section [tech]
   (when-let [blog-posts (->> (:blog-post/_techs tech)
