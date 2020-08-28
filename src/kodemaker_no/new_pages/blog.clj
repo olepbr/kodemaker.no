@@ -255,7 +255,21 @@
      :sections
      (concat
       [{:kind :header
-        :bg-color :blanc}]
+        :bg-color :blanc}
+       {:kind :tech-intro
+        :title (:tech/name tech)
+        :logo (:tech/illustration tech)
+        :article {:content [:div.text.tac
+                            [:p
+                             "Du ser nå noen av våre blogginnlegg. Vi har også "
+                             [:a {:href (:page/uri tech)}
+                              (format "mer stoff om %s" (:tech/name tech))]
+                             "."]]
+                  :alignment :front}
+        :pønt [{:kind :greater-than
+                :position "top -410px right 60vw"}
+               {:kind :dotgrid
+                :position "top -110px left 80vw"}]}]
       (->> (tech-blog-posts-by-published db (:db/ident tech))
            list-blog-posts)
       [{:kind :footer}])}))
