@@ -185,6 +185,26 @@
       [:a {:href (:href bottom-triangle) :title (:title bottom-triangle)}
        [:img.img.image-style-chocolate-triangle {:src (:img bottom-triangle)}]]]]]])
 
+(defn references-intro-section [{:keys [title image logo link content] :as params}]
+  [:div.section.references-intro-section
+   {:style (l/stylish {} params)}
+   [:div.content.header-section
+    (l/header)]
+   [:div.content.ris
+    [:div.ac-person
+     [:div.ris-hc [:img.ris-img {:src image}]]
+     [:div.ac-logo [:img.img {:src (:image logo)}]]]
+    [:div.ris-logo [:img.img {:src (:image logo)}]]
+    [:div
+     [:h1.h3.mw500.mbm
+      [:a {:href (:href link)} title]]
+     (assoc-in (e/blockquote {:quote content}) [0] :div)
+     [:div.acc
+      [:div.acc-link (e/arrow-link link)]
+      [:div.acc-logo [:img.img {:src (:image logo)}]]]
+     [:div.ac-link
+      (e/arrow-link link)]]]])
+
 (defn seymour-section [{:keys [seymours] :as params}]
   [:div.section {:style (l/stylish {} params)}
    [:div.content.whitespaceorama

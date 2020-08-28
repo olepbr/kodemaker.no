@@ -15,6 +15,7 @@
             ui.sections.hyrule-section-cards
             ui.sections.profile-section-cards
             ui.sections.pønt-section-cards
+            ui.sections.references-intro-section-cards
             ui.sections.seymour-section-cards
             ui.sections.tech-intro-section-cards
             ui.sections.titled-section-cards

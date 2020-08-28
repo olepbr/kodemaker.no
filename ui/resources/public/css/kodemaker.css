@@ -1201,15 +1201,33 @@ a, .clickable {
 
 .stats {color: var(--chocolat-au-lait)}
 
+.references-intro-section {
+  background-repeat: no-repeat;
+  background-position: left -400px top -460px;
+  background-image: url("/img/p-nt/greater-than.svg");
+  background-size: 650px 1300px;
+}
+.ris {margin-bottom: 80px;}
+.ris h1 {font-size: 46px;}
+.ris-img {width: 300px; max-width: 100%;}
+
 @media only screen and (max-width: 899px) {
   .ac-content {margin-bottom: 48px;}
   .ac-person {display: flex; align-items: center;}
   .ac-person .media {flex: 1;}
   .ac-person .ac-logo {width: 150px;}
   .acc {display: none;}
+  .ris h1 {margin-top: 80px;}
+  .ris-hc {flex: 1;}
+}
+.ris-logo {text-align: right; margin: 40px 0 -40px;}
+.ris-logo img {width: 150px; display: inline-block;}
+@media only screen and (min-width: 601px) {
+  .ris-logo {display: none;}
 }
 @media only screen and (max-width: 600px) {
   .ac-logo {display: none;}
+  .ris h1 {font-size: 30px;}
 }
 .ac-link {margin-top: 56px;}
 @media only screen and (min-width: 900px) {
@@ -1221,6 +1239,16 @@ a, .clickable {
   .acc {display: flex; margin-top: 48px; align-items: center;}
   .acc-link {flex: 1;}
   .acc-logo {width: 150px;}
+
+  .references-intro-section {
+    background-position: right 64vw top -260px;
+  }
+
+  .ris {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .hyrule {background: var(--rose-aube); height: 1px; border:none; margin: 80px 0;}
