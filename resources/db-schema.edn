@@ -660,6 +660,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :reference/half-circle-portrait
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :reference/signee-name
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

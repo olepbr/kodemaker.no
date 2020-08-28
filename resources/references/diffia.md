@@ -3,7 +3,8 @@
 :type reference
 :img /references/petter-og-soheil.jpg
 :portrait /references/petter-og-soheil-portrett.jpg
-:logo /logos/diffia.png
+:half-circle-portrait /references/soheil-halvsirkel.jpg
+:logo /logos/diffia_logo_onwhite.svg
 :company Diffia
 :name Soheil Dabestani og Petter Risøe
 :phone 922 97 460 / 997 00 220

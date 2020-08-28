@@ -26,6 +26,7 @@
        :profile sections/profile-section
        :pønt sections/pønt-section
        :seymour sections/seymour-section
+       :references-intro sections/references-intro-section
        :tech-intro sections/tech-intro-section
        :titled sections/titled-section
        :vertigo sections/vertigo-section

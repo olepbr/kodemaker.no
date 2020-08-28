@@ -203,7 +203,9 @@
       [:div.acc-link (e/arrow-link link)]
       [:div.acc-logo [:img.img {:src (:image logo)}]]]
      [:div.ac-link
-      (e/arrow-link link)]]]])
+      (e/arrow-link link)]]]
+   [:div.content
+    [:hr.hyrule.mbn]]])
 
 (defn seymour-section [{:keys [seymours] :as params}]
   [:div.section {:style (l/stylish {} params)}

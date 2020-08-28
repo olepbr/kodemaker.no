@@ -7,6 +7,7 @@
   {:reference/page-title :page-title
    :reference/image :img
    :reference/portrait :portrait
+   :reference/half-circle-portrait :half-circle-portrait
    :reference/signee-name :name
    :reference/signee-phone :phone
    :reference/signee-title :title

@@ -132,6 +132,15 @@
                        [:circle]
                        [:crop {:width 380 :height 190 :origin-y :bottom}]]}
 
+    :bottom-rouge-half-circle
+    {:transformations [[:fit {:width 900 :height 900}]
+                       [:crop {:preset :square}]
+                       rouge-duotone
+                       [:circle]
+                       [:triangle :lower-left]
+                       [:crop {:width 775
+                               :origin [:left :bottom]}]]}
+
     :big-bottom-half-circle
     {:transformations [[:fit {:width 600 :height 600 :scale-up? true}]
                        [:crop {:preset :square}]
