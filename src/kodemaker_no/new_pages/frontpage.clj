@@ -2,7 +2,7 @@
 
 (defn create-page []
   {:sections [{:kind :bruce
-               :title "Engasjert miljø - erfarne utviklere"
+               :title "Engasjert miljø, erfarne utviklere"
                :text "Vi er ansvarlige, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
                :link {:text "Ta kontakt"
                       :href "/kontakt/"}
