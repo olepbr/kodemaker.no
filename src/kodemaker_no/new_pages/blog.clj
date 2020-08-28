@@ -176,7 +176,7 @@
 
 (defn link-to-tech-blog [tech]
   (-> (into {} tech)
-      (assoc :page/uri (format "/blogg/%s" (name (:db/ident tech))))))
+      (assoc :page/uri (format "/blogg/%s/" (name (:db/ident tech))))))
 
 (defn blog-post-teaser [post]
   {:kind :article

@@ -133,7 +133,7 @@
                                    (filter tech/is-page?)
                                    (map tech/page)))
   @(datomic.api/transact conn (for [tech (blog/blogged-techs (d/db conn))]
-                                {:page/uri (format "/blogg/%s" (name tech))
+                                {:page/uri (format "/blogg/%s/" (name tech))
                                  :page/kind :page.kind/blog-category
                                  :blog-category/tech tech}))
   (when-let [techs (seq (find-uncategorized-techs (d/db conn)))]
