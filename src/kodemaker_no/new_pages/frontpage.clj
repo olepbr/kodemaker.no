@@ -48,13 +48,13 @@
                :top-triangle {:img "/rouge-triangle/foto/magnus-f.jpg"
                               :href "/magnus/"
                               :title "Magnus Rundberget"}
-               :bottom-triangle {:img "/chocolate-triangle/foto/sjogutta.jpg"
-                                 :href "/folk/"
-                                 :title "Alle sammen"}
+               :bottom-triangle {:img "/chocolate-triangle/foto/blyanter2.jpg"
+                                 :href "/blogg/"
+                                 :title "Bloggen vår"}
                :top-circle {:img "/rouge-circle/foto/finn-f3.jpg"
                             :href "/finn/"
                             :title "Finn Johnsen"}
-               :bottom-circle {:img "/chocolate-circle/foto/blyanter2.jpg"
-                               :href "/blogg/"
-                               :title "Bloggen vår"}}
+               :bottom-circle {:img "/chocolate-circle/foto/sjogutta2.jpg"
+                               :href "/folk/"
+                               :title "Alle sammen"}}
               {:kind :footer}]})
