@@ -18,14 +18,14 @@
                        [:crop {:preset :square}]]
      :retina-optimized? true
      :retina-quality 0.4
-     :width 184} ;; todo: kan reduseres til 92 når imagine dobler riktig
+     :width 184}
 
     :vcard-medium
     {:transformations [[:fit {:width 240 :height 240}]
                        [:crop {:preset :square}]]
      :retina-optimized? true
      :retina-quality 0.4
-     :width 240} ;; todo: kan reduseres til 120 når imagine dobler riktig
+     :width 240}
 
     :bruce-front
     {:transformations
@@ -75,21 +75,21 @@
     :hobby-square
     {:transformations [[:fit {:width 1200 :height 1200 :scale-up? true}]
                        rouge-duotone]
-     :width 600
+     :width 1200
      :retina-optimized? true
      :retina-quality 0.4}
 
     :rouge-portrait
     {:transformations [[:fit {:width 670 :height 800 :scale-up? true}]
                        rouge-duotone]
-     :width 335
+     :width 670
      :retina-optimized? true
      :retina-quality 0.4}
 
     :chocolate-portrait
     {:transformations [[:fit {:width 670 :height 800}]
                        chocolate-au-lait-duotone]
-     :width 335
+     :width 670
      :retina-optimized? true
      :retina-quality 0.4}
 
@@ -149,7 +149,7 @@
     {:transformations [[:fit {:width 600 :height 800}]]
      :retina-optimized? true
      :retina-quality 0.4
-     :width 300}}})
+     :width 600}}})
 
 (defn url-to [transform file-path]
   (imagine/url-to image-asset-config transform file-path))
