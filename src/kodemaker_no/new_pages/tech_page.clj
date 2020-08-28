@@ -255,9 +255,8 @@
                  (< 3 (count blog-posts))
                  (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
                             (e/teaser
-                             {:title [:h3.h4-light.mbs (format "Mer %s" (:tech/name tech))]
-                              :url url
-                              :link {:text (format "%s på bloggen vår" (:tech/name tech))
+                             {:url url
+                              :link {:text (format "Se flere skriverier om %s" (:tech/name tech))
                                      :href url}}))]))}))
 
 (defn create-page [tech]
