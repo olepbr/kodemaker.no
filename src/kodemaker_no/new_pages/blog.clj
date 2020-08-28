@@ -267,7 +267,7 @@
         (try-pitch tech content :screencast/_techs "screencasts")
         (try-pitch tech content :side-project/_techs "side-prosjekter")
         (try-pitch tech content :recommendation/_techs "anbefalinger"))
-       (format " om %s" (:tech/name tech))))))
+       (format " om %s" (:tech/name tech))))))
 
 (defn create-category-index-page [db page]
   (let [tech (d/entity db [:db/ident (:blog-category/tech page)])]
@@ -280,7 +280,7 @@
         :title (:tech/name tech)
         :logo (:tech/illustration tech)
         :article {:content [:div.tac
-                            [:p "Du ser nå noen av " [:a {:href "/blogg/"} "våre blogginnlegg"] "." ]
+                            [:p "Du ser nå noen av " [:a {:href "/blogg/"} "våre blogginnlegg"] "." ]
                             (when-let [pitch (tech-page-pitch tech)]
                               [:p "Vi kan også by på " [:a {:href (:page/uri tech)} pitch] "."])]
                   :alignment :front}
