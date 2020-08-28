@@ -16,7 +16,7 @@
 
 (def config
   {:adapter/jetty {:port 3333 :handler (ig/ref :app/handler)}
-   :app/handler {:new-site? true :conn (ig/ref :datomic/conn)}
+   :app/handler {:conn (ig/ref :datomic/conn)}
    :datomic/conn {:uri "datomic:mem://kodemaker"}
    :dev/ingestion-watcher {:directory "resources" :conn (ig/ref :datomic/conn)}})
 

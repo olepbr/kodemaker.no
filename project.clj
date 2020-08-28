@@ -34,8 +34,7 @@
   :ring {:handler repl/ring-app
          :init repl/init-app-for-ring!
          :port 3334}
-  :aliases {"build-site" ["run" "-m" "kodemaker-no.web/export"]
-            "build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]
+  :aliases {"build-new-site" ["run" "-m" "kodemaker-no.web/export-new"]
             "cvpartner-export" ["run" "-m" "kodemaker-no.export.cvpartner/cvpartner-export"]}
   :profiles {:dev {:dependencies [[hiccup-find  "1.0.0"]
                                   [integrant "0.7.0"]

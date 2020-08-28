@@ -7,12 +7,10 @@
             [imagine.core :as imagine]
             [kodemaker-no.atomic :as atomic]
             [kodemaker-no.content :refer [load-content]]
-            [kodemaker-no.cultivate :refer [cultivate-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [kodemaker-no.images :as images]
             [kodemaker-no.ingest :as ingest]
             [kodemaker-no.new-pages.blog :as blog]
-            [kodemaker-no.pages :as pages]
             [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.rss :as rss]
             [kodemaker-no.validate :refer [validate-content]]
@@ -65,18 +63,6 @@
     ["/css/kodemaker.css"
      "/css/pygments.css"])))
 
-(defn get-pages []
-  (let [content (load-content)
-        pages (-> content
-                  validate-content
-                  cultivate-content
-                  pages/create-pages
-                  (prepare-pages images/image-asset-config))]
-    (stasis/merge-page-sources
-     {:site-pages pages
-      :raw-pages (:raw-pages content)
-      :raw-css (:raw-css content)})))
-
 (def optimize
   (-> (fn [assets options]
         (-> (map #(assoc % :context-path "/assets") assets)
@@ -105,31 +91,14 @@
                  (remove :outdated))))
       (clojure.core.memoize/lru {} :lru/threshold 3)))
 
-(defn- dummy-mail-sender [handler]
-  (fn [req]
-    (if (= "/send-mail" (:uri req))
-      (do (prn "Sending mail!" (slurp (:body req)))
-          {:status 302
-           :headers {"Location" "/takk/"}})
-      (handler req))))
-
 (defn create-app [& [opts]]
-  (if (:new-site? opts)
-    (-> (atomic/serve-pages (:conn opts))
-        (wrap-resource "videos")
-        (imagine/wrap-images images/image-asset-config)
-        (optimus/wrap get-assets optimizations/none optimus.strategies/serve-live-assets-autorefresh)
-        wrap-content-type
-        wrap-content-type-utf-8
-        prone/wrap-exceptions)
-    (-> (stasis/serve-pages get-pages)
-        dummy-mail-sender
-        (wrap-resource "videos")
-        (imagine/wrap-images images/image-asset-config)
-        (optimus/wrap get-assets optimize optimus.strategies/serve-live-assets-autorefresh)
-        wrap-content-type
-        wrap-content-type-utf-8
-        prone/wrap-exceptions)))
+  (-> (atomic/serve-pages (:conn opts))
+      (wrap-resource "videos")
+      (imagine/wrap-images images/image-asset-config)
+      (optimus/wrap get-assets optimizations/none optimus.strategies/serve-live-assets-autorefresh)
+      wrap-content-type
+      wrap-content-type-utf-8
+      prone/wrap-exceptions))
 
 (defn extract-style-urls [node]
   (some->> (.getAttribute node "style")
@@ -161,26 +130,6 @@
 
 (defn- load-export-dir []
   (stasis/slurp-directory export-directory #"\.[^.]+$"))
-
-(defn export [& args]
-  (let [[format] (map read-string args)
-        assets (optimize (get-assets) {})
-        old-files (load-export-dir)]
-    (stasis/empty-directory! export-directory)
-    (optimus.export/save-assets assets export-directory)
-    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets
-                                                       :base-url "https://www.kodemaker.no"})
-    (let [conn (atomic/create-database (str "datomic:mem://" (d/squuid)))]
-      (ingest/ingest-all conn "resources")
-      (spit (str export-directory "atom.xml") (rss/atom-xml (blog/blog-posts-by-published (d/db conn)))))
-    (export-images export-directory export-directory (assoc images/image-asset-config :cacheable-urls? true))
-    (if (= format :json)
-      (println (json/write-str (dissoc (stasis/diff-maps old-files (load-export-dir)) :unchanged)))
-      (do
-        (println)
-        (println "Export complete:")
-        (stasis/report-differences old-files (load-export-dir))
-        (println)))))
 
 (defn export-new [& args]
   (let [[format] (map read-string args)
