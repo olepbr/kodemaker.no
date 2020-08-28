@@ -20,7 +20,7 @@
  :architecture "Arkitektur"
  :asp "ASP"
  :aspectj "AspectJ"
- :aspnet "asp.net"
+ :aspnet "ASP.NET"
  :atg-dynamo "ATG Dynamo"
  :auth0 "Auth0"
  :automated-acceptance-testing "Automatisert akseptansetesting"
