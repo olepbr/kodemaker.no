@@ -249,6 +249,26 @@
             db tech)
        (active-posts-by-published db)))
 
+(defn try-pitch [tech content k label]
+  (when (seq (k tech))
+    (str label
+         (when (< 0 (count (remove (k tech) content)))
+           " og andre godsaker"))))
+
+(defn tech-page-pitch [tech]
+  (let [content (concat (:presentation/_techs tech)
+                        (:screencast/_techs tech)
+                        (:side-project/_techs tech)
+                        (:recommendation/_techs tech))]
+    (when (seq content)
+      (str
+       (or
+        (try-pitch tech content :presentation/_techs "foredrag")
+        (try-pitch tech content :screencast/_techs "screencasts")
+        (try-pitch tech content :side-project/_techs "side-prosjekter")
+        (try-pitch tech content :recommendation/_techs "anbefalinger"))
+       (format " om %s" (:tech/name tech))))))
+
 (defn create-category-index-page [db page]
   (let [tech (d/entity db [:db/ident (:blog-category/tech page)])]
     {:title (format "Blogg: %s" (:tech/name tech))
@@ -259,12 +279,10 @@
        {:kind :tech-intro
         :title (:tech/name tech)
         :logo (:tech/illustration tech)
-        :article {:content [:div.text.tac
-                            [:p
-                             "Du ser nå noen av våre blogginnlegg. Vi har også "
-                             [:a {:href (:page/uri tech)}
-                              (format "mer stoff om %s" (:tech/name tech))]
-                             "."]]
+        :article {:content [:div.tac
+                            [:p "Du ser nå noen av " [:a {:href "/blogg/"} "våre blogginnlegg"] "." ]
+                            (when-let [pitch (tech-page-pitch tech)]
+                              [:p "Vi kan også by på " [:a {:href (:page/uri tech)} pitch] "."])]
                   :alignment :front}
         :pønt [{:kind :greater-than
                 :position "top -410px right 60vw"}
