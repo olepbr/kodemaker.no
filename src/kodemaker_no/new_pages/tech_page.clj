@@ -114,16 +114,6 @@
                             (f/to-html (:presentation/description pres))]])])]
                     (remove nil?))}))
 
-(defn blog-post-sections [tech]
-  (when-let [posts (->> (:blog-post/_techs tech)
-                        (group-by blog/post-url)
-                        vals
-                        (apply concat)
-                        (sort-by :blog-post/published)
-                        reverse
-                        seq)]
-    (blog/list-blog-posts posts)))
-
 (defn merge-screencasts [screencasts]
   (-> (h/select-keys-by screencasts
                         {:screencast/title first
@@ -232,40 +222,70 @@
                                   (sort-by :oss-project/name (remove :oss-project/description projects)))
                                  (map format-oss-project))]})]}))
 
+(defn blog-post-section [tech]
+  (when-let [blog-posts (->> (:blog-post/_techs tech)
+                             (group-by blog/post-url)
+                             vals
+                             (apply concat)
+                             (sort-by :blog-post/published)
+                             reverse
+                             seq)]
+    {:kind :titled
+     :title "Våre blogginnlegg"
+     :contents (cond->
+                   (for [post (take 3 blog-posts)]
+                     (let [url (blog/post-url post)]
+                       (e/teaser
+                        {:title (:blog-post/title post)
+                         :tags (e/people-tags {:prefix "Av"
+                                               :people [(blog/author post)]
+                                               :class "tags"})
+                         :url url
+                         :content (f/to-html (:blog-post/blurb post))
+                         :link (when url
+                                 {:text "Les artikkelen"
+                                  :href url})})))
+                 (< 3 (count blog-posts))
+                 (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
+                            (e/teaser
+                             {:title [:h3.h4-light.mbs (format "Mer %s" (:tech/name tech))]
+                              :url url
+                              :link {:text (format "%s på bloggen vår" (:tech/name tech))
+                                     :href url}}))]))}))
+
 (defn create-page [tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
      :sections
      (->>
-      (concat
-       [{:kind :header :background :chablis}
-        {:kind :tech-intro
-         :title (:tech/name tech)
-         :logo (:tech/illustration tech)
-         :article {:content [:div.text
-                             (f/to-html (:tech/description tech))]
-                   :alignment :front
-                   :aside (when-let [headliner (:headliner presentations)]
-                            [:div.hide-below-1000
-                             (e/video-thumb
-                              {:img (str "/rouge-duotone" (:presentation/thumb headliner))
-                               :tags (e/people-tags {:prefix "Av"
-                                                     :class "tags"
-                                                     :people (:presentation/people headliner)})
-                               :url (presentation-uri headliner)
-                               :title (:presentation/title headliner)})])}
-         :pønt [{:kind :greater-than
-                 :position "top -410px right 60vw"}
-                {:kind :dotgrid
-                 :position "top -110px left 80vw"}]}
+      [{:kind :header :background :chablis}
+       {:kind :tech-intro
+        :title (:tech/name tech)
+        :logo (:tech/illustration tech)
+        :article {:content [:div.text
+                            (f/to-html (:tech/description tech))]
+                  :alignment :front
+                  :aside (when-let [headliner (:headliner presentations)]
+                           [:div.hide-below-1000
+                            (e/video-thumb
+                             {:img (str "/rouge-duotone" (:presentation/thumb headliner))
+                              :tags (e/people-tags {:prefix "Av"
+                                                    :class "tags"
+                                                    :people (:presentation/people headliner)})
+                              :url (presentation-uri headliner)
+                              :title (:presentation/title headliner)})])}
+        :pønt [{:kind :greater-than
+                :position "top -410px right 60vw"}
+               {:kind :dotgrid
+                :position "top -110px left 80vw"}]}
 
-        (recommendations-section tech)
-        (presentations-section presentations)
-        (screencasts-section tech)
-        (side-projects-section tech)
-        (open-source-section tech)]
-       (blog-post-sections tech)
-       [{:kind :footer}])
+       (recommendations-section tech)
+       (presentations-section presentations)
+       (screencasts-section tech)
+       (side-projects-section tech)
+       (open-source-section tech)
+       (blog-post-section tech)
+       {:kind :footer}]
       (remove nil?)
       (map (fn [color section]
              (assoc section :background color))
