@@ -1602,3 +1602,37 @@ a, .clickable {
 .mbxxl {margin-bottom: 120px;}
 .mbn {margin-bottom: 0;}
 .mw500 {max-width: 500px;}
+
+.pdf {
+  margin: 0;
+  padding: 0;
+  overflow: visible !important;
+}
+
+.pdf .menu-toggler,
+.pdf .inline-menu {
+  display: none;
+}
+
+.pdf p {
+  widows: 3;
+  orphans: 3;
+}
+
+.pdf .unbreakable {
+  break-before: auto;
+  break-inside: avoid-page;
+}
+
+@page {
+  size: A4; /* DIN A4 standard, Europe */
+  margin: 15mm 0;
+}
+
+.pdf {
+  overflow: visible;
+}
+
+@page :first {
+  margin-top: 0;
+}

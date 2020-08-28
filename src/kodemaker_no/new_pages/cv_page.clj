@@ -339,7 +339,8 @@
     {:kind :definitions
      :title "Andre faglige bidrag"
      :definitions
-     [{:contents
+     [{:breakable? true
+       :contents
        (->> contribs
             (map (fn [{:keys [title url summary]}]
                    (e/teaser

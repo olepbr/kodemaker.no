@@ -239,22 +239,23 @@
 (defmulti definition (fn [p] (:type p)))
 
 (defmethod definition :separator [{:keys [title description category]}]
-  [:div.definition.mbm
+  [:div.definition.unbreakable.mbm
    (when category [:p.h6 category])
    [:h3.h4 title]
    (when description
      [:div.text.mts description])])
 
-(defmethod definition :complex-title [{:keys [title contents]}]
-  [:div.definition
-   [:div.definition-title title]
+(defmethod definition :complex-title [{:keys [title contents breakable?] :as e}]
+  [:div.definition {:className (when-not breakable? "unbreakable")}
+   (when title [:div.definition-title title])
    [:div.definition-content
     (seq contents)]])
 
 (defmethod definition :default [params]
-  (definition (-> params
-                  (assoc :type :complex-title)
-                  (assoc :title [:h4.h6 (or (:title params) " ")]))))
+  (definition
+    (cond-> params
+      (:title params) (assoc :title [:h4.h6 (or (:title params) " ")])
+      :always (assoc :type :complex-title))))
 
 (defn definition-section [{:keys [definitions title id] :as params}]
   [:div.section.definition-section {:style (l/stylish {} params)
@@ -324,15 +325,16 @@
        (e/icon-link-row {:links links})]]]]
    [:div.content.cv-intro
     [:div.cv-intro-text
-     [:div.mbxl
+     [:div.mbxl.unbreakable
       [:h2.h4 experience]
       [:ul.dotted (for [q qualifications] [:li q])]]
      (when quote
-       [:div.mbxxl
+       [:div.mbxxl.unbreakable
         [:div.mbm (e/blockquote {:quote (:text quote)})]
         (when-let [source (:source quote)]
           [:p [:cite "- " (:source quote)]])])
-     [:h2.h3 "Om " friendly-name]
-     [:div.text description]]
-    [:div.cv-highlights
+     [:div.unbreakable
+      [:h2.h3 "Om " friendly-name]
+      [:div.text description]]]
+    [:div.cv-highlights.unbreakable
      (map cv-highlight highlights)]]])
