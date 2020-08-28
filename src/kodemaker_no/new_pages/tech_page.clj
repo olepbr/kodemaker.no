@@ -252,7 +252,7 @@
                                                :class "tags"})
                          :url url
                          :content (f/to-html (:blog-post/blurb post))})))
-                 (< 3 (count blog-posts))
+                 (< 3 (count (filter :page/uri blog-posts)))
                  (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
                             (e/teaser
                              {:url url
