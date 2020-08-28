@@ -5,7 +5,6 @@
             datomic.api
             [datomic-type-extensions.api :as d]
             [kodemaker-no.files :as files]
-            [kodemaker-no.formatting :as f]
             [kodemaker-no.homeless :as homeless]
             kodemaker-no.ingestion.article
             [kodemaker-no.ingestion.blog :as blog]
@@ -135,13 +134,7 @@
   @(datomic.api/transact conn (for [tech (blog/blogged-techs (d/db conn))]
                                 {:page/uri (format "/blogg/%s/" (name tech))
                                  :page/kind :page.kind/blog-category
-                                 :blog-category/tech tech}))
-  (when-let [techs (seq (find-uncategorized-techs (d/db conn)))]
-    (throw (ex-info (format "Det har sneket seg inn techs som ikke er kategorisert! Sørg for å enten fikse stavingen av %s (fra %s) eller legg %s til i resources/tech-categories."
-                            (str/join (f/comma-separated (map first techs)))
-                            (str/join (f/comma-separated (set (map second techs))))
-                            (if (< 1 (count techs)) "dem" "den"))
-                    {:techs techs}))))
+                                 :blog-category/tech tech})))
 
 (defn ingest-all [conn directory]
   (doseq [file-name (files/find-file-names directory #"(md|edn)$")]
