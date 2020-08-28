@@ -27,12 +27,6 @@ prod-env() {
 bucket="s3://kodemaker-www/"
 target="build"
 
-# echo "Syncing down production site for accurate build diffs"
-# mkdir -p "$target"
-# pushd "$target" > /dev/null
-# env $(prod-env) aws s3 sync $bucket .
-# popd > /dev/null
-
 echo "Building site"
 diffs=$(lein build-new-site :json)
 
@@ -62,21 +56,5 @@ env $(prod-env) aws s3 sync . $bucket --delete --exclude "assets/*"
 
 echo "Purging old assets"
 env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --delete
-
-# changed=$(for file in $(echo "${diffs}" | jq -cr '.changed[]'); do
-#             echo ${file/"index.html"/""}
-#             echo $file
-#           done)
-
-# removed=$(for file in $(echo "${diffs}" | jq -cr '.removed[]'); do
-#             echo ${file/"index.html"/""}
-#             echo $file
-#           done)
-
-# if [ "$changed$removed" != "" ]; then
-#   paths=$(echo "$changed $removed")
-#   echo "Purging Cloudfront caches for $paths"
-#   env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths $paths
-# fi
 
 env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths / "/*"
