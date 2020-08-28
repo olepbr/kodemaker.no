@@ -37,7 +37,7 @@
                :link {:text "Les blogger"
                       :href "/blogg/"}
                :image "/foto/christin-foredrag.jpg"
-               :image-center "60% 0%"}
+               :image-center "53% 23%"}
               {:kind :pønt
                :portrait-1 {:img "/rouge-portrait/foto/ashild-f.jpg"
                             :href "/ashild/"
