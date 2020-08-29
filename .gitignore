@@ -25,3 +25,4 @@ ui/resources/public/js/
 /.envrc
 /secret.envrc
 /cvpartner.error.txt
+node_modules
