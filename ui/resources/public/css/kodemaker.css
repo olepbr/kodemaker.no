@@ -975,8 +975,8 @@ a, .clickable {
 }
 
 @media only screen and (max-width: 899px) {
-  .titled-title,
-  .definition-title { margin-bottom: 64px; }
+  .titled-title { margin-bottom: 64px; }
+  .definition-title { margin-bottom: 16px; }
 }
 
 /* contact-section */
