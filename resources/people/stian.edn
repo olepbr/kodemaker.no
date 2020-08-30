@@ -22,9 +22,9 @@
             :linkedin "/in/stianalsos"
             :github "stiancor"}
 
- :tech {:favorites-at-the-moment [:clojure :clojurescript :blockchains :groovy]
-            :using-at-work [:groovy :clojurescript :clojure :ruby :javascript]
-            :want-to-learn-more [:machine-learning :clojure :devops]}
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :groovy]
+            :using-at-work [:groovy :clojurescript :clojure :javascript :devops]
+            :want-to-learn-more [:machine-learning :devops]}
 
  :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
@@ -57,18 +57,15 @@
                     :tech [:teknologi :utvikling]}
                    ]
 
- :hobbies [{:title "Reising"
-            :description "Jeg er bitt av reisebasillen og har bare funnet
-                          en kur som fungerer; mer reising! Mitt foreløpige
-                          høydepunkt hadde jeg i 2008 da jeg reiste verden
-                          rundt i syv måneder. Med tiden har jeg besøkt godt
-                          over 50 land og vært i alle verdensdeler utenom Antarktis.
-                          Jeg har imidlertid funnet ut at det er viktigere å ta seg
-                          tid til å oppleve stedet du er på enn haste videre for
-                          alltid å se noe nytt. Husk at det er menneskene du møter
-                          på veien som gjør turen, ikke at man
-                          besøkte alle severdighetene på ruten. God tur!"
-            :illustration "/illustrations/hobbies/stian_reise.jpg"}
+ :hobbies [{:title "Friluftsliv"
+            :description "Jeg har alltid vært glad i friluftsliv. Enkeltheten 
+                          ved å bare gå i marka eller fjellet uten andre planer enn å fiske, 
+                          fyre bål og sove i telt gir meg mye. 
+                          Jeg er ikke opptatt av å krysse av flest mulig 2000-meterstopper, eller
+                          presse meg til det ytterste. Når jeg tenker på tur handler det egentlig mest 
+                          bare om å komme seg ut å oppleve naturen. 
+                          Om turen også innebærer en fiskestang og godt ørretfiske er den fullkommen."
+            :illustration "/illustrations/hobbies/stian-friluftsliv.jpg"}
            {:title "Løping"
             :description "For meg handler løping om mange ting. Det åpenbare
                           er et ønske om å holde meg i form, men viktigere enn
@@ -77,7 +74,7 @@
                           og noen konkurranser for å teste formen. Hvis man
                           da i tillegg slår venner og bekjente smaker det
                           selvsagt ekstra godt."
-            :illustration "/illustrations/hobbies/jogging.jpg"}
+            :illustration "/illustrations/hobbies/stian-loping.jpg"}
            {:title "Gitar"
             :description "Det finnes mange grunner til å spille gitar.
                           Noen har som drøm å spille i forrykende tempo på
