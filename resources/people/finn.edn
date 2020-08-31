@@ -9,7 +9,7 @@
             :twitter "finnjohnsen"
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
- :tech {:favorites-at-the-moment [:clojure :clojurescript :javascript :kotlin :java]
+ :tech {:favorites-at-the-moment [:clojure :javascript :kotlin :java]
         :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
  :hobbies [{:title "Podcaster"
