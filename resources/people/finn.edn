@@ -3,13 +3,13 @@
  :title "Utvikler"
  :start-date "2008-10-01"
  :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
- :innate-skills [:java :kotlin :git :unit-testing]
+ :innate-skills [:java :clojure :kotlin :git :unit-testing]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
             :twitter "finnjohnsen"
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
- :tech {:favorites-at-the-moment [:javascript :kotlin :java]
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :javascript :kotlin :java]
         :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
  :hobbies [{:title "Podcaster"
@@ -17,7 +17,7 @@
             :illustration "/illustrations/hobbies/utviklingslandet.jpg"
             }
            {:title "Foto"
-            :description "Alle liker å se på bilder. Et speilrefleks lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3 -format."
+            :description "Alle liker å se på bilder. Et kamera lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3+ -format."
             :illustration "/illustrations/hobbies/finn-flue.jpg"}
            {:title "Reise"
             :description "Verden er stor og har mye å vise deg - Pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
@@ -42,6 +42,12 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
                       {:blurb "Android App for ombordpersonell hos NSB"
                        :customer "NSB"}]
  :projects [
+            {:customer "Animalia"
+             :start "2020-01"
+             :employer :kodemaker
+             :summary "Utvikler Clojure"
+             :description "Clojure-utvikler på 2 forskjellige systemer for dyrehold. Forplan for Sau og livdyrattester for kjøp/salg av Storfe."
+             :tech [:clojure :deps :leiningen :oracle :mssql]}
             {:customer "Politiet"
              :start "2019-10"
              :employer :kodemaker
@@ -202,8 +208,8 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :tech [:delphi :csharp :sql]}]
 
  :cv {:default {
-                :preferred-techs [:java :javascript :android :git :kotlin :ubuntu]
-                :exclude-techs [:delphi :cvs :hudson]}}
+                :preferred-techs [:clojure :java :javascript :android :git :kotlin :ubuntu]
+                :exclude-techs [:delphi :cvs :hudson :springsource-tool-suite]}}
 
  :cv/description "Finn har lang erfaring innen programmering. Han trives best
  med begge hendene i kildekoden. Han er engasjert i open source, og har god
@@ -214,7 +220,9 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
  :qualifications ["Fullstack -utvikler"
                   "Web -utvikler"
                   "Android -utvikler"
-                  "Java back-end utvikler"]
+                  "Java/JVM utvikler"
+                  "DevOps"
+                  ]
 
  :endorsements [{:author "Johan Sörmling"
                  :title "Director Software Engineering at AllClear ID"
