@@ -47,7 +47,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :employer :kodemaker
              :summary "Utvikler Clojure"
              :description "Clojure-utvikler på 2 forskjellige systemer for dyrehold. Forplan for Sau og livdyrattester for kjøp/salg av Storfe."
-             :tech [:clojure :deps :leiningen :oracle :mssql]}
+             :tech [:clojure :clojurescript :oracle :mssql]}
             {:customer "Politiet"
              :start "2019-10"
              :employer :kodemaker
