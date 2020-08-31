@@ -2,23 +2,14 @@
  :name ["August" "Lilleaas"]
  :title "Elektronisk databehandler"
  :start-date "2012-01-01"
- :description "August er en allsidig utvikler med erfaring fra mobilapper på Android og iOS, webutvikling og
- operativsystemutvikling, til  backend og databaser, DevOps og kontiluerlige leveranser.
+ :description "August er en allsidig fullstack-utvikler med erfaring fra mobilapper og GUI-er på Android og iOS, webutvikling og
+ operativsystemutvikling, til backend og databaser, DevOps og kontiluerlige leveranser.
 
- Han startet med PHP, fortsatte med Ruby on Rails, og har landet på JVM-språk som Clojure, Kotlin, Groovy - og
+ Karriæren startet med PHP og Ruby on Rails, innom Objective-C og iOS, og landet på JVM-språk som Clojure, Kotlin, Groovy - og
  litt Java.
 
- August er aktiv foredragsholder, med det aller høyest rangerte foredraget på JavaZone 2013. Han driver også en
- podcast på [utviklingslandet.no](https://utviklingslandet.no)"
- :cv/description "August er full-stack webutvikler, og har tidligere jobbet som iOS-apputvikler.
-
-Han startet med Ruby on Rails, og beveget seg over på JVM-plattformen i 2012 og
-har erfaring med Clojure, Kotlin, Grails/Groovy og React Native.
-
-August liker å snakke, og du kan få et godt inntrykk av hvordan han oppleves ved
-å se presentasjonen [You Probably Don't Know How The Internet Actually Works](https://vimeo.com/74406482) fra
-JavaZone 2013 - som forøvrig ble [stemt frem av deltagerne](http://2014.javazone.no/toptalks.html) som den beste
-presentasjonen på hele konferansen!"
+ August er aktiv foredragsholder, og ble stemt til [publikumsfavoritt på JavaZone 2014](http://2014.javazone.no/toptalks.html). Han driver også to
+ podcasts, [Utviklingslandet](https://utviklingslandet.no) og [Kodeskikknemnda](https://kodeskikknemnda.no)"
 
  :phone-number "+47 915 28 701"
  :email-address "august@kodemaker.no"
