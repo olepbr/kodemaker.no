@@ -17,6 +17,7 @@
  :presence {:cv "august"
             :twitter "augustl"
             :stackoverflow "/users/26051/august-lilleaas"
+            :linkedin "/in/programmer666schmogrammer/"
             :github "augustl"}
 
  :tech {:favorites-at-the-moment [:datomic :clojurescript]
