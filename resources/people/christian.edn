@@ -142,26 +142,23 @@
                             tilfredstillende løsning på problemene vi som
                             frontendutviklere møter."}]
  :hobbies [{:title "Mat, brød og øl"
-            :description "Som programmerer tar jeg stor glede i å skape. Som
-                          aspirerende hobbykokk tas denne gleden ut i skaperverk
-                          som i tillegg kan nytes med smaksløkene. Jeg tar like
-                          stor glede i å bruke en hel lørdag på å lage Lasagne
-                          fra bunnen som jeg gjør av en kveld med
-                          surdeigsbrødbaking eller ølbrygging. Eller å pleie
-                          chiliplantene jeg har rundt i huset på vinteren, og i
-                          hagen på sommeren."
+            :description "Jeg har alltid vært interessert i mat, og over tid har
+            interessen bredt om seg: Interessen for meksikansk mat har gjort
+            chilibonde av meg, med 60 planter på det meste. Interessen for
+            fermenterte produkter har ført til en mengde glass med fermenterte
+            grønnsaker, saurkraut, øl, og ikke minst brød - bakt med og uten
+            surdeig tilnærmet daglig."
             :illustration "/illustrations/hobbies/chili-con-carne.jpg"}
            {:title "Musikk"
             :description "Jeg har spilt i band siden jeg gikk på ungdomsskolen,
                           og holder fortsatt gitarspillet ved like gjennom
                           bandet Execration, som ble foræret en Spellemann for
-                          2014. Jeg har alltid vært en sucker for aggressiv
-                          musikk, fra mine jyplingår som fan av Nirvana og
-                          skranglepunk til mine senere år som metal-connoisseur
-                          av ypperste rang."
-            :illustration "/illustrations/hobbies/execration.jpg"
-            :url "http://execration.no/"}
-           ]
+                          2014. Mine musikalske røtter finner du innen rock og
+                          metal, men som jeg eldes får jeg stadig bredere
+                          musikksmak, og de senere årene har det gått mye i
+                          70-talls progrock."
+            :illustration "/illustrations/hobbies/christian-gitar.jpg"
+            :url "http://execration.no/"}]
 
  :blog-posts [{:url "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs/"
                :published "2019-01-18"
@@ -268,7 +265,24 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Fortum"
+ :projects [{:customer "Kodemaker"
+             :employer :kodemaker
+             :summary "Utvikling av nettsted"
+             :description "Utviklet skinnende
+             ny [kodemaker.no](https://www.kodemaker.no). Data leses fra flate
+             filer inn i Datomic, noe som gir en superb programmeringsmodell for
+             å generere de statiske filene som utgjør nettstedet - proppfulle av
+             lenker på kryss og tvers i det etterhvert så omfangsrike faglige
+             innholdet vårt. Designet er levert av Sebastian
+             i [Eggs](https://eggsdesign.com), [Magnar](/magnar/) og jeg
+             sto for implementasjonen over tre uker.
+             [Koden finner du på Github](https://github.com/kodemaker/kodemaker.no/)."
+             :tech [:clojure :responsive-design :datomic :aws :puppeteer
+                    :docker :clojurescript :dumdom :emacs :git]
+             :start "2020-08"
+             :end "2020-08"}
+
+            {:customer "Fortum"
              :employer :kodemaker
              :summary "Utvikling av nettsted"
              :description "Utviklet nytt nettsted for Fortums
