@@ -193,7 +193,7 @@
                           [:div.h6.b (:project/customer project)]
                           (e/tech-tags {:class "tags"
                                         :techs (take 5 (h/unwrap-ident-list project :project/tech-list))})
-                          [:div.mts
+                          [:div.mts.text
                            (f/to-html (:project/description project))]])
                        vec
                        (cond-> show-more-link?
