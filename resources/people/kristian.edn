@@ -94,9 +94,9 @@
              :employer :kodemaker
              :summary "Kolonial til skyen - Kubernetes på GCP"
              :description "Grunnet eksplosiv vekst og ambisjoner om å gå ut i verden har Kolonial sett behovet for å flytte on premise baserte
-             løsninger over på en arkitektur som er skreddersydde for å skalere. Nube-plattformen bygges rundt Kubernetes på GCP og helautomatiseres
+             løsninger over på en arkitektur som er skreddersydd for å skalere. Kolonial sin Nube-plattform bygges rundt Kubernetes på GCP og helautomatiseres
              ved å kombinere Github sitt eget verktøy for kontinuerlig integrasjon(Github Actions) med ArgoCD for kontinuerlig deployment. Terraform
-             benyttes for å automatisere arkitekturen og Kubernetes manifester bygges helt uten bruk av templates, men med små gjenbrukbare byggeklosser
+             benyttes for å automatisere arkitekturen. Kubernetes manifester bygges helt uten bruk av templates, men med små gjenbrukbare byggeklosser
              i form av kustomize konfigurasjoner. Det er også lagt opp til høy grad av selvbetjening og utviklet en egen kommandolinje klient i Go for å
              hente ut data og status om kjørende applikasjoner. Dette underbygger tanken om autonome team som ikke er avhengig av dyp infrastruktur kompetanse
              for å håndere egne applikasjoner på plattformen."
