@@ -100,7 +100,7 @@
              i form av kustomize konfigurasjoner. Det er også lagt opp til høy grad av selvbetjening og utviklet en egen kommandolinje klient i Go for å
              hente ut data og status om kjørende applikasjoner. Dette underbygger tanken om autonome team som ikke er avhengig av dyp infrastruktur kompetanse
              for å håndere egne applikasjoner på plattformen."
-             :tech [:docker :kubernetes :terraform :kustomize :github-actions :argocd :secret-manager :berglas :golang :python]}
+             :tech [:docker :kubernetes :terraform :kustomize :github-actions :argocd :secret-manager :berglas :go :python]}
             {:customer "Statistisk Sentralbyrå(SSB)"
              :years [2019 2020]
              :employer :kodemaker
