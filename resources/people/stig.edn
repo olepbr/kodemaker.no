@@ -31,7 +31,7 @@
             :linkedin "/in/stigmelling"
             :github "stigmelling"
             }
-:tech {:using-at-work [:grails :javascript :docker :git :ansible :micronaut :aws :circleci :react :redux :linux :redhat :centos ]
+:tech {:using-at-work [:grails :javascript :docker :git :ansible :micronaut :aws :circleci :react :redux :linux :redhat ]
            :favorites-at-the-moment [:react :kubernetes :micronaut :grafana :prometheus]
            :want-to-learn-more [:kubernetes :go ]}
 
@@ -103,7 +103,7 @@ Det gikk bra - veldig bra."
   :employer :kodemaker
   :summary "Migrering av resultatsystem til Kubernets i AWS"
   :description "Migrering av en monolitt av ett resultatsystem til mindre og mer skalerbare tjenster"
-  :tech [:kubernetes :micronaut :groovy :grails :javascript :mysql ]}
+  :tech [:kubernetes :micronaut :groovy :spring-boot :grails :javascript :mysql ]}
 
  {:customer "VY"
   :years [2017 ]
@@ -406,7 +406,7 @@ Det gikk bra - veldig bra."
              Sentrale teknologier: EJB, MDB, JMS, JSP, XML, XSLT, CVS, JMX,
              HTML, CSS, JavaMail, Distribuerte transaksjoner, SQL, IBM MQ
              Series, IBM integrasjonsadaptre."
-             :tech [:ejb :mdb :jms :jsp :xslt :cvs :jmx :html :css :java-mail :sql]}
+             :tech [:ejb :mdb :jms :jsp :xslt :cvs :jmx :html :css :sql]}
             {:customer "NSB Ekspressgods"
              :years [2001]
              :employer :sap
@@ -446,7 +446,7 @@ Det gikk bra - veldig bra."
     - Java Message Service
     - WebServices
     - Real Time Data Services"
-             :tech [:sap :jms :uml :powerdesigner :powerbuilder]}
+             :tech [:sybase :jms :uml]}
             {:customer "Aftenposten, Axiti, Sør-norge aluminium, Alm.Brand, Aloc, Arrive"
              :years [2000 2001 2002 2003 2004 2005]
              :employer :sap
