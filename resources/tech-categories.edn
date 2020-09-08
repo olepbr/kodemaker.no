@@ -263,6 +263,7 @@
    :bamboo
    :berglas
    :capistrano
+   :circleci
    :cloud
    :concourse
    :crucible

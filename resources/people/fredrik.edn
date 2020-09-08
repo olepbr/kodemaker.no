@@ -2,7 +2,7 @@
  :name ["Fredrik" "Aubert"]
  :title "Utvikler"
  :start-date "2009-01-01"
- :description "Fredrik har nesten 20 års erfaring som systemuvikler. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer generelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
+ :description "Fredrik jobbet som systemutvikler siden 1999. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer generelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
 
  :phone-number "+47 410 21 442"
  :email-address "fredrik@kodemaker.no"
@@ -31,6 +31,20 @@
            ]
 
  :projects [
+           {:customer "Vygruppen AS"
+             :employer :kodemaker
+             :summary "Kvitteringsliste"
+             :years [2020]
+             :description "Tilpasse og migrere en eksisterende applikasjon til aws."
+             :tech [:grails :groovy :docker :aws :terraform :rest :dynamodb :circleci]}
+
+           {:customer "Vygruppen AS"
+             :employer :kodemaker
+             :summary "Trafficinfo tjenester"
+             :years [2019 2020]
+             :description "Microtjenester som tilbyr trafikkinformasjon, som rutetider, passeringstider og kjøretøysinformasjon til konsumenter."
+             :tech [:kotlin :micronaut :docker :aws :terraform :rest :dynamodb :circleci]}
+
  	    {:customer "NSB"
              :employer :kodemaker
              :summary "Topas"
@@ -40,13 +54,13 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "Passasjerinformasjonssystemer og støttesystemer"
-             :years [2015 :ongoing]
+             :years [2015 2020]
              :description "Passasjerinformasjonssystemer og støttesystemer: Et system som leverer informasjon til togsettene. Bl.a. kjøredatabase, avviksmeldinger, nyheter og værmelding."
              :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "MCC"
-             :years [2015 :ongoing]
+             :years [2015 2019]
              :description "MCC er en webapplikasjon for materiell kontroll, som
              rapporterer nå-situasjonen for tog-flåten og utnyttelsesgrad.
              Oppgaver: Senior Javautvikler / frontendutvikler."
@@ -54,7 +68,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "D9009"
-             :years [2013 :ongoing]
+             :years [2013 2014]
              :description "D9009 Webapplikasjon som viser planlagt
              togsammensetning. Oppgaver: Senior Javautvikler /
              frontendutvikler."
@@ -62,7 +76,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "Pis Marketing System"
-             :years [2012 :ongoing]
+             :years [2012 2020]
              :description "Pis Marketing System er en webapplikasjon for å produsere
              og distribuere markedsvideoer som vises ombord i togene. Oppgaver:
              Senior Javautvikler / frontendutvikler."
@@ -70,7 +84,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "JODA"
-             :years [2011 :ongoing]
+             :years [2011 2020]
              :description "JODA genererer realtime informasjon til
              passasjerinformasjonssystemet på NSBs nye togsett, slik som
              nyheter, værmelding og overgangsinformasjon. Systemet henter data
@@ -81,7 +95,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "FILI"
-             :years [2010 :ongoing]
+             :years [2010 2020]
              :description "FILI Håndterer realtime datakommunikasjon med NSB nye
              togsett, som overføring av diagnosedata, passasjertelling,
              passasjerinformasjon osv. Oppgaver: Senior Javautvikler /
@@ -90,7 +104,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "GRAILS"
-             :years [2010 :ongoing]
+             :years [2010 2020]
              :description "GRAILS Et system som beskriver geografien og
              stasjonene i NSBs domene. Dette er masterdatabase for andre NSB
              systemer. Oppgaver: Senior Javautvikler / frontendutvikler."
@@ -98,7 +112,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "PAIN"
-             :years [2009 :ongoing]
+             :years [2009 2020]
              :description "PAIN Utvikling av en applikasjon for automatisk
              generere databasen som styrer passasjerinformasjons-anleggene
              ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l.
@@ -237,6 +251,29 @@
 
  Jobb skal være gøy, og Fredrik bidrar både sosialt og faglig for at teamet skal
  yte sitt beste. "
+
+
+:endorsements [{:author "Kent Kolnes"
+                 :title "Leder forretningssystemer, Vygruppen AS"
+                 :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget 
+                 fornøyd med hvordan Fredrik bidrar med forslag både i arkitektur spørsmål
+                 og i løsninger. Løsningene Fredrik har bidratt med og lage gir flere 1000
+                 ansatte i Norge og Sverige nytte hver dag. I tillegg alle kundene våre
+                 som hver dag høre Monika snakke i togene våre, eller leser avviksmeldinger
+                 og nyheter på toget.
+
+                 Fredrik er allsidig, kan jobbe topp down og bottom up. Noen ganger, tror 
+                 jeg han virkelig koser seg når han kan begynne med en bottom up løsning 
+                 som utvikler seg, og han har sørget for fleksibilitet som gjør at vi ikke 
+                 trenger å redesigne noe. Vi har virkelig glede av når Fredrik er med på 
+                 POCer som vi utvikler videre.
+
+                 Fredrik er pliktoppfyllende og veldig god til å forklare løsningsforslagene 
+                 så vi kan ta gode avgjørelser. 
+
+                 Topp utvikler, som du garantert kommer til å bli fornøyd med."}
+              ]
+
  :education-summary "Dataingeniør, HiG"
  :experience-since 1999
  :qualifications ["Fullstack utvikler"
@@ -272,6 +309,12 @@
              {:language "Engelsk"
               :orally "Meget god"
               :written "Flytende"}]
+
+ :endorsement-highlight {:author "Kent Kolnes"
+                         :title "Leder forretningssystemer, Vygruppen AS"
+                         :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget 
+                                 fornøyd med hvordan Fredrik bidrar med forslag både i arkitektur spørsmål
+                                 og i løsninger. "}
 
  :project-highlights [{:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
                        :customer "NSB"}
