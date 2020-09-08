@@ -446,7 +446,7 @@ Det gikk bra - veldig bra."
     - Java Message Service
     - WebServices
     - Real Time Data Services"
-             :tech [:sap :jms :uml :powerDesigner :powerBuilder]}
+             :tech [:sap :jms :uml :powerdesigner :powerbuilder]}
             {:customer "Aftenposten, Axiti, Sør-norge aluminium, Alm.Brand, Aloc, Arrive"
              :years [2000 2001 2002 2003 2004 2005]
              :employer :sap
