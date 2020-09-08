@@ -370,6 +370,7 @@
    :emacs
    :intellij
    :jrebel
+   :mscode
    :lighttable
    :powerbuilder
    :powerdesigner
