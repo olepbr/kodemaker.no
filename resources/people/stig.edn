@@ -90,13 +90,13 @@ Det gikk bra - veldig bra."
   :years [2019 ]
   :employer :kodemaker
   :summary "Migrering av påloggingsløsninger til Azure og Oauth2"
-  :description "Modernisering av påloggingsløsning for flere Vy-systemer"
+  :description "Modernisering av påloggingsløsning for flere Vy-systemer slik at disse gjør single sign on mot Azure ved hjelp av Oauth2 token."
   :tech [:oauth2 :azure]}
- {:customer "F1 Historic Esports League"
+ {:customer "Blind Chicken Productions"
   :years [2019 ]
   :employer :kodemaker
   :summary "Innsamling av rundetider i fra legazy online bilsimulator"
-  :description "F1 Historic Esports League er ett miljø der det konkurreres online i bilsimulatoren Grand Prix Legends i fra 1998. En enkelt løsning ble utviklet i GO for å hente ut rundetider slik at disse kan publiseres på nett."
+  :description "Blind Chicken Productions drifter 2 online racing ligaer som består av 18 terminfestede løp i året samt VM finale. F1 Historic Esports League er ett miljø der det konkurreres online i bilsimulatoren Grand Prix Legends i fra 1998. En enkelt løsning ble utviklet i GO for å hente ut rundetider slik at disse kan publiseres på nett."
   :tech [:go :mscode]}
  {:customer "Langløpet Kneskjælven"
   :years [2019]
@@ -534,12 +534,15 @@ Det gikk bra - veldig bra."
               {:author "Victor Dieu"
                   :title "Prosjektleder, NSB"
                   :quote "Stig er veldig dyktig når det gjelder å levere i fra seg produkt med god kvalitet."}
+               {:author "André Jahren"
+                  :title "Simracing-teamet i Blind Chicken Productions"
+                  :quote "Vi er strålende fornøyd med programvaren Stig har levert og profesjonaliteten han viste underveis i leveransen."}
                  ]
 
 :project-highlights [{:blurb "Teknisk arkitekt programkontor. Virksomhetsmodellering, målbilde, koordinering av sentrale IKT-iniativ"
                      :customer "Bring"}
                     {:blurb "Utvikling og DevOps på virksomhetskritiske applikasjoner."
-                     :customer "NSB"}
+                     :customer "VY"}
                     {:blurb "Prosjektleder og utvikler av nytt system for måling og evaluering av rør/piper hos Forsvaret"
                      :customer "Forsvaret"}]
 
