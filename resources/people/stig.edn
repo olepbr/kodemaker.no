@@ -83,7 +83,7 @@ Det gikk bra - veldig bra."
  {:customer "VY"
   :years [2020 ]
   :employer :kodemaker
-  :summary "Overvåking av passerinsmeldinger i fra BaneNOR "
+  :summary "Overvåking av passeringsmeldinger i fra BaneNOR "
   :description "Sanntidsovervåkning av passeringsmeldinger i fra BaneNOR ved hjelp av Grafana og Prometheus"
   :tech [:grafana :prometheus]}
  {:customer "VY"
@@ -96,7 +96,7 @@ Det gikk bra - veldig bra."
   :years [2019 ]
   :employer :kodemaker
   :summary "Innsamling av rundetider i fra legazy online bilsimulator"
-  :description "Blind Chicken Productions drifter 2 online racing ligaer som består av 18 terminfestede løp i året samt VM finale. F1 Historic Esports League er ett miljø der det konkurreres online i bilsimulatoren Grand Prix Legends i fra 1998. En enkelt løsning ble utviklet i GO for å hente ut rundetider slik at disse kan publiseres på nett."
+  :description "Blind Chicken Productions drifter 2 online racing ligaer som består av 18 terminfestede løp i året samt VM finale. F1 Historic Esports League er ett miljø der det konkurreres online i bilsimulatoren Grand Prix Legends i fra 1998. En enkel løsning ble utviklet i GO for å hente ut rundetider slik at disse kan publiseres på nett."
   :tech [:go :mscode]}
  {:customer "Langløpet Kneskjælven"
   :years [2019]
