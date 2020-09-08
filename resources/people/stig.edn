@@ -1,6 +1,6 @@
 {:id :stig
  :name ["Stig" "Melling"]
- :title "Smart løsningsbygger"
+ :title "Utvikler"
  :start-date "2010-04-01"
  :description "Stig elsker å programmere, men tenner mest der han må ta tak i forretningsmessige problemstillinger og løse disse ved hjelp av nye arbeidsprosesser understøttet av teknologi. Stig er pliktoppfyllende og gir det som er nødvendig for at prosjekter skal lykkes."
  :cv/description " Stig elsker å programmere, men tenner mest der han kan ta tak
@@ -31,16 +31,15 @@
             :linkedin "/in/stigmelling"
             :github "stigmelling"
             }
-:tech {:using-at-work [:grails :javascript :docker :git :ansible :svg ]
-           :favorites-at-the-moment [:grails :groovy :react]
-           :want-to-learn-more [:kotlin :openlayers :cesiumjs]}
+:tech {:using-at-work [:grails :javascript :docker :git :ansible :micronaut :aws :circleci :react :redux :linux :redhat :centos ]
+           :favorites-at-the-moment [:react :kubernetes :micronaut :grafana :prometheus]
+           :want-to-learn-more [:kubernetes :go ]}
 
 :qualifications ["God og bred teknologiforståelse som går gjennom «alle lag» i teknologistakken"
                  "Erfaring med oppsett, drift og kontinuerlig forbedring av løsninger"
                  "Flink til å forstå hva kunden lever av og bidra til at dette kan gjøres enklere"
                 "Automatisering av prosesser mellom aktører i en verdikjede"
-                "Har klokketro på å lage løsninger som undersøtter ERP/forretningssystemer"
-                "Varehandel, Finans, Transport, logistikk og optimalisering"]
+                "Varehandel, finans, transport, logistikk og optimalisering"]
 
 :side-projects [{:title "Resultatservice på nett"
                 :description "Ringerike o-lag med sine sammarbeidsparter arrangerete NM Ultralang i august 2015. Det var viktig for oss å bruke denne anledningen til å bygge egen arrangør-kompetanse ved å gjennomføre ett så viktig løp. Vi ønsket derfor selv å ta ansvar for tidtakertjenesten med tilhørende resultatservice. Det var OK for Norges orienteringsforbund - så lenge vi klarer å stable på beina en resultattjenste som er på høyde med det publikum forventer i denne type arrangement.
@@ -81,8 +80,33 @@ Det gikk bra - veldig bra."
                :tech [:javascript :aws]}]
 
  :projects [
- {:customer "NSB"
-  :years [2017 :ongoing]
+ {:customer "VY"
+  :years [2020 ]
+  :employer :kodemaker
+  :summary "Overvåking av passerinsmeldinger i fra BaneNOR "
+  :description "Sanntidsovervåkning av passeringsmeldinger i fra BaneNOR ved hjelp av Grafana og Prometheus"
+  :tech [:grafana :prometheus]}
+ {:customer "VY"
+  :years [2019 ]
+  :employer :kodemaker
+  :summary "Migrering av påloggingsløsninger til Azure og Oauth2"
+  :description "Modernisering av påloggingsløsning for flere Vy-systemer"
+  :tech [:oauth2 :azure]}
+ {:customer "F1 Historic Esports League"
+  :years [2019 ]
+  :employer :kodemaker
+  :summary "Innsamling av rundetider i fra legazy online bilsimulator"
+  :description "F1 Historic Esports League er ett miljø der det konkurreres online i bilsimulatoren Grand Prix Legends i fra 1998. En enkelt løsning ble utviklet i GO for å hente ut rundetider slik at disse kan publiseres på nett."
+  :tech [:go :mscode]}
+ {:customer "Langløpet Kneskjælven"
+  :years [2019]
+  :employer :kodemaker
+  :summary "Migrering av resultatsystem til Kubernets i AWS"
+  :description "Migrering av en monolitt av ett resultatsystem til mindre og mer skalerbare tjenster"
+  :tech [:kubernetes :micronaut :groovy :grails :javascript :mysql ]}
+
+ {:customer "VY"
+  :years [2017 ]
   :employer :kodemaker
   :summary "Utvikling av system for vedlikehold og publisering av servicestandarder"
   :description "Design og utvikling av system for vedlikehold og publisering av servicestandarder. Oppgaver:
@@ -422,7 +446,7 @@ Det gikk bra - veldig bra."
     - Java Message Service
     - WebServices
     - Real Time Data Services"
-             :tech [:sap :jms :uml :powerdesigner :powerbuilder]}
+             :tech [:sap :jms :uml :powerDesigner :powerBuilder]}
             {:customer "Aftenposten, Axiti, Sør-norge aluminium, Alm.Brand, Aloc, Arrive"
              :years [2000 2001 2002 2003 2004 2005]
              :employer :sap
@@ -523,6 +547,17 @@ Det gikk bra - veldig bra."
                        :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
                        :quote "Stig har på en imponerende måte satt seg inn i utfordringer og kompleksitet i prosjektet.
                        Han har bidratt med god kompetanse samtidig som han er god til å sette seg inn i og forstå kundes behov."}
+ :recommendations [{:title "Micronaut"
+                    :blurb "Graeme Rocher har vært med å laget mye bra. Nylig ble hans siste prosjekt kåret til en av de 25 beste/viktigste java applikasjonene som er laget. Micronaut er ett rammeverk som er utviklet for å bygge tjenster i skyen. Det har med seg erfaringer i fra kjente rammeverk som Spring, Spring Boot og Grails. "
+                    :link {:url "https://micronaut.io/"
+                           :text "Les om Micronaut"}
+                    :tech [:micro-services :micronaut]}
+                   {:title "Monolith first"
+                    :blurb "Martin Fowler har i mange år hatt veldig gode betraktninger om programvareutvikling. Effekten av å benytte en monolitt til å utforske kompleksiteten i ett domene og komponenters avgrensninger, synes jeg fremdeles er høyaktuell."
+                    :link {:url "https://martinfowler.com/bliki/MonolithFirst.html"
+                           :text "Les artikkelen"}
+                    :tech [:micro-services]}]
+
 
  :education-summary "Norges Tekniske Høyskole (NTH/NTNU)"
  :experience-since 1995
