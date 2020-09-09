@@ -17,7 +17,7 @@
                :seymours
                [{:icon {:type :science/chemical :height 79}
                  :title "Referanser"
-                 :text "Vi har interessante og utfordende kunder. Sammen har vi utviklet spennende nye løsninger."
+                 :text "Vi har interessante og utfordrende kunder. Sammen har vi utviklet spennende nye løsninger."
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
                 {:icon {:type :science/robot-1 :height 79}
