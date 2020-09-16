@@ -1,6 +1,6 @@
 :title Rebusløp
 :author christin
-:published 2020-07-16
+:published 2020-09-16
 :blurb
 Kode skal være lett å lese. Men hva betyr dette i praksis? 
 Hva er lett å lese og hva er det koden skal formidle til leseren? Hvorfor leser vi kode i det hele tatt?
