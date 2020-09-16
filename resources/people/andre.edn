@@ -156,7 +156,7 @@
     {:customer "Posten"
              :years [2020 :ongoing]
              :description "Videreutvikling og forvaltning av Postens Sporings app. Oppsett av Azure Pipelines for CI. 
-             Laget ett system som forenkler skriving av enhetstester av komponenter som gjør nettverkskall. Jobbet for å endre holdningen til enheststester blant app utviklere på teamet. 
+             Laget ett system som forenkler skriving av enhetstester av komponenter som gjør nettverkskall.  
              Utviklet ett system som benyttes for at testdata brukt i UITester skal kunne kjøre uten at en test server er involvert. 
     \nOppgaver: Utvikler"
              :employer :kodemaker
