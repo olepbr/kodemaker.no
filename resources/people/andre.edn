@@ -152,8 +152,19 @@
                  high value for money for the customer."} ]
 
  :projects [
+
+    {:customer "Posten"
+             :years [2020 :ongoing]
+             :description "Videreutvikling og forvaltning av Postens Sporings app. Oppsett av Azure Pipelines for CI. 
+             Laget ett system som forenkler skriving av enhetstester av komponenter som gjør nettverkskall. Jobbet for å endre holdningen til enheststester blant app utviklere på teamet. 
+             Utviklet ett system som benyttes for at testdata brukt i UITester skal kunne kjøre uten at en test server er involvert. 
+    \nOppgaver: Utvikler"
+             :employer :kodemaker
+             :summary "Posten Sporing"
+             :tech [:swift :appcode :azure :xcode]}
+
 	 		{:customer "Posten"
-             :years [2019 :ongoing]
+             :years [2019 2020]
              :description "Utvikling av to forskjellige iOS apper, en for kunde, 
 			 og en for sjåfør. Utvikler også et Swift Framework som kan gjenbruke funksjonalitet på 
 			 tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige typer elektroniske låser.
