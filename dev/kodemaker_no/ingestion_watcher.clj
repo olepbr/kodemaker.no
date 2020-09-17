@@ -3,6 +3,7 @@
             [clojure.string :as str]
             [datomic-type-extensions.api :as d]
             [hawk.core :as hawk]
+            [kodemaker-no.files :as files]
             [kodemaker-no.formatting :as f]
             [kodemaker-no.ingest :as ingest]))
 
@@ -15,7 +16,7 @@
        :handler
        (fn [_ e]
          (let [file-path (subs (.getAbsolutePath (:file e)) chop-length)]
-           (when (ingest/ingest conn file-path)
+           (when (ingest/ingest conn (files/normalize-path file-path))
              (ingest/perform-last-minute-changes conn)
              (when-let [techs (seq (ingest/find-uncategorized-techs (d/db conn)))]
                (println
