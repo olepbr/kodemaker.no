@@ -1,7 +1,7 @@
 {:id :kolbjorn
  :name ["Kolbjørn" "Jetne"]
  :title "Daglig leder"
- :start-date "2001-04-01 00:01"
+ :start-date "1995-02-01 00:00"
  :experience-since 1998
  :administration? true
  :description "Jeg synes det er moro å være leder i Kodemaker.  Lang erfaring med å utfordre etablerte sannheter.  Uredd og utforskende.  Såre fornøyd med at Kodemaker nå har blitt en av de mest attraktive arbeidsplassene for erfarne dyktige teknologer.  Motiverer meg å jobbe med sylskarpe kodemakere, og vi har det mye moro sammen.  Vi skal alltid utvikle oss videre, og to hestehoder foran er helt OK!"
