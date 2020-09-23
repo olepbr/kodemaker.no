@@ -39,22 +39,22 @@
                :image "/foto/christin-foredrag.jpg"
                :image-center "53% 23%"}
               {:kind :pønt
-               :portrait-1 {:img "/rouge-portrait/foto/ashild-f.jpg"
-                            :href "/ashild/"
-                            :title "Åshild Thorrud"}
-               :portrait-2 {:img "/chocolate-portrait/foto/kristian-f.jpg"
-                            :href "/kristian/"
-                            :title "Kristian Frøhlich"}
-               :top-triangle {:img "/rouge-triangle/foto/magnus-f.jpg"
-                              :href "/magnus/"
-                              :title "Magnus Rundberget"}
+               :portrait-1 {:img "/rouge-portrait/foto/andre-f.jpg"
+                            :href "/andre/"
+                            :title "André Bonkowski"}
+               :portrait-2 {:img "/chocolate-portrait/foto/fredrik-f2.jpg"
+                            :href "/fredrik/"
+                            :title "Fredrik Aubert"}
+               :top-triangle {:img "/rouge-triangle/foto/stig-f.jpg"
+                              :href "/stig/"
+                              :title "Stig Melling"}
                :bottom-triangle {:img "/chocolate-triangle/foto/blyanter2.jpg"
                                  :href "/blogg/"
                                  :title "Bloggen vår"}
                :top-circle {:img "/rouge-circle/foto/finn-f3.jpg"
                             :href "/finn/"
                             :title "Finn Johnsen"}
-               :bottom-circle {:img "/chocolate-circle/foto/sjogutta2.jpg"
+               :bottom-circle {:img "/chocolate-circle/foto/zambezi.jpg"
                                :href "/folk/"
-                               :title "Alle sammen"}}
+                               :title "Zambezi"}}
               {:kind :footer}]})
