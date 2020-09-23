@@ -1,6 +1,6 @@
 :title Teknisk egenkapital og gjeld
 :author august
-:published 2020-09-17
+:published 2020-09-23
 :blurb
 Paul Graham sin klassiker [Beating The Averages](http://www.paulgraham.com/onlisp.html) forteller at Lisp er et hemmelig våpen, hvor konkurrentene dine blir stående igjen i støvet som legger seg etter din enorme effektivitet og produktivitet.
 
