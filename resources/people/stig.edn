@@ -87,6 +87,12 @@ Det gikk bra - veldig bra."
   :description "Sanntidsovervåkning av passeringsmeldinger i fra BaneNOR ved hjelp av Grafana og Prometheus"
   :tech [:grafana :prometheus]}
  {:customer "VY"
+  :years [2020 ]
+  :employer :kodemaker
+  :summary "Opplasting av bilder til S3"
+  :description "Løsning for innraportering av ulike problemstillinger skal skrive vedlegg til S3-bucket"
+  :tech [:aws-s3 :terraform]}
+ {:customer "VY"
   :years [2019 ]
   :employer :kodemaker
   :summary "Migrering av påloggingsløsninger til Azure og Oauth2"
