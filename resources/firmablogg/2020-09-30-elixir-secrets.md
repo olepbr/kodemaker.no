@@ -300,3 +300,11 @@ ConfigLogger.log_all_applicaion_config(:amoi)
 ```
 
 Hva logger du i oppstart av din app?
+
+## Edit
+
+Da jeg skrev denne posten forsøkte jeg å forenkle kodeeksempelet så mye som mulig, blant annet tok jeg bort spesialhåndtering av strukter, da dette fungerte lokalt hos meg.
+
+Så deployet jeg endringene til prod, og det feilet. I prod har vi faktisk noen strukter i config. Problemet er at strukter er "map-like", men ikke helt maps, og feiler i en del api'er. Trikset er å ta bort `:__struct__` feltet, og vipps så funker de generelle api'ene. `:__struct__` verdien kan man legge tilbake, og så er det en vanlig strukt igjen.
+
+Jeg har latt kodeeksempelet over være urørt. Det å håndtere strukter kompliserer, og gir lite verdi i forhold til denne posten. For den som er interessert, så har [gisten](https://gist.github.com/stoyle/a62a6511f9ebe18564119dff963ebebf) oppdatert kode.
