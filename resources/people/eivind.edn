@@ -34,8 +34,8 @@
             :stackoverflow "/users/562492/eivindw"
             :github "eivindw"}
 
- :tech {:using-at-work [:python :opencv :clojure :clojurescript]
-        :favorites-at-the-moment [:python :clojurescript]
+ :tech {:using-at-work [:typescript :react]
+        :favorites-at-the-moment [:python :clojurescript :typescript]
         :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning :clojurescript]}
 
  :innate-skills [:cpp :cvs :emacs :git :intellij :linux :osx :windows]
