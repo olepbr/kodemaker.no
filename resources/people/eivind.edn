@@ -70,15 +70,16 @@
 		    	   :text "Til website"}
 		    :tech [:java]}]
 
- :hobbies [{:title "Snowboard"
+ :hobbies [{:title "Løpe og sykle"
+            :description "Eivind er veldig glad i å løpe - gjerne på stier i skogen. Det siste året
+                          har han også begynt å sykle en del på sti. Sjøl om sykkelformen er ganske
+                          middels er det veldig artig!"
+            :illustration "/illustrations/hobbies/eivind_sykkel.jpg"}
+           {:title "Snowboard"
             :description "Snowboard har vært en hobby siden videregående, og det blir fortsatt
                           noen turer hvert år. De siste årene har barna også blitt med,
                           noe som gjør det ekstra stas :)"
-            :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}
-           {:title "Fløyte"
-            :description "Eivind spilte fløyte i skolekorps i ungdommen. Dette er en hobby han har tatt
-                          opp igjen for noen år siden. Spiller i Grav Musikkorps i Bærum."
-            :illustration "/illustrations/hobbies/eivind_flute.jpg"}]
+            :illustration "/illustrations/hobbies/eivind_snowboard.jpg"}]
 
  :blog-posts [{:url "http://eivindw.github.io/2016/01/08/comparing-gc-collectors.html"
                :published "2016-01-08"
