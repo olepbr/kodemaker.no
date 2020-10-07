@@ -107,14 +107,14 @@ class CodeServiceTests: XCTestCase {
 
     func testSetCode() {
 
-        MyStubURLProtocol.urls[url] = StubbedResponse(response: HTTPURLResponse(
+        MyStubURLProtocol.urls[publicKeyUrl] = StubbedResponse(response: HTTPURLResponse(
             url: publicKeyUrl,
             statusCode: 201,
             httpVersion: nil,
             headerFields: nil)!, data: TestFixtures.getPublicKeyWithSuccess.data(using: .utf8)!) // 3
 
 
-        MyStubURLProtocol.urls[url] = StubbedResponse(response: HTTPURLResponse(
+        MyStubURLProtocol.urls[codeUrl] = StubbedResponse(response: HTTPURLResponse(
             url: codeUrl,
             statusCode: 201,
             httpVersion: nil,
