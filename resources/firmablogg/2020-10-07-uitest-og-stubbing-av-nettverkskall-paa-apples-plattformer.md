@@ -168,7 +168,7 @@ La oss si man ønsker å benytte en sentral test server. Man vil da måtte "null
 
 Dersom du deler test server-instansen med andre utviklere så må man avtale at "nå skal jeg kjøre testene mine, kan du vente litt"... skalerer dårlig. Jeg antar at man har satt opp en CI-server og en build pipeline som kjører testene automatisk når endringer pushes? Skal dere da avtale når dere skal pushe så testkjøringene ikke går i beina på hverandre? 
 
-Man kan forsøke å la testene kjøre i en bestemt rekkefølge, slik at den neste testen kan basere seg på resultatet av den forrige testen. Man blir man nødt til å navngi testene slik at de er satt opp i riktig alfabetisk rekkefølge. Lykke til med å legge inn en ny test mellom to eksisterende.
+Man kan forsøke å la testene kjøre i en bestemt rekkefølge, slik at den neste testen kan basere seg på resultatet av den forrige testen. Man blir nødt til å navngi testene slik at de er satt opp i riktig alfabetisk rekkefølge. Lykke til med å legge inn en ny test mellom to eksisterende.
 
 
 Det finnes nok mange andre kreative og bedre fremgangsmåter enn dette man kan velge, og ett alternativt er at man bestemmer man seg for at det er så mye arbeid at det ikke er verdt det. Jeg håper  det ikke er tilfellet etter du har lest denne bloggposten :)
