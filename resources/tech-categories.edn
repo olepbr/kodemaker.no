@@ -682,6 +682,7 @@
    :cpp
    :csharp
    :dataflex
+   :dart
    :delphi
    :elisp
    :elixir
