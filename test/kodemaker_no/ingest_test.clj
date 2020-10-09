@@ -7,5 +7,5 @@
 (def conn (atomic/create-database (str "datomic:mem://" (d/squuid))))
 (sut/ingest-all conn "resources")
 
-(fact "All techs have categories"
+(fact "All techs have categories, if not they should be added to resources/tech-categories.edn"
       (seq (sut/find-uncategorized-techs (d/db conn))) => nil)
