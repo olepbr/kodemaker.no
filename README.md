@@ -191,11 +191,7 @@ Bildene ligger i `resources/public`.
 - `/illustrations/side-projects/` Illustrasjoner til sideprosjekter: .jpg med bredde 420px.
 - `/references/` Illustrasjoner til forside-referanser: .jpg med bredde 1280x488.
 - `/photos/tech/` Illustrasjoner til tech: .jpg med bredde 580px.
-- `/photos/people/<person>/half-figure.jpg` Kodemaker stående: .jpg 580x741
-- `/photos/people/<person>/side-profile.jpg` Kodemaker sittende: .jpg 620x485
-- `/photos/people/<person>/side-profile-cropped.jpg` Kodemaker med kappa hode: .jpg 580x453
-- `/photos/people/<person>/side-profile-near.jpg` Kodemaker med kappa hode: .jpg 620×485
-- `/photos/people/<person>/side-profile-square.jpg` Kodemaker med kappa hode, firkanted: .jpg 485×485
+- `/foto/<person>/` Profilbilder
 
 
 Hvis du ikke har Photoshop eller lignende, så kan du skalere bilder på
