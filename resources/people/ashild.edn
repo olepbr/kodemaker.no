@@ -4,9 +4,7 @@
  :start-date "2020-10-01"
  :experience-since 2011
  :born 1986
- :description "Starter i Kodemaker 1.oktober.
- 
-    Åshild fremstår som en proaktiv, strukturert og kompetent person.
+ :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
     Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
     Åshild foretrekker frontendutvikling, men liker fremfor alt en variert 
     arbeidshverdag der hun kan løse det meste selv, uten å være avhengig av andre.
@@ -38,12 +36,11 @@
             :linkedin "/in/ashildthorrud/"
             :github "thorrud"}
 
-:tech {:using-at-work [:react :java :sql :docker]
-        :favorites-at-the-moment [:java :react]
+:tech {:using-at-work [:kotlin :arrow :postgresql :docker :kubernetes]
+        :favorites-at-the-moment [:react]
         :want-to-learn-more [:clojurescript :kafka]}
 
-:qualifications ["Starter i Kodemaker 1.oktober"
-                "Fullstack, jobber gjerne med hele stacken"
+:qualifications ["Fullstack, jobber gjerne med hele stacken"
                   "Erfaring med oppsett av frontendapplikasjoner"
                   "Liker enkle løsninger og små team"
                   "Utviser initiativ, omgjengelighet, utholdenhet og god arbeidsmoral"]
@@ -61,7 +58,14 @@
             :illustration "/illustrations/hobbies/ashild_fotball.jpg"}
            ]
 
-:projects [{:customer "Statnett"
+:projects [{:customer "Finn"
+            :employer :kodemaker
+            :summary "Videreutvikle og fornye system for annonser med effekt-produkter."
+            :description "Distribusjon av annonser med økt synlighet. Prosessere meldinger
+             for endring på annonser og håndtere livssyklus for effekt-produkter for annonser på finn.no."
+            :tech [:kotlin :kubernetes :docker :postgresql]
+            :years [2020]}
+    {:customer "Statnett"
             :employer :webstep
             :summary "Videreutvikling på Operatør Informasjon System (OIS)"
             :description "Fullstackutvikler på OIS sine applikasjoner som brukes av både eksterne
@@ -69,7 +73,7 @@
             for konsesjonærer av planer for tvungen utkobling av forbruk og gjenoppretting, 
             samt saksbehandling og oversikt for Statnett."
             :tech [:typescript :react :wicket :java :git :sql :docker]
-            :start "2020-01"}
+            :years [2020]}
     
             {:customer "Norgesgruppen Data"
             :employer :webstep
@@ -80,7 +84,7 @@
             på OAuth 2.0 og OpenId Connect. Skilte ut felles UI-komponenter til 
             eget bibliotek til gjenbruk for NGFLYT-løsningen og Leveranseplanleggeren."
             :tech [:javascript :react :redux :java :springboot :sql :okta :git]
-            :start "2019-03"}
+            :years [2019]}
     
             {:customer "Norgesgruppen Data"
             :employer :webstep
@@ -90,7 +94,7 @@
             med prosjektene var å forenkle dagens varebestillingsløsning (NGFLYT) for 
             både automatisk og manuell bestilling fra dagligvarebutikker."
             :tech [:javascript :react :redux :java :sql :git :svn]
-            :start "2017-08"}
+            :years [2017 2018 2019]}
 
             {:customer "SpareBank1 Gruppen AS"
             :employer :capgemini
@@ -101,7 +105,7 @@
             bedriftsmarkedet og rådgiverkanal. Vi utviklet felles backendkode for mobilbank, PM- og BM-sparing. 
             All kode ble også skrevet om fra JSF til REST og React/Redux."
             :tech [:javascript :react :redux :java :git :docker]
-            :start "2014-10"}
+            :years [2014 2015 2016 2017]}
 
             {:customer "SpareBank1 Gruppen AS"
             :employer :capgemini
@@ -111,7 +115,7 @@
             til PM-sparing fra nettbankkoden. Dette ble gjort ved å migrere eksisterende kode til ny 
             arkitektur. "
             :tech [:javascript :jsf :java :jenkins]
-            :start "2014-03"}
+            :years [2014]}
 
             {:customer "SpareBank1 Gruppen AS"
             :employer :capgemini
@@ -120,7 +124,7 @@
              i mobilbanken. Dette innebærte å lage et nytt GUI som koblet seg på eksisterende 
             backend i nettbanken. "
             :tech [:javascript :rest :java :jenkins]
-            :start "2013-12"}
+            :years [2013 2014]}
 
              {:customer "SpareBank1 Gruppen AS"
             :employer :capgemini
@@ -130,7 +134,7 @@
              for frontend og backend, og hadde spesielt ansvar for fondshandelapplikasjonen i nettbanken
               og rådgiverkanalen. "
             :tech [:javascript :jsf :java :jenkins :git]
-            :start "2013-03"}
+            :years [2013]}
 
             {:customer "SpareBank1 Gruppen AS"
             :employer :capgemini
@@ -140,7 +144,7 @@
              til fullstackutvikler. Var en svært sentral ressurs i prosjektet og var involvert i 
              de fleste utfordringer som dukket opp. "
             :tech [:jsf :java :jenkins :git ]
-            :start "2013-03"}
+            :years [2012 2013]}
 
             {:customer "Bærum kommunne"
             :employer :capgemini
@@ -149,9 +153,8 @@
             :description "Jobbet som utvikler i det tekniske teamet. Var med i designfasen av prosjektet 
             og jobbet med integrasjon av komponenter til større enheter av systemet."
             :tech []
-            :start "2011-11"}]
+            :years [2011 2012]}]
 
-:cv-picture "/foto/profiles/ashild/ashild.jpg"
 
 :presentations [{:title "Content Security Policy - Hva er din side lastet med?"
                   :blurb "En kjapp introduksjon og how-to til bruk av CSP på
@@ -178,7 +181,15 @@
                  minst faglig! Du jobber godt i både teamarbeid men også mer 
                  selvstendig. Du er gjerne med på å diskutere/finne nye 
                  løsninger/metoder i tillegg til at du tar ansvar for det man 
-                 evt måtte forvalte. Jeg ønsker deg lykke til!"}]
+                 evt måtte forvalte. Jeg ønsker deg lykke til!"}
+                 {:author "Tore Skjulstad Bryhni"
+                 :title "Avdelingsleder i Statnett SF"
+                 :quote "Åshild er en dyktig utvikler. Hun leverer med god kvalitet
+                  i alle faser av arbeidet fra analyse av brukeren sine behov og helt 
+                  ut til løsningen kjører i produksjon. I Statnett er vi opptatt av å ha
+                   en god faglig diskusjon i teamet når vi velger hvordan løsningene skal lages. 
+                   Åshild har vært en god bidragsyter i dette arbeidet i tillegg til jobben med 
+                   å lage løsningene vi kommer frem til med god kvalitet."}]
 
 :education-summary "Kommunikasjonsteknologi, NTNU"
 :education [{:institution "Kommunikasjonsteknologi, NTNU"
@@ -199,13 +210,14 @@
                       {:blurb "Splittet opp monolitten i SpareBank1 til en distribuert arkitektur"
                        :customer "Sparebank1"}]
 
- :endorsement-highlight {:author "Brit Kaaresen"
-                         :title "Teamleder, Team Sparing, SpareBank1"
-                         :quote "Du er en dyktig utvikler som bidrar både sosialt og ikke 
-                 minst faglig! Du jobber godt i både teamarbeid men også mer 
-                 selvstendig. Du er gjerne med på å diskutere/finne nye 
-                 løsninger/metoder i tillegg til at du tar ansvar for det man 
-                 evt måtte forvalte."}
+ :endorsement-highlight {:author "Tore Skjulstad Bryhni"
+                         :title "Avdelingsleder i Statnett SF"
+                         :quote "Åshild er en dyktig utvikler. Hun leverer med god kvalitet
+                  i alle faser av arbeidet fra analyse av brukeren sine behov og helt 
+                  ut til løsningen kjører i produksjon. I Statnett er vi opptatt av å ha
+                   en god faglig diskusjon i teamet når vi velger hvordan løsningene skal lages. 
+                   Åshild har vært en god bidragsyter i dette arbeidet i tillegg til jobben med 
+                   å lage løsningene vi kommer frem til med god kvalitet."}
 
 :cv {:default {:preferred-techs [:react :typescript :java
                 :intellij :terminal 
