@@ -176,7 +176,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :projects
  [
   {:customer    "Mnemonic"
-   :description "Utvikling av applikasjon tilknyttet sitt system, Argus."
+   :description "Utvikling av applikasjon tilknyttet mnemonic sitt system, Argus."
    :years       [2020]
    :employer    :kodemaker
    :summary     "Utvikling av applikasjon."
