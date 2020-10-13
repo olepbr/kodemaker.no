@@ -1,0 +1,10 @@
+{:id :flutter
+ :name "Flutter"
+ :type :frontend
+ :illustration "/photos/tech/flutter.svg"
+ :site "http://flutter.dev/"
+ :description
+ "[Flutter](http://flutter.dev/) er et rammeverk for å lage mobile applikasjoner for Android, desktop, web og iOS. Det er laget av google og har god støtte for material design. Det finnes en rekke plugins for å gjøre platform-spesifikke ting for Android og iOS, samtidig som det er relativt enkelt å kommunisere med platform-spesifikk kode. 
+
+Flutter er sterkt inspirert av React og lar deg skrive deklarativ kode for UI. Det er lett å komme i gang og det er et stort pluss at stateful hot-reloading er innebygd. Konkurrenter til Flutter er react-native og xamarin. 
+ "}
