@@ -1,7 +1,7 @@
 {:id :dart
  :name "Dart"
  :type :proglang
- :illustration "/photos/tech/dart.svg"
+ :illustration "/photos/tech/dart.png"
  :site "http://dart.dev/"
  :description
  "[Dart](http://dart.dev/) er et språk som er utviklet av Google for å lage UI for web, desktop og mobile applikasjoner. Selve språket er ikke revolusjonerende, og minner gjerne om kotlin hvis man har vært borti det og swift hvis man har vært borti det. Det er et sterkt typet objekt-orientert språk med støtte for generics, polymorfisme og en solid concurrency-modell som mange vil kjenne seg igjen i. 
