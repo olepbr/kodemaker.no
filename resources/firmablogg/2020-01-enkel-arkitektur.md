@@ -85,6 +85,10 @@ Observer hvordan alle pilene strømmer ut fra `main`, og én vei. Event bus-en e
 grepet som inverterer avhengigheten slik at vi kan kommunisere handlinger uten å
 innføre sirkulære avhengigheter.
 
+PSST! [Ove](https://twitter.com/ovegram/status/1222819751279329281) stilte et
+betimelig spørsmål når denne bloggposten ble publisert. Som svar har jeg skrevet
+litt mer om [samspillet mellom generiske UI-komponenter](/blogg/2020-10-samspill-mellom-generiske-ui-komponenter/).
+
 ## Fra domenedata til generiske komponenter
 
 Ettersom komponentene ikke snakker domenespråk, så trenger vi en tolk. Det er
