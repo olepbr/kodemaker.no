@@ -71,6 +71,7 @@ Noen triks:
 - husk at dette nesten alltid går raskt nok, men hvis ikke ...
 - kanskje det holder å oppdatere på `onBlur` istedet for `onKeyUp`?
 - kanskje `prepare` kan deles i to: en for tunge operasjoner og en for raske?
+- kanskje en liten throttle kan være til hjelp?
 - kanskje du kan bruke den alternative tilnærmingen fra neste avsnitt?
 
 Ove spurte: "Hvem har ansvaret for å ta verdien fra
