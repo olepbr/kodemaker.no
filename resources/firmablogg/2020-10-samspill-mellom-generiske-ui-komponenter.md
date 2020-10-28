@@ -1,7 +1,7 @@
 :title Samspill mellom generiske UI-komponenter
 :published 2020-10-28
 :author magnar
-:tech [:frontend :design :functional-programming]
+:tech [:frontend :design :funksjonell-programmering]
 
 :blurb
 
