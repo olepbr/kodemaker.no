@@ -12,9 +12,9 @@
             :linkedin "/in/fredrikaubert"
             :github "fredrikaubert"}
 
- :tech {:favorites-at-the-moment [:react :redux :groovy :grails ]
-        :want-to-learn-more [:clojure :kubernetes]
-        :using-at-work [:react :redux :groovy :grails]}
+ :tech {:favorites-at-the-moment [:react :redux :kotlin :micronaut]
+        :want-to-learn-more [:clojure :go :kubernetes]
+        :using-at-work [:react :redux :groovy :kotlin :micronaut :aws :terraform ]}
 
  :hobbies [{:title "MC"
             :description "Aktiv i firmaets MC-klubb; Codebreakers, som årlig drar på flere turer rundt om i Norge. Liker å utvikle mc-ferdighetene på bane."
