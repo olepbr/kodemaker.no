@@ -54,13 +54,31 @@
                    (fn [[_ url]]
                      (str "url(" (f url) ")"))))))
 
+(defn replace-path-fn [f]
+  (fn [path]
+    (str/replace path #"(\S+)(\s+\S+)?"
+               (fn [[_ path suffix]]
+                 (str (f path) suffix)))))
+
+(defn replace-paths-fn [f]
+  (fn [paths]
+    (when paths
+      (str/join ", "
+                (map (replace-path-fn f)
+                     (str/split paths #",\s*"))))))
+
+(defn update-img-attrs [node f]
+  (update-attr node "src" f)
+  (when (.getAttribute node "srcset")
+    (update-attr node "srcset" (replace-paths-fn f))))
+
 (defn- tweak-page-markup [html image-asset-config request]
   (try
     (html5-walker/replace-in-document
      html
      {
       ;; use optimized images
-      [:img] #(update-attr % "src" (optimize-path-fn image-asset-config request))
+      [:img] #(update-img-attrs % (optimize-path-fn image-asset-config request))
       [:.w-style-img] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
       [:.section] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
       [:video :source] #(update-attr % "src" (optimize-path-fn image-asset-config request))

@@ -24,6 +24,15 @@
  ((replace-urls-fn str/upper-case) "url(foobar), url(barfoo)") => "url(FOOBAR), url(BARFOO)")
 
 (fact
+ ((replace-path-fn str/upper-case) "/images/blog/test-1.png") => "/IMAGES/BLOG/TEST-1.PNG"
+ ((replace-path-fn str/upper-case) "/images/blog/test-1-2x.png 2x") => "/IMAGES/BLOG/TEST-1-2X.PNG 2x")
+
+(fact
+ ((replace-paths-fn str/upper-case) "/images/blog/test-1.png") => "/IMAGES/BLOG/TEST-1.PNG"
+ ((replace-paths-fn str/upper-case) "/images/blog/test-1.png, /images/blog/test-1-2x.png 2x")
+    => "/IMAGES/BLOG/TEST-1.PNG, /IMAGES/BLOG/TEST-1-2X.PNG 2x")
+
+(fact
  (let [page (parse (prepare-page {} get-page request))]
    (-> page (select [:title]) first :content)
    => '("Systemutvikling på høyt nivå | Kodemaker")
