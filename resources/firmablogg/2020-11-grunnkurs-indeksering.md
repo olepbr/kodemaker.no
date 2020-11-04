@@ -20,7 +20,7 @@ Når vi bruker ordet indeks i forbindelse med SQL så mener vi en indeks av type
 
 ### Løvnodene
 
-Indeksen må være sortert. Derfor kan vi ikke lagre indeksen sekvensielt fordi det vil innebære at vi må flytte dataene hver gang det skjer en endring i tabellen - og det blir for kostbart. Indeksen er derfor representert som en dobbeltlenket liste som har en logisk rekkefølge som er uavhengig av hvordan den er lagret. Hver node i indeksen har en lenke til både det foregående og det neste elementet. Som en `java.util.ArrayList`. Flere innslag i indekser er gruppert sammen i blokker som er databasens minste lagringsenhet.
+Indeksen må være sortert. Derfor kan vi ikke lagre indeksen sekvensielt fordi det vil innebære at vi må flytte dataene hver gang det skjer en endring i tabellen - og det blir for kostbart. Indeksen er derfor representert som en dobbeltlenket liste som har en logisk rekkefølge som er uavhengig av hvordan den er lagret. Hver node i indeksen har en lenke til både det foregående og det neste elementet. Som en `java.util.LinkedList`. Flere innslag i indekser er gruppert sammen i blokker som er databasens minste lagringsenhet.
 
 <img alt="Figur 1: Indeks løvnoder med pekere til tilhørende tabelldata" src="/images/blogg/indeks-figur1.png" />
 
