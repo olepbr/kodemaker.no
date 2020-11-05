@@ -22,7 +22,7 @@ Når vi bruker ordet indeks i forbindelse med SQL så mener vi en indeks av type
 
 Indeksen må være sortert. Derfor kan vi ikke lagre indeksen sekvensielt fordi det vil innebære at vi må flytte dataene hver gang det skjer en endring i tabellen - og det blir for kostbart. Indeksen er derfor representert som en dobbeltlenket liste som har en logisk rekkefølge som er uavhengig av hvordan den er lagret. Hver node i indeksen har en lenke til både det foregående og det neste elementet. Som en `java.util.LinkedList`. Flere innslag i indekser er gruppert sammen i blokker som er databasens minste lagringsenhet.
 
-<img alt="Figur 1: Indeks løvnoder med pekere til tilhørende tabelldata" src="/images/blogg/indeks-figur1.png" />
+<img alt="Figur 1: Indeks løvnoder med pekere til tilhørende tabelldata" src="/images/blogg/indeks-figur1.png" srcset="/images/blogg/indeks-figur1.png, /images/blogg/indeks-figur1-2x.png 2x" />
 
 Figur 1 viser et utdrag fra en indeks på kolonnen `department_id` i tabellen `order_t` (suffix `_t` fordi order er et reservert ord i SQL). Hvert innslag i indeksen inneholder den indekserte verdien og en ID som peker til raden i den faktiske tabellen.
 
@@ -30,7 +30,7 @@ Figur 1 viser et utdrag fra en indeks på kolonnen `department_id` i tabellen `o
 
 Kort fortalt er det trestrukturen i en indeks som gjør at oppslag er raskt. Hvert innslag i de indre gren-nodene (altså de som ikke er løvnoder) består av den største verdien fra den respektive løvnoden. En gren-node inneholder verdiene til flere løvnoder og disse er også sortert på samme måte. Treet består av nok gren-noder på det første nivået til at alle løvnodene er dekket. Det neste nivået i treet bygges opp på samme måte ved at hver node inneholder de største verdiene fra hver node i det foregående nivået helt til alle innslagene får plass i én enkelt node: rotnoden.
 
-<img alt="Figur 2: Gren-noder med pekere til løvnoder" src="/images/blogg/indeks-figur2.png" />
+<img alt="Figur 2: Gren-noder med pekere til løvnoder" src="/images/blogg/indeks-figur2.png" srcset="/images/blogg/indeks-figur2.png, /images/blogg/indeks-figur2-2x.png 2x" />
 
 Figur 2 viser hvordan gren-nodene består av de største verdiene fra hver node i det neste nivået i treet. Treet er balansert slik at det alltid er like mange nivåer fra rotnoden til en hver løvnode.
 
@@ -38,7 +38,7 @@ Databasen sørger for at indeksen alltid er oppdatert og at treet er balansert e
 
 ## Oppslag i indeksen
 
-<img alt="Figur 3: Traversering av søketreet" src="/images/blogg/indeks-figur3.png" />
+<img alt="Figur 3: Traversering av søketreet" src="/images/blogg/indeks-figur3.png" srcset="/images/blogg/indeks-figur3.png, /images/blogg/indeks-figur3-2x.png 2x" />
 
 Figur 3 viser et oppslag på `department_id=3`. Oppslaget begynner på starten av rotnoden og leter sekvensielt etter en verdi som er >= 3. I dette eksemplet er det 5. Søket fortsetter på samme måte i gren-noden som 5 peker på. Vi finner her verdien 3 og følger pekeren til det neste nivået i treet. Søket gjentas på samme måte til det treffer en løvnode. Resultatet av søket vil være 0 eller flere løvnoder som matcher kriteriet. Hvis det indekserte feltet er unikt er vi garantert å få høyst ett treff.
 
