@@ -85,7 +85,7 @@ Når brukerne navigerer bort fra ditt nettsted er det som regel ingen grunn til 
 * `strict-origin-when-cross-origin`
 * `unsafe-url`.
 
-Enkelte av disse som `no-referrer` er selvforklarende, andre sørger for at du bare overfører protokoll, domene og lignende. Jeg anbefaler å ta en titt [her](https://www.w3.org/TR/referrer-policy/) for å finne et nivå som passer din applikasjon og begrenser privatlivet til dine brukere mest mulig.
+Enkelte av disse som `no-referrer` er selvforklarende, andre sørger for at du bare overfører protokoll, domene og lignende. Jeg anbefaler å ta en titt [her](https://www.w3.org/TR/referrer-policy/) for å finne et nivå som passer din applikasjon og beskytter privatlivet til dine brukere mest mulig.
 
 ## Clear-Site-Data
 
@@ -117,7 +117,7 @@ Det finnes i praksis fem måter du kan tildele tilganger, altså `*`, `self`, `s
 
 ## Content-Security-Policy 
 
-Denne headeren lar deg hvitliste hvor du tillater at nettleseren henter ressurser fra. Dette gjør at faren for såkalte Cross Site Scripting (XSS) blir betraktelig mindre. En måte dette kan gjøres på er å si at du kun ønsker å hente skript fra ditt eget nettsted, altså slik:
+Denne headeren lar deg diktere hvilke domener nettleseren har lov til å kommunisere med. Dette gjør at faren for såkalte Cross Site Scripting (XSS) blir betraktelig mindre. En måte dette kan gjøres på er å si at du kun ønsker å hente skript fra ditt eget nettsted, altså slik:
 
 ```
 Content-Security-Policy: script-src 'self'
