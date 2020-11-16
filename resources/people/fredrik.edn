@@ -2,7 +2,9 @@
  :name ["Fredrik" "Aubert"]
  :title "Utvikler"
  :start-date "2009-01-01"
- :description "Fredrik jobbet som systemutvikler siden 1999. Han har jobbet mye med moderne frontendteknologi, og er en tungvekter på både webapplikasjoner og rike klienter. Han ivrer generelt for lettvektsarkitekturer og smidige utviklingsmetodikk."
+ :description "Fredrik har lang og allsidig erfaring som systemutvikler. Han har jobbet med en mengde varierte systemer relatert til logistikk og transport de siste årene. 
+Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet brukerne faktisk trenger. Foretrekker små og effektive team, samt iterativ utvikling med raske beslutningsveier.
+"
 
  :phone-number "+47 410 21 442"
  :email-address "fredrik@kodemaker.no"
@@ -13,7 +15,7 @@
             :github "fredrikaubert"}
 
  :tech {:favorites-at-the-moment [:react :redux :kotlin :micronaut]
-        :want-to-learn-more [:clojure :go :kubernetes]
+        :want-to-learn-more [:clojure :go :elixir :kubernetes ]
         :using-at-work [:react :redux :groovy :kotlin :micronaut :aws :terraform ]}
 
  :hobbies [{:title "MC"
@@ -21,8 +23,7 @@
             :illustration "/illustrations/hobbies/fredrik-mc.jpg"},
 
            {:title "Home automation"
-            :description "Som programør lærer man seg å automatisere så mye som mulig. Hvorfor reise
-            seg fra sofaen for å skru av lyset når man skal se på film?"
+            :description "Som programør lærer man seg å automatisere så mye som mulig. Burde ikke lyset dempes automatisk når filmen starter?"
             :illustration "/illustrations/hobbies/raspberrypi.jpg"}
 
            {:title "Foto"
@@ -54,13 +55,13 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "Passasjerinformasjonssystemer og støttesystemer"
-             :years [2015 2020]
+             :years [2015 2016 2017 2018 2019 2020]
              :description "Passasjerinformasjonssystemer og støttesystemer: Et system som leverer informasjon til togsettene. Bl.a. kjøredatabase, avviksmeldinger, nyheter og værmelding."
              :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "MCC"
-             :years [2015 2019]
+             :years [2015 2016 2017 2018 2019]
              :description "MCC er en webapplikasjon for materiell kontroll, som
              rapporterer nå-situasjonen for tog-flåten og utnyttelsesgrad.
              Oppgaver: Senior Javautvikler / frontendutvikler."
@@ -76,7 +77,7 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "Pis Marketing System"
-             :years [2012 2020]
+             :years [2012 2013 2014 ]
              :description "Pis Marketing System er en webapplikasjon for å produsere
              og distribuere markedsvideoer som vises ombord i togene. Oppgaver:
              Senior Javautvikler / frontendutvikler."
@@ -84,80 +85,75 @@
             {:customer "NSB"
              :employer :kodemaker
              :summary "JODA"
-             :years [2011 2020]
+             :years [2011 2012 2013 2014 2015 2016]
              :description "JODA genererer realtime informasjon til
              passasjerinformasjonssystemet på NSBs nye togsett, slik som
              nyheter, værmelding og overgangsinformasjon. Systemet henter data
              fra innholdsleverandører og setter sammen skreddersydde pakker til
-             hvert enkelt togsett. 
-             Oppgaver: Senior Javautvikler / frontendutvikler."
+             hvert enkelt togsett. "
              :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :bootstrap :git :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "FILI"
-             :years [2010 2020]
+             :years [2010 2011 2012 2013]
              :description "FILI Håndterer realtime datakommunikasjon med NSB nye
              togsett, som overføring av diagnosedata, passasjertelling,
-             passasjerinformasjon osv. Oppgaver: Senior Javautvikler /
-             frontendutvikler."
+             passasjerinformasjon osv."
              :tech [:grails :groovy :java :spring :css :html :svn :jenkins]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "GRAILS"
-             :years [2010 2020]
+             :years [2010 2011 2012]
              :description "GRAILS Et system som beskriver geografien og
              stasjonene i NSBs domene. Dette er masterdatabase for andre NSB
-             systemer. Oppgaver: Senior Javautvikler / frontendutvikler."
+             systemer. "
              :tech [:grails :java :gorm :spring :testng :css :html :javascript :jquery :svn :maven]}
             {:customer "NSB"
              :employer :kodemaker
              :summary "PAIN"
-             :years [2009 2020]
-             :description "PAIN Utvikling av en applikasjon for automatisk
+             :years [2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020]
+             :description "Utvikling av en applikasjon for automatisk
              generere databasen som styrer passasjerinformasjons-anleggene
-             ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l.
-             Oppgaver: Senior Javautvikler / frontendutvikler"
+             ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l."
              :tech [:griffon :groovy :java :spring :junit :svn :maven :java-sound-framework]}
             {:customer "HRM Group"
              :employer :kodemaker
              :summary "Lederindeksen"
              :years [2009]
              :description "Utvikling av måleverktøy for Ledere.
-             www.lederindeksen.no Oppgaver: Seniorutvikler"
+             www.lederindeksen.no"
              :tech [:ruby :rails :rake]}
             {:customer "Statens Pensjonskasse"
              :employer :kodemaker
-             :summary "Nytt saksbehandlingssystem for SPK"
+             :summary "Nytt saksbehandlingssystem for SPK."
              :years [2009]
-             :description "Utvikling av saksbehandlingssystem. Oppgaver: Utvikler"
+             :description "Utvikling av saksbehandlingssystem."
              :tech [:java :flex :maven :hudson :hibernate :javascript]}
             {:customer "Forsvaret"
              :employer :kodemaker
              :years [2009]
-             :description "Oppgaver: Utvikler"
+             :summary "Amplan"
+             :description "Planlegging og bestillingssystem for ammunisjon."
              :tech [:java :spring-mvc :javascript :html]}
             {:customer "Tandberg"
              :employer :objectware
              :summary "Telepresence"
              :years [2008]
              :description "Telepresence. Utvikling av styresystem for Tandbergs
-             prestisjeprodukt T3. Oppgaver: Senior Java / frontendutvikler.
-             Utvikling av GUI i Swing."
+             prestisjeprodukt T3."
              :tech [:java :swing :spring :svn :junit]}
             {:customer "Western Geco"
              :employer :objectware
              :summary "Støttesystemer for Seismikk"
              :years [2008]
              :description "Støttesystemer for Seismikk Prisberegningssystem for
-             seismikkjobber - en rik klient i Swing. Oppgaver: Senior Java /
-             frontendutvikler."
+             seismikkjobber - en rik klient i Swing."
              :tech [:java :swing :hudson]}
             {:customer "Cicero"
              :employer :objectware
              :summary "Cicero Financial Portal"
              :years [2007]
-             :description "Finansportal Utvikling av Ciceros Finansportal
-             Oppgaver: Senior Java- / frontendutvikler."
+             :description "Utvikling av Ciceros Finansportal"
              :tech [:java :jsp :struts2 :css :html :sql :portlets :oracle-portal
                     :oracle-appserver :eclipse :maven :svn :spring :junit :hudson]}
             {:customer "CSAM/Rikshospitalet"
@@ -169,8 +165,7 @@
              bl.a. med på å muliggjøre sammenslåingen av Rikshospitalet og
              Radiumhospitalet. Startet som et prosjekt hos Rikshospitalet men
              vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
-             bruk på flere sykehus i Vestmanlän i Sverige. Oppgaver: Senior Java
-             / frontendutvikler. Portalutvikling av ajaxintensive portlets."
+             bruk på flere sykehus i Vestmanlän i Sverige."
              :tech [:java :jsp :struts :prototype :ajaxanywhere :javascript
                     :css :html :portlets :oracle-portal :oracle-appserver :intellij
                     :ant :svn :cvs :jstl :spring :junit :hudson]}
@@ -178,30 +173,26 @@
              :employer :objectware
              :summary "Intranett portal"
              :years [2006]
-             :description "Intranett portal Utvikling av Intranett Oppgaver:
-             Senior Java / frontendutvikler. Portalutvikling av ajaxintensive
-             portlets."
+             :description "Utviklet portlets til skatteetatens intranet-portal."
              :tech [:java :escenic :oracle-portal]}
             {:customer "DnbNor"
              :employer :accenture
              :summary "Postbanken Nettbank"
              :years [2005]
-             :description "Utvikling av Postbankens Nettbank Oppgaver: Ansvarlig
-             for design og utvikling av forskjellige moduler."
+             :description "Utviklet moduler til Postbankens Nettbank"
              :tech [:java :html]}
             {:customer "Norgesgruppen"
              :employer :accenture
              :summary "Intranett og Matsikkerhetsportal"
              :years [2004]
-             :description "Intranett Oppgaver: Utvikler av Intranett portal for
+             :description "Utviklet Intranett portal for
              Norgesgruppens forskjellige kjeder."
              :tech [:java :escenic :oracle-portal]}
             {:customer "DnbNor"
              :employer :accenture
              :summary "Postbanken Nettbank"
              :years [2003]
-             :description "Utvikling av Postbankens Nettbank Oppgaver: Ansvarlig
-             for design og utvikling av forskjellige moduler."
+             :description "Design og utvikling av forskjellige moduler i Postbankens Nettbank."
              :tech [:java :html]}
             {:customer "Canal Digital"
              :employer :accenture
@@ -215,17 +206,16 @@
             {:customer "SuperOffice"
              :employer :superoffice
              :summary "Intranet portal"
-             :years [1999]
-             :description "Utvikling av Intranett produkt Oppgaver: Utvikler av
+             :years [1999, 2000]
+             :description "Bygge
              forskjellige moduler, som dokumentarkiv, diskusjonsforum,
-             publiseringsverktøy. Prosjektleder/Utvikler for SDK til produktet"
+             publiseringsverktøy. "
              :tech [:vbscript :asp :javascript :mssql]}
             {:customer "Trumf"
              :employer :superoffice
              :summary "Nettbutikk"
              :years [2001]
-             :description "Nettbutikk Oppgaver: Utviklet Trumfs nettbutikk i et
-             team bestående av meg, en database dud og en web designer"
+             :description "Utviklet Trumfs nettbutikk."
              :tech [:vbscript :asp :oracle :html :javascript]}]
 
  :innate-skills [:mariadb  :jenkins]
@@ -239,18 +229,9 @@
                                  :jenkins
                                  ]}}
 
- :cv/description "Fredrik har jobbet som utvikler siden 1999, og har har vært
- innom en rekke forskjellige teknologer, med spesiell fokus på frontend, både
- web og rike klienter. Han er opptatt av å velge riktig teknolog for å møte
- kundens behov, og han tilegner seg raskt domenekunnskap i prosjektene han
- deltar i.
-
- Med et ønske om å levere kvalitet ligger smidige utviklingsmetodikker hans
- hjerte nært. Scrum har vært brukt i de fleste prosjektene han har deltatt i de
- siste årene.
-
- Jobb skal være gøy, og Fredrik bidrar både sosialt og faglig for at teamet skal
- yte sitt beste. "
+ :cv/description "Fredrik har lang og allsidig erfaring som systemutvikler. Han har jobbet med en mengde varierte systemer relatert til logistikk og transport de siste årene. 
+Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet brukerne faktisk trenger. Foretrekker små og effektive team, samt iterativ utvikling med raske beslutningsveier.
+"
 
 
 :endorsements [{:author "Kent Kolnes"
@@ -276,8 +257,9 @@
 
  :education-summary "Dataingeniør, HiG"
  :experience-since 1999
- :qualifications ["Fullstack utvikler"
-                  "Lang erfaring med Groovy og Grails"
+ :qualifications ["Fullstack utvikler, jobber gjerne med hele stacken"
+                  "Foretrekker små og effektive team"
+                  "Mye erfaring med transport- og logistikksystemer"
                   "God domeneforståelse og gode samarbeidsevner"
                   ]
  :certifications [{:name "JavaScript/JQuery", :year 2009}
@@ -316,10 +298,11 @@
                                  fornøyd med hvordan Fredrik bidrar med forslag både i arkitektur spørsmål
                                  og i løsninger. "}
 
- :project-highlights [{:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
+ :project-highlights [
+                     {:blurb "Microtjenester som tilbyr trafikkinformasjon, basert på Kotlin, Micronaut og AWS"
+                      :customer "Vy"}
+                     {:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
                        :customer "NSB"}
-                      {:blurb "Planlegging og bestillingssystem for ammunisjon"
-                       :customer "Forsvaret"}
                       {:blurb "System for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy"
                        :customer "NSB"}]
 
