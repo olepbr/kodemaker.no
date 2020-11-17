@@ -220,8 +220,10 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
 
  :innate-skills [:mariadb  :jenkins]
 
- :cv {:default {:preferred-techs [:groovy :javascript :grails
-                                 :react :redux  
+ :cv {:default {:preferred-techs [
+                                 :react :redux
+                                 :kotlin :closure :groovy :javascript :grails
+                                 :micronaut
                                  :gradle :maven
                                  :git :svn :cvs
                                  :mariadb :oracle :mssql
@@ -303,7 +305,7 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
                       :customer "Vy"}
                      {:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
                        :customer "NSB"}
-                      {:blurb "System for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy"
+                      {:blurb "Løsning for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy og React/Redux"
                        :customer "NSB"}]
 
  }
