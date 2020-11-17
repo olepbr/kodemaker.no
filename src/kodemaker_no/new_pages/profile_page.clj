@@ -63,7 +63,7 @@
           :title "Teknologi"
           :categories (->> (for [[k label] technology-categories]
                              {:label label
-                              :items (for [tech (unwrap-idents person k)]
+                              :items (for [tech (h/unwrap-ident-list person k)]
                                        {:text (:tech/name tech)
                                         :href (:page/uri tech)})})
                            (remove (comp empty? :items)))

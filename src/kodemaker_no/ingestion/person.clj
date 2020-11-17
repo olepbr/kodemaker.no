@@ -270,7 +270,7 @@
         (assoc :person/full-name (str/join " " (:name person)))
         (assoc :person/profile-active? (get person :profile-active? true))
         (assoc :person/quit? (get person :quit? false))
-        (merge (h/map-vals h/prep-techs (h/keep-vals (:tech person {}) tech-keys)))
+        (merge (h/map-vals h/prep-tech-list (h/keep-vals (:tech person {}) tech-keys)))
         (maybe-pagify file-name))))
 
 (defn cv-data [file-name person profile]

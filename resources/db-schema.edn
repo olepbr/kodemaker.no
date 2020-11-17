@@ -468,14 +468,17 @@
 
  {:db/ident :person/using-at-work
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/favorites-at-the-moment
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/want-to-learn-more
   :db/valueType :db.type/ref
+  :db/isComponent true
   :db/cardinality :db.cardinality/many}
 
  {:db/ident :person/recommendations

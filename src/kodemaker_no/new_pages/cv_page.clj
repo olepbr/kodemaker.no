@@ -51,7 +51,7 @@
   (mapcat :project/techs (:person/projects person)))
 
 (defn gather-all-techs [db cv person]
-  (->> (concat (:person/using-at-work person)
+  (->> (concat (map :list/ref (:person/using-at-work person))
                (:person/innate-skills person)
                (side-project-techs person)
                (blog-post-techs person)
