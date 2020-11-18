@@ -528,7 +528,7 @@ Her er kravspesifikasjonen vår:
 * Vis en tekslinje som én lang tekst, ikke en span per bokstav (sånn at nettleseren får rendret den fint)
 * Mål faktisk størrelse på bokstaver slik de er, når de er tegnet slik.
 
-Det får vi faktisk til, med "ranges". Et API du aldri trodde du skulle få bruk for! Men nå ha endelig (😅) dagen kommet.
+Det får vi faktisk til, med "ranges". Et API du aldri trodde du skulle få bruk for! Men nå hra endelig (😅) dagen kommet.
 
 <div id="lol_dragon_text_epic_mode">AV Wa AV Wa AV Wa AV Wa</div>
 
