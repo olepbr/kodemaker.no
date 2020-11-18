@@ -167,15 +167,15 @@
    {:label      {:no "Bruker på jobben"}
     :key_points (map (fn [tech-ref]
                        {:name {:no (:tech/name (d/entity db tech-ref))}})
-                     (map :list/ref (:person/using-at-work person)))}
+                     (h/entity-seq (:person/using-at-work person)))}
    {:label      {:no "Favoritter for tiden"}
     :key_points (map (fn [tech-ref]
                        {:name {:no (:tech/name (d/entity db tech-ref))}})
-                     (map :list/ref (:person/favorites-at-the-moment person)))}
+                     (h/entity-seq (:person/favorites-at-the-moment person)))}
    {:label      {:no "Vil lære mer av"}
     :key_points (map (fn [tech-ref]
                        {:name {:no (:tech/name (d/entity db tech-ref))}})
-                     (map :list/ref (:person/want-to-learn-more person)))}
+                     (h/entity-seq (:person/want-to-learn-more person)))}
    {:label      {:no "Open source bidrag"}
     :key_points (map (fn [osc]
                        {:name             {:no (:oss-project/name osc)}

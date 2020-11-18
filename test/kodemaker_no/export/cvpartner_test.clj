@@ -82,8 +82,8 @@
                  {:key_points [{:name {:no "TypeScript"}}
                                {:name {:no "Groovy"}}]
                   :label      {:no "Prefererte teknologier"}}
-                 {:key_points [{:name {:no "Redux"}}
-                               {:name {:no "React"}}
+                 {:key_points [{:name {:no "React"}}
+                               {:name {:no "Redux"}}
                                {:name {:no "TypeScript"}}]
                   :label      {:no "Bruker på jobben"}}
                  {:key_points [{:name {:no "Reinforcement learning"}}]
