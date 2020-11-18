@@ -180,12 +180,13 @@
     :key_points (map (fn [osc]
                        {:name             {:no (:oss-project/name osc)}
                         :long_description {:no (str/join
-                                                 "\n"
-                                                 (filter identity
-                                                         [(str-or-nil "Url: " (:oss-project/url osc))
-                                                          (str-or-nil "Techs: " (map (fn [tech-ref]
-                                                                                       {:name {:no (:tech-name (d/entity db tech-ref))}})
-                                                                                     (:oss-project/tech-list osc)))]))}})
+                                                "\n"
+                                                (filter identity
+                                                        [(str-or-nil "Url: " (:oss-project/url osc))
+                                                         (str-or-nil "Techs: " (some->> (h/unwrap-ident-list osc :oss-project/tech-list)
+                                                                                        (keep :tech/name)
+                                                                                        seq
+                                                                                        (str/join ", ")))]))}})
                      (:person/open-source-contributions person))}])
 
 

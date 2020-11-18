@@ -90,7 +90,7 @@
                   :label      {:no "Favoritter for tiden"}}
                  {:key_points [{:name {:no "Tensorflow js"}}]
                   :label      {:no "Vil lære mer av"}}
-                 {:key_points [{:long_description {:no "Url: https://github.com/grails/grails-core/commits?author=trygvea\nTechs: clojure.lang.LazySeq@753aa147"}
+                 {:key_points [{:long_description {:no "Url: https://github.com/grails/grails-core/commits?author=trygvea\nTechs: Grails"}
                                 :name             {:no "grails-core"}}]
                   :label      {:no "Open source bidrag"}}
                  ]
