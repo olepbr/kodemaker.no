@@ -222,7 +222,7 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
 
  :cv {:default {:preferred-techs [
                                  :react :redux
-                                 :kotlin :closure :groovy :javascript :grails
+                                 :kotlin :groovy :javascript :grails
                                  :micronaut
                                  :gradle :maven
                                  :git :svn :cvs
