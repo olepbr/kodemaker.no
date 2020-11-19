@@ -492,7 +492,7 @@ Vi prøver oss på en dum implementasjon av å måle tekst, som baserer seg på 
   GLOBAL.libDragonLolTextRunAnimation({
     target: target,
     text: text,
-    label: "En og en bokstav med createRange",
+    label: "En og en bokstav",
     measuredChars: GLOBAL.libDragonLolTextMeasureShitty(text)
   });
 }(window))
@@ -540,7 +540,7 @@ Det får vi faktisk til, med "ranges". Et API du aldri trodde du skulle få bruk
   GLOBAL.libDragonLolTextRunAnimation({
     target: target,
     text: text,
-    label: "En og en bokstav med createRange",
+    label: "Setning i kontekst med createRange",
     measuredChars: GLOBAL.libDragonLolTextMeasureProperly(text)
   });
 }(window))
