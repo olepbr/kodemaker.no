@@ -181,7 +181,10 @@
  :data
  {:label "Data"
   :parent :other
-  :idx 95}
+  :idx 95
+  :techs
+  [:json
+   :xml]}
 
  :database
  {:label "Database"
@@ -298,7 +301,6 @@
    :spark
    :teamcity
    :terraform
-   :toad
    :traefik
    :varnish
    :vault
@@ -331,6 +333,7 @@
    :springsource-tool-suite
    :systemjs
    :terminal
+   :toad
    :togetherj
    :vagrant
    :visual-age
@@ -381,6 +384,7 @@
    :vim
    :visual-studio
    :visual-studio-appcenter
+   :vscode
    :websphere-studio
    :xcode
    :xmlspy]}
@@ -437,6 +441,7 @@
    :less
    :mapbox
    :material-ui
+   :neptune
    :om
    :om-next
    :oocss
@@ -658,6 +663,7 @@
    :shell
    :solaris
    :ssh
+   :suse-linux
    :terminator
    :thrift
    :ubuntu
@@ -890,6 +896,7 @@
    :grails
    :graphql
    :groovyws
+   :gsp
    :gwt
    :html5
    :https
@@ -948,6 +955,7 @@
    :struts2
    :swagger
    :tapestry
+   :thymeleaf
    :tomcat
    :unfiltered
    :unity3d
@@ -980,9 +988,9 @@
    :ms-dna
    :ms-market
    :mts
-   :neptune
    :orion
    :paradox
+   :powercenter
    :silverstream
    :spring-batch
    :spring-integration
