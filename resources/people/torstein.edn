@@ -25,8 +25,8 @@
             :linkedin "/in/tmeland/"
             :github "tmetrue"}
 
- :tech {:using-at-work [:groovy :grails :java :spring :neptune :javascript :bootstrap]
-        :favorites-at-the-moment [:groovy :grails]
+ :tech {:using-at-work [:groovy :grails :java :spring-boot :react :typescript :javascript :bootstrap]
+        :favorites-at-the-moment [:react :typescript :material-ui]
         :want-to-learn-more [:clojure :emacs :swift]}
 
  :qualifications ["Fullstack, åpen for alle utfordringer"
