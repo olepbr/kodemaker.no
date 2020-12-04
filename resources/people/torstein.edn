@@ -140,7 +140,7 @@
              applikasjoner. Utvikling av grensesnitt mellom SAP og andre
              forvaltningssystem, samt tilpasning av disse systemene slik at de
              samspiller med SAP. Oppgaver: Senior Javautvikler."
-             :tech [:j2ee :java :jsp :javascript :rest :struts :json :xml :spring :jpa :hibernate :apache :jboss :bash :solaris :oracle :sql :plsql :toad :maven :svn :eclipse :intellij :webmethods :powercenter]}
+             :tech [:j2ee :java :jsp :javascript :rest :struts :json :xml :spring :jpa :hibernate :apache :jboss :bash :solaris :oracle :sql :plsql :toad :maven :svn :eclipse :intellij :webmethods :powercenter :windows]}
             {:customer "TAD"
              :years [2006]
              :employer :kodemaker
