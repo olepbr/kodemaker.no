@@ -135,8 +135,7 @@
              :years [2007 2008 2009 2010 2011 2012 2013 2014]
              :employer :kodemaker
              :summary "EDBVT, Amplan3, Amplan4, Ammunisjonsrestriksjoner, Datakvalitetsmonitor"
-             :description "EDBVT, Amplan, Ammunisjonsrestrksjoner,
-             Datakvalitetsmonitor Videreutvikling på flere av forsvarets
+             :description "Videreutvikling på flere av forsvarets
              applikasjoner. Utvikling av grensesnitt mellom SAP og andre
              forvaltningssystem, samt tilpasning av disse systemene slik at de
              samspiller med SAP. Oppgaver: Senior Javautvikler."
