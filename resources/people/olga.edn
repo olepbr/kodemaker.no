@@ -1,13 +1,13 @@
 {:id :olga
  :name ["Olga" "Voronkova"]
- :title "Systemutvikler"
+ :title "Kodeknekker"
  :start-date "2019-03-01 00:09"
  :experience-since 2013
  :born 1988
- :description "Olga har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
+ :description "Olga har de siste årene jobbet som app- og
  frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend."
 
- :cv/description "Olga er konsulent i Kodemaker. Hun har universitetsbakgrunn som backendutvikler, men har de siste årene jobbet som app- og
+ :cv/description "Olga er konsulent i Kodemaker. Hun har de siste årene jobbet som app- og
                  frontendutvikler med designkvalitet og universell utforming i fokus. I prosjekter trives Olga både i store og små teams, og fungerer ofte som et bindeledd mellom design og backend.
 
                  Hun liker å lære seg nye ting, og tilegner seg raskt ny kunnskap.
@@ -19,12 +19,11 @@
 
  :presence { :cv "olga"
             :linkedin "/in/olgavoronkova"
-            :twitter "tr0llga"
           }
 
- :tech {:using-at-work [:react :react-native :typescript :javascript]
+ :tech {:using-at-work [:react-native :typescript :javascript]
         :favorites-at-the-moment [:xamarin-forms :responsive-design]
-        :want-to-learn-more [:react-native :hololens :unity :wearables :clojure]}
+        :want-to-learn-more [:flutter :hololens :unity :wearables :clojure]}
 
  :qualifications ["Mobil- og frontendutvikler"
                   "Opptatt av designkvalitet"
@@ -94,8 +93,9 @@
    :employer :kodemaker
    :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
    utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
-   mottagerene av pakkene (pakkesporing, osv)."
+   mottagerene av pakkene (pakkesporing, osv). Ansvar for å vedlikeholde og virereutvikle app-løsningen til sjafører."
    :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
+
    {:customer "Rikshospitalet"
      :start "2018-07"
      :end "2018-07"
@@ -103,6 +103,7 @@
      :employer :steria
      :description "HoloCare er innovasjonssenter for utvikling av mixed reality-løsninger innen helse. Olga hadde et sterkt ønske om å lære seg denne teknologien, og jobbet derfor under sommeren med et team på fire på ett av prosjektene til HoloCare."
      :tech [:hololens :unity :csharp]}
+
   {:customer "Avinor"
    :start "2017-05"
    :end "2018-06"
@@ -110,6 +111,7 @@
    :employer :steria
    :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming. I løpet av oppdragsperioden hadde Olga rollen som app-utvikler, men tok også på seg ansvar som tech lead og scrum master i en periode."
    :tech [:xamarin-forms :xaml :csharp :ios :android :gitlab :zeplin :visual-studio-appcenter :voiceover :talkback :visual-studio]}
+
    {:customer "Brønnøysundregistrene"
     :start "2016-08"
     :end "2017-04"
@@ -117,6 +119,7 @@
     :employer :steria
     :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
     :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
+
     {:customer "SEB Oslo AS"
      :start "2015-05"
      :end "2016-06"
@@ -124,6 +127,7 @@
      :employer :quesnay
      :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
      :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
+
      {:customer "Posten og Bring"
       :start "2016-02"
       :end "2016-07"
@@ -135,6 +139,72 @@
       Olga jobbet med den nettbaserte quiz'en og implementerte frontend basert på skissene levert av Ernö.
       Teamet bestod av en designer, en backendutvikler og en frontendutvikler."
       :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
+
+      {:customer "Kopinor"
+       :years [2014 2015]
+       :summary "Nye nettsider til Skaff.no"
+       :employer :computas
+       :description "Skaff.no inneholder tusenvis av boktitler som kan bestilles for klargjøring og opptrykk. De nye nettsidene er oversiktlige, har ordrehistorikk tilgjengelig og gjør det mulig å betale for bestillingen med kort eller få tilsendt faktura."
+       :tech [:csharp :html :sass :javascript]}
+
+      {:customer "Statens legemiddelverk"
+       :years [2014]
+       :summary "eResept"
+       :employer :computas
+       :description "FEST/eResept prosjektet er en del av det totale eResept-programmet, som har som formål å innføre elektroniske resepter i Norge. Computas' utviklingskontrakt med SLV omfatter utvikling av det interne saksbehandlingssystemet Athene, samt formidling av grunndata via FEST-tjenesten til de andre aktørene i eResept-programmet. Deler av løsningen som tilbys er behandling av legemidler på godkjenningsfritak, som ikke har markedsføringstillatelse i Norge. Computas har utviklet et separat saksbehandlingssystem for dette. Denne løsningen har strenge sikkerhetsmekanismer, og følger Norsk Helsenett norm for informasjonssikkerhet.
+
+Del av eResept-programmet som har som formål å innføre elektroniske resepter i Norge. Computas' utviklingskontrakt med Statens Legemiddelverk (SLV) omfatter utvikling av det interne saksbehandlingssystemet Athene, samt formidling av grunndata via FEST-tjenesten til de andre aktørene i eResept-programmet. Athene på Nett er legemiddelsøk tilgjengelig for forbrukerne på SLVs sider; www.legemiddelverket.no som henter og viser informasjon fra Athene.
+"
+       :tech [:dotnet :visual-studio :jira]}
+
+      {:customer "BufDir"
+       :years [2012 2013]
+       :summary "Mobil-app PappaTid for BufDir"
+       :employer :computas
+       :description "PappaTid er en app for nybakte pappaer i permisjon. Appen gir oversikt over aktiviteter i nærområdet, over profiler til andre pappaer, og gir mulighet for å opprette egne aktiviteter, bli med på en aktivitet, finne frem ved hjelp av kart, og legge til andre pappaer i egen krets. Appen tillater også login gjennom Facebook."
+       :tech [:objective-c]}
+
+       {:customer "ConocoPhillips"
+        :years [2012]
+        :summary "Møte-webapp for CODIO"
+        :employer :computas
+        :description "Videreutvikle den eksisterende CODIO web-løsningen for møter med ny design og dynamisk Jquery/Knockout funksjonalitet som tillater alle møtedeltagere til å følge med på referatet direkte under møte, og legge til oppgaver knyttet til brukere i systemet. Design av konseptet i team med fokus på intuitiv og brukervennlig løsning."
+        :tech [:jquery :knockout]}
+
+        {:customer "Corbell"
+         :years [2012]
+         :summary "Mobil-app Corbell WorkBox"
+         :employer :computas
+         :description "Corbell WorkBox mobil-app er rettet mot servicenæringen. Appen gir muligheter for å se egne skift i måneds- og dagskalender, bytte skift med andre, redigere profil, se nedtellingen til neste vakt og se nyheter fra bransjen."
+         :tech [:flex]}
+
+         {:customer "Computas"
+          :years [2012]
+          :summary "Mobil-app Interactor"
+          :employer :computas
+          :description "Interactor er et nyttig verktøy for å kommunisere med publikum under foredrag. Publikum kan gi tilbakemelding om at de forstår/ikke forstår presentasjonen, og sende inn spørsmål til foredragsholderen underveis."
+          :tech [:flex]}
+
+          {:customer "Mattilsynet"
+           :years [2011]
+           :summary "Mobil-app Mamot"
+           :employer :computas
+           :description "Laget en mobil-applikasjon for å inspiserer steder som selger/behandler næringsmidler. Løsningen viser inspektørens tilsyn. Inspektør kan ringe, sende SMS eller maile kontaktpersonen i tillegg til å se kart over stedet tilsynet skal skje. Inspektør velger områder og gjenstander det gjøres inspeksjoner på og registrerer observasjoner på hvilke krav som ikke er overholdt. Observasjonene brukes for gjennomgang med kontaktperson etter inspeksjonen og er grunnlaget for vedtaket som gjøres."
+           :tech [:flex]}
+
+           {:customer "FMC"
+            :years [2011]
+            :summary "Mobil-app FMC"
+            :employer :computas
+            :description "Appen overvåker sensorene i oljebrønnene, viser målingene, og gir alarm når en sensor måler for høye eller for lave verdier.Kryss -platform løsning for Android, iPhone og Windows Phone 7 i Mono-Touch, .NET, C#."
+            :tech [:xamarin]}
+
+            {:customer "Mintra AS"
+             :years [2009 2010 2011]
+             :summary "Mintra Trainingportal"
+             :employer :mintra
+             :description "Inhouse Javautvikler-trainee av Trainingportal (e-læringsplattform for bedrifter) og LessonLearned (platform for deling av uønskede hendelser på arbeidsplassen)"
+             :tech [:java :spring :hibernate]}
   ]
 
  :endorsements [{:author "Leo Sander Gasnier"
