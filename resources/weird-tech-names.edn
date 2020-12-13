@@ -152,6 +152,7 @@
  :jstl "JSTL"
  :jsx "JSX"
  :junit "JUnit"
+ :knockout "Knockout"
  :ldap "LDAP"
  :less "LESS"
  :letsencrypt "Let's Encrypt"

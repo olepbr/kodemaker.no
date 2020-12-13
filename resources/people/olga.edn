@@ -162,7 +162,7 @@ Del av eResept-programmet som har som formål å innføre elektroniske resepter 
        :summary "Mobil-app PappaTid for BufDir"
        :employer :computas
        :description "PappaTid er en app for nybakte pappaer i permisjon. Appen gir oversikt over aktiviteter i nærområdet, over profiler til andre pappaer, og gir mulighet for å opprette egne aktiviteter, bli med på en aktivitet, finne frem ved hjelp av kart, og legge til andre pappaer i egen krets. Appen tillater også login gjennom Facebook."
-       :tech [:objective-c]}
+       :tech [:objc]}
 
        {:customer "ConocoPhillips"
         :years [2012]
