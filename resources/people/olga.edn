@@ -235,7 +235,10 @@ Del av eResept-programmet som har som formål å innføre elektroniske resepter 
                 }
                 ]
 
- :cv {:default {:preferred-techs [:xamarin-forms :html :sass :responsive-design ]}}
+ :cv {:default {:preferred-techs [:react-native :xamarin-forms
+   :javascript :typescript
+   :html :sass
+   :responsive-design ]}}
 
  :education-summary "Master, Programmering og Nettverk, UiO"
  :education [{:institution "UiO"
