@@ -18,11 +18,11 @@
                  :github        "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:swift :kotlin :elixir]
-                 :using-at-work [:swift]
-                 :want-to-learn-more      [:swift :haskell :elixir]}
+ :tech          {:favorites-at-the-moment [:swift :kotlin]
+                 :using-at-work [:swift :kotlin :typescript]
+                 :want-to-learn-more [:swift :haskell :elixir]}
 
- :cv {:default {:preferred-techs [:swift :elixir :kotlin :clojure :clojurescript]
+ :cv {:default {:preferred-techs [:swift :kotlin]
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase]}}                 
  
  :project-highlights [{:blurb "Design og utvikling av et nytt system for budleveranser"
