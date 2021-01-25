@@ -152,38 +152,49 @@
                  high value for money for the customer."} ]
 
  :projects [
-
     {:customer "Posten"
-             :years [2020 :ongoing]
+             :start "2020-11"
+             :description "Integrering av Innafor biblioteket utviklet tidligere inn i Glow Courier. For å kunne bruke dette biblioteket så må man 
+             autentistere og autorisere bruker i Azure AD B2C, så oppgaven innkluderte det å ta i bruk dette i løsingen. 
+             \nOppgaver: Utvikler"
+             :employer :kodemaker
+             :summary "Posten Sporing"
+             :tech [:swift :kotlin :appcode :xcode :android-studio :azure]}
+    {:customer "Posten"
+             :start "2020-04"
+             :end "2020-11"
              :description "Videreutvikling og forvaltning av Postens Sporings app. Oppsett av Azure Pipelines for CI. 
              Laget ett system som forenkler skriving av enhetstester av komponenter som gjør nettverkskall.  
              Utviklet ett system som benyttes for at testdata brukt i UITester skal kunne kjøre uten at en test server er involvert. 
-    \nOppgaver: Utvikler"
+             \nOppgaver: Utvikler"
              :employer :kodemaker
              :summary "Posten Sporing"
              :tech [:swift :appcode :azure :xcode]}
 
 	 		{:customer "Posten"
-             :years [2019 2020]
+             :start "2019-04"
+             :end "2020-04"
              :description "Utvikling av to forskjellige iOS apper, en for kunde, 
-			 og en for sjåfør. Utvikler også et Swift Framework som kan gjenbruke funksjonalitet på 
-			 tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige typer elektroniske låser.
-			 \nOppgaver: Utvikler, arkitekt"
+			          og en for sjåfør. Utvikler også et Swift Framework som kan gjenbruke funksjonalitet på 
+			          tvers av andre apps i Posten som skal ha mulighet for integrasjon med forskjellige typer elektroniske låser.
+			          \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
              :summary "Utvikling av et system for postleveranser innenfor dør"
              :tech [:swift :appcode :xcode]}
  			{:customer "Bring"
-             :years [2018 2019]
+             :start "2018-01"
+             :end "2019-04"
              :description "Utvikling av et system for budleveranser, alt fra
              mottak av ordre, ruteoptimalisering for sjåfører, sporing i
-             sanntid, og integrasjoner med mange av Bring sine systemer. Utvikling av app for sjåfører for å støtte de 
+             sanntid, og integrasjoner med mange av Bring sine systemer. Utvikling av app (Glow Courier) for sjåfører for å støtte de 
              i sin jobb med å plukke opp og leverer pakkene til mottaker.
              \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
              :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
              :tech [:kotlin :javascript :es6 :react :react-native :swift :funksjonell-programmering :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
-            {:customer "Animalia"
-             :years [2017]
+    {:customer "Animalia"
+             :start "2017-07"
+             :end "2018-01"
              :employer :kodemaker
              :summary "Utvikling og vurdereutvikling av systemer innenfor kjøtt- og egg-bransjen."
              :description "Helsefjørfe Oppgradering til Grails 3.1, samt
@@ -194,16 +205,18 @@
              \nOppgaver: Utvikler, arkitekt"
              :tech
              [:grails :javascript :docker :clojure :docker-cloud :oracle :git :architecture]}
-            {:customer "Animalia"
-             :years [2017]
+    {:customer "Animalia"
+             :start "2017-06"
+             :end "2017-07"
              :employer :kodemaker
              :summary "Videreutvikling av Helseservice"
              :description "Videreutvikling av Helseservice. Implementasjon av
              nye krav og ønsker. 
-			 \nOppgaver: Utvikler, arkitekt"
+			          \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
-            {:customer "Fondet for Regionale Verneombud"
-             :years [2017]
+    {:customer "Fondet for Regionale Verneombud"
+             :start "2017-05"
+             :end "2017-06"
              :summary "Integrasjoner med ITX samt uttrekk av informasjon fra Sekretariatsystemet som skulle inn i Visma"
              :employer :kodemaker
              :description "RVO systemet Utfasing av Sekretariatsystemet etter at
@@ -213,8 +226,9 @@
              av informasjon fra Sekretariatsystemet som skulle inn i Visma.
              \nOppgaver: Utvikler, arkitekt"
              :tech [:ruby :rails :javascript :mariadb]}
-            {:customer "Animalia"
-             :years [2016]
+    {:customer "Animalia"
+             :start "2016-11"
+             :end "2017-05"          
              :employer :kodemaker
              :summary "Utvikling av adminsystem for konfigurering av spørsmålsmaler i Helsegris"
              :description "Utvikling av adminsystem for konfigurering av
@@ -233,10 +247,11 @@
              både på serversiden samt i klienten. Det ble også utført enn del
              refaktoreringer i forbindelse med dette arbeidet for å forenkle
              datamodellen systemet bygger på. 
-			 \nOppgaver: Utvikler, arkitekt"
+		        	 \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :oracle :git :micro-services :architecture]}
-            {:customer "Animalia"
-             :years [2016]
+    {:customer "Animalia"
+             :start "2016-05"
+             :end "2016-11"
              :employer :kodemaker
              :summary "Helseservice"
              :description "Helseservice. Innføring av Helseinformasjon som er
@@ -254,10 +269,11 @@
              som man integrerte inn i Kontrollene, som kommuniserer med det nye
              Helse APIet. På denne måten så vil man kunne gjenbruke dette i
              andre systemer som f.eks Helsegris. 
-			 \nOppgaver: Utvikler, arkitekt"
+			          \nOppgaver: Utvikler, arkitekt"
              :tech [:clojure :clojurescript :docker :docker-cloud :groovy :grails :oracle :gradle :git :micro-services :architecture]}
-            {:customer "Animalia"
-             :years [2016]
+    {:customer "Animalia"
+             :start "2016-02"
+             :end "2016-05"
              :employer :kodemaker
              :summary "Videreutvikling av Sauekontrollen"
              :description "Videreutvikling av Sauekontrollen samt
@@ -265,10 +281,11 @@
              oppgraderinger av eksisterende applikasjoner i Animalias
              produktportefølje. I denne perioden var det diverse utvidelse av
              Sauekontrollen, samt utvidelser av Produsentregisteret 
-			 \nOppgaver: Utvikler"
+			          \nOppgaver: Utvikler"
              :tech [:clojure :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
-            {:customer "Animalia"
-             :years [2015]
+    {:customer "Animalia"
+             :start "2015-09"
+             :end "2016-02"
              :summary "Videreutvikling av Helsefjørfe"
              :employer :kodemaker
              :description "Videreutvikling av Helsefjørfe. Oppdaterer Helsefjørfe
@@ -277,8 +294,9 @@
              av produsenter. Denne tjenesten vil bli benyttet av de flere andre
              delsystemene i Animalia. \nOppgaver: Utvikler"
              :tech [:clojure :javascript :docker :tutum :elasticsearch :groovy :grails :oracle :gradle :git]}
-            {:customer "Animalia"
-             :years [2014]
+    {:customer "Animalia"
+             :start "2014-11"
+             :end "2015-09"
              :summary "Utvikling av et nytt system innen kjøttproduksjonsbransjen"
              :employer :kodemaker
              :description "Utvikling av et nytt system innen
@@ -297,24 +315,27 @@
              jobbet med å finne ut av hvordan sette opp dette og automatisere
              tjenestene rundt dette. \nOppgaver: Utvikler"
              :tech [:clojure :clojurescript :docker :tutum :leiningen :oracle :jenkins :git :micro-services :architecture]}
-            {:customer "Animalia"
-             :years [2014]
+   {:customer "Animalia"
+             :start "2014-08"
+             :end "2014-11"
              :employer :kodemaker
              :summary "Oppgradering og videreutvikling av KTerm og Helse Fjørfe"
              :description "Oppgradering og videreutvikling av KTerm og Helse
              Fjørfe. Oppgradering og videreutvikling av to eksisterende systemer
              skrevet i Groovy og Grails. \nOppgaver: Utvikler"
              :tech [:groovy :grails :javascript :oracle :gradle :jenkins :git]}
-            {:customer "Fondet for Regionale Verneombud"
-             :years [2014]
+   {:customer "Fondet for Regionale Verneombud"
+             :start "2014-01"
+             :end "2014-07"
              :description "Oppgradering og videreutvikling av eksisterende
              løsninger. Oppgradering og ny funksjonalitet i løsningene. \nOppgaver: Utvikler"
              :employer :kodemaker
              :summary "Oppgradering og videreutvikling"
              :tech [:ruby :rails :nginx :passenger :prawn :mysql :coffeescript :javascript
                     :jquery :css :rspec :capistrano :linux :rest :rubymine]}
-            {:customer "Broadnet"
-             :years [2013]
+   {:customer "Broadnet"
+             :start "2013-06"
+             :end "2014-01"
              :employer :kodemaker
              :summary "Videreutvikling av portal for salg av fiber, ADSL/SHDSL, IPVPN og andre bredbåndtjenester hovesaklig for bedriftsmarkedet"
              :description "Utvikling av salgsportal. Målet for prosjektet er å
@@ -326,8 +347,9 @@
              :tech
              [:java :wicket :javascript :j2ee :jpa :hibernate :neo4j :mongodb :lucene
               :rest :jax-rs :jboss :postgresql :oracle :maven :jenkins :git :junit]}
-            {:customer "FINN.no"
-             :years [2012]
+   {:customer "FINN.no"
+             :start "2012-10"
+             :end "2013-06"
              :employer :kodemaker
              :summary "Utvikling av en ny iPhone og iPad app"
              :description "Utvikling av en ny iPad- og iPhone-app. Utvikling av en
@@ -341,8 +363,9 @@
              veldig bra, og har gitt en betydelig forbedring av kodekvalitet og
              arkitektur i applikasjonen. \nOppgaver: Utvikler og mentor."
              :tech [:ios :cocoa :appcode :xcode :objc :cocoapods :jenkins :ruby :bamboo :architecture]}
-            {:customer "FINN.no"
-             :years [2011]
+   {:customer "FINN.no"
+             :start "2011-11"
+             :end "2012-10"
              :employer :kodemaker
              :summary "Utvikling av FINN sin iPad søkeapp"
              :description "Utvikling av FINN sin iPad søkeappUtvikling og design
@@ -368,8 +391,9 @@
              applikasjonen, samt klargjøre og planlegge for de neste iOS
              applikasjonene som skal utvikles. \nOppgaver: Utvikler og mentor."
              :tech [:ios :cocoa :appcode :xcode :objc :objcplusplus :architecture]}
-            {:customer "Fondet for Regionale Verneombud"
-             :years [2011]
+   {:customer "Fondet for Regionale Verneombud"
+             :start "2011-09"
+             :end "2012-01"
              :employer :kodemaker
              :summary "Utvikling av saksbehandlingsløsning med Ruby on Rails"
              :description "Utvikling av saksbehandlingsløsning med Ruby on
@@ -382,11 +406,12 @@
              fra IXD og RVO sin prosjektleder. Metodikken som ble fulgt var en
              pragmatisk variant av Kanban med web-baserte
              prosjektoppfølgingsverktøy (AgileZen, BaseCamp med mer). 
-			 \nOppgaver: Utvikler og teamleder."
+		         	 \nOppgaver: Utvikler og teamleder."
              :tech [:ruby :rails :nginx :passenger :prawn :mysql :coffeescript :javascript
                     :jquery :css :rspec :capistrano :linux :mongo-queue :rest :rubymine]}
-            {:customer "Politiets Data og Materielltjeneste, PDMT"
-             :years [2011]
+  {:customer "Politiets Data og Materielltjeneste, PDMT"
+             :start "2011-02"
+             :end "2011-09"
              :employer :kodemaker
              :summary "Utvikling av system for maritim grensekontroll, SafeSeaNet"
              :description "Utvikling av system for maritim grensekontroll,
@@ -395,8 +420,9 @@
              \nOppgaver: Utvikler"
              :tech [:java :groovy :oracle :oracle-appserver :h2db :webservices
                     :jms :maven :intellij :jsf :jira :jenkins :cqrs]}
-            {:customer "Fondet for regionale verneombud."
-             :years [2010]
+  {:customer "Fondet for regionale verneombud."
+             :start "2010-08"
+             :end "2010-12"
              :employer :kodemaker
              :summary "Utvikling av nytt system for oppfølging av betalinger og medlemmer"
              :description "Utvikling av nytt system for oppfølging av betalinger
@@ -409,8 +435,9 @@
              :tech
              [:ruby :rails :html :css :mysql :ubuntu :windows :passenger :nginx
               :cucumber :rspec :thinking-sphinx :rubymine :capistrano :rake]}
-            {:customer "Telenor Mobil"
-             :years [2009]
+  {:customer "Telenor Mobil"
+             :start "2009-06"
+             :end "2010-07"
              :employer :kodemaker
              :summary "Automatisering av Fri Famile verdikjede"
              :description "Automatisering av Fri Familie verdikjede. I dette
@@ -418,8 +445,9 @@
              mellomvaresystem."
              :tech [:java :weblogic :drools :mks :maven :bamboo :sybase :easymock
                     :junit :intellij :dbunit :aspectj]}
-            {:customer "Telenor Mobil"
-             :years [2008]
+  {:customer "Telenor Mobil"
+             :start "2008-11"
+             :end "2009-06"
              :employer :kodemaker
              :summary "Cos Restrukturering"
              :description "Cos Restrukturering. Dette prosjektet innførte JBoss
@@ -429,8 +457,9 @@
              regressjonstestrammeverk, samt Bamboo CI byggesystem."
              :tech [:java :weblogic :drools :mks :maven :bamboo :sybase :easymock
                     :junit :intellij :dbunit :aspectj :architecture]}
-            {:customer "Nordic Lottery Systems"
-             :years [2007]
+  {:customer "Nordic Lottery Systems"
+             :start "2007-08"
+             :end "2008-11"
              :employer :kodemaker
              :summary "OTTO. Et Lotterisystem på nettet"
              :description "OTTO. Et Lotterisystem på nettet. André kom inn i
@@ -445,8 +474,9 @@
              klienter."
              :tech [:java :jboss :spring :oracle :aws-ec2 :jmeter :jdbc :junit :dbunit
                     :cruisecontrol :easymock :webservices :uml :intellij :architecture]}
-            {:customer "Telenor Mobil"
-             :years [2007]
+  {:customer "Telenor Mobil"
+             :start "2007-01"
+             :end "2007-08"
              :employer :kodemaker
              :summary "Utvikling av Single-Sign-On (SSO) for Telenor Mobils mellomvaresystem Cos"
              :description "Win prosjektet - Innføring av SSO mellom Cos og Metro
@@ -457,8 +487,9 @@
              en Service bus fra BEA."
              :tech [:java :j2ee :weblogic :spring :sybase :jdbc :junit :dbunit :cruise-control
                     :easymock :aspectj :webservices :uml :intellij :architecture]}
-            {:customer "Bankenes Betalingssentral, BBS"
-             :years [2005]
+  {:customer "Bankenes Betalingssentral, BBS"
+             :start "2005-09"
+             :end "2007-01"
              :employer :kodemaker
              :summary "Implementering av chipkort/smartkort i betalingsterminaler"
              :description "Win prosjektet - Innføring av SSO mellom Cos og Metro
@@ -469,7 +500,7 @@
              en mindre integrasjonsjobb mellom Telenor/Netcom Elektroniske
              Ladekoder og BAXBIS (BankAxept)."
              :tech [:java :j2se :j2me :apache-axis :sybase :ruby :git :architecture]}
-            {:customer "Telenor Mobil"
+  {:customer "Telenor Mobil"
              :years [2002]
              :summary "Forvaltning og nyutvikling av Cos"
              :employer :telenor-mobil
@@ -479,7 +510,7 @@
              etc. Deltok i flere intern prosjekter som arkitekt og utvikler."
              :tech [:java :j2ee :weblogic :spring :corba :sybase :jdbc :oracle :junit :dbunit
                     :cruisecontrol :mockobjects :aspectj :servlets :webservices :uml :intellij :architecture]}
-            {:customer "Arrive, Nordea, Europay Norway"
+  {:customer "Arrive, Nordea, Europay Norway"
              :years [2002]
              :employer :objectware
              :summary "Rådgivning og estimering av tekniske løsninger i forbindelse med anbud"
@@ -489,14 +520,14 @@
              egenutviklede J2EE baserte rammeverk JEFF/Coffee. Design og
              utvikling av en online saldooversikt for EuroCard-kunder"
              :tech [:java :j2ee :websphere :visual-age :sybase :architecture]}
-            {:customer "Gjensidige NOR"
+  {:customer "Gjensidige NOR"
              :years [2002]
              :employer :objectware
              :summary "Utvikling av delsystem for saksbehandlersystemet KLE"
              :description "Utvikling av delsystem for saksbehandlersystemet
              KLE. (Java Swing klient)."
              :tech [:java :j2ee :swing :jbuilder :junit]}
-            {:customer "Bankenes Betalingssentral, BBS"
+  {:customer "Bankenes Betalingssentral, BBS"
              :years [2001]
              :employer :objectware
              :summary "eFaktura"
