@@ -152,13 +152,24 @@
                  high value for money for the customer."} ]
 
  :projects [
-    {:customer "Posten"
+
+    {:customer "Nord - SJ Norge"
+             :start "2021-02"
+             :description "POC for kommunikasjon mellom tog og landsiden for Nord (SJ Norge) sine tog i Norge. 
+             \nOppgaver: Utvikler"
+             :employer :kodemaker
+             :summary "Kommunikasjon mellom tog og landsiden for SJ"
+             :tech [:kotlin :intellij :azure :flyway :arrow :funksjonell-programmering :postgresql]}
+
+
+    {:customer "Bring"
              :start "2020-11"
+             :end "2021-02"
              :description "Integrering av Innafor biblioteket utviklet tidligere inn i Glow Courier. For å kunne bruke dette biblioteket så må man 
              autentistere og autorisere bruker i Azure AD B2C, så oppgaven innkluderte det å ta i bruk dette i løsingen. 
              \nOppgaver: Utvikler"
              :employer :kodemaker
-             :summary "Posten Sporing"
+             :summary "Glow - system for budleveranser med sanntids pakkesporing."
              :tech [:swift :kotlin :appcode :xcode :android :azure]}
     {:customer "Posten"
              :start "2020-04"
@@ -168,7 +179,7 @@
              Utviklet ett system som benyttes for at testdata brukt i UITester skal kunne kjøre uten at en test server er involvert. 
              \nOppgaver: Utvikler"
              :employer :kodemaker
-             :summary "Posten Sporing"
+             :summary "Posten Sporing - Postens forbruker-app"
              :tech [:swift :appcode :azure :xcode]}
 
 	 		{:customer "Posten"
@@ -190,7 +201,7 @@
              i sin jobb med å plukke opp og leverer pakkene til mottaker.
              \nOppgaver: Utvikler, arkitekt"
              :employer :kodemaker
-             :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid. "
+             :summary "Glow - system for budleveranser med sanntids pakkesporing."
              :tech [:kotlin :javascript :es6 :react :react-native :swift :funksjonell-programmering :gradle :azure :postgresql :redis :kubernetes :trello :architecture :slack]}
     {:customer "Animalia"
              :start "2017-07"
