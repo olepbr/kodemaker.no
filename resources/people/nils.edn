@@ -155,15 +155,9 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  [
   {:title        "vintilbud.no"
    :link         {:url "https://vintilbud.no" :text "Tilbud på varer fra vinmonopolet"}
-   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en web-app og android-app der man kan filtrere på type og sortere på ulike parametere. Frontend for web-appen er skrevet i elm og backend er skrevet i go. Backend kjører på google app-engine. Mobil-appen for android er skrevet i dart med rammeverket flutter."
+   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en Android-app og en ios-app der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go og kjører på google app-engine. Mobil-appen for Android og iOS er skrevet i dart med rammeverket flutter."
    :illustration "/illustrations/side-projects/vintilbud.png"
-   :tech         [:go :google-appengine :elm :flutter :dart]
-   },
-  {:title        "pushify.xyz"
-   :link         {:url "https://pushify.xyz" :text "Pushify"}
-   :description  "Pushify lar deg sende og motta push-meldinger uten å måtte installere en app, en såkalt progressive web app(pwa). Det eneste man trenger er å gå til nettsiden og begynne å bruke appen. Service workers sørger for at du får push-meldinger selv om nettleseren er lukket. Jeg lagde appen for å kunne motta push-meldinger fra hjemme-automasjonssystemet mitt og for å lære om Elm og pwa. Frontend er skrevet i Elm og backend er skrevet i go. Appen kjører på google app-engine."
-   :illustration "/illustrations/side-projects/pushify.png"
-   :tech         [:go :google-appengine :elm :pwa]
+   :tech         [:go :google-appengine :elm :flutter :dart :ios :android]
    },
   {:title        "Analyse av værdata"
    :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
