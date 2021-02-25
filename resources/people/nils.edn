@@ -21,8 +21,8 @@
 
  :project-highlights    [{:blurb    "Utvikling av system for anbefaling av rubrikk-annonser. Java, Kotlin, Kafka og Postgresql."
                           :customer "Finn"},
-                         {:blurb    "Ansvar for utvikling og drifting av android app. Videreutvikle kjernekomponeter for bookingsystemet."
-                          :customer "Norwegian Air Shuttle"},
+                         {:blurb    " Utvikle  mobil applikasjon for sakssystem for Android og iOS med rammeverket flutter."
+                          :customer "Mnemonic"},
                          {:blurb    "Utvikling av løsning for distribusjon av tidsseriedata fra ulike markeder ved hjelp av Spark, Kafka, Hadoop og HBase."
                           :customer "Thomson Reuters"}]
 
@@ -175,19 +175,20 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :projects
  [
+   {:customer    "NDA"
+    :description  "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen kontrollerer en IOT enhet og leverer push-varsler for alarmer. "
+    :years       [2021]
+    :employer    :kodemaker
+    :summary     "Utvikling av mobil applikasjon for IOT enhet."
+    :tech        [:dart :flutter :ios :android :rest]},
+
   {:customer    "Mnemonic"
-   :description "Utvikling av applikasjon tilknyttet mnemonic sitt system, Argus."
-   :years       [2020]
+   :description     "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
+   :years       [2020 2021]
    :employer    :kodemaker
-   :summary     "Utvikling av applikasjon."
-   :tech        []},
-  {:customer "Posten AS"
-   :summary "Utvikle backend for tjenesten 'Innenfor' -  levering av pakker innenfor døren med digitale låser."
-   :years [2019]
-   :employer :kodemaker
-   :description "Integrasjon mellom mobile apper, låser og postens systemer for å kunne la sjåførene levere pakker innenfor dør hos kunder. Håndtere signering av koder, private og public keys for engangskoder og sikkerhetsaspekter rundt kryptering, lagring og uthenting av koder. Laget en mock-server i Go for mobil-appene for å kunne teste uten å involvere tunge legacy-systemer."
-   :tech [:kotlin :postgresql :ktor :oauth :go :swagger]
-   },
+   :summary     "Utvikling av mobil applikasjon for sakssystem."
+   :tech        [:dart :flutter :ios :android :graphql :rest]},
+
   {:customer    "Finn"
    :description "Distribusjon av annonser med økt synlighet. Prosessere meldinger for endring på annonser og håndtere livssyklus for effekt-produkter for annonser på finn.no."
    :years       [2019 2020]
@@ -234,7 +235,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :tech                  [:hbase :spark :kafka :java :zookeeper :vertx :kibana :java]}
   {:customer    "Norwegian Air Shuttle"
    :description "Utvikling og vedlikehold av backend for booking-systemet. Videreutvikling av reiseassistent for Android."
-   :years       [2012 2016]
+   :years       [2012 2013 2014 2015 2016]
    :employer    :webstep
    :summary     "Utvikling og vedlikehold av backend for booking-systemet"
    :tech        [:java, :cxf, :google-guice, :android, :jboss :junit, :maven, :oracle
