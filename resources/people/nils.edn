@@ -126,8 +126,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :open-source-contributions
  [
   {:name "Retriable Kafka Consumer" :url "https://github.com/finn-no/retriable-kafka-consumer" :tech [:kafka :java]}
-  {:name "Ktor-Swagger" :url "https://github.com/nielsfalk/ktor-swagger" :tech [:kotlin] }
-  ,
+  {:name "Ktor-Swagger" :url "https://github.com/nielsfalk/ktor-swagger" :tech [:kotlin] },
   {:name "Go" :url "https://github.com/golang/go/commit/81ec7256072ed5e20b8827c583193258769aebc0" :tech [:go]},
   {:name "Unleash-go-client" :url "https://github.com/Unleash/unleash-client-go" :tech [:go, :unleash]},
   {:name "Influx/Telegraf" :url "https://github.com/influxdata/telegraf/pull/3309" :tech [:go, :telegraf]}
@@ -169,13 +168,6 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :projects
  [
-   {:customer    "NDA"
-    :description  "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen kontrollerer en IOT enhet og leverer push-varsler for alarmer. "
-    :years       [2021]
-    :employer    :kodemaker
-    :summary     "Utvikling av mobil applikasjon for IOT enhet."
-    :tech        [:dart :flutter :ios :android :rest]},
-
   {:customer    "Mnemonic"
    :description     "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
    :years       [2020 2021]
