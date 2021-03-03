@@ -56,7 +56,7 @@
                   :years [2016 2017]
                   :summary "Forsvaret, Materielldataportalen"
                   :employer :kodemaker
-                  :description "Masterdata-synkronisering. Oppgaver: Analyse,
+                  :description "Masterdata-synkronisering mellom forsvarets materielldatasystemer (SAP, MCC, DNF, IMAS, m.fl). Oppgaver: Analyse,
                  design, test, utvikling, dokumentasjon"
                   :tech [:groovy :grails :bootstrap :oracle :sap :soap :rest]}
 
