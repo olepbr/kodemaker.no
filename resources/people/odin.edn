@@ -25,9 +25,9 @@
             :github "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:clojurescript :kubernetes :go]
+ :tech {:favorites-at-the-moment [:clojurescript :p5js]
         :using-at-work           [:typescript :javascript :react]
-        :want-to-learn-more      [:unity3d :flutter :go]}
+        :want-to-learn-more      [:unity3d :flutter]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
@@ -244,9 +244,9 @@
                     :spring-integration :maven :web-services :cxf :jms :oracle-aq :apache-mq
                     :jenkins :sonar :jetty :oracle-appserver :oracle]}
             {:customer "NAV Pensjonsprogrammet, Applikasjonsarkitektur"
-             :years [2007 2010]
+             :years [2009 2010]
              :employer :accenture
-             :summary "Applikasjonsarkitektur, tjenesteintroduksjon, bygg og miljø"
+             :summary "Applikasjonsarkitektur"
              :description "Ansvarlig for applikasjonsarkitekturteamet. Arbeidet
              bestod av utforming av arkitekturprinsipper og retningslinjer for
              utvikling, vedlikehold av applikasjonsrammeverket og tett samarbeid
@@ -256,7 +256,7 @@
             {:customer "NAV Pensjonsprogrammet, Tjenesteintroduksjon"
              :years [2008]
              :employer :accenture
-             :summary "Applikasjonsarkitektur, tjenesteintroduksjon, bygg og miljø"
+             :summary "Tjenesteintroduksjon"
              :description "Tjenesteintroduksjonsteamet arbeider med
              kvalitetssikring og overlevering av teknisk dokumentasjon og
              applikasjonsleveranser til kundens driftsavdeling. Ansvar for
@@ -265,7 +265,7 @@
              produksjonssetting av Pensjonsprogrammets største leveranse."
              :tech [:architecture]}
             {:customer "NAV Pensjonsprogrammet, Utviklingsarkitektur"
-             :years [2007 2010]
+             :years [2007]
              :employer :accenture
              :summary "Applikasjonsarkitektur, tjenesteintroduksjon, bygg og miljø"
              :description "Arbeidet med bygg, utrulling og administrasjon av testmiljøer"
