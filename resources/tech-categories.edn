@@ -447,6 +447,7 @@
    :om-next
    :oocss
    :openlayers
+   :p5js
    :patternlab
    :pegjs
    :prototype
