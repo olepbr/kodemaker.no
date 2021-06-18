@@ -168,6 +168,13 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :projects
  [
+  {:customer    "Mercell"
+   :description     "Utvikle salgsløsning for anbudsportal. Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og trenger en salgsløsning på nett for å kunne betjene den voksende kundemassen og for å kunne nå ut til flere kunder. Tidligere har salg bare foregått over telefon og man ønsker med den nye løsningen å flytte salget over på nett."
+   :years       [2021]
+   :employer    :kodemaker
+   :summary     "Utvikling salgsløsning for anbudsportal."
+   :tech        [:kotlin :typescript :react :kubernetes :terraform]},
+
   {:customer    "Mnemonic"
    :description     "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
    :years       [2020 2021]
