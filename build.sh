@@ -49,6 +49,7 @@ if [ $? -ne 0 ]; then
 fi
 
 expires="$(format-date $ts "%a, %d %b %Y %H:%M:%S GMT")"
+
 env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*"
 
 echo "Syncing remaining files and deleting removed files"
