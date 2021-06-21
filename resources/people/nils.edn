@@ -173,7 +173,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :years       [2021]
    :employer    :kodemaker
    :summary     "Utvikling salgsløsning for anbudsportal."
-   :tech        [:kotlin :typescript :react :kubernetes :terraform]},
+   :tech        [:kotlin :typescript :react :kubernetes :terraform :postgresql :arrow]},
 
   {:customer    "Mnemonic"
    :description     "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
