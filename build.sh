@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -u
+set -ue
+
 
 function format-date() {
   timestamp=$1
@@ -14,9 +15,13 @@ function format-date() {
   fi
 }
 
+echo "Get credentials"
+
 role_creds=$(aws sts assume-role \
                  --role-arn "arn:aws:iam::195221715009:role/Deployer" \
                  --role-session-name DeployKodemakerWeb)
+
+echo "Set environment variables"
 
 prod-env() {
   echo "AWS_ACCESS_KEY_ID=$(echo "$role_creds" | jq -cr .Credentials.AccessKeyId)"
