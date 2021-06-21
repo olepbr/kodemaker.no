@@ -44,6 +44,8 @@ fi
 echo "Get login for ECR"
 ecr_login=$(aws ecr get-login-password --region eu-west-1)
 if [ -z "$ecr_login" ]; then echo "Could not get ecr login" && exit 1; else echo "Got ECR login"; fi
+echo "Docker login"
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 575778107697.dkr.ecr.eu-west-1.amazonaws.com
 echo "Generating PDFs"
 docker run --rm -v $(cd $(dirname $ecr_login)/build && pwd):/site 575778107697.dkr.ecr.eu-west-1.amazonaws.com/html2pdf:b2d215eee2 /site
 
