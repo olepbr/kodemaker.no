@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -u
-set -e
 
 function format-date() {
   timestamp=$1
