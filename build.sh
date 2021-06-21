@@ -41,8 +41,9 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Generating PDFs"
+echo "Get login for ECR"
 $(aws ecr get-login --region eu-west-1 --no-include-email)
+echo "Generating PDFs"
 docker run --rm -v $(cd $(dirname $0)/build && pwd):/site 575778107697.dkr.ecr.eu-west-1.amazonaws.com/html2pdf:b2d215eee2 /site
 
 echo "Syncing assets, cacheable for a year"
