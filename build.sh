@@ -42,7 +42,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Get login for ECR"
-ecr_login=$(aws ecr get-login-password --region eu-west-1 --no-include-email)
+ecr_login=$(aws ecr get-login-password --region eu-west-1)
 echo "Generating PDFs"
 docker run --rm -v $(cd $(dirname $ecr_login)/build && pwd):/site 575778107697.dkr.ecr.eu-west-1.amazonaws.com/html2pdf:b2d215eee2 /site
 
