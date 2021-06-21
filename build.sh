@@ -19,7 +19,8 @@ echo "Get credentials"
 
 role_creds=$(aws sts assume-role \
                  --role-arn "arn:aws:iam::195221715009:role/Deployer" \
-                 --role-session-name DeployKodemakerWeb)
+                 --role-session-name DeployKodemakerWeb
+                 --region eu-west-1)
 
 echo "Set environment variables"
 
