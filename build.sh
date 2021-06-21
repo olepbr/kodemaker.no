@@ -45,7 +45,7 @@ echo "Get login for ECR"
 ecr_login=$(aws ecr get-login-password --region eu-west-1)
 if [ -z "$ecr_login" ]; then echo "Could not get ecr login" && exit 1; else echo "Got ECR login"; fi
 echo "Docker login"
-aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 575778107697.dkr.ecr.eu-west-1.amazonaws.com
+echo "$ecr_login" | docker login --username AWS --password-stdin 575778107697.dkr.ecr.eu-west-1.amazonaws.com
 echo "Generating PDFs"
 docker run --rm -v $(cd $(dirname $ecr_login)/build && pwd):/site 575778107697.dkr.ecr.eu-west-1.amazonaws.com/html2pdf:b2d215eee2 /site
 
@@ -60,12 +60,12 @@ fi
 
 expires="$(format-date $ts "%a, %d %b %Y %H:%M:%S GMT")"
 
-env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*"
+env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --region eu-west-1
 
 echo "Syncing remaining files and deleting removed files"
-env $(prod-env) aws s3 sync . $bucket --delete --exclude "assets/*"
+env $(prod-env) aws s3 sync . $bucket --delete --exclude "assets/*" --region eu-west-1
 
 echo "Purging old assets"
-env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --delete
+env $(prod-env) aws s3 sync . $bucket --expires "$expires" --exclude "*" --include "assets/*" --delete --region eu-west-1
 
-env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths / "/*"
+env $(prod-env) aws cloudfront create-invalidation --distribution-id E377BQUYES9DH7 --paths / "/*" --region eu-west-1
