@@ -18,12 +18,15 @@
                  :github        "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:swift :kotlin]
-                 :using-at-work [:swift :kotlin :typescript]
-                 :want-to-learn-more [:swift :haskell :elixir]}
+ :tech          {:favorites-at-the-moment [:kotlin :arrow]
+                 :using-at-work [:kotlin :typescript]
+                 :want-to-learn-more [:haskell :scala]}
 
  :cv {:default {:preferred-techs [:swift :kotlin]
-                :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase]}}                 
+                :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase 
+                                :jbuilder :mvs :windows :novell-netware :j2me :screenscraping :rake :sourcesafe :mks :jmeter :visual-age :jax-rs :jquery 
+                                :cvs :svn :swing :mockobjects :passenger :webmacro :tutum :oracle-appserver :cruise-control :cruisecontrol :easymock :awt 
+                                :corba :mongo-queue :tandem :webservices :paradox :erwin :trello :slack ]}}                 
  
  :project-highlights [ {:blurb "Utvikle salgsløsning for anbudsportal."
                         :customer "Mercell"}
@@ -74,8 +77,7 @@
                   :description  "Jeg hadde som guttunge en plakat på veggen av Clay Regazzoni kjørende i en Ferrari F1 bil.
                   Om det var det som fikk i gang interessen for Formel 1 vet jeg ikke helt, men etter å vært på mitt første F1 løp på Silverstone i 1991, så var jeg solgt.
                   Følger med hver løpshelg fra start til slutt"
-                  :illustration "/illustrations/hobbies/f1.jpg"}
-                  ]
+                  :illustration "/illustrations/hobbies/f1.jpg"}]
 
  :blog-posts [{:url "http://bonkowski.net/posts/refactoring-in-appcode"
                :published "2013-02-10"
