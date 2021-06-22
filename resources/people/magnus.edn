@@ -36,7 +36,7 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :clojurescript :datomic :kafka :aws :influxdb :kubernetes]
+ :tech {:using-at-work [:kotlin :typescript :kafka :aws :react :dynamodb]
         :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
         :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
 
@@ -422,8 +422,21 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
- :projects [{:customer "Norled"
+ :projects [{:customer "Mercell"
+             :start "2020-10"
+             :employer :kodemaker
+             :summary "Utvikling av ny samarbeidstjenste for leverandører i en anbudsportal."
+             :description "Mercell er en av de ledende aktørerne i Europa innen anbudsformidling. De har en offensiv vekststrategi og har gjennom flere oppkjøp vokst fort de siste par årene.
+             Mercell er i ferd med å lage en ny felles plattform for leverandører. I starten av vårt prosjekt identifiserte vi vha analyser og brukerundersøkelser at det i dag fantes et gap i tjenestetilbudet for leverandører.
+             \nVårt oppdrag var å utvikle en tjeneste som gir en totaloversikt over en leverandørs pågående anbudsprosesser. Vi skulle også utvikle tjenester som gir mulighet for leverandører til samarbeid og samhandling i fasene for evaluering av anbud og innlevering av tilbud.
+             Teamet vårt er et autonomt domeneteam og vi har stor frihet i valg av teknologi og arbeidsmetodikk. Vi har valgt en reactive inspirert arkitektur og benytter oss av Javalin/Kotlin på backend og React/Typescript på frontend. Kommunikasjon mellom backend og frontend skjer via Websockets (for lesing) og REST/commands (for skriving).
+             På litt sikt vil våre tjenester splittes inn i mindre selvstendige komponenter også kjent som Micro Frontends.
+             Integrasjon mot andre domener foregår ved bruk av Kafka. Brukerene skal sikres en sømløs brukerreise med integrasjon mot et felles autentiseringsløsning (i dag Auth0).
+             \nRolle: Tech lead, utvikler og arkitekt"
+             :tech [:kotlin :typescript :kafka :aws :dynamodb :terraform :auth0 :funksjonell-programmering]}
+            {:customer "Norled"
              :start "2019-04"
+             :end "2020-09"
              :employer :kodemaker
              :summary "Utvikling av nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for Norled."
