@@ -19,14 +19,15 @@
                  }
 
  :tech          {:favorites-at-the-moment [:kotlin :arrow]
-                 :using-at-work [:kotlin :typescript]
+                 :using-at-work [:kotlin :arrow :typescript]
                  :want-to-learn-more [:haskell :scala]}
 
  :cv {:default {:preferred-techs [:swift :kotlin]
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase 
                                 :jbuilder :mvs :windows :novell-netware :j2me :screenscraping :rake :sourcesafe :mks :jmeter :visual-age :jax-rs :jquery 
                                 :cvs :svn :swing :mockobjects :passenger :webmacro :tutum :oracle-appserver :cruise-control :cruisecontrol :easymock :awt 
-                                :corba :mongo-queue :tandem :webservices :paradox :erwin :trello :slack ]}}                 
+                                :corba :mongo-queue :tandem :webservices :paradox :erwin :trello :slack :maven :es6 :capistrano :aws-ec2 :jsf :jenkins 
+                                :wicket :websphere :apache-axis :hibernate :cqrs :windows-nt :j2se :weblogic :rubymine :dbunit :prawn :aspectj :prawn]}}                 
  
  :project-highlights [ {:blurb "Utvikle salgsløsning for anbudsportal."
                         :customer "Mercell"}
@@ -173,7 +174,7 @@
                \nRolle: Tech lead, utvikler og arkitekt"
                :employer :kodemaker
                :summary "Utvikle salgsløsning for anbudsportal."
-               :tech [:kotlin :typescript :react :kubernetes :terraform :arrow :funksjonell-programmering :aws]}
+               :tech [:kotlin :typescript :react :kubernetes :kafka :terraform :arrow :funksjonell-programmering :aws]}
 
     {:customer "Nord - SJ Norge"
              :start "2021-02"
