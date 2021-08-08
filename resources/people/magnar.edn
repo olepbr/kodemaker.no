@@ -479,7 +479,14 @@
                 :illustration "/illustrations/side-projects/parens-of-the-dead.jpg"
                 :tech [:clojure :clojurescript :tdd :testing]}]
 
- :projects [{:customer "Norled"
+ :projects [{:customer "Hafslund Strøm / Fortum"
+             :employer :kodemaker
+             :summary "Mine Sider, App, Produktsider, Bestillingsløp"
+             :description "Utvikling og forvaltning av flere av Fortum og Hafslund Strøm sine kunderettede flater."
+             :tech [:clojurescript :clojure :responsive-design :sanity :datadog :git :aws :aws-s3 :tools-deps :varnish]
+             :years [2020 :ongoing]}
+
+            {:customer "Norled"
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for
@@ -487,7 +494,7 @@
             fergebillettørene."
              :tech [:clojure :clojurescript :datomic :datascript :reagent :mount :docker :aws :cordova
                     :html :css :responsive-design :kafka :influxdb :lambdacd :travis-ci]
-             :years [2016 :ongoing]}
+             :years [2016 2017 2018 2019 2020]}
 
             {:customer "Hafslund Strøm"
              :employer :kodemaker
