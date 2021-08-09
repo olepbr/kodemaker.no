@@ -10,235 +10,241 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
  :email-address "fredrik@kodemaker.no"
 
  :presence {:cv "fredrik"
-            :twitter "faubert"
-            :linkedin "/in/fredrikaubert"
-            :github "fredrikaubert"}
+						:twitter "faubert"
+						:linkedin "/in/fredrikaubert"
+						:github "fredrikaubert"}
 
- :tech {:favorites-at-the-moment [:react :redux :kotlin :micronaut]
-        :want-to-learn-more [:clojure :go :elixir :kubernetes ]
-        :using-at-work [:react :redux :groovy :kotlin :micronaut :aws :terraform ]}
+ :tech {:favorites-at-the-moment [:clojure :clojurescript]
+				:want-to-learn-more [:clojure :go :kubernetes]
+				:using-at-work [:clojure :clojurescript :kubernetes :aws]}
 
  :hobbies [{:title "MC"
-            :description "Aktiv i firmaets MC-klubb; Codebreakers, som årlig drar på flere turer rundt om i Norge. Liker å utvikle mc-ferdighetene på bane."
-            :illustration "/illustrations/hobbies/fredrik-mc.jpg"},
+						:description "Aktiv i firmaets MC-klubb; Codebreakers, som årlig drar på flere turer rundt om i Norge. Liker å utvikle mc-ferdighetene på bane."
+						:illustration "/illustrations/hobbies/fredrik-mc.jpg"},
 
-           {:title "Home automation"
-            :description "Som programør lærer man seg å automatisere så mye som mulig. Burde ikke lyset dempes automatisk når filmen starter?"
-            :illustration "/illustrations/hobbies/raspberrypi.jpg"}
+					 {:title "Home automation"
+						:description "Som programør lærer man seg å automatisere så mye som mulig. Burde ikke lyset dempes automatisk når filmen starter?"
+						:illustration "/illustrations/hobbies/raspberrypi.jpg"}
 
-           {:title "Foto"
-            :description "Et bilde sier mer enn tusen ord."
-            :illustration "/illustrations/hobbies/fredrik-foto.jpg"}
-           ]
+					 {:title "Foto"
+						:description "Et bilde sier mer enn tusen ord."
+						:illustration "/illustrations/hobbies/fredrik-foto.jpg"}
+					 ]
 
- :projects [
-           {:customer "Vygruppen AS"
-             :employer :kodemaker
-             :summary "Kvitteringsliste"
-             :years [2020]
-             :description "Tilpasse og migrere en eksisterende applikasjon til aws."
-             :tech [:grails :groovy :docker :aws :terraform :rest :dynamodb :circleci]}
+ :projects [{:customer "Hafslund Strøm / Fortum"
+						 :employer :kodemaker
+						 :summary "Mine Sider, App, Produktsider, Bestillingsløp"
+						 :description "Utvikling og forvaltning av flere av Fortum og Hafslund Strøm sine kunderettede flater."
+						 :tech [:clojurescript :clojure :kubernetes :aws :responsive-design :sanity :datadog :git :aws-s3 :tools-deps :varnish]
+						 :years [2020 :ongoing]}
 
-           {:customer "Vygruppen AS"
-             :employer :kodemaker
-             :summary "Trafficinfo tjenester"
-             :years [2019 2020]
-             :description "Microtjenester som tilbyr trafikkinformasjon, som rutetider, passeringstider og kjøretøysinformasjon til konsumenter."
-             :tech [:kotlin :micronaut :docker :aws :terraform :rest :dynamodb :circleci]}
+						{:customer "Vygruppen AS"
+						 :employer :kodemaker
+						 :summary "Kvitteringsliste"
+						 :years [2020]
+						 :description "Tilpasse og migrere en eksisterende applikasjon til aws."
+						 :tech [:grails :groovy :docker :aws :terraform :rest :dynamodb :circleci]}
 
- 	    {:customer "NSB"
-             :employer :kodemaker
-             :summary "Topas"
-             :years [2017 2018]
-             :description "Topas er et system for å sikre at togpersonalet mottar og kvitterer for relevante dokumenter."
-             :tech [:grails :groovy :react :redux :javascript :rest :css :html :bootstrap :jms :git :gradle :mariadb :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "Passasjerinformasjonssystemer og støttesystemer"
-             :years [2015 2016 2017 2018 2019 2020]
-             :description "Passasjerinformasjonssystemer og støttesystemer: Et system som leverer informasjon til togsettene. Bl.a. kjøredatabase, avviksmeldinger, nyheter og værmelding."
-             :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "MCC"
-             :years [2015 2016 2017 2018 2019]
-             :description "MCC er en webapplikasjon for materiell kontroll, som
+						{:customer "Vygruppen AS"
+						 :employer :kodemaker
+						 :summary "Trafficinfo tjenester"
+						 :years [2019 2020]
+						 :description "Microtjenester som tilbyr trafikkinformasjon, som rutetider, passeringstider og kjøretøysinformasjon til konsumenter."
+						 :tech [:kotlin :micronaut :docker :aws :terraform :rest :dynamodb :circleci]}
+
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "Topas"
+						 :years [2017 2018]
+						 :description "Topas er et system for å sikre at togpersonalet mottar og kvitterer for relevante dokumenter."
+						 :tech [:grails :groovy :react :redux :javascript :rest :css :html :bootstrap :jms :git :gradle :mariadb :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "Passasjerinformasjonssystemer og støttesystemer"
+						 :years [2015 2016 2017 2018 2019 2020]
+						 :description "Passasjerinformasjonssystemer og støttesystemer: Et system som leverer informasjon til togsettene. Bl.a. kjøredatabase, avviksmeldinger, nyheter og værmelding."
+						 :tech [:grails :groovy :javascript :es6 :react :redux :rest :css :html :bootstrap :jms :git :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "MCC"
+						 :years [2015 2016 2017 2018 2019]
+						 :description "MCC er en webapplikasjon for materiell kontroll, som
              rapporterer nå-situasjonen for tog-flåten og utnyttelsesgrad.
              Oppgaver: Senior Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :rest :soap :css :html :bootstrap :git :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "D9009"
-             :years [2013 2014]
-             :description "D9009 Webapplikasjon som viser planlagt
+						 :tech [:grails :groovy :rest :soap :css :html :bootstrap :git :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "D9009"
+						 :years [2013 2014]
+						 :description "D9009 Webapplikasjon som viser planlagt
              togsammensetning. Oppgaver: Senior Javautvikler /
              frontendutvikler."
-             :tech [:grails :groovy :rest :css :javascript :html :bootstrap :git :svn :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "Pis Marketing System"
-             :years [2012 2013 2014 ]
-             :description "Pis Marketing System er en webapplikasjon for å produsere
+						 :tech [:grails :groovy :rest :css :javascript :html :bootstrap :git :svn :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "Pis Marketing System"
+						 :years [2012 2013 2014]
+						 :description "Pis Marketing System er en webapplikasjon for å produsere
              og distribuere markedsvideoer som vises ombord i togene. Oppgaver:
              Senior Javautvikler / frontendutvikler."
-             :tech [:grails :groovy :css :html :bootstrap :svn :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "JODA"
-             :years [2011 2012 2013 2014 2015 2016]
-             :description "JODA genererer realtime informasjon til
+						 :tech [:grails :groovy :css :html :bootstrap :svn :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "JODA"
+						 :years [2011 2012 2013 2014 2015 2016]
+						 :description "JODA genererer realtime informasjon til
              passasjerinformasjonssystemet på NSBs nye togsett, slik som
              nyheter, værmelding og overgangsinformasjon. Systemet henter data
              fra innholdsleverandører og setter sammen skreddersydde pakker til
              hvert enkelt togsett. "
-             :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :bootstrap :git :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "FILI"
-             :years [2010 2011 2012 2013]
-             :description "FILI Håndterer realtime datakommunikasjon med NSB nye
+						 :tech [:grails :java :gorm :spring :css :html :javascript :jquery :svn :bootstrap :git :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "FILI"
+						 :years [2010 2011 2012 2013]
+						 :description "FILI Håndterer realtime datakommunikasjon med NSB nye
              togsett, som overføring av diagnosedata, passasjertelling,
              passasjerinformasjon osv."
-             :tech [:grails :groovy :java :spring :css :html :svn :jenkins]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "GRAILS"
-             :years [2010 2011 2012]
-             :description "GRAILS Et system som beskriver geografien og
+						 :tech [:grails :groovy :java :spring :css :html :svn :jenkins]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "GRAILS"
+						 :years [2010 2011 2012]
+						 :description "GRAILS Et system som beskriver geografien og
              stasjonene i NSBs domene. Dette er masterdatabase for andre NSB
              systemer. "
-             :tech [:grails :java :gorm :spring :testng :css :html :javascript :jquery :svn :maven]}
-            {:customer "NSB"
-             :employer :kodemaker
-             :summary "PAIN"
-             :years [2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020]
-             :description "Utvikling av en applikasjon for automatisk
+						 :tech [:grails :java :gorm :spring :testng :css :html :javascript :jquery :svn :maven]}
+						{:customer "NSB"
+						 :employer :kodemaker
+						 :summary "PAIN"
+						 :years [2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020]
+						 :description "Utvikling av en applikasjon for automatisk
              generere databasen som styrer passasjerinformasjons-anleggene
              ombord i forskjellige togtyper, dvs annonsering av stasjoner o.l."
-             :tech [:griffon :groovy :java :spring :junit :svn :maven :java-sound-framework]}
-            {:customer "HRM Group"
-             :employer :kodemaker
-             :summary "Lederindeksen"
-             :years [2009]
-             :description "Utvikling av måleverktøy for Ledere.
+						 :tech [:griffon :groovy :java :spring :junit :svn :maven :java-sound-framework]}
+						{:customer "HRM Group"
+						 :employer :kodemaker
+						 :summary "Lederindeksen"
+						 :years [2009]
+						 :description "Utvikling av måleverktøy for Ledere.
              www.lederindeksen.no"
-             :tech [:ruby :rails :rake]}
-            {:customer "Statens Pensjonskasse"
-             :employer :kodemaker
-             :summary "Nytt saksbehandlingssystem for SPK."
-             :years [2009]
-             :description "Utvikling av saksbehandlingssystem."
-             :tech [:java :flex :maven :hudson :hibernate :javascript]}
-            {:customer "Forsvaret"
-             :employer :kodemaker
-             :years [2009]
-             :summary "Amplan"
-             :description "Planlegging og bestillingssystem for ammunisjon."
-             :tech [:java :spring-mvc :javascript :html]}
-            {:customer "Tandberg"
-             :employer :objectware
-             :summary "Telepresence"
-             :years [2008]
-             :description "Telepresence. Utvikling av styresystem for Tandbergs
+						 :tech [:ruby :rails :rake]}
+						{:customer "Statens Pensjonskasse"
+						 :employer :kodemaker
+						 :summary "Nytt saksbehandlingssystem for SPK."
+						 :years [2009]
+						 :description "Utvikling av saksbehandlingssystem."
+						 :tech [:java :flex :maven :hudson :hibernate :javascript]}
+						{:customer "Forsvaret"
+						 :employer :kodemaker
+						 :years [2009]
+						 :summary "Amplan"
+						 :description "Planlegging og bestillingssystem for ammunisjon."
+						 :tech [:java :spring-mvc :javascript :html]}
+						{:customer "Tandberg"
+						 :employer :objectware
+						 :summary "Telepresence"
+						 :years [2008]
+						 :description "Telepresence. Utvikling av styresystem for Tandbergs
              prestisjeprodukt T3."
-             :tech [:java :swing :spring :svn :junit]}
-            {:customer "Western Geco"
-             :employer :objectware
-             :summary "Støttesystemer for Seismikk"
-             :years [2008]
-             :description "Støttesystemer for Seismikk Prisberegningssystem for
+						 :tech [:java :swing :spring :svn :junit]}
+						{:customer "Western Geco"
+						 :employer :objectware
+						 :summary "Støttesystemer for Seismikk"
+						 :years [2008]
+						 :description "Støttesystemer for Seismikk Prisberegningssystem for
              seismikkjobber - en rik klient i Swing."
-             :tech [:java :swing :hudson]}
-            {:customer "Cicero"
-             :employer :objectware
-             :summary "Cicero Financial Portal"
-             :years [2007]
-             :description "Utvikling av Ciceros Finansportal"
-             :tech [:java :jsp :struts2 :css :html :sql :portlets :oracle-portal
-                    :oracle-appserver :eclipse :maven :svn :spring :junit :hudson]}
-            {:customer "CSAM/Rikshospitalet"
-             :employer :objectware
-             :summary "Klinisk portal"
-             :years [2006]
-             :description "Klinisk portal Utvikling av «Klinisk Portal», en
+						 :tech [:java :swing :hudson]}
+						{:customer "Cicero"
+						 :employer :objectware
+						 :summary "Cicero Financial Portal"
+						 :years [2007]
+						 :description "Utvikling av Ciceros Finansportal"
+						 :tech [:java :jsp :struts2 :css :html :sql :portlets :oracle-portal
+										:oracle-appserver :eclipse :maven :svn :spring :junit :hudson]}
+						{:customer "CSAM/Rikshospitalet"
+						 :employer :objectware
+						 :summary "Klinisk portal"
+						 :years [2006]
+						 :description "Klinisk portal Utvikling av «Klinisk Portal», en
              portalløsning med integrasjon mot mange underliggende systemer. Var
              bl.a. med på å muliggjøre sammenslåingen av Rikshospitalet og
              Radiumhospitalet. Startet som et prosjekt hos Rikshospitalet men
              vokste til et eget selskap (CSAM) og et produkt som også ble tatt i
              bruk på flere sykehus i Vestmanlän i Sverige."
-             :tech [:java :jsp :struts :prototype :ajaxanywhere :javascript
-                    :css :html :portlets :oracle-portal :oracle-appserver :intellij
-                    :ant :svn :cvs :jstl :spring :junit :hudson]}
-            {:customer "Skatteetaten"
-             :employer :objectware
-             :summary "Intranett portal"
-             :years [2006]
-             :description "Utviklet portlets til skatteetatens intranet-portal."
-             :tech [:java :escenic :oracle-portal]}
-            {:customer "DnbNor"
-             :employer :accenture
-             :summary "Postbanken Nettbank"
-             :years [2005]
-             :description "Utviklet moduler til Postbankens Nettbank"
-             :tech [:java :html]}
-            {:customer "Norgesgruppen"
-             :employer :accenture
-             :summary "Intranett og Matsikkerhetsportal"
-             :years [2004]
-             :description "Utviklet Intranett portal for
+						 :tech [:java :jsp :struts :prototype :ajaxanywhere :javascript
+										:css :html :portlets :oracle-portal :oracle-appserver :intellij
+										:ant :svn :cvs :jstl :spring :junit :hudson]}
+						{:customer "Skatteetaten"
+						 :employer :objectware
+						 :summary "Intranett portal"
+						 :years [2006]
+						 :description "Utviklet portlets til skatteetatens intranet-portal."
+						 :tech [:java :escenic :oracle-portal]}
+						{:customer "DnbNor"
+						 :employer :accenture
+						 :summary "Postbanken Nettbank"
+						 :years [2005]
+						 :description "Utviklet moduler til Postbankens Nettbank"
+						 :tech [:java :html]}
+						{:customer "Norgesgruppen"
+						 :employer :accenture
+						 :summary "Intranett og Matsikkerhetsportal"
+						 :years [2004]
+						 :description "Utviklet Intranett portal for
              Norgesgruppens forskjellige kjeder."
-             :tech [:java :escenic :oracle-portal]}
-            {:customer "DnbNor"
-             :employer :accenture
-             :summary "Postbanken Nettbank"
-             :years [2003]
-             :description "Design og utvikling av forskjellige moduler i Postbankens Nettbank."
-             :tech [:java :html]}
-            {:customer "Canal Digital"
-             :employer :accenture
-             :summary "Applikasjoner for Digital TV"
-             :years [2001]
-             :description "Applikasjoner for digital TV Utvikling av
+						 :tech [:java :escenic :oracle-portal]}
+						{:customer "DnbNor"
+						 :employer :accenture
+						 :summary "Postbanken Nettbank"
+						 :years [2003]
+						 :description "Design og utvikling av forskjellige moduler i Postbankens Nettbank."
+						 :tech [:java :html]}
+						{:customer "Canal Digital"
+						 :employer :accenture
+						 :summary "Applikasjoner for Digital TV"
+						 :years [2001]
+						 :description "Applikasjoner for digital TV Utvikling av
              forskjellige applikasjoner og infrastrukturmoduler som kjører på
              Canal Digitals STB. Bl.a. Elektronisk Program Guide og
              stemmeapplikasjon"
-             :tech [:media-highway :media-home-platform]}
-            {:customer "SuperOffice"
-             :employer :superoffice
-             :summary "Intranet portal"
-             :years [1999, 2000]
-             :description "Bygge
+						 :tech [:media-highway :media-home-platform]}
+						{:customer "SuperOffice"
+						 :employer :superoffice
+						 :summary "Intranet portal"
+						 :years [1999, 2000]
+						 :description "Bygge
              forskjellige moduler, som dokumentarkiv, diskusjonsforum,
              publiseringsverktøy. "
-             :tech [:vbscript :asp :javascript :mssql]}
-            {:customer "Trumf"
-             :employer :superoffice
-             :summary "Nettbutikk"
-             :years [2001]
-             :description "Utviklet Trumfs nettbutikk."
-             :tech [:vbscript :asp :oracle :html :javascript]}]
+						 :tech [:vbscript :asp :javascript :mssql]}
+						{:customer "Trumf"
+						 :employer :superoffice
+						 :summary "Nettbutikk"
+						 :years [2001]
+						 :description "Utviklet Trumfs nettbutikk."
+						 :tech [:vbscript :asp :oracle :html :javascript]}]
 
- :innate-skills [:mariadb  :jenkins]
+ :innate-skills [:mariadb :jenkins]
 
- :cv {:default {:preferred-techs [
-                                 :react :redux
-                                 :kotlin :groovy :javascript :grails
-                                 :micronaut
-                                 :gradle :maven
-                                 :git :svn :cvs
-                                 :mariadb :oracle :mssql
-                                 :osx :ubuntu :ubuntu :ios :haproxy
-                                 :jenkins
-                                 ]}}
+ :cv {:default {:preferred-techs
+								[:react :redux
+								 :kotlin :groovy :javascript :grails
+								 :micronaut
+								 :gradle :maven
+								 :git :svn :cvs
+								 :mariadb :oracle :mssql
+								 :osx :ubuntu :ubuntu :ios :haproxy
+								 :jenkins
+								 ]}}
 
  :cv/description "Fredrik har lang og allsidig erfaring som systemutvikler. Han har jobbet med en mengde varierte systemer relatert til logistikk og transport de siste årene. 
 Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet brukerne faktisk trenger. Foretrekker små og effektive team, samt iterativ utvikling med raske beslutningsveier.
 "
 
 
-:endorsements [{:author "Kent Kolnes"
-                 :title "Leder forretningssystemer, Vygruppen AS"
-                 :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget 
+ :endorsements [{:author "Kent Kolnes"
+								 :title "Leder forretningssystemer, Vygruppen AS"
+								 :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget
                  fornøyd med hvordan Fredrik bidrar med forslag både i arkitektur spørsmål
                  og i løsninger. Løsningene Fredrik har bidratt med og lage gir flere 1000
                  ansatte i Norge og Sverige nytte hver dag. I tillegg alle kundene våre
@@ -255,58 +261,57 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
                  så vi kan ta gode avgjørelser. 
 
                  Topp utvikler, som du garantert kommer til å bli fornøyd med."}
-              ]
+								]
 
  :education-summary "Dataingeniør, HiG"
  :experience-since 1999
  :qualifications ["Fullstack utvikler, jobber gjerne med hele stacken"
-                  "Foretrekker små og effektive team"
-                  "Mye erfaring med transport- og logistikksystemer"
-                  "God domeneforståelse og gode samarbeidsevner"
-                  ]
+									"Foretrekker små og effektive team"
+									"Mye erfaring med transport- og logistikksystemer"
+									"God domeneforståelse og gode samarbeidsevner"
+									]
  :certifications [{:name "JavaScript/JQuery", :year 2009}
-                  {:name "Sun Certified Business Component Developer", :year 2006}
-                  {:name "Sun Certified Java Developer", :year 2005}
-                  {:name "Sun Certified Java Programmer", :year 2003}]
+									{:name "Sun Certified Business Component Developer", :year 2006}
+									{:name "Sun Certified Java Developer", :year 2005}
+									{:name "Sun Certified Java Programmer", :year 2003}]
  :born 1976
  :education [{:institution "Høgskolen i Gjøvik"
-              :years [1997 1998 1999]
-              :subject "Høgskoleingeniør, Data"}]
+							:years [1997 1998 1999]
+							:subject "Høgskoleingeniør, Data"}]
  :domain-skills [{:title "Jernbane"
-                  :description
-                  "God kunnskap om norsk jernbane, etter over åtte år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. "}
-                 {:title "Helseforetak"
-                  :description "God kunnskap etter 18 måneder på Rikshospitalet. "}
-                 {:title "Oljeleting/seismikk"
-                  :description "Noe kjennskap, etter 4 måneder i Western Geco."}
-                 {:title "Bank/Finans"
-                  :description
-                  "Noe kjennskap, etter å ha jobbet for Postbanken/DnB og Cicero finansportal. "}
-                 {:title "Telekonferanser/Teleprecence"
-                  :description
-                  "God kjennskap til High-End/Telepresence løsningene etter 5 måneder hos Tandberg"}
-                 {:title "Dagligvarebransjen", :description "Noe kjennskap."}]
+									:description
+									"God kunnskap om norsk jernbane, etter over åtte år hos NSB. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. "}
+								 {:title "Helseforetak"
+									:description "God kunnskap etter 18 måneder på Rikshospitalet. "}
+								 {:title "Oljeleting/seismikk"
+									:description "Noe kjennskap, etter 4 måneder i Western Geco."}
+								 {:title "Bank/Finans"
+									:description
+									"Noe kjennskap, etter å ha jobbet for Postbanken/DnB og Cicero finansportal. "}
+								 {:title "Telekonferanser/Teleprecence"
+									:description
+									"God kjennskap til High-End/Telepresence løsningene etter 5 måneder hos Tandberg"}
+								 {:title "Dagligvarebransjen", :description "Noe kjennskap."}]
 
  :languages [{:language "Norsk"
-              :orally "Morsmål"
-              :written "Morsmål"}
-             {:language "Engelsk"
-              :orally "Meget god"
-              :written "Flytende"}]
+							:orally "Morsmål"
+							:written "Morsmål"}
+						 {:language "Engelsk"
+							:orally "Meget god"
+							:written "Flytende"}]
 
  :endorsement-highlight {:author "Kent Kolnes"
-                         :title "Leder forretningssystemer, Vygruppen AS"
-                         :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget 
+												 :title "Leder forretningssystemer, Vygruppen AS"
+												 :quote "Vi i Vy har jobbet med Fredrik i en lengre periode, vi er meget
                                  fornøyd med hvordan Fredrik bidrar med forslag både i arkitektur spørsmål
                                  og i løsninger. "}
 
- :project-highlights [
-                     {:blurb "Microtjenester som tilbyr trafikkinformasjon, basert på Kotlin, Micronaut og AWS"
-                      :customer "Vy"}
-                     {:blurb "Dokumentdistribusjons-system for togpersonalet basert på Grails/Groovy og React/Redux"
-                       :customer "NSB"}
-                      {:blurb "Løsning for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy og React/Redux"
-                       :customer "NSB"}]
+ :project-highlights [{:blurb "Utvikling og forvaltning av flere av Fortum og Hafslund Strøm sine kunderettede flater."
+											 :customer "Hafslund Strøm / Fortum"}
+											{:blurb "Microtjenester som tilbyr trafikkinformasjon, basert på Kotlin, Micronaut og AWS"
+											 :customer "Vy"}
+											{:blurb "Løsning for oppdatering av passasjerinformasjonssystemene på togene basert på Groovy og React/Redux"
+											 :customer "NSB"}]
 
  }
 
