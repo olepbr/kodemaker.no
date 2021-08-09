@@ -1,6 +1,6 @@
 {:id :olga
  :name ["Olga" "Voronkova"]
- :title "Kodeknekker"
+ :title "Utvikler"
  :start-date "2019-03-01 00:09"
  :experience-since 2013
  :born 1988
@@ -21,9 +21,8 @@
             :linkedin "/in/olgavoronkova"
           }
 
- :tech {:using-at-work [:react-native :typescript :javascript]
-        :favorites-at-the-moment [:xamarin-forms :responsive-design]
-        :want-to-learn-more [:flutter :hololens :unity :wearables :clojure]}
+ :tech {:using-at-work [:elixir :phoenix :postgresql :azure]
+        :want-to-learn-more [:elixir :flutter]}
 
  :qualifications ["Mobil- og frontendutvikler"
                   "Opptatt av designkvalitet"
@@ -88,13 +87,21 @@
 
  :projects
  [{:customer "Bring"
-   :start "2019-03"
-   :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
-   :employer :kodemaker
-   :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
-   utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
-   mottagerene av pakkene (pakkesporing, osv). Ansvar for å vedlikeholde og virereutvikle app-løsningen til sjafører."
-   :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
+						 :start "2021-04"
+						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
+						 :employer :kodemaker
+						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
+						 :tech [:elixir :phoenix :azure :postgresql]}
+
+   {:customer "Bring"
+     :start "2019-03"
+     :end "2021-03"
+     :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
+     :employer :kodemaker
+     :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
+     utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
+     mottagerene av pakkene (pakkesporing, osv). Ansvar for å vedlikeholde og virereutvikle app-løsningen til sjafører."
+     :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
 
    {:customer "Rikshospitalet"
      :start "2018-07"
