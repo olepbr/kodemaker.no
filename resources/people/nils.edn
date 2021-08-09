@@ -37,8 +37,8 @@
 
  :tech                  {
                          :favorites-at-the-moment [:flutter :go :emacs]
-                         :using-at-work           [:ios :flutter :android]
-                         :want-to-learn-more      [:ios :flutter :dart :emacs]
+                         :using-at-work           [:kotlin :flutter :kafka]
+                         :want-to-learn-more      [:flutter :clojure :go]
                          }
 
  :hobbies               [
