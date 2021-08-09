@@ -31,8 +31,8 @@
             :linkedin "/in/stigmelling"
             :github "stigmelling"
             }
-:tech {:using-at-work [:grails :javascript :docker :git :ansible :micronaut :aws :circleci :react :redux :linux :redhat ]
-           :favorites-at-the-moment [:react :kubernetes :micronaut :grafana :prometheus]
+:tech {:using-at-work [:kafka :kotlin :typescript :terraform :grails :javascript :docker :git :micronaut :aws :react :redux :aws]
+           :favorites-at-the-moment [:react :kubernetes :micronaut :kotlin :grafana :prometheus]
            :want-to-learn-more [:kubernetes :go ]}
 
 :qualifications ["God og bred teknologiforståelse som går gjennom «alle lag» i teknologistakken"
@@ -80,6 +80,12 @@ Det gikk bra - veldig bra."
                :tech [:javascript :aws]}]
 
  :projects [
+ {:customer "Mercell"
+  :years [2020 ]
+  :employer :kodemaker
+  :summary "Skybasert platform for distribusjon og presentasjon av anbudsinformasjon"
+  :description "Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og har etablert ett eget team som har ansvar for distribusjon og presentasjon av anbudsinformasjon."
+  :tech [:aws :terraform :micronaut :kafka :kotlin :typescript :react :redux :postgresql :gradle]}
  {:customer "VY"
   :years [2020 ]
   :employer :kodemaker
@@ -109,7 +115,7 @@ Det gikk bra - veldig bra."
   :employer :kodemaker
   :summary "Migrering av resultatsystem til Kubernets i AWS"
   :description "Migrering av en monolitt av ett resultatsystem til mindre og mer skalerbare tjenster"
-  :tech [:kubernetes :micronaut :groovy :spring-boot :grails :javascript :mysql ]}
+  :tech [:kubernetes :micronaut :groovy :springboot :grails :javascript :mysql ]}
 
  {:customer "VY"
   :years [2017 ]
@@ -550,7 +556,9 @@ Det gikk bra - veldig bra."
                     {:blurb "Utvikling og DevOps på virksomhetskritiske applikasjoner."
                      :customer "VY"}
                     {:blurb "Prosjektleder og utvikler av nytt system for måling og evaluering av rør/piper hos Forsvaret"
-                     :customer "Forsvaret"}]
+                     :customer "Forsvaret"}
+                    {:blurb "Etablering av skybasert platform for distribusjon og presentasjon av anbudsinformasjon på Mercells nye platform"
+                     :customer "Mercell"}]
 
 :endorsement-highlight {:author "Cato Berg"
                        :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
