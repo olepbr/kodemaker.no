@@ -433,7 +433,7 @@
              På litt sikt vil våre tjenester splittes inn i mindre selvstendige komponenter også kjent som Micro Frontends.
              Integrasjon mot andre domener foregår ved bruk av Kafka. Brukerene skal sikres en sømløs brukerreise med integrasjon mot et felles autentiseringsløsning (i dag Auth0).
              \nRolle: Tech lead, utvikler og arkitekt"
-             :tech [:kotlin :typescript :kafka :aws :dynamodb :terraform :auth0 :funksjonell-programmering]}
+             :tech [:kotlin :typescript :kafka :aws :dynamodb :terraform :auth0 :funksjonell-programmering :docker :react :devops]}
             {:customer "Norled"
              :start "2019-04"
              :end "2020-09"
