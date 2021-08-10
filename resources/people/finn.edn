@@ -42,12 +42,23 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
                       {:blurb "Android App for ombordpersonell hos NSB"
                        :customer "NSB"}]
  :projects [
+{:customer "Mercell"
+             :start "2020-10"
+             :employer :kodemaker
+             :summary "Utvikling av ny samarbeidstjenste for leverandører i en anbudsportal."
+             :description "Mercell er en av de ledende aktørerne i Europa innen anbudsformidling. De har en offensiv vekststrategi og har gjennom flere oppkjøp vokst fort de siste par årene.
+             Mercell er i ferd med å lage en ny felles plattform for leverandører. I starten av vårt engasjement skulle vi analysere og identifisere behovet for tjenesten vi skulle utvikle. Ved hjelp av brukerintervjuer og intern kunnskap fant vi et gap i tjenestetilbudet for leverandører som ble vårt team sin satsning (Mercell Workboard).
+             \nVårt oppdrag blei da å utvikle en tjeneste som gir en totaloversikt over en leverandørs pågående anbudsprosesser. Vi skulle også utvikle tjenester som gir mulighet for leverandører til samarbeid og samhandling i fasene for evaluering av anbud og innlevering av tilbud.
+             Teamet vårt er et autonomt domeneteam og vi har stor frihet i valg av teknologi og arbeidsmetodikk. Vi har valgt en reactive inspirert arkitektur og benytter oss av Javalin/Kotlin på backend og React/Typescript på frontend. Kommunikasjon mellom backend og frontend skjer via Websockets (for lesing) og REST/commands (for skriving).
+             Integrasjon mot andre team/domener foregår med meldingsutveksling i Kafka.
+             \nRolle: Utvikler"
+             :tech [:kotlin :typescript :docker :kafka :aws :react :dynamodb :terraform :devops]}
             {:customer "Animalia"
              :start "2020-01"
              :employer :kodemaker
              :summary "Utvikler Clojure"
              :description "Clojure-utvikler på 2 forskjellige systemer for dyrehold. Forplan for Sau og livdyrattester for kjøp/salg av Storfe."
-             :tech [:clojure :clojurescript :oracle :mssql]}
+             :tech [:clojure :clojurescript :react :oracle :mssql :okd :reagent :re-frame :docker :devops]}
             {:customer "Politiet"
              :start "2019-10"
              :employer :kodemaker
