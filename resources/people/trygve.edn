@@ -124,7 +124,17 @@
                              {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                               :customer "Thomson Reuters"}]
 
- :projects                  [{:customer    "Kodemaker"
+ :projects                  [{:customer    "Bring"
+                              :employer    :kodemaker
+                              :years       [2020 :ongoing]
+                              :summary     "Opplegg for flyfrakt i system for budleveranser"
+                              :description "Innføre flyfrakt innen skandinavia som en opsjon ved en leveranse i applikasjonen Glow.
+                                            Glow er et system for budleveranser som håndterer alt
+                                            fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
+                                            sanntid, og integrasjoner med mange av Bring sine systemer.
+                                            Trygve har jobbet med både frontend og backend."
+                              :tech         [:typescript :react :redux :kotlin :arrow :gradle :azure :postgresql]}
+                             {:customer    "Kodemaker"
                               :years       [2020]
                               :employer    :kodemaker
                               :summary     "Integrasjon av kodemakers cv-er mot cvpartner.no"
