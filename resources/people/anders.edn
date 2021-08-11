@@ -64,7 +64,13 @@
                         the extreme. One of the best developers I have ever worked
                         with."}]
 
- :projects [{:customer "Norled"
+ :projects [{:customer "Ruter"
+             :employer :kodemaker
+             :summary "Salgsløsning for billetter ombord i buss"
+             :description "Backend-utvikling av ny plattform for salg av billetter ombord i buss."
+             :tech [:kotlin :kafka :gradle :postgresql :kubernetes :ci :cd :datadog :event-sourcing]
+             :years [2020 2021 :ongoing]}
+            {:customer "Norled"
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for
@@ -74,7 +80,7 @@
                     :aws :aws-vpc :aws-s3 :aws-route53 :aws-iam :nginx :cordova :html :css :responsive-design :kafka
                     :influxdb :lambdacd :ci :cd :alpine :ubuntu :datadog :event-sourcing :cqrs :figwheel :dynamodb
                     :aws-ec2 :bash :clojure-spec :cloud :travis-ci]
-             :years [2016 :ongoing]}
+             :years [2016 2017 2018 2019 2020]}
             {:customer "Oiiku"
              :employer :kodemaker
              :years [2015]
@@ -138,8 +144,7 @@
              :years [2008]
              :employer :nets
              :summary "Konsekvensanalyse / forprosjekt for utfasing av PKI plattform"
-             :description "Konsekvensanalyse / forprosjekt for utfasing av PKI
-             plattform Konsekvensanalyse for utfasing av sertifikatplattform
+             :description "Konsekvensanalyse for utfasing av sertifikatplattform
              benyttet av flere virksomhetskritiske tjenester. Utarbeidelse av
              løsningsforslag for innføring/utvikling av ny sertifikatplattform.
              Utarbeidelse av strategi for migrering av berørte tjenester og
@@ -149,16 +154,14 @@
              :years [2007 2008]
              :employer :nets
              :summary "System for bestilling av digitale sertifikater via web"
-             :description "System for bestilling av digitale sertifikater via
-             web Design og utvikling av webbasert grensesnitt for bestilling og
+             :description "Design og utvikling av webbasert grensesnitt for bestilling og
              formidling av digitale sertifikater. Rolle: Ledende utvikler"
              :tech [:java :spring-mvc :spring :hibernate]}
             {:customer "NETS AS"
              :employer :nets
              :years [2005 2006 2007]
              :summary "Autentisering- og autorisasjonssystem for online portal"
-             :description "Autentisering- og autorisasjonssystem for online
-             portal Design og utvikling av nytt sikkerhetsrammeverk for
+             :description "Design og utvikling av nytt sikkerhetsrammeverk for
              tilgangskontroll av tjenester. Støtte for et bredt utvalg av
              autentiseringsmekanismer samt Single Sign-On mekanismer. Utvikling
              av dynamisk regelmotor for evaluering av tilgangsforespørsler.
@@ -169,21 +172,20 @@
              :years [2007 2008]
              :employer :nets
              :summary "Utarbeidelse av metodikk for sikkerhetsanalyse av IT-systemer"
-             :description "Metodikk for sikkerhetsanalyse Initiativtaker og
-             utførende i utarbeidelse av bedriftstilpasset metodikk for
-             sikkerhetsanalyse av tjenester. Utførende analytiker og veileder
-             for sikkerhetsanalyse av tjenester. Rolle: Analytiker"
+             :description "Initiativtaker og utførende i utarbeidelse av
+             bedriftstilpasset metodikk for sikkerhetsanalyse av tjenester. Utførende
+             analytiker og veileder for sikkerhetsanalyse av tjenester. Rolle: Analytiker"
              :tech []}
             {:customer "NETS AS"
              :years [2003 2004 2005]
              :employer :nets
              :summary "Utvikling av system og rammeverk for kryptering og signering av finansielle transaksjoner"
-             :description "Krypteringsrammeverk Videreutvikling av tjeneste og
+             :description "Videreutvikling av tjeneste og
              produkt for generering og verifisering av digitale signaturer i
              ulike formater. Ansvarlig for implementering av støtte for bl.a.
              EDIFACT AUTACK og Visa/MasterCard MPI. Benyttet av ulike tjenester
              for å sikre integritet av utveklsing av finansielle transaksjoner
-             mellom BBS og kunder. Rolle: Utvikler"
+             mellom NETS og kunder. Rolle: Utvikler"
              :tech
              [:c :java :jni :linux :solaris :hp-nonstop]}
             {:customer "NETS AS"
