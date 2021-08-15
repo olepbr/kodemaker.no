@@ -89,8 +89,23 @@
                         I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
                         Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
                         Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]
- :projects [{:customer "Kolonial(.no)"
+ :projects [{:customer "Mercell"
              :years [2020 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av nye tjenester i skyen basert på AWS og Kafka(Aiven)"
+             :description "Mercell har i løpet av kort tid etablert seg som en av de aller største aktørene innenfor offentlig anbud. Ved fortløpende å kjøpe
+             opp konkurenter i både Norge, Skandinavia og Europa har selskapet vokst i et forrykende tempo. Antallet ansatte og tekniske løsninger som oppkjøpene
+             medfører innebærer en stor utfordring å vedlikeholde over tid. Ved å utvikle helt nye og gjenbrukbare tjenester på AWS i skyen er tanken at alle nye
+             og eksisterende selskaper som er en del av Mercell skal samle seg rundt et sett av felleskomponenter. Det er alikevel lagt opp til høy grad av
+             autonomitet i de forskjellige teamene og all form for kommunikasjon mellom disse gjøres helt datadrevet med meldingsutveksling over Kafka(Aiven).
+             Oppgavene har i stor grad vært domenespesifikke innen distribusjon og presentasjon. Med distribusjon menes her alle typer kommunikasjonskanaler som
+             mail, sms, Slack osv. Det har i hovedsak blitt utviklet egne tjenester som er selve fundamentet for distribusjonen. En egen pipeline som tar i mot
+             mail formatert som egne meldinger på Kafka blir plukket opp, validert og sendt ut via AWS sin Simple Email Service. Alt av tilbakemeldinger som
+             mottas av AWS blir parset og oversatt til interne dataformater som kan abonneres på av andre team og konsumenter. Presentasjonsdelen er relevant i
+             forhold til hvordan andre team og tjenester ønsker dataene formatert. Dette gjøres via ferdig templates som lett kan modifiseres og tilpasses."
+             :tech [:kotlin :arrow :javalin :aws :aws-sqs :aws-ses :aws-eks :aws-fargate :kafka :waypoint :terraform]}
+            {:customer "Kolonial(.no)"
+             :years [2020]
              :employer :kodemaker
              :summary "Kolonial til skyen - Kubernetes på GCP"
              :description "Grunnet eksplosiv vekst og ambisjoner om å gå ut i verden har Kolonial sett behovet for å flytte on premise baserte

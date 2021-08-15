@@ -76,12 +76,15 @@
    :aws-cloudwatch
    :aws-ec2
    :aws-ecs
+   :aws-eks
+   :aws-fargate
    :aws-iam
    :aws-kinesis
    :aws-lambda
    :aws-rds
    :aws-route53
    :aws-s3
+   :aws-sqs
    :aws-vpc
    :azure
    :cloudstack
@@ -99,7 +102,8 @@
    :secret-manager
    :serverless
    :tutum
-   :travis-ci]}
+   :travis-ci
+   :waypoint]}
 
  :concept
  {:label "Metode og tilnærming"
@@ -183,7 +187,8 @@
   :parent :other
   :idx 95
   :techs
-  [:json
+  [:avro
+   :json
    :xml]}
 
  :database
@@ -510,6 +515,7 @@
    :aspectj
    :google-guice
    :jackson
+   :javalin
    :java-mail
    :java-sound-framework
    :jaxb
