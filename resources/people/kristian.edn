@@ -103,7 +103,7 @@
              mail formatert som egne meldinger på Kafka blir plukket opp, validert og sendt ut via AWS sin Simple Email Service. Alt av tilbakemeldinger som
              mottas av AWS blir parset og oversatt til interne dataformater som kan abonneres på av andre team og konsumenter. Presentasjonsdelen er relevant i
              forhold til hvordan andre team og tjenester ønsker dataene formatert. Dette gjøres via ferdig templates som lett kan modifiseres og tilpasses."
-             :tech [:kotlin :arrow :javalin :aws :aws-sqs :aws-ses :aws-eks :aws-fargate :kafka :waypoint :terraform]}
+             :tech [:kotlin :arrow :javalin :aws :aws-s3 :aws-sqs :aws-ses :aws-eks :aws-fargate :kafka :waypoint :terraform]}
             {:customer "Kolonial(.no)"
              :years [2020]
              :employer :kodemaker

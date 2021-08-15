@@ -84,6 +84,7 @@
    :aws-rds
    :aws-route53
    :aws-s3
+   :aws-ses
    :aws-sqs
    :aws-vpc
    :azure
