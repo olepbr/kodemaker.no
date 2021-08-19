@@ -136,6 +136,8 @@ a, .clickable {
   .f-address {white-space: nowrap;}
 }
 
+.nbr {white-space: nowrap;}
+
 @media only screen and (min-width: 1080px) {
   .footer {display: flex;}
   .f-logo {padding-top: 6px; flex: 1;}
@@ -1635,4 +1637,101 @@ a, .clickable {
 
 @page :first {
   margin-top: 0;
+}
+
+.erfaring,
+.ansvarlig,
+.utfordrer,
+.bidrar,
+.engasjert,
+.uformell,
+.orden {transition: opacity 500ms; opacity: 0;}
+
+.erfaring-on .erfaring,
+.ansvarlig-on .ansvarlig,
+.utfordrer-on .utfordrer,
+.bidrar-on .bidrar,
+.engasjert-on .engasjert,
+.uformell-on .uformell,
+.orden-on .orden {opacity: 1;}
+
+.no-erfaring,
+.no-ansvarlig,
+.no-utfordrer,
+.no-bidrar,
+.no-engasjert,
+.no-uformell,
+.no-orden {transition: opacity 500ms;}
+
+.erfaring-on .no-erfaring,
+.ansvarlig-on .no-ansvarlig,
+.utfordrer-on .no-utfordrer,
+.bidrar-on .no-bidrar,
+.engasjert-on .no-engasjert,
+.uformell-on .no-uformell,
+.orden-on .no-orden {opacity: 0;}
+
+#whoami-wrapper {position: relative; width: 100vw; overflow: hidden;}
+#whoami-section {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#illustration {
+  pointer-events: none;
+  position: absolute;
+  padding-top: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#illustration svg {display:block;}
+
+#quotes {padding-top: 580px;}
+
+@media only screen and (max-width: 1160px) { #quotes { padding-top: 50vw; }}
+@media only screen and (max-width: 690px) { #quotes { padding-top: 70vw; }}
+@media only screen and (max-width: 450px) { #quotes { padding-top: 80vw; }}
+
+.whoami-q div {
+  display: inline-block;
+  border-radius: 20px;
+  margin: 0 -20px 50vh;
+  padding: 20px;
+  background: rgba(255,255,255,0.8);
+  position: relative;
+  z-index: 9;
+}
+
+.whoami-q.scroll--none div {background: rgba(255,246,246,0.8);}
+
+.whoami-q:last-child div {margin-bottom: 0; padding-bottom: 10vh;}
+@media only screen and (min-width: 691px) {
+  .whoami-q:last-child div {margin-top: 60vh;}
+}
+
+.scroll--ansvarlig-on,
+.scroll--bidrar-on,
+.scroll--uformell-on {text-align: right;}
+.scroll--ansvarlig-on div,
+.scroll--bidrar-on div,
+.scroll--uformell-on div {text-align: left;}
+
+@media only screen and (max-width: 690px) {
+  #illustration { margin-left: -100px; margin-right: -100px; padding-top: 20px; }
+  #illustration .nomob {display:none;}
+}
+@media only screen and (max-width: 450px) {
+  #illustration { padding-top: 30px; }
+}
+.whoami-footer-in #illustration { top: initial; }
+
+#whoami-body {overflow: hidden; position: relative;}
+.whoami-header-out #whoami-body { position: initial; }
+.whoami-footer-in #whoami-body { position: relative; }
+
+@media only screen and (min-width: 691px) {
+  .whoami-q div {max-width: 600px;}
+  .whoami-q.scroll--none div {max-width: initial;}
+  #illustration .mob {display:none;}
 }

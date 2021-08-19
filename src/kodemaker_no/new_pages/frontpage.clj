@@ -4,8 +4,8 @@
   {:sections [{:kind :bruce
                :title "Engasjert miljø, erfarne utviklere"
                :text "Vi er ansvarlige, engasjerte og uformelle konsulenter. Vi er selvgående, trygge på våre meninger og utfordrer gjerne det eksisterende. Er du en av de som vet at et fåtall dyktige utviklere kan utgjøre en stor forskjell, så ta gjerne kontakt med oss."
-               :link {:text "Ta kontakt"
-                      :href "/kontakt/"}
+               :link {:text "Hvem er vi?"
+                      :href "/om-oss/"}
                :image-front "/bruce-front/foto/folk.jpg"
                :image-back "/bruce-back/foto/arduino.jpg"}
               {:kind :seymour
@@ -21,7 +21,7 @@
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
                 {:icon {:type :science/robot-1 :height 79}
-                 :title "Hvem er kodemakerne?"
+                 :title "Folka"
                  :text "Vi er erfarne, sultne og sosiale konsulenter som liker å bryne oss på de vanskeligere oppgavene."
                  :link {:text "Se kodemakere"
                         :href "/folk/"}}

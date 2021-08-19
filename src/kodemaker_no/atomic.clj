@@ -16,6 +16,7 @@
             [kodemaker-no.new-pages.references-page :as references-page]
             [kodemaker-no.new-pages.tech-page :as tech-page]
             [kodemaker-no.new-pages.video-page :as video-page]
+            [kodemaker-no.new-pages.whoami-page :as whoami-page]
             [kodemaker-no.prepare-pages :refer [post-process-page]]
             [kodemaker-no.render-new-page :refer [render-page]]))
 
@@ -53,7 +54,8 @@
                   :page.kind/references (references-page/create-page e)
                   :page.kind/tech (tech-page/create-page e)
                   :page.kind/people (people-page/create-page e)
-                  :page.kind/video (video-page/create-page e))
+                  :page.kind/video (video-page/create-page e)
+                  :page.kind/whoami (whoami-page/create-page e))
                 request)))
 
 (defn serve-pages [conn]

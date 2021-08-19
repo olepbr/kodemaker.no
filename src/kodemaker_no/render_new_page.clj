@@ -1,6 +1,7 @@
 (ns kodemaker-no.render-new-page
   (:require [clojure.java.io :as io]
             [dumdom.string :as dumdom]
+            [kodemaker-no.new-pages.whoami-page :as whoami-page]
             [optimus.link :as link]
             [ui.layout :as layout]
             [ui.sections :as sections]))
@@ -30,6 +31,7 @@
        :tech-intro sections/tech-intro-section
        :titled sections/titled-section
        :vertigo sections/vertigo-section
+       :whoami whoami-page/render-section
        :widescreen sections/widescreen-section) section)
     (catch Exception e
       (throw (ex-info (format "Unable to render section: %s" (.getMessage e)) {:section section})))))
