@@ -1,5 +1,6 @@
 (ns ui.elements
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [ui.inline-icons :as inline]))
 
 (defn el [el params text]
   [(get params :element el)
@@ -69,14 +70,17 @@
    text (arrow params)])
 
 (def viewboxes
-  {:custom/person "0 0 44 44"})
+  {:custom/person "0 0 44 44"
+   :drawings/folka "0 0 209 218.1"
+   :drawings/jobbe-hos-oss "0 0 209 212.4"})
 
 (defn icon [{:keys [type width height color]}]
-  [:svg {:view-box (or (viewboxes type) "0 0 24 24")
-         :width width
-         :height height}
-   [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
-          :style {"--svg_color" (str "var(--" (or (some-> color name) "rouge") ")")}}]])
+  (or (some-> type inline/icons (str/replace "<height>" (str height)))
+      [:svg {:view-box (or (viewboxes type) "0 0 24 24")
+             :width width
+             :height height}
+       [:use {:xlink-href (str "/icons/" (namespace type) "/" (name type) ".svg#icon")
+              :style {"--svg_color" (str "var(--" (or (some-> color name) "rouge") ")")}}]]))
 
 (defn seymour [params]
   [:div.seymour

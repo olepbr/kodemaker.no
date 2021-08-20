@@ -100,21 +100,14 @@
                        :request (dissoc request :optimus-assets)}
                       e)))))
 
-(defn- use-norwegian-quotes [html]
-  (-> html
-      (str/replace "“" "«")
-      (str/replace "”" "»")))
-
 (defn post-process-page [html image-asset-config request]
   (-> html
-      (tweak-page-markup image-asset-config request)
-      use-norwegian-quotes))
+      (tweak-page-markup image-asset-config request)))
 
 (defn prepare-page [image-asset-config get-page request]
   (-> (get-page)
       (render/render-page request)
-      (tweak-page-markup image-asset-config request)
-      use-norwegian-quotes))
+      (tweak-page-markup image-asset-config request)))
 
 (defn prepare-pages [pages image-asset-config]
   (h/update-vals pages #(partial prepare-page image-asset-config %)))

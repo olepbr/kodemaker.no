@@ -15,17 +15,17 @@
                       {:kind :ascending-line
                        :position "top -500px right -440px"}]
                :seymours
-               [{:icon {:type :science/chemical :height 79}
+               [{:icon {:type :drawings/referanser :height 220}
                  :title "Referanser"
                  :text "Vi har interessante og utfordrende kunder. Sammen utvikler vi spennende løsninger."
                  :link {:text "Se referanser"
                         :href "/referanser/"}}
-                {:icon {:type :science/robot-1 :height 79}
+                {:icon {:type :drawings/folka :height 220}
                  :title "Folka"
                  :text "Vi er erfarne, sultne og sosiale konsulenter som liker å bryne oss på de vanskeligere oppgavene."
                  :link {:text "Se kodemakere"
                         :href "/folk/"}}
-                {:icon {:type :computer/laptop-1 :height 79}
+                {:icon {:type :drawings/jobbe-hos-oss :height 220}
                  :title "Jobbe hos oss"
                  :text "Det er ikke ofte vi ansetter nye Kodemakere, men kanskje du er vår neste kollega?"
                  :link {:text "Se jobb"
