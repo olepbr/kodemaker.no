@@ -6,7 +6,7 @@
 *I Kodemaker er vi 24 konsulenter som gjør karriere av å være utviklere — ikke
 powerpoint-arkitekter, fagansvarlige eller mellomledere.*
 
-<img src="/fullsize-photos/stemning1.jpg"/>
+<img style="float: right; width: 40%; margin-left: 20px;" src="/icons/drawings/jobbe-hos-oss.svg"/>
 
 Hos oss er det ingen administrativ karrierestige. Vi mener at systemutvikling er
 et yrke man svært gjerne kan utøve hele livet — ikke noe man trenger å bli
