@@ -57,6 +57,8 @@ lagt merke til er det et stort pluss, og noe vi har gode ordninger for å støtt
 Vi ønsker oss større mangfold: kvinner og søkere fra andre underrepresenterte
 grupper oppfordres spesielt til å søke.
 
+<img src="/fullsize-photos/gruppebilde.jpg"/>
+
 ## Ta kontakt
 
 Vi biter ikke, så ta gjerne kontakt med [Kolbjørn](/kolbjorn/), hvis du er
@@ -64,6 +66,3 @@ interessert. Evt. [en av oss andre](/folk/). Du kjenner kanskje noen fra før?
 Fyr av en mail til [kontakt@kodemaker.no](mailto:kontakt@kodemaker.no), så avtaler
 vi en prat, lunsj eller kaffekopp.
 
-<img src="/fullsize-photos/gruppebilde.jpg"/>
-
-[Lyst til å bli med?](mailto:kontakt@kodemaker.no)
