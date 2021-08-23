@@ -3,7 +3,7 @@
 
 :lead
 
-*I Kodemaker er vi 24 konsulenter som gjør karriere av å være utviklere — ikke
+*I Kodemaker er vi 26 konsulenter som gjør karriere av å være utviklere — ikke
 powerpoint-arkitekter, fagansvarlige eller mellomledere.*
 
 <img style="float: right; width: 40%; margin-left: 20px;" src="/icons/drawings/jobbe-hos-oss.svg"/>
@@ -66,5 +66,4 @@ vi en prat, lunsj eller kaffekopp.
 
 <img src="/fullsize-photos/gruppebilde.jpg"/>
 
-Hva!? Har vi glemt meteren? Fortvil ikke, dette bildet ble tatt i fordums tid.
-Den gangen man kunne få plass til 25 folk på ett bilde. Trivelig gjeng, da. [Lyst til å bli med?](mailto:kontakt@kodemaker.no)
+[Lyst til å bli med?](mailto:kontakt@kodemaker.no)
