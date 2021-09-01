@@ -153,7 +153,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :side-projects
  [
   {:title        "vintilbud.no"
-   :link         {:url "https://vintilbud.no" :text "Tilbud på varer fra vinmonopolet"}
+   :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.vintilbudp" :text "Tilbud på varer fra vinmonopolet"}
    :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en Android-app og en ios-app der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go og kjører på google app-engine. Mobil-appen for Android og iOS er skrevet i dart med rammeverket flutter."
    :illustration "/illustrations/side-projects/vintilbud.png"
    :tech         [:go :google-appengine :elm :flutter :dart :ios :android]
