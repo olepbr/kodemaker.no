@@ -115,7 +115,7 @@
              i form av kustomize konfigurasjoner. Det er også lagt opp til høy grad av selvbetjening og utviklet en egen kommandolinje-klient i Go(prototyping
              i Python) for å hente ut data og status om kjørende applikasjoner. Dette underbygger tanken om autonome team som ikke er avhengig av dyp infrastruktur
              kompetanse for å håndtere egne applikasjoner på plattformen."
-             :tech [:docker :kubernetes :terraform :kustomize :github-actions :argocd :secret-manager :berglas :go :python]}
+             :tech [:gcp :docker :kubernetes :terraform :kustomize :github-actions :argocd :secret-manager :berglas :go :python]}
             {:customer "Statistisk Sentralbyrå(SSB)"
              :years [2019 2020]
              :employer :kodemaker
@@ -129,7 +129,7 @@
              opp til høy grad av automatisering hvor Ansible blir brukt til å generere Terraform konfigurasjoner. I tilleg har man omfavnet GitOps-tangegangen
              ved å integrere Flux i arkitekturen. Flux sin primæroppgave er å se etter endringer i kodebasen og umiddelbart deploye disse ut. Full 2-veis
              synkronisering er også støttet som betyr at en endring direkte i clusteret blir automatisk rullet tilbake til siste versjon som finnes i Git."
-             :tech [:docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :jinja2]}
+             :tech [:gcp :docker :kubernetes :istio :flux :ansible :terraform :sealed-secrets :helm :jinja2]}
             {:customer "Finn AS"
              :years [2018 2019]
              :employer :kodemaker
