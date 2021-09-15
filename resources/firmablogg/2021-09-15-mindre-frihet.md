@@ -24,7 +24,7 @@ til hvor som helst i koden. Dritbra greier da!
 Ikke sant?
 
 Du gikk ikke på den, nei. I dag er vi naturligvis enige alle sammen om at `GOTO`
-er en uting. Det startet da Dijkstra popularisterte uttrykket "considered
+er en uting. Det startet da Dijkstra populariserte uttrykket "considered
 harmful" på slutten av 60-tallet.
 
 Jeg kunne kanskje allerede her klappet meg selv på skulderen. Spørsmålet i
@@ -66,7 +66,7 @@ består sjekken i `check`, og samler dem i en ny liste. Det er altså filter
 (eller select).
 
 La oss avslutte denne artige øvelsen med noen flere kodesnutter. Se om du klarer
-se hva de gjør.
+å se hva de gjør.
 
 ```js
 var result = [];
@@ -128,7 +128,7 @@ var result = items.map(transform).filter(check);
 var result = items.filter(i => check(transform(i));
 ```
 
-Husker du at jeg spurte deg "Er du sikker?". Da måtte du nesten gå tilbake til
+Husker du at jeg spurte deg "Er du sikker?" Da måtte du nesten gå tilbake til
 for-loopen og sjekke. Hadde du gått glipp av en detalj? Hadde jeg vært snedig
 med min termineringsklausul? Eller den der `++`-en?
 
