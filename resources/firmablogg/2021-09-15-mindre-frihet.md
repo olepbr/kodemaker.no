@@ -1,6 +1,6 @@
 :title Kan mindre frihet være bra?
 :author magnar
-:tech [:functional-programming]
+:tech [:funksjonell-programmering]
 :published 2021-09-15
 
 :blurb
