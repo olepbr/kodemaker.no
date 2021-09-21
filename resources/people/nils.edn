@@ -51,6 +51,15 @@
  :innate-skills         [:kotlin]
 
  :endorsements          [
+                         {:author "Joakim Von Brandis"
+                          :title "Head of Development, mnemonic as"
+                          :quote "Vi var heldige å få Nils inn på et kritisk tidspunkt i prosjektet med utvikling av ny mobilapp.
+Nils tar utfordringer på strak arm, og setter seg raskt inn i nye problemstillinger og løsninger.
+Han er en hyggelig og omgjengelig utvikler å ha i teamet, og er samvittighetsfull og
+løsningsorientert.
+
+Jeg kan trygt anbefale Nils som et solid tilskudd til fremtidige prosjekter."
+                          },
                          {:author "Thor Marius Henrichsen"
                           :title "Tech Lead, Finn.no"
                           :quote "Nils er en fantastisk utvikler å ha i ethvert utviklingteam. Han har dyp teknisk forståelse i en mengde språk, og han behersker mange tilhørende rammeverk. Han er enormt effektiv, og løser komplekse oppgaver på løpende bånd. Er det noe han ikke kan, bruker han dessuten svært kort tid å å lære seg nye ting. 
