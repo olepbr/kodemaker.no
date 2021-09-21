@@ -51,7 +51,7 @@
  :innate-skills         [:kotlin]
 
  :endorsements          [
-                         {:author "Joakim Von Brandis"
+                         {:author "Joakim von Brandis"
                           :title "Head of Development, mnemonic as"
                           :quote "Vi var heldige å få Nils inn på et kritisk tidspunkt i prosjektet med utvikling av ny mobilapp.
 Nils tar utfordringer på strak arm, og setter seg raskt inn i nye problemstillinger og løsninger.
