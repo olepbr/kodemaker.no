@@ -36,9 +36,9 @@
       [:p.text text]
       (e/arrow-link link)]
      [:div.bruce-image-front
-      [:img {:src image-front}]]
+      [:img {:alt "" :src image-front}]]
      [:div.bruce-image-back
-      [:img {:src image-back}]]]]])
+      [:img {:alt "" :src image-back}]]]]])
 
 (defn contact-section [{:keys [email phone address contacts link] :as params}]
   [:div.section.bruce.contact-section
