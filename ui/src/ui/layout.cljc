@@ -2,8 +2,8 @@
   (:require [clojure.string :as str]
             [ui.elements :as e]))
 
-(defn logo [{:keys [width]}]
-  [:img {:alt "Kodemaker logo" :src "/img/logo.svg" :width width}])
+(defn logo [{:keys [width, alt]}]
+  [:img {:src "/img/logo.svg" :width width :alt alt}])
 
 (def pønt-infos
   {:greater-than {:ext ".svg" :size "650px 1300px"}
@@ -55,7 +55,7 @@
 
 (defn header []
   [:div.header
-   [:a {:title "Hjem" :href "/"} (logo {:width 176})]
+   [:a {:href "/"} (logo {:width 176 :alt "Kodemakers logo, lenke hjem"})]
    [:div.menu-toggler.clickable.h5 {:onclick "var mm = document.getElementById('mobile-menu'); mm.style.display='block'; mm.ontouchmove = function (e) { e.preventDefault(); };"}
     "Meny"]
    [:div#mobile-menu {:style {:display "none"}}
@@ -79,7 +79,7 @@
                                                            :position "right -300px top -480px"}]))}
    [:div.content
     [:div.footer
-     [:div.f-logo (logo {:width 176})]
+     [:div.f-logo (logo {:width 176 :alt "Kodemakers logo"})]
      [:div.f-infos
       [:div.f-address
        [:div "Kodemaker Systemutvikling AS"]
