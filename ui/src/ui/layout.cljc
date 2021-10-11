@@ -3,7 +3,7 @@
             [ui.elements :as e]))
 
 (defn logo [{:keys [width]}]
-  [:img {:src "/img/logo.svg" :width width}])
+  [:img {:alt "Kodemaker logo" :src "/img/logo.svg" :width width}])
 
 (def pønt-infos
   {:greater-than {:ext ".svg" :size "650px 1300px"}
@@ -55,7 +55,7 @@
 
 (defn header []
   [:div.header
-   [:a {:href "/"} (logo {:width 176})]
+   [:a {:title "Hjem" :href "/"} (logo {:width 176})]
    [:div.menu-toggler.clickable.h5 {:onclick "var mm = document.getElementById('mobile-menu'); mm.style.display='block'; mm.ontouchmove = function (e) { e.preventDefault(); };"}
     "Meny"]
    [:div#mobile-menu {:style {:display "none"}}
