@@ -44,7 +44,7 @@
 (defn render-page [page request]
   (str "<!DOCTYPE html>"
    (dumdom/render
-    [:html
+    [:html {:lang "no"}
      [:head
       [:meta {:charset "utf-8"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
