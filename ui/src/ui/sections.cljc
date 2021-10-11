@@ -162,28 +162,28 @@
    [:div.content
     [:div.gutter.gutter-xl
      [:div.pønt-item.portrait-1
-      [:a {:href (:href portrait-1) :title (:title portrait-1)}
-       [:img.img.image-style-chocolate-triangle {:src (:img portrait-1)}]]]
+      [:a {:href (:href portrait-1)}
+       [:img.img.image-style-chocolate-triangle {:title (:title portrait-1) :src (:img portrait-1)}]]]
 
      [:div.pønt-item.top-triangle
-      [:a {:href (:href top-triangle) :title (:title top-triangle)}
-       [:img.img.image-style-rouge-triangle {:src (:img top-triangle)}]]]
+      [:a {:href (:href top-triangle)}
+       [:img.img.image-style-rouge-triangle {:title (:title top-triangle) :src (:img top-triangle)}]]]
 
      [:div.pønt-item.bottom-circle
-      [:a {:href (:href bottom-circle) :title (:title bottom-circle)}
-       [:img.img.image-style-chocolate-circle-pønt {:src (:img bottom-circle)}]]]
+      [:a {:href (:href bottom-circle)}
+       [:img.img.image-style-chocolate-circle-pønt {:title (:title bottom-circle) :src (:img bottom-circle)}]]]
 
      [:div.pønt-item.portrait-2
-      [:a {:href (:href portrait-2) :title (:title portrait-2)}
-       [:img.img.image-style-rouge-triangle {:src (:img portrait-2)}]]]
+      [:a {:href (:href portrait-2)}
+       [:img.img.image-style-rouge-triangle {:title (:title portrait-2) :src (:img portrait-2)}]]]
 
      [:div.pønt-item.top-circle
-      [:a {:href (:href top-circle) :title (:title top-circle)}
-       [:img.img.image-style-rouge-circle-pønt {:src (:img top-circle)}]]]
+      [:a {:href (:href top-circle)}
+       [:img.img.image-style-rouge-circle-pønt {:title (:title top-circle) :src (:img top-circle)}]]]
 
      [:div.pønt-item.bottom-triangle
-      [:a {:href (:href bottom-triangle) :title (:title bottom-triangle)}
-       [:img.img.image-style-chocolate-triangle {:src (:img bottom-triangle)}]]]]]])
+      [:a {:href (:href bottom-triangle)}
+       [:img.img.image-style-chocolate-triangle {:title (:title bottom-triangle) :src (:img bottom-triangle)}]]]]]])
 
 (defn references-intro-section [{:keys [title image logo link content] :as params}]
   [:div.section.references-intro-section
