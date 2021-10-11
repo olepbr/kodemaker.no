@@ -1,5 +1,5 @@
 {:id :responsive-design
- :name "Responsive Design"
+ :name "Responsiv design"
  :type :frontend
  :illustration "/photos/tech/rwd.jpg"
  :site "http://en.wikipedia.org/wiki/Responsive_web_design"

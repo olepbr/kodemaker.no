@@ -64,7 +64,7 @@
                     :link {:url "https://www.youtube.com/watch?v=PUv66718DII"
                            :text "Se foredraget"}
                     :tech [:tooling :design]
-                    :blurb "Fantastisk foredrag av Brett Victor. Programmering er et kreativt yrke. Det er antageligvis mye lettere å være kreativ dersom man kan ta, se, observere og endre helt fritt og dynamisk på et kjørende program.
+                    :blurb "Fantastisk foredrag av Bret Victor. Programmering er et kreativt yrke. Det er antageligvis mye lettere å være kreativ dersom man kan ta, se, observere og endre helt fritt og dynamisk på et kjørende program.
                             Hadde det ikke vært digg å kunne spole tilbake det du nettopp gjorde i appen din, endre noen parametere og så kjøre på nytt. Kanskje tom for å sammenligne.
                             Dette foredraget var bl.a med på å inspirere mye av tankene rundt verktøy som Light Table og programmeringspråket Elm"}
                    {:title "Let's be Mainstream"
