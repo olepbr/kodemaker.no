@@ -429,7 +429,7 @@
              applikasjoner, oppringt, nettverk, printere, etc) på forskjellige
              plattformer (Windows, Mac, Unix/Linux). Utskriftstjenester,
              systemovervåkning/vedlikehold."
-             :tech [:windows :mac-os :linux :unix]}]
+             :tech [:windows :classic-mac-os :linux :unix]}]
 
  :employments {:objectware {:description "Konsulent, Seniorkonsulent (fra 2004).
                Java/JEE konsulent i en rekke prosjekter med varierende teknologi. Svært mye frontendutvikling på javaplattform, både tykke (Swing) og tynne klienter. Opparbeidet seg rollen som avdelingens ekspert på ajaxteknologi."}

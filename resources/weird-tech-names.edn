@@ -48,6 +48,7 @@
  :cef "Chrome Embedded Framework"
  :centos "CentOS"
  :ci "Kontinuerlig integrasjon"
+ :classic-mac-os "Classic Mac OS"
  :clojure-spec "clojure.spec"
  :cloud "Skyen"
  :complus "COM+"
@@ -158,7 +159,6 @@
  :letsencrypt "Let's Encrypt"
  :lighttable "Light Table"
  :lisp-flavoured-erlang "Lisp Flavoured Erlang"
- :mac-os "Mac OS" ;Classic Mac OS 1984-2001
  :mariadb "MariaDB"
  :material-ui "Material UI"
  :mdb "Message-driven Beans"

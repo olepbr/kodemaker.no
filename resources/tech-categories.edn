@@ -634,6 +634,7 @@
    :bluetooth
    :busybox
    :centos
+   :classic-mac-os
    :coreos
    :dotnet
    :ejb
@@ -656,7 +657,6 @@
    :jbuilder
    :linux
    :linux-kernel
-   :mac-os
    :media-home-platform
    :mono
    :mvs
