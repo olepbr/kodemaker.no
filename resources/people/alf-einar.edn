@@ -303,5 +303,5 @@ I addition he obtained a good knowledge of the Pension Business."
               :orally "Meget god"
               :written "Flytende"}]
 
- :innate-skills [:intellij :eclipse :git :svn :cvs :ddd :tdd :unix :osx :windows]
+ :innate-skills [:intellij :eclipse :git :svn :cvs :ddd :tdd :unix :mac-os :windows]
  }

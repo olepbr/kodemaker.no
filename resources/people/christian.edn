@@ -34,7 +34,7 @@
     (http://www.apollon.uio.no/) og har vært \"frontend-mann\" for utallige små og
     store prosjekter, samt skrevet en bok om test-drevet utvikling med JavaScript."
 
- :innate-skills [:terminal :browser-devtools :haproxy :svn :osx :android :ios]
+ :innate-skills [:terminal :browser-devtools :haproxy :svn :mac-os :android :ios]
 
  :phone-number "+47 934 17 480"
  :email-address "christian@kodemaker.no"
@@ -1255,7 +1255,7 @@
  :cv {:default {:preferred-techs [:clojure :clojurescript
                                   :funksjonell-programmering :immutability
                                   :emacs :terminal
-                                  :osx :centos :alpine :ubuntu :ios
+                                  :mac-os :centos :alpine :ubuntu :ios
                                   :docker :nginx :haproxy]}}
 
  :workshops [{:title "Webutvikling med ClojureScript"

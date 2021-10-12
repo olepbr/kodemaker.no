@@ -657,12 +657,12 @@
    :jbuilder
    :linux
    :linux-kernel
+   :mac-os
    :media-home-platform
    :mono
    :mvs
    :novell-netware
    :openhab
-   :osx
    :passiv-rfid
    :pthread
    :qb-vision

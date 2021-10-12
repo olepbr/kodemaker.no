@@ -492,7 +492,7 @@ kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
                    :year 2003}
                   {:name "Sun Certified Programmer for Java 2 platform", :year 2001}]
  :born 1975
- :innate-skills [:postgresql :ruby :objc :xcode :textmate :sublime-text :terminal :osx :h2db :hsqldb :sqlite :google-analytics :eclipse :scrum :architecture :testing :ci :cd :micro-services :php :maven :jetty]
+ :innate-skills [:postgresql :ruby :objc :xcode :textmate :sublime-text :terminal :mac-os :h2db :hsqldb :sqlite :google-analytics :eclipse :scrum :architecture :testing :ci :cd :micro-services :php :maven :jetty]
  :education [{:institution "Universitet i Oslo"
               :years [1996 1997 1998 1999 2000]
               :subject "Cand. Mag. Informatikk"}]

@@ -39,7 +39,7 @@
                  :linkedin "/in/steintore/"}
     
  
- :innate-skills [:terminal :browser-devtools :svn :osx :android :activemq :confluence :mysql :nexus 
+ :innate-skills [:terminal :browser-devtools :svn :mac-os :android :activemq :confluence :mysql :nexus 
                  :pair-programming :mariadb :influxdb :db2 :github :gitlab :google-maps :h2db]
  
  :tech          {:favorites-at-the-moment [:clojure]

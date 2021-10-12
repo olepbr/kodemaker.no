@@ -221,7 +221,7 @@
 
 :cv {:default {:preferred-techs [:react :typescript :java
                 :intellij :terminal 
-                :osx :ubuntu
+                :mac-os :ubuntu
                 :docker]}}
 
 :certifications [{:name "Sun Certified Java Programmer"

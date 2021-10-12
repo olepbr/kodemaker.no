@@ -15,7 +15,7 @@
                Oppdragsgiverne hans kjenner ham som en som får ting gjort. Han har stor arbeidskapasitet
                og jobber effektivt. Han lærer raskt og tenker fremover."
 
- :innate-skills [:intellij :eclipse :vscode :toad :terminal :sql :java :ios :android :windows :unix :linux :osx]
+ :innate-skills [:intellij :eclipse :vscode :toad :terminal :sql :java :ios :android :windows :unix :linux :mac-os]
 
  :phone-number "+47 481 12 911"
  :email-address "torstein@kodemaker.no"
