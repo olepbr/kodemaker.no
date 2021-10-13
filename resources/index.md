@@ -154,7 +154,6 @@ utgangpunktet hadde ambisjoner om å få til.
 /alf-kristian/                     /photos/people/alf-kristian/side-profile-square.jpg
 /odin/                             /photos/people/odin/side-profile-square.jpg
 /clojure/                          /photos/tech/clojure.svg
-/august/                           /photos/people/august/side-profile-square.jpg
 /nodejs/                           /photos/tech/nodejs-simple.svg
 /stian/                            /photos/people/stian/side-profile-square.jpg
 /react/                            /photos/tech/react.png
