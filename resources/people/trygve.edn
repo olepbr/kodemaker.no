@@ -26,7 +26,7 @@
                              :haskell :scala :ruby :python :octave :pascal :prolog :fortran
                              :redux
                              :intellij :browser-devtools
-                             :osx :linux
+                             :mac-os :linux
                              :ddd
                              :deeplearning]
 
@@ -465,7 +465,7 @@
 
  :cv                        {:default {:preferred-techs [:java :javascript :es6 :typescript :groovy :python
                                                          :react :redux :immutable-js
-                                                         :osx :linux
+                                                         :mac-os :linux
                                                          :intellij :docker :ddd]
                                        :exclude-techs   []}}
 

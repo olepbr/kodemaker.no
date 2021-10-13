@@ -29,7 +29,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
         :favorites-at-the-moment [:elm :kotlin :haskell]
         :want-to-learn-more [:elm :kotlin :clojure]}
 
- :innate-skills [:terminal :intellij :osx :haskell :vim :lean :scrum :kanban :tdd :browser-devtools :windows]
+ :innate-skills [:terminal :intellij :mac-os :haskell :vim :lean :scrum :kanban :tdd :browser-devtools :windows]
 
  :recommendations [{:title "Distributed systems for fun and profit"
                     :blurb "En veldig bra innføring i grunnleggende teori og prinsipper bak distribuerte systemer. Den tar for seg på en lettlest måte hvordan fysisk avstand og samtidighet påvirker alle distribuerte systemer (i praksis alle kommersielle it-systemer), hvorfor det er viktig å ta hensyn til dette når vi utvikler systemer og hvordan dette påvirker designet av kjente systemer som Amazon Dynamo, Google BigTable og Hadoop."

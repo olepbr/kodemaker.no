@@ -634,6 +634,7 @@
    :bluetooth
    :busybox
    :centos
+   :classic-mac-os
    :coreos
    :dotnet
    :ejb
@@ -662,7 +663,6 @@
    :mvs
    :novell-netware
    :openhab
-   :osx
    :passiv-rfid
    :pthread
    :qb-vision

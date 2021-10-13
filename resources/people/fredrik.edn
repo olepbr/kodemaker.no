@@ -233,7 +233,7 @@ Fredrik er spesielt opptatt av sluttbrukere, og at man lager det systemet bruker
 								 :gradle :maven
 								 :git :svn :cvs
 								 :mariadb :oracle :mssql
-								 :osx :ubuntu :ubuntu :ios :haproxy
+								 :mac-os :ubuntu :ubuntu :ios :haproxy
 								 :jenkins
 								 ]}}
 

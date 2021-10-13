@@ -38,7 +38,7 @@
         :favorites-at-the-moment [:python :clojurescript :typescript]
         :want-to-learn-more [:clojure :emacs :rust :go :r :machine-learning :clojurescript]}
 
- :innate-skills [:cpp :cvs :emacs :git :intellij :linux :osx :windows]
+ :innate-skills [:cpp :cvs :emacs :git :intellij :linux :mac-os :windows]
 
  :recommendations [{:title "The Log: What every software engineer should know about real-time data's unifying abstraction"
                     :blurb "Fantastisk bra artikkel om logg som sentralt system for integrasjon,

@@ -9,7 +9,7 @@
 
  :innate-skills [:terminal 
                  :svn :cvs 
-                 :osx :unix :ubuntu :redhat 
+                 :mac-os :unix :ubuntu :redhat 
                  :teamcity :hudson :jenkins :bamboo
                  :crucible
                  :hbase :mysql :postgresql
@@ -454,7 +454,7 @@
 
  :cv {:default {:preferred-techs [:clojure :clojurescript :java :groovy :javascript
                                   :git :svn :cvs
-                                  :osx :ubuntu :redhat
+                                  :mac-os :ubuntu :redhat
                                   :datomic :redis :kafka :elasticsearch :dynamodb :cassandra :postgresql :mysql :oracle
                                   :kubernetes :terraform :puppet :teamcity
                                   :jira :confluence :bamboo
