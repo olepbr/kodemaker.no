@@ -45,6 +45,7 @@
    :cocoa
    :cordova
    :core-text
+   :expo
    :gcd
    :google-cloud-to-device-android-push
    :jquery-mobile
@@ -74,6 +75,7 @@
    :aws-cloudformation
    :aws-cloudfront
    :aws-cloudwatch
+   :aws-cognito
    :aws-ec2
    :aws-ecs
    :aws-eks
@@ -93,17 +95,20 @@
    :docker-cloud
    :docker-swarm
    :efs
+   :firebase
    :gcp
    :github-actions
    :google-appengine
    :google-cloud
    :google-cloud-messaging
+   :hasura
    :heroku
    :ibm-bluemix
    :secret-manager
    :serverless
    :tutum
    :travis-ci
+   :vercel
    :waypoint]}
 
  :concept
@@ -119,6 +124,7 @@
    :automated-acceptance-testing
    :bildeanalyse
    :blockchains
+   :brand-design
    :business
    :cd
    :ci
@@ -128,6 +134,7 @@
    :ddd
    :design
    :devops
+   :digital-design
    :distributed-systems
    :domain-modeling
    :event-sourcing
@@ -136,6 +143,7 @@
    :hateoas
    :homoikonisitet
    :immutability
+   :interaction-design
    :kanban
    :lean
    :logic-programming
@@ -163,6 +171,7 @@
    :trening
    :uml
    :universell-utforming
+   :user-research
    :virtualisering
    :web-performance
    :web-services
@@ -378,6 +387,7 @@
    :dreamweaver-mx
    :eclipse
    :emacs
+   :figma
    :intellij
    :jrebel
    :mscode
@@ -385,6 +395,7 @@
    :powerbuilder
    :powerdesigner
    :rubymine
+   :sketch
    :sublime-text
    :textmate
    :vim
@@ -469,8 +480,12 @@
    :sass
    :sente
    :sse
+   :ssg
+   :ssr
    :svg
+   :visx
    :voiceover
+   :wasm
    :webgl
    :websockets]}
 
@@ -497,6 +512,7 @@
    :reactive-x
    :saaj
    :telon
+   :tokio
    :unleash
    :vavr
    :versata
@@ -900,6 +916,7 @@
    :epicentric-portal
    :express
    :facelets
+   :gatsby
    :geronimo
    :glassfish
    :grails
@@ -930,6 +947,7 @@
    :liberator
    :mustache
    :netty
+   :nextjs
    :novell-extend-composer-appserver
    :oc4j
    :optimus
@@ -988,6 +1006,7 @@
   :techs
   [:abdera
    :atom
+   :blockhain
    :etl
    :genova
    :google-protocol-buffers
