@@ -174,7 +174,7 @@ const Hundesiden = () => (
 );
 ```
 
-Å støtte fullskjerm påvirker da kun kattesiden:
+Å støtte fullskjerm påvirker kun kattesiden:
 
 ```
 const Kattesiden = () => {
@@ -195,8 +195,8 @@ const Kattesiden = () => {
 ```
 
 # Oppsummering
-Ulempen er at det blir litt mer kode på hver side, men det er en smal pris å betale. Ved å la hver side bestemme selv
-så har du oppnådd følgende:
+Ulempen er at det blir litt mer kode på hver side, men det er en lav pris å betale. Ved å la hver side bestemme selv
+så oppnår du følgende:
 
 * Mer forståelig kode. Du kan gå til en hvilken som helst side og finne koden til *hele* siden
 * Lettere å tilpasse hver side, uten å påvirke andre
