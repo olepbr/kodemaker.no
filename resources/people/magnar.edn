@@ -264,7 +264,14 @@
                        noen andres config og håpe det blir bra."
                :tech [:emacs]}]
 
- :presentations [{:title "Kosetime: Live parprogrammering og zombier"
+ :presentations [{:title "That Tech Show: Magnar Sveen"
+                  :blurb "Jeg tok en prat med to karer fra London om Zombier, Emacs og Clojure. Pass opp for det skumle coverbildet, det var Halloween Special."
+                  :event "That Tech Show-podcast"
+                  :tech [:clojure :clojurescript :funksjonell-programmering :emacs]
+                  :date "2021-10-26"
+                  :url "https://thattech.show/episodes/episode-37-zombies-emacs-and-getting-clojure-with-magnar-sveen"
+                  :thumb "/thumbs/videos/tts-magnar.jpg"}
+                 {:title "Kosetime: Live parprogrammering og zombier"
                   :blurb "[Christian](/christian/) og jeg parprogrammerer nettspill
                   med Clojure og ClojureScript på JavaZone. Det blir funksjonell
                   programmering, testdrevet utvikling og to tomsinger fra Østfold."
