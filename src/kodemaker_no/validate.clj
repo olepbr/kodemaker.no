@@ -68,9 +68,10 @@
                                    :tech [ID]
                                    (optional-key :event) Str ;; Konferansenavn etc
                                    :date Date ;; iso-8601 yyyy-mm-dd
-                                   :urls {(optional-key :video) URL
-                                          (optional-key :slides) URL
-                                          (optional-key :source) URL} ;; må ha minst en av disse URLene
+                                   (optional-key :url) URL
+                                   (optional-key :urls) {(optional-key :video) URL
+                                                         (optional-key :slides) URL
+                                                         (optional-key :source) URL} ;; må ha minst en av disse URLene
                                    (optional-key :thumb) Str
                                    (optional-key :direct-link?) Boolean}] ;; true hvis det ikke skal embeddes video på kodemaker-sidene
 
