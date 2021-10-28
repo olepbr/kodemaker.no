@@ -51,13 +51,13 @@
             :illustration "/illustrations/hobbies/sindre_volley.jpg"}]
 
  :blog-posts [
-              {:url "https://grensesnittet.computas.com/the-missing-piece-of-software-development/"
+              {:url "https://sindredev.wordpress.com/the-missing-piece-of-software-development/"
                :published "2017-02-20"
                :title "The Missing Piece of Software Development"
                :blurb "Et innlegg om hvordan det viktigste ved softwareutvikling muligens har druknet i teknologier og rammeverk."
                :tech [:ddd]}
 
-              {:url "https://grensesnittet.computas.com/lost-in-translation/"
+              {:url "https://sindredev.wordpress.com/lost-in-translation/"
                :published "2017-05-15"
                :title "Lost in Translation"
                :blurb "Et innlegg om språk og misforståelser."
