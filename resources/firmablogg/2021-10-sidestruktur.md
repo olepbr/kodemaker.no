@@ -1,8 +1,9 @@
 :title Sidestruktur
 :author odin
 :tech [:frontend]
-:blurb
 :published 2021-11-01
+
+:blurb
 
 Ofte så lager vi løsninger med en fast visuell struktur. Du har for eksempel en header med en meny, en sidespesifikk kropp og 
 en footer. Hva gjør vi hvis noen sider trenger en annen struktur?
