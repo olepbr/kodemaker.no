@@ -314,15 +314,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; REPL stuff
 (comment
-
   ;;;;;;;;;;;;;;;;;
   ; To run in repl:
+  ; (with intellij: use Cursive plugin, right click on project and start repl)
 
   ; first start datomic database
   (start)
 
   ; then load this file in REPL
-  ; (intellij: shift-cmd-L)
+  ; (with intellij: select this file and load with shift-cmd-L)
 
   ; finally set namespace for access to functions
   (ns kodemaker-no.export.cvpartner)
@@ -331,11 +331,31 @@
   (def conn (d/connect "datomic:mem://kodemaker"))
   (def db (d/db conn))
 
+  ; If you want to acces cvpartner, you must make sure authorization-token is set
+  ; (it will be set autmatically by .envrc when cd into kodemaker.no folder,
+  ; but may not be set by intellij.)
+  ; Check that token is set with:
+  authorization-token
+  ; If not, set the authorization-token and -header again:
+  (def authorization-token "hemmelig, se secret.envrc eller secret-sample.envrc")
+  (def authorization-header {"Authorization" (str "Token token=" authorization-token)})
+
   ;;;;;;;;;;;;;;;;;
   ; useful commands
 
-  ; export all
-  (map str (export-all-cvs db))
+
+  ; export one person (NOTE: will take a minute or so!)
+  (cvpartner-export "trygve")
+  ; Same, but in multiple steps
+  (def company-config (get-company-config))
+  (def person (find-person-by-email db "olav@kodemaker.no"))
+  (export-cv db company-config person)
+  ; and export-cv can be divided in more parts, see impl.
+  ; For example, if create brand new user, something like this:
+  (def user (generate-user person company-config))
+  (create-or-update-user user)
+  (def cv (generate-cv db person))
+  (update-cv person cv)
 
   ; get test person from datomic
   (def trygve (d/entity db :person/trygve))
@@ -355,6 +375,4 @@
 
   ; datomic queries
   (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/given-name "Trygve"]] db)
-  (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "olga@kodemaker.no"]] db)
-
-  )
+  (d/q '[:find [(pull ?e [*]) ...] :where [?e :person/email-address "olga@kodemaker.no"]] db))

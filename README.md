@@ -563,7 +563,8 @@ Kjør følgende script og følg oppskriften du får.
 ```
 
 Du vil bli bedt om å opprette filen `secret.envrc` fra malen `secret-sample.envrc` 
-og legge inn cvpartner api token i denne. Og så må du source denne: 
+og legge inn cvpartner api token i denne. Les `secret-sample.envrc`, der står det hvor 
+du finner passordet. Og så må du source denne: 
 ```sh
 . ./secret.envrc
 ```
