@@ -49,8 +49,8 @@ Altså omsetter jeg et generisk "klikk" til mer app-spesifikke meldinger:
 Her har noen fylt inn e-post-adressen sin, og dersom de nå trykker på knappen,
 så vil appen få tre meldinger, som er implementert som "actions" et sted.
 
-Med eksempelet over i hodet skulle Dumdom få en ny feature: innebygget støtte
-for event-handlere som bare er data.
+Koden vår var full av slike eksempler. Nå var det på tide å brette opp ermene og
+lage en ny feature: innebygget støtte for event-handlere som bare er data.
 
 ## Iterasjon #1: Dumdoms meldingsbuss
 
