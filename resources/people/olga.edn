@@ -35,9 +35,9 @@
                  {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}
  ]
 
- :recommendations [{:title "Xamarin Podcast"
-                    :blurb "Se hva som rører seg i Xamarin-verden. Informativ og morsom podcast med Matt Soucoup og James Montemagno."
-                    :link {:url "https://www.xamarinpodcast.com/"
+ :recommendations [{:title ".NET MAUI Podcast"
+                    :blurb "Se hva som rører seg i Xamarin/MAUI-verden. Informativ og morsom podcast med Matt Soucoup og James Montemagno."
+                    :link {:url "https://www.dotnetmauipodcast.com/"
                            :text "Hør podcast her."}
                     :tech [:teknologi :utvikling]
                            }]
@@ -88,10 +88,11 @@
  :projects
  [{:customer "Bring"
 						 :start "2021-04"
+             :end "2021-11"
 						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
 						 :employer :kodemaker
 						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
-						 :tech [:elixir :phoenix :azure :postgresql]}
+						 :tech [:elixir :phoenix :azure :postgresql :nextjs :graphql :vercel :typescript :figma]}
 
    {:customer "Bring"
      :start "2019-03"
