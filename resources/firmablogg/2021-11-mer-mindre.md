@@ -10,6 +10,10 @@ nedskalert og samtidig mer nyttig.
 
 :body
 
+NB! Dette innlegget har noen små kodeeksempler i Clojure, men handler om
+generell tilnærming til design av kode. Ikke la deg skremme om språket er
+ukjent.
+
 Jeg vedlikeholder et rendering-bibliotek
 ([Dumdom](https://github.com/cjohansen/dumdom)), som lar deg rendre DOM med
 komponenter, mye likt React. Jeg er også over gjennomsnittet opptatt av å
