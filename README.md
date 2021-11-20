@@ -335,8 +335,8 @@ I tillegg kan du vurdere å berike CV-en din med følgende felter:
   `:description` for CV-en.
 - `:cv {}` - "Instillinger", se nedenfor
 
-Helt til slutt er det også mulig å legge til disse to feltene, men det er
-kanskje mulig å diskutere hvor relevante de er:
+Helt til slutt er det også mulig å legge til dette feltet, men det er
+kanskje mulig å diskutere hvor relevant det er:
 
 - `:born`
 
