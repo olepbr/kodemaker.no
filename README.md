@@ -9,7 +9,7 @@ har den. Sats på versjon 2.9+. Hvis du har en gammel versjon under 2.0 så funk
 det garantert ikke. På OSX kan du hente den med homebrew: `brew update && brew
 install leiningen` eller med SDKMAN: `sdk install leiningen`
 
-Du må også ha JDK 1.11. Sjekk med `java -version`, ellers
+Du må også ha JDK 11. Sjekk med `java -version`, ellers
 [last ned her](http://www.oracle.com/technetwork/java/javase/downloads/index.html) eller installer med SDKMAN.
 
 Gå så til rota av prosjektet, og
