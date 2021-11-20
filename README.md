@@ -385,9 +385,9 @@ så det er OK å utelate deler av den.
 
 ### Sammendrag
 
-Unngå fyllord
-Kan du si dette om alle? For generelt - vær konkret
-Eksempler på for generelle beskrivelser: Entusiastisk, engasjert, ansvarsfull, smidig, løsningsorientert
+Unngå fyllord.  
+Kan du si dette om alle? For generelt - vær konkret.  
+Eksempler på for generelle beskrivelser: Entusiastisk, engasjert, ansvarsfull, smidig, løsningsorientert.
 
 
 ### Hva er greia med den teknologi-lista a?
