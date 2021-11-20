@@ -167,7 +167,7 @@ Legge merke til at dette er kode som kjører når siden bygges opp, slik
 at du bør få grei tilbakemelding om du tråkker på utsiden.
 
 **NB!** Kjør opp siden og se hvordan det blir før du commiter. Da får
-du kjørte all programmatisk validering av datastrukturen, sjekket at
+du kjørt all programmatisk validering av datastrukturen, sjekket at
 alle bilde-URLer finnes, og sett med øynene dine at det ble som du
 hadde tenkt.
 
