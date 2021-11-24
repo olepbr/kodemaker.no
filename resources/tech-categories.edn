@@ -474,6 +474,7 @@
    :ractive
    :re-frame
    :react
+   :react-query
    :reagent
    :redux
    :responsive-design
