@@ -6,13 +6,13 @@
 :blurb
 
 Jeg arrangerte Kodekamp i helga, en hjemmesnekret konkurranse i kodeskriving.
-Det var intenst og gøy. Her er en liten samlig fikse finurligheter og lett
+Det var intenst og gøy. Her er en liten samling fikse finurligheter og lett
 underholdende anekdoter derfra.
 
 :body
 
 Jeg arrangerte Kodekamp i helga, en hjemmesnekret konkurranse i kodeskriving.
-Det var intenst og gøy. Her er en liten samlig fikse finurligheter og lett
+Det var intenst og gøy. Her er en liten samling fikse finurligheter og lett
 underholdende anekdoter derfra.
 
 ## Først, to ord om opplegget
@@ -44,6 +44,8 @@ utviklere i rommet som alle prøver å finne den beste logikken for å vinne.
 Som lovet, la oss se på noen artige småting som dukket opp.
 
 ## Kamper på overheaden
+
+<img src="/images/blogg/kodekamp-in-situ.jpg" align="right" width="35%" style="margin: 20px 0 20px 20px;"/>
 
 Det ble tidlig klart at jeg ville ha kampene kjørende på overheaden. Men hvordan
 kunne jeg sikre at spillet på skjermen og spillet som foregikk på serveren holdt
