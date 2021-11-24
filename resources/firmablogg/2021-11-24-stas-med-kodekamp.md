@@ -100,8 +100,8 @@ eller vise frem noe jeg jobber med remote.
 feilmeldinger underveis.
 
 Det interessante er at man på forhånd ikke kan vite om en ordre er gyldig eller
-ei. Man må spille gjennom og prøve ordene én etter én. Det endte opp med at koden
-for å gi gode feilmeldinger er 150 linjer av de 400 linjene som implementerer
+ei. Man må spille gjennom og prøve ordrene én etter én. Det endte opp med at koden
+for å gi gode feilmeldinger står for 150 av de 400 linjene som implementerer
 hele spillogikken.
 
 Min favorittfeilmelding er denne:
