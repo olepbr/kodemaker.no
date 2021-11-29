@@ -1,7 +1,7 @@
 :title RadioButtons for Android
 :author olga
 :tech [:android]
-:published 2021-12-15
+:published 2021-12-01
 
 :blurb
 Hvorfor i alle dager sjekker vi på radio button selected id?
@@ -66,7 +66,7 @@ Dette var gøy! Men, hvordan kan vi nå få tak i value på radio button fra kod
     val checkedValue = checked.value
 ```
 
-Det gikk ikke, value er rødt og den banner på oss med `Unresolved reference: value`. Vi må eksponere `value` på noe vis. 
+Det gikk ikke, vi får kompileringsfeil og den banner på oss med `Unresolved reference: value`. Vi må eksponere `value` på noe vis. 
 
 Tilbake i `CustomRadioButton.kt`, utvid klassen med
 
@@ -85,12 +85,12 @@ class CustomRadioButton(context: Context?, attrs: AttributeSet?) :
 }
 ```
 
-Her deklarerer vi value, henter alle styleables på init, og tilegner value til å være den som ble satt i xml deklarasjonen vår. Til slutt må array med styleables frigjøres siden det er et delt ressurs. Hvis vi nå sjekker koden vår i `MainActivity.kt`, så er ikke `value` rødt lenger.
+Her deklarerer vi value, henter alle styleables på init, og tilegner value til å være den som ble satt i xml deklarasjonen vår. Til slutt må array med styleables frigjøres siden det er et delt ressurs. Hvis vi nå sjekker koden vår i `MainActivity.kt`, så er ikke `value` rød lenger.
 
 ## Hva har vi lært?
 * At radio buttons i Android ikke har innebygd støtte for å sette verdi
 * At det går an å gjøre noe med det
-* At det blir alt i alt mer kode av det (med mindre du har en radio button group med en hel haug radiobuttons, men da bør man kanskje revurdere designet.. 😅)
+* At det blir mer kode av det (med mindre du har en radio button group med en hel haug radiobuttons, men da bør man kanskje revurdere designet.. 😅)
 
 ## Konklusjon
 Dette var et morsomt tanke- og kodeeksperiment. Kommer jeg til å bruke custom radio buttons kun for å fiske ut verdi istedenfor en brute-force id-sjekk? Sansynligvis ikke. Men dersom man uansett skal lage et eget komponent for radio button for å utvide med mer funksjonalitet, så er det fort gjort å slenge på en `value` som supplement. 
