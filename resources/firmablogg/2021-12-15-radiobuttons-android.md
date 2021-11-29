@@ -85,7 +85,7 @@ class CustomRadioButton(context: Context?, attrs: AttributeSet?) :
 }
 ```
 
-Her deklarerer vi value, henter alle styleables på init, og tilegner value til å være den som ble satt i xml deklarasjonen vår. Til slutt må array med styleables frigjøres siden det er et delt ressurs. Hvis vi nå sjekker koden vår i `MainActivity.kt`, så er ikke `value` rød lenger.
+Her deklarerer vi value, henter alle styleables på init, og tilegner value til å være den som ble satt i xml deklarasjonen vår. Til slutt må array med styleables frigjøres siden det er et delt ressurs. 
 
 ## Hva har vi lært?
 * At radio buttons i Android ikke har innebygd støtte for å sette verdi
