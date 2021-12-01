@@ -8,7 +8,7 @@ Hvorfor i alle dager sjekker vi på radio button checked id for å finne ut av h
 
 :body
 
-Jeg har vært på flere app-prosjekter uten å bli eksponert for radio buttons. Mulig det ikke er så utbredt i app-verden, eller at designere på de prosjektene ikke syntes de var noe særlig. Uansett, nå går jeg gjennom forberedelseskurs for Android-sertifisering, og en av oppgavene har radio buttons, yay! Ved å følge instruksjonene i [oppgaven](https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1) lager man en enkel tip calculator app som ser sånn ut: 
+Jeg har vært på flere app-prosjekter uten å bli eksponert for radio buttons. Mulig det ikke er så utbredt i app-verden, eller at designere på de prosjektene ikke syntes de var noe særlig. Uansett, jeg kom over et kurs for Android-sertifisering, og en av oppgavene har radio buttons, yay! Ved å følge instruksjonene i [oppgaven](https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1) lager man en enkel tip calculator app som ser sånn ut: 
 
 <img style="width: 100%; max-width: 600px" src="/images/blogg/tip-calculator.png" alt="tip calculator" />
 
