@@ -52,7 +52,7 @@ og whoosh, nå kan vi sette verdi på custom radio button:
 
 ```xml
 <com.example.tiptime.CustomRadioButton
-            android:id="@+id/option_20_percent"
+            android:id="@+id/option_twenty_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/amazing_20"
