@@ -64,7 +64,7 @@ I lille Norge har vi ofte ikke så store datamengder at slike batch-søk egentli
 
 ## Cache?
 Hva med oppslag etter data i eksterne registre? Burde vi cache dataene lokalt, både for ytelse og økt robusthet hvis tjenesten blir utilgjengelig?
-Det er en kjent ordtak i bransjen at det kun er 2 vanskelige problemer innen programmering:
+Det er et kjent ordtak i bransjen at det kun er 2 vanskelige problemer innen programmering:
 1) Å navngi ting
 2) Cache-invalidering
 3) "Off-by-one" feil 
