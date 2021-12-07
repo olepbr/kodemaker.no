@@ -76,8 +76,9 @@ Ja, det kan hende det er helt greit. Jeg bruker AMOI som eksempel igjen.
 I checkout-flyten så må du taste inn adressen dit du vil ha varene levert. Her integrerer vi med en ekstern tjeneste som foreslår adresser.
 Dette gjør at man får færre feil-stavede adresser som budet så sliter med å finne. Hva gjorde vi hvis denne tjenesten ikke svarte? 
 Ingen ting - da måtte du bare fylle inn adressen manuelt. For det er faktisk ikke helt krise om du ikke får foreslått adresser.  
-Det samme gjelder tross alt de fleste slike registre.  Folkeregisteret, kontaktregisteret, matrikkelen og statens kartverk. 
-Det er sjelden det er tids- og livskritisk å vite hvor noen er folkeregistrert, eller hva gårds- og bruksnummeret ditt er.
+
+Det samme gjelder tross alt de fleste slike registre.  
+Folkeregisteret, kontaktregisteret, matrikkelen, statens kartverk m.fl. Det er sjelden det er tids- og livskritisk å vite hvor noen er folkeregistrert, eller hva gårds- og bruksnummeret ditt er.
 Disse registrene er der stort sett som en "convenience" - for at du skal slippe å måtte finne ut av og skrive inn masse greier selv. 
 Slik vi måtte før. Men vi klarte det jo før! Det at vi nå har oppslagsverk, betyr jo ikke at du ikke lenger kan adressen din f.eks. 
 Og hvis det er noe man ikke kan eller husker, så kan man stort sett klare å vente i de minuttene det tar før tjenesten er oppe igjen før man får informasjonen.
