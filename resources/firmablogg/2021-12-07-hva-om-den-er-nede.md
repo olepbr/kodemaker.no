@@ -93,7 +93,7 @@ Tenk gjennom hva de relle konsekvensene er dersom en ekstern tjeneste ikke er ti
 
 - Noen ganger er det ikke så farlig, man kan ha failover til manuell håndtering slik vi gjorde med adresser.
 - Andre ganger er det ikke noe vi kan gjøre: "Betaling feilet". Dette kan vi rett og slett ikke rette opp i. Ikke noen vits i å prøve. 
-- Til sist lønner det seg ofte å ha asynkrone løsninger der en "melding" kan prosesseres igjen og igjen til den lykkes en god løsning. 
+- Til sist lønner det seg ofte å ha asynkrone løsninger der en "melding" kan prosesseres igjen og igjen til den lykkes. 
 
 Uansett hva man gjør, så må man ikke glemme det at hver eneste kodelinje du legger til øker sjansen for feil.
 Så jo mer feilhåndtering du legger til, jo flere feil kan du ha. Så velg strategi med omhu og gjør minst mulig.
