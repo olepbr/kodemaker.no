@@ -20,10 +20,10 @@ som nær sagt hadde vært umulig å avdekke i form av tradisjonelle tester!
 
 Foredragsholderen var John Hughes og er mannen bak
 [QuickCheck](https://hackage.haskell.org/package/QuickCheck), det opprinnelige
-verktøyet for å skrive Propeprty-Based tester.
+verktøyet for å skrive Property-Based tester.
 
 Denne bloggposten er den første i en serie av flere. I første omgang vil jeg gi
-deg en kort innføring i Property-Based testing (PBT). Vi skal skrive et par
+deg en kort innføring i Property-Based Testing (PBT). Vi skal skrive et par
 tester mot en triviell, velkjent funksjon og ta et aldri så lite dykk nedi
 [test.check](https://github.com/clojure/test.check), et PBT-verktøy for
 [Clojure](http://clojure.org). Dersom Clojure er fremmed for deg anbefaler jeg
@@ -43,18 +43,18 @@ Elixir](https://github.com/pragdave/quixir) og
 
 Den _tradisjonelle_ måten å skrive tester av en funksjon går som følger:
 
-1. Vi formulerer et konkret eksempel på input til funksjonen
-2. Vi kaller på funksjonen med det konkrete eksempelet som input
-3. Vi verifisere at resultatet stemmer med våre forventninger
+1. Vi formulerer et konkret eksempel på input til funksjonen.
+2. Vi kaller på funksjonen med det konkrete eksempelet som input.
+3. Vi verifisere at resultatet stemmer med våre forventninger.
 
-En property-based test generere testene for deg. Dette skjer ved at:
+En property-based test genererer testene for deg. Dette skjer ved at:
 
 1. Vi formulerer en mer _generell_ beskrivelse av input ved hjelp av
-   testverktøyet
+   testverktøyet.
 2. Testverktøyet generere et _konkret og tilfeldig_ eksempel som passer
-   beskrivelsen
-3. Vi kaller på funksjonen med det konkrete eksempelet som input
-4. Vi verifiserer at resultatet stemmer med våre forventninger
+   beskrivelsen.
+3. Vi kaller på funksjonen med det konkrete eksempelet som input.
+4. Vi verifiserer at resultatet stemmer med våre forventninger.
 
 Ettersom det er testverktøyet, og ikke du, som genererer input til funksjonen
 din vil testverkøyet kunne generere "uendelig" antall unike tester mot
@@ -125,7 +125,7 @@ tross alt skal generere testene), samt kalle på sorteringsfunksjonen vår.
 Vi forteller `quick-check` at vi ønsker å generere og kjøre `1000` tester.
 Beskrivelsen av input gir vi til testverktøyets `for-all`, som i tur vil
 generere det ene konkret eksempel etter det andre. Hvert konkret eksempel blir
-bundet til symbolet vi har navngitt `output`. `for-all` forventer at vi
+bundet til symbolet vi har navngitt `input`. Videre forventer `for-all` at vi
 signaliserer at en test feiler ved å enten returnere `false` eller kaste en
 exception.
 
@@ -137,7 +137,7 @@ fått som input? Ettersom vi har beskrevet input'n i generelle termer blir vi
 pent nødt til å gjøre det samme i verifiseringssteget.
 
 Hva er det sorteringsfunksjonen vår _gjør_? Hvilke _egenskaper_ (derav navnet
-"property-based" forresten) har funksjonen vår? Dette høres ut som banale
+"property-based", forresten) har funksjonen vår? Dette høres ut som banale
 spørsmål, men det er spørsmål som må besvares i kode. La oss bryte det ned.
 Output fra sorteringsfunksjonen er:
 
@@ -158,7 +158,8 @@ eventuell feilsøking velger jeg å lage egne tester for hver egenskap.
 (def sorter-heltall sort)
 
 
-;; Egenskap 1: Inneholder (og kun inneholder) alle elementene som ble gitt som input
+;; Egenskap 1: Inneholder (og kun inneholder) alle
+;; elementene som ble gitt som input
 
 (tc/quick-check
  1000
@@ -255,8 +256,8 @@ av elementer og du i tillegg ikke ser bunnen på nøstingen av hvert enkelt
 element... da kan jeg love deg at denne krympingen er helt og fullstendig
 uvurderlig!
 
-En annen ting; settet av testdata som genereres ved kjøring av testen vår vil
-variere. Den er jo tross alt tilfeldig genrerert. Dette er noe av styrken til
+En annen ting: Settet av testdata som genereres ved kjøring av testen vår vil
+variere. Den er jo tross alt tilfeldig generert. Dette er noe av styrken til
 property-based testing. Selv om vi i disse testen har sagt vi kun ønsker å
 utføre 2000 tester vil disse testene i stor grad være unike mellom hver
 testkjøring. Når testen først feiler kan det være fordelaktig å kunne kjøre
