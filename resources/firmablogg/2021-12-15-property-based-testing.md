@@ -281,4 +281,4 @@ sorteringsalgoritmer er én ting, men hvordan kan jeg skrive tilsvarende tester 
 mitt langt mer komplekse og mindre generelle domene?". Det er et godt og
 betimelig spørsmål.
 
-I nesten innlegg i denne serien skal vi gjøre nettopp dét!
+I neste innlegg i denne serien skal vi gjøre nettopp dét!
