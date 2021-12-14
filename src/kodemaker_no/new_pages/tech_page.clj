@@ -259,7 +259,19 @@
                               :link {:text (format "Se flere skriverier om %s" (:tech/name tech))
                                      :href url}}))]))}))
 
-(defn create-page [tech]
+(defn people-section [tech db]
+  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where [?e :person/projects ?proj] [?proj :project/techs ?tech-ref]] db (:db/id tech))
+                         (map #(d/entity db %)))]
+    {:kind :titled
+     :title "Våre ansatte med denne kompetansen"
+     :contents [(e/tango-grid (for [person people]
+                                {:content
+                                 (e/illustrated
+                                  {:image (str "/vcard-small" (first (:person/portraits person)))
+                                   :title (:person/full-name person)
+                                   :href (:page/uri person)})}))]}))
+
+(defn create-page [db tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
      :sections
@@ -291,6 +303,7 @@
        (side-projects-section tech)
        (open-source-section tech)
        (blog-post-section tech)
+       (people-section tech db)
        {:kind :footer}]
       (remove nil?)
       (map (fn [color section]
