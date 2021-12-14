@@ -61,11 +61,10 @@ din vil testverktøyet kunne generere "uendelig" antall unike tester mot
 funksjonen din. Når jeg sier "funksjon", så mener jeg ikke en nødvendigvis en
 funksjon som er ["pure"](https://en.wikipedia.org/wiki/Pure_function). Tvert
 imot; PBT er like, om ikke mer, nyttig til testing av metoder eller systemer med
-[sideeffekter](https://en.wikipedia.org/wiki/Side_effect_(computer_science)).
-I min erfaring er det gjerne nettopp der de fleste feilene oppstår og gjerne
-også hvor de er mest vanskelig å avdekke. Se i så tilfelle for deg "funksjonen"
-som den som i tillegg har til ansvar å sette opp systemet i en tilstand som lar
-seg teste.
+[sideeffekter](https://en.wikipedia.org/wiki/Side_effect_(computer_science)). I
+min erfaring er det gjerne nettopp der de fleste feilene oppstår og gjerne også
+hvor de er mest vanskelig å avdekke. "Funksjonen" har i så tilfelle ansvar for å
+sette opp systemet i en tilstand som lar seg teste.
 
 La oss konkretisere disse stegene i litt kode ved å skrive en test for noe så
 trivielt som en funksjon som sorterer en liste av heltall.
