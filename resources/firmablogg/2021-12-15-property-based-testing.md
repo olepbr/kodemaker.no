@@ -11,7 +11,7 @@ verktøy som genererer testene for deg? For godt til å være sant?
 :body
 
 For noen år tilbake dro flere kollegaer og jeg til en konferanse for faglig
-påfyll og inspirasjon. Et av foredragene bar tittelen "Don't write tests!
+påfyll og inspirasjon. Ett av foredragene bar tittelen "Don't write tests!
 Generate them". Nysgjerrigheten ble umiddelbart pirret selv om dette hørtes for
 godt ut til å være sant. Foredragsholderen proklamerte videre at han ved denne
 formen for testing hadde avdekket dype, intrikate feil i alt fra
@@ -45,19 +45,19 @@ Den _tradisjonelle_ måten å skrive tester av en funksjon går som følger:
 
 1. Vi formulerer et konkret eksempel på input til funksjonen.
 2. Vi kaller på funksjonen med det konkrete eksempelet som input.
-3. Vi verifisere at resultatet stemmer med våre forventninger.
+3. Vi verifiserer at resultatet stemmer med våre forventninger.
 
 En property-based test genererer testene for deg. Dette skjer ved at:
 
 1. Vi formulerer en mer _generell_ beskrivelse av input ved hjelp av
    testverktøyet.
-2. Testverktøyet generere et _konkret og tilfeldig_ eksempel som passer
+2. Testverktøyet genererer et _konkret og tilfeldig_ eksempel som passer
    beskrivelsen.
 3. Vi kaller på funksjonen med det konkrete eksempelet som input.
 4. Vi verifiserer at resultatet stemmer med våre forventninger.
 
 Ettersom det er testverktøyet, og ikke du, som genererer input til funksjonen
-din vil testverkøyet kunne generere "uendelig" antall unike tester mot
+din vil testverktøyet kunne generere "uendelig" antall unike tester mot
 funksjonen din. Når jeg sier "funksjon", så mener jeg ikke en nødvendigvis en
 funksjon som er ["pure"](https://en.wikipedia.org/wiki/Pure_function). Tvert
 imot; PBT er like, om ikke mer, nyttig til testing av metoder eller systemer med
@@ -81,7 +81,7 @@ heltall-generatoren:
 (ns sorter-heltall-test
   (:require [clojure.test.check.generators :as gen]))
 
-(gen/sample gen/int 30)
+(gen/sample gen/int 20)
 
 => (0 0 1 -2 -4 1 -3 7 8 8 -3 -2 7 13 0 11 -9 17 14 -18)
 ```
@@ -124,7 +124,7 @@ tross alt skal generere testene), samt kalle på sorteringsfunksjonen vår.
 
 Vi forteller `quick-check` at vi ønsker å generere og kjøre `1000` tester.
 Beskrivelsen av input gir vi til testverktøyets `for-all`, som i tur vil
-generere det ene konkret eksempel etter det andre. Hvert konkret eksempel blir
+generere det ene konkrete eksempel etter det andre. Hvert konkret eksempel blir
 bundet til symbolet vi har navngitt `input`. Videre forventer `for-all` at vi
 signaliserer at en test feiler ved å enten returnere `false` eller kaste en
 exception.
@@ -258,20 +258,20 @@ uvurderlig!
 
 En annen ting: Settet av testdata som genereres ved kjøring av testen vår vil
 variere. Den er jo tross alt tilfeldig generert. Dette er noe av styrken til
-property-based testing. Selv om vi i disse testen har sagt vi kun ønsker å
-utføre 2000 tester vil disse testene i stor grad være unike mellom hver
-testkjøring. Når testen først feiler kan det være fordelaktig å kunne kjøre
-påfølgende tester med tilsvarende generert input. Spesielt dersom du tester
-funksjoner som ikke er pure! Testrapporten oppgir derfor hvilket `:seed` som er
-benyttet i genereringen av input. Denne verdien kan du angi til `quick-check`
-for å enkelt reprodusere feilen.
+property-based testing. Selv om vi i dissee testen har sagt vi kun ønsker å
+utføre 2000 tester vil de i stor grad være unike mellom hver testkjøring. Når
+testen først feiler kan det være fordelaktig å kunne kjøre påfølgende tester med
+tilsvarende generert input. Spesielt dersom du tester funksjoner som ikke er
+pure! Testrapporten oppgir derfor hvilket `:seed` som er benyttet i genereringen
+av input. Denne verdien kan du angi til `quick-check` for å enkelt reprodusere
+feilen.
 
 Generatorene i `test.check` (og trolig tilsvarende konsepter i ditt fremtidige
 favorittverktøy for PBT) er dog ikke helt tilfeldig. De har alle en formening om
 relativ "størrelse" eller "kompleksitet" i bestanddelene som blir generert.
 Testverktøyet vil stadig generere mer og mer komplekse permutasjoner av
 beskrivelsen du har formidlet, både for å tidlig kunne detektere elementære feil
-og gjøre en god jobbe med å krympe datasettet, men samtidig også øke testflaten
+og gjøre en god jobb med å krympe datasettet, men samtidig også øke testflaten
 til funksjonene dine.
 
 
