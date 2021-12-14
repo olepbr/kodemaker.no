@@ -231,7 +231,7 @@ La oss teste egenskap #2:
 
 ```
 
-What?!?
+😱
 
 Etter 9 iterasjoner har testen vår feilet. Funksjonen vår ble fôret `(7 -3 5 -7
 5 -5 -2 -2)`. Testverktøyet har dog, på nesten magisk vis, krympet input'n og
