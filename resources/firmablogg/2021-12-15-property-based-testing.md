@@ -88,7 +88,7 @@ heltall-generatoren:
 
 Sweet! Vi trenger dog å beskrive en liste av heltall som input til
 sorteringsfunksjonen vår. Generatoren `gen/list` hjelper oss med dette. Den tar
-en vilkårlig generator som argument og genererer lister med elementert generert
+en vilkårlig generator som argument og genererer lister med elementer generert
 fra denne:
 
 ```clj
