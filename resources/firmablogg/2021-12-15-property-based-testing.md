@@ -32,7 +32,7 @@ universelle på tvers av teknologi.
 
 Støtte for PBT finnes for et bredt utvalg av språk. Et raskt søk på nett vil
 gi deg pekere til testverktøy for eksempelvis
-[JavaScript](https://bitbucket.org/darrint/qc.js/),
+[JavaScript](https://github.com/dubzzz/fast-check),
 [Ruby](https://github.com/hayeah/rantly),
 [Java](http://java.net/projects/quickcheck/pages/Home),
 [Go](https://github.com/flyingmutant/rapid), [Erlang /
