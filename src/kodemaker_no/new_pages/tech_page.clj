@@ -261,7 +261,8 @@
 
 (defn people-section [tech db]
   (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where [?e :person/projects ?proj] [?proj :project/techs ?tech-ref]] db (:db/id tech))
-                         (map #(d/entity db %)))]
+                         (map #(d/entity db %))
+                         seq)]
     {:kind :titled
      :title "Våre ansatte med denne kompetansen"
      :contents [(e/tango-grid (for [person people]
