@@ -264,7 +264,7 @@
                          (map #(d/entity db %))
                          seq)]
     {:kind :titled
-     :title "Våre ansatte med denne kompetansen"
+     :title (format "Vi kan %s" (:tech/name tech))
      :contents [(e/tango-grid (for [person people]
                                 {:content
                                  (e/illustrated
