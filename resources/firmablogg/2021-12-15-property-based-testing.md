@@ -11,12 +11,12 @@ verktøy som genererer testene for deg? For godt til å være sant?
 :body
 
 For noen år tilbake dro flere kollegaer og jeg til en konferanse for faglig
-påfyll og inspirasjon. Ett av foredragene bar tittelen "Don't write tests!
+påfyll og inspirasjon. Et av foredragene bar tittelen "Don't write tests!
 Generate them". Nysgjerrigheten ble umiddelbart pirret selv om dette hørtes for
 godt ut til å være sant. Foredragsholderen proklamerte videre at han ved denne
 formen for testing hadde avdekket dype, intrikate feil i alt fra
 telefonsystemer, styringssystemer til biler, samt databaseimplementasjoner. Feil
-som nær sagt hadde vært umulig å avdekke i form av tradisjonelle tester!
+som nær sagt hadde vært umulig å avdekke i form av tradisjonelle tester.
 
 Foredragsholderen var John Hughes og er mannen bak
 [QuickCheck](https://hackage.haskell.org/package/QuickCheck), det opprinnelige
@@ -26,7 +26,7 @@ Denne bloggposten er den første i en serie av flere. I første omgang vil jeg g
 deg en kort innføring i Property-Based Testing (PBT). Vi skal skrive et par
 tester mot en triviell, velkjent funksjon og ta et aldri så lite dykk nedi
 [test.check](https://github.com/clojure/test.check), et PBT-verktøy for
-[Clojure](http://clojure.org). Dersom Clojure er fremmed for deg anbefaler jeg
+[Clojure](/clojure). Dersom Clojure er fremmed for deg anbefaler jeg
 deg likevel fortsatt til å lese videre. Anatomien og prinsippene bak PBT er
 universelle på tvers av teknologi.
 
@@ -39,7 +39,7 @@ gi deg pekere til testverktøy for eksempelvis
 Elixir](https://github.com/pragdave/quixir) og
 [Python](https://github.com/DRMacIver/hypothesis).
 
-# Anatomi
+## Anatomi
 
 Den _tradisjonelle_ måten å skrive tester av en funksjon går som følger:
 
@@ -143,7 +143,7 @@ Output fra sorteringsfunksjonen er:
 1. en liste som inneholder (og kun inneholder) alle elementene som ble gitt som input
 2. en liste hvis elementer er i stigende rekkefølge
 
-# En kjørende test!
+## En kjørende test!
 
 La oss komplettere testen vår med det fjerde og siste steget. For å lette
 eventuell feilsøking velger jeg å lage egne tester for hver egenskap.
@@ -230,7 +230,7 @@ La oss teste egenskap #2:
 
 ```
 
-😱
+😱 What!?
 
 Etter 9 iterasjoner har testen vår feilet. Funksjonen vår ble fôret `(7 -3 5 -7
 5 -5 -2 -2)`. Testverktøyet har dog, på nesten magisk vis, krympet input'n og
@@ -274,7 +274,7 @@ og gjøre en god jobb med å krympe datasettet, men samtidig også øke testflat
 til funksjonene dine.
 
 
-# Dette var jo interessant, meeeeen...
+## Dette var jo interessant, meeeeen...
 
 Du tenker sikkert: "Å skrive property-based tester for konseptuelt enkle
 sorteringsalgoritmer er én ting, men hvordan kan jeg skrive tilsvarende tester i
