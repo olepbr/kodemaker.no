@@ -265,12 +265,12 @@
                          seq)]
     {:kind :titled
      :title (format "Vi kan %s" (:tech/name tech))
-     :contents [(e/tango-grid (for [person people]
-                                {:content
-                                 (e/illustrated
-                                  {:image (str "/vcard-small" (first (:person/portraits person)))
-                                   :title (:person/full-name person)
-                                   :href (:page/uri person)})}))]}))
+     :contents [(e/round-card-grid (for [person people]
+                                     {:content
+                                      (e/centered-vert-round-media
+                                       {:image (str "/vcard-small" (first (:person/portraits person)))
+                                        :href (:page/uri person)
+                                        :lines [(:person/given-name person)]})}))]}))
 
 (defn create-page [db tech]
   (let [presentations (classify-presentations tech)]
@@ -297,14 +297,13 @@
                 :position "top -410px right 60vw"}
                {:kind :dotgrid
                 :position "top -110px left 80vw"}]}
-
+       (people-section tech db)
        (recommendations-section tech)
        (presentations-section presentations)
        (screencasts-section tech)
        (side-projects-section tech)
        (open-source-section tech)
        (blog-post-section tech)
-       (people-section tech db)
        {:kind :footer}]
       (remove nil?)
       (map (fn [color section]
