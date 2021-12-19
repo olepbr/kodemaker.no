@@ -260,9 +260,17 @@
                                      :href url}}))]))}))
 
 (defn people-section [tech db]
-  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where [?e :person/projects ?proj] [?proj :project/techs ?tech-ref]] db (:db/id tech))
-                         (map #(d/entity db %))
-                         seq)]
+  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where 
+    (or (and [?e :person/projects ?x] [?x :project/techs ?tech-ref])
+    (and [?e :person/side-projects ?x] [?x :side-project/techs ?tech-ref])
+    (and [?e :person/presentations ?x] [?x :presentation/techs ?tech-ref])
+    (and [?e :person/screencasts ?x] [?x :screencast/techs ?tech-ref])
+    (and [?e :person/open-source-projects ?x] [?x :oss-project/techs ?tech-ref])
+    (and [?e :person/workshops ?x] [?x :presentation-product/techs ?tech-ref])
+    (and [?e :person/business-presentations ?x] [?x :presentation-product/techs ?tech-ref])
+  )] db (:db/id tech))
+    (map #(d/entity db %)) 
+    seq)]
     {:kind :titled
      :title (format "Vi kan %s" (:tech/name tech))
      :contents [(e/round-card-grid (for [person people]
@@ -297,13 +305,13 @@
                 :position "top -410px right 60vw"}
                {:kind :dotgrid
                 :position "top -110px left 80vw"}]}
-       (people-section tech db)
        (recommendations-section tech)
        (presentations-section presentations)
        (screencasts-section tech)
        (side-projects-section tech)
        (open-source-section tech)
        (blog-post-section tech)
+       (people-section tech db)
        {:kind :footer}]
       (remove nil?)
       (map (fn [color section]
