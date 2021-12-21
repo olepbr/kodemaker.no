@@ -268,7 +268,8 @@
     (and [?e :person/open-source-projects ?x] [?x :oss-project/techs ?tech-ref])
     (and [?e :person/workshops ?x] [?x :presentation-product/techs ?tech-ref])
     (and [?e :person/business-presentations ?x] [?x :presentation-product/techs ?tech-ref])
-  )] db (:db/id tech))
+    (and [?x :blog-post/techs ?tech-ref] [?x :blog-post/author ?e])
+)] db (:db/id tech))
     (map #(d/entity db %)) 
     seq)]
     {:kind :titled
