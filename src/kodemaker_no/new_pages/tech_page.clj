@@ -243,15 +243,15 @@
     {:kind :titled
      :title "Våre blogginnlegg"
      :contents (cond->
-                   (for [post (take 3 blog-posts)]
-                     (let [url (blog/post-url post)]
-                       (e/teaser
-                        {:title (:blog-post/title post)
-                         :tags (e/people-tags {:prefix "Av"
-                                               :people [(blog/author post)]
-                                               :class "tags"})
-                         :url url
-                         :content (f/to-html (:blog-post/blurb post))})))
+                (for [post (take 3 blog-posts)]
+                  (let [url (blog/post-url post)]
+                    (e/teaser
+                     {:title (:blog-post/title post)
+                      :tags (e/people-tags {:prefix "Av"
+                                            :people [(blog/author post)]
+                                            :class "tags"})
+                      :url url
+                      :content (f/to-html (:blog-post/blurb post))})))
                  (< 3 (count (filter :page/uri blog-posts)))
                  (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
                             (e/teaser
@@ -260,26 +260,31 @@
                                      :href url}}))]))}))
 
 (defn people-section [tech db]
-  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where 
-    (or (and [?e :person/projects ?x] [?x :project/techs ?tech-ref])
-    (and [?e :person/side-projects ?x] [?x :side-project/techs ?tech-ref])
-    (and [?e :person/presentations ?x] [?x :presentation/techs ?tech-ref])
-    (and [?e :person/screencasts ?x] [?x :screencast/techs ?tech-ref])
-    (and [?e :person/open-source-projects ?x] [?x :oss-project/techs ?tech-ref])
-    (and [?e :person/workshops ?x] [?x :presentation-product/techs ?tech-ref])
-    (and [?e :person/business-presentations ?x] [?x :presentation-product/techs ?tech-ref])
-    (and [?x :blog-post/techs ?tech-ref] [?x :blog-post/author ?e])
-)] db (:db/id tech))
-    (map #(d/entity db %)) 
-    seq)]
+  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where
+                                (or (and [?e :person/projects ?x] [?x :project/techs ?tech-ref])
+                                    (and [?e :person/side-projects ?x] [?x :side-project/techs ?tech-ref])
+                                    (and [?e :person/presentations ?x] [?x :presentation/techs ?tech-ref])
+                                    (and [?e :person/screencasts ?x] [?x :screencast/techs ?tech-ref])
+                                    (and [?e :person/open-source-projects ?x] [?x :oss-project/techs ?tech-ref])
+                                    (and [?e :person/workshops ?x] [?x :presentation-product/techs ?tech-ref])
+                                    (and [?e :person/business-presentations ?x] [?x :presentation-product/techs ?tech-ref])
+                                    (and [?x :blog-post/techs ?tech-ref] [?x :blog-post/author ?e]))] db (:db/id tech))
+                         frequencies
+                         (sort-by (comp - second))
+                         (map first)
+                         (map #(d/entity db %))
+                         seq)]
     {:kind :titled
-     :title (format "Vi kan %s" (:tech/name tech))
-     :contents [(e/round-card-grid (for [person people]
-                                     {:content
-                                      (e/centered-vert-round-media
-                                       {:image (str "/vcard-small" (first (:person/portraits person)))
-                                        :href (:page/uri person)
-                                        :lines [(:person/given-name person)]})}))]}))
+     :title (if (< 1 (count people)) (format "Vi kan %s" (:tech/name tech)) (format "Jeg kan %s" (:tech/name tech)))
+     :contents (if (> 20 (count people))
+                 [(e/round-card-grid (for [person people]
+                                       {:content
+                                        (e/centered-vert-round-media
+                                         {:image (str "/vcard-small" (first (:person/portraits person)))
+                                          :href (:page/uri person)
+                                          :lines [(:person/given-name person)]})}))]
+                 [(e/teaser {:link {:text "Alle ansatte"
+                                    :href "/folk/"}})])}))
 
 (defn create-page [db tech]
   (let [presentations (classify-presentations tech)]
@@ -358,9 +363,4 @@
         (:presentation/thumb pres)
         (:presentation/title pres)]))
    (group-by first)
-   (map-vals #(mapv (comp vec next) %)))
-
-
-
-
-  )
+   (map-vals #(mapv (comp vec next) %))))
