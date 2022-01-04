@@ -260,20 +260,38 @@
                                      :href url}}))]))}))
 
 (defn people-section [tech db]
-  (when-let [people (->> (d/q '[:find [?e ...] :in $ ?tech-ref :where
-                                (or (and [?e :person/projects ?x] [?x :project/techs ?tech-ref])
-                                    (and [?e :person/side-projects ?x] [?x :side-project/techs ?tech-ref])
-                                    (and [?e :person/presentations ?x] [?x :presentation/techs ?tech-ref])
-                                    (and [?e :person/screencasts ?x] [?x :screencast/techs ?tech-ref])
-                                    (and [?e :person/open-source-projects ?x] [?x :oss-project/techs ?tech-ref])
-                                    (and [?e :person/workshops ?x] [?x :presentation-product/techs ?tech-ref])
-                                    (and [?e :person/business-presentations ?x] [?x :presentation-product/techs ?tech-ref])
-                                    (and [?x :blog-post/techs ?tech-ref] [?x :blog-post/author ?e]))] db (:db/id tech))
-                         frequencies
-                         (sort-by (comp - second))
-                         (map first)
-                         (map #(d/entity db %))
-                         seq)]
+  (when-let [people
+             (->> (concat
+                   (->> (:project/_techs tech)
+                        (map :person/_projects)
+                        (map :db/ident))
+                   (->> (:side-project/_techs tech)
+                        (map :person/_side-projects)
+                        (map :db/ident))
+                   (->> (:presentation/_techs tech)
+                        (map :person/_presentations)
+                        (map :db/ident))
+                   (->> (:screencast/_techs tech)
+                        (map :person/_screencasts)
+                        (map :db/ident))
+                   (->> (:oss-project/_techs tech)
+                        (map :person/_open-source-projects)
+                        (map :db/ident))
+                   (->> (:presentation-product/_techs tech)
+                        (map :person/_workshops)
+                        (map :db/ident))
+                   (->> (:presentation-product/_techs tech)
+                        (map :person/_business-presentations)
+                        (map :db/ident))
+                   (->> (:blog-post/_techs tech)
+                        (map :blog-post/author)))
+                  (remove nil?)
+                  frequencies
+                  (sort-by (comp - second))
+                  (map first)
+                  (map #(d/entity db %))
+                  (remove (or (:person/_exclude-techs tech) :person/quit?))
+                  seq)]
     {:kind :titled
      :title (if (< 1 (count people)) (format "Vi kan %s" (:tech/name tech)) (format "Jeg kan %s" (:tech/name tech)))
      :contents (if (> 20 (count people))
