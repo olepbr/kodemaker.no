@@ -301,7 +301,7 @@
                                          {:image (str "/vcard-small" (first (:person/portraits person)))
                                           :href (:page/uri person)
                                           :lines [(:person/given-name person)]})}))]
-                 [(e/teaser {:link {:text "Alle ansatte"
+                 [(e/teaser {:link {:text "Stort sett alle"
                                     :href "/folk/"}})])}))
 
 (defn create-page [db tech]
