@@ -52,7 +52,7 @@
                   :page.kind/cv (cv-page/create-page e)
                   :page.kind/reference (reference-page/create-page e)
                   :page.kind/references (references-page/create-page e)
-                  :page.kind/tech (tech-page/create-page e)
+                  :page.kind/tech (tech-page/create-page db e)
                   :page.kind/people (people-page/create-page e)
                   :page.kind/video (video-page/create-page e)
                   :page.kind/whoami (whoami-page/create-page e))

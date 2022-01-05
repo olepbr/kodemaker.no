@@ -170,6 +170,14 @@
                         :type "vcard-medium"
                         :size 120})))
 
+(defn centered-vert-round-media [params]
+  (media (assoc params
+                :class "round-media vert-round-media centered-vert-round-media"
+                :content [:p (interpose [:br] (:lines params))]
+                :image {:src (:image params)
+                        :type "vcard-medium"
+                        :size 240})))
+
 (defn illustrated [params]
   (media (assoc params
                 :class "illustrated"
@@ -248,6 +256,11 @@
 
 (defn card-grid [items]
   [:div.card-grid
+   (for [{:keys [content]} items]
+     [:div.card-grid-item content])])
+
+(defn round-card-grid [items]
+  [:div.card-grid.round-card-grid
    (for [{:keys [content]} items]
      [:div.card-grid-item content])])
 

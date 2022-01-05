@@ -243,15 +243,15 @@
     {:kind :titled
      :title "Våre blogginnlegg"
      :contents (cond->
-                   (for [post (take 3 blog-posts)]
-                     (let [url (blog/post-url post)]
-                       (e/teaser
-                        {:title (:blog-post/title post)
-                         :tags (e/people-tags {:prefix "Av"
-                                               :people [(blog/author post)]
-                                               :class "tags"})
-                         :url url
-                         :content (f/to-html (:blog-post/blurb post))})))
+                (for [post (take 3 blog-posts)]
+                  (let [url (blog/post-url post)]
+                    (e/teaser
+                     {:title (:blog-post/title post)
+                      :tags (e/people-tags {:prefix "Av"
+                                            :people [(blog/author post)]
+                                            :class "tags"})
+                      :url url
+                      :content (f/to-html (:blog-post/blurb post))})))
                  (< 3 (count (filter :page/uri blog-posts)))
                  (concat [(let [url (format "/blogg/%s/" (name (:db/ident tech)))]
                             (e/teaser
@@ -259,7 +259,52 @@
                               :link {:text (format "Se flere skriverier om %s" (:tech/name tech))
                                      :href url}}))]))}))
 
-(defn create-page [tech]
+(defn people-section [tech db]
+  (when-let [people
+             (->> (concat
+                   (->> (:project/_techs tech)
+                        (map :person/_projects)
+                        (map :db/ident))
+                   (->> (:side-project/_techs tech)
+                        (map :person/_side-projects)
+                        (map :db/ident))
+                   (->> (:presentation/_techs tech)
+                        (map :person/_presentations)
+                        (map :db/ident))
+                   (->> (:screencast/_techs tech)
+                        (map :person/_screencasts)
+                        (map :db/ident))
+                   (->> (:oss-project/_techs tech)
+                        (map :person/_open-source-projects)
+                        (map :db/ident))
+                   (->> (:presentation-product/_techs tech)
+                        (map :person/_workshops)
+                        (map :db/ident))
+                   (->> (:presentation-product/_techs tech)
+                        (map :person/_business-presentations)
+                        (map :db/ident))
+                   (->> (:blog-post/_techs tech)
+                        (map :blog-post/author)))
+                  (remove nil?)
+                  frequencies
+                  (sort-by (comp - second))
+                  (map first)
+                  (map #(d/entity db %))
+                  (remove (or (:person/_exclude-techs tech) :person/quit?))
+                  seq)]
+    {:kind :titled
+     :title (if (< 1 (count people)) (format "Vi kan %s" (:tech/name tech)) (format "Jeg kan %s" (:tech/name tech)))
+     :contents (if (> 20 (count people))
+                 [(e/round-card-grid (for [person people]
+                                       {:content
+                                        (e/centered-vert-round-media
+                                         {:image (str "/vcard-small" (first (:person/portraits person)))
+                                          :href (:page/uri person)
+                                          :lines [(:person/given-name person)]})}))]
+                 [(e/teaser {:link {:text "Stort sett alle"
+                                    :href "/folk/"}})])}))
+
+(defn create-page [db tech]
   (let [presentations (classify-presentations tech)]
     {:title (:tech/name tech)
      :sections
@@ -284,13 +329,13 @@
                 :position "top -410px right 60vw"}
                {:kind :dotgrid
                 :position "top -110px left 80vw"}]}
-
        (recommendations-section tech)
        (presentations-section presentations)
        (screencasts-section tech)
        (side-projects-section tech)
        (open-source-section tech)
        (blog-post-section tech)
+       (people-section tech db)
        {:kind :footer}]
       (remove nil?)
       (map (fn [color section]
@@ -336,9 +381,4 @@
         (:presentation/thumb pres)
         (:presentation/title pres)]))
    (group-by first)
-   (map-vals #(mapv (comp vec next) %)))
-
-
-
-
-  )
+   (map-vals #(mapv (comp vec next) %))))
