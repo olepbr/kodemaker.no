@@ -20,8 +20,8 @@
  :presence {:cv "olga"
             :linkedin "/in/olgavoronkova"}
 
- :tech {:using-at-work [:elixir :phoenix :postgresql :azure]
-        :want-to-learn-more [:elixir :flutter]}
+ :tech {;;  :using-at-work [:elixir :phoenix :postgresql :azure]
+        :want-to-learn-more [:flutter :android]}
 
  :qualifications ["Mobil- og frontendutvikler"
                   "Opptatt av designkvalitet"
