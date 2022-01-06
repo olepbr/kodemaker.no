@@ -1,7 +1,7 @@
 {:id :olga
  :name ["Olga" "Voronkova"]
  :title "Utvikler"
- :start-date "2019-03-01 00:09"
+ :start-date "2019-03-01"
  :experience-since 2013
  :born 1988
  :description "Olga har de siste årene jobbet som app- og
@@ -17,9 +17,8 @@
  :phone-number "+47 991 60 613"
  :email-address "olga@kodemaker.no"
 
- :presence { :cv "olga"
-            :linkedin "/in/olgavoronkova"
-          }
+ :presence {:cv "olga"
+            :linkedin "/in/olgavoronkova"}
 
  :tech {:using-at-work [:elixir :phoenix :postgresql :azure]
         :want-to-learn-more [:elixir :flutter]}
@@ -30,32 +29,27 @@
                   "Erfaring med responsiv design"]
 
  :certifications [{:name "Certified Scrum Master", :year 2018}
-                 {:name "Xamarin Certified Mobile Developer", :year 2017}
-                 {:name "UXQB® Certified Professional for Usability and User Experience – Foundation Level", :year 2016}
-                 {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}
- ]
+                  {:name "Xamarin Certified Mobile Developer", :year 2017}
+                  {:name "UXQB® Certified Professional for Usability and User Experience – Foundation Level", :year 2016}
+                  {:name "70-480 Programming in HTML5 with JavaScript and CSS3", :year 2015}]
 
  :recommendations [{:title ".NET MAUI Podcast"
                     :blurb "Se hva som rører seg i Xamarin/MAUI-verden. Informativ og morsom podcast med Matt Soucoup og James Montemagno."
                     :link {:url "https://www.dotnetmauipodcast.com/"
                            :text "Hør podcast her."}
-                    :tech [:teknologi :utvikling]
-                           }]
+                    :tech [:teknologi :utvikling]}]
 
  :hobbies [{:title "Dans"
             :description "Dans er noe jeg har drevet med nesten fra når jeg kunne gå, og har vært innom de fleste stiler. Jeg er nok mest glad i West Coast Swing, og var også med på å starte opp en klubb for det på Bårdar."
-            :illustration "/illustrations/hobbies/wcs.png"
-          }
-            {:title "Magic the gathering"
-             :description "MTG er kjempegøy! Jeg liker både å drafte og spille med ferdige decks. Jeg har 2 stykker 100-decks, og flere 60-decks, og er gjerne med og lager lokal spillelag når det er interesse for det!"
-            :illustration "/illustrations/hobbies/mtg.jpg"
-           }]
+            :illustration "/illustrations/hobbies/wcs.png"}
+           {:title "Magic the gathering"
+            :description "MTG er kjempegøy! Jeg liker både å drafte og spille med ferdige decks. Jeg har 2 stykker 100-decks, og flere 60-decks, og er gjerne med og lager lokal spillelag når det er interesse for det!"
+            :illustration "/illustrations/hobbies/mtg.jpg"}]
 
-   :blog-posts [{:url "http://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
-                 :published "2014-05-20"
-                 :title "Code club for juniors"
-                 :blurb "Hvorfor er det viktig at barn ikke bare er forbrukere av teknologien, men også dens skapere? Artikkelen er skrevet i forkant av første \"Lær kidsa koder NDC\" samlingen, og beskriver de ulike aktivitetene i kodeklubben, med oppstartstips til en ny lokal kodeklubb."
-                 }]
+ :blog-posts [{:url "http://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
+               :published "2014-05-20"
+               :title "Code club for juniors"
+               :blurb "Hvorfor er det viktig at barn ikke bare er forbrukere av teknologien, men også dens skapere? Artikkelen er skrevet i forkant av første \"Lær kidsa koder NDC\" samlingen, og beskriver de ulike aktivitetene i kodeklubben, med oppstartstips til en ny lokal kodeklubb."}]
 
  :side-projects [{:title "Spør en Biolog"
                   :description "Spør en Biolog er en mobil-utvidelse til allerede eksisterende nettforum der det er mulig å stille spørsmål direkte til biologer.
@@ -64,53 +58,57 @@
                   :illustration "/illustrations/side-projects/bio.png"
                   :link {:url "https://bio.no/artikler/491-spor-en-biolog-som-app" :text "Prøv app'en"}
                   :tech [:xamarin-forms :csharp :xaml :android :ios :visual-studio-appcenter]}
-                  {:title "NDC Junior"
+                 {:title "NDC Junior"
                   :description "NDC Junior er en mini-konferanse for barn og unge i forkant av den årlige NDC konferansen, arrangert av Lær Kidsa Koding og Programutvikling.
                   Olga hadde prosjektlederrollen for NDC Junior det andre året konferansen ble arrangert. Oppgavene gikk ut på å skaffe
                   kursholdere, promotere eventet, koordinere påmeldingene til rundt 200 deltagere på 7 ulike kurs, og passe på at logistikken stemte på selve dagen."
                   :illustration "/illustrations/side-projects/lkk.png"
                   :link {:url "https://issuu.com/developermagazine/docs/ndc-magazine-2-2014/24"
-                  :text "Les Olgas artikkel om konferansen i NDC magazine."}
-                  }
-                  {:title "Social graphs - change of metrics’ distribution with scale (Masteroppgave)"
+                         :text "Les Olgas artikkel om konferansen i NDC magazine."}}
+                 {:title "Social graphs - change of metrics’ distribution with scale (Masteroppgave)"
                   :description "Sosiale nettverk er systemer bestående av flere enheter som interagerer med hverandre for å oppnå ønsket funksjonalitet. Denne interaksjonen kan bli modellert i grafer, som gir systemdesignere muligheten til å forske og utvikle nye løsninger. Ekte interaksjonsdata kreves for å bygge modeller av grafer, men er av ulike årsaker ofte vanskelig å få tak i. For å forbigå denne hindringen, finnes det mange innsamlings- og modelleringsalgoritmer av data. Arbeidet vårt bestod i å sammenligne de ulike teknikkene med det originale data-settet, basert på målingene av forhåndsdefinerte graf-egenskaper."
                   :illustration "/illustrations/side-projects/uni.png"
                   :link {:url "https://www.duo.uio.no/bitstream/handle/10852/41631/Voronkova-Master.pdf?sequence=11&isAllowed=y"
-                  :text "Les masteroppgaven"}
-                  }]
-
+                         :text "Les masteroppgaven"}}]
 
  :open-source-contributions [{:url "https://github.com/Altinn/DesignSystem"
-                        :name "Altinn Design System"
-                        :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
-                  ]
+                              :name "Altinn Design System"
+                              :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}]
 
  :projects
- [{:customer "Bring"
-						 :start "2021-04"
-             :end "2021-11"
-						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
-						 :employer :kodemaker
-						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
-						 :tech [:elixir :phoenix :azure :postgresql :nextjs :graphql :vercel :typescript :figma]}
+ [{:customer "Kodemaker"
+   :start "2021-12"
+   :end "2021-12"
+   :employer :kodemaker
+   :summary "Videreutvikling av nettsted"
+   :description "Tech-sidene på Kodemaker.no har en del trafikk. Vi ønsket å fremheve de av konsulentene våre som har erfaring med de forskjellige teknologiene, og da med mest relevante Kodemakere profilert først pr. teknologiside. Jobben bestod da i å lage et enkelt design og frontend for denne visningen og sortere Kodemakere basert på strukturerte data fra prosjekter, blogger, foredrag osv. Typisk eksempel kan du finne her: www.kodemaker.no/python"
+   :tech [:clojure :datomic]}
 
-   {:customer "Bring"
-     :start "2019-03"
-     :end "2021-03"
-     :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
-     :employer :kodemaker
-     :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
+  {:customer "Bring"
+   :start "2021-04"
+   :end "2021-11"
+   :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
+   :employer :kodemaker
+   :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
+   :tech [:elixir :phoenix :azure :postgresql :nextjs :graphql :vercel :typescript :figma]}
+
+  {:customer "Bring"
+   :start "2019-03"
+   :end "2021-03"
+   :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
+   :employer :kodemaker
+   :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
      utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
      mottagerene av pakkene (pakkesporing, osv). Ansvar for å vedlikeholde og virereutvikle app-løsningen til sjafører."
-     :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
+   :tech [:react :react-native :kotlin :android :ios :postgresql :azure :xcode]}
 
-   {:customer "Rikshospitalet"
-     :start "2018-07"
-     :end "2018-07"
-     :summary "Bistand i et HoloCare prosjekt"
-     :employer :steria
-     :description "HoloCare er innovasjonssenter for utvikling av mixed reality-løsninger innen helse. Olga hadde et sterkt ønske om å lære seg denne teknologien, og jobbet derfor under sommeren med et team på fire på ett av prosjektene til HoloCare."
-     :tech [:hololens :unity :csharp]}
+  {:customer "Rikshospitalet"
+   :start "2018-07"
+   :end "2018-07"
+   :summary "Bistand i et HoloCare prosjekt"
+   :employer :steria
+   :description "HoloCare er innovasjonssenter for utvikling av mixed reality-løsninger innen helse. Olga hadde et sterkt ønske om å lære seg denne teknologien, og jobbet derfor under sommeren med et team på fire på ett av prosjektene til HoloCare."
+   :tech [:hololens :unity :csharp]}
 
   {:customer "Avinor"
    :start "2017-05"
@@ -120,100 +118,99 @@
    :description "Avinor appen er videreutvikling av Avinor sine digitale tjenester for å gjøre reisen enklere for passasjerene som reiser til og fra flyplassene. Olga ble innleid til prosjektet på et korttidsoppdrag på 2 måneder, og appen ble lansert på Appstore og Google Play sommeren 2017. Etter første lanseringen fortsatte videreutviklingen av appen. Prosjektet hadde stort fokus på design og universell utforming. I løpet av oppdragsperioden hadde Olga rollen som app-utvikler, men tok også på seg ansvar som tech lead og scrum master i en periode."
    :tech [:xamarin-forms :xaml :csharp :ios :android :gitlab :zeplin :visual-studio-appcenter :voiceover :talkback :visual-studio]}
 
-   {:customer "Brønnøysundregistrene"
-    :start "2016-08"
-    :end "2017-04"
-    :summary "Altinn Design System"
-    :employer :steria
-    :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
-    :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
+  {:customer "Brønnøysundregistrene"
+   :start "2016-08"
+   :end "2017-04"
+   :summary "Altinn Design System"
+   :employer :steria
+   :description "Brønnøysundregistrene har valgt å legge ut hele designsystemet sitt på GitHub. Systemet ble implementert med PatternLab-oppsett basert på Atomic Design prinsipper. Olga var leid inn som frontendutvikler, og jobbet tett med design- og backend-teamene. Olga delte ansvar med en annen utvikler for å gjennomføre design-reviews av implementasjonen sammen med designere, og påtok seg også ansvaret for å innføre testrammeverk Mocha og Selenium i prosjektet."
+   :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}
 
-    {:customer "SEB Oslo AS"
-     :start "2015-05"
-     :end "2016-06"
-     :summary "SEB nettbank"
-     :employer :quesnay
-     :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
-     :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
+  {:customer "SEB Oslo AS"
+   :start "2015-05"
+   :end "2016-06"
+   :summary "SEB nettbank"
+   :employer :quesnay
+   :description "SEB er en ledende nordisk leverandør av finansielle tjenester. Sammen med Laboremus Oslo, laget SEB ny løsning for nettbanken sin. Olga var frontendutvikler på prosjektet, og hadde hovedansvaret for å gjøre løsningen responsiv og i tråd med kundens designmanual."
+   :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
 
-     {:customer "Posten og Bring"
-      :start "2016-02"
-      :end "2016-07"
-      :summary "Ingen kjenner Norge bedre - Posten og Brings Norgesquiz"
-      :employer :quesnay
-      :description "I 2016 kom Posten og Bring med kampanjen «Ingen kjenner Norge bedre», for å tydeliggjøre deres retning innen
+  {:customer "Posten og Bring"
+   :start "2016-02"
+   :end "2016-07"
+   :summary "Ingen kjenner Norge bedre - Posten og Brings Norgesquiz"
+   :employer :quesnay
+   :description "I 2016 kom Posten og Bring med kampanjen «Ingen kjenner Norge bedre», for å tydeliggjøre deres retning innen
       fremtidens post- og logistikk, og deres miljøsatsning. Som en del av kampanjen ble det laget film, annonser, og en interaktiv Norgesquiz med
       bilder tatt av Brings sjafører.
       Olga jobbet med den nettbaserte quiz'en og implementerte frontend basert på skissene levert av Ernö.
       Teamet bestod av en designer, en backendutvikler og en frontendutvikler."
-      :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
+   :tech [:html :bootstrap :jquery :css :csharp :responsive-design]}
 
-      {:customer "Kopinor"
-       :years [2014 2015]
-       :summary "Nye nettsider til Skaff.no"
-       :employer :computas
-       :description "Skaff.no inneholder tusenvis av boktitler som kan bestilles for klargjøring og opptrykk. De nye nettsidene er oversiktlige, har ordrehistorikk tilgjengelig og gjør det mulig å betale for bestillingen med kort eller få tilsendt faktura."
-       :tech [:csharp :html :sass :javascript]}
+  {:customer "Kopinor"
+   :years [2014 2015]
+   :summary "Nye nettsider til Skaff.no"
+   :employer :computas
+   :description "Skaff.no inneholder tusenvis av boktitler som kan bestilles for klargjøring og opptrykk. De nye nettsidene er oversiktlige, har ordrehistorikk tilgjengelig og gjør det mulig å betale for bestillingen med kort eller få tilsendt faktura."
+   :tech [:csharp :html :sass :javascript]}
 
-      {:customer "Statens legemiddelverk"
-       :years [2014]
-       :summary "eResept"
-       :employer :computas
-       :description "FEST/eResept prosjektet er en del av det totale eResept-programmet, som har som formål å innføre elektroniske resepter i Norge. Computas' utviklingskontrakt med SLV omfatter utvikling av det interne saksbehandlingssystemet Athene, samt formidling av grunndata via FEST-tjenesten til de andre aktørene i eResept-programmet. Deler av løsningen som tilbys er behandling av legemidler på godkjenningsfritak, som ikke har markedsføringstillatelse i Norge. Computas har utviklet et separat saksbehandlingssystem for dette. Denne løsningen har strenge sikkerhetsmekanismer, og følger Norsk Helsenett norm for informasjonssikkerhet.
+  {:customer "Statens legemiddelverk"
+   :years [2014]
+   :summary "eResept"
+   :employer :computas
+   :description "FEST/eResept prosjektet er en del av det totale eResept-programmet, som har som formål å innføre elektroniske resepter i Norge. Computas' utviklingskontrakt med SLV omfatter utvikling av det interne saksbehandlingssystemet Athene, samt formidling av grunndata via FEST-tjenesten til de andre aktørene i eResept-programmet. Deler av løsningen som tilbys er behandling av legemidler på godkjenningsfritak, som ikke har markedsføringstillatelse i Norge. Computas har utviklet et separat saksbehandlingssystem for dette. Denne løsningen har strenge sikkerhetsmekanismer, og følger Norsk Helsenett norm for informasjonssikkerhet.
 
 Del av eResept-programmet som har som formål å innføre elektroniske resepter i Norge. Computas' utviklingskontrakt med Statens Legemiddelverk (SLV) omfatter utvikling av det interne saksbehandlingssystemet Athene, samt formidling av grunndata via FEST-tjenesten til de andre aktørene i eResept-programmet. Athene på Nett er legemiddelsøk tilgjengelig for forbrukerne på SLVs sider; www.legemiddelverket.no som henter og viser informasjon fra Athene.
 "
-       :tech [:dotnet :visual-studio :jira]}
+   :tech [:dotnet :visual-studio :jira]}
 
-      {:customer "BufDir"
-       :years [2012 2013]
-       :summary "Mobil-app PappaTid for BufDir"
-       :employer :computas
-       :description "PappaTid er en app for nybakte pappaer i permisjon. Appen gir oversikt over aktiviteter i nærområdet, over profiler til andre pappaer, og gir mulighet for å opprette egne aktiviteter, bli med på en aktivitet, finne frem ved hjelp av kart, og legge til andre pappaer i egen krets. Appen tillater også login gjennom Facebook."
-       :tech [:objc]}
+  {:customer "BufDir"
+   :years [2012 2013]
+   :summary "Mobil-app PappaTid for BufDir"
+   :employer :computas
+   :description "PappaTid er en app for nybakte pappaer i permisjon. Appen gir oversikt over aktiviteter i nærområdet, over profiler til andre pappaer, og gir mulighet for å opprette egne aktiviteter, bli med på en aktivitet, finne frem ved hjelp av kart, og legge til andre pappaer i egen krets. Appen tillater også login gjennom Facebook."
+   :tech [:objc]}
 
-       {:customer "ConocoPhillips"
-        :years [2012]
-        :summary "Møte-webapp for CODIO"
-        :employer :computas
-        :description "Videreutvikle den eksisterende CODIO web-løsningen for møter med ny design og dynamisk Jquery/Knockout funksjonalitet som tillater alle møtedeltagere til å følge med på referatet direkte under møte, og legge til oppgaver knyttet til brukere i systemet. Design av konseptet i team med fokus på intuitiv og brukervennlig løsning."
-        :tech [:jquery :knockout]}
+  {:customer "ConocoPhillips"
+   :years [2012]
+   :summary "Møte-webapp for CODIO"
+   :employer :computas
+   :description "Videreutvikle den eksisterende CODIO web-løsningen for møter med ny design og dynamisk Jquery/Knockout funksjonalitet som tillater alle møtedeltagere til å følge med på referatet direkte under møte, og legge til oppgaver knyttet til brukere i systemet. Design av konseptet i team med fokus på intuitiv og brukervennlig løsning."
+   :tech [:jquery :knockout]}
 
-        {:customer "Corbell"
-         :years [2012]
-         :summary "Mobil-app Corbell WorkBox"
-         :employer :computas
-         :description "Corbell WorkBox mobil-app er rettet mot servicenæringen. Appen gir muligheter for å se egne skift i måneds- og dagskalender, bytte skift med andre, redigere profil, se nedtellingen til neste vakt og se nyheter fra bransjen."
-         :tech [:flex]}
+  {:customer "Corbell"
+   :years [2012]
+   :summary "Mobil-app Corbell WorkBox"
+   :employer :computas
+   :description "Corbell WorkBox mobil-app er rettet mot servicenæringen. Appen gir muligheter for å se egne skift i måneds- og dagskalender, bytte skift med andre, redigere profil, se nedtellingen til neste vakt og se nyheter fra bransjen."
+   :tech [:flex]}
 
-         {:customer "Computas"
-          :years [2012]
-          :summary "Mobil-app Interactor"
-          :employer :computas
-          :description "Interactor er et nyttig verktøy for å kommunisere med publikum under foredrag. Publikum kan gi tilbakemelding om at de forstår/ikke forstår presentasjonen, og sende inn spørsmål til foredragsholderen underveis."
-          :tech [:flex]}
+  {:customer "Computas"
+   :years [2012]
+   :summary "Mobil-app Interactor"
+   :employer :computas
+   :description "Interactor er et nyttig verktøy for å kommunisere med publikum under foredrag. Publikum kan gi tilbakemelding om at de forstår/ikke forstår presentasjonen, og sende inn spørsmål til foredragsholderen underveis."
+   :tech [:flex]}
 
-          {:customer "Mattilsynet"
-           :years [2011]
-           :summary "Mobil-app Mamot"
-           :employer :computas
-           :description "Laget en mobil-applikasjon for å inspiserer steder som selger/behandler næringsmidler. Løsningen viser inspektørens tilsyn. Inspektør kan ringe, sende SMS eller maile kontaktpersonen i tillegg til å se kart over stedet tilsynet skal skje. Inspektør velger områder og gjenstander det gjøres inspeksjoner på og registrerer observasjoner på hvilke krav som ikke er overholdt. Observasjonene brukes for gjennomgang med kontaktperson etter inspeksjonen og er grunnlaget for vedtaket som gjøres."
-           :tech [:flex]}
+  {:customer "Mattilsynet"
+   :years [2011]
+   :summary "Mobil-app Mamot"
+   :employer :computas
+   :description "Laget en mobil-applikasjon for å inspiserer steder som selger/behandler næringsmidler. Løsningen viser inspektørens tilsyn. Inspektør kan ringe, sende SMS eller maile kontaktpersonen i tillegg til å se kart over stedet tilsynet skal skje. Inspektør velger områder og gjenstander det gjøres inspeksjoner på og registrerer observasjoner på hvilke krav som ikke er overholdt. Observasjonene brukes for gjennomgang med kontaktperson etter inspeksjonen og er grunnlaget for vedtaket som gjøres."
+   :tech [:flex]}
 
-           {:customer "FMC"
-            :years [2011]
-            :summary "Mobil-app FMC"
-            :employer :computas
-            :description "Appen overvåker sensorene i oljebrønnene, viser målingene, og gir alarm når en sensor måler for høye eller for lave verdier.Kryss -platform løsning for Android, iPhone og Windows Phone 7 i Mono-Touch, .NET, C#."
-            :tech [:xamarin]}
+  {:customer "FMC"
+   :years [2011]
+   :summary "Mobil-app FMC"
+   :employer :computas
+   :description "Appen overvåker sensorene i oljebrønnene, viser målingene, og gir alarm når en sensor måler for høye eller for lave verdier.Kryss -platform løsning for Android, iPhone og Windows Phone 7 i Mono-Touch, .NET, C#."
+   :tech [:xamarin]}
 
-            {:customer "Mintra AS"
-             :years [2009 2010 2011]
-             :summary "Mintra Trainingportal"
-             :employer :mintra
-             :description "Inhouse Javautvikler-trainee av Trainingportal (e-læringsplattform for bedrifter) og LessonLearned (platform for deling av uønskede hendelser på arbeidsplassen)"
-             :tech [:java :spring :hibernate]}
-  ]
+  {:customer "Mintra AS"
+   :years [2009 2010 2011]
+   :summary "Mintra Trainingportal"
+   :employer :mintra
+   :description "Inhouse Javautvikler-trainee av Trainingportal (e-læringsplattform for bedrifter) og LessonLearned (platform for deling av uønskede hendelser på arbeidsplassen)"
+   :tech [:java :spring :hibernate]}]
 
  :endorsements [{:author "Leo Sander Gasnier"
                  :title "Produkteier for moderniseringsprosjektet for Altinn"
@@ -226,49 +223,45 @@ Del av eResept-programmet som har som formål å innføre elektroniske resepter 
                  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen.
                  Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem.
                  Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
-                 {:author "Amr Ellafy"
-                   :title "Tech Lead/Enterprise Architect"
-                   :quote "I worked with Olga on various projects. Olga is experienced, dedicated, and pleasant to work with.
+                {:author "Amr Ellafy"
+                 :title "Tech Lead/Enterprise Architect"
+                 :quote "I worked with Olga on various projects. Olga is experienced, dedicated, and pleasant to work with.
                    Our team delivered SEB new e-banking system. Olga met the deadlines, and was extremely dedicated throughout the project.
                    C#, Javascript, and CSS are among the technologies we used.
-                   I highly recommend to future employers, and assignments."
-                 }
+                   I highly recommend to future employers, and assignments."}
                 {:author "Simen Sommerfeldt"
-                  :title "CTO Bouvet ASA, Koordinator Lær Kidsa Koding"
-                  :quote "This conference [NDC Junior] is one of our most important yearly events.
+                 :title "CTO Bouvet ASA, Koordinator Lær Kidsa Koding"
+                 :quote "This conference [NDC Junior] is one of our most important yearly events.
                   Olga recruited and coordinated lecturers, composed the program, communicated with the event company, wrote newsletters,
                   and kept a keen eye on everything during the conference.
                   The result was a stunning success,with some 200 children and their parents learning to code in seven parallell tracks.
-                  I am impressed by her communication skills and ability to manage expectations."
-                }
-                ]
+                  I am impressed by her communication skills and ability to manage expectations."}]
 
  :cv {:default {:preferred-techs [:react-native :xamarin-forms
-   :javascript :typescript
-   :html :sass
-   :responsive-design ]}}
+                                  :javascript :typescript
+                                  :html :sass
+                                  :responsive-design]}}
 
  :education-summary "Master, Programmering og Nettverk, UiO"
  :education [{:institution "UiO"
               :years [2007 2008 2009 2010 2011 2012 2013]
               :subject "Master, Programmering og Nettverk"}
-              {:institution "Universidad Pontificia de Salamanca"
-               :years [2010]
-               :subject "Utvekslingshalvår i Salamanca, Spania"}]
+             {:institution "Universidad Pontificia de Salamanca"
+              :years [2010]
+              :subject "Utvekslingshalvår i Salamanca, Spania"}]
 
  :languages [{:language "Russisk"
               :orally "Morsmål"
               :written "Morsmål"}
-              {:language "Norsk"
+             {:language "Norsk"
               :orally "Flytende"
               :written "Flytende"}
              {:language "Engelsk"
               :orally "Meget god"
               :written "Meget god"}
-              {:language "Spansk"
-               :orally "God"
-               :written "God"}]
-
+             {:language "Spansk"
+              :orally "God"
+              :written "God"}]
 
  :project-highlights [{:blurb "Native app-utvikling av nytt nordisk system for ekspressleveranser"
                        :customer "Bring"}
@@ -278,6 +271,5 @@ Del av eResept-programmet som har som formål å innføre elektroniske resepter 
                        :customer "Brønnøysundregistrene"}]
 
  :endorsement-highlight {:author "Torborg Galteland"
-                 :title "Daglig leder i Norsk biologforening"
-                 :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}
-}
+                         :title "Daglig leder i Norsk biologforening"
+                         :quote "Jeg har hatt gleden av å arbeide tett med Olga i to omganger om Appen «Spør en biolog».  Olga er veldig hyggelig å samarbeide med, hun er dyktig, hun ser gode løsninger og hun følger opp og passer på framgangen. Jeg er spesielt imponert over hvor godt hun håndterte ungdommene i vårt testpanel. Feiret når de fant bugs og heiet på dem. Jeg håper vi får muligheten til å ha flere prosjekter sammen."}}
