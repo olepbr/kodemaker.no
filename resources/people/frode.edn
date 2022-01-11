@@ -233,6 +233,7 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
  :side-projects [{:title       "Digipostarkiv"
                   :description "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
                                 Består av en backend skrevet i Haskell og et macos-gui skrevet i Swift som linkes sammen til én binary."
+                  :illustration "/photos/tech/haskell.png"
                   :link        {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
-                  :tech        [:haskell :swift :objective-c :oauth]}]
+                  :tech        [:haskell :swift :objc :oauth]}]
  }
