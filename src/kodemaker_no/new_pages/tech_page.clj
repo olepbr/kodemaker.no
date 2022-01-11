@@ -293,7 +293,7 @@
                   (remove (or (:person/_exclude-techs tech) :person/quit?))
                   seq)]
     {:kind :titled
-     :title (if (< 1 (count people)) (format "Vi kan %s" (:tech/name tech)) (format "Jeg kan %s" (:tech/name tech)))
+     :title (if (< 1 (count people)) (format "Spør oss om %s" (:tech/name tech)) (format "Spør meg om %s" (:tech/name tech)))
      :contents (if (> 20 (count people))
                  [(e/round-card-grid (for [person people]
                                        {:content
