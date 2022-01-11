@@ -25,9 +25,9 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
             :linkedin "/in/nerbraten"
             :github "froden"}
 
- :tech {:using-at-work [:kotlin :typescript :postgresql :docker]
-        :favorites-at-the-moment [:elm :kotlin :haskell]
-        :want-to-learn-more [:elm :kotlin :clojure]}
+ :tech {:using-at-work [:kotlin :typescript :react :postgresql :kubernetes]
+        :favorites-at-the-moment [:kotlin :haskell :clojure]
+        :want-to-learn-more [:elm :haskell :clojure]}
 
  :innate-skills [:terminal :intellij :mac-os :haskell :vim :lean :scrum :kanban :tdd :browser-devtools :windows]
 
@@ -122,8 +122,8 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
              :description "Utvikling av system for budleveranser som håndterer alt
                 fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
                 sanntid, og integrasjoner med mange av Bring sine systemer. Frode har jobbet med frontend, backend og drift"
-             :tech [:azure :typescript :react :redux :kotlin :gradle
-                    :postgresql :event-sourcing :cqrs :flyway :javascript :yarn]}
+             :tech [:azure :typescript :react :redux :kotlin :gradle :kubernetes
+                    :postgresql :event-sourcing :cqrs :flyway :javascript :yarn :arrow]}
             {:customer "Diffia"
              :years [2018]
              :employer :kodemaker
@@ -230,14 +230,9 @@ Frode er først og fremst en utvikler og arkitekt, men har også kombinert dette
                  {:name "Jetty" :url "https://org.eclipse.jetty" :tech [:java :jetty] }
                  ]
 
-;:side-projects
-;                [
-;                 {:title        "Digipostarkiv"
-;                  :description  "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
-;                                Består av en backend skrevet i Haskell og et native OSX-gui skrevet i Swift som linkes sammen til én binary."
-;                  :illustration "/illustrations/side-projects/weathergraph.png"
-;                  :link         {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
-;                  :tech         [ :haskell :swift :objective-c :oauth]
-;                  }
-;                 ]
+ :side-projects [{:title       "Digipostarkiv"
+                  :description "En applikasjon som synkroniserer innholdet i en lokale mappe på din maskin med din Digipost-konto (ala Dropbox).
+                                Består av en backend skrevet i Haskell og et macos-gui skrevet i Swift som linkes sammen til én binary."
+                  :link        {:url "https://github.com/froden/digipostarkiv" :text "Kode på GitHub"}
+                  :tech        [:haskell :swift :objective-c :oauth]}]
  }
