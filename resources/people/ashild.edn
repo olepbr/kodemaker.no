@@ -5,7 +5,7 @@
  :experience-since 2011
  :born 1986
  :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
-    Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
+    Hun har jobbet som fullstackutvikler i 10 år, samt hatt en tech lead-rolle.
     Åshild foretrekker frontendutvikling, men liker fremfor alt en variert 
     arbeidshverdag der hun kan løse det meste selv, uten å være avhengig av andre.
 
@@ -15,7 +15,7 @@
     opptatt av at koden skal være enkel å forvalte, og forstå."
 
 :cv/description "Åshild fremstår som en proaktiv, strukturert og kompetent person. 
-    Hun har jobbet som fullstackutvikler i 9 år, samt hatt en tech lead-rolle.
+    Hun har jobbet som fullstackutvikler i 10 år, samt hatt en tech lead-rolle.
     Åshild foretrekker frontendutvikling, men liker fremfor alt en variert arbeidshverdag 
     der hun kan løse det meste selv, uten å være avhengig av andre.
 
@@ -36,9 +36,9 @@
             :linkedin "/in/ashildthorrud/"
             :github "thorrud"}
 
-:tech {:using-at-work [:kotlin :arrow :postgresql :docker :kubernetes]
-        :favorites-at-the-moment [:react]
-        :want-to-learn-more [:clojurescript :kafka]}
+:tech {:using-at-work [:react :nextjs :kotlin :arrow :postgresql :docker :kubernetes]
+        :favorites-at-the-moment [:react :nextjs]
+        :want-to-learn-more [:clojurescript :kafka :firebase]}
 
 :qualifications ["Fullstack, jobber gjerne med hele stacken"
                   "Erfaring med oppsett av frontendapplikasjoner"
@@ -182,14 +182,19 @@
                  selvstendig. Du er gjerne med på å diskutere/finne nye 
                  løsninger/metoder i tillegg til at du tar ansvar for det man 
                  evt måtte forvalte. Jeg ønsker deg lykke til!"}
-                 {:author "Tore Skjulstad Bryhni"
-                 :title "Avdelingsleder i Statnett SF"
-                 :quote "Åshild er en dyktig utvikler. Hun leverer med god kvalitet
-                  i alle faser av arbeidet fra analyse av brukeren sine behov og helt 
-                  ut til løsningen kjører i produksjon. I Statnett er vi opptatt av å ha
-                   en god faglig diskusjon i teamet når vi velger hvordan løsningene skal lages. 
-                   Åshild har vært en god bidragsyter i dette arbeidet i tillegg til jobben med 
-                   å lage løsningene vi kommer frem til med god kvalitet."}]
+                {:author "Tore Skjulstad Bryhni"
+                :title "Avdelingsleder i Statnett SF"
+                :quote "Åshild er en dyktig utvikler. Hun leverer med god kvalitet
+                i alle faser av arbeidet fra analyse av brukeren sine behov og helt 
+                ut til løsningen kjører i produksjon. I Statnett er vi opptatt av å ha
+                en god faglig diskusjon i teamet når vi velger hvordan løsningene skal lages. 
+                Åshild har vært en god bidragsyter i dette arbeidet i tillegg til jobben med 
+                å lage løsningene vi kommer frem til med god kvalitet."}
+                {:author "Magne Vidnes"
+                :title "Produksjef, Team Adboost, FINN.no"
+                :quote "Åshild er svært effektiv, allsidig og har stor gjennomføringskraft. 
+                Hun setter seg raskt inn i nye problemstillinger, bidrar positivt til de rundt
+                seg og drar med seg andre."}]
 
 :education-summary "Kommunikasjonsteknologi, NTNU"
 :education [{:institution "Kommunikasjonsteknologi, NTNU"
@@ -210,14 +215,11 @@
                       {:blurb "Splittet opp monolitten i SpareBank1 til en distribuert arkitektur"
                        :customer "Sparebank1"}]
 
- :endorsement-highlight {:author "Tore Skjulstad Bryhni"
-                         :title "Avdelingsleder i Statnett SF"
-                         :quote "Åshild er en dyktig utvikler. Hun leverer med god kvalitet
-                  i alle faser av arbeidet fra analyse av brukeren sine behov og helt 
-                  ut til løsningen kjører i produksjon. I Statnett er vi opptatt av å ha
-                   en god faglig diskusjon i teamet når vi velger hvordan løsningene skal lages. 
-                   Åshild har vært en god bidragsyter i dette arbeidet i tillegg til jobben med 
-                   å lage løsningene vi kommer frem til med god kvalitet."}
+:endorsement-highlight {:author "Magne Vidnes"
+        :title "Produksjef, Team Adboost, FINN.no"
+        :quote "Åshild er svært effektiv, allsidig og har stor gjennomføringskraft. 
+        Hun setter seg raskt inn i nye problemstillinger, bidrar positivt til de rundt seg og 
+        drar med seg andre."}
 
 :cv {:default {:preferred-techs [:react :typescript :java
                 :intellij :terminal 
