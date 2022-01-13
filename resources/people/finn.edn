@@ -2,27 +2,22 @@
  :name ["Finn" "J" "Johnsen"]
  :title "Utvikler"
  :start-date "2008-10-01"
- :description "Finn er opptatt av open source og åpne standarder. Han trives med intrikate tekniske utfordringer, og er kjent for å levere høy kvalitet."
+ :description "Finn liker å jobbe i alle tekniske deler av systemene - infrastruktur, database, back-end, API-er og front-end. 
+
+Han har flere års erfaring fra alle faser i prosjekter. Fra nyoppstarta prosjekter og utforming, til videreutvikling og forvaltning av prosjekter som har pågått en tid. 
+
+Han trives godt i arbeidshverdagen med noen få stikkord ivaretatt; hurtig utviklingssyklus, tidlig feedback, enkel kode og godt samarbeid i teamet.
+"
  :innate-skills [:java :clojure :kotlin :git :unit-testing]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
             :twitter "finnjohnsen"
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
+ :hobbies []
  :tech {:favorites-at-the-moment [:clojure :javascript :kotlin :java]
         :want-to-learn-more []}
  :email-address "finn@kodemaker.no"
- :hobbies [{:title "Podcaster"
-            :description "Finn og August lager Podcasten Utviklingslandet. Dette er en uformell podcast for utviklere hvor vi prater om det som engasjerer oss"
-            :illustration "/illustrations/hobbies/utviklingslandet.jpg"
-            }
-           {:title "Foto"
-            :description "Alle liker å se på bilder. Et kamera lar seg stort sett kombinere med alle andre aktiviteter du finner på - så sitter du igjen med minner du stolt kan henge på veggen i A3+ -format."
-            :illustration "/illustrations/hobbies/finn-flue.jpg"}
-           {:title "Reise"
-            :description "Verden er stor og har mye å vise deg - Pakk kofferten og lag deg minner (og fotografier) du tar med deg resten av livet."
-            :illustration "/illustrations/hobbies/finn-newyork.jpg"
-            }]
  :endorsement-highlight {:author "Johan Sörmling"
                          :title "Director Software Engineering at AllClear ID"
                          :quote "Finn has worked for us at AllClearID for several periods as a Software engineer 
@@ -42,7 +37,13 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
                       {:blurb "Android App for ombordpersonell hos NSB"
                        :customer "NSB"}]
  :projects [
-{:customer "Mercell"
+            {:customer "Animalia"
+             :start "2021-10"
+             :employer :kodemaker
+             :summary "Utvikler Clojure"
+             :description "Fullstack clojure-utvikler på livdyrattester for kjøp/salg av Storfe."
+             :tech [:clojure :clojurescript :react :oracle :mssql :okd :reagent :re-frame :docker :devops]}
+            {:customer "Mercell"
              :start "2020-10"
              :employer :kodemaker
              :summary "Utvikling av ny samarbeidstjenste for leverandører i en anbudsportal."
@@ -255,6 +256,11 @@ Difficulties in task solving only spur his interest. Being a good developer, Fin
 
 Finn is a great guy and an even better developer, if anybody needs a high-level Java developer/architect that can not only get things done on the development side but also talk with people and organize architectural changes then he’s your guy."}
                 ]
+ :side-projects [
+                 {:title "Smarthus"
+                  :description "Familien til Finn har et feriehus i Agder; og dette har blitt et hobbyprosjekt å passe dette på mens ingen er der. I huset finnes sensorer som sender data via MQTT for å vise i oversiktelig dashboard i Home Assistant"
+                  :tech [:home-assistant :python :mqtt :linux :rasperry-pi :airthings :bluetooth]
+                  }]
  
  :certifications [{:name "Styrekurs for daglig leder og styremedlemmer" :year 2019}
                   {:name "Retorikk" :year 2010}
