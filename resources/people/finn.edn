@@ -2,11 +2,9 @@
  :name ["Finn" "J" "Johnsen"]
  :title "Utvikler"
  :start-date "2008-10-01"
- :description "Finn liker å jobbe i alle tekniske deler av systemene - infrastruktur, database, back-end, API-er og front-end. 
+ :description " Finn er en sosial og positiv humørspreder, og bidrar til god stemning i oppdragene sine. Han er allsidig og trivest godt med å jobbe i alle lag av systemene han er med å utvikle. Han har bred erfaring fra både nystartede prosjekter og systemer som har eksistert en stund.
 
-Han har flere års erfaring fra alle faser i prosjekter. Fra nyoppstarta prosjekter og utforming, til videreutvikling og forvaltning av prosjekter som har pågått en tid. 
-
-Han trives godt i arbeidshverdagen med noen få stikkord ivaretatt; hurtig utviklingssyklus, tidlig feedback, enkel kode og godt samarbeid i teamet.
+Han sier at i arbeidshverdagen trives han med noen få stikkord ivaretatt; hurtig utviklingssyklus, tidlig feedback, enkel kode og godt samarbeid i teamet.
 "
  :innate-skills [:java :clojure :kotlin :git :unit-testing]
  :phone-number "+47 97 00 59 68"
@@ -41,7 +39,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
              :start "2021-10"
              :employer :kodemaker
              :summary "Utvikler Clojure"
-             :description "Fullstack clojure-utvikler på livdyrattester for kjøp/salg av Storfe."
+             :description "Fullstack clojure-utvikler på livdyrattester for kjøp og salg av storfe."
              :tech [:clojure :clojurescript :react :oracle :mssql :okd :reagent :re-frame :docker :devops]}
             {:customer "Mercell"
              :start "2020-10"
@@ -258,7 +256,7 @@ Finn is a great guy and an even better developer, if anybody needs a high-level 
                 ]
  :side-projects [
                  {:title "Smarthus"
-                  :description "Familien til Finn har et feriehus i Agder; og dette har blitt et hobbyprosjekt å passe dette på mens ingen er der. I huset finnes sensorer som sender data via MQTT for å vise i oversiktelig dashboard i Home Assistant"
+                  :description "Familien til Finn har et feriehus i Agder; og dette har blitt et hobbyprosjekt å overvåke og passe på når det står tomt. I huset finnes sensorer som sender data via MQTT for å vise i oversiktelig dashboard i Home Assistant"
                   :illustration "/photos/tech/home-assistant.png"
                   :tech [:home-assistant :python :mqtt :linux :raspberry-pi :bluetooth]
                   }]
