@@ -259,7 +259,8 @@ Finn is a great guy and an even better developer, if anybody needs a high-level 
  :side-projects [
                  {:title "Smarthus"
                   :description "Familien til Finn har et feriehus i Agder; og dette har blitt et hobbyprosjekt å passe dette på mens ingen er der. I huset finnes sensorer som sender data via MQTT for å vise i oversiktelig dashboard i Home Assistant"
-                  :tech [:home-assistant :python :mqtt :linux :rasperry-pi :airthings :bluetooth]
+                  :illustration "/photos/tech/home-assistant.png"
+                  :tech [:home-assistant :python :mqtt :linux :raspberry-pi :bluetooth]
                   }]
  
  :certifications [{:name "Styrekurs for daglig leder og styremedlemmer" :year 2019}

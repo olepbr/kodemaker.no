@@ -1012,6 +1012,7 @@
    :genova
    :google-protocol-buffers
    :grasshopper
+   :home-assistant
    :interconnect
    :jasper-reports
    :ms-dna
@@ -1020,6 +1021,7 @@
    :orion
    :paradox
    :powercenter
+   :raspberry-pi
    :silverstream
    :spring-batch
    :spring-integration
