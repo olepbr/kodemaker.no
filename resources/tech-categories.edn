@@ -52,6 +52,8 @@
    :pwa
    :reactive-cocoa
    :siri-service-interface-for-real-time-information
+   :swift-ui
+   :uikit
    :wearables]}
 
  :cross-platform
