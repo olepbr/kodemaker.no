@@ -84,7 +84,7 @@ Det gikk bra - veldig bra."
   :years [2021 ]
   :employer :kodemaker
   :summary "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
-  :description "Cognite er et norsk teknologiselskap som utvikler platformen Cognite Data Fusion, en platform som samler store datamenger reletert til industrielle produksjonsprosesser. Sanntids produksjosdata tilgjengeliggjøres gjennom api og spesialapplikasjoner for å understøtte data-drevne beslutninger."
+  :description "Cognite er et norsk teknologiselskap som utvikler platformen Cognite Data Fusion, en platform som samler store datamenger relatert til industrielle produksjonsprosesser. Sanntids produksjosdata tilgjengeliggjøres gjennom api og spesialapplikasjoner for å understøtte data-drevne beslutninger."
   :tech [:azure :terraform :python :kotlin :gradle :kubernetes]}
  {:customer "Mercell"
   :years [2020 ]
