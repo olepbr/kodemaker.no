@@ -17,9 +17,9 @@
                  :github        "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:kotlin :arrow]
-                 :using-at-work [:kotlin :arrow :typescript]
-                 :want-to-learn-more [:haskell :scala]}
+ :tech          {:favorites-at-the-moment [:swift :kotlin :arrow]
+                 :using-at-work [:swift :kotlin :arrow]
+                 :want-to-learn-more [:haskell]}
 
  :cv {:default {:preferred-techs [:swift :kotlin]
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase 
