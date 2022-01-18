@@ -134,7 +134,7 @@
 
                              {:customer    "Bring"
                               :employer    :kodemaker
-                              :years       [2020 :ongoing]
+                              :years       [2020]
                               :summary     "Opplegg for flyfrakt i system for budleveranser"
                               :description "Innføre flyfrakt innen skandinavia som en opsjon ved en leveranse i applikasjonen Glow.
                                             Glow er et system for budleveranser som håndterer alt
