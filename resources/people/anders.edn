@@ -64,12 +64,18 @@
                         the extreme. One of the best developers I have ever worked
                         with."}]
 
- :projects [{:customer "Ruter"
+ :projects [{:customer "Hafslund Strøm / Fortum"
+             :employer :kodemaker
+             :summary "Mine Sider, App, Produktsider, Bestillingsløp"
+             :description "Utvikling og forvaltning av flere av Fortum og Hafslund Strøm sine kunderettede flater."
+             :tech [:clojurescript :clojure :responsive-design :sanity :datadog :git :aws :aws-s3 :tools-deps :varnish]
+             :years [2021 :ongoing]}
+            {:customer "Ruter"
              :employer :kodemaker
              :summary "Salgsløsning for billetter ombord i buss"
              :description "Backend-utvikling av ny plattform for salg av billetter ombord i buss."
              :tech [:kotlin :kafka :gradle :postgresql :kubernetes :ci :cd :datadog :event-sourcing]
-             :years [2020 2021 :ongoing]}
+             :years [2020 2021]}
             {:customer "Norled"
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
