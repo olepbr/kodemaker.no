@@ -198,12 +198,22 @@
                            :tech [:design :smidig :arkitektur]
                            :duration "1 time"}]
 
+ :projects [{:customer "Norsk Helsenett"
+						 :start "2021-11"
+						 :summary "Utvikling av Kjernejournal"
+						 :employer :kodemaker
+						 :description "Norsk Helsenett (NHN) utvikler og drifter nasjonale helse-IT-løsninger.
+						 Kjernejournal tilgjengeliggjør helseinformasjon til innbyggere via helsenorge.no.  Helsepersonell får tilgang via deres EPJ.
+						 Vaksiner, journaldokumenter, besøkshistorikk, legemidler, behandlingsplaner, reservasjoner, donorkort, mer og mer helseinformasjon skal tilgjengeliggjøres sikkert der de trengs.
+						 Oppdraget innebærer å både utvikle ny funksjonalitet, og jobbe for at kode skal kunne rulles ut kontinuerlig på en sikker måte."
+						 :tech [:java :maven :oracle :jenkins :kubernetes]},
  :projects [{:customer "Bring"
 						 :start "2020-02"
+						 :end "2021-10"
 						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
 						 :employer :kodemaker
 						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
-						 :tech [:elixir :phoenix :azure :postgresql]},
+						 :tech [:elixir :phoenix :azure :postgresql :kubernetes :terraform]},
 						{:customer "Tomra"
              :start "2017-09"
              :end "2020-02"
@@ -213,7 +223,7 @@
              :description "Tomra er i en ekspensjonsfase, med mange nye land som innfører panteløsninger, alle med hver sine behov og spesialtilpasninger.
              For å håndtere en hverdag med flere og flere panteoperatører i flere og flere regioner, jobber Tomra med å fornye sin digitale plattform.
              Eldre løsninger må forbedres og konverteres til å kjøre på ny og moderne infrastruktur med tilstrekkelige skaleringsmuligheter og kontinuerlige utrullinger uten nedetid."
-             :tech [:java :kubernetes :aws :postgresql :sql-server :javascript :gitlab]}
+             :tech [:java :kubernetes :aws :postgresql :sql-server :javascript :gitlab :terraform]}
             {:customer "WesternGeco"
              :start "2017-04"
              :end "2017-10"
