@@ -103,6 +103,7 @@
    :google-appengine
    :google-cloud
    :google-cloud-messaging
+   :google-cloud-run
    :hasura
    :heroku
    :ibm-bluemix
