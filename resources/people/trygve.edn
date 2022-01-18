@@ -124,7 +124,15 @@
                              {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
                               :customer "Thomson Reuters"}]
 
- :projects                  [{:customer    "Bring"
+ :projects                  [{:customer "Solibo"
+                              :employer :kodemaker
+                              :start "2021-10"
+                              :summary "Ny styreportal for boligselskaper"
+                              :description "Del av et lite, autonomt team. Bidrar med teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, UX, med mer."
+                              :tech [:kotlin :ktor :typescript :react :react-query :aws :docker :gradle
+                              :postgresql :cqrs :flyway :javascript :npm :ddd :kanban :tailwind]}
+
+                             {:customer    "Bring"
                               :employer    :kodemaker
                               :years       [2020 :ongoing]
                               :summary     "Opplegg for flyfrakt i system for budleveranser"
