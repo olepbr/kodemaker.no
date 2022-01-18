@@ -36,15 +36,15 @@
                          }
 
  :tech                  {
-                         :favorites-at-the-moment [:flutter :go :emacs]
+                         :favorites-at-the-moment [:go]
                          :using-at-work           [:kotlin :flutter :kafka]
-                         :want-to-learn-more      [:flutter :clojure :go]
+                         :want-to-learn-more      [:clojure :go]
                          }
 
  :hobbies               [
                          {
                           :title        "Stisykling"
-                          :description  "Jeg er overbevist at det ikke finnes noen bedre måte å slappe av på enn å sykle i marka, opp og ned bratte stier. Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere sleipe røtter, glatte steiner og den biten av stien du ikke klarte på forrige tur."
+                          :description  "Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere sleipe røtter, glatte steiner og den biten av stien du ikke klarte på forrige tur."
                           :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
                          ],
 
@@ -86,13 +86,15 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :recommendations
  [
   {:title "Concurrency is not parallelism"
-   :blurb "Concurrency og parallelisme er to begreper som blandes sammen. Rob Pike, en av skaperene av Go,
-                         forklarer forskjellen og hvordan dette concurrency kan håndteres i Go. Det foretrukne patternet i Go er
-                         'Communicating Sequential Processes' (CSP) som også blir brukt av andre språk. CSP implementasjonen i
-                         Go er brukt som grunnlag for implementasjon i flere andre språk som Clojure og Kotlin."
-   :link  {:url  "https://blog.golang.org/concurrency-is-not-parallelism"
+   :blurb "Concurrency og parallelisme er begreper som ofte blandes sammen. Rob Pike, en av skaperene av Go, og forklarer forskjellen på en elegant måte."
+   :link  {:url  "https://vimeo.com/49718712"
            :text "Til video/slides"},
    :tech  [:go :concurrency]},
+  {:title "The Night Watch"
+   :blurb "En humoristisk beskrivelse av hvordan det noen ganger føles å være en programmerer. "
+   :link  {:url  "https://www.usenix.org/system/files/1311_05-08_mickens.pdf"
+           :text "Til artikkel"},
+   :tech  [:programming]},
 
   {:title "Teach Yourself Programming in Ten Years"
    :blurb "Kan man plukke opp en programmeringsbok og lære programmering på 24 timer eller 21 dager? Nei.
@@ -162,10 +164,10 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :side-projects
  [
   {:title        "vintilbud.no"
-   :link         {:url "https://play.google.com/store/apps/details?id=no.bytecode.vintilbudp" :text "Tilbud på varer fra vinmonopolet"}
-   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en Android-app og en ios-app der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go og kjører på google app-engine. Mobil-appen for Android og iOS er skrevet i dart med rammeverket flutter."
+   :link         {:url "https://bytecode.no/vintilbud" :text "Tilbud på varer fra vinmonopolet"}
+   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en Android-app og en web-side der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go, appen er skrevet i flutter."
    :illustration "/illustrations/side-projects/vintilbud.png"
-   :tech         [:go :google-appengine :elm :flutter :dart :ios :android]
+   :tech         [:go :google-appengine :elm :flutter :dart :android]
    },
   {:title        "Analyse av værdata"
    :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
@@ -177,6 +179,12 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
  :projects
  [
+  {:customer    "Finn"
+   :description "Utbedre systemer som håndterer innkommende klikk og hendelser for annonser på finn.no. Utbedre ytelse ved å ta i bruk Cassandra som database for annonse-klikk istedenfor elastisearch."
+   :years       [2021 2022]
+   :employer    :kodemaker
+   :summary     "Videreutvikle og fornye systemer for å lagre statistikk for annonser på finn."
+   :tech        [:kotlin, :kafka, :kubernetes, :cassandra, :docker, :postgresql, :spring-boot]},
   {:customer    "Mercell"
    :description     "Utvikle salgsløsning for anbudsportal. Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og trenger en salgsløsning på nett for å kunne betjene den voksende kundemassen og for å kunne nå ut til flere kunder. Tidligere har salg bare foregått over telefon og man ønsker med den nye løsningen å flytte salget over på nett."
    :years       [2021]
@@ -185,7 +193,7 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
    :tech        [:kotlin :typescript :react :kubernetes :terraform :postgresql :arrow]},
 
   {:customer    "Mnemonic"
-   :description     "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
+   :description  "Utvikle mobil app for iOS og Android med kryssplatform-rammeverket flutter. Appen bruker biometri for brukerverifisering og verifisering/bruk av kryptografiske nøkler. Den har støtte for push-varsler og enkel redigering av saker."
    :years       [2020 2021]
    :employer    :kodemaker
    :summary     "Utvikling av mobil applikasjon for sakssystem."
