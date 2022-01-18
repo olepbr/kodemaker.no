@@ -4,10 +4,9 @@
  :start-date    "2005-09-01"
  :experience-since 1994
  :born          1967
- :description   "André har sansen for enkle løsninger, og fokuserer på å ikke bringe inn ny teknologi og rammeverk uten at det 
-                 faktisk vil gi en gevinst for prosjektet og kunden. Han er preget av yrkesstolthet, er nøyaktig, og setter 
-                 sin ære i å levere riktig kvalitet."
-
+ :description   "André er en sosial og trivelig kar som har sansen for enkle løsninger. Han har god oversikt over og interesse for nye teknologier, rammeverk og biblioteker, 
+                 og samtidig lang erfaring med å gjøre gode vurderinger av når det er riktig for kundene å ta slikt i bruk.
+                 André er nøyaktig og ærgjerrig, og setter sin ære i å levere kode av høy kvalitet."
  :phone-number  "+47 911 79 089"
  :email-address "andre@kodemaker.no"
 
@@ -158,8 +157,19 @@
 
  :projects [
 
+
+   {:customer "FFL"
+             :start "2021-11"
+             :summary "Utvikling av et mobilspill"
+             :description "Spillet er innen sjangeren 'Fantasy football'.\n
+             Vi er ett lite Kodemaker-team som utvikler en iOS-app med Swift (i første omgang) og backend i Kotlin."
+             :employer :kodemaker
+             :tech [:appcode :xcode :uikit :swift-ui]}
+
+
     {:customer "Mercell"
                :start "2021-03"
+               :end "2021-11"
                :description "Utvikling av en salgsløsning i en anbudsportal. 
                Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. 
                De lager en felles løsning for hele Mercell og trenger en salgsløsning på nett for å kunne
