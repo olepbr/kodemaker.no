@@ -422,8 +422,18 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
- :projects [{:customer "Mercell"
+ :projects [{:customer "FFL AS"
+             :start "2021-11"
+             :employer :kodemaker
+             :summary "Fantasy Football får et nytt og spennende spill. Kodemaker står for utvikling av både app og backend."
+             :description "Fantasy Football sjangeren er et stort og voksende marked. FFL som en ny og ambisiøs aktør, ønsker å ta en ledende posisjon. Det skal utvikles et engasjerende, morsomt og svært brukervennlig spill.
+                           Da muligheten for å være med på utviklingen av dette produktet dukket opp, var det to av Kodemakers mest fotballgale utviklere som øynet drømmeoppdraget.
+                           \nKodemaker er ansvarlig for utvikling av app, backend og integrasjon mot 3.parts leverandører av data. Vi er også ansvarlig for å etablere rutiner for CI/CD, devops og utvikling av nødvendige verktøy for administrasjon.
+                           Selvfølgelig forventes det av vi bidrar med domenekunnskap og kreative innspill/løsninger som bidrar til et best mulig produkt."
+             :tech [:kotlin :swift :google-cloud-run :terraform :postgresql :arrow :funksjonell-programmering]}
+            {:customer "Mercell"
              :start "2020-10"
+             :end "2021-11"
              :employer :kodemaker
              :summary "Utvikling av ny samarbeidstjenste for leverandører i en anbudsportal."
              :description "Mercell er en av de ledende aktørerne i Europa innen anbudsformidling. De har en offensiv vekststrategi og har gjennom flere oppkjøp vokst fort de siste par årene.
