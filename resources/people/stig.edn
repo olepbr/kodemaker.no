@@ -557,8 +557,7 @@ Det gikk bra - veldig bra."
                   :quote "Vi er strålende fornøyd med programvaren Stig har levert og profesjonaliteten han viste underveis i leveransen."}
                  ]
 
-:project-highlights [
-       {:blurb "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
+:project-highlights [{:blurb "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
        :customer "Cognite"}
        {:blurb "Etablering av skybasert platform for distribusjon og presentasjon av anbudsinformasjon på Mercells nye platform"
        :customer "Mercell"}
