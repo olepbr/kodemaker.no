@@ -33,7 +33,7 @@
             }
 :tech {:using-at-work [:kafka :kotlin :typescript :terraform :grails :javascript :docker :git :micronaut :aws :react :redux :aws]
            :favorites-at-the-moment [:react :kubernetes :micronaut :kotlin :grafana :prometheus]
-           :want-to-learn-more [:kubernetes :go ]}
+           :want-to-learn-more [:kubernetes :go :machine-learning]}
 
 :qualifications ["God og bred teknologiforståelse som går gjennom «alle lag» i teknologistakken"
                  "Erfaring med oppsett, drift og kontinuerlig forbedring av løsninger"
@@ -80,6 +80,12 @@ Det gikk bra - veldig bra."
                :tech [:javascript :aws]}]
 
  :projects [
+ {:customer "Cognite"
+  :years [2021 ]
+  :employer :kodemaker
+  :summary "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
+  :description "Cognite er et norsk teknologiselskap som utvikler platformen Cognite Data Fusion, en platform som samler store datamenger reletert til industrielle produksjonsprosesser. Sanntids produksjosdata tilgjengeliggjøres gjennom api og spesialapplikasjoner for å understøtte data-drevne beslutninger."
+  :tech [:azure :terraform :python :kotlin :gradle :kubernetes]}
  {:customer "Mercell"
   :years [2020 ]
   :employer :kodemaker
