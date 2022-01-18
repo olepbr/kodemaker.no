@@ -206,8 +206,8 @@
 						 Kjernejournal tilgjengeliggjør helseinformasjon til innbyggere via helsenorge.no.  Helsepersonell får tilgang via deres EPJ.
 						 Vaksiner, journaldokumenter, besøkshistorikk, legemidler, behandlingsplaner, reservasjoner, donorkort, mer og mer helseinformasjon skal tilgjengeliggjøres sikkert der de trengs.
 						 Oppdraget innebærer å både utvikle ny funksjonalitet, og jobbe for at kode skal kunne rulles ut kontinuerlig på en sikker måte."
-						 :tech [:java :maven :oracle :jenkins :kubernetes]},
- :projects [{:customer "Bring"
+						 :tech [:java :maven :oracle :jenkins :kubernetes]}
+						 {:customer "Bring"
 						 :start "2020-02"
 						 :end "2021-10"
 						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
