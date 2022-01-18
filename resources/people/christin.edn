@@ -213,7 +213,7 @@
 						 :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
 						 :employer :kodemaker
 						 :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde. Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.  Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
-						 :tech [:elixir :phoenix :azure :postgresql :kubernetes :terraform]},
+						 :tech [:elixir :phoenix :azure :postgresql :kubernetes :terraform]}
 						{:customer "Tomra"
              :start "2017-09"
              :end "2020-02"
