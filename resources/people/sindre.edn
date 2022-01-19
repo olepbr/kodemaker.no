@@ -69,10 +69,10 @@
                 :date "2015-06-01"}]
 
  :projects [
-             {:customer "N.N."
+             {:customer "Solibo"
               :employer :kodemaker
               :start "2021-10"
-              :summary "Frontend- og backendutvikling"
+              :summary "Ny styreportal for boligselskaper"
               :description "Del av et lite, autonomt team. Bidrar med teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, UX, med mer."
               :tech [:kotlin :ktor :typescript :react :react-query :aws :docker :gradle
                      :postgresql :cqrs :flyway :javascript :npm :ddd :kanban]}
