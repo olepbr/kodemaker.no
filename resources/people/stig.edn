@@ -563,10 +563,6 @@ Det gikk bra - veldig bra."
        :customer "Mercell"}
        {:blurb "Utvikling og DevOps på virksomhetskritiske applikasjoner."
        :customer "VY"}
-       {:blurb "Prosjektleder og utvikler av nytt system for måling og evaluering av rør/piper hos Forsvaret"
-       :customer "Forsvaret"}
-       {:blurb "Teknisk arkitekt programkontor. Virksomhetsmodellering, målbilde, koordinering av sentrale IKT-iniativ"
-       :customer "Bring"}
        ]
 
 :endorsement-highlight {:author "Cato Berg"
