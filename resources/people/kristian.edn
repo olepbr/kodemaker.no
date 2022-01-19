@@ -89,8 +89,20 @@
                         I FINN.no jobbet han i team med alt fra eksperimentering til design og implementering av ferdig løsning.
                         Han fungerte også som en mentor/veileder og delte kunnskap han var alene om på teamet.
                         Jeg kan varmt anbefale Kristian og er sikker på at han vil være et verdifult tilskudd til de fleste prosjekter."}]
- :projects [{:customer "Mercell"
-             :years [2020 :ongoing]
+ :projects [{:customer "FINN"
+             :years [2021 :ongoing]
+             :employer :kodemaker
+             :summary "Utvikling av ny reklame master for hele FINN.no"
+             :description "Som en del av Team Reklameprodukter er en av hovedoppgavene å ferdigstille og produksjonssette NRM - ny reklame master,
+             som blir ansvarlig for lasting av reklame og bannere på tvers av alle vertikaler(bil, reise, torget osv) i FINN-domenet. I hovedsak
+             har det blitt utviklet 3 forskjellige tjenester - 2 backend-tjenester hvor en builder er ansvarlig for innhenting av data, typisk annonser og
+             sammenstilling av disse med tilhørende metadata(hva slags reklame-konfigurasjon er gjeldende) og en provider som server ut dataene på flere
+             forskjellige formater(hovedsaklig JSON) for bruk i klienter. En ferdig utviklet klient, som er tiltenkt brukt av mange vertikaler, er en
+             frontend-applikasjon som server ut alle hestesko-bannerne som finnes over hele FINN-domenet i tillegg kan man be denne om å dekorere f.eks
+             resultatsider slik at man mellom annonser får bannere i henhold til gjeldende konfigurasjon."
+             :tech [:kotlin :spring :typescript :react :podium :kafka :kubernetes]}
+            {:customer "Mercell"
+             :years [2020 2021]
              :employer :kodemaker
              :summary "Utvikling av nye tjenester i skyen basert på AWS og Kafka(Aiven)"
              :description "Mercell har i løpet av kort tid etablert seg som en av de aller største aktørene innenfor offentlig anbud. Ved fortløpende å kjøpe

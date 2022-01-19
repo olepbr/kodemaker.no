@@ -470,6 +470,7 @@
    :p5js
    :patternlab
    :pegjs
+   :podium
    :prototype
    :puppeteer
    :pygments
