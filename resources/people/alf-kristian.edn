@@ -19,8 +19,8 @@
 
  Alf Kristian har stor tro på funksjonell programmering, og har
  jobbet lenge i communities som scalaBin og Oslo Socially Functional
- for å fremheve bruken av funksjonelle språk, som Scala og
- Clojure."
+ for å fremheve bruken av funksjonelle språk, som Scala,
+ Clojure, Elixir og Haskell."
 
  :phone-number "997 92 226"
  :email-address "alf.kristian@kodemaker.no"
@@ -31,7 +31,15 @@
             :linkedin "/in/stoyle"}
  :upcoming []
 
- :hobbies [{:title "Jogging og løpeteknikk"
+ :hobbies [#_ {:title "Hund og trening"
+            :description "I januar 2021 fikk vi en fantastisk Border Collie
+            valp, Aro. Han var mildt sagt en håndfull, så vi jobbet hardt med
+            å trene ham og gi ham et godt liv. Rasen er kjent for å svært aktiv
+            og smart, og krever mye stimuli. Og som med så mye annet, så har jeg
+            gått \"all inn\". Hund og hundetrening har rett og slett blitt en del
+            av hverdagen, og jeg må si det er utrolig moro."
+            :illustration "/illustrations/hobbies/alf_kristian_run.jpg"}
+           {:title "Jogging og løpeteknikk"
             :description "Helt siden jeg fikk en Garmin GPS klokke i
             gave, og oppdaget at man kunne tracke sin forbedring
             online, har jeg elsket å løpe. Det begynte forholdsvis
@@ -52,7 +60,8 @@
             :illustration "/illustrations/hobbies/alf_kristian_fractal.jpg"}]
 
  :tech {:favorites-at-the-moment [:clojure :scala :kotlin :funksjonell-programmering]
-        :want-to-learn-more [:elixir :lisp-flavoured-erlang]}
+        :using-at-work [:nodejs :javascript :css :typescript :react :kubernetes]
+        :want-to-learn-more [:haskell :rust]}
 
  :qualifications ["Fullstack, jobber like gjerne med frontend som backend."
                   "Mange års erfaring med devops, og mener dette er den beste måten å utvikle systemer på."
@@ -70,10 +79,10 @@
                           customer. He has passion for the project, and compassion for his teammates,
                           doing what he can to strengthen the team."}
 
- :project-highlights [{:blurb "Tech lead for utvikling av nytt Nordisk system for budleveranser."
+ :project-highlights [{:blurb "Tech lead for utvikling av ny markesplass, amoi.no."
                        :customer "Bring"}
-                      {:blurb "Full stack utvikler og devops for ny innovativ meglerløsning."
-                       :customer "BN Bolig"}
+                      {:blurb "Tech lead for utvikling av nytt Nordisk system for budleveranser."
+                       :customer "Bring"}
                       {:blurb "App-, backendutvikler og devops i home automation prosjekt."
                        :customer "Hafslund Strøm"}]
 
@@ -115,22 +124,36 @@
                            :text "Offisielle sider"}
                     :tech [:trening]}]
 
- :projects [{:customer "Bring"
+ :projects [{:customer "FINN"
+             :start "2021-11"
+             :years [2021 :ongoing]
+             :employer :kodemaker
+             :summary "Frontend utvikler i ADVIEW teamet"
+             :description "FINN har mange systemer som til sammen lager finn.no. Et av de sentrale
+             teamene er ADVIEW, som har ansvaret for mange ganske kjente sider, som f.eks. salg av brukt
+             eiendom. Som eneste utvikler med fullt fokus på frontend i teamet, har Alf Kristian ansvar for å
+             implementere nye design, drive vedlikehold, samt bistå andre i teamet med frontend utvikling.
+             Frontend har naturligvis et veldig stort forkus i FINN, så f.eks. ytelse, mobiltilpasning og universell
+             utforming er viktig."
+             :tech [:nodejs :javascript :typescript :npm :yarn :css :react :podium :rollup :postcss :universell-utforming :kubernetes]}
+           {:customer "Bring"
              :start "2020-02"
-						       :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
-						       :employer :kodemaker
-						       :description "Bring lager en ny markedsplass på nett der man kan kjøpe, selge og sende varer mellom folk i et byområde.
-						       Det har fått navnet AMOI (https://amoi.no).  Prosjektet hadde oppstart i februar, og man startet helt fra scratch og
-						       laget en løsning som bygger på Elixir og Phoenix.  Allerede i mai ble første versjon rullet ut i produksjon.
-						       Ny funksjonalitet blir lagt til og rullet ut kontinuerlig (Continuous Deployment)."
-						       :tech [:elixir :phoenix :azure :postgresql :kubernetes]}
-						      {:customer "Hafslund Strøm"
+             :end "2021-10"
+             :summary "Utvikling av AMOI, en markedsplass der butikker i en by kan få varene sine solgt og levert på dagen til folk i nærområdet."
+             :employer :kodemaker
+             :description "Bring lager en ny markedsplass på nett der en kan kjøpe og selge varer og tjenster, og få varer levert på dagen (med Glow).
+             Denne markedsplassen har fått navnet AMOI (https://amoi.no). Prosjektet hadde oppstart i februar 2020, og var i produksjon i
+             mai 2020. Løsningen ble laget med på Elixir og Phoenix, og driftet i Azure. Prosjektet ble drevet svært smidig,
+             der alle kunne påvirke daglig hva som skulle lages og hvordan. Alf Kristian var tech lead for et lite tech team,
+             som hadde fullt ansvar for utvikling og drift."
+             :tech [:elixir :phoenix :mix :svelte :azure :postgresql :kubernetes]}
+           {:customer "Hafslund Strøm"
              :start "2019-03"
              :end "2020-02"
              :employer :kodemaker
              :summary "Modernisering av plattform, videreutvikling av app og lage nye innloggede sider for privatkunder"
              :description "Hafslund Strøm ønsket å bygge videre på plattformen som ble utviklet i Link
-             prosjektet. Ut av dette lager vi personlig månedsrapport på epost, nye innloggede
+             prosjektet. Ut av dette laget vi personlig månedsrapport på epost, nye innloggede
              sider for strømkunder, samtidig med vedlikehold og utvikling av de eldre delene av plattformen.
              Del av et lite fokusert team, der alle måtte bidra til alt."
              :tech [:clojure :clojurescript :scala :kubernetes :postgresql :redis :react
@@ -138,12 +161,12 @@
             {:customer "Bring"
              :years [2017 2018 2019]
              :employer :kodemaker
-             :summary "Utvikle og drifte system for budleveranser, der pakker kan spores i sanntid."
+             :summary "Glow - system for budleveranser med sanntids pakkesporing."
              :description "Systemet som vi utviklet, var for budleveranser, alt
              fra mottak av ordre, ruteoptimalisering for sjåfører, sporing i
-             sanntid, og integrasjoner med mange av Bring sine systemer. Jeg har
+             sanntid, og integrasjoner med mange av Bring sine systemer. Alf Kristian hadde
              mange roller i prosjektet, scrum master, programmere frontend,
-             backend, sette opp og drifte servere"
+             backend, deveops og tech lead."
              :tech [:heroku :azure :kubernetes :javascript :es6 :react :redux :nodejs :kotlin
                     :clojure :gradle :postgresql :event-sourcing :cqrs :flyway]}
             {:customer "BN Bolig"
@@ -152,8 +175,8 @@
              :summary "Eiendomsmeglerstartup, der vi utviklet og driftet bnbolig.no og BN Bolig sin innovative KlartSalg."
              :description "BN Bolig er en ny type megler som har etablert seg i
              Oslo. Målet deres er å være en ny og innovativ megler, der kjøper
-             og selger får mer innsikt og kontroll i boligsalgs-prosessen. Jeg
-             har mange roller i prosjektet, programmere frontend, backend, sette
+             og selger får mer innsikt og kontroll i boligsalgs-prosessen. Alf Kristian
+             hadde mange roller i prosjektet, programmere frontend, backend, sette
              opp og drifte servere, og også være med på forretningsuvikling."
              :tech [:javascript :es6 :react :redux :webpack :shipit :clojure :aleph
                     :netty :postgresql :nginx :varnish :haproxy :ansible :flyway :digital-ocean]}
@@ -178,22 +201,23 @@
              :years [2014 2015 2016]
              :employer :kodemaker
              :summary "Programmerer i team i Hafslunds \"Smart hjem\" satsning, Link."
-             :description "Link er et prosjekt fra Hafslund med fokus på
-             monitorering og automatisering i hjemmet. Jeg har jobbet med mange
+             :description "Link var et prosjekt fra Hafslund med fokus på
+             monitorering og automatisering i hjemmet. Alf Kristian har jobbet med mange
              områder innen prosjektet. Blant annet salg, produkter, ordre,
              logistikk, rapportering, generell kundeoppfølging, og tjenester som
-             varmestyring og bevegelse. Vi er et relativt lite team, der vi har
-             fullt ansvar for alt som gjøres. I tillegg til programmering, er
-             jeg med på generell planlegging, og har driftsansvar. Vi drifter
-             alt i AWS, og alle endringer som gjøres, om det så er små
-             kode-endringer eller større arkitektur-endringer, må vi selv
+             varmestyring og bevegelse. Vi var et relativt lite team, der vi har
+             fullt ansvar for alt som gjøres. I tillegg til programmering, var
+             Alf Kristian med på generell planlegging, og har driftsansvar. Vi driftet
+             alt i AWS, og alle endringer som ble gjort, om det så var små
+             kode-endringer eller større arkitektur-endringer, måtte vi selv
              prodsette og drifte. Oppgave: Programmerer"
              :tech [:clojurescript :scala :javascript :react :sbt :akka :play :slick
                     :unfiltered :postgresql :kafka :micro-services :git :aws :devops]}
             {:customer "Telenor Digital"
              :years [2014]
              :employer :kodemaker
-             :summary "Bistå analytics team i fornying og forbedring av eksisterende plattform. I tillegg jobbe med ETL, og analyse av data."
+             :summary "Bistå analytics team i fornying og forbedring av eksisterende plattform.
+             I tillegg jobbe med ETL, og analyse av data."
              :description "Bistå analytics team i fornying av eksisterende
              plattform. I tillegg jobbe med ETL, og analyse av data. Telenor
              Digital har mange produkter som integrerer med deres analytics

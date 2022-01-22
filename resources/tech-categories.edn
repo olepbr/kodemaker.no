@@ -377,7 +377,10 @@
    :rake
    :sbt
    :tools-deps
-   :webpack]}
+   :webpack
+   :rollup
+   :postcss
+   :mix]}
 
  :editors
  {:label "Utviklingsmiljøer"
