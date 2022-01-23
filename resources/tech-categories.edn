@@ -490,6 +490,7 @@
    :sse
    :ssg
    :ssr
+   :svelte
    :svg
    :visx
    :voiceover
