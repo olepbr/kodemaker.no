@@ -1,0 +1,48 @@
+{:id :react-query
+ :name "React Query"
+ :type :frontend
+ :illustration "/photos/tech/react-query.svg"
+ :site "https://react-query.tanstack.com/"
+ :description
+ "[React Query](https://react-query.tanstack.com/) er et hjelpemiddel til å håndtere server-tilstand i en frontend-applikasjon.
+
+Å håndtere data fra en server har flere utfordringer. Det er i sin natur asynkront, med sine utfordringer for 
+henting og oppdatering. Vi har jo heller ikke full kontroll på data fra en server – andre kan endre på de, og data tenderer til 
+å ende opp som utdatert.  
+
+Å håndtere server data er definitivt mer komplisert enn å håndtere lokale data i en app.
+
+React Query har en elegant løsning på dette problemet, synes vi:
+
+```
+ const Example = (id) => {
+  const { isLoading, error, data } = useQuery(['exampleData', id], () =>
+    fetch('https://example.com/data/'+id)
+      .then((res) => res.json())
+  );
+
+  if (isLoading) return <Loading/>;
+  if (error) return <Error message={error.message}/>;
+
+  return (
+    <div>
+      <h1>{data.name}</h1>
+    <div>
+  )
+}
+ ```
+
+Selv om koden ser enkelt ut, får man mye på kjøpet.
+ * Caching. Full kontroll på cache stale time etc
+ * Flere komponenter kan derfor hente de samme dataene uten at dette vil resultere i flere requester.
+   Dette igjen gjør at man ikke forholder seg til global state, bare til resultatet av queries/mutations.
+ * Transport agnostisk (du gjør selv dine fetch/graphql/promise etc)
+ * Automatisk flere forsøk før det feiler
+ * Opplegg for transformering av data
+ * God støtte for muteringer av data samt evt optimistisk oppdatering av data lokalt
+ * Og mye mer. Se [feature list](https://github.com/tannerlinsley/react-query#quick-features)
+
+ 
+"}
+
+ 
