@@ -1038,7 +1038,8 @@
    :wpf
    :xfire
    :xfire-webservices
-   :xsd]}
+   :xsd
+   :asdf]}
 
  :excluded
  {:techs
