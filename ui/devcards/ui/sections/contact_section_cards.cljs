@@ -7,7 +7,7 @@
   (sections/contact-section
    {:email "kontakt@kodemaker.no"
     :phone "+47 22 82 20 80"
-    :address "Munkedamsveien 3, 0161 Oslo"
+    :address "Universitetsgata 2, 0164 Oslo"
     :contacts [{:name "Kolbjørn Jetne"
                 :title "Daglig leder"
                 :phone "+47 957 45 096"
@@ -24,7 +24,7 @@
     :map {:zoom 15
           :lat 59.914432
           :lon 10.731476
-          :title "Munkedamsveien 3, 0161 Oslo"
+          :title "Universitetsgata 2, 0164 Oslo"
           :api-key "add-your-own-google-maps-api-key-for-localhost"
           :map-marker-url "/devcard_images/map-marker.png"}
     :link {:text "Alle ansatte"

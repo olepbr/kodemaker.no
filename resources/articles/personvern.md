@@ -72,7 +72,7 @@ Kodemaker Systemutvikling AS er behandlingsansvarlig for behandlingen av persono
 
 *Kodemaker Systemutvikling AS*
 
-*Munkedamsveien 3 b, 0161 Oslo* 
+*Universitetsgata 2, 0164 Oslo* 
 
 *Telefon: 22 82 20 80*
 

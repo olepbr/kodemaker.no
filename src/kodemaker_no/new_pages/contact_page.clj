@@ -16,14 +16,14 @@
    [{:kind :contact
      :email "kontakt@kodemaker.no"
      :phone "+47 22 82 20 80"
-     :address "Munkedamsveien 3, 0161 Oslo"
+     :address "Universitetsgata 2, 0164 Oslo"
      :contacts [(contact (d/entity db :person/kolbjorn))
                 (-> (contact (d/entity db :person/gry))
                     (assoc :curtain :right))]
      :map {:zoom 15
-           :lat 59.914432
-           :lon 10.731476
-           :title "Munkedamsveien 3, 0161 Oslo"
+           :lat 59.917369
+           :lon 10.740605
+           :title "Universitetsgata 2, 0164 Oslo"
            :api-key "AIzaSyDi89iBAXS9WK22fa7ua4ruhVssJLpAb9w"
            :map-marker-url "/images/map-marker.png"}
      :link {:text "Alle ansatte"

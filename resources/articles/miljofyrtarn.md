@@ -18,7 +18,7 @@ Kodemakers klima- og miljørapport er tilgjengelig ved forespørsel.
 
 *Kodemaker Systemutvikling AS*
 
-*Munkedamsveien 3 b, 0161 Oslo* 
+*Universitetsgata 2, 0164 Oslo* 
 
 *Telefon: 22 82 20 80*
 

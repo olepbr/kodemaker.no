@@ -83,8 +83,8 @@
      [:div.f-infos
       [:div.f-address
        [:div "Kodemaker Systemutvikling AS"]
-       [:div "Munkedamsveien 3b"]
-       [:div "0161 OSLO"]]
+       [:div "Universitetsgata 2"]
+       [:div "0164 OSLO"]]
       [:div.f-contact
        [:div "Orgnr. 982099595"]
        [:div [:a {:href "tel:+4722822080"} "+47 22 82 20 80"]]

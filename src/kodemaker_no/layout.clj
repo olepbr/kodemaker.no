@@ -115,8 +115,8 @@
           [:strong.mrl (f/no-widows "Kodemaker Systemutvikling AS")] " "
           [:span.nowrap "Orgnr. 982099595 "]
           [:div
-           [:span.nowrap "Munkedamsveien 3b,"] " "
-           [:span.nowrap "0161 OSLO"]]
+           [:span.nowrap "Universitetsgata 2,"] " "
+           [:span.nowrap "0164 OSLO"]]
           [:div
            [:span.nowrap.mrl "+47 22 82 20 80"] " "
            [:span.nowrap "<a href='mailto:kontakt@kodemaker.no'>kontakt@kodemaker.no</a>"]
@@ -156,5 +156,5 @@
      [:div.flex-l
       [:p [:a {:href "https://www.kodemaker.no/"} "www.kodemaker.no"]]
       [:p "+47 22 82 20 80"]
-      [:p "Munkedamsveien 3b, 0161 Oslo"]]]]))
+      [:p "Universitetsgata 2, 0164 Oslo"]]]]))
 
