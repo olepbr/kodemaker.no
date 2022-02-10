@@ -55,7 +55,6 @@
     [:link {:href "/atom.xml" :rel "alternate" :title "Kodemakerblogg" :type "application/atom+xml"}]
     [:title (head-title (:title page))]]
    [:body
-    [:script (slurp (io/resource "public/scripts/analytics.js"))]
     [:div#ow ;; outer-wrapper for off-canvas menu
      [:div#ocm ;; off-canvas menu
       [:div.bd
