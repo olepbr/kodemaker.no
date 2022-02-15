@@ -72,13 +72,17 @@
   (let [articles
         (->> team
              (mapv (fn [{:project-participation/keys [person role]}]
-                     (let [{:person/keys [given-name family-name title phone-number email-address portraits]}
+                     (let [{:person/keys [given-name family-name title phone-number email-address portraits] :as person}
                            (d/entity db [:db/ident person])]
-                       {:sub-title (format "%s %s" given-name family-name)
+                       {:sub-title [:a.link
+                                    {:style {:color "var(--rouge)"}
+                                     :href (:page/uri person)}
+                                    (format "%s %s" given-name family-name)]
                         :content (f/markdown role)
                         :alignment :back
                         :aside (e/vert-round-media
                                 {:image (some->> portraits first (str "/vcard-small"))
+                                 :href (:page/uri person)
                                  :lines [title
                                          phone-number
                                          email-address]})}))))]
