@@ -11,7 +11,7 @@
 :title Gründere, Diffia
 :techs [:react :redux :java :postgresql :git]
 :quote Kodemaker har vært en perfekt partner for Diffia
-:priority 1
+:priority 2
 :body
 
 Kodemaker har vært en perfekt partner for Diffia og 
@@ -56,7 +56,7 @@ Arbeidet omfattet både frontend, API-er, integrasjon og ops.
 /javascript/                       /photos/tech/js.svg
 /react/                            /photos/tech/react.png
 /java/                             /photos/tech/java.svg
-/postgresql/                       /photos/tech/postgresql.svg
+https://www.postgresql.org         /photos/tech/postgresql.svg
 /git/                              /photos/tech/git.svg
 
 --------------------------------------------------------------------------------
