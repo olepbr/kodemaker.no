@@ -14,7 +14,7 @@
 :priority 2
 :body
 
-Kodemaker har levert to fantastisk erfarne og dyktige utviklere, som sammen med noen få interne ressurser har utviklet
+Kodemaker har levert to fantastisk erfarne og dyktige utviklere, som sammen med noen få ansatte har utviklet
 en styreportal for borettslag og sameier. Prosjektet ble tatt fra idé til en løsning som brukes av våre kunder på få
 måneder. Dette var utelukkende mulig på grunn av selvstendigheten, initiativet og helhetsforståelsen til utviklerne fra
 Kodemaker. Vi klarer ikke se for oss at det er mulig å sitte igjen med et bedre produkt på den tiden og med det
@@ -27,8 +27,10 @@ budsjettet som har vært til disposisjon.
 :body
 
 [Solibo Home](https://solibohome.no/) ble utviklet for å tilby styrene i borettslag og sameier en intuitiv,
-brukervennlig løsning. Her får styrene en alt-i-ett-løsning, hvor alt styrearbeid samles på ett sted, slikt som; økonomi
-og regnskap, styrearbeid, HMS, kommunikasjon med beboere, og mye mer.
+brukervennlig løsning. Her får styrene en alt-i-ett-løsning, hvor alt styrearbeid samles på ett sted: økonomi
+og regnskap, møter og styresaker, HMS, kommunikasjon med beboere, og mye mer.
+
+![Skjermbilde fra Solibo Home](/illustrations/references/solibohome.png)
 
 Løsningen må ta innover seg at styrene ofte
 skiftes ut, og at de som sitter i styret ofte har styrevervet på toppen av fulltidsjobb, egne hobbyer og kjøring av barn
@@ -77,7 +79,7 @@ Begge parter er godt fornøyd med prosjektet, og vi jobber veldig gjerne med lig
 /react/                            /photos/tech/react.png
 /typescript/                       /photos/tech/typescript.png
 /react-query/                      /photos/tech/react-query.svg
-https://www.postgresql.org         /photos/tech/postgresql.svg
+/aws/                              /photos/tech/aws.png
 /docker/                           /photos/tech/docker.png
 
 --------------------------------------------------------------------------------
