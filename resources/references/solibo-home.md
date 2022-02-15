@@ -63,7 +63,7 @@ utviklere og samarbeidet tett med sentrale ansatte fra første dag.
 Vi hadde stort fokus på domenemodellering sammen med kunden, og brukte god tid på å forstå utfordringene som lå foran
 oss. Vi fikk lov til å være effektive og kunne levere fort med tilnærmet frie tøyler teknologisk sett.
 
-Vi valgte å bruke React Query for å håndtere “server state” i klienten. Dette blir en forenkling i forhold til f.eks.
+Vi valgte å bruke React Query for å håndtere server-tilstand i klienten. Dette blir en forenkling i forhold til f.eks.
 Redux, og var et godt valg for problemstillingene vi skulle løse. På backend valgte vi solide teknologier som Kotlin,
 Ktor og PostgreSQL.
 
