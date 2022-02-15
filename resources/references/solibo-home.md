@@ -3,6 +3,7 @@
 :type reference
 :img /references/magnus-babsvik.png
 :portrait /references/magnus-babsvik-portrett.jpg
+:half-circle-portrait /references/magnus-babsvik-halvsirkel.jpg
 :logo /logos/solibo.png
 :company Solibo
 :href https://solibo.no/
@@ -11,7 +12,7 @@
 :title Daglig leder, Solibo
 :techs [:kotlin :react :typescript :postgresql :aws :docker :react-query :ktor]
 :quote Kodemaker har levert to fantastisk erfarne og dyktige utviklere
-:priority 2
+:priority 1
 :body
 
 Kodemaker har levert to fantastisk erfarne og dyktige utviklere, som sammen med noen få ansatte har utviklet
@@ -26,7 +27,7 @@ budsjettet som har vært til disposisjon.
 :sub-title Ny ledende styreportal for borettslag og sameier
 :body
 
-[Solibo Home](https://solibohome.no/) ble utviklet for å tilby styrene i borettslag og sameier en intuitiv,
+[Solibo Home](https://home.solibo.no/) ble utviklet for å tilby styrene i borettslag og sameier en intuitiv,
 brukervennlig løsning. Her får styrene en alt-i-ett-løsning, hvor alt styrearbeid samles på ett sted: økonomi
 og regnskap, møter og styresaker, HMS, kommunikasjon med beboere, og mye mer.
 
@@ -56,11 +57,11 @@ To Kodemakere utviklet en løsning fra bunnen av i tett samarbeid med svært god
 :title Tett samarbeid og fokus på domeneforståelse
 :body
 
-Kodemaker fikk ansvaret for å utvikle den tekniske løsningen fra bunnen av for Solibo. Vi stilte med to erfarne
+Kodemaker fikk ansvaret for å utvikle den tekniske løsningen fra bunnen av for [Solibo](https://solibo.no/). Vi stilte med to erfarne
 utviklere og samarbeidet tett med sentrale ansatte fra første dag.
 
 Vi hadde stort fokus på domenemodellering sammen med kunden, og brukte god tid på å forstå utfordringene som lå foran
-oss. Vi fikk lov å være effektive og kunne levere fort med tilnærmet frie tøyler teknologisk sett.
+oss. Vi fikk lov til å være effektive og kunne levere fort med tilnærmet frie tøyler teknologisk sett.
 
 Vi valgte å bruke React Query for å håndtere “server state” i klienten. Dette blir en forenkling i forhold til f.eks.
 Redux, og var et godt valg for problemstillingene vi skulle løse. På backend valgte vi solide teknologier som Kotlin,
@@ -90,7 +91,7 @@ Begge parter er godt fornøyd med prosjektet, og vi jobber veldig gjerne med lig
 
 trygve
 
-Trygve og Sindre inngikk i et lite team som satt tett sammen med kunden. Systemet ble utviklet domene for domene og
+Trygve og Sindre inngikk i et lite team som satt tett sammen med kunden. Systemet ble utviklet domene for domene, og
 Trygve bidro like mye på frontend som på backend i denne prosessen. React, typescript, kotlin og postgresql, samt
 modellering av domenet. Sammen med Sindre la han grunnlaget med en fleksibel arkitektur.
 
