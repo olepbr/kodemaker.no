@@ -72,8 +72,13 @@
              {:customer "Solibo"
               :employer :kodemaker
               :start "2021-10"
-              :summary "Ny styreportal for boligselskaper"
-              :description "Del av et lite, autonomt team. Bidrar med teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, UX, med mer."
+              :end "2022-03"
+              :summary "Ny styreportal for borettslag og sameier"
+              :description "Kodemaker fikk ansvaret for å utvikle en helt ny styreportal sammen med Solibo. I tett samarbeid med kunden lagde vi en stor og brukervennlig løsning på kort tid. Applikasjonen støtter gjennomføring av møter og behandling av styresaker, full oversikt over beboere, leiligheter og leverandører, og opplasting av dokumenter. Styret kan kommunisere med beboere og leverandører direkte i applikasjonen, eller via oppslag med utsending av varsler på SMS eller e-post. Det er satt opp integrasjon mot Tripletex for enkel behandling av fakturaer. I tillegg inkluderer løsningen hjemmesider for alle borettslagene.
+
+                            Applikasjonen er responsiv, og kan dermed brukes både på mobil, nettbrett og PC. Det ble lagt vekt på at løsningen skulle være brukervennlig, og et av grepene vi gjorde var å fokusere på rask lasting av data, samt lasting av endringer i bakgrunnen. Vi bidro også med UX-design og formuleringer av tydelige og lettforståelige tekster i løsningen.
+
+                            På utviklingssiden bidro vi med teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, med mer."
               :tech [:kotlin :ktor :typescript :react :react-query :aws :docker :gradle
                      :postgresql :cqrs :flyway :javascript :npm :ddd :kanban]}
 
@@ -81,10 +86,12 @@
              :employer :kodemaker
              :start "2019-10"
              :end "2021-10"
-             :summary "Applikasjon for budleveranser med sporing av pakker i sanntid"
-             :description "Utvikling av system for budleveranser som håndterer alt
+             :summary "Applikasjoner for budleveranser med sporing av pakker i sanntid"
+             :description "Utvikling av internt system for budleveranser som håndterer alt
                 fra mottak av ordre, optimalisering av ruter for sjåfører, sporing av pakker i
-                sanntid, og integrasjoner med mange av Bring sine systemer."
+                sanntid, og integrasjoner med mange av Bring sine systemer. Hadde også ansvaret
+                for utvikling av en applikasjon for sporing av pakker som årlig brukes av millioner
+                av privatpersoner i Norden."
              :tech [:kotlin :typescript :react :redux :devops :gradle :azure
                     :postgresql :event-sourcing :cqrs :flyway :javascript :yarn :ddd :kanban]}
 
@@ -130,15 +137,26 @@
              :description "Mitt første prosjekt i arbeidslivet. Ung og nysgjerrig kastet jeg meg over java-utvikling, arbeidsprosessmodellering, kravspesifisering, utvikling av skjermbilder, testing og kvalitetssikring. Jeg lærte raskt, og fikk etter hvert ansvar for å utvikle en revidert saksflyt til bruk i konkursbehandling. Her jobbet jeg tett sammen med kunde og funksjonell arkitekt, og den endelige løsningen ble tatt meget godt imot av sluttbrukerne."
              :tech [:swing :java :j2ee :hibernate :maven :ejb :weblogic :mercurial :scrum]}]
 
- :endorsements [{:author "Tommy Sommerseth"
-                 :title "Produkteier for vektestimering hos Aker Solutions"
-                 :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}
-                {:author "Sigrid Ekremsvik Dragset"
-                 :title "Computas Lead for ix3 hos Aker Solutions"
-                 :quote "Jeg har hatt gleden av å jobbe sammen med Sindre i 2,5 år hos Aker Solutions der han har jobbet som fullstack-utvikler og funksjonell arkitekt på et team. Sindre er en meget dyktig utvikler som har en genuin interesse for å lage løsninger som gir mest mulig nytteverdi for sluttbrukerne. Han samarbeider godt med domeneeksperter for å sikre dette. Jeg anbefaler gjerne Sindre for andre oppdrag."}
+ :endorsements [{:author "Magnus Babsvik"
+                 :title "Daglig leder i Solibo"
+                 :quote "Sammen med Sindre har Solibo utviklet en styreportal for borettslag og sameier. Produktet ble tatt fra idé til lansering på ca. seks måneder, og Sindre var involvert gjennom alle prosjektets faser.
+
+                         Det har vært en glede å jobbe med Sindre i denne perioden. Hans selvstendighet og allsidighet har vært helt sentralt for å lykkes med et ambisiøst prosjekt der vi har laget en relativt stor applikasjon på kort tid. I tillegg til frontend- og backend-utvikling har han kunnet bidra med alt fra å finne gode løsninger for hvordan styret kan gjøre styrearbeidet sitt mest mulig effektivt i løsningen, til UX-design og fortløpende prioritering av oppgaver.
+
+                         Det er tydelig at Sindre liker å gå nøye til verks når han starter i et nytt oppdrag, blant annet ved å sette seg så godt inn i domenet at han kan arbeide etter oppdragsgivers intensjon. Det har vært helt fantastisk å kunne beskrive ønsket funksjonalitet uten å måtte detaljspesifisere oppgaver, for så å se løsninger jeg ikke på forhånd hadde sett for meg vokse frem, som viser seg å løse problemene på en smidigere måte enn hva man hadde forestilt seg var mulig.
+
+                         Jeg kan anbefale Sindre på det varmeste, og jobber gjerne med ham igjen!"}
                 {:author "Heidi Mork"
                  :title "Fagansvarlig for programmering i NRK"
-                 :quote "Jeg har jobbet med Sindre på prosjektet for Smilefjesordningen i Mattilsynet. Der var vi sammen ansvarlige for valg av teknologi og arkitektur for klientapplikasjonen. Jeg kjenner Sindre som den som alltid har brukerens behov i fokus, og tilstreber å finne løsninger som er best mulig for brukeren. For å oppnå dette benytter han blant annet domenedrevet design. Han har en veldig god teknisk forståelse og setter seg lett inn i ny teknologi, i tillegg er han svært grundig og arbeidsom, og har et godt øye for detaljene. Sindre leverer alltid godt arbeid, og leter alltid etter den beste måten å løse oppgaver på."}]
+                 :quote "Jeg har jobbet med Sindre på prosjektet for Smilefjesordningen i Mattilsynet. Der var vi sammen ansvarlige for valg av teknologi og arkitektur for klientapplikasjonen. Jeg kjenner Sindre som den som alltid har brukerens behov i fokus, og tilstreber å finne løsninger som er best mulig for brukeren. For å oppnå dette benytter han blant annet domenedrevet design. Han har en veldig god teknisk forståelse og setter seg lett inn i ny teknologi, i tillegg er han svært grundig og arbeidsom, og har et godt øye for detaljene. Sindre leverer alltid godt arbeid, og leter alltid etter den beste måten å løse oppgaver på."}
+                {:author "Tommy Sommerseth"
+                 :title "Produkteier for vektestimering hos Aker Solutions"
+                 :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger.
+
+                         Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}
+                {:author "Sigrid Ekremsvik Dragset"
+                 :title "Computas Lead for ix3 hos Aker Solutions"
+                 :quote "Jeg har hatt gleden av å jobbe sammen med Sindre i 2,5 år hos Aker Solutions der han har jobbet som fullstack-utvikler og funksjonell arkitekt på et team. Sindre er en meget dyktig utvikler som har en genuin interesse for å lage løsninger som gir mest mulig nytteverdi for sluttbrukerne. Han samarbeider godt med domeneeksperter for å sikre dette. Jeg anbefaler gjerne Sindre for andre oppdrag."}]
 
  :cv {:default {:preferred-techs [:google-cloud-datastore :git :kanban :ddd :java :typescript]}}
 
@@ -164,7 +182,7 @@
                       {:blurb "Virksomhetskritisk system for sykefraværsoppfølging, arbeidsavklaringspenger m.m."
                        :customer "NAV"}]
 
- :endorsement-highlight {:author "Tommy Sommerseth"
-                          :title "Produkteier for vektestimering hos Aker Solutions"
-                          :quote "Sindre er leid inn i forbindelse med Aker Solutions satsing på digitale arbeidsprosesser for å effektivisere tekniske/økonomiske dataverktøy for selskapet. Over denne perioden har Sindre vært en sentral bidragsyter til å utvikle estimeringsverktøy som tidligere bestod av omfattende manuelle arbeidsoperasjoner som var svært tidkrevende til effektive digitale løsninger. Sindre har utført sine arbeidsoppgaver på en meget ansvarsfull og profesjonell måte. Han kommuniserer meget godt med teamet og med team på andre produkter. Han fanger raskt opp hva som må løses av problemstillinger og hva kundene ønsker, og skisserer hurtig mulige løsninger. Vi gir han de beste anbefalinger, og han vil ved fremtidige behov være en selvskreven kandidat til arbeidsoppdrag i Aker Solutions."}
+ :endorsement-highlight {:author "Magnus Babsvik"
+                          :title "Daglig leder i Solibo"
+                          :quote "Det har vært helt fantastisk å kunne beskrive ønsket funksjonalitet uten å måtte detaljspesifisere oppgaver, for så å se løsninger jeg ikke på forhånd hadde sett for meg vokse frem, som viser seg å løse problemene på en smidigere måte enn hva man hadde forestilt seg var mulig."}
  }

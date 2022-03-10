@@ -44,7 +44,7 @@ So, in other words working with Finn and hiring him is a case where you get 1+1=
             {:customer "Mercell"
              :start "2020-10"
              :employer :kodemaker
-             :summary "Utvikling av ny samarbeidstjenste for leverandører i en anbudsportal."
+             :summary "Utvikling av ny samarbeidstjeneste for leverandører i en anbudsportal."
              :description "Mercell er en av de ledende aktørerne i Europa innen anbudsformidling. De har en offensiv vekststrategi og har gjennom flere oppkjøp vokst fort de siste par årene.
              Mercell er i ferd med å lage en ny felles plattform for leverandører. I starten av vårt engasjement skulle vi analysere og identifisere behovet for tjenesten vi skulle utvikle. Ved hjelp av brukerintervjuer og intern kunnskap fant vi et gap i tjenestetilbudet for leverandører som ble vårt team sin satsning (Mercell Workboard).
              \nVårt oppdrag blei da å utvikle en tjeneste som gir en totaloversikt over en leverandørs pågående anbudsprosesser. Vi skulle også utvikle tjenester som gir mulighet for leverandører til samarbeid og samhandling i fasene for evaluering av anbud og innlevering av tilbud.
