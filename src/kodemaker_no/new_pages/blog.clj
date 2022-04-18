@@ -145,7 +145,17 @@
            {:property "og:title"
              :content (strip-text title 70)}
            {:property "og:url"
-            :content (:page/uri blog-post)}]
+            :content (:page/uri blog-post)}
+           {:property "og:image"
+            :content (str "/profile-medium" author-picture)}
+           {:property "og:image:width"
+            :content "600"}
+           {:property "og:image:height"
+            :content "800"}
+           {:property "twitter:card"
+            :content "summary"}
+           {:property "twitter:site"
+            :content "@kodemaker"}]
    :sections
    [{:kind :header
      :background :chablis}
