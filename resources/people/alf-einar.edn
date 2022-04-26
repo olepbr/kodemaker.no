@@ -40,9 +40,9 @@
  :projects      [
                  {:customer "Forsvaret"
                    :years [2019 :ongoing]
-                   :summary "Utvikler"
+                   :summary "Forsvaret, Materielldataportalen"
                    :employer :kodemaker
-                   :description "Videreutvikling av forsvarets Materielldataportal"
+                   :description "Masterdata-synkronisering mellom forsvarets materielldatasystemer (SAP, MCC, DNF, IMAS, m.fl). Oppgaver: Analyse, design, test, utvikling, dokumentasjon"
                    :tech [:groovy :grails :bootstrap :oracle :sap :soap :rest]}
 
                  {:customer "Animalia"
