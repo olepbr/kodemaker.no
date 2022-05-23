@@ -11,12 +11,15 @@
 
 (defn- optimize-path-fn [image-asset-config request]
   (fn [src]
-    (let [[url skigard] (str/split src #"#")]
-      (str
-       (or (not-empty (link/file-path request url))
-           (imagine/realize-url image-asset-config url)
-           (throw (Exception. (str "Asset not loaded: " url))))
-       (some->> skigard (str "#"))))))
+    (try
+      (let [[url skigard] (str/split src #"#")]
+        (str
+         (or (not-empty (link/file-path request url))
+             (imagine/realize-url image-asset-config url)
+             (throw (Exception. (str "Asset not loaded: " url))))
+         (some->> skigard (str "#"))))
+      (catch Exception e
+        (throw (ex-info "Failed to optimize path" {:src src} e))))))
 
 (defn- try-optimize-path [request path]
   (or (not-empty (link/file-path request path))
