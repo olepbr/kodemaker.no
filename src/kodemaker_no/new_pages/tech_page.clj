@@ -64,6 +64,7 @@
 
 (defn classify-presentations [tech]
   (let [all-presentations (->> (:presentation/_techs tech)
+                               (filter presentation-uri)
                                (group-by presentation-uri)
                                vals
                                (map merge-presentations)
