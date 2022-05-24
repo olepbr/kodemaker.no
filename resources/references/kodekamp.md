@@ -45,7 +45,7 @@ spiller spillet. Det er kode mot kode.
 
 Alle utviklerne møter opp med laptop, sitt favorittprogrammeringsspråk, sin favoritteditor, og sitt favorittwebrammeverk.
 
-På sin lokale maskin fyrer de opp en server som kan svare med JSON på POST-requester som har en JSON body. De registrerer endepunktet sitt på konkurranse-serveren, og requests begynner å ramle inn.
+På sin lokale maskin fyrer deltakerne opp en server som kan snakke JSON, registrerer endepunktet sitt på konkurranse-serveren, og requests begynner å ramle inn.
 
 Deretter er det bare å kode i vei for å løse oppgaven. Hvor går krigerne, og hvem slår de på?
 
