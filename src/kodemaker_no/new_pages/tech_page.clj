@@ -10,7 +10,8 @@
 
 (defn presentation-uri [pres]
   (or (:page/uri pres)
-      (:presentation/video-url pres)))
+      (:presentation/video-url pres)
+      (:presentation/source-url pres)))
 
 (defn change-1st-person-to-3rd [value entity person-lookup]
   (str/replace value #"\b[jJ]eg\b"
@@ -27,6 +28,7 @@
                         {:presentation/thumb first
                          :presentation/date first
                          :presentation/video-url first
+                         :presentation/source-url first
                          :presentation/title first
                          :presentation/description (choose-and-change first
                                                                       change-1st-person-to-3rd
@@ -64,6 +66,7 @@
 
 (defn classify-presentations [tech]
   (let [all-presentations (->> (:presentation/_techs tech)
+                               (filter presentation-uri)
                                (group-by presentation-uri)
                                vals
                                (map merge-presentations)
