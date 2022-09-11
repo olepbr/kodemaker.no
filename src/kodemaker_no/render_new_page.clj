@@ -41,13 +41,17 @@
     (str title-str " | Kodemaker")
     "Kodemaker"))
 
+(defn- render-meta [meta]
+  [:meta meta])
+
 (defn render-page [page request]
   (str "<!DOCTYPE html>"
    (dumdom/render
-    [:html {:lang "no"}
+    [:html {:lang "no" :prefix "og: http://ogp.me/ns#"}
      [:head
       [:meta {:charset "utf-8"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
+      (map render-meta (:metas page))
       (map (fn [url] [:link {:rel "stylesheet" :href url}])
            (link/bundle-paths request ["styles.css"]))
       [:link {:href (link/file-path request "/favicon.ico") :rel "icon" :type "image/x-icon"}]

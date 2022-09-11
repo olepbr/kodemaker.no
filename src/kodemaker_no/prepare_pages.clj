@@ -82,6 +82,8 @@
      {
       ;; use optimized images
       [:img] #(update-img-attrs % (optimize-path-fn image-asset-config request))
+      [:head :meta] #(if (= (.getAttribute % "property") "og:image")
+                      (update-attr % "content" (optimize-path-fn image-asset-config request)))
       [:.w-style-img] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
       [:.section] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
       [:video :source] #(update-attr % "src" (optimize-path-fn image-asset-config request))
