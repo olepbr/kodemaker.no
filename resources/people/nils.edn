@@ -106,6 +106,14 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
 
   ]
  :presentations[
+                {:title "Makefiles for hvermannsen"
+                 :blurb "En kort innføring i Makefiles på en lettfattelig måte. Og noen triks i make."
+                 :date  "2022-09-08"
+                 :event "JavaZone"
+                 :tech  [:make]
+                 :urls  {:video "https://vimeo.com/748031702"},
+                 :thumb "/thumbs/videos/makefiles-for-hvermannsen.png"
+                 },
                 {:title "3,5 teknikker for tryggere håndtering av meldinger"
                  :blurb "I dette foredraget viser jeg hvordan du kan prosessere meldinger fra Kafka på en tryggere måte. Jeg har destillert ned min erfaring fra meldingsbaserte arkitekturer til 3,5 patterns som vil komme godt med i ethvert event-basert system - ikke bare de som bruker Kafka."
                  :date  "2019-09-12"
