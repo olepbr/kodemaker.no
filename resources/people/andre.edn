@@ -17,9 +17,9 @@
                  :github        "bonkowski"
                  }
 
- :tech          {:favorites-at-the-moment [:swift :kotlin :arrow]
-                 :using-at-work [:swift :kotlin :arrow]
-                 :want-to-learn-more [:haskell]}
+ :tech          {:favorites-at-the-moment [:swift :kotlin :arrow :composable-architecture]
+                 :using-at-work [:swift :composable-architecture]
+                 :want-to-learn-more [:haskell :rust]}
 
  :cv {:default {:preferred-techs [:swift :kotlin]
                 :exclude-techs [:cobol, :coffeescript, :objcplusplus, :delphi :visual-basic :j2ee :cpp :mongodb :neo4j :architecture :h2db :interbase 
@@ -160,11 +160,15 @@
 
    {:customer "FFL"
              :start "2021-11"
-             :summary "Utvikling av et mobilspill"
-             :description "Spillet er innen sjangeren 'Fantasy football'.\n
-             Vi er ett lite Kodemaker-team som utvikler en iOS-app med Swift (i første omgang) og backend i Kotlin."
+             :summary "Football Fantasy League"
+             :description "Fantasy Football sjangeren er et stort og voksende marked. FFL som en ny og ambisiøs aktør, ønsker å ta en ledende posisjon. 
+              Det skal utvikles et engasjerende, morsomt og svært brukervennlig spill.
+              Da muligheten for å være med på utviklingen av dette produktet dukket opp, var det to av Kodemakers mest fotballgale utviklere som øynet drømmeoppdraget, og André var en av disse.
+              \nKodemaker er ansvarlig for utvikling av app, backend og integrasjon mot 3.parts leverandører av data. Vi er også ansvarlig for å etablere rutiner for CI/CD, devops og utvikling av nødvendige verktøy for administrasjon.
+              Selvfølgelig forventes det av vi bidrar med domenekunnskap og kreative innspill/løsninger som bidrar til et best mulig produkt.
+														\nAndré har fokusert mest på iOS appen, som over tid har gått fra å være en AppKit basert app til nå nesten hovedsaklig SwiftUI basert. "
              :employer :kodemaker
-             :tech [:appcode :xcode :uikit :swift-ui]}
+             :tech [:swift :swift-ui :uikit :composable-architecture :firebase ]}
 
 
     {:customer "Mercell"

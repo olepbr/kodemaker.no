@@ -1,0 +1,6 @@
+{:id :composable-architecture
+ :name "Composable Architecture"
+ :type :library
+ :site "http://www.ansibleworks.com/"
+ :description "Composable Architecture (TCA) er et bibliotek for å bygge applikasjoner på en konsistent og forståelig måte, 
+               med composability', testing og ergonomi i tankene. Biblioteket kan benyttes med SwiftUI, UIKit og på hvilken som helst Apple-plattform"}

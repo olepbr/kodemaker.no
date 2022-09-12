@@ -1,0 +1,7 @@
+{:id :uikit
+ :name "UIKit"
+ :type :frontend
+ :site "https://developer.apple.com/documentation/uikit/"
+ :description "UIKit er ett bibliotek fra Apple for utvikling av brukergrensesnitt på iOS, iPadOS, tvOS, watchOS samt Mac Catalyst. Selv om flere og flere utviklere på disse plattformene går over til å bruke SwiftUI, så vil UIKit fortsatt være aktuell i lang tid fremover."}
+
+

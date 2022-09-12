@@ -1,0 +1,15 @@
+{:id :swift-ui
+ :name "SwiftUI"
+ :type :frontend
+ :illustration "/photos/tech/swiftui.png"
+ :site "https://developer.apple.com/xcode/swiftui//"
+ :description "SwiftUI er et deklarativt GUI-rammeverk fra Apple som ble lansert under WWDC 2019. Sammen med Xcode så kan programmere nå utvikle brukergrensesnitt og se endringene i real tid slik at man ikke trenger å bygge og kjøre applikasjonen i en simumator eller fysisk enhet. SwiftUI støttes av alle plattformer Apple tilbyr, og komponenter kan gjenbrukes på tvers av disse, fra Mac, til iPhone til Apple Watch.\nSwiftUI reduserer mengde kode som er nødvendig for å bygge avanserte brukerhgrensesnitt"}
+
+
+
+
+
+
+
+
+

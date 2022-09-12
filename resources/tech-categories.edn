@@ -507,6 +507,7 @@
    :axis
    :c3
    :castor-xml
+   :composable-architecture
    :dlib
    :drools
    :geotools
