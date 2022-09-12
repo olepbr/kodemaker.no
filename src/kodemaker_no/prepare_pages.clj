@@ -82,7 +82,7 @@
      {
       ;; use optimized images
       [:img] #(update-img-attrs % (optimize-path-fn image-asset-config request))
-      [:head :meta] #(if (= (.getAttribute % "property") "og:image")
+      [:head :meta] #(if (and (= (.getAttribute % "property") "og:image") (not (.getAttribute % "content")))
                       (update-attr % "content" (optimize-path-fn image-asset-config request)))
       [:.w-style-img] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))
       [:.section] #(update-attr % "style" (replace-urls-fn (optimize-path-fn image-asset-config request)))

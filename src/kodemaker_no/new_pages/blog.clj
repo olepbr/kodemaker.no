@@ -125,14 +125,14 @@
    :github icons/github})
 
 (defn strip-text [text max-size]
-  (let [s (str/trim text)
+  (let [s (str/trim (or text ""))
         size (count s)]
     (if (> size max-size)
       (str (subs s 0 max-size)
            (str "..."))
       s)))
 
-(defn create-post-page [{:blog-post/keys [published updated title body blurb author author-picture] :as blog-post}]
+(defn create-post-page [{:blog-post/keys [published updated title body blurb author-picture] :as blog-post}]
   {:title title
    :metas [{:property "og:site"
              :content "Kodemaker"}
