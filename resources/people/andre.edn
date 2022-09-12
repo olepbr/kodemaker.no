@@ -4,9 +4,14 @@
  :start-date    "2005-09-01"
  :experience-since 1994
  :born          1967
- :description   "André er en sosial og trivelig kar som har sansen for enkle løsninger. Han har god oversikt over og interesse for nye teknologier, rammeverk og biblioteker, 
+ :description   "André er en sosial og trivelig kar som har sansen for enkle løsninger. Han har god oversikt over og interesse for nye teknologier, 
+                 rammeverk og biblioteker, 
                  og samtidig lang erfaring med å gjøre gode vurderinger av når det er riktig for kundene å ta slikt i bruk.
-                 André er nøyaktig og ærgjerrig, og setter sin ære i å levere kode av høy kvalitet."
+                 André er nøyaktig og ærgjerrig, og setter sin ære i å levere kode av høy kvalitet.
+
+
+                 André har i de siste årene blitt veldig interessert i funksjonell programmering, og da helst sterk typet, 
+                 og har hatt gleden av å være med på prosjekter hvor dette er benyttet."
  :phone-number  "+47 911 79 089"
  :email-address "andre@kodemaker.no"
 
@@ -50,13 +55,31 @@
 
 
  :recommendations [
+
+{  :title "Point·Free"
+    :blurb "En videoserie som utforsker praktisk funksjonell programmering og Swift.
+            Serien tar for seg forskellige temaer, alt fra algebraiske datatyper, avansert bruk av protokoller, 
+            avhengigheter, samt at vi får følge med hvordan Composable Architecture biblioteket kom til, 
+            samt forbedringene av dette etter hvert som Swift har utviklet seg."
+    :link  {:url  "https://www.pointfree.co"
+    :text "Besøk Point·Free"}
+    :tech  [:funksjonell-programmering]}
+
  {  :title "Learn You a Haskell for Great Good!"
     :blurb "Etter å ha jobbet med Clojure og ClojureScript i lengre tid så ble jeg interessert i hvordan det var å programmere i 
             et sterkt typet funksjonelt språk. Haskell da kanskje det første språket man tenker på. Jeg har ikke vært i et prosjekt 
             hvor Haskell er benyttet, men konseptene er universelle og nyttige, og boken er lettlest og morsom."
     :link  {:url  "http://learnyouahaskell.com/"
-    :text "Besøk websidene"}
+    :text "Info om boken"}
     :tech  [:funksjonell-programmering]}
+
+ { 
+    :title "The Pragmatic Programmer: From Journeyman to Master"
+    :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
+    :text "Info om boken"}
+    :tech [:software-craftsmanship]
+    :blurb "Denne boken kom ut allerede i 1999, så noen av teknologiene som er benyttet som eksempler er litt utdaterte, men budskapet i boka er fortsatt i høyeste grad aktuelle.
+            \nOppdatering: Jeg har hørt på 2 utgave av denne boken som lydbok. I tillegg til å være oppdatert, så er den også tilpasset lydbok-formatet, noe som fungerte veldig bra."}    
  {
     :title "Clojure Applied"
     :link {:url "https://pragprog.com/book/vmclojeco/clojure-applied"
@@ -65,13 +88,7 @@
     :blurb "Dette er ikke en 'Lær Clojure' bok, men gir en hel tips og forslag til hvordan benytte Clojure på en bra og fornuftig måte. Jeg leste denne boken etter 
            mitt første Clojure/ClojureScript prosjekt. Det hadde selvfølgelig vært nyttig å ha lest boken før prosjektet, men jeg er ikke sikker om alt hadde gitt så mye mening som
            nå etter at jeg har følt noen av problemstillingene på kroppen. Uansett en bok jeg varmt vil anbefale."}
-    { 
-    :title "The Pragmatic Programmer: From Journeyman to Master"
-    :link {:url "http://pragprog.com/book/tpp/the-pragmatic-programmer"
-    :text "Info om boken"}
-    :tech [:software-craftsmanship]
-    :blurb "Denne boken kom ut allerede i 1999, så noen av teknologiene som er benyttet som eksempler er litt utdaterte, men budskapet i boka er fortsatt i høyeste grad aktuelle." 
-  }]
+    ]
 
  :hobbies       [{:title        "Formel 1"
                   :description  "Jeg hadde som guttunge en plakat på veggen av Clay Regazzoni kjørende i en Ferrari F1 bil.
@@ -166,7 +183,7 @@
               Da muligheten for å være med på utviklingen av dette produktet dukket opp, var det to av Kodemakers mest fotballgale utviklere som øynet drømmeoppdraget, og André var en av disse.
               \nKodemaker er ansvarlig for utvikling av app, backend og integrasjon mot 3.parts leverandører av data. Vi er også ansvarlig for å etablere rutiner for CI/CD, devops og utvikling av nødvendige verktøy for administrasjon.
               Selvfølgelig forventes det av vi bidrar med domenekunnskap og kreative innspill/løsninger som bidrar til et best mulig produkt.
-														\nAndré har fokusert mest på iOS appen, som over tid har gått fra å være en AppKit basert app til nå nesten hovedsaklig SwiftUI basert. "
+														\nAndré har hovedsaklig jobbet med iOS appen, som over tid har gått fra å være en AppKit basert app til nå nesten hovedsaklig SwiftUI basert. "
              :employer :kodemaker
              :tech [:swift :swift-ui :uikit :composable-architecture :firebase ]}
 
