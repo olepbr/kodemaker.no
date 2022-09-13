@@ -125,16 +125,17 @@
    :github icons/github})
 
 (defn strip-text [text max-size]
-  (let [s (str/trim text)
-        size (count s)]
-    (if (> size max-size)
-      (str (subs s 0 max-size)
-           (str "..."))
-      s)))
+  (when text
+    (let [s    (str/trim text)
+          size (count s)]
+      (if (> size max-size)
+        (str (subs s 0 max-size)
+             (str "..."))
+        s))))
 
-(defn create-post-page [{:blog-post/keys [published updated title body blurb author author-picture] :as blog-post}]
+(defn create-post-page [{:blog-post/keys [published updated title body blurb author-picture] :as blog-post}]
   {:title title
-   :metas [{:property "og:site"
+   :metas (->> [{:property "og:site"
              :content "Kodemaker"}
            {:property "og:type"
              :content "article"}
@@ -146,8 +147,9 @@
              :content (strip-text title 70)}
            {:property "og:url"
             :content (:page/uri blog-post)}
-           {:property "og:image"
-            :content (str "/profile-medium" author-picture)}
+            (when author-picture
+              {:property "og:image"
+               :content (str "/profile-medium" author-picture)})
            {:property "og:image:width"
             :content "600"}
            {:property "og:image:height"
@@ -156,6 +158,7 @@
             :content "summary"}
            {:property "twitter:site"
             :content "@kodemaker"}]
+               (remove nil?))
    :sections
    [{:kind :header
      :background :chablis}
