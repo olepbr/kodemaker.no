@@ -125,12 +125,13 @@
    :github icons/github})
 
 (defn strip-text [text max-size]
-  (let [s (str/trim (or text ""))
-        size (count s)]
-    (if (> size max-size)
-      (str (subs s 0 max-size)
-           (str "..."))
-      s)))
+  (when text
+    (let [s    (str/trim text)
+          size (count s)]
+      (if (> size max-size)
+        (str (subs s 0 max-size)
+             (str "..."))
+        s))))
 
 (defn create-post-page [{:blog-post/keys [published updated title body blurb author-picture] :as blog-post}]
   {:title title
@@ -147,7 +148,8 @@
            {:property "og:url"
             :content (:page/uri blog-post)}
            {:property "og:image"
-            :content (str "/profile-medium" author-picture)}
+            :content (when author-picture
+                       (str "/profile-medium" author-picture))}
            {:property "og:image:width"
             :content "600"}
            {:property "og:image:height"
