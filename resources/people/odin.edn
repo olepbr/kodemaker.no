@@ -26,7 +26,7 @@
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:clojurescript :p5js]
-        :using-at-work           [:winui :dotnet]
+        :using-at-work           [:winui :dotnet :csharp]
         :want-to-learn-more      [:unity3d :threejs]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
@@ -197,7 +197,7 @@
              :employer :kodemaker
              :summary "OffPAD"
              :description "Klientutvikling for device management på Windows."
-             :tech [:dotnet :c# :winui]}
+             :tech [:dotnet :csharp :winui]}
             {:customer "Mnemonic"
              :years [2019 2020 2021 2022]
              :employer :kodemaker
