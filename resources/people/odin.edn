@@ -26,8 +26,8 @@
             :linkedin "/in/odinholestandal"}
 
  :tech {:favorites-at-the-moment [:clojurescript :p5js]
-        :using-at-work           [:typescript :javascript :react]
-        :want-to-learn-more      [:unity3d :flutter]}
+        :using-at-work           [:winui :dotnet]
+        :want-to-learn-more      [:unity3d :threejs]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
@@ -106,7 +106,15 @@
                            :text "Det vi glemte"}
                     :tech [:clojurescript]}]
 
- :presentations [{:title "3 grunner til at ClojureScript gir deg superkrefter"
+ :presentations [{:title "Web3 er en pyramide med søppel"
+                  :date "2022-09-08"
+                  :event "JavaZone"
+                  :blurb "Har du hørt om web3, NFTer og smarte kontrakter? Her får du en skeptisk gjennomgang av en
+                  teknologi omringet av hype, svindel og pyramidespill. Her forklarer jeg hva en blokkjede og
+                  smarte kontrakter er, og hvorfor de ikke vil erstatte web2 med det første."
+                  :tech [:web :web3]
+                  :urls {:video "https://vimeo.com/748032146"}}
+                 {:title "3 grunner til at ClojureScript gir deg superkrefter"
                   :date "2016-09-08"
                   :event "JavaZone"
                   :blurb "Trenden i webutvikling går mot mer og mer avanserte klienter skrevet i JavaScript.
@@ -184,8 +192,14 @@
                   :illustration "/illustrations/side-projects/cashflow.jpg"
                   :tech [:clojure]}]
 
- :projects [{:customer "Mnemonic"
-             :years [2019 :ongoing]
+ :projects [{:customer "Pone Biometrics"
+             :years [2022 :ongoing]
+             :employer :kodemaker
+             :summary "OffPAD"
+             :description "Klientutvikling for device management på Windows."
+             :tech [:dotnet :c# :winui]}
+            {:customer "Mnemonic"
+             :years [2019 2020 2021 2022]
              :employer :kodemaker
              :summary "Semi-Automated Cyber Threat Intelligence (ACT)"
              :description "Frontend- og backendutvikling av ACT-plattformen som er et forskningsprosjekt med mål om å utvikle nye
@@ -367,7 +381,19 @@
                               :url "https://github.com/clj-time/clj-time"
                               :tech [:clojure]}]
 
- :endorsements [{:author "Joel Wilsson"
+ :endorsements [{:author "Joakim von Brandis"
+                 :title "Head of development, Mnemonic"
+                 :quote "Vi har vært så heldige å få låne Odin i litt over tre år her hos Mnemonic.
+                 Odin kom inn for å bistå på et konkret prosjekt, men ble fort en knallressurs på flere områder,
+                 og har bidratt på flere prosjekter.
+
+                 Jeg er superimponert over hvor fort han setter seg inn i et nytt område, og raskt har oversikt både
+                 over domenet og den tekniske løsningen vi jobber med. Hans lange erfaring har gitt masse nyttig
+                 input til vår utviklingsprosess og bidratt til gode tekniske løsninger.
+
+                 Odin er i tillegg en knallhyggelig fyr, som tar fatt på alle oppgave med godt humør,
+                 og som regel har løst dem før man har rukket å spørre."}
+                {:author "Joel Wilsson"
                  :title "Software Engineer, Telenor Digital"
                  :quote "Odin was a consultant with the Data Insights team in Telenor Digital for three months,
                  and he was productive immediately. Large companies tend to have a lot of overhead, and some
@@ -402,11 +428,11 @@
                       {:blurb "Workshops om testautomatisering, byggautomatisering, frontend- og backendutvikling og testautomatisering."
                        :customer "Conax"}]
 
- :endorsement-highlight {:author "Trond Hagen"
-                         :title "Director Software Development, Conax"
-                         :quote "Odin er på mange måter den perfekte konsulent. Han er meget intelligent og utrolig rask
-                                til å sette seg inn i nye domener og problemstillinger. Han er alltid klar for å ta
-                                fatt på nye utfordringer uavhengig om de er store eller små, spennende eller ikke."}
+ :endorsement-highlight {:author "Joakim von Brandis"
+                         :title "Head of development, Mnemonic"
+                         :quote "Jeg er superimponert over hvor fort han setter seg inn i et nytt område, og raskt har oversikt både
+                                 over domenet og den tekniske løsningen vi jobber med. Hans lange erfaring har gitt masse nyttig
+                                 input til vår utviklingsprosess og bidratt til gode tekniske løsninger."}
 
  :cv {:default {:preferred-techs [:clojure :clojurescript
                                   :java :javascript
