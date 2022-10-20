@@ -36,8 +36,8 @@
            :want-to-learn-more [:kubernetes :go :machine-learning]}
 
 :qualifications ["God og bred teknologiforståelse som går gjennom «alle lag» i teknologistakken"
-                 "Erfaring med oppsett, drift og kontinuerlig forbedring av løsninger"
                  "Flink til å forstå hva kunden lever av og bidra til at dette kan gjøres enklere"
+                 "Synes overvåkning av systemer i produksjon er en naturlig del av systemutviklingsprosessen"
                 "Automatisering av prosesser mellom aktører i en verdikjede"
                 "Varehandel, finans, transport, logistikk og optimalisering"]
 
@@ -81,13 +81,13 @@ Det gikk bra - veldig bra."
 
  :projects [
  {:customer "Cognite"
-  :years [2021 ]
+  :years [2021 2022]
   :employer :kodemaker
   :summary "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
   :description "Cognite er et norsk teknologiselskap som utvikler plattformen ‘Cognite Data Fusion’. Plattformen samler store datamenger relatert til industrielle produksjonsprosesser. Sanntids produksjonsdata gjøres tilgjengelige gjennom api-er og spesialapplikasjoner for å understøtte data-drevne beslutninger."
-  :tech [:azure :terraform :python :kotlin :gradle :kubernetes]}
+  :tech [:azure google-cloud :terraform :python :kubernetes :prometheus :grafana :docker :postgresql]}
  {:customer "Mercell"
-  :years [2020 ]
+  :years [2020 2021]
   :employer :kodemaker
   :summary "Skybasert platform for distribusjon og presentasjon av anbudsinformasjon"
   :description "Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og har etablert ett eget team som har ansvar for distribusjon og presentasjon av anbudsinformasjon."
