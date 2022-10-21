@@ -4,13 +4,10 @@ Våre nye nettsider kommer til verden.
 
 ## Teste lokalt
 
-Skaff [leiningen](https://github.com/technomancy/leiningen#leiningen) om du ikke
-har den. Sats på versjon 2.9+. Hvis du har en gammel versjon under 2.0 så funker
-det garantert ikke. På OSX kan du hente den med homebrew: `brew update && brew
-install leiningen` eller med SDKMAN: `sdk install leiningen`
-
-Du må også ha JDK 11. Sjekk med `java -version`, ellers
-[last ned her](http://www.oracle.com/technetwork/java/javase/downloads/index.html) eller installer med SDKMAN.
+1. Installer [asdf](https://asdf-vm.com/guide/getting-started.html) før du begynner.
+2. Installer asdf-plugin for leiningen: `asdf plugin-add lein https://github.com/miorimmax/asdf-lein.git`
+3. Installer asdf-plugin for java: `asdf plugin add java`
+4. Installer lein og java med asdf: `asdf install`
 
 Gå så til rota av prosjektet, og
 
