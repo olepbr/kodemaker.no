@@ -1,25 +1,22 @@
 (ns kodemaker-no.web
-  (:require clojure.core.memoize
+  (:require [clojure.core.memoize]
             [clojure.data.json :as json]
             [config :refer [export-directory]]
             [datomic-type-extensions.api :as d]
             [html5-walker.core :as html5-walker]
             [imagine.core :as imagine]
             [kodemaker-no.atomic :as atomic]
-            [kodemaker-no.content :refer [load-content]]
             [kodemaker-no.homeless :refer [wrap-content-type-utf-8]]
             [kodemaker-no.images :as images]
             [kodemaker-no.ingest :as ingest]
             [kodemaker-no.new-pages.blog :as blog]
-            [kodemaker-no.prepare-pages :refer [prepare-pages]]
             [kodemaker-no.rss :as rss]
-            [kodemaker-no.validate :refer [validate-content]]
-            [optimus.assets :as assets]
-            optimus.export
             [optimus-img-transform.core :refer [transform-images]]
+            [optimus.assets :as assets]
+            [optimus.export]
             [optimus.optimizations :as optimizations]
             [optimus.prime :as optimus]
-            optimus.strategies
+            [optimus.strategies]
             [prone.middleware :as prone]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [ring.middleware.resource :refer [wrap-resource]]
@@ -30,7 +27,7 @@
    (assets/load-assets
     "public"
     [
-     ;: ny
+     ;; ny
      "/css/kodemaker.css"
      "/css/pygments.css"
      #"/img/.*\..+"
@@ -56,6 +53,7 @@
      #"/images/.*\.png"
      #"/images/.*\.jpg"
      #"/images/blogg/.*\.png"
+     #"/images/blogg/.*\.gif"
      #"/videos/.*\.mp4"])
    (assets/load-bundle
     "public"
