@@ -25,7 +25,7 @@
  :innate-skills             [
                              :haskell :scala :ruby :python :octave :pascal :prolog :fortran
                              :redux
-                             :intellij :browser-devtools
+                             :intellij :browser-devtools 
                              :mac-os :linux
                              :ddd
                              :deeplearning]
@@ -117,18 +117,28 @@
 
  :open-source-contributions [{:name "grails-core", :url "https://github.com/grails/grails-core/commits?author=trygvea", :tech [:grails]}]
 
- :project-highlights        [{:blurb    "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
+ :project-highlights        [{:blurb    "Laget ny styreportal for boligselskaper på 3 månender. Backend og frontend utvikling i lite team"
+                              :customer "Solibo"}
+                             {:blurb    "Utvikling av media-arkivet til NRK. Frontend med React, Redux, Typescript"
                               :customer "Nrk"}
-                             {:blurb    "Ny og innovativ meglerløsning. Frontend med React/Redux."
-                              :customer "BN Bolig"}
-                             {:blurb    "Distribusjon av fremskrevne tidsserier for forskjellige markeder. Spark, Kafka, HBase"
-                              :customer "Thomson Reuters"}]
+                             {:blurb    "Innføring av ratings og reviews for Finn's søsterselskap, Blocket."
+                              :customer "Finn"}]
 
- :projects                  [{:customer "Solibo"
+ :projects                  [{:customer "Finn"
                               :employer :kodemaker
-                              :start "2021-10"
+                              :start "2022-02"
+                              :summary "Del av team Nordic Trust, med ansvar for ratings & reviews i Finn og Blocket"
+                              :description "Var med på nysatsningen team Nordic Trust der første leveranse var å levere 
+                                            ratings & reviews til Blocket, Finns søsterselskap i Sverige."
+                              :tech [:kotlin :java :ktor :spring :docker :gradle :postgresql :flyway :kubernetes 
+                              :redis :prometheus :kibana :grafana]}
+                              
+                             {:customer "Solibo"
+                              :employer :kodemaker
+                              :years [2021]
                               :summary "Ny styreportal for boligselskaper"
-                              :description "Del av et lite, autonomt team. Bidrar med teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, UX, med mer."
+                              :description "Utvikling av styreportal som en del av et lite, autonomt team. Bidrar med 
+                                            teknologivalg, arkitektur, domenemodellering, databasemodellering, API-utvikling, UX, med mer."
                               :tech [:kotlin :ktor :typescript :react :react-query :aws :docker :gradle
                               :postgresql :cqrs :flyway :javascript :npm :ddd :kanban]}
 
@@ -471,8 +481,9 @@
                                                       teknisk support."
                               :tech                  [:ims :mvs :cobol :telon :turbo-pascal :dataflex :oracle]}]
 
- :cv                        {:default {:preferred-techs [:java :javascript :es6 :typescript :groovy :python
-                                                         :react :redux :immutable-js
+ :cv                        {:default {:preferred-techs [:typescript :kotlin :java :javascript
+                                                         :groovy :python
+                                                         :react :react-query
                                                          :mac-os :linux
                                                          :intellij :docker :ddd]
                                        :exclude-techs   []}}
@@ -497,6 +508,7 @@
  :experience-since          1984
 
  :qualifications            ["Erfaring med moderne frontendutvikling med javascript, Typescript, React, Redux, CSS"
+                             "Erfaring med backend-utvikling med kotlin, java, spring, ktor"
                              "Erfaring med forskjellige former for funksjonell programmering"
                              "Erfaring fra Big Data med Apache Spark, Kafka, Hadoop, HBase"
                              "Grundig kurset på maskinlæring og dyp læring og følger med på nyvinninger innen området"
