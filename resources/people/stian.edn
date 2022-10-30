@@ -11,8 +11,7 @@
                og ser at nøkkelen til et vellykket sluttprodukt
                handler om å skjønne kundens forretning og bruke
                riktig teknologi på riktig sted. Stian har meget
-               gode referanser fra tidligere oppdrag. Han er ofte
-               å se i fagmiljøet i Oslo som deltaker eller bidragsyter."
+               gode referanser fra tidligere oppdrag."
 
  :phone-number "+47 932 24 540"
  :email-address "stian@kodemaker.no"
@@ -22,16 +21,16 @@
             :linkedin "/in/stianalsos"
             :github "stiancor"}
 
- :tech {:favorites-at-the-moment [:clojure :clojurescript :groovy]
-            :using-at-work [:groovy :clojurescript :clojure :javascript :devops]
-            :want-to-learn-more [:machine-learning :devops]}
+ :tech {:favorites-at-the-moment [:clojure :clojurescript :javascript]
+        :using-at-work [:clojure :clojurescript :javascript :groovy :java :devops]
+        :want-to-learn-more [:machine-learning :devops]}
 
  :recommendations [{:title "Coding Horror"
                     :blurb "Jeff Atwood er en morsom type og en skikkelig geek.
                         På bloggen hans finner du vittige innlegg om alt fra
                         optimale keyboard for å skrive kode til bokanmeldelser.
                         Fyren er også en av grunnleggerne av Stack Overflow."
-                    :link {:url "http://www.codinghorror.com/blog/"
+                    :link {:url "https://www.codinghorror.com/blog/"
                            :text "Besøk bloggen"}
                     :tech [:teknologi :utvikling]}
                    {:title "Machine Learning"
@@ -39,12 +38,12 @@
                             gjenkjenne håndskrift, anbefale varer basert på tidligere kjøp
                             og kategorisere innhold i artikler automatisk. Machine learning
                             gjør det mulig for systemer og lære basert på data uten å følge
-                            forhåndsprogrammerte instruksjoner. Dette 10-ukerskurset på Coursera
+                            forhåndsprogrammerte instruksjoner. Dette 12-ukerskurset på Coursera
                             er gratis og gir en solid innføring i temaet."
-                    :link {:url "https://www.coursera.org/course/ml/"
+                    :link {:url "https://www.coursera.org/specializations/machine-learning-introduction"
                            :text "Ta kurset på Coursera"}
                     :tech [:machine-learning]}
-                    {:title "The morning paper"
+                   {:title "The morning paper"
                     :blurb "På The morning paper legges det hver ukedag ut en 
                             datavitenskaplig artikkel. Spennet mellom temaene er
                             stort, men det er jo også det som er så bra! En dag kan du lese 
@@ -96,8 +95,8 @@
                   :tech [:ruby :rails]}]
 
  :endorsement-highlight {:author "Vigdis Diesen"
-                 :title "Head of Client Services at VPS"
-                 :quote "Jeg har jobbet som prosjektleder for Stian i Verdipapirsentralen.
+                         :title "Head of Client Services at VPS"
+                         :quote "Jeg har jobbet som prosjektleder for Stian i Verdipapirsentralen.
                          Stian er en meget dyktig ressurs som fungerer godt,
                          både faglig og sosialt. Han evner å sette seg inn i kundens - til
                          tider svært komplekse - problemstillinger og finner gode løsninger
@@ -142,20 +141,21 @@
                          I give Stian my best recommodation - you can never fail having
                          him on your project."}]
 
- :project-highlights [{:blurb "Mikrotjenester, devops, clojure, groovy"
+ :project-highlights [{:blurb "Mikrotjenester, devops, clojure, javascript, groovy"
                        :customer "Animalia"}
                       {:blurb "Ny løsning for IP-basert TV og sikring av digitalt innhold"
                        :customer "Conax"}
                       {:blurb "Utvikling av nytt fondsystem for Norge og Norden"
                        :customer "VPS"
-                      }]                         
+                       }]
 
  :projects [{:customer "Animalia"
              :years [2017 :ongoing]
              :employer :kodemaker
-             :summary "Ny- og videreutvikling av fagsystemer"
-             :description "Nyutvikling og videreutvikling av fagsystemer Oppgaver: Seniorutvikler"
-             :tech [:clojure :clojurescript :react :docker :groovy :gradle :oracle :leiningen :rest :re-frame :reagent :devops :nginx]}
+             :summary "Ny- og videreutvikling av fagsystemer og løsninger for landbruket, slakterier og veterinærer"
+             :description "Jobbet sammen med organisasjonen for å lage og videreutvikle et stort antall fagsystemer.
+             Både backend- og frontendutvikling, samt overordnet arkitektur"
+             :tech [:clojure :react :devops :docker :kubernetes :clojurescript :groovy :java :aws :azure :gradle :oracle :leiningen :rest :re-frame :reagent :nginx]}
             {:customer "Conax"
              :years [2016 2017]
              :employer :kodemaker
@@ -163,7 +163,7 @@
              :description "Utvikle og designe løsning
              for IP-TV og sikring av innhold. Dette er et produkt som rulles ut
              i flere land Oppgaver: Seniorutvikler"
-             :tech [:java :groovy :ansible :javascript :docker :spring :jetty :oracle :linux]}
+             :tech [:java :groovy :ansible :javascript :docker :spring :jetty :oracle :linux :hibernate]}
             {:customer "NSB"
              :years [2013 2014 2015 2016]
              :employer :kodemaker
@@ -273,7 +273,7 @@
              implementerte en intern bestillingsløsning for NAV. Løsningen er
              bygd på Java/JEE og kommuniserer med backend-system via web
              services. Oppgaver: Utvikler"
-             :tech [:java :web-services :j2ee]}
+             :tech [:java :web-services]}
             {:customer "Carrot Communications"
              :years [2007]
              :employer :avenir
@@ -285,7 +285,7 @@
              services som kaller backend betalingsløsning. Videre implementerte
              Stian en løsning for påfylling av kontantkort via SMS for Chess.
              Oppgaver: Utvikler"
-             :tech [:java :web-services :j2ee :struts :css]}
+             :tech [:java :web-services :struts :css]}
             {:customer "NAV"
              :years [2006]
              :employer :avenir
@@ -296,7 +296,7 @@
              var med å integrere Enonic CMS med FAST søkemotor. Løsninger er
              basert Java. Nettstedet har vunnet flere priser i ettertid.
              Oppgaver: Utvikler"
-             :tech [:java :j2ee :xslt :javascript :html]}
+             :tech [:java :xslt :javascript :html]}
             {:customer "Fjordland"
              :years [2005 2006]
              :employer :avenir
@@ -335,10 +335,10 @@
              serverpark benyttet til design av microcontrollere."
              :tech [:linux]}]
 
- :cv {:default {:preferred-techs [:clojure :clojurescript :groovy :react :devops :nginx :gradle :linux]}}   
+ :cv {:default {:preferred-techs [:clojure :clojurescript :groovy :react :devops :nginx :gradle :linux]}}
  :cv/description " Stian er utdannet sivilingeniør innen kommunikasjonsteknologi
  ved NTNU i Trondheim, hvor han spesialiserte seg innen systemutvikling. Han har
- høy kompetanse på javaplatformen, og har jobbet med systemutvikling
+ høy kompetanse på javaplatformen og arkitektur, og har jobbet med systemutvikling
  siden før han gikk ut av universitetet i 2005.
 
  Stian har vært med på å utvikle en rekke systemer. Mange av disse er
@@ -370,5 +370,5 @@ smidig utvikling siden 2005."
               :written "Morsmål"}
              {:language "Engelsk"
               :orally "Meget god"
-              :written "Flytende"}]              
+              :written "Flytende"}]
  }
