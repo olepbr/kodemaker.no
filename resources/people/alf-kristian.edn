@@ -133,9 +133,9 @@
              teamene er ADVIEW, som har ansvaret for mange ganske kjente sider, som f.eks. salg av brukt
              eiendom. Som eneste utvikler med fullt fokus på frontend i teamet, har Alf Kristian ansvar for å
              implementere nye design, drive vedlikehold, samt bistå andre i teamet med frontend utvikling.
-             Frontend har naturligvis et veldig stort forkus i FINN, så f.eks. ytelse, mobiltilpasning og universell
+             Frontend har naturligvis et veldig stort fokus i FINN, så f.eks. ytelse, mobiltilpasning og universell
              utforming er viktig."
-             :tech [:nodejs :javascript :typescript :npm :yarn :css :react :podium :rollup :postcss :universell-utforming :kubernetes]}
+             :tech [:nodejs :javascript :typescript :remix :npm :pnpm :yarn :css :react :podium :rollup :postcss :universell-utforming :kubernetes]}
            {:customer "Bring"
              :start "2020-02"
              :end "2021-10"

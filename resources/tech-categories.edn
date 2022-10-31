@@ -346,6 +346,7 @@
    :npm
    :optimizeit-profiler
    :oracle-jdeveloper
+   :pnpm
    :rational-rose
    :rational-suite
    :sonar
@@ -975,6 +976,7 @@
    :rack
    :rad
    :rails
+   :remix
    :rdf
    :rest
    :resteasy
