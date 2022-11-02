@@ -1438,6 +1438,8 @@ a, .clickable {
   font-size: 15px;
 }
 
+p code {font-size: 21px;}
+
 /* "iPad" */
 @media only screen and (max-width: 900px) {
   .h0 {
