@@ -464,6 +464,7 @@
    :jquery
    :jsx
    :knockout
+   :leaflet
    :less
    :mapbox
    :material-ui
@@ -978,6 +979,7 @@
    :rails
    :remix
    :rdf
+   :reitit
    :rest
    :resteasy
    :ring
