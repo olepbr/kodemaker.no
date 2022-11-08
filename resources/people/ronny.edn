@@ -14,12 +14,12 @@
             :coderwall "rlovtangen"
             :linkedin "/in/ronnylovtangen"}
 
- :tech {:favorites-at-the-moment [:react]
-        :using-at-work [:clojure :clojurescript :re-frame :reagent :docker :okd :elasticsearch]
-        :want-to-learn-more [:micronaut :graalvm :kubernetes :docker :typescript :kotlin :graphql]}
+ :tech {:favorites-at-the-moment [:clojure]
+        :using-at-work [:clojure :clojurescript :re-frame :react :docker :okd :elasticsearch]
+        :want-to-learn-more [:micronaut :graalvm :kubernetes :typescript :kotlin :graphql]}
 
  :recommendations [{:title "This Developer's Life"
-                    :blurb "Nydelig podcast om livet som utvikler. Dessverre lenge mellom hver nye episode, men de som finnes er ganske så tidløse."
+                    :blurb "Nydelig podcast om livet som utvikler. Dessverre ikke lenger aktiv, men de episodene som finnes er ganske så tidløse."
                     :link {:url "http://thisdeveloperslife.com"
                            :text "Hør podcasten"}
                     :tech [:utvikling]}]
@@ -51,11 +51,85 @@
  :projects [
 
             {:customer "Animalia"
-             :start "2018-09"
+             :start "2022-10"
+             :end "2022-11"
+             :employer :kodemaker
+             :summary "Velferdsportal sau"
+             :description "Utvikling av en applikasjon for oppfølging av kontroll av dyrevelferd for sau"
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :tools-deps :reitit :swagger :reagent :re-frame :react :bootstrap :oracle]}
+
+            {:customer "Animalia"
+             :start "2022-08"
+             :end "2022-09"
              :employer :kodemaker
              :summary "Dyrehelseportalen"
-             :description "Utvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
-             :tech [:clojure :clojurescript :docker :okd :leiningen :oauth2 :elasticsearch :compojure :swagger :clojure-spec :reagent :re-frame :react :websocket :bootstrap :sql-server :oracle]}
+             :description "Videreutvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :leiningen :compojure :swagger :clojure-spec :reagent :re-frame :react :websocket :bootstrap :leaflet :sql-server :oracle]}
+
+            {:customer "Animalia"
+             :start "2022-03"
+             :end "2022-07"
+             :employer :kodemaker
+             :summary "Velferdsportal storfe"
+             :description "Videreutvikling av en applikasjon for oppfølging av kontroll av dyrevelferd for storfe"
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :tools-deps :reitit :swagger :reagent :re-frame :react :bootstrap :oracle]}
+
+            {:customer "Animalia"
+             :start "2022-01"
+             :end "2022-03"
+             :employer :kodemaker
+             :summary "Kterm / Slaktservice"
+             :description "Videretvikling av en applikasjon for klassifisering av slakt og tilhørende API"
+             :tech [:clojure :leiningen :compojure :swagger :groovy :grails :gradle :java :spring :spock :okd :docker :git :oracle]}
+
+            {:customer "Animalia"
+             :start "2021-12"
+             :end "2022-01"
+             :employer :kodemaker
+             :summary "Velferdsportal storfe"
+             :description "Videreutvikling av en applikasjon for oppfølging av kontroll av dyrevelferd for storfe"
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :tools-deps :reitit :swagger :reagent :re-frame :react :bootstrap :oracle]}
+
+            {:customer "Animalia"
+             :start "2021-10"
+             :end "2021-11"
+             :employer :kodemaker
+             :summary "Dyrehelseportalen"
+             :description "Videreutvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m."
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :leiningen :compojure :swagger :clojure-spec :reagent :re-frame :react :websocket :bootstrap :leaflet :sql-server :oracle]}
+
+            {:customer "Animalia"
+             :start "2021-01"
+             :end "2021-09"
+             :employer :kodemaker
+             :summary "Velferdsportal Storfe"
+             :description "Utvikling av en applikasjon for oppfølging av kontroll av dyrevelferd"
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :tools-deps :reitit :swagger :reagent :re-frame :react :bootstrap :oracle]}
+
+            {:customer "Animalia"
+             :start "2021-01"
+             :end "2021-02"
+             :employer :kodemaker
+             :summary "Animalia QA"
+             :description "Videreutvikling av en applikasjon for besvarelse av spørreskjema"
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :tools-deps :reitit :compojure :swagger :liberator :clojure-spec :reagent :re-frame :react :bootstrap :oracle]}
+
+            {:customer "Animalia"
+             :start "2020-10"
+             :end "2021-02"
+             :employer :kodemaker
+             :summary "Sauekontrollen"
+             :description "Videreutvikling av en applikasjon for registrering av sauehold"
+             :tech [:groovy :grails :gradle :java :spring :spock :okd :docker :git :oracle]}
+
+            {:customer "Animalia"
+             :start "2018-09"
+             :end "2020-10"
+             :employer :kodemaker
+             :summary "Dyrehelseportalen"
+             :description "Utvikling av en applikasjon for registrering av helseopplysninger for storfe, sau m.m.
+             Ansvar for en ny modul for registrering av reise for veterinærer, et samarbeid med Landbruksdirektoratet og Geno."
+             :tech [:clojure :clojurescript :okd :docker :git :oauth2 :elasticsearch :leiningen :compojure :swagger :clojure-spec :reagent :re-frame :react :websocket :bootstrap :leaflet :sql-server :oracle]}
 
             {:customer "NSB"
              :start "2018-05"
@@ -496,7 +570,10 @@ kolleger. Er opptatt av å avdekke kundens behov og møte disse. "
  :education [{:institution "Universitet i Oslo"
               :years [1996 1997 1998 1999 2000]
               :subject "Cand. Mag. Informatikk"}]
- :domain-skills [{:title "Jernbane"
+ :domain-skills [{:title "Landbruk"
+                  :description
+                  "God kunnskap om dyrehold etter flere år hos Animalia"}
+                 {:title "Jernbane"
                   :description
                   "Inngående kjennskap til hvordan norsk jernbane fungerer, etter mange år hos NSB. Også kjennskap til svensk jernbane etter flere prosjekter for Tågkompaniet. God kunnskap om både operasjonell virksomhet, materiell og teknisk infrastruktur. Stemplet som tognerd."}
                  {:title "Helseforetak"
