@@ -7,11 +7,12 @@
 
 (def presence-base-urls
   {:twitter "https://twitter.com/"
+   :mastodon "https://mastodon.social/"
    :linkedin "https://www.linkedin.com"
    :stackoverflow "https://stackoverflow.com/"
    :github "https://github.com/"})
 
-(def presence-order [:linkedin :stackoverflow :twitter :github])
+(def presence-order [:linkedin :stackoverflow :twitter :mastodon :github])
 
 (defn prep-presence-links [presence]
   (->> (for [[k v] (select-keys presence presence-order)]

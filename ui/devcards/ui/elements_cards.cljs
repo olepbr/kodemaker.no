@@ -270,6 +270,9 @@ spill, grensesnitt og støtteverktøy/overvåkning."]]
             {:href "https://twitter.com/cjno"
              :target "_blank"
              :icon (icons/icon :twitter)}
+            {:href "https://mastodon.social/@christian@mastodon.duderinos.no"
+             :target "_blank"
+             :icon (icons/icon :mastodon)}
             {:href "https://github.com/cjohansen"
              :target "_blank"
              :icon (icons/icon :github)}]}))

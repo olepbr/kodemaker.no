@@ -40,6 +40,7 @@ Du finner din personlige datafil i `resources/people/`. Slik ser den ut:
 
    :presence {(optional-key :cv) Str ;; Kodemaker cv id
               (optional-key :twitter) Str ;; brukernavn
+              (optional-key :mastodon) Str ;; brukernavn
               (optional-key :linkedin) Path ;; path til din offentlige side
               (optional-key :stackoverflow) Path ;; path til din offentlige side
               (optional-key :github) Str ;; brukernavn

@@ -9,6 +9,7 @@
 
  :presence {:cv "ronny"
             :twitter "rlovtangen"
+            :mastodon "@rlovtangen@snabelen.no"
             :stackoverflow "/users/141688/rlovtang"
             :github "rlovtangen"
             :coderwall "rlovtangen"
