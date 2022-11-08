@@ -107,7 +107,10 @@
   (-> (for [node (html5-walker/find-nodes html [:img])]
         (.getAttribute node "src"))
       (into (mapcat extract-style-urls (html5-walker/find-nodes html [:.w-style-img])))
-      (into (mapcat extract-style-urls (html5-walker/find-nodes html [:.section])))))
+      (into (mapcat extract-style-urls (html5-walker/find-nodes html [:.section])))
+      (into (->> (html5-walker/find-nodes html [:meta])
+				         (filter #(= "og:image" (.getAttribute % "property")))
+					       (map #(.getAttribute % "content"))))))
 
 (defn get-images [pages-dir]
   (->> (stasis/slurp-directory pages-dir #"\.html+$")
@@ -140,6 +143,7 @@
     (optimus.export/save-assets assets export-directory)
     (stasis/export-pages (atomic/get-pages (d/db conn) request) export-directory request)
     (spit (str export-directory "atom.xml") (rss/atom-xml (blog/blog-posts-by-published (d/db conn))))
+		(println "Exporting images from <img> <meta property=\"og:image\"> and select style attributes")
     (export-images export-directory export-directory (assoc images/image-asset-config :cacheable-urls? true))
     (if (= format :json)
       (println (json/write-str (dissoc (stasis/diff-maps old-files old-files) :unchanged)))

@@ -7,12 +7,18 @@
   (html-resource (java.io.StringReader. s)))
 
 (fact
- (web/extract-images "
+ (set (web/extract-images "
+<html>
+<head>
+<meta property=\"og:image\" content=\"meta.jpg\">
+<meta property=\"og:site\" content=\"Kodemaker Test\">
+</head>
+<body>
 <div>
   <img src=\"foo.png\"/>
   <div class=\"foo w-style-img\" style=\"background: url(bar.jpg)\"></div>
   <div class=\"bar w-style-img\"></div>
-</div>") => ["bar.jpg" "foo.png"]
+</div></body></html>")) => #{"bar.jpg" "foo.png", "meta.jpg"}
  )
 
 #_(def app (web/create-app))
