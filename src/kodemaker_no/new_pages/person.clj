@@ -1,13 +1,20 @@
 (ns kodemaker-no.new-pages.person
-  (:require [datomic-type-extensions.api :as d]
+  (:require [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
             [kodemaker-no.homeless :as h]
             [kodemaker-no.new-pages.open-source :as oss]
             [ui.elements :as e]
             [ui.icons :as icons]))
 
+(defn mastodon-url [username]
+  (let [[_ user server] (str/split username #"@")]
+    (str "https://" server "/@" user)))
+
+(def presence-url-fns
+  {:mastodon mastodon-url})
+
 (def presence-base-urls
   {:twitter "https://twitter.com/"
-   :mastodon "https://mastodon.social/"
    :linkedin "https://www.linkedin.com"
    :stackoverflow "https://stackoverflow.com/"
    :github "https://github.com/"})
@@ -16,7 +23,9 @@
 
 (defn prep-presence-links [presence]
   (->> (for [[k v] (select-keys presence presence-order)]
-         [k (str (presence-base-urls k) v)])
+         [k (if-let [presence-url-fn (presence-url-fns k)]
+              (presence-url-fn v)
+              (str (presence-base-urls k) v))])
        (sort-by #(.indexOf presence-order (first %)))
        (map (fn [[k url]]
               {:href url
