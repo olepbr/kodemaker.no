@@ -18,6 +18,7 @@
  :presence      {:cv "andre"
                  :twitter       "bonkowski"
                  :linkedin      "/in/bonkowski"
+                 :mastodon      "@bonkowski@mas.to"
                  :stackoverflow "/users/893477/andre"
                  :github        "bonkowski"
                  }
