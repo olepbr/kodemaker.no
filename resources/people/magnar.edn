@@ -30,6 +30,7 @@
 
  :presence {:cv "magnar"
             :twitter "magnars"
+            :mastodon "@magnars@snabelen.no"
             :linkedin "/pub/magnar-sveen/2/219/33a"
             :stackoverflow "/users/1123/magnar"
             :github "magnars"}
