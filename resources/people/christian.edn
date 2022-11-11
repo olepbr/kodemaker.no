@@ -41,6 +41,7 @@
 
  :presence {:cv "christian"
             :twitter "cjno"
+            :mastodon "@christian@deff.no"
             :linkedin "/in/christianjohansen"
             :github "cjohansen"}
 
