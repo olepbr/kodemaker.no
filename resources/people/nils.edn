@@ -29,7 +29,7 @@
 
  :presence              {
                          :cv            "nils"
-                         :twitter       "nils_magnus"
+                         :mastodon      "@nilsdrakedrepar/@snabelen.no"
                          :github        "nilsmagnus"
                          :stackoverflow "/users/639559/nilsmagnus"
                          :linkedin      "/in/nilsmagnus/"
