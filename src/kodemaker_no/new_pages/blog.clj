@@ -120,6 +120,7 @@
 
 (def icons
   {:twitter icons/twitter
+   :mastodon icons/mastodon
    :linkedin icons/linkedin
    :stack-overflow icons/stackoverflow
    :github icons/github})

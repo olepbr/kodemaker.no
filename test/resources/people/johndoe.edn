@@ -10,6 +10,7 @@
 
  :presence                  {:cv       "johndoe"
                              :twitter  "johndoe"
+                             :mastodon  "@johndoe@snabelen.no"
                              :github   "johndoe"
                              :linkedin "/in/johndoe"}
 
