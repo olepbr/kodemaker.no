@@ -26,7 +26,7 @@
  :email-address "alf.kristian@kodemaker.no"
 
  :presence {:cv "alf-kristian"
-            :twitter "stoyle"
+            :mastodon "@stoyle@snabelen.no"
             :github "stoyle"
             :linkedin "/in/stoyle"}
  :upcoming []
