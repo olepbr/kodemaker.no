@@ -9,7 +9,7 @@ Han sier at i arbeidshverdagen trives han med noen få stikkord ivaretatt; hurti
  :innate-skills [:java :clojure :kotlin :git :unit-testing]
  :phone-number "+47 97 00 59 68"
  :presence {:cv "finn"
-            :twitter "finnjohnsen"
+            :mastodon "@finn@snabelen.no"
             :github "finnjohnsen"
             :linkedin "/in/finnj"}
  :hobbies []
