@@ -76,7 +76,15 @@
                               :tech [:mustache :bootstrap :jquery :sass :selenium :mocha :patternlab :atomic-design]}]
 
  :projects
- [{:customer "Kodemaker"
+ [{:customer "Bring"
+  :start "2022-01"
+  :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
+  :employer :kodemaker
+  :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av
+    utsendelse av pakker for utsenderne, mobil-app for sjåførene som plukker opp og leverer pakkene, og grensesnittet til
+    mottagerene av pakkene (pakkesporing, osv). Ansvar for å vedlikeholde og virereutvikle app-løsningen til sjafører."
+  :tech [:react :react-native :typescript :kotlin :android :ios :postgresql :azure :xcode :figma :tailwindcss]}
+ {:customer "Kodemaker"
    :start "2021-12"
    :end "2021-12"
    :employer :kodemaker
