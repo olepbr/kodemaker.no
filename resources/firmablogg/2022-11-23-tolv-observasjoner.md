@@ -34,7 +34,7 @@ tas lynraskt.
 Noen ganger har vi konsepter i koden vår som gjemmer seg godt. La oss si vi har
 en pappeske med høyde, bredde og lengde. Flere steder i koden multipliserer vi
 disse, og resultatet brukes blant annet til å finne ut hvor mange pappesker som
-får plass i en varebil. Multiplikasjonen skjuler et konsept i domenet -- som til
+får plass i en varebil. Multiplikasjonen skjuler et konsept i domenet --- som til
 og med kan virke ganske sentralt. Ved å innføre _volum_ som et eksplisitt konsept,
 vil vi øke lesbarheten i koden, og kanskje også oppleve mer fruktbare diskusjoner
 med fagpersonene rundt oss.
@@ -48,7 +48,7 @@ misforståelsen kan føre til uheldige avhengigheter i kodebasen.
 La oss si at vi utvikler en applikasjon hvor både produkter og kunder har _navn_.
 Koden for å håndtere navn er duplisert, så vi trekker dette ut i en felles greie.
 Nå har vi innført en avhengighet mellom to konsepter som hadde fortjent å utvikle
-seg uavhengig av hverandre. Hva gjør vi når vi finner ut av vi ønsker å
+seg uavhengig av hverandre. Hva gjør vi da når vi finner ut at vi ønsker å
 representere kundens navn som _fornavn_ og _etternavn_?
 
 ### 5. Komplisert forretningslogikk trives best i isolasjon
@@ -90,7 +90,7 @@ har kun eksterne avhengigheter osv.
 
 ### 9. Det er vanskelig å slå tavle og tusj
 
-Å tegne på tavle er et veldig effektivt kommunikasjonsverktøy -- om man så
+Å tegne på tavle er et veldig effektivt kommunikasjonsverktøy --- om man så
 skal lære bort noe, skape en felles forståelse, eller samarbeide om å løse
 et problem. Informasjon fester seg bedre når den visualiseres, og aktiv bruk
 av tavle holder godt på oppmerksomheten. Og ikke minst er det en naturlig
@@ -112,7 +112,7 @@ og i dagligtalen.
 
 ### 11. “Hvorfor?” er et kraftig verktøy
 
-De fleste av oss har blitt bedt om å lage en knapp. Bak ønsket om ny knapp ligger
+De fleste av oss har blitt bedt om å lage en knapp. Bak ønsket om en ny knapp ligger
 det gjemt et behov. Ved å grave oss bakover, vil vi til slutt avdekke det
 grunnleggende behovet. Da kan vi utviklere bruke våre problemløsningsferdigheter
 til å sparre rundt alternative løsninger. Kanskje ender vi opp med en automatisert
@@ -125,5 +125,5 @@ fokuseres på i jobbannonser, i artikler og på konferanser. Det virker som at v
 av og til glemmer at jobben vår også består av å lære nye domener, dele kunnskap
 med andre, løse problemer, samarbeide i team, håndtere konflikter, organisere og
 bryte ned arbeid, prioritere, strukturere informasjon, og mye mer. Her er det mange
-erfaringer og egenskaper som er nyttige å ha som utvikler -- som kanskje ikke helt får den
+erfaringer og egenskaper som er nyttige å ha som utvikler --- som kanskje ikke helt får den
 oppmerksomheten de fortjener.
