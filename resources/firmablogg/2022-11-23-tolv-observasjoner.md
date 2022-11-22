@@ -83,7 +83,7 @@ Kodebaser har ofte pakkestrukturer som gjør det tungvint å navigere i koden.
 oversikt over en ny kodebase, eller når det skal innføres en ny betalingsmåte
 i nettbutikken. Derfor er jeg stor tilhenger av å ha pakker som `bestilling`,
 `betaling` og `levering` på toppnivå. Betaling kan igjen inneholde for eksempel
-`faktura` og `kortbetaling`. Da blir det ikke mer åpenbart hvor den nye betalingsmetoden
+`faktura` og `kortbetaling`. Da blir åpenbart hvor den nye betalingsmetoden
 passer inn. En annen gevinst med en slik inndeling er at avhengighetene blir
 tydelige: `bestilling` har avhengigheter til `betaling` og `levering`, `betaling`
 har kun eksterne avhengigheter osv.
@@ -93,8 +93,8 @@ har kun eksterne avhengigheter osv.
 Å tegne på tavle er et veldig effektivt kommunikasjonsverktøy -- om man så
 skal lære bort noe, skape en felles forståelse, eller samarbeide om å løse
 et problem. Informasjon fester seg bedre når den visualiseres, og aktiv bruk
-av tavle holder godt på oppmerksomheten. Og ikke minst, det er en naturlig
-felles arbeidsflate -- hvor flere kan drodle og tegne samtidig.
+av tavle holder godt på oppmerksomheten. Og ikke minst er det en naturlig
+felles arbeidsflate hvor flere kan drodle og tegne samtidig.
 
 ### 10. Det lønner seg å være nøye med språk og begreper
 
