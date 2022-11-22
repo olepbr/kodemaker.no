@@ -18,7 +18,7 @@ Vi kan ikke forvente å kunne lage gode arbeidsverktøy for helsepersonell uten
 noen få personer i teamet har denne kunnskapen; vi gjør alle stadig valg hvor
 utfallet påvirkes av hvor godt vi kan domenet. Utviklere med god domenekompetanse
 vil kunne sparre med fagpersoner rundt funksjonalitet og prioriteringer. Lange
-utredninger blir overflødige. Og applikasjonene vi lager vil løse brukernes
+utredninger blir overflødige. Og produktene vi lager vil løse brukernes
 faktiske behov, og bidra til å forbedre noen sin hverdag.
 
 ### 2. Det er utrolig hvor mye et lite team med dyktige folk kan få til
@@ -83,7 +83,7 @@ Kodebaser har ofte pakkestrukturer som gjør det tungvint å navigere i koden.
 oversikt over en ny kodebase, eller når det skal innføres en ny betalingsmåte
 i nettbutikken. Derfor er jeg stor tilhenger av å ha pakker som `bestilling`,
 `betaling` og `levering` på toppnivå. Betaling kan igjen inneholde for eksempel
-`faktura` og `kortbetaling`. Da blir åpenbart hvor den nye betalingsmetoden
+`faktura` og `kortbetaling`. Da blir det åpenbart hvor den nye betalingsmetoden
 passer inn. En annen gevinst med en slik inndeling er at avhengighetene blir
 tydelige: `bestilling` har avhengigheter til `betaling` og `levering`, `betaling`
 har kun eksterne avhengigheter osv.
@@ -118,7 +118,7 @@ grunnleggende behovet. Da kan vi utviklere bruke våre problemløsningsferdighet
 til å sparre rundt alternative løsninger. Kanskje ender vi opp med en automatisert
 løsning som alle er enda mer fornøyde med?
 
-### 12. Å skrive kode er en bare en del av jobben vår
+### 12. Å skrive kode er bare en del av jobben vår
 
 Likevel er det i all hovedsak programmeringsspråk, biblioteker og rammeverk det
 fokuseres på i jobbannonser, i artikler og på konferanser. Det virker som at vi
