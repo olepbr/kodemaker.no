@@ -69,6 +69,17 @@
                 :date "2015-06-01"}]
 
  :projects [
+            {:customer "Norsk Helsenett"
+ 			 :start "2022-05"
+ 			 :summary "Utvikling av Kjernejournal for helsepersonell"
+ 			 :employer :kodemaker
+ 			 :description "Norsk Helsenett (NHN) utvikler og drifter nasjonale IT-løsninger i helsesektoren.
+ 			 			 Kjernejournal tilgjengeliggjør helseinformasjon for helsepersonell på tvers av fylker og kommuner. Dette inkluderer blant annet
+ 			 			 vaksiner, besøkshistorikk, legemidler og kritisk informasjon. Oppdraget innebærer både å
+ 			 			 utvikle ny funksjonalitet, som for eksempel ny nasjonal løsning for prøvesvar,
+ 			 			 og å jobbe for at funksjonalitet skal kunne rulles ut kontinuerlig på en sikker måte."
+ 			 :tech [:java :react :typescript :react-query :kubernetes :maven :javascript]}
+
              {:customer "Solibo"
               :employer :kodemaker
               :start "2021-10"
