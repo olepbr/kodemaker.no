@@ -40,19 +40,19 @@ create table audit
 
 Gitt det enkle skjemaet ovenfor så kan vi kun sette inn rader i `audit` med en `created_by` som finnes i `users`. I
 praksis betyr dette at hver gang vi setter inn en rad i `audit` så må databasen slå opp i `users` for å finne en `id`
-som matcher `created_by`. En fremmednøkkel kan kun referere til en primærenøkkel eller en kolonne med en unique
+som matcher `created_by`. En fremmednøkkel kan kun referere til en primærnøkkel eller en kolonne med en unique
 constraint. Slike kolonner vil derfor være indeksert og oppslaget vil være effektivt og raskt. Derfor vil en insert
 eller update på `audit` gå raskt uten at vi trenger å gjøre noe spesielt. Hvis vi derimot vil slette en bruker eller
 endre `id` til en bruker så må databasen sjekke alle rader i `audit` om den har en `created_by` som refererer til den
 aktuelle brukeren. Hvis `audit` blir stor kan dette ta lang tid.
 
-> **Derfor er det nesten alltid lurt å lage en indeks på kolonner som er fremmednøkkel**
+> **Derfor er det nesten alltid lurt å lage en indeks på kolonner som er fremmednøkler**
 
 ## Analyse
 
 Hvorfor var ikke dette opplagt da jeg støtte på problemet? Fordi validering av fremmednøkkel-constraints er en implisitt
 handling som databasen utfører for oss. At den i det hele tatt trenger å gjøre det fremgår verken av spørringen,
-definisjonen av tabellen eller explain planen til spørringen. Jobber man på et stort skjema er det ikke sikkert man har
+definisjonen av tabellen eller explain-planen til spørringen. Jobber man på et stort skjema er det ikke sikkert man har
 full oversikt over eksisterende fremmednøkler.
 
 La oss forsøke å generere litt data for å illustrere problemet. Først lager vi 10 000 brukere:
@@ -73,7 +73,7 @@ from generate_series(1, 5000000);
 ```
 
 Fordi testdatabasen er tom, har null trafikk og laptoppen er alt for rask, trenger vi ganske mange rader for å
-illustrere effekten. I produksjon vil problemet være større selv med langt færre rader.
+illustrere effekten. I produksjon vil problemet være gjeldende selv med langt færre rader.
 
 ```sql
 delete from audit where id = 400;
@@ -83,8 +83,8 @@ delete from users where id = 400;
 1 row affected in 4 s 810 ms
 ```
 
-Det tar altså mer enn 600 ganger lenger tid å slette en rad fra users enn audit. Og det til tross for at det er 500
-ganger flere rader i audit 🤨 Kanskje vår venn explain plan kan gi oss svaret?
+Det tar altså mer enn 600 ganger lenger tid å slette en rad fra `users` enn `audit`. Og det til tross for at det er 500
+ganger flere rader i `audit` 🤨 Kanskje vår venn explain plan kan gi oss svaret?
 
 ```sql
 explain
@@ -102,9 +102,9 @@ Delete on users  (cost=0.29..8.30 rows=1 width=6)
           Index Cond: (id = 400)
 ```
 
-Noe overraskende mener databasen at det skal ta eksakt like lang tid å slette en rad fra de to tabellene, men vi vet at
-det ikke stemmer. Vi kan forsøke å la databasen både planlegge og analysere eksekveringen ved hjelp
-av `explain analyse` og se om det gir noen hint. Vær obs på at med **analyse** vil spørringen bli kjørt og raden slettet: 
+Noe overraskende mener databasen at det skal ta eksakt like lang tid å slette en rad fra de to tabellene, noe vi vet at
+ikke stemmer. Vi kan forsøke å la databasen både planlegge og analysere eksekveringen ved hjelp av `explain analyse` og
+se om det gir noen hint. Vær obs på at med **analyse** vil spørringen bli kjørt og raden slettet: 
 
 ```sql
 explain analyse
@@ -121,8 +121,8 @@ Execution Time: 4803.345 ms
 Og der fikk vi svaret i klartekst: **Trigger for constraint audit_created_by_fkey** er det som tar lang tid. 
 Altså verifisering av fremmednøkkel-constrainten. Så for å gjøre sletting raskt igjen har vi 2 alternativer:
 
-1. Fjerne fremmednøkkel-constraintent og gi opp dataintegriteten den gir oss
-2. Lage en index på created_by i audit
+1. Fjerne fremmednøkkel-constrainten og gi opp dataintegriteten den gir oss
+2. Lage en index på `created_by` i `audit`
 
 Med mindre vi har helt spesielle hensyn å ta så bør vi lage indeksen:
 
@@ -148,7 +148,7 @@ Denne gangen gikk det raskt 🎉 og vi er tilbake til forventet kjøretid for sl
 
 ## Oppsummering
 
-En uindeksert fremmednøkkel kan dramatisk påvirke ytelsen til deletes og updates. Behold constraints på fremmenøkler,
+En uindeksert fremmednøkkel kan dramatisk påvirke ytelsen til deletes og updates. Behold constraints på fremmednøkler,
 men husk å lage indekser på de. Gjør det gjerne samtidig som du oppretter kolonnene siden ytelsesproblemene vil komme
 senere når du minst aner det. Så sparer du deg for unødvendig feilsøking.
 
