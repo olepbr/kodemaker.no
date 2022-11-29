@@ -11,7 +11,7 @@ Postgres-database i produksjon? Denne utfordringen støtte jeg på nylig og det 
 :body
 
 For en liten stund siden støtte jeg på en ytelsesutfordring i Postgres da jeg skulle slette én enkelt bruker fra et
-system jeg jobber med. Den enkle spørringen `delete from users where id = :id` ble aldri ferdig. Til slutt fikk jeg
+system jeg jobber med. Den enkle spørringen **delete from users where id = :id** ble aldri ferdig. Til slutt fikk jeg
 kalde føtter og avbrøt. Hva var det som tok så lang tid? Jeg prøvde igjen og sjekket om den ventet på noen låser holdt
 av andre. Det gjorde den ikke. De låsene jeg så ble holdt av min egen transaksjon, og de var på andre tabeller enn `users`.
 Hvorfor det? Svaret var enkelt, men ikke så opplagt der og da.
@@ -103,7 +103,7 @@ Delete on users  (cost=0.29..8.30 rows=1 width=6)
 ```
 
 Noe overraskende mener databasen at det skal ta eksakt like lang tid å slette en rad fra de to tabellene, noe vi vet at
-ikke stemmer. Vi kan forsøke å la databasen både planlegge og analysere eksekveringen ved hjelp av `explain analyse` og
+ikke stemmer. Vi kan forsøke å la databasen både planlegge og analysere eksekveringen ved hjelp av `explain` `analyse` og
 se om det gir noen hint. Vær obs på at med **analyse** vil spørringen bli kjørt og raden slettet: 
 
 ```sql
@@ -122,7 +122,7 @@ Og der fikk vi svaret i klartekst: **Trigger for constraint audit_created_by_fke
 Altså verifisering av fremmednøkkel-constrainten. Så for å gjøre sletting raskt igjen har vi 2 alternativer:
 
 1. Fjerne fremmednøkkel-constrainten og gi opp dataintegriteten den gir oss
-2. Lage en index på `created_by` i `audit`
+2. Lage en index på created_by i audit
 
 Med mindre vi har helt spesielle hensyn å ta så bør vi lage indeksen:
 
