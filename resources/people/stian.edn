@@ -4,14 +4,20 @@
  :start-date "2010-10-01"
  :experience-since 2004
  :born 1980
- :description "Stian er en dedikert systemutvikler som er
+ :description "Stian er en dedikert fullstack-utvikler som er
                opptatt av å forstå og løse kundens problem
-               på en best mulig måte. Han har jobbet for mange
-               ulike kunder innenfor flere bransjer,
+               på en best mulig måte. Han har jobbet for en rekke 
+               kunder innenfor ulike bransjer,
                og ser at nøkkelen til et vellykket sluttprodukt
-               handler om å skjønne kundens forretning og bruke
-               riktig teknologi på riktig sted. Stian har meget
-               gode referanser fra tidligere oppdrag."
+               handler om å forstå kundens forretning og bruke
+               riktig teknologi på riktig sted. 
+               
+               Stian jobber så vel backend som frontend, 
+               og bryner seg på alt fra databasedesign til webutvikling.
+               Han trives best i team der utviklere og forretningen jobber tett sammen,
+               og gjerne også veien fra idé til løsning er kort.
+
+               Stian har meget gode referanser fra tidligere oppdrag."
 
  :phone-number "+47 932 24 540"
  :email-address "stian@kodemaker.no"
@@ -154,7 +160,7 @@
              :employer :kodemaker
              :summary "Ny- og videreutvikling av fagsystemer og løsninger for landbruket, slakterier og veterinærer"
              :description "Jobbet sammen med organisasjonen for å lage og videreutvikle et stort antall fagsystemer.
-             Både backend- og frontendutvikling, samt overordnet arkitektur"
+             Både backend- og frontendutvikling, samt overordnet arkitektur og infrastruktur"
              :tech [:clojure :react :devops :docker :kubernetes :clojurescript :groovy :java :aws :azure :gradle :oracle :leiningen :rest :re-frame :reagent :nginx]}
             {:customer "Conax"
              :years [2016 2017]
@@ -162,7 +168,7 @@
              :summary "Utvikle løsning for IP-TV"
              :description "Utvikle og designe løsning
              for IP-TV og sikring av innhold. Dette er et produkt som rulles ut
-             i flere land Oppgaver: Seniorutvikler"
+             i flere land"
              :tech [:java :groovy :ansible :javascript :docker :spring :jetty :oracle :linux :hibernate]}
             {:customer "NSB"
              :years [2013 2014 2015 2016]
