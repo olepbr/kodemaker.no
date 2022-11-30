@@ -1,6 +1,5 @@
 (ns kodemaker-no.render-new-page
-  (:require [clojure.java.io :as io]
-            [dumdom.string :as dumdom]
+  (:require [dumdom.string :as dumdom]
             [kodemaker-no.new-pages.whoami-page :as whoami-page]
             [optimus.link :as link]
             [ui.layout :as layout]
