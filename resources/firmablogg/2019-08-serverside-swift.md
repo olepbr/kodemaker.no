@@ -64,7 +64,7 @@ Til en mer avansert løsning så virker alle disse tre rammeverkene å ha det me
 
 I forhold til hvilket av de tre rammeverkene jeg ville ha benyttet i et potensielt nytt backendsystem, så vil det selvfølgelig være avhengig av kravene til dette systemet. Kitura og Vapor ligner en del på hverandre. Kitura er litt mer konservativt i forhold til nye features som legges til, mens Vapor er litt mer "bleeding edge". Personlig så holder jeg allikevel en knapp på Perfect fordi det ikke virker å være så opinionated som de to andre.
 
-###Arrow for Swift?
+### Arrow for Swift?
 
 Vår positive erfaring med bruk av Arrow gjør at jeg gjerne skulle hatt noe lignende for Swift, men heldigvis så har [47 Degrees](https://www.47deg.com) som står bak Arrow også laget [Bow](https://bow-swift.io). Pr i dag så ligger dokumentasjonen langt bak hva Arrow har å tilby, men mye av det som er dokumentert der virker langt på vei og også gjelde for Bow. Ved bruk av disse bibliotekene så får man ett verktøy i verktøykassen som vil hjelpe Swift-utviklere til å kunne skive funkjonell kode enda mer elegant enn nå, selv om Swift i utgangpunktet har mye bra.
 
