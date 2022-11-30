@@ -61,4 +61,7 @@
       [:link {:href "/atom.xml" :rel "alternate" :title "Kodemakerblogg" :type "application/atom+xml"}]
       [:title (head-title (:title page))]]
      [:body
-      (map render-section (:sections page))]])))
+      (map render-section (:sections page))
+      [:script {:src "https://koslig-bolle.kodemaker.no/script.js"
+                :data-site "DLJZEOUY"
+                :defer true}]]])))
