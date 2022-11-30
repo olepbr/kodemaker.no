@@ -20,7 +20,7 @@
                  [org.clojure/core.memoize "0.7.2"]
                  [clygments "2.0.0"]
                  [prone "2019-07-08"]
-                 [cjohansen/dumdom "2019.09.05-1"]
+                 [cjohansen/dumdom "2022.09.28"]
                  [com.datomic/datomic-free "0.9.5697"]
                  [datoms-differ "2019-08-26"]
                  [datomic-type-extensions "2019-09-04"]
