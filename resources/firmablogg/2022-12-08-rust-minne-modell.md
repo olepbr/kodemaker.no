@@ -11,21 +11,23 @@ Det som først fikk min oppmerksomhet var hvordan man håndterer minne.
 :body
 
 Rust er det mest populære programmeringsspråket i følge Stack Overflow, men hva er det som er så spesielt med det? 
-Det som først fikk min oppmerksomhet var hvordan man håndterer minne. For å finne ut av hvorfor Rust sin håndtering er så spesiell, la oss først se på noen av de andre måtene dette gjøres.
+Det som først fikk min oppmerksomhet var hvordan man håndterer minne. For å finne ut av hvorfor Rust sin håndtering er så spesiell, la oss først se på noen av alternativene.
 
 ## Hva mener vi med minnehåndtering
-Når man i et program oppretter en variabel, så må det settes av nok minne for å holde på dataene variablene skal peke på. Siden minne er en begrenset ressurs, så ønsker man frigi ubrukt minne så snart som mulig  etter man ikke har behov for det lenger, for å kunne gjenbruke det.
+Når man i et program oppretter en variabel, så må det settes av nok minne for å holde på dataene variablene skal peke på. Siden minne er en begrenset ressurs, så ønsker man å frigi ubrukt minne så snart som mulig etter at man ikke har behov for det lenger.
 
 Minne deles opp i to typer, Stack og Heap. Disse har forskjellige karakteristikker og bruksområder, så la oss ta en rask titt på de:
 
 ### Stack 
 
-Man sier ikke å allokere og deallokere minne på stacken, siden vi vet hvor i minnet variablene skal plasseres, samt størrelsen på minnet som trengs. Vi sier i stedet å "pushe" og "poppe" på stacken.
+Man snakker ikke om å allokere og deallokere minne på stacken siden vi vet hvor i minnet variablene skal plasseres, samt størrelsen på minnet som trengs. Vi sier i stedet å "pushe" og "poppe" på stacken.
+
+![Bestandelene av s1](/images/blogg/stack-vs-heap.png)
 
 * Variabler blir liggende i samme rekkefølge som de blir "pushet" på stacken.
 * Størrelsen på dataene som skal lagres på stacken er kjent ved kompileringstidspunktet. 
-* Når en funksjon kalles, så vil argumenter som er sendt til funksjonen, samt funksjonens lokale variabler blir dyttet på stacken. 
-* Når funksjonen er ferdig utført, så vil verdiene blir fjernet fra stacken i rekkefølgen sist inn, først ut.
+* Når en funksjon kalles, så vil argumenter som er sendt til funksjonen, samt funksjonens lokale variabler bli dyttet på stacken. 
+* Når funksjonen er ferdig utført, så vil verdiene bli fjernet fra stacken i rekkefølgen sist inn, først ut.
 * Tilgjengelig stackminne er (mye) mindre enn for heap.
 * Data som er lagret på stacken kan sies å være "sikrere", siden data laget her kun kan aksesseres av tråden som utfører funksjonen.
 * Det er raskt å pushe og poppe.
@@ -39,10 +41,10 @@ Man sier ikke å allokere og deallokere minne på stacken, siden vi vet hvor i m
 * Glemmer man å deallokere minnet etter bruk så vil det oppstå en minnelekasje.
 * Allokering og deallokering av minne på heapen er mye tregere enn minne avsatt på stacken, siden man må først finne en stor nok minneblokk som kan holde på det vi ønsker å lagre der, og så man må "bokføre" hvor minnet er allokert for senere å kunne frigjøre det.
 
-Det å holde orden på minne i et program krever at man holder tungen rett i munnen for å ikke innføre minnelekasjer. Man må også passe på at en tråd ikke leser fra minnet samtidig som en annen skriver til det. I tillegg så må man passe på at man ikke frigjør minne som er pekt på av en annen variabel enn den man selv holder på. Det er flere måter man kan angripe denne utfordringer på. La oss se på noen eksempler:
+Det å holde orden på minne i et program krever at man holder tungen rett i munnen for å unngå minnelekkasjer. Man må også passe på at en tråd ikke leser fra minnet samtidig som en annen skriver til det. I tillegg må man passe på at man ikke frigjør minne som er pekt på av en annen variabel enn den man selv holder på. Det er flere måter man kan angripe denne utfordringer på. La oss se på noen eksempler:
 
 
-## Manuell minnehåntering
+## Manuell minnehåndtering
 La oss se på hvordan man håndterer minne i språket C.
 Det er opp til programmereren å allokere og deallokere minne som programmet har behov for.
 
@@ -59,31 +61,26 @@ void func()
 }
 ```
 
-I dette eksempelet så allokerer vi et minneområde som er stort nok til å holde en `int`. Vi oppretter en variabel `intPtr` som peker til minnet vi satt av ved kallet til `malloc(sizeof(int))`, som blir pushet på stacken. Siden variabelen ligger på stacken, så vil den bli frigitt når funksjonen er ferdig. Minneområdet `intPtr` peker på, ble ikke lagt på stacken, men på heapen. For å frigi minnet allokert tidligere, så kaller vi `free(intPtr)` før vi returnerer fra funksjonen. Funksjonen `free` frigir minne som navnet indikerer. 
+I dette eksempelet allokerer vi et minneområde som er stort nok til å holde en `int`. Vi oppretter en variabel `intPtr` som peker til minnet vi satt av ved kallet til `malloc(sizeof(int))`, som blir pushet på stacken. Siden variabelen ligger på stacken, vil den bli frigitt når funksjonen er ferdig. Minneområdet `intPtr` peker på, ble ikke lagt på stacken, men på heapen. For å frigi minnet allokert tidligere, så kaller vi `free(intPtr)` før vi returnerer fra funksjonen. Funksjonen `free` frigir minne som navnet indikerer. 
 
-Dersom vi ikke husker å gjøre dette, så ville programmet lekke 4 bytes (på en 32-bit plattform) for hver gang funksjonen hadde blitt kalt. Det lekkede minnet hadde blitt frigitt når programmet avsluttes, men ikke før det. Fire bytes er ikke mye minne, men dersom den aktuelle funksjonen blir kalt veldig mange ganger, så kunne den totale minnelekkasjen blitt stor. 
+Dersom vi ikke gjør dette, så vil programmet lekke 4 bytes (på en 32-bit plattform) hver gang funksjonen blir kalt. Det lekkede minnet hadde blitt frigitt når programmet avsluttes, men ikke før det. Fire bytes er ikke mye minne, men dersom den aktuelle funksjonen blir kalt veldig mange ganger, så kunne den totale minnelekkasjen blitt stor. 
 
-Når et program har en minnelekkasje så vil man typisk først oppleve at programmet blir tregere og tregere siden allokering av minne blir mer og mer tidkrevende.Grunnen til der er at man må lete mer og kanskje defragmentere minnet for å finne etter et sammenhengende område som er stort nok. Finner man ikke det, så har man ikke nok minne, og da vil programmer krasje.
+Når et program har en minnelekkasje så vil man typisk først oppleve at programmet blir tregere og tregere siden allokering av minne blir mer og mer tidkrevende. Grunnen til det er at man må lete mer og kanskje defragmentere minnet for å finne etter et sammenhengende område som er stort nok. Finner man ikke det, så har man ikke nok minne, og da vil programmer krasje.
 
 Siden et allokert minneområde kan refereres til av flere pekere samtidig, så må man være påpasselig slik at vi ikke deallokerer minneområder som kan være i bruk av andre. Gjør man det, så vil applikasjonen også kunne krasje. 
 
 
 ## Referansetellere
 
-Det at et allokert minneområde kan refereres til av flere pekere samtidig gjør det vanskelig å manuelt å holde orden på hvem som gjør hva med minneområdet og når. 
-En teknikk som kan benyttes for å forenkle dette noe er å benytte referansetellere. Det er fortsatt ikke noe automatikk inne i bildet her og det er i stor grad basert på at man følger konvensjoner... nøye.
+Det at et allokert minneområde kan refereres til av flere pekere samtidig gjør det vanskelig å manuelt holde orden på hvem som gjør hva med minneområdet og når. 
+En teknikk som kan forenkle dette noe er å benytte referansetellere. Det er fortsatt ikke noe automatikk inne i bildet her og det er i stor grad basert på at man følger konvensjoner... nøye.
 Referansetellere er benyttet i f.eks Objective-C og Cocoa, som de påfølgende eksemplene benytter.
 
 
-```objective-c
-NSString* string = [[NSString alloc] init]; // refCount: 1
-[string retain];                            // refCount: 2
-[string release];                           // refCount: 1    
-[string release];                           // refCount: 0, dealloker minne    
+![Bestandelene av s1](/images/blogg/ref-count.png)
 
-```
 
-Hvert objekt har en referanseteller som holder orden på hvor hvor mange andre som peker på seg. Når et objekt opprettes, så settes referansetelleren til 1. Hver gang man kaller `retain` på objektet, så inkrementeres telleren, mens kall til `release` dekrementerer den. Man kan sende en melding til objektet for å finne ut hvor mange som peker på det aktuelle objektet..  
+Når et objekt har en referanseteller som holder orden på hvor hvor mange andre som peker på seg. Når et objekt opprettes, så settes referansetelleren til 1. Hver gang man kaller `retain` på objektet, så inkrementeres telleren, mens kall til `release` dekrementerer den. Man kan sende en melding til objektet for å finne ut hvor mange som peker på det aktuelle objektet..  
 
 
 ```objective-c
@@ -103,7 +100,7 @@ En situasjon som man må være oppmerksom på når man bruker referansetellere e
 
 Tilbake til objektene A og B. Hva om B trenger en referanse tilbake til A, og på grunn av det gjør en `retain` mot A? Når den som opprettet A gjør en `release` på A, så dekrementeres telleren, men siden B også har `retain` på A, så faller ikke A telleren til 0. A har jo også en `retain` på B, så da vil ikke B sin teller heller bli 0. Selv om B kaller `release` på A i sin `dealloc`, så hjelper ikke dette siden den aldri vil bli kalt. Vi har en minnelekkasje.
 
-På grunn av dette så anbefaler Cocoa rammeverket at barn-foreldre relasjonen bruker en `weak` referanse. Et objekt som har en `weak`referanse til et annet objekt anses ikke å være "eieren" av objektet den peker på, og en slik referanse fører ikke til at objektet den peker på ikke inkrementerer sin teller. 
+På grunn av dette så anbefaler Cocoa-rammeverket at barn-foreldre relasjonen bruker en `weak` referanse. Et objekt som har en `weak`referanse til et annet objekt anses ikke å være "eieren" av objektet den peker på, og en slik referanse fører til at objektet den peker på ikke inkrementerer sin teller. 
 
 
 ### @autoreleasepool
@@ -132,7 +129,7 @@ Prinsippene vi har sett på så langt er kanskje ikke så kompliserte for enkle 
 
 Garbage Collection hjelper oss med å unngå en rekke type feil som kan oppstå ved bruk av mekanismene bekrevet tidligere, som det å frigjøre minne som andre pekere peker på, minnelekasjer osv. Moderne implementasjoner av Garbage Collection har blitt uhyre effektive og baserer seg på kunnskap akkumulert over mange 10-år. Hvilke teknikker som er brukt i en Garbage Collector er et stort område som er langt utover hva denne artikkelen tar for seg, men noen eksempler er:
 
-* Referanse tellere
+* Referansetellere
 * Tracing, hvor man holder orden på hvilke objekter som man kan nåes.
 * Kompileringstidsananlyse hvor man ser på hvilke heap allokeringer som kan konverteres til stack allokeringer. 
 * Andre teknikker og kombinasjoner av disse.
@@ -145,11 +142,11 @@ Nå er det slik at Garbage Collection ikke er helt uten ulemper. En ting er at m
  
 Ulempene til Garbage Collection er en av grunnene til at Apple ikke valgte å gå for denne løsningen for sine systemer. Garbage Collection var tilgjengelig for Objective-C på OS X i ca 5 år fra 10.5 (2007) til 10.8 (2012). Etter dette så ble støtten fjernet. 
 
-Alternativet som ble valgt var ARC, eller Automatic Reference Counting. Som navnet hinter om så ligger Reference Counting som et fundament, men ved kompilering så settes det automatisk inn kall til `retain` og `release` automatisk av kompilatoren. Det som ikke automatisk håndteres er retain cycles. Det er fortsatt opp til programmereren til å løse opp i ved hjelp av `weak` referanser der det behøves. 
+Alternativet som ble valgt var ARC, eller Automatic Reference Counting. Som navnet hinter om så ligger Reference Counting som et fundament, men ved kompilering så settes det automatisk inn kall til `retain` og `release` av kompilatoren. Det som ikke automatisk håndteres er retain cycles. Det er fortsatt opp til programmereren til å løse opp i ved hjelp av `weak` referanser der det behøves. 
 
-Fordelen med ARC er at brukt minne frigis så og si umiddelbart etter man ikke lenger har behov for det. Dette optimaliserer minneforbruket, samt at man ikke trenger å kjøre en egen prosess som har ansvar for å frigi ubrukt minne. 
+Fordelen med ARC er at brukt minne frigis så og si umiddelbart etter man ikke lenger har behov for det. Dette optimaliserer minneforbruket, samt at man ikke trenger å kjøre en egen prosess som har ansvar for frigjøring av ubrukt minne. 
 
-Senere versjoner av Objective-C har støtte for ARC, mens Swift har alltid basert seg på det. C++ har shared_ptr og "smart pointer" som er konseptuellt likt ARC, men støtten for dette får man ved bruk av biblioteker og er ikke en språkegenskap.
+Senere versjoner av Objective-C har støtte for ARC, mens Swift har alltid basert seg på det. C++ har `shared_ptr` og "smart pointer" som er konseptuellt likt ARC, men støtten for dette får man ved bruk av biblioteker og er ikke en språkegenskap.
 
 
 ## Hvordan håndteres minne i Rust?
@@ -208,7 +205,7 @@ let x = 5;
 let y = x;
 ```
 
-Siden `x` og `y` er enkle verdier med kjent størrelse, så blir disse to verdien pushet på stacken. `y` peker ikke på samme verdi som `x`, men det er to verdier, for reglene sier jo at en verdi har kun en eier. 
+Siden `x` og `y` er enkle verdier med kjent størrelse, så blir disse to verdiene pushet på stacken. `y` peker ikke på samme verdi som `x`, men det er to verdier, for reglene sier jo at en verdi har kun en eier. 
 La oss prøve noe lignende, hvor vi i stedet for en enkel type som `Int` bruker en `String` type.
 
 ```rust
@@ -319,14 +316,14 @@ fn create_greeting() -> String {
 ### Referanser og "Låning"
 Det virker jo litt tungvint å ikke kunne bruke variabler etter at man har flyttet eierskapet fordi man kaller en funksjon som tar variabelen som argument. Det er her *references* og *borrowing* kommer inn i bildet.
 
-En referanse er en slags peker til data i minnet den har adressen til, men som er eid av en annen variabel. Til forskjell fra pekere som vi er vant med fra andre språk, så er en referanse garantert til å peke på en gyldig verdi av en bestemt type. Garantien for gyldighet gjør da at null pekere ikke kan eksistere i et Rust program.
+En referanse er en slags peker til data i minnet den har adressen til, men som er eid av en annen variabel. Til forskjell fra pekere som vi er vant med fra andre språk, så er en referanse garantert til å peke på en gyldig verdi av en bestemt type. Garantien for gyldighet gjør da at null pekere ikke kan eksistere i et Rust-program.
 
 
 La oss se hvordan `shout` kunne blitt implementert ved å få en referanse istedet for en verdi:
 
 ```rust
 fn main() {
-  let greeting = String::from(“Halloen”); // greeting oppstår
+  let greeting = String::from("Halloen"); // greeting oppstår
   shout(&greeting);                       // en referanse til greeting sendes til shout funksjonen.
   println!("{}", greeting);               // shout bare "lånte" bare greeting, så den er fortsatt gyldig.                                     
 }
