@@ -1,6 +1,6 @@
 :title Hvordan håndterer man minne i Rust
 :author andre
-:tech [:programming]
+:tech [:rust :programming]
 :published 2022-12-08
 
 :blurb
