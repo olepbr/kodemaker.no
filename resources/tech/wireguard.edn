@@ -1,0 +1,9 @@
+{:id :wireguard
+ :name "Wireguard"
+ :type :devops
+ :illustration "/photos/tech/wireguard.png"
+ :site "https://www.wireguard.com/"
+ :description "WireGuard® er en ekstremt enkel, men rask og moderne VPN som bruker toppmoderne kryptografi. 
+  Opprinnelig utgitt for Linux-kjernen, men er nå kryssplattform (Windows, macOS, BSD, iOS, Android). 
+  Det er for tiden under tung utvikling, men det kan allerede betraktes som den sikreste, 
+  enkleste å bruke og enkleste VPN-løsningen i bransjen."}
