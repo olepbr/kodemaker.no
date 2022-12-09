@@ -176,12 +176,12 @@
  :projects [
 
    {:customer "The Sosial Gaming Group"
-             :start "2021-11"
+             :start "2022-11"
              :description "Oppdraget er å utvikle en løsning for automatisering av nyinstallasjoner og oppdateringer av eksisterende installasjoner. 
              Dette for både operativsystem og spillprogramvare for SHUFL.TECH (Shuffleboard) og [Play Flyby Darts](https://playflybydarts.com/). 
              Automatiseringen skal kunne kontrolleres sentralt, med minimalt behov for spesiell teknisk kompetanse. 
              Hver enkelt installasjon skal overvåkes, og varsle om noe har skjedd eller er i ferd med å skje. 
-             Målet er å kunne være mer proaktiv for å forhindre hendelse som reduserer spillopplevelsen til kundene."
+             Målet er å kunne være mer proaktiv for å forhindre hendelser som reduserer spillopplevelsen til kundene."
              :employer :kodemaker
              :tech [:linux :wireguard :bash :shell :ansible]}
    {:customer "FFL"
