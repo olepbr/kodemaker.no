@@ -324,7 +324,8 @@
    :varnish
    :vault
    :vmware-esxi
-   :weave]}
+   :weave
+   :wireguard]}
 
  :devtools
  {:label "Utviklingsverktøy"
