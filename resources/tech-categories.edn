@@ -586,7 +586,7 @@
   :idx 218
   :techs
   [:arrow
-   ]}
+   :coroutines]}
 
  :messaging
  {:label "Meldingssystemer"

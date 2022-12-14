@@ -1,0 +1,6 @@
+{:id :coroutines
+ :name "Coroutines"
+ :type :library
+ :site "https://kotlinlang.org/docs/coroutines-overview.html"
+ :description
+ "Coroutines er en utvidelse av Kotlin sitt standardbibliotek som tilbyr funksjoner og konstruksjoner for asynkron programmering."}
