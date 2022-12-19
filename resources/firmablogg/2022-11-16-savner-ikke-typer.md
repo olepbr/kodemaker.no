@@ -78,8 +78,8 @@ Kanskje det er derfor jeg trekkes til mindre team også, for denne måten å job
 på er en stor grunn til at jeg fortsatt elsker jobben min. Jeg elsker følelsen
 av å levere noe raskere og bedre enn det kunden hadde forventet. Det gjør jeg
 personlig best med et dynamisk språk, fleksibel kode, i et lite team som dytter
-kode i prod på løpende bånd. Selv om jeg da av og til må rette en feil i prod
-litt brennkvikt.
+kode til produksjon på løpende bånd. Selv om jeg da av og til må rette en feil i
+prod litt brennkvikt.
 
 <br><br><br>
 
