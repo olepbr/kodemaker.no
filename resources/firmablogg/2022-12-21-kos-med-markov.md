@@ -19,7 +19,7 @@ Markov-kjeder.
 
 ## Hva?
 
-Markov-kjeder (navngitt etter den russiske matematikeren Andrey Markov) er en
+Markov-kjeder -- navngitt etter den russiske matematikeren Andrey Markov -- er en
 liten algoritme som er lett å forstå, men som gir overraskende resultater.
 Tekstproduksjon er nok ikke dens sterkeste side, men det gjør det desto
 morsommere.
