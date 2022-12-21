@@ -1,7 +1,7 @@
 :title Litt julekos med Markov-kjeder
 :author magnar
 :tech [:programming :clojure]
-:published 2022-12-19
+:published 2022-12-21
 
 :blurb
 
