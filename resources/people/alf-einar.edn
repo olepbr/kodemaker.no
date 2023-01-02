@@ -1,6 +1,7 @@
 {:id :alf-einar
  :name ["Alf" "Einar" "Solbakken"]
  :title "Utvikler"
+ :quit? true
  :start-date "2008-07-01"
  :description "Alf liker enkle og pragmatiske løsninger som kan dekke kundens behov. Han liker godt å sette seg inn i nye domener, programmeringsspråk og teknologier, og har kapasitet til raskt å omsette teori til praksis."
 
