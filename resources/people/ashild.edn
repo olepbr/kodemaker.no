@@ -5,7 +5,7 @@
  :experience-since 2011
  :born 1986
  :description "Åshild fremstår som en proaktiv, strukturert og kompetent person.
-    Hun har jobbet som fullstackutvikler i 10 år, samt hatt en tech lead-rolle.
+    Hun har jobbet som fullstackutvikler i 11 år, samt hatt en tech lead-rolle.
     Åshild foretrekker frontendutvikling, men liker fremfor alt en variert 
     arbeidshverdag der hun kan løse det meste selv, uten å være avhengig av andre.
 
@@ -58,13 +58,21 @@
             :illustration "/illustrations/hobbies/ashild_fotball.jpg"}
            ]
 
-:projects [{:customer "Finn"
+:projects [{:customer "Bring"
+            :employer :kodemaker
+            :start "2022-04"
+            :summary "Glow - trafikkstyring, levering av pakker, pakkesporing til mottagere, og flere tjenester levert av Bring Express"
+            :description "Glow - verktøyet for Bring Express sin pakkelevering. Dette inkluderer ruteplanlegging, administrasjon av utsendelse av pakker for utsenderne,
+            og grensesnittet til mottagerene av pakkene (pakkesporing, osv). Åshild har jobbet med frontend og backend."
+            :tech [:kotlin :arrow :postgresql :typescript :react :redux]
+            }
+    {:customer "Finn"
             :employer :kodemaker
             :summary "Videreutvikle og fornye system for annonser med effekt-produkter."
             :description "Distribusjon av annonser med økt synlighet. Prosessere meldinger
              for endring på annonser og håndtere livssyklus for effekt-produkter for annonser på finn.no."
             :tech [:kotlin :kubernetes :docker :postgresql]
-            :years [2020]}
+            :years [2020 2021]}
     {:customer "Statnett"
             :employer :webstep
             :summary "Videreutvikling på Operatør Informasjon System (OIS)"
@@ -208,12 +216,13 @@
               :orally "Meget god"
               :written "Meget god"}]
 
- :project-highlights [{:blurb "Webapplikasjon fra scratch for leveranseplanlegging utviklet med React/Redux og Java."
+ :project-highlights [{:blurb "Glow - system for budleveranser med sanntids pakkesporing."
+                        :customer "Bring"}
+                    {:blurb "Webapplikasjon fra scratch for leveranseplanlegging utviklet med React/Redux og Java."
                        :customer "Norgesgruppen Data"}
                       {:blurb "Tech lead for Team Sparing i nettbanken til SpareBank1"
                        :customer "SpareBank1"}
-                      {:blurb "Splittet opp monolitten i SpareBank1 til en distribuert arkitektur"
-                       :customer "Sparebank1"}]
+                      ]
 
 :endorsement-highlight {:author "Magne Vidnes"
         :title "Produksjef, Team Adboost, FINN.no"
@@ -221,10 +230,10 @@
         Hun setter seg raskt inn i nye problemstillinger, bidrar positivt til de rundt seg og 
         drar med seg andre."}
 
-:cv {:default {:preferred-techs [:react :typescript :java
+:cv {:default {:preferred-techs [:react :typescript :kotlin
                 :intellij :terminal 
-                :mac-os :ubuntu
-                :docker]}}
+                :mac-os
+                ]}}
 
 :certifications [{:name "Sun Certified Java Programmer"
     :year 2011
