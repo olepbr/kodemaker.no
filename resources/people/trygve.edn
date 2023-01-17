@@ -577,7 +577,23 @@
                               :years       [1980 1981 1982]
                               :subject     "Datateknikk"}]
 
- :endorsement-highlight     {:author "Ståle Bie"
+  :endorsements          [{:author "Kaia Roquist"
+                             :title  "Engineering Manager, Finn.no"
+                             :quote  "Kudos and warm thanks to Trygve who as a consultant brought technical expertise alongside collaborative skills and great friendships into a pilot team set up for Nordic collaboration. 
+                                      Trygve is never afraid to dive into new projects, and is able to both use his long experience and to look at each case with new eyes and evaluate alternative solutions. 
+                                      His wide and solid technical knowledge gives him the steadiness, while his curiosity and openness makes him take on next task easily. 
+                                      Trygve is also a highly valued colleague who has taken on the role to guide junior and graduate developers."}     
+                          {:author "Ståle Bie"
                              :title  "Avdelingsleder, SAS Data"
                              :quote  "Han storkoser seg når det umulige blir mulig og skyr ingen anstrengelser.
-                                      Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}}
+                                      Samtidig klarer han å beholde målet i fokus, en hardtslående kombinasjon!"}
+
+                         ]
+
+:endorsement-highlight     {:author "Kaia Roquist"
+                             :title  "Engineering Manager, Finn.no"
+                             :quote  "Kudos and warm thanks to Trygve who as a consultant brought technical expertise alongside collaborative skills and great friendships into a pilot team set up for Nordic collaboration. 
+                                      Trygve is never afraid to dive into new projects, and is able to both use his long experience and to look at each case with new eyes and evaluate alternative solutions. 
+                                      His wide and solid technical knowledge gives him the steadiness, while his curiosity and openness makes him take on next task easily. 
+                                      Trygve is also a highly valued colleague who has taken on the role to guide junior and graduate developers."}
+}
