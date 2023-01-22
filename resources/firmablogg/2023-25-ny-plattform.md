@@ -17,23 +17,29 @@ En gang ble jeg bedt om å være med på et jobb-intervju.  Etterpå trakk sjefe
 
 Hva hadde man gjort her?  
 Laget en ny plattform som er _vanskeligere_ å jobbe med?  
+
 Det er bemerkelsesverdig hvor ofte jeg har vært med på å lage "ny plattform" de siste 20 årene.
 Det er mange som vil ha ny plattform.  
 Hvorfor det? Og får de det de vil ha?  
 Jeg er usikker.  
+
 Vi som følger med på slikt hører ofte om store IT-prosjekter som går på trynet.  Men 
 hvor mange prosjekter der ute er det vi _ikke_ hører om?  Med 
 mindre det blir helt katastrofe, så vil ledelsen kjempe med nebb og klør for å unngå at en satsning stemples som et feilgrep.
-Jeg tror det er store mørketall her, i implementasjoner av nye plattformer, som koster mer enn de smaker.  
+Jeg tror det er store mørketall hva gjelder implementasjoner av nye plattformer, som koster mer enn de smaker.  
 
 Jeg ønsker meg litt ærlig refleksjon rundt hva det er vi (tror vi) driver med når vi bygger ny plattform.
 
 ## Hva er en plattform?
 "Plattform" er et ord som brukes i mange forskjellige fag, men overalt der det brukes, så gir plattformen 
 kun verdi i form av hvilke ting som vises frem eller monteres på den.  
+
 En olje-plattform er der for å hente ut olje.  
+
 En tog-plattform er der for å gjøre det lettere å komme seg inn og ut av toget.  
+
 Det er togreisen og oljen som gir verdi.  
+
 En togplattform i feil høyde, eller et sted der ingen reiser til eller fra er bare i veien.  
 En oljeplattform i en fremtid der alle har gått over til å bruke fornybar elektrisk kraft er en bortkastet investering.
 
@@ -132,10 +138,10 @@ Jeg var i sin tid med på å lage en løsning for å kunne søke om bostøtte p�
 og søknadsløsningen ble laget og driftet i Husbankens "plattform".  
 Fra denne plattformen integrerte vi så med mange andre tjenester på mange andre plattformer:    
 
-For å logge seg inn, gikk bruker via ID-porten (leveres via Difi sin "plattform").
+For å logge seg inn, gikk bruker via ID-porten (leveres via Difi sin "plattform").  
 Etter innlogging hentet man inn adresse- og familie-informasjon fra folkeregisteret (leveres via skatt sin "plattform").  
 Vi hentet bolig-informasjon fra matrikkelen, (Statens kartverk sin "plattform").  
-Vi hentet trygdeopplysninger fra nav, som har sin plattform.  
+Trygdeopplysninger hentet vi fra nav, som igjen har _sin_ plattform.  
 
 5 forskjellige plattformer måtte integreres.  De hadde helt forskjellige APIer og forskjellige autentiserings-mekanismer, og forskjellige formater.  Men gikk selvsagt helt greit.
 
