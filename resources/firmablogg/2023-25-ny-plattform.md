@@ -25,6 +25,7 @@ Vi som følger med på slikt hører ofte om store IT-prosjekter som går på try
 hvor mange prosjekter der ute er det vi _ikke_ hører om?  Med 
 mindre det blir helt katastrofe, så vil ledelsen kjempe med nebb og klør for å unngå at en satsning stemples som et feilgrep.
 Jeg tror det er store mørketall her, i implementasjoner av nye plattformer, som koster mer enn de smaker.  
+
 Jeg ønsker meg litt ærlig refleksjon rundt hva det er vi (tror vi) driver med når vi bygger ny plattform.
 
 ## Hva er en plattform?
@@ -52,17 +53,16 @@ Hvordan disse skjermbildene eller APIene leveres er ganske uinteressant.
 Man skyver gjerne brukerne foran seg når man selger inn plattform-begrepet:
 > "Brukerene ønsker ikke ha så mange systemer å forholde seg til."
 
-Men dette er faktisk ikke sant.  Brukere må uansett forholde seg til mange forskjellige "systemer".  
-Det går ikke an å lage _ett_ brukergrensesnitt som løser _alle_ behov enkelt og intuitivt.  Det er fysisk umulig.  
-En snekker vil ikke ha _ett_ verktøy som både er hammer, skrutrekker, vegg-isolasjonsmateriale og matboks.  
-Vi må slutte å innbille oss at brukere av IT-systemer ønsker seg tilsvarende alt-i-ett-løsninger.  
+Men dette er faktisk ikke sant.  Brukere må uansett forholde seg til mange forskjellige 
+"systemer".  Det går ikke an å lage _ett_ brukergrensesnitt som løser _alle_ behov enkelt og 
+intuitivt.  Det er fysisk umulig. En snekker vil ikke ha _ett_ verktøy som både er hammer, 
+skrutrekker, vegg-isolasjonsmateriale og matboks.  Vi må slutte å innbille oss at brukere av IT-systemer ønsker seg tilsvarende alt-i-ett-løsninger.  
 
 ***Det er _innkjøpere_ som kjenner behov for dette, ikke brukerne.***
 
 Det brukere av web-applikasjoner og slikt ønsker seg, er gode brukeropplevelser.    
-Ja, de ønsker helst å slippe å logge seg inn forskjellige steder.   
-Men hvis de må logge seg inn et nytt sted for å få en mye bedre brukeropplevelse,
-så gjør de gjerne det.
+Ja, de ønsker helst å slippe å logge seg inn forskjellige steder.  Men hvis de må logge seg inn et 
+nytt sted for å få en mye bedre brukeropplevelse, så gjør de gjerne det.
 
 Samme gjelder utviklere som skal kalle et API.  Akkurat som at et skjermbilde for å gjøre én ting,
 nødvendigivs er annerledes enn et skjermbilde for å gjøre en helt annen ting, så er ett API-kall
@@ -82,18 +82,17 @@ Her gjelder det å finne gode måter å gjøre det på. Ikke lure oss selv til �
 
 ## Plattform som en bi-effekt
 Selv om skummelt mange plattform-prosjekter går åt skogen, så finnes det forskjellige typer "plattform" innen IT som både fungerer bra, 
-er fleksible og innehar enorm kompleksitet.  
-Det disse vellykkede plattformene har til felles er at de har vokst frem i parallel med tjenestene som leveres.  
-Man begynte med å levere en tjeneste noen trengte. Så leverte man flere og flere over tid, 
-trakk ut felles-komponenter og bygget plattformen rundt funksjonaliteten som ga verdi.
-De som har lykkes i å bygge plattform har ikke organisert arbeidet rundt "å bygge plattform".  
-De har organisert arbeidet rundt å levere verdi. Konkret verdi brukere merker nytten av.    
+er fleksible og innehar enorm kompleksitet.  Det disse vellykkede plattformene har til felles er at 
+de har vokst frem i parallel med tjenestene som leveres. Man begynte med å levere en tjeneste noen 
+trengte. Så leverte man flere og flere over tid, trakk ut felles-komponenter og bygget plattformen rundt funksjonaliteten som ga verdi.
+De som har lykkes i å bygge plattform har ikke organisert arbeidet rundt "å bygge plattform":      
+***De har organisert arbeidet rundt å levere verdi.***  Konkret verdi brukere merker nytten av.   
+
 Da Apple jobbet med sin første iPhone, var ikke arbeidet fokuset på å lage en mobil "plattform" med masse apps.  
 Fokuset var på å levere en skikkelig bra telefon som folk likte å bruke.  
-Det er helt OK å ha tanker om en fin stor generisk plattform som skal løse alt for alle en gang i fremtiden. 
-Men ikke organiser arbeidet slik. Fokuser på noe som gir bruksverdi med en gang.
-La plattformen bli til organisk ved at man legger til flere og flere gode støttemekanismer 
-for å levere de tjenestene kundene/brukerne har behov for.
+
+Det er helt OK å ha tanker om en fin stor generisk plattform som skal løse alt for alle en gang i fremtiden. Men ikke organiser arbeidet slik. Fokuser på noe som gir bruksverdi med en gang.
+La plattformen bli til organisk ved at man legger til flere og flere gode støttemekanismer for å levere de tjenestene kundene/brukerne har behov for.
 
 ## Conway's law
 Ikke trekk ut felleskomponenter før akkurat samme funksjonalitet er i bruk _minst_ 2
@@ -112,7 +111,7 @@ velges fordi de gir merverdi for tjenesten som leveres.  Det er tjenesten som le
 Gode eksempler på felles/plattform-tjenester er ting som sky-leverandører tilbyr.  Ting som 
 ikke er knyttet til domenet overhodet. Amazon Web Services har uhorvelig mange forskjellige tjenester,
 og verdien ligger i at man velger ut de tjenestene man ønsker å bruke selv. Ingen bruker alt.
-AWS leggger ingen føringer på hvordan du lager ting, de bare tilbyr nyttige verktøy. Det er slik en plattform bør være.
+AWS legger ingen føringer på hvordan du lager ting, de bare tilbyr nyttige verktøy. Det er slik en plattform bør være.
 
 
 ## Vær klar over fordelene med løsningene du allerede har.  
@@ -131,15 +130,18 @@ Det er mange som tror at for å integrere systemer, så må de kjøre på samme 
 #### Dette er helt feil.  
 Jeg var i sin tid med på å lage en løsning for å kunne søke om bostøtte på nett.  Bostøtteordningen forvaltes av Husbanken, 
 og søknadsløsningen ble laget og driftet i Husbankens "plattform".  
-For å søke, så logget man seg inn via ID-porten, som lages og driftes av Difi på deres "plattform".   
-Etter innlogging hentet man inn adresse- og familie-informasjon fra folkeregisteret, som leveres via skatt sin "plattform".   
-Vi hentet bolig-informasjon fra matrikkelen, som leveres av statens kartverk.  
-Vi hentet trygdeopplysninger fra nav.  
-Ingen av disse løsningene kjørte på samme plattform.  De hadde helt forskjellige APIer og forskjellige autentiserings-mekanismer, og forskjellige formater.   
-Men gikk selvsagt helt greit.
+Fra denne plattformen integrerte vi så med mange andre tjenester på mange andre plattformer:    
+
+For å logge seg inn, gikk bruker via ID-porten (leveres via Difi sin "plattform").
+Etter innlogging hentet man inn adresse- og familie-informasjon fra folkeregisteret (leveres via skatt sin "plattform").  
+Vi hentet bolig-informasjon fra matrikkelen, (Statens kartverk sin "plattform").  
+Vi hentet trygdeopplysninger fra nav, som har sin plattform.  
+
+5 forskjellige plattformer måtte integreres.  De hadde helt forskjellige APIer og forskjellige autentiserings-mekanismer, og forskjellige formater.  Men gikk selvsagt helt greit.
 
 For brukeren av bostøtte-søknadsløsningen, oppleves det som at alt leveres fra Husbanken sin nettside, 
 selv om det er massevis av forskjellige APIer og "plattformer" i bakgrunnen.    
+
 ***Man trenger ingen felles plattform for å lage integrerte løsninger.***
 
 
