@@ -16,7 +16,7 @@ En gang ble jeg bedt om å være med på et jobb-intervju.  Etterpå trakk sjefe
 > men er de flinke nok til å jobbe på den nye?"
 
 Hva hadde man gjort her?  
-Laget en ny plattform som er _vanskeligere_ å jobbe med?  
+Laget en ny plattform som var _vanskeligere_ å jobbe med?  
 
 Det er bemerkelsesverdig hvor ofte jeg har vært med på å lage "ny plattform" de siste 20 årene.
 Det er mange som vil ha ny plattform.  
