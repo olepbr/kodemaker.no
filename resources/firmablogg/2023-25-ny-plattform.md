@@ -81,7 +81,7 @@ nødvendigvis ikke det samme som et annet API-kall.
 Det å søke etter poststeder er noe annet enn å oppdatere preferanser om frekvens på nyhetsbrev.  Koden
 som håndterer disse to vil være veldig forskjellig uansett.
 La oss si at en plattform tilbyr begge to over "enhetlige" SOAP-apier.  I tillegg finnes det en ny
-tjeneste på en annen "plattform" som lar en søke etter poststeder via "REST".  Det er
+tjeneste på en annen "plattform" som lar en søke etter poststeder via REST.  Det er
 ikke REST- eller SOAP-tekniske ting utviklere bruker mest tid på uansett.  Vi velger
 de løsningene som er lettest å jobbe med. Jeg ville nok valgt å bruke REST-tjenesten til poststed, og SOAP kun der det ikke var noe annet alternativ.
 Selv om det ville føre til "mindre enhetlig" kode.
@@ -113,7 +113,13 @@ hjulene til de som skal levere konkret verdi.  Hvis du for å levere en ny tjene
 må koordinere større mengder utviklings-arbeid mellom f.eks database-teamet, infrastruktur-teamet, 
 meldings-mottak-teamet, sikkerhets-teamet, personvern-teamet, test-teamet, osv osv, så blir det mye vanskeligere å 
 jobbe effektivt.  Man legger opp til at ingen i noen av teamene er istand til å gjøre noe av verdi 
-for kunde/bruker alene.  Det er veldig lett å miste fokus på ting som bruker/kunde faktisk trenger, når man er organisert slik.
+for kunde/bruker alene.  Det er veldig lett å miste fokus på ting som bruker/kunde faktisk trenger, når man er organisert slik.   
+
+Det er stort sett bedre å organisere team etter brukergruppene de leverer løsninger for. 
+Istedenfor at felles-kode forvaltes av egne team, kan heller alle team ha tilgang til all kode.
+Da kan eventuell "felles-kode" endres av produktteamet som trenger endringen når de trenger den.   
+
+Begyn i alle fall med å gjøre det slik.  Ikke skill ut egne felles-komponent-team før det er et konkret behov for det.  
 
 
 ## Små komponenter. Opt in.
