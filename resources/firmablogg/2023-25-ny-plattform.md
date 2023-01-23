@@ -11,22 +11,27 @@ Hvordan passer vi på at den nye plattformen blir en suksess?  (For hvem?)
 
 :body
 
-En gang ble jeg bedt om å være med på et jobb-intervju.  Etterpå trakk sjefen meg til side og spurte:
-> "Vedkomne er sikkert flink nok til å jobbe på den gamle plattformen,
+En gang for noen år siden ble jeg bedt om å være med på et jobb-intervju.  Etterpå trakk sjefen meg til side og spurte:
+> "Vedkommende er sikkert flink nok til å jobbe på den gamle plattformen,
 > men er de flinke nok til å jobbe på den nye?"
 
 Hva hadde man gjort her?  
-Laget en ny plattform som var _vanskeligere_ å jobbe med?  
+Laget en ny plattform som var _vanskeligere_ å jobbe med enn den gamle? Jeg mistenker at det ikke var meningen.
 
-Det er bemerkelsesverdig hvor ofte jeg har vært med på å lage "ny plattform" de siste 20 årene.
+Det er bemerkelsesverdig hvor ofte jeg har vært med på å lage "ny plattform" de siste 20 årene.  
 Det er mange som vil ha ny plattform.  
 Hvorfor det? Og får de det de vil ha?  
-Jeg er usikker.  
+Kanskje.   
+Spørs hva de er ute etter kanskje.  Er de ute etter å få store budsjetter, så er jo disse platformsatsningene alltid en brakende suksess.   
 
-Vi som følger med på slikt hører ofte om store IT-prosjekter som går på trynet.  Men 
-hvor mange prosjekter der ute er det vi _ikke_ hører om?  Med 
+Men får de det brukerne deres trenger?   
+Til en fornuftig pris?   
+Stort sett ikke mistenker jeg.  
+
+Vi som følger med på slikt hører ofte om store IT-prosjekter som går på trynet.  Men
+hvor mange prosjekter der ute er det vi _ikke_ hører om?  Med
 mindre det blir helt katastrofe, så vil ledelsen kjempe med nebb og klør for å unngå at en satsning stemples som et feilgrep.
-Jeg tror det er store mørketall hva gjelder implementasjoner av nye plattformer, som koster mer enn de smaker.  
+Jeg tror det er store mørketall hva gjelder implementasjoner av nye plattformer, som koster mer enn de smaker.
 
 Jeg ønsker meg litt ærlig refleksjon rundt hva det er vi (tror vi) driver med når vi bygger ny plattform.
 
@@ -133,7 +138,7 @@ Det er tungt. Noe som gjør at plattformen stagnerer, og man til slutt føler ma
 
 ## Ting kan integreres uten at de kjører på samme plattform
 Det er mange som tror at for å integrere systemer, så må de kjøre på samme plattform.  
-#### Dette er helt feil.  
+***Dette er helt feil.***  
 Jeg var i sin tid med på å lage en løsning for å kunne søke om bostøtte på nett.  Bostøtteordningen forvaltes av Husbanken, 
 og søknadsløsningen ble laget og driftet i Husbankens "plattform".  
 Fra denne plattformen integrerte vi så med mange andre tjenester på mange andre plattformer:    
@@ -160,7 +165,8 @@ Men denne prosessen både kan og bør skje gradvis. Bygg opp "plattformen" du vi
 Om 7 år har alle celler i kroppen din blitt erstattet.  Uten at du aktivt har måttet "bytte kropp".
 Med IT-systemer kan vi ikke bare erstatte "cellene", men forbedre dem for hver iterasjon.  
 
-### En plattform er et sett av verktøy som en IT-organisasjon lager til seg selv.
+## Pass på å få verdi for pengene
+***En plattform er et sett av verktøy som en IT-organisasjon lager til seg selv.***  
 Å forbedre plattformen er noe organisasjoner som leverer software alltid må jobbe med hele tiden. 
 Uansett hvor gode systemer du har nå, så bør du jobbe kontinuerlig med å holde dem oppdatert og gjøre dem bedre. 
 Dette gjelder i alle bransjer.  Man må holde verktøykassa oppdatert. 
