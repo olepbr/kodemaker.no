@@ -26,7 +26,7 @@ Spørs hva de er ute etter kanskje.  Er de ute etter å få store budsjetter, s�
 
 Men får de det brukerne deres trenger?   
 Til en fornuftig pris?   
-Stort sett ikke mistenker jeg.  
+Jeg er usikker.  
 
 Vi som følger med på slikt hører ofte om store IT-prosjekter som går på trynet.  Men
 hvor mange prosjekter der ute er det vi _ikke_ hører om?  Med
