@@ -2,7 +2,7 @@
  :name ["Magnus" "Rundberget"]
  :title "Systemutvikler"
  :start-date "2007-04-01 00:07"
- :description "Magnus er en ringrev som er like engasjert (om ikke mer) i faget sitt nå, enn da han skrev sine første Commodore 64-program på 80 tallet.
+ :description "Magnus er en ringrev som er like engasjert (om ikke mer) i faget sitt nå, som da han skrev sin første Othello implementasjon på høgskolen.
                Han er analytisk av natur og nøler ikke med å brette opp ermene for å sørge for at rikig ting blir levert så fort som mulig med så høy kvalitet som mulig.
 
                Med sin bredde og erfaring kan Magnus ta mange forskjellige roller i et prosjekt.
@@ -32,13 +32,14 @@
                   "Solid erfaring på arkitektur, analyse og design, men liker best å kode"
                   "Yter mest optimalt i små smidige team med fokus på hyppige leveranser, læring og trivsel."]
  :presence {:cv "magnus"
+            :mastodon "@rundis@snabelen.no"
             :twitter "mrundberget"
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:kotlin :typescript :kafka :aws :react :dynamodb]
-        :favorites-at-the-moment [:elm :haskell :clojure :clojurescript :figwheel]
-        :want-to-learn-more [:elm :rust :haskell :idris :kubernetes]}
+ :tech {:using-at-work [:clojure :kotlin :swift :typescript :react :swift]
+        :favorites-at-the-moment [:clojure]
+        :want-to-learn-more [:rust :haskell :idris :kubernetes]}
 
  :endorsement-highlight {:author "Mitul Thobhani"
                          :title "Owner and Co-Founder, Portfolio Software Limited"
@@ -422,15 +423,30 @@
                               :url "https://github.com/int128/gradle-ssh-plugin"
                               :tech [:groovy :gradle]}]
 
- :projects [{:customer "FFL AS"
+ :projects [{:customer "The Social Gaming Group"
+             :start "2022-11"
+             :employer :kodemaker
+             :summary "Strømlinjeforme utrulling av ny/oppdatert spillsoftware for Shuffle og Darts."
+             :description "I 2018 var Kodemaker med på å utvikle software for forskjellige spill knyttet til darts. Disse ble lansert ved åpningen av utesteded Oche.
+             Siden deg gang har man utviklet tilsvarende for Shuffle og ekspandert til langt flere installasjoner over hele verden.
+             Kodemaker ble engasjert for å hjelpe til med å effektivisere og strømlinjeforme utrulling av ny software som kan skalere i takt med ønskede vekstambisjoner.
+
+             Mine oppgaver i prosjektet omfattet:
+              - Oppsett av byggepipelines i GitLab
+              - Utvikling av ansible playbooks for oppsett/installasjon av spillsoftware
+              - Utvikling av en tjeneste for asynkron installasjon (skrevet i Clojure med en PostgreSQL DB)"
+             :tech [:clojure :ansible :gitlab]}
+            {:customer "FFL AS"
              :start "2021-11"
              :employer :kodemaker
              :summary "Fantasy Football får et nytt og spennende spill. Kodemaker står for utvikling av både app og backend."
              :description "Fantasy Football sjangeren er et stort og voksende marked. FFL som en ny og ambisiøs aktør, ønsker å ta en ledende posisjon. Det skal utvikles et engasjerende, morsomt og svært brukervennlig spill.
                            Da muligheten for å være med på utviklingen av dette produktet dukket opp, var det to av Kodemakers mest fotballgale utviklere som øynet drømmeoppdraget.
                            \nKodemaker er ansvarlig for utvikling av app, backend og integrasjon mot 3.parts leverandører av data. Vi er også ansvarlig for å etablere rutiner for CI/CD, devops og utvikling av nødvendige verktøy for administrasjon.
-                           Selvfølgelig forventes det av vi bidrar med domenekunnskap og kreative innspill/løsninger som bidrar til et best mulig produkt."
-             :tech [:kotlin :swift :google-cloud-run :terraform :postgresql :arrow :funksjonell-programmering]}
+                           Selvfølgelig forventes det av vi bidrar med domenekunnskap og kreative innspill/løsninger som bidrar til et best mulig produkt.
+
+                           \nRolle: Fullstack-utvikler, DevOps, Tech Lead"
+             :tech [:kotlin :swift :swift-ui :google-cloud-run :firebase :terraform :postgresql :arrow :funksjonell-programmering]}
             {:customer "Mercell"
              :start "2020-10"
              :end "2021-11"
@@ -739,7 +755,13 @@
              testing."
              :tech [:windows :hpunix :visual-basic :complus :sybase :rational-rose :erwin :dbartisan]}]
 
- :endorsements [{:author "Simon Herberg"
+ :endorsements [{:author "Daniel Haukaas"
+                 :title "Produkteier, FFL AS"
+                 :quote "Det var både gøy og lærerikt å jobbe med Magnus på fantasy football-prosjektet FFL i 2022.
+                Magnus er flink til å se helheten og tenke nøye igjennom valgene man tar før man begynner å implementere,
+                noe jeg satt stor pris på når vi jobbet sammen.
+                Vil absolutt anbefale Magnus videre."}
+                {:author "Simon Herberg"
                  :title "Architect, Telenor"
                  :quote "Karl Magnus was part of a team that upgraded our JAVA
                 and Weblogic software. In addition he was the driving force
