@@ -16,7 +16,7 @@ Du har nettopp fått et bekjentskap form av Rust Lifetime, og det er nettopp det
 :body
 
 
-Hver variablel i Rust har en "livstid" tilknyttet seg som definerer hvor lenge variablen skal leve i minnet. Dette gjør man for å unngå minnefeil som "dangling pointers", samt at variabler ikke blir brukt etter at minneområdet har blitt frigitt. Dette konseptet kalles Lifetimes, og er en del av Rust sitt typesystem.
+Hver variablel i Rust har en "levetid" tilknyttet seg som definerer hvor lenge variablen skal leve i minnet. Dette gjør man for å unngå minnefeil som "dangling pointers", samt at variabler ikke blir brukt etter at minneområdet har blitt frigitt. Dette konseptet kalles Lifetimes, og er en del av Rust sitt typesystem.
 
 
 La oss se på et eksempel som vil føre til en kompileringsfeil på grunn av brudd på en lifetime regel:
@@ -54,7 +54,7 @@ error[E0597]: `x` does not live long enough
 
 ## Lifetime annotations
 
-En variabels livstid er noe Rust kompilatoren i mange tilfeller vil kunne utlede på egenhånd, og dette kalles `elision`. I de tilfellene den ikke er i stand til å utlede dette selv, så må vi tilby en hjelpende hånd ved å annotere de nødvendige variablene med en livstid. 
+En variabels levetid er noe Rust kompilatoren i mange tilfeller vil kunne utlede på egenhånd, og dette kalles `elision`. I de tilfellene den ikke er i stand til å utlede dette selv, så må vi tilby en hjelpende hånd ved å annotere de nødvendige variablene med en levetid. 
 
 Syntaksen for dette er å definere en type med en ledende apostrof, etterfulgt av et variabelnavn som f.eks `'a`. Her har vi bare brukt navnet `a`, som også er det formatet man ofte ser, men det er ingenting som hindrer oss å bruke mer beskrivende navn dersom det er ønskelig. 
 
@@ -63,7 +63,7 @@ En eksplisitt annotering av en type ser da slik ut,
 ```rust
 &'a T
 ```
-hvor `'a` allerede er introdusert. Dette leses da som: _En referanse til en type T hvor livstiden er 'a._
+hvor `'a` allerede er introdusert. Dette leses da som: _En referanse til en type T hvor levetiden er 'a._
 
 
 
@@ -117,7 +117,7 @@ fn extract_languages(languages: &str) -> Vec<&str> {
 
 
 Her tar vi eksakt en referanse som input parameter, `languages`. Argumentet er ikke `&self` eller `&mut self`. 
-Dette betyr at regel 1, 2 og 3 oppfylt, referansene i returverdien vil få samme livstid som input, og vi trenger ikke å annotere typene med en livstid.
+Dette betyr at regel 1, 2 og 3 oppfylt, referansene i returverdien vil få samme levetid som input, og vi trenger ikke å annotere typene med en levetid.
 
 
 En stund senere så kommer det inn et ønske om at man skal kunne ekskludere en av landkodene dersom den finnes i strengen. Vi endrer funksjonen til å ta med et ekstra  argument `exclude_lang` som vi filtrerer på.
