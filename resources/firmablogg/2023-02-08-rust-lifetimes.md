@@ -6,7 +6,7 @@
 :blurb
 
 Så du har endelig kommet i gang med dette spennede programmeringsspråket Rust. Du har fått tak på hvordan Borrow Checker fungerer, så nå kan du sette i gang og virkelig kode!
-Men hva er det som møter deg? En ny kompilerfeil som sier:
+Men hva er det som møter deg? En ny kompilatorfeil som sier:
 
 ```rust
 'x' does not live long enough
@@ -34,7 +34,7 @@ println!("r: {}", r);
 
 Det som skjer her er at man først definerer en variabel `r`. Inne i den påfølgende blokken så defineres variabelen `x` som tilordnes verdien 5. Deretter så settes `r` til å referere til `x`, før man går ut av blokkens scope hvor `x` er definert. Dette vil føre til at minneområdet til `x` frigis, og `x` slutter å eksistere.  
 
-Reultatet av dette er at `r` nå vil referere til et ugyldig minneområde, og det vil ikke Rust kompileren ha noe av. Kompileren er streng, men er såpass grei at den forklarer hvorfor den feiler.
+Reultatet av dette er at `r` nå vil referere til et ugyldig minneområde, og det vil ikke Rust kompilatoren ha noe av. Kompilatoren er streng, men er såpass grei at den forklarer hvorfor den feiler.
 
 ```
 error[E0597]: `x` does not live long enough
@@ -69,7 +69,7 @@ hvor `'a` allerede er introdusert. Dette leses da som: _En referanse til en type
 
 ### Lifetime elisions
 
-Kompileren benytter tre regler for å utlede lifetime for referanser som ikke er eksplisit annoterte. Regel nr 1 har med input å gjøre, mens de to andre har med output lifetimes. Etter at kompileren har gått gjennom disse tre reglene, og det fortsatt er referanser som man ikke har utledet lifetime for, så vil kompilatoren gi en feilmelding. 
+kompilatoren benytter tre regler for å utlede lifetime for referanser som ikke er eksplisit annoterte. Regel nr 1 har med input å gjøre, mens de to andre har med output lifetimes. Etter at kompilatoren har gått gjennom disse tre reglene, og det fortsatt er referanser som man ikke har utledet lifetime for, så vil kompilatoren gi en feilmelding. 
 
 #### Regel 1
 Kompilatoren tilordner en lifetime til hvert referanseparameter. En funksjon med ett referanseparameter vil få følgende lifetime annotering:
@@ -133,7 +133,7 @@ fn extract_languages(languages: &str, exclude_lang: &str) -> Vec<&str> {
 ```
 
 
-Her er regel 1 er fortsatt overholdt, så kompileren vil inplisitt sette `'a` for `languages` og `'b` for `excluded_lang`. 
+Her er regel 1 er fortsatt overholdt, så kompilatoren vil inplisitt sette `'a` for `languages` og `'b` for `excluded_lang`. 
 Regel 3 er også oppfylt siden ikke noen av argumentetene er `&self` eller `&mut self`
 
 
@@ -180,7 +180,7 @@ Den aktuelle structen inneholder en referanse til en string slice, `line`. Man d
 
 Dersom en struct inneholder flere referanser, så vil man som oftest bruke samme lifetime for disse. Det finnes unntak, som f.eks dersom strukten har en metode som returnerer en referanse til en av medlemmene som er spesifikk for dette medlemmet.
 
-Man kan og av og til må gå enda dypere inn i hvordan lifetimes fungere, men det vi har gått gjennom her vi ta oss langt på vei når vi programmerer i Rust. Vi sees...
+Man kan og av og til måtte gå enda dypere inn i hvordan lifetimes fungere, men det vi har gått gjennom her vi ta oss langt på vei når vi programmerer i Rust. Vi sees...
 
 
 
