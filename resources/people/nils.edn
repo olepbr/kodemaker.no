@@ -43,13 +43,8 @@
 
  :hobbies               [
                          {
-                          :title        "Stisykling"
-                          :description  "Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere sleipe røtter, glatte steiner og den biten av stien du ikke klarte på forrige tur."
-                          :illustration "/illustrations/hobbies/nils-stisykling.jpg"
-                          },
-                         {
                            :title        "Enhjulssykkel"
-                           :description  "Etter å ha syklet på trehjulssykkel som liten og tohjulssykkel som voksen har jeg i en alder av 42 redusert antall hjul til 1. Fantastisk moro og utfordringene står i kø."
+                           :description  "Etter å ha syklet på trehjulssykkel som liten og tohjulssykkel som voksen, har jeg i en alder av 42 redusert antall hjul til 1. Fantastisk moro og utfordringene står i kø."
                            :illustration "/illustrations/hobbies/nimbus-hatchet.jpg"
                            }
                          ],
