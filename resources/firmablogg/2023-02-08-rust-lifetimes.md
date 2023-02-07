@@ -23,7 +23,7 @@ Hver variablel i Rust har en "levetid" tilknyttet seg som definerer hvor lenge v
 
 La oss se på et eksempel som vil føre til en kompileringsfeil på grunn av brudd på en levetid-regel:
 
-_...for du vet at minnefeil fanges ved kompilering i Rust?_ Ikke? Se [her](https://www.kodemaker.no/blogg/2022-12-08-rust-minne-modell//#hvordan-handteres-minne-i-rust) da!
+_...for du vet at minnefeil fanges ved kompilering i Rust?_ Ikke? Se [her](https://www.kodemaker.no/blogg/2022-12-08-rust-minne-modell#hvordan-handteres-minne-i-rust) da!
 
 ```rust
 let r;
