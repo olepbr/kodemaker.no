@@ -15,15 +15,16 @@ Men hva er det som møter deg? En ny kompilatorfeil som sier:
 
 Det du nå har stiftet bekjentskap med er Rust Lifetimes, så da passer det fint at det er nettopp det vi skal se nærmere på i denne bloggposten.
 
+
 :body
 
-
+![Rust krabbe](/images/blogg/rust-crab.png)
 Hver variablel i Rust har en "levetid" tilknyttet seg som definerer hvor lenge variablen skal leve i minnet. Dette gjør man for å unngå minnefeil som "dangling pointers", samt at variabler ikke blir brukt etter at minneområdet har blitt frigitt. Dette konseptet kalles Lifetimes, og er en del av Rust sitt typesystem.
 
 
 La oss se på et eksempel som vil føre til en kompileringsfeil på grunn av brudd på en levetid-regel:
 
-_...for du vet at minnefeil fanges ved kompilering i Rust?_ Ikke? Se [her](https://www.kodemaker.no/blogg/2022-12-08-rust-minne-modell#hvordan-handteres-minne-i-rust) da!
+_...for du vet at minnefeil fanges ved kompilering i Rust?_ Ikke? Se [her](https://www.kodemaker.no/blogg/2022-12-08-rust-minne-modell#hvordan-handteres-minne-i-rust) da! 
 
 ```rust
 let r;
@@ -51,8 +52,6 @@ error[E0597]: `x` does not live long enough
 24 |     println!("r: {}", r);
    |                       - borrow later used here
 ```
-
-
 
 
 ## Annoteringer for levetid
