@@ -91,4 +91,5 @@
        [:div [:a {:href "mailto:kontakt@kodemaker.no"} "kontakt@kodemaker.no"]]]]
      [:div.f-links
       [:div (e/arrow-link {:text "Personvern" :href "/personvern/"})]
+      [:div (e/arrow-link {:text "Åpenhetsloven" :href "/apenhetsloven/"})]
       [:div (e/arrow-link {:text "Miljøfyrtårn" :href "/miljofyrtarn/"})]]]]])
