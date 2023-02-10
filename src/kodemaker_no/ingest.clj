@@ -66,11 +66,11 @@
 
 (defn retract-tx [db file-name]
   (when-let [tx-id (datomic.api/q '[:find ?e .
-                                :in $ ?file-name
-                                :where
-                                [?e :tx-source/file-name ?file-name]]
-                              db
-                              file-name)]
+                                    :in $ ?file-name
+                                    :where
+                                    [?e :tx-source/file-name ?file-name]]
+                                  db
+                                  file-name)]
     (keep
      (fn [[e a v t]]
        (when (= tx-id t)
