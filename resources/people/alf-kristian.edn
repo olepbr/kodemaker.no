@@ -68,16 +68,39 @@
                   "Søker alltid løsninger som er enkle, driftbare, og så lette å endre som mulig. Har erfaring med at funksjonell programmering og devops bidrar til dette."
                   "Er gjerne tech lead i teams, både på grunn av sterk teknisk kompetanse og ønske om å få teams til å prestere optimalt."]
 
- :endorsement-highlight {:author "Robin Skoglund"
-                         :title "Tech lead, web, Posten/Bring"
-                         :quote "Alf Kristian is a role model developer. He is technical to his finger
-                          tips, with a deep understanding of how code runs on a computer. He is up-to-date
-                          on which tools work well, and shines with experience and lessons learned. He is
-                          unafraid in his approach to new technology, eager to learn and always get
-                          better. But he is so much more than a technologist; he is selfless, setting
-                          aside personal development goals for the greater good of the team and the
-                          customer. He has passion for the project, and compassion for his teammates,
-                          doing what he can to strengthen the team."}
+ :endorsement-highlight {:author "Stian Bjørkelo"
+                         :title "Engineering Manager at FINN.no"
+                         :quote "Alf Kristian's involvement in any team or project will
+                                 result in a significant improvement and his
+                                 contributions will have a lasting impact even after
+                                 his consultancy period has concluded. I strongly
+                                 recommend that anyone with the opportunity to work
+                                 with Alf Kristian take advantage of it promptly.
+
+                                 I had the privilege of working with Alf Kristian for a
+                                 year in the FINN AdView team. He exemplifies the 
+                                 characteristics that one would hope for in a talented 
+                                 colleague and team member. His technical expertise is
+                                 unparalleled, and in the event of any gaps, he will
+                                 take the initiative to research and expand his knowledge
+                                 with curiosity and eagerness to ensure that the team skill
+                                 set also grows and benefits greatly from it.
+
+                                 In addition to his technical prowess, Alf Kristian's
+                                 strengths lie in his approach to system development
+                                 mindset and team collaboration. He consistently goes
+                                 above and beyond to fully comprehend complex processes
+                                 and root causes to deliver exceptional value to users.
+                                 He is driven, accountable, and always strives for
+                                 excellence while putting the team's interests first
+                                 and ensuring that all his contributions are beneficial
+                                 to the team's success. 
+
+                                 Furthermore, Alf Kristian was a valuable asset to the
+                                 team, not only in his contributions, but also in his
+                                 ability to effectively onboard new team members and
+                                 ensure their smooth integration into the team and
+                                 helping them grow further."}
 
  :project-highlights [{:blurb "Tech lead for utvikling av ny markesplass, amoi.no."
                        :customer "Bring"}
@@ -474,7 +497,40 @@
                 :date "2010-07-01"
                 :tech [:scala]}]
 
- :endorsements [{:author "Robin Skoglund"
+ :endorsements [{:author "Stian Bjørkelo"
+                 :title "Engineering Manager at FINN.no"
+                 :quote "Alf Kristian's involvement in any team or project will
+                         result in a significant improvement and his
+                         contributions will have a lasting impact even after
+                         his consultancy period has concluded. I strongly
+                         recommend that anyone with the opportunity to work
+                         with Alf Kristian take advantage of it promptly.
+
+                         I had the privilege of working with Alf Kristian for a
+                         year in the FINN AdView team. He exemplifies the 
+                         characteristics that one would hope for in a talented 
+                         colleague and team member. His technical expertise is
+                         unparalleled, and in the event of any gaps, he will
+                         take the initiative to research and expand his knowledge
+                         with curiosity and eagerness to ensure that the team skill
+                         set also grows and benefits greatly from it.
+
+                         In addition to his technical prowess, Alf Kristian's
+                         strengths lie in his approach to system development
+                         mindset and team collaboration. He consistently goes
+                         above and beyond to fully comprehend complex processes
+                         and root causes to deliver exceptional value to users.
+                         He is driven, accountable, and always strives for
+                         excellence while putting the team's interests first
+                         and ensuring that all his contributions are beneficial
+                         to the team's success. 
+
+                         Furthermore, Alf Kristian was a valuable asset to the
+                         team, not only in his contributions, but also in his
+                         ability to effectively onboard new team members and
+                         ensure their smooth integration into the team and
+                         helping them grow further."}
+                {:author "Robin Skoglund"
                  :title "Tech lead, web, Posten/Bring"
                  :quote "Alf Kristian is a role model developer. He is technical to his finger
                     tips, with a deep understanding of how code runs on a computer. He is up-to-date
