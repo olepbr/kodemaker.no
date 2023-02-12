@@ -147,15 +147,28 @@
                            :text "Offisielle sider"}
                     :tech [:trening]}]
 
- :projects [{:customer "FINN"
+ :projects [{:customer "DNB"
+             :start "2023-01"
+             :years [2021]
+             :employer :kodemaker
+             :summary "Frontend utvikler i området 'Sparing og investering' i DNB" 
+             :description "Da dette er et nytt oppdrag, er det ikke 100 % gitt hva Alf Kristian skal jobbe med.
+             Sannsyligvis blir det en sentral frontend-rolle i forbindelse med noen store endringer som skal gjennomføres i banken."
+             :tech [:react :yarn :gatsby :css :sass]}
+            {:customer "FINN"
              :start "2021-11"
-             :years [2021 :ongoing]
+             :end "2023-01"
+             :years [2021 2023]
              :employer :kodemaker
              :summary "Frontend utvikler i ADVIEW teamet"
-             :description "FINN har mange systemer som til sammen lager finn.no. Et av de sentrale
+             :description "FINN har mange systemer som til sammen lager FINN.no. Et av de sentrale
              teamene er ADVIEW, som har ansvaret for mange ganske kjente sider, som f.eks. salg av brukt
-             eiendom. Som eneste utvikler med fullt fokus på frontend i teamet, har Alf Kristian ansvar for å
-             implementere nye design, drive vedlikehold, samt bistå andre i teamet med frontend utvikling.
+             eiendom. Da Alf Kristian startet i teamet, tok han ansvar som eneste fulltid frontend utvikler,
+             med oppgaver som å implementere nye design, drive vedlikehold, samt bistå andre i teamet med frontend.
+
+             Underveis i oppdraget ble det ansatt en rekke nye folk i teamet, inklusiv en frontend utvikler som
+             Alf Kristian jobbet tett med. Hele teamet jobbet med å modernisere annonsesider for eiendom og torget.
+
              Frontend har naturligvis et veldig stort fokus i FINN, så f.eks. ytelse, mobiltilpasning og universell
              utforming er viktig."
              :tech [:nodejs :javascript :typescript :remix :npm :pnpm :yarn :css :react :podium :rollup :postcss :universell-utforming :kubernetes]}
