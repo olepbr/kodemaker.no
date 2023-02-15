@@ -25,9 +25,9 @@
             :github "odinodin"
             :linkedin "/in/odinholestandal"}
 
- :tech {:favorites-at-the-moment [:clojurescript :p5js]
+ :tech {:favorites-at-the-moment [:clojurescript :unity3d]
         :using-at-work           [:winui :dotnet :csharp]
-        :want-to-learn-more      [:unity3d :threejs]}
+        :want-to-learn-more      [:threejs :kotlin]}
 
  :qualifications ["Fullstackutvikler som liker å lage brukergrensesnitt"
                   "Bred erfaring med bygg og kontinuerlige leveranser"
@@ -106,7 +106,15 @@
                            :text "Det vi glemte"}
                     :tech [:clojurescript]}]
 
- :presentations [{:title "Web3 er en pyramide med søppel"
+ :presentations [{:title "Web3 is a pyramid of dumpster fires"
+                  :date "2022-09-29"
+                  :event "NDC"
+                  :blurb "Har du hørt om web3, NFTer og smarte kontrakter? Her får du en skeptisk gjennomgang av en
+                  teknologi omringet av hype, svindel og pyramidespill. Her forklarer jeg hva en blokkjede og
+                  smarte kontrakter er, og hvorfor de ikke vil erstatte web2 med det første."
+                  :tech [:web :web3]
+                  :urls {:video "https://youtu.be/07ceY-VKsvw"}}
+                 {:title "Web3 er en pyramide med søppel"
                   :date "2022-09-08"
                   :event "JavaZone"
                   :blurb "Har du hørt om web3, NFTer og smarte kontrakter? Her får du en skeptisk gjennomgang av en
@@ -196,21 +204,21 @@
              :years [2022 :ongoing]
              :employer :kodemaker
              :summary "OffPAD"
-             :description "Klientutvikling for device management på Windows."
-             :tech [:dotnet :csharp :winui]}
+             :description "Klientutvikling for device management på Windows. Embeddedutvikling med JavaCard."
+             :tech [:dotnet :csharp :winui :java]}
             {:customer "Mnemonic"
              :years [2019 2020 2021 2022]
              :employer :kodemaker
              :summary "Semi-Automated Cyber Threat Intelligence (ACT)"
              :description "Frontend- og backendutvikling av ACT-plattformen som er et forskningsprosjekt med mål om å utvikle nye
              metoder for å analysere sikkerhetsangrep. Frontendutvikling på Argus, sikkerhetsproduktet til Mnemonic."
-             :tech [:javascript :typescript :react :cytoscape :java]}
+             :tech [:javascript :typescript :d3 :react :redux :cytoscape :java :bamboo :cassandra :elasticsearch :kafka]}
             {:customer "Norled"
              :years [2016 2017 2018 2019]
              :employer :kodemaker
              :summary "Nytt informasjonssystem for fergedrift"
              :description "Utvikler nye informasjonssystemer for fergedrift for Norled."
-             :tech [:clojure :clojurescript :datomic :kubernetes :kafka :cassandra :datascript
+             :tech [:clojure :clojurescript :datomic :datadog :kubernetes :kafka :cassandra :datascript
                     :d3 :mapbox :reagent :mount :docker :aws :cordova]}
             {:customer "Telenor Digital"
              :description "Medlem av Data Insights-teamet som driver med analysetjenester for ulike deler av Telenor.
@@ -234,8 +242,8 @@
              :years [2012 2013 2014 2015]
              :employer :kodemaker
              :summary "Contego"
-             :tech [:groovy, :java, :javascript, :react, :spock, :spring, :hibernate, :spring-mvc, :hazelcast,
-                    :gradle, :maven, :git, :devops, :ansible]}
+             :tech [:groovy :java :javascript :react :spock :spring :hibernate :spring-mvc :hazelcast
+                    :gradle :maven :git :devops :ansible :bamboo]}
             {:customer "Oiiku"
              :years [2012 2013]
              :employer :kodemaker
@@ -245,7 +253,7 @@
              Clojure. Laget blant annet funksjonalitet for å importere og
              eksportere Excel-filer"
              :tech [:clojure :angularjs :javascript :datomic :mongodb :java :ring :compojure
-                    :elasticsearch :apache-poi :jetty :google-closure]}
+                    :elasticsearch :apache-poi :jenkins :jetty :google-closure]}
             {:customer "Politiets data- og materielltjeneste"
              :years [2010]
              :employer :webstep
@@ -254,9 +262,9 @@
              SafeSeaNet. Bistod med å avklare funksjonelle krav, definere den
              tekniske arkitekturen og utviklet på alle lagene i applikasjonen.
              Ansvar for å følge opp drift og den tekniske leveransen."
-             :tech [:java :groovy :jsf :facelets :html :css :javascript :jquery :spring :spring-security
+             :tech [:java :groovy :jsf :html :css :javascript :jquery :spring :spring-security
                     :spring-integration :maven :web-services :cxf :jms :oracle-aq :apache-mq
-                    :jenkins :sonar :jetty :oracle-appserver :oracle]}
+                    :jenkins :sonar :jetty]}
             {:customer "NAV Pensjonsprogrammet, Applikasjonsarkitektur"
              :years [2009 2010]
              :employer :accenture
@@ -266,7 +274,7 @@
              utvikling, vedlikehold av applikasjonsrammeverket og tett samarbeid
              med underleverandører. I tillegg med på å etablere og holde
              sertifiseringskurs i NAVs nye SOA-plattform."
-             :tech [:java :jsf :spring :spring-web-flow :spring-batch :hibernate :websphere]}
+             :tech [:java :jsf :spring :spring-web-flow :spring-batch :hibernate]}
             {:customer "NAV Pensjonsprogrammet, Tjenesteintroduksjon"
              :years [2008]
              :employer :accenture
@@ -283,7 +291,7 @@
              :employer :accenture
              :summary "Applikasjonsarkitektur, tjenesteintroduksjon, bygg og miljø"
              :description "Arbeidet med bygg, utrulling og administrasjon av testmiljøer"
-             :tech [:maven :hudson :cruise-control :websphere]}
+             :tech [:maven :hudson :cruise-control :java]}
             {:customer "Teknisk veileder for sommerstudentprosjekt"
              :years [2007]
              :employer :accenture
@@ -294,7 +302,7 @@
              ultralydbrikker. Evaluerte lokaliseringsløsninger, etablerte
              arkitektur og overordnet design og var teknisk veileder for 15
              sommerstudenter under utviklingen."
-             :tech [:dotnet :java :flash :websphere]}
+             :tech [:dotnet :java :flash]}
             {:customer "Stor, norsk bank"
              :years [2007]
              :employer :accenture
@@ -340,7 +348,7 @@
              :description "Scarp var et konsulentselskap som jobbet med
              webløsninger. Utvikling av Flashbaserte webapplikasjoner med
              integrasjon mot .NET-løsning."
-             :tech [:flash :actionscript :dotnet]}
+             :tech [:flash :dotnet]}
             {:customer "NTNU"
              :years [2002 2003 2004 2005 2006]
              :employer :study-part-time
@@ -439,7 +447,10 @@
                                   :react :d3
                                   :kubernetes
                                   :datomic :kafka]
-                :exclude-techs [:hudson :cruise-control :jsf]}}
+                :exclude-techs [:hudson :cruise-control :jsf :sonar :ibm-bluemix :google-closure :spock :cocoa :sybase
+                                :oracle-aq :spring-batch :spring-integration :spring-web-flow :passiv-rfid :devcards
+                                :angularjs :ring :mount :apache-poi :spring-security :flash :jquery
+                                :jetty :cxf]}}
 
  :education-summary "Sivilingeniør/Master Datateknikk, NTNU"
  :certifications [{:year 2015 :name "Architecting for continuous delivery and zero downtime"}
