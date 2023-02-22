@@ -76,7 +76,7 @@ dum kan klienten egentlig bli?
 Ved hjelp av denne data-idéen ble svaret: **Ille dum.** Mer om det med data snart.
 
 Du kan [sjekke koden her
-selv](https://github.com/magnars/zombie-clj-s2/tree/main/src/zombies/client),
+selv](https://github.com/magnars/zombieclj-s02/tree/main/src/zombies/client),
 men kort fortalt så er det noen få actions, en event bus, litt local-storage,
 og en god dose komponentkode for å rendre ut DOM-en.
 
