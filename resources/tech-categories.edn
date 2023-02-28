@@ -42,6 +42,7 @@
   :techs
   [:android-intents
    :apns
+   :capacitor
    :cocoa
    :cordova
    :core-text
