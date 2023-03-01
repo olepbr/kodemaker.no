@@ -1050,7 +1050,8 @@
    :xfire-webservices
    :xsd
    :asdf
-   :web3]}
+   :web3
+   :platformio]}
 
  :excluded
  {:techs

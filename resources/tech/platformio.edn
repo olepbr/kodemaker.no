@@ -1,0 +1,6 @@
+{:id :platformio
+ :name "PlatformIO"
+ :type :framework
+ :site "https://platformio.org\n"
+ :description
+ "PlatformIO gjør det enkelt å programmere microkontrollere. Den støtter en rekke plattform hvor den mest kjente er Arduino, og hundrevis av microkontroller, sensorer og annet gøy. PlattformIO fungerer både på kommandolinje og har en extension til VSCode."}
