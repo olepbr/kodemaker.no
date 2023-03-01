@@ -12,7 +12,7 @@ Du får ikke mye til 25 kroner. Men du kan få din egen webserver på en bitte l
 
 For vanlig web-visningen er det nettleseren som gjør de tunge løftene, og en web-server som skal servere statisk web til litt personlig bruk - kan egentlig da være en datakraft-pingle. Den skal jo bare gi filer.
 
-La oss kombinere to verdner, et høynivå og moderne webprosjekt med ClojureScript - med lavere nivå på en microkontroller. Hvorfor ikke...? Litt C++ er ikke noe å være redd for og jeg vedder 25 kroner på at du kommer til å forstå det aller meste dersom du har vært borti ett eller annet c-like språk.
+La oss kombinere to verdener, et høynivå og moderne webprosjekt med ClojureScript - med lavere nivå på en microkontroller. Hvorfor ikke...? Litt C++ er ikke noe å være redd for og jeg vedder 25 kroner på at du kommer til å forstå det aller meste dersom du har vært borti ett eller annet c-like språk.
 
 Dette er et glimrende utgangspunkt til å bruke å web som interface videre hvis du ønsker å lese sensorer, styre motorer, kommunisere med radio eller bluetooth - for å nevne noe du kan gjøre med microkontrollere i arduino-verden. Og hvis du kun vil ha en webserver i lomma, så er det fint også, og det er dette vi skal gjøre her.
 
