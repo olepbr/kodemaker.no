@@ -10,7 +10,7 @@ Din egen webserver på splitter ny hardware til 25 kroner.
 
 Du får ikke mye til 25 kroner. Men du kan få din egen webserver på en bitte liten microkontroller.
 
-For vanlig web-visningen er det nettleseren som gjør de tunge løftene, og en web-server som skal servere statisk web til litt personlig bruk - kan egentlig da være ei datakraft-pingle. Den skal jo bare gi filer.
+For vanlig web-visningen er det nettleseren som gjør de tunge løftene, og en web-server som skal servere statisk web til litt personlig bruk - kan egentlig da være en datakraft-pingle. Den skal jo bare gi filer.
 
 La oss kombinere to verdner, et høynivå og moderne webprosjekt med ClojureScript - med lavere nivå på en microkontroller. Hvorfor ikke...? Litt C++ er ikke noe å være redd for og jeg vedder 25 kroner på at du kommer til å forstå det aller meste dersom du har vært borti ett eller annet c-like språk.
 
@@ -24,7 +24,7 @@ Jeg bruker her en D1 mini ESP8266.
 
 ## platformio
 
-Først må vi ha [platformio](https://platformio.org/) installert. Det finner du enkelt utav hvordan du installerer selv. Du kan bruke en hvilken som helst arduino-kompatibel microkontroller som platformio støtter. Platformio støtter [det meste](https://docs.platformio.org/en/latest/boards/index.html).
+Først må vi ha [platformio](https://platformio.org/) installert. Det er enkelt å installere fra den offentlige dokumentasjonen deres. Du kan bruke en hvilken som helst arduino-kompatibel microkontroller som platformio støtter. Platformio støtter [det meste](https://docs.platformio.org/en/latest/boards/index.html).
 
 La oss lage et nytt prosjekt. 
 
@@ -54,9 +54,9 @@ Hvis du har installert VSCode og platformio, kan du åpne dette prosjektet. Vi f
 
 
 ## ClojureScript
-**TLDR; vi lager en <em>index.html</em>, kompilere en <em>main.js</em> fra ClojureScript.**
+**TLDR; vi lager en <em>index.html</em>, kompilerer en <em>main.js</em> fra ClojureScript.**
 
-Vi trenger altså to kataloger, en for ClojureScript-prosjektet; **cljs/**, og en target-katalog som skal opp til dingsten vår; **data/www/**.
+Vi trenger altså to kataloger, en for ClojureScript-prosjektet; **cljs/**, og en target-katalog som skal opp til dingsen vår; **data/www/**.
 
 
 **cljs/deps.edn:**
@@ -91,8 +91,7 @@ Vi trenger altså to kataloger, en for ClojureScript-prosjektet; **cljs/**, og e
 ```
 
 
-I ClojureScript, lager vi nå bare en popup med **js/alert** og ikke mer. Vi skal få dette til å snurre bare. Vi bruker prosjektstruktur som gjør dette enkelt å innføre Figwheel i etterkant.
-
+ClojureScript lager vi nå kun en popup med js/alert, målet er bare å dette til å snurre. Vi bruker en prosjektstruktur som gjør dette enkelt å innføre Figwheel i etterkant.
 ### Makefile
 Merk at Makefile er på root i prosjektet, så for å kompilere ClojureScript så må vi gjøre litt directory -akrobatikk. 
 
@@ -265,7 +264,7 @@ namespace WEB {
 ```
 
 ### LittleFS
-LittleFS er filsystemet på dingsten vår, og må uploades separat fra executable-en. Det fine med dette, er at vi ikke trenger å røre programmet hvis du kun har endringer på web-filene vice versa.
+LittleFS er filsystemet på dingsen vår, og må uploades separat fra executable-en. Det fine med dette er at vi ikke trenger å røre programmet hvis det kun er endringer på web-filene vice versa.
 
 ```makefile
 upload-files:
