@@ -91,7 +91,7 @@ Vi trenger altså to kataloger, en for ClojureScript-prosjektet; **cljs/**, og e
 ```
 
 
-ClojureScript lager vi nå kun en popup med js/alert, målet er bare å dette til å snurre. Vi bruker en prosjektstruktur som gjør dette enkelt å innføre Figwheel i etterkant.
+I ClojureScript lager vi nå kun en popup med js/alert, målet er bare å dette til å snurre. Vi bruker en prosjektstruktur som gjør dette enkelt å innføre Figwheel i etterkant.
 ### Makefile
 Merk at Makefile er på root i prosjektet, så for å kompilere ClojureScript så må vi gjøre litt directory -akrobatikk. 
 
