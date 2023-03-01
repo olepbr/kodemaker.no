@@ -182,7 +182,7 @@ Loop
 ### http server
 Nå skal vi lime alt sammen og lage wifi, websever og levere filene våre fra frontend-prosjektet. 
 
-Det er dårlig praksis å fyller opp **main.cpp** med masse greier, så vi kaller bare setup() i WEB fra main.cpp og gjør alt arbeidet i web.cpp.
+Det er dårlig praksis å fylle opp **main.cpp** med masse greier, så vi kaller bare setup() i WEB fra main.cpp og gjør alt arbeidet i web.cpp.
 
 **main.cpp:**
 ```cpp
