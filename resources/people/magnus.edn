@@ -37,7 +37,7 @@
             :github "rundis"
             :linkedin "/in/mrundberget"}
 
- :tech {:using-at-work [:clojure :kotlin :swift :typescript :react :swift]
+ :tech {:using-at-work [:clojure :kotlin :typescript :react :swift]
         :favorites-at-the-moment [:clojure]
         :want-to-learn-more [:rust :haskell :idris :kubernetes]}
 
@@ -95,7 +95,14 @@
                   :tech [:clojure :clojurescript :nodejs :electron :javascript]}]
 
 
- :presentations [{:title "Elm - Awesomesauce or just yet another language for the frontend"
+ :presentations [{:title "Elm Editor Support - Perspectives from an Editor Hacker"
+                  :blurb "Foredrag hvor jeg forteller om tilstanden på editor/IDE støtte for Elm.
+                          Gjennom livekoding demonstrerer jeg endel av editorstøtten implementert i min Elm plugin for Light Table."
+                  :event "Oslo Elm Day 2017"
+                  :tech [:elm]
+                  :date "2017-06-10"
+                  :urls {:video "https://www.youtube.com/watch?v=ExGkdmey0n4"}}
+                 {:title "Elm - Awesomesauce or just yet another language for the frontend"
                   :blurb "Elm er kanskje et av de mest spennende språkene og platformene for å lage solide, raske og vedlikeholdbare web frontends.
                           I dette fordraget får du en liten smakebit av fordelene med funksjonell programmering (med typer) i Elm. Du får også en innføring
                           i hvordan Elm er mere enn bare et språk. Språket, plattformen og arkitekturen promoterer en ny måte å tenke på som virkelig fanger ens oppmerksomhet.
@@ -376,7 +383,11 @@
                fikk jeg mer om mer sansen for Groovy."
                :tech [:groovy]}]
 
- :open-source-projects [{:url "https://github.com/rundis/elm-bootstrap"
+ :open-source-projects [{:url "https://github.com/rundis/ts-ws-machine"
+                         :name "TypeScript WebSocket Machine"
+                         :description "Klientbibliotek for websocket-kommunikasjon i nettleser. Bygget rundt en tilstandsmaskin med støtte for automatisk gjenoppkobling og pulskontroll."
+                         :tech [:typescript]}
+                        {:url "https://github.com/rundis/elm-bootstrap"
                          :name "Elm Bootstrap"
                          :description "Elm bibliotek for å lage responsive webapplikasjoner med Twitter Bootstrap 4."
                          :tech [:elm :bootstrap]}
