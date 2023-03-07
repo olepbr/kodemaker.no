@@ -1,0 +1,17 @@
+{:id :marte
+ :name ["Marte" "Kjenstad"]
+ :title "COO"
+ :start-date "2023-03-01 00:00"
+ :administration? true
+ :description "Marte jobber i administrasjonen sammen med Kolbjørn, og sørger for at hjulene går rundt med stort og smått i den daglige driften av selskapet.
+
+Marte har utdannelse og bakgrunn som utvikler, men har de siste 15 årene jobbet mer med mennesker enn med koding. Kjærligheten for kode ulmer likevel i bunn, så plutselig dukker det opp et hobbyprosjekt eller 2.
+
+I  tillegg til å jobbe med det administrative vil hun også bl.a. jobbe for fortsatt høy trivsel blant husets konsulenter, og også med Kodemakers synlighet i markedet.
+
+Marte er sosial og (for det meste) grei, så om du har lyst på en kaffekopp eller en lunsj på Rebel, så ta kontakt for en hyggelig prat."
+
+ :phone-number "+47 976 86 453"
+ :email-address "marte@kodemaker.no"
+
+ :presence {:linkedin "/in/martebk/"}}
