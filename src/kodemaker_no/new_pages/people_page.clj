@@ -47,6 +47,7 @@
                         db)
                    (map #(d/entity db (first %)))
                    (sort-by :person/start-date)
+                   (sort-by (complement :person/administration?))
                    reverse
                    (map-indexed person-card))}
       {:kind :footer}]}))

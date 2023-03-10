@@ -42,6 +42,7 @@
   :techs
   [:android-intents
    :apns
+   :capacitor
    :cocoa
    :cordova
    :core-text
@@ -1049,7 +1050,8 @@
    :xfire-webservices
    :xsd
    :asdf
-   :web3]}
+   :web3
+   :platformio]}
 
  :excluded
  {:techs

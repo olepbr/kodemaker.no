@@ -36,16 +36,22 @@
                          }
 
  :tech                  {
-                         :favorites-at-the-moment [:go]
+                         :favorites-at-the-moment [:go :flutter]
                          :using-at-work           [:kotlin :flutter :kafka]
-                         :want-to-learn-more      [:clojure :go]
+                         :want-to-learn-more      [:clojurescript :emacs]
                          }
 
  :hobbies               [
                          {
                           :title        "Stisykling"
                           :description  "Lykken er en fulldempet sykkel på blåstier og noen timer til overs for å forsere sleipe røtter, glatte steiner og den biten av stien du ikke klarte på forrige tur."
-                          :illustration "/illustrations/hobbies/nils-stisykling.jpg"}
+                          :illustration "/illustrations/hobbies/nils-stisykling.jpg"
+                          },
+                         {
+                           :title        "Enhjulssykkel"
+                           :description  "Etter å ha syklet på trehjulssykkel som liten og tohjulssykkel som voksen har jeg i en alder av 42 redusert antall hjul til 1. Fantastisk moro og utfordringene står i kø."
+                           :illustration "/illustrations/hobbies/nimbus-hatchet.jpg"
+                           }
                          ],
 
  :innate-skills         [:kotlin]
@@ -173,14 +179,15 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  [
   {:title        "vintilbud.no"
    :link         {:url "https://bytecode.no/vintilbud" :text "Tilbud på varer fra vinmonopolet"}
-   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en Android-app og en web-side der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go, appen er skrevet i flutter."
+   :description  "Vintilbud er en app som overvåker alle varene på vinmonopolet og finner varer som blir satt ned i pris. Tilbudene blir presentert i en moil-app og en web-side der man kan filtrere på type og sortere på ulike parametere. Backend er skrevet i go, appen er skrevet i flutter og publisert på Apple App Store og Google Play."
    :illustration "/illustrations/side-projects/vintilbud.png"
-   :tech         [:go :google-appengine :elm :flutter :dart :android]
+   :tech         [:go :google-appengine :elm :flutter :dart :android :ios]
    },
-  {:title        "Analyse av værdata"
-   :description  "Et system for å samle inn og organisere data om vær og bruke dataene for å finne korrelasjoner med andre tidsserier. Skrevet for det meste i go og deployet på google cloud platformen med kubernetes."
-   :illustration "/illustrations/side-projects/weathergraph.png"
-   :tech         [:go :kubernetes :machine-learning :influxdb]
+  {:title        "Plain Quotes"
+   :link         {:url "https://apps.apple.com/us/app/plain-quotes/id6444596800" :text "Aksjekurser på mobil."}
+   :description  "Etter å bare ha funnet apper som enten ikke viser det jeg vil om aksjer eller som sender masse data om meg til andre så laget jeg min egen aksje-app. Appen er skrevet i flutter og er tilgjengelig på Google Play og Apple App Store. Designet for mobil og nettbrett med adaptivt design."
+   :illustration "/illustrations/side-projects/plainquotes.png"
+   :tech         [:flutter :dart :android :ios]
    }
 
   ]
@@ -188,10 +195,11 @@ Nils er alltid blid og imøtekommende, og har en lun personlighet som smitter ov
  :projects
  [
   {:customer    "Finn"
-   :description "Utbedre systemer som håndterer innkommende klikk og hendelser for annonser på finn.no. Utbedre ytelse ved å ta i bruk Cassandra som database for annonse-klikk istedenfor elastisearch."
-   :years       [2021 2022]
+   :description "Utbedre systemer som håndterer innkommende klikk og hendelser for annonser på finn.no. Utbedre ytelse ved å ta i bruk Cassandra som database for annonse-klikk istedenfor elastisearch.
+   Videreutvikle system for distribusjon av finn-annonser på nettsider utenfor finn.no og oppsalgsprodukter for å øke trafikk på finn-annonser. "
+   :years       [2021 2022 2023]
    :employer    :kodemaker
-   :summary     "Videreutvikle og fornye systemer for å lagre statistikk for annonser på finn."
+   :summary     "Videreutvikle og fornye systemer for å lagre statistikk for annonser på finn. "
    :tech        [:kotlin, :kafka, :kubernetes, :cassandra, :docker, :postgresql, :spring-boot]},
   {:customer    "Mercell"
    :description     "Utvikle salgsløsning for anbudsportal. Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og trenger en salgsløsning på nett for å kunne betjene den voksende kundemassen og for å kunne nå ut til flere kunder. Tidligere har salg bare foregått over telefon og man ønsker med den nye løsningen å flytte salget over på nett."

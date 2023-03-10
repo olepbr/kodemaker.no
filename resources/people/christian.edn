@@ -46,7 +46,7 @@
             :github "cjohansen"}
 
  :tech {:using-at-work [:sanity :aws :kubernetes :clojurescript :clojure]
-        :favorites-at-the-moment [:sanity :clojure :clojurescript]
+        :favorites-at-the-moment [:clojure :clojurescript :datomic]
         :want-to-learn-more [:haskell :go]}
 
  :qualifications ["Fullstack, jobber like gjerne med backend som frontend"
@@ -266,7 +266,32 @@
                        hvordan Lisp ser ut utover 'Hello world'."
                :tech [:lisp :elisp :emacs]}]
 
- :projects [{:customer "Kodemaker"
+ :projects [{:customer "Fortum"
+             :employer :kodemaker
+             :summary "Utviklet smart varmestyring"
+             :description "Utviklet et produkt for smart varmestyring for Fortums kunder.
+             Løsningen integrerer med varmeovner og varmepumper og styrer temperaturen opp
+             og ned for kunden basert på deres preferanser og vaner. Løsningen styrer også
+             etter spotpris på strøm, slik at kunden kan spare penger på bekostning av noe
+             komfort når prisen er høy. Løsningen leveres både via Fortum Norges app og
+             Min side, og som frittstående iOS- og Android-app i Sverige og Finland."
+             :tech [:clojure :datomic :capacitor]
+             :start "2022-12"}
+
+            {:customer "Fortum"
+             :employer :kodemaker
+             :summary "Designet og utviklet loginløsning"
+             :description "Designet og utviklet ny logintjeneste for Fortums apper,
+             Min side og andre systemer. Tjenesten integrerer med flere interne
+             kundesystemer, tilbyr passordløs innlogging via epost og/eller telefon,
+             samt login med BankID via Signicat. Løsningen tilbyr også kontodeling for
+             kunder, og kjører mot flere forskjellige kundesystemer i forskjellige
+             markeder. Jeg hadde rollen som løsningsarkitekt og utvikler i dette
+             prosjektet, som ble løst av et lite team."
+             :tech [:clojure :datomic]
+             :start "2022-04"}
+
+            {:customer "Kodemaker"
              :employer :kodemaker
              :summary "Utvikling av nettsted"
              :description "Utviklet skinnende
@@ -301,7 +326,10 @@
              Løsningen søker opp kunden i flere registre, inkludert Elhub, og
              klarer i de aller fleste tilfeller å hjelpe folk med å bestille
              strøm ved å kun oppgi telefonnummer og epost-adresse. Løsningen
-             passerte ekstern sikkerhets- og personvernsgjennomgang med glans."
+             passerte ekstern sikkerhets- og personvernsgjennomgang med glans og
+             har blitt fremhevet som en av bransjens beste løsninger for kundene.
+             Tilnærmingen til strømsalg har siden blitt kopiert av de fleste
+             strømselskapene i det Norske markedet."
              :tech [:clojurescript :clojure :postgresql :responsive-design :datadog :git :aws :aws-s3 :tools-deps]
              :start "2019-10"}
 
@@ -311,7 +339,8 @@
              :description "Utviklet ny Min Side basert på kodebasen til
              mobil-appen til Hafslund Strøm."
              :tech [:clojurescript :aws :aws-s3 :tools-deps :responsive-design :datadog :git]
-             :start "2019-04"}
+             :start "2019-04"
+             :end "2021-04"}
 
             {:customer "Hafslund Strøm"
              :employer :kodemaker
@@ -322,7 +351,8 @@
              SVG-grafer og samler det hele sammen i en HTML-epost som er 100%
              personalisert, og som vises pent i \"alle\" epost-klienter."
              :tech [:clojurescript :node :kafka :dynamodb :puppeteer :aws :aws-s3 :tools-deps]
-             :start "2018-04"}
+             :start "2018-04"
+             :end "2021-04"}
 
             {:customer "Hafslund Strøm"
              :employer :kodemaker
@@ -334,7 +364,8 @@
              og Terraform."
              :tech [:aws :kubernetes :aws-cloudfront :aws-s3 :aws-iam :aws-route53 :terraform
                     :packer :aws-ec2 :aws-iam :aws-rds :aws-route53 :aws-vpc :datadog :git]
-             :start "2018-04"}
+             :start "2018-04"
+             :end "2021-04"}
 
             {:customer "Hafslund Strøm"
              :employer :kodemaker
@@ -342,7 +373,9 @@
              :description "Videreutvikling av Hafslund Strøms app for iOS og
             Android, samt tilstøtende backend-systemer og infrastruktur."
              :tech [:clojurescript :cordova :svg :kubernetes :terraform :d3 :datadog :git :tools-deps]
-             :start "2018-04"}
+             :start "2018-04"
+             :end "2021-04"}
+
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
              :summary "Domenemodellering og applikasjonsarkitektur"
@@ -361,6 +394,7 @@
                     :ubuntu :cqrs :event-sourcing :micro-services :figwheel]
              :start "2017-09"
              :end "2018-03"}
+
             {:customer "Tine Husdyrfag"
              :employer :kodemaker
              :summary "Utvikling av infrastruktur på AWS"
@@ -1092,7 +1126,15 @@
                 :date "2009-12-01"
                 :tech [:javascript]}]
 
- :screencasts [{:title "Zombie CLJ - Clojure og ClojureScript"
+ :screencasts [{:title "Parens of the dead"
+                :url "http://parens-of-the-dead.com/"
+                :blurb "En screencast i samme ånd som Zombie CLJ, denne gangen på engelsk."
+                :description "Mer zombier og Clojure, denne gangen på engelsk.
+                Vi tenkte det kunne være moro å lage noe for et større
+                publikum."
+                :illustration "/illustrations/side-projects/parens-of-the-dead.jpg"
+                :tech [:clojure :clojurescript :tdd :testing]}
+               {:title "Zombie CLJ - Clojure og ClojureScript"
                 :url "http://www.zombieclj.no/"
                 :blurb "I denne oppfølgeren til Zombie TDD
                 lager [Magnar](/magnar/) og
@@ -1106,20 +1148,34 @@
                 :illustration "/illustrations/side-projects/zombieclj.jpg"
                 :tech [:clojure :clojurescript :frontend]}]
 
- :open-source-projects [{:url "https://github.com/cjohansen/imagine/"
+ :open-source-projects [{:url "https://github.com/cjohansen/portfolio/"
+                         :name "porfolio"
+                         :description "Et verktøy for å jobbe med UI-komponenter. Lar deg
+                         vise mange scenarioer for samme komponent i kombinasjon med forskjellige
+                         skjermoppløsninger, bakgrunnsfarger, osv. Startet som en Clojure-versjon
+                         av Storybook.js, men lever nå sitt eget liv."
+                         :tech [:clojure :clojurescript]}
+                        {:url "https://github.com/cjohansen/m1p/"
+                         :name "m1p"
+                         :description "Et datadrevet bibliotek for å jobbe med i18n, theming og
+                         andre lignende problemstillinger (der du ønsker å trekke konkret innhold
+                         ut av implementasjonen)."
+                         :tech [:clojure :clojurescript]}
+                        {:url "https://github.com/cjohansen/courier/"
+                         :name "courier"
+                         :description "Et høynivå http-bibliotek for Clojure. Lar deg
+                         uttrykke avhengigheter mellom requests (\"hent tokenet fra cache
+                         eller HTTP før du gjør denne requesten\"), og gir deg verktøy
+                         for retries og caching som kan benytte informasjon utover hva
+                         HTTP-protokollen gir."
+                         :tech [:clojure]}
+                        {:url "https://github.com/cjohansen/imagine/"
                          :name "imagine"
                          :description "Et verktøy for å skalere, croppe, og
                          gjøre andre transformasjoner på bilder før de serves på
                          internett. Kan brukes som en Ring-middleware, eller til
                          å generere transformerte/optimaliserte bilder til disk."
                          :tech [:clojure]}
-                        {:url "https://github.com/cjohansen/pharmacist/"
-                         :name "pharmacist"
-                         :description "Et bibliotek for deklarativ utførelse av
-                         en serie operasjoner som kanskje kan feile. Typisk
-                         use-case er orkestrering av nettverkskall, men
-                         Pharmacist er ikke begrenset til dette."
-                         :tech [:clojure :clojurescript]}
                         {:url "https://github.com/cjohansen/dumdom/"
                          :name "dumdom"
                          :description "Et lettvektsalternativ til React for
@@ -1240,8 +1296,8 @@
               :orally "Meget god"
               :written "Flytende"}]
 
- :project-highlights [{:blurb "App for iOS og Android utviklet med ClojureScript og Cordova, og tilstøtende backendsystemer."
-                       :customer "Hafslund Strøm"}
+ :project-highlights [{:blurb "Apper for iOS, Android og web, loginsystem, smarte strømprodukter. Frontend, backend, løsningsarkitektur, samt utvikling og drift av infrastruktur på AWS."
+                       :customer "Fortum"}
                       {:blurb "Domenemodellering, applikasjonsarkitektur og utvikling av infrastruktur på AWS"
                        :customer "Tine"}
                       {:blurb "Arkivsøk og produksjonsstøtte for NRKs journalister med Elasticsearch, node.JS og React"

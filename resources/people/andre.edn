@@ -43,12 +43,11 @@
                        {:blurb "Arkitektur og implementering av FINN.no iOS applikasjoner"
                         :customer "FINN.no"}]
 
- :endorsement-highlight {:author "Torkel Randem"
-                         :title "Økonomi- og utviklingssjef, Animalia.no"
-                         :quote "André er en meget dyktig utvikler og en jovial person
-                                 som jeg hadde gleden av å samarbeide med i Animalia. Han bidro
-                                 sterkt i arbeidet med å søke etter og implementere ny teknologi
-                                 i videre-/nyutviklingen av Animalia sine husdyrkontroller og fagsystemer."}
+ :endorsement-highlight {:author "Daniel Haukaas"
+                  :title "Produkteier, Fantasy Football League"
+                  :quote "Det var både gøy og lærerikt å jobbe med André under utviklingen av Fantasy Football League. 
+                          André er ikke redd for å utfordre ideer og tenker gjerne gjennom ting flere ganger for å få det gjort riktig med én gang, 
+                          noe jeg syntes var veldig verdifullt. Jeg vil absolutt anbefale André videre."}
  :qualifications ["Fullstackutvikler, med erfaring fra mobilutvikling på iOS, React Native, Android",
                   "Foretrekker funksjonell programmering"
                   "Testdrevet utvikling"
@@ -112,8 +111,15 @@
                 :tech [:cocoa :objc]
                 }]
 
- :endorsements  [{:author "Torkel Randem, Økonomi- og utviklingssjef, Animalia.no"
-                  :quote "André er en meget dyktig utvikler og en jovial person
+ :endorsements  [{:author "Daniel Haukaas"
+                  :title "Produkteier, Fantasy Football League"
+                  :quote "Det var både gøy og lærerikt å jobbe med André under utviklingen av Fantasy Football League. 
+                  André er ikke redd for å utfordre ideer og tenker gjerne gjennom ting flere ganger for å få det gjort riktig med én gang, 
+                  noe jeg syntes var veldig verdifullt. Jeg vil absolutt anbefale André videre."
+                }
+                {:author "Torkel Randem"
+                 :title  "Økonomi- og utviklingssjef, Animalia.no"
+                 :quote "André er en meget dyktig utvikler og en jovial person
                  som jeg hadde gleden av å samarbeide med i Animalia. Han bidro
                  sterkt i arbeidet med å søke etter og implementere ny teknologi
                  i videre-/nyutviklingen av Animalia sine husdyrkontroller og

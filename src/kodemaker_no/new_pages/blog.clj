@@ -126,13 +126,18 @@
    :github icons/github})
 
 (defn strip-text [text max-size]
-  (when text
-    (let [s    (str/trim text)
+   (when text
+      (str/escape
+       (let [s (str/trim text)
           size (count s)]
-      (if (> size max-size)
-        (str (subs s 0 max-size)
+          (if (> size max-size)
+           (str (subs s 0 max-size)
              (str "..."))
-        s))))
+           s))
+       {\< "&lt;"
+        \> "&gt;"
+        \& "&amp;"
+        \" "\""})))
 
 (defn create-post-page [{:blog-post/keys [published updated title body blurb author-picture] :as blog-post}]
   {:title title
