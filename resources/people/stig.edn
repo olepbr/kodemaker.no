@@ -46,9 +46,11 @@
 Da blir det fort mer interessant. Utvikling av ny programvare som bare må virke ved første storskala forsøk kan jo ikke kategoriseres som noe annet enn spennende.
 I de fleste systemutviklingsprosjekt, er det mulig med en myk 'igangkjøring' der eventuelle problemstillinger kan håndteres og rettes 'i fart'.
 En resultattjeneste for ett løp som bare gjennomføres den 22/8-2015 - har ikke rom til å feile. Enten så fungerer det som det skal - eller så blir det fiasko.
-Det gikk bra - veldig bra."
+Det gikk bra - veldig bra.
+
+Løsningen er fremdeles i bruk i arrangement i regi av Ringerike o-lag"
                 :illustration "/illustrations/side-projects/nmultra.png"
-                :tech [:grails :react :aws]}
+                :tech [:typescript :react :aws :kubernetes :micronaut :mysql :rabbitmq]}
                {:title "ROLtracker"
                                  :description "Live-tracking av o-løpere med Android-telefoner
                                                som fanger GPS-posisjoner som igjen overføres
@@ -80,24 +82,30 @@ Det gikk bra - veldig bra."
                :tech [:javascript :aws]}]
 
  :projects [
+ {:customer "Glow"
+  :years [2023]
+  :employer :kodemaker
+  :summary "Glow - trafikkstyring av pakkeleveringer for Bring Express"
+  :description "Glow - verkøtyet for Bring Express sin pakkelevering. Stig har jobbet med moduler knyttet til prisberegninger og flyfrakt"
+  :tech [:azure :kubernetes :kotlin :react :redux :docker :postgresql :typescript :springboot :helm]}
  {:customer "Cognite"
   :years [2021 2022]
   :employer :kodemaker
   :summary "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
-  :description "Cognite er et norsk teknologiselskap som utvikler plattformen ‘Cognite Data Fusion’. Plattformen samler store datamenger relatert til industrielle produksjonsprosesser. Sanntids produksjonsdata gjøres tilgjengelige gjennom api-er og spesialapplikasjoner for å understøtte data-drevne beslutninger."
+  :description "Cognite er et norsk teknologiselskap som utvikler plattformen ‘Cognite Data Fusion’. Plattformen samler store datamenger relatert til industrielle produksjonsprosesser. Sanntids produksjonsdata gjøres tilgjengelige gjennom api-er og spesialapplikasjoner for å understøtte data-drevne beslutninger. Stig utviklet en data ekstraktor knyttet til standarden WITSML for håndtering av boredata i sanntid."
   :tech [:azure :google-cloud :terraform :python :kubernetes :prometheus :grafana :docker :postgresql]}
  {:customer "Mercell"
   :years [2020 2021]
   :employer :kodemaker
   :summary "Skybasert platform for distribusjon og presentasjon av anbudsinformasjon"
-  :description "Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og har etablert ett eget team som har ansvar for distribusjon og presentasjon av anbudsinformasjon."
+  :description "Mercell er en stor europeisk aktør innen anbudsformidling og har vokst mye gjennom oppkjøp. De lager en felles løsning for hele Mercell og har etablert ett eget team som har ansvar for distribusjon og presentasjon av anbudsinformasjon. Kafka ble benyttet som kommunikasjonskanal mellom ulike mikrotjenester. Tjenestene innenfor _Distribusjon og presentasjon av anbudsinformasjon_ ble utviklet i Kotling med bruk av Kafa Streams og Micronaut"
   :tech [:aws :terraform :micronaut :kafka :kotlin :typescript :react :redux :postgresql :gradle]}
  {:customer "VY"
   :years [2020 ]
   :employer :kodemaker
   :summary "Overvåking av passeringsmeldinger i fra BaneNOR "
   :description "Sanntidsovervåkning av passeringsmeldinger i fra BaneNOR ved hjelp av Grafana og Prometheus"
-  :tech [:grafana :prometheus]}
+  :tech [:grafana :prometheus :activemq]}
  {:customer "VY"
   :years [2020 ]
   :employer :kodemaker
@@ -244,7 +252,7 @@ Det gikk bra - veldig bra."
              slikt system. Disse måltallene fanges opp og presenteres i egne
              trendrapporter. Løsningen er utviklet i SQL og Business
              Intelligence and Reporting Tools (BIRT) fra eclipse."
-             :tech [:mssql :eclipse :birt]}
+             :tech [:mssql :eclipse ]}
             {:customer "Bring Cargo"
              :years [2010]
              :employer :kodemaker
@@ -546,16 +554,20 @@ Det gikk bra - veldig bra."
 
 :cv {}
 
-:endorsements [{:author "Cato Berg"
+:endorsements [{:author "Christian Mueller"
+                  :title "Engineering Manager, Cognite"
+                  :quote "Stig is an impressive professional. He learns a new domain very quickly and consistently delivers high quality solutions to complex problems by applying his experience and great solution-building skills. We were very fortunate to be able to work with Stig, not only he is brilliant with building solutions and great architectures but he is also an awesome person to work with. With his solution-oriented mindset, Stig has also positively influenced the entire team here in Cognite, not only with his own deliveries but also by being a team-player and willingness to help his colleagues. By being a multi-talented and committed professional, he has delivered value to our customers in many ways, including new extractors, POCs and demos but also to his colleagues (including myself!), by sharing his extensive knowledge and making himself available to help. Personally for me, Stig has taught me a lot about software development and great ways to build integrations :)
+Needless to say, I do hope to get the opportunity to work with Stig again!"}
+              {:author "Cato Berg"
                   :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
                   :quote "Stig har på en imponerende måte satt seg inn i utfordringer og kompleksitet i prosjektet slik at Kodemaker har kunnet levert det produktet vi som kunde har kravstilt."}
               {:author "Victor Dieu"
-                  :title "Prosjektleder, NSB"
+                  :title "Prosjektleder, VY"
                   :quote "Stig er veldig dyktig når det gjelder å levere i fra seg produkt med god kvalitet."}
-               {:author "André Jahren"
+              {:author "André Jahren"
                   :title "Simracing-teamet i Blind Chicken Productions"
                   :quote "Vi er strålende fornøyd med programvaren Stig har levert og profesjonaliteten han viste underveis i leveransen."}
-                 ]
+              ]
 
 :project-highlights [{:blurb "Software Engineer i team Subsurface Beachhead med ansvar for utvikling av tjenester for innsamling av boredata"
        :customer "Cognite"}
@@ -565,10 +577,9 @@ Det gikk bra - veldig bra."
        :customer "VY"}
        ]
 
-:endorsement-highlight {:author "Cato Berg"
-                       :title "Prosjektleder, Forsvarets Logistikkorganisasjon Landkapasiteter"
-                       :quote "Stig har på en imponerende måte satt seg inn i utfordringer og kompleksitet i prosjektet.
-                       Han har bidratt med god kompetanse samtidig som han er god til å sette seg inn i og forstå kundes behov."}
+:endorsement-highlight {:author "Christian Mueller"
+                  :title "Engineering Manager, Cognite"
+                  :quote "Stig is an impressive professional. He learns a new domain very quickly and consistently delivers high quality solutions to complex problems by applying his experience and great solution-building skills. We were very fortunate to be able to work with Stig, not only he is brilliant with building solutions and great architectures but he is also an awesome person to work with. With his solution-oriented mindset, Stig has also positively influenced the entire team here in Cognite, not only with his own deliveries but also by being a team-player and willingness to help his colleagues."}
  :recommendations [{:title "Micronaut"
                     :blurb "Graeme Rocher har vært med å laget mye bra. Nylig ble hans siste prosjekt kåret til en av de 25 beste/viktigste java applikasjonene som er laget. Micronaut er ett rammeverk som er utviklet for å bygge tjenster i skyen. Det har med seg erfaringer i fra kjente rammeverk som Spring, Spring Boot og Grails. "
                     :link {:url "https://micronaut.io/"

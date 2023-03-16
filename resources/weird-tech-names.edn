@@ -210,6 +210,7 @@
  :prototype "Prototype.JS"
  :pwa "Progressive Web Apps (PWA)"
  :quic "QUIC"
+ :rabbitmq "RabbitMQ"
  :rational-clearcase "Rational ClearCase"
  :rational-rose "Rational Rose"
  :re-frame "re-frame"

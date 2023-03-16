@@ -612,6 +612,7 @@
    :mule
    :nats
    :oracle-aq
+   :rabbitmq
    :quartz
    :visibroker
    :wsrp
@@ -622,8 +623,7 @@
   :parent :devops
   :idx 50
   :techs
-  [:birt
-   :dashing
+  [:dashing
    :datadog
    :dropwizard-metrics
    :fluentd
@@ -862,6 +862,7 @@
   :idx 180
   :techs
   [:agresso
+   :birt
    :domino
    :erwin
    :excel
