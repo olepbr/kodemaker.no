@@ -1,4 +1,4 @@
-:title Løs det rette problemet
+:title Løs det riktige problemet
 :author stig
 :published 2023-03-22
 :tech [:programming]
@@ -18,14 +18,14 @@ Mine største blemmer som systemutvikler - handler ikke om teknologi, men derimo
 * Jeg har laget funksjonalitet som aldri har blitt brukt 
 * Jeg har laget løsninger som er bedre på unntakshåndtering enn det å støtte de sentrale standardprosessene.
 
-Dette handler om forstå hva som er viktig.
+Dette handler om å forstå hva som er viktig.
 Hvorfor fokuser vi av og til på feil oppgave? Hvorfor tar det av og til veldig lang tid før oppgavens kontekst forstås?
 Hvordan skal du raskt komme under huden på en organisasjon og virkelig forstå DNA'et i det de driver med? 
 
-Det finnes masse materiale om gode prosesser for å forstå brukerbehov. Mye nyttig lesing, men jeg synes ofte at metoder blir for omfattende til at det gir meg noen praktisk guiding i det daglige arbeidet. 
+Det finnes mye materiale om hvordan du skal analysere ett domene. Mye nyttig lesing, men jeg synes ofte mange henger seg opp i for mye implementasjonsdetaljer, for tidlig, til at det gir meg noen praktisk guiding i det daglige arbeidet. 
 
 Det blir fort litt for mye tran og teknikker. Jeg ønsket meg en enkel modell som får plass på en serviett. 
-Noe som kan ligge der i bakhodet samtidig som jeg kan gjøre det som er gøy. 
+Noe som kan ligge der i bakhodet samtidig som jeg kan gjøre det som er gøy - nemling - løse oppgaver.  
 
 Over tid - så har jeg formet min "egen" mentale sjekkliste som hjelper meg å forstå og fokusere. 
 
@@ -35,7 +35,7 @@ En gammel greker som het Aristoteles, ble tatt under vingene av en enda eldre gr
 På tenkeskolen var Aristoteles i 20 år og rakk å tenke mange kloke tanker innenfor ulike fagfelt, blant annet filosofi. 
 For å forstå menneskers handlinger i fra ett filosofisk ståsted, definerte han det engelsktalende kaller **The 5 W's and one How**... eller på norsk: **Hvem, Hva, Hvor, Hvofor, Hvordan og Når**. 
 
-Dette er en nyttig strategi for å forstå, innenfor mange fagfelt - også systemutvikling. 
+Dette er en nyttig strategi for å skaffe seg innsikt, innenfor mange fagfelt - også systemutvikling. 
 
 De ulike perspektivene er ikke likeverdige. Det er jo ikke tvil om at **Hvorfor** er viktigere enn **Hvordan**. 
 Over tid, har disse boksene ramlet på plass og fått litt spisset budskap på min serviett.
@@ -44,7 +44,7 @@ Over tid, har disse boksene ramlet på plass og fått litt spisset budskap på m
 Sånn ser servietten ut. Den har 6 bokser, der _Hvem_, _Hvorfor_ og _Hva_ danner rammene for de andre. 
 ![Bestandelene av s1](/images/blogg/paper_all_2.png)
 
-* **Hvem** - beskriver de aktørene som påvirker eller blir påvirket innenfor domenet/området vi jobber i.
+* **Hvem** - beskriver de aktørene som påvirker eller blir påvirket innenfor domenet vi jobber i.
 * **Hvorfor** - beskriver det som er viktig for de ulike aktørene vi forholder oss til. 
 * **Hva** - beskriver de sentrale begrepene på en slik måte at det er veldig tydelig og klart hva de betyr. 
 
@@ -69,7 +69,7 @@ Mål/hensikt er taket i modellen fordi det er overgripende for alt annet som bli
 
 ### Begrep (hva)
 Vårt fag er ikke ukjent med begrep og deres betydning for vårt arbeid. 
-Vi snakker om entiteter, klasser, objekter og datastrukturer som alle kan ha en eller annen direkte kobling til en organisasjons virksomhet. 
+Vi snakker om entiteter, klasser, objekter og datastrukturer som alle kan ha en eller annen kobling til en organisasjons virksomhet. 
 Uansett hva vi kaller byggeklossene - så er det utrolig viktig at vi klarer å definere tydelige begrep som alle kan enes om. 
 
 Abstrasjonsnivå er viktig. Fokuser på begrep som handler om det organisasjonen driver med .... ikke hvordan noe er implementert. 
@@ -98,7 +98,7 @@ Noen ganger oppleves det også som litt vondt å grave i regler, det er ikke all
 Dette er ikke regler, men unnskyldninger. 
 
 Noen ganger jobber vi med ett forretningsområde som er i støpeskjeen og da er det kanskje ikke så klart hva som er beste praksis. 
-Da er det fint å ha noen hypoteser og sørge for at vi raskt kan håndtere endringer. 
+Da er det fint å ha noen hypoteser om hva som kan være lurt og sørge for at vi raskt kan håndtere endringer. 
 
 Systemer som har litt tid på baken, må ofte tilpasses fordi noe i denne "boksen" endres. Vi kaster oss over slike endringer og lager nødvendige tilpassninger, men glemmer ofte å sjekke ut hvilke regler eller praksis som ikke lenger har livets rett. 
 
@@ -122,10 +122,15 @@ Utførte oppgaver må loggføres og kan danne grunnlag for at gjenstående aktiv
 Slike scenarier kan være krevende å modellere .... men desto viktigere å forstå. 
 
 ### Systemstøtte
-Endelig ... det som er gøy. 
-Det er her vi virkelig lærer og skaper verdi. 
-... men det er viktig at vi ser en rød tråd i det vi lager opp gjenom boksene og helt til målsetning og hensikt. 
-* Hvordan skal funksjonaliteten understøtte viktige hendelser og prosesser. 
+Endelig, det som er gøy, funksjonaliteten som vi skal lage samtidig som vi forsøker å sette oss inn i ett ukjent domene. 
+Det er først når vi viser vår forståelse, gjennom den koden vi har skrevet, at vi får de virkelig fruktbare diskusjonene og god læring. 
+
+Selv om det er gøy å bare programmere - så er min påstand at det blir enda artigere - når vi innimellom løfter blikket og forsøker å fylle boksen på "servietten" med innhold. 
+
+Vi må forstå den røde tråden i fra funksjonalitet som vi lager opp gjenom boksene
+og helt til målsetning og hensikt.
+* Hvordan skal funksjonaliteten understøtte viktige hendelser og
+prosesser.
 * Hvordan griper de inn i regler og beste praksis?
 * Hvordan påvirker de aktørenes målsetninger?
 
@@ -133,4 +138,4 @@ Det er her vi virkelig lærer og skaper verdi.
 
 Fossefall? - På ingen måte, jeg har ingen ønsker om å komme tilbake til en tid med fossefall og forsøk på å tenke alle tanker før spaden settes i jorda. 
 Det fungerte ikke før - og fungerer fremdeles ikke. 
-Jeg lærer best når jeg løser oppgaver. Jeg må bare ha en enkel sjekkliste som hjelper meg til å fokusere på riktig oppgave.
+Jeg lærer best når jeg løser oppgaver. Jeg må bare ha en enkel sjekkliste som hjelper meg til å fokusere på det som faktisk gir verdi.
