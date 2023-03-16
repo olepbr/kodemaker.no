@@ -42,7 +42,7 @@ Over tid, har disse boksene ramlet på plass og fått litt spisset budskap på m
 
 ## Servietten
 Sånn ser servietten ut. Den har 6 bokser, der _Hvem_, _Hvorfor_ og _Hva_ danner rammene for de andre. 
-![Bestandelene av s1](/images/blogg/paper_all_2.png)
+![Bestandelene av s1](/images/blogg/paper_all.png)
 
 * **Hvem** - beskriver de aktørene som påvirker eller blir påvirket innenfor domenet vi jobber i.
 * **Hvorfor** - beskriver det som er viktig for de ulike aktørene vi forholder oss til. 
