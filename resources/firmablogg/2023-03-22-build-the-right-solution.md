@@ -22,7 +22,7 @@ Dette handler om å forstå hva som er viktig.
 Hvorfor fokuser vi av og til på feil oppgave? Hvorfor tar det av og til veldig lang tid før oppgavens kontekst forstås?
 Hvordan skal du raskt komme under huden på en organisasjon og virkelig forstå DNA'et i det de driver med? 
 
-Det finnes mye materiale om hvordan du skal analysere ett domene. Mye nyttig lesing, men jeg synes ofte mange henger seg opp i for mye implementasjonsdetaljer, for tidlig, til at det gir meg noen praktisk guiding i det daglige arbeidet. 
+Det finnes mye materiale om hvordan du skal analysere ett domene. Mye nyttig lesing, men jeg synes ofte mange henger seg opp i for mye implementasjonsdetaljer for tidlig. 
 
 Det blir fort litt for mye tran og teknikker. Jeg ønsket meg en enkel modell som får plass på en serviett. 
 Noe som kan ligge der i bakhodet samtidig som jeg kan gjøre det som er gøy - nemling - løse oppgaver.  
@@ -125,7 +125,7 @@ Slike scenarier kan være krevende å modellere .... men desto viktigere å fors
 Endelig, det som er gøy, funksjonaliteten som vi skal lage samtidig som vi forsøker å sette oss inn i ett ukjent domene. 
 Det er først når vi viser vår forståelse, gjennom den koden vi har skrevet, at vi får de virkelig fruktbare diskusjonene og god læring. 
 
-Selv om det er gøy å bare programmere - så er min påstand at det blir enda artigere - når vi innimellom løfter blikket og forsøker å fylle boksen på "servietten" med innhold. 
+Programmering er supergøy - og enda artigere blir det når vi innimellom løfter blikket og forsøker å fylle boksen på "servietten" med innhold. 
 
 Vi må forstå den røde tråden i fra funksjonalitet som vi lager opp gjenom boksene
 og helt til målsetning og hensikt.
