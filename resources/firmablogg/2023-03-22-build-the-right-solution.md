@@ -42,7 +42,7 @@ Over tid, har disse boksene ramlet på plass og fått litt spisset budskap på m
 
 ## Servietten
 Sånn ser servietten ut. Den har 6 bokser, der _Hvem_, _Hvorfor_ og _Hva_ danner rammene for de andre. 
-![Bestandelene av s1](/images/blogg/paper_all.png)
+![Servietten](/images/blogg/paper_all.png)
 
 * **Hvem** - beskriver de aktørene som påvirker eller blir påvirket innenfor domenet vi jobber i.
 * **Hvorfor** - beskriver det som er viktig for de ulike aktørene vi forholder oss til. 
@@ -134,7 +134,7 @@ prosesser.
 * Hvordan griper de inn i regler og beste praksis?
 * Hvordan påvirker de aktørenes målsetninger?
 
-![Bestandelene av s1](/images/blogg/maal_og_hensikt.png)
+![Boksene](/images/blogg/maal_og_hensikt.png)
 
 Fossefall? - På ingen måte, jeg har ingen ønsker om å komme tilbake til en tid med fossefall og forsøk på å tenke alle tanker før spaden settes i jorda. 
 Det fungerte ikke før - og fungerer fremdeles ikke. 
