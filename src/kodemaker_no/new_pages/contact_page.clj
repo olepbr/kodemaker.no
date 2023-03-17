@@ -18,7 +18,7 @@
      :phone "+47 22 82 20 80"
      :address "Universitetsgata 2, 0164 Oslo"
      :contacts [(contact (d/entity db :person/kolbjorn))
-                (-> (contact (d/entity db :person/gry))
+                (-> (contact (d/entity db :person/marte))
                     (assoc :curtain :right))]
      :map {:zoom 15
            :lat 59.917369
