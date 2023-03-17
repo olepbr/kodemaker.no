@@ -25,7 +25,7 @@ Hvordan skal du raskt komme under huden på en organisasjon og virkelig forstå 
 Det finnes mye materiale om hvordan du skal analysere et domene. Mye nyttig lesing, men jeg synes ofte mange henger seg opp i for mye implementasjonsdetaljer for tidlig. 
 
 Det blir fort litt for mye tran og teknikker. Jeg ønsket meg en enkel modell som får plass på en serviett. 
-Noe som kan ligge der i bakhodet samtidig som jeg kan gjøre det som er gøy - nemling - løse oppgaver.  
+Noe som kan ligge der i bakhodet samtidig som jeg kan gjøre det som er gøy - nemlig - løse oppgaver.  
 
 Over tid - så har jeg formet min "egen" mentale sjekkliste som hjelper meg å forstå og fokusere. 
 
@@ -33,7 +33,7 @@ Det er jo bare sunn fornuft, faktisk veldig gammel sunn fornuft.
 En gammel greker som het Aristoteles, ble tatt under vingene av en enda eldre greker, Platon, når han bare var 17 år gammel. 
 
 På tenkeskolen var Aristoteles i 20 år, og rakk å tenke mange kloke tanker innenfor ulike fagfelt, blant annet filosofi. 
-For å forstå menneskers handlinger i fra et filosofisk ståsted, definerte han det engelsktalende kaller **The 5 W's and one How**... eller på norsk: **Hvem, Hva, Hvor, Hvofor, Hvordan og Når**. 
+For å forstå menneskers handlinger i fra et filosofisk ståsted, definerte han det engelsktalende kaller **The 5 W's and one How**... eller på norsk: **Hvem, Hva, Hvor, Hvorfor, Hvordan og Når**. 
 
 Dette er en nyttig strategi for å skaffe seg innsikt, innenfor mange fagfelt - også systemutvikling. 
 
@@ -62,7 +62,7 @@ Aktører er den ene veggen i modellen - fordi vi må forstå deres påvirkning p
 
 ### Mål/hensikt (hvorfor)
 Alle aktører har sine målsetninger.
-Noen ganger kan det vere overlappende målsetninger på tvers av aktører, men de kan også være veldig ulike. 
+Noen ganger kan det være overlappende målsetninger på tvers av aktører, men de kan også være veldig ulike. 
 I noen tilfeller ser vi også at ulike aktører kan ha målsetninger som er i direkte konflikt. 
 De fleste prosjekter er flinke til å belyse hva som er hensikten med det vi skal gjøre, men ofte mangler bredden i forhold til å forstå alle som blir påvirket. 
 Mål/hensikt er taket i modellen fordi det er overgripende for alt annet som blir definert. 
