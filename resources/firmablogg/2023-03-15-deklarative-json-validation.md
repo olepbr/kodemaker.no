@@ -70,7 +70,7 @@ const CardSchema = z.object({
 });
 
 // 2 - Utled type basert på skjema
-const Card = z.infer<typeof CardSchema>;
+type Card = z.infer<typeof CardSchema>;
 ```
 
 Nå har du et skjema du kan bruke for å parse og validere json og du har en type utledet fra skjema som har samme form som i forrige eksempel.
@@ -99,10 +99,10 @@ Dersom validering feiler får du en et feilobjekt `error` i resultatet fra parsi
 // 1. Modellere enums
 
 const SuitSchema = z.enum(["Hearts", "Spades", "Clubs", "Diamonds"]);
-const Suit = z.infer<typeof SuitSchema>;
+type Suit = z.infer<typeof SuitSchema>;
 
 const RankSchema = z.enum(["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]);
-const Rank = z.infer<typeof RankSchema>;
+type Rank = z.infer<typeof RankSchema>;
 
 // 2. Forbedre CardSchema til å sjekke at kun gyldige enum verdier er brukt 
 const CardSchema = z.object({
